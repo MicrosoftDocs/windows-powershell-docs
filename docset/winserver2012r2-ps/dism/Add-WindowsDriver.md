@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ### -ForceUnsigned
 Add unsigned drivers to an x64 image.
 The ForceUnsigned parameter overrides the requirement that drivers that are installed on X64-based computers must have a digital signature.
-For more information about driver signing requirements, see Device Drivers and Deployment Overviewhttp://go.microsoft.com/fwlink/?LinkId=214574.
+For more information about driver signing requirements, see Device Drivers and Deployment Overviewhttps://go.microsoft.com/fwlink/?LinkId=214574.
 
 ```yaml
 Type: SwitchParameter
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -112,7 +112,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 * The **Import-HpcNodeXML** cmdlet skips any nodes that are already part of the HPC cluster and have a known state. You can use this cmdlet to update properties of nodes that are in the unknown state. The **Import-HpcNodeXML** cmdlet corresponds to the process of adding compute nodes under Configuration in HPC Cluster Manager. The cmdlet provisions the nodes and leaves the nodes in the offline state after provisioning is complete. You can bring the nodes online by running the Set-HpcNodeState cmdlet or by using HPC Cluster Manager.
-* For information about creating a node XML file that you can import, see Appendix 2: Creating a Node XML Filehttp://go.microsoft.com/fwlink/?LinkId=124145 (http://go.microsoft.com/fwlink/?LinkId=124145).
+* For information about creating a node XML file that you can import, see Appendix 2: Creating a Node XML Filehttps://go.microsoft.com/fwlink/?LinkId=124145 (https://go.microsoft.com/fwlink/?LinkId=124145).
 * The built-in ConfirmImpact setting for this cmdlet is High. If this ConfirmImpact setting is equal to or higher than the value of the $ConfirmPreference variable for your environment, the cmdlet prompts for confirmation unless you specify `-Confirm:$False`. If this ConfirmImpact setting is lower than the value of the $ConfirmPreference variable for your environment, the cmdlet does not prompt for confirmation unless you specify `-Confirm` or `-Confirm:$True`.
 * You must be a cluster administrator to run this cmdlet successfully.
 

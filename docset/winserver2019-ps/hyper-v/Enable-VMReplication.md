@@ -227,7 +227,7 @@ To display a list of certificates in the computer's My store and the thumbprint 
 
 `PS C:\\\> dir | format-list`
 
-For more information about certificate stores, see [http://technet.microsoft.com//library/cc757138.aspx](https://technet.microsoft.com//library/cc757138.aspx).
+For more information about certificate stores, see [https://technet.microsoft.com//library/cc757138.aspx](https://technet.microsoft.com//library/cc757138.aspx).
 
 ```yaml
 Type: String

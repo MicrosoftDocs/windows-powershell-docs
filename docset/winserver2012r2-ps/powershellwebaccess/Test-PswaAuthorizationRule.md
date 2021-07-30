@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ### -Credential
 Specifies a **PSCredential** object for a user account that you want to use to test Windows PowerShell Web Access authorization rules.
 If you do not add this parameter, the cmdlet uses the currently logged-on user account.
-To get a **PSCredential** object, which is required to test authorization rules remotely, run the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
+To get a **PSCredential** object, which is required to test authorization rules remotely, run the Get-Credentialhttps://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
 
 ```yaml
 Type: PSCredential
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -38,19 +38,19 @@ Or, if you need to upload more than one file, consider a cabinet file (.cab) or 
 
 ### Example 1: Create a BITS transfer job that downloads a file
 ```
-PS C:\> Start-BitsTransfer -Source "http://server01/servertestdir/testfile1.txt" -Destination "c:\clienttestdir\testfile1.txt"
+PS C:\> Start-BitsTransfer -Source "https://server01/servertestdir/testfile1.txt" -Destination "c:\clienttestdir\testfile1.txt"
 ```
 
 This command creates a BITS transfer job that downloads a file from a server.
 The local and remote names of the file are specified in the *Source* and *Destination* parameters.
-Because the default transfer type is Download, the `http://Server01/servertestdir/testfile1.txt` file is transferred to `C:\clienttestdir\testfile1.txt` on the client.
+Because the default transfer type is Download, the `https://Server01/servertestdir/testfile1.txt` file is transferred to `C:\clienttestdir\testfile1.txt` on the client.
 The command prompt returns when the file transfer is complete or when it enters an error state.
 
 When you upload files to an HTTP location, the *TransferType* parameter must be set to **Upload**.
 
 Because the **Start-BitsTransfer** cmdlet assumes that the first parameter is the source and that the second parameter is the destination when no value is specified, this command could be simplified as follows:
 
-`Start-BitsTransfer "http://server01/servertestdir/testfile1.txt" "c:\clienttestdir\testfile1.txt"`
+`Start-BitsTransfer "https://server01/servertestdir/testfile1.txt" "c:\clienttestdir\testfile1.txt"`
 
 ### Example 2: Create BITS transfer jobs that download multiple files
 ```
@@ -65,22 +65,22 @@ The **Start-BitsTransfer** command creates a new BITS transfer job for each of t
 The contents of the filelist.txt file resemble the following information:
 
 Source, Destination
-http://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt
-http://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt
-http://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt
-http://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt
+https://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt
+https://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt
+https://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt
+https://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt
 
 **Note:** First line of the file must include Source, Destination header as in the example.
 
 ### Example 3: Create a BITS transfer job that uploads a file
 ```
-PS C:\> Start-BitsTransfer -Source "c:\clienttestdir\testfile1.txt" -Destination "http://server01/servertestdir/testfile1.txt" -TransferType Upload
+PS C:\> Start-BitsTransfer -Source "c:\clienttestdir\testfile1.txt" -Destination "https://server01/servertestdir/testfile1.txt" -TransferType Upload
 ```
 
 This command creates a BITS transfer job that uploads a file to a server.
 The local and remote names of the file are specified in the **Source** and **Destination** parameters.
 Because the default transfer type is Download, the *TransferType* parameter must be set to **Upload**.
-The `C:\clienttestdir\testfile1.txt` file on the client is transferred to `http://Server01/servertestdir/testfile1.txt`.
+The `C:\clienttestdir\testfile1.txt` file on the client is transferred to `https://Server01/servertestdir/testfile1.txt`.
 The command prompt returns when the file transfer is complete or enters an error state.
 
 The **Start-BitsTransfer** cmdlet downloads multiple files from a server to a client computer, but it does not typically upload multiple files from a client computer to a server.
@@ -89,23 +89,23 @@ If you need to upload more than one file, you can also use a .cab or .zip file.
 
 Because the **Start-BitsTransfer** cmdlet assumes that the first parameter is the source and that the second parameter is the destination when no value is specified, this command could be simplified as follows:
 
-`Start-BitsTransfer "c:\clienttestdir\testfile1.txt" "http://server01/servertestdir/testfile1.txt" -TransferType Upload`
+`Start-BitsTransfer "c:\clienttestdir\testfile1.txt" "https://server01/servertestdir/testfile1.txt" -TransferType Upload`
 
 ### Example 4: Create a BITS transfer job that downloads multiple files
 ```
-PS C:\> Start-BitsTransfer -Source "http://server01/servertestdir/testfile1.txt", "http://server01/servertestdir/testfile2.txt" -Destination "c:\clienttestdir\testfile1.txt", "c:\clienttestdir\testfile2.txt"
+PS C:\> Start-BitsTransfer -Source "https://server01/servertestdir/testfile1.txt", "https://server01/servertestdir/testfile2.txt" -Destination "c:\clienttestdir\testfile1.txt", "c:\clienttestdir\testfile2.txt"
 ```
 
 This command creates a BITS transfer job that downloads multiple files from a server.
 
 The local and remote names of the files are specified in the *Source* and *Destination* parameters.
-Because the default of the *TransferType* parameter is Download, the `http://Server01/servertestdir/testfile1.txt` and `http://Server01/servertestdir/testfile2.txt` files are transferred to `C:\clienttestdir\testfile1.txt` and `C:\clienttestdir\testfile2.txt` on the client computer.
+Because the default of the *TransferType* parameter is Download, the `https://Server01/servertestdir/testfile1.txt` and `https://Server01/servertestdir/testfile2.txt` files are transferred to `C:\clienttestdir\testfile1.txt` and `C:\clienttestdir\testfile2.txt` on the client computer.
 The command prompt returns when the file transfer is complete or enters an error state.
 
 ### Example 5: Create a BITS transfer job that downloads a file using a specific set of credentials
 ```
 PS C:\> $Cred = Get-Credential
-PS C:\> Start-BitsTransfer -DisplayName MyJob -Credential $Cred -Source "http://server01/servertestdir/testfile1.txt" -Destination "c:\clienttestdir\testfile1.txt"
+PS C:\> Start-BitsTransfer -DisplayName MyJob -Credential $Cred -Source "https://server01/servertestdir/testfile1.txt" -Destination "c:\clienttestdir\testfile1.txt"
 ```
 
 This example creates a BITS transfer job that downloads a file from a server by using a specific set of credentials.
@@ -114,7 +114,7 @@ The first command retrieves a set of credentials from the user by calling the **
 The returned **PSCredential** object is stored in the $Cred variable.
 
 The second command uses the *Credential* parameter to pass the **PSCredential** object that is stored in the $Cred variable to the **Start-BitsTransfer** cmdlet.
-A new BITS transfer job is created that downloads the `http://server01/servertestdir/testfile1.txt` file to the client.
+A new BITS transfer job is created that downloads the `https://server01/servertestdir/testfile1.txt` file to the client.
 The specified credentials are used to authenticate the user at the server.
 Additionally, the optional *DisplayName* parameter is used to give the BITS transfer job a unique name.
 
@@ -132,10 +132,10 @@ The **Start-BitsTransfer** command creates a new BITS transfer job for each of t
 The contents of the filelist.txt file resemble the following information:
 
 Source, Destination
-http://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt
-http://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt
-http://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt
-http://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt
+https://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt
+https://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt
+https://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt
+https://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt
 
 **Note:** First line of the file must include Source, Destination header as in the example.
 
@@ -162,10 +162,10 @@ The **Start-BitsTransfer** command creates a new BITS transfer job for each of t
 The contents of the filelist.txt file resemble the following information:
 
 Source, Destination
-c:\clienttestdir\testfile1.txt, http://server01/servertestdir/testfile1.txt
-c:\clienttestdir\testfile2.txt, http://server01/servertestdir/testfile2.txt
-c:\clienttestdir\testfile3.txt, http://server01/servertestdir/testfile3.txt
-c:\clienttestdir\testfile4.txt, http://server01/servertestdir/testfile4.txt
+c:\clienttestdir\testfile1.txt, https://server01/servertestdir/testfile1.txt
+c:\clienttestdir\testfile2.txt, https://server01/servertestdir/testfile2.txt
+c:\clienttestdir\testfile3.txt, https://server01/servertestdir/testfile3.txt
+c:\clienttestdir\testfile4.txt, https://server01/servertestdir/testfile4.txt
 
 **Note:** First line of the file must include Source, Destination header as in the example.
 

@@ -34,32 +34,32 @@ The timestamp of the recovery information is required and is supplied through th
 
 ### Example 1: Write user recovery information on a specified computer to the MBAM server
 ```
-PS C:\>Write-MbamRecoveryInformation -Computer Computer.Contoso.com -ComputerUser @("User1@Contoso.com") -Time 1/20/2015 -RecoveryPassword 311111-363319-126170-621720-547228-519706-367873-363880 -RecoveryPasswordID Af3d4a74-f650-4370-AAA2-cbfc7fe2abb8 -VolumeId Bf3d4a74-f650-4370-BBB2-cbfc7fe2abb8 -RecoveryPackage @(49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49) -RecoveryServiceEndPoint http://mbamserver.contoso.com:8080 -Force
+PS C:\>Write-MbamRecoveryInformation -Computer Computer.Contoso.com -ComputerUser @("User1@Contoso.com") -Time 1/20/2015 -RecoveryPassword 311111-363319-126170-621720-547228-519706-367873-363880 -RecoveryPasswordID Af3d4a74-f650-4370-AAA2-cbfc7fe2abb8 -VolumeId Bf3d4a74-f650-4370-BBB2-cbfc7fe2abb8 -RecoveryPackage @(49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49) -RecoveryServiceEndPoint https://mbamserver.contoso.com:8080 -Force
 ```
 
-This command writes the recovery information for the user named User1@Contoso.com on the computer named Computer.Contoso.com to the MBAM server listening at the recovery service end point address http://mbamserver.contoso.com:8080.
+This command writes the recovery information for the user named User1@Contoso.com on the computer named Computer.Contoso.com to the MBAM server listening at the recovery service end point address https://mbamserver.contoso.com:8080.
 
 ### Example 2: Write user recovery information on a specified computer to the MBAM server with verbose output
 ```
-PS C:\>Write-MbamRecoveryInformation -Computer Machine.Contoso.com -ComputerUser @("User1@Contoso.com") -Time 1/20/2015 -RecoveryPassword 311111-363319-126170-621720-547228-519706-367873-363880 -RecoveryPasswordID Af3d4a74-f650-4370-AAA2-cbfc7fe2abb8  -VolumeId Bf3d4a74-f650-4370-BBB2-cbfc7fe2abb8 -RecoveryPackage @(49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49) -RecoveryServiceEndPoint http://mbamserver.contoso.com:8080 -Force -Verbose
+PS C:\>Write-MbamRecoveryInformation -Computer Machine.Contoso.com -ComputerUser @("User1@Contoso.com") -Time 1/20/2015 -RecoveryPassword 311111-363319-126170-621720-547228-519706-367873-363880 -RecoveryPasswordID Af3d4a74-f650-4370-AAA2-cbfc7fe2abb8  -VolumeId Bf3d4a74-f650-4370-BBB2-cbfc7fe2abb8 -RecoveryPackage @(49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49) -RecoveryServiceEndPoint https://mbamserver.contoso.com:8080 -Force -Verbose
 VERBOSE: Performing the operation "Write-MbamRecoveryInformation" on target "MBAM Recovery Database".
 VERBOSE: Recovery Information for Volume bf3d4a74-f650-4370-bbb2-cbfc7fe2abb8 on Computer Machine.Contoso.com sent
  successfully.
 ```
 
-This command writes the recovery information specified by the cmdlet input parameters to the MBAM server listening at the recovery service end point address http://mbamserver.contoso.com:8080.
+This command writes the recovery information specified by the cmdlet input parameters to the MBAM server listening at the recovery service end point address https://mbamserver.contoso.com:8080.
 
 This command also displays a confirmation message.
 
 ### Example 3: Write user recovery information on a specified computer to the MBAM server with verbose output and attempt recovery if the cmdlet fails
 ```
-PS C:\>Write-MbamRecoveryInformation -Computer Machine.Contoso.com -ComputerUser @("user@Contoso.com") -Time 1/20/2015 -RetryCount 2 -RetryIntervalSeconds 5 -RecoveryPassword 311111-363319-126170-621720-547228-519706-367873-363880  -RecoveryPasswordID Af3d4a74-f650-4370-AAA2-cbfc7fe2abb8 -VolumeId Bf3d4a74-f650-4370-BBB2-cbfc7fe2abb8 -RecoveryPackage @(49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49) -RecoveryServiceEndPoint http://mbamserver.contoso.com:8080 -Force -Verbose
+PS C:\>Write-MbamRecoveryInformation -Computer Machine.Contoso.com -ComputerUser @("user@Contoso.com") -Time 1/20/2015 -RetryCount 2 -RetryIntervalSeconds 5 -RecoveryPassword 311111-363319-126170-621720-547228-519706-367873-363880  -RecoveryPasswordID Af3d4a74-f650-4370-AAA2-cbfc7fe2abb8 -VolumeId Bf3d4a74-f650-4370-BBB2-cbfc7fe2abb8 -RecoveryPackage @(49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49, 48, 49) -RecoveryServiceEndPoint https://mbamserver.contoso.com:8080 -Force -Verbose
 VERBOSE: Performing the operation "Write-MbamRecoveryInformation" on target "MBAM Recovery Database".
 VERBOSE: Recovery Information for Volume bf3d4a74-f650-4370-bbb2-cbfc7fe2abb8 on Computer Machine.Contoso.com sent
 successfully.
 ```
 
-This command writes the recovery information specified by the cmdlet input parameters to the MBAM server listening at the recovery service end point address http://mbamserver.contoso.com:8080.
+This command writes the recovery information specified by the cmdlet input parameters to the MBAM server listening at the recovery service end point address https://mbamserver.contoso.com:8080.
 
 This command also displays a confirmation message.
 

@@ -283,7 +283,7 @@ Accept wildcard characters: False
 Specifies an array of values that determine whether to enable congestion window restart.
 The cmdlet gets settings that have the congestion window restart values that you specify.
 Congestion window restart can avoid slow start to optimize throughput on low latency networks.
-For more information about congestion window restart, see [RFC 2581](http://www.ietf.org/rfc/rfc2581.txt).
+For more information about congestion window restart, see [RFC 2581](https://www.ietf.org/rfc/rfc2581.txt).
 The acceptable values for this parameter are:
 
 - True.
@@ -602,7 +602,7 @@ Accept wildcard characters: False
 Specifies an array of values that determine whether to enable timestamps.
 The cmdlet gets settings that have the enable timestamps values that you specify.
 Timestamps facilitate round trip measurement, and can help protect against wrapped sequence numbers on high throughput links.
-For more information about TCP timestamps, see [RFC 1323](http://www.ietf.org/rfc/rfc1323.txt).
+For more information about TCP timestamps, see [RFC 1323](https://www.ietf.org/rfc/rfc1323.txt).
 The acceptable values for this parameter are:
 
 - Enabled

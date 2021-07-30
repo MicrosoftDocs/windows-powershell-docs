@@ -22,7 +22,7 @@ Get-NetDnsTransitionConfiguration [-Adapter <CimInstance>] [-CimSession <CimSess
 
 ## DESCRIPTION
 The **Get-NetDnsTransitionConfiguration** cmdlet retrieves the DNS64 configuration of a computer.
-DNS64 is described in [RFC 6147](http://tools.ietf.org/html/rfc6147).
+DNS64 is described in [RFC 6147](https://tools.ietf.org/html/rfc6147).
 DNS64 is used with an IPv6/IPv4 translator to enable client-server communication between an IPv6-only client and an IPv4-only server, without requiring any changes to either the IPv6 or the IPv4 node.
 
 ## EXAMPLES

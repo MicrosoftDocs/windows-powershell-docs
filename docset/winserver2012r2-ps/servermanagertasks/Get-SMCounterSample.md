@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 Specifies the name of the data collector set in Performance Log Analyzer (PLA) to query.
 The collector name for Server Manager is 'Server Manager Performance Monitor'; because this name contains spaces, it must be specified in your command in quotations, as shown here.
 If desired, you can create a custom data collector set in Performance Logs and Alerts (PLA).
-For more information about how to create a custom data collector set, see Creating a Collector Sethttp://msdn.microsoft.com/library/windows/desktop/bb509347.aspx and Create a Data Collector Set Manuallyhttp://technet.microsoft.com/library/cc766404.aspx.
+For more information about how to create a custom data collector set, see Creating a Collector Sethttps://msdn.microsoft.com/library/windows/desktop/bb509347.aspx and Create a Data Collector Set Manuallyhttps://technet.microsoft.com/library/cc766404.aspx.
 
 ```yaml
 Type: String
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

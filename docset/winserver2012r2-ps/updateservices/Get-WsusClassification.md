@@ -20,7 +20,7 @@ Get-WsusClassification [-UpdateServer <IUpdateServer>] [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-WsusClassification** cmdlet gets the list of all Windows Server Update Services (WSUS) classifications.
-This list can be filtered using the Where-Objecthttp://go.microsoft.com/fwlink/?LinkID=113423 cmdlet with the results piped into the Set-WsusClassification cmdlet.
+This list can be filtered using the Where-Objecthttps://go.microsoft.com/fwlink/?LinkID=113423 cmdlet with the results piped into the Set-WsusClassification cmdlet.
 
 ## EXAMPLES
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -103,7 +103,7 @@ Valid values for the parameter include a NetBIOS name, an IP address, or a fully
 
 To use an IP address of a remote computer as the value of this parameter, your command must include the `Credential` parameter.
 The computer must either be configured for HTTPS transport, or the IP address of the remote computer must be included in the WinRM TrustedHosts list on the local computer.
-For information about adding a computer name to the WinRM TrustedHosts list, see "How to Add a Computer to the Trusted Host List" in about_Remote_Troubleshootinghttp://go.microsoft.com/fwlink/p/?LinkID=135188.
+For information about adding a computer name to the WinRM TrustedHosts list, see "How to Add a Computer to the Trusted Host List" in about_Remote_Troubleshootinghttps://go.microsoft.com/fwlink/p/?LinkID=135188.
 
 ```yaml
 Type: String
@@ -163,7 +163,7 @@ Quotation marks are optional.
 
   ●   "User@Domain.com" 
 
-  ●   A Credential object returned by the Get-Credentialhttp://go.microsoft.com/fwlink/p/?LinkID=113311 cmdlet.
+  ●   A Credential object returned by the Get-Credentialhttps://go.microsoft.com/fwlink/p/?LinkID=113311 cmdlet.
 
 If a user name is entered, then a prompt for a password is displayed.
 
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

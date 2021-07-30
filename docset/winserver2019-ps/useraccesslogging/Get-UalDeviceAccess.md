@@ -33,7 +33,7 @@ The record also includes the first time the client accessed the service, the mos
 You can specify parameter values to narrow the records that this cmdlet returns.
 For instance, you can get records for only a specified IP address or role.
 
-For more information about UAL, see the [User Access Logging Overview](https://technet.microsoft.com/library/hh849634.aspx) topic in the TechNet library at http://technet.microsoft.com/library/hh849634.aspx.
+For more information about UAL, see the [User Access Logging Overview](https://technet.microsoft.com/library/hh849634.aspx) topic in the TechNet library at https://technet.microsoft.com/library/hh849634.aspx.
 
 ## EXAMPLES
 

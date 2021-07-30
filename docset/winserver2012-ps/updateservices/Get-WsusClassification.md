@@ -18,7 +18,7 @@ Get-WsusClassification [-UpdateServer <IUpdateServer>]
 
 ## DESCRIPTION
 The **Get-WsusClassification** cmdlet gets the list of all Windows Server Update Services (WSUS) classifications.
-This list can be filtered using the Where-Objecthttp://go.microsoft.com/fwlink/?LinkID=113423 cmdlet with the results piped into the Set-WsusClassification cmdlet.
+This list can be filtered using the Where-Objecthttps://go.microsoft.com/fwlink/?LinkID=113423 cmdlet with the results piped into the Set-WsusClassification cmdlet.
 
 ## EXAMPLES
 

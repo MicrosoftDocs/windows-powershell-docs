@@ -20,7 +20,7 @@ Show-WindowsDeveloperLicenseRegistration [<CommonParameters>]
 
 ## DESCRIPTION
 The **Show-WindowsDeveloperLicenseRegistration** cmdlet starts the developer license registration workflow that allows you to create and register a developer license for the current computer.
-For more information about developer licenses, see Get a developer license (Windows Store apps) (Windows)http://msdn.microsoft.com/library/windows/apps/hh974578.aspx (http://msdn.microsoft.com/library/windows/apps/hh974578.aspx) in the MSDN library.
+For more information about developer licenses, see Get a developer license (Windows Store apps) (Windows)https://msdn.microsoft.com/library/windows/apps/hh974578.aspx (https://msdn.microsoft.com/library/windows/apps/hh974578.aspx) in the MSDN library.
 
 You need to run the Windows PowerShell console as Administrator to register a developer license.
 You need a valid LiveID.
@@ -39,7 +39,7 @@ This command opens a dialog box that allows you to register a developer license.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

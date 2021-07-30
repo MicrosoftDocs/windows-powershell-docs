@@ -20,7 +20,7 @@ Set-WsusProduct -Product <WsusProduct> [-Disable] [-WhatIf] [-Confirm] [<CommonP
 
 ## DESCRIPTION
 The **Set-WsusProduct** cmdlet enables or disables the product representing the category of updates to synchronized.
-In order to use this cmdlet, the Get-WsusProduct cmdlet must be run (optionally using the Where-Objecthttp://go.microsoft.com/fwlink/?LinkID=113423 cmdlet to filter its results) with its results piped into this cmdlet.
+In order to use this cmdlet, the Get-WsusProduct cmdlet must be run (optionally using the Where-Objecthttps://go.microsoft.com/fwlink/?LinkID=113423 cmdlet to filter its results) with its results piped into this cmdlet.
 
 ## EXAMPLES
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

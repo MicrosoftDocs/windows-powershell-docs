@@ -46,7 +46,7 @@ PS C:\>Import-Csv -Path MacAddressFilters.csv | Add-DhcpServerv4Filter -Computer
 ```
 
 This example adds all of the MAC address filters in the file named MacAddressFilters.csv to the allow MAC address list of the DHCP server service running on the computer named dhcpserver.contoso.com.
-The Import-Csvhttp://go.microsoft.com/fwlink/p/?LinkID=113341 cmdlet returns the objects with Mac address filter fields that are piped to this cmdlet, which in turn adds the MAC address filters to the server.
+The Import-Csvhttps://go.microsoft.com/fwlink/p/?LinkID=113341 cmdlet returns the objects with Mac address filter fields that are piped to this cmdlet, which in turn adds the MAC address filters to the server.
 The file named MacAddressFilters.csv should be in the following comma-separated values (CSV) format:
 `MacAddress,Description`
 `1a-1b-1c-1d-1e-1f,Computer1`
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

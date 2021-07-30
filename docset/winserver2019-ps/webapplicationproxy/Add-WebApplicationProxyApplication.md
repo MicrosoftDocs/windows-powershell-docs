@@ -47,14 +47,14 @@ This cmdlet supports passing multiple **WebApplicationProxyApplication** objects
 
 ### Example 1: Publish a web application
 ```
-PS C:\> Add-WebApplicationProxyApplication -Name "Contoso App" -ExternalPreauthentication ADFS -ExternalUrl https://ContosoApp.Contoso.com/ -ExternalCertificateThumbprint "69DF0AB8434060DC869D37BBAEF770ED5DD0C32A" -BackendServerUrl http://ContosoApp:8080/ -ADFSRelyingPartyName "ContosoAppRP"
+PS C:\> Add-WebApplicationProxyApplication -Name "Contoso App" -ExternalPreauthentication ADFS -ExternalUrl https://ContosoApp.Contoso.com/ -ExternalCertificateThumbprint "69DF0AB8434060DC869D37BBAEF770ED5DD0C32A" -BackendServerUrl https://ContosoApp:8080/ -ADFSRelyingPartyName "ContosoAppRP"
 ```
 
 This command publishes a web application that specifies the value of AD FS for the **ExternalPreauthentication** parameter.
 
 ### Example 2: Publish a web application that omits external preauthentication
 ```
-PS C:\> Add-WebApplicationProxyApplication -Name "ContosoApp" -BackendServerUrl http://ContosoApp/ -ExternalUrl https://ContosoApp.Contoso.com/ -ExternalPreauthentication "PassThrough" -ExternalCertificateThumbprint "D1A657E1A4F276FCC45613C0F6B3BC91AFC4633F"
+PS C:\> Add-WebApplicationProxyApplication -Name "ContosoApp" -BackendServerUrl https://ContosoApp/ -ExternalUrl https://ContosoApp.Contoso.com/ -ExternalPreauthentication "PassThrough" -ExternalCertificateThumbprint "D1A657E1A4F276FCC45613C0F6B3BC91AFC4633F"
 ```
 
 This command publishes a web application named ContosoApp.
@@ -159,9 +159,9 @@ Include the trailing slash (/).
 You can also include a port number and path.
 The following examples show the form of an address: 
 
-- http://AccountingApp.Contoso.com/
-- http://Mail.Contoso.com/Remote/
-- http://Portal/
+- https://AccountingApp.Contoso.com/
+- https://Mail.Contoso.com/Remote/
+- https://Portal/
 
 ```yaml
 Type: String

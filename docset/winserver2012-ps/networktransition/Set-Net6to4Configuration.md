@@ -30,7 +30,7 @@ Set-Net6to4Configuration [[-State] <State>] [[-AutoSharing] <State>] [[-RelayNam
 ## DESCRIPTION
 The **Set-Net6to4Configuration** cmdlet sets the 6to4 configuration of both client computers and servers.
 
-6to4 is an address assignment and router-to-router automatic tunneling technology that is described in RFC 3056: Connection of IPv6 Domains via IPv4 Cloudshttp://go.microsoft.com/fwlink/p/?LinkId=256388.
+6to4 is an address assignment and router-to-router automatic tunneling technology that is described in RFC 3056: Connection of IPv6 Domains via IPv4 Cloudshttps://go.microsoft.com/fwlink/p/?LinkId=256388.
 6to4 provides a globally-routable IPv6 address to a host with a public IPv4 address.
 This IPv6 address can be used to connect to other 6to4 hosts or the IPv6 Internet.
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

@@ -27,7 +27,7 @@ To remove a link from the home page of a Remote Web Access website, use the **Re
 
 ### Example 1: Add a link to a home page
 ```
-PS C:\> Add-WssRemoteWebAccessLink -Text "Link1" -Url "http://Contoso.com/About-Contoso-Page.html"
+PS C:\> Add-WssRemoteWebAccessLink -Text "Link1" -Url "https://Contoso.com/About-Contoso-Page.html"
 ```
 
 This command adds a link to the home page for a Remote Web Access website.
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

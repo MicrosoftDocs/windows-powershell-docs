@@ -60,28 +60,28 @@ To set options based on legacy user classes, the *UserClass* parameter must be s
 
 ### Example 1: Set server level option values
 ```
-PS C:\> Set-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain "contoso.com" -Router 192.168.1.1 -Wpad "http://proxy.contoso.com/wpad.dat"
+PS C:\> Set-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain "contoso.com" -Router 192.168.1.1 -Wpad "https://proxy.contoso.com/wpad.dat"
 ```
 
 This example sets the server level option values for DNS server, WINS server, DNS domain, router, and WPAD.
 
 ### Example 2: Set option values for a scope
 ```
-PS C:\> Set-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain "contoso.com" -Router 192.168.1.1 -Wpad "http://proxy.contoso.com/wpad.dat"
+PS C:\> Set-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain "contoso.com" -Router 192.168.1.1 -Wpad "https://proxy.contoso.com/wpad.dat"
 ```
 
 This example sets the option values for DNS server, WINS server, DNS domain, router, and WPAD for scope 10.10.10.0.
 
 ### Example 3: Set option values for an address
 ```
-PS C:\> Set-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ReservedIP 10.10.10.5 -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain "contoso.com" -Router 192.168.1.1 -Wpad "http://proxy.contoso.com/wpad.dat"
+PS C:\> Set-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ReservedIP 10.10.10.5 -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain "contoso.com" -Router 192.168.1.1 -Wpad "https://proxy.contoso.com/wpad.dat"
 ```
 
 This example sets the option values for DNS server, WINS server, DNS domain, router, and WPAD for reserved IP address 10.10.10.5.
 
 ### Example 4: Set option values for a policy
 ```
-PS C:\> Set-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -PolicyName "LabComputers" -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain "contoso.com" -Router 192.168.1.1 -Wpad "http://proxy.contoso.com/wpad.dat"
+PS C:\> Set-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -PolicyName "LabComputers" -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain "contoso.com" -Router 192.168.1.1 -Wpad "https://proxy.contoso.com/wpad.dat"
 ```
 
 This example sets the option values for DNS server, WINS server, DNS domain, router, and WPAD for policy named LabComputers in the scope 10.10.10.0.

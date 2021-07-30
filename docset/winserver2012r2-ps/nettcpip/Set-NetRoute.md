@@ -43,7 +43,7 @@ To determine where to forward a packet, the host or router consults a routing ta
 When TCP/IP starts, it creates entries in the routing table.
 You can add entries either manually or automatically.
 
-For more information about routing, see Chapter 5 - IP Routinghttp://technet.microsoft.com/library/bb727001.aspx (http://technet.microsoft.com/library/bb727001.aspx) in the TechNet library.
+For more information about routing, see Chapter 5 - IP Routinghttps://technet.microsoft.com/library/bb727001.aspx (https://technet.microsoft.com/library/bb727001.aspx) in the TechNet library.
 
 After you create an entry in the routing table, you cannot modify the destination prefix or the next hop value.
 If necessary, use the Remove-NetRoute cmdlet to remove the entry, and then recreate it with the desired values by using the New-NetRoute cmdlet.
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -434,7 +434,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

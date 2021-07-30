@@ -57,14 +57,14 @@ You can use the following variables depending upon the switch when specifying th
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>Add-CACRLDistributionPoint -Uri http://ca1.corp.contoso.com/pki/<CAName>.crl -AddToCertificateCdp
+C:\PS>Add-CACRLDistributionPoint -Uri https://ca1.corp.contoso.com/pki/<CAName>.crl -AddToCertificateCdp
 ```
 
 Description
 
 -----------
 
-Adds a certificate revocation list (CRL) distribution point for the URI of http://ca1.corp.contoso.com/pki/\<CAName\>.crl and sets the CRL URI to be included in issued certificates.
+Adds a certificate revocation list (CRL) distribution point for the URI of https://ca1.corp.contoso.com/pki/\<CAName\>.crl and sets the CRL URI to be included in issued certificates.
 
 ## PARAMETERS
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

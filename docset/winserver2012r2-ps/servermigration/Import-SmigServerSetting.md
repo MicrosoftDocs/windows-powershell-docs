@@ -29,7 +29,7 @@ You can also use this cmdlet to install Windows features and their dependencies,
 Some Windows features might require that the destination computer be restarted to complete installation.
 After restarting the computer, you must run the cmdlet again with -Force parameter to complete the import operation.
 
-For online Help about the Windows Server Migration Tools cmdlets, see http://go.microsoft.com/fwlink/?LinkId=246313http://go.microsoft.com/fwlink/?LinkId=246313.
+For online Help about the Windows Server Migration Tools cmdlets, see https://go.microsoft.com/fwlink/?LinkId=246313https://go.microsoft.com/fwlink/?LinkId=246313.
 
 ## EXAMPLES
 
@@ -344,7 +344,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

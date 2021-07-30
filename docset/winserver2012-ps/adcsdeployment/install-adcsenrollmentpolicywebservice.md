@@ -39,7 +39,7 @@ Description
 
 This command installs the Certificate Enrollment Policy Web Service using Kerberos for authentication.
 Replace \<sslCertThumbPrint\> with the actual certificate thumbprint.
-For information on obtaining a certificate thumbprint using PowerShell, see Certificate Provider (http://go.microsoft.com/fwlink/?LinkId=225044).
+For information on obtaining a certificate thumbprint using PowerShell, see Certificate Provider (https://go.microsoft.com/fwlink/?LinkId=225044).
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

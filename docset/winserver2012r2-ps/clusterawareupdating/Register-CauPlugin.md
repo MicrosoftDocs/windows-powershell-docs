@@ -23,7 +23,7 @@ The **Register-CauPlugin** cmdlet registers a Cluster-Aware Updating (CAU) softw
 
 CAU always uses a plug-in when performing updates, although you do not need to register a plug-in because CAU uses the Microsoft.WindowsUpdatePlugin plug-in by default.
 This plug-in communicates with the Windows Update Agent software resident on each node, the same software that is used when updates are downloaded from Windows Update or Microsoft Update, or from a Windows Server Update Services (WSUS) server.
-For more information about how plug-ins work in CAU, see the content about Cluster-Aware Updating plug-inshttp://go.microsoft.com/fwlink/p/?LinkId=235333.
+For more information about how plug-ins work in CAU, see the content about Cluster-Aware Updating plug-inshttps://go.microsoft.com/fwlink/p/?LinkId=235333.
 
 ## EXAMPLES
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -32,7 +32,7 @@ Network Virtualization allows more than one virtual network to exist on the same
 Computers can exchange network traffic with a virtual machine (VM) by using a Customer Address within the virtual network.
 Network Virtualization manages the Provider Addresses that are the physical network addresses.
 This cmdlet removes records that map a Customer Address to a Provider Address.
-For more information, see Network Virtualization technical detailshttp://technet.microsoft.com/library/jj134174.aspx (http://technet.microsoft.com/library/jj134174.aspx) on TechNet.
+For more information, see Network Virtualization technical detailshttps://technet.microsoft.com/library/jj134174.aspx (https://technet.microsoft.com/library/jj134174.aspx) on TechNet.
 
 You can specify which entries to remove, or you can remove all policy entries for a hv_win8_2 host.
 You can use the Get-NetVirtualizationLookupRecord cmdlet to get entries to remove.
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

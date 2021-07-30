@@ -27,18 +27,18 @@ After you set the configuration, you must enable the web proxy by using the Enab
 
 ### Example 1: Configure a web proxy
 ```
-PS C:\> Set-HcsWebProxy -Authentication None -ConnectionURI "http://myproxy:8080"
+PS C:\> Set-HcsWebProxy -Authentication None -ConnectionURI "https://myproxy:8080"
 ConnectionURI                                Authentication Username                                          IsEnabled
 -------------                                -------------- --------                                          ---------
-http://myproxy:8080                                    None                                                       False
+https://myproxy:8080                                    None                                                       False
 ```
 
-This command configures the web proxy that has the URI http://myproxy:8080.
+This command configures the web proxy that has the URI https://myproxy:8080.
 The proxy uses no authentication.
 
 ### Example 2: Configure a web proxy with NTLM authentication
 ```
-PS C:\> Set-HcsWebProxy -Authentication NTLM -ConnectionURI "http://myproxy:8080" -Username "ENarvaez"
+PS C:\> Set-HcsWebProxy -Authentication NTLM -ConnectionURI "https://myproxy:8080" -Username "ENarvaez"
 WARNING: A script or application on the remote computer 10.122.103.105 is sending a prompt request. When you are
 prompted, enter sensitive information, such as credentials or passwords, only if you trust the remote computer and the
 application or script that is requesting the data.
@@ -50,17 +50,17 @@ Confirm Password: ****
 
 ConnectionURI                                Authentication Username                                          IsEnabled
 -------------                                -------------- --------                                          ---------
-http://myproxy:8080                                    NTLM ENarvaez                                              False
+https://myproxy:8080                                    NTLM ENarvaez                                              False
 ```
 
 This command configures the web proxy to use NTLM authentication for user named ENarvaez.
 
 ### Example 3: Configure a web proxy with Basic authentication
 ```
-PS C:\> Set-HcsWebProxy -Authentication Basic -ConnectionURI "http://myproxy:8080" -Password $Null -Username "ENarvaez" 
+PS C:\> Set-HcsWebProxy -Authentication Basic -ConnectionURI "https://myproxy:8080" -Password $Null -Username "ENarvaez" 
 ConnectionURI                                Authentication Username                                          IsEnabled
 -------------                                -------------- --------                                          ---------
-http://myproxy:8080                                   Basic ENarvaez                                              False
+https://myproxy:8080                                   Basic ENarvaez                                              False
 ```
 
 This command configures the web proxy to use Basic authentication with no password.
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

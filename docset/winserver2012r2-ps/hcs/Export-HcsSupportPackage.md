@@ -74,7 +74,7 @@ After you enter your password, the console displays output.
 ### -Credential
 Specifies a **PSCredential** object.
 Specify a credential that has write permission for the location that the **Path** parameter specifies.
-To obtain a **PSCredential** object, use the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
+To obtain a **PSCredential** object, use the Get-Credentialhttps://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
 For more information, type `Get-Help Get-Credential`.
 
 ```yaml
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 ### -MinimumTimestamp
 Specifies the earliest time to include as a **DateTime** object.
-To obtain a **DateTime** object, use the Get-Datehttp://go.microsoft.com/fwlink/?LinkID=293966 cmdlet.
+To obtain a **DateTime** object, use the Get-Datehttps://go.microsoft.com/fwlink/?LinkID=293966 cmdlet.
 For more information, type `Get-Help Get-Date`.
 
 ```yaml
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

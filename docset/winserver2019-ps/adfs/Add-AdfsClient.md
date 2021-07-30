@@ -27,7 +27,7 @@ The **Add-AdfsClient** cmdlet registers an OAuth client with Active Directory Fe
 In order to allow access from OAuth clients to resources secured by AD FS, you need to register the OAuth client with AD FS by using this cmdlet.
 
 When you register an OAuth 2.0 client with AD FS, you must specify a client identifier and a redirection URI, as well as a friendly name and description, for the OAuth client.
-When an OAuth client requests access to a resource using the OAuth 2.0 protocol, the client must specify a client identifier and redirection URI to AD FS, in accordance with  [RFC 6749](http://tools.ietf.org/html/rfc6749). 
+When an OAuth client requests access to a resource using the OAuth 2.0 protocol, the client must specify a client identifier and redirection URI to AD FS, in accordance with  [RFC 6749](https://tools.ietf.org/html/rfc6749). 
 AD FS will not allow access to a resource to clients that specify a client identifier or redirection URI that are not registered with AD FS.
 
 ## EXAMPLES
@@ -302,7 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -28,7 +28,7 @@ Remove-NetVirtualizationProviderAddress [-AsJob] [-CimSession <CimSession[]>] [-
 ## DESCRIPTION
 The **Remove-NetVirtualizationProviderAddress** cmdlet deletes Provider Addresses configured in hv_win8_1 Network Virtualization.
 A Provider Address is an IPv4 or IPv6 address that Network Virtualization uses for multiple virtual Customer Addresses.
-For more information, see Network Virtualization technical detailshttp://technet.microsoft.com/library/jj134174.aspx (http://technet.microsoft.com/library/jj134174.aspx) on TechNet.
+For more information, see Network Virtualization technical detailshttps://technet.microsoft.com/library/jj134174.aspx (https://technet.microsoft.com/library/jj134174.aspx) on TechNet.
 
 You can specify which Provider Addresses to delete by using address state, interface index, prefix length, IP address, or VLAN ID, or you can use the Get-NetVirtualizationProviderAddress cmdlet to get Provider Addresses to delete.
 

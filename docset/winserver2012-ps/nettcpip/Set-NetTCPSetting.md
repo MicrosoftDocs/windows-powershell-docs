@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -118,7 +118,7 @@ The acceptable values for this parameter are:
 
  -- Default: Sets the TCP stack to its default setting.
 Servers use DCTCP by default.
-Clients use NewReno as defined in RFC 3782http://www.ietf.org/rfc/rfc3782.txt. 
+Clients use NewReno as defined in RFC 3782https://www.ietf.org/rfc/rfc3782.txt. 
 
  -- CTCP: Sets the TCP stack to use Compound TCP, which increases the receive window and amount of data sent.
 This may improve throughput on higher latency connections. 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ### -CwndRestart
 Specifies the enabled state of the cwnd restart.
 This parameter value determines whether congestion window is restarted and can avoid slow start to optimize throughput on low latency networks.
-This is described in RFC 2581http://go.microsoft.com/fwlink/p/?LinkId=95127. 
+This is described in RFC 2581https://go.microsoft.com/fwlink/p/?LinkId=95127. 
 
  -- False: Sets the TCP stack to use its default setting. 
 
@@ -399,14 +399,14 @@ Accept wildcard characters: False
 ```
 
 ### -Timestamps
-Specifies the enabled state of the RFC 1323http://www.ietf.org/rfc/rfc1323.txt TCP timestamps.
-RFC 1323http://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps can help with round trip measurement and protection against wrapped sequence numbers on high throughput links.
+Specifies the enabled state of the RFC 1323https://www.ietf.org/rfc/rfc1323.txt TCP timestamps.
+RFC 1323https://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps can help with round trip measurement and protection against wrapped sequence numbers on high throughput links.
 The acceptable values for this parameter are:
 
- -- Disabled: The TCP setting does not use the RFC 1323http://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps.
+ -- Disabled: The TCP setting does not use the RFC 1323https://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps.
 This is the default. 
 
- -- Enabled: The TCP setting uses the RFC 1323http://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps.
+ -- Enabled: The TCP setting uses the RFC 1323https://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps.
 
 ```yaml
 Type: Timestamps

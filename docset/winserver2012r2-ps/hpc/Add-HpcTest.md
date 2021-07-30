@@ -20,7 +20,7 @@ Add-HpcTest [-File] <String> [-Scheduler <String[]>] [<CommonParameters>]
 ## DESCRIPTION
 The **Add-HpcTest** cmdlet adds the custom diagnostic tests that the specified XML file defines to the set of diagnostic tests that administrators can run on the HPC cluster.
 
-For information about creating custom diagnostic tests, see Diagnostics Extensibility in Windows HPC Server 2008 R2 Step-by-Step Guidehttp://go.microsoft.com/fwlink/?LinkId=177604 (http://go.microsoft.com/fwlink/?LinkId=177604).
+For information about creating custom diagnostic tests, see Diagnostics Extensibility in Windows HPC Server 2008 R2 Step-by-Step Guidehttps://go.microsoft.com/fwlink/?LinkId=177604 (https://go.microsoft.com/fwlink/?LinkId=177604).
 
 ## EXAMPLES
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

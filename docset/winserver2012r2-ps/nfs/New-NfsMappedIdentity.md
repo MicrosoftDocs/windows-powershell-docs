@@ -37,8 +37,8 @@ A UID or GID identifies a UNIX account namespace.
 These elements are associated with the corresponding elements of a Windows account namespace: a user name or a group name.
 By using a mapped identity, a user who is logged on to a UNIX domain can access shared resources in a Windows domain without having to log on to the Windows domain.
 
-For more information about NFS, see Network File Systemhttp://technet.microsoft.com/en-us/library/jj592688.
-For more information about NFS account mapping, see NFS Account Mapping Guidehttp://technet.microsoft.com/en-us/library/hh509020(v=ws.10) and Identity Management for UNIXhttp://technet.microsoft.com/en-us/library/cc772571.
+For more information about NFS, see Network File Systemhttps://technet.microsoft.com/en-us/library/jj592688.
+For more information about NFS account mapping, see NFS Account Mapping Guidehttps://technet.microsoft.com/en-us/library/hh509020(v=ws.10) and Identity Management for UNIXhttps://technet.microsoft.com/en-us/library/cc772571.
 
 ## EXAMPLES
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

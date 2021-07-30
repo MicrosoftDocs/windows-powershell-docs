@@ -27,7 +27,7 @@ You can specify a volume by drive letter, or you can specify a BitLocker volume 
 You must remove automatic unlocking keys before you can disable BitLocker by using the Disable-BitLocker cmdlet.
 You can use the Clear-BitLockerAutoUnlock cmdlet to remove keys for all the volumes configured to use automatic unlocking instead of just specified volumes.
 
-For an overview of BitLocker, see BitLocker Drive Encryption Overviewhttp://technet.microsoft.com/en-us/library/cc732774.aspx (http://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+For an overview of BitLocker, see BitLocker Drive Encryption Overviewhttps://technet.microsoft.com/en-us/library/cc732774.aspx (https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
 
 ## EXAMPLES
 

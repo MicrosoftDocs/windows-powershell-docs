@@ -33,7 +33,7 @@ File access rights are maintained during the migration; the same set of users is
 Because files are sent by using an encrypted connection, a password must be provided to decrypt migrated files on both the source and destination servers.
 Transporting encrypted files (EFS) and junction points is not supported.
 
-For online Help about the Windows Server Migration Tools cmdlets, see http://go.microsoft.com/fwlink/?LinkId=246313.
+For online Help about the Windows Server Migration Tools cmdlets, see https://go.microsoft.com/fwlink/?LinkId=246313.
 
 ## EXAMPLES
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -820,7 +820,7 @@ Each string must employ one of the following formats:
 
 oid`=`base64String, where oid is the object identifier of the extension and base64String is a value that you provide.
 After decoding base64String, the value must be valid Abstract Syntax Notation One (ASN.1).
-For more information, see [Abstract Syntax Notation One (ASN.1): Specification of basic notation](http://www.itu.int/ITU-T/studygroups/com17/languages/X.680-0207.pdf).
+For more information, see [Abstract Syntax Notation One (ASN.1): Specification of basic notation](https://www.itu.int/ITU-T/studygroups/com17/languages/X.680-0207.pdf).
 
 oid`={hex}`hexidecimalString, where oid is the object identifier of the extension and hexidecimalString is a value that you provide.
 After decoding hexidecimalString, the value must be valid ASN.1.
@@ -863,7 +863,7 @@ Text notice
 - OID.
 Object identifier in dotted decimal notation, such as this example: 1.2.3.4.5
 - URL.
-The URL of a host, such as this example: http://computer07.contoso.com
+The URL of a host, such as this example: https://computer07.contoso.com
 
 To specify an Application Policy extension, specify the first object identifier, followed by zero or more other **token=value** entries.
 These entries are subordinate to the preceding object identifier.
@@ -885,7 +885,7 @@ Text notice
 - OID.
 Object ID in dotted decimal notation, such as this example: 1.2.3.4.5
 - URL.
-The URL of a host, such as this example: http://computer07.contoso.com
+The URL of a host, such as this example: https://computer07.contoso.com
 
 To specify a Certificate Policies extension, follow the same syntax as an Application Policy extension.
 
@@ -928,7 +928,7 @@ ID in dotted decimal notation, such as this example: 1.2.3.4.5
 - UPN.
 A user principal name in the following format: admin@contoso.com
 - URL.
-The URL of a host, such as this example: http://computer07.contoso.com/index.html
+The URL of a host, such as this example: https://computer07.contoso.com/index.html
 
 Policy Mapping
 2.5.29.33={text}oid=oid&oid=oid…
@@ -946,7 +946,7 @@ A computer name in the following format: computer.contoso.com
 - DirectoryName.
 CN=Name,DC=Domain,DC=com
 - URL.
-The URL of a host, such as this example: http://computer07.contoso.com/index.html
+The URL of a host, such as this example: https://computer07.contoso.com/index.html
 - IPAddress.
 An IP address
 - RegisteredID.

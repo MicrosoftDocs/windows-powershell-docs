@@ -474,7 +474,7 @@ After you disable transfer of log files, the log files will not be automatically
 You may want to keep the log files for future reference by downloading them.
 The log files can be cleaned up by removing the hpclogs container from your storage account.
 
-For more information about logging for Azure nodes, see Troubleshoot Deployments of Windows Azure Nodes with Microsoft HPC Packhttp://go.microsoft.com/fwlink/p/?LinkId=273926 (http://go.microsoft.com/fwlink/p/?LinkId=273926) in the TechNet library.
+For more information about logging for Azure nodes, see Troubleshoot Deployments of Windows Azure Nodes with Microsoft HPC Packhttps://go.microsoft.com/fwlink/p/?LinkId=273926 (https://go.microsoft.com/fwlink/p/?LinkId=273926) in the TechNet library.
 
 This parameter was introduced in HPC Pack 2012 with Service Pack 1 (SP1).
 It is not supported in previous versions.
@@ -535,7 +535,7 @@ Accept wildcard characters: False
 
 ### -AzureMetricsCollectionEnabled
 Indicates whether to collect on the cluster head node and upload to Microsoft certain metrics about the availability, connectivity, and performance of your Azure node deployments.
-For more information about the collection of these metrics, see the Privacy Statement for Microsoft HPC Packhttp://go.microsoft.com/fwlink/p/?LinkId=296260 (http://go.microsoft.com/fwlink/p/?LinkId=296260).
+For more information about the collection of these metrics, see the Privacy Statement for Microsoft HPC Packhttps://go.microsoft.com/fwlink/p/?LinkId=296260 (https://go.microsoft.com/fwlink/p/?LinkId=296260).
 
 A non-zero or $True value turns on the collection of metrics for Azure node deployments.
 A value of 0 or $False turns off the collection of metrics for Azure node deployments.
@@ -578,7 +578,7 @@ Accept wildcard characters: False
 
 ### -AzureStorageConnectionString
 Specifies an Azure storage connection string to enable the use of common data and service-oriented architecture (SOA) session monitoring when running SOA jobs on Azure nodes.
-For configuration details, see Configuring Connection Stringshttp://msdn.microsoft.com/library/ee758697.aspx.
+For configuration details, see Configuring Connection Stringshttps://msdn.microsoft.com/library/ee758697.aspx.
 
 This parameter was introduced in HPC Pack 2012.
 It is not supported in previous versions.
@@ -2302,7 +2302,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

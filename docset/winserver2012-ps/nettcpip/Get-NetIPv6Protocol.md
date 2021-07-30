@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ### -MaxPreferredLifetime
 Gets IPv6 protocol configuration by MaxPreferredLifetime.
 MaxPreferredLifetime determines the maximum lifetime over which a temporary address is preferred.
-MaxPreferredLifetime uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure. 
+MaxPreferredLifetime uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure. 
 
 The default value is 1 day.
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ### -MaxRandomTime
 Gets IPv6 protocol configuration by MaxRandomTime.
 MaxRandomTime determines the upper bound to use when computing a random delay at startup time.
-MaxRandomTime uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure. 
+MaxRandomTime uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure. 
 
 The default value is 10 minutes.
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ### -MaxValidLifetime
 Gets IPv6 protocol configuration by MaxValidLifetime.
 MaxValidLifetime determines the Maximum lifetime over which a temporary address is valid.
-MaxValidLifetime uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure. 
+MaxValidLifetime uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure. 
 
 The default value is 7 days.
 
@@ -412,7 +412,7 @@ Accept wildcard characters: False
 ### -RegenerateTime
 Gets IPv6 protocol configuration by RegenerateTime.
 RegenerateTime determines Time prior to deprecating a temporary address when a new address is generated.
-RegenerateTime uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure. 
+RegenerateTime uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure. 
 
 The default value is 5 seconds.
 
@@ -452,7 +452,7 @@ SourceRoutingBehavior determines the behavior for source routed packets.
 (DontForward) source routed packets can be received but not forwarded. 
 DontForward is the default setting.
 (Drop) source routed packets will be dropped.
-(Forward) Per RFC 5095http://www.ietf.org/rfc/rfc5095.txt support for forwarding of source routed IPv6 packets has been removed, and the Forward setting now has the same effect as DontForward.
+(Forward) Per RFC 5095https://www.ietf.org/rfc/rfc5095.txt support for forwarding of source routed IPv6 packets has been removed, and the Forward setting now has the same effect as DontForward.
 The acceptable values for this parameter are:
 
  -- DontForward: IPv6 protocol configuration that contains the SourceRoutingBehavior set to DontForward. 
@@ -491,7 +491,7 @@ Accept wildcard characters: False
 ### -UseTemporaryAddresses
 Gets IPv6 protocol configuration by the UseTemporaryAddresses.
 UseTemporaryAddresses determines whether temporary addresses are enabled.
-Temporary addresses are described in RFC 3041http://www.ietf.org/rfc/rfc3041.txt.
+Temporary addresses are described in RFC 3041https://www.ietf.org/rfc/rfc3041.txt.
 UseTemporary address may be set to (Disabled) don't use temporary addresses; (Enabled) use temporary addresses; (Always) Always generate random numbers; (Counter) Generate temporary addresses with the interface identifier.
 The acceptable values for this parameter are:
 

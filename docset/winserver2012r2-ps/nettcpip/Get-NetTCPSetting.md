@@ -234,7 +234,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -263,7 +263,7 @@ This value can improve throughput on low latency links.
 - Default.
 Servers use Data Center TCP by default.
 Clients use NewReno.
-For information about NewReno, see RFC 3782http://www.ietf.org/rfc/rfc3782.txt (http://www.ietf.org/rfc/rfc3782.txt).
+For information about NewReno, see RFC 3782https://www.ietf.org/rfc/rfc3782.txt (https://www.ietf.org/rfc/rfc3782.txt).
 
 ```yaml
 Type: CongestionProvider[]
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 Specifies an array of values that determine whether to enable congestion window restart.
 The cmdlet gets settings that have the congestion window restart values that you specify.
 Congestion window restart can avoid slow start to optimize throughput on low latency networks.
-For more information about congestion window restart, see RFC 2581http://www.ietf.org/rfc/rfc2581.txt (http://www.ietf.org/rfc/rfc2581.txt).
+For more information about congestion window restart, see RFC 2581https://www.ietf.org/rfc/rfc2581.txt (https://www.ietf.org/rfc/rfc2581.txt).
 The acceptable values for this parameter are:
 
 - True.
@@ -601,7 +601,7 @@ Accept wildcard characters: False
 Specifies an array of values that determine whether to enable timestamps.
 The cmdlet gets settings that have the enable timestamps values that you specify.
 Timestamps facilitate round trip measurement, and can help protect against wrapped sequence numbers on high throughput links.
-For more information about TCP timestamps, see RFC 1323http://www.ietf.org/rfc/rfc1323.txt (http://www.ietf.org/rfc/rfc1323.txt).
+For more information about TCP timestamps, see RFC 1323https://www.ietf.org/rfc/rfc1323.txt (https://www.ietf.org/rfc/rfc1323.txt).
 The acceptable values for this parameter are:
 
 - Enabled
@@ -621,7 +621,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

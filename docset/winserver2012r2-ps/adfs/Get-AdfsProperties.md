@@ -29,15 +29,15 @@ PS C:\> Get-AdfsProperties
 
 
 AcceptableIdentifiers                      : {}
-AddProxyAuthorizationRules                 : exists([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-544", Issuer =~ "^AD AUTHORITY$"]) =>
-issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");
-c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid", Issuer =~ "^AD AUTHORITY$" ]
+AddProxyAuthorizationRules                 : exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-544", Issuer =~ "^AD AUTHORITY$"]) =>
+issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");
+c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid", Issuer =~ "^AD AUTHORITY$" ]
 =>
-issue(store="_ProxyCredentialStore",types=("http://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustManagerSid({0})",
+issue(store="_ProxyCredentialStore",types=("https://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustManagerSid({0})",
 param=c.Value );
-c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/proxytrustid", Issuer =~ "^SELF AUTHORITY$" ]
+c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/proxytrustid", Issuer =~ "^SELF AUTHORITY$" ]
 =>
-issue(store="_ProxyCredentialStore",types=("http://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustProvisioned({0})",
+issue(store="_ProxyCredentialStore",types=("https://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustProvisioned({0})",
 param=c.Value );
 ArtifactDbConnection                       : Data Source=np:\\.\pipe\microsoft##wid\tsql\query;Initial Catalog=AdfsArtifactStore;Integrated Security=True
 AuthenticationContextOrder                 : {urn:oasis:names:tc:SAML:2.0:ac:classes:Password, urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport,
@@ -60,7 +60,7 @@ HostName                                   : sts.contoso.com
 HttpPort                                   : 80
 HttpsPort                                  : 443
 TlsClientPort                              : 49443
-Identifier                                 : http://sts.contoso.com/adfs/services/trust
+Identifier                                 : https://sts.contoso.com/adfs/services/trust
 InstalledLanguage                          : en-US
 LogLevel                                   : {Errors, Information, Verbose, Warnings}
 MonitoringInterval                         : 1440
@@ -93,7 +93,7 @@ This command retrieves the associated properties from AD FS.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

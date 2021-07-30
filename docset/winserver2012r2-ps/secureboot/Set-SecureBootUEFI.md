@@ -58,7 +58,7 @@ This example sets the information obtained from the Format-SecureBootUEFI cmdlet
 This cmdlet supplies a path to the signed package to be authenticated.
 The file named GeneratedFileToSign.bin is a digest created by the Format-SecureBootUEFI cmdlet that needs to be signed according to the UEFI specification.
 The second command runs the SignTool.exe tool from the current directory to sign the digest.
-The SignTool.exe tool can be downloaded from Windows Software Development Kit (SDK) for Windows 8http://go.microsoft.com/fwlink/p/?LinkId=236500 on MSDN.
+The SignTool.exe tool can be downloaded from Windows Software Development Kit (SDK) for Windows 8https://go.microsoft.com/fwlink/p/?LinkId=236500 on MSDN.
 
 ### EXAMPLE 2
 ```
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -23,7 +23,7 @@ Using this cmdlet without filtering results.
 The Get-WsusClassification cmdlet must be run, then the results are piped it into this cmdlet.
 
 Using this cmdlet with filtered results.
-The Get-WsusClassification cmdlet must be run, then results are filtered using the Where-Objecthttp://go.microsoft.com/fwlink/?LinkID=113423 cmdlet and piped into this cmdlet.
+The Get-WsusClassification cmdlet must be run, then results are filtered using the Where-Objecthttps://go.microsoft.com/fwlink/?LinkID=113423 cmdlet and piped into this cmdlet.
 
 ## EXAMPLES
 

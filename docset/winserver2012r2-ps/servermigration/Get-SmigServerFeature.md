@@ -28,7 +28,7 @@ Get-SmigServerFeature -Path <String> -Password <SecureString> [<CommonParameters
 Gets the set of all Windows features that can be migrated from the local server or from a migration store.
 If a migration store is specified in the Path parameter, this cmdlet returns only the features in the migration store that can be installed on the local server.
 
-For online Help about the Windows Server Migration Tools cmdlets, see http://go.microsoft.com/fwlink/?LinkId=246313.
+For online Help about the Windows Server Migration Tools cmdlets, see https://go.microsoft.com/fwlink/?LinkId=246313.
 
 ## EXAMPLES
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

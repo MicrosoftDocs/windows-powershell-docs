@@ -64,7 +64,7 @@ Values         : {<Result ResultNumber="1" ResultId="3656124781" ModelId="Micros
                  maintenance, such as installing updates.</Impact>
                      <Resolution>Reconfigure the server to run a Server Core installation by using Server Manager to
                  remove the features under the User Interfaces and Infrastructure category.</Resolution>
-                     <Help>http://go.microsoft.com/fwlink/?LinkId=227981</Help>
+                     <Help>https://go.microsoft.com/fwlink/?LinkId=227981</Help>
                      <SchemaContext>/dp0:schema/dp0:pattern[5]/dp0:rule/dp0:assert</SchemaContext>
                  </Result>, <Result ResultNumber="4" ResultId="1941517451" ModelId="Microsoft/Windows/Hyper-V"
                  SubModelId="" ComputerName="SERVER_01" Context="" Source="SERVER_01">

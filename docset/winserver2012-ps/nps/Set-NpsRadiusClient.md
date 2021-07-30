@@ -22,7 +22,7 @@ The **Set-NpsRadiusClient** cmdlet specifies configuration settings for a Remote
 A RADIUS client uses a RADIUS server to manage authentication, authorization, and accounting requests that the client sends.
 A RADIUS client can be an access server, such as a dial-up server or wireless access point, or a RADIUS proxy.
 
-For more information about RADIUS client options, see Managing RADIUS Clientshttp://technet.microsoft.com/library/cc754717(v=ws.10).aspx (http://technet.microsoft.com/library/cc754717(v=ws.10).aspx) on TechNet.
+For more information about RADIUS client options, see Managing RADIUS Clientshttps://technet.microsoft.com/library/cc754717(v=ws.10).aspx (https://technet.microsoft.com/library/cc754717(v=ws.10).aspx) on TechNet.
 
 ## EXAMPLES
 

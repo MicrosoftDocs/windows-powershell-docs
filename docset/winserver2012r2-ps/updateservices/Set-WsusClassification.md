@@ -26,7 +26,7 @@ Using this cmdlet without filtering results.
 The Get-WsusClassification cmdlet must be run, then the results are piped it into this cmdlet.
 
 Using this cmdlet with filtered results.
-The Get-WsusClassification cmdlet must be run, then results are filtered using the Where-Objecthttp://go.microsoft.com/fwlink/?LinkID=113423 cmdlet and piped into this cmdlet.
+The Get-WsusClassification cmdlet must be run, then results are filtered using the Where-Objecthttps://go.microsoft.com/fwlink/?LinkID=113423 cmdlet and piped into this cmdlet.
 
 ## EXAMPLES
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

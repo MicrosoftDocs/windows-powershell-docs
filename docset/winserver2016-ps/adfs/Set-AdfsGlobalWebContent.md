@@ -59,14 +59,14 @@ If there is no logo, the sign-in page displays the company name Contoso.
 
 ### Example 2: Set the text and links for the sign-in pages
 ```
-PS C:\> Set-AdfsWebContent -Locale "en-us" -CompanyName "Contoso" -HelpDeskLink "http://helpdesklink" -HelpDeskLinkText "Help desk" -HomeLink "http://homelink" -HomeLinkText "Home" -PrivacyLink "http://privacylink" -PrivacyLinkText "Privacy statement" -SignInPageDescriptionText "Sign in here" -SignOutPageDescriptionText "Sign out here" -ErrorPageGenericErrorMessage "An error occurred." -ErrorPageSupportEmail "support@contoso.com" -UpdatePasswordPageDescriptionText "Update password here"
+PS C:\> Set-AdfsWebContent -Locale "en-us" -CompanyName "Contoso" -HelpDeskLink "https://helpdesklink" -HelpDeskLinkText "Help desk" -HomeLink "https://homelink" -HomeLinkText "Home" -PrivacyLink "https://privacylink" -PrivacyLinkText "Privacy statement" -SignInPageDescriptionText "Sign in here" -SignOutPageDescriptionText "Sign out here" -ErrorPageGenericErrorMessage "An error occurred." -ErrorPageSupportEmail "support@contoso.com" -UpdatePasswordPageDescriptionText "Update password here"
 ```
 
 This command specifies the text to display in the sign-in pages for AD FS for the en-us locale.
 
 ### Example 3: Set the text and links for the certificate page
 ```
-PS C:\> Set-AdfsGlobalWebContent -Locale "en-us" -CompanyName "Contoso" -HomeLink "http://homelink" -HomeLinkText "Home" -PrivacyLink "http://privaylink" -PrivacyLinkText "Privacy statement" -SignInPageDescriptionText "<p>Sign-in to Contoso requires device registration. Click <A href='http://fs1.contoso.com/deviceregistration/'>here</A> for more information.</p>" -SignOutPageDescriptionText "Sign out here" -ErrorPageGenericErrorMessage "An error occurred." -ErrorPageSupportEmail "support@contoso.com" -UpdatePasswordPageDescriptionText "Update password here" -CertificatePageDescriptionText "Sign in with your Smartcard"
+PS C:\> Set-AdfsGlobalWebContent -Locale "en-us" -CompanyName "Contoso" -HomeLink "https://homelink" -HomeLinkText "Home" -PrivacyLink "https://privaylink" -PrivacyLinkText "Privacy statement" -SignInPageDescriptionText "<p>Sign-in to Contoso requires device registration. Click <A href='https://fs1.contoso.com/deviceregistration/'>here</A> for more information.</p>" -SignOutPageDescriptionText "Sign out here" -ErrorPageGenericErrorMessage "An error occurred." -ErrorPageSupportEmail "support@contoso.com" -UpdatePasswordPageDescriptionText "Update password here" -CertificatePageDescriptionText "Sign in with your Smartcard"
 ```
 
 This command specifies the text and links to display when an application prompts a user prompted for a certificate.
@@ -468,7 +468,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

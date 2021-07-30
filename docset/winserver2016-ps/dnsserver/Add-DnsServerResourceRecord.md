@@ -1314,7 +1314,7 @@ Specifies whether the server is an AFS volume location server.
 Use a value of 1 indicate that the server is an AFS version 3.0 volume location server for the specified AFS cell.
 Use a value of 2 to indicate that the server is an authenticated name server that holds the cell-root directory node for the server that uses either Open Software Foundation's (OSF) DCE authenticated cell-naming system or HP/Apollo's Network Computing Architecture (NCA).
 
-For more information about server subtypes, see [RFC 1183](http://www.ietf.org/rfc/rfc1183.txt).
+For more information about server subtypes, see [RFC 1183](https://www.ietf.org/rfc/rfc1183.txt).
 
 ```yaml
 Type: UInt16
@@ -1587,9 +1587,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[RFC 2535](http://www.ietf.org/rfc/rfc2535.txt)
+[RFC 2535](https://www.ietf.org/rfc/rfc2535.txt)
 
-[RFC 1183](http://www.ietf.org/rfc/rfc1183.txt)
+[RFC 1183](https://www.ietf.org/rfc/rfc1183.txt)
 
 [Show-DnsServerCache](./Show-DnsServerCache.md)
 

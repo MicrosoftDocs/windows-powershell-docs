@@ -37,14 +37,14 @@ This cmdlet supports getting information from a Group Policy Object, in the form
 
 ### EXAMPLE 1
 ```
-PS C:\> Set-NCSIPolicyConfiguration -PolicyStore "contoso\User1" -CorporateWebsiteProbe http://contoso.com
+PS C:\> Set-NCSIPolicyConfiguration -PolicyStore "contoso\User1" -CorporateWebsiteProbe https://contoso.com
 ```
 
 This example modifies the corporate website probe of the specified GPO.
 
 ### EXAMPLE 2
 ```
-PS C:\>Get-NCSIPolicyConfiguration -PolicyStore "contoso\User1" | Set-NCSIPolicyConfiguration -CorporateWebsiteProbe http://contoso.com
+PS C:\>Get-NCSIPolicyConfiguration -PolicyStore "contoso\User1" | Set-NCSIPolicyConfiguration -CorporateWebsiteProbe https://contoso.com
 ```
 
 This example performs the same operation as EXAMPLE 1 using pipelining.
@@ -55,7 +55,7 @@ PS C:\>$Object = Get-NCSIPolicyConfiguration -PolicyStore "contoso\User1"
 
 
 
-PS C:\>$Object.CorporateWebsiteProbe = http://ncsi.corp.microsoft.com
+PS C:\>$Object.CorporateWebsiteProbe = https://ncsi.corp.microsoft.com
 
 
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Specifies the value to be configured. 
 
 This is the host name of a PC known to be on the corporate network.
-Successful resolution of this host name to the expected address indicates corporate connectivity, such as `http://contoso.com`
+Successful resolution of this host name to the expected address indicates corporate connectivity, such as `https://contoso.com`
 
 ```yaml
 Type: String
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ### -CorporateWebsiteProbeURL
 Specifies the value to be configured. 
 
-This is the URL of the corporate website that will be used to perform an active probe against, such as `http://contoso.com`
+This is the URL of the corporate website that will be used to perform an active probe against, such as `https://contoso.com`
 
 ```yaml
 Type: String

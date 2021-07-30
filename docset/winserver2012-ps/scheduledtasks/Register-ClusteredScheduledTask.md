@@ -37,7 +37,7 @@ The **Register-ClusteredScheduledTask** cmdlet registers a clustered scheduled t
 The new task runs scheduled actions as defined by task triggers.
 As specified in the **TaskType** parameter, an action runs on a resource specific node, an active failover node, or on all cluster nodes.
 
-For more information about the Windows Server® 2012 Task Scheduler, see the Task Scheduler Overviewhttp://technet.microsoft.com/en-us/library/cc721871.aspx topic in the TechNet Library at http://technet.microsoft.com/en-us/library/cc721871.aspx.
+For more information about the Windows Server® 2012 Task Scheduler, see the Task Scheduler Overviewhttps://technet.microsoft.com/en-us/library/cc721871.aspx topic in the TechNet Library at https://technet.microsoft.com/en-us/library/cc721871.aspx.
 
 ## EXAMPLES
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

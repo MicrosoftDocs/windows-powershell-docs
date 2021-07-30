@@ -30,7 +30,7 @@ Get-NetIPsecDospSetting [-Name] <String[]> [-CimSession <CimSession[]>] [-Thrott
 The **Get-NetIPsecDospSetting** cmdlet returns the instances of existing IPsec DoS protection settings.
 
 If the **Name** parameter is not specified, then all of the Dosp settings configured on the computer are returned.
-Querying by object requires the use of the Where-Objecthttp://go.microsoft.com/fwlink/p/?LinkId=113423 cmdlet.
+Querying by object requires the use of the Where-Objecthttps://go.microsoft.com/fwlink/p/?LinkId=113423 cmdlet.
 
 ## EXAMPLES
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

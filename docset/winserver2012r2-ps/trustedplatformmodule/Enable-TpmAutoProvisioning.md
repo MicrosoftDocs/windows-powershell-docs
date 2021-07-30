@@ -23,7 +23,7 @@ The **Enable-TpmAutoProvisioning** cmdlet enables Trusted Platform Module (TPM) 
 Provisioning is the process of preparing a TPM to be used.
 You can use the **Disable-TpmAutoProvisioning** cmdlet to prevent auto-provisioning, either permanently or for the next restart.
 
-For more information on TPM, see the Trusted Platform Module Technology Overviewhttp://technet.microsoft.com/en-us/library/jj131725.aspx in the Technet library at http://technet.microsoft.com/en-us/library/jj131725.aspx.
+For more information on TPM, see the Trusted Platform Module Technology Overviewhttps://technet.microsoft.com/en-us/library/jj131725.aspx in the Technet library at https://technet.microsoft.com/en-us/library/jj131725.aspx.
 
 ## EXAMPLES
 
@@ -46,7 +46,7 @@ This command enables auto-provisioning for the current computer.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

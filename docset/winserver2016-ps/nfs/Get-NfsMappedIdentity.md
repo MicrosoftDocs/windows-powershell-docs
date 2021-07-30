@@ -245,7 +245,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[RFC-2307](http://www.rfc-editor.org/rfc/rfc2307.txt)
+[RFC-2307](https://www.rfc-editor.org/rfc/rfc2307.txt)
 
 [Get-NfsMappedIdentity](./Get-NfsMappedIdentity.md)
 

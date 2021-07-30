@@ -124,7 +124,7 @@ This option can significant reduce encryption time.
 It is common practice to add a recovery password to an operating system volume by using the Add-BitLockerKeyProtector cmdlet, and then save the recovery password by using the Backup-BitLockerKeyProtector cmdlet, and then enable BitLocker for the drive.
 This procedure ensures that you have a recovery option.
 
-For an overview of BitLocker, see BitLocker Drive Encryption Overviewhttp://technet.microsoft.com/en-us/library/cc732774.aspx (http://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+For an overview of BitLocker, see BitLocker Drive Encryption Overviewhttps://technet.microsoft.com/en-us/library/cc732774.aspx (https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
 
 ## EXAMPLES
 

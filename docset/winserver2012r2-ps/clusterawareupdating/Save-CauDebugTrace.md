@@ -25,7 +25,7 @@ The tracing information is mainly intended for use by developers and support eng
 Specify the file name with the **FilePath** parameter.
 
 Note: To run this cmdlet, Windows PowerShell® remoting must be enabled on each node.
-To do this, run the Enable-PSRemotinghttp://go.microsoft.com/fwlink/p/?LinkID=144300 cmdlet.
+To do this, run the Enable-PSRemotinghttps://go.microsoft.com/fwlink/p/?LinkID=144300 cmdlet.
 In addition, ensure that the Windows Remote Management - Compatibility Mode (HTTP-In) firewall exception is enabled on each node.
 
 ## EXAMPLES
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -355,7 +355,7 @@ Gets IPv4 protocol configuration by the SourceRoutingBehavior.
 SourceRoutingBehavior determines the behavior for source routed packets.
 (DontForward) source routed packets can be received but not forwarded.
 (Drop) source routed packets will be dropped.
-(Forward) Per RFC 5095http://www.ietf.org/rfc/rfc5095.txt support for forwarding of source routed IPv6 packets has been removed, and the Forward setting now has the same effect as DontForward.
+(Forward) Per RFC 5095https://www.ietf.org/rfc/rfc5095.txt support for forwarding of source routed IPv6 packets has been removed, and the Forward setting now has the same effect as DontForward.
 The acceptable values for this parameter are:
 
  -- DontForward: IPv4 protocol configuration that contains the SourceRoutingBehavior set to DontForward. 

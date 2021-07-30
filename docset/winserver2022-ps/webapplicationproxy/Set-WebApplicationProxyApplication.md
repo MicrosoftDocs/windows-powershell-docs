@@ -170,9 +170,9 @@ Include the trailing slash (/).
 You can also include a port number and path.
 The following examples show the form of an address: 
 
-- http://AccountingApp.Contoso.com/
-- http://Mail.Contoso.com/Remote/
-- http://Portal/
+- https://AccountingApp.Contoso.com/
+- https://Mail.Contoso.com/Remote/
+- https://Portal/
 
 The cmdlet checks that no other applications are already configured to use this URL.
 

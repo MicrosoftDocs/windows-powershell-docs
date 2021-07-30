@@ -33,7 +33,7 @@ Or, use a cabinet file (.cab) or a compressed file (.zip).
 
 ### Example 1: Append a file to the transfer queue of an existing BITS transfer job
 ```
-PS C:\> Get-BitsTransfer -JobId 10778CFA-C1D7-4A82-8A9D-80B19224879C | Add-BitsFile -Source http://server01/servertestdir/testfile1.txt -Destination "c:\clienttestdir\testfile1.txt"
+PS C:\> Get-BitsTransfer -JobId 10778CFA-C1D7-4A82-8A9D-80B19224879C | Add-BitsFile -Source https://server01/servertestdir/testfile1.txt -Destination "c:\clienttestdir\testfile1.txt"
 ```
 
 This command appends a file to the transfer queue of an existing BITS transfer job.
@@ -45,7 +45,7 @@ The local and remote names of the file are in the parameters.
 ### Example 2: Append a set of files to the transfer queue of an existing BITS transfer job
 ```
 PS C:\> $Bits = Get-BitsTransfer -JobId 10778CFA-C1D7-4A82-8A9D-80B19224879C
-PS C:\> Add-BitsFile -BitsJob $Bits -Source "http://server01/servertestdir/testfile1.txt", "http://server01/servertestdir/testfile2.txt" -Destination "c:\clienttestdir\testfile1.txt", "c:\clienttestdir\testfile2.txt"
+PS C:\> Add-BitsFile -BitsJob $Bits -Source "https://server01/servertestdir/testfile1.txt", "https://server01/servertestdir/testfile2.txt" -Destination "c:\clienttestdir\testfile1.txt", "c:\clienttestdir\testfile2.txt"
 ```
 
 This command appends a set of files to the transfer queue of an existing BITS transfer job.
@@ -81,10 +81,10 @@ In this example, the array of objects is passed to the `Add-BitsFile` cmdlet.
 The contents of the Filelist.txt file resemble the following information:
 
 - **Source, Destination**
-- `http://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt`
-- `http://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt`
-- `http://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt`
-- `http://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt`
+- `https://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt`
+- `https://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt`
+- `https://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt`
+- `https://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt`
 
 ## PARAMETERS
 

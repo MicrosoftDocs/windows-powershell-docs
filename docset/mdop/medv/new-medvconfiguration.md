@@ -116,7 +116,7 @@ That cmdlet saves the object as a .reg file.
 
 ### Example 3: Add redirection URLs
 ```
-C:\PS>New-MedvConfiguration -UxRedirectUrls "http://webapp1/contoso.com","http://webapp2/contoso.com" | Export-MedvConfiguration -Path "c:\temp\redirUrls.reg"
+C:\PS>New-MedvConfiguration -UxRedirectUrls "https://webapp1/contoso.com","https://webapp2/contoso.com" | Export-MedvConfiguration -Path "c:\temp\redirUrls.reg"
 ```
 
 This command creates a **MedvConfiguration** object that contains redirection for the browser in the guest virtual machine.

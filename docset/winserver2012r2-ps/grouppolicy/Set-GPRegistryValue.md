@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ### -Type
 Specifies the data type for the registry-based policy setting.
 You can specify one of the following data types: String, ExpandString, Binary, DWord, MultiString, or Qword.
-For more information about these data types, see "Microsoft.Win32.RegistryValueKind Enumeration" in the MSDN library at http://go.microsoft.com/fwlink/?LinkID=143266.
+For more information about these data types, see "Microsoft.Win32.RegistryValueKind Enumeration" in the MSDN library at https://go.microsoft.com/fwlink/?LinkID=143266.
 
 Only the following data types are supported for list values: String and ExpandString.
 
@@ -443,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

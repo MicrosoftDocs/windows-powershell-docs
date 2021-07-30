@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 Specifies keywords as a set of hexadecimal values.
 Keywords are flags that you can combine to generate values.
 Use a set of hexadecimal values of the keywords instead of the keyword names, and apply a filter to write ETW events for keyword matches.
-For more information, see  HYPERLINK "http://msdn.microsoft.com/en-us/library/ff357720.aspxhttp://msdn.microsoft.com/en-us/library/ff357720.aspx" http://msdn.microsoft.com/en-us/library/ff357720.aspxhttp://msdn.microsoft.com/en-us/library/ff357720.aspx in the Microsoft Developer Library.
+For more information, see  HYPERLINK "https://msdn.microsoft.com/en-us/library/ff357720.aspxhttps://msdn.microsoft.com/en-us/library/ff357720.aspx" https://msdn.microsoft.com/en-us/library/ff357720.aspxhttps://msdn.microsoft.com/en-us/library/ff357720.aspx in the Microsoft Developer Library.
 
 ```yaml
 Type: UInt64
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

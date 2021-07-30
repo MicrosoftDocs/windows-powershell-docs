@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390825
+Download Help Link: https://go.microsoft.com/fwlink/?linkid=390825
 Help Version: 5.0.0.1
 Locale: en-US
 Module Name: Microsoft.Windows.ServerManager.Migration

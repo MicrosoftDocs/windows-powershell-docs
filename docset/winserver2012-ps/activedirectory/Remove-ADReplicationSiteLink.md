@@ -19,7 +19,7 @@ Remove-ADReplicationSiteLink [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Cre
 
 ## DESCRIPTION
 The Remove-ADReplicationSiteLink cmdlet removes a site link object used to manage replication traffic between two sites in your Active Directory installation.
-For more information on site links, see the following topic "Creating a Site Link Design" in the TechNet Library: http://go.microsoft.com/fwlink/?LinkId=221870
+For more information on site links, see the following topic "Creating a Site Link Design" in the TechNet Library: https://go.microsoft.com/fwlink/?LinkId=221870
 
 ## EXAMPLES
 
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

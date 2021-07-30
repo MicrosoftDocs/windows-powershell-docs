@@ -47,7 +47,7 @@ The filter-to-rule relationship is always one-to-one and is managed automaticall
 Rule parameters associated with filters can only be queried using filter objects.
 
 This cmdlet retrieves the addresses associated with firewall, IPsec, and IPsec main-mode rules.
-This allows for rule querying based on address fields using the **LocalAddress** or **RemoteAddress** parameters; this cmdlet returns filter objects that may be further queried with the Where-Objecthttp://go.microsoft.com/fwlink/p/?LinkId=113423 cmdlet.
+This allows for rule querying based on address fields using the **LocalAddress** or **RemoteAddress** parameters; this cmdlet returns filter objects that may be further queried with the Where-Objecthttps://go.microsoft.com/fwlink/p/?LinkId=113423 cmdlet.
 The resultant filters are passed to the Get-NetFirewallRule, Get-NetIPsecRule, or Get-NetIPsecMainModeRule cmdlet to return the rules queried by address.
 
 To modify rule address conditions, two methods can be used starting with the address filters returned by this cmdlet and optional additional querying. 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

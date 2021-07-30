@@ -67,7 +67,7 @@ The Set-ADFSRelyingParty cmdlet configures the trust relationship with a specifi
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>Set-ADFSRelyingPartyTrust -TargetName SampleApp -Identifier  http://SampleApp.SampleServerNew.org
+C:\PS>Set-ADFSRelyingPartyTrust -TargetName SampleApp -Identifier  https://SampleApp.SampleServerNew.org
 ```
 
 Description
@@ -78,7 +78,7 @@ Sets the name and identifier for the specified relying party trust.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Set-ADFSRelyingPartyTrust -TargetIdentifier http://SampleApp.SampleServer.org -Identifier http://SampleApp.SampleServerNew.org
+C:\PS>Set-ADFSRelyingPartyTrust -TargetIdentifier https://SampleApp.SampleServer.org -Identifier https://SampleApp.SampleServerNew.org
 ```
 
 Description
@@ -496,15 +496,15 @@ Accept wildcard characters: False
 Specifies the signature algorithm that the relying party uses for signing and verification.
 Valid values are as follows:
 
-http://www.w3.org/2000/09/xmldsig#rsa-sha1
+https://www.w3.org/2000/09/xmldsig#rsa-sha1
 
-http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+https://www.w3.org/2001/04/xmldsig-more#rsa-sha256
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Accepted values: http://www.w3.org/2000/09/xmldsig#rsa-sha1, http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+Accepted values: https://www.w3.org/2000/09/xmldsig#rsa-sha1, https://www.w3.org/2001/04/xmldsig-more#rsa-sha256
 
 Required: False
 Position: Named
@@ -636,7 +636,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -295,7 +295,7 @@ Accept wildcard characters: False
 
 ### -Kerberos
 Specifies that Kerberos is used.
-This method authenticates the identity of user or computer accounts by using Kerberos Protocol Extensionshttp://msdn.microsoft.com/library/cc233855.aspx.
+This method authenticates the identity of user or computer accounts by using Kerberos Protocol Extensionshttps://msdn.microsoft.com/library/cc233855.aspx.
 
 ```yaml
 Type: SwitchParameter
@@ -528,7 +528,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

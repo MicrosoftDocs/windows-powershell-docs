@@ -87,14 +87,14 @@ This command changes the relying party to use a new template.
 ### Example 9: Complicated conditions with specific claims
 ```
 PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyName DemoRP -AccessControlPolicyParameters`
-    @{"SPParameter"= @{ClaimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/OfficeLocation"; Operator="Equals"; Value="Redmond"}}
+    @{"SPParameter"= @{ClaimType="https://schemas.xmlsoap.org/ws/2005/05/identity/claims/OfficeLocation"; Operator="Equals"; Value="Redmond"}}
 ```
 
 ### Example 10: Two specific claims for single parameter
 ```
 PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyName "DemoRP" -AccessControlPolicyParameters`
-    @{"SPParameter"= (@{ClaimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/OfficeLocation"; Operator="Equals"; Value=("Redmond","DC")},`
-                      @{ClaimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/Department"; Operator="Equals"; Value="Azure"})}
+    @{"SPParameter"= (@{ClaimType="https://schemas.xmlsoap.org/ws/2005/05/identity/claims/OfficeLocation"; Operator="Equals"; Value=("Redmond","DC")},`
+                      @{ClaimType="https://schemas.xmlsoap.org/ws/2005/05/identity/claims/Department"; Operator="Equals"; Value="Azure"})}
 ```
 
 ## PARAMETERS
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

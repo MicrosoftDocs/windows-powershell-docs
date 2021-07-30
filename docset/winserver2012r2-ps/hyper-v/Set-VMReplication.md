@@ -241,7 +241,7 @@ To display a list of certificates in the computer's My store and the thumbprint 
 
 `PS C:\\\> dir | format-list`
 
-For more information about certificate stores, see http://technet.microsoft.com//library/cc757138.aspxhttp://technet.microsoft.com//library/cc757138.aspx.
+For more information about certificate stores, see https://technet.microsoft.com//library/cc757138.aspxhttps://technet.microsoft.com//library/cc757138.aspx.
 
 ```yaml
 Type: String
@@ -555,7 +555,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

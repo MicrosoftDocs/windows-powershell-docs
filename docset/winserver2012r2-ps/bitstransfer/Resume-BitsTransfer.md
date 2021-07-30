@@ -50,7 +50,7 @@ If any of the BITS transfer jobs are already active, they will continue to run.
 ### EXAMPLE 2
 ```
 PS C:\>$b = Start-BitsTransfer -DisplayName "MyJob" -Suspended
-PS C:\>Add-BitsTransfer -BitsJob $b -ClientFileName C:\myFile -ServerFileName http://www.mysite.com/file1
+PS C:\>Add-BitsTransfer -BitsJob $b -ClientFileName C:\myFile -ServerFileName https://www.mysite.com/file1
 PS C:\>Resume-BitsTransfer -BitsJob $b -Asynchronous
 ```
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

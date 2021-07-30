@@ -19,7 +19,7 @@ Invoke-DnsServerSigningKeyRollover [-ZoneName] <String> [-KeyId] <Guid[]> [-AsJo
 
 ## DESCRIPTION
 The **Invoke-DnsServerSigningKeyRollover** initiates rollover of input keys for the specified Domain Name System (DNS) zone.
-For more information about DNS server signing keys, see the **Key Management** section of Overview of DNSSEChttp://technet.microsoft.com/en-us/library/jj200221.aspx.
+For more information about DNS server signing keys, see the **Key Management** section of Overview of DNSSEChttps://technet.microsoft.com/en-us/library/jj200221.aspx.
 
 ## EXAMPLES
 
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

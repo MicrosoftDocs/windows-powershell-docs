@@ -70,7 +70,7 @@ This example grants access to the session configuration PSWAEndpoint, a restrict
 Note: The computer name must be a fully qualified domain name (FQDN).
 Administrators define a restricted session configuration or runspace, which is a limited range of cmdlets and tasks that end users can run.
 Defining a restricted runspace can prevent users from accessing other computers that are not in the allowed Windows PowerShell® runspace, thus offering a more secure connection.
-For more information on session configurations, see about_Session_Configurationshttp://technet.microsoft.com/library/dd819508.aspx or the Windows PowerShell Web Access Helphttp://go.microsoft.com/fwlink/p/?LinkID=221050.
+For more information on session configurations, see about_Session_Configurationshttps://technet.microsoft.com/library/dd819508.aspx or the Windows PowerShell Web Access Helphttps://go.microsoft.com/fwlink/p/?LinkID=221050.
 
 ### EXAMPLE 2
 ```
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ### -Credential
 Specifies a **PSCredential** object for a user account that you want to use to change Windows PowerShell Web Access authorization rules.
 If you do not add this parameter, the cmdlet uses the currently logged-on user account.
-To get a **PSCredential** object, which is required to add authorization rules remotely, run the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
+To get a **PSCredential** object, which is required to add authorization rules remotely, run the Get-Credentialhttps://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
 
 ```yaml
 Type: PSCredential
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

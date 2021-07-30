@@ -60,10 +60,10 @@ You can use the following variables depending upon the switch when specifying th
 
 ### Example 1: Add a CRL distribution point URI where AD CS publishes certification revocations
 ```
-PS C:\> Add-CACRLDistributionPoint -Uri "http://ca1.corp.contoso.com/pki/<CAName>.crl" -AddToCertificateCdp
+PS C:\> Add-CACRLDistributionPoint -Uri "https://ca1.corp.contoso.com/pki/<CAName>.crl" -AddToCertificateCdp
 ```
 
-This command adds a CRL distribution point for the URI of `http://ca1.corp.contoso.com/pki/<CAName>.crl` and sets the CRL URI to be included in issued certificates.
+This command adds a CRL distribution point for the URI of `https://ca1.corp.contoso.com/pki/<CAName>.crl` and sets the CRL URI to be included in issued certificates.
 
 ## PARAMETERS
 

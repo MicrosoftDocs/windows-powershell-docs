@@ -32,7 +32,7 @@ You can specify the properties to add or modify with the parameter SetPropertyVa
 You should use the driver installation program to install and uninstall a driver.
 You cannot install or uninstall a driver using PowerShell Cmdlets.
 
-For more information about ODBC and drivers, see Microsoft Open Database Connectivity (ODBC)http://msdn.microsoft.com/en-us/library/ms710252.aspx and Drivershttp://msdn.microsoft.com/en-us/library/ms715383.aspx.
+For more information about ODBC and drivers, see Microsoft Open Database Connectivity (ODBC)https://msdn.microsoft.com/en-us/library/ms710252.aspx and Drivershttps://msdn.microsoft.com/en-us/library/ms715383.aspx.
 
 ## EXAMPLES
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

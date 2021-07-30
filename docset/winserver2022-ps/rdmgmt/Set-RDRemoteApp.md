@@ -42,7 +42,7 @@ A RemoteApp program runs in its own resizable window and has its own entry on th
 
 ### Example 1: Modify settings for a RemoteApp program
 ```
-PS C:\> Set-RDRemoteApp -CollectionName "Virtual Desktop Collection" -Alias "IE" -VirtualDesktopName "RDS-WKS-A27" -FolderName "Websites" -CommandLineSetting Require -RequiredCommandLine "http://www.bing.com"
+PS C:\> Set-RDRemoteApp -CollectionName "Virtual Desktop Collection" -Alias "IE" -VirtualDesktopName "RDS-WKS-A27" -FolderName "Websites" -CommandLineSetting Require -RequiredCommandLine "https://www.bing.com"
 ```
 
 This command modifies settings for a RemoteApp program in the collection named Virtual Desktop Collection.

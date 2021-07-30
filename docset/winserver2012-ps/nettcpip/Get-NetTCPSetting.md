@@ -178,7 +178,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -198,7 +198,7 @@ Gets TCP setting information only for settings that have a specific CongestionPr
 CongestionProvider determines the congestion provider used by TCP.
 The CongestionProvider settings include (Default) the TCP stack uses its default setting.
 Servers use DCTCP by default.
-Clients use NewReno as defined in RFC 3782http://www.ietf.org/rfc/rfc3782.txt; (CTCP) the TCP stack uses Compound TCP, which increases the receive window and amount of data sent.
+Clients use NewReno as defined in RFC 3782https://www.ietf.org/rfc/rfc3782.txt; (CTCP) the TCP stack uses Compound TCP, which increases the receive window and amount of data sent.
 This may improve throughput on higher latency connections; (DCTCP) the TCP stack uses Datacenter TCP, which adjusts the TCP window size based on network congestion feedback based on ECN signaling.
 This may improve throughput on low latency links.
 The acceptable values for this parameter are:
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 ### -CwndRestart
 Gets TCP setting information only for settings that have CwndRestart set to False or True.
 CwndRestart determines whether congestion window is restarted and can avoid slow start to optimize throughput on low latency networks.
-This is described in RFC 2581http://go.microsoft.com/fwlink/p/?LinkId=95127.
+This is described in RFC 2581https://go.microsoft.com/fwlink/p/?LinkId=95127.
 The CwndRestart settings include (False) set the TCP stack uses its default setting; (True) the TCP stack uses CwndRestart.
 The acceptable values for this parameter are:
 
@@ -460,14 +460,14 @@ Accept wildcard characters: False
 ```
 
 ### -Timestamps
-Controls RFC 1323http://go.microsoft.com/fwlink/p/?LinkId=84406 TCP timestamps.
-RFC 1323http://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps can help with round trip measurement and protection against wrapped sequence numbers on high throughput links.
+Controls RFC 1323https://go.microsoft.com/fwlink/p/?LinkId=84406 TCP timestamps.
+RFC 1323https://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps can help with round trip measurement and protection against wrapped sequence numbers on high throughput links.
 The default value is Disabled.
 The acceptable values for this parameter are:
 
- -- Disabled: The TCP settings that have RFC 1323http://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps disabled. 
+ -- Disabled: The TCP settings that have RFC 1323https://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps disabled. 
 
- -- Enabled: The TCP settings that have the RFC 1323http://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps enabled.
+ -- Enabled: The TCP settings that have the RFC 1323https://go.microsoft.com/fwlink/p/?LinkId=84406 timestamps enabled.
 
 ```yaml
 Type: Timestamps[]

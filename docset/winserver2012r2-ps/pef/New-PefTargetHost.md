@@ -60,7 +60,7 @@ PS C:\> $TraceSession01 = New-PefTraceSession -Force -Path "C:\Trace01" -SaveOnS
 
 This example resembles the previous example, but it also includes credentials.
 
-The first command creates a credential by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet, and stores the resulting **PSCredential** object in the **$Credential** variable.
+The first command creates a credential by using the Get-Credentialhttps://go.microsoft.com/fwlink/?LinkID=293936 cmdlet, and stores the resulting **PSCredential** object in the **$Credential** variable.
 The **Get-Credential** cmdlet prompts you for user name and password.
 For more information, type `Get-Help Get-Credential`.
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies credentials, as a **PSCredential** object, for the target computer specified by the **ComputerName** parameter.
-To obtain a **PSCredential** object, use the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
+To obtain a **PSCredential** object, use the Get-Credentialhttps://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
 For more information, type `Get-Help Get-Credential`.
 
 If you do not specify a value for this parameter, this cmdlet uses the current credentials.
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

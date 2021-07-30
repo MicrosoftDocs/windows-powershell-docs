@@ -78,7 +78,7 @@ This command returns the autonym property of the first item in the user's langua
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -86,7 +86,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Collections.Generic.List<Microsoft.InternationalSettings.Commands.WinUserLanguage>
 A list of WinUserLanguage objects that contain one or more languages and associated properties from the current user account's language list.
-For information about the Generic.List object, see System.Collections.Generic.List<T\> Classhttp://go.microsoft.com/fwlink/?LinkID=243342.
+For information about the Generic.List object, see System.Collections.Generic.List<T\> Classhttps://go.microsoft.com/fwlink/?LinkID=243342.
 
 The generic list object supports the following methods:
 

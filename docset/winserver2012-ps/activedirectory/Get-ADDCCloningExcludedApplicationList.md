@@ -33,7 +33,7 @@ Next, vet the returned list with your software vendors and remove any applicatio
 Finally, you can run the Get-ADDCCloningExcludedApplicationList cmdlet again using the **-GenerateXml** parameter set to create the CustomDCCloneAllowList.xml file.
 
 The Get-ADDCCloningExcludedApplicationList cmdlet needs to be run before the New-ADDCCloneConfigFile cmdlet is used because if the New-ADDCCloneConfigFile cmdlet detects an excluded application, it will not create a DCCloneConfig.xml file.
-For more information on virtual domain controller cloning, see the guidance on AD DS virtualization at http://go.microsoft.com/fwlink/?LinkId=208030http://go.microsoft.com/fwlink/?LinkId=208030.
+For more information on virtual domain controller cloning, see the guidance on AD DS virtualization at https://go.microsoft.com/fwlink/?LinkId=208030https://go.microsoft.com/fwlink/?LinkId=208030.
 
 ## EXAMPLES
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

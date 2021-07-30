@@ -22,7 +22,7 @@ The **Enable-BitLockerAutoUnlock** cmdlet enables automatic unlocking for a volu
 You can configure BitLocker to automatically unlock volumes that do not host an operating system.
 After a user unlocks the operating system volume, BitLocker uses encrypted information stored in the registry and volume metadata to unlock any data volumes that use automatic unlocking.
 
-For an overview of BitLocker, see BitLocker Drive Encryption Overviewhttp://technet.microsoft.com/en-us/library/cc732774.aspx (http://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+For an overview of BitLocker, see BitLocker Drive Encryption Overviewhttps://technet.microsoft.com/en-us/library/cc732774.aspx (https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
 
 ## EXAMPLES
 

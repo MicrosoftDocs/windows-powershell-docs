@@ -39,7 +39,7 @@ The **Add-CauClusterRole** cmdlet adds the Cluster-Aware Updating (CAU) clustere
 When the CAU clustered role has been added to a cluster, the failover cluster can update itself on the schedule that is specified by the user, without requiring an external computer to coordinate the cluster updating process.
 
 Note: To run this cmdlet, Windows PowerShell® remoting must be enabled on each node.
-To do this, run the Enable-PSRemotinghttp://go.microsoft.com/fwlink/p/?LinkID=144300 cmdlet.
+To do this, run the Enable-PSRemotinghttps://go.microsoft.com/fwlink/p/?LinkID=144300 cmdlet.
 In addition, ensure that the Windows Remote Management - Compatibility Mode (HTTP-In) firewall exception is enabled on each node.
 
 ## EXAMPLES
@@ -114,7 +114,7 @@ If not specified, then the **Microsoft.WindowsUpdatePlugin** plug-in by default 
 
  - `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1" and IsAssigned=1`
 
- For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in and the criteria such as IsInstalled that can be included in the query strings, see the topic about search criteria in the Windows Update Agent (WUA) API Referencehttp://go.microsoft.com/fwlink/p/?LinkId=223304. 
+ For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in and the criteria such as IsInstalled that can be included in the query strings, see the topic about search criteria in the Windows Update Agent (WUA) API Referencehttps://go.microsoft.com/fwlink/p/?LinkId=223304. 
 
 
 For the **Microsoft.HotfixPlugin** plug-in.
@@ -138,7 +138,7 @@ If not specified, the default value is 30 minutes.
  - **HotfixConfigFileName=\<name\>**: Name for the hotfix configuration file.
 If not specified, the default name DefaultHotfixConfigFile.xml is used. 
 
-For more information about required and optional arguments for the **Microsoft.HotfixPlugin** plug-in, see the content about Cluster-Aware Updating plug-inshttp://go.microsoft.com/fwlink/p/?LinkId=235333.
+For more information about required and optional arguments for the **Microsoft.HotfixPlugin** plug-in, see the content about Cluster-Aware Updating plug-inshttps://go.microsoft.com/fwlink/p/?LinkId=235333.
 
 ```yaml
 Type: Hashtable[]
@@ -157,7 +157,7 @@ Specifies one or more plug-ins to use when performing scans or updates.
 You can specify multiple values separated with commas.
 The default is the Microsoft.WindowsUpdatePlugin plug-in.
 This plug-in coordinates the Windows Update Agent software resident on each cluster node, the same software that is used when updates are downloaded from Windows Update or Microsoft Update, or from a Windows Server Update Services (WSUS) server.
-For more information about how plug-ins work with CAU, see the content about Cluster-Aware Updating plug-inshttp://go.microsoft.com/fwlink/p/?LinkId=235333.
+For more information about how plug-ins work with CAU, see the content about Cluster-Aware Updating plug-inshttps://go.microsoft.com/fwlink/p/?LinkId=235333.
 
 ```yaml
 Type: String[]
@@ -527,7 +527,7 @@ Accept wildcard characters: False
 
 ### -VirtualComputerObjectName
 Specifies the name of a prestaged virtual computer object that is used by the CAU clustered role.
-For more information, see the Steps to create computer objects in Active Directoryhttp://go.microsoft.com/fwlink/p/?LinkId=237624.
+For more information, see the Steps to create computer objects in Active Directoryhttps://go.microsoft.com/fwlink/p/?LinkId=237624.
 If not specified, then a virtual computer object is created using a generated name.
 Generating a name automatically requires the cluster name object to have permissions to create the virtual computer object in Active Directory.
 

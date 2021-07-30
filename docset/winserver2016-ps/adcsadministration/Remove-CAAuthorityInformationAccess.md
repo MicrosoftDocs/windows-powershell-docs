@@ -34,24 +34,24 @@ The **Remove-CAAuthorityInformationAccess** cmdlet removes the Authority Informa
 
 ### Example 1: Remove AIA for a specified URI
 ```
-PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.contoso.com/pki/orca1.crt" -AddToCertificateAia
+PS C:\> Remove-CAAuthorityInformationAccess -Uri "https://www.contoso.com/pki/orca1.crt" -AddToCertificateAia
 ```
 
-This command removes AIA for the specified URI named `http://www.contoso.com/pki/orca1.crt`.
+This command removes AIA for the specified URI named `https://www.contoso.com/pki/orca1.crt`.
 
 ### Example 2: Remove OCSP for a specified URI
 ```
-PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.cpandl.com/ocsp/" -AddToCertificateOcsp
+PS C:\> Remove-CAAuthorityInformationAccess -Uri "https://www.cpandl.com/ocsp/" -AddToCertificateOcsp
 ```
 
-This command removes the OCSP for the specified URI named `http://www.cpandl.com/ocsp`.
+This command removes the OCSP for the specified URI named `https://www.cpandl.com/ocsp`.
 
 ### Example 3: Remove all AIA and OCSP entries for a specified URI
 ```
-PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.contoso.com/pki/orca1.crt"
+PS C:\> Remove-CAAuthorityInformationAccess -Uri "https://www.contoso.com/pki/orca1.crt"
 ```
 
-This command removes all AIA and OCSP entries that match the URL `http://www.contoso.com/pki/orca1.crt`.
+This command removes all AIA and OCSP entries that match the URL `https://www.contoso.com/pki/orca1.crt`.
 
 ## PARAMETERS
 

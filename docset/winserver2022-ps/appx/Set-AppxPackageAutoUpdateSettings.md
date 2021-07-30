@@ -334,9 +334,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Package Manager API](http://go.microsoft.com/fwlink/?LinkId=245447)
+[Package Manager API](https://go.microsoft.com/fwlink/?LinkId=245447)
 
-[How to Add and Remove Apps](http://go.microsoft.com/fwlink/?LinkID=231020)
+[How to Add and Remove Apps](https://go.microsoft.com/fwlink/?LinkID=231020)
 
 [Get-AppxPackage](Get-AppxPackage.md)
 

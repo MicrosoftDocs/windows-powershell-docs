@@ -32,19 +32,19 @@ PS C:\> Get-AdfsWebApplicationProxyRelyingPartyTrust
 AlwaysRequireAuthentication   : False
 Enabled                       : True
 Identifier                    : {urn:AppProxy:com}
-IssuanceAuthorizationRules    : @RuleTemplate="AllowAllAuthzRule" => issue(Type = "http://schemas.contoso.com/authorization/claims/permit", Value="true");
+IssuanceAuthorizationRules    : @RuleTemplate="AllowAllAuthzRule" => issue(Type = "https://schemas.contoso.com/authorization/claims/permit", Value="true");
 IssuanceTransformRules        : @RuleTemplate="PassThroughClaims"
 @RuleName="Pass Through Application Identifier"
-c:[Type == "http://schemas.contoso.com/2012/01/requestcontext/claims/relyingpartytrustid"] => issue(claim = c);
+c:[Type == "https://schemas.contoso.com/2012/01/requestcontext/claims/relyingpartytrustid"] => issue(claim = c);
 @RuleTemplate="PassThroughClaims"
 @RuleName="Pass Through Device Registration Identifier"
-c:[Type == "http://schemas.contoso.com/2012/01/devicecontext/claims/registrationid"] => issue(claim = c);
+c:[Type == "https://schemas.contoso.com/2012/01/devicecontext/claims/registrationid"] => issue(claim = c);
 @RuleTemplate="PassThroughClaims"
 @RuleName="Pass Through UPN"
-c:[Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"] => issue(claim = c);
+c:[Type == "https://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"] => issue(claim = c);
 @RuleTemplate="PassThroughClaims"
 @RuleName="Pass Through Activity ID"
-c:[Type == "http://schemas.contoso.com/2012/01/requestcontext/claims/client-request-id"] => issue(claim = c);
+c:[Type == "https://schemas.contoso.com/2012/01/requestcontext/claims/client-request-id"] => issue(claim = c);
 
 AdditionalAuthenticationRules :
 Name                          : urn:AppProxy:com
@@ -60,7 +60,7 @@ The command displays authentication and authorization rules added previously.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

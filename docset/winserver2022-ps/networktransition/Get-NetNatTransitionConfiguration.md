@@ -22,7 +22,7 @@ Get-NetNatTransitionConfiguration [-InstanceName <String[]>] [-PolicyStore <Poli
 
 ## DESCRIPTION
 The **Get-NetNatTransitionConfiguration** cmdlet retrieves the NAT64 configuration of a computer.
-NAT64 is described in [RFC 6146](http://tools.ietf.org/html/rfc6147).
+NAT64 is described in [RFC 6146](https://tools.ietf.org/html/rfc6147).
 NAT64 allows IPv6-only clients to contact IPv4 servers using unicast UDP, TCP, or ICMP.
 
 ## EXAMPLES

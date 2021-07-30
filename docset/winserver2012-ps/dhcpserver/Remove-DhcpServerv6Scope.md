@@ -43,8 +43,8 @@ PS C:\>Get-DhcpServerv6Scope | Where-Object -FilterScript { $_.State -Eq "Inacti
 ```
 
 This example deletes all of the disabled scopes on the DHCP server service.
-The Get-DhcpServerv6Scope cmdlet returns the scope objects and pipes the objects into the Where-Objecthttp://go.microsoft.com/fwlink/p/?LinkID=113423 cmdlet.
-The Where-Objecthttp://go.microsoft.com/fwlink/p/?LinkID=113423 cmdlet filters the scope objects for the state being InActive (or disabled) and pipes the objects into this cmdlet, which deletes the disabled scopes passed through the pipeline.
+The Get-DhcpServerv6Scope cmdlet returns the scope objects and pipes the objects into the Where-Objecthttps://go.microsoft.com/fwlink/p/?LinkID=113423 cmdlet.
+The Where-Objecthttps://go.microsoft.com/fwlink/p/?LinkID=113423 cmdlet filters the scope objects for the state being InActive (or disabled) and pipes the objects into this cmdlet, which deletes the disabled scopes passed through the pipeline.
 If non-empty scopes are deleted without the **Force** parameter, then the cmdlet displays an error.
 This cmdlet does not prompt for user confirmation.
 Active scopes that are empty get deleted without the **Force** parameter.
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

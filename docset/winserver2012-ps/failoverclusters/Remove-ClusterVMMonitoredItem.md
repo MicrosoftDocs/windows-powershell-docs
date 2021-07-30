@@ -33,7 +33,7 @@ This example removes all of the items being monitored on the virtual machine nam
 ### Example 2
 ```
 PS C:\>Remove-ClusterVMMonitoredItem -VirtualMachine VM1 -Service spooler
-http://go.microsoft.com/fwlink/?LinkId=216240
+https://go.microsoft.com/fwlink/?LinkId=216240
 ```
 
 This example removes monitoring on the print spooler service on the virtual machine named VM1.

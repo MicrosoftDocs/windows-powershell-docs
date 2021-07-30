@@ -384,7 +384,7 @@ Specifies the schedule on which the source server is available for replication.
 
 Replication occurs at intervals that administrators can schedule so that use of expensive WAN links is managed.
 Use this parameter to specify the replication intervals.
-For more information on how replication topology works, go to http://go.microsoft.com/fwlink/?LinkId=223932.
+For more information on how replication topology works, go to https://go.microsoft.com/fwlink/?LinkId=223932.
 
 To specify the replication schedule,
 
@@ -406,7 +406,7 @@ To specify the replication schedule,
 
    `Set-ADReplicationConnection "5f98e288-19e0-47a0-9677-57f05ed54f6b" -ReplicationSchedule $schedule`
 
-For more information on the ActiveDirectorySchedule class, go to http://go.microsoft.com/fwlink/?LinkId=223933.
+For more information on the ActiveDirectorySchedule class, go to https://go.microsoft.com/fwlink/?LinkId=223933.
 
 ```yaml
 Type: ActiveDirectorySchedule
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

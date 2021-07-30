@@ -26,14 +26,14 @@ The **Write-MbamComputerUser** cmdlet writes a set of users to a computer's Trus
 
 ### Example 1: Give a user permission to recover TPM and Bitlocker information for a specified computer
 ```
-PS C:\>Write-MbamComputerUser -RecoveryServiceEndPoint http://MBAMServer.contoso.com:8080 -Computer User12-PC.Contoso.com -user @("User12@Contoso.com")
+PS C:\>Write-MbamComputerUser -RecoveryServiceEndPoint https://MBAMServer.contoso.com:8080 -Computer User12-PC.Contoso.com -user @("User12@Contoso.com")
 ```
 
 This command gives User12@Contoso.com permission to recover TPM and Bitlocker information from self-service portal for computer User12-PC.Contoso.com and its volumes.
 
 ### Example 2: Give a user permission to recover TPM and Bitlocker information for a specified computer and suppress user confirmation
 ```
-PS C:\>Write-MbamComputerUser -RecoveryServiceEndPoint http://MBAMServer.contoso.com:8080 -Computer User12-PC.Contoso.com -user @("User12@Contoso.com") -Force
+PS C:\>Write-MbamComputerUser -RecoveryServiceEndPoint https://MBAMServer.contoso.com:8080 -Computer User12-PC.Contoso.com -user @("User12@Contoso.com") -Force
 ```
 
 This command gives User12@Contoso.com permission to recover TPM and Bitlocker information from self-service portal for computer User12-PC.Contoso.com and its volumes.
@@ -42,7 +42,7 @@ This command additionally suppresses user confirmation.
 
 ### Example 3: Give multiple users permission to recover TPM and Bitlocker information for a specified computer and attempt recovery if the cmdlet fails
 ```
-PS C:\>Write-MbamComputerUser -svc http://MBAMServer.contoso.com:8080 -Computer User12-PC.Contoso.com -ComputerUser @("User12@Contoso.com", "User13@Contoso.net") -RetryCount 2 -RetryIntervalSeconds 10 -Force
+PS C:\>Write-MbamComputerUser -svc https://MBAMServer.contoso.com:8080 -Computer User12-PC.Contoso.com -ComputerUser @("User12@Contoso.com", "User13@Contoso.net") -RetryCount 2 -RetryIntervalSeconds 10 -Force
 ```
 
 This command gives  User12@Contoso.com and User13@Contoso.com permission to recover TPM and Bitlocker information from self-service portal for computer User12-PC.Contoso.com and its volumes.
@@ -52,7 +52,7 @@ This command additionally suppresses user confirmation.
 
 ### Example 4: Give a user permission to recover TPM and Bitlocker information for a specified computer and attempt recovery if the cmdlet fails
 ```
-PS C:\>Write-MbamComputerUser -service http://MBAMServer.contoso.com:8080 -Computer User13-Desktop.Domain.Net -user @("User12@Contoso.com") -rc 2 -ri 10
+PS C:\>Write-MbamComputerUser -service https://MBAMServer.contoso.com:8080 -Computer User13-Desktop.Domain.Net -user @("User12@Contoso.com") -rc 2 -ri 10
 ```
 
 This command gives User12@Contoso.com permission to recover TPM and Bitlocker information from self-service portal for the computer User13-Desktop.Domain.Net and its volumes.
@@ -61,7 +61,7 @@ This command attempts recovery two more times with a ten second wait time betwee
 
 ### Example 5: Give a user permission to recover TPM and Bitlocker information for a specified machine and attempt recovery if the cmdlet fails
 ```
-PS C:\>Write-MbamComputerUser -service http://MBAMServer.contoso.com:8080 -Computer User13-Desktop.Domain.Net -user @("User12@Contoso.com") -rc 2 -ri 10 -Confirm
+PS C:\>Write-MbamComputerUser -service https://MBAMServer.contoso.com:8080 -Computer User13-Desktop.Domain.Net -user @("User12@Contoso.com") -rc 2 -ri 10 -Confirm
 ```
 
 This command gives  User12@Contoso.com permission to recover TPM and Bitlocker information from the self-service portal for the machine User13-Desktop.Domain.Net and its volumes.

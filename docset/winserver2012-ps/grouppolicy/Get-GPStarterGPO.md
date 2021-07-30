@@ -51,7 +51,7 @@ StarterGpoType    : System
 Author            : Microsoft 
 Description       : This Starter GPO contains the user Group Policy settings recommended for the Enterprise Client (EC) environment described in the Windows Vista security guide. 
 
-For more information about each of these settings, see the Windows Vista Security Guide (http://go. microsoft.com/fwlink/?LinkID=121852).
+For more information about each of these settings, see the Windows Vista Security Guide (https://go. microsoft.com/fwlink/?LinkID=121852).
 ```
 
 Description

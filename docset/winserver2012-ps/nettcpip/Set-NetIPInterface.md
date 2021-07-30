@@ -123,7 +123,7 @@ Modifies IP interface advertised router lifetime property.
 This parameter value indicates the lifetime of default routes when advertising routes on the IP interface, in seconds.
 The default value is `1800`.
 Valid only for advertising interfaces.
-AdvertisedRouterLifetime uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+AdvertisedRouterLifetime uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure.
 
 ```yaml
 Type: TimeSpan
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ### -BaseReachableTimeMs
 Modifies the BaseReachableTime property.
 BaseReachableTime is the base for random reachable time, in milliseconds.
-This parameter is described in RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044. 
+This parameter is described in RFC 2461https://go.microsoft.com/fwlink/p/?LinkId=84044. 
 
 The default value is 30.
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -517,7 +517,7 @@ Accept wildcard characters: False
 Modifies the neighbor unreachablility detection (NUD) property.
 NUD is how nodes determine that a neighbor is no longer reachable.
 Default depends on type of interface.
-This parameter is described in RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.
+This parameter is described in RFC 2461https://go.microsoft.com/fwlink/p/?LinkId=84044.
 Note For the ActiveStore, the NUD modification is allowed only from Disabled to Enabled state, but modifying NUD from Enabled to Disabled for ActiveStore fails with Invalid Parameter.
 For the PersistentStore, the NUD can be modified to either Enabled or Disabled.
 But the interface will need to be restarted for the setting to take effect. 
@@ -643,7 +643,7 @@ Accept wildcard characters: False
 ### -RetransmitTimeMs
 Modifies the retransmit time.
 This parameter value defines the timeout and retransmission of Neighbor Solicitation messages, in milliseconds.
-This parameter is described as RetransTimer in RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.
+This parameter is described as RetransTimer in RFC 2461https://go.microsoft.com/fwlink/p/?LinkId=84044.
 The default value is `1000`.
 
 ```yaml

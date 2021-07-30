@@ -24,7 +24,7 @@ The **Open-NetGPO** cmdlet caches the Group Policy Object (GPO) so that modifica
 The changes are batch returned to the policy store with the Save-NetGPO cmdlet.
 
 Note: If the DomainController parameter value is not a writeable Domain Controller (DC), then the batch updates will not be applied.
-To help target a writeable DC, use the cmdlets in the Active Directory module using the Get-Commandhttp://go.microsoft.com/fwlink/p/?LinkId=113309 cmdlet with the **Module** parameter set to ActiveDirectory.
+To help target a writeable DC, use the cmdlets in the Active Directory module using the Get-Commandhttps://go.microsoft.com/fwlink/p/?LinkId=113309 cmdlet with the **Module** parameter set to ActiveDirectory.
 
 Note: An error will result for using this cmdlet when the user is not a domain administrator.
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ### -DomainController
 Specifies the DC used to target the GPO.
 If this cmdlet is used without specifying this parameter, then the DC can target a read-only DC (RODC), and lose the batch changes with Save-NetGPO.
-To help target a writeable DC, use the cmdlets in the Active Directory module using the Get-Commandhttp://go.microsoft.com/fwlink/p/?LinkId=113309 cmdlet with the **Module** parameter set to ActiveDirectory.
+To help target a writeable DC, use the cmdlets in the Active Directory module using the Get-Commandhttps://go.microsoft.com/fwlink/p/?LinkId=113309 cmdlet with the **Module** parameter set to ActiveDirectory.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

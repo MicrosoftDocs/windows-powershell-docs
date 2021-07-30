@@ -64,7 +64,7 @@ PS C:\>Get-RemoteAccessConnectionStatistics | Format-List -Property *
 This example disconnects the connection by specifying the IP address of the host from which it originates.
 The output of the disconnect cmdlet displays the IP address of the disconnected host.
 For this example there is one active VPN connection.
-The output of this cmdlet is piped to the Format-Listhttp://go.microsoft.com/fwlink/p/?LinkId=113302 cmdlet to display the details of the active connection in a list format.
+The output of this cmdlet is piped to the Format-Listhttps://go.microsoft.com/fwlink/p/?LinkId=113302 cmdlet to display the details of the active connection in a list format.
 
 ### EXAMPLE 2
 ```
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

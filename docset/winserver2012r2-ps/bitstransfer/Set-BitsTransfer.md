@@ -73,7 +73,7 @@ The supplied set of credentials is used to authenticate the user at the proxy se
 
 ### EXAMPLE 4
 ```
-PS C:\>Get-BitsTransfer | Set-BitsTransfer -ProxyUsage Override -ProxyList http://proxy1,http://proxy2:81 -ProxyBypass http://directconnect
+PS C:\>Get-BitsTransfer | Set-BitsTransfer -ProxyUsage Override -ProxyList https://proxy1,https://proxy2:81 -ProxyBypass https://directconnect
 ```
 
 This command changes the proxy settings of an existing BITS transfer job.
@@ -83,8 +83,8 @@ This output is piped to the **Set-BitsTransfer** cmdlet.
 The Override value that is specified in the **ProxyUsage** parameter indicates that an explicit list of proxy server and bypassed host names will be provided.
 
 The **ProxyList** parameter specifies two proxy servers.
-The first server in the list (http://proxy1) is used.
-If that connection fails, the command tries the connection by using the second server in the list (http://proxy2:81).
+The first server in the list (https://proxy1) is used.
+If that connection fails, the command tries the connection by using the second server in the list (https://proxy2:81).
 If both connections fail, the job fails.
 
 When a list of host names is specified in the **ProxyBypass** parameter, the connection that is made is a direct connection that does not use a proxy server.
@@ -477,7 +477,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

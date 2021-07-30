@@ -415,7 +415,7 @@ Accept wildcard characters: False
 ### -Type
 Specifies the data type of the registry value for the Registry preference item.
 You can specify one of the following data types: String, ExpandString, Binary, DWord, MultiString, ExpandString, and Qword.
-For more information about these data types, see "Microsoft.Win32.RegistryValueKind Enumeration" in the MSDN library at http://go.microsoft.com/fwlink/?LinkID=143266.
+For more information about these data types, see "Microsoft.Win32.RegistryValueKind Enumeration" in the MSDN library at https://go.microsoft.com/fwlink/?LinkID=143266.
 
 When you configure a Registry preference item for a registry key, do not specify this parameter.
 When you configure a Registry preference item for a registry value, specify this parameter together with the Key, ValueName, and Value parameters.
@@ -491,7 +491,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

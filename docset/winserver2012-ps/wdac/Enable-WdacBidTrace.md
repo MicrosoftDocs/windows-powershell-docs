@@ -37,7 +37,7 @@ Enable-WdacBidTrace [-AsJob] [-CimSession <CimSession>] [-PassThru] [-Platform <
 ```
 
 ## DESCRIPTION
-For more information about data access tracing (Bidtrace), see Data Access Tracing (Windows 8)http://msdn.microsoft.com/en-us/library/hh829624(VS.85).aspx.
+For more information about data access tracing (Bidtrace), see Data Access Tracing (Windows 8)https://msdn.microsoft.com/en-us/library/hh829624(VS.85).aspx.
 
 ## EXAMPLES
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

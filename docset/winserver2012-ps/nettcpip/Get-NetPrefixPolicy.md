@@ -20,7 +20,7 @@ Get-NetPrefixPolicy [[-Prefix] <String[]>] [-AsJob] [-CimSession <CimSession[]>]
 ## DESCRIPTION
 The **Get-NetPrefixPolicy** cmdlet gets the prefix policy.
 The prefix policy is used in source and destination address selection.
-The prefix policy is described in RFC 3484http://www.ietf.org/rfc/rfc3484.txt.
+The prefix policy is described in RFC 3484https://www.ietf.org/rfc/rfc3484.txt.
 
 ## EXAMPLES
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

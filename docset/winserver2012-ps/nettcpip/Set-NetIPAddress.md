@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 
 ### -PreferredLifetime
 Modifies the PreferredLifetime to the specified values.
-PreferredLifetime uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+PreferredLifetime uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure.
 
 ```yaml
 Type: TimeSpan
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 
 ### -ValidLifetime
 Modifies the PreferredLifetime to the specified values.
-ValidLifetime uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+ValidLifetime uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure.
 
 ```yaml
 Type: TimeSpan

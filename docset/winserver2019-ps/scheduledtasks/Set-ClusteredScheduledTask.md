@@ -41,7 +41,7 @@ For instance, you can change the actions or triggers associated with a task.
 You can make changes to a task even if an instance of the task is currently running.
 Any changes do not affect any actions already initiated.
 
-For more information about the Task Scheduler, see the [Task Scheduler Overview](https://technet.microsoft.com/en-us/library/cc721871.aspx) topic in the TechNet Library at http://technet.microsoft.com/en-us/library/cc721871.aspx.
+For more information about the Task Scheduler, see the [Task Scheduler Overview](https://technet.microsoft.com/en-us/library/cc721871.aspx) topic in the TechNet Library at https://technet.microsoft.com/en-us/library/cc721871.aspx.
 
 ## EXAMPLES
 

@@ -41,7 +41,7 @@ If the signed file supplied to this cmdlet is not valid, then this cmdlet return
 
 ### EXAMPLE 1
 ```
-@{navigationLink=@{uri=http://go.microsoft.com/fwlink/p/?LinkId=236500; linkText=Windows Software Development Kit (SDK) for Windows 8}; #text=System.Management.Automation.PSObject[]}
+@{navigationLink=@{uri=https://go.microsoft.com/fwlink/p/?LinkId=236500; linkText=Windows Software Development Kit (SDK) for Windows 8}; #text=System.Management.Automation.PSObject[]}
 ```
 
 This example sets the information obtained from the Format-SecureBootUEFI cmdlet to the DBX UEFI variable.
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

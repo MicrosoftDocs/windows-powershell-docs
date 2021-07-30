@@ -50,7 +50,7 @@ Sets the HTTP port to 8123.
 Before restarting the Federation service, update the ACLs for the corresponding endpoint URLs to ensure that the service can be restarted successfully using the new port numbers.
 For example, use a Netsh command similar to the following example to add the required ACL for the updated URL.
 
-`netsh http addurlacl url=http://+:8123/adfs/services/ -user "Network Service"`
+`netsh http addurlacl url=https://+:8123/adfs/services/ -user "Network Service"`
 
 ## PARAMETERS
 
@@ -622,7 +622,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

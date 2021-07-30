@@ -24,7 +24,7 @@ Get-NetIPAddress [[-IPAddress] <String[]>] [-AddressFamily <AddressFamily[]>] [-
 The **Get-NetIPAddress** cmdlet gets the IP address information such as IPv4 addresses, IPv6 addresses and the IP interfaces with which addresses are associated. 
 
 This cmdlet also gets the **PrefixLength**, also known as a subnet mask.
-For more information on subnetting, see Subnetting on TechNethttp://technet.microsoft.com/library/bb726997.aspx (http://technet.microsoft.com/library/bb726997.aspx) on TechNet. 
+For more information on subnetting, see Subnetting on TechNethttps://technet.microsoft.com/library/bb726997.aspx (https://technet.microsoft.com/library/bb726997.aspx) on TechNet. 
 
 This cmdlet does not get the gateway as that is a routing concept covered by the Get-NetRoute cmdlet.
 For IP endpoints, the gateway specifies the forwarding address or the next hop IP address over which the set of addresses defined by the network destination and subnet mask are reachable. 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -241,7 +241,7 @@ Accept wildcard characters: False
 
 ### -PreferredLifetime
 Gets IP address information by a specific preferred lifetime.
-This parameter uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+This parameter uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure.
 
 ```yaml
 Type: TimeSpan[]
@@ -383,7 +383,7 @@ Accept wildcard characters: False
 
 ### -ValidLifetime
 Gets IP address information by a specific valid lifetime.
-This parameter uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+This parameter uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure.
 
 ```yaml
 Type: TimeSpan[]

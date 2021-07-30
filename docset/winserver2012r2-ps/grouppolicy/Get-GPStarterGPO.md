@@ -53,7 +53,7 @@ StarterGpoType    : System
 Author            : Microsoft 
 Description       : This Starter GPO contains the user Group Policy settings recommended for the Enterprise Client (EC) environment described in the Windows Vista security guide. 
 
-For more information about each of these settings, see the Windows Vista Security Guide (http://go. microsoft.com/fwlink/?LinkID=121852).
+For more information about each of these settings, see the Windows Vista Security Guide (https://go. microsoft.com/fwlink/?LinkID=121852).
 ```
 
 Description
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -111,7 +111,7 @@ Configures the connectivity tests that DirectAccess client computers use to dete
 Enter the values for this parameter in the form of a string array, with each entry surrounded by double quotes (" ") and separated by commas.
 Use the following formats for each test type:
 
-HTTP test: `"HTTP:http://computername"`
+HTTP test: `"HTTP:https://computername"`
 
 File test: `"FILE:\\fileserver\"`
 

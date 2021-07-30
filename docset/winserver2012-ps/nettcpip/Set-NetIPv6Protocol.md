@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ### -MaxPreferredLifetime
 Modifies the maximum preferred lifetime.
 This parameter value determines the maximum lifetime over which a temporary address is preferred.
-This parameter value uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure. 
+This parameter value uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure. 
 
 The default value is 1 day.
 
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ### -MaxRandomTime
 Modifies the maximum random time.
 This parameter value determines the upper bound to use when computing a random delay at startup time.
-This parameter value uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure. 
+This parameter value uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure. 
 
 The default value is 10 minutes.
 
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ### -MaxValidLifetime
 Modifies the maximum valid lifetime.
 This parameter value determines the maximum lifetime over which a temporary address is valid.
-This parameter value uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure. 
+This parameter value uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure. 
 
 The default value is 7 days.
 
@@ -439,7 +439,7 @@ Accept wildcard characters: False
 ### -RegenerateTime
 Modifies the RegenerateTime property.
 This parameter value determines time prior to deprecating a temporary address when a new address is generated.
-RegenerateTime uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure. 
+RegenerateTime uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure. 
 
 The default value is 5 seconds.
 
@@ -477,7 +477,7 @@ Accept wildcard characters: False
 Modifies the source routing behavior.
 This parameter value determines the behavior for source routed packets.
 **Note**: The computer allows three possible values.
-However, per RFC 5095http://www.ietf.org/rfc/rfc5095.txt support for forwarding of source routed IPv6 packets has been removed, and the Forward setting now has the same effect as DontForward.
+However, per RFC 5095https://www.ietf.org/rfc/rfc5095.txt support for forwarding of source routed IPv6 packets has been removed, and the Forward setting now has the same effect as DontForward.
 The acceptable values for this parameter are:
 
  -- DontForward: Source routed packets can be received but not forwarded. 
@@ -518,7 +518,7 @@ Accept wildcard characters: False
 ### -UseTemporaryAddresses
 Modifies the UseTemporaryAddresses property.
 This parameter value determines whether temporary addresses are enabled.
-Temporary addresses are described in RFC 3041http://www.ietf.org/rfc/rfc3041.txt.
+Temporary addresses are described in RFC 3041https://www.ietf.org/rfc/rfc3041.txt.
 The acceptable values for this parameter are:
 
  -- Always: The computer will always generate temporary addresses with random numbers. 

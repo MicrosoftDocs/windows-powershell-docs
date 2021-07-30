@@ -25,7 +25,7 @@ Network Virtualization allows more than one virtual network to exist on the same
 Computers can exchange network traffic with a virtual machine (VM) by using a Customer Address within the virtual network.
 Network Virtualization manages the Provider Addresses that are the physical network addresses.
 This cmdlet creates a record that maps a Customer Address to a Provider Address.
-For more information, see Network Virtualization technical detailshttp://technet.microsoft.com/library/jj134174.aspx (http://technet.microsoft.com/library/jj134174.aspx) on TechNet.
+For more information, see Network Virtualization technical detailshttps://technet.microsoft.com/library/jj134174.aspx (https://technet.microsoft.com/library/jj134174.aspx) on TechNet.
 
 To create a policy entry, you must specify a Customer Address, a VM media access control (MAC) address, a Provider Address, a rule type, and a virtual subnet ID.
 You can also specify a context, a customer ID, and a VM name, as well as whether to use a VM virtual MAC address.
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=517622
+Download Help Link: https://go.microsoft.com/fwlink/?LinkId=517622
 Help Version: 4.0.0.0
 Locale: en-US
 Module Guid: CMDLETS

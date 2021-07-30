@@ -30,7 +30,7 @@ The export process skips replicated folders automatically.
 You can only export or import one database at a time for a computer.
 
 Use the recommended and supported steps to perform DFS Replication database cloning.
-For more information, see the following Microsoft web site: [http://go.microsoft.com/fwlink/?LinkId=302005](https://go.microsoft.com/fwlink/?LinkId=302005).
+For more information, see the following Microsoft web site: [https://go.microsoft.com/fwlink/?LinkId=302005](https://go.microsoft.com/fwlink/?LinkId=302005).
 The term upstream refers to the server that is the authoritative source of both replicated file data and the DFS Replication database.
 The term downstream refers to the non-authoritative server that is a clone of the authoritative server.
 

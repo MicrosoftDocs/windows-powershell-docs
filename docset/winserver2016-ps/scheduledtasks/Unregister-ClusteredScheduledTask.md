@@ -30,7 +30,7 @@ Unregister-ClusteredScheduledTask [[-InputObject] <CimInstance>] [-CimSession <C
 ## DESCRIPTION
 The **Unregister-ClusteredScheduledTask** cmdlet removes a clustered scheduled task from all nodes of a failover cluster.
 
-For more information about the Task Scheduler, see the [Task Scheduler Overview](https://technet.microsoft.com/en-us/library/cc721871.aspx) topic in the TechNet Library at http://technet.microsoft.com/en-us/library/cc721871.aspx.
+For more information about the Task Scheduler, see the [Task Scheduler Overview](https://technet.microsoft.com/en-us/library/cc721871.aspx) topic in the TechNet Library at https://technet.microsoft.com/en-us/library/cc721871.aspx.
 
 ## EXAMPLES
 

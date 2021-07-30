@@ -23,7 +23,7 @@ You can specify a netgroup member by its host name or IP address.
 
 You can modify netgroups that are stored in Active Directory Domain Services (AD DS) or Active Directory Lightweight Directory Services (AD LDS) only.
 To modify a netgroup that is stored in Network Information Service (NIS), use the corresponding NIS administration tool.
-For more information about how to manage an NIS server, see Server for NIS Administrationhttp://technet.microsoft.com/en-us/library/cc753089.
+For more information about how to manage an NIS server, see Server for NIS Administrationhttps://technet.microsoft.com/en-us/library/cc753089.
 
 ## EXAMPLES
 

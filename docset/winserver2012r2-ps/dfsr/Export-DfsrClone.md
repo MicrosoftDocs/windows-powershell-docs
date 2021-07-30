@@ -29,7 +29,7 @@ DFSR does not support cloning SYSVOL or read-only replicas in Windows Server 201
 These replicated folders are automatically skipped by the export process.
 You can only export or import one database at a time for a computer.
 
-Follow the recommended and supported steps to perform DFS Replication database cloning, as described on the following Microsoft web site: http://go.microsoft.com/fwlink/?LinkId=302005http://go.microsoft.com/fwlink/?LinkId=302005.
+Follow the recommended and supported steps to perform DFS Replication database cloning, as described on the following Microsoft web site: https://go.microsoft.com/fwlink/?LinkId=302005https://go.microsoft.com/fwlink/?LinkId=302005.
 The term upstream refers to the server that is the authoritative source of both replicated file data and the DFS Replication database.
 The term downstream refers to the non-authoritative server that is a clone of the authoritative server.
 
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

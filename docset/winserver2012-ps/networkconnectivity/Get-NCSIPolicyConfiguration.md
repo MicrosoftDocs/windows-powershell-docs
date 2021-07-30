@@ -29,7 +29,7 @@ Description                    : NCSI Configuration
 CorporateDNSProbeHostAddress   : 2001:4898:1337:1337:1337::1337 
 CorporateDNSProbeHostName      : corp.contoso.com 
 CorporateSitePrefixList        : 2001:4898::/32,2006:1601::/32,2a01:0110::/31 
-CorporateWebsiteProbeURL       : http://web.contoso.com 
+CorporateWebsiteProbeURL       : https://web.contoso.com 
 DomainLocationDeterminationURL : https://io.contoso.com
 ```
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies a predefined virtual machine size of the Azure nodes that is supported in HPC Pack.
 The size of the virtual machine determines characteristics such as the number of CPU cores, the memory capacity, and the local file system size of each node.
 
-For more information, see Virtual Machine Sizes for Azurehttp://go.microsoft.com/fwlink/?LinkId=294911.
+For more information, see Virtual Machine Sizes for Azurehttps://go.microsoft.com/fwlink/?LinkId=294911.
 
 ```yaml
 Type: String
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

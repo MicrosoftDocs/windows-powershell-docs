@@ -29,7 +29,7 @@ This cmdlet organizes information by user for each day.
 For each user that accesses a service on a server, the cmdlet returns a record that specifies the user, the server role that the client requested, and the name of the server product.
 The record also includes the date that the user accessed the service and how many times the user accessed the service during that day.
 
-For more information about UAL, see the [User Access Logging Overview](https://technet.microsoft.com/library/hh849634.aspx) topic in the TechNet library at http://technet.microsoft.com/library/hh849634.aspx.
+For more information about UAL, see the [User Access Logging Overview](https://technet.microsoft.com/library/hh849634.aspx) topic in the TechNet library at https://technet.microsoft.com/library/hh849634.aspx.
 
 ## EXAMPLES
 

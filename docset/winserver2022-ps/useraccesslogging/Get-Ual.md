@@ -30,7 +30,7 @@ UAL does not start when Windows Server starts.
 You can use the Disable-Ual and Enable-Ual cmdlets to change the startup status.
 The **Get-Ual** cmdlet does not check whether the UAL service itself is running.
 
-For more information about UAL, see the [User Access Logging Overview](https://technet.microsoft.com/library/hh849634.aspx) topic in the TechNet library at http://technet.microsoft.com/library/hh849634.aspx.
+For more information about UAL, see the [User Access Logging Overview](https://technet.microsoft.com/library/hh849634.aspx) topic in the TechNet library at https://technet.microsoft.com/library/hh849634.aspx.
 
 ## EXAMPLES
 

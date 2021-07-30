@@ -274,7 +274,7 @@ The HPC job scheduler service only runs the job at the date and time that this p
 If the resources needed for the job are not available at that date and time, the job remains queued until the necessary resources become available.
 
 You can specify the date and time in any format that the .NET Framework can parse for the current operating system culture.
-For information about how the .NET Framework parses date and time strings, see Parsing Date and Time Strings in the .NET Frameworkhttp://go.microsoft.com/fwlink/p/?LinkId=200188 (http://go.microsoft.com/fwlink/p/?LinkId=200188) in MSDN.
+For information about how the .NET Framework parses date and time strings, see Parsing Date and Time Strings in the .NET Frameworkhttps://go.microsoft.com/fwlink/p/?LinkId=200188 (https://go.microsoft.com/fwlink/p/?LinkId=200188) in MSDN.
 The time specified using *Holduntil* is converted internally to UTC, and does not reflect local Daylight Saving Time.
 
 You can only specify the Holduntil parameter for a job that is not running or has not completed.
@@ -982,7 +982,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

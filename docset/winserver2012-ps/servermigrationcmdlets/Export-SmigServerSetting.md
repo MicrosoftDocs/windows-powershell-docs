@@ -21,7 +21,7 @@ Export-SmigServerSetting [[-Feature] <Feature[]>] [[-FeatureId] <String[]>] [[-U
 Exports selected Windows features and operating system settings from the local computer, and stores them in a migration store specified in the -Path parameter.
 Use the Import-SmigServerSetting cmdlet to import Windows features and operating system settings to the destination computer from the migration store populated by the Export-SmigServerSetting command.
 
-For online Help about the Windows Server Migration Tools cmdlets, see http://go.microsoft.com/fwlink/?LinkId=246313.
+For online Help about the Windows Server Migration Tools cmdlets, see https://go.microsoft.com/fwlink/?LinkId=246313.
 
 ## EXAMPLES
 

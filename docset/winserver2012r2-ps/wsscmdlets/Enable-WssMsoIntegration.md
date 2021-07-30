@@ -34,7 +34,7 @@ PS C:\> Enable-WssMsoIntegration -MsoUserName "PattiFuller@TSQA.Contoso.com" -Pa
 This example enables integration between Windows Server Essentials and aad_2.
 To enable integration, supply an online service account and a secure string that contains the password for that account.
 
-The first command creates a secure string by using the ConvertTo-SecureStringhttp://go.microsoft.com/fwlink/?LinkID=113291 cmdlet, and then stores it in the **$Password** variable.
+The first command creates a secure string by using the ConvertTo-SecureStringhttps://go.microsoft.com/fwlink/?LinkID=113291 cmdlet, and then stores it in the **$Password** variable.
 For more information, type `Get-Help ConvertTo-SecureString`.
 
 The second command enables integration.
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 
 ### -Password
 Specifies a password for a user, as a secure string.
-To obtain a secure string, use the ConvertTo-SecureStringhttp://go.microsoft.com/fwlink/?LinkID=113291 cmdlet.
+To obtain a secure string, use the ConvertTo-SecureStringhttps://go.microsoft.com/fwlink/?LinkID=113291 cmdlet.
 For more information, type `Get-Help ConvertTo-SecureString`.
 The password that you specify belongs to the online service account specified by the **MsoUserName** parameter.
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

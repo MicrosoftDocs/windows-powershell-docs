@@ -23,7 +23,7 @@ The New-ADFSOrganization cmdlet creates a new information object for an organiza
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>New-ADFSOrganization -DisplayName Fabrikam -OrganizationUrl http://fabrikam.com
+C:\PS>New-ADFSOrganization -DisplayName Fabrikam -OrganizationUrl https://fabrikam.com
 ```
 
 Description
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

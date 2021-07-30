@@ -27,7 +27,7 @@ This mechanism helps to improve the performance of TLS.
 The TLS server uses this mechanism to create a key to encrypt a session ticket.
 The client can later use the encrypted session ticket to resume communication with the TLS server.
 Otherwise, the client must restart the communication by acquiring of new session ticket.
-For more information, see [RFC 5077, Transport Layer Security (TLS) Session Resumption without Server-Side State](http://rfc5077.openrfc.org/).
+For more information, see [RFC 5077, Transport Layer Security (TLS) Session Resumption without Server-Side State](https://rfc5077.openrfc.org/).
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

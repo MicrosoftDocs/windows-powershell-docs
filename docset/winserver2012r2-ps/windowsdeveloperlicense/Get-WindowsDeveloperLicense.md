@@ -20,7 +20,7 @@ Get-WindowsDeveloperLicense [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-WindowsDeveloperLicense** cmdlet provides information about the developer license present on the current computer.
-For more information about developer licenses, see Get a developer license (Windows Store apps) (Windows)http://msdn.microsoft.com/library/windows/apps/hh974578.aspx (http://msdn.microsoft.com/library/windows/apps/hh974578.aspx) in the Microsoft Developer Network library.
+For more information about developer licenses, see Get a developer license (Windows Store apps) (Windows)https://msdn.microsoft.com/library/windows/apps/hh974578.aspx (https://msdn.microsoft.com/library/windows/apps/hh974578.aspx) in the Microsoft Developer Network library.
 
 The cmdlet gets an object that contains the expiration date for the developer license and a Boolean value that indicates whether that license is valid.
 If the cmdlet does not find a developer license, it informs you that there is no developer license on the current computer.
@@ -39,7 +39,7 @@ If the computer does not have a developer license, the cmdlet returns an error.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

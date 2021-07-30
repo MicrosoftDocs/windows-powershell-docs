@@ -123,7 +123,7 @@ VERBOSE: "A new PSSession to Contoso075 created."
 VERBOSE: "Transaction propagated from Contoso089 to Contoso075 using PULL propagation." 
 VERBOSE: "Transaction propagated from Contoso089 to Contoso075 using PUSH propagation." 
 VERBOSE: "Test Resource Manager Verbose Log:" 
-VERBOSE: DtcDiagRM:17100 is now listening at http://Contoso089:17100/DTCDiagRM. 
+VERBOSE: DtcDiagRM:17100 is now listening at https://Contoso089:17100/DTCDiagRM. 
 VERBOSE: Resolution of IP address to hostname failed, just using IP address: 2001:0db8:2a:1006:c041:b365:30de:b2e3. 
 VERBOSE: DtcDiagRM:17100 received a request for PropagationToken from 2001:0db8:2a:1006:c041:b365:30de:b2e3.
 VERBOSE: DtcDiagRM:17100 created Transaction 4a546251-db38-4fe9-91bb-22e532deb68b. 

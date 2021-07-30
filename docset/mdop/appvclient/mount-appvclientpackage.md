@@ -57,7 +57,7 @@ This command gets all packages that have the string My in the name, and then dow
 
 ### Example 4: Download and publish a new package
 ```
-PS C:\> Add-AppvClientPackage -Path "http://MyServer/content/package.Appv" | Mount-AppvClientPackage | Publish-AppvClientPackage -Global
+PS C:\> Add-AppvClientPackage -Path "https://MyServer/content/package.Appv" | Mount-AppvClientPackage | Publish-AppvClientPackage -Global
 ```
 
 This command adds the package from the path specified, then downloads it, and then publishes it to all users on the computer.

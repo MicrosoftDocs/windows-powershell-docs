@@ -58,7 +58,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -245,7 +245,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 
 ## RELATED LINKS
 
-[RFC-2307](http://www.rfc-editor.org/rfc/rfc2307.txt)
+[RFC-2307](https://www.rfc-editor.org/rfc/rfc2307.txt)
 
 [Get-NfsNetgroupStore](./Get-NfsNetgroupStore.md)
 

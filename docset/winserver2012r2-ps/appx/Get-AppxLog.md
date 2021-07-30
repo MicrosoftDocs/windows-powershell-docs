@@ -30,7 +30,7 @@ The log contains errors, warnings, and additional information about the processe
 
 When Add-AppxPackage or Remove-AppxPackage report a failure, they will return the ActivityID to use with Get-AppxLog.
 
-For more information about common error codes, see Troubleshooting packaging, deployment, and query of Windows Store appshttp://go.microsoft.com/fwlink/?LinkId=271201.
+For more information about common error codes, see Troubleshooting packaging, deployment, and query of Windows Store appshttps://go.microsoft.com/fwlink/?LinkId=271201.
 
 ## EXAMPLES
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

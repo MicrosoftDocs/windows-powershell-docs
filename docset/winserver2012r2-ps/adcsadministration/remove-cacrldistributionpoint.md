@@ -26,36 +26,36 @@ The Remove-CACRLDistributionPoint cmdlet removes the uniform resource identifier
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>Remove-CACrlDistributionPoint -URI "http://corp.contoso.com/rootca.crl"
+C:\PS>Remove-CACrlDistributionPoint -URI "https://corp.contoso.com/rootca.crl"
 ```
 
 Description
 
 -----------
 
-Removes all URIs for all distribution points that contain the specified URI value ("http://corp.contoso.com/rootca.crl").
+Removes all URIs for all distribution points that contain the specified URI value ("https://corp.contoso.com/rootca.crl").
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Remove-CACrlDistributionPoint -Uri "http://corp.contoso.com/rootca.crl" -AddToCertificateCdp
+C:\PS>Remove-CACrlDistributionPoint -Uri "https://corp.contoso.com/rootca.crl" -AddToCertificateCdp
 ```
 
 Description
 
 -----------
 
-Removes only the URIs that are set to a value of "http://corp.contoso.com/rootca.crl" and for which the AddToCertificateCdp is set.
+Removes only the URIs that are set to a value of "https://corp.contoso.com/rootca.crl" and for which the AddToCertificateCdp is set.
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>Remove-CACrlDistributionPoint -Uri "http://www.contoso.com/pki/orca.crl" -AddToCertificateCdp -AddToCrlIdp
+C:\PS>Remove-CACrlDistributionPoint -Uri "https://www.contoso.com/pki/orca.crl" -AddToCertificateCdp -AddToCrlIdp
 ```
 
 Description
 
 -----------
 
-Removes only the uniform resource indicators (URIs) that are unique to the URI specified ("http://www.contoso.com/pki/orca.crl") and the combination of flags that are set or included (AddToCertificateCdp, AddToCrlIdp).
+Removes only the uniform resource indicators (URIs) that are unique to the URI specified ("https://www.contoso.com/pki/orca.crl") and the combination of flags that are set or included (AddToCertificateCdp, AddToCrlIdp).
 
 ## PARAMETERS
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

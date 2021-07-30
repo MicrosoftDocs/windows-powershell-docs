@@ -32,7 +32,7 @@ Description                    : NCSI Configuration
 CorporateDNSProbeHostAddress   : 2001:4898:1337:1337:1337::1337 
 CorporateDNSProbeHostName      : corp.contoso.com 
 CorporateSitePrefixList        : 2001:4898::/32,2006:1601::/32,2a01:0110::/31 
-CorporateWebsiteProbeURL       : http://web.contoso.com 
+CorporateWebsiteProbeURL       : https://web.contoso.com 
 DomainLocationDeterminationURL : https://io.contoso.com
 ```
 

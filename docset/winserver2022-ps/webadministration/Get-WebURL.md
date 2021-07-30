@@ -35,7 +35,7 @@ The **Get-WebURL** cmdlet gets information about the URL associated with the spe
 IIS:\> Get-WebURL -PSPath "IIS:\Sites\Default Web Site"
 ResponseUri       Contents
 -----------       --------
-http://localhost/ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN".
+https://localhost/ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN".
 ```
 
 This command returns data about the default website.

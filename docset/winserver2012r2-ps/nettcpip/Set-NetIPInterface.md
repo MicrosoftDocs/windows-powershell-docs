@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 ### -BaseReachableTimeMs
 Specifies the base value for random reachable time, in milliseconds.
-For more information, see RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044. 
+For more information, see RFC 2461https://go.microsoft.com/fwlink/p/?LinkId=84044. 
                          
 The default value is 30.
 
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -585,7 +585,7 @@ Accept wildcard characters: False
 ### -NeighborUnreachabilityDetection
 Specifies the value for Neighbor Unreachability Detection (NUD).
 Use this parameter to determine when a neighbor is no longer reachable.
-For more information, see RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.
+For more information, see RFC 2461https://go.microsoft.com/fwlink/p/?LinkId=84044.
 For ActiveStore, you can modify the NUD from Disabled to Enabled, but modifying NUD from Enabled to Disabled for ActiveStore fails with an invalid parameter.
 For the PersistentStore, you can modify the NUD to either Enabled or Disabled, but you will have to restart the interface for the setting to take effect. 
 
@@ -714,7 +714,7 @@ Accept wildcard characters: False
 
 ### -RetransmitTimeMs
 Specifies a value for timeout and retransmission, in milliseconds, for Neighbor Solicitation messages.
-For more information, see RetransTimer in RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.
+For more information, see RetransTimer in RFC 2461https://go.microsoft.com/fwlink/p/?LinkId=84044.
 By default, the value is set to 1000.
 
 ```yaml
@@ -831,7 +831,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

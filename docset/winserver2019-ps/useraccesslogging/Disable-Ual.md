@@ -27,7 +27,7 @@ This cmdlet does not stop the UAL service.
 You can use the Get-Ual cmdlet to check the startup status for UAL.
 You can use the Disable-Ual and Enable-Ual cmdlets to change the startup status.
 
-For more information about UAL, see the [User Access Logging Overview](https://technet.microsoft.com/library/hh849634.aspx) topic in the TechNet library at http://technet.microsoft.com/library/hh849634.aspx.
+For more information about UAL, see the [User Access Logging Overview](https://technet.microsoft.com/library/hh849634.aspx) topic in the TechNet library at https://technet.microsoft.com/library/hh849634.aspx.
 
 ## EXAMPLES
 

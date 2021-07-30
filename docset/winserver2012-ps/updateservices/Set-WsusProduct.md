@@ -18,7 +18,7 @@ Set-WsusProduct [-Disable] -Product <WsusProduct> [-Confirm] [-WhatIf]
 
 ## DESCRIPTION
 The **Set-WsusProduct** cmdlet enables or disables the product representing the category of updates to synchronized.
-In order to use this cmdlet, the Get-WsusProduct cmdlet must be run (optionally using the Where-Objecthttp://go.microsoft.com/fwlink/?LinkID=113423 cmdlet to filter its results) with its results piped into this cmdlet.
+In order to use this cmdlet, the Get-WsusProduct cmdlet must be run (optionally using the Where-Objecthttps://go.microsoft.com/fwlink/?LinkID=113423 cmdlet to filter its results) with its results piped into this cmdlet.
 
 ## EXAMPLES
 

@@ -32,7 +32,7 @@ Description
 -----------
 
 This command removes the rms_2 configuration on this computer.
-For more information on using this cmdlet, see http://go.microsoft.com/fwlink/?LinkId=136806
+For more information on using this cmdlet, see https://go.microsoft.com/fwlink/?LinkId=136806
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
@@ -44,7 +44,7 @@ Description
 -----------
 
 This command removes the Identity Federation Support configuration on this computer.
-For more information on using this cmdlet, see http://go.microsoft.com/fwlink/?LinkId=136806
+For more information on using this cmdlet, see https://go.microsoft.com/fwlink/?LinkId=136806
 
 ## PARAMETERS
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

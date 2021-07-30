@@ -106,7 +106,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -240,7 +240,7 @@ Specifies an array of one or more trigger objects that cause a scheduled task to
 A trigger is a set of criteria that, when met, starts a scheduled task.
 You can use a time-based trigger or an event-based trigger to start a task and a task can be started by one or more triggers.
 A task can have up to 48 triggers.
-For more information about triggers, see Triggershttp://technet.microsoft.com/en-us/library/cc748841.aspx.
+For more information about triggers, see Triggershttps://technet.microsoft.com/en-us/library/cc748841.aspx.
 
 ```yaml
 Type: CimInstance[]

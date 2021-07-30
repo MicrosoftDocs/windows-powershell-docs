@@ -75,7 +75,7 @@ PS C:\> Import-Csv -Path ScopeList.txt | Export-DhcpServer -ComputerName dhcpser
 ```
 
 This example exports a list of scopes specified in file named ScopeList.txt to the specified export file in XML file format.
-The Import-Csvhttp://go.microsoft.com/fwlink/p/?LinkId=113341 cmdlet returns the objects containing the scope IDs output and pipes the objects into this cmdlet, which exports the specified scopes. 
+The Import-Csvhttps://go.microsoft.com/fwlink/p/?LinkId=113341 cmdlet returns the objects containing the scope IDs output and pipes the objects into this cmdlet, which exports the specified scopes. 
                          
 The file named ScopeList.txt should contain the following format: 
                          
@@ -91,7 +91,7 @@ ScopeId
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

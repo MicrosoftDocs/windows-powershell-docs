@@ -24,7 +24,7 @@ Get-NetPrefixPolicy [[-Prefix] <String[]>] [-Precedence <UInt32[]>] [-Label <UIn
 The **Get-NetPrefixPolicy** cmdlet gets the prefix policy.
 A computer uses a prefix policy to select source and destination addresses.
 A prefix policy establishes selection criteria based on the precedence of destination addresses and on labels that are attached to source addresses.
-For more information, see [RFC 3484](http://www.ietf.org/rfc/rfc3484.txt).
+For more information, see [RFC 3484](https://www.ietf.org/rfc/rfc3484.txt).
 
 ## EXAMPLES
 

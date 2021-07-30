@@ -35,7 +35,7 @@ This example returns all of the enrollment policy URL configurations that are in
 
 ### EXAMPLE 2
 ```
-PS C:\>Get-CertificateEnrollmentPolicyServer -Url http://www.contoso.com/Policy/service.svc -Scope All -Context Machine
+PS C:\>Get-CertificateEnrollmentPolicyServer -Url https://www.contoso.com/Policy/service.svc -Scope All -Context Machine
 ```
 
 This example returns all of the enrollment policy URL configurations that have the given URL for the machine context.

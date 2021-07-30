@@ -44,7 +44,7 @@ To make these decisions, the IP layer consults a routing table stored in memory.
 Routing table entries are created by default when TCP/IP initializes, and entries can be added either manually or automatically.
 When the computer is routing, the RouteMetric property is added to the InterfaceMetric property, described as a part of NetIPInterface.
 This total value is used to decide the pass-through interface to send the forwarded packets.
-For more information, see IP Routing on TechNethttp://technet.microsoft.com/library/bb727001.aspx.
+For more information, see IP Routing on TechNethttps://technet.microsoft.com/library/bb727001.aspx.
 
 NetRoute objects do not allow the DestinationPrefix or NextHop properties to be modified after creation.
 To modify these values, remove the NetRoute object and re-create it using the New-NetRoute cmdlet.
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 
 ### -PreferredLifetime
 Modifies the preferred lifetime of the IP route.
-This parameter value uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+This parameter value uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure.
 
 ```yaml
 Type: TimeSpan
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 
 ### -ValidLifetime
 Modifies the valid lifetime of a route.
-This parameter value uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+This parameter value uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure.
 
 ```yaml
 Type: TimeSpan

@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -104,7 +104,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 
 ## NOTES
-* For information about the schema for the metrics XML file, see Windows HPC Server 2008: Operationshttps://technet.microsoft.com/en-us/library/cc947639.aspx (http://go.microsoft.com/fwlink/?LinkId=120726) in the TechNet Library.
+* For information about the schema for the metrics XML file, see Windows HPC Server 2008: Operationshttps://technet.microsoft.com/en-us/library/cc947639.aspx (https://go.microsoft.com/fwlink/?LinkId=120726) in the TechNet Library.
 * You must be a cluster administrator to run this cmdlet successfully.
 
 ## RELATED LINKS

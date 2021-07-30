@@ -25,7 +25,7 @@ Enable-OdbcPerfCounter [[-Platform] <String>] [-AsJob] [-CimSession <CimSession>
 ```
 
 ## DESCRIPTION
-For more information about ODBC and performance counters, see Microsoft Open Database Connectivity (ODBC)http://msdn.microsoft.com/en-us/library/ms710252.aspx and ODBC Performance Countershttp://msdn.microsoft.com/en-us/library/windows/desktop/ms709288.aspx.
+For more information about ODBC and performance counters, see Microsoft Open Database Connectivity (ODBC)https://msdn.microsoft.com/en-us/library/ms710252.aspx and ODBC Performance Countershttps://msdn.microsoft.com/en-us/library/windows/desktop/ms709288.aspx.
 
 ## EXAMPLES
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

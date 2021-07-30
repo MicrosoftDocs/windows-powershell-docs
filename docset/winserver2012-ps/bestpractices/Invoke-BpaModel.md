@@ -33,7 +33,7 @@ If a model is specified in the cmdlet after the BPA scan has been performed, the
 This cmdlet cannot be canceled after it has been started.
 
 Single-node XML is not supported by the BPA model schema.
-For more information about what is supported by the BPA model schema, see the Microsoft Baseline Configuration Analyzer Model Authoring Guide on the Microsoft Download Centerhttp://www.microsoft.com/download/details.aspx?id=16475.
+For more information about what is supported by the BPA model schema, see the Microsoft Baseline Configuration Analyzer Model Authoring Guide on the Microsoft Download Centerhttps://www.microsoft.com/download/details.aspx?id=16475.
 
 ## EXAMPLES
 
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

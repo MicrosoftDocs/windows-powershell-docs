@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -Cost
 Specifies the cost to be placed on the site link.
-For more information on determining the cost, see [Determining the Cost](https://go.microsoft.com/fwlink/?LinkId=221871) in the TechNet Library: http://go.microsoft.com/fwlink/?LinkId=221871.
+For more information on determining the cost, see [Determining the Cost](https://go.microsoft.com/fwlink/?LinkId=221871) in the TechNet Library: https://go.microsoft.com/fwlink/?LinkId=221871.
 
 ```yaml
 Type: Int32

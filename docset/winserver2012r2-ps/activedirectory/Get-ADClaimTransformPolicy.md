@@ -100,7 +100,7 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
+You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttps://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
 You can then set the **Credential** parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
@@ -212,7 +212,7 @@ To display all of the attributes that are set on the object, specify * (asterisk
 To specify an individual extended property, use the name of the property.
 For properties that are not default or extended properties, you must specify the LDAP display name of the attribute.
 
-To retrieve properties and display them for an object, you can use the Get-* cmdlet associated with the object and pass the output to the Get-Memberhttp://go.microsoft.com/fwlink/?LinkID=113322 cmdlet.
+To retrieve properties and display them for an object, you can use the Get-* cmdlet associated with the object and pass the output to the Get-Memberhttps://go.microsoft.com/fwlink/?LinkID=113322 cmdlet.
 
 ```yaml
 Type: String[]
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

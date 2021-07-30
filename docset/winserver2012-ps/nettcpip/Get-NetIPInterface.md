@@ -57,7 +57,7 @@ Get-NetIPInterface [-AsJob] [-AssociatedIPAddress <CimInstance>] [-CimSession <C
 ## DESCRIPTION
 The **Get-NetIPInterface** cmdlet gets IP interface properties such as IPv4 addresses, IPv6 addresses and the IP interfaces to which these addresses are associated.
 Interface properties include properties such as DHCP is enabled or disabled, Wake on LAN (WoL) settings and IPv6 address auto-configuration settings.
-More information on IPv6 is available here IPv6 Address Autoconfiguration on TechNethttp://technet.microsoft.com/library/cc778502(WS.10).aspx. 
+More information on IPv6 is available here IPv6 Address Autoconfiguration on TechNethttps://technet.microsoft.com/library/cc778502(WS.10).aspx. 
 
 This cmdlet does not get the gateway as that is a routing concept covered by the Get-NetRoute cmdlet.
 For IP endpoints, the gateway specifies the forwarding or next hop IP address over which the set of addresses defined by the network destination and subnet mask are reachable. 
@@ -165,7 +165,7 @@ Gets IP interface properties only for interfaces by AdvertisedRouterLifetime.
 This parameter indicates the lifetime of default routes when advertising routes on the IP interface, in seconds.
 The default value is 1800.
 Valid only for advertising interfaces.
-This parameter uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+This parameter uses time as defined by the TimeSpanhttps://msdn.microsoft.com/library/system.timespan.aspx structure.
 
 ```yaml
 Type: TimeSpan[]
@@ -304,7 +304,7 @@ Accept wildcard characters: False
 ### -BaseReachableTimeMs
 Gets IP interface properties only for interfaces by the BaseReachableTime property.
 This parameter is the base for random reachable time, in milliseconds.
-This parameter is described in RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.
+This parameter is described in RFC 2461https://go.microsoft.com/fwlink/p/?LinkId=84044.
 The default BaseReachableTime setting is `30`.
 
 ```yaml
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -620,7 +620,7 @@ Accept wildcard characters: False
 Gets IP interface properties only for interfaces by the NeighborUnreachablilityDetection property.
 This parameter is how nodes determine that a neighbor is no longer reachable.
 Default depends on type of interface.
-This parameter is described in RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.
+This parameter is described in RFC 2461https://go.microsoft.com/fwlink/p/?LinkId=84044.
 The acceptable values for this parameter are:
 
  -- Enabled: IP Interface properties for interfaces that have NeighborUnreachabilityDetection enabled. 
@@ -722,7 +722,7 @@ Accept wildcard characters: False
 ### -RetransmitTimeMs
 Gets IP interface properties only about a specific interface, as defined by the RetransmitTime.
 This parameter defines the timeout and retransmission of Neighbor Solicitation messages, in milliseconds.
-This parameter is described as RetransTimer in RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.
+This parameter is described as RetransTimer in RFC 2461https://go.microsoft.com/fwlink/p/?LinkId=84044.
 The default value is `1000`.
 
 ```yaml

@@ -21,7 +21,7 @@ Get-NetVirtualizationProviderAddress [-AddressState <AddressState[]>] [-AsJob] [
 ## DESCRIPTION
 The **Get-NetVirtualizationProviderAddress** cmdlet gets Provider Addresses configured in hv_win8_1 Network Virtualization.
 A Provider Address is an IPv4 or IPv6 address that Network Virtualization uses for multiple virtual Customer Addresses.
-For more information, see Network Virtualization technical detailshttp://technet.microsoft.com/library/jj134174.aspx (http://technet.microsoft.com/library/jj134174.aspx) on TechNet.
+For more information, see Network Virtualization technical detailshttps://technet.microsoft.com/library/jj134174.aspx (https://technet.microsoft.com/library/jj134174.aspx) on TechNet.
 
 You can specify which Provider Addresses to get by using address state, interface index, prefix length, IP address, or VLAN ID.
 You can use this cmdlet to get Provider Addresses for other cmdlets, such as the Set-NetVirtualizationProviderAddress cmdlet or the Remove-NetVirtualizationProviderAddress cmdlet.
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

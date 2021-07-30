@@ -34,7 +34,7 @@ This example returns all of the enrollment policy URL configurations that are in
 
 ### EXAMPLE 2
 ```
-PS C:\>Get-CertificateEnrollmentPolicyServer -Url http://www.contoso.com/Policy/service.svc -Scope All -Context Machine
+PS C:\>Get-CertificateEnrollmentPolicyServer -Url https://www.contoso.com/Policy/service.svc -Scope All -Context Machine
 ```
 
 This example returns all of the enrollment policy URL configurations that have the given URL for the machine context.
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

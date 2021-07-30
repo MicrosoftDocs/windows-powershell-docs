@@ -570,7 +570,7 @@ The LDAP Display Name (ldapDisplayName) for this property is "wWWHomePage".
 
 The following example shows how to set this parameter to a URL.
 
--HomePage "http://employees.contoso.com/sdavis"
+-HomePage "https://employees.contoso.com/sdavis"
 
 ```yaml
 Type: String

@@ -67,10 +67,10 @@ To specify a default naming context for an AD LDS environment, set the **msDS-de
 
 ### Example 1: Set properties for a user
 ```powershell
-PS C:\> Set-ADUser -Identity ChewDavid -HomePage 'http://fabrikam.com/employees/ChewDavid' -LogonWorkstations 'ChewDavid-DSKTOP,ChewDavid-LPTOP'
+PS C:\> Set-ADUser -Identity ChewDavid -HomePage 'https://fabrikam.com/employees/ChewDavid' -LogonWorkstations 'ChewDavid-DSKTOP,ChewDavid-LPTOP'
 ```
 
-This command sets the specified user's **homepage** property to http://fabrikam.com/employees/ChewDavid and the **LogonWorkstations** property to ChewDavid-DSKTOP,ChewDavid-LPTOP.
+This command sets the specified user's **homepage** property to https://fabrikam.com/employees/ChewDavid and the **LogonWorkstations** property to ChewDavid-DSKTOP,ChewDavid-LPTOP.
 
 ### Example 2: Set properties for multiple users
 ```powershell

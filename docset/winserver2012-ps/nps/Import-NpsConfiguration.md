@@ -20,7 +20,7 @@ Import-NpsConfiguration [-Path] <String>
 The **Import-NpsConfiguration** cmdlet imports settings for Network Policy Server (NPS).
 NPS manages network access policies for client health, connection request authentication, and connection request authorization.
 You can use NPS as a Remote Authentication Dial-In User Service (RADIUS) proxy to forward connection requests to NPS or other RADIUS servers that you configure in remote RADIUS server groups.
-For more information about NPS, see Network Policy Serverhttp://technet.microsoft.com/en-us/library/cc732912.aspx (http://technet.microsoft.com/en-us/library/cc732912.aspx) on TechNet.
+For more information about NPS, see Network Policy Serverhttps://technet.microsoft.com/en-us/library/cc732912.aspx (https://technet.microsoft.com/en-us/library/cc732912.aspx) on TechNet.
 
 ## EXAMPLES
 

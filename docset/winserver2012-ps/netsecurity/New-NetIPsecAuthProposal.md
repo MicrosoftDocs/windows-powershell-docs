@@ -293,7 +293,7 @@ Accept wildcard characters: False
 
 ### -Kerberos
 Specifies that Kerberos is used.
-This method authenticates the identity of user or computer accounts by using Kerberos Protocol Extensionshttp://msdn.microsoft.com/library/cc233855.aspx.
+This method authenticates the identity of user or computer accounts by using Kerberos Protocol Extensionshttps://msdn.microsoft.com/library/cc233855.aspx.
 
 ```yaml
 Type: SwitchParameter

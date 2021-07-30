@@ -25,7 +25,7 @@ To remove a link from the home page of a Remote Web Access website, use the **Re
 
 ### Example 1: Add a link to a home page
 ```
-PS C:\> Add-WssRemoteWebAccessLink -Text "Link1" -Url "http://Contoso.com/About-Contoso-Page.html"
+PS C:\> Add-WssRemoteWebAccessLink -Text "Link1" -Url "https://Contoso.com/About-Contoso-Page.html"
 ```
 
 This command adds a link to the home page for a Remote Web Access website.

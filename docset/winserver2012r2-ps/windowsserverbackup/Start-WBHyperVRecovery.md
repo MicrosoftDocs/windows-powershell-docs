@@ -23,7 +23,7 @@ Start-WBHyperVRecovery [-BackupSet] <WBBackupSet> [-VMInBackup] <WBVirtualMachin
 The **Start-WBHyperVRecovery** cmdlet starts a recovery operation for a Hyper-V virtual machine (VM).
 Use the application array from a **WBBackupSet** object to specify the VMs that you want to recover.
 
-For an overview of Hyper-V, see HyperV Overviewhttp://technet.microsoft.com/en-us/library/hh831531.aspx (http://technet.microsoft.com/en-us/library/hh831531.aspx) on TechNet.
+For an overview of Hyper-V, see HyperV Overviewhttps://technet.microsoft.com/en-us/library/hh831531.aspx (https://technet.microsoft.com/en-us/library/hh831531.aspx) on TechNet.
 
 ## EXAMPLES
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

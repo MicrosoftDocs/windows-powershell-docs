@@ -21,7 +21,7 @@ The **Set-WinHomeLocation** cmdlet sets the value of the user GeoID object.
 The Windows GeoID setting is a user setting that describes the home location (that is, the country or region) of the current user account.
 Applications that require the current user account's home location, such as a driver for a television tuner application, can use this setting.
 
-A table of GeoIDs is available at Table of Geographical Locationshttp://go.microsoft.com/fwlink/?LinkID=242308.
+A table of GeoIDs is available at Table of Geographical Locationshttps://go.microsoft.com/fwlink/?LinkID=242308.
 
 ## EXAMPLES
 
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

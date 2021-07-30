@@ -42,14 +42,14 @@ This cmdlet supports getting information from a Group Policy Object, in the form
 
 ### Example 1: Modify the corporate website probe of a GPO
 ```
-PS C:\> Set-NCSIPolicyConfiguration -PolicyStore "contoso\davidchew" -CorporateWebsiteProbe "http://contoso.com"
+PS C:\> Set-NCSIPolicyConfiguration -PolicyStore "contoso\davidchew" -CorporateWebsiteProbe "https://contoso.com"
 ```
 
 This command modifies the corporate website probe of the specified GPO.
 
 ### Example 2: Modify the corporate website probe by using the pipeline
 ```
-PS C:\> Get-NCSIPolicyConfiguration -PolicyStore "contoso\davidchew" | Set-NCSIPolicyConfiguration -CorporateWebsiteProbe "http://contoso.com"
+PS C:\> Get-NCSIPolicyConfiguration -PolicyStore "contoso\davidchew" | Set-NCSIPolicyConfiguration -CorporateWebsiteProbe "https://contoso.com"
 ```
 
 This command performs the same operation as the first example using the pipeline operator.
@@ -57,7 +57,7 @@ This command performs the same operation as the first example using the pipeline
 ### Example 2: Modify the corporate website probe by using dot notation
 ```
 PS C:\> $Object = Get-NCSIPolicyConfiguration -PolicyStore "contoso\davidchew"
-PS C:\> $Object.CorporateWebsiteProbe = "http://contoso.com"
+PS C:\> $Object.CorporateWebsiteProbe = "https://contoso.com"
 PS C:\> Set-NCSIPolicyConfiguration -InputObject $Object
 ```
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 Specifies the value to be configured.
 
 This is the host name of a computer known to be on the corporate network.
-Successful resolution of this host name to the expected address indicates corporate connectivity, such as `http://contoso.com`.
+Successful resolution of this host name to the expected address indicates corporate connectivity, such as `https://contoso.com`.
 
 ```yaml
 Type: String
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ### -CorporateWebsiteProbeURL
 Specifies the value to be configured.
 
-This is the URL of the corporate website that will be used to perform an active probe against, such as `http://contoso.com`.
+This is the URL of the corporate website that will be used to perform an active probe against, such as `https://contoso.com`.
 
 ```yaml
 Type: String

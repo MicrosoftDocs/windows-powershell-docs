@@ -39,7 +39,7 @@ Description
 -----------
 
 This command configures AD RMS by using configuration settings that were previously set on items in the adrmsdrive:\ drive.
-For more information on using this cmdlet, see http://go.microsoft.com/fwlink/?LinkId=136806.
+For more information on using this cmdlet, see https://go.microsoft.com/fwlink/?LinkId=136806.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
@@ -51,7 +51,7 @@ Description
 -----------
 
 This command configures Identity Federation Support for the AD RMS cluster and sets the federation server URL.
-For more information on using this cmdlet, see http://go.microsoft.com/fwlink/?LinkId=136806.
+For more information on using this cmdlet, see https://go.microsoft.com/fwlink/?LinkId=136806.
 
 ## PARAMETERS
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

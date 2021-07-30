@@ -21,8 +21,8 @@ Set-DnsServer [-InputObject] <CimInstance> [-AsJob] [-CimSession <CimSession[]>]
 The **Set-DnsServer** cmdlet uses an input object to overwrite a specified Domain Name System (DNS) server configuration.
 You can generate the input object by using an XML file that is exported by using any of the following cmdlets: **Get-DnsServer**, **Export-Clixml**, or **Import-Clixml**.
 
-For more information about **Export-Clixml**, see  Export-Clixmlhttp://technet.microsoft.com/en-us/library/hh849916.aspx.
-For more information about **Import-Clixml**, see  Import-Clixmlhttp://technet.microsoft.com/en-us/library/hh849906.aspx.
+For more information about **Export-Clixml**, see  Export-Clixmlhttps://technet.microsoft.com/en-us/library/hh849916.aspx.
+For more information about **Import-Clixml**, see  Import-Clixmlhttps://technet.microsoft.com/en-us/library/hh849906.aspx.
 
 ## EXAMPLES
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

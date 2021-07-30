@@ -21,7 +21,7 @@ The **Copy-WssClientRecoveryImage** cmdlet copies files needed to build a client
 Specify the partition for the device.
 
 Before you use this cmdlet, use the DiskPart utility to clean the USB device, create a primary partition, format that partition as NTFS, and activate the partition.
-For more information about the DiskPart utility, see DiskParthttp://technet.microsoft.com/en-us/library/cc770877.aspx (http://technet.microsoft.com/en-us/library/cc770877.aspx).
+For more information about the DiskPart utility, see DiskParthttps://technet.microsoft.com/en-us/library/cc770877.aspx (https://technet.microsoft.com/en-us/library/cc770877.aspx).
 
 ## EXAMPLES
 

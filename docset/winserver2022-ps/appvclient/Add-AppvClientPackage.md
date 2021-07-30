@@ -31,7 +31,7 @@ Existing versions remain unchanged.
 
 ### Example 1: Add a package to the client
 ```
-PS C:\> Add-AppvClientPackage -Path "http://MyServer/content/package.APPV"
+PS C:\> Add-AppvClientPackage -Path "https://MyServer/content/package.APPV"
 ```
 
 This command adds a new package to the client computer.
@@ -40,14 +40,14 @@ Since no computer policy is provided, the package receives the default computer 
 
 ### Example 2: Add a package with a configuration file
 ```
-PS C:\> Add-AppvClientPackage -Path "http://MyServer/content/package.appv" -DynamicDeploymentConfiguration "C:\MyConfigfiles\DynamicDeploymentConfig.xml"
+PS C:\> Add-AppvClientPackage -Path "https://MyServer/content/package.appv" -DynamicDeploymentConfiguration "C:\MyConfigfiles\DynamicDeploymentConfig.xml"
 ```
 
 This command adds a package with a Dynamic Deployment Configuration file.
 
 ### Example 3: Add a package to the client and store the result
 ```
-PS C:\> $Package = Add-AppvClientPackage -Path "http://MyServer/content/package.APPV"
+PS C:\> $Package = Add-AppvClientPackage -Path "https://MyServer/content/package.APPV"
 ```
 
 This command adds a new package to the client and assigns the resulting **AppvClientPackage** object to the variable $Package.

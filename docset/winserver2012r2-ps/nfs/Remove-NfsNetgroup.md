@@ -24,7 +24,7 @@ The **Remove-NfsNetgroup** cmdlet removes a netgroup.
 
 You can remove netgroups that are stored in Active Directory Domain Services (AD DS) or Active Directory Lightweight Directory Services (AD LDS) only.
 To remove a netgroup that is stored in Network Information Service (NIS), use the corresponding NIS administration tool.
-For more information about how to manage an NIS server, see Server for NIS Administrationhttp://technet.microsoft.com/en-us/library/cc753089.
+For more information about how to manage an NIS server, see Server for NIS Administrationhttps://technet.microsoft.com/en-us/library/cc753089.
 
 If you do not specify a netgroup store, the **Remove-NfsNetgroup** cmdlet removes the netgroup from a netgroup store that is configured on the local computer.
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

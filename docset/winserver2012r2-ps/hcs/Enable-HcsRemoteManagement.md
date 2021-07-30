@@ -26,7 +26,7 @@ Specify the **AllowHttp** parameter to enable remote management over HTTP as wel
 
 To obtain the required certificate for connecting by using HTTPS, use the Get-HcsRemoteManagementCert cmdlet.
 
-For more information about how to run remote commands in Windows PowerShell, type Get-Help about_Remotehttp://technet.microsoft.com/en-us/library/hh847900.aspx.
+For more information about how to run remote commands in Windows PowerShell, type Get-Help about_Remotehttps://technet.microsoft.com/en-us/library/hh847900.aspx.
 
 ## EXAMPLES
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

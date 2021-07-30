@@ -24,7 +24,7 @@ Get-ClusteredScheduledTask [[-TaskName] <String>] [[-Cluster] <String>] [[-TaskT
 The **Get-ClusteredScheduledTask** cmdlet gets the clustered scheduled tasks registered on a failover cluster.
 You can specify task name or task type.
 
-For more information about the Windows Server® 2012 Task Scheduler, see the [Task Scheduler Overview](https://technet.microsoft.com/en-us/library/cc721871.aspx) topic in the TechNet Library at http://technet.microsoft.com/en-us/library/cc721871.aspx.
+For more information about the Windows Server® 2012 Task Scheduler, see the [Task Scheduler Overview](https://technet.microsoft.com/en-us/library/cc721871.aspx) topic in the TechNet Library at https://technet.microsoft.com/en-us/library/cc721871.aspx.
 
 ## EXAMPLES
 

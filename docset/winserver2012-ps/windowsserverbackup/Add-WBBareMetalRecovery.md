@@ -20,7 +20,7 @@ Add-WBBareMetalRecovery [-Policy] <WBPolicy>
 The **Add-WBBareMetalRecovery** cmdlet adds items to a backup policy object so that backups that use that policy can perform bare metal recoveries.
 A bare metal recovery is the process of rebuilding a computer after a catastrophic failure.
 The recovery process backs up the system volume and master boot record by copying the entire volume and using Volume Shadow Copy Service (VSS) writers to ensure that all applications are in a consistent state for the copy.
-For more information about bare metal recovery, see Backup for Bare Metal Recoveryhttp://technet.microsoft.com/en-us/library/bb795820.aspx (http://technet.microsoft.com/en-us/library/bb795820.aspx) on TechNet.
+For more information about bare metal recovery, see Backup for Bare Metal Recoveryhttps://technet.microsoft.com/en-us/library/bb795820.aspx (https://technet.microsoft.com/en-us/library/bb795820.aspx) on TechNet.
 
 If you add the ability to perform a bare metal recovery to a policy, you also add the ability to perform a system state recovery.
 

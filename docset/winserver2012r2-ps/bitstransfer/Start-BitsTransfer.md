@@ -37,19 +37,19 @@ Or, if you need to upload more than one file, consider using a cabinet file (.ca
 
 ### EXAMPLE 1
 ```
-PS C:\>Start-BitsTransfer -Source http://server01/servertestdir/testfile1.txt -Destination c:\clienttestdir\testfile1.txt
+PS C:\>Start-BitsTransfer -Source https://server01/servertestdir/testfile1.txt -Destination c:\clienttestdir\testfile1.txt
 ```
 
 This command creates a new BITS transfer job that downloads a file from a server.
 The local and remote names of the file are specified in the **Source** and **Destination** parameters.
-Because the default transfer type is Download, the `http://Server01/servertestdir/testfile1.txt` file is transferred to `C:\clienttestdir\testfile1.txt` on the client.
+Because the default transfer type is Download, the `https://Server01/servertestdir/testfile1.txt` file is transferred to `C:\clienttestdir\testfile1.txt` on the client.
 The command prompt returns when the file transfer is complete or when it enters an error state.
 
 When you upload files to an HTTP location, the **TransferType** parameter must be set to **Upload**.
 
 Because the **Start-BitsTransfer** cmdlet assumes that the first parameter is the source and that the second parameter is the destination when no value is specified, this command could be simplified as follows:
 
-`Start-BitsTransfer http://server01/servertestdir/testfile1.txt c:\clienttestdir\testfile1.txt`
+`Start-BitsTransfer https://server01/servertestdir/testfile1.txt c:\clienttestdir\testfile1.txt`
 
 ### EXAMPLE 2
 ```
@@ -64,20 +64,20 @@ The **Start-BitsTransfer** command creates a new BITS transfer job for each of t
 The contents of the **filelist.txt** file resemble the following information:
 
 **Source, Destination**
-**http://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt**
-**http://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt**
-**http://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt**
-**http://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt**
+**https://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt**
+**https://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt**
+**https://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt**
+**https://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt**
 
 ### EXAMPLE 3
 ```
-PS C:\>Start-BitsTransfer -Source c:\clienttestdir\testfile1.txt -Destination http://server01/servertestdir/testfile1.txt -TransferType Upload
+PS C:\>Start-BitsTransfer -Source c:\clienttestdir\testfile1.txt -Destination https://server01/servertestdir/testfile1.txt -TransferType Upload
 ```
 
 This command creates a new BITS transfer job that uploads a file to a server.
 The local and remote names of the file are specified in the **Source** and **Destination** parameters.
 Because the default transfer type is Download, the **TransferType** parameter must be set to **Upload**.
-The **C:\clienttestdir\testfile1.txt** file on the client is transferred to **http://Server01/servertestdir/testfile1.txt**.
+The **C:\clienttestdir\testfile1.txt** file on the client is transferred to **https://Server01/servertestdir/testfile1.txt**.
 The command prompt returns when the file transfer is complete or enters an error state.
 
 Important: The **Start-BitsTransfer** cmdlet lets you download multiple files from a server to a client computer, but it does not typically let you upload multiple files from a client computer to a server.
@@ -86,23 +86,23 @@ If you need to upload more than one file, you can also use a .cab or .zip file.
 
 Because the **Start-BitsTransfer** cmdlet assumes that the first parameter is the source and that the second parameter is the destination when no value is specified, this command could be simplified as follows:
 
-`Start-BitsTransfer c:\clienttestdir\testfile1.txt http://server01/servertestdir/testfile1.txt -TransferType Upload`
+`Start-BitsTransfer c:\clienttestdir\testfile1.txt https://server01/servertestdir/testfile1.txt -TransferType Upload`
 
 ### EXAMPLE 4
 ```
-PS C:\>Start-BitsTransfer -Source http://server01/servertestdir/testfile1.txt, http://server01/servertestdir/testfile1.txt -Destination c:\clienttestdir\testfile1.txt, c:\clienttestdir\testfile1.txt
+PS C:\>Start-BitsTransfer -Source https://server01/servertestdir/testfile1.txt, https://server01/servertestdir/testfile1.txt -Destination c:\clienttestdir\testfile1.txt, c:\clienttestdir\testfile1.txt
 ```
 
 This command creates a new BITS transfer job that downloads multiple files from a server.
 
 The local and remote names of the files are specified in the **Source** and **Destination** parameters.
-Because the default of the **TransferType** parameter is Download, the **http://Server01/servertestdir/testfile1.txt** and **http://Server01/servertestdir/testfile2.txt** files are transferred to **C:\clienttestdir\testfile1.txt and C:\clienttestdir\testfile2.txt** on the client computer.
+Because the default of the **TransferType** parameter is Download, the **https://Server01/servertestdir/testfile1.txt** and **https://Server01/servertestdir/testfile2.txt** files are transferred to **C:\clienttestdir\testfile1.txt and C:\clienttestdir\testfile2.txt** on the client computer.
 The command prompt returns when the file transfer is complete or enters an error state.
 
 ### EXAMPLE 5
 ```
 PS C:\>$c = Get-Credential
-PS C:\>Start-BitsTransfer -DisplayName MyJob -Credential $c -Source http://server01/servertestdir/testfile1.txt -Destination c:\clienttestdir\testfile1.txt
+PS C:\>Start-BitsTransfer -DisplayName MyJob -Credential $c -Source https://server01/servertestdir/testfile1.txt -Destination c:\clienttestdir\testfile1.txt
 ```
 
 These commands create a new BITS transfer job that downloads a file from a server by using a specific set of credentials.
@@ -111,7 +111,7 @@ The first command retrieves a set of credentials from the user by calling the **
 The returned PSCredential object is stored in the $c variable.
 
 The second command uses the **Credential** parameter to pass the PSCredential object that is stored in the $c variable to the **Start-BitsTransfer** cmdlet.
-A new BITS transfer job is created that downloads the **http://server01/servertestdir/testfile1.txt** file to the client.
+A new BITS transfer job is created that downloads the **https://server01/servertestdir/testfile1.txt** file to the client.
 The specified credentials are used to authenticate the user at the server.
 Additionally, the optional **DisplayName** parameter is used to give the BITS transfer job a unique name.
 
@@ -129,14 +129,14 @@ The **Start-BitsTransfer** command creates a new BITS transfer job for each of t
 The contents of the **filelist.txt** file resemble the following information:
 
 **Source, Destination**
-**http://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt**
-**http://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt**
-**http://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt**
-**http://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt**
+**https://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt**
+**https://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt**
+**https://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt**
+**https://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt**
 
 ### EXAMPLE 7
 ```
-PS C:\>Start-BitsTransfer -Source http://server01/servertestdir/*.* -Destination c:\clienttestdir\
+PS C:\>Start-BitsTransfer -Source https://server01/servertestdir/*.* -Destination c:\clienttestdir\
 ```
 
 This command creates a new BITS transfer job that downloads multiple files from a server.
@@ -146,7 +146,7 @@ All the files are added to a single job and then transferred sequentially to the
 
 The following command shows another variation of a file transfer command that uses a wildcard character:
 
-`Start-BitsTransfer -Source http://server01/servertestdir/*.txt -Destination c:\clienttestdir\\`
+`Start-BitsTransfer -Source https://server01/servertestdir/*.txt -Destination c:\clienttestdir\\`
 
 The destination path cannot use wildcard characters.
 The destination path supports only a relative directory, a rooted path, or an implicit directory (the current directory).
@@ -168,10 +168,10 @@ The **Start-BitsTransfer** command creates a new BITS transfer job for each of t
 The contents of the **filelist.txt** file resemble the following information:
 
 **Source, Destination**
-**c:\clienttestdir\testfile1.txt, http://server01/servertestdir/testfile1.txt**
-**c:\clienttestdir\testfile2.txt, http://server01/servertestdir/testfile2.txt**
-**c:\clienttestdir\testfile3.txt, http://server01/servertestdir/testfile3.txt**
-**c:\clienttestdir\testfile4.txt, http://server01/servertestdir/testfile4.txt**
+**c:\clienttestdir\testfile1.txt, https://server01/servertestdir/testfile1.txt**
+**c:\clienttestdir\testfile2.txt, https://server01/servertestdir/testfile2.txt**
+**c:\clienttestdir\testfile3.txt, https://server01/servertestdir/testfile3.txt**
+**c:\clienttestdir\testfile4.txt, https://server01/servertestdir/testfile4.txt**
 
 ### EXAMPLE 9
 ```
@@ -241,7 +241,7 @@ Specifies the credentials to use to authenticate the user to the server that is 
 The default is the current user.
 
 Type a user name, such as "User01", "Domain01\User01", or "User@Contoso.com".
-Or, use the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=113311 cmdlet to create the value for this parameter.
+Or, use the Get-Credentialhttps://go.microsoft.com/fwlink/?LinkID=113311 cmdlet to create the value for this parameter.
 When you type a user name, you are prompted for a password.
 
 ```yaml
@@ -642,7 +642,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

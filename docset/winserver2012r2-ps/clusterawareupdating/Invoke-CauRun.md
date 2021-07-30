@@ -47,7 +47,7 @@ The Updating Run process includes the following:
 The Updating Run process also includes ensuring that quorum is maintained, checking for additional updates that can only be installed after the initial set of updates are installed, and saving a report of the actions taken.
 
 Note: To run this cmdlet with the **PostUpdateScript** or **PreUpdateScript** parameter, Windows PowerShell® remoting must be enabled on each node.
-To do this, run the Enable-PSRemotinghttp://go.microsoft.com/fwlink/p/?LinkID=144300 cmdlet.
+To do this, run the Enable-PSRemotinghttps://go.microsoft.com/fwlink/p/?LinkID=144300 cmdlet.
 In addition, ensure that the Windows Remote Management - Compatibility Mode (HTTP-In) firewall exception is enabled on each node.
 
 ## EXAMPLES
@@ -116,7 +116,7 @@ If not specified, then the **Microsoft.WindowsUpdatePlugin** plug-in by default 
                          
  - `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
                          
-For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in and the criteria such as IsInstalled that can be included in the query strings, see the topic about search criteria in the Windows Update Agent (WUA) API Referencehttp://go.microsoft.com/fwlink/p/?LinkId=223304. 
+For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in and the criteria such as IsInstalled that can be included in the query strings, see the topic about search criteria in the Windows Update Agent (WUA) API Referencehttps://go.microsoft.com/fwlink/p/?LinkId=223304. 
 
                          
 For the **Microsoft.HotfixPlugin** plug-in, the following argument is required: 
@@ -139,7 +139,7 @@ If not specified, the default value is 30 minutes.
  - **HotfixConfigFileName=\<name\>**: Name for the hotfix configuration file.
 If not specified, the default name DefaultHotfixConfig.xml is used. 
 
-For more information about required and optional arguments for the **Microsoft.HotfixPlugin** plug-in, see the content about Cluster-Aware Updating plug-inshttp://go.microsoft.com/fwlink/p/?LinkId=235333.
+For more information about required and optional arguments for the **Microsoft.HotfixPlugin** plug-in, see the content about Cluster-Aware Updating plug-inshttps://go.microsoft.com/fwlink/p/?LinkId=235333.
 
 ```yaml
 Type: Hashtable[]
@@ -158,7 +158,7 @@ Specifies one or more plug-ins to use when performing updates.
 You can specify multiple values separated with commas.
 The default is the Microsoft.WindowsUpdatePlugin plug-in.
 This plug-in coordinates the Windows Update Agent software resident on each cluster node, the same software that is used when updates are downloaded from Windows Update or Microsoft Update, or from a Windows Server Update Services (WSUS) server.
-For more information about how plug-ins work with CAU, see the content about Cluster-Aware Updating plug-inshttp://go.microsoft.com/fwlink/p/?LinkId=235333.
+For more information about how plug-ins work with CAU, see the content about Cluster-Aware Updating plug-inshttps://go.microsoft.com/fwlink/p/?LinkId=235333.
 
 ```yaml
 Type: String[]
@@ -525,7 +525,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

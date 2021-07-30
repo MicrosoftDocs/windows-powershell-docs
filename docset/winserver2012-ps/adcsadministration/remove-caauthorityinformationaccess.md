@@ -31,36 +31,36 @@ The Remove-CAAuthorityInformationAccess cmdlet removes the Authority Information
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>Remove-CAAuthorityInformationAccess -uri "http://www.contoso.com/pki/orca1.crt" -AddToCertificateAia
+C:\PS>Remove-CAAuthorityInformationAccess -uri "https://www.contoso.com/pki/orca1.crt" -AddToCertificateAia
 ```
 
 Description
 
 -----------
 
-Removes Authority Information Access (AIA) for the specified uniform resource identifier (URI) of 'http://www.contoso.com/pki/orca1.crt'.
+Removes Authority Information Access (AIA) for the specified uniform resource identifier (URI) of 'https://www.contoso.com/pki/orca1.crt'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Remove-CAAuthorityInformationAccess -uri "http://www.cpandl.com/ocsp/" -AddToCertificateOcsp
+C:\PS>Remove-CAAuthorityInformationAccess -uri "https://www.cpandl.com/ocsp/" -AddToCertificateOcsp
 ```
 
 Description
 
 -----------
 
-Removes the Online Certificate Status Protocol (OCSP) for the specified uniform resource identifier (URI) of 'http://www.cpandl.com/ocsp'.
+Removes the Online Certificate Status Protocol (OCSP) for the specified uniform resource identifier (URI) of 'https://www.cpandl.com/ocsp'.
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>Remove-CAAuthorityInformationAccess -uri "http://www.contoso.com/pki/orca1.crt"
+C:\PS>Remove-CAAuthorityInformationAccess -uri "https://www.contoso.com/pki/orca1.crt"
 ```
 
 Description
 
 -----------
 
-Removes all AIA and OCSP entries that match the URL 'http://www.contoso.com/pki/orca1.crt'.
+Removes all AIA and OCSP entries that match the URL 'https://www.contoso.com/pki/orca1.crt'.
 
 ## PARAMETERS
 
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

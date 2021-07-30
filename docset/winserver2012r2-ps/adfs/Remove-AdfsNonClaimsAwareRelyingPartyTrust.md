@@ -49,10 +49,10 @@ This command removes the non-claims-aware relying party trust for the applicatio
 
 ### Example 1: Remove a non-claims-aware relying party trust by using an identifier
 ```
-PS C:\> Remove-AdfsNonClaimsAwareRelyingPartyTrust -TargetIdentifier -TargetIdentifier "http://Contosoexpense/"
+PS C:\> Remove-AdfsNonClaimsAwareRelyingPartyTrust -TargetIdentifier -TargetIdentifier "https://Contosoexpense/"
 ```
 
-This command removes the non-claims-aware relying party trust for the expense report application that has the identifier http://Contosoexpense.
+This command removes the non-claims-aware relying party trust for the expense report application that has the identifier https://Contosoexpense.
 
 ## PARAMETERS
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

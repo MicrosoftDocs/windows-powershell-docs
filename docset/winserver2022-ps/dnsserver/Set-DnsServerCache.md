@@ -301,7 +301,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[RFC 2308](http://www.rfc-editor.org/rfc/rfc2308.txt)
+[RFC 2308](https://www.rfc-editor.org/rfc/rfc2308.txt)
 
 [Clear-DnsServerCache](./Clear-DnsServerCache.md)
 

@@ -267,7 +267,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 
 ## RELATED LINKS
 
-[RFC-2307](http://www.rfc-editor.org/rfc/rfc2307.txt)
+[RFC-2307](https://www.rfc-editor.org/rfc/rfc2307.txt)
 
 [Get-NfsNetgroupStore](./Get-NfsNetgroupStore.md)
 

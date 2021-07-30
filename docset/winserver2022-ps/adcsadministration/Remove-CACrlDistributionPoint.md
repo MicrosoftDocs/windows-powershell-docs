@@ -27,24 +27,24 @@ The **Remove-CACRLDistributionPoint** cmdlet removes the uniform resource identi
 
 ### Example 1: Remove all URIs for all distribution points for the specified URI
 ```
-PS C:\> Remove-CACrlDistributionPoint -URI "http://corp.contoso.com/rootca.crl"
+PS C:\> Remove-CACrlDistributionPoint -URI "https://corp.contoso.com/rootca.crl"
 ```
 
-This command removes all URIs for all distribution points that contain the specified URI value `http://corp.contoso.com/rootca.crl`.
+This command removes all URIs for all distribution points that contain the specified URI value `https://corp.contoso.com/rootca.crl`.
 
 ### Example 2: Remove the URIs for all distribution points for the CDP extension of issued certificates
 ```
-PS C:\> Remove-CACrlDistributionPoint -Uri "http://corp.contoso.com/rootca.crl" -AddToCertificateCdp
+PS C:\> Remove-CACrlDistributionPoint -Uri "https://corp.contoso.com/rootca.crl" -AddToCertificateCdp
 ```
 
-This command removes only the URIs that are set to a value of `http://corp.contoso.com/rootca.crl` and for which the *AddToCertificateCdp* parameter is set.
+This command removes only the URIs that are set to a value of `https://corp.contoso.com/rootca.crl` and for which the *AddToCertificateCdp* parameter is set.
 
 ### Example 3: Remove the URIs for all distribution points for the CDP and IDP extensions of issued certificates
 ```
-PS C:\> Remove-CACrlDistributionPoint -Uri "http://www.contoso.com/pki/orca.crl" -AddToCertificateCdp -AddToCrlIdp
+PS C:\> Remove-CACrlDistributionPoint -Uri "https://www.contoso.com/pki/orca.crl" -AddToCertificateCdp -AddToCrlIdp
 ```
 
-This command removes only the URIs that are unique to the URI named `http://www.contoso.com/pki/orca.crl` and the combination of flags that are set or included with the *AddToCertificateCdp* and *AddToCrlIdp* parameters.
+This command removes only the URIs that are unique to the URI named `https://www.contoso.com/pki/orca.crl` and the combination of flags that are set or included with the *AddToCertificateCdp* and *AddToCrlIdp* parameters.
 
 ## PARAMETERS
 

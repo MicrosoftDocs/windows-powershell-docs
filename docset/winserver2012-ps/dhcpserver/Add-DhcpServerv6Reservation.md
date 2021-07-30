@@ -37,7 +37,7 @@ PS C:\> Import-Csv -Path Reservations.csv | Add-DhcpServerv6Reservation -Compute
 ```
 
 This example adds all of the reservations in the file named Reservations.csv to the DHCP server service running on the computer named dhcpserver.contoso.com.
-The Import-Csvhttp://go.microsoft.com/fwlink/p/?LinkId=113341 cmdlet returns the objects with reservation fields and pipes the objects to this cmdlet, which adds these reservations to the DHCP server service.
+The Import-Csvhttps://go.microsoft.com/fwlink/p/?LinkId=113341 cmdlet returns the objects with reservation fields and pipes the objects to this cmdlet, which adds these reservations to the DHCP server service.
 The file named Reservations.csv should contain the reservations in the following comma-separated values (CSV) format: 
 
 Prefix,IPAddress,Name,ClientDuid,Iaid,Description 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

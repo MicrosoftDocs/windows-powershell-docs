@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ### -DisableDevelopmentMode
 Indicates that this cmdlet registers an existing app package installation that has been disabled, did not register, or has become corrupted.
 Use the current parameter to specify that the manifest is from an existing installation, and not from a collection of files in development mode.
-You can also use this parameter to register an application that the Package Manager APIhttp://go.microsoft.com/fwlink/?LinkId=245447 has staged.
+You can also use this parameter to register an application that the Package Manager APIhttps://go.microsoft.com/fwlink/?LinkId=245447 has staged.
 Use the *Register* parameter to specify the location of the app package manifest .xml file from the installation location.
 
 ```yaml
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

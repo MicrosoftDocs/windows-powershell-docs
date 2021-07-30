@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -Cost
 Specifies the cost to be placed on the site link.
-For more information on determining the cost, see Determining the Costhttp://go.microsoft.com/fwlink/?LinkId=221871 in the TechNet Library: http://go.microsoft.com/fwlink/?LinkId=221871.
+For more information on determining the cost, see Determining the Costhttps://go.microsoft.com/fwlink/?LinkId=221871 in the TechNet Library: https://go.microsoft.com/fwlink/?LinkId=221871.
 
 ```yaml
 Type: Int32
@@ -189,7 +189,7 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
+You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttps://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
 You can then set the **Credential** parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
@@ -454,7 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

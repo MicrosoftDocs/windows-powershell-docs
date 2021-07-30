@@ -47,7 +47,7 @@ The filter to rule relationship is always one-to-one and is managed automaticall
 Rule parameters associated with filters can only be queried using filter objects.
 
 This cmdlet displays the interface types associated with firewall and IPsec rules.
-This allows for rule querying based on the **InterfaceType** parameter value; this cmdlet returns filter objects that may be further queried with the Where-Objecthttp://go.microsoft.com/fwlink/p/?LinkId=113423 cmdlet.
+This allows for rule querying based on the **InterfaceType** parameter value; this cmdlet returns filter objects that may be further queried with the Where-Objecthttps://go.microsoft.com/fwlink/p/?LinkId=113423 cmdlet.
 This cmdlet also allows the interface type filters to be obtained by InterfaceType query.
 The resultant filters are passed into the Get-NetFirewallRule or Get-NetIPsecRule cmdlet to return the rules queried by interface type.
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

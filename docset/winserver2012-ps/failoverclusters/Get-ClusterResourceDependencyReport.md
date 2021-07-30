@@ -21,7 +21,7 @@ Get-ClusterResourceDependencyReport [-Cluster <String>] [-Group <String>] [-Inpu
 The **Get-ClusterResourceDependencyReport** cmdlet generates a report that lists the dependencies between resources in a failover cluster.
 
 The report has a filename extension of MHT.
-For convenience in storing and finding the report, you can pipe this cmdlet to the Copy-Itemhttp://go.microsoft.com/fwlink/?LinkID=113292 cmdlet and specify a destination folder into which to copy the report.
+For convenience in storing and finding the report, you can pipe this cmdlet to the Copy-Itemhttps://go.microsoft.com/fwlink/?LinkID=113292 cmdlet and specify a destination folder into which to copy the report.
 
 ## EXAMPLES
 

@@ -57,7 +57,7 @@ This command sends the data to the location that is configured in the client and
 
 ### Example 3: Send data to specified location and delete data
 ```
-PS C:\> Send-AppVClientReport -URL "http://myreportingserver:port" -DeleteOnSuccess
+PS C:\> Send-AppVClientReport -URL "https://myreportingserver:port" -DeleteOnSuccess
 The Application Virtualization Client Report was sent successfully
 ```
 
@@ -65,7 +65,7 @@ This command sends the data to the location specified by the URL parameter and d
 
 ### Example 4: Send data to incorrect location
 ```
-PS C:\> Send-AppVClientReport -URL "http://incorrectservername:port" -DeleteOnSuccess
+PS C:\> Send-AppVClientReport -URL "https://incorrectservername:port" -DeleteOnSuccess
 The reporting server or share location has not been specified.  You must specify the reporting server or share location using the following format: -Url <location>
 ```
 

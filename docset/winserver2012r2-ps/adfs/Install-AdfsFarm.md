@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies a **PSCredential** object based on a user name and password.
-To obtain a **PSCredential** object, use the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
+To obtain a **PSCredential** object, use the Get-Credentialhttps://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
 For more information, type `Get-Help Get-Credential`.
 To use this cmdlet, you must supply credentials that have domain administrator privileges.
 
@@ -375,7 +375,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

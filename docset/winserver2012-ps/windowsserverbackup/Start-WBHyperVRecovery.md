@@ -21,7 +21,7 @@ Start-WBHyperVRecovery [-BackupSet] <WBBackupSet> [-VMInBackup] <WBVirtualMachin
 The **Start-WBHyperVRecovery** cmdlet starts a recovery operation for a hv_win8_1 virtual machine (VM).
 Use the application array from a **WBBackupSet** object to specify the VMs that you want to recover.
 
-For an overview of hv_win8_2, see HyperV Overviewhttp://technet.microsoft.com/en-us/library/hh831531.aspx (http://technet.microsoft.com/en-us/library/hh831531.aspx) on TechNet.
+For an overview of hv_win8_2, see HyperV Overviewhttps://technet.microsoft.com/en-us/library/hh831531.aspx (https://technet.microsoft.com/en-us/library/hh831531.aspx) on TechNet.
 
 ## EXAMPLES
 

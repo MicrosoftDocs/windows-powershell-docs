@@ -30,7 +30,7 @@ UAL polls Hyper-V Server 2016 for data every 24 hours.
 This cmdlet gets the virtual machine Universally Unique Identifier (UUID) for virtual machines hosted on a server, the name of the server product, and chassis serial number of the host server.
 This cmdlet also gets the creation time for a virtual machine and the most recent time the virtual machine ran on the Hyper-V Server 2016 server.
 
-For more information about UAL, see the [User Access Logging Overview](https://technet.microsoft.com/library/hh849634.aspx) topic in the TechNet library at http://technet.microsoft.com/library/hh849634.aspx.
+For more information about UAL, see the [User Access Logging Overview](https://technet.microsoft.com/library/hh849634.aspx) topic in the TechNet library at https://technet.microsoft.com/library/hh849634.aspx.
 
 ## EXAMPLES
 

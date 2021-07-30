@@ -52,7 +52,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -195,9 +195,9 @@ When you set the value for this parameter to True, the DNS server enables cache 
 The DNS server performs a cache update query to resolve the address of the NS if the NS is outside the zone of the DNS server.
 The additional query minimally affects DNS server performance.
 
-For more information about DNS cache locking, see DNS Cache Lockinghttp://technet.microsoft.com/en-us/library/ee683892(v=WS.10).aspx.
-For more information about cache pollution protection, see Securing the DNS Server Servicehttp://technet.microsoft.com/en-us/library/cc731367.
-For more information about NS resource records, see Managing resource recordshttp://technet.microsoft.com/en-us/library/cc783389(v=WS.10).aspx.
+For more information about DNS cache locking, see DNS Cache Lockinghttps://technet.microsoft.com/en-us/library/ee683892(v=WS.10).aspx.
+For more information about cache pollution protection, see Securing the DNS Server Servicehttps://technet.microsoft.com/en-us/library/cc731367.
+For more information about NS resource records, see Managing resource recordshttps://technet.microsoft.com/en-us/library/cc783389(v=WS.10).aspx.
 
 ```yaml
 Type: Boolean
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -292,7 +292,7 @@ Microsoft DNS servers have a feature that enables them to attempt to write back 
 
 ## RELATED LINKS
 
-[RFC 2308](http://www.rfc-editor.org/rfc/rfc2308.txt)
+[RFC 2308](https://www.rfc-editor.org/rfc/rfc2308.txt)
 
 [Clear-DnsServerCache](./Clear-DnsServerCache.md)
 

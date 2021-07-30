@@ -549,7 +549,7 @@ Accept wildcard characters: False
 
 ### -URIMatchCondition
 Specifies the URI to match.
-Only a HTTP URL is currently supported, such as `http://myhost`, `https://*/training`, `http://myhost:8080/training`, or `https://myhost:*/training`.
+Only a HTTP URL is currently supported, such as `https://myhost`, `https://*/training`, `https://myhost:8080/training`, or `https://myhost:*/training`.
 The QoS policy will only apply to the traffic sent from HTTP server applications to HTTP clients in response to the requests from the client for the specified URI.
 
 ```yaml

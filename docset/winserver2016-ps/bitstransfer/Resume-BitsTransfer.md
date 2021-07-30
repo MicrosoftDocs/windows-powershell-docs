@@ -51,7 +51,7 @@ If any of the BITS transfer jobs are already active, they will continue to run.
 ### Example 2: Resume a new BITS transfer job that was initially suspended
 ```
 PS C:\> $Bits = Start-BitsTransfer -DisplayName "MyJob" -Suspended
-PS C:\> Add-BitsTransfer -BitsJob $Bits  -ClientFileName C:\myFile -ServerFileName http://www.mysite.com/file1
+PS C:\> Add-BitsTransfer -BitsJob $Bits  -ClientFileName C:\myFile -ServerFileName https://www.mysite.com/file1
 PS C:\> Resume-BitsTransfer -BitsJob $Bits -Asynchronous
 ```
 

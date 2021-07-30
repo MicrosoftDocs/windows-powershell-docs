@@ -107,7 +107,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 
 ### -Partition
 Accepts a Partition object as input.
-The Partition CIM object is exposed by the Get-Partitionhttp://technet.microsoft.com/library/85bb3c53-536e-408f-b159-28e91afeb1a1 cmdlet.
+The Partition CIM object is exposed by the Get-Partitionhttps://technet.microsoft.com/library/85bb3c53-536e-408f-b159-28e91afeb1a1 cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 
 ### -VirtualDisk
 Accepts a VirtualDisk object as input.
-The Virtual Disk CIM object is exposed by the Get-VirtualDiskhttp://technet.microsoft.com/library/0eeba53f-6468-485f-a680-49260b4c83f0 cmdlet.
+The Virtual Disk CIM object is exposed by the Get-VirtualDiskhttps://technet.microsoft.com/library/0eeba53f-6468-485f-a680-49260b4c83f0 cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 
 ### -iSCSIConnection
 Accepts an iSCSIConnection object as input.
-The iSCSI Connection CIM object is exposed by the Get-IscsiConnectionhttp://technet.microsoft.com/library/e566d297-76ad-48d0-b5af-11674f23b080 cmdlet.
+The iSCSI Connection CIM object is exposed by the Get-IscsiConnectionhttps://technet.microsoft.com/library/e566d297-76ad-48d0-b5af-11674f23b080 cmdlet.
 
 ```yaml
 Type: CimInstance

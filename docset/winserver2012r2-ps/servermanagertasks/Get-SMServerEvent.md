@@ -32,7 +32,7 @@ PS C:\>Get-SMServerEvent -Log 'Microsoft-Windows-ServerManager-MgmtProvider/Oper
 
 This command gets the events in the Server Manager Management Provider Operational event log channel.
 Because no batch size is specified, the command uses the default batch size, 100 result entries.
-To reduce the results to a manageable display size, the command is piped to the Format-Tablehttp://technet.microsoft.com/library/hh849892.aspx cmdlet, where properties Description and Source become the column headings.
+To reduce the results to a manageable display size, the command is piped to the Format-Tablehttps://technet.microsoft.com/library/hh849892.aspx cmdlet, where properties Description and Source become the column headings.
 
 ### Example 2: Get events of a specific severity level
 ```
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

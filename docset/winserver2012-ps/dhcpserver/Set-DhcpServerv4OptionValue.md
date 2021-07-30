@@ -53,28 +53,28 @@ To set options based upon legacy user classes, then the **UserClass** parameter 
 
 ### EXAMPLE 1
 ```
-PS C:\>Set-DhcpServerv4OptionValue -ComputerName dhcpserver.contoso.com -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain contoso.com -Router 192.168.1.1 -Wpad http://proxy.contoso.com/wpad.dat
+PS C:\>Set-DhcpServerv4OptionValue -ComputerName dhcpserver.contoso.com -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain contoso.com -Router 192.168.1.1 -Wpad https://proxy.contoso.com/wpad.dat
 ```
 
 This example sets the server level option values for DNS server, WINS server, DNS domain, router, and WPAD.
 
 ### EXAMPLE 2
 ```
-PS C:\>Set-DhcpServerv4OptionValue -ComputerName dhcpserver.contoso.com -ScopeId 10.10.10.0 -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain contoso.com -Router 192.168.1.1 -Wpad http://proxy.contoso.com/wpad.dat
+PS C:\>Set-DhcpServerv4OptionValue -ComputerName dhcpserver.contoso.com -ScopeId 10.10.10.0 -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain contoso.com -Router 192.168.1.1 -Wpad https://proxy.contoso.com/wpad.dat
 ```
 
 This example sets the option values for DNS server, WINS server, DNS domain, router, and WPAD for scope 10.10.10.0.
 
 ### EXAMPLE 3
 ```
-PS C:\>Set-DhcpServerv4OptionValue -ComputerName dhcpserver.contoso.com -ReservedIP 10.10.10.5 -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain contoso.com -Router 192.168.1.1 -Wpad http://proxy.contoso.com/wpad.dat
+PS C:\>Set-DhcpServerv4OptionValue -ComputerName dhcpserver.contoso.com -ReservedIP 10.10.10.5 -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain contoso.com -Router 192.168.1.1 -Wpad https://proxy.contoso.com/wpad.dat
 ```
 
 This example sets the option values for DNS server, WINS server, DNS domain, router, and WPAD for reserved IP address 10.10.10.5.
 
 ### EXAMPLE 4
 ```
-PS C:\>Set-DhcpServerv4OptionValue -ComputerName dhcpserver.contoso.com -ScopeId 10.10.10.0 -PolicyName LabComputers -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain contoso.com -Router 192.168.1.1 -Wpad http://proxy.contoso.com/wpad.dat
+PS C:\>Set-DhcpServerv4OptionValue -ComputerName dhcpserver.contoso.com -ScopeId 10.10.10.0 -PolicyName LabComputers -DnsServer 192.168.1.2 -WinsServer 192.168.1.3 -DnsDomain contoso.com -Router 192.168.1.1 -Wpad https://proxy.contoso.com/wpad.dat
 ```
 
 This example sets the option values for DNS server, WINS server, DNS domain, router, and WPAD for policy named LabComputers in the scope 10.10.10.0.
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

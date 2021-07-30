@@ -44,14 +44,14 @@ This cmdlet supports passing multiple **WebApplicationProxyApplication** objects
 
 ### Example 1: Publish a web application
 ```
-PS C:\> Add-WebApplicationProxyApplication -Name "Contoso App" -ExternalPreauthentication ADFS -ExternalUrl https://ContosoApp.Contoso.com/ -ExternalCertificateThumbprint "69DF0AB8434060DC869D37BBAEF770ED5DD0C32A" -BackendServerUrl http://ContosoApp:8080/ -ADFSRelyingPartyName "ContosoAppRP"
+PS C:\> Add-WebApplicationProxyApplication -Name "Contoso App" -ExternalPreauthentication ADFS -ExternalUrl https://ContosoApp.Contoso.com/ -ExternalCertificateThumbprint "69DF0AB8434060DC869D37BBAEF770ED5DD0C32A" -BackendServerUrl https://ContosoApp:8080/ -ADFSRelyingPartyName "ContosoAppRP"
 ```
 
 This command publishes a web application that specifies the value of AD FS for the **ExternalPreauthentication** parameter.
 
 ### Example 2: Publish a web application that omits external preauthentication
 ```
-PS C:\> Add-WebApplicationProxyApplication -Name "ContosoApp" -BackendServerUrl http://ContosoApp/ -ExternalUrl https://ContosoApp.Contoso.com/ -ExternalPreauthentication "PassThrough" -ExternalCertificateThumbprint "D1A657E1A4F276FCC45613C0F6B3BC91AFC4633F"
+PS C:\> Add-WebApplicationProxyApplication -Name "ContosoApp" -BackendServerUrl https://ContosoApp/ -ExternalUrl https://ContosoApp.Contoso.com/ -ExternalPreauthentication "PassThrough" -ExternalCertificateThumbprint "D1A657E1A4F276FCC45613C0F6B3BC91AFC4633F"
 ```
 
 This command publishes a web application named ContosoApp.
@@ -134,9 +134,9 @@ Include the trailing slash (/).
 You can also include a port number and path.
 The following examples show the form of an address: 
 
-- http://AccountingApp.Contoso.com/
-- http://Mail.Contoso.com/Remote/
-- http://Portal/
+- https://AccountingApp.Contoso.com/
+- https://Mail.Contoso.com/Remote/
+- https://Portal/
 
 ```yaml
 Type: Uri
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttps://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -361,7 +361,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -23,7 +23,7 @@ The tracing information is mainly intended for use by developers and support eng
 Specify the file name with the **FilePath** parameter.
 
 Note: To run this cmdlet, Windows PowerShell® remoting must be enabled on each node.
-To do this, run the Enable-PSRemotinghttp://go.microsoft.com/fwlink/p/?LinkID=144300 cmdlet.
+To do this, run the Enable-PSRemotinghttps://go.microsoft.com/fwlink/p/?LinkID=144300 cmdlet.
 In addition, ensure that the Windows Remote Management - Compatibility Mode (HTTP-In) firewall exception is enabled on each node.
 
 ## EXAMPLES

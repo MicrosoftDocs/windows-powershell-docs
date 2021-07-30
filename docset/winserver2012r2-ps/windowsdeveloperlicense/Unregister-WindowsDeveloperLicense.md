@@ -22,7 +22,7 @@ Unregister-WindowsDeveloperLicense [-Force] [-WhatIf] [-Confirm] [<CommonParamet
 The **Unregister-WindowsDeveloperLicense** cmdlet removes a developer license from the current computer.
 If you remove the developer license, you can no longer install and test your apps.
 Any developer apps no longer run on the current computer.
-For more information about developer licenses, see Get a developer license (Windows Store apps) (Windows) HYPERLINK "http://msdn.microsoft.com/library/windows/apps/hh974578.aspx" http://msdn.microsoft.com/library/windows/apps/hh974578.aspx at http://msdn.microsoft.com/library/windows/apps/hh974578.aspx in the MSDN library.
+For more information about developer licenses, see Get a developer license (Windows Store apps) (Windows) HYPERLINK "https://msdn.microsoft.com/library/windows/apps/hh974578.aspx" https://msdn.microsoft.com/library/windows/apps/hh974578.aspx at https://msdn.microsoft.com/library/windows/apps/hh974578.aspx in the MSDN library.
 
 You need Administrator permissions to remove a developer license.
 If the cmdlet cannot find a developer license, it returns an error that informs you that there is no developer license on the current computer.
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

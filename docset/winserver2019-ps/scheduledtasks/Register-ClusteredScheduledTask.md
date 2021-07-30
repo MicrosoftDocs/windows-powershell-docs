@@ -41,7 +41,7 @@ The **Register-ClusteredScheduledTask** cmdlet registers a clustered scheduled t
 The new task runs scheduled actions as defined by task triggers.
 As specified in the *TaskType* parameter, an action runs on a resource specific node, an active failover node, or on all cluster nodes.
 
-For more information about the Task Scheduler, see the [Task Scheduler Overview](https://technet.microsoft.com/en-us/library/cc721871.aspx) topic in the TechNet Library at http://technet.microsoft.com/en-us/library/cc721871.aspx.
+For more information about the Task Scheduler, see the [Task Scheduler Overview](https://technet.microsoft.com/en-us/library/cc721871.aspx) topic in the TechNet Library at https://technet.microsoft.com/en-us/library/cc721871.aspx.
 
 ## EXAMPLES
 

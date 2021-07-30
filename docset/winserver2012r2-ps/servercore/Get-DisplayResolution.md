@@ -23,7 +23,7 @@ The **Get-DisplayResolution** cmdlet shows the display resolution for Windows Se
 For a width of 1920 pixels and a height of 1080 pixels, the cmdlet displays 1920x1080.
 You can use the **Set-DisplayResolution** cmdlet to change the resolution.
 
-For more information about Server Core mode, see Configure and Manage Server Core Installationshttp://technet.microsoft.com/en-us/library/jj574091 (http://technet.microsoft.com/en-us/library/jj574091).
+For more information about Server Core mode, see Configure and Manage Server Core Installationshttps://technet.microsoft.com/en-us/library/jj574091 (https://technet.microsoft.com/en-us/library/jj574091).
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ This command gets the current display resolution, which is a width of 1920 and a
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

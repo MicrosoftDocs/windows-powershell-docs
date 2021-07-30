@@ -258,7 +258,7 @@ If this property is set, node affinity overrides the job scheduler affinity sett
 A value of 0 or $False specifies that affinity on the node is not managed by the HPC services, and the operating system or the application manages placement of tasks on physical cores.
 A value of 1 or $True specifies that the HPC Node Manager Service sets affinity for tasks (assigns tasks to specific cores).
 
-For more information relating to affinity, see Understanding Affinityhttp://technet.microsoft.com/library/ff919424(WS.10).aspx.
+For more information relating to affinity, see Understanding Affinityhttps://technet.microsoft.com/library/ff919424(WS.10).aspx.
 
 This parameter was introduced in HPC Pack 2008 R2 with Service Pack 2 (SP2).
 It is not supported in previous versions.
@@ -323,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

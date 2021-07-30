@@ -56,7 +56,7 @@ The last command uses the Start-PefTraceSession cmdlet to start the Trace Sessio
 ### -Filter
 Specifies a string that acts as a Trace Filter.
 A Trace Filter defines the messages that a Trace Session retrieves according to the specified filtering criteria.
-To learn more about Trace Filters, see Creating and Applying Trace Filtershttp://technet.microsoft.com/en-us/library/jj674813.aspx in the Message Analyzer Operating Guidehttp://technet.microsoft.com/en-us/library/jj649776.aspx.
+To learn more about Trace Filters, see Creating and Applying Trace Filtershttps://technet.microsoft.com/en-us/library/jj674813.aspx in the Message Analyzer Operating Guidehttps://technet.microsoft.com/en-us/library/jj649776.aspx.
 
 ```yaml
 Type: String
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

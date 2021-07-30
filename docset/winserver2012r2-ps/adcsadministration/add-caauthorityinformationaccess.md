@@ -40,25 +40,25 @@ An AIA URI should specify either an AIA extension or an OCSP extension, but not 
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-PS C:\>Add-CAAuthorityInformationAccess -AddToCertificateAia -uri http://ca1.corp.contoso.com/pki
+PS C:\>Add-CAAuthorityInformationAccess -AddToCertificateAia -uri https://ca1.corp.contoso.com/pki
 ```
 
 Description
 
 -----------
 
-Adds Authority Information Access (AIA) for the specified certification authority to http://ca1.corp.contoso.com/pki
+Adds Authority Information Access (AIA) for the specified certification authority to https://ca1.corp.contoso.com/pki
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-PS C:\>Add-CAAuthorityInformationAccess -AddToCertificateOcsp -uri http://www.corp.contoso.com/ocsp
+PS C:\>Add-CAAuthorityInformationAccess -AddToCertificateOcsp -uri https://www.corp.contoso.com/ocsp
 ```
 
 Description
 
 -----------
 
-Adds AIA for OCSP pointing to http://www.corp.contoso.com/ocsp
+Adds AIA for OCSP pointing to https://www.corp.contoso.com/ocsp
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

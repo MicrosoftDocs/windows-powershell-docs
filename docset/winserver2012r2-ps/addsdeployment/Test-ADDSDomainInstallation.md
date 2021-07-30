@@ -28,7 +28,7 @@ Test-ADDSDomainInstallation -NewDomainName <String> -ParentDomainName <String>
 The Test-ADDSDomainInstallation cmdlet runs those prerequisite checks (only) which would be performed if you were to use the Install-ADDSDomain cmdlet to install a new Active Directory domain configuration.
 It differs from using the **-WhatIf** parameter with the Install-ADDSDomain cmdlet in that instead of summarizing the changes that would occur during the installation process, this cmdlet actually tests whether those changes are possible given the current environment.
 
-For more information on the scope of these prerequisite checks that the ADDSDeployment module performs when using this cmdlet see the section "Prerequisite Checking" in Understand and Troubleshoot AD DS Simplified Administrationhttp://go.microsoft.com/fwlink/?LinkID=237244.
+For more information on the scope of these prerequisite checks that the ADDSDeployment module performs when using this cmdlet see the section "Prerequisite Checking" in Understand and Troubleshoot AD DS Simplified Administrationhttps://go.microsoft.com/fwlink/?LinkID=237244.
 
 ## EXAMPLES
 
@@ -441,7 +441,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

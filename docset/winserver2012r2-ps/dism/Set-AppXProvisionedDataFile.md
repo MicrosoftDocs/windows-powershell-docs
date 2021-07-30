@@ -35,7 +35,7 @@ The specified app (.appx) package must already be added to the image prior to ad
 You cannot install an app package (.appx) on an operating system that does not support apps for at least Windows® 8.
 Apps are not supported on Server Core installations of Windows Server, Windows PE, or on any versions of Windows older than Windows 8 and Windows Server 2012.
 
-To install and run apps on Windows Server, you must install the Desktop Experiencehttp://go.microsoft.com/fwlink/?LinkId=247330.
+To install and run apps on Windows Server, you must install the Desktop Experiencehttps://go.microsoft.com/fwlink/?LinkId=247330.
 
 Use the Online parameter to specify the running operating system on your local computer, or use the Path parameter to specify the location of a mounted Windows image.
 
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

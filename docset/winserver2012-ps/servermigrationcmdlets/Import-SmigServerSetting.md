@@ -27,7 +27,7 @@ You can also use this cmdlet to install Windows features and their dependencies,
 Some Windows features might require that the destination computer be restarted to complete installation.
 After restarting the computer, you must run the cmdlet again with -Force parameter to complete the import operation.
 
-For online Help about the Windows Server Migration Tools cmdlets, see http://go.microsoft.com/fwlink/?LinkId=246313.
+For online Help about the Windows Server Migration Tools cmdlets, see https://go.microsoft.com/fwlink/?LinkId=246313.
 
 ## EXAMPLES
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 Module Name: Appx
-ms.date: 12/20/2016
+ms.date: 07/30/2021
 online version: https://docs.microsoft.com/powershell/module/appx/remove-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-AppxPackage
@@ -39,7 +39,7 @@ Remove-AppxPackage [-Package] <String> -User <String> [-WhatIf] [-Confirm] [<Com
 
 ## DESCRIPTION
 
-The **Remove-AppxPackage** cmdlet removes an app package from a user account.  
+The **Remove-AppxPackage** cmdlet removes an app package from a user account.
 An app package has an .msix or .appx file name extension.
 
 ## EXAMPLES
@@ -140,7 +140,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveRoamableApplicationData
-{{ Fill PreserveRoamableApplicationData Description }}
+
+Preserves the roamable portion of the app's data when the package is removed. This parameter is not
+supported with PreserveApplicationData.
 
 ```yaml
 Type: SwitchParameter

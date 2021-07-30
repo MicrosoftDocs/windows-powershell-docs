@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 12/20/2016
+ms.date: 07/30/2021
 online version: https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-AppxPackage
@@ -73,7 +73,7 @@ The **Add-AppxPackage** cmdlet adds a signed app package to a user account.
 An app package has an .msix or .appx file name extension.
 Use the *DependencyPath* parameter to add all other packages that are required for the installation of the app package.
 
-You can use the *Register* parameter to install from a folder of unpackaged files during development of Windows® Store apps.
+You can use the *Register* parameter to install from a folder of unpackaged files during development of Windows&reg; Store apps.
 
 To update an already installed package, the new package must have the same package family name.
 
@@ -122,7 +122,8 @@ This command adds an app package but only installs the required section of a str
 ## PARAMETERS
 
 ### -AllowUnsigned
-{{ Fill AllowUnsigned Description }}
+
+Allows adding an unsigned package.
 
 ```yaml
 Type: SwitchParameter
@@ -160,7 +161,7 @@ Specifies that the app will not register for a user if currently in use. The app
 Type: SwitchParameter
 Parameter Sets: AddSet
 Aliases:
- 
+
 Required: False
 Position: Named
 Default value: False
@@ -219,7 +220,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalLocation
-{{ Fill ExternalLocation Description }}
+
+URI path of an external disk location outside of the MSIX package where the package manifest can
+reference application content.
 
 ```yaml
 Type: String
@@ -376,7 +379,7 @@ Accept wildcard characters: False
 ### -Register
 Indicates that this cmdlet registers an application in development mode.
 You can use development mode to install applications from a folder of unpackaged files.
-You can use the current parameter to test your Windows® Store apps before you deploy them as app packages.
+You can use the current parameter to test your Windows&reg; Store apps before you deploy them as app packages.
 To register an existing app package installation, you must specify the *DisableDevelopmentMode* parameter and the *Register* parameter.
 In order to specify dependency packages, specify the *DependencyPath* parameter and the *DisableDevelopmentMode* parameter.
 
@@ -480,7 +483,14 @@ Accept wildcard characters: False
 ```
 
 ### -StubPackageOption
-{{ Fill StubPackageOption Description }}
+
+Defines the stub behavior for an app package that is being added or staged.
+The acceptable values
+for this parameter are:
+- Default: Uses the default behavior
+- InstallFull: Installs as a full app
+- InstallStub: Installs as a stub app
+- UsePreference: Uses the current [PackageSubPreference](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagestubpreference) for the package.
 
 ```yaml
 Type: StubPackageOption

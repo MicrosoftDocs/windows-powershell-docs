@@ -141,8 +141,8 @@ Accept wildcard characters: False
 
 ### -PreserveRoamableApplicationData
 
-Preserves the roamable portion of the app's data when the package is removed. This parameter is not
-supported with PreserveApplicationData.
+Preserves the roamable portion of the app's data when the package is removed. This parameter is
+incompatible with PreserveApplicationData.
 
 ```yaml
 Type: SwitchParameter

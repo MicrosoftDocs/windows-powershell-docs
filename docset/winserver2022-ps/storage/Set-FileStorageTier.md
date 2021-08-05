@@ -135,7 +135,10 @@ Accept wildcard characters: False
 ```
 
 ### -DesiredStorageTierClass
-{{ Fill DesiredStorageTierClass Description }}
+Set the storage tier class of a specified file. 
+The possible values are: 
+- Capacity 
+- Performance 
 
 ```yaml
 Type: StorageTierClass

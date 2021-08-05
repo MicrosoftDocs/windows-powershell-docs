@@ -39,10 +39,7 @@ VhdPath        : c:\vhd.vhdx
 OfflineAction  : 0
 VmName         : hcsres
 ```
-
-
-
-{{ Add example description here }}
+As you can see here, after creating the HCS VM, we have a list of information. Notice how the **Name** of the resource has been changed. The Group name (**VmName**), however, is the same as before.
 
 ## PARAMETERS
 

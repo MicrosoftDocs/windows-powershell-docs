@@ -330,7 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoTrim
-{{ Fill NoTrim Description }}
+Disable TRIM and unmap functionality for all unused sectors of the specified volume. This means unused capacity on a volume will not be recovered after data deletion. 
 
 ```yaml
 Type: SwitchParameter

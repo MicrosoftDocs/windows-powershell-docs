@@ -71,7 +71,12 @@ This command gets the pinned files for the specified volume, and their status va
 ## PARAMETERS
 
 ### -AllocatedStorageTierClass
-{{ Fill AllocatedStorageTierClass Description }}
+Return a list of files with allocation on the specified storage tier class.
+The possible values are:
+- Capacity
+- Performance
+
+Example: ``Get-FileStorageTier -AllocatedStorageTierClass Capacity``
 
 ```yaml
 Type: StorageTierClass
@@ -134,7 +139,13 @@ Accept wildcard characters: False
 ```
 
 ### -PinnedState
-{{ Fill PinnedState Description }}
+Return a list of files with the specified pinned state on the storage tier class.
+The possible values are: 
+- Pinned 
+- Unpinned
+- All 
+
+Example: ``Get-FileStorageTier -PinnedState “Pinned”``
 
 ```yaml
 Type: PinnedState
@@ -149,7 +160,12 @@ Accept wildcard characters: False
 ```
 
 ### -PinnedStorageTierClass
-{{ Fill PinnedStorageTierClass Description }}
+Return a list of files pinned on the specified storage tier class.
+The possible values are:
+- Capacity
+- Performance
+
+Example: ``Get-FileStorageTier -PinnedStorageTierClass Capacity``
 
 ```yaml
 Type: StorageTierClass

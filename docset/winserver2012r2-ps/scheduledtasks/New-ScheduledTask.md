@@ -65,7 +65,7 @@ PS C:\> Register-ScheduledTask 'baz' -InputObject $task
 
 ```
 
-This example creates and registers a scheduled task that runs two powershell scripts daily at 09:15 AM.
+This example creates and registers a scheduled task that runs two PowerShell scripts daily at 09:15 AM.
 
 ## PARAMETERS
 

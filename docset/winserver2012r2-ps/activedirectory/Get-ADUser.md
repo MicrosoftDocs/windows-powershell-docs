@@ -107,7 +107,7 @@ This command gets the user with the name ChewDavid in the Active Directory Light
 C:\PS> Get-ADUser -LDAPFilter '(!userAccountControl:1.2.840.113556.1.4.803:=2)'
 ```
 
-This command get all enabled user accounts in AD using an LDAP filter.
+This command gets all enabled user accounts in Active Directory using an LDAP filter.
 
 ## PARAMETERS
 
@@ -358,7 +358,7 @@ When you run a cmdlet outside of an Active Directory provider drive against an A
 When you run a cmdlet outside of an Active Directory provider drive against an AD LDS target, the default value is the default naming context of the target LDS instance if one has been specified by setting the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance.
 If no default naming context has been specified for the target AD LDS instance, then this parameter has no default value.
 
-When the value of the *SearchBase* parameter is set to an empty string and you are connected to a GC port, all partitions is searched.
+When the value of the *SearchBase* parameter is set to an empty string and you are connected to a GC port, all partitions are searched.
 If the value of the *SearchBase* parameter is set to an empty string and you are not connected to a GC port, an error is thrown.
 
 ```yaml

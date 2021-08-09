@@ -31,13 +31,12 @@ You can register a task to run any of the following application or file types: W
 
 ### Example 1: Define a scheduled task and register it at a later time
 ```powershell
-PS C:\> $A = New-ScheduledTaskAction -Execute "Taskmgr.exe"
-PS C:\> $T = New-ScheduledTaskTrigger -AtLogon
-PS C:\> $P = New-ScheduledTaskPrincipal "Contoso\Administrator"
-PS C:\> $S = New-ScheduledTaskSettingsSet
-PS C:\> $D = New-ScheduledTask -Action $A -Principal $P -Trigger $T -Settings $S
-PS C:\> Register-ScheduledTask T1 -InputObject $D
-```
+PS C:\> $action = New-ScheduledTaskAction -Execute "Taskmgr.exe"
+PS C:\> $trigger = New-ScheduledTaskTrigger -AtLogon
+PS C:\> $principal = "Contoso\Administrator"
+PS C:\> $settings = New-ScheduledTaskSettingsSet
+PS C:\> $task = New-ScheduledTask -Action $action -Principal $principal -Trigger $trigger -Settings $settings
+PS C
 
 In this example, the set of commands uses several cmdlets and variables to define and then register a scheduled task.
 

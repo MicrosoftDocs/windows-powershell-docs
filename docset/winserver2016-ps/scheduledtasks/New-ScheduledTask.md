@@ -36,7 +36,8 @@ PS C:\> $trigger = New-ScheduledTaskTrigger -AtLogon
 PS C:\> $principal = "Contoso\Administrator"
 PS C:\> $settings = New-ScheduledTaskSettingsSet
 PS C:\> $task = New-ScheduledTask -Action $action -Principal $principal -Trigger $trigger -Settings $settings
-PS C
+PS C:\> Register-ScheduledTask T1 -InputObject $task
+```
 
 In this example, the set of commands uses several cmdlets and variables to define and then register a scheduled task.
 
@@ -65,7 +66,7 @@ PS C:\> Register-ScheduledTask 'baz' -InputObject $task
 
 ```
 
-This example creates and registers a scheduled task that runs two powershell scripts daily at 09:15 AM.
+This example creates and registers a scheduled task that runs two PowerShell scripts daily at 09:15 AM.
 
 ## PARAMETERS
 

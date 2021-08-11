@@ -24,8 +24,9 @@ This cmdlet will allow you to get an already created HCS VM resource.
 
 ### Example 1
 ```powershell
-PS C:\> Get-ClusterHCSVM -Name "HCS Virtual Machine Your_Name"
-
+Get-ClusterHCSVM -Name "HCS Virtual Machine Your_Name"
+```
+```Output
 Name           : HCS Virtual Machine hcsres
 SwitchName     : TestSwitch
 MemorySizeInMb : 1024
@@ -80,11 +81,13 @@ Accept wildcard characters: False
 
 ### -Name
 
-**Name** is used to find the actual resource. When trying to get an HCS VM resource,
-always refer to it by its updated name.
+Used to identify the resource. When trying to get an HCS VM resource, always refer to it by its
+translated name.
 
-**Example Name: hcsres**
-> hcsres is **HCS Virtual Machine hcsres**
+For example, the translated name for hcsres is **HCS Virtual Machine hcsres**. You would pass the
+value to the parameter as:
+
+> -Name "HCS Virtual Machine hcsres"
 
 ```yaml
 Type: String[]

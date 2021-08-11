@@ -152,7 +152,12 @@ Accept wildcard characters: False
 ```
 
 ### -DetectLeaks
-{{ Fill DetectLeaks Description }}
+Specifies the type of leak detection to perform. 
+The options are: 
+-	Scan 
+-	ScanAndFix 
+-	OfflineScanAndFix
+-	QuerySpaceForFix
 
 ```yaml
 Type: DetectLeakMode
@@ -167,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -DirectoryIds
-{{ Fill DirectoryIds Description }}
+Specifies directories to be triaged by their object IDs.
 
 ```yaml
 Type: UInt64[]
@@ -274,7 +279,14 @@ Accept wildcard characters: False
 ```
 
 ### -Salvage
-{{ Fill Salvage Description }}
+Specifies the type of salvage operation to perform. 
+The options are: 
+-	Diagnose 
+-	Scan
+-	Copy 
+-	ScanAndCopy
+-	QuickScan
+-	QuickScanAndCopy
 
 ```yaml
 Type: SalvageMode
@@ -304,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScratchDir
-{{ Fill ScratchDir Description }}
+Specifies the scratch directory to be used for salvage operations. Note that for clustered scenarios, the name is local to the volume owner node. 
 
 ```yaml
 Type: String
@@ -319,7 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScratchFile
-{{ Fill ScratchFile Description }}
+Specifies the scratch file to use for leak detection. If a scratch file is not specified, a temporary file will be created. Note that for clustered scenarios, the name is local to the volume owner node.
 
 ```yaml
 Type: String
@@ -349,7 +361,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDir
-{{ Fill TargetDir Description }}
+Specifies the target directory to be used for salvage. Salvaged files are copied to this directory. Note that for clustered scenarios, the name is local to the volume owner node.
 
 ```yaml
 Type: String
@@ -364,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetFile
-{{ Fill TargetFile Description }}
+Specifies the target file to be used for salvage. Information about salvaged files are written to this file. Note that for clustered scenarios, the name is local to the volume owner node.
 
 ```yaml
 Type: String
@@ -379,7 +391,7 @@ Accept wildcard characters: False
 ```
 
 ### -Threads
-{{ Fill Threads Description }}
+Specifies the number of threads to be used by leak detection.
 
 ```yaml
 Type: UInt32
@@ -411,7 +423,7 @@ Accept wildcard characters: False
 ```
 
 ### -Triage
-{{ Fill Triage Description }}
+Specifies the ReFS volume that should be triaged. When DirectoryIds are not specified, the triage is done on global tables. 
 
 ```yaml
 Type: SwitchParameter

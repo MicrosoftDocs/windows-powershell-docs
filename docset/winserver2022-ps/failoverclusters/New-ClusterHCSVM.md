@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 Specify a VM configuration setting file. The configuration file format is JSON.
 
-The following example show how to pass a configuration file via parameter:
+The following example shows how to pass a configuration file via parameter:
 > -ExtendedVmConfiguration (Get-Content 'C:\config.txt')
 
 Ensure that you use **Get-Content** when passing the configuration file. A **default**

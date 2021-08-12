@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidateMaintenanceMode
-{{ Fill ValidateMaintenanceMode Description }}
+Indicates whether physical disks in the storage enclosure will validate if enabling maintenance mode will be successful.
 
 ```yaml
 Type: Boolean

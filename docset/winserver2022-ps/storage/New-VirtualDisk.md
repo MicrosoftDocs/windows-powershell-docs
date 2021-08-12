@@ -126,7 +126,7 @@ This example creates a virtual disk on the Windows Storage subsystem that uses t
 ## PARAMETERS
 
 ### -AddToCluster
-{{ Fill AddToCluster Description }}
+Specifies whether the virtual disk should be added to the cluster.
 
 ```yaml
 Type: Boolean
@@ -341,7 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsManualAttach
-{{ Fill IsManualAttach Description }}
+Specifies whether the virtual disk will be automatically connected to the system on startup. The **Connect-VirtualDisk** cmdlet can be used to connect this virtual disk to the system.
 
 ```yaml
 Type: Boolean
@@ -552,7 +552,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageFaultDomainsToUse
-{{ Fill StorageFaultDomainsToUse Description }}
+Specifies a list of storage fault domains that the virtual disk can use. 
 
 ```yaml
 Type: CimInstance[]

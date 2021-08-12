@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceNumber
-{{ Fill DeviceNumber Description }}
+Specifies the device number for the physical disk. 
 
 ```yaml
 Type: String
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -HasMetadata
-{{ Fill HasMetadata Description }}
+Indicates whether the cmdlet gets a list of physical disks that has metadata with the storage pool or virtual disk specified. 
 
 ```yaml
 Type: SwitchParameter
@@ -392,7 +392,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageChassis
-{{ Fill StorageChassis Description }}
+Specifies a storage chassis associated with the physical disk that this cmdlet gets.
+To obtain a **StorageChassis** object, use the **Get-StorageChassis** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -456,7 +457,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageRack
-{{ Fill StorageRack Description }}
+Specifies a storage rack associated with the physical disk that this cmdlet gets.
+To obtain a **StorageRack** object, use the **Get-StorageRack** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -471,7 +473,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageScaleUnit
-{{ Fill StorageScaleUnit Description }}
+Specifies a storage scale unit associated with the physical disk that this cmdlet gets.
+To obtain a **StorageScaleUnit** object, use the **Get-StorageScaleUnit** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -486,7 +489,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageSite
-{{ Fill StorageSite Description }}
+Specifies a storage site associated with the physical disk that this cmdlet gets.
+To obtain a **StorageSite** object, use the **Get-StorageSite** cmdlet.
 
 ```yaml
 Type: CimInstance

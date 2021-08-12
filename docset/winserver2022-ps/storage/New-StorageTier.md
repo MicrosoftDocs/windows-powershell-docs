@@ -71,7 +71,7 @@ This command creates a storage tier for hard disk drives named Tier11 in the sto
 ## PARAMETERS
 
 ### -AllocationUnitSize
-{{ Fill AllocationUnitSize Description }}
+Specifies the allocation unit size in bytes for this storage tier.
 
 ```yaml
 Type: UInt64
@@ -324,7 +324,10 @@ Accept wildcard characters: False
 ```
 
 ### -ProvisioningType
-{{ Fill ProvisioningType Description }}
+Specifies the provisioning scheme of the storage tier.
+The possible values are:
+-	Thin (1): capacity is allocated on demand.
+-	Fixed (2): capacity is fully allocated upon creation.
 
 ```yaml
 Type: ProvisioningType
@@ -362,7 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageFaultDomainsToUse
-{{ Fill StorageFaultDomainsToUse Description }}
+Specifies which storage fault domains the storage tier is allowed to use.
 
 ```yaml
 Type: CimInstance[]
@@ -443,7 +446,14 @@ Accept wildcard characters: False
 ```
 
 ### -Usage
-{{ Fill Usage Description }}
+Specifies the intended usage for this storage tier. The options are: 
+-	Data (default)
+-	Read Cache
+-	Cache Log
+-	Dirty Region Tracking
+-	Stripe State Tracking
+-	Valid Data Tracking
+-	Cache Lines
 
 ```yaml
 Type: Usage

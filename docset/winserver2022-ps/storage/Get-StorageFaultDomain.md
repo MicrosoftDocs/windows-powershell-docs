@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-{{ Fill FriendlyName Description }}
+Specifies the user-friendly string representing the name of the fault domain object.
 
 ```yaml
 Type: String
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -SerialNumber
-{{ Fill SerialNumber Description }}
+Specifies the serial number of the hardware. For physical disks, it must match the disk's SCSI inquiry data.
 
 ```yaml
 Type: String
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDisk
-{{ Fill VirtualDisk Description }}
+Get a list of storage fault domains associated with the specified virutal disk. 
 
 ```yaml
 Type: CimInstance

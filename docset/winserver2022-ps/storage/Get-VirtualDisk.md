@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedObjects
-{{ Fill AssociatedObjects Description }}
+Specifies a list of internal virtual disks associated. 
 
 ```yaml
 Type: SwitchParameter
@@ -463,7 +463,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageChassis
-{{ Fill StorageChassis Description }}
+Specifies a storage chassis associated with the virtual disk that this cmdlet gets.
+To obtain a **StorageChassis** object, use the **Get-StorageChassis** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -478,7 +479,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageEnclosure
-{{ Fill StorageEnclosure Description }}
+Specifies a storage enclosure associated with the virtual disk that this cmdlet gets.
+To obtain a **StorageEnclosure** object, use the **Get-StorageEnclosure** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -544,7 +546,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageRack
-{{ Fill StorageRack Description }}
+Specifies a storage rack associated with the virtual disk that this cmdlet gets.
+To obtain a **StorageRack** object, use the **Get-StorageRack** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -559,7 +562,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageScaleUnit
-{{ Fill StorageScaleUnit Description }}
+Specifies a storage scale unit associated with the virtual disk that this cmdlet gets.
+To obtain a **StorageScaleUnit** object, use the **Get-StorageScaleUnit** cmdlet.
 
 ```yaml
 Type: CimInstance

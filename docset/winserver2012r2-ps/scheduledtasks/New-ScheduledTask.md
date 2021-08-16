@@ -30,12 +30,12 @@ You can register a task to run any of the following application or file types: W
 
 ### Example 1: Define a scheduled task and register it at a later time
 ```powershell
-PS C:\> $A = New-ScheduledTaskAction -Execute "Taskmgr.exe"
-PS C:\> $T = New-ScheduledTaskTrigger -AtLogon
-PS C:\> $P = "Contoso\Administrator"
-PS C:\> $S = New-ScheduledTaskSettingsSet
-PS C:\> $D = New-ScheduledTask -Action $A -Principal $P -Trigger $T -Settings $S
-PS C:\> Register-ScheduledTask T1 -InputObject $D
+PS C:\> $action = New-ScheduledTaskAction -Execute "Taskmgr.exe"
+PS C:\> $trigger = New-ScheduledTaskTrigger -AtLogon
+PS C:\> $principal = "Contoso\Administrator"
+PS C:\> $settings = New-ScheduledTaskSettingsSet
+PS C:\> $task = New-ScheduledTask -Action $action -Principal $principal -Trigger $trigger -Settings $settings
+PS C:\> Register-ScheduledTask T1 -InputObject $task
 ```
 
 In this example, the set of commands uses several cmdlets and variables to define and then register a scheduled task.
@@ -53,6 +53,20 @@ The fifth command creates a new task and assigns the task definition to the vari
 The sixth command (hypothetically) runs at a later time.
 It registers the new scheduled task and defines it by using the $D variable.
 
+### Example 2: Define a scheduled task with multiple actions
+```powershell
+PS C:\> $actions = (New-ScheduledTaskAction –Execute 'foo.ps1'), (New-ScheduledTaskAction –Execute 'bar.ps1')
+PS C:\> $trigger = New-ScheduledTaskTrigger -Daily -At '9:15 AM'
+PS C:\> $principal = New-ScheduledTaskPrincipal -UserId 'DOMAIN\user' -RunLevel Highest
+PS C:\> $settings = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable -WakeToRun
+PS C:\> $task = New-ScheduledTask -Action $actions -Principal $principal -Trigger $trigger -Settings $settings
+
+PS C:\> Register-ScheduledTask 'baz' -InputObject $task
+
+```
+
+This example creates and registers a scheduled task that runs two PowerShell scripts daily at 09:15 AM.
+
 ## PARAMETERS
 
 ### -Action
@@ -63,7 +77,7 @@ A task can have up to 32 actions.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -78,7 +92,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +124,7 @@ Briefly describes the task.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -125,7 +139,7 @@ Specifies the security context in which a task runs.
 ```yaml
 Type: CimInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -140,7 +154,7 @@ Specifies a configuration object that the Task Scheduler service uses to determi
 ```yaml
 Type: CimInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -157,7 +171,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +191,7 @@ For more information about triggers, see [Triggers](https://technet.microsoft.co
 ```yaml
 Type: CimInstance[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1

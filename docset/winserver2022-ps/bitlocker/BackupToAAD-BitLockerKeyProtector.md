@@ -18,7 +18,7 @@ BackupToAAD-BitLockerKeyProtector [-MountPoint] <String[]> [-KeyProtectorId] <St
 ```
 
 ## DESCRIPTION
-The BackupToAAD-BitLockerKeyProtector cmdlet saves a recovery password key protector for a volume protected by BitLocker Drive Encryption to Azure Active Directory (AAD). Specify a key to be saved by ID.
+The **BackupToAAD-BitLockerKeyProtector** cmdlet saves a recovery password key protector for a volume protected by BitLocker Drive Encryption to Azure Active Directory (AAD). Specify a key to be saved by ID.
 
 ## EXAMPLES
 
@@ -31,7 +31,7 @@ BackupToAAD-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProte
 
 This example saves a key protector for a specified BitLocker volume.
 
-The first command uses Get-BitLockerVolume to obtain a BitLocker volume and store it in the $BLV variable.
+The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the $BLV variable.
 
 The second command backs up the key protector for the BitLocker volume specified by the MountPoint parameter. The command specifies the key protector by using its ID, contained in the BitLocker object stored in $BLV. 
 
@@ -39,12 +39,12 @@ The second command backs up the key protector for the BitLocker volume specified
 ```powershell
 BackupToAAD-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId "{E2611001E-6AD0-4A08-BAAA-C9c031DB2AA6}"
 ```
-This commands saves a key protector for a specified BitLocker volume to Azure AD. The command specifies the key protector by using its ID.
+This command saves a key protector for a specified BitLocker volume to Azure AD. The command specifies the key protector by using its ID.
 
 ## PARAMETERS
 
 ### -KeyProtectorId
-The KeyProtector attribute contains an array of key protectors associated to the volume. This command uses standard array syntax to index the KeyProtector object. The key protector that corresponds to the recovery password key protector can be identified by using the KeyProtectorType attribute in the KeyProtector object.
+The **KeyProtector** attribute contains an array of key protectors associated to the volume. This command uses standard array syntax to index the KeyProtector object. The key protector that corresponds to the recovery password key protector can be identified by using the KeyProtectorType attribute in the KeyProtector object.
 
 
 ```yaml
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -MountPoint
-{{ Fill MountPoint Description }}
+The volume to be used by **KeyProtector**.
 
 ```yaml
 Type: String[]

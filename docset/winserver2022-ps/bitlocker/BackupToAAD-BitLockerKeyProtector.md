@@ -39,7 +39,7 @@ The second command backs up the key protector for the BitLocker volume specified
 ```powershell
 BackupToAAD-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId "{E2611001E-6AD0-4A08-BAAA-C9c031DB2AA6}"
 ```
-This command saves a key protector for a specified BitLocker volume to Azure AD. The command specifies the key protector by using its ID.
+This commands saves a key protector for a specified BitLocker volume to Azure AD. The command specifies the key protector by using its ID.
 
 ## PARAMETERS
 

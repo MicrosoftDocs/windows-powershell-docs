@@ -8,7 +8,7 @@ schema: 2.0.0
 # BackupToAAD-BitLockerKeyProtector
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Saves a key protector for a BitLocker volume in Azure Active Directory.
 
 ## SYNTAX
 
@@ -18,21 +18,34 @@ BackupToAAD-BitLockerKeyProtector [-MountPoint] <String[]> [-KeyProtectorId] <St
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The BackupToAAD-BitLockerKeyProtector cmdlet saves a recovery password key protector for a volume protected by BitLocker Drive Encryption to Azure Active Directory (AAD). Specify a key to be saved by ID.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+$BLV = Get-BitLockerVolume -MountPoint "C:"
+BackupToAAD-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1].KeyProtectorId
+
 ```
 
-{{ Add example description here }}
+This example saves a key protector for a specified BitLocker volume.
+
+The first command uses Get-BitLockerVolume to obtain a BitLocker volume and store it in the $BLV variable.
+
+The second command backs up the key protector for the BitLocker volume specified by the MountPoint parameter. The command specifies the key protector by using its ID, contained in the BitLocker object stored in $BLV. 
+
+### Example 2
+```powershell
+BackupToAAD-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId "{E2611001E-6AD0-4A08-BAAA-C9c031DB2AA6}"
+```
+This command saves a key protector for a specified BitLocker volume to Azure AD. The command specifies the key protector by using its ID.
 
 ## PARAMETERS
 
 ### -KeyProtectorId
-{{ Fill KeyProtectorId Description }}
+The KeyProtector attribute contains an array of key protectors associated to the volume. This command uses standard array syntax to index the KeyProtector object. The key protector that corresponds to the recovery password key protector can be identified by using the KeyProtectorType attribute in the KeyProtector object.
+
 
 ```yaml
 Type: String

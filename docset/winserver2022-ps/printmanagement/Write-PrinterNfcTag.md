@@ -1,4 +1,4 @@
----
+﻿---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterNfcTagTasks_v1.0.cdxml-help.xml
 Module Name: PrintManagement
@@ -61,7 +61,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +93,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance
 Parameter Sets: PrinterNfcTag
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -109,7 +109,7 @@ You cannot unlock a locked NFC tag.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ManualSpecification
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -126,7 +126,7 @@ The cmdlet writes the path of the shared printers to an NFC tag.
 ```yaml
 Type: String[]
 Parameter Sets: ManualSpecification
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -143,7 +143,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ The acceptable values for this parameter are: an IPv4 or IPv6 IP address or any 
 ```yaml
 Type: String[]
 Parameter Sets: ManualSpecification
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -170,12 +170,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### System.String[]
+
+### System.Management.Automation.SwitchParameter
+
+### Microsoft.Management.Infrastructure.CimInstance
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

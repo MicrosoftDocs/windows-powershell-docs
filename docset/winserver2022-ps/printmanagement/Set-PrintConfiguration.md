@@ -1,4 +1,4 @@
----
+﻿---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterConfiguration_v1.0.cdxml-help.xml
 Module Name: PrintManagement
@@ -90,7 +90,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ Specifies whether to collate the output of the printer by default.
 ```yaml
 Type: Boolean
 Parameter Sets: PrinterObject, PrinterName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ Specifies whether the printer should use either color or grayscale printing by d
 ```yaml
 Type: Boolean
 Parameter Sets: PrinterObject, PrinterName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,21 +158,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -219,23 +204,8 @@ For valid values, see the Syntax section.
 ```yaml
 Type: PaperSizeEnum
 Parameter Sets: PrinterObject, PrinterName
-Aliases: 
+Aliases:
 Accepted values: Custom, Letter, LetterSmall, Tabloid, Ledger, Legal, Statement, Executive, A3, A4, A4Small, A5, B4, B5, Folio, Quarto, Sheet10x14, Sheet11x17, Note, Envelope9, Envelope10, Envelope11, Envelope12, Envelope14, CSheet, DSheet, ESheet, EnvelopeDL, EnvelopeC5, EnvelopeC3, EnvelopeC4, EnvelopeC6, EnvelopeC65, EnvelopeB4, EnvelopeB5, EnvelopeB6, EnvelopeItaly, EnvelopeMonarch, EnvelopePersonal, FanfoldUS, FanfoldStandardGerman, FanfoldLegalGerman, ISOB4, JapanesePostcard, Sheet9x11, Sheet10x11, Sheet15x11, EnvelopeInvite, Reserved48, Reserved49, LetterExtra, LegalExtra, TabloidExtra, A4Extra, LetterTransverse, A4Transverse, LetterExtraTransverse, APlus, BPlus, LetterPlus, A4Plus, A5Transverse, B5Transverse, A3Extra, A5Extra, B5Extra, A2, A3Transverse, A3ExtraTransverse, JapaneseDoublePostcard, A6, JapaneseEnvelopeKaku2, JapaneseEnvelopeKaku3, JapaneseEnvelopeChou3, JapaneseEnvelopeChou4, LetterRotated, A3Rotated, A4Rotated, A5Rotated, B4JISRotated, B5JISRotated, JapanesePostcardRotated, JapaneseDoublePostcardRotated, A6Rotated, JapaneseEnvelopeKaku2Rotated, JapaneseEnvelopeKaku3Rotated, JapaneseEnvelopeChou3Rotated, JapaneseEnvelopeChou4Rotated, B6JIS, B6JISRotated, Sheet12x11, JapaneseEnvelopeYou4, JapaneseEnvelopeYou4Rotated, PRC16K, PRC32K, PRC32KBig, PRCEnvelope1, PRCEnvelope2, PRCEnvelope3, PRCEnvelope4, PRCEnvelope5, PRCEnvelope6, PRCEnvelope7, PRCEnvelope8, PRCEnvelope9, PRCEnvelope10, PRC16KRotated, PRC32KRotated, PRC32KBigRotated, PRCEnvelope1Rotated, PRCEnvelope2Rotated, PRCEnvelope3Rotated, PRCEnvelope4Rotated, PRCEnvelope5Rotated, PRCEnvelope6Rotated, PRCEnvelope7Rotated, PRCEnvelope8Rotated, PRCEnvelope9Rotated, PRCEnvelope10Rotated
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrintTicketXml
-Specifies the print ticket XML defining the default print settings for this printer.
-
-```yaml
-Type: String
-Parameter Sets: PrinterObject, PrinterName
-Aliases: PrintTicket, PT
 
 Required: False
 Position: Named
@@ -274,6 +244,21 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -PrintTicketXml
+Specifies the print ticket XML defining the default print settings for this printer.
+
+```yaml
+Type: String
+Parameter Sets: PrinterObject, PrinterName
+Aliases: PrintTicket, PT
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
 If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
@@ -282,11 +267,26 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -308,18 +308,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer
-This cmdlet accepts one printer object.
+### System.String
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output objects.
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

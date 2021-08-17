@@ -1,8 +1,8 @@
----
+﻿---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterPortTasks_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date:ms.date: 08/17/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/add-printerport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-PrinterPort
@@ -74,7 +74,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,28 +116,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -HostName
 Specifies the host name of the computer on which to add LPR printer port.
 
 ```yaml
 Type: String
 Parameter Sets: lpr
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -152,7 +137,7 @@ Indicates that this cmdlet enables LPR byte counting for a TCP/IP printer port i
 ```yaml
 Type: SwitchParameter
 Parameter Sets: tcplpr
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +152,7 @@ Specifies the LPR host address when installing a TCP/IP printer port in LPR mode
 ```yaml
 Type: String
 Parameter Sets: tcplpr
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -182,7 +167,7 @@ Specifies the LPR queue name when installing a TCP/IP printer port in LPR mode.
 ```yaml
 Type: String
 Parameter Sets: tcplpr
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -197,7 +182,7 @@ Specifies the name of the printer port to install on the specified computer.
 ```yaml
 Type: String
 Parameter Sets: local, tcplpr, tcp
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -212,7 +197,7 @@ Specifies the TCP/IP port number for the printer port added to the specified com
 ```yaml
 Type: UInt32
 Parameter Sets: tcp
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,7 +212,7 @@ Specifies the host address of the TCP/IP printer port added to the specified com
 ```yaml
 Type: String
 Parameter Sets: tcp
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -242,7 +227,7 @@ Specifies the name of the printer installed on the LPR printer port.
 ```yaml
 Type: String
 Parameter Sets: lpr
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -272,7 +257,7 @@ Specifies the SNMP community name for TCP/IP printer port management.
 ```yaml
 Type: String
 Parameter Sets: tcplpr, tcp
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -289,11 +274,26 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -315,18 +315,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-This cmdlet accepts no input objects.
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterPort
-This cmdlet returns an object that contains the new printer port.
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

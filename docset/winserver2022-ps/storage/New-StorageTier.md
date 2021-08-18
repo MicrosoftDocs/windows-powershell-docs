@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StoragePool.cdxml-help.xml
 Module Name: Storage
-ms.date: 12/20/2016
+ms.date: 08/18/2021
 online version: https://docs.microsoft.com/powershell/module/storage/new-storagetier?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-StorageTier
@@ -326,8 +326,8 @@ Accept wildcard characters: False
 ### -ProvisioningType
 Specifies the provisioning scheme of the storage tier.
 The possible values are:
--	Thin (1): capacity is allocated on demand.
--	Fixed (2): capacity is fully allocated upon creation.
+- Thin (1): capacity is allocated on demand.
+- Fixed (2): capacity is fully allocated upon creation.
 
 ```yaml
 Type: ProvisioningType
@@ -430,7 +430,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -446,14 +446,14 @@ Accept wildcard characters: False
 ```
 
 ### -Usage
-Specifies the intended usage for this storage tier. The options are: 
--	Data (default)
--	Read Cache
--	Cache Log
--	Dirty Region Tracking
--	Stripe State Tracking
--	Valid Data Tracking
--	Cache Lines
+Specifies the intended usage for this storage tier. The options are:
+- Data (default)
+- Read Cache
+- Cache Log
+- Dirty Region Tracking
+- Stripe State Tracking
+- Valid Data Tracking
+- Cache Lines
 
 ```yaml
 Type: Usage

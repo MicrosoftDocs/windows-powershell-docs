@@ -55,15 +55,15 @@ The possible status values are the following:
 ## EXAMPLES
 
 ### Example 1: Get status for a file
-```
-PS C:\>Get-FileStorageTier -FilePath "D:\DataFile06.txt"
+```powershell
+Get-FileStorageTier -FilePath "D:\DataFile06.txt"
 ```
 
 This command gets the pinned file that you specify, and its status.
 
 ### Example 2: Get pinned files for a volume
-```
-PS C:\>Get-FileStorageTier -VolumePath "\\?\Volume{6d6e000d-6038-11e2-be6d-806e6f6e6963}\"
+```powershell
+Get-FileStorageTier -VolumePath "\\?\Volume{6d6e000d-6038-11e2-be6d-806e6f6e6963}\"
 ```
 
 This command gets the pinned files for the specified volume, and their status values.
@@ -76,7 +76,7 @@ The possible values are:
 - Capacity
 - Performance
 
-Example: ``Get-FileStorageTier -AllocatedStorageTierClass Capacity``
+For example, to return a list of files with **Capacity** allocation, use `Get-FileStorageTier -AllocatedStorageTierClass Capacity`
 
 ```yaml
 Type: StorageTierClass
@@ -140,12 +140,13 @@ Accept wildcard characters: False
 
 ### -PinnedState
 Return a list of files with the specified pinned state on the storage tier class.
-The possible values are: 
-- Pinned 
+The possible values are:
+- Pinned
 - Unpinned
-- All 
+- All
 
-Example: ``Get-FileStorageTier -PinnedState “Pinned”``
+For example, to return a list of files with **Pinned** state, use
+`Get-FileStorageTier -PinnedState Pinned`
 
 ```yaml
 Type: PinnedState
@@ -165,7 +166,8 @@ The possible values are:
 - Capacity
 - Performance
 
-Example: ``Get-FileStorageTier -PinnedStorageTierClass Capacity``
+For example, to return a list of files pinned with **Capacity** storage tier class, use
+`Get-FileStorageTier -PinnedStorageTierClass Capacity`
 
 ```yaml
 Type: StorageTierClass
@@ -181,7 +183,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

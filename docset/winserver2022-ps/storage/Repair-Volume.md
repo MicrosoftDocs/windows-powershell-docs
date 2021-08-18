@@ -152,12 +152,12 @@ Accept wildcard characters: False
 ```
 
 ### -DetectLeaks
-Specifies the type of leak detection to perform. 
-The options are: 
--	Scan 
--	ScanAndFix 
--	OfflineScanAndFix
--	QuerySpaceForFix
+Specifies the type of leak detection to perform.
+The options are:
+- Scan
+- ScanAndFix
+- OfflineScanAndFix
+- QuerySpaceForFix
 
 ```yaml
 Type: DetectLeakMode
@@ -279,14 +279,14 @@ Accept wildcard characters: False
 ```
 
 ### -Salvage
-Specifies the type of salvage operation to perform. 
-The options are: 
--	Diagnose 
--	Scan
--	Copy 
--	ScanAndCopy
--	QuickScan
--	QuickScanAndCopy
+Specifies the type of salvage operation to perform.
+The options are:
+- Diagnose
+- Scan
+- Copy
+- ScanAndCopy
+- QuickScan
+- QuickScanAndCopy
 
 ```yaml
 Type: SalvageMode
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScratchDir
-Specifies the scratch directory to be used for salvage operations. Note that for clustered scenarios, the name is local to the volume owner node. 
+Specifies the scratch directory to be used for salvage operations. Note that for clustered scenarios, the name is local to the volume owner node.
 
 ```yaml
 Type: String
@@ -407,7 +407,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -423,7 +423,7 @@ Accept wildcard characters: False
 ```
 
 ### -Triage
-Specifies the ReFS volume that should be triaged. When DirectoryIds are not specified, the triage is done on global tables. 
+Specifies the ReFS volume that should be triaged. When DirectoryIds are not specified, the triage is done on global tables.
 
 ```yaml
 Type: SwitchParameter

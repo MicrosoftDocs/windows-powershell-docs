@@ -16,17 +16,18 @@ Sets the SMB client configuration.
 ## SYNTAX
 
 ```
-Set-SmbClientConfiguration [-ConnectionCountPerRssNetworkInterface <UInt32>]
+Set-SmbClientConfiguration [-SkipCertificateCheck <Boolean>] [-ConnectionCountPerRssNetworkInterface <UInt32>]
  [-DirectoryCacheEntriesMax <UInt32>] [-DirectoryCacheEntrySizeMax <UInt32>] [-DirectoryCacheLifetime <UInt32>]
  [-DormantFileLimit <UInt32>] [-EnableBandwidthThrottling <Boolean>]
  [-EnableByteRangeLockingOnReadOnlyFiles <Boolean>] [-EnableInsecureGuestLogons <Boolean>]
  [-EnableLargeMtu <Boolean>] [-EnableLoadBalanceScaleOut <Boolean>] [-EnableMultiChannel <Boolean>]
  [-EnableSecuritySignature <Boolean>] [-ExtendedSessionTimeout <UInt32>] [-FileInfoCacheEntriesMax <UInt32>]
  [-FileInfoCacheLifetime <UInt32>] [-FileNotFoundCacheEntriesMax <UInt32>]
- [-FileNotFoundCacheLifetime <UInt32>] [-KeepConn <UInt32>] [-MaxCmds <UInt32>]
- [-MaximumConnectionCountPerServer <UInt32>] [-OplocksDisabled <Boolean>] [-RequireSecuritySignature <Boolean>]
- [-SessionTimeout <UInt32>] [-UseOpportunisticLocking <Boolean>] [-WindowSizeThreshold <UInt32>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FileNotFoundCacheLifetime <UInt32>] [-ForceSMBEncryptionOverQuic <Boolean>] [-KeepConn <UInt32>]
+ [-MaxCmds <UInt32>] [-MaximumConnectionCountPerServer <UInt32>] [-OplocksDisabled <Boolean>]
+ [-RequireSecuritySignature <Boolean>] [-SessionTimeout <UInt32>] [-UseOpportunisticLocking <Boolean>]
+ [-WindowSizeThreshold <UInt32>] [-DisableCompression <Boolean>] [-Force] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -151,6 +152,21 @@ Specifies the directory cache lifetime.
 
 ```yaml
 Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableCompression
+{{ Fill DisableCompression Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -371,6 +387,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForceSMBEncryptionOverQuic
+{{ Fill ForceSMBEncryptionOverQuic Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -KeepConn
 Specifies the time, in seconds, before the SMB client session is automatically disconnected.
 
@@ -453,6 +484,21 @@ Specifies the session time-out.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCertificateCheck
+{{ Fill SkipCertificateCheck Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

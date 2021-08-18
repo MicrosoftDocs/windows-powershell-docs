@@ -17,8 +17,10 @@ Creates an SMB mapping.
 
 ```
 New-SmbMapping [[-LocalPath] <String>] [[-RemotePath] <String>] [-UserName <String>] [-Password <String>]
- [-Persistent <Boolean>] [-SaveCredentials] [-HomeFolder] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Persistent <Boolean>] [-SaveCredentials] [-HomeFolder] [-RequireIntegrity <Boolean>]
+ [-RequirePrivacy <Boolean>] [-UseWriteThrough <Boolean>] [-TransportType <TransportType>]
+ [-SkipCertificateCheck] [-CompressNetworkTraffic <Boolean>] [-GlobalMapping] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,17 +72,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -CompressNetworkTraffic
+{{ Fill CompressNetworkTraffic Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GlobalMapping
+{{ Fill GlobalMapping Description }}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -160,8 +177,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RequireIntegrity
+{{ Fill RequireIntegrity Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequirePrivacy
+{{ Fill RequirePrivacy Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SaveCredentials
 Indicates that the credentials provided should be saved for when a mapping to the same SMB server also is created.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCertificateCheck
+{{ Fill SkipCertificateCheck Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -192,6 +254,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TransportType
+{{ Fill TransportType Description }}
+
+```yaml
+Type: TransportType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UserName
 Specifies the user name to use to connect to the SMB share.
 
@@ -203,6 +280,36 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseWriteThrough
+{{ Fill UseWriteThrough Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

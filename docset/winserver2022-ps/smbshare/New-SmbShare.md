@@ -123,6 +123,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CATimeout
+Specifies the continuous availability time-out for the share.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ChangeAccess
 Specifies which users are granted modify permission to access the share.
 Multiple users can be specified by using a comma-separated list.
@@ -148,6 +163,21 @@ The default is the current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompressData
+{{ Fill CompressData Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -268,6 +298,21 @@ An account may not be specified more than once in the *FullAccess*, *ChangeAcces
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LeasingMode
+{{ Fill LeasingMode Description }}
+
+```yaml
+Type: LeasingMode
 Parameter Sets: (All)
 Aliases:
 

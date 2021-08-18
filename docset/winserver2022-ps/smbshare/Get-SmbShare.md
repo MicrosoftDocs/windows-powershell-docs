@@ -19,9 +19,10 @@ Retrieves the SMB shares on the computer.
 Get-SmbShare [[-Name] <String[]>] [[-ScopeName] <String[]>] [-Scoped <Boolean[]>] [-Special <Boolean[]>]
  [-ContinuouslyAvailable <Boolean[]>] [-ShareState <ShareState[]>]
  [-FolderEnumerationMode <FolderEnumerationMode[]>] [-CachingMode <CachingMode[]>]
- [-ConcurrentUserLimit <UInt32[]>] [-AvailabilityType <AvailabilityType[]>] [-CaTimeout <UInt32[]>]
- [-EncryptData <Boolean[]>] [-IncludeHidden] [-SmbInstance <SmbInstance>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-LeasingMode <LeasingMode[]>] [-ConcurrentUserLimit <UInt32[]>] [-AvailabilityType <AvailabilityType[]>]
+ [-CaTimeout <UInt32[]>] [-EncryptData <Boolean[]>] [-CompressData <Boolean[]>] [-IncludeHidden]
+ [-SmbInstance <SmbInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -219,6 +220,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CompressData
+{{ Fill CompressData Description }}
+
+```yaml
+Type: Boolean[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ConcurrentUserLimit
 Specifies the concurrent user limit of the shares being enumerated.
 
@@ -295,6 +311,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LeasingMode
+{{ Fill LeasingMode Description }}
+
+```yaml
+Type: LeasingMode[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies one or more SMB shares by share name.
 
@@ -305,6 +336,21 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Scoped
+Indicates that the shares to be numerated should be scoped.
+
+```yaml
+Type: Boolean[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

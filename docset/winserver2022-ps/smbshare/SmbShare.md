@@ -44,7 +44,10 @@ Retrieves the connections established from the SMB client to the SMB servers.
 ### [Get-SmbDelegation](./Get-SmbDelegation.md)
 Gets the constrained delegation authorizations for an SMB client.
 
-### [Get-SmbMapping](./Get-SmbMapping.md)
+### [Get-SmbGlobalMapping](Get-SmbGlobalMapping.md)
+{{ Fill in the Synopsis }}
+
+### [Get-SmbMapping](Get-SmbMapping.md)
 Retrieves the SMB client directory mappings created for a server.
 
 ### [Get-SmbMultichannelConnection](./Get-SmbMultichannelConnection.md)
@@ -55,6 +58,12 @@ Retrieves the constraints that define how the SMB client uses network interfaces
 
 ### [Get-SmbOpenFile](./Get-SmbOpenFile.md)
 Retrieves basic information about the files that are open on behalf of the clients of the SMB server.
+
+### [Get-SmbServerCertificateMapping](./Get-SmbServerCertificateMapping.md)
+{{ Fill in the Synopsis }}
+
+### [Get-SmbServerCertProps](./Get-SmbServerCertProps.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-SmbServerConfiguration](./Get-SmbServerConfiguration.md)
 Retrieves the SMB server configuration.
@@ -74,11 +83,17 @@ Retrieves the ACL of the SMB share.
 ### [Grant-SmbShareAccess](./Grant-SmbShareAccess.md)
 Adds an allow ACE for a trustee to the security descriptor of the SMB share.
 
+### [New-SmbGlobalMapping](./New-SmbGlobalMapping.md)
+{{ Fill in the Synopsis }}
+
 ### [New-SmbMapping](./New-SmbMapping.md)
 Creates an SMB mapping.
 
 ### [New-SmbMultichannelConstraint](./New-SmbMultichannelConstraint.md)
 Creates an SMB multi-channel constraint for the specified server.
+
+### [New-SmbServerCertificateMapping](./New-SmbServerCertificateMapping.md)
+{{ Fill in the Synopsis }}
 
 ### [New-SmbShare](./New-SmbShare.md)
 Creates an SMB share.
@@ -86,11 +101,20 @@ Creates an SMB share.
 ### [Remove-SmbBandwidthLimit](./Remove-SmbBandwidthLimit.md)
 Removes SMB bandwidth caps.
 
+### [Remove-SmbComponent](./Remove-SmbComponent.md)
+{{ Fill in the Synopsis }}
+
+### [Remove-SmbGlobalMapping](./Remove-SmbGlobalMapping.md)
+{{ Fill in the Synopsis }}
+
 ### [Remove-SmbMapping](./Remove-SmbMapping.md)
 Removes the SMB mapping to an SMB share.
 
 ### [Remove-SmbMultichannelConstraint](./Remove-SmbMultichannelConstraint.md)
 Removes SMB multi-channel constraints.
+
+### [Remove-SmbServerCertificateMapping](./Remove-SmbServerCertificateMapping.md)
+{{ Fill in the Synopsis }}
 
 ### [Remove-SmbShare](./Remove-SmbShare.md)
 Deletes the specified SMB shares.
@@ -107,8 +131,11 @@ Sets the SMB client configuration.
 ### [Set-SmbPathAcl](./Set-SmbPathAcl.md)
 Sets the ACL for the file system folder to match the ACL used by an SMB share.
 
+### [Set-SmbServerCertificateMapping](./Set-SmbServerCertificateMapping.md)
+{{ Fill in the Synopsis }}
+
 ### [Set-SmbServerConfiguration](./Set-SmbServerConfiguration.md)
-Sets the SMB Service configuration.
+Sets the Server Message Block (SMB) server configuration.
 
 ### [Set-SmbShare](./Set-SmbShare.md)
 Modifies the properties of the SMB share.

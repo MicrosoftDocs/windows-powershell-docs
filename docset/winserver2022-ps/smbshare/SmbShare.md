@@ -44,10 +44,10 @@ Retrieves the connections established from the SMB client to the SMB servers.
 ### [Get-SmbDelegation](./Get-SmbDelegation.md)
 Gets the constrained delegation authorizations for an SMB client.
 
-### [Get-SmbGlobalMapping](Get-SmbGlobalMapping.md)
+### [Get-SmbGlobalMapping](./Get-SmbGlobalMapping.md)
 {{ Fill in the Synopsis }}
 
-### [Get-SmbMapping](Get-SmbMapping.md)
+### [Get-SmbMapping](./Get-SmbMapping.md)
 Retrieves the SMB client directory mappings created for a server.
 
 ### [Get-SmbMultichannelConnection](./Get-SmbMultichannelConnection.md)

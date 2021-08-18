@@ -341,21 +341,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Scoped
-Indicates that the shares to be numerated should be scoped.
-
-```yaml
-Type: Boolean[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ScopeName
 Specifies the scope of the share by name.
 

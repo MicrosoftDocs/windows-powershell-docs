@@ -94,15 +94,14 @@ This example performs a full format of the D volume using the FAT32 file system.
 
 ```powershell
 Get-Volume -DriveLetter D
-```
-```Output
+
 DriveLetter FileSystemLabel FileSystem DriveType HealthStatus OperationalStatus SizeRemaining      Size
 ----------- --------------- ---------- --------- ------------ ----------------- -------------      ----
 D           Server1         NTFS       Fixed     Healthy      OK                    126.76 GB 126.87 GB
 D           Server2         NTFS       Fixed     Healthy      OK                    126.76 GB 126.87 GB
-```powershell
+
 Format-Volume -DriveLetter D
-```Output
+
 DriveLetter FileSystemLabel FileSystem DriveType HealthStatus OperationalStatus SizeRemaining      Size
 ----------- --------------- ---------- --------- ------------ ----------------- -------------      ----
 D                           NTFS       Fixed     Healthy      OK                    126.76 GB 126.87 GB

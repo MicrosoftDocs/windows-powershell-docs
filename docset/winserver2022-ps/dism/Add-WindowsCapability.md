@@ -17,14 +17,15 @@ Installs a Windows capability package on the specified operating system image.
 
 ### Online
 ```powershell
-Add-WindowsCapability -Online -Name <String> [-LimitAccess] [-Source <String[]>] [-WindowsDirectory <String>]
- [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
- [<CommonParameters>]
+Add-WindowsCapability [-Name <String>] [-Recipe <String>] [-LimitAccess] [-Source <String[]>] [-Online]
+ [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>]
+ [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
 ### Offline
 ```powershell
-Add-WindowsCapability -Path <String> -Name <String> [-Source <String[]>] [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>]
+Add-WindowsCapability [-Name <String>] [-Recipe <String>] [-LimitAccess] [-Source <String[]>] -Path <String>
+ [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>]
  [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
@@ -117,7 +118,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -149,6 +150,21 @@ Parameter Sets: Offline
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Recipe
+{{ Fill Recipe Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

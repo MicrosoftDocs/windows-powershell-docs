@@ -17,14 +17,16 @@ Gets Windows capabilities for an image or a running operating system.
 
 ### Offline
 ```
-Get-WindowsCapability [-Name <String>] -Path <String> [-WindowsDirectory <String>] [-SystemDrive <String>]
- [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [-LimitAccess <String>] [-Source <String>] [-Verbose <String>] [<CommonParameters>]
+Get-WindowsCapability [-Name <String>] [-LimitAccess] [-Source <String[]>] -Path <String>
+ [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>]
+ [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
 ### Online
 ```
-Get-WindowsCapability [-Name <String>] [-Online] [-WindowsDirectory <String>] [-SystemDrive <String>]
- [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [-LimitAccess <String>] [-Source <String>] [-Verbose <String>] [<CommonParameters>]
+Get-WindowsCapability [-Name <String>] [-LimitAccess] [-Source <String[]>] [-Online]
+ [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>]
+ [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,6 +49,21 @@ PS C:\> Get-WindowsCapability -Online
 This command gets the Windows capabilities installed on the local host.
 
 ## PARAMETERS
+
+### -LimitAccess
+{{ Fill LimitAccess Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -LogLevel
 Specifies the maximum output level shown in the logs.
@@ -149,6 +166,21 @@ The directory used for extracting files for temporary usage during servicing sho
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Source
+{{ Fill Source Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

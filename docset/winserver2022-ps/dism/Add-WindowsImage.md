@@ -17,8 +17,8 @@ Adds an additional image to an existing image (.wim) file.
 
 ```
 Add-WindowsImage -ImagePath <String> -CapturePath <String> [-ConfigFilePath <String>] [-Description <String>]
- -Name <String> [-CheckIntegrity] [-NoRpFix] [-Setbootable] [-Verify] [-WIMBoot] [-LogPath <String>]
- [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+ -Name <String> [-CheckIntegrity] [-NoRpFix] [-Setbootable] [-Verify] [-WIMBoot] [-SupportEa]
+ [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -224,6 +224,21 @@ Only one volume image can be marked as bootable in a .wim file.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SupportEa
+{{ Fill SupportEa Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

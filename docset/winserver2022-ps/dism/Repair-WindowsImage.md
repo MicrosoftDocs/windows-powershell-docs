@@ -17,16 +17,18 @@ Repairs a Windows image in a WIM or VHD file.
 
 ### Offline
 ```
-Repair-WindowsImage [-CheckHealth] [-ScanHealth] [-RestoreHealth] [-LimitAccess] [-Source <String[]>]
- [-NoRestart] -Path <String> [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>]
- [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+Repair-WindowsImage [-CheckHealth] [-ScanHealth] [-RestoreHealth] [-StartComponentCleanup] [-LimitAccess]
+ [-ResetBase] [-Defer] [-Source <String[]>] [-NoRestart] -Path <String> [-WindowsDirectory <String>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
+ [<CommonParameters>]
 ```
 
 ### Online
 ```
-Repair-WindowsImage [-CheckHealth] [-ScanHealth] [-RestoreHealth] [-LimitAccess] [-Source <String[]>]
- [-NoRestart] [-Online] [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>]
- [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+Repair-WindowsImage [-CheckHealth] [-ScanHealth] [-RestoreHealth] [-StartComponentCleanup] [-LimitAccess]
+ [-ResetBase] [-Defer] [-Source <String[]>] [-NoRestart] [-Online] [-WindowsDirectory <String>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,6 +82,21 @@ Checks whether the image has been flagged as corrupted by a failed process and w
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Defer
+{{ Fill Defer Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -196,6 +213,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ResetBase
+{{ Fill ResetBase Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -RestoreHealth
 Scans the image for component store corruption, and then performs repair operations automatically.
 This operation will take several minutes.
@@ -264,6 +296,21 @@ Windows Update (WU) is also used for online images.
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StartComponentCleanup
+{{ Fill StartComponentCleanup Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

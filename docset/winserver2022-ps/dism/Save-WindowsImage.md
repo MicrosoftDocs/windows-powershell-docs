@@ -16,8 +16,8 @@ Applies changes made to a mounted image to its WIM or VHD file.
 ## SYNTAX
 
 ```
-Save-WindowsImage -Path <String> [-CheckIntegrity] [-Append] [-LogPath <String>] [-ScratchDirectory <String>]
- [-LogLevel <LogLevel>] [<CommonParameters>]
+Save-WindowsImage -Path <String> [-CheckIntegrity] [-Append] [-SupportEa] [-LogPath <String>]
+ [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -145,6 +145,21 @@ The directory used for extracting files for temporary usage during servicing sho
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SupportEa
+{{ Fill SupportEa Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

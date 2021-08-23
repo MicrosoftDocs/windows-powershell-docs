@@ -18,15 +18,15 @@ Applies an image to a specified location.
 ### InputByFilePathAndName
 ```
 Expand-WindowsImage -ImagePath <String> -Name <String> [-SplitImageFilePattern <String>] -ApplyPath <String>
- [-CheckIntegrity] [-ConfirmTrustedFile] [-NoRpFix] [-Verify] [-WIMBoot] [-Compact] [-LogPath <String>]
- [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+ [-CheckIntegrity] [-ConfirmTrustedFile] [-NoRpFix] [-Verify] [-WIMBoot] [-Compact] [-SupportEa]
+ [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
 ### InputByFilePathAndIndex
 ```
 Expand-WindowsImage -ImagePath <String> -Index <UInt32> [-SplitImageFilePattern <String>] -ApplyPath <String>
- [-CheckIntegrity] [-ConfirmTrustedFile] [-NoRpFix] [-Verify] [-WIMBoot] [-Compact] [-LogPath <String>]
- [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+ [-CheckIntegrity] [-ConfirmTrustedFile] [-NoRpFix] [-Verify] [-WIMBoot] [-Compact] [-SupportEa]
+ [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -249,6 +249,21 @@ Specifies the location and name of the base split image file.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SupportEa
+{{ Fill SupportEa Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -18,18 +18,18 @@ Mounts a Windows image in a WIM or VHD file to a directory on the local computer
 ### OfflineIndex
 ```
 Mount-WindowsImage -Path <String> -ImagePath <String> -Index <UInt32> [-ReadOnly] [-Optimize] [-CheckIntegrity]
- [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+ [-SupportEa] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
 ### OfflineName
 ```
 Mount-WindowsImage -Path <String> -ImagePath <String> -Name <String> [-ReadOnly] [-Optimize] [-CheckIntegrity]
- [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+ [-SupportEa] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
 ### Remount
 ```
-Mount-WindowsImage -Path <String> [-Remount] [-LogPath <String>] [-ScratchDirectory <String>]
+Mount-WindowsImage -Path <String> [-Remount] [-SupportEa] [-LogPath <String>] [-ScratchDirectory <String>]
  [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
@@ -275,6 +275,21 @@ The directory used for extracting files for temporary usage during servicing sho
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SupportEa
+{{ Fill SupportEa Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

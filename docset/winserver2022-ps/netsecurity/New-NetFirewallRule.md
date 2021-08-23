@@ -24,8 +24,8 @@ New-NetFirewallRule [-PolicyStore <String>] [-GPOSession <String>] [-Name <Strin
  [-IcmpType <String[]>] [-DynamicTarget <DynamicTransport>] [-Program <String>] [-Package <String>]
  [-Service <String>] [-InterfaceAlias <WildcardPattern[]>] [-InterfaceType <InterfaceType>]
  [-LocalUser <String>] [-RemoteUser <String>] [-RemoteMachine <String>] [-Authentication <Authentication>]
- [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-RemoteDynamicKeywordAddresses <String[]>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -818,6 +818,21 @@ See the Get-NetFirewallAddressFilter cmdlet for more information.
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteDynamicKeywordAddresses
+{{ Fill RemoteDynamicKeywordAddresses Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

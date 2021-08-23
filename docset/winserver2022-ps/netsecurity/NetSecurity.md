@@ -65,7 +65,10 @@ Retrieves address filter objects from the target computer.
 ### [Get-NetFirewallApplicationFilter](./Get-NetFirewallApplicationFilter.md)
 Retrieves application filter objects from the target computer.
 
-### [Get-NetFirewallInterfaceFilter](./Get-NetFirewallInterfaceFilter.md)
+### [Get-NetFirewallDynamicKeywordAddress](Get-NetFirewallDynamicKeywordAddress.md)
+{{ Fill in the Synopsis }}
+
+### [Get-NetFirewallInterfaceFilter](Get-NetFirewallInterfaceFilter.md)
 Retrieves interface filter objects from the target computer.
 
 ### [Get-NetFirewallInterfaceTypeFilter](./Get-NetFirewallInterfaceTypeFilter.md)
@@ -116,7 +119,10 @@ Returns active quick mode security associations (SAs) from the target computer.
 ### [Get-NetIPsecRule](./Get-NetIPsecRule.md)
 Gets an IPsec rule from the target computer.
 
-### [New-NetFirewallRule](./New-NetFirewallRule.md)
+### [New-NetFirewallDynamicKeywordAddress](New-NetFirewallDynamicKeywordAddress.md)
+{{ Fill in the Synopsis }}
+
+### [New-NetFirewallRule](New-NetFirewallRule.md)
 Creates a new inbound or outbound firewall rule and adds the rule to the target computer.
 
 ### [New-NetIPsecAuthProposal](./New-NetIPsecAuthProposal.md)
@@ -152,7 +158,10 @@ Creates an IPsec rule that defines security requirements for network connections
 ### [Open-NetGPO](./Open-NetGPO.md)
 Creates a cached copy of the Group Policy Object (GPO) to modify locally.
 
-### [Remove-NetFirewallRule](./Remove-NetFirewallRule.md)
+### [Remove-NetFirewallDynamicKeywordAddress](Remove-NetFirewallDynamicKeywordAddress.md)
+{{ Fill in the Synopsis }}
+
+### [Remove-NetFirewallRule](Remove-NetFirewallRule.md)
 Deletes one or more firewall rules that match the specified criteria.
 
 ### [Remove-NetIPsecDospSetting](./Remove-NetIPsecDospSetting.md)
@@ -266,7 +275,10 @@ Displays all of the existing IPsec rules and associated objects in a fully expan
 ### [Sync-NetIPsecRule](./Sync-NetIPsecRule.md)
 Gets the list of IP addresses to be added and deleted to an IPsec rule based on the differences detected between the existing rule IP addresses and the specified IP addresses.
 
-### [Update-NetIPsecRule](./Update-NetIPsecRule.md)
+### [Update-NetFirewallDynamicKeywordAddress](Update-NetFirewallDynamicKeywordAddress.md)
+{{ Fill in the Synopsis }}
+
+### [Update-NetIPsecRule](Update-NetIPsecRule.md)
 Updates an IPsec rule by adding or removing a set of IP addresses.
 
 

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-ClusterHCSVM
 
 ## SYNOPSIS
-Sets certain settings for the HCS VM 
+Sets certain settings for the HCS VM
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ With this cmdlet you can set a variaty of settings on the HCS VM
 
 ### Example 1
 ```powershell
-PS C:\> Set-ClusterHCSVM -Name "HCS Virtual Machine hcsres" -NewName "newName" -ExtendedVmConfiguration "info" -OfflineAction 0
+Set-ClusterHCSVM -Name "HCS Virtual Machine hcsres" -NewName "newName" -ExtendedVmConfiguration "info" -OfflineAction 0
 ```
 
 Though you can change certian settings, it is not recommended that you change the name of the resource
@@ -41,12 +41,12 @@ Though you can change certian settings, it is not recommended that you change th
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ### -ExtendedVmConfiguration
 This are where you can pass in extra settings that you'd like to pass into the VM. You can pass them in via JSON. This would be an example of you'd want to pass it in via parameter
 
-> -ExtendedVmConfiguration (Get-Content 'C:\config.txt') 
+> -ExtendedVmConfiguration (Get-Content 'C:\config.txt')
 
 Ensure that you use **Get-Content**. This parameter is **not required**, and a **default** ExtendedVmConfiguration will be passed in when the resource is started
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-This will output the object that has been changed 
+This will output the object that has been changed
 
 ```yaml
 Type: SwitchParameter
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

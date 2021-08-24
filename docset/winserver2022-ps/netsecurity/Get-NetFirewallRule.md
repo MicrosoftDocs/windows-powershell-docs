@@ -17,19 +17,19 @@ Retrieves firewall rules from the target computer.
 
 ### GetAll (Default)
 ```
-Get-NetFirewallRule [-All] [-PolicyStore <String>] [-GPOSession <String>] [-TracePolicyStore]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+Get-NetFirewallRule [-All] [-PolicyStore <String>] [-TracePolicyStore] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-NetFirewallRule [-Name] <String[]> [-PolicyStore <String>] [-GPOSession <String>] [-TracePolicyStore]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+Get-NetFirewallRule [-Name] <String[]> [-PolicyStore <String>] [-TracePolicyStore] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByDisplayName
 ```
-Get-NetFirewallRule -DisplayName <String[]> [-PolicyStore <String>] [-GPOSession <String>] [-TracePolicyStore]
+Get-NetFirewallRule -DisplayName <String[]> [-PolicyStore <String>] [-TracePolicyStore]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
@@ -39,63 +39,56 @@ Get-NetFirewallRule [-Description <String[]>] [-DisplayGroup <String[]>] [-Group
  [-Enabled <Enabled[]>] [-Direction <Direction[]>] [-Action <Action[]>]
  [-EdgeTraversalPolicy <EdgeTraversal[]>] [-LooseSourceMapping <Boolean[]>] [-LocalOnlyMapping <Boolean[]>]
  [-Owner <String[]>] [-PrimaryStatus <PrimaryStatus[]>] [-Status <String[]>] [-PolicyStoreSource <String[]>]
- [-PolicyStoreSourceType <PolicyStoreType[]>] [-PolicyStore <String>] [-GPOSession <String>]
- [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-PolicyStoreSourceType <PolicyStoreType[]>] [-PolicyStore <String>] [-TracePolicyStore]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallAddressFilter
 ```
 Get-NetFirewallRule -AssociatedNetFirewallAddressFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallApplicationFilter
 ```
 Get-NetFirewallRule -AssociatedNetFirewallApplicationFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallInterfaceFilter
 ```
 Get-NetFirewallRule -AssociatedNetFirewallInterfaceFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallInterfaceTypeFilter
 ```
 Get-NetFirewallRule -AssociatedNetFirewallInterfaceTypeFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallPortFilter
 ```
-Get-NetFirewallRule -AssociatedNetFirewallPortFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+Get-NetFirewallRule -AssociatedNetFirewallPortFilter <CimInstance> [-PolicyStore <String>] [-TracePolicyStore]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallSecurityFilter
 ```
 Get-NetFirewallRule -AssociatedNetFirewallSecurityFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallServiceFilter
 ```
 Get-NetFirewallRule -AssociatedNetFirewallServiceFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallProfile
 ```
-Get-NetFirewallRule -AssociatedNetFirewallProfile <CimInstance> [-PolicyStore <String>] [-GPOSession <String>]
- [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+Get-NetFirewallRule -AssociatedNetFirewallProfile <CimInstance> [-PolicyStore <String>] [-TracePolicyStore]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -477,28 +470,6 @@ Type: Enabled[]
 Parameter Sets: ByQuery
 Aliases: 
 Accepted values: True, False
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GPOSession
-Specifies the network GPO from which to retrieve the rules to be retrieved. 
-This parameter is used in the same way as the *PolicyStore* parameter.
-When modifying GPOs in Windows PowerShell®, each change to a GPO requires the entire GPO to be loaded, modified, and saved back.
-On a busy Domain Controller (DC), this can be a slow and resource-heavy operation.
-A GPO Session loads a domain GPO onto the local computer and makes all changes in a batch, before saving the domain GPO back.
-This reduces the load on the DC and speeds up the Windows PowerShell cmdlets.
-To load a GPO Session, use the Open-NetGPO cmdlet.
-To save a GPO Session, use the Save-NetGPO cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
 
 Required: False
 Position: Named

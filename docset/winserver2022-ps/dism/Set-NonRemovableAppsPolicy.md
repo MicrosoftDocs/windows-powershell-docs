@@ -41,7 +41,13 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -LogLevel
-{{ Fill LogLevel Description }}
+Specifies the maximum output level shown in the logs.
+The default log level is 3.
+The accepted values are as follows:
+- 1 = Errors only
+- 2 = Errors and warnings
+- 3 = Errors, warnings, and information
+- 4 = All of the information listed previously, plus debug output
 
 ```yaml
 Type: LogLevel
@@ -57,7 +63,13 @@ Accept wildcard characters: False
 ```
 
 ### -LogPath
-{{ Fill LogPath Description }}
+Specifies the full path and file name to log to. If not set, the default is
+`%WINDIR%\Logs\Dism\dism.log`. In Windows PE, the default directory is the RAMDISK scratch space
+which can be as low as 32 MB. The log file will automatically be archived. The archived log file
+will be saved with .bak appended to the file name and a new log file will be generated. Each time
+the log file is archived the .bak file will be overwritten. When using a network share that is not
+joined to a domain, use the net use command together with domain credentials to set access
+permissions before you set the log path for the DISM log.
 
 ```yaml
 Type: String
@@ -87,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -Online
-{{ Fill Online Description }}
+Specifies that the action is to be taken on the operating system that is currently running on the
+local computer.
 
 ```yaml
 Type: SwitchParameter
@@ -117,7 +130,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{ Fill Path Description }}
+Specifies the full path to the root directory of the offline Windows image that you will service. If
+the directory named Windows is not a subdirectory of the root directory, *WindowsDirectory* must be
+specified.
 
 ```yaml
 Type: String
@@ -132,7 +147,12 @@ Accept wildcard characters: False
 ```
 
 ### -ScratchDirectory
-{{ Fill ScratchDirectory Description }}
+Specifies a temporary directory that will be used when extracting files for use during servicing.
+The directory must exist locally. If not specified, the `\Windows\%Temp%` directory will be used,
+with a subdirectory name of a randomly generated hexadecimal value for each run of DISM. Items in
+the scratch directory are deleted after each operation. You should not use a network share location
+as a scratch directory to expand a package (.cab or .msu file) for installation. The directory used
+for extracting files for temporary usage during servicing should be a local directory.
 
 ```yaml
 Type: String
@@ -147,7 +167,9 @@ Accept wildcard characters: False
 ```
 
 ### -SystemDrive
-{{ Fill SystemDrive Description }}
+Specifies the path to the location of the BootMgr files. This is necessary only when the BootMgr
+files are located on a partition other than the one that you are running the command from. Use
+-SystemDrive to service an installed Windows image from a Windows PE environment.
 
 ```yaml
 Type: String
@@ -162,7 +184,9 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsDirectory
-{{ Fill WindowsDirectory Description }}
+Specifies the path to the Windows directory relative to the image path. This cannot be the full path
+to the Windows directory; it should be a relative path. If not specified, the default is the Windows
+directory in the root of the offline image directory.
 
 ```yaml
 Type: String

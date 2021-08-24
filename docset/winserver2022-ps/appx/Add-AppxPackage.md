@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 07/30/2021
+ms.date: 08/24/2021
 online version: https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-AppxPackage
@@ -80,41 +80,41 @@ To update an already installed package, the new package must have the same packa
 ## EXAMPLES
 
 ### Example 1: Add an app package
-```
-PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msix" -DependencyPath "C:\Users\user1\Desktop\winjs.msix"
+```powershell
+Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msix" -DependencyPath "C:\Users\user1\Desktop\winjs.msix"
 ```
 
 This command adds an app package that the package contains.
 
 ### Example 2: Update an app, but defer registration until the app has closed
 
-```
-PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msix" -DependencyPath "C:\Users\user1\Desktop\winjs.msix" -DeferRegistrationWhenPackagesAreInUse
+```powershell
+Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msix" -DependencyPath "C:\Users\user1\Desktop\winjs.msix" -DeferRegistrationWhenPackagesAreInUse
 ```
 
 This command will register an update to an existing app, but will not do so until the next launch of the app.
 
 ### Example 3: Add a disabled app package in development mode
-```
-PS C:\> $ManifestPath = (Get-AppxPackage -Name "*WindowsCalculator*").InstallLocation + "\Appxmanifest.xml"
-PS C:\> Add-AppxPackage -Path $ManifestPath -Register -DisableDevelopmentMode
+```powershell
+$ManifestPath = (Get-AppxPackage -Name "*WindowsCalculator*").InstallLocation + "\Appxmanifest.xml"
+Add-AppxPackage -Path $ManifestPath -Register -DisableDevelopmentMode
 ```
 
 This command gets the full path of the package manifest file of an installed Windows Store app, and then registers that package.
 You can use *DisableDevelopmentMode* to register an application that is staged by the **StagePackageAsync** API, has been disabled, or has become corrupted during testing.
 
 ### Example 4: Add an app along with its optional packages
-```
-PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -ExternalPackages "C:\Users\user1\Desktop\optionalpackage1.msix","C:\Users\user1\Desktop\optionalpackage2.msixbundle"
+```powershell
+Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -ExternalPackages "C:\Users\user1\Desktop\optionalpackage1.msix","C:\Users\user1\Desktop\optionalpackage2.msixbundle"
 
-PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -OptionalPackages "29270sandstorm.OptionalPackage1_gah1vdar1nn7a"
+Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -OptionalPackages "29270sandstorm.OptionalPackage1_gah1vdar1nn7a"
 ```
 
 This command adds an app package along with its optional packages. It is an atomic operation which means that if the app or its optional packages fail to install, the deployment operation will be aborted
 
 ### Example 5: Install only the required section of a streaming app
-```
-PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -RequiredContentGroupOnly
+```powershell
+Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -RequiredContentGroupOnly
 ```
 
 This command adds an app package but only installs the required section of a streaming app. Calling this command again without the RequiredContentGroupOnly flag proceeds to install the rest of the application in the order defined by the AppxContentGroupMap.xml

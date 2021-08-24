@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 10/20/2020
+ms.date: 08/24/2021
 online version: https://docs.microsoft.com/powershell/module/appx/reset-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Reset-AppxPackage
@@ -20,21 +20,21 @@ Restores the Windows app to its initial configuration.
 
 ```PowerShell
 Reset-AppxPackage [-Package] <string>
-                  [-WhatIf] 
-                  [-Confirm] 
+                  [-WhatIf]
+                  [-Confirm]
                   [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Reset-AppxPackage** cmdlet will reset the app to its original settings, and the app will react as a freshly installed app. 
+The **Reset-AppxPackage** cmdlet will reset the app to its original settings, and the app will react as a freshly installed app.
 
-After resetting the app, any initial prompts by the app will be prompted for user input. 
+After resetting the app, any initial prompts by the app will be prompted for user input.
 
 ## EXAMPLES
 
 ### Example 1: Reset app package
-```
-PS C:\> Reset-AppxPackage -Package publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe
+```powershell
+Reset-AppxPackage -Package publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe
 ```
 
 This cmdlet will reset the `publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe` application back to its original settings.

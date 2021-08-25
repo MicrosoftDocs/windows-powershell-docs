@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckForSignaturesBeforeRunningScan
-{{ Fill CheckForSignaturesBeforeRunningScan Description }}
+Remove whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 
 ```yaml
 Type: SwitchParameter
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableArchiveScanning
-{{ Fill DisableArchiveScanning Description }}
+Removes whether to scan archive files, such as .zip and .cab files, for malicious and unwanted software.
 
 ```yaml
 Type: SwitchParameter
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAutoExclusions
-{{ Fill DisableAutoExclusions Description }}
+Remove whether to disable the Automatic Exclusions feature for the server.
 
 ```yaml
 Type: SwitchParameter
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBehaviorMonitoring
-{{ Fill DisableBehaviorMonitoring Description }}
+Removes whether to enable behavior monitoring.
 
 ```yaml
 Type: SwitchParameter
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBlockAtFirstSeen
-{{ Fill DisableBlockAtFirstSeen Description }}
+Removes whether to enable block at first seen.
 
 ```yaml
 Type: SwitchParameter
@@ -339,7 +339,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCatchupFullScan
-{{ Fill DisableCatchupFullScan Description }}
+Removes whether Windows Defender runs catch-up scans for scheduled full scans.
 
 ```yaml
 Type: SwitchParameter
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCatchupQuickScan
-{{ Fill DisableCatchupQuickScan Description }}
+Removes whether Windows Defender runs catch-up scans for scheduled quick scans.
 
 ```yaml
 Type: SwitchParameter
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCpuThrottleOnIdleScans
-{{ Fill DisableCpuThrottleOnIdleScans Description }}
+Remove whether the CPU will be throttled for scheduled scans while the device is idle.
 
 ```yaml
 Type: SwitchParameter
@@ -429,7 +429,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEmailScanning
-{{ Fill DisableEmailScanning Description }}
+Remove whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 
 ```yaml
 Type: SwitchParameter
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableIntrusionPreventionSystem
-{{ Fill DisableIntrusionPreventionSystem Description }}
+Remove whether to configure network protection against exploitation of known vulnerabilities.
 
 ```yaml
 Type: SwitchParameter
@@ -504,7 +504,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableIOAVProtection
-{{ Fill DisableIOAVProtection Description }}
+Remove whether Windows Defender scans all downloaded files and attachments.
 
 ```yaml
 Type: SwitchParameter
@@ -519,7 +519,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePrivacyMode
-{{ Fill DisablePrivacyMode Description }}
+Remove whether to disable privacy mode.
 
 ```yaml
 Type: SwitchParameter
@@ -549,7 +549,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRealtimeMonitoring
-{{ Fill DisableRealtimeMonitoring Description }}
+Remove whether to use real-time protection.
 
 ```yaml
 Type: SwitchParameter
@@ -564,7 +564,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRemovableDriveScanning
-{{ Fill DisableRemovableDriveScanning Description }}
+Remove whether to scan for malicious and unwanted software in removable drives, such as flash drives, during a full scan.
 
 ```yaml
 Type: SwitchParameter
@@ -579,7 +579,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRestorePoint
-{{ Fill DisableRestorePoint Description }}
+Remove whether to disable scanning of restore points.
 
 ```yaml
 Type: SwitchParameter
@@ -594,7 +594,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningMappedNetworkDrivesForFullScan
-{{ Fill DisableScanningMappedNetworkDrivesForFullScan Description }}
+Remove whether to scan mapped network drives. If you specify a value of $False or do not specify a value, Windows Defender scans mapped network drives.
 
 ```yaml
 Type: SwitchParameter
@@ -609,7 +609,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-{{ Fill DisableScanningNetworkFiles Description }}
+Remove whether to scan for network files. 
 
 ```yaml
 Type: SwitchParameter
@@ -624,7 +624,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScriptScanning
-{{ Fill DisableScriptScanning Description }}
+Removes whether to disable the scanning of scripts during malware scans.
+If you specify a value of $False or do not specify a value, Windows Defender does not scan scripts.
 
 ```yaml
 Type: SwitchParameter
@@ -790,7 +791,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusionIpAddress
-{{ Fill ExclusionIpAddress Description }}
+Specifies an array of IP addresses to exclude from scheduled and real-time scanning.
 
 ```yaml
 Type: String[]
@@ -897,7 +898,7 @@ Accept wildcard characters: False
 ```
 
 ### -MAPSReporting
-{{ Fill MAPSReporting Description }}
+Remove membership in Microsoft Active Protection Service.
 
 ```yaml
 Type: SwitchParameter
@@ -1017,7 +1018,7 @@ Accept wildcard characters: False
 ```
 
 ### -QuarantinePurgeItemsAfterDelay
-{{ Fill QuarantinePurgeItemsAfterDelay Description }}
+Remove specified number of days to keep items in the Quarantine folder.
 
 ```yaml
 Type: SwitchParameter
@@ -1032,7 +1033,7 @@ Accept wildcard characters: False
 ```
 
 ### -RandomizeScheduleTaskTimes
-{{ Fill RandomizeScheduleTaskTimes Description }}
+Remove whether to select a random time for the scheduled start and scheduled update for definitions.
 
 ```yaml
 Type: SwitchParameter
@@ -1047,7 +1048,7 @@ Accept wildcard characters: False
 ```
 
 ### -RealTimeScanDirection
-{{ Fill RealTimeScanDirection Description }}
+Remove specified scanning configuration for incoming and outgoing files on NTFS volumes.
 
 ```yaml
 Type: SwitchParameter
@@ -1062,7 +1063,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemediationScheduleDay
-{{ Fill RemediationScheduleDay Description }}
+Remove specified day of the week on which to perform a scheduled full scan in order to complete remediation.
 
 ```yaml
 Type: SwitchParameter
@@ -1077,7 +1078,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemediationScheduleTime
-{{ Fill RemediationScheduleTime Description }}
+Removes specified time of day, as the number of minutes after midnight, to perform a scheduled scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1092,7 +1093,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportingAdditionalActionTimeOut
-{{ Fill ReportingAdditionalActionTimeOut Description }}
+Remove specified number of minutes before a detection in the additional action state changes to the cleared state.
 
 ```yaml
 Type: SwitchParameter
@@ -1107,7 +1108,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportingCriticalFailureTimeOut
-{{ Fill ReportingCriticalFailureTimeOut Description }}
+Removes specified the number of minutes before a detection in the critically failed state changes to either the additional action state or the cleared state.
 
 ```yaml
 Type: SwitchParameter
@@ -1122,7 +1123,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportingNonCriticalTimeOut
-{{ Fill ReportingNonCriticalTimeOut Description }}
+Removes specified number of minutes before a detection in the non-critically failed state changes to the cleared state.
 
 ```yaml
 Type: SwitchParameter
@@ -1137,7 +1138,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanAvgCPULoadFactor
-{{ Fill ScanAvgCPULoadFactor Description }}
+Removes specified maximum percentage CPU usage for a scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1152,7 +1153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanOnlyIfIdleEnabled
-{{ Fill ScanOnlyIfIdleEnabled Description }}
+Removes whether to start scheduled scans only when the computer is not in use.
 
 ```yaml
 Type: SwitchParameter
@@ -1167,7 +1168,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanParameters
-{{ Fill ScanParameters Description }}
+Removes specified scan type to use during a scheduled scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1182,7 +1183,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanPurgeItemsAfterDelay
-{{ Fill ScanPurgeItemsAfterDelay Description }}
+Remove specified number of days to keep items in the scan history folder.
 
 ```yaml
 Type: SwitchParameter
@@ -1197,7 +1198,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleDay
-{{ Fill ScanScheduleDay Description }}
+Remove specified the day of the week on which to perform a scheduled scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1212,7 +1213,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleQuickScanTime
-{{ Fill ScanScheduleQuickScanTime Description }}
+Removes specified time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1227,7 +1228,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleTime
-{{ Fill ScanScheduleTime Description }}
+Remove specified time of day, as the number of minutes after midnight, to perform a scheduled scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1287,7 +1288,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureAuGracePeriod
-{{ Fill SignatureAuGracePeriod Description }}
+Remove specified grace period, in minutes, for the definition.
 
 ```yaml
 Type: SwitchParameter
@@ -1332,7 +1333,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureDefinitionUpdateFileSharesSources
-{{ Fill SignatureDefinitionUpdateFileSharesSources Description }}
+Remove specified file-share sources for definition updates.
 
 ```yaml
 Type: SwitchParameter
@@ -1347,7 +1348,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureDisableUpdateOnStartupWithoutEngine
-{{ Fill SignatureDisableUpdateOnStartupWithoutEngine Description }}
+Remove whether to initiate definition updates even if no antimalware engine is present.
 
 ```yaml
 Type: SwitchParameter
@@ -1362,7 +1363,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureFallbackOrder
-{{ Fill SignatureFallbackOrder Description }}
+Remove specified order in which to contact different definition update sources.
 
 ```yaml
 Type: SwitchParameter
@@ -1377,7 +1378,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureFirstAuGracePeriod
-{{ Fill SignatureFirstAuGracePeriod Description }}
+Removes specified grace period, in minutes, for the definition.
 
 ```yaml
 Type: SwitchParameter
@@ -1392,7 +1393,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureScheduleDay
-{{ Fill SignatureScheduleDay Description }}
+Remove specified day of the week on which to check for definition updates.
 
 ```yaml
 Type: SwitchParameter
@@ -1407,7 +1408,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureScheduleTime
-{{ Fill SignatureScheduleTime Description }}
+Remove specified time of day, as the number of minutes after midnight, to check for definition updates.
 
 ```yaml
 Type: SwitchParameter
@@ -1437,7 +1438,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureUpdateCatchupInterval
-{{ Fill SignatureUpdateCatchupInterval Description }}
+Remove specified number of days after which Windows Defender requires a catch-up definition update.
 
 ```yaml
 Type: SwitchParameter
@@ -1452,7 +1453,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureUpdateInterval
-{{ Fill SignatureUpdateInterval Description }}
+Remove specified interval at which to check for definition updates.
 
 ```yaml
 Type: SwitchParameter
@@ -1467,7 +1468,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubmitSamplesConsent
-{{ Fill SubmitSamplesConsent Description }}
+Remove how Windows Defender checks for user consent for certain samples.
 
 ```yaml
 Type: SwitchParameter
@@ -1482,7 +1483,19 @@ Accept wildcard characters: False
 ```
 
 ### -ThreatIDDefaultAction_Actions
-{{ Fill ThreatIDDefaultAction_Actions Description }}
+Specifies an array of the actions to take for the IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
+The acceptable values for this parameter are:
+
+- 1: Clean 
+- 2: Quarantine 
+- 3: Remove 
+- 6: Allow 
+- 8: UserDefined 
+- 9: NoAction 
+- 10: Block
+
+>[!NOTE]
+>A value of 0 (NULL) applies an action based on the Security Intelligence Update (SIU). This is the default value.
 
 ```yaml
 Type: ThreatAction[]
@@ -1530,7 +1543,7 @@ Accept wildcard characters: False
 ```
 
 ### -UILockdown
-{{ Fill UILockdown Description }}
+Removes whether to disable UI lockdown mode.
 
 ```yaml
 Type: SwitchParameter

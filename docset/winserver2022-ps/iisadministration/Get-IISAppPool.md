@@ -72,11 +72,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String[]
+### string, string[]
 
 ## OUTPUTS
 
-### System.Object
+### Microsoft.Web.Administration.ApplicationPool, Microsoft.Web.Administration.ApplicationPool[]
 
 ## NOTES
 

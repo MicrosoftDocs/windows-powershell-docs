@@ -125,11 +125,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### **Get-IISCentralCertProvider** does not accept pipelined input.
 
 ## OUTPUTS
 
-### System.Object
+### **Get-IISCentralCertProvider** returns instances of the **System.String** object.
 
 ## NOTES
 

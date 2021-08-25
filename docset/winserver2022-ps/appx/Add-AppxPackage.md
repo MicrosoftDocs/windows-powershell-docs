@@ -490,7 +490,7 @@ for this parameter are:
 - Default: Uses the default behavior
 - InstallFull: Installs as a full app
 - InstallStub: Installs as a stub app
-- UsePreference: Uses the current [PackageSubPreference](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagestubpreference) for the package.
+- UsePreference: Uses the current [PackageSubPreference](/uwp/api/windows.management.deployment.packagestubpreference) for the package
 
 ```yaml
 Type: StubPackageOption

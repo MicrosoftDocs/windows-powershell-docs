@@ -1,0 +1,160 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes scopes from a superscope.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Scope" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Superscope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Superscope" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Add-DhcpServerv4Superscope
+  href: ./Add-DhcpServerv4Superscope.yml
+- text: Get-DhcpServerv4Superscope
+  href: ./Get-DhcpServerv4Superscope.yml
+syntaxes:
+- >-
+  Remove-DhcpServerv4Superscope [-ComputerName <String>] [-SuperscopeName] <String> [[-ScopeId] <String[]>]
+
+   [-Passthru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove scopes from a superscope'
+  code: |-
+    PS C:\> Remove-DhcpServerv4Superscope -SuperscopeName "Expanded Lab-4 Network" -ScopeId 10.1.1.0, 10.1.2.0
+  description: |-
+    This example removes the scopes 10.1.1.0 and 10.1.2.0 from the superscope named Expanded Lab-4 Network on the DHCP server service that runs on the local computer.
+    The superscope continues to exist if there are other scopes associated with it.
+    If the superscope has no scope associations after this operation, the superscope is deleted.
+  summary: ""
+- title: 'Example 2: Remove all scopes from a superscope and remove the superscope'
+  code: |-
+    PS C:\> Remove-DhcpServerv4Superscope -SuperscopeName "Expanded Lab-5 Network"
+  description: |-
+    This example deletes the superscope named Expanded Lab-5 Network on the DHCP server service that runs on the local computer.
+    All of scopes associated with the specified superscope are removed from the superscope.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the Dynamic Host Configuration Protocol (DHCP) server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ScopeId
+  description: |+
+    Specifies one of more scope identifiers (IDs), in IPv4 address format, to be removed from a superscope.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SuperscopeName
+  isRequired: true
+  description: |+
+    Specifies the name of the superscope from which the scopes are to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Remove-DhcpServerv4Superscope
+name: Remove-DhcpServerv4Superscope
+description: |-
+  The **Remove-DhcpServerv4Superscope** cmdlet removes one or more specified scopes from a superscope.
+  The scopes which are removed from the superscope remain otherwise unchanged.
+  If you do not specify the *ScopeId* parameter, all of the scopes are removed from the specified superscope and the superscope is also removed.
+  If you specify the *ScopeId* parameter and the *ScopeId* parameter values are part of the superscopes, the scopes are removed from the superscope.
+  If no other scopes in the superscope, the superscope is also removed.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerV4Superscope_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/remove-dhcpserverv4superscope?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-DhcpServerv4Superscope

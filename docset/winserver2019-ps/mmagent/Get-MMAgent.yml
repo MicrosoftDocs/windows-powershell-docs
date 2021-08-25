@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the state of application launch prefetching, operation API prefetching functionality, page combining, and application prelaunch.
+module: MMAgent
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MMAgentComponents" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Debug-MMAppPrelaunch
+  href: ./Debug-MMAppPrelaunch.yml
+- text: Set-MMAgent
+  href: ./Set-MMAgent.yml
+- text: Enable-MMAgent
+  href: ./Enable-MMAgent.yml
+- text: Disable-MMAgent
+  href: ./Disable-MMAgent.yml
+syntaxes:
+- Get-MMAgent [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the state of prefetching functionality'
+  code: |-
+    PS C:\> Get-MMAgent
+  description: |-
+    This command gets the state of application launch prefetching, application prelaunch, operation recorder API prefetching functionality, and page combining.
+    This command also gets the maximum number of prefetch files for scenarios that the operation recorder API records.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MMAgent.Get-MMAgent
+name: Get-MMAgent
+description: |-
+  The **Get-MMAgent** cmdlet reports whether the following features are enabled: 
+  - Application launch prefetching 
+  - Operation API prefetching functionality
+  - Page combining
+  - Application prelaunching
+
+  This cmdlet also gets the maximum number of prefetch files for scenarios that the operation recorder API records.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ps_mmagent_v1.0.cdxml-help.xml
+  Module Name: MMAgent
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/mmagent/get-mmagent?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MMAgent

@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes personal certificates.
+module: MSMQ
+notes: ""
+links:
+- text: Get-MsmqCertificate
+  href: ./Get-MSMQCertificate.yml
+- text: Enable-MsmqCertificate
+  href: ./Enable-MSMQCertificate.yml
+syntaxes:
+- Remove-MsmqCertificate -InputObject <X509Certificate2[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove all certificates for the current user'
+  code: |-
+    PS C:\> Get-MsmqCertificate | Remove-MsmqCertificate
+  description: |-
+    This command gets the certificates of the current user for all hosts or virtual servers by using the **Get-MsmqCertificate** cmdlet.
+    The command passes them to the current cmdlet by using the pipeline operator.
+    The current command removes the certificates.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of certificate objects that represent certificates that this cmdlet removes from Active Directory Domain Services.
+    This parameter accepts pipeline input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MSMQ.Remove-MsmqCertificate
+name: Remove-MsmqCertificate
+description: |-
+  The **Remove-MsmqCertificate** cmdlet removes personal certificates from Active Directory® Domain Services.
+  This cmdlet returns the removed Message Queuing (also known as MSMQ) certificate.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/remove-msmqcertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-MsmqCertificate

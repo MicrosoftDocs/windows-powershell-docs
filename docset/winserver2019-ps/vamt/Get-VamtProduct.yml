@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the record of a product or list of products from a VAMT database.
+module: VAMT
+notes: ""
+links:
+- text: Update-VamtProduct
+  href: ./Update-VamtProduct.yml
+syntaxes:
+- >-
+  Get-VamtProduct [-DbConnectionString <String>] [-ProductName <String>] [-DbCommandTimeout <Int32>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Save all products in a file'
+  code: |-
+    PS C:\>Get-VamtProduct > c:\users\me\windowslist.txt
+  description: |-
+    This command outputs the list of all products in the dep_nextref_vamt database to the specified file.
+  summary: ""
+- title: 'Example 2: Get all Windows products that are not licensed'
+  code: |-
+    PS C:\>$Products = Get-VamtProduct -ProductName "windows" | where { $_.licensestatus -ne 'Licensed' }
+  description: |-
+    This command returns all Windows products whose license status does not equal licensed.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DbCommandTimeout
+  description: |+
+    Indicates how long dep_nextref_vamt waits for a response from the database before timing out.
+    The default value is 30 seconds.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DbConnectionString
+  description: |+
+    Specifies the database that the product or list of products are retrieved from.
+    If no database connection string is provided, dep_nextref_vamt attempts to use the database that the dep_nextref_vamt user console used on the local computer.
+    If dep_nextref_vamt does not find a database, it returns an error.
+    You can find the connection string in the dep_nextref_vamt UI in the Preferences dialog box.
+    On the menu bar, click View, and then click Preferences to open the Volume Activation Management Tool Preferences dialog box.
+    The connection string is in the Database Settings section under Current connection string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProductName
+  description: |+
+    Specifies the product information to retrieve.
+    If the *ProductName* parameter is not included, dep_nextref_vamt retrieves all product information in the dep_nextref_vamt database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: VAMT.Get-VamtProduct
+name: Get-VamtProduct
+description: |-
+  The **Get-VamtProduct** cmdlet retrieves the record of a product or list of products from a dep_nextref_vamt database.
+  The results are saved to a file, or a **Microsoft.Licensing.VolumeActivation.Product** object is returned.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/vamt/get-vamtproduct?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VamtProduct

@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the active signing certificate.
+module: DeviceHealthAttestation
+notes: ""
+outputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the active signing certificate thumbprint.
+links:
+- text: Set-DHASActiveSigningCertificate
+  href: ./Set-DHASActiveSigningCertificate.yml
+syntaxes:
+- Get-DHASActiveSigningCertificate [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the active signing certificate'
+  code: |-
+    PS C:\> Get-DHASActiveSigningCertificate
+  description: |-
+    This command gets the active signing certificate thumbprint for the Device Health Attestation service.
+  summary: ""
+uid: DeviceHealthAttestation.Get-DHASActiveSigningCertificate
+name: Get-DHASActiveSigningCertificate
+description: |-
+  The **Get-DHASActiveSigningCertificate** cmdlet gets the active signing certificate thumbprint for the Device Health Attestation service.
+
+  You must have administrator rights to run this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.DeviceHealthAttestation.PowerShell.dll-Help.xml
+  Module Name: DeviceHealthAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/devicehealthattestation/get-dhasactivesigningcertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DHASActiveSigningCertificate

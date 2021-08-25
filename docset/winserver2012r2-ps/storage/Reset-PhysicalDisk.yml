@@ -1,0 +1,158 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the status of a physical disk.
+module: Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/?LinkID=113423
+- text: Add-PhysicalDisk
+  href: ./Add-PhysicalDisk.yml
+- text: Get-PhysicalDisk
+  href: ./Get-PhysicalDisk.yml
+- text: Remove-PhysicalDisk
+  href: ./Remove-PhysicalDisk.yml
+- text: Set-PhysicalDisk
+  href: ./Set-PhysicalDisk.yml
+syntaxes:
+- >-
+  Reset-PhysicalDisk [-FriendlyName] <String[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Reset-PhysicalDisk -UniqueId <String[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Reset-PhysicalDisk -InputObject <CimInstance[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Reset-PhysicalDisk -FriendlyName "PhysicalDisk5"
+  description: |-
+    This example resets the state of a specific physical disk.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> $phydisk = (Get-Physicaldisk | Where-Object -FilterScript {$_.HealthStatus -Eq "Unhealthy"}
+    PS C:\> Reset-PhysicalDisk -FriendlyName $phydisk.FriendlyName
+  description: |-
+    This example resets all of the unhealthy physical disks.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FriendlyName
+  isRequired: true
+  description: |+
+    Specifies a friendly name for a disk.
+    The friendly name may be defined by a user and is not guaranteed to be unique.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an object from the pipeline as input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: "Sends items from the interactive window down the pipeline as input to other cmdlets.\r\nBy default, this cmdlet does not generate any output. \r\n \r\n                        \r\nTo send items from the interactive window down the pipeline, click to select the items and then click OK.\r\nShift-click and Ctrl-click are supported.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UniqueId
+  isRequired: true
+  description: |+
+    Specifies an ID used to uniquely identify a Disk object in the system.
+    The ID persists through restarts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Storage.Reset-PhysicalDisk
+name: Reset-PhysicalDisk
+description: |-
+  The **Reset-PhysicalDisk** cmdlet resets the status of a physical disk.
+  For storage spaces, this is a destructive operation that removes the storage pool configuration and pool data from the specified physical disk.
+metadata:
+  external help file: PhysicalDisk.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/storage/reset-physicaldisk?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Reset-PhysicalDisk

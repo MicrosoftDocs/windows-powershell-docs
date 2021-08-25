@@ -1,0 +1,169 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a file screen template.
+module: FileServerResourceManager
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMFileScreenTemplate" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-FsrmFileScreenTemplate
+  href: ./Get-FsrmFileScreenTemplate.yml
+- text: New-FsrmAction
+  href: ./New-FsrmAction.yml
+- text: Remove-FsrmFileScreenTemplate
+  href: ./Remove-FsrmFileScreenTemplate.yml
+- text: Set-FsrmFileScreenTemplate
+  href: ./Set-FsrmFileScreenTemplate.yml
+syntaxes:
+- >-
+  New-FsrmFileScreenTemplate [-Name] <String> [-Description <String>] [-IncludeGroup <String[]>] [-Active]
+
+   [-Notification <CimInstance[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a passive file screen template'
+  code: |-
+    PS C:\> New-FsrmFileScreenTemplate "Filter Non-HTML text files" -IncludeGroup "Non-HTML text files"
+  description: |-
+    This command creates a passive file screen template named "Filter Non-HTML text files" that logs any files that match the "Non-HTML text files" file group.
+    The file screen template is passive because the command does not specify the *Active* parameter.
+    This means that users can create non-HTML text files.
+  summary: ""
+- title: 'Example 2: Create an active file screen template'
+  code: |-
+    PS C:\> $Notification = New-FsrmAction -Type Email -MailTo "[Admin Email];[File Owner]" -Subject "Warning: attempted to create a non-HTML text file" -Body "You attempted to create a non-HTML text file. This is not allowed." -RunLimitInterval 120
+    PS C:\> New-FsrmFileScreenTemplate -Name "Filter Non-HTML text files" -IncludeGroup "Non-HTML text files" -Notification $Notification -Active
+  description: |-
+    The first command creates a File Server Resource Manager (FSRM) action object and stores the results in the $Notification variable.
+    The action sends an email notification to the file owner and administrator.
+    The *RunLimitInterval* parameter specifies an interval of 2 minutes before the server can send the email notification again.
+
+    This second command creates an active file screen template named "Filter Non-HTML text files" that restricts any files that match the Non-HTML text files file group.
+    When a user attempts to create a non-HTML text file, the file screen performs the notification action stored in the $Notification variable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Active
+  description: |+
+    Indicates that the server will fail any I/O operation that violates the file screen.
+    If you do not specify this parameter, the server does not fail violating I/O operations and still runs any action that is associated with the file screen.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the file screen template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IncludeGroup
+  description: |+
+    Specifies an array of names of file groups that you want to exclude from file screening.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name for the file screen template.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Notification
+  description: |+
+    Specifies an array of notification action objects.
+    You can use the New-New-FsrmFmjNotificationAction cmdlet to create a **FsrmFmjNotificationAction** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FileServerResourceManager.New-FsrmFileScreenTemplate
+name: New-FsrmFileScreenTemplate
+description: |-
+  The **New-FsrmFileScreenTemplate** cmdlet creates a file screen template.
+  A file screen template defines the group of file groups to block, the type of screening to perform (active or passive), and the set of notifications that the file screen generates.
+
+  You can use file screen templates to centrally manage your file screens by updating the templates instead of the individual file screens.
+  When you make changes to a template, you can choose to apply those changes to all file screens that are based on that template or only to the file screens whose properties match those in the template.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: FsrmFileScreenTemplate.cdxml-help.xml
+  Module Name: FileServerResourceManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/new-fsrmfilescreentemplate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-FsrmFileScreenTemplate

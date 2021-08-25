@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies member computer information in a replication group.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrMember" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-DfsrMember
+  href: ./Add-DfsrMember.yml
+- text: Get-DfsrMember
+  href: ./Get-DfsrMember.yml
+- text: Remove-DfsrMember
+  href: ./Remove-DfsrMember.yml
+syntaxes:
+- >-
+  Set-DfsrMember [-GroupName] <String[]> [-ComputerName] <String[]> [[-Description] <String>]
+
+   [[-DomainName] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update the description for a member'
+  code: |-
+    PS C:\> Set-DfsrMember -GroupName "RG07" -Member "SRV01" -Description "Waukegan Branch Office Server"
+    GroupName                    : RG07
+    ComputerName                 : SRV01
+    DomainName                   : corp.contoso.com
+    Identifier                   : 5ddc94cd-1602-477d-9e50-a66af5892b67
+    Description                  : Waukegan Branch Office Server
+    DnsName                      : SRV01.corp.contoso.com
+    Site                         : Default-First-Site-Name
+    NumberOfConnections          : 2
+    NumberOfInboundConnections   : 1
+    NumberOfOutboundConnections  : 1
+    NumberOfInterSiteConnections : -2
+    NumberOfIntraSiteConnections : 2
+    IsClusterNode                : True
+    State                        : Normal
+  description: |-
+    This command updates the description for the computer named SRV01 in the group named RG07.
+    The console displays the **DfsrMember** object, which includes the updated description.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies an array of names of member computers.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: MemberList, MemList
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for a member computer.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains a replication group.
+    If you do not specify this parameter, the cmdlet uses the domain of the current user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replication groups.
+    You can use a comma separated list and the wildcard character (*).
+    If you do not specify this parameter, the cmdlet uses all participating replication groups.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSR.Set-DfsrMember
+name: Set-DfsrMember
+description: |-
+  The **Set-DfsrMember** cmdlet modifies member computer information in a replication group.
+  Members of a replication group host replicated folders.
+  You can modify the description of a member.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/set-dfsrmember?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DfsrMember

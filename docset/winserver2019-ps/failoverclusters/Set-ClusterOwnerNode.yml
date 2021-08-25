@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Specifies which nodes can own a resource in a failover cluster or specifies the order of preference among owner nodes for a clustered role, or resource group.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterOwnerNode
+  href: ./Get-ClusterOwnerNode.yml
+syntaxes:
+- >-
+  Set-ClusterOwnerNode [-Resource <String>] [-Group <String>] -Owners <StringCollection>
+
+   [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterResource -Name "Cluster Disk 3" | Set-ClusterOwnerNode -Owners node1,node2
+  description: |-
+    This example sets the possible owners for cluster named Cluster Disk 3 on the local cluster to the nodes named node1 and node2.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-ClusterOwnerNode -Group cluster12FS -Owners node3,node2
+  description: |-
+    This example sets the preferred owners for the clustered service named cluster12FS to the node named node3 followed by the node named node2 on the local cluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  description: |+
+    Specifies the name of the cluster group for which owner nodes are set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster group or cluster resource for which to set owner nodes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Owners
+  isRequired: true
+  description: |+
+    Specifies the list of owner nodes.
+    If this is for a cluster group, then the sorted list of nodes is the preferred owners for this cluster group.
+    If this is for a cluster resource, then the list is for the possible owners for this cluster resource.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Resource
+  description: |+
+    Specifies the name of the cluster resource for which owner nodes are set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Set-ClusterOwnerNode
+name: Set-ClusterOwnerNode
+description: |-
+  The **Set-ClusterOwnerNode** cmdlet specifies which nodes can own a resource in a failover cluster or specifies the order of preference among owner nodes for a clustered role, or resource group.
+  The settings that control the possible or preferred owners affect the way the cluster responds to the failure of a resource or a clustered role.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterownernode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-ClusterOwnerNode

@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the certificates that are in the Federation Service.
+module: ADFS
+notes: |-
+  * You can use the Get-ADFSCertificate cmdlet without any parameters to get all the certificates.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ServiceCertificate" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure that represents the certificate objects for the Federation Service.
+links:
+- text: Add-ADFSCertificate
+  href: ./Add-ADFSCertificate.yml
+- text: Remove-ADFSCertificate
+  href: ./Remove-ADFSCertificate.yml
+- text: Update-ADFSCertificate
+  href: ./Update-ADFSCertificate.yml
+syntaxes:
+- Get-ADFSCertificate [[-CertificateType] <String[]>] [<CommonParameters>]
+- Get-ADFSCertificate [-Thumbprint] <String[]> [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>Get-ADFSCertificate -CertificateType "Token-Signing"
+  description: |-
+    Description
+
+    -----------
+
+    Gets the token-signing certificates for the Federation Service.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CertificateType
+  description: |+
+    Specifies the type of the certificate to retrieve.
+    Possible certificate types include the following:
+
+    Token-Signing, Token-Encryption, Service-Communications, or Infocard-Signing.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: Service-Communications, Token-Decrypting, Token-Signing
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Thumbprint
+  isRequired: true
+  description: |+
+    Specifies the thumbprint of the certificate to retrieve.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-ADFSCertificate
+name: Get-ADFSCertificate
+description: |-
+  The Get-ADFSCertificate cmdlet retrieves the certificates that the Federation Service uses for token signing, token decrypting, card signing and securing service communications.
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfscertificate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

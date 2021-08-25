@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a virtual storage area network (SAN) from a Hyper-V host.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.Powershell.VMSan" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+syntaxes:
+- >-
+  Remove-VMSan [-CimSession <CimSession[]>] [-Name] <String[]> [-Passthru] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-VMSan -Name Production
+  description: |-
+    Removes the virtual storage area network named Production from the local Hyper-V host.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies a Hyper-V host from which the virtual storage area network (SAN) is to be removed.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual storage area network (SAN) to be removed from the Hyper-V host.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: SanName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that an object is to be passed through to the pipeline representing the removed virtual machine storage area network.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Remove-VMSan
+name: Remove-VMSan
+description: |-
+  The **Remove-VMSan** cmdlet removes a virtual storage area network (SAN) from a Hyper-V host.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/remove-vmsan?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-VMSan

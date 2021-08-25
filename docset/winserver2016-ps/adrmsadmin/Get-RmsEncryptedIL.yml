@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns use-license information from an issuance license used in a user request for the Active Directory Rights Management Services (AD RMS) cluster.
+module: ADRMSAdmin
+notes: ""
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Get-RmsCertChain
+  href: ./Get-RmsCertChain.yml
+- text: Get-RmsCertInfo
+  href: ./Get-RmsCertInfo.yml
+- text: Get-RmsChildCert
+  href: ./Get-RmsChildCert.yml
+- text: Get-RmsRequestInfo
+  href: ./Get-RmsRequestInfo.yml
+- text: Get-RmsUserRequestReport
+  href: ./Get-RmsUserRequestReport.yml
+syntaxes:
+- Get-RmsEncryptedIL -ILCertificateId <String> [-Path] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get use-license information'
+  code: |-
+    PS C:\> Get-RmsEncryptedIL -Path "." -ILCertificateId "YJ3HGsG/ADg3rLm5LwWGgpAJmz4=" | Out-File -FilePath "C:\temp\RightsPolicyData.xml"
+  description: |-
+    This command returns use-license information from an issuance license and saves the results in a file.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ILCertificateId
+  isRequired: true
+  description: |+
+    Specifies the issuance license certificate hash ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a provider drive and path or relative path on the current drive.
+    Use a dot (.) to specify the current location.
+    This parameter does not accept wildcards and has no default value.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADRMSAdmin.Get-RmsEncryptedIL
+name: Get-RmsEncryptedIL
+description: |-
+  The **Get-RmsEncryptedIL** cmdlet generates a report containing information about an issuance license used in a user request on the Active Directory Rights Management Services (AD RMS) cluster.
+  You must be logged in as an Enterprise Administrator to use this cmdlet.
+
+  To obtain licenses, specify the ILCertificateID of the certificate for which you want to obtain use-license information and then set the *Path* parameter to the AD RMS provider drive path `<PSDrive>:\`Report where `<PSDrive>` is the provider drive ID.
+  You can also specify a relative path.
+  For example, a dot (.) specifies the current location.
+
+  Use the **Get-RmsCertChain** cmdlet to obtain the *ILCertificateID* of the certificate for which you want to obtain use-license information.
+  The *ILCertificateID* value returned is valid only for the cluster identified by the *Path* parameter of **Get-RmsCertChain**.
+  You cannot use an *ILCertificateID* to identify the same certificate in different clusters.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adrmsadmin/get-rmsencryptedil?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RmsEncryptedIL

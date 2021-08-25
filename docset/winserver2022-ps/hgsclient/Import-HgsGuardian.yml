@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a guardian object from an .xml file.
+module: HgsClient
+notes: ""
+outputs:
+- name: <xref href="CimInstance#MSFT_HgsGuardian" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Export-HgsGuardian
+  href: ./Export-HgsGuardian.yml
+- text: Get-HgsGuardian
+  href: ./Get-HgsGuardian.yml
+- text: New-HgsGuardian
+  href: ./New-HgsGuardian.yml
+- text: Remove-HgsGuardian
+  href: ./Remove-HgsGuardian.yml
+syntaxes:
+- >-
+  Import-HgsGuardian [-Path] <String> -Name <String> [-AllowExpired] [-AllowUntrustedRoot] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Import a guardian'
+  code: |-
+    PS C:\> Import-HgsGuardian -Path "C:\MyDirectory\Guardian11.xml" -Name "Guardian11"
+  description: |-
+    This command imports a guardian from the specified .xml file.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowExpired
+  description: |+
+    Indicates whether to allow guardian creation with certificates that are expired.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowUntrustedRoot
+  description: |+
+    Indicates whether to allow a guardian to be created using self-signed certificates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name to associate with this guardian when it is persisted to the local guardian store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path to an XML file containing the Guardian information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: FilePath
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsClient.Import-HgsGuardian
+name: Import-HgsGuardian
+description: |-
+  The **Import-HgsGuardian** cmdlet creates a Host Guardian Service guardian object from an .xml file.
+  If you specify a name for the guardian, this cmdlet also persists that object in the local guardian store.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: HgsClient-help.xml
+  Module Name: HgsClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsclient/import-hgsguardian?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-HgsGuardian

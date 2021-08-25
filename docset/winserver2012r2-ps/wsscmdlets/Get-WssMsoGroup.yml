@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets security groups.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    WssGroupName
+    Type: System.String
+    Description: local network account name of group
+links:
+- text: Add-WssMsoGroup
+  href: ./Add-WssMsoGroup.yml
+- text: Remove-WssMsoGroup
+  href: ./Remove-WssMsoGroup.yml
+syntaxes:
+- Get-WssMsoGroup [[-MsoId] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all security groups'
+  code: |-
+    PS C:\> Get-WssMSOGroup
+    LocalGroupName : Admins
+
+    Description    :
+
+    IdentityType   : SecurityGroup
+
+    ObjectId       : 70769c52-b6e2-4ef6-8369-3c2a0208da68
+
+    PrincipleName  :
+
+    DisplayName    : Administrators
+
+
+    LocalGroupName : All Employees
+
+    Description    :
+
+    IdentityType   : SecurityGroup
+
+    ObjectId       : d77e9419-2e1f-4080-ae7c-9b97c6caa681
+
+    PrincipleName  :
+
+    DisplayName    : All Employees
+
+
+    LocalGroupName :
+
+    Description    :
+
+    IdentityType   : SecurityGroup
+
+    ObjectId       : 77378d14-80ab-48fe-a2d4-e610b2c7eef6
+
+    PrincipleName  :
+
+    DisplayName    : Other Admins
+  description: |-
+    This command gets all the security groups.
+  summary: ""
+- title: 'Example 2: Get a specific security group'
+  code: |-
+    PS C:\> Get-WssMsoGroup -MsoId "70769c52-b6e2-4ef6-8369-3c2a0208da68"
+    LocalGroupName :
+
+    Description    :
+
+    IdentityType   : SecurityGroup
+
+    ObjectId       : 70769c52-b6e2-4ef6-8369-3c2a0208da68
+
+    PrincipleName  :
+
+    DisplayName    : Other Admins
+  description: |-
+    This command gets the security group that has the specified ID.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MsoId
+  description: |+
+    Specifies an ID for a security group.
+    The cmdlet gets the security group that has the ID that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Get-WssMsoGroup
+name: Get-WssMsoGroup
+description: |-
+  The **Get-WssMsoGroup** cmdlet gets aad_1 security groups.
+  Specify an ID to get a particular security group.
+  The cmdlet gets security groups whether or not they have an assignment to a user group.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssmsogroup?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssMsoGroup

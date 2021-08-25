@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a clustered print server, a resource group that includes a printer and a disk for storing print job information and printer drivers.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterGroup
+  href: ./Get-ClusterGroup.yml
+- text: Move-ClusterGroup
+  href: ./Move-ClusterGroup.yml
+- text: Remove-ClusterGroup
+  href: ./Remove-ClusterGroup.yml
+- text: Start-ClusterGroup
+  href: ./Start-ClusterGroup.yml
+- text: Stop-ClusterGroup
+  href: ./Stop-ClusterGroup.yml
+syntaxes:
+- >-
+  Add-ClusterPrintServerRole [[-Name] <String>] [-Cluster <String>] [-IgnoreNetwork <StringCollection>]
+
+   [-InputObject <PSObject>] [-StaticAddress <StringCollection>] [-Storage <StringCollection>] [-Wait <Int32>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Add-ClusterPrintServerRole -Storage "Cluster Disk 5"
+    Name                       OwnerNode                                      State 
+    ----                       ---------                                      ----- 
+    cluster1PS                 node1                                         Online
+  description: |-
+    This example creates a clustered print server using Cluster Disk 5, and assigns a default name.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Add-ClusterPrintServerRole -Storage "Cluster Disk 5" -Name MyPrintServer
+    Name                       OwnerNode                                      State 
+    ----                       ---------                                      ----- 
+    MyPrintServer              node1                                         Online
+  description: |-
+    This example creates a clustered print server using Cluster Disk 5, and assigns the name MyPrintServer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: IgnoreNetwork
+  description: |+
+    Specifies one or more networks to ignore when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to create the highly available print server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the highly available print server to create.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: StaticAddress
+  description: |+
+    Specifies one or more static addresses to use when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Storage
+  description: |+
+    Specifies the cluster disk resource to be added to the created highly available print server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the **Wait** parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterPrintServerRole
+name: Add-ClusterPrintServerRole
+description: |-
+  The **Add-ClusterPrintServerRole** cmdlet creates a clustered print server (a resource group that includes a printer and a disk for storing print job information and printer drivers).
+
+  When adding a clustered print server, specify a name for the print server, any IP address information that is not automatically supplied by your DHCP settings, and the storage volume or volumes that the clustered print server should use for print job information and printer drivers.
+
+  Note: This cmdlet has been deprecated and is only supported on firstref_server_7 and lower.
+metadata:
+  external help file: Failoverv2_Cmdlets.xml
+  Module Name: FailoverClusters
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clusterprintserverrole?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

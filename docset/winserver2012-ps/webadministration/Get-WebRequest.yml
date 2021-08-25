@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the IIS requests that are currently being executed.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Get-WebRequest [-InputObject <PSObject>] [-AppPool <String>] [-Process <UInt32>] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Get request that are currently being executed --------------'
+  code: |-
+    IIS:\>Get-Item IIS:\AppPools\DefaultAppPool | Get-WebRequest
+  description: |-
+    Returns a list of IIS requests that are currently being executed.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AppPool
+  description: |+
+    The application pool from which request information is retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: pool
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Input object from which parameter data is received.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Process
+  description: |+
+    Specifies a process ID for which request information is retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: proc, procid, pid, wp
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebRequest
+name: Get-WebRequest
+description: |-
+  Shows IIS requests that are currently being executed.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webrequest?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

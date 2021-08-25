@@ -1,0 +1,17 @@
+### YamlMime:PowershellModule
+children:
+- title: ADRMS
+  cmdlets:
+  - ADRMS.Install-ADRMS
+  - ADRMS.Uninstall-ADRMS
+  - ADRMS.Update-ADRMS
+uid: ADRMS
+name: ADRMS
+description: |-
+  This topic contains brief descriptions of the Windows PowerShell cmdlets that are used to deploy in Windows Server 2012. Each cmdlet in the table is linked to additional information about that cmdlet. These cmdlets allow you to install, upgrade, or remove a cluster using Windows PowerShell.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2012-pshelp
+  Help Version: 3.0.0.0
+  Locale: en-US
+  Module Guid: a127fb5d-22a6-4056-a043-b16196305cc7
+  Module Name: ADRMS

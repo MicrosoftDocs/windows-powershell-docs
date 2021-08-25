@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the rules in a Code Integrity policy.
+module: ConfigCI
+notes: ""
+outputs:
+- name: <xref href="Rule" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns rules from the policy.
+links:
+- text: Merge-CIPolicy
+  href: ./Merge-CIPolicy.yml
+- text: New-CIPolicy
+  href: ./New-CIPolicy.yml
+syntaxes:
+- Get-CIPolicy [-FilePath] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get rules from a policy'
+  code: |-
+    PS C:\> Get-CIPolicy -FilePath '.\Policy.xml'
+    Name           : MSIT Test CodeSign CA 3
+    Id             : ID_SIGNER_S_17
+    TypeId         : Allow
+    Root           : FA6B9A2230CE08BCA81D096B28CF495672401D3A43A0D285CF352464A6C9C7FD
+    FileVersionRef : 
+    Wellknown      : False
+    Ekus           : 
+    Exceptions     : 
+    FileAttributes : 
+    FileException  : False
+    UserMode       : False
+
+    Name           : VeriSign Class 3 Code Signing 2010 CA
+    Id             : ID_SIGNER_S_1D
+    TypeId         : Allow
+    Root           : 4843A82ED3B1F2BFBEE9671960E1940C942F688D
+    FileVersionRef : 
+    Wellknown      : False
+    Ekus           : 
+    Exceptions     : 
+    FileAttributes : 
+    FileException  : False
+    UserMode       : False
+
+    Name           : Microsoft Windows Third Party Component CA 2012
+    Id             : ID_SIGNER_S_1E
+    TypeId         : Allow
+    Root           : CEC1AFD0E310C55C1DCC601AB8E172917706AA32FB5EAF826813547FDF02DD46
+    FileVersionRef : 
+    Wellknown      : False
+    Ekus           : 
+    Exceptions     : 
+    FileAttributes : 
+    FileException  : False
+    UserMode       : False
+  description: |-
+    This command returns the rule objects from Policy.xml.
+    For this example, we present only the first few rules.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the path of the policy .xml file for which this cmdlet gets rules.
+
+  defaultValue: None
+  position: "0"
+  aliases: f
+  parameterValueGroup: ""
+uid: ConfigCI.Get-CIPolicy
+name: Get-CIPolicy
+description: |-
+  The **Get-CIPolicy** cmdlet returns the rules in a Code Integrity policy.
+  Specify a policy .xml file.
+  This cmdlet does not currently support policies in Public-Key Cryptography Standards #7 format (.p7b files).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/configci/get-cipolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-CIPolicy

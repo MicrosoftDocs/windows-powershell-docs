@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a connection schedule between members of a replication group.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrConnectionSchedule, string" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-DfsrConnectionSchedule
+  href: ./Set-DfsrConnectionSchedule.yml
+syntaxes:
+- >-
+  Get-DfsrConnectionSchedule [[-GroupName] <String[]>] [-SourceComputerName] <String>
+
+   [-DestinationComputerName] <String> [[-DomainName] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a connection schedule'
+  code: |-
+    PS C:\> Get-DfsrConnectionSchedule -GroupName "RG24" -SourceComputerName "SRV02" -DestinationComputerName "SRV01"
+
+
+    GroupName               : RG24
+    SourceComputerName      : SRV02
+    DestinationComputerName : SRV1
+    DomainName              : corp.contoso.com
+    ConnectionGuid          : b3249896-e3ec-468b-a06a-31946d86e426
+    UseUTC                  : False
+    HoursReplicated         : 168
+    BandwidthDetail         : Using the replication group's schedule
+  description: |-
+    This command gets the connection-based replication schedule from the server named SRV02 to the server named SRV01.
+    Because the administrator has not specified a custom schedule for the connection, the connection inherits the schedule settings from the replication group.
+  summary: ""
+- title: 'Example 2: Get a custom connection schedule'
+  code: |-
+    PS C:\> Get-DfsrConnectionSchedule -GroupName "RG24" -SourceComputerName "SRV01" -DestinationComputerName "SRV02"
+
+
+    GroupName               : RG24
+    SourceComputerName      : SRV01
+    DestinationComputerName : SRV22
+    DomainName              : corp.contoso.com
+    ConnectionGuid          : fb4a502f-48d1-4926-ae29-c1e90b32c139
+    UseUTC                  : False
+    HoursReplicated         : 128
+    BandwidthDetail         : FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000000000000000FFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000000000000000FFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000000000000000FFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000000000000000FFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFF
+  description: |-
+    This command gets the connection-based replication schedule from the server named SRV01 to the server named SRV02.
+    The cmdlet gets a custom connection schedule that blocks replication from 9 A.M.
+    to 5 P.M.
+    Monday through Friday (represented by zeros in the output), and allows full bandwidth replication for all remaining time blocks.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of the receiving computer.
+    A receiving computer is also called an inbound or downstream computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ReceivingMember, RMem
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains the replication group.
+    If you do not specify this parameter, the cmdlet uses the domain of the current user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  description: |+
+    Specifies an array of names of replication groups.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of the sending computer.
+    A sending computer is also called an outbound or upstream computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: SendingMember, SMem
+  parameterValueGroup: ""
+uid: DFSR.Get-DfsrConnectionSchedule
+name: Get-DfsrConnectionSchedule
+description: |-
+  The **Get-DfsrConnectionSchedule** cmdlet gets a connection schedule.
+
+  Distributed File System (DFS) Replication connections are the logical partnerships between members in a replication group.
+  The DFS Replication service uses the Remote Procedure Call (RPC) protocol to communicate between servers.
+  DFS Replication schedules control the availability and bandwidth usage of replication.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/get-dfsrconnectionschedule?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DfsrConnectionSchedule

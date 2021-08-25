@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sends out a health report instance.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: |-
+    Report Guid
+links:
+- text: Get-WssReport
+  href: ./Get-WssReport.yml
+- text: New-WssReport
+  href: ./New-WssReport.yml
+- text: Remove-WssReport
+  href: ./Remove-WssReport.yml
+syntaxes:
+- Send-WssReport [-Id] <Guid> [<CommonParameters>]
+examples:
+- title: 'Example 1: Send a health report'
+  code: |-
+    PS C:\> $Reports = Get-WssReport
+    PS C:\> Send-WssReport $Reports[0].Id
+  description: |-
+    The first command uses the Get-WssReport cmdlet to get all instances of reports, and saves the results in the $Reports variable.
+
+    The second command sends an instance of a health report by using the ID of the first instance in the $Reports variable.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the GUID of a health report instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Send-WssReport
+name: Send-WssReport
+description: |-
+  The **Send-WssReport** cmdlet sends out a health report instance through email by using the ID of the report.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/send-wssreport?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Send-WssReport

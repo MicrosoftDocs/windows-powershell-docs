@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops and removes a diagnostic Resource Manager job.
+module: MsDtc
+notes: ""
+links:
+- text: Join-DtcDiagnosticResourceManager
+  href: ./Join-DtcDiagnosticResourceManager.yml
+- text: Start-DtcDiagnosticResourceManager
+  href: ./Start-DtcDiagnosticResourceManager.yml
+syntaxes:
+- Stop-DtcDiagnosticResourceManager [[-Job] <DtcDiagnosticResourceManagerJob>] [<CommonParameters>]
+- Stop-DtcDiagnosticResourceManager [[-Name] <String>] [<CommonParameters>]
+- Stop-DtcDiagnosticResourceManager [[-InstanceId] <Guid>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Stop a diagnostic resource manager'
+  code: |-
+    PS C:\> Stop-DtcDiagnosticResourceManager -Name "testRM"
+  description: |-
+    This command stops the DTC diagnostic resource manager named testRM.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: InstanceId
+  description: |+
+    Specifies the **DtcDiagResourceManagerJob** instance ID to stop.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DtcDiagnosticResourceManagerJob" data-throw-if-not-resolved="False" />
+  name: Job
+  description: |+
+    Specifies the **DtcDiagResourceManagerJob** instance to stop.
+    This parameter accepts pipeline input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies a name of the diagnostic resource manager to stop.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDtc.Stop-DtcDiagnosticResourceManager
+name: Stop-DtcDiagnosticResourceManager
+description: |-
+  The **Stop-DtcDiagnosticResourceManager** cmdlet stops and removes a **DiagnosticResourceManagerJob** that runs as a Windows PowerShell® background job.
+  To stop the default Resource Manager, you must explicitly specify the name of the default Resource Manager.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dtc.PowerShell.dll-Help.xml
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/msdtc/stop-dtcdiagnosticresourcemanager?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-DtcDiagnosticResourceManager

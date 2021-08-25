@@ -1,0 +1,293 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies settings for the specified iSCSI target.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiServerTarget" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiServerTarget" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: ConvertTo-SecureString
+  href: https://go.microsoft.com/fwlink/p/?LinkId=113291
+- text: New-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkId=113355
+- text: Get-IscsiServerTarget
+  href: ./Get-IscsiServerTarget.yml
+- text: New-IscsiServerTarget
+  href: ./New-IscsiServerTarget.yml
+- text: Remove-IscsiServerTarget
+  href: ./Remove-IscsiServerTarget.yml
+syntaxes:
+- >-
+  Set-IscsiServerTarget [-TargetName] <String> [-TargetIqn <Iqn>] [-Description <String>] [-Enable <Boolean>]
+
+   [-EnableChap <Boolean>] [-Chap <PSCredential>] [-EnableReverseChap <Boolean>] [-ReverseChap <PSCredential>]
+
+   [-MaxReceiveDataSegmentLength <Int32>] [-FirstBurstLength <Int32>] [-MaxBurstLength <Int32>]
+
+   [-ReceiveBufferCount <Int32>] [-EnforceIdleTimeoutDetection <Boolean>] [-InitiatorIds <InitiatorId[]>]
+
+   [-PassThru] [-ComputerName <String>] [-Credential <PSCredential>] [<CommonParameters>]
+- >-
+  Set-IscsiServerTarget -InputObject <IscsiServerTarget> [-TargetIqn <Iqn>] [-Description <String>]
+
+   [-Enable <Boolean>] [-EnableChap <Boolean>] [-Chap <PSCredential>] [-EnableReverseChap <Boolean>]
+
+   [-ReverseChap <PSCredential>] [-MaxReceiveDataSegmentLength <Int32>] [-FirstBurstLength <Int32>]
+
+   [-MaxBurstLength <Int32>] [-ReceiveBufferCount <Int32>] [-EnforceIdleTimeoutDetection <Boolean>]
+
+   [-InitiatorIds <InitiatorId[]>] [-PassThru] [-ComputerName <String>] [-Credential <PSCredential>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove all initiators associated with a target'
+  code: |-
+    PS C:\> Set-IscsiServerTarget -TargetName "Test" -InitiatorId @()
+  description: |-
+    This example removes all of the initiators that are associated with the target named Test.
+  summary: ""
+- title: 'Example 2: Modify a description for a target'
+  code: |-
+    PS C:\> Set-IscsiServerTarget -TargetName "TargetOne" -Description "Target for initiator Appsvr"
+  description: |-
+    This example sets the description for a target named TargetOne to Target for initiator Appsvr.
+  summary: ""
+- title: 'Example 3: Configure forward CHAP'
+  code: |-
+    PS C:\> $password = ConvertTo-SecureString -String "passwordpass" -AsPlainText -Force
+
+
+
+    PS C:\> $chap = New-Object -ComObject System.Management.Automation.PSCredential("user", $password)
+
+
+
+    PS C:\> Set-IscsiServerTarget -TargetName "T1" -EnableChap $True -Chap $chap
+  description: |-
+    This example enables and sets the forward CHAP on a target named T1 with the credentials user and password.
+  summary: ""
+- title: 'Example 4: Assign initiator IDs to a target'
+  code: |-
+    PS C:\> Set-IscsiServerTarget -TargetName "Test" -InitiatorId @("IPAddress:10.10.1.10","IPAddress:10.10.1.11")
+  description: |-
+    This example assigns more IDs to the same target.
+  summary: ""
+- title: 'Example 5: Assigns a target to all initiators that attempt to connect to it'
+  code: |-
+    PS C:\> Set-IscsiServerTarget -TargetName "Test" -InitiatorId "IQN:*"
+  description: |-
+    This example assigns the target to all initiators that attempt to connect to it.
+    Because no validation is performed the iSCSI target when an initiator makes a connection, be very cautious when you use this configuration.
+    It is most useful when troubleshooting connection issues, because it removes the risk of Target-Initiator assignment errors.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Chap
+  description: |+
+    Specifies the settings for Challenge Handshake Authentication Protocol (CHAP) user name and secret.
+    Use this parameter in combination with the *EnableChap* parameter if the CHAP is not enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the iSCSI target.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enable
+  description: |+
+    Determines whether the specified iSCSI target is enabled or disabled.
+
+    If you specify a value of $True, the target is enabled.
+    If the target is already enabled, no action occurs.
+
+    If you specify a value of $False, the target is disabled.
+    If the target is already disabled, no action occurs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableChap
+  description: |+
+    Specifies whether CHAP is enabled for the iSCSI target.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableReverseChap
+  description: |+
+    Specifies whether reverse CHAP is enabled for the iSCSI target.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnforceIdleTimeoutDetection
+  description: |+
+    Specifies whether to enforce idle time-out detection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: FirstBurstLength
+  description: |+
+    Specifies the length of the first burst.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="InitiatorId" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InitiatorIds
+  description: |+
+    Specifies the iSCSI initiator identifiers (IDs) to which the iSCSI target is assigned.
+
+    To assign a LUN or VHD to an iSCSI initiator, an iSCSI target is first created.
+    After the target is assigned to the initiator, a LUN is associated with the target.
+    The format of this parameter is IdType:Value.
+    The acceptable values for this parameter are: DNSName, IPAddress, IPv6Address, IQN, and MACAddress.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IscsiServerTarget" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an iSCSI target object from the input pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxBurstLength
+  description: |+
+    Specifies the maximum burst length.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxReceiveDataSegmentLength
+  description: |+
+    Specifies the maximum receiver data segment length.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReceiveBufferCount
+  description: |+
+    Specifies the receiver buffer count.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ReverseChap
+  description: |+
+    Specifies the reverse CHAP user name and secret.
+    Use this parameter in combination with the *EnableReverseChap* parameter if the Reverse CHAP is not enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Iqn" data-throw-if-not-resolved="False" />
+  name: TargetIqn
+  description: |+
+    Specifies the target iSCSI Qualified Name (IQN).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the iSCSI target.
+    The target name cannot be changed here.
+    This parameter can be used to filter out the iSCSI Target objects.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Set-IscsiServerTarget
+name: Set-IscsiServerTarget
+description: |-
+  The **Set-IscsiServerTarget** cmdlet modifies settings for the iSCSi target and returns the corresponding iSCSI Target object if the *PassThru* parameter is specified.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/set-iscsiservertarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-IscsiServerTarget

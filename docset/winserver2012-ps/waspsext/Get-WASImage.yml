@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of images.
+module: WasPSExt
+notes: ""
+links:
+- text: Windows Assessment Services Technical Reference
+  href: https://go.microsoft.com/fwlink/?LinkId=215628
+- text: Update-WASJob
+  href: ./Update-WASJob.yml
+syntaxes:
+- Get-WASImage [-ImageID] <Guid[]>
+- Get-WASImage [[-ImageName] <String[]>]
+examples:
+- title: 'Example 1: Get all images'
+  code: |-
+    PS C:\>Get-WASImage
+  description: |-
+    This command returns a list of all of the images in the Windows Assessment Services inventory.
+  summary: ""
+- title: 'Example 2: Get all images and output data to a table'
+  code: |-
+    PS C:\> Get-WASImage | format-table -property ImageName,OsVersion,Architecture,Language
+  description: |-
+    This command returns a list of all of the images in the Windows Assessment Services inventory, and formats the data in a table.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ImageID
+  isRequired: true
+  description: |+
+    Specifies the ID of the image you want to get.
+    This is the image ID that is recorded in the Windows Assessment Services inventory.
+    If this parameter is not specified, all images in the inventory are listed.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ImageName
+  description: |+
+    Specifies the name of the image that you want to get.
+    This is the image name recorded in the Windows Assessment Services inventory.
+    The full name of the image isn't required.
+    Wildcards are accepted.
+    If this parameter isn't specified, all images in the inventory are listed.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WasPSExt.Get-WASImage
+name: Get-WASImage
+description: |-
+  The **Get-WASImage** cmdlet gets a list of the images that are available in the Windows Assessment Services inventory.
+  Image metadata is also returned.
+metadata:
+  external help file: WasPsExt_Cmdlets.xml
+  Module Name: WasPSExt
+  online version: https://docs.microsoft.com/powershell/module/waspsext/get-wasimage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

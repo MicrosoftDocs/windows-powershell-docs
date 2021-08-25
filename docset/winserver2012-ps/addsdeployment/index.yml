@@ -1,0 +1,24 @@
+### YamlMime:PowershellModule
+children:
+- title: ADDSDeployment
+  cmdlets:
+  - ADDSDeployment.Add-ADDSReadOnlyDomainControllerAccount
+  - ADDSDeployment.Install-ADDSDomain
+  - ADDSDeployment.Install-ADDSDomainController
+  - ADDSDeployment.Install-ADDSForest
+  - ADDSDeployment.Test-ADDSDomainControllerInstallation
+  - ADDSDeployment.Test-ADDSDomainControllerUninstallation
+  - ADDSDeployment.Test-ADDSDomainInstallation
+  - ADDSDeployment.Test-ADDSForestInstallation
+  - ADDSDeployment.Test-ADDSReadOnlyDomainControllerAccountCreation
+  - ADDSDeployment.Uninstall-ADDSDomainController
+uid: ADDSDeployment
+name: ADDSDeployment
+description: |-
+  The following contains the names and a brief description of each ADDSDeployment cmdlet.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2012-pshelp
+  Help Version: 3.2.0.0
+  Locale: en-US
+  Module Guid: df736400-2e72-4a7b-8eda-d5b28421881f
+  Module Name: ADDSDeployment

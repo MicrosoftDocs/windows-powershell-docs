@@ -1,0 +1,162 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the range of IPv6 addresses to exclude from an IPv6 scope.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6ExclusionRange" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6ExclusionRange" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DhcpServerv6ExclusionRange
+  href: ./Get-DhcpServerv6ExclusionRange.yml
+- text: Remove-DhcpServerv6ExclusionRange
+  href: ./Remove-DhcpServerv6ExclusionRange.yml
+syntaxes:
+- >-
+  Add-DhcpServerv6ExclusionRange [-ComputerName <String>] [-StartRange] <IPAddress> [-EndRange] <IPAddress>
+
+   [-Prefix] <IPAddress> [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Exclude addresses on the local computer'
+  code: |-
+    PS C:\> Add-DhcpServerv6ExclusionRange -Prefix 2001:4898:7020:1020:: -StartRange 2001:4898:7020:1020::1 -EndRange 2001:4898:7020:1020::10
+  description: |-
+    This example excludes the IPv6 addresses from 2001:4898:7020:1020::1 to 2001:4898:7020:1020::10 from DHCPv6 scope 2001:4898:7020:1020:: on the DHCP server service that runs on the local computer.
+  summary: ""
+- title: 'Example 2: Exclude an address on a remote computer'
+  code: |-
+    PS C:\> Add-DhcpServerv6ExclusionRange -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020:: -StartRange 2001:4898:7020:1020::1 -EndRange 2001:4898:7020:1020::1
+  description: |-
+    This example excludes the IPv6 address 2001:4898:7020:1020::1 from the DHCPv6 scope 2001:4898:7020:1020:: on the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: EndRange
+  isRequired: true
+  description: |+
+    Specifies the ending IP address in exclusion range, as a string formatted as an IPv6 address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: Prefix
+  isRequired: true
+  description: |+
+    Specifies the IPv6 prefix of the scope to which the exclusion range is added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: StartRange
+  isRequired: true
+  description: |+
+    Specifies the starting IP address in exclusion range, as a string formatted as an IPv6 address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Add-DhcpServerv6ExclusionRange
+name: Add-DhcpServerv6ExclusionRange
+description: |-
+  The **Add-DhcpServerv6ExclusionRange** cmdlet sets the range of IPv6 addresses to exclude from an IPv6 scope.
+  The IP addresses from this range is not be leased out by the Dynamic Host Configuration Protocol (DHCP) server service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerV6ExclusionRange_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/add-dhcpserverv6exclusionrange?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DhcpServerv6ExclusionRange

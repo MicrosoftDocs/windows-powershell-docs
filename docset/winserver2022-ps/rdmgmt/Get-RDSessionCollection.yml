@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets session collections in a Remote Desktop deployment.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.RDSessionCollection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-RDSessionCollection
+  href: ./New-RDSessionCollection.yml
+- text: Remove-RDSessionCollection
+  href: ./Remove-RDSessionCollection.yml
+syntaxes:
+- Get-RDSessionCollection [[-CollectionName] <String>] [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example1: Get a list of the Session Collections in the Remote Desktop Deployment'
+  code: |-
+    PS C:\> Get-RDSessionCollection -CollectionName "Session Collection" -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command gets the collection named Session Collection in the deployment that has the RD Connection Broker named RDCB.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  description: |+
+    Specifies the name of a session collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Get-RDSessionCollection
+name: Get-RDSessionCollection
+description: |-
+  The **Get-RDSessionCollection** cmdlet gets session collections in a Remote Desktop deployment.
+  A session collection consists of one or more Remote Desktop Session Host (RD Session Host) servers.
+  Users can connect to RD Session Host servers in a session collection to run programs, save files, and use resources on those servers.
+  The user needs to be a member of the local computer Administrator group to run this command.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdsessioncollection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDSessionCollection

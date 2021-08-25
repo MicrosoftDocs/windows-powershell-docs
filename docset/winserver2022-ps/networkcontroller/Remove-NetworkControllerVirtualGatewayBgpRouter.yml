@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a BGP router.
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NetworkControllerVirtualGatewayBgpRouter
+  href: ./Get-NetworkControllerVirtualGatewayBgpRouter.yml
+- text: New-NetworkControllerVirtualGatewayBgpRouter
+  href: ./New-NetworkControllerVirtualGatewayBgpRouter.yml
+syntaxes:
+- >-
+  Remove-NetworkControllerVirtualGatewayBgpRouter [-VirtualGatewayId] <String> [-ResourceId] <String>
+
+   [[-Etag] <String>] [-Force] -ConnectionUri <Uri> [-CertificateThumbprint <String>]
+
+   [-Credential <PSCredential>] [-PassInnerException] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: "Example 1: Remove a tenant's virtual gateway BGP router configuration from the Network Controller"
+  code: |-
+    PS C:\> Remove-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri "https://networkcontroller" -VirtualGatewayId "Contoso" -ResourceId "Contoso_Vnet_BgpRouter2" -Force
+  description: |-
+    This command removes the configuration for the BGP router Contoso_Vnet_BgpRouter2 from the Network Controller.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+    This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.
+    This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) of the resource.
+    An ETag is an HTTP response header returned by an HTTP-compliant web server.
+    An ETag is used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the resource ID of the BGP router to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualGatewayId
+  isRequired: true
+  description: |+
+    Specifies the ID of the virtual gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.Remove-NetworkControllerVirtualGatewayBgpRouter
+name: Remove-NetworkControllerVirtualGatewayBgpRouter
+description: |-
+  The **Remove-NetworkControllerVirtualGatewayBgpRouter** cmdlet removes the configuration of the tenant Border Gateway Protocol (BGP) router specified by the *ResourceId* parameter from the Network Controller.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/remove-networkcontrollervirtualgatewaybgprouter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-NetworkControllerVirtualGatewayBgpRouter

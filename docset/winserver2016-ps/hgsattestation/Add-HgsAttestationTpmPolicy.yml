@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an attestation policy based on TPM 2.0 hardware to HGS.
+module: HgsAttestation
+notes: ""
+inputs:
+- name: <xref href="Byte[], String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts a TCG log as a **Byte** array or a file name.
+outputs:
+- name: <xref href="AttestationPolicyInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns attestation policy information.
+syntaxes:
+- >-
+  Add-HgsAttestationTpmPolicy [-InputObject] <Byte[]> -Name <String> [-PolicyVersion <PolicyVersion>] [-Stage]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-HgsAttestationTpmPolicy [-Path] <String> [-Name <String>] [-PolicyVersion <PolicyVersion>] [-Stage]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a policy'
+  code: |-
+    PS C:\> Add-HgsAttestationTpmPolicy -Name "BaselineTpmPolicy17" -Path "C:\Hgs\BaselineTcgLog"
+  description: |-
+    This command adds a policy named BaselineTpmPolicy17 to the Attestation service.
+    The Path parameter specifies the TCG log that you create by using **Get-HgsAttestationBaselinePolicy** cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies a TCG log, in binary form, on which this cmdlet bases a policy.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the policy that this cmdlet adds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of a file that contains a TCG log, in binary form.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: FilePath, PSPath
+  parameterValueGroup: ""
+- type: <xref href="PolicyVersion" data-throw-if-not-resolved="False" />
+  name: PolicyVersion
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, PolicyVersion1503, PolicyVersion1704
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Stage
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsAttestation.Add-HgsAttestationTpmPolicy
+name: Add-HgsAttestationTpmPolicy
+description: |-
+  The **Add-HgsAttestationTpmPolicy** cmdlet adds an attestation policy based on trusted platform module (TPM) 2.0 hardware to the Host Guardian Service (HGS).
+  Specify a log, in Trusted Computing Group (TCG) format, that you obtain by using the **Get-HgsAttestationBaselinePolicy** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/add-hgsattestationtpmpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-HgsAttestationTpmPolicy

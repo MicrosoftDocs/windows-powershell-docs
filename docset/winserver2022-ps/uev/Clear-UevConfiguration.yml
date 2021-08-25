@@ -1,0 +1,309 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears UE-V configuration settings.
+module: UEV
+notes: ""
+links:
+- text: Get-UevConfiguration
+  href: ./Get-UevConfiguration.yml
+- text: Set-UevConfiguration
+  href: ./Set-UevConfiguration.yml
+- text: Import-UevConfiguration
+  href: ./Import-UevConfiguration.yml
+- text: Export-UevConfiguration
+  href: ./Export-UevConfiguration.yml
+syntaxes:
+- >-
+  Clear-UevConfiguration [-CurrentComputerUser] [-MaxPackageSizeInBytes] [-SettingsStoragePath]
+
+   [-SyncProviderPingEnabled] [-SyncTimeoutInMilliseconds] [-SyncMethod] [-SyncEnabled] [-SyncOverMeteredNetwork]
+
+   [-SyncOverMeteredNetworkWhenRoaming] [-SettingsImportNotifyEnabled] [-SettingsImportNotifyDelayInSeconds]
+
+   [-DontSyncWindows8AppSettings] [-WaitForSyncTimeoutInMilliseconds] [-WaitForSyncOnApplicationStart]
+
+   [-WaitForSyncOnLogon] [-SyncUnlistedWindows8Apps] [-VdiCollectionName] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Clear-UevConfiguration [-Computer] [-MaxPackageSizeInBytes] [-SettingsStoragePath]
+
+   [-SettingsTemplateCatalogPath] [-SyncProviderPingEnabled] [-SyncTimeoutInMilliseconds] [-SyncMethod]
+
+   [-SyncEnabled] [-SyncOverMeteredNetwork] [-SyncOverMeteredNetworkWhenRoaming] [-SettingsImportNotifyEnabled]
+
+   [-SettingsImportNotifyDelayInSeconds] [-ContactITUrl] [-ContactITDescription] [-TrayIconEnabled]
+
+   [-FirstUseNotificationEnabled] [-DontSyncWindows8AppSettings] [-WaitForSyncTimeoutInMilliseconds]
+
+   [-WaitForSyncOnApplicationStart] [-WaitForSyncOnLogon] [-SyncUnlistedWindows8Apps] [-VdiCollectionName]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Clear the setting for maximum package size for all users'
+  code: |-
+    PS C:\> Clear-UevConfiguration -Computer -MaxPackageSizeInBytes
+  description: |-
+    This command clears the setting for maximum package size for all users on the computer.
+  summary: ""
+- title: 'Example 2: Clear the setting for maximum package size for the current user'
+  code: |-
+    PS C:\> Clear-UevConfiguration -CurrentComputerUser -MaxPackageSizeInBytes
+  description: |-
+    This command clears the setting for maximum package size for the current user.
+  summary: ""
+- title: 'Example 3: Clear the setting for maximum package size by default for the current user'
+  code: |-
+    PS C:\> Clear-UevConfiguration -MaxPackageSizeInBytes
+  description: |-
+    This command clears the setting for maximum package size by default for the current user.
+  summary: ""
+- title: 'Example 4: Clear multiple settings for the current user'
+  code: |-
+    PS C:\> Clear-UevConfiguration -MaxPackageSizeInBytes -SyncTimeoutInMilliseconds
+  description: |-
+    This command clears the settings for maximum package size and synchronization timeout for the current user.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Computer
+  description: |+
+    Indicates that the cmdlet clears the settings for all users on the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ContactITDescription
+  description: |+
+    Indicates that the cmdlet clears the setting for the description of the Contact IT link.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ContactITUrl
+  description: |+
+    Indicates that the cmdlet clears the setting for the URL of the Contact IT link.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CurrentComputerUser
+  description: |+
+    Indicates that the cmdlet clears the settings that you specify for the current user only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DontSyncWindows8AppSettings
+  description: |+
+    Indicates that the cmdlet clears the setting for not synchronizing settings for Windows® 8 apps.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FirstUseNotificationEnabled
+  description: |+
+    Indicates that the cmdlet clears the setting for the notification of first-use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MaxPackageSizeInBytes
+  description: |+
+    Indicates that the cmdlet clears the setting for the maximum package size.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SettingsImportNotifyDelayInSeconds
+  description: |+
+    Indicates that the cmdlet clears the setting for the delay before UE-V notifies the user about the settings import.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SettingsImportNotifyEnabled
+  description: |+
+    Indicates that the cmdlet clears the setting for the notification of settings import.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SettingsStoragePath
+  description: |+
+    Indicates that the cmdlet clears the setting for the path of the location where UE-V stores the user settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SettingsTemplateCatalogPath
+  description: |+
+    Indicates that the cmdlet clears the setting for the path of the location where UE-V stores the settings template catalog.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SyncEnabled
+  description: |+
+    Indicates that the cmdlet clears the setting that enables the synchronization of settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SyncMethod
+  description: |+
+    Indicates that the cmdlet clears the setting for the method of the synchronization of settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SyncOverMeteredNetwork
+  description: |+
+    Indicates that the cmdlet clears the setting for synchronization over metered connections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SyncOverMeteredNetworkWhenRoaming
+  description: |+
+    Indicates that the cmdlet clears the setting for synchronization over a metered connection that is roaming.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SyncProviderPingEnabled
+  description: |+
+    Indicates that the cmdlet clears the setting that enables the sync provider to ping for network access before doing a sync.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SyncTimeoutInMilliseconds
+  description: |+
+    Indicates that the cmdlet clears the setting for the timeout before UE-V synchronizes settings from the settings repository.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SyncUnlistedWindows8Apps
+  description: |+
+    Indicates that the cmdlet clears the setting for the synchronization of unlisted Windows 8 apps.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TrayIconEnabled
+  description: |+
+    Indicates that the cmdlet clears the setting for the icon in the notification area.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: VdiCollectionName
+  description: |+
+    Indicates that the cmdlet performs synchronization in a pooled VDI-type environment when computers are not persistent.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WaitForSyncOnApplicationStart
+  description: |+
+    Indicates that the cmdlet clears the setting for waiting for synchronization to finish before the user can start an application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WaitForSyncOnLogon
+  description: |+
+    Indicates that the cmdlet clears the setting for waiting for synchronization to finish before the user can log on.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WaitForSyncTimeoutInMilliseconds
+  description: |+
+    For internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UEV.Clear-UevConfiguration
+name: Clear-UevConfiguration
+description: |-
+  The **Clear-UevConfiguration** cmdlet clears Microsoft User Experience Virtualization (UE-V) configuration settings.
+  If you specify the *CurrentComputerUser* parameter, the cmdlet clears the settings that you specify for the current user only.
+  If you specify the *Computer* parameter, the cmdlet clears the settings that you specify for all users on the computer.
+  You must have administrative credentials to use this cmdlet to clear settings for all users on the computer.
+  If you do not specify the *CurrentComputerUser* or *Computer* parameter, the cmdlet clears the settings that you specify for the current user only.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/clear-uevconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-UevConfiguration

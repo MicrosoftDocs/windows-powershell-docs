@@ -1,0 +1,247 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests connectivity between virtual machines.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMNetworkAdapterConnectionTestResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-VMNetworkAdapter
+  href: ./Add-VMNetworkAdapter.yml
+- text: Connect-VMNetworkAdapter
+  href: ./Connect-VMNetworkAdapter.yml
+- text: Disconnect-VMNetworkAdapter
+  href: ./Disconnect-VMNetworkAdapter.yml
+- text: Get-VMNetworkAdapter
+  href: ./Get-VMNetworkAdapter.yml
+- text: Remove-VMNetworkAdapter
+  href: ./Remove-VMNetworkAdapter.yml
+- text: Rename-VMNetworkAdapter
+  href: ./Rename-VMNetworkAdapter.yml
+- text: Set-VMNetworkAdapter
+  href: ./Set-VMNetworkAdapter.yml
+syntaxes:
+- >-
+  Test-VMNetworkAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String> [-Name <String>] [-Sender] [-Receiver] -SenderIPAddress <String>
+
+   -ReceiverIPAddress <String> [-NextHopMacAddress <String>] [-IsolationId <Int32>] -SequenceNumber <Int32>
+
+   [-PayloadSize <Int32>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Test-VMNetworkAdapter [-VMNetworkAdapter] <VMNetworkAdapter> [-Sender] [-Receiver] -SenderIPAddress <String>
+
+   -ReceiverIPAddress <String> [-NextHopMacAddress <String>] [-IsolationId <Int32>] -SequenceNumber <Int32>
+
+   [-PayloadSize <Int32>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Test-VMNetworkAdapter [-VM] <VirtualMachine> [-Name <String>] [-Sender] [-Receiver] -SenderIPAddress <String>
+
+   -ReceiverIPAddress <String> [-NextHopMacAddress <String>] [-IsolationId <Int32>] -SequenceNumber <Int32>
+
+   [-PayloadSize <Int32>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Test connectivity'
+  code: |-
+    PS C:\> Test-VMNetworkAdapter -VMName "ContosoVM01" -Receiver -SenderIPAddress "10.20.20.5" -ReceiverIPAddress "10.20.20.6" -VMNetworkAdapterName "ContosoNic01"
+  description: |-
+    This command tests connectivity by using the virtual network adapter named ContosoNic01.
+    The command targets the receiver virtual machine.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which this cmdlet operates.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: IsolationId
+  description: |+
+    Specifies the ID of a virtual subnet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: VMNetworkAdapterName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NextHopMacAddress
+  description: |+
+    Specified the MAC address for the next hop VM required for non-Hyper-V Network Virtualization configurations.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PayloadSize
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Receiver
+  description: |+
+    Indicates that the cmdlet targets the receiver virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReceiverIPAddress
+  isRequired: true
+  description: |+
+    Specifies the IP address of the receiver virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Sender
+  description: |+
+    Indicates that the cmdlet targets the sender virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SenderIPAddress
+  isRequired: true
+  description: |+
+    Specifies the IP address of the sender virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SequenceNumber
+  isRequired: true
+  description: |+
+    Specifies the sequence number to use to generate ICMP Ping packets.
+    The default value is 100.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" />
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies a virtual machine.
+    The cmdlet tests connectivity for adapters that belong to the virtual machines that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of a virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapter" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapter
+  isRequired: true
+  description: |+
+    Specifies a virtual machine network adapter as a **VMNetworkAdapterBase** object.
+    The cmdlet tests connectivity for the adapters that you specify.
+    To obtain a network adapter, use the **Get-VMNetworkAdapter** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Test-VMNetworkAdapter
+name: Test-VMNetworkAdapter
+description: |-
+  The **Test-VMNetworkAdapter** cmdlet tests connectivity between virtual machines by using Internet Control Message Protocol (ICMP) Ping packets.
+  Ping verifies IP-level connectivity to another TCP/IP computer by sending ICMP Echo Request messages.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/test-vmnetworkadapter?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-VMNetworkAdapter

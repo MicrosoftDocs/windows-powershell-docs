@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets one or more disk image objects (virtual hard disk or ISO).
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Volume" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a Volume object to the *Volume* parameter.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_DiskImage" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents the specified disk image.
+links:
+- text: Dismount-DiskImage
+  href: ./Dismount-DiskImage.yml
+- text: Get-Disk
+  href: ./Get-Disk.yml
+- text: Get-Partition
+  href: ./Get-Partition.yml
+- text: Get-Volume
+  href: ./Get-Volume.yml
+- text: Mount-DiskImage
+  href: ./Mount-DiskImage.yml
+syntaxes:
+- >-
+  Get-DiskImage [-ImagePath] <String[]> [-StorageType <StorageType>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-DiskImage [-Volume <CimInstance>] [-StorageType <StorageType>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-DiskImage -DevicePath <String[]> [-StorageType <StorageType>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a disk image by path'
+  code: |-
+    PS C:\>Get-DiskImage -ImagePath "E:\ISO-Files\My US Visit Fall 2010 Pictures.iso"
+  description: |-
+    This example gets an ISO disk image specified by path and displays information about the disk image.
+  summary: ""
+- title: 'Example 2: Get a disk image by device path'
+  code: |-
+    PS C:\>Get-DiskImage -DevicePath \\.\CDROM1
+  description: |-
+    This example gets an ISO disk image specified by device path and displays information about the disk image.
+  summary: ""
+- title: 'Example 3: Get the drive letter associated with a mounted ISO'
+  code: |-
+    PS C:\>Get-DiskImage -DevicePath \\.\CDROM1 | Get-Volume
+  description: |-
+    This example displays the drive letter associated with an ISO file.
+  summary: ""
+- title: 'Example 4: Get the drive letter associated with a mounted VHD'
+  code: |-
+    PS C:\>Get-DiskImage -ImagePath E:\vhd1.vhdx | Get-Disk | Get-Partition | Get-Volume
+    DriveLetter       FileSystemLabel   FileSystem        DriveType         HealthStatus        SizeRemaining             Size
+    -----------       ---------------   ----------        ---------         ------------        -------------             ----
+    F                 New Volume        NTFS              Fixed             Healthy                  19.27 GB         19.87 GB
+  description: |-
+    This example displays one or more drive letters associated with volumes in a VHD file.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DevicePath
+  isRequired: true
+  description: |+
+    Specifies the device path of the ISO or VHD file.
+    You cannot use this parameter with the *ImagePath* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ImagePath
+  isRequired: true
+  description: |+
+    Specifies the path of the ISO or VHD file.
+    You cannot use this parameter with the *DevicePath* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StorageType" data-throw-if-not-resolved="False" />
+  name: StorageType
+  description: |+
+    Specifies the type of a disk image: ISO, VHD, VHDx, or Unknown.
+    If the *StorageType* parameter is not specified or the Unknown type is provided, the storage type is determined by file extension.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, ISO, VHD, VHDX, VHDSet
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Volume
+  description: |+
+    Gets the disk image associated with the specified Volume object.
+    Enter a Volume CIM object, which can be obtained by using the Get-Volume cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-DiskImage
+name: Get-DiskImage
+description: |-
+  The **Get-DiskImage** cmdlet gets the objects associated with one or more disk images (virtual hard disk or ISO).
+  This cmdlet requires either the full image path of the ISO or VHD file, or the device path.
+
+  This cmdlet reports whether the specified ISO or VHD file is currently attached.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DiskImage.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-diskimage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DiskImage

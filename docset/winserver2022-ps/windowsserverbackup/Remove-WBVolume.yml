@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the volume from the backup policy.
+module: WindowsServerBackup
+notes: |-
+  * The **WBPolicy** object must be in edit mode. To put the **WBPolicy** object in edit mode for a policy that you set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the *Editable* parameter. The New-WBPolicy cmdlet creates a **WBPolicy** object that is already in edit mode.
+inputs:
+- name: <xref href="WBPolicy,WBVolume" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet removes the **WBVolume** object from the policy contained in the **WBPolicy** object.
+outputs:
+- name: <xref href="WBVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns a the list of **WBVolume** objects left in **WBPolicy** after the cmdlet removes the specified **WBVolume** object.
+links:
+- text: Add-WBVolume
+  href: ./Add-WBVolume.yml
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: Get-WBVolume
+  href: ./Get-WBVolume.yml
+syntaxes:
+- Remove-WBVolume [-Policy] <WBPolicy> [-Volume] <WBVolume> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a volume from the backup policy'
+  code: |-
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> $Volume = Get-WBVolume -VolumePath "E:"
+    PS C:\> Remove-WBVolume -Policy $Policy -Volume $Volume
+  description: |-
+    This example removes the specified volume from the backup policy.
+    The output is the list of volumes left in the **WBPolicy** object.
+
+    The first command stores the output of [Get-WBPolicy](./Get-WBPolicy.yml) in the variable named $Policy.
+
+    The second command stores the output of [Get-WBVolume](./Get-WBVolume.yml) in the variable $Volume.
+
+    The third command uses **Remove-WBVolume** to remove the volumes in the variable $Volume from the backup policy object.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies the **WBPolicy** object that contains the policy that this cmdlet updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBVolume" data-throw-if-not-resolved="False" />
+  name: Volume
+  isRequired: true
+  description: |+
+    Specifies the volume that this cmdlet removes from the policy contained in the **WBPolicy** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Remove-WBVolume
+name: Remove-WBVolume
+description: |-
+  The **Remove-WBVolume** cmdlet removes the **WBVolume** object from the **WBPolicy** object.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/remove-wbvolume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WBVolume

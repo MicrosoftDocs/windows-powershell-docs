@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops a job on a virtual desktop collection.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDVirtualDesktopCollectionJobStatus
+  href: ./Get-RDVirtualDesktopCollectionJobStatus.yml
+- text: Get-RDVirtualDesktopCollectionConfiguration
+  href: ./Get-RDVirtualDesktopCollectionConfiguration.yml
+syntaxes:
+- >-
+  Stop-RDVirtualDesktopCollectionJob [-CollectionName] <String> [-ConnectionBroker <String>] [-Force] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Stop a virtual desktop collection job'
+  code: |-
+    PS C:\> Stop-RDVirtualDesktopCollectionJob -CollectionName "Virtual Desktop Pool" -ConnectionBroker "rdcb.contoso.com"
+  description: |-
+    This command stops a job on the virtual desktop collection named Virtual Desktop Pool that is associated with the RD Connection Broker server named rdcb.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a virtual desktop collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RDMgmt.Stop-RDVirtualDesktopCollectionJob
+name: Stop-RDVirtualDesktopCollectionJob
+description: |-
+  The **Stop-RDVirtualDesktopCollectionJob** cmdlet forcibly ends a job that the server is currently running, or that is scheduled to run, on a virtual desktop collection.
+  You can use the **Get-RDVirtualDesktopCollectionJobStatus** to get status information for the most recent job on a virtual desktop collection.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/stop-rdvirtualdesktopcollectionjob?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-RDVirtualDesktopCollectionJob

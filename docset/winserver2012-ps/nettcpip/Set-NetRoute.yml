@@ -1,0 +1,283 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an entry or entries in the IP routing table.
+module: NetTCPIP
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetPrefixPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NetRoute
+  href: ./Get-NetRoute.yml
+- text: New-NetRoute
+  href: ./New-NetRoute.yml
+- text: Remove-NetRoute
+  href: ./Remove-NetRoute.yml
+- text: New-TimeSpan
+  href: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan
+syntaxes:
+- >-
+  Set-NetRoute [[-DestinationPrefix] <String[]>] [-AddressFamily <AddressFamily[]>] [-AsJob]
+
+   [-CimSession <CimSession[]>] [-InterfaceAlias <String[]>] [-InterfaceIndex <UInt32[]>] [-NextHop <String[]>]
+
+   [-PassThru] [-PolicyStore <String>] [-PreferredLifetime <TimeSpan>] [-Publish <Publish>]
+
+   [-RouteMetric <UInt16>] [-ThrottleLimit <Int32>] [-ValidLifetime <TimeSpan>] [-Confirm] [-WhatIf]
+- >-
+  Set-NetRoute [-AsJob] [-CimSession <CimSession[]>] [-PassThru] [-PreferredLifetime <TimeSpan>]
+
+   [-Publish <Publish>] [-RouteMetric <UInt16>] [-ThrottleLimit <Int32>] [-ValidLifetime <TimeSpan>]
+
+   -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Set-NetRoute -RouteMetric 257
+  description: |-
+    This example sets the **RouteMetric** parameter to 257, making the route less preferable than the default of 256.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$timespan = ( New-TimeSpan -Days 1 )
+
+
+
+    PS C:\>Set-NetRoute -DestinationPrefix 192.168.0.0/24 -PreferredLifetime $timespan
+  description: |-
+    This example sets the **PreferredLifetime** parameter to one (1) day.
+  summary: ""
+parameters:
+- type: <xref href="AddressFamily" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressFamily
+  description: |+
+    Specifies the IP address family of the IP route.
+    The acceptable values for this parameter are:
+
+     -- IPv4: IPv4 route information. 
+
+     -- IPv6: IPv6 route information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DestinationPrefix
+  description: |+
+    Specifies the IP route information by the destination orefix.
+    This parameter value contains an IP address prefix and a prefix length, separated by a slash (/).
+    A destination prefix of `0.0.0.0/0` for IPv4 or `::/0` for IPv6 would indicate that the **NextHop** parameter value is a default gateway.
+
+  defaultValue: Dhcp
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceAlias
+  description: |+
+    Specifies the interface on which the IP route is configured, as defined by the InterfaceAlias property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceIndex
+  description: |+
+    Specifies the interface on which the IP route is configured, as defined by the InterfaceIndex number.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NextHop
+  description: |+
+    Specifies the next hop used in the IP route.
+    This parameter value is the IP address of the next hop in the route.
+    A next hop of `0.0.0.0` for IPv4 or `::` for IPv6 would indicate that the route is on-link.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  description: |+
+    Specifies the PolicyStore value.
+    The acceptable values for this parameter are:
+
+     -- ActiveStore: The IP address information is currently valid. 
+
+     -- PersistentStore: The IP address information is persistent across reboots.
+    When the computer starts, the PersistentStore settings are copied to the ActiveStore. 
+
+    The default value is ActiveStore.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: PreferredLifetime
+  description: |+
+    Modifies the preferred lifetime of the IP route.
+    This parameter value uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Publish" data-throw-if-not-resolved="False" />
+  name: Publish
+  description: |+
+    Modifies the publish setting of the IP route.
+    The acceptable values for this parameter are:
+
+     -- No: The IP Route information is not published nor advertised in router advertisements. 
+
+     -- Yes: The IP Route information is published and advertised in router advertisements with an infinite **ValidLifetime** parameter. 
+
+     -- Age: The IP Route information is published and advertised in router advertisements with a finite **ValidLifetime** parameter. 
+
+    The default value is No.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: RouteMetric
+  description: |+
+    Modifies the metric associated with the IP route.
+    This parameter value specifies an integer cost metric for the route.
+    This parameter value is added to the **InterfaceMetric** parameter value and the total value is used when choosing among multiple routes in the routing table that most closely match the destination address of a packet being forwarded.
+    The route with the lowest, combined RouteMetric property and InterfaceMetric property value is chosen.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: ValidLifetime
+  description: |+
+    Modifies the valid lifetime of a route.
+    This parameter value uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetTCPIP.Set-NetRoute
+name: Set-NetRoute
+description: |-
+  The **Set-NetRoute** cmdlet modifies an entry or entries in the IP routing table.
+  This cmdlet has 2 types of parameters.
+  One set of parameters specifies the routing table entry or entries to be modified.
+  A destination prefix must be used and next hop address must be used as an identifier and additional properties may be included such as InterfaceIndex.
+  The second set of parameters modifies properties in that NetIPAddress object.
+  These properties include Type, PrefixLength, valid or preferred lifetime and skip as source.
+
+  IP routing is the process of forwarding a packet based on the destination IP address.
+  Routing occurs at a sending TCP/IP host and at an IP router. 
+
+  In each case, the IP layer at the sending host or router must decide where to forward the packet.
+  For IPv4, routers are also commonly referred to as gateways.
+  To make these decisions, the IP layer consults a routing table stored in memory.
+  Routing table entries are created by default when TCP/IP initializes, and entries can be added either manually or automatically.
+  When the computer is routing, the RouteMetric property is added to the InterfaceMetric property, described as a part of NetIPInterface.
+  This total value is used to decide the pass-through interface to send the forwarded packets.
+  For more information, see IP Routing on TechNethttp://technet.microsoft.com/library/bb727001.aspx.
+
+  NetRoute objects do not allow the DestinationPrefix or NextHop properties to be modified after creation.
+  To modify these values, remove the NetRoute object and re-create it using the New-NetRoute cmdlet.
+
+  Note: A gateway is a routing concept covered by the Get-NetRoute cmdlet.
+  For IP end points, the gateway specifies the forwarding or next hop IP address over which the set of addresses defined by the network destination and subnet mask are reachable.
+
+  Without parameters, the Get-NetRoute cmdlet modifies the routing table for all of the routes on the computer.
+metadata:
+  external help file: NetTCPIP_Cmdlets.xml
+  Module Name: NetTCPIP
+  online version: https://docs.microsoft.com/powershell/module/nettcpip/set-netroute?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,21 @@
+### YamlMime:PowershellModule
+children:
+- title: ShieldedVMDataFile
+  cmdlets:
+  - ShieldedVMDataFile.Import-ShieldingDataFile
+  - ShieldedVMDataFile.New-ShieldingDataFile
+  - ShieldedVMDataFile.New-VolumeIDQualifier
+  - ShieldedVMDataFile.Save-ShieldedVMRecoveryKey
+  - ShieldedVMDataFile.Save-VolumeSignatureCatalog
+  - ShieldedVMDataFile.Unprotect-ShieldedVMRecoveryKey
+uid: ShieldedVMDataFile
+name: ShieldedVMDataFile
+description: |-
+  This reference provides cmdlet descriptions and syntax for shielded virtual machine provisioning file cmdlets. This table lists the cmdlets in alphabetical order.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.2
+  Locale: en-US
+  Module Guid: 9e8b69b3-2cc7-4060-8d66-6f86be39febf
+  Module Name: ShieldedVMDataFile
+  title: ShieldedVMDataFile

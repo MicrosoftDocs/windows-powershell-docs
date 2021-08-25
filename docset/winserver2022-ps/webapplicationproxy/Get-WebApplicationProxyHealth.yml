@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the health status of the Web Application Proxy server.
+module: WebApplicationProxy
+notes: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.ApplicationProxy.Management.PowerShell.Health.WebAppProxyHealthStatus" data-throw-if-not-resolved="False" />
+  description: |-
+    The return value is 1 if healthy, and any other value for non-healthy.
+links:
+- text: Get-WebApplicationProxyApplication
+  href: ./Get-WebApplicationProxyApplication.yml
+- text: Get-WebApplicationProxyConfiguration
+  href: ./Get-WebApplicationProxyConfiguration.yml
+syntaxes:
+- Get-WebApplicationProxyHealth [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the health of the Web Application Proxy server'
+  code: |-
+    PS C:\> Get-WebApplicationProxyHealth
+
+
+    Component          : AD FS Proxy
+    RemoteAccessServer : TSQAProxy01
+    HealthState        : OK
+    Heuristics         : {Id: 0, ErrorDesc: , ErrorCause: , ErrorResoln: , OperationStatus: , Status: OK}
+    TimeStamp          : 5/9/2013 6:03:03 PM
+
+
+    Component          : Web Application Proxy Core
+    RemoteAccessServer : TSQAProxy01
+    HealthState        : OK
+    Heuristics         : {Id: 0, ErrorDesc: , ErrorCause: , ErrorResoln: , OperationStatus: , Status: OK}
+    TimeStamp          : 5/9/2013 6:03:03 PM
+  description: |-
+    This command gets the health status of the Web Application Proxy server.
+  summary: ""
+uid: WebApplicationProxy.Get-WebApplicationProxyHealth
+name: Get-WebApplicationProxyHealth
+description: |-
+  The **Get-WebApplicationProxyHealth** cmdlet gets the health status of the Web Application Proxy server and the health of the Web Application Proxy services on the Web Application Proxy server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.ApplicationProxy.Management.PowerShell.dll-Help.xml
+  Module Name: WebApplicationProxy
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/webapplicationproxy/get-webapplicationproxyhealth?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebApplicationProxyHealth

@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the current settings for the RD Licensing server and the licensing mode of the Remote Desktop deployment.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    - Mode (string). Remote Desktop licensing mode that you configured for the deployment. Valid values are PerUser and PerDevice.
+    - LicenseServer (string\[\]). FQDN of the Remote Desktop license server that you configured for the deployment.
+links:
+- text: Set-RDLicenseConfiguration
+  href: ./Set-RDLicenseConfiguration.yml
+syntaxes:
+- Get-RDLicenseConfiguration [[-ConnectionBroker] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the Remote Desktop license configuration'
+  code: |-
+    PS C:\> Get-RDLicenseConfiguration -ConnectionBroker "Rdcb.Contoso.com"
+  description: |-
+    This command gets the Remote Desktop license configuration for the RD Connection Broker server named Rdcb.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for this Remote Desktop deployment.
+    If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Get-RDLicenseConfiguration
+name: Get-RDLicenseConfiguration
+description: |-
+  The **Get-RDLicenseConfiguration** cmdlet retrieves the current settings for the Remote Desktop Licensing (RD Licensing) server and the licensing mode of the Remote Desktop deployment.
+
+  RD Licensing servers manage the Remote Desktop Services client access licenses (RDS CALs) that each device or user requires to connect to a Remote Desktop Session Host (RD Session Host) server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdlicenseconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDLicenseConfiguration

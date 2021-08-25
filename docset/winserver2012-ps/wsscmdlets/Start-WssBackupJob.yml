@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a manual server backup.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssBackupJob
+  href: ./Get-WssBackupJob.yml
+- text: Stop-WssBackupJob
+  href: ./Stop-WssBackupJob.yml
+syntaxes:
+- Start-WssBackupJob
+examples:
+- title: '-------------------------- EXAMPLE Example 1: Start a manual server backup --------------------------'
+  code: |-
+    PS C:\> Start-WssBackupJob
+  description: |-
+    This command starts a manual server backup.
+  summary: |+
+    Example : Start a manual server backup
+uid: WssCmdlets.Start-WssBackupJob
+name: Start-WssBackupJob
+description: |-
+  The **Start-WssBackupJob** cmdlet starts a manual backup of a server.
+  This is an asynchronous operation.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/start-wssbackupjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

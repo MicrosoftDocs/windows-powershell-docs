@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures Web Application Proxy on the server.
+module: WebApplicationProxy
+notes: ""
+links:
+- text: Add-WebApplicationProxyApplication
+  href: ./Add-WebApplicationProxyApplication.yml
+- text: Get-WebApplicationProxyApplication
+  href: ./Get-WebApplicationProxyApplication.yml
+- text: Get-WebApplicationProxyConfiguration
+  href: ./Get-WebApplicationProxyConfiguration.yml
+- text: Set-WebApplicationProxyConfiguration
+  href: ./Set-WebApplicationProxyConfiguration.yml
+syntaxes:
+- >-
+  Install-WebApplicationProxy -FederationServiceTrustCredential <PSCredential> -CertificateThumbprint <String>
+
+   -FederationServiceName <String> [-HttpsPort <Int32>] [-TlsClientPort <Int32>] [-ForwardProxy <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure Web Application Proxy on the server'
+  code: |-
+    PS C:\> $FScredential = Get-Credential
+    PS C:\> Install-WebApplicationProxy -FederationServiceName "FS01.Contoso.com" -FederationServiceTrustCredential $FScredential -CertificateThumbprint "0a1b2c3d0a1b2c3d0a1b2c3d0a1b2c3d0a1b2c3d"
+  description: |-
+    This example configures Web Application Proxy on the local server.
+
+    The first command uses the **Get-Credential** cmdlet to create a credential, and then stores it in the **$FScredential** variable.
+    The cmdlet prompts you for a user name and password.
+    For more information, type `Get-Help Get-Credential`.
+
+    The second command configures Web Application Proxy on the local server.
+    The command specifies the name of the Federation Service for which Web Application Proxy provides an AD FS proxy.
+    The command specifies the thumbprint of the certificate that Web Application Proxy presents to users to identify the Web Application Proxy server as a proxy for the Federation Service.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  isRequired: true
+  description: |+
+    Specifies the certificate thumbprint, as a string, of the certificate that Web Application Proxy presents to users to identify the Web Application Proxy as a proxy for the Federation Service.
+    The thumbprint is 40 hexadecimal characters.
+
+    The certificate must be in the Personal store for the local computer.
+    You can use a simple certificate, a subject alternative name (SAN) certificate, or a wildcard certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FederationServiceName
+  isRequired: true
+  description: |+
+    Specifies the name of a Federation Service.
+    This is the Federation Service for which Web Application Proxy provides AD FS proxy functionality and stores the configuration of the Federation Service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: FederationServiceTrustCredential
+  isRequired: true
+  description: |+
+    Specifies a **PSCredential** object that contains the credentials of the AD FS identity that is authorized to register new Federation server proxies.
+    Specify an account that has permissions to manage the Federation Service.
+
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ForwardProxy
+  description: |+
+    Specifies the DNS name and port number of an HTTP proxy that this federation server proxy uses to obtain access to the federation service.
+    Specify the value for this parameter in the following format: FQDN:PortNumber.
+    For example, to specify a forward proxy with a host name of "proxy01" that is located within the corp.contoso.com domain and that can be reached using the HTTP port of 8080 would be "proxy-01.corp.contoso.com:8080".
+    Note: This parameter applies only to Federation Services proxy.
+    It does not apply for application publishing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: HttpsPort
+  description: |+
+    Specifies the HTTPS port for the Web Application Proxy server.
+    The default value is 443.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TlsClientPort
+  description: |+
+    Specifies the port for the TLS client.
+    Web Application Proxy uses this port for user certificate authentication.
+    The default value is 49443.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebApplicationProxy.Install-WebApplicationProxy
+name: Install-WebApplicationProxy
+description: |-
+  The **Install-WebApplicationProxy** cmdlet configures Web Application Proxy on the current server.
+
+  The **FederationServiceName** parameter specifies the Federation Service that provides authentication for Web Application Proxy.
+  The **FederationServiceTrustCredential** parameter specifies the Active Directory Federation Services (AD FS) identity that is authorized to register new Federation server proxies.
+  The **CertificateThumbprint** parameter specifies the thumbprint of the certificate that Web Application Proxy uses to identify the server to users as a proxy for the Federation Service.
+  You can also specify the name of a forward proxy, the HTTPS port for the Web Application Proxy server, and the port for the Transport Layer Security (TLS) client.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.Proxy.dll-Help.xml
+  Module Name: WebApplicationProxy
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/webapplicationproxy/install-webapplicationproxy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Install-WebApplicationProxy

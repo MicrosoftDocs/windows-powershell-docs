@@ -1,0 +1,156 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the virtual hard disk drives attached to one or more virtual machines.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.ControllerType" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.HyperV.PowerShell.VMSnapshot" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.HyperV.PowerShell.VMDriveController" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.HardDiskDrive" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-VMHardDiskDrive [-ControllerLocation <Int32>] [-ControllerNumber <Int32>]
+
+   [-ControllerType <ControllerType>] [-ComputerName <String[]>] [-VMName] <String[]> [<CommonParameters>]
+- >-
+  Get-VMHardDiskDrive [-VMSnapshot] <VMSnapshot> [-ControllerLocation <Int32>] [-ControllerNumber <Int32>]
+
+   [-ControllerType <ControllerType>] [<CommonParameters>]
+- >-
+  Get-VMHardDiskDrive [-ControllerLocation <Int32>] [-VMDriveController] <VMDriveController[]>
+
+   [<CommonParameters>]
+- >-
+  Get-VMHardDiskDrive [-ControllerLocation <Int32>] [-ControllerNumber <Int32>]
+
+   [-ControllerType <ControllerType>] [-VM] <VirtualMachine[]> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMHardDiskDrive -VMName TestVM
+  description: |-
+    Gets the virtual hard drives from virtual machine TestVM.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VM -Name TestVM | Get-VMHardDiskDrive -ControllerType IDE -ControllerNumber 1
+  description: |-
+    Gets the virtual hard drives from IDE controller 1 of virtual machine TestVM.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>Get-VMIdeController -VMName TestVM -ControllerNumber 1 -ComputerName Development | Get-VMHardDiskDrive
+  description: |-
+    Gets the virtual hard drives from IDE controller 1 of virtual machine TestVM located on Hyper-V host Development.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\>Get-VMSnapshot -VMName Test -Name 'Before applying updates' | Get-VMHardDrive
+  description: |-
+    Gets the virtual hard drives from snapshot Before applying updates of virtual machine TestVM.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which the virtual hard disk drives are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerLocation
+  description: |+
+    Specifies the number of the location on the controller at which the virtual hard disk drives are to be retrieved.
+    If not specified, the number of the first available location on the controller is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerNumber
+  description: |+
+    Specifies the number of the controller at which the virtual hard disk drives are to be retrieved.
+    If not specified, the first controller on which the specified **ControllerLocation** is available is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ControllerType" data-throw-if-not-resolved="False" />
+  name: ControllerType
+  description: |+
+    Specifies the type of the controller from which the virtual hard disk drives are to be retrieved.
+    Allowed values are **Floppy**, **IDE**, and **SCSI**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: IDE, SCSI, Floppy
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine from which the virtual hard disk drives are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMDriveController" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMDriveController
+  isRequired: true
+  description: |+
+    Specifies the drive controller from which the virtual hard disk drives are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine from which the virtual hard disks drives are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSnapshot" data-throw-if-not-resolved="False" />
+  name: VMSnapshot
+  isRequired: true
+  description: |+
+    Specifies the snapshot from which the virtual hard disk drives are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMHardDiskDrive
+name: Get-VMHardDiskDrive
+description: |-
+  The **Get-VMHardDiskDrive** cmdlet gets the virtual hard disk drives attached to one or more virtual machines.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmharddiskdrive?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMHardDiskDrive

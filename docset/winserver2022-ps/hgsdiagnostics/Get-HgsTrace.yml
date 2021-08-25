@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Collects and analyzes data relevant to the operation of a guarded fabric.
+module: HgsDiagnostics
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Windows.HostGuardianService.Diagnostics.Payload.InputTarget" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet pipes one or more targets created with **New-HgsTraceTarget** to trace and diagnose.
+outputs:
+- name: <xref href="Microsoft.Windows.HostGuardianService.Diagnostics.Payload.RemoteResultSet" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a collection of results for various operations and tests performed on the provided targets.
+    These results are grouped by target and category with each group possessing an aggregate result that reflects the status of all child operation.
+links:
+- text: Get-HgsTraceFileData
+  href: ./Get-HgsTraceFileData.yml
+- text: New-HgsTraceTarget
+  href: ./New-HgsTraceTarget.yml
+syntaxes:
+- >-
+  Get-HgsTrace [-Collector <String[]>] [-Target <InputTarget[]>] [[-Path] <String>] [-WriteManifest] [-Detailed]
+
+   [-Compact] [-Diagnostic <String[]>] [<CommonParameters>]
+- >-
+  Get-HgsTrace [-RunDiagnostics] [-Target <InputTarget[]>] [[-Path] <String>] [-WriteManifest] [-Detailed]
+
+   [-Compact] [-Diagnostic <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Diagnose the local host'
+  code: |-
+    PS C:\> Get-HgsTrace -RunDiagnostics
+  description: |-
+    This command diagnoses the local host.
+    The traces are stored in a temporary folder and diagnosis results are reported to the user.
+  summary: ""
+- title: 'Example 2: Collect traces from the specified target'
+  code: |-
+    PS C:\> Get-HgsTrace -Target $VMhost -Path ".\Traces"
+  description: |-
+    This command collects traces from the target specified in the VMhost variable.
+    The command then stores the trace files to the specified path.
+    Since the *RunDiagnostics* parameter is not used, the cmdlet does not run diagnostics against the collected targets.
+  summary: ""
+- title: 'Example 3: Diagnose multiple targets'
+  code: |-
+    PS C:\> Get-HgsTrace -Target $VMhost,$Server -RunDiagnostics
+  description: |-
+    This command runs diagnostics on the targets stored in the $VMHost and $Server variables.
+  summary: ""
+- title: 'Example 4: Diagnose the local host using hardware'
+  code: |-
+    PS C:\> Get-HgsTrace -RunDiagnostics -Diagnostic "Hardware"
+  description: |-
+    This command runs diagnostics named Hardware on the local host.
+  summary: ""
+- title: 'Example 5: Diagnose previously collected traces stored in the specified folder'
+  code: |-
+    PS C:\> Get-HgsTrace -RunDiagnostics -Path ".\GatheredTraces"
+  description: |-
+    This command runs diagnostics on collected traces that are stored in the folder named GatheredTraces.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Collector
+  description: |+
+    Specifies a list of collectors to be executed when gathering traces.
+    This parameter is used to collect only specific traces when you do not specify a list of diagnostics and you do not run diagnostics with the *RunDiagnostics* switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Compact
+  description: |+
+    Indicates that the output object is provided should be a minimal subset of the results generated instead of the complete result set.
+    This switch parameter is ignored if more than one target is provided.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Detailed
+  description: |+
+    Specifies that the output object has full details, which includes all results omitted from the default output report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Diagnostic
+  description: |+
+    Specifies a list of diagnostics that are run if you also provide the *RunDiagnostics* switch parameter.
+    If you do not provide the *RunDiagnostics* switch parameter, this list of diagnostics is used to determine which collectors are executed.
+    Diagnostics and collectors whose requirements are not satisfied by the provided targets will not be executed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Base, All, GuardedFabric, GuardedFabricTpmMode, GuardedFabricADMode, BestPractices, GuardedHost, HostGuardianService, Networking, Https, Hardware
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies an absolute or relative path to a folder where trace files are stored.
+    If the folder already exists, any traces contained therein are reused.
+    New traces are collected to augment existing traces if they are missing from the pre-populated traces.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RunDiagnostics
+  isRequired: true
+  description: |+
+    Indicates that diagnostics are immediately run against the collected traces and that the result set describes the result of diagnosing the collected information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="InputTarget" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Target
+  description: |+
+    Specifies a list of targets created by **New-HgsTraceTarget** to be traced and diagnosed.
+    If no targets are provided, but a collection path has been specified, the path is searched for pre-existing traces to be analyzed.
+    If none are found, the localhost is targeted using the current session's credentials inferring the host's role from installed Windows features.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WriteManifest
+  description: |+
+    Indicates that a manifest of all trace files collected are written.
+    This can then be used by the **Get-HgsTraceFileData** cmdlet to get secured information about trace files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HgsDiagnostics.Get-HgsTrace
+name: Get-HgsTrace
+description: |-
+  The **Get-HgsTrace** cmdlet collects and analyzes data relevant to the operation of a guarded fabric, diagnosing confirmed and potential failures in the environment that will impact the operation of the Host Guardian Service (HGS), guarded hosts, and shielded virtual machines.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.HostGuardianService.Diagnostics.Payload.dll-Help.xml
+  Module Name: HgsDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsdiagnostics/get-hgstrace?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-HgsTrace

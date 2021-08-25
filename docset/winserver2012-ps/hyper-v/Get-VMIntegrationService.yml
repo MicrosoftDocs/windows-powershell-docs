@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the integration services of a virtual machine or snapshot.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Virtualization.PowerShell.IntegrationService" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-VMIntegrationService [-VMName] <String[]> [[-Name] <String[]>] [-ComputerName <String[]>]
+- Get-VMIntegrationService [-VM] <VirtualMachine[]> [[-Name] <String[]>]
+- Get-VMIntegrationService [-VMSnapshot] <VMSnapshot> [[-Name] <String[]>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMIntegrationService -VMName TestVM | Where-Object {$_.SecondaryOperationalStatus -eq 'ProtocolMismatch'}
+  description: |-
+    Gets the out-of-date integration services from virtual machine TestVM.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VM -Name TestVM | Get-VMIntegrationService -Name Shutdown,VSS
+  description: |-
+    Gets the Shutdown and VSS integration services from virtual machine TestVM.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>Get-VMSnapshot -VMName TestVM -Name 'Before applying updates' | Get-VMIntegrationService Shutdown,VSS
+  description: |-
+    Gets the Shutdown and VSS integration services from the snapshot Before applying updates of virtual machine TestVM.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the integration services are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the integration service to be retrieved.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine from which the integration services are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine from which the integration services are to be retrieved.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSnapshot" data-throw-if-not-resolved="False" />
+  name: VMSnapshot
+  isRequired: true
+  description: |+
+    Specifies the snapshot from which the integration services are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMIntegrationService
+name: Get-VMIntegrationService
+description: |-
+  The **Get-VMIntegrationService** cmdlet gets the integration services of a virtual machine or snapshot.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmintegrationservice?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

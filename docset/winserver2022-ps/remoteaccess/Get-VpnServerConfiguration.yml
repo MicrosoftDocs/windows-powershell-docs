@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets VPN server properties.
+module: RemoteAccess
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnServerIPsecConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-VpnServerConfiguration
+  href: ./Set-VpnServerConfiguration.yml
+syntaxes:
+- >-
+  Get-VpnServerConfiguration [-TunnelType <TunnelType>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Display IPsec properties'
+  code: |-
+    PS C:\> Get-VpnServerIPsecConfiguration
+    EncryptionType                 : OptionalEncryption
+
+    Ikev2Ports                     : 5
+
+    SstpPorts                      : 10
+
+    IdleDisconnect(s)              : 300
+
+    L2tpPorts                      : 5
+
+    SADataSizeForRenegotiation(KB) : 102400
+
+    SALifeTime(s)                  : 28800
+  description: |-
+    This command displays properties for the current VPN server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TunnelType" data-throw-if-not-resolved="False" />
+  name: TunnelType
+  description: |+
+    Specifies a tunnel type.
+    If you specify a value for this parameter, the cmdlet gets properties only for tunnels of that type.
+    The acceptable values for this parameter are:
+
+    - PPTP.
+    Point-to-Point Tunneling Protocol.
+    - L2TP.
+    Layer Two Tunneling Protocol.
+    - SSTP.
+    Secure Socket Tunneling Protocol.
+    - IKEv2.
+    Internet Key Exchange version 2.
+    - Automatic.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: IKEV2, L2TP
+uid: RemoteAccess.Get-VpnServerConfiguration
+name: Get-VpnServerConfiguration
+description: |-
+  The **Get-VpnServerConfiguration** cmdlet gets virtual private network (VPN) server properties.
+  The cmdlet gets settings for a Routing and Remote Access service (RRAS) server for incoming server-to-server protocol (S2S protocol) VPN interfaces.
+  You can restrict the type of tunnel to view by specifying the **TunnelType** parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_VpnServerIPsecConfiguration_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/get-vpnserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VpnServerConfiguration

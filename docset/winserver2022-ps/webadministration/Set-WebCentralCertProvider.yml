@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the configuration settings for the central certificate provider.
+module: WebAdministration
+notes: ""
+links:
+- text: Clear-WebCentralCertProvider
+  href: ./Clear-WebCentralCertProvider.yml
+- text: Disable-WebCentralCertProvider
+  href: ./Disable-WebCentralCertProvider.yml
+- text: Enable-WebCentralCertProvider
+  href: ./Enable-WebCentralCertProvider.yml
+- text: Get-WebCentralCertProvider
+  href: ./Get-WebCentralCertProvider.yml
+syntaxes:
+- >-
+  Set-WebCentralCertProvider [-CertStoreLocation <String>] [-UserName <String>] [-Password <String>]
+
+   [-PrivateKeyPassword <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the central certificate store location'
+  code: |-
+    PS C:\> Set-WebCentralCertProvider -CertStoreLocation "\\MyCertServer\CertStore"
+  description: |-
+    This command sets the physical location of the central certificate store.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertStoreLocation
+  description: |+
+    Specifies the physical path to the central certificate store.
+    The path is either a local path such as D:\CertStore, or a UNC path such as \\\\MyCertServer\CertStore.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Specifies the password for the user account that is used to access the central certificate store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrivateKeyPassword
+  description: |+
+    Specifies the password for the private key.
+    If specified, this password is the same for all keys.
+    The password can be $Null.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  description: |+
+    Specifies the name of the user account that is used to access the central certificate store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Set-WebCentralCertProvider
+name: Set-WebCentralCertProvider
+description: |-
+  The **Set-WebCentralCertProvider** cmdlet changes the configuration settings for the central certificate provider.
+  The settings that you can set include whether the provider is enabled, the location of the centralized certification store, the user name and password, and the private key password.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/set-webcentralcertprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WebCentralCertProvider

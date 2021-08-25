@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns App-V Client Packages.
+module: AppvClient
+notes: |-
+  * If you do not specify any parameters, the cmdlet returns a set of all packages on the computer.
+  * The cmdlet checks that you have permissions to perform the specific action. If not, the cmdlet returns the following error: The action could not be performed due to current App-V permissions. Please modify the permissions and try the operation again.
+  * If the cmdlet cannot find the package, the cmdlet returns the following error: The specified package(s) could not be found. An error code is returned.
+outputs:
+- name: <xref href="Microsoft.AppV.AppvClientPowerShell.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvClientPackage
+  href: ./Add-AppvClientPackage.yml
+- text: Mount-AppvClientPackage
+  href: ./Mount-AppvClientPackage.yml
+- text: Publish-AppvClientPackage
+  href: ./Publish-AppvClientPackage.yml
+- text: Remove-AppvClientPackage
+  href: ./Remove-AppvClientPackage.yml
+- text: Repair-AppvClientPackage
+  href: ./Repair-AppvClientPackage.yml
+- text: Set-AppvClientPackage
+  href: ./Set-AppvClientPackage.yml
+- text: Stop-AppvClientPackage
+  href: ./Stop-AppvClientPackage.yml
+- text: Unpublish-AppvClientPackage
+  href: ./Unpublish-AppvClientPackage.yml
+syntaxes:
+- Get-AppvClientPackage [[-Name] <String>] [[-Version] <String>] [-All] [<CommonParameters>]
+- Get-AppvClientPackage [-PackageId] <Guid> [[-VersionId] <Guid>] [-All] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get packages that have names that match a string'
+  code: |-
+    PS C:\> Get-AppvClientPackage -Name "MyApp*" -All
+  description: |-
+    This command gets the set of packages that have names that start with the string MyApp.
+  summary: ""
+- title: 'Example 2: Get a specific version of a package by name'
+  code: |-
+    PS C:\> Get-AppvClientPackage -Name "MyApp" -Version 4
+  description: |-
+    This command gets the version 4 of the package named MyApp.
+  summary: ""
+- title: 'Example 3: Get a package by using its package ID'
+  code: |-
+    PS C:\> Get-AppvClientPackage -PackageID 793afd37-bd68-4ea1-859a-669f6afd0aa8
+  description: |-
+    This command gets the package with the package ID of 793afd37-bd68-4ea1-859a-669f6afd0aa8.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Indicates that the cmdlet uses the set of all packages added to the computers as the searchable set.
+    If not provided, the cmdlet only uses packages that are entitled to the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the friendly name of the package given during Sequencing time.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageId
+  isRequired: true
+  description: |+
+    Specifies the GUID that uniquely identifies the package.
+    It can be found in the package manifest or by opening the package in the App-V Sequencer.
+    The package ID is shared by all versions of a package.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of an App-V package in one specific lineage.
+    If you do not specify this parameter, the cmdlet operates on available versions of the package on the target computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionId
+  description: |+
+    Specifies the GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+    If you do specify this parameter, the cmdlet operates on all versions of a package.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Get-AppvClientPackage
+name: Get-AppvClientPackage
+description: |-
+  The **Get-AppvClientPackage** cmdlet returns a set of Microsoft Application Virtualization (App-V) Client Packages based on the criteria provided.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/get-appvclientpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AppvClientPackage

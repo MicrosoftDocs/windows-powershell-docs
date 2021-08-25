@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns App-V Server Dynamic user configurations applied to a user group for a set of packages.
+module: AppVServer
+notes: ""
+inputs:
+- name: <xref href="AppvServer.AppvServerPackage" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+syntaxes:
+- Get-AppvServerPackageUserConfiguration -Group <String> [-Name] <String> [<CommonParameters>]
+- >-
+  Get-AppvServerPackageUserConfiguration [-AppvServerPackage] <PackageVersion> -Group <String>
+
+   [<CommonParameters>]
+- >-
+  Get-AppvServerPackageUserConfiguration -Group <String> [-PackageID] <Guid> [[-VersionID] <Guid>]
+
+   [<CommonParameters>]
+- Get-AppvServerPackageUserConfiguration -Group <String> [[-Version] <String>] [<CommonParameters>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="PackageVersion" data-throw-if-not-resolved="False" />
+  name: AppvServerPackage
+  isRequired: true
+  description: |+
+    Specifies an array of **AppVServerPackage** objects.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specifies the name of the Active Directory group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the package given when the package was created.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageID
+  isRequired: true
+  description: |+
+    Specifies a GUID that uniquely identifies the package.
+    This GUID can be found in the package manifest or by opening the package in the App-V sequencer.
+    The package GUID is shared by all versions of a specific package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of an App-V package in one lineage.
+    If no version is supplied, the operation acts on all versions saved to computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionID
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppVServer.Get-AppvServerPackageUserConfiguration
+name: Get-AppvServerPackageUserConfiguration
+description: |-
+  The **Get-AppvServerPackageUserConfiguration** cmdlet returns a set of Microsoft Application Virtualization (App-V) Server Dynamic user configurations (Strings) applied to a given user group for specified packages.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: AppVServerCmdlets.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Get-AppvServerPackageUserConfiguration

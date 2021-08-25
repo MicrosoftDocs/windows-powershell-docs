@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an attestation policy based on a host group.
+module: HgsAttestation
+notes: ""
+links:
+- text: Add-HgsAttestationHostGroup
+  href: ./Add-HgsAttestationHostGroup.yml
+- text: Get-HgsAttestationHostGroup
+  href: ./Get-HgsAttestationHostGroup.yml
+syntaxes:
+- Remove-HgsAttestationHostGroup [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a host group'
+  code: |-
+    PS C:\> Remove-HgsAttestationHostGroup -Name "TrustedADHostGroup14"
+  description: |-
+    This command removes the host group named TrustedADHostGroup14 from the Attestation service.
+    If a guarded host belongs to this host group and to no other trusted host group, the host can no longer obtain a new Attestation certificate.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the host group for which this cmdlet removes a policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsAttestation.Remove-HgsAttestationHostGroup
+name: Remove-HgsAttestationHostGroup
+description: |-
+  The **Remove-HgsAttestationHostGroup** cmdlet removes an attestation policy that is based on the configuration of an Active Directory host group from Host Guardian Service (HGS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/remove-hgsattestationhostgroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-HgsAttestationHostGroup

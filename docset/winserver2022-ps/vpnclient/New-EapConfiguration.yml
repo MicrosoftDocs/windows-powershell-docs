@@ -1,0 +1,289 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generates an XML file with the specified EAP configuration.
+module: VpnClient
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/RemoteAccess/ClientEapConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    This cmdlet returns a **VpnConnection** object that contains the VPN connection configuration settings.
+links:
+- text: Add-VpnConnection
+  href: ./Add-VpnConnection.yml
+- text: Set-VpnConnection
+  href: ./Set-VpnConnection.yml
+syntaxes:
+- >-
+  New-EapConfiguration [-UseWinlogonCredential] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-EapConfiguration [-UseWinlogonCredential] [-Ttls] [-TunneledNonEapAuthMethod <String>]
+
+   [[-TunneledEapAuthMethod] <XmlDocument>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-EapConfiguration [-Tls] [-UserCertificate] [-VerifyServerIdentity] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-EapConfiguration [-VerifyServerIdentity] [[-TunneledEapAuthMethod] <XmlDocument>] [-Peap] [-EnableNap]
+
+   [-FastReconnect <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a default EAP configuration object'
+  code: |-
+    PS C:\> $A = New-EapConfiguration
+  description: |-
+    This command creates a default EAP configuration object, and stores it in the variable named $A.
+    You can use the XML configuration object stored in the variable when you create a VPN connection or change the configuration of a VPN connection.
+  summary: ""
+- title: 'Example 2: Create a customized EAP configuration object'
+  code: |-
+    PS C:\> $A = New-EapConfiguration -UseWinlogonCredential
+  description: |-
+    This command creates an EAP configuration object, customized by the *UseWinlogonCredential* parameter, and stores it in the variable named $A.
+    By specifying the *UseWinlogonCredential* parameter, the EAP configuration object is configured to use MSCHAPv2 as the authentication method, and that Windows logon credentials are used automatically when connecting with the VPN connection profile.
+
+    See [VPN authentication options](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-authentication) 
+    and [Add connectivity profiles](https://docs.microsoft.com/windows/configuration/wcd/wcd-connectivityprofiles#vpn-1) to learn more about VPN authentication methods.
+  summary: ""
+- title: 'Example 3: Create a TLS customized EAP configuration object'
+  code: |-
+    PS C:\> $A = New-EapConfiguration -Tls -VerifyServerIdentity -UserCertificate
+  description: |-
+    This command creates a customized EAP configuration object and stores it in the variable named $A.
+    The EAP configuration object is customized by specifying the following parameters: 
+
+    - The *Tls* parameter, which indicates that this configuration object uses EAP-TLS
+    - The *VerifyServerIdentity* parameter, which indicates that the identity of the server to which the client connects is validated
+    - The *UserCertificate* parameter, which indicates that the EAP-TLS authentication method uses a user certificate.
+  summary: ""
+- title: 'Example 4: Create a TTLS customized EAP configuration object'
+  code: |-
+    PS C:\> $A = New-EapConfiguration -Ttls
+  description: |-
+    This command creates an EAP configuration object, customized by the *Ttls* parameter to use the TTLS authentication method.
+    The configuration object is stored in the variable named $A.
+  summary: ""
+- title: 'Example 5: Create a TTLS EAP configuration object with MSCHAPv2 as the client authentication method'
+  code: |-
+    PS C:\> $A = New-EapConfiguration -Ttls -TunneledNonEapAuthMethod "MSChapv2" -UseWinlogonCredential
+  description: |-
+    This command creates a new EAP configuration object and stores it in the variable named $A.
+    The EAP configuration object is customized by specifying the following parameters: 
+
+    - The *Ttls* parameter, which indicates that this configuration object uses TTLS as the authentication method
+    - The *TunneledNonEapAuthMethod* parameter with the MSChapv2 value, which specifies that MSCHAPv2 is used as the specific client authentication method
+    - The *UseWinlogonCredential* parameter, which indicates that Windows logon credentials are used automatically when connecting with the VPN connection profile that uses this EAP configuration object.
+  summary: ""
+- title: 'Example 6: Create an EAP configuration object and use it as input'
+  code: |-
+    This command creates an EAP configuration object configured to use an EAP-TLS authentication method and to verify the server identity. The configuration object is stored in a variable named $B.
+    PS C:\>$B = New-EapConfiguration -Tls -VerifyServerIdentity
+
+    This command creates an EAP configuration object configured to use the TTLS authentication method, and specifies the *TunneledEapAuthMethod* parameter to use the EapConfigXmlStream created by the first EAP configuration object as the tunnel EAP authentication method.
+    PS C:\>$A = New-EapConfiguration -Ttls -TunneledEapAuthMethod $B.EapConfigXmlStream
+  description: |-
+    This set of commands creates an EAP configuration object customized with a TTLS authentication method which uses EAP-TLS as the tunneled client authentication method.
+  summary: ""
+- title: 'Example 7: Create an EAP configuration object that uses PEAP authentication'
+  code: |-
+    PS C:\> $A = New-EapConfiguration -Peap
+  description: |-
+    This command creates an EAP configuration object customized by the *Peap* parameter to use the PEAP authentication method.
+    The configuration object is stored in a variable named $A.
+  summary: ""
+- title: 'Example 8: Create a customized EAP configuration object and use it as input'
+  code: |-
+    This command creates the EAP configuration object and stores it in the variable named $B. The EAP configuration object is customized to use the TLS authentication method by the *Tls* parameter, and configured to verify the identity of the server by the *VerifyServerIdentity* parameter.This command implicitly configures a smart card to be used for authentication.
+    PS C:\>$B = New-EapConfiguration -Tls -VerifyServerIdentity
+
+    This command uses the *EapConfigXmlStream* method of the EAP configuration object created in the previous command to specify the value for the *TunneledEapAuthMethod* parameter. This command also specifies that PEAP is the authentication method, as specified by the *Peap* parameter; that NAP is enabled for PEAP, as specified by the *EnableNap* parameter; and that *FastReconnect* is enabled, as specified by the *FastReconnect* parameter. 
+    PS C:\>$a = New-EapConfiguration -Peap -EnableNap -FastReconnect $True -VerifyServerIdentity -TunneledEapAuthMethod $b.EapConfigXmlStream
+  description: |-
+    This set of commands creates an EAP configuration object customized with the TLS authentication method, and then uses its EapConfigXmlStream object as the tunneled authentication method.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableNap
+  description: |+
+    Indicates that the cmdlet enables Network Access Protection (NAP) for PEAP.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: FastReconnect
+  description: |+
+    Specifies whether to enable FastReconnect in the current PEAP configuration.
+    Specify either $True or $False.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Peap
+  isRequired: true
+  description: |+
+    Indicates that PEAP is used as the authentication method.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Tls
+  isRequired: true
+  description: |+
+    Indicates that EAP-TLS, either smart card based or user certificate based, is used as the authentication method.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Ttls
+  isRequired: true
+  description: |+
+    Indicates that TTLS is used as the authentication method.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XmlDocument" data-throw-if-not-resolved="False" />
+  name: TunneledEapAuthMethod
+  description: |+
+    Specifies the configuration XML for tunneled EAP, EAP-TTLS, or PEAP authentication.
+
+  defaultValue: None
+  position: "3"
+  aliases: TunneledEapAuthMethod
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TunneledNonEapAuthMethod
+  description: |+
+    Specifies the simple EAP-TTLS client authentication methods.
+    The acceptable values for this parameter are:
+
+    - Pap 
+    - Chap 
+    - MSChap 
+    - MSCHapv2
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: TunneledNonEapAuthMethod
+  parameterValueGroup: Pap, Chap, MSChap, MSChapv2
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UserCertificate
+  description: |+
+    Indicates that a user certificate is used for authentication.
+    This parameter is used with EAP-TLS.
+    If this parameter is not specified, a smart card authentication is used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseWinlogonCredential
+  description: |+
+    Indicates that MSCHAPv2 or EAP-MSCHAPv2 is used as the authentication method, and that Windows logon credentials are used automatically when connecting with the VPN connection profile.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: VerifyServerIdentity
+  description: |+
+    Indicates that server identity validation is performed for the VPN connection.
+    This parameter is used with PEAP, and EAP-TLS with tunneled EAP client authentication.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: VpnClient.New-EapConfiguration
+name: New-EapConfiguration
+description: |-
+  The **New-EapConfiguration** cmdlet creates an XML file with the specified EAP configuration.
+  You use this cmdlet to create the EAP XML configuration file for EAP authentication that is then used by the Set-VpnConnection cmdlet or the Add-VpnConnection cmdlet.
+  If errors happen during the generation of the XML file, the error information is returned.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_EapConfiguration_v1.0.0.cdxml-help.xml
+  Module Name: VpnClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/vpnclient/new-eapconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-EapConfiguration

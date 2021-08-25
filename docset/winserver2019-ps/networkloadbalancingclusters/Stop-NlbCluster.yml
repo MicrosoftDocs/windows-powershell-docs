@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops all nodes of a NLB cluster.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NlbCluster
+  href: ./Get-NlbCluster.yml
+- text: New-NlbCluster
+  href: ./New-NlbCluster.yml
+- text: Remove-NlbCluster
+  href: ./Remove-NlbCluster.yml
+- text: Resume-NlbCluster
+  href: ./Resume-NlbCluster.yml
+- text: Set-NlbCluster
+  href: ./Set-NlbCluster.yml
+- text: Start-NlbCluster
+  href: ./Start-NlbCluster.yml
+- text: Suspend-NlbCluster
+  href: ./Suspend-NlbCluster.yml
+syntaxes:
+- >-
+  Stop-NlbCluster [-Drain] [-Timeout <UInt32>] [[-HostName] <String>] [[-InterfaceName] <String>]
+
+   [<CommonParameters>]
+- Stop-NlbCluster -InputObject <Cluster[]> [-Drain] [-Timeout <UInt32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Stop all cluster nodes on the local cluster'
+  code: |-
+    PS C:\>Stop-NlbCluster
+    Name                IPAddress           SubnetMask          Mode 
+    ----                ---------           ----------          ---- 
+    cluster1            3.53.100.100        255.0.0.0           UNICAST
+  description: |-
+    This example stops all cluster nodes on the local cluster.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Drain
+  description: |+
+    Indicates that the cmdlet drains existing traffic before stopping the cluster.
+    If this parameter is omitted, then the existing traffic is dropped.
+
+  defaultValue: None
+  position: Named
+  aliases: D
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: "0"
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="Cluster" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the cluster to stop.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: "1"
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Timeout
+  description: |+
+    Specifies the number of minutes to wait for the drain operation before stopping the cluster.
+    After the time expires, the existing connections are dropped.
+
+  defaultValue: None
+  position: Named
+  aliases: T
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Stop-NlbCluster
+name: Stop-NlbCluster
+description: |-
+  The **Stop-NlbCluster** cmdlet stops all nodes in a Network Load Balancing (NLB) cluster.
+  The cmdlet stops the NLB service on the host and all existing connections will be lost.
+  To avoid interrupting active connections, use the *Drain* parameter which allows the host to continue servicing active connections, but disables all new traffic to that host.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/stop-nlbcluster?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-NlbCluster

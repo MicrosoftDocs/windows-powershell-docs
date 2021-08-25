@@ -1,0 +1,190 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports the DHCP server service configuration and lease data.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Backup-DhcpServer
+  href: ./Backup-DhcpServer.yml
+- text: Import-DhcpServer
+  href: ./Import-DhcpServer.yml
+- text: Restore-DhcpServer
+  href: ./Restore-DhcpServer.yml
+syntaxes:
+- >-
+  Export-DhcpServer [-File] <String> [-ScopeId <IPAddress[]>] [-Prefix <IPAddress[]>] [-Leases] [-Force]
+
+   [-ComputerName <String>] [-CimSession <CimSession>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Export all DHCP configurations'
+  code: |-
+    PS C:\> Export-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exportdir\dhcpexport.xml"
+  description: |-
+    This example exports all of the DHCP server, DHCPv4 and DHCPv6, configurations including scopes present on the DHCP server service to the specified export file in XML file format.
+  summary: ""
+- title: 'Example 2: Export the specified scopes'
+  code: |-
+    PS C:\> Export-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exportdir\dhcpexport.xml" -ScopeId 10.10.10.0,10.20.20.0
+  description: |-
+    This example exports the scopes 10.10.10.0 and 10.20.20.0 present on the DHCP server service to the specified export file in XML file format.
+    The DHCPv4 server level configuration is also exported to the specified file.
+  summary: ""
+- title: 'Example 3: Export specified scopes and their leases'
+  code: |-
+    PS C:\> Export-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exportdir\dhcpexport.xml" -ScopeId 10.10.10.0,10.20.20.0 -Leases
+  description: |-
+    This example exports the scopes 10.10.10.0 and 10.20.20.0 present on the DHCP server service to the specified export file in XML file format.
+    This includes the leases present in the specified scopes.
+    The DHCPv4 server level configuration will also be exported to the specified file.
+  summary: ""
+- title: 'Example 4: Export the specified scopes and DHCPv6 server level configuration'
+  code: |-
+    PS C:\> Export-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exportdir\dhcpexport.xml" -Prefix 2001:4898:7020:1020::,2001:4898:7020:1030::
+  description: |-
+    This example exports the specified scopes 2001:4898:7020:1020:: and 2001:4898:7020:1030:: present on the DHCP server service to the specified export file in XML file format.
+    The DHCPv6 server level configuration is also exported to the specified file.
+  summary: ""
+- title: 'Example 5: Export the specified scopes, their leases, and DHCPv6 server level configuration'
+  code: |-
+    PS C:\> Export-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exportdir\dhcpexport.xml" -Prefix 2001:4898:7020:1020::,2001:4898:7020:1030:: -Leases
+  description: |-
+    This example exports the specified scopes 2001:4898:7020:1020:: and 2001:4898:7020:1030:: present on the DHCP server service to the specified export file in XML file format.
+    This includes the leases present in the specified scopes.
+    The DHCP server level configuration is also exported to the specified file.
+  summary: ""
+- title: 'Example 6: Export scopes specified in a file'
+  code: |-
+    PS C:\> Import-Csv -Path "ScopeList.txt" | Export-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exportdir\dhcpexport.xml" -Leases
+  description: |-
+    This example exports a list of scopes specified in file named ScopeList.txt to the specified export file in XML file format.
+    The **Import-Csv** cmdlet returns the objects that contain the scope IDs output and pipes the objects into this cmdlet, which exports the specified scopes.
+
+    The file named ScopeList.txt should contain the following format: 
+
+    ScopeId 
+
+    10.10.10.0 
+
+    20.20.20.0 
+
+    30.30.30.0
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: File
+  isRequired: true
+  description: |+
+    Specifies the name of the file to which the data will be exported.
+    If the complete file path is not specified, the file is created in the current working directory.
+    If there is an existing file by the same name, an error is returned.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies that, if there is a file that already exists with the specified name, the file is overwritten.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Leases
+  description: |+
+    Specifies that IP address leases is also exported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Prefix
+  description: |+
+    Specifies one or more subnet prefixes of the IPv6 scopes which are exported.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ScopeId
+  description: |+
+    Specifies the scope identifiers, in IPv4 address format, which are exported.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Export-DhcpServer
+name: Export-DhcpServer
+description: |-
+  The **Export-DhcpServer** cmdlet exports the Dynamic Host Configuration Protocol (DHCP) server service configuration, and optionally lease data, to the specified file.
+
+  If you specify the *ScopeId* or *Prefix* parameter,only the specified scopes or prefixes and all server level settings are exported.
+
+  If you specify neither *ScopeId* or *Prefix*, the DHCP server service configuration including all scopes, v4 and v6 and optionally the lease data, is exported.
+
+  If you specify the *Leases* parameter, the lease data is also exported in addition to configuration data.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DhcpServerMigration-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/export-dhcpserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-DhcpServer

@@ -1,0 +1,189 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a file screen.
+module: FileServerResourceManager
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMFileScreen" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-FsrmFileGroup
+  href: ./Get-FsrmFileGroup.yml
+- text: Get-FsrmFileScreen
+  href: ./Get-FsrmFileScreen.yml
+- text: New-FsrmFmjNotificationAction
+  href: ./New-FsrmFmjNotificationAction.yml
+- text: Remove-FsrmFileScreen
+  href: ./Remove-FsrmFileScreen.yml
+- text: Reset-FsrmFileScreen
+  href: ./Reset-FsrmFileScreen.yml
+- text: Set-FsrmFileScreen
+  href: ./Set-FsrmFileScreen.yml
+syntaxes:
+- >-
+  New-FsrmFileScreen [-Path] <String> [-Description <String>] [-IncludeGroup <String[]>] [-Active]
+
+   [-Template <String>] [-Notification <CimInstance[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a passive file screen'
+  code: |-
+    PS C:\> New-FsrmFileScreen -Path "C:\Shares" -Description "Filter Non-HTML text files" -IncludeGroup "Non-HTML text files" -Active:$false
+  description: |-
+    This command creates a passive file screen on C:\Shares that logs any files that match the "Non-HTML text files" file group.
+    The file screen template is passive because the command specifies the `-Active:$false` parameter.
+    This means that users can create non-HTML text files.
+  summary: ""
+- title: 'Example 2: Create an active file screen'
+  code: |-
+    PS C:\> $Notification = New-FsrmAction -Type Email -MailTo "[Admin Email];[File Owner]" -Subject "Warning: attempted to create a non-HTML text file" -Body "You attempted to create a non-HTML text file. This is not allowed." -RunLimitInterval 120
+    PS C:\> New-FsrmFileScreen -Path "C:\Shares\Ctrshare03" -IncludeGroup "Non-HTML text files" -Notification $Notification -Active
+  description: |-
+    The first command creates a File Server Resource Manager (FSRM) action object and stores the results in the $Notification variable.
+    The action sends an email notification to the file owner and administrator.
+    The **RunLimitInterval** parameter specifies an interval of 2 minutes before the server can send the email notification again.
+
+    This second command creates an active file screen on `C:\Shares\Ctrshare03` that restricts any files that match the "Non-HTML text files" file group.
+    When a user attempts to create a non-HTML text file, the file screen performs the notification action stored in the `$Notification` variable.
+  summary: ""
+- title: 'Example 3: Create a file screen from a file screen template'
+  code: |-
+    PS C:\> New-FsrmFileScreen -Path "C:\shares\ctrshare03" -Template "Block Image Files"
+  description: |-
+    This command creates a file screen on `C:\shares\ctrshare03` based on the settings in the "Block Image Files" template.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Active
+  description: |+
+    Indicates that the server will fail any I/O operation that violates the file screen. It is enabled by default.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the file screen.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IncludeGroup
+  description: |+
+    Specifies an array of names of file groups.
+    The file groups contain the file name patterns that the server uses to specify the files that are blocked by this screen.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Notification
+  description: |+
+    Specifies an array of notification action objects.
+    You can use the **New-FsrmFmjNotificationAction** cmdlet to create a **FsrmFmjNotificationAction** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a valid local path to a folder.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Template
+  description: |+
+    Specifies a file screen template on the server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FileServerResourceManager.New-FsrmFileScreen
+name: New-FsrmFileScreen
+description: |-
+  The **New-FsrmFileScreen** cmdlet creates a file screen for a path on the server.
+  A file screen blocks users from saving groups of files to a specified folder.
+
+  If you specify the *Active* parameter, the file screen prevents users from saving files that are members of blocked file groups, and generates notifications when users try to save blocked files.
+  The file screen does not prevent users and applications from accessing files that were saved to the path before the file screen was created, regardless of whether the files are members of blocked file groups.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: FsrmFileScreen.cdxml-help.xml
+  Module Name: FileServerResourceManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/new-fsrmfilescreen?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-FsrmFileScreen

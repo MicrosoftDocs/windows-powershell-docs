@@ -1,0 +1,135 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports a TUD from a file in AD RMS or specifies to trust Microsoft account IDs.
+module: ADRMSAdmin
+notes: ""
+outputs:
+- name: <xref href="Microsoft.RightsManagementServices.PowerShell.TrustedUserDomainImportedItem" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Export-RmsTUD
+  href: ./Export-RmsTUD.yml
+syntaxes:
+- >-
+  Import-RmsTUD [-DisplayName] <String> [-SourceFile] <String> [-TrustADFederatedUser] [-PassThru]
+
+   [-Path] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Import-RmsTUD [-WindowsLiveId] [-PassThru] [-Path] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Import a TUD and assign it a name'
+  code: |-
+    PS C:\> Import-TUD -Path "." -DisplayName "Fabrikam" -SourceFile "c:\transfer\fabrikam.xml"
+  description: |-
+    This command imports the TUD information stored in the specified file and assigns the name Fabrikam to the TUD.
+  summary: ""
+- title: 'Example 2: Configure a TUD to trust Microsoft account IDs'
+  code: |-
+    PS C:\> Import-RmsTUD -Path "." -WindowsLiveId
+  description: |-
+    This command configures the AD RMS cluster to trust Microsoft account IDs.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Specifies the name that will be used to identify the domain being imported.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a provider drive and path or relative path on the current drive.
+    This parameter is required.
+    Use a dot (.) to specify the current location.
+    This parameter does not accept wildcards and has no default value.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceFile
+  isRequired: true
+  description: |+
+    Specifies the path to the file that contains the domain information to import.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TrustADFederatedUser
+  description: |+
+    Specifies to trust Active Directory Federation Services (ADFS) users.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WindowsLiveId
+  isRequired: true
+  description: |+
+    Indicates to trust Microsoft account IDs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADRMSAdmin.Import-RmsTUD
+name: Import-RmsTUD
+description: |-
+  The **Import-RmsTUD** cmdlet imports an enterprise trusted user domain (TUD) from a file in Active Directory Rights Management Services (AD RMS) or it specifies to trust a Microsoft account ID.
+
+  To perform the import of enterprise TUDs, specify the *DisplayName* and *SourceFile* parameters and set the *Path* parameter to the AD RMS provider drive folder `<PSDrive>:\TrustPolicy\TrustedUserDomain` where `<PSDrive>` is the provider drive ID.
+
+  To trust a Microsoft account ID, specify the *WindowsLiveID* parameter, and set the *Path* parameter to the AD RMS provider drive folder `<PSDrive>:\TrustPolicy\TrustedUserDomain`.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adrmsadmin/import-rmstud?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-RmsTUD

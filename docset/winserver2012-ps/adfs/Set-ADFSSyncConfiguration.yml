@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the configuration properties of the database synchronization engine for the federation server farm.
+module: ADFS
+notes: |-
+  * This cmdlet is for use when working with server computers as part of a federation server farm.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ADFSSyncConfiguration
+  href: ./Get-ADFSSyncConfiguration.yml
+syntaxes:
+- >-
+  Set-ADFSSyncConfiguration [-PrimaryComputerName <String>] [-PrimaryComputerPort <Int32>]
+
+   [-PollDuration <Int32>] [-Role <String>] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    PS C:\>Set-ADFSSyncConfiguration -PrimaryComputerName fs1.fabrikam.com
+  description: |-
+    Sets the name of the primary federation server in a federation server farm.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PollDuration
+  description: |+
+    Specifies (in seconds) how often the AD FS configuration database is synchronized from the primary federation server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrimaryComputerName
+  description: |+
+    Specifies the name of the primary federation server in the federation server farm.
+    Settings for the Federation Service may be modified on the primary federation server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PrimaryComputerPort
+  description: |+
+    Specifies the TCP port to use on the primary computer in the federation service farm.
+    Settings for the federation service may be modified on the primary computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Role
+  description: |+
+    Specifies whether this federation server is the primary federation server or a secondary federation server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Set-ADFSSyncConfiguration
+name: Set-ADFSSyncConfiguration
+description: |-
+  The Set-ADFSSyncConfiguration cmdlet changes the frequency of AD FS configuration database synchronization.
+  It also specifies which federation server is the primary federation server in the federation server farm
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfssyncconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

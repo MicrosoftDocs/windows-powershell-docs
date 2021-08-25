@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies access for user groups.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Set-WssUserAccess
+  href: ./Set-WssUserAccess.yml
+syntaxes:
+- >-
+  Set-WssUserGroupAccess -Name <String> [-GrantAccess <WSSGroupType>] [-RevokeAccess <WSSGroupType>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Grant ShareAccess to a group'
+  code: |-
+    PS C:\> Set-WssUserGroupAccess -Name "HRGroup" -GrantAccess 2
+  description: |-
+    This command grants ShareAccess to the group named HRGroup.
+    The **GrantAccess** parameter specifies a value of 2, which corresponds to ShareAccess.
+  summary: ""
+parameters:
+- type: <xref href="WSSGroupType" data-throw-if-not-resolved="False" />
+  name: GrantAccess
+  description: |+
+    Specifies the access to grant.
+    The cmdlet grants the access that you specify to users in the user group.
+    To grant more than one type of access, run the cmdlet for each type to grant.
+    The acceptable values for this parameter are:
+
+
+    - 1 RemoteAccess
+
+    - 2 ShareAccess
+
+    - 3 ComputerAccess
+
+    - 4 MediaAccess
+
+    - 6 DashboardAccess
+
+    - 7 HomePageLinks
+
+    - 9 VpnAccess
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: InvalidAccess, RemoteAccess, ShareAccess, ComputerAccess, MediaAccess, AddInAccess, DashboardAccess, HomePageLinks, NetworkAlertAccess, VpnAccess, InvisibleToDashboard
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name.
+    The cmdlet modifies access for the group that you specify by name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WSSGroupType" data-throw-if-not-resolved="False" />
+  name: RevokeAccess
+  description: |+
+    Specifies the access to revoke.
+    The cmdlet revokes the access that you specify to users in the user group.
+    To revoke more than one type of access, use the cmdlet for each type to revoke.
+    The acceptable values for this parameter are:
+
+
+    - 1 RemoteAccess
+
+    - 2 ShareAccess
+
+    - 3 ComputerAccess
+
+    - 4 MediaAccess
+
+    - 6 DashboardAccess
+
+    - 7 HomePageLinks
+
+    - 9 VpnAccess
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: InvalidAccess, RemoteAccess, ShareAccess, ComputerAccess, MediaAccess, AddInAccess, DashboardAccess, HomePageLinks, NetworkAlertAccess, VpnAccess, InvisibleToDashboard
+uid: WSSCmdlets.Set-WssUserGroupAccess
+name: Set-WssUserGroupAccess
+description: |-
+  The **Set-WssUserGroupAccess** cmdlet modifies access for user groups.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssusergroupaccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssUserGroupAccess

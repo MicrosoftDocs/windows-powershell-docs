@@ -1,0 +1,299 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an IPv4 scope on the DHCP server service.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DhcpServerv4Scope
+  href: ./Get-DhcpServerv4Scope.yml
+- text: Get-DhcpServerv4ScopeStatistics
+  href: ./Get-DhcpServerv4ScopeStatistics.yml
+- text: Remove-DhcpServerv4Scope
+  href: ./Remove-DhcpServerv4Scope.yml
+- text: Set-DhcpServerv4Scope
+  href: ./Set-DhcpServerv4Scope.yml
+syntaxes:
+- >-
+  Add-DhcpServerv4Scope [-ComputerName <String>] [-StartRange] <IPAddress> [-EndRange] <IPAddress>
+
+   [-Name] <String> [-Description <String>] [-State <String>] [-SuperscopeName <String>]
+
+   [-MaxBootpClients <UInt32>] [-ActivatePolicies <Boolean>] [-PassThru] [-NapEnable] [-NapProfile <String>]
+
+   [-Delay <UInt16>] [-LeaseDuration <TimeSpan>] [-SubnetMask] <IPAddress> [-Type <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a new scope for a subnet'
+  code: |-
+    PS C:\> Add-DhcpServerv4Scope -Name "Lab-4 Network" -StartRange 10.10.10.1 -EndRange 10.10.10.254 -SubnetMask 255.255.255.0
+  description: |-
+    This example adds a new scope for 10.10.10.0/24 subnet on the DHCP server service that runs on the local computer.
+  summary: ""
+- title: 'Example 2: Add a new scope for a subnet enabled for NAP'
+  code: |-
+    PS C:\> Add-DhcpServerv4Scope -ComputerName dhcpserver.contoso.com -Name "Lab-5 Network" -StartRange 10.20.20.1 -EndRange 10.20.20.254 -SubnetMask 255.255.255.0 -State InActive -NapEnable
+  description: |-
+    This example adds the specified inactive scope for 20.20.20.0/24 subnet on the DHCP server service.
+    The scope is enabled for NAP.
+  summary: ""
+- title: 'Example 3: Add a new scope for a subnet as part of a superscope'
+  code: |-
+    PS C:\> Add-DhcpServerv4Scope -Name "Lab-6 Network" -StartRange 10.30.30.1 -EndRange 10.30.30.254 -SubnetMask 255.255.255.0 -SuperScope "Expanded Lab-6 Network"
+  description: |-
+    This example adds a new scope for 10.30.30.0/24 subnet on the DHCP server service that runs on the local computer.
+    The scope is added as part of the superscope named Expanded Lab-6 Network.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ActivatePolicies
+  description: |+
+    Specifies the enabled state of the policy enforcement on the scope that is added.
+
+  defaultValue: "True"
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: Delay
+  description: |+
+    Specifies the number of milliseconds by which the DHCP server service should wait before responding to the client requests.
+    Specify this parameter if the scope is part of a split scope deployment and this DHCP server service should act as a secondary DHCP server service for the scope being added.
+
+  defaultValue: "0"
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description string for the IPv4 scope that is added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: EndRange
+  isRequired: true
+  description: |+
+    Specifies the ending IP address of the range in the subnet from which IP addresses should be leased by the DHCP server service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: LeaseDuration
+  description: |+
+    Specifies the time interval for which an IP address should be leased to a client in this scope.
+    This should be specified in the format `day.hrs:mins:secs`.
+
+  defaultValue: 8.00:00:00
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxBootpClients
+  description: |+
+    Specifies, if the scope type is specified as Both to allow for both DHCP and BootP clients, the maximum number of BootP clients which should be leased an IP address from this scope.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the IPv4 scope that is added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NapEnable
+  description: |+
+    Specifies the enabled state of Network Access Protection (NAP) for this scope.
+    If NAP is enabled, then the DHCP server service passes the statement of health (SoH) received from the client to the network policy server (NPS).
+    Based on the NAP profile set, the NPS determines the network access to grant to the client.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NapProfile
+  description: |+
+    Specifies that the NAP profile should be set only if NAP is enabled on the scope.
+    The NAP profile refers to the MS Service Class which is a condition used in network policies on NPS.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: StartRange
+  isRequired: true
+  description: |+
+    Specifies the starting IP address of the range in the subnet from which IP addresses should be leased by the DHCP server service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    Specifies the state of the scope when it is created.
+    The acceptable values for this parameter are: Active and Inactive.
+    Only an active scope responds to client requests.
+    The default value is Active.
+
+  defaultValue: Active
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Active, InActive
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: SubnetMask
+  isRequired: true
+  description: |+
+    Specifies the subnet mask for the scope specified in IP address format.
+    For example: `255.255.255.0`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SuperscopeName
+  description: |+
+    Specifies the name of the superscope to which the scope is added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the type of clients to be serviced by the scope.
+    The acceptable values for this parameter are: DHCP, BootP, or Both.
+    The type of the scope determines whether the DHCP server service responds to only DHCP client requests, only BootP client requests, or Both types of clients.
+
+  defaultValue: DHCP
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Dhcp, Bootp, Both
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Add-DhcpServerv4Scope
+name: Add-DhcpServerv4Scope
+description: |-
+  The **Add-DhcpServerv4Scope** cmdlet adds an IPv4 scope on the Dynamic Host Configuration Protocol (DHCP) server service that has the specified parameters.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerV4Scope_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/add-dhcpserverv4scope?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DhcpServerv4Scope

@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new SAML protocol endpoint object.
+module: ADFS
+notes: |-
+  * You can associate this object with a relying party trust or claims provider trust by using the corresponding cmdlets.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.SamlEndpoint" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure that represents a SAML endpoint resource object.
+links:
+- text: Get-ADFSClaimsProviderTrust
+  href: ./Get-ADFSClaimsProviderTrust.yml
+- text: Get-ADFSRelyingPartyTrust
+  href: ./Get-ADFSRelyingPartyTrust.yml
+- text: Set-ADFSClaimsProviderTrust
+  href: ./Set-ADFSClaimsProviderTrust.yml
+- text: Set-ADFSRelyingPartyTrust
+  href: ./Set-ADFSRelyingPartyTrust.yml
+- text: Update-ADFSClaimsProviderTrust
+  href: ./Update-ADFSClaimsProviderTrust.yml
+- text: Update-ADFSRelyingPartyTrust
+  href: ./Update-ADFSRelyingPartyTrust.yml
+syntaxes:
+- >-
+  New-ADFSSamlEndpoint -Binding <String> -Protocol <String> -Uri <Uri> [-IsDefault <Boolean>] [-Index <Int32>]
+
+   [-ResponseUri <Uri>] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>$ep = New-ADFSSamlEndpoint -Binding "POST" -Protocol "SAMLAssertionConsumer" -Uri "https://fabrikam.com/saml/ac"
+    Set-ADFSRelyingPartyTrust -Name "My application" -SamlEndpoint $ep
+  description: |-
+    Description
+
+    -----------
+
+    Creates a new SAML endpoint and assigns it to a relying party trust named "My application".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Binding
+  isRequired: true
+  description: |+
+    Specifies the binding type of the endpoint.
+    The possible binding types are POST, SOAP, Artifact, and Redirect.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Artifact, POST, Redirect, SOAP
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Index
+  description: |+
+    Specifies the index that is defined for this endpoint.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsDefault
+  description: |+
+    Specifies that this is a default endpoint for the particular protocol type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  isRequired: true
+  description: |+
+    Specifies the type of service at the endpoint.
+    The possible values are SAMLSingleSignOn, SAMLArtifactResolution, SAMLLogout, and SAMLAssertionConsumer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SAMLArtifactResolution, SAMLAssertionConsumer, SAMLLogout, SAMLSingleSignOn
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ResponseUri
+  description: |+
+    Specifies the response URI for the endpoint.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Uri
+  isRequired: true
+  description: |+
+    Specifies the URI of this endpoint.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.New-ADFSSamlEndpoint
+name: New-ADFSSamlEndpoint
+description: |-
+  The New-ADFSSamlEndpoint cmdlet creates a new SAML protocol endpoint object.
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/new-adfssamlendpoint?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

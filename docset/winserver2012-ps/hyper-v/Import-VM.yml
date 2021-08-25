@@ -1,0 +1,229 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports a virtual machine from a file.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+outputs:
+- name: <xref href="Microsoft.Virtualization.Powershell.VirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Import-VM [-CompatibilityReport] <VMCompatibilityReport> [-AsJob] [-Confirm] [-WhatIf]
+- >-
+  Import-VM [-Path] <String> [[-VhdDestinationPath] <String>] [-AsJob] [-ComputerName <String[]>]
+
+   [-GenerateNewId] [-SmartPagingFilePath <String>] [-SnapshotFilePath <String>] [-VhdSourcePath <String>]
+
+   [-VirtualMachinePath <String>] [-Copy] [-Confirm] [-WhatIf]
+- Import-VM [-Path] <String> [-AsJob] [-ComputerName <String[]>] [-Register] [-Confirm] [-WhatIf]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Import-VM -Path 'D:\Test\VirtualMachines\5AE40946-3A98-428E-8C83-081A3C6BD18C.XML'
+  description: |-
+    Imports the virtual machine from its configuration file.
+    The virtual machine is registered in-place, so its files are not copied.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Import-VM -Path 'D:\Test2\Virtual Machines\8F148B6D-C674-413E-9FCC-4FBED185C52D.XML' -Copy -GenerateNewId
+  description: |-
+    Imports the virtual machine by copying its files to the default virtual machine and virtual hard drive storage locations of the Hyper-V host.
+    The imported virtual machine will be given a new unique identifier, not the one in the configuration file.
+    This is useful when you want to import multiple copies of a virtual machine, since each virtual machine must have a unique identifier.
+  summary: ""
+- title: Example 3
+  code: |-
+    Attempts import of a virtual machine; the attempt fails due to incompatibilities with the Hyper-V host.
+    PS C:\>Import-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML'
+    Import-VM : Unable to import virtual machine due to configuration errors.  Please use Compare-VM to repair the virtual machine.
+    At line:1 char:1
+    + import-vm -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XM ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        + CategoryInfo          : NotSpecified: (:) [Import-VM], VirtualizationOperationFailedException
+        + FullyQualifiedErrorId : Microsoft.HyperV.PowerShell.Commands.ImportVMCommand 
+
+    Gets a compatibility report that describes the attempted import and lists the virtual machine's incompatibilities with the Hyper-V host.
+    PS C:\>$report = Compare-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML'
+
+
+    Displays the compatibility report, revealing that the virtual network adapter was connected to switch Production. The Hyper-V host has no switch by that name.
+    PS C:\>$report.Incompatibilities | Format-Table -AutoSize
+    Message                                      MessageId Source
+    -------                                      --------- ------
+    Could not find Ethernet switch 'Production'.     33012 Microsoft.HyperV.PowerShell.VMNetworkAdapter 
+
+    Disconnects the virtual network adapter.
+    PS C:\>$report.Incompatibilities[0].Source | Disconnect-VMNetworkAdapter
+
+
+    Generates a new compatibility report to determine if the virtual machine is compatible with the Hyper-V host.
+    PS C:\>Compare-VM -CompatibilityReport $report
+
+
+    Displays the compatibility report.
+    PS C:\>$report
+    VM                 : Microsoft.HyperV.PowerShell.VirtualMachine
+    OperationType      : ImportVirtualMachine
+    Destination        : HYPER-V-1
+    Path               : D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML
+    SnapshotPath       : D:\vm1\Snapshots
+    VhdDestinationPath :
+    VhdSourcePath      :
+    Incompatibilities  :
+
+    Imports the virtual machine.
+    PS C:\>import-vm -CompatibilityReport $report
+    Name State CPUUsage(%) MemoryAssigned(M) MemoryDemand(M) MemoryStatus Uptime   Status             ReplicationState
+    ---- ----- ----------- ----------------- --------------- ------------ ------   ------             ----------------
+    VM1  Off   0           0                 0                            00:00:00 Operating normally Disabled
+  description: |-
+    Imports a virtual machine whose configuration is not compatible with the Hyper-V host.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Specifies that the cmdlet is to be run as a background job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMCompatibilityReport" data-throw-if-not-resolved="False" />
+  name: CompatibilityReport
+  isRequired: true
+  description: |+
+    Specifies a compatibility report which resolves any incompatibilities between the virtual machine and the Hyper-V host.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which the virtual machine is to be imported.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Copy
+  isRequired: true
+  description: |+
+    Specifies that the imported virtual machine's files should be copied to the server's default locations, as opposed to registering the virtual machine in-place.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GenerateNewId
+  description: |+
+    Specifies that the imported virtual machine should be copied and given a new unique identifier.
+    (By default, **Import-VM** gives the new virtual machine the same unique identifier as the imported virtual machine.)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path to the exported virtual machine to be imported.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Register
+  description: |+
+    Specifies that the imported virtual machine is to be registered in-place, as oppsed to copying its files to the server's default locations.
+    Choose this option if the virtual machines files are already in the location from which they are to run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SmartPagingFilePath
+  description: |+
+    Specifies the new path to use for a smart paging file, if one is needed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SnapshotFilePath
+  description: |+
+    Specifies the path for any snapshot files associated with the virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VhdDestinationPath
+  description: |+
+    Specifies the folder to which the virtual machine's VHD files are to be copied.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VhdSourcePath
+  description: |+
+    Specifies the folder from which the virtual machine's VHD files are to be copied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualMachinePath
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Import-VM
+name: Import-VM
+description: |-
+  The **Import-VM** cmdlet imports a virtual machine from a file.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/import-vm?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

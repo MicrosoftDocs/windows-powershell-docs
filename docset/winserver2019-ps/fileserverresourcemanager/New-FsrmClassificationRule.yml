@@ -1,0 +1,263 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an automatic classification rule.
+module: FileServerResourceManager
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMClassificationRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-FsrmClassificationPropertyDefinition
+  href: ./Get-FsrmClassificationPropertyDefinition.yml
+- text: Get-FsrmClassificationRule
+  href: ./Get-FsrmClassificationRule.yml
+- text: Remove-FsrmClassificationRule
+  href: ./Remove-FsrmClassificationRule.yml
+- text: Set-FsrmClassificationRule
+  href: ./Set-FsrmClassificationRule.yml
+syntaxes:
+- >-
+  New-FsrmClassificationRule [-Name] <String> [-Description <String>] -Property <String>
+
+   [-PropertyValue <String>] -Namespace <String[]> [-Disabled] [-ReevaluateProperty <RuleReevaluatePropertyEnum>]
+
+   [-Flags <RuleFlagsEnum[]>] [-ContentRegularExpression <String[]>] [-ContentString <String[]>]
+
+   [-ContentStringCaseSensitive <String[]>] -ClassificationMechanism <String> [-Parameters <String[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a classification rule'
+  code: |-
+    PS C:\> New-FsrmClassificationRule -Name "Find confidential files" -Namespace @("C:\shares\CtrShare03") -Property "Impact" -PropertyValue "High" -ClassificationMechanism "Content Classifier" -ContentString "Confidential"
+  description: |-
+    This command creates a classification rule that marks any files as Impact=High if the files contain the word Confidential and the files do not already have an Impact property.
+  summary: ""
+- title: 'Example 2: Create a classification rule and overwrite the property value'
+  code: |-
+    PS C:\> New-FsrmClassificationRule -Name "Find confidential files" -Namespace @("C:\shares\CtrShare03") -Property "Impact" -PropertyValue "High" -ClassificationMechanism "Content Classifier" -ContentString "confidential" -ReevaluateProperty Overwrite
+  description: |-
+    This command creates a classification rule that marks any files as Impact=High if they contain the word Confidential, and overwrites any existing Impact property value.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClassificationMechanism
+  isRequired: true
+  description: |+
+    Specifies the name of a valid classification mechanism available on the server for assigning the property value.
+
+    The classification mechanisms are provided by a series of plug-ins that are included with Windows Server® 2012 or produced by you or an ISV.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ContentRegularExpression
+  description: |+
+    Specifies an array of regular expressions for pattern matching.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ContentString
+  description: |+
+    Specifies an array of strings for the content classifier to search for.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ContentStringCaseSensitive
+  description: |+
+    Specifies an array of case sensitive strings for the content classifier to search for.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the classification rule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disabled
+  description: |+
+    Indicates that the classification rule is disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RuleFlagsEnum" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Flags
+  description: |+
+    Specifies an array of flags that defines the possible states of the rule.
+    The acceptable values for this parameter are:
+
+    - ClearAutomaticallyClassifiedProperty.
+    Integer value 1024.
+    - ClearManuallyClassifiedProperty.
+    Integer value 2048.
+    - Deprecated.
+    Integer value 4096.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ClearAutomaticallyClassifiedProperty, ClearManuallyClassifiedProperty, Deprecated
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the classification rule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Namespace
+  isRequired: true
+  description: |+
+    Specifies an array of namespaces where the rule is applied.
+    Each value must be either a value of the FolderType property defined on the server (using the format "\[Folder type property name=\<value\>\]") or a static path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Parameters
+  description: |+
+    Specifies an array of strings using the format \<name\>=\<value\>.
+    The File Classification Infrastructure and other management tools use these parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Property
+  isRequired: true
+  description: |+
+    Specifies the name of a classification property definition to set.
+    Specify the value of the Name property in a **FsrmClassificationPropertyDefinition** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PropertyValue
+  description: |+
+    Specifies the property value that the rule will assign.
+    The property value that you set must be an valid value supported by the classification mechanism that you specify in the *ClassificationMechanism* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RuleReevaluatePropertyEnum" data-throw-if-not-resolved="False" />
+  name: ReevaluateProperty
+  description: |+
+    Specifies the evaluation policy of the rule.
+    The acceptable values for this parameter are:
+
+    - Never: Assign values to properties only if that property does not already have a value for the file.
+    - Overwrite: Reclassify files when the files change and overwrite this property.
+    - Aggregate: Reclassify files when the files change and aggregate the new value for the property with the existing value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Never, Aggregate, Overwrite
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FileServerResourceManager.New-FsrmClassificationRule
+name: New-FsrmClassificationRule
+description: |-
+  The **New-FsrmClassificationRule** cmdlet creates an automatic classification rule on the server.
+  Each rule sets the value for a single property.
+  By default, a rule runs only once and ignores files that already have a property value assigned.
+  However, you can configure a rule to evaluate files regardless of whether a value is already assigned to the property.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: FSRMClassificationRule.cdxml-help.xml
+  Module Name: FileServerResourceManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/new-fsrmclassificationrule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-FsrmClassificationRule

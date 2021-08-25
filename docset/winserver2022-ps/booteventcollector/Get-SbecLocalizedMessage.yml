@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a localized message string.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet gets the text of the localized message.
+syntaxes:
+- Get-SbecLocalizedMessage [-Name] <String> [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the localized message to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Get-SbecLocalizedMessage
+name: Get-SbecLocalizedMessage
+description: |-
+  The **Get-SbecLocalizedMessage** cmdlet gets a localized message string by its name.
+
+  Because message strings for Setup and Boot Event Collector error message are localized, identifying errors returned by Setup and Boot Event Collector commands in the scripts requires that you can identify the meaning of the localized text.
+
+  $PsHome\Modules\BootEventCollector\$PsCulture\BootEventCollectorStrings.psd1 contains the localized strings and their names.
+  Specify the name of the localized message to get it.
+
+  If the name is not known, the cmdlet will throw an error.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/get-sbeclocalizedmessage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-SbecLocalizedMessage

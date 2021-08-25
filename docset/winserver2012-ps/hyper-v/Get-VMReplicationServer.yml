@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the replication and authentication settings of a Replica server.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="VMReplicationServer" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-VMReplicationServer [[-ComputerName] <String[]>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-VMReplicationServer
+  description: |-
+    This example gets the replication configuration of the local Replica server.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-VMReplicationServer server01.domain01.contoso.com
+  description: |-
+    This example gets the replication configuration of a server named server01.domain01.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts for which to retrieve replication and authentication settings.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMReplicationServer
+name: Get-VMReplicationServer
+description: |-
+  The **Get-VMReplicationServer** cmdlet gets the replication and authentication settings of a Replica server.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmreplicationserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a claim description to the Federation Service.
+module: ADFS
+notes: |-
+  * You can use claim descriptions to configure the list of claims that are available to be offered or accepted by AD FS 2.0.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ADFSClaimDescription
+  href: ./Get-ADFSClaimDescription.yml
+- text: Remove-ADFSClaimDescription
+  href: ./Remove-ADFSClaimDescription.yml
+- text: Set-ADFSClaimDescription
+  href: ./Set-ADFSClaimDescription.yml
+syntaxes:
+- >-
+  Add-ADFSClaimDescription -Name <String> -ClaimType <String> [-IsAccepted <Boolean>] [-IsOffered <Boolean>]
+
+   [-IsRequired <Boolean>] [-Notes <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>Add-ADFSClaimDescription -name "Role" -ClaimType "https://fabrikam.com/role"
+  description: |-
+    Description
+
+    -----------
+
+    Adds a new claim description for a custom Role claim.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClaimType
+  isRequired: true
+  description: |+
+    Specifies the claim type URN or URI of the claim. 
+    All claim descriptions must include a valid URN or URI.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsAccepted
+  description: |+
+    Specifies that the claim should be published in federation metadata as a claim that the Federation Service accepts.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsOffered
+  description: |+
+    Specifies that the claim should be published in federation metadata as a claim that the Federation Service offers.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsRequired
+  description: |+
+    Specifies that the claim should be published in federation metadata as a claim that the Federation Service requires.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of this claim.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Specifies any notes for this claim description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Passes an object to the pipeline.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Add-ADFSClaimDescription
+name: Add-ADFSClaimDescription
+description: |-
+  The Add-ADFSClaimDescription cmdlet adds a claim description to the Federation Service.
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/add-adfsclaimdescription?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,149 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a shielding data file.
+module: ShieldedVMDataFile
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Windows.HardenedFabric.Cmdlets.Common.Guardian" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Windows.HardenedFabric.Cmdlets.Common.VolumeIDQualifier[]
+    Microsoft.Windows.HardenedFabric.Cmdlets.Common.NamedFileContent
+    Microsoft.Windows.HardenedFabric.Cmdlets.Common.NamedFileContent[]
+    Microsoft.Windows.HardenedFabric.Cmdlets.Common.Guardian[]
+    Microsoft.Windows.HardenedFabric.Cmdlets.Common.FabricPolicyValue
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-ShieldingDataFile [-ShieldingDataFilePath] <String> [-Owner] <Guardian>
+
+   [-VolumeIDQualifier] <VolumeIDQualifier[]> [-AnswerFile] <NamedFileContent>
+
+   [[-OtherFile] <NamedFileContent[]>] [[-Guardian] <Guardian[]>] [-Policy <FabricPolicyValue>] [-WhatIf]
+
+   [-Confirm]
+- >-
+  New-ShieldingDataFile [-ShieldingDataFilePath] <String> [-Owner] <Guardian> [[-OtherFile] <NamedFileContent[]>]
+
+   [[-Guardian] <Guardian[]>] [-Policy <FabricPolicyValue>] [-WhatIf] [-Confirm]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $owner = Get-HgsGuardian -Name Owner
+    PS C:\> $hoster = Get-HgsGuardian -Name MyHostingProvider
+    PS C:\> $viq = New-VolumeIDQualifier -VolumeSignatureCatalogFilePath 'C:\temp\trustedtemplate.vsc' -VersionRule Equals
+    PS C:\> New-ShieldingDataFile -ShieldingDataFilePath 'C:\temp\shieldingdata.pdk' -Owner $owner -Guardian $hoster -VolumeIDQualifier $viq -AnswerFile 'C:\temp\unattend.xml'
+  description: |-
+    Creates a shielding data file using the "Owner" and "MyHostingProvider" guardians and a single volume ID qualifier representing the trusted template disk.
+  summary: ""
+parameters:
+- type: <xref href="NamedFileContent" data-throw-if-not-resolved="False" />
+  name: AnswerFile
+  isRequired: true
+  description: |+
+    Path to an XML file containing specialization information needed to automatically set up the OS in a shielded VM.
+    For Windows VMs, this file is typically the unattend.xml file.
+    The file varies for Linux distributions based on the specialization agent installed in the template disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: WindowsUnattendFile
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Guardian" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Guardian
+  description: |+
+    One or more HGS guardian objects representing fabrics trusted to run your virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="NamedFileContent" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OtherFile
+  description: |+
+    Additional files (limited to 384KB) that should be encrypted at rest and copied to a provisioned virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guardian" data-throw-if-not-resolved="False" />
+  name: Owner
+  isRequired: true
+  description: |+
+    The guardian object containing the certificates of the VM owner.
+    Only the VM owner can modify the shielding data file in the future.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FabricPolicyValue" data-throw-if-not-resolved="False" />
+  name: Policy
+  description: |+
+    Specifies the security policy for the resulting VM.
+    The EncryptionSupported policy allows all normal VM devices, while the shielded policy adds additional protections to the VM, prevents basic console access and requires live migration traffic to be encrypted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Shielded, EncryptionSupported
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShieldingDataFilePath
+  isRequired: true
+  description: |+
+    Specifies the path where the newly created shielding data file should be saved.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VolumeIDQualifier" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VolumeIDQualifier
+  isRequired: true
+  description: |+
+    One or more **VolumeIDQualifier** objects representing template disks trusted for shielded VM deployment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ShieldedVMDataFile.New-ShieldingDataFile
+name: New-ShieldingDataFile
+description: |-
+  The **New-ShieldingDataFile** cmdlet creates a shielding data file for use in provisioning a shielded virtual machine.
+  The shielding data file contains information about which fabrics the VM can run on, which template disks can be used, the security policy, and files such as the specialization answer file.
+
+  The specialization answer file and any additional files you add to the shielding data file will be encrypted until a shielded VM is provisioned.
+metadata:
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  Module Name: ShieldedVMDataFile
+  online version: https://docs.microsoft.com/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-ShieldingDataFile

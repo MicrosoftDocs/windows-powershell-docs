@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet sets the global settings of the virtual switch from the Network Controller.
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties can be set for the virtual switch configuration:
+    1.
+    Reservation mode for QoS: absolute or Weight
+    2.
+    Link speed percentage
+    3.
+    Default reservation for QoS
+    4.
+    Whether hardware limits are enabled for QoS
+    5.
+    Whether hardware reservations are enabled for QoS
+    6.
+    Whether software reservations are enabled for QoS
+syntaxes:
+- >-
+  Set-NetworkControllerVirtualSwitchConfiguration -ConnectionUri <Uri>
+
+   -Properties <VirtualSwitchManagerProperties> [-CertificateThumbPrint <string>] [-Credential <PSCredential>]
+
+   [-Etag <string>] [-Force] [-ResourceId <string>] [-ResourceMetadata <ResourceMetadata>] [-Tags <psobject>]
+examples:
+- title: Example 1
+  code: |-
+    $Qos=New-Object Microsoft.Windows.NetworkController.VirtualSwitchQosSettings
+    $Qos.ReservationMode="Weight"
+    $vswitchSettings=New-Object Microsoft.Windows.NetworkController.VirtualSwitchManagerProperties
+    $vswitchSettings.QosSettings=$qos
+    Set-NetworkControllerVirtualSwitchConfiguration -ConnectionUri https://networkcontroller -Properties $vswitchSettings
+  description: |-
+    Description
+
+
+
+    This example first creates a resource for QoS settings and sets the reservation mode to "Weight".
+    Then, it sets the virtual switch manager settings with the QoS settings.
+  summary: ""
+parameters:
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: CertificateThumbPrint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+    This thumbprint must also be provided in the ClientCertificateThumbprint parameter in the Install-NetworkController or Set-NetworkController cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.This user must be present in the security group provided in the ClientSecurityGroup parameter in the Install-NetworkController cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="switch" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualSwitchManagerProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Following properties can be set for the virtual switch configuration:
+    1.
+    Reservation mode for QoS: absolute or Weight
+    2.
+    Link speed percentage
+    3.
+    Default reservation for QoS
+    4.
+    Whether hardware limits are enabled for QoS
+    5.
+    Whether hardware reservations are enabled for QoS
+    6.
+    Whether software reservations are enabled for QoS
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  description: |+
+    Specifies the identifier for QoS settings.
+    This is not used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    This parameter contains metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="psobject" data-throw-if-not-resolved="False" />
+  name: Tags
+  description: |+
+    @{Text=}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Set-NetworkControllerVirtualSwitchConfiguration
+name: Set-NetworkControllerVirtualSwitchConfiguration
+description: |-
+  This cmdlet sets the global settings of the virtual switch from the Network Controller.
+  This primarily sets Quality of Service settings for all virtual switches managed by the Network Controller.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/set-networkcontrollervirtualswitchconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetworkControllerVirtualSwitchConfiguration

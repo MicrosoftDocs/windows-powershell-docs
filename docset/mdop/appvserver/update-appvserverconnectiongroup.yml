@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the specified connection group.
+module: AppVServer
+notes: |-
+  * This cmdlet returns an **AppvServerPackageGroup** object that references the updated version of the package group.
+  * You must specify the name of an existing package group. If the group does not exist, the cmdlet returns the following error: The specified package group could not be found on the system.
+  * This cmdlet returns an empty package group with its server version incremented. The version GUID will NOT be incremented until you run the **Set-AppvServerPackageGroup** cmdlet.
+outputs:
+- name: <xref href="AppvServer.AppvServerPackageGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AppvServerConnectionGroup
+  href: ./Get-AppvServerConnectionGroup.yml
+- text: Grant-AppvServerConnectionGroup
+  href: ./Grant-AppvServerConnectionGroup.yml
+- text: New-AppvServerConnectionGroup
+  href: ./New-AppvServerConnectionGroup.yml
+- text: Publish-AppvServerConnectionGroup
+  href: ./Publish-AppvServerConnectionGroup.yml
+- text: Remove-AppvServerConnectionGroup
+  href: ./Remove-AppvServerConnectionGroup.yml
+- text: Set-AppvServerConnectionGroup
+  href: ./Set-AppvServerConnectionGroup.yml
+- text: Unpublish-AppvServerConnectionGroup
+  href: ./Unpublish-AppvServerConnectionGroup.yml
+syntaxes:
+- >-
+  Update-AppvServerConnectionGroup [-AppvServerConnectionGroup] <SerializableConnectionGroup> [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Update-AppvServerConnectionGroup [-Name] <String> [[-Version] <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a group'
+  code: |-
+    PS C:\> Update-AppvServerConnectionGroup -Name "Office" | Set-AppvServerConnectionGroup $Package01 $Package02
+  description: |-
+    This command updates the group named Office, and then sets two packages to be in the group.
+  summary: ""
+- title: 'Example 2: Get an updated version'
+  code: |-
+    PS C:\> $Group = Get-AppvServerPackage -PackageGUID A1232ACFD3EF
+    PS C:\> Update-AppvServerConnectionGroup -Name $Package.Name
+  description: |-
+    This example returns an updated version of $Group.
+    The new version contains no package groups.
+    Note that $Group could contain multiple versions of the package group, but the cmdlet uses the latest version of the package group to create the new version.
+  summary: ""
+- title: 'Example 3: Store an updated version in a variable'
+  code: |-
+    PS C:\> $Group = Get-AppvServerConnectionGroup -Name "Office"
+    PS C:\> $Group02 = $Group.Update()
+  description: |-
+    This example returns an updated version of $Group, and stores it in $Group02.
+    The $Group02 variable contains no packages.
+  summary: ""
+parameters:
+- type: <xref href="SerializableConnectionGroup" data-throw-if-not-resolved="False" />
+  name: AppvServerConnectionGroup
+  isRequired: true
+  description: |+
+    Specifies the package group object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the package group.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Version
+  description: ""
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AppVServer.Update-AppvServerConnectionGroup
+name: Update-AppvServerConnectionGroup
+description: |-
+  The **Update-AppvServerConnectionGroup** cmdlet updates a connection group.
+  This cmdlet increments the version of the package group in the server management console.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: AppVServerCmdlets.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Update-AppvServerConnectionGroup

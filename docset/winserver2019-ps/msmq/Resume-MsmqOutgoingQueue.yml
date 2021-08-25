@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resumes outgoing queues.
+module: MSMQ
+notes: ""
+links:
+- text: Clear-MsmqOutgoingQueue
+  href: ./Clear-MSMQOutgoingQueue.yml
+- text: Get-MsmqOutgoingQueue
+  href: ./Get-MSMQOutgoingQueue.yml
+- text: Suspend-MsmqOutgoingQueue
+  href: ./Suspend-MsmqOutgoingQueue.yml
+syntaxes:
+- Resume-MsmqOutgoingQueue [-InputObject <OutgoingQueue[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Resume outgoing queues specified by name'
+  code: |-
+    PS C:\> Get-MsmqOutgoingQueue -Name "Order*" | Resume-MsmqOutgoingQueue
+  description: |-
+    This command gets the outgoing queues have names that start with the string Order by using the **Get-MsmqOutgoingQueue** cmdlet.
+    The command passes the results to the current cmdlet by using the pipeline operator.
+    The current cmdlet resumes the queues.
+  summary: ""
+parameters:
+- type: <xref href="OutgoingQueue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  description: |+
+    Specifies an array of **MsmqOutgoingQueue** objects.
+    This cmdlet resumes outgoing queues that this parameter specifies.
+    This parameter accepts pipeline input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MSMQ.Resume-MsmqOutgoingQueue
+name: Resume-MsmqOutgoingQueue
+description: |-
+  The **Resume-MsmqOutgoingQueue** cmdlet resumes outgoing queues.
+  Specify queues to resume by using **MsmqOutgoingQueue** objects.
+  The cmdlet returns the resumed **MsmqOutgoingQueue** objects.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/resume-msmqoutgoingqueue?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Resume-MsmqOutgoingQueue

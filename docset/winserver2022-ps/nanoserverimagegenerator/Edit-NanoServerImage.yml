@@ -1,0 +1,501 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a Nano Server installation image.
+module: NanoServerImageGenerator
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NanoServerPackage
+  href: ./Get-NanoServerPackage.yml
+- text: New-NanoServerImage
+  href: ./New-NanoServerImage.yml
+syntaxes:
+- >-
+  Edit-NanoServerImage [[-BasePath] <String>] [-TargetPath] <String> [[-SetupUI] <String[]>]
+
+   [[-Package] <String[]>] [[-ServicingPackagePath] <String[]>] [[-ComputerName] <String>] [[-AdministratorPassword] <SecureString>] [[-UnattendPath] <String>] [[-DomainName] <String>]
+
+   [[-DomainBlobPath] <String>] [[-DriverPath] <String[]>] [[-InterfaceNameOrIndex] <String>]
+
+   [[-Ipv6Address] <String>] [[-Ipv6Dns] <String[]>] [[-Ipv4Address] <String>]
+
+   [[-Ipv4SubnetMask] <String>] [[-Ipv4Gateway] <String>] [[-Ipv4Dns] <String[]>]
+
+   [[-DebugMethod] <String> {Serial | Net | 1394 | USB} [[-DebugBaudRate] <UInt32>]
+
+   [[-DebugBusParams <String>] [[-DebugChannel] <UInt16>] [[-DebugCOMPort] <Byte>]
+
+   [[-DebugKey] <String>] [[-DebugPort] <UInt16>] [[-DebugRemoteIP] <String>]
+
+   [[-DebugTargetName] <String>]] [-EnableEMS] [[-EMSPort] <Byte>] [[-EMSBaudRate] <UInt32>]
+
+   [[-CopyPath] <Object>] [[-SetupCompleteCommand] <String[]>] [[-LogPath] <String>]
+
+   [[-OfflineScriptPath] <String[]>] [[-OfflineScriptArgument] <Hashtable>] [[-Internal] <String>]
+
+   [-Storage] [-Compute] [-Defender] [-Clustering] [-OEMDrivers] [-Containers] [-ReuseDomainNode]
+
+   [-EnableRemoteManagementPort] [-Development] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a Nano Server installation image'
+  code: |-
+    PS C:\> Edit-NanoServerImage -MediaPath D:\ -BasePath .\Base -TargetPath .\NanoServer.vhdx -Compute -ComputerName Nano -DomainName ContosoDomain -AdministratorPassword (ConvertTo-SecureString -String "Passw0rd" -AsPlainText -Force)
+  description: |-
+    This example assumes that you've run the **New-NanoServerImage** cmdlet and specified .\Base as the base path.
+
+    This command edits the existing Nano Server image (NanoServer.vhdx) specified by the TargetPath parameter and the existing Nano Server files in the .\Base folder as specified by the BasePath parameter are reused. The command adds the Compute (Hyper-V) package, sets the computer name to Nano, sets the administrator password to Passw0rd, and performs an offline domain join of the machine to ContosoDomain.
+  summary: ""
+parameters:
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: AdministratorPassword
+  description: |+
+    Specifies the password for the built-in Administrator account for the image. If you do not specify this value on the command line, this cmdlet prompts you for the password.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BasePath
+  description: |+
+    Specifies the path where Nano Server files are copied from the source media. These files are not automatically deleted after running Edit-NanoServerImage or New-NanoServerImage. This enables you to copy the Nano Server files from the source media once with the MediaPath parameter and reuse the same files with the BasePath parameter when running Edit-NanoServerImage or New-NanoServerImage again.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Clustering
+  description: |+
+    Indicates that this operation adds the Clustering package. This package includes Failover Clustering, VM Failover Clustering, Volume Replication Clustering, Storage Spaces Direct (S2D), Storage Quality of Service (QoS), and SMB Witness Service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Compute
+  description: |+
+    Indicates that this operation adds the Compute package. This package includes Hyper-V and NetQoS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name of the image.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Containers
+  description: |+
+    Indicates that this operation adds the Containers package. This package includes host support for Windows Containers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: CopyPath
+  description: |+
+    Specifies one or more files to copy into the target image. This parameter accepts a path to a single file, an array of paths to multiple files, or a hashtable of file paths and target directories where the keys are the file path names and the values are the target directories. For example, @{"C:\mytool.exe"="windows"} will copy mytool.exe from C:\ on the source machine to the windows directory in the target image.
+
+  defaultValue: None
+  position: "21"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DebugBaudRate
+  description: |+
+    Specifies the baud rate to use for kernel debugging. This parameter is only applicable when DebugMethod is Serial. The default rate is 115200 bps.
+
+  defaultValue: "115200"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DebugBusParams
+  description: |+
+    Specifies additional bus parameters to use for network kernel debugging (KDNet). This parameter is only applicable when DebugMethod is Net.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: DebugChannel
+  isRequired: true
+  description: |+
+    Specifies the channel that the computer running the debugger can use to connect to the host. This parameter is only applicable when DebugMethod is 1394.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: DebugCOMPort
+  description: |+
+    Specifies the serial port that kernel debugging is enabled on. This parameter is only applicable when DebugMethod is Serial. The default port is 2.
+
+  defaultValue: "2"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DebugKey
+  description: |+
+    Specifies the shared key secret for establishing the debugger connection. This parameter is only applicable when DebugMethod is Net.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DebugMethod
+  description: |+
+    Specifies the method of kernel debugging for the target image. The acceptable values for this parameter are:
+
+    - Serial
+    - Net (KDNET) 
+    - 1394 (FireWire) 
+    - USB
+
+    Depending on the value of this parameter, other parameters become available.
+
+  defaultValue: None
+  position: "18"
+  aliases: ""
+  parameterValueGroup: Serial, Net, 1394, USB
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: DebugPort
+  isRequired: true
+  description: |+
+    Specifies the port that the computer running the debugger can use to connect to the host. This parameter is only applicable when DebugMethod is Net.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DebugRemoteIP
+  isRequired: true
+  description: |+
+    Specifies the IP address of the computer running the debugger. This parameter is only applicable when DebugMethod is Net.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DebugTargetName
+  isRequired: true
+  description: |+
+    Specifies the target name that the computer running the debugger can use to connect to the host. This parameter is only applicable when DebugMethod is USB.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Defender
+  description: |+
+    Indicates that this operation adds the Windows Defender package. This package also includes a default malware definition file for Windows Defender.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Development
+  description: |+
+    Indicates that this operation enables settings for development and testing scenarios on Nano Server. This includes enabling PowerShell as the default local shell, allowing installation of unsigned drivers, copying debugger binaries into the image, opening a port for debugging, enabling test signing, and enabling installation of AppX packages without a developer license.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainBlobPath
+  description: |+
+    Specifies the path to a domain blob. This cmdlet joins the image to the domain that this parameter specifies. You can harvest a domain blob from a computer that is joined to the domain using the djoin.exe tool with the Provision parameter. Save the blob to a file and specify the path to the blob file using this parameter.
+
+  defaultValue: None
+  position: "9"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies a domain name. This cmdlet performs an offline join to the domain specified by this parameter.
+    A domain blob is retrieved from the local computer. If the local computer is not a member of the specified domain, the command fails. In this case, harvest a domain blob from a computer that is joined to the domain and use the DomainBlobPath parameter instead.
+
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DriverPath
+  description: |+
+    Specifies one or more paths to driver .inf files and binary files to add to the image. Paths can be directories containing drivers or paths to individual driver files. For each driver, both the .inf and .sys files must be present. Only 64-bit drivers are supported on Nano Server. If the drivers are not signed, the command fails.
+
+  defaultValue: None
+  position: "10"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: EMSBaudRate
+  description: |+
+    Specifies the baud rate for Emergency Management Services (EMS). The default is 115200 bps.
+
+  defaultValue: "115200"
+  position: "20"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: EMSPort
+  description: |+
+    Specifies the port on which to enable Emergency Management Services (EMS). The default is 1.
+
+  defaultValue: "1"
+  position: "19"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableEMS
+  description: |+
+    Indicates that this operation enables Emergency Management Services (EMS) and BootEMS on the image.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableRemoteManagementPort
+  description: |+
+    Indicates that this operation opens port 5985 for inbound TCP connections for Windows Remote Management (WinRM) and enable the Remote Event Log Management firewall group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceNameOrIndex
+  description: |+
+    Specifies the network adapter interface name or index to modify. You can get the interface name or index using **Get-NetAdapter**, netsh, or Recovery Console.
+
+  defaultValue: None
+  position: "11"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Internal
+  description: |+
+    This parameter is reserved for internal use.
+
+  defaultValue: None
+  position: "26"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Ipv4Address
+  description: |+
+    Specifies the given IPv4 static address on the interface specified by the *InterfaceNameOrIndex* parameter.
+
+  defaultValue: None
+  position: "14"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Ipv4Dns
+  description: |+
+    Specifies an array of static IPv4 DNS server addresses.
+
+  defaultValue: None
+  position: "17"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Ipv4Gateway
+  description: |+
+    Specifies the given IPv4 gateway on the interface specified by the *InterfaceNameOrIndex* parameter.
+
+  defaultValue: None
+  position: "16"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Ipv4SubnetMask
+  description: |+
+    Specifies the IPv4 subnet mask on the interface specified by the *InterfaceNameOrIndex* parameter.
+
+  defaultValue: None
+  position: "15"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Ipv6Address
+  description: |+
+    Specifies the IPv6 static address on the interface specified by the *InterfaceNameOrIndex* parameter.
+
+  defaultValue: None
+  position: "12"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Ipv6Dns
+  description: |+
+    Specifies an array of static IPv6 DNS server addresses.
+
+  defaultValue: None
+  position: "13"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the path where log files from the operation will be collected. If LogPath is not specified, all logs are collected into a Logs folder in BasePath.
+
+  defaultValue: None
+  position: "23"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OEMDrivers
+  description: |+
+    Indicates that this operation adds the OEM Drivers package. This package includes drivers for a variety of network adapters, storage controllers, and other peripherals. This is the same set of drivers included in a Server Core installation of Windows Server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: OfflineScriptArgument
+  description: |+
+    Use the OfflineScriptPath parameter to specify an array of paths to PowerShell (.ps1) scripts. If those scripts take arguments, use the OfflineScriptArgument parameter to pass a hashtable of additional arguments to the scripts.
+
+  defaultValue: None
+  position: "25"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OfflineScriptPath
+  description: |+
+    Use the OfflineScriptPath parameter to specify an array of paths to PowerShell (.ps1) scripts. If those scripts take arguments, use the OfflineScriptArgument parameter to pass a hashtable of additional arguments to the scripts.
+
+  defaultValue: None
+  position: "24"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Package
+  description: |+
+    Specifies an array of Nano Server packages to add. Packages are stored in the NanoServer\Packages folder on the installation media. You can get a list of Nano Server packages by running the Get-NanoServerPackage cmdlet.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReuseDomainNode
+  description: |+
+    Indicates that this operation reuses a node with the same name if it exists when joining a domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ServicingPackagePath
+  description: |+
+    Specifies an array of servicing packages (updates) to add.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SetupCompleteCommand
+  description: |+
+    Specifies an array of commands to run after setup completes.
+
+  defaultValue: None
+  position: "22"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SetupUI
+  description: |+
+    This parameter is reserved for internal use.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Storage
+  description: |+
+    Indicates that this operation adds the Storage package. This package includes the File Server role, Data Deduplication, Multipath I/O, including a driver for Microsoft Device-Specific Module (MSDSM), ReFS (v1 and v2), iSCSI Initiator (but not iSCSI Target), Storage Replica, Storage Management Service with SMI-S support, SMB Witness Service, Volume Shadow Copy Service (VSS), Dynamic Volumes, and basic Windows storage providers (for Windows Storage Management). Note that when using the Storage parameter to install the File Server role, the role is installed but not enabled. You can enable the File Server role from a remote computer using Server Manager.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetPath
+  isRequired: true
+  description: |+
+    Specifies the path of the final, modified image. The image format is determined based on the file extension. Possible extension values are .vhd, .vhdx, and .wim.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UnattendPath
+  description: |+
+    Specifies the path to an unattended setup file (unattend.xml).
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NanoServerImageGenerator.Edit-NanoServerImage
+name: Edit-NanoServerImage
+description: |-
+  The **Edit-NanoServerImage** cmdlet adds packages, drivers, and configures operating system options for a base Nano Server installation.
+  The cmdlet operates on an image produced by the **New-NanoServerImage** cmdlet.
+
+  You can use the **Edit-NanoServerImage** cmdlet to do the following operations: 
+
+  - Add packages.
+  - Add drivers.
+  - Add servicing packages (updates).
+  - Add an unattended setup file (unattend.xml).
+  - Add files.
+  - Add setup scripts.
+  - Set the computer name.
+  - Set the administrator password.
+  - Configure network settings.
+  - Join a domain.
+  - Enable debugging.
+  - Enable Emergency Management Services (EMS).
+  - Enable remote management.
+  - Enable development options.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: NanoServerImageGenerator-help.xml
+  Module Name: NanoServerImageGenerator
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nanoserverimagegenerator/edit-nanoserverimage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Edit-NanoServerImage

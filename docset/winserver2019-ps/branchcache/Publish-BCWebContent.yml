@@ -1,0 +1,177 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates hashes for web content.
+module: BranchCache
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-BC
+  href: ./Disable-BC.yml
+- text: Reset-BC
+  href: ./Reset-BC.yml
+syntaxes:
+- >-
+  Publish-BCWebContent [-Path] <String[]> [-UseVersion <UInt32>] [-StageData] [-StagingPath <String>]
+
+   [-ReferenceFile <String>] [-Force] [-Recurse] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Hash the contents of a folder'
+  code: |-
+    PS C:\> Publish-BCWebContent -Path "D:\inetpub\wwwroot" -Recurse
+  description: |-
+    This command pre-hashes the contents of wwwroot.
+    Hashes are available as soon as requests are made.
+  summary: ""
+- title: 'Example 2: Hash the contents of a folder for export'
+  code: |-
+    PS C:\> Publish-BCWebContent -Path "D:\inetpub\wwwroot" -StageData
+  description: |-
+    This command adds data to a data package that can later be exported and preloaded on a remote hosted cache server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the file path or the path of a folder that contains files that this cmdlet hashes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recurse
+  description: |+
+    Indicates that hashes are created for content in subfolders.
+    If you do not specify this parameter, this cmdlet creates hashes only for content in the top folder.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReferenceFile
+  description: |+
+    Specifies a reference file from a previous run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: StageData
+  description: |+
+    Indicates that this cmdlet saves data to a staging area for future export using the **Export-BCCachePackage** cmdlet.
+    If you do not specify this parameter, hashes are generated for data, but the data is not prepared for export.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StagingPath
+  description: |+
+    Specifies a folder location where this cmdlet stores staging data.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: UseVersion
+  description: |+
+    Specifies the version of the BranchCache hashing scheme to use.
+    If the specified version is 1, the content information is generated according to the scheme used by Windows 7 clients.
+    If the specified version is 2,  content information is generated according to the more efficient hashing scheme used by client computers that run operating systems later than Windows® 7.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: BranchCache.Publish-BCWebContent
+name: Publish-BCWebContent
+description: |-
+  The **Publish-BCWebContent** cmdlet creates hashes for web content when content servers are deployed that run Windows Server® 2012 with the Web Services (IIS) server role installed.
+  In addition, the web server must be configured as a BranchCache content server by installing the BranchCache feature.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BranchCacheOrchestrator.cdxml-help.xml
+  Module Name: BranchCache
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/branchcache/publish-bcwebcontent?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Publish-BCWebContent

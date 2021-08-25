@@ -1,0 +1,164 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the AD FS global policy.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AdfsGlobalAuthenticationPolicy
+  href: ./Get-AdfsGlobalAuthenticationPolicy.yml
+- text: Register-AdfsAuthenticationProvider
+  href: ./Register-AdfsAuthenticationProvider.yml
+- text: Get-AdfsAuthenticationProvider
+  href: ./Get-AdfsAuthenticationProvider.yml
+syntaxes:
+- >-
+  Set-AdfsGlobalAuthenticationPolicy [-AdditionalAuthenticationProvider <String[]>]
+
+   [-DeviceAuthenticationEnabled <Boolean>] [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>]
+
+   [-AllowDeviceAuthAsPrimaryForDomainJoinedDevices <Boolean>]
+
+   [-PrimaryExtranetAuthenticationProvider <String[]>] [-PrimaryIntranetAuthenticationProvider <String[]>]
+
+   [-WindowsIntegratedFallbackEnabled <Boolean>] [-ClientAuthenticationMethods <ClientAuthenticationMethod>]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the primary extranet authentication policy'
+  code: |-
+    PS C:\> Set-AdfsGlobalAuthenticationPolicy -PrimaryExtranetAuthenticationProvider @('FormsAuthentication', 'CertificateAuthentication')
+  description: |-
+    This command sets the primary extranet authentication policy to forms-based or certificate-based authentication.
+    In this case, the user is provided a choice when the user logs on to an application protected by AD FS from the extranet.
+  summary: ""
+- title: 'Example 2: Enable an additional authentication provider'
+  code: |-
+    PS C:\> Set-AdfsGlobalAuthenticationPolicy -AdditionalAuthenticationProvider "A1ExternalAuthProvider"
+  description: |-
+    This command enables the provider named A1ExternalAuthProvider as an additional authentication provider in the global policy.
+    Note that the value provided for the *AdditionalAuthenticationProvider* parameter corresponds to the value you provide for the *Name* parameter in the **Register-AdfsAuthenticationProvider** cmdlet, and to the **Name** property in the output from the **Get-AdfsAuthenticationProvider** cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AdditionalAuthenticationProvider
+  description: |+
+    Specifies an array of names of external authentication providers to add to the global policy.
+
+    Specifying this parameter configures an external authentication provider, for second stage authentication, in the global policy.
+    This is the first step in creating an AD FS policy that invokes an external authentication provider for multifactor authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowDeviceAuthAsPrimaryForDomainJoinedDevices
+  description: |+
+    Specifying this parameter configures an external authentication provider, for second stage authentication, in the global policy.
+    This is the first step in creating an AD FS policy that invokes an external authentication provider for multifactor authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClientAuthenticationMethod" data-throw-if-not-resolved="False" />
+  name: ClientAuthenticationMethods
+  description: |+
+    Specifying this parameter configures an external authentication provider, for second stage authentication, in the global policy.
+    This is the first step in creating an AD FS policy that invokes an external authentication provider for multifactor authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, ClientSecretPostAuthentication, ClientSecretBasicAuthentication, PrivateKeyJWTBearerAuthentication, WindowsIntegratedAuthentication
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DeviceAuthenticationEnabled
+  description: |+
+    Specifies whether device authentication is enabled for the global policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DeviceAuthenticationMethod" data-throw-if-not-resolved="False" />
+  name: DeviceAuthenticationMethod
+  description: |+
+    Specifying this parameter configures an external authentication provider, for second stage authentication, in the global policy.
+    This is the first step in creating an AD FS policy that invokes an external authentication provider for multifactor authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: All, ClientTLS, SignedToken, PKeyAuth
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PrimaryExtranetAuthenticationProvider
+  description: |+
+    Specifies an array of names of authentication providers for the primary extranet to add to the global policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PrimaryIntranetAuthenticationProvider
+  description: |+
+    Specifies an array of names of authentication providers for the primary intranet to add to the global policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: WindowsIntegratedFallbackEnabled
+  description: |+
+    Specifies whether fallback to Integrated Windows Authentication is enabled on the intranet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsGlobalAuthenticationPolicy
+name: Set-AdfsGlobalAuthenticationPolicy
+description: |-
+  The **Set-AdfsGlobalAuthenticationPolicy** cmdlet modifies the Active Directory Federation Services (AD FS) global policy.
+  You can also use the cmdlet to enable an external provider in the global policy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsglobalauthenticationpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsGlobalAuthenticationPolicy

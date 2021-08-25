@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a Boolean value that indicates whether or not a backup policy can perform bare metal recoveries from backups.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet queries a **WBPolicy** object that contains a backup policy to determine whether the server can use backups that use that policy for bare metal recovery.
+outputs:
+- name: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a Boolean value to indicate whether the server can run backups that use a specified policy for bare metal recovery.
+links:
+- text: Backup for Bare Metal Recovery
+  href: https://technet.microsoft.com/en-us/library/bb795820.aspx
+- text: Add-WBBareMetalRecovery
+  href: ./Add-WBBareMetalRecovery.yml
+- text: Remove-WBBareMetalRecovery
+  href: ./Remove-WBBareMetalRecovery.yml
+syntaxes:
+- Get-WBBareMetalRecovery [-Policy] <WBPolicy> [<CommonParameters>]
+examples:
+- title: 'Example 1: Determine whether a backup policy includes bare metal recovery'
+  code: |-
+    PS C:\> Get-WBBareMetalRecovery -Policy $Policy
+  description: |-
+    This command gets a Boolean value that indicates whether bare metal recovery is set in the **WBPolicy** object and stores this value in the variable named $Policy.
+  summary: ""
+parameters:
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies a **WBPolicy** object that contains the backup policy for which to display information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Get-WBBareMetalRecovery
+name: Get-WBBareMetalRecovery
+description: |-
+  The **Get-WBBareMetalRecovery** cmdlet gets a Boolean value that indicates whether or not a **WBPolicy** object that contains a backup policy can perform bare metal recoveries from backups.
+  A bare metal recovery is the process of rebuilding a computer after a catastrophic failure.
+  The recovery process backs up the system volume and master boot record by copying the entire volume and using Volume Shadow Copy Service (VSS) writers to ensure that all applications are in a consistent state for the copy.
+
+  For more information about bare metal recovery, see [Backup for Bare Metal Recovery](https://technet.microsoft.com/en-us/library/bb795820.aspx) on TechNet.
+
+
+  If a policy does not include the ability to perform bare metal recoveries from backups, use the [Add-WBBareMetalRecovery](./Add-WBBareMetalRecovery.yml) cmdlet to add this ability.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbbaremetalrecovery?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBBareMetalRecovery

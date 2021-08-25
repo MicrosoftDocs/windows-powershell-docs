@@ -1,0 +1,207 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the configuration of Microsoft Group KdsSvc.
+module: KDS
+notes: ""
+inputs:
+- name: <xref href="Microsoft.KeyDistributionService.KdsServerConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **KdsServerConfiguration** object that contains configuration information for the Microsoft Group KdsSvc.
+outputs:
+- name: <xref href="Microsoft.KeyDistributionService.KdsServerConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-KdsRootKey
+  href: ./Add-KdsRootKey.yml
+- text: Clear-KdsCache
+  href: ./Clear-KdsCache.yml
+- text: Get-KdsConfiguration
+  href: ./Get-KdsConfiguration.yml
+- text: Get-KdsRootKey
+  href: ./Get-KdsRootKey.yml
+- text: Test-KdsRootKey
+  href: ./Test-KdsRootKey.yml
+syntaxes:
+- >-
+  Set-KdsConfiguration [-LocalTestOnly] [-SecretAgreementPublicKeyLength <Int32>]
+
+   [-SecretAgreementPrivateKeyLength <Int32>] [-SecretAgreementParameters <Byte[]>]
+
+   [-SecretAgreementAlgorithm <String>] [-KdfParameters <Byte[]>] [-KdfAlgorithm <String>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Set-KdsConfiguration [-LocalTestOnly] [-RevertToDefault] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-KdsConfiguration [-LocalTestOnly] [-InputObject] <KdsServerConfiguration> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the configuration of Microsoft Group Key Distribution Service'
+  code: |-
+    PS C:\> $config = Get-KdsConfiguration
+    PS C:\> Set-KdsConfiguration -InputObject $config
+  description: |-
+    This command retrieves a server configuration object in to a variable $config using the **Get-KdsConfiguration** cmdlet, and passes the contents of the variable to this cmdlet.
+  summary: ""
+- title: 'Example 2: Test the configuration on the local server'
+  code: |-
+    PS C:\> Set-KdsConfiguration -LocalTestOnly
+  description: |-
+    This command tests the local server configuration.
+  summary: ""
+- title: 'Example 3: Set the key derivation function algorithm'
+  code: |-
+    PS C:\> Set-KdsConfiguration -KdfAlgorithm "SHA-1"
+  description: |-
+    This command sets the key derivation function (KDF) algorithm name to SHA-1.
+    This algorithm generates a private group key.
+  summary: ""
+- title: 'Example 4: Set the secret agreement algorithm'
+  code: |-
+    PS C:\> Set-KdsConfiguration -SecretAgreementAlgorithm "ECDH"
+  description: |-
+    This command sets the secret agreement algorithm name to ECDH.
+    This algorithm generates a public group key.
+  summary: ""
+- title: 'Example 5: Set the Group Key Distribution Service configuration to the default configuration'
+  code: |-
+    PS C:\> Set-KdsConfiguration -RevertToDefault
+  description: |-
+    This command validates that the customized group key distribution service configurations are deleted and the SID key starts to use the default configuration.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="KdsServerConfiguration" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the server configuration object that contains the configuration information of the Microsoft Group KdsSvc.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: KdfAlgorithm
+  description: |+
+    Specifies the name of the key derivation function algorithm that the key distribution server uses to generate the keys.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: KdfParameters
+  description: |+
+    Specifies the parameters for the key derivation function used to generate the group private key.
+    If this parameter is not specified or this parameter is set to $Null, then no key derivation function parameters are needed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalTestOnly
+  description: |+
+    Indicates that the cmdlet only validates the new group key distribution service configuration on the local computer, and does not store the key in Active Directory.
+
+    If this parameter is specified, then the cmdlet returns a value that indicates whether the test passed.
+
+    If this parameter is not specified, then the cmdlet returns the new server configuration object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RevertToDefault
+  isRequired: true
+  description: |+
+    Indicates that the customized service configuration is reverted to the default configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecretAgreementAlgorithm
+  description: |+
+    Specifies the name of the secret agreement algorithm used to generate a group public key.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SecretAgreementParameters
+  description: |+
+    Specifies the parameters for the secret agreement algorithm.
+    If this parameter is not specified or this parameter is set to $Null, then no secret agreement algorithm parameters are needed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SecretAgreementPrivateKeyLength
+  description: |+
+    Specifies the length of the private key used in the secret agreement algorithm.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SecretAgreementPublicKeyLength
+  description: |+
+    Specifies the length of the public key used in the secret agreement algorithm.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: KDS.Set-KdsConfiguration
+name: Set-KdsConfiguration
+description: |-
+  The **Set-KdsConfiguration** cmdlet sets the configuration of Microsoft Group Key Distribution Service (KdsSvc).
+  This cmdlet sets the following configuration data: 
+
+  - The key derivation function algorithm and parameters used to generate private group keys 
+  - The secret agreement algorithm and parameters used to generate public group keys
+
+  This cmdlet also validates input by performing key derivation function tests and secret agreement tests.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
+  Module Name: KDS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/kds/set-kdsconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-KdsConfiguration

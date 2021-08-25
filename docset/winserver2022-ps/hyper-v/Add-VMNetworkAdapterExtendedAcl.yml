@@ -1,0 +1,345 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an extended ACL for a virtual network adapter.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMNetworkAdapterExtendedAclSetting" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-VMNetworkAdapterExtendedAcl
+  href: ./Get-VMNetworkAdapterExtendedAcl.yml
+- text: Remove-VMNetworkAdapterExtendedAcl
+  href: ./Remove-VMNetworkAdapterExtendedAcl.yml
+- text: Get-VM
+  href: ./Get-VM.yml
+- text: Set-VmNetworkAdapterIsolation
+  href: ./Set-VmNetworkAdapterIsolation.yml
+syntaxes:
+- >-
+  Add-VMNetworkAdapterExtendedAcl [-Action] <VMNetworkAdapterExtendedAclAction>
+
+   [-Direction] <VMNetworkAdapterExtendedAclDirection> [[-LocalIPAddress] <String>] [[-RemoteIPAddress] <String>]
+
+   [[-LocalPort] <String>] [[-RemotePort] <String>] [[-Protocol] <String>] [-Weight] <Int32>
+
+   [-Stateful <Boolean>] [-IdleSessionTimeout <Int32>] [-IsolationID <Int32>] [-Passthru]
+
+   [-VMNetworkAdapterName <String>] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [-VMName] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-VMNetworkAdapterExtendedAcl [-Action] <VMNetworkAdapterExtendedAclAction>
+
+   [-Direction] <VMNetworkAdapterExtendedAclDirection> [[-LocalIPAddress] <String>] [[-RemoteIPAddress] <String>]
+
+   [[-LocalPort] <String>] [[-RemotePort] <String>] [[-Protocol] <String>] [-Weight] <Int32>
+
+   [-Stateful <Boolean>] [-IdleSessionTimeout <Int32>] [-IsolationID <Int32>] [-Passthru]
+
+   [-VMNetworkAdapter] <VMNetworkAdapterBase[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-VMNetworkAdapterExtendedAcl [-Action] <VMNetworkAdapterExtendedAclAction>
+
+   [-Direction] <VMNetworkAdapterExtendedAclDirection> [[-LocalIPAddress] <String>] [[-RemoteIPAddress] <String>]
+
+   [[-LocalPort] <String>] [[-RemotePort] <String>] [[-Protocol] <String>] [-Weight] <Int32>
+
+   [-Stateful <Boolean>] [-IdleSessionTimeout <Int32>] [-IsolationID <Int32>] [-Passthru] [-ManagementOS]
+
+   [-VMNetworkAdapterName <String>] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-VMNetworkAdapterExtendedAcl [-Action] <VMNetworkAdapterExtendedAclAction>
+
+   [-Direction] <VMNetworkAdapterExtendedAclDirection> [[-LocalIPAddress] <String>] [[-RemoteIPAddress] <String>]
+
+   [[-LocalPort] <String>] [[-RemotePort] <String>] [[-Protocol] <String>] [-Weight] <Int32>
+
+   [-Stateful <Boolean>] [-IdleSessionTimeout <Int32>] [-IsolationID <Int32>] [-Passthru]
+
+   [-VMNetworkAdapterName <String>] [-VM] <VirtualMachine[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an ACL for Remote Desktop Protocol'
+  code: |-
+    PS C:\> Add-VMNetworkAdapterExtendedAcl -VMName "TSQA01" -Action Allow -Direction Inbound -LocalPort "3389" -Protocol "TCP" -Weight 10 -Stateful $True
+  description: |-
+    This command creates a stateful inbound ACL that allows a remote device to connect to the virtual machine on port 3389, which is the port for Remote Desktop Protocol.
+  summary: ""
+- title: 'Example 2: Create an ACL to initiate a connection with timeout'
+  code: |-
+    PS C:\> Add-VMNetworkAdapterExtendedAcl -VMName "TSQA03" -Action Allow -Direction Outbound -RemotePort "80" -Protocol "TCP" -Weight 100 -Timeout 3600 -Stateful $True
+  description: |-
+    This command creates a stateful ACL that allows outbound packets to a remote device by using TCP.
+    If there is no activity for 3600 seconds, the connection times out.
+  summary: ""
+parameters:
+- type: <xref href="VMNetworkAdapterExtendedAclAction" data-throw-if-not-resolved="False" />
+  name: Action
+  isRequired: true
+  description: |+
+    Specifies the action for the ACL.
+    The acceptable values for this parameter are:
+
+    - Allow
+    - Deny
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Allow, Deny
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies an array of Hyper-V hosts.
+    The cmdlet adds the ACL to the network adapters on the Hyper-V hosts that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterExtendedAclDirection" data-throw-if-not-resolved="False" />
+  name: Direction
+  isRequired: true
+  description: |+
+    Specifies the direction of network traffic, from the perspective of the virtual machine, to which the ACL applies.
+    The cmdlet adds an ACL that has the value that you specify.
+    The acceptable values for this parameter are:
+
+    - Inbound 
+    - Outbound
+
+     If you run the **Get-VMNetworkAdapterExtendedAcl** cmdlet, the entry that you create appears in both the inbound ACL and the outbound ACL.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: Inbound, Outbound
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: IdleSessionTimeout
+  description: |+
+    Specifies a time-out period, in seconds, for idle sessions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: IsolationID
+  description: |+
+    Specifies an ID of a virtual subnet.
+    The cmdlet adds an ACL that applies to traffic on the isolated network that you specify.
+    The subnet uses virtual local area network (VLAN) or Hyper-V Network Virtualization.
+    For more information about isolation IDs, see the **Set-VmNetworkAdapterIsolation** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalIPAddress
+  description: |+
+    Specifies the local IP address for the ACL.
+    For an inbound packet, the local address is the destination IP address.
+    For an outbound packet, the local address is the source IP address.
+    You can specify a host address or a subnet address, or specify a wildcard, such as 0.0.0.0/0 for all IPv4 addresses, ::/0 for all IPv6 addresses, or ANY for all IPv4 and IPv6 addresses.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalPort
+  description: |+
+    Specifies the local port for the ACL. A port range format can also be used (i.e. "49152-49182", for example).
+    For an inbound TCP or UDP packet, the local port is the destination port.
+    For an outbound packet, the local port is the source port.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagementOS
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet operates on the parent or host operating system.
+    If you specify this parameter, this cmdlet creates an ACL that applies to the parent or host operating system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    Specifies the protocol that the ACL applies to.
+    The acceptable values for this parameter are:
+
+    - TCP 
+    - UDP  
+    - an integer IP protocol ID (**use 1 for ICMP**)
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemoteIPAddress
+  description: |+
+    Specifies the local IP address for the ACL.
+    For an inbound packet, the remote address is the source IP address.
+    For an outbound packet, the remote address is the destination IP address.
+    You can specify a host address or a subnet address, or specify a wildcard, such as 0.0.0.0/0 for all IPv4 addresses, ::/0 for all IPv6 addresses, or ANY for all IPv4 and IPv6 addresses.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemotePort
+  description: |+
+    Specifies the remote port for the ACL. A port range format can also be used (i.e. "49152-49182", for example).
+    For an inbound TCP or UDP packet, the remote port is the source port.
+    For an outbound packet, the remote port is the destination port.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Stateful
+  description: |+
+    Indicates whether the ACL applies to packets in both directions of the same session.
+    If you specify a value of $True, the ACL applies to a return packet even though that packet has the opposite direction with respect to the ACL.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machine objects.
+    The cmdlet adds an ACL for the virtual machines that you specify.
+    To obtain a virtual machine object, use the **Get-VM** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies an array of names of virtual machines.
+    The cmdlet adds an ACL for the virtual machines that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterBase" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMNetworkAdapter
+  isRequired: true
+  description: |+
+    Specifies an array VM network adapters as **VMNetworkAdapterBase** objects.
+    The cmdlet adds an ACL to the adapters that you specify.
+    To obtain a network adapter, use the **Get-VMNetworkAdapter** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapterName
+  description: |+
+    Specifies the name of a virtual network adapter.
+    The cmdlet adds an ACL to the adapter that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Weight
+  isRequired: true
+  description: |+
+    Specifies the weight of an ACL entry.
+    Larger weight values apply first, and once an ACL entry applies to a packet, other entries are no longer relevant for that packet.
+
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Add-VMNetworkAdapterExtendedAcl
+name: Add-VMNetworkAdapterExtendedAcl
+description: |-
+  The **Add-VMNetworkAdapterExtendedAcl** cmdlet creates an extended access control list (ACL) for a virtual network adapter.
+  The ACL allows or denies access to a virtual machine network adapter for network packets based on source IP address, destination IP address, protocol, source port, and destination port.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/add-vmnetworkadapterextendedacl?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-VMNetworkAdapterExtendedAcl

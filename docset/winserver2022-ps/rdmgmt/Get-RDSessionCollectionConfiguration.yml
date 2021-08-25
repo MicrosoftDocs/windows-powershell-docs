@@ -1,0 +1,188 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets configuration information for a session collection.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-RDSessionCollectionConfiguration
+  href: ./Set-RDSessionCollectionConfiguration.yml
+- text: Get-RDSessionCollection
+  href: ./Get-RDSessionCollection.yml
+- text: New-RDSessionCollection
+  href: ./New-RDSessionCollection.yml
+- text: Remove-RDSessionCollection
+  href: ./Remove-RDSessionCollection.yml
+syntaxes:
+- >-
+  Get-RDSessionCollectionConfiguration [-CollectionName] <String> [-ConnectionBroker <String>]
+
+   [<CommonParameters>]
+- >-
+  Get-RDSessionCollectionConfiguration [-CollectionName] <String> [-UserGroup] [-ConnectionBroker <String>]
+
+   [<CommonParameters>]
+- >-
+  Get-RDSessionCollectionConfiguration [-CollectionName] <String> [-Connection] [-ConnectionBroker <String>]
+
+   [<CommonParameters>]
+- >-
+  Get-RDSessionCollectionConfiguration [-CollectionName] <String> [-UserProfileDisk] [-ConnectionBroker <String>]
+
+   [<CommonParameters>]
+- >-
+  Get-RDSessionCollectionConfiguration [-CollectionName] <String> [-Security] [-ConnectionBroker <String>]
+
+   [<CommonParameters>]
+- >-
+  Get-RDSessionCollectionConfiguration [-CollectionName] <String> [-LoadBalancing] [-ConnectionBroker <String>]
+
+   [<CommonParameters>]
+- >-
+  Get-RDSessionCollectionConfiguration [-CollectionName] <String> [-Client] [-ConnectionBroker <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get domain groups authorized to connection to a session collection'
+  code: |-
+    PS C:\> Get-RDSessionCollectionConfiguration -CollectionName "Session Collection 22" -UserGroup -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command gets settings for the session collection named Session Collection 22 that has the RD Connection Broker server named RDCB.Contoso.com.
+    The command includes the **UserGroup** parameter, therefore the command gets the domain groups authorized to connect to the session collection.
+  summary: ""
+- title: 'Example 2: Get connection settings for a session collection'
+  code: |-
+    PS C:\> Get-RDSessionCollectionConfiguration -CollectionName "Session Collection 22" -Connection -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command gets settings for the session collection named Session Collection 22 that has the RD Connection Broker server named RDCB.Contoso.com.
+    This command includes the **Connection** parameter, therefore the command gets connection settings.
+  summary: ""
+- title: 'Example 3: Get user profile disk settings for a session collection'
+  code: |-
+    PS C:\> Get-RDSessionCollectionConfiguration -CollectionName "Session Collection 22" -UserProfileDisk -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command gets settings for the session collection named Session Collection 22 that has the RD Connection Broker server named RDCB.Contoso.com.
+    This command includes the **UserProfileDisk** parameter, therefore the command gets settings for the user profile disk.
+  summary: ""
+- title: 'Example 4: Get security settings for a session collection'
+  code: |-
+    PS C:\> Get-RDSessionCollectionConfiguration -CollectionName "Session Collection 22" -Security -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command gets settings for the session collection named Session Collection 22 that has the RD Connection Broker server named RDCB.Contoso.com.
+    This command includes the **Security** parameter, therefore the command gets security settings.
+  summary: ""
+- title: 'Example 5: Get load balancing settings for a session collection'
+  code: |-
+    PS C:\> Get-RDSessionCollectionConfiguration -CollectionName "Session Collection 22" -LoadBalancing -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command gets settings for the session collection named Session Collection 22 that has the RD Connection Broker server named RDCB.Contoso.com.
+    This command includes the **LoadBalancing** parameter, therefore the command gets load balancing settings.
+  summary: ""
+- title: 'Example 6: Get client settings for a session collection'
+  code: |-
+    PS C:\> Get-RDSessionCollectionConfiguration -CollectionName "Session Collection 22" -Client -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command gets settings for the session collection named Session Collection 22 that has the RD Connection Broker server named RDCB.Contoso.com.
+    This command includes the **Client** parameter, therefore the command gets client settings.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Client
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets client settings for the session collection, such as those specified by the values of the **ClientDeviceRedirectionOptions**, **ClientPrinterAsDefault**, and **ClientPrinterRedirected** parameters in the Set-RDSessionCollectionConfiguration cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a session collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Connection
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet displays connection settings for the session collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LoadBalancing
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets load balancing settings for the session collection, such as those set by the **LoadBalancing** parameter in the Set-RDSessionCollectionConfiguration cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Security
+  isRequired: true
+  description: |+
+    Indicates that the parameter gets the security protocol in use for the session collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UserGroup
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets the list of domain groups and users authorized to connect to the session.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UserProfileDisk
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets settings for the user profile disk for the session collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Get-RDSessionCollectionConfiguration
+name: Get-RDSessionCollectionConfiguration
+description: |-
+  The **Get-RDSessionCollectionConfiguration** cmdlet gets configuration information for a specified session collection.
+  A session collection consists of one or more Remote Desktop Session Host (RD Session Host) servers.
+  Users can connect to RD Session Host servers in a session collection to run programs, save files, and use resources on those servers.
+
+  You can specify whether to get configuration resources for connection settings, load balancing settings, security settings, or user profile disk settings.
+  You can also see the domain groups and users authorized to connect to the session.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdsessioncollectionconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDSessionCollectionConfiguration

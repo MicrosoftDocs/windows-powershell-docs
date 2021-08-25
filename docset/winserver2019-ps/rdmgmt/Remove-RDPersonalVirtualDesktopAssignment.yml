@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the association between a personal virtual desktop and a user.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-RDPersonalVirtualDesktopAssignment
+  href: ./Export-RDPersonalVirtualDesktopAssignment.yml
+- text: Get-RDPersonalVirtualDesktopAssignment
+  href: ./Get-RDPersonalVirtualDesktopAssignment.yml
+- text: Import-RDPersonalVirtualDesktopAssignment
+  href: ./Import-RDPersonalVirtualDesktopAssignment.yml
+- text: Set-RDPersonalVirtualDesktopAssignment
+  href: ./Set-RDPersonalVirtualDesktopAssignment.yml
+syntaxes:
+- >-
+  Remove-RDPersonalVirtualDesktopAssignment [-CollectionName] <String> [-User] <String>
+
+   [-ConnectionBroker <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-RDPersonalVirtualDesktopAssignment [-CollectionName] <String> [-VirtualDesktopName] <String>
+
+   [-ConnectionBroker <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a personal virtual desktop assignment by user'
+  code: |-
+    PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones"
+  description: |-
+    This command removes a personal virtual desktop assignment by user.
+  summary: ""
+- title: 'Example 2: Remove a personal virtual desktop assignment virtual desktop name'
+  code: |-
+    PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -VirtualDesktopName "PVD-12"
+  description: |-
+    This command removes a personal virtual desktop assignment by virtual desktop name.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a personal virtual desktop collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    Specifies the user account to remove, in DOMAIN\User format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual desktop.
+    This parameter is required.
+    The virtual desktop identified here must be a member of the collection that the *CollectionName* parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RDMgmt.Remove-RDPersonalVirtualDesktopAssignment
+name: Remove-RDPersonalVirtualDesktopAssignment
+description: |-
+  The **Remove-RDPersonalVirtualDesktopAssignment** cmdlet removes an existing association between a personal virtual desktop and a user.
+  This removal makes the virtual desktop available for another user.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/remove-rdpersonalvirtualdesktopassignment?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-RDPersonalVirtualDesktopAssignment

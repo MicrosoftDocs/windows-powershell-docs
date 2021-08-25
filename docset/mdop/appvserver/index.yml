@@ -1,0 +1,38 @@
+### YamlMime:PowershellModule
+children:
+- title: AppVServer
+  cmdlets:
+  - AppVServer.Add-AppvServerConnectionGroupPackage
+  - AppVServer.Get-AppvServerConnectionGroup
+  - AppVServer.Get-AppvServerPackage
+  - AppVServer.Get-AppvServerPackageDeploymentConfiguration
+  - AppVServer.Get-AppvServerPackageUserConfiguration
+  - AppVServer.Grant-AppvServerConnectionGroup
+  - AppVServer.Grant-AppvServerPackage
+  - AppVServer.Import-AppvServerPackage
+  - AppVServer.New-AppvServerConnectionGroup
+  - AppVServer.Publish-AppvServerConnectionGroup
+  - AppVServer.Publish-AppvServerPackage
+  - AppVServer.Remove-AppvServerConnectionGroup
+  - AppVServer.Remove-AppvServerConnectionGroupPackage
+  - AppVServer.Remove-AppvServerPackage
+  - AppVServer.Set-AppvServerConnectionGroup
+  - AppVServer.Set-AppvServerConnectionGroupPackage
+  - AppVServer.Set-AppvServerPackage
+  - AppVServer.Unpublish-AppvServerConnectionGroup
+  - AppVServer.Unpublish-AppvServerPackage
+  - AppVServer.Update-AppvServerConnectionGroup
+uid: AppVServer
+name: AppVServer
+description: |-
+  The following list contains links to the help topics for the App-V Server cmdlets.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  Download Help Link: http://go.microsoft.com/fwlink/?LinkId=403039
+  Help Version: 4.0.3.0
+  Locale: en-US
+  Module Guid: F395C50F-FC15-4FC7-B45C-BBBE0359F08B
+  Module Name: AppVServer
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  title: AppVServer

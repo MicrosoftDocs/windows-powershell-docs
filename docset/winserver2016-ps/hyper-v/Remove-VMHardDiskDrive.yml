@@ -1,0 +1,167 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes a hard disk drive from a virtual machine.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.HardDiskDrive" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.DriveController" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+syntaxes:
+- >-
+  Remove-VMHardDiskDrive [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String> [-ControllerType] <ControllerType> [-ControllerNumber] <Int32>
+
+   [-ControllerLocation] <Int32> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-VMHardDiskDrive [-VMHardDiskDrive] <HardDiskDrive[]> [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-VMHardDiskDrive -VMName TestVM -ControllerType IDE -ControllerNumber 1 -ControllerLocation 0
+  description: |-
+    Removes the virtual hard drive at IDE 1,0 on virtual machine TestVM.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-VMHardDiskDrive -VMName TestVM -ControllerType IDE -ControllerNumber 1 | Remove-VMHardDiskDrive
+  description: |-
+    Removes all virtual hard drives on IDE controller 1 from virtual machine TestVM.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which the virtual hard disk drive is to be deleted.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerLocation
+  isRequired: true
+  description: |+
+    Specifies the number of the location on the controller at which the virtual hard disk drive is to be deleted.
+    If not specified, the number of the first available location on the controller is used.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerNumber
+  isRequired: true
+  description: |+
+    Specifies the number of the controller from which the virtual hard disk drive is to be deleted.
+    If not specified, the first controller on which the specified **ControllerLocation** is available is used.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ControllerType" data-throw-if-not-resolved="False" />
+  name: ControllerType
+  isRequired: true
+  description: |+
+    Specifies the type of the controller where the virtual hard disk is to be deleted.
+    Allowed values are **IDE** and **SCSI**.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: IDE, SCSI
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that an object is to be passed through to be pipeline representing the virtual hard disk drive to be deleted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HardDiskDrive" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMHardDiskDrive
+  isRequired: true
+  description: |+
+    Specifies the virtual hard disk drive to be deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine from which the virtual hard disk is to be deleted.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Remove-VMHardDiskDrive
+name: Remove-VMHardDiskDrive
+description: |-
+  The **Remove-VMHardDiskDrive** cmdlet deletes a hard disk drive from a virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/remove-vmharddiskdrive?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-VMHardDiskDrive

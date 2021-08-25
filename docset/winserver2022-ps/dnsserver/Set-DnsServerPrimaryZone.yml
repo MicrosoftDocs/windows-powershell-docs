@@ -1,0 +1,333 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes settings for a DNS primary zone.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerPrimaryZone" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-DnsServerPrimaryZone
+  href: ./Add-DnsServerPrimaryZone.yml
+- text: ConvertTo-DnsServerPrimaryZone
+  href: ./ConvertTo-DnsServerPrimaryZone.yml
+- text: Restore-DnsServerPrimaryZone
+  href: ./Restore-DnsServerPrimaryZone.yml
+syntaxes:
+- >-
+  Set-DnsServerPrimaryZone [-Name] <String> [-ComputerName <String>] [-PassThru]
+
+   [-AllowedDcForNsRecordsAutoCreation <String[]>] [-DynamicUpdate <String>] [-Notify <String>]
+
+   [-NotifyServers <IPAddress[]>] [-SecondaryServers <IPAddress[]>] [-SecureSecondaries <String>]
+
+   [-IgnorePolicies <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-DnsServerPrimaryZone [-Name] <String> [-ComputerName <String>] [-PassThru] -ZoneFile <String>
+
+   [-VirtualizationInstance <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-DnsServerPrimaryZone [-Name] <String> [-ComputerName <String>] [-PassThru] -ReplicationScope <String>
+
+   [-DirectoryPartitionName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the dynamic update setting'
+  code: |-
+    PS C:\> Set-DnsServerPrimaryZone -Name "western.contoso.com" -DynamicUpdate "NonsecureAndSecure" -PassThru
+
+    ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
+    --------                            --------        -------------   --------------  -------------------  --------
+    western.contoso.com                 Primary         False           True            False                False
+  description: |-
+    This command changes the dynamic update setting to NonsecureAndSecure for the zone named western.contoso.com.
+    The example uses the *PassThru* parameter to return output.
+  summary: ""
+- title: 'Example 2: Change the replication scope'
+  code: |-
+    PS C:\> Set-DnsServerPrimaryZone -Name "western.contoso.com" -ReplicationScope "Forest" -PassThru
+
+    ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
+    --------                            --------        -------------   --------------  -------------------  --------
+    western.contoso.com                 Primary         False           True            False                False
+  description: |-
+    This command changes the replication scope of the zone named western.contoso.com.
+    The example uses the *PassThru* parameter to return output.
+  summary: ""
+- title: 'Example 3: Change the name for the zone file'
+  code: |-
+    PS C:\> Set-DnsServerPrimaryZone -Name "western.contoso.com" -ZoneFile "tet23.dns" -PassThru
+
+    ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
+    --------                            --------        -------------   --------------  -------------------  --------
+    western.contoso.com                 Primary         False           False           False                False
+  description: |-
+    This command changes the file name for the zone file for the zone western.contoso.com.
+    The example uses the *PassThru* parameter to return output.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AllowedDcForNsRecordsAutoCreation
+  description: |+
+    Specifies IP addresses of domain controllers that add their names in Name Server (NS) resource records for the zone.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    If you do not specify this parameter, the command runs on the local system.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DirectoryPartitionName
+  description: |+
+    Specifies a directory partition on which to store the zone.
+    Use this parameter when the *ReplicationScope* parameter has a value of Custom.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DynamicUpdate
+  description: |+
+    Specifies how a zone accepts dynamic updates.
+    Servers that accept dynamic updates can receive client registration requests.
+    The acceptable values for this parameter are:
+
+    - None
+    - Secure
+    - NonsecureAndSecure
+
+    DNS update security is available only for Active Directory-integrated zones.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Secure, NonsecureAndSecure
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IgnorePolicies
+  description: |+
+    Indicates whether to ignore policies for this zone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a zone.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ZoneName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notify
+  description: |+
+    Specifies how a DNS master server notifies secondary servers of changes to resource records.
+    The acceptable values for this parameter are:
+
+    - NoNotify.
+    The zone does not send change notifications to secondary servers.
+    - Notify.
+    The zone sends change notifications to all secondary servers.
+    - NotifyServers.
+    The zone sends change notifications to some secondary servers.
+    If you choose this option, specify the list of secondary servers in the *NotifyServers* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoNotify, Notify, NotifyServers
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NotifyServers
+  description: |+
+    Specifies an array of IP addresses of secondary DNS servers that the DNS master server notifies of changes to resource records.
+    You need this parameter only if you selected the value NotifyServers for the *Notify* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReplicationScope
+  isRequired: true
+  description: |+
+    Specifies a partition on which to store an Active Directory-integrated zone.
+    The acceptable values for this parameter are:
+
+    - Custom.
+    Any custom directory partition that a user creates.
+    Specify a custom directory partition by using the *DirectoryPartitionName* parameter.
+    - Domain.
+    The domain directory partition. 
+    - Forest.
+    The ForestDnsZone directory partition.
+    - Legacy.
+    A legacy directory partition.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Forest, Domain, Legacy, Custom
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SecondaryServers
+  description: |+
+    Specifies an array of IP addresses of DNS servers that are allowed to receive this zone through zone transfers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecureSecondaries
+  description: |+
+    Specifies how a DNS master server allows zone transfers to secondary servers.
+    You can configure the DNS server to send zone transfers only certain servers.
+    If other servers request zone transfers, the DNS server rejects the requests.
+
+    The acceptable values for this parameter are:
+
+    - NoTransfer.
+    Zone transfers are not allowed on this DNS server for this zone.
+    - TransferAnyServer.
+    Zone transfers are allowed to any DNS server.
+    - TransferToZoneNameServer.
+    Zone transfers are allowed only to servers in the name servers (NS) records for this zone.
+    - TransferToSecureServers.
+    Zone transfers are allowed only for secondary servers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoTransfer, TransferAnyServer, TransferToZoneNameServer, TransferToSecureServers
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualizationInstance
+  description: |+
+    Specifies the virtualization instance in which the zone will be added.
+    A virtualization instance is logical partition in a DNS Server, which is capable of independently hosting zones and zone scopes.
+    Same name zones and zone scopes can be hosted in different virtualization instances.
+    This parameter is optional and if not provided it will add the zone into the default virtualization instance which is functionally equivalent to a standard DNS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ZoneFile
+  isRequired: true
+  description: |+
+    Specifies the name of the zone file.
+    This parameter is relevant only for file-backed DNS.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Set-DnsServerPrimaryZone
+name: Set-DnsServerPrimaryZone
+description: |-
+  The **Set-DnsServerPrimaryZone** cmdlet changes settings for an existing Domain Name System (DNS) primary zone.
+  You can change values that are relevant for either Active Directory-integrated zones or file-backed zones.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerPrimaryZone_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverprimaryzone?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DnsServerPrimaryZone

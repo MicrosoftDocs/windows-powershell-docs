@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a resource type to a failover cluster, and specifies information such as the dynamic-link library (DLL) to use with that resource type.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResourceType" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterResourceType
+  href: ./Get-ClusterResourceType.yml
+- text: Remove-ClusterResourceType
+  href: ./Remove-ClusterResourceType.yml
+syntaxes:
+- >-
+  Add-ClusterResourceType [-Name] <String> [-Dll] <String> [[-DisplayName] <String>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-ClusterResourceType -Name ResType3 -InputObject C:\res3.dll
+    Name                                    DisplayName 
+    ----                                    ----------- 
+    ResType3                                ResType3
+  description: |-
+    This example creates ResType3 on the local cluster using res3.dll located on the provided resource DLL file path C:\.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Add-ClusterResourceType -Name ResType4 -InputObject C:\res4.dll -DisplayName "Resource Type 4"
+    Name                                    DisplayName 
+    ----                                    ----------- 
+    ResType4                                Resource Type 4
+  description: |-
+    This example creates ResType4 on the local cluster using res4.dll located on the provided resource DLL file path C:\.
+    The display name of the resource type is Resource Type 4.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specifies the display name for the resource type.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Dll
+  isRequired: true
+  description: |+
+    Specifies the DLL file path for the resource type.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to register the new resource type.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the cluster resource type to register.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterResourceType
+name: Add-ClusterResourceType
+description: |-
+  The **Add-ClusterResourceType** cmdlet adds a resource type to a failover cluster, and specifies information such as the dynamic-link library (DLL) to use with that resource type.
+
+  The failover cluster software provides Resource DLL files for the most common types of resources.
+  Using the application programming interface (API) provided in the Microsoft Platform Software Development Kit (SDK), other vendors can add support for other resource types.
+
+  Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clusterresourcetype?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusterResourceType

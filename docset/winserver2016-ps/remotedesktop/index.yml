@@ -1,0 +1,96 @@
+### YamlMime:PowershellModule
+children:
+- title: RemoteDesktop
+  cmdlets:
+  - RemoteDesktop.Add-RDServer
+  - RemoteDesktop.Add-RDSessionHost
+  - RemoteDesktop.Add-RDVirtualDesktopToCollection
+  - RemoteDesktop.Disable-RDVirtualDesktopADMachineAccountReuse
+  - RemoteDesktop.Disconnect-RDUser
+  - RemoteDesktop.Enable-RDVirtualDesktopADMachineAccountReuse
+  - RemoteDesktop.Export-RDPersonalSessionDesktopAssignment
+  - RemoteDesktop.Export-RDPersonalVirtualDesktopAssignment
+  - RemoteDesktop.Get-RDAvailableApp
+  - RemoteDesktop.Get-RDCertificate
+  - RemoteDesktop.Get-RDConnectionBrokerHighAvailability
+  - RemoteDesktop.Get-RDDeploymentGatewayConfiguration
+  - RemoteDesktop.Get-RDFileTypeAssociation
+  - RemoteDesktop.Get-RDLicenseConfiguration
+  - RemoteDesktop.Get-RDPersonalSessionDesktopAssignment
+  - RemoteDesktop.Get-RDPersonalVirtualDesktopAssignment
+  - RemoteDesktop.Get-RDPersonalVirtualDesktopPatchSchedule
+  - RemoteDesktop.Get-RDRemoteApp
+  - RemoteDesktop.Get-RDRemoteDesktop
+  - RemoteDesktop.Get-RDServer
+  - RemoteDesktop.Get-RDSessionCollection
+  - RemoteDesktop.Get-RDSessionCollectionConfiguration
+  - RemoteDesktop.Get-RDSessionHost
+  - RemoteDesktop.Get-RDUserSession
+  - RemoteDesktop.Get-RDVirtualDesktop
+  - RemoteDesktop.Get-RDVirtualDesktopCollection
+  - RemoteDesktop.Get-RDVirtualDesktopCollectionConfiguration
+  - RemoteDesktop.Get-RDVirtualDesktopCollectionJobStatus
+  - RemoteDesktop.Get-RDVirtualDesktopConcurrency
+  - RemoteDesktop.Get-RDVirtualDesktopIdleCount
+  - RemoteDesktop.Get-RDVirtualDesktopTemplateExportPath
+  - RemoteDesktop.Get-RDWorkspace
+  - RemoteDesktop.Grant-RDOUAccess
+  - RemoteDesktop.Import-RDPersonalSessionDesktopAssignment
+  - RemoteDesktop.Import-RDPersonalVirtualDesktopAssignment
+  - RemoteDesktop.Invoke-RDUserLogoff
+  - RemoteDesktop.Move-RDVirtualDesktop
+  - RemoteDesktop.New-RDCertificate
+  - RemoteDesktop.New-RDPersonalVirtualDesktopPatchSchedule
+  - RemoteDesktop.New-RDRemoteApp
+  - RemoteDesktop.New-RDSessionCollection
+  - RemoteDesktop.New-RDSessionDeployment
+  - RemoteDesktop.New-RDVirtualDesktopCollection
+  - RemoteDesktop.New-RDVirtualDesktopDeployment
+  - RemoteDesktop.Remove-RDDatabaseConnectionString
+  - RemoteDesktop.Remove-RDPersonalSessionDesktopAssignment
+  - RemoteDesktop.Remove-RDPersonalVirtualDesktopAssignment
+  - RemoteDesktop.Remove-RDPersonalVirtualDesktopPatchSchedule
+  - RemoteDesktop.Remove-RDRemoteApp
+  - RemoteDesktop.Remove-RDServer
+  - RemoteDesktop.Remove-RDSessionCollection
+  - RemoteDesktop.Remove-RDSessionHost
+  - RemoteDesktop.Remove-RDVirtualDesktopCollection
+  - RemoteDesktop.Remove-RDVirtualDesktopFromCollection
+  - RemoteDesktop.Send-RDUserMessage
+  - RemoteDesktop.Set-RDActiveManagementServer
+  - RemoteDesktop.Set-RDCertificate
+  - RemoteDesktop.Set-RDClientAccessName
+  - RemoteDesktop.Set-RDConnectionBrokerHighAvailability
+  - RemoteDesktop.Set-RDDatabaseConnectionString
+  - RemoteDesktop.Set-RDDeploymentGatewayConfiguration
+  - RemoteDesktop.Set-RDFileTypeAssociation
+  - RemoteDesktop.Set-RDLicenseConfiguration
+  - RemoteDesktop.Set-RDPersonalSessionDesktopAssignment
+  - RemoteDesktop.Set-RDPersonalVirtualDesktopAssignment
+  - RemoteDesktop.Set-RDPersonalVirtualDesktopPatchSchedule
+  - RemoteDesktop.Set-RDRemoteApp
+  - RemoteDesktop.Set-RDRemoteDesktop
+  - RemoteDesktop.Set-RDSessionCollectionConfiguration
+  - RemoteDesktop.Set-RDSessionHost
+  - RemoteDesktop.Set-RDVirtualDesktopCollectionConfiguration
+  - RemoteDesktop.Set-RDVirtualDesktopConcurrency
+  - RemoteDesktop.Set-RDVirtualDesktopIdleCount
+  - RemoteDesktop.Set-RDVirtualDesktopTemplateExportPath
+  - RemoteDesktop.Set-RDWorkspace
+  - RemoteDesktop.Stop-RDVirtualDesktopCollectionJob
+  - RemoteDesktop.Test-RDOUAccess
+  - RemoteDesktop.Test-RDVirtualDesktopADMachineAccountReuse
+  - RemoteDesktop.Update-RDVirtualDesktopCollection
+uid: RemoteDesktop
+name: RemoteDesktop
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Remote Desktop Service-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.2.0
+  Locale: en-US
+  Module Guid: 81d5df9c-8fe3-46d7-a9bf-2aedd60d1843
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  title: RemoteDesktop

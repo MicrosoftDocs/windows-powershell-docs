@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a virtual machine host cluster.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMHostCluster" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **VMHostCluster** object, if you specify the **Passthru** parameter.
+links:
+- text: Get-VMHostCluster
+  href: ./Get-VMHostCluster.yml
+syntaxes:
+- >-
+  Set-VMHostCluster [-ClusterName] <String[]> [[-Credential] <PSCredential[]>] [-SharedStoragePath <String>]
+
+   [-Passthru] [<CommonParameters>]
+- Set-VMHostCluster [-CimSession] <CimSession[]> [-SharedStoragePath <String>] [-Passthru] [<CommonParameters>]
+- >-
+  Set-VMHostCluster [-InputObject] <VMHostCluster[]> [-SharedStoragePath <String>] [-Passthru]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure a virtual machine host cluster'
+  code: |-
+    PS C:\> Set-VMHostCluster -ClusterName "ContosoCluster" -SharedStoragePath "D:\ClusterStorage\cluster01"
+  description: |-
+    This command configures the shared storage path for the cluster named ContosoCluster.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  isRequired: true
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClusterName
+  isRequired: true
+  description: |+
+    Specifies an array of names of the virtual machine host clusters that this cmdlet configures.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMHostCluster" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machine host clusters that this cmdlet configures.
+    To obtain a **VMHostCluster** object, use the **Get-VMHostCluster** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Indicates that this cmdlet returns the **Microsoft.HyperV.PowerShell.VMHostCluster** object that it configures.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SharedStoragePath
+  description: |+
+    Specifies the location of the shared storage for the virtual machine host cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMHostCluster
+name: Set-VMHostCluster
+description: |-
+  The **Set-VMHostCluster** cmdlet configures a virtual machine host cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmhostcluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VMHostCluster

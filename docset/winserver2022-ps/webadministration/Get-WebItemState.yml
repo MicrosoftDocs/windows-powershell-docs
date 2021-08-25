@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the run-time state of a site or an application pool.
+module: WebAdministration
+notes: ""
+inputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-WebItemState [-Protocol <String>] [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the state of all websites'
+  code: |-
+    C:\PS>Get-WebItemState -PSPath "IIS:\sites\*"
+  description: |-
+    This command returns information about the state of all the sites on the IIS server.
+  summary: ""
+- title: 'Example 2: Get the state of the default website using HTTP'
+  code: |-
+    IIS:\> Get-WebItemState -PSPath ".\Default Web Site" -Protocol "http"
+    Value
+
+    -----
+
+    Started
+  description: |-
+    This command returns information about the HTTP binding on the default website.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    Specifies the protocol binding for which information is returned, such as HTTP or FTP.
+    This parameter is for sites only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies the path to the application pool or site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebItemState
+name: Get-WebItemState
+description: |-
+  The **Get-WebItemState** cmdlet gets the run-time state of a site or an application pool.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webitemstate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebItemState

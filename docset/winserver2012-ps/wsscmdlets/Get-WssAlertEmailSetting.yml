@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets settings for alert email notification.
+module: WssCmdlets
+notes: ""
+links:
+- text: Set-WssAlertEmailSetting
+  href: ./Set-WssAlertEmailSetting.yml
+- text: Test-WssAlertEmail
+  href: ./Test-WssAlertEmail.yml
+syntaxes:
+- Get-WssAlertEmailSetting
+examples:
+- title: 'Example 1: Get the settings for alert email notification'
+  code: |-
+    PS C:\> Get-WssAlertEmailSetting
+  description: |-
+    This command gets the current settings for alert email notification.
+  summary: ""
+uid: WssCmdlets.Get-WssAlertEmailSetting
+name: Get-WssAlertEmailSetting
+description: |-
+  The **Get-WssAlertEmailSetting** cmdlet gets settings for alert email notification.
+  The settings include the SMTP settings for the email account and the recipients of the notification.
+  You can use the Set-WssAlertEmailSetting cmdlet to change settings for alert email notification.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssalertemailsetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

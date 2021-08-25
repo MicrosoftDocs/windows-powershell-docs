@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of the app packages that are installed in a user profile.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Windows.Appx.PackageManager.Commands.AppxPackage" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an **AppxPackage** object that contains information, including the full name of the app package.
+links:
+- text: Package Manager API
+  href: https://go.microsoft.com/fwlink/?LinkId=245447
+- text: How to Add and Remove Apps
+  href: https://go.microsoft.com/fwlink/?LinkID=231020
+- text: Add-AppxPackage
+  href: ./Add-AppxPackage.yml
+- text: Get-AppxPackageManifest
+  href: ./Get-AppxPackageManifest.yml
+- text: Move-AppxPackage
+  href: ./Move-AppxPackage.yml
+- text: Remove-AppxPackage
+  href: ./Remove-AppxPackage.yml
+syntaxes:
+- >-
+  Get-AppxPackage [-AllUsers] [-PackageTypeFilter <PackageTypes>] [[-Name] <String>] [[-Publisher] <String>]
+
+   [-User <String>] [-Volume <AppxVolume>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all app packages for every user account'
+  code: |-
+    PS C:\> Get-AppxPackage -AllUsers
+  description: |-
+    This command lists the app packages that are installed for every user account on the computer.
+  summary: ""
+- title: 'Example 2: Get an app package for a specific a user'
+  code: |-
+    PS C:\> Get-AppxPackage -Name "Package17" -User "Contoso\EvanNarvaez"
+  description: |-
+    This command displays information about Package17 if it is installed in the specified user profile.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllUsers
+  description: |+
+    Indicates that this cmdlet lists app packages for all user accounts on the computer.
+    To use this parameter, you must run the command by using administrator permissions.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a particular package.
+    If you specify this parameter, the cmdlet returns results for this package only.
+    Wildcards are permitted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PackageTypes" data-throw-if-not-resolved="False" />
+  name: PackageTypeFilter
+  description: |+
+    Specifies one or more comma-separated types of packages that the cmdlet gets from the package repository.
+    Valid values are: 
+
+    - Bundle
+    - Framework
+    - Main
+    - Resource
+    - None
+
+    By default, this cmdlet returns only packages of types Main and Framework.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Main, Framework, Resource, Bundle, Xap
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Publisher
+  description: |+
+    Specifies the publisher of a particular package.
+    If you specify this parameter, the cmdlet returns results only for this publisher.
+    Wildcards are permitted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  description: |+
+    Specifies a user.
+    If you specify this parameter, the cmdlet returns a list of app packages that are installed for only the user that this cmdlet specifies.
+    To get the list of packages for a user profile other than the profile for the current user, you must run this command by using administrator permissions.
+    The user name can be in one of these formats: 
+
+    - domain\user_name
+    - user_name@fqn.domain.tld
+    - user_name
+    - SID-string
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppxVolume" data-throw-if-not-resolved="False" />
+  name: Volume
+  description: |+
+    Specifies an **AppxVolume** object.
+    If you specify this parameter, this cmdlet returns only packages that are relative to volume that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Appx.Get-AppxPackage
+name: Get-AppxPackage
+description: |-
+  The **Get-AppxPackage** cmdlet gets a list of the app packages that are installed in a user profile.
+  An app package has an .msix or .appx file name extension.
+  To get the list of packages for a user profile other than the profile for the current user, you must run this command by using administrator permissions.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: Appx
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appx/get-appxpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AppxPackage

@@ -1,0 +1,32 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops tracing to file.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Start-VMTrace
+  href: ./Start-VMTrace.yml
+syntaxes:
+- Stop-VMTrace [<CommonParameters>]
+examples:
+- title: 'Example 1: Stop tracing'
+  code: |-
+    PS C:\> Stop-VMTrace
+  description: |-
+    This command stops tracing.
+  summary: ""
+uid: Hyper-V.Stop-VMTrace
+name: Stop-VMTrace
+description: |-
+  The **Stop-VMTrace** cmdlet stops tracing to a file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/stop-vmtrace?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-VMTrace

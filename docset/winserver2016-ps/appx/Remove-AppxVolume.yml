@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an appx volume.
+module: Appx
+notes: ""
+links:
+- text: Add-AppxVolume
+  href: ./Add-AppxVolume.yml
+- text: Dismount-AppxVolume
+  href: ./Dismount-AppxVolume.yml
+- text: Get-AppxVolume
+  href: ./Get-AppxVolume.yml
+- text: Mount-AppxVolume
+  href: ./Mount-AppxVolume.yml
+syntaxes:
+- Remove-AppxVolume [-Volume] <AppxVolume[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a volume by using an ID'
+  code: |-
+    PS C:\> Remove-AppxVolume -Volume {984786d3-0cae-49de-a68f-8bedb0ca260b}
+  description: |-
+    This command removes a volume that has the specified media ID.
+  summary: ""
+- title: 'Example 2: Remove a volume by using a path'
+  code: |-
+    PS C:\> Remove-AppxVolume -Volume E:\
+  description: |-
+    This command removes a volume at the path E:\.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="AppxVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Volume
+  isRequired: true
+  description: |+
+    Specifies the **AppxVolume** object to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Appx.Remove-AppxVolume
+name: Remove-AppxVolume
+description: |-
+  The **Remove-AppxVolume** cmdlet removes an **AppxVolume**.
+  You can only remove a volume after there are no apps staged to it for any user.
+  After you remove a volume, apps can no longer be added to it.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: Appx
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appx/remove-appxvolume?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AppxVolume

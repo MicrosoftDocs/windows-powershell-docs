@@ -1,0 +1,34 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The Get-AdfsRegistrationHosts cmdlet is deprecated.
+  Instead, use the Get-AdfsDeviceRegistrationUpnSuffix cmdlet.
+module: ADFS
+notes: ""
+links:
+- text: Set-AdfsRegistrationHosts
+  href: ./Set-AdfsRegistrationHosts.yml
+- text: Get-AdfsDeviceRegistrationUpnSuffix
+  href: ./Get-AdfsDeviceRegistrationUpnSuffix.yml
+syntaxes:
+- Get-AdfsRegistrationHosts [-PassThru] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsRegistrationHosts
+name: Get-AdfsRegistrationHosts
+description: |-
+  The **Get-AdfsRegistrationHosts** cmdlet is deprecated in this release.
+  Instead, use the Get-AdfsDeviceRegistrationUpnSuffix cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsregistrationhosts?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsRegistrationHosts

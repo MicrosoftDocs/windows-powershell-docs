@@ -1,0 +1,229 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Performs repairs on a volume.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Volume" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Format-Volume
+  href: ./Format-Volume.yml
+- text: Get-Volume
+  href: ./Get-Volume.yml
+- text: Optimize-Volume
+  href: ./Optimize-Volume.yml
+- text: Set-Volume
+  href: ./Set-Volume.yml
+syntaxes:
+- >-
+  Repair-Volume [-DriveLetter] <Char[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Repair-Volume -ObjectId <String[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Repair-Volume -Path <String[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Repair-Volume -FileSystemLabel <String[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Repair-Volume -InputObject <CimInstance[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Repair-Volume -DriveLetter H -Scan
+  description: |-
+    This example scans the volume H: and reports errors only. It uses the `-DriveLetter` switch to designate the volume by its drive letter and `-Scan` to indicate the scanning action.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Repair-Volume -DriveLetter GHI -SpotFix
+  description: |-
+    This example uses the spot verifier functionality to quickly fix volumes designation G:, H: and I:. It uses the `-DriveLetter` switch to designate multiple volumes by their drive letters and `SpotFix` to indicate the quick fixing action.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\> Get-Volume
+
+    DriveLetter FriendlyName             FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining      Size
+    ----------- ------------             -------------- --------- ------------ ----------------- -------------      ----
+                System Reserved          NTFS           Fixed     Healthy      OK                    178.47 MB    550 MB
+    C           Contoso - C              NTFS           Fixed     Healthy      OK                     41.28 GB  98.89 GB
+                                         NTFS           Fixed     Healthy      OK                     89.03 MB    481 MB
+                                         FAT32          Fixed     Healthy      OK                      70.8 MB     96 MB
+    D           Contoso - D              NTFS           Fixed     Healthy      OK                     29.13 GB  67.68 GB
+    E           Contoso - E              NTFS           Fixed     Healthy      OK                    148.44 GB 465.76 GB
+    F           Archives                 NTFS           Fixed     Healthy      OK                    324.13 GB 465.76 GB
+
+
+    PS C:\> Repair-Volume -FileSystemLabel "System Reserved" -OfflineScanAndFix
+  description: |-
+    This example takes the System Reserved volume offline, and fixes all issues. This volume has no drive letters assigned to it. The first command, `Get-Volume` gives an overview of the volumes on the local computer. As the output indicates, the volume bearing the "System Reserved" label has no drive letters. Next, the `Repair-Volume` cmdlet uses the `-FileSystemLabel` switch to designate the "System Reserved" volume and the `-OfflineScanAndFix` switch indicates the volume should be taken offline and scanned in full.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Char" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DriveLetter
+  isRequired: true
+  description: |+
+    Specifies a letter used to identify a drive or volume in the system.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FileSystemLabel
+  isRequired: true
+  description: |+
+    Specifies the volume to scan based on the file system label (the volume name).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ObjectId
+  isRequired: true
+  description: |+
+    Specifies an ID representing the object.
+    The ID is not globally unique.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OfflineScanAndFix
+  description: |+
+    Performs and offline scan and fix of any errors found in the file system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Contains valid path information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Scan
+  description: |+
+    Scans the volume.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SpotFix
+  description: |+
+    Takes the volume offline and fixes any issues that are logged in the $corrupt file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Storage.Repair-Volume
+name: Repair-Volume
+description: |-
+  The **Repair-Volume** cmdlet performs repairs on a volume.
+  The following repair actions are available:
+
+  OfflineScanAndFix: Takes the volume offline to scan the volume and fix any errors found (equivalent to `chkdsk /f`).
+
+  Scan: Scans the volume without attempting to repair it; all detected corruptions are added to the `$corrupt` system file (equivalent to `chkdsk /scan`).
+
+  SpotFix: Takes the volume briefly offline and then fixes only issues that are logged in the `$corrupt` file (equivalent to `chkdsk /spotfix`).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Volume.cdxml-help.xml
+  Module Name: Storage
+  online version: https://docs.microsoft.com/powershell/module/storage/repair-volume?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Repair-Volume

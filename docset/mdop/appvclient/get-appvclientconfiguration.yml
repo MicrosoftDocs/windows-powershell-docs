@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the configuration for the App-V client.
+module: AppVClient
+notes: ""
+outputs:
+- name: <xref href="Microsoft.AppV.AppvClientPowerShell.AppvClientConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    In you do not specify any parameters, the cmdlet returns an **AppvClientConfiguration** object.
+    The object is displayed as a two column table.
+    The first column contains the specific configuration and the second column contains the associated current value.
+
+    If you specify the *Name* parameter, the cmdlet returns the same two column table, but only for the configuration requested.
+links:
+- text: Set-AppvClientConfiguration
+  href: ./set-appvclientconfiguration.yml
+syntaxes:
+- Get-AppvClientConfiguration [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Display all configuration settings'
+  code: |-
+    PS C:\> Get-AppvClientConfiguration
+  description: |-
+    This command displays all of the App-V Client Configuration settings.
+  summary: ""
+- title: 'Example 2: Display a single configuration setting'
+  code: |-
+    PS C:\> Get-AppvClientConfiguration -Name "PackageSourceRoot"
+  description: |-
+    This command displays the value of the **PackageSourceRoot** setting.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Not Specified.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppVClient.Get-AppvClientConfiguration
+name: Get-AppvClientConfiguration
+description: |-
+  The **Get-AppvClientConfiguration** cmdlet returns an object containing all of the settings and permissions for the Microsoft Application Virtualization (App-V) client.
+  These settings include both App-V client settings and permissions.
+
+  In the case where a particular setting is asked for, the cmdlet will return the value for that specific setting.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Get-AppvClientConfiguration

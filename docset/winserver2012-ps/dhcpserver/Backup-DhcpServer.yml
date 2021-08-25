@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Backs up the Dynamic Host Configuration Protocol (DHCP) database of DHCP server service to the specified location.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-DhcpServer
+  href: ./Export-DhcpServer.yml
+- text: Import-DhcpServer
+  href: ./Import-DhcpServer.yml
+- text: Restore-DhcpServer
+  href: ./Restore-DhcpServer.yml
+syntaxes:
+- >-
+  Backup-DhcpServer [-Path] <String> [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String>]
+
+   [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Backup-DhcpServer -ComputerName dhcpserver.contoso.com -Path C:\Windows\system32\dhcp\backup
+  description: |-
+    This example backs up the DHCP server database to the specified location.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IP address, of the target computer running the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path to the directory where the backed up database will be stored.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DhcpServer.Backup-DhcpServer
+name: Backup-DhcpServer
+description: |-
+  The **Backup-DhcpServer** cmdlet backs up the Dynamic Host Configuration Protocol (DHCP) database of DHCP server service to specified location.
+metadata:
+  external help file: DhcpServer_Cmdlets.xml
+  Module Name: DhcpServer
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/backup-dhcpserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

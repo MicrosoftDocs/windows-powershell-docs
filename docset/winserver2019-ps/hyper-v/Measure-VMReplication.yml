@@ -1,0 +1,192 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets replication statistics and information associated with a virtual machine.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMReplicationHealth" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Measure-VMReplication [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [[-VMName] <String[]>] [-ReplicaServerName <String>] [-PrimaryServerName <String>]
+
+   [-ReplicationState <VMReplicationState>] [-ReplicationHealth <VMReplicationHealthState>]
+
+   [-ReplicationMode <VMReplicationMode>] [-ReplicationRelationshipType <VMReplicationRelationshipType>]
+
+   [-TrustGroup <String>] [<CommonParameters>]
+- >-
+  Measure-VMReplication [-VM] <VirtualMachine[]> [-ReplicationRelationshipType <VMReplicationRelationshipType>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Measure-VMReplication
+  description: |-
+    This example gets the replication monitoring details of all replicating virtual machines on the local host.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Measure-VMReplication VM01
+  description: |-
+    This example gets the replication monitoring details of a virtual machine named VM01.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>  Measure-VMReplication -ReplicationHealth Warning
+  description: |-
+    This example gets the replication monitoring details of all virtual machines that have a replication health of "Warning".
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which to get replication statistics.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrimaryServerName
+  description: |+
+    Specifies the name of a primary server.
+    Replication statistics are retrieved for all virtual machines from the specified primary server.
+
+  defaultValue: None
+  position: Named
+  aliases: PrimaryServer
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReplicaServerName
+  description: |+
+    Specifies the name of a Replica server of the virtual machines whose replication statistics you want to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ReplicaServer
+  parameterValueGroup: ""
+- type: <xref href="VMReplicationHealthState" data-throw-if-not-resolved="False" />
+  name: ReplicationHealth
+  description: |+
+    Specifies the replication health of the virtual machines whose replication statistics you want to get.
+    Valid values are "Critical", "Warning", "Normal", and "NotApplicable".
+
+  defaultValue: None
+  position: Named
+  aliases: Health
+  parameterValueGroup: NotApplicable, Normal, Warning, Critical
+- type: <xref href="VMReplicationMode" data-throw-if-not-resolved="False" />
+  name: ReplicationMode
+  description: |+
+    Specifies the replication mode of the virtual machines whose replication statistics you want to get.
+    Valid values are "None", "Primary", "Replica", "TestReplica" and "ExtendedReplica"
+
+  defaultValue: None
+  position: Named
+  aliases: Mode
+  parameterValueGroup: None, Primary, Replica, TestReplica, ExtendedReplica
+- type: <xref href="VMReplicationRelationshipType" data-throw-if-not-resolved="False" />
+  name: ReplicationRelationshipType
+  description: |+
+    Specifies the replication relationship type of the virtual machine.
+    Specify whether the replication relationship is a simple primary to replica or is an extended replication chain.
+    The cmdlet gets replication statistics and information associated with the virtual machines that have the replication type that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: Relationship
+  parameterValueGroup: Simple, Extended
+- type: <xref href="VMReplicationState" data-throw-if-not-resolved="False" />
+  name: ReplicationState
+  description: |+
+    Specifies the replication state of the virtual machines for which you want to get replication statistics.
+    Valid values are:
+
+    - Error
+    - FailOverWaitingCompletion
+    - FailedOver
+    - NotApplicable
+    - ReadyForInitialReplication
+    - Replicating
+    - Resynchronizing
+    - ResynchronizeSuspended
+    - Suspended
+    - SyncedReplicationComplete
+    - WaitingForInitialReplication
+    - WaitingForStartResynchronize
+
+  defaultValue: None
+  position: Named
+  aliases: State
+  parameterValueGroup: Disabled, ReadyForInitialReplication, InitialReplicationInProgress, WaitingForInitialReplication, Replicating, PreparedForFailover, FailedOverWaitingCompletion, FailedOver, Suspended, Error, WaitingForStartResynchronize, Resynchronizing, ResynchronizeSuspended, RecoveryInProgress, FailbackInProgress, FailbackComplete, WaitingForUpdateCompletion, UpdateError, WaitingForRepurposeCompletion, PreparedForSyncReplication, PreparedForGroupReverseReplication, FiredrillInProgress
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TrustGroup
+  description: |+
+    Specifies a trust group associated with the virtual machines whose replication statistics you want to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine for which you want to get replication statistics.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  description: |+
+    Specifies the name of the virtual machine for which you want to get virtual machine replication statistics.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+uid: Hyper-V.Measure-VMReplication
+name: Measure-VMReplication
+description: |-
+  The **Measure-VMReplication** cmdlet gets replication statistics and information associated with virtual machine.
+  Replication statistics are calculated for a predetermined amount of time based on the monitoring interval specified through the **Set-VMReplicationServer** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/measure-vmreplication?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Measure-VMReplication

@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a backup policy object.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    None
+outputs:
+- name: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns and generates an empty **WBPolicy** object in edit mode.
+links:
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: Remove-WBPolicy
+  href: ./Remove-WBPolicy.yml
+- text: Set-WBPolicy
+  href: ./Set-WBPolicy.yml
+- text: Start-WBBackup
+  href: ./Start-WBBackup.yml
+syntaxes:
+- New-WBPolicy [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a backup policy'
+  code: |-
+    PS C:\> $Policy = New-WBPolicy
+  description: |-
+    This command creates an empty **WBPolicy** object and saves it in the $Policy variable.
+    Use the **WBPolicy** object to specify the settings for backup.
+  summary: ""
+uid: WindowsServerBackup.New-WBPolicy
+name: New-WBPolicy
+description: |-
+  The **New-WBPolicy** cmdlet creates a backup policy object.
+  The new backup policy object does not contain information about the volumes included in the policy, the files in the backup, the backup target, or any scheduled times.
+
+  To make a new policy for scheduled backups, use the [Set-WBPolicy](./Set-WBPolicy.yml) cmdlet to define what items to include or exclude in backups, when to run backups, and where to store backups.
+  To make a one-time backup from policy settings, use the [Start-WBBackup](./Start-WBBackup.yml) cmdlet.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/new-wbpolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WBPolicy

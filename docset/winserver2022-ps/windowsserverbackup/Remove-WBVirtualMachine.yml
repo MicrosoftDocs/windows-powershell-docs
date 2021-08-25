@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the list of virtual machines from the backup policy.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="Windows.ServerBackup.Commands.WBPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Windows.ServerBackup.Commands.WBVirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Add-WBVirtualMachine
+  href: ./Add-WBVirtualMachine.yml
+- text: Get-WBVirtualMachine
+  href: ./Get-WBVirtualMachine.yml
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+syntaxes:
+- >-
+  Remove-WBVirtualMachine [-Policy] <WBPolicy> [[-VirtualMachine] <WBVirtualMachine[]>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Remove-WBVirtualMachine [-Policy] <WBPolicy> [-All] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove virtual machines from the backup policy'
+  code: |-
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Remove-WBVirtualMachine $Policy -All
+  description: |-
+    This example removes all virtual machines from the backup policy.
+
+    The first command calls the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet and assigns the result to the $Policy variable.
+
+    The second command removes the virtual machines from the backup policy stored in the $Policy variable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Indicates that this cmdlet removes all virtual machines from the backup contained in the **WBPolicy** object.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies the **WBPolicy** object that contains the backup policy that this cmdlet updates.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBVirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VirtualMachine
+  description: |+
+    Specifies an array of one or more virtual machines that this cmdlet removes from the backup policy contained in the **WBPolicy** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Remove-WBVirtualMachine
+name: Remove-WBVirtualMachine
+description: |-
+  The **Remove-WBVirtualMachine** cmdlet removes the list of virtual machines from the backup policy contained in the **WBPolicy** object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/remove-wbvirtualmachine?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WBVirtualMachine

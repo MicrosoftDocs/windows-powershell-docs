@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Fetches the current diagnostic store capacity.
+  Parameter \[-Size\] returns the diagnostic store size capacity in megabytes.
+  Parameter \[-Time\] returns the diagnostic store capacity in days.
+  The default diagnostic data store size capacity is 1024 MB.
+  The default time capacity is 30 days.
+module: Microsoft.DiagnosticDataViewer
+notes: |-
+  Requires Windows 10 version 17134 (1803) or higher
+inputs:
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: |-
+    Get configured size capacity (megabytes) of the Diagnostic store.
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: |-
+    Get configured time capacity (hours) of the Diagnostic store.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-DiagnosticStoreCapacity [-Size] [-Time] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-DiagnosticStoreCapacity -Size
+  description: |-
+    Get configured size capacity (megabytes) of the Diagnostic store.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-DiagnosticStoreCapacity -Time
+  description: |-
+    Get configured time capacity (hours) of the Diagnostic store.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Size
+  description: |+
+    Get configured size capacity (megabytes) of the Diagnostic store.
+
+  defaultValue: "False"
+  pipelineInput: true
+  position: Named
+  aliases: s
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Time
+  description: |+
+    Get configured time capacity (hours) of the Diagnostic store.
+
+  defaultValue: "False"
+  pipelineInput: true
+  position: Named
+  aliases: t
+  parameterValueGroup: ""
+uid: Microsoft.DiagnosticDataViewer.Get-DiagnosticStoreCapacity
+name: Get-DiagnosticStoreCapacity
+description: |-
+  The amount of Diagnostic Data history that can be shown through this tool is capped based on time in days and size in megabytes.
+  Once either cap is reached (whichever comes first), diagnostic data is removed based on a first in first out order.
+  For example, if the size cap is 1GB and the time cap is 30 days, then once the diagnostic data store has reached 1GB of history or the oldest record is 30 days old (whichever comes first), the oldest seen event is dropped.
+metadata:
+  external help file: DDVCmdlets.dll-Help.xml
+  Module Name: Microsoft.DiagnosticDataViewer
+  online version: https://docs.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/get-diagnosticstorecapacity?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DiagnosticStoreCapacity

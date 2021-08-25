@@ -1,0 +1,42 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the UPN suffixes that can be used with device registration.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Commands.GetAdfsDeviceRegistrationUpnSuffix+DrsBinding" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more DrsBinding objects that represent the device registration service UPN suffix resources for the Federation Service.
+links:
+- text: Add-AdfsDeviceRegistrationUpnSuffix
+  href: ./Add-AdfsDeviceRegistrationUpnSuffix.yml
+- text: Remove-AdfsDeviceRegistrationUpnSuffix
+  href: ./Remove-AdfsDeviceRegistrationUpnSuffix.yml
+- text: Set-AdfsDeviceRegistrationUpnSuffix
+  href: ./Set-AdfsDeviceRegistrationUpnSuffix.yml
+syntaxes:
+- Get-AdfsDeviceRegistrationUpnSuffix [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the UPN suffixes for the device registration service'
+  code: |-
+    PS C:\> Get-AdfsDeviceRegistrationUpnSuffix | Format-List
+    Upn               : contoso.com
+    SslPort           : 443
+    IsSetAsSslBinding : True
+    IsCustom          : False
+  description: |-
+    This command gets information on the UPN suffixes that are accepted by the Device Registration Service in AD FS.
+  summary: ""
+uid: ADFS.Get-AdfsDeviceRegistrationUpnSuffix
+name: Get-AdfsDeviceRegistrationUpnSuffix
+description: |-
+  The **Get-AdfsDeviceRegistrationUpnSuffix** cmdlet gets all of the user principal name (UPN) suffixes that you can use when you register a device with Active Directory Federation Services (AD FS).
+  The cmdlet returns a list of UPN suffixes and indicates whether a UPN suffix was discovered or manually configured by the administrator, and if the server has a valid SSL binding configured for the UPN suffix.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsdeviceregistrationupnsuffix?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsDeviceRegistrationUpnSuffix

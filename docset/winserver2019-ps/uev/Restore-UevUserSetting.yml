@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets a restore flag for the user settings.
+module: UEV
+notes: ""
+links:
+- text: Get-UevTemplate
+  href: ./Get-UevTemplate.yml
+syntaxes:
+- >-
+  Restore-UevUserSetting [-Force] -Application <String> [-LastKnownGood] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Restore-UevUserSetting [-TemplateId] <String> [-LastKnownGood] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Restore user settings for a specific template'
+  code: |-
+    PS C:\> Restore-UevUserSetting -TemplateId "MicrosoftCalculator6"
+  description: |-
+    This command sets a restore flag for the user settings that are identified by the template ID MicrosoftCalculator6.
+  summary: ""
+- title: 'Example 2: Restore all user settings'
+  code: |-
+    PS C:\> Get-UevTemplate | Restore-UevUserSetting
+  description: |-
+    This command sets a restore flag for all user settings.
+  summary: ""
+- title: 'Example 3: Restore user settings that match an application name'
+  code: |-
+    PS C:\> Restore-UevUserSetting -Application "word"
+    Confirm
+    The following user settings will be restored: 
+
+    MicrosoftOffice2010.Word (Microsoft Office 2010.Word) 
+    MicrosoftWordpad6 (Microsoft Wordpad) 
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+  description: |-
+    This command sets a restore flag for user settings for applications with names that contain the string word.
+  summary: ""
+- title: 'Example 4: Restore user settings that match a pattern'
+  code: |-
+    PS C:\> Restore-UevUserSetting -Application "office*word" -Force
+  description: |-
+    This command sets a restore flag for the user settings of the application whose name contains the strings office and word, in that order.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Application
+  isRequired: true
+  description: |+
+    Specifies the name of an application.
+    Use the application name, or a partial name with wildcard characters, to set the restore flag for specific applications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LastKnownGood
+  description: |+
+    Indicates that this cmdlet restores the application to the settings last known good state.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TemplateId
+  isRequired: true
+  description: |+
+    Specifies the ID of a template.
+    The cmdlet sets the restore flag for the application settings or operating system settings group to restore.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UEV.Restore-UevUserSetting
+name: Restore-UevUserSetting
+description: |-
+  The **Restore-UevUserSetting** cmdlet sets a restore flag for the user application settings or Windows operating system settings group.
+  You must perform this action for each application for which to restore the user settings.
+  The settings are restored the next time you run the application or log on to the operating system.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/restore-uevusersetting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Restore-UevUserSetting

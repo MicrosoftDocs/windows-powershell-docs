@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the RD Connection Broker server to reuse existing AD DS computer accounts.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-RDVirtualDesktopADMachineAccountReuse
+  href: ./Disable-RDVirtualDesktopADMachineAccountReuse.yml
+- text: Test-RDVirtualDesktopADMachineAccountReuse
+  href: ./Test-RDVirtualDesktopADMachineAccountReuse.yml
+syntaxes:
+- Enable-RDVirtualDesktopADMachineAccountReuse [[-ConnectionBroker] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable account reuse on the RD Connection Broker'
+  code: |-
+    PS C:\> Enable-RDVirtualDesktopADMachineAccountReuse -ConnectionBroker "rdcb.contoso.com"
+  description: |-
+    This command enables the Remote Desktop Connection Broker server named rdcb.contoso.com to reuse existing Active Directory Domain Services computer accounts when you create new virtual machines in a managed virtual desktop collection.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Enable-RDVirtualDesktopADMachineAccountReuse
+name: Enable-RDVirtualDesktopADMachineAccountReuse
+description: |-
+  The **Enable-RDVirtualDesktopADMachineAccountReuse** cmdlet configures the Remote Desktop Connection Broker (RD Connection Broker) server to reuse existing Active Directory Domain Services (AD DS) computer accounts for pooled virtual desktops when you create new virtual machines in a managed virtual desktop collection.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/enable-rdvirtualdesktopadmachineaccountreuse?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-RDVirtualDesktopADMachineAccountReuse

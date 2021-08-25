@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Unregisters a settings location template from Microsoft User Experience Virtualization (UE-V).
+module: UEV
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The settings location template ID.
+links:
+- text: Disable-UevTemplate
+  href: ./Disable-UevTemplate.yml
+- text: Enable-UevTemplate
+  href: ./Enable-UevTemplate.yml
+- text: Get-UevTemplate
+  href: ./Get-UevTemplate.yml
+- text: Register-UevTemplate
+  href: ./Register-UevTemplate.yml
+- text: Test-UevTemplate
+  href: ./Test-UevTemplate.yml
+- text: Update-UevTemplate
+  href: ./Update-UevTemplate.yml
+syntaxes:
+- Unregister-UevTemplate [-ID] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Unregister-UevTemplate [-All] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Unregister a template'
+  code: |-
+    PS C:\> Unregister-UevTemplate -TemplateId "MicrosoftCalculator6"
+  description: |-
+    This command unregisters a settings location template that has the ID MicrosoftCalculator6.
+  summary: ""
+- title: 'Example 2: Unregister templates for applications that match a specified string'
+  code: |-
+    PS C:\> Get-UevTemplate -Application "calc" | Unregister-UevTemplate
+  description: |-
+    This command uses the **Get-UevTemplate** cmdlet to get all the registered settings location templates whose application name contains the specified string, and then passes them to the current cmdlet by using the pipeline operator.
+    The cmdlet unregisters all the templates for applications that contain the string calc.
+  summary: ""
+- title: 'Example 3: Unregister all templates'
+  code: |-
+    PS C:\> Unregister-UevTemplate -All
+  description: |-
+    This command unregisters all the settings location templates that are currently registered with UE-V.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet unregisters all settings location templates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ID
+  isRequired: true
+  description: |+
+    Specifies the ID of a settings location template.
+    The cmdlet unregisters the template that you specify.
+    If you specify an ID for a template that is not registered, the cmdlet returns an error.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: TemplateID
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UEV.Unregister-UevTemplate
+name: Unregister-UevTemplate
+description: |-
+  The **Unregister-UevTemplate** cmdlet unregisters a settings location template from Microsoft User Experience Virtualization (UE-V).
+  A template defines settings to synchronize between computers.
+  After you unregister a template, UE-V no longer synchronizes those settings.
+  If you try to unregister a template that is not registered, the cmdlet returns an error.
+
+  You must have administrative credentials to run this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/unregister-uevtemplate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Unregister-UevTemplate

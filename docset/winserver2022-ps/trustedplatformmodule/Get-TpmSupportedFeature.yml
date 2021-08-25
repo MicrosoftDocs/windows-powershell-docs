@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies whether a TPM supports specified features.
+module: TrustedPlatformModule
+notes: ""
+inputs:
+- name: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts a collection of features to verify.
+outputs:
+- name: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a **StringCollection** object that contains features that the TPM of the computer supports.
+links:
+- text: Trusted Platform Module Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- Get-TpmSupportedFeature [[-FeatureList] <StringCollection>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Verify support for key attestation'
+  code: |-
+    PS C:\> Get-TpmSupportedFeature -FeatureList "Key Attestation"
+    key attestation
+  description: |-
+    This command verifies whether TPM supports the key attestation feature.
+    The cmdlet displays the string, key attestation, so TPM supports that feature.
+  summary: ""
+parameters:
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: FeatureList
+  description: |+
+    Specifies feature names as a string collection.
+    The cmdlet verifies the features that you specify.
+    If you specify an empty collection, $Null, or do not include this parameter, the cmdlet verifies all features.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: TrustedPlatformModule.Get-TpmSupportedFeature
+name: Get-TpmSupportedFeature
+description: |-
+  The **Get-TpmSupportedFeature** cmdlet verifies whether a Trusted Platform Module (TPM) supports specified TPM features.
+  Not all TPMs support all features.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Tpm.Commands.dll-Help.xml
+  Module Name: TrustedPlatformModule
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/trustedplatformmodule/get-tpmsupportedfeature?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-TpmSupportedFeature

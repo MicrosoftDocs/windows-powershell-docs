@@ -1,0 +1,206 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the large send offload (LSO) properties of the network adapter.
+module: NetAdapter
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapter LsoSettingData" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapter LsoSettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Disable-NetAdapterLso
+  href: ./Disable-NetAdapterLso.yml
+- text: Enable-NetAdapterLso
+  href: ./Enable-NetAdapterLso.yml
+- text: Get-NetAdapterLso
+  href: ./Get-NetAdapterLso.yml
+syntaxes:
+- >-
+  Set-NetAdapterLso [-Name] <String[]> [-AsJob] [-CimSession <CimSession[]>] [-IncludeHidden]
+
+   [-IPv4Enabled <Boolean>] [-IPv6Enabled <Boolean>] [-NoRestart] [-PassThru] [-ThrottleLimit <Int32>]
+
+   [-V1IPv4Enabled <Boolean>] [-Confirm] [-WhatIf]
+- >-
+  Set-NetAdapterLso [-AsJob] [-CimSession <CimSession[]>] [-IncludeHidden] [-IPv4Enabled <Boolean>]
+
+   [-IPv6Enabled <Boolean>] [-NoRestart] [-PassThru] [-ThrottleLimit <Int32>] [-V1IPv4Enabled <Boolean>]
+
+   -InterfaceDescription <String[]> [-Confirm] [-WhatIf]
+- >-
+  Set-NetAdapterLso [-AsJob] [-CimSession <CimSession[]>] [-IPv4Enabled <Boolean>] [-IPv6Enabled <Boolean>]
+
+   [-NoRestart] [-PassThru] [-ThrottleLimit <Int32>] [-V1IPv4Enabled <Boolean>] -InputObject <CimInstance[]>
+
+   [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Set-NetAdapterLso -Name MyAdapter -IPv4Enabled $True -IPv6Enabled $False
+  description: |-
+    This example enables LSO for IPv4 and disables LSO for IPv6 on the network adapter named MyAdapter.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeHidden
+  description: |+
+    Specifies both visible and hidden network adapters should be included.
+    By default only visible network adapters are included.
+    If a wildcard character is used in identifying a network adapter and this parameter has been specified, then the wildcard string is matched against both hidden and visible network adapters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceDescription
+  isRequired: true
+  description: |+
+    Specifies the network adapter interface description.
+    For a physical network adapter this is typically the name of the vendor of the network adapter followed by a part number and description, such as `Contoso 12345 Gigabit Network Device`.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ifDesc
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IPv4Enabled
+  description: |+
+    Specifies the enabled state of LSO for IPv4 traffic.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IPv6Enabled
+  description: |+
+    Specifies the enabled state of LSO for IPv6 traffic.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the network adapter.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ifAlias, InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRestart
+  description: |+
+    Specifies that the network adapter is not restarted as part of running this cmdlet.
+    Note: Many advanced properties require restarting the network adapter before the new settings take effect.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: V1IPv4Enabled
+  description: |+
+    Enables LSOv1 on the network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetAdapter.Set-NetAdapterLso
+name: Set-NetAdapterLso
+description: |-
+  The **Set-NetAdapterLso** cmdlet manages the large send offload property which can improve send side performance by having the network adapter distribute a large send request into smaller sizes that can be sent out by the network adapter.
+  Without this setting Windows Server® 2012 and later would have to perform this work.
+  The offload reduces the load on the processor, so that the processor can to do more application level work.
+  If only setting the enabled state of LSO, then use the Enable-NetAdapterLso or Disable-NetAdapterLso cmdlets.
+metadata:
+  external help file: NetAdapter_Cmdlets.xml
+  Module Name: NetAdapter
+  online version: https://docs.microsoft.com/powershell/module/netadapter/set-netadapterlso?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

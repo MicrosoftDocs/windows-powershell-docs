@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a configuration element object from an IIS configuration section or a configuration element.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElement, System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElement" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-IISConfigElement
+  href: ./Remove-IISConfigElement.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Get-IISConfigElement [-ConfigElement] <ConfigurationElement> [[-ChildElementName] <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a configuration element for an IIS website'
+  code: |-
+    PS C:\> $ConfigSection = Get-IISConfigSection -SectionPath "system.applicationHost/sites"
+    PS C:\> $SitesCollection = Get-IISConfigCollection -ConfigElement $ConfigSection
+    PS C:\> $Site = Get-IISConfigCollectionElement -ConfigCollection $SitesCollection -ConfigAttribute @{"name" = "Default Web Site"}
+    PS C:\> $Elem = Get-IISConfigElement -ConfigElement $Site -ChildElementName "limits"
+    PS C:\> Get-IISConfigAttributeValue -ConfigElement $Elem -AttributeName "MaxUrlSegments"
+  description: |-
+    This command returns the configuration element limits for the Default Web Site into the Windows PowerShell variable $Elem.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ChildElementName
+  description: |+
+    Specifies the name of the child ConfigurationElement to be returned.
+    If this parameter is omitted, all the child elements for the given parent are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ConfigurationElement" data-throw-if-not-resolved="False" />
+  name: ConfigElement
+  isRequired: true
+  description: |+
+    Specifies the IIS ConfigurationSection or ConfigurationElement for which the child ConfigurationElement is returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Get-IISConfigElement
+name: Get-IISConfigElement
+description: |-
+  The **Get-IISConfigElement** cmdlet gets a child ConfigurationElement object from either a ConfigurationSection or a ConfigurationElement.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/get-iisconfigelement?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-IISConfigElement

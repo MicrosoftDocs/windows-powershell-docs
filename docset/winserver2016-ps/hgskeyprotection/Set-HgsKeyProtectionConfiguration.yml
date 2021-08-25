@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the configuration of the Key Protection Service.
+module: HgsKeyProtection
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Get-HgsKeyProtectionConfiguration
+  href: ./Get-HgsKeyProtectionConfiguration.yml
+syntaxes:
+- >-
+  Set-HgsKeyProtectionConfiguration -CommunicationsCertificateThumbprint <String>
+
+   [-NoCommunicationsCertificateReplication] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-HgsKeyProtectionConfiguration -CommunicationsCertificatePath <String>
+
+   [-CommunicationsCertificatePassword <SecureString>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Assign a certificate to be the communication certificate'
+  code: |-
+    PS C:\> Set-HgsKeyProtectionConfiguration -CommunicationsCertificateThumbprint "d39203a3b3544743ad552afe0615dc1f" -Force
+  description: |-
+    This command assigns the certificate that has the specified thumbprint to be the communication certificate for the Key Protection Service.
+    The command specifies the **Force**, and so, it does not prompt you for confirmation.
+  summary: ""
+- title: 'Example 2: Assign a certificate file to be the communications certificate'
+  code: |-
+    PS C:\> Set-HgsKeyProtectionConfiguration -CommunicationsCertificatePath "C:\example.pfx"
+    Set-HgsKeyProtectionConfiguration -CommunicationsCertificateThumbprint "d39203a3b3544743ad552afe0615dc1f" -Force
+  description: |-
+    This command assigns a certificate file to be the communications certificate for the Key Protection Service.
+  summary: ""
+- title: 'Example 3: Assign a certificate file with a password to be the communications certificate'
+  code: |-
+    PS C:\> Set-HgsKeyProtectionConfiguration -CommunicationsCertificatePath "C:\example.pfx" -CommunicationsCertificatePassword $Password
+  description: |-
+    This command assigns a password-protected certificate file to be the communications certificate for the Key Protection Service.
+    The certificate password is stored as a SecureString in the **$Password** variable.
+  summary: ""
+parameters:
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: CommunicationsCertificatePassword
+  description: |+
+    Specifies the password which protects a certificate file.
+    If the certificate file is protected by a password, you must specify this value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CommunicationsCertificatePath
+  isRequired: true
+  description: |+
+    Specifies the path to the certificate which will be added to the Key Protection Service as the communications certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CommunicationsCertificateThumbprint
+  isRequired: true
+  description: |+
+    Specifies the thumbprint of the new communications certificate.
+    Before you run this cmdlet, the certificate that this parameter specifies needs to already be in the LocalMachine\My certificate store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoCommunicationsCertificateReplication
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsKeyProtection.Set-HgsKeyProtectionConfiguration
+name: Set-HgsKeyProtectionConfiguration
+description: |-
+  The **Set-HgsKeyProtectionConfiguration** cmdlet assigns a communication certificate to the Key Protection Service that runs on the local computer.
+  The Key Protection Service uses the communication certificate to sign the metadata document that the service provides.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/set-hgskeyprotectionconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-HgsKeyProtectionConfiguration

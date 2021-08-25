@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Commands to enable and disable process mitigations or set them in bulk from an XML file.
+module: ProcessMitigations
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Set-ProcessMitigation [[-Name] <String>] [-Disable <String[]>] [-Enable <String[]>] [<CommonParameters>]
+- Set-ProcessMitigation -PolicyFilePath <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>  Set-ProcessMitigation -Name Notepad.exe -Enable SEHOP -Disable ForceRelocateImages
+  description: |-
+    Gets the current process mitigation for "notepad.exe" from the registry and then enables SEHOP, and disables ForceRelocateImages.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-ProcessMitigation -PolicyFilePath settings.xml
+  description: |-
+    Applies all settings inside settings.xml
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Set-ProcessMitigation -System -Enable DEP
+  description: |-
+    Applies DEP at the system level. To disable mitigations, you can replace `-Enable` with `-Disable`. However, for app-level mitigations, this will force the mitigation to be disabled only for that app.
+  summary: ""
+- title: Exmaple 4
+  code: |-
+    PS C:\> Set-ProcessMitigation -System -Remove -Disable DEP
+  description: |-
+    If you need to restore the mitigation back to the system default, you need to include the `-Remove` cmdlet as well, as in the above  example:
+  summary: ""
+- title: Example 5
+  code: |-
+    PS C:\> Set-ProcessMitigation -System -Enable SEHOP
+  description: |-
+    Enable SEHOP Component at the system level.
+  summary: ""
+- title: Example 6
+  code: |-
+    PS C:\> Set-ProcessMitigation -System -Disable SEHOP
+  description: |-
+    Disable SEHOP Component at the system level.
+  summary: ""
+- title: Example 7
+  code: |-
+    PS C:\> Set-ProcessMitigation -System -Reset
+  description: |-
+    Reset Mitigation at the system level.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Disable
+  description: |+
+    Comma separated list of mitigations to disable.
+    Disable list takes priority over enable list.
+    If specified in both, it will be disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: d
+  parameterValueGroup: DEP, EmulateAtlThunks, SEHOP, ForceRelocateImages, RequireInfo, BottomUp, HighEntropy, StrictHandle, DisableWin32kSystemCalls, AuditSystemCall, DisableExtensionPoints, BlockDynamicCode, AllowThreadsToOptOut, AuditDynamicCode, CFG, SuppressExports, StrictCFG, MicrosoftSignedOnly, AllowStoreSignedBinaries, AuditMicrosoftSigned, AuditStoreSigned, EnforceModuleDependencySigning, DisableNonSystemFonts, AuditFont, BlockRemoteImageLoads, BlockLowLabelImageLoads, PreferSystem32, AuditRemoteImageLoads, AuditLowLabelImageLoads, AuditPreferSystem32, EnableExportAddressFilter, AuditEnableExportAddressFilter, EnableExportAddressFilterPlus, AuditEnableExportAddressFilterPlus, EnableImportAddressFilter, AuditEnableImportAddressFilter, EnableRopStackPivot, AuditEnableRopStackPivot, EnableRopCallerCheck, AuditEnableRopCallerCheck, EnableRopSimExec, AuditEnableRopSimExec, SEHOP, AuditSEHOP, SEHOPTelemetry, TerminateOnError, DisallowChildProcessCreation, AuditChildProcess
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EAFModules
+  description: |+
+    Modules to be added to the EAF+ mitigation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Enable
+  description: |+
+    Comma separated list of mitigations to enable.
+    Disable list takes priority over enable list.
+    If specified in both, it will be disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: e
+  parameterValueGroup: DEP, EmulateAtlThunks, SEHOP, ForceRelocateImages, RequireInfo, BottomUp, HighEntropy, StrictHandle, DisableWin32kSystemCalls, AuditSystemCall, DisableExtensionPoints, BlockDynamicCode, AllowThreadsToOptOut, AuditDynamicCode, CFG, SuppressExports, StrictCFG, MicrosoftSignedOnly, AllowStoreSignedBinaries, AuditMicrosoftSigned, AuditStoreSigned, EnforceModuleDependencySigning, DisableNonSystemFonts, AuditFont, BlockRemoteImageLoads, BlockLowLabelImageLoads, PreferSystem32, AuditRemoteImageLoads, AuditLowLabelImageLoads, AuditPreferSystem32, EnableExportAddressFilter, AuditEnableExportAddressFilter, EnableExportAddressFilterPlus, AuditEnableExportAddressFilterPlus, EnableImportAddressFilter, AuditEnableImportAddressFilter, EnableRopStackPivot, AuditEnableRopStackPivot, EnableRopCallerCheck, AuditEnableRopCallerCheck, EnableRopSimExec, AuditEnableRopSimExec, SEHOP, AuditSEHOP, SEHOPTelemetry, TerminateOnError, DisallowChildProcessCreation, AuditChildProcess
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overrides a system setting either on or off depending on the level this is set at. Will force "on"/"off" all mitigations provided in the -Enable list
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IsValid
+  description: |+
+    Set to check the given XML file for validity. Requires local .xsd
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of the process to apply mitigation settings to.
+    Can be in the format "notepad" or "notepad.exe"
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyFilePath
+  isRequired: true
+  description: |+
+    Path to XML file containing mitigation settings.
+
+  defaultValue: None
+  position: Named
+  aliases: x
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Remove
+  description: |+
+    Removes a mitigation entry from the registry.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Reset
+  description: |+
+    Resets a specific mitigation entry to defer.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: System
+  description: |+
+    Used to configure system defaults rather than individual apps.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ProcessMitigations.Set-ProcessMitigation
+name: Set-ProcessMitigation
+description: |-
+  Used to turn on and off various process mitigation settings.
+  Can also apply an XML file to apply settings for many processes at once.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ProcessMitigations.dll-Help.xml
+  Module Name: ProcessMitigations
+  ms.date: 03/29/2017
+  online version: https://docs.microsoft.com/powershell/module/processmitigations/set-processmitigation?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-ProcessMitigation

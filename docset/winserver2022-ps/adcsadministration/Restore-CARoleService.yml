@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Restores the CA database and private key information.
+module: ADCSAdministration
+notes: ""
+links:
+- text: Backup-CARoleService
+  href: ./Backup-CARoleService.yml
+syntaxes:
+- >-
+  Restore-CARoleService [-Path] <String> [-Force] [-KeyOnly] [-Password <SecureString>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Restore-CARoleService [-Path] <String> [-Force] [-DatabaseOnly] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Restore-CARoleService [-Path] <String> [-Force] [-Password <SecureString>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Restore the CA private key and certificate'
+  code: |-
+    PS C:\> Restore-CARoleService -Path "C:\CABackup"
+  description: |-
+    This command restores the CA private key and certificate from the specified path.
+  summary: ""
+- title: 'Example 2: Restore the CA database only'
+  code: |-
+    PS C:\> Restore-CARoleService -Path "C:\CABackup" -DatabaseOnly
+  description: |-
+    This command restores the CA database from the specified path.
+    The command does not restore the CA private key information.
+  summary: ""
+- title: 'Example 3: Restore the CA key only'
+  code: |-
+    PS C:\> Restore-CARoleService -Path "C:\CABackup" -KeyOnly
+  description: |-
+    This command restores the CA private key information to the specified path.
+    The command does not restore the CA database.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DatabaseOnly
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet restores only the certification authority database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: KeyOnly
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet restores only the certification authority private key and certificate.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Specifies a password, as a secure string, to access the private key and certificate information.
+    To obtain a secure string, use the [ConvertTo-SecureString](https://go.microsoft.com/fwlink/?LinkID=113291) cmdlet.
+    For more information, type `Get-Help ConvertTo-SecureString`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the directory from which the cmdlet restores the CA database and private key.
+    The cmdlet restores the database from the subdirectory named Database in the path that you specified when you backed up the CA database.
+    The cmdlet restores the private key from the .p12 file that you backed up in the Database subdirectory in the path that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADCSAdministration.Restore-CARoleService
+name: Restore-CARoleService
+description: |-
+  The **Restore-CARoleService** cmdlet restores the certification authority (CA) database and private key information.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsadministration/restore-caroleservice?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Restore-CARoleService

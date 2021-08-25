@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a switch team.
+module: NetSwitchTeam
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NetSwitchTeam
+  href: ./Get-NetSwitchTeam.yml
+- text: Remove-NetSwitchTeam
+  href: ./Remove-NetSwitchTeam.yml
+- text: Rename-NetSwitchTeam
+  href: ./Rename-NetSwitchTeam.yml
+syntaxes:
+- >-
+  New-NetSwitchTeam [-Name] <String> [-TeamMembers] <String[]> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a team'
+  code: |-
+    PS C:\>New-NetSwitchTeam -Name "SwitchTeam01" -TeamMembers "Ethernet 2","Ethernet 3"
+  description: |-
+    This command creates a team named SwitchTeam01 that has two network adapter members.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the switch team being created.
+    The name must be a unique team name that does not exist as either a switch team or Load-Balancing/Fail-Over team name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TeamMembers
+  isRequired: true
+  description: |+
+    Specifies one or more network adapters to add as members of the team.
+    A new team must have at least one member upon creation.
+    The network adapters must already exist and not be part of another team.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetSwitchTeam.New-NetSwitchTeam
+name: New-NetSwitchTeam
+description: |-
+  The **New-NetSwitchTeam** cmdlet creates a switch team.
+  A switch team must have a name for the team and must be created with one or more members, or network adapters.
+
+  The network switch team is a team that is controlled by a Hyper-V extensible switch forwarding extension.
+  No other cmdlets can be used to manage a switch team and the Network Switch Team Cmdlets in Windows PowerShell must not be used to manage standard, or non-switch, network adapter teams.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetSwitchTeam.cdxml-help.xml
+  Module Name: NetSwitchTeam
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/netswitchteam/new-netswitchteam?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetSwitchTeam

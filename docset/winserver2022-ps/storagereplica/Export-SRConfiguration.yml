@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports replication configuration to a Windows PowerShell script.
+module: StorageReplica
+notes: ""
+syntaxes:
+- >-
+  Export-SRConfiguration [[-ComputerName] <String>] [-Path] <String> [-Seeded] [-AllowClobber]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Export configuration'
+  code: |-
+    This command exports all replication partnership and group information to a Windows PowerShell script named sr-srv01.ps1 in the C:\temp folder. 
+    PS C:\>Export-SRConfiguration -Path "C:\temp\sr-srv01.ps1"
+    Exported 1 Storage Replica partnerships. 
+    Exported 2 Storage Replica groups.
+
+    This command displays the contents of the script by using the Get-Content cmdlet. 
+    PS C:\>Get-Content -Path "C:\temp\sr-srv01.ps1"
+    New-SRGroup -Computer SR-SRV01 -Name ReplicationGroup01 -VolumeName D:\ -LogVolumeName e:\ -LogSizeInBytes 8589934592
+    New-SRGroup -Computer SR-SRV03 -Name ReplicationGroup02 -VolumeName D:\ -LogVolumeName e:\ -LogSizeInBytes 8589934592
+    New-SRPartnership -SourceComputerName SR-SRV01 -SourceRGName ReplicationGroup01 -DestinationComputerName SR-SRV03 -DestinationRGName Rep
+    licationGroup02 -ReplicationMode Synchronous -PreventReplication
+    Write-Host Please execute Sync-SRGroup to resume replication.
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowClobber
+  description: |+
+    Indicates that the cmdlet overwrites an existing file.
+    By default, this cmdlet does not overwrite an existing file.
+
+  defaultValue: None
+  position: "99"
+  aliases: AC
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN) for which this cmdlet exports configuration.
+    The default value is the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: CN
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the exported configuration file, including the file name.
+    By default, this cmdlet does not overwrite an existing file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: P
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Seeded
+  description: |+
+    Specifies that the destination computer contains a seeded copy of the data from the source server.
+    Seeded data is a copy of data from the source server, such as a restored backup or copies of drives.
+    Unused blocks also count toward seeding.
+    This option may reduce bandwidth usage during initial replication and is likely to use more CPU and memory.
+
+  defaultValue: None
+  position: "2"
+  aliases: S
+  parameterValueGroup: ""
+uid: StorageReplica.Export-SRConfiguration
+name: Export-SRConfiguration
+description: |-
+  The **Export-SRConfiguration** cmdlet exports the replication configuration for a computer to a Windows PowerShell .ps1 configuration script.
+  You can use this .ps1 file as a configuration backup to reapply in event that Storage Replica settings are damaged or removed.
+  You can also use this file to migrate settings to another computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: StorageReplica-help.xml
+  Module Name: StorageReplica
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storagereplica/export-srconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-SRConfiguration

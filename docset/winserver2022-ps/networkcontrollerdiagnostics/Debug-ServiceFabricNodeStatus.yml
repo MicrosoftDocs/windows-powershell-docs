@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Queries the Network Controller Service Fabric to show the replication status and health state of each Network Controller node.
+module: NetworkControllerDiagnostics
+notes: ""
+links:
+- text: Debug-NetworkController
+  href: ./Debug-NetworkController.yml
+- text: Debug-NetworkControllerConfigurationState
+  href: ./Debug-NetworkControllerConfigurationState.yml
+syntaxes:
+- Debug-ServiceFabricNodeStatus [-ServiceTypeName] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the replication status Virtual Switch Service'
+  code: |-
+    PS C:\>Debug-ServiceFabricNodeStatus -ServiceTypeName "VSwitchService"
+  description: |-
+    This command gets the replication status VSwitchService, or Virtual Switch Service.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceTypeName
+  isRequired: true
+  description: |+
+    Specifies the service type that this cmdlet queries.
+    The acceptable values for this parameter are:
+
+    - ControllerService
+    - ApiService
+    - SlbManagerService
+    - ServiceInsertion
+    - FirewallService
+    - VSwitchService
+    - GatewayManager
+    - MonitoringService
+    - TopologyService
+    - FnmService
+    - HelperService
+    - UpdateService
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkControllerDiagnostics.Debug-ServiceFabricNodeStatus
+name: Debug-ServiceFabricNodeStatus
+description: |-
+  The **Debug-ServiceFabricNodeStatus** cmdlet queries the Network Controller Service Fabric to show the replication status and health state of each Network Controller node.
+  It also shows evolution of the status of the nodes by regularly polling for changes.
+
+  You can run this cmdlet from one of the Network Controller nodes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Debug-ServiceFabricNodeStatus-help.xml
+  Module Name: NetworkControllerDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontrollerdiagnostics/debug-servicefabricnodestatus?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Debug-ServiceFabricNodeStatus

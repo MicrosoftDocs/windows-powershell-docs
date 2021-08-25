@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a user to launch only one app.
+module: AssignedAccess
+notes: |-
+  * To get all the Windows Store apps installed for a user account, use the Get-AppxPackage cmdlet as follows:
+
+  `Get-AppxPackage -User "username"`
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Clear-AssignedAccess
+  href: ./Clear-AssignedAccess.yml
+- text: Get-AssignedAccess
+  href: ./Get-AssignedAccess.yml
+syntaxes:
+- Set-AssignedAccess -UserName <String> -AppName <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Set-AssignedAccess -UserName <String> -AppUserModelId <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Set-AssignedAccess -UserSID <String> -AppUserModelId <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Set-AssignedAccess -UserSID <String> -AppName <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set assigned access by SID and app name'
+  code: |-
+    PS C:\> Set-AssignedAccess -UserSID "S-1-5-21-523423449-2432423479-234123443-1004" -AppName "CustomApp"
+  description: |-
+    This command configures assigned access by using the user SID and the app name.
+  summary: ""
+- title: 'Example 2: Set assigned access by user name and AppUserModelID'
+  code: |-
+    PS C:\> Set-AssignedAccess -UserName "UserName" -AppUserModelId "microsoft.windowsphotos_8wekyb3d8bbwe!app"
+  description: |-
+    This command configures assigned access by using the user name and AppUserModelID.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AppName
+  isRequired: true
+  description: |+
+    Specifies the name of the installed Windows Store app to use for assigned access.
+    Wildcard characters are accepted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AppUserModelId
+  isRequired: true
+  description: |+
+    Specifies the Application User Model ID (AppUserModelID) for the installed Windows Store app to use for assigned access.
+    The AppUserModelID is found in the app's AUMIDs.txt file.
+
+  defaultValue: None
+  position: Named
+  aliases: AUMID
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  isRequired: true
+  description: |+
+    Specifies the local user account name to use for assigned access.
+    This cannot be a domain account or an administrator account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserSID
+  isRequired: true
+  description: |+
+    Specifies the security identifier (SID) for the local user account to use for assigned access.
+    This account cannot be a domain account or an administrator account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AssignedAccess.Set-AssignedAccess
+name: Set-AssignedAccess
+description: |-
+  The **Set-AssignedAccess** cmdlet configures the specified user account so that it can use only one Windows Store app.
+  The user cannot exit the app, sign out, or access any system settings.
+
+  If a user is signed-in or the computer has a PS/2 keyboard, you must restart the computer to apply the changes.
+
+  To sign out of assigned access, quickly press the left Windows logo key five times.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: AssignedAccess-help.xml
+  Module Name: AssignedAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/assignedaccess/set-assignedaccess?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AssignedAccess

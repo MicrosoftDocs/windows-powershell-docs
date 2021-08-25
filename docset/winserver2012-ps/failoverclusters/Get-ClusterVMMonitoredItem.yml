@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the list of services and events currently being monitored in the virtual machine.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterVMMonitoredItem" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterVMMonitoredItem
+  href: ./Add-ClusterVMMonitoredItem.yml
+- text: Remove-ClusterVMMonitoredItem
+  href: ./Remove-ClusterVMMonitoredItem.yml
+- text: Reset-ClusterVMMonitoredState
+  href: ./Reset-ClusterVMMonitoredState.yml
+syntaxes:
+- Get-ClusterVMMonitoredItem [[-VirtualMachine] <String>] [-Cluster <String>] [-InputObject <PSObject>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
+    Name 
+    ---- 
+    Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708 
+    Spooler
+  description: |-
+    This example returns the services and events being monitored in the virtual machine named vm1 on the cluster named Cluster1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: Local Cluster
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to run the cmdlet or the clustered virtual machine for which to retrieve the clustered virtual machine monitored item object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualMachine
+  description: |+
+    Specifies the name of the clustered virtual machine on which to perform monitoring.
+    When this parameter is specified, the cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterVMMonitoredItem
+name: Get-ClusterVMMonitoredItem
+description: |-
+  The **Get-ClusterVMMonitoredItem** cmdlet gets the list of services and events currently being monitored in the virtual machine.
+  If one of those services fails or one of the events occurs, then the system responds by taking an action based on the failover configuration for the virtual machine resource.
+  For example, the configuration might specify that the virtual machine be restarted.
+metadata:
+  external help file: Failoverv2_Cmdlets.xml
+  Module Name: FailoverClusters
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clustervmmonitoreditem?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

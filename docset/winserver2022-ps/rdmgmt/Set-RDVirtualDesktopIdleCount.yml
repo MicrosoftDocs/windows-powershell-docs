@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the maximum number of idle virtual desktops on host servers.
+module: RDMgmt
+notes: ""
+links:
+- text: Get-RDVirtualDesktopIdleCount
+  href: ./Get-RDVirtualDesktopIdleCount.yml
+- text: Get-RDVirtualDesktop
+  href: ./Get-RDVirtualDesktop.yml
+syntaxes:
+- >-
+  Set-RDVirtualDesktopIdleCount [-IdleCount] <Int32> [[-HostServer] <String[]>] [-ConnectionBroker <String>]
+
+   [-BatchSize <Int32>] [<CommonParameters>]
+- >-
+  Set-RDVirtualDesktopIdleCount [-Allocation] <Hashtable> [-ConnectionBroker <String>] [-BatchSize <Int32>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the number of idle virtual desktops on host servers'
+  code: |-
+    PS C:\>Set-RDVirtualDesktopIdleCount -IdleCount 10 -HostServer @("rdvh-1.contoso.com","rdvh-2.contoso.com") -ConnectionBroker "rdcb.contoso.com"
+  description: |-
+    This command sets the maximum number of active but idle virtual desktops on the host servers named rdvh-1.contoso.com and rdvh-2.contoso.com.
+  summary: ""
+- title: 'Example 2: Allocate idle virtual desktops to host servers'
+  code: |-
+    PS C:\>Set-RDVirtualDesktopIdleCount -Allocation @{"RDS-WKS-A26.contoso.com"=2;" RDS-WKS-A27.contoso.com"=4} -ConnectionBroker "rdcb.contoso.com"
+  description: |-
+    This command sets the number of idle virtual desktops for specific host servers.
+    The command allocates 2 idle virtual desktops for the host server named RDS-WKS-A26.contoso.com, and 4 idle virtual desktops for the host server named RDS-WKS-A27.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Allocation
+  isRequired: true
+  description: |+
+    Specifies a collection of values (key/value pair) that allocate idle virtual desktops to Remote Desktop Virtualization (RD Virtualization Host) servers.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: BatchSize
+  description: |+
+    Specifies the batch size.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HostServer
+  description: |+
+    Specifies an array of names of the servers that host the session.
+    For session collections the host server has the name of the Remote Desktop Session Host (RD Session Host) server.
+    For virtual desktop collections the host server has the name of the Remote Desktop Virtualization Host (RD Virtualization Host) server.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: IdleCount
+  isRequired: true
+  description: |+
+    Specifies the number of idle virtual desktops.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Set-RDVirtualDesktopIdleCount
+name: Set-RDVirtualDesktopIdleCount
+description: |-
+  The **Set-RDVirtualDesktopIdleCount** cmdlet sets the maximum number of active but idle virtual desktops on one or more host servers.
+  This cmdlet sets the total number of virtual desktops that can be idle in all pools.
+
+  An idle virtual desktop is a virtual machine that is in a running state and there is no user logged on to it.
+  Idle virtual desktops continue to run even if you configured the pool so that the server saves a virtual desktop that is not in use.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdvirtualdesktopidlecount?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDVirtualDesktopIdleCount

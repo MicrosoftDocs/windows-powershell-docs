@@ -1,0 +1,195 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Runs the prerequisites for uninstalling a domain controller in Active Directory.
+module: ADDSDeployment
+notes: ""
+links:
+- text: AD DS Simplified Administration
+  href: https://go.microsoft.com/fwlink/?LinkID=237244
+- text: Uninstall-ADDSDomainController
+  href: ./Uninstall-ADDSDomainController.yml
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+- text: ConvertTo-SecureString
+  href: https://go.microsoft.com/fwlink/p/?LinkId=113291
+syntaxes:
+- >-
+  Test-ADDSDomainControllerUninstallation [-LocalAdministratorPassword <SecureString>]
+
+   [-Credential <PSCredential>] [-DemoteOperationMasterRole] [-DnsDelegationRemovalCredential <PSCredential>]
+
+   [-IgnoreLastDCInDomainMismatch] [-IgnoreLastDnsServerForZone] [-LastDomainControllerInDomain]
+
+   [-NoRebootOnCompletion] [-RemoveApplicationPartitions] [-RemoveDnsDelegation] [-RetainDCMetadata] [-Force]
+
+   [<CommonParameters>]
+- >-
+  Test-ADDSDomainControllerUninstallation [-LocalAdministratorPassword <SecureString>]
+
+   [-Credential <PSCredential>] [-DemoteOperationMasterRole] [-ForceRemoval] [-NoRebootOnCompletion] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Test if uninstalling a domain controller is possible'
+  code: |-
+    PS C:\> Test-ADDSDomainControllerUninstallation
+  description: |-
+    This command runs the prerequisites to determine if the uninstall of an additional domain controller in a domain is possible.
+    The command also prompts the user to set and confirm the local Administrator password prior to completing the uninstallation process.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user name and password that corresponds to the account used to install the domain controller.
+    To prompt the user to supply a password, use Runs the prerequisites (only) to determine if installing a domain controller is possible that includes a DNS server for the corp.contoso.com domain, using domain administrator credentials, and then prompts the user to correctly specify the Directory Services Restore Mode (DSRM) password.
+    Use the **Get-Credential** cmdlet in place of an existing *PSCredential* type.
+    This parameter will cause Windows PowerShell to prompt the user to enter credentials using the Windows security login UI.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DemoteOperationMasterRole
+  description: |+
+    Indicates that forced demotion should continue even if an operations master role is discovered on domain controller from which AD DS is being removed.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DnsDelegationRemovalCredential
+  description: |+
+    Specifies the account credentials to use when you create or remove the DNS delegation.
+    If you do not specify a value, the account credentials that you specify for the AD DS installation or removal are used to remove the DNS delegation.
+    As an alternative, you can specify the asterisk (*) to prompt the user to enter credentials.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceRemoval
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet forces the removal of a domain controller.
+    Use this parameter to force the uninstall of AD DS if you need to remove the domain controller and do not have connectivity to other domain controllers within the domain topology.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IgnoreLastDCInDomainMismatch
+  description: |+
+    Indicates that Windows PowerShell ignores any inconsistency that it detects with the value that you specify for the *LastDomainControllerInDomain* parameter.
+    For instance, if you specify *LastDomainControllerInDomain* but Windows PowerShell detects that there is actually another active domain controller in the domain, you can specify the *IgnoreLastDCInDomainMismatch* parameter to have Windows PowerShell continue the removal of AD DS from the domain controller despite the inconsistency that it has detected.
+    Similarly, if you do not specify *LastDomainControllerInDomain* but Windows PowerShell is unable to detect that another domain controller is in the domain, you can specify *IgnoreLastDCInDomainMismatch* to have Windows PowerShell continue to remove AD DS from the domain controller.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IgnoreLastDnsServerForZone
+  description: |+
+    Indicates that the cmdlet continues the removal of AD DS despite the fact that the domain controller is the last DNS server for one or more of the Active Directory-integrated DNS zones that it hosts.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LastDomainControllerInDomain
+  description: |+
+    Indicates that the cmdlet removes AD DS from the last controller in the domain.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: LocalAdministratorPassword
+  description: |+
+    Specifies a local administrator account password when AD DS is removed from a domain controller.
+    In earlier releases, where uninstall of AD DS was done using Dcpromo.exe for demotion, the default was to allow an empty password for this setting.
+    In Windows PowerShell, the ADDS Deployment module requires that a non-empty password string value be assigned.
+    If a value is not provided for this parameter, you are prompted to enter a value for the password at the Windows PowerShell prompt.
+    The password value must be a secure string.
+
+    If this parameter is not specified, the cmdlet prompts you to enter and confirm a masked password.
+    This is the preferred usage when running the cmdlet interactively.
+    If additionally there are no other arguments specified with the cmdlet, you are prompted to enter a masked password for this parameter but no confirmation of the password entered is made.
+    This is not recommended as it could allow a mistyped password to be configured.
+    Another available advanced option is to use the **ConvertTo-SecureString** cmdlet and specify the password string inline as unmasked console input, which is also not a recommended security best practice in production deployments.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRebootOnCompletion
+  description: |+
+    Indicates that the cmdlet does not restart the computer upon completion, regardless of success.
+    By default, reboot upon completion occurs when this cmdlet is used and this parameter is omitted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemoveApplicationPartitions
+  description: |+
+    Indicates that the cmdlet removes application partitions during the removal of AD DS from a domain controller.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemoveDnsDelegation
+  description: |+
+    Indicates that the cmdlet preserves DNS delegations that point to this DNS server from the parent DNS zone.
+
+    By default, this parameter is set to false, which means DNS delegations that point to this server from the parent DNS zone will not be retained after uninstallation of the domain controller.
+    This setting corresponds to the earlier Dcpromo.exe parameter default of /RemoveDNSDelegation:Yes.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RetainDCMetadata
+  description: |+
+    Indicates that the domain controller should retain metadata for the domain after removal of AD DS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADDSDeployment.Test-ADDSDomainControllerUninstallation
+name: Test-ADDSDomainControllerUninstallation
+description: |-
+  The **Test-ADDSDomainControllerUninstallation** cmdlet runs those prerequisite checks which would be performed if you were to use the Uninstall-ADDSDomainController cmdlet to uninstall a domain controller in Active Directory.
+  It differs from using the *WhatIf* parameter with the **Uninstall-ADDSDomainController** cmdlet in that instead of summarizing the changes that would occur during the uninstallation process, this cmdlet actually tests whether those changes are possible given the current environment.
+
+  For more information on the scope of these prerequisite checks that the ADDSDeployment module performs when using this cmdlet see the section ADPrep and Prerequisite Checking Architecture in [AD DS Simplified Administration](https://go.microsoft.com/fwlink/?LinkID=237244).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
+  Module Name: ADDSDeployment
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/addsdeployment/test-addsdomaincontrolleruninstallation?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-ADDSDomainControllerUninstallation

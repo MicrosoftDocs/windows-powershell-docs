@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables the Reports feature on the local server.
+module: MBAM
+notes: ""
+links:
+- text: Disable-MbamReport
+  href: disable-mbamreport.yml
+- text: Get-MbamReport
+  href: get-mbamreport.yml
+- text: Test-MbamReport
+  href: test-mbamreport.yml
+- text: Enable-MbamDatabase
+  href: enable-mbamdatabase.yml
+syntaxes:
+- >-
+  Enable-MbamReport [-SkipValidation] [-ComplianceAndAuditDBConnectionString <String>]
+
+   -ComplianceAndAuditDBCredential <PSCredential> [-SsrsInstance <String>] -ReportsReadOnlyAccessGroup <String>
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable the Reports feature'
+  code: |-
+    PS C:\> Enable-MbamReport -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -ComplianceAndAuditDBCredential (Get-Credential) -ReportsReadOnlyAccessGroup "Contoso\ReportsGroup"
+  description: |-
+    This command enables the Reports feature on the local server.
+    The feature uses the Compliance and Audit Database on ContosoDatabaseServer.
+    The command prompts you to enter credentials to access the Compliance and Audit Database.
+    The reports group is Contoso\ReportsGroup.
+    The command installs reports on the default SQL Server Reporting Services instance.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComplianceAndAuditDBConnectionString
+  description: |+
+    Specifies a connection string.
+    The local SQL Server Reporting Services uses the string that this parameter specifies to connect to the Compliance and Audit Database feature.
+    The connection string must contain values for the **Integrated Security** and **Initial Catalog** fields.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComplianceDB
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ComplianceAndAuditDBCredential
+  isRequired: true
+  description: |+
+    Specifies the domain account credentials that the local SQL Server Reporting Services instance uses to connect to the Compliance and Audit Database.
+    The domain user in the credentials must be the same as the user that you specify for the *ReportAccount* parameter in the **Enable-MbamDatabase** cmdlet.
+    If you specified a domain user group for the *ReportAccount* parameter, the credentials that you specify for the current parameter must be a member of that group.
+
+    Important: For improved security, use an account that has limited privileges.
+    Also, configure the account so that the password never expires.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComplianceDBCred
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportsReadOnlyAccessGroup
+  isRequired: true
+  description: |+
+    Specifies a domain user group.
+    Specify a group that has read permission for the reports.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ReportsGroup
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipValidation
+  description: |+
+    Indicates that this cmdlet bypasses validation of parameter values.
+    If you specify this parameter, the feature may not function properly after you enable it.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SsrsInstance
+  description: |+
+    Specifies the SQL Server Reporting Services instance.
+    After installation, this instance hosts the reports.
+    If you do not specify an instance, the cmdlet uses the default instance, MSSQLSERVER.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MBAM.Enable-MbamReport
+name: Enable-MbamReport
+description: |-
+  The **Enable-MbamReport** cmdlet enables the Microsoft BitLocker Administration and Monitoring (MBAM) Reports feature on a local Microsoft SQL Server Reporting Services instance.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Enable-MbamReport

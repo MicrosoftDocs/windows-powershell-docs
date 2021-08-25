@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests whether a cluster is properly set up to apply software updates using CAU.
+module: ClusterAwareUpdating
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauBpaProgress" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Test-CauSetup [[-ClusterName] <String>] [[-Credential] <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Test whether the specified failover cluster is set up for CAU'
+  code: |-
+    PS C:\>Test-CauSetup -ClusterName "CONTOSO-FC1"
+    Test-CauSetup completed successfully. To view the results, run the "Get-BpaResult Microsoft/Windows/ClusterAwareUpdating" Windows PowerShell cmdlet.
+  description: |-
+    This example tests whether the failover cluster named CONTOSO-FC1 is properly set up for CAU.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  description: |+
+    Specifies the name of the cluster on which to test for proper setup.
+    This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the administrative credentials for the target cluster.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ClusterAwareUpdating.Test-CauSetup
+name: Test-CauSetup
+description: |-
+  The **Test-CauSetup** cmdlet tests whether a failover cluster is properly set up to apply software updates using Cluster-Aware Updating (CAU).
+  The cmdlet performs a Best Practices Analyzer (BPA) scan of the failover cluster and network environment by invoking the ClusterAwareUpdating BPA model that is installed with CAU.
+  To view the results of a BPA scan that is performed by **Test-CauSetup**, including possible problems and resolution steps, run the **Get-BpaResult** cmdlet.
+
+  You must run the **Test-CauSetup** cmdlet with local administrative credentials.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  Module Name: ClusterAwareUpdating
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/test-causetup?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-CauSetup

@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures an IIS managed module.
+module: WebAdministration
+notes: ""
+links:
+- text: Get-WebManagedModule
+  href: ./Get-WebManagedModule.yml
+- text: New-WebManagedModule
+  href: ./New-WebManagedModule.yml
+- text: Remove-WebManagedModule
+  href: ./Remove-WebManagedModule.yml
+syntaxes:
+- >-
+  Set-WebManagedModule [-Name] <String> [-Type <String>] [-Precondition <String>] [-Location <String[]>]
+
+   [[-PSPath] <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change a property of a managed module'
+  code: |-
+    IIS:\> Set-WebManagedModule -Name "UrlMappingsModule" -Type "Test.Test"
+  description: |-
+    This command changes the type of the module named UrlMappingsModule.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    Specifies the location on which to set the configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the managed module to configure.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Precondition
+  description: |+
+    Specifies preconditions of the module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies an IIS configuration path to the module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the managed type of the module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Set-WebManagedModule
+name: Set-WebManagedModule
+description: |-
+  The **Set-WebManagedModule** cmdlet configures an Internet Information Services (IIS) managed module.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/set-webmanagedmodule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WebManagedModule

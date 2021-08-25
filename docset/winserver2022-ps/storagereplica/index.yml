@@ -1,0 +1,39 @@
+### YamlMime:PowershellModule
+children:
+- title: StorageReplica
+  cmdlets:
+  - StorageReplica.Clear-SRMetadata
+  - StorageReplica.Export-SRConfiguration
+  - StorageReplica.Get-SRAccess
+  - StorageReplica.Get-SRDelegation
+  - StorageReplica.Get-SRGroup
+  - StorageReplica.Get-SRNetworkConstraint
+  - StorageReplica.Get-SRPartnership
+  - StorageReplica.Grant-SRAccess
+  - StorageReplica.Grant-SRDelegation
+  - StorageReplica.New-SRGroup
+  - StorageReplica.New-SRPartnership
+  - StorageReplica.Remove-SRGroup
+  - StorageReplica.Remove-SRNetworkConstraint
+  - StorageReplica.Remove-SRPartnership
+  - StorageReplica.Revoke-SRAccess
+  - StorageReplica.Revoke-SRDelegation
+  - StorageReplica.Set-SRGroup
+  - StorageReplica.Set-SRNetworkConstraint
+  - StorageReplica.Set-SRPartnership
+  - StorageReplica.Suspend-SRGroup
+  - StorageReplica.Sync-SRGroup
+  - StorageReplica.Test-SRTopology
+uid: StorageReplica
+name: StorageReplica
+description: |-
+  This reference provides the cmdlet description and syntax for the Storage Replica cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: f04004d8-804d-4427-8311-92fa44bce42c
+  Module Name: StorageReplica
+  ms.date: 12/20/2016
+  title: StorageReplica

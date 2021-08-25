@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests the active Boot Event Collector configuration.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+  description: |-
+    The text of the configuration, same as in the *Content* parameter.
+outputs:
+- name: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    The result of comparison: $True or $False.
+links:
+- text: Get-SbecActiveConfig
+  href: ./Get-SbecActiveConfig.yml
+- text: Set-SbecActiveConfig
+  href: ./Set-SbecActiveConfig.yml
+- text: Test-SbecConfig
+  href: ./Test-SbecConfig.yml
+syntaxes:
+- >-
+  Test-SbecActiveConfig [-Content] <String[]> [[-ComputerName] <String[]>] [[-CimSession] <CimSession[]>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Test a configuration file through a pipeline'
+  code: |-
+    PS C:\> Get-Content -Path "c:\MyConfig.xml" | Test-SbecActiveConfig
+  description: |-
+    This command compares the current configuration with the contents of the file MyConfig.xml by passing it through a pipeline.
+  summary: ""
+- title: 'Example 2: Test a configuration file through a parameter'
+  code: |-
+    PS C:\> Test-SbecActiveConfig -Content "(Get-Content -Path "c:\MyConfig.xml")"
+  description: |-
+    This command compares the current configuration with the contents of the file MyConfig.xml by passing it as a parameter.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet on the remote computers through a remote session.
+    Enter a session object, such as the output of a **New-CimSession** or **Get-CimSession** cmdlet or an array of these objects.
+    The default is to run the cmdlet on the local computer.
+    For more information, see About_CimSession.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies the names of the computers on which you want to perform the operation.
+    You can specify a fully qualified domain name (FQDN), a NetBIOS name, or an IP address for each computer.
+    For more information see [Invoke-CimMethod](https://go.microsoft.com/fwlink/?LinkId=808801) on MSDN.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Content
+  isRequired: true
+  description: |+
+    Specifies the configuration to test.
+    The acceptable values for this parameter are:
+
+    - A multiline string.
+    Use `\n` to indicate line breaks. 
+    - An array of one-line strings.
+    This cmdlet merges the array.
+    - A mix of multiline strings and string arrays.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Test-SbecActiveConfig
+name: Test-SbecActiveConfig
+description: |-
+  The **Test-SbecActiveConfig** cmdlet tests whether the specified Boot Event Collector configuration matches the current active configuration.
+
+  The comparison is done on the "normalized" text of the configuration by removing all the carriage return (`\r`) characters and by removing any empty lines at the end of configuration.
+  The empty lines in the middle of the text are not removed, and the white space matters.
+
+  This command returns $True if the configurations match; otherwise, it returns $False.
+
+  This command throws an error on failures.
+
+  You must have the Builtin Administrator privilege to run this command.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/test-sbecactiveconfig?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-SbecActiveConfig

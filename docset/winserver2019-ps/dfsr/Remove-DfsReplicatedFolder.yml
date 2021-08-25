@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a replicated folder from a replication group.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, string" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DfsReplicatedFolder
+  href: ./Get-DfsReplicatedFolder.yml
+- text: Set-DfsReplicatedFolder
+  href: ./Set-DfsReplicatedFolder.yml
+- text: New-DfsReplicatedFolder
+  href: ./New-DfsReplicatedFolder.yml
+syntaxes:
+- >-
+  Remove-DfsReplicatedFolder [-GroupName] <String[]> [-FolderName] <String[]> [-Force] [[-DomainName] <String>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a replicated folder'
+  code: |-
+    PS C:\> Remove-DfsReplicatedFolder -GroupName "RG11" -FolderName "RF22"
+
+    Performing this operation will remove the replicated folder "RF22" and its memberships.
+    Are you sure you want to continue to remove this replicated folder and its memberships?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+  description: |-
+    This command removes the replicated folder RF22 and its associated memberships from the replication group named RG11.
+  summary: ""
+- title: 'Example 2: Remove all replicated folders associated with a replication group'
+  code: |-
+    PS C:\> Remove-DfsReplicatedFolder -GroupName "RG11" -FolderName * -Force
+  description: |-
+    This command removes all replicated folders and their associated memberships from the replication group named RG11.
+    The *Force* parameter specifies that the cmdlet does not prompt you to confirm that you want to remove each replicated folder.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains the replication group.
+    If you do not specify this parameter, the cmdlet uses the domain of the current user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FolderName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replicated folders.
+    You can use a comma separated list and the wildcard character (*).
+    If you do not specify this parameter, the cmdlet gets all replicated folders.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: RF, RfName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replication groups.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSR.Remove-DfsReplicatedFolder
+name: Remove-DfsReplicatedFolder
+description: |-
+  The **Remove-DfsReplicatedFolder** cmdlet removes replicated folders from a replication group.
+  Replicated folders are logical arrangements of replication that do not contain computer-specific settings.
+
+  When you remove a replicated folder, the Distributed File System (DFS) Replication service cannot replicate the folder.
+  This operation does not delete any replicated file data.
+  Use this cmdlet only when you decommission a replicated folder.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/remove-dfsreplicatedfolder?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-DfsReplicatedFolder

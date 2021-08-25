@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Propagates a transaction to a specified diagnostic Resource Manager.
+module: MsDtc
+notes: ""
+links:
+- text: Complete-DtcDiagnosticTransaction
+  href: ./Complete-DtcDiagnosticTransaction.yml
+- text: New-DtcDiagnosticTransaction
+  href: ./New-DtcDiagnosticTransaction.yml
+- text: Receive-DtcDiagnosticTransaction
+  href: ./Receive-DtcDiagnosticTransaction.yml
+- text: Undo-DtcDiagnosticTransaction
+  href: ./Undo-DtcDiagnosticTransaction.yml
+syntaxes:
+- >-
+  Send-DtcDiagnosticTransaction [-Transaction] <DtcDiagnosticTransaction> [[-ComputerName] <String>]
+
+   [[-Port] <Int32>] [[-PropagationMethod] <DtcTransactionPropagation>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Send a DTC diagnostic transaction'
+  code: |-
+    PS C:\> $Tx = New-DtcDiagnosticTransaction
+    PS C:\> Send-DtcDiagnosticTransaction -Transaction $Tx -ComputerName "Host1" -PropagationMethod Push
+  description: |-
+    The first command creates a new DTC diagnostic transaction and assigns it to a variable.
+
+    The second command sends the diagnostic transaction to an RM running on the computer named Host1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the host name of the computer on which the RM is running.
+    If you do not specify a host name, the cmdlet uses the name of the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the listening port of the test RM.
+
+  defaultValue: "3002"
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DtcTransactionPropagation" data-throw-if-not-resolved="False" />
+  name: PropagationMethod
+  description: |+
+    Specifies the propagation mechanism, pull or push, to use.
+    The default is pull.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: Pull, Push
+- type: <xref href="DtcDiagnosticTransaction" data-throw-if-not-resolved="False" />
+  name: Transaction
+  isRequired: true
+  description: |+
+    Specifies the **DtcDiagnosticTransaction** object to use in the transaction propagation.
+    You can use the pipeline operator to pass this parameter value to the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDtc.Send-DtcDiagnosticTransaction
+name: Send-DtcDiagnosticTransaction
+description: |-
+  The **Send-DtcDiagnosticTransaction** cmdlet propagates a transaction to a specified diagnostic Resource Manager (RM).
+  Use the **PropagationMethod** parameter to specify the propagation method.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dtc.PowerShell.dll-Help.xml
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/msdtc/send-dtcdiagnostictransaction?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Send-DtcDiagnosticTransaction

@@ -1,0 +1,52 @@
+### YamlMime:PowershellModule
+children:
+- title: SmbShare
+  cmdlets:
+  - SmbShare.Block-SmbShareAccess
+  - SmbShare.Close-SmbOpenFile
+  - SmbShare.Close-SmbSession
+  - SmbShare.Disable-SmbDelegation
+  - SmbShare.Enable-SmbDelegation
+  - SmbShare.Get-SmbBandwidthLimit
+  - SmbShare.Get-SmbClientConfiguration
+  - SmbShare.Get-SmbClientNetworkInterface
+  - SmbShare.Get-SmbConnection
+  - SmbShare.Get-SmbDelegation
+  - SmbShare.Get-SmbMapping
+  - SmbShare.Get-SmbMultichannelConnection
+  - SmbShare.Get-SmbMultichannelConstraint
+  - SmbShare.Get-SmbOpenFile
+  - SmbShare.Get-SmbServerConfiguration
+  - SmbShare.Get-SmbServerNetworkInterface
+  - SmbShare.Get-SmbSession
+  - SmbShare.Get-SmbShare
+  - SmbShare.Get-SmbShareAccess
+  - SmbShare.Grant-SmbShareAccess
+  - SmbShare.New-SmbMapping
+  - SmbShare.New-SmbMultichannelConstraint
+  - SmbShare.New-SmbShare
+  - SmbShare.Remove-SmbBandwidthLimit
+  - SmbShare.Remove-SmbMapping
+  - SmbShare.Remove-SmbMultichannelConstraint
+  - SmbShare.Remove-SmbShare
+  - SmbShare.Revoke-SmbShareAccess
+  - SmbShare.Set-SmbBandwidthLimit
+  - SmbShare.Set-SmbClientConfiguration
+  - SmbShare.Set-SmbPathAcl
+  - SmbShare.Set-SmbServerConfiguration
+  - SmbShare.Set-SmbShare
+  - SmbShare.Unblock-SmbShareAccess
+  - SmbShare.Update-SmbMultichannelConnection
+uid: SmbShare
+name: SmbShare
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Server Message Block (SMB) Share-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.1.1
+  Locale: en-US
+  Module Guid: 3af1699d-cc54-4e54-81cf-28d2df5cce0a
+  Module Name: SmbShare
+  ms.date: 12/20/2016
+  title: SmbShare

@@ -1,0 +1,268 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the configuration of the local BGP router for the specified tenant ID.
+module: RemoteAccess
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#BgpRouterConfig" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-BgpRouter
+  href: ./Add-BgpRouter.yml
+- text: Get-BgpRouter
+  href: ./Get-BgpRouter.yml
+- text: Remove-BgpRouter
+  href: ./Remove-BgpRouter.yml
+- text: Remote Access Cmdlets
+  href: ./index.yml
+syntaxes:
+- >-
+  Set-BgpRouter [-BgpIdentifier <IPAddress>] [-LocalASN <UInt32>] [-CompareMEDAcrossASN <Boolean>]
+
+   [-DefaultGatewayRouting <Boolean>] [-IPv6Routing <IPv6RoutingState>] [-RoutingDomain <String>] [-PassThru]
+
+   [-Force] [-LocalIPv6Address <IPAddress>] [-TransitRouting <TransitRouting>] [-RouteReflector <RouteReflector>]
+
+   [-ClusterId <UInt32>] [-ClientToClientReflection <ClientToClientReflection>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the local BGP router with confirmation'
+  code: |-
+    PS C:\>Set-BgpRouter -LocalASN 64513 -PassThru
+    Confirm
+    One or more BGP peering sessions are active. Applying changes will restart these sessions. Do you want to continue? 
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+
+    RoutingDomain         : 
+    BgpIdentifier         : 192.168.1.10
+    LocalASN              : 64513
+    CompareMEDAcrossASN   : False
+    DefaultGatewayRouting : False
+    IPv6Routing           : Disabled
+    LocalIPv6Address      : 
+    PeerName              : 
+    PolicyName            :
+  description: |-
+    This command prompts the user for confirmation and on confirmation from user, updates, and then modifies the configuration of the local BGP router and restarts all the active BGP peerings.
+  summary: ""
+- title: 'Example 2: Update and modify the local BGP router'
+  code: |-
+    PS C:\>Set-BgpRouter -LocalASN 64513 -Force -PassThru
+    RoutingDomain         : 
+    BgpIdentifier         : 192.168.1.10
+    LocalASN              : 64513
+    CompareMEDAcrossASN   : False
+    DefaultGatewayRouting : False
+    IPv6Routing           : Disabled
+    LocalIPv6Address      : 
+    PeerName              : 
+    PolicyName            :
+  description: |-
+    This command updates and modifies the configuration of the local BGP router and restarts all the active BGP Peerings.
+  summary: ""
+- title: 'Example 3: Update and modify the configuration of a BGP router for the specified routing domain'
+  code: |-
+    PS C:\>Set-BgpRouter -RoutingDomain Rd_001 -BgpIdentifier 14.1.1.10 -LocalASN 64522 -PassThru
+    RoutingDomain         : Rd_001
+    BgpIdentifier         : 14.1.1.10
+    LocalASN              : 64522
+    CompareMEDAcrossASN   : False
+    DefaultGatewayRouting : False
+    IPv6Routing           : Disabled
+    LocalIPv6Address      : 
+    PeerName              : 
+    PolicyName            :
+  description: |-
+    This command updates and modifies the configuration of the BGP router for the specified routing domain in Multi-tenant environment and restarts all the active BGP peerings.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: BgpIdentifier
+  description: |+
+    Specifies the local BGP Router Identifier.
+    The acceptable value for this parameter is an IPv4 address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="ClientToClientReflection" data-throw-if-not-resolved="False" />
+  name: ClientToClientReflection
+  description: |+
+    Specifies whether client to client reflection is enabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ClusterId
+  description: |+
+    Specifies the cluster ID of the cluster.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: CompareMEDAcrossASN
+  description: |+
+    Indicates that comparison of Microsoft Enterprise Desktop (MED) values across different autonomous systems (AS) is enabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DefaultGatewayRouting
+  description: |+
+    Indicates that routing of the unresolvable routes to the default (Internet) gateway is enabled or disabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPv6RoutingState" data-throw-if-not-resolved="False" />
+  name: IPv6Routing
+  description: |+
+    Specifies whether to enable or disable IPv6 routing for this BGP router.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LocalASN
+  description: |+
+    Specifies the local AS Number of the BGP Router instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: LocalIPv6Address
+  description: |+
+    Specifies the local BGP router's global or site-local IPv6 Address, which is to be used as the NEXT-HOP value in the IPv6 route advertisements.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RouteReflector" data-throw-if-not-resolved="False" />
+  name: RouteReflector
+  description: |+
+    Specifies whether BGP router will act as a RouteReflector.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingDomain
+  description: |+
+    Specifies the user-defined unique alphanumeric identifier for the routing domain.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RoutingDomainName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TransitRouting" data-throw-if-not-resolved="False" />
+  name: TransitRouting
+  description: |+
+    Specifies whether Transit routing is enabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Set-BgpRouter
+name: Set-BgpRouter
+description: |-
+  The **Set-BgpRouter** cmdlet updates the local Border Gateway Protocol (BGP) router configuration. 
+  Error information will be returned if errors occur while modifying the BGP router configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_BgpRouter_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-bgprouter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-BgpRouter

@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the relationship between a hosted email account and a local user account.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    LocalAccountName
+    Type: System.String
+    Description: local user name
+links:
+- text: Get-HostedEmailAccount
+  href: ./Get-HostedEmailAccount.yml
+syntaxes:
+- Clear-AssignedHostedEmailAccount [-LocalAccountName] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove the relationship between a hosted email account and a local user account'
+  code: |-
+    PS C:\> Clear-AssignedHostedEmailAccount -LocalAccountName "PattiFuller"
+  description: |-
+    This command removes the relationship between the hosted email account and the local user account named PattiFuller.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of a local Active Directory user account.
+    The cmdlet removes the relationship between the hosted email account and the local user account that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Clear-AssignedHostedEmailAccount
+name: Clear-AssignedHostedEmailAccount
+description: |-
+  The **Clear-AssignedHostedEmailAccount** cmdlet removes the relationship between a hosted email account and the local user account to which the hosted email account is assigned.
+  A hosted email service provides a hosted email account.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/clear-assignedhostedemailaccount?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-AssignedHostedEmailAccount

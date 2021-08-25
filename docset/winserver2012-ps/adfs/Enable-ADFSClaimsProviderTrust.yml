@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables a claims provider trust in the Federation Service.
+module: ADFS
+notes: |-
+  * The claims provider is responsible for collecting and authenticating a user's credentials, building up claims for that user, and packaging the claims into security tokens or Information Cards. In other words, a claims provider represents the organization for whose users the claims provider issues security tokens or Information Cards on their behalf. When you configure Active Directory Federation Services (AD FS) 2.0  to use federation services, the role of the claims provider is to enable its users to access resources that are hosted in a relying party organization by establishing one side of a federation trust relationship. After the trust is established, tokens and Information Cards can be presented to a relying party across the federation trust.
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure that represents the claims provider trusts for the Federation Service.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-ADFSClaimsProviderTrust
+  href: ./Disable-ADFSClaimsProviderTrust.yml
+- text: Get-ADFSClaimsProviderTrust
+  href: ./Get-ADFSClaimsProviderTrust.yml
+- text: Remove-ADFSClaimsProviderTrust
+  href: ./Remove-ADFSClaimsProviderTrust.yml
+- text: Set-ADFSClaimsProviderTrust
+  href: ./Set-ADFSClaimsProviderTrust.yml
+- text: Update-ADFSClaimsProviderTrust
+  href: ./Update-ADFSClaimsProviderTrust.yml
+syntaxes:
+- >-
+  Enable-ADFSClaimsProviderTrust -TargetClaimsProviderTrust <ClaimsProviderTrust> [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Enable-ADFSClaimsProviderTrust -TargetCertificate <X509Certificate2> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Enable-ADFSClaimsProviderTrust -TargetIdentifier <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Enable-ADFSClaimsProviderTrust -TargetName <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>Enable-ADFSClaimsProviderTrust -TargetName "My claims provider"
+  description: |-
+    Description
+
+    -----------
+
+    Enables a claims provider trust with the name "My claims provider".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Passes an object to the pipeline.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: TargetCertificate
+  isRequired: true
+  description: |+
+    Specifies the token-signing certificate of the claims provider trust to enable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  name: TargetClaimsProviderTrust
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the claims provider trust to enable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the claims provider trust to enable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Enable-ADFSClaimsProviderTrust
+name: Enable-ADFSClaimsProviderTrust
+description: |-
+  The Enable-ADFSClaimsProviderTrust cmdlet enables a claims provider trust in the Federation Service.
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/enable-adfsclaimsprovidertrust?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

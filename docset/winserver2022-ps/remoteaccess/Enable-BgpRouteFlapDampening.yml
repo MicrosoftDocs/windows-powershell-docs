@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables route dampening for the flapping BGP routes.
+module: RemoteAccess
+notes: ""
+links:
+- text: Clear-BgpRouteFlapDampening
+  href: ./Clear-BgpRouteFlapDampening.yml
+- text: Disable-BgpRouteFlapDampening
+  href: ./Disable-BgpRouteFlapDampening.yml
+- text: Get-BgpRouteFlapDampening
+  href: ./Get-BgpRouteFlapDampening.yml
+- text: Set-BgpRouteFlapDampening
+  href: ./Set-BgpRouteFlapDampening.yml
+- text: Remote Access Cmdlets
+  href: ./index.yml
+syntaxes:
+- >-
+  Enable-BgpRouteFlapDampening [-RoutingDomain <String>] [-Force] [-PassThru] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable BGP route flap dampening'
+  code: |-
+    PS C:\> Enable-BgpRouteFlapDampening -RoutingDomain "Contoso"
+    Route Flap Dampening engine is not configured. Do you want to enable dampening using the default configuration? 
+    (Y/N) Yes
+  description: |-
+    This command enables BGP route flap dampening for the routing domain named Contoso.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingDomain
+  description: |+
+    Specifies a user-defined unique alphanumeric identifier for the routing domain
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RoutingDomainName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent connections that can be established to run this command.
+    If you omit this parameter or enter a value of 0, the default value, 32, is used.
+
+    The throttle limit applies only to the current command, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Enable-BgpRouteFlapDampening
+name: Enable-BgpRouteFlapDampening
+description: |-
+  The **Enable-BgpRouteFlapDampening** cmdlet enables route dampening for the flapping Border Gateway Protocol (BGP) routes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_BgpRouteFlapDampening_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/enable-bgprouteflapdampening?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-BgpRouteFlapDampening

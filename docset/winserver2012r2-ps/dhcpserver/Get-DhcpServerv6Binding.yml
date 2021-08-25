@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the IPv6 interfaces to which the Dynamic Host Configuration Protocol (DHCP) server service is bound.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Binding" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Set-DhcpServerv6Binding
+  href: ./Set-DhcpServerv6Binding.yml
+syntaxes:
+- >-
+  Get-DhcpServerv6Binding [-ComputerName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-DhcpServerv6Binding -ComputerName dhcpserver.contoso.com
+  description: |-
+    This example gets the IPv6 interface to which the DHCP server service is bound.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer running the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DhcpServer.Get-DhcpServerv6Binding
+name: Get-DhcpServerv6Binding
+description: |-
+  The **Get-DhcpServerv6Binding** cmdlet returns the IPv6 interfaces to which the Dynamic Host Configuration Protocol (DHCP) server service is bound.
+metadata:
+  external help file: PS_DhcpServerV6Binding_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverv6binding?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DhcpServerv6Binding

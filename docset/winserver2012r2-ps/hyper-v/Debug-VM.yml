@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Debugs a virtual machine.
+module: Hyper-V
+notes: ""
+syntaxes:
+- >-
+  Debug-VM [-ComputerName <String[]>] [-Name] <String[]> [-Force] [-AsJob] [-Passthru]
+
+   [-InjectNonMaskableInterrupt] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Debug-VM [-Force] [-AsJob] [-Passthru] [-InjectNonMaskableInterrupt] [-VM] <VirtualMachine[]> [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> debug-vm "VM to Debug" -InjectNonMaskableInterrupt -Force
+  description: |-
+    This example injects a non-maskable interrupt into the virtual machine named "VM to Debug".
+    A kernel debugger should be connected to the guest operating system before attempting to do this.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies an array of Hyper-V hosts.
+    The cmdlet debugs the virtual machines on the hosts you specify.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InjectNonMaskableInterrupt
+  description: |+
+    Indicates that the cmdlet sends a nonmaskable interrupt (NMI) to the virtual machine.
+    An interrupt handler must process a nonmaskable interrupt.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names of virtual machines to be debugged.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: VMName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machine objects that are to be debugged.
+    To obtain virtual machine objects, use the Get-VM cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Debug-VM
+name: Debug-VM
+description: |-
+  The **Debug-VM** cmdlet debugs a virtual machine.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/debug-vm?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Debug-VM

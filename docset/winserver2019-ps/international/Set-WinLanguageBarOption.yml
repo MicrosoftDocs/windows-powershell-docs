@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the language bar type and mode for the current user account.
+module: International
+notes: ""
+links:
+- text: Get-WinLanguageBarOption
+  href: ./Get-WinLanguageBarOption.yml
+syntaxes:
+- Set-WinLanguageBarOption [-UseLegacySwitchMode] [-UseLegacyLanguageBar] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set language bar options'
+  code: |-
+    PS C:\> Set-WinLanguageBarOption -UseLegacySwitchMode -UseLegacyLanguageBar
+  description: |-
+    This command sets the language bar mode to the legacy setting and the language bar type to the per-thread setting.
+  summary: ""
+- title: 'Example 2: Set language bar options to default values'
+  code: |-
+    PS C:\> Set-WinLanguageBarOption
+  description: |-
+    This command sets the language bar mode and the language bar type to the default setting.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseLegacyLanguageBar
+  description: |+
+    Indicates that this cmdlet sets the language bar mode to the legacy setting.
+    If you do not specify this parameter, the cmdlet sets the language bar mode to the default setting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseLegacySwitchMode
+  description: |+
+    Indicates that this cmdlet sets the language bar switch mode to the legacy or per-thread setting.
+    If you do not specify this parameter, the cmdlet sets the language bar switch mode to the default or per-user setting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: International.Set-WinLanguageBarOption
+name: Set-WinLanguageBarOption
+description: |-
+  The **Set-WinLanguageBarOption** cmdlet sets the language bar type and mode by using a **LanguageBar** object.
+  The values for the type and mode settings can be either true or false.
+  The default value for each setting is false.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/international/set-winlanguagebaroption?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WinLanguageBarOption

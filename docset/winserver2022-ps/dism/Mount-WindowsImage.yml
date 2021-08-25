@@ -1,0 +1,237 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Mounts a Windows image in a WIM or VHD file to a directory on the local computer.
+module: DISM
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageInfoObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Dismount-WindowsImage
+  href: ./Dismount-WindowsImage.yml
+- text: Save-WindowsImage
+  href: ./Save-WindowsImage.yml
+- text: Get-WindowsImage
+  href: ./Get-WindowsImage.yml
+- text: Repair-WindowsImage
+  href: ./Repair-WindowsImage.yml
+syntaxes:
+- >-
+  Mount-WindowsImage -Path <String> -ImagePath <String> -Index <UInt32> [-ReadOnly] [-Optimize] [-CheckIntegrity]
+
+   [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+- >-
+  Mount-WindowsImage -Path <String> -ImagePath <String> -Name <String> [-ReadOnly] [-Optimize] [-CheckIntegrity]
+
+   [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+- >-
+  Mount-WindowsImage -Path <String> [-Remount] [-LogPath <String>] [-ScratchDirectory <String>]
+
+   [-LogLevel <LogLevel>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Mount an image from the install.vhd file to a directory'
+  code: |-
+    PS C:\> Mount-WindowsImage -ImagePath "c:\imagestore\install.vhd" -Index 1 -Path "c:\offline"
+  description: |-
+    This command mounts the Windows image contained in the install.vhd file to the c:\offline directory.
+  summary: ""
+- title: 'Example 2: Mount an image at an index of a file with read-only privileges'
+  code: |-
+    PS C:\> Mount-WindowsImage -ImagePath "c:\imagestore\install.wim" -Index 2 -Path "c:\offline" -ReadOnly
+  description: |-
+    This command mounts the Windows image at index 2 of the install.wim file to the c:\offline directory with read-only privileges.
+  summary: ""
+- title: 'Example 3: Mount an image at an index of a file'
+  code: |-
+    PS C:\> Mount-WindowsImage -ImagePath "c:\imagestore\install.wim" -Index 2 -Path "c:\offline" -Optimize
+  description: |-
+    This command mounts the Windows image at index 2 of the install.wim file to the c:\offline directory with a quicker initial mount time.
+    Additional operations may be slower.
+  summary: ""
+- title: 'Example 4: Remounts an image previously mounted to a directory that is inaccessible'
+  code: |-
+    PS C:\> Mount-WindowsImage -Path "c:\offline" -Remount
+  description: |-
+    This command remounts a Windows image that has already been mounted to the c:\offline directory but has become inaccessible for servicing.
+  summary: ""
+- title: 'Example 5: Mount an image at an index of a file specifying logpath with checkintegrity and optimize parameters'
+  code: |-
+    PS C:\> Mount-WindowsImage -Checkintegrity -ImagePath "c:\imagestore\install.wim" -Index 2 -Path "c:\offline" -Logpath C:\install.log -Optimize
+  description: |-
+    This command mounts the Windows image at index 2 of the install.wim file to the c:\offline directory with Checkintegrity parameter, requesting a log file to be written and with a quicker initial mount time. Additional operations may be slower.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CheckIntegrity
+  description: |+
+    Detects and tracks .wim file corruption when used with the **Dismount-WindowsImage** or **Save-WindowsImage** cmdlet. 
+    *CheckIntegrity* stops the operation if DISM detects that the .wim file is corrupted when used with the **Mount-WindowsImage** cmdlet.
+    The *CheckIntegrity* parameter does not apply to virtual hard disk (VHD) files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImagePath
+  isRequired: true
+  description: |+
+    Specifies the location of the WIM or VHD file containing the Windows image you want to mount.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Index
+  isRequired: true
+  description: |+
+    Specifies the index number of a Windows image in a WIM or VHD file.
+    For a VHD file, the *Index* must be 1.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: |+
+    Specifies the maximum output level shown in the logs.
+    The default log level is 3.
+    The accepted values are as follows:
+    - 1 = Errors only
+    - 2 = Errors and warnings
+    - 3 = Errors, warnings, and information
+    - 4 = All of the information listed previously, plus debug output
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LL
+  parameterValueGroup: Errors, Warnings, WarningsInfo
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the full path and file name to log to.
+    If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+    In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+    The log file will automatically be archived.
+    The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+    Each time the log file is archived the .bak file will be overwritten. 
+    When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LP
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of an image in a WIM or VHD file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Optimize
+  description: |+
+    Reduces the amount of time it takes to initially mount the image.
+    However, processes that are ordinarily performed during a mount will instead be completed the first time that you access a directory.
+    As a result, there may be an increase in the time that is required to access a directory for the first time after mounting an image using the *Optimize* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the location on your local computer where you want to mount the Windows image.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReadOnly
+  description: |+
+    Specifies that the image should be mounted with read-only permissions.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Remount
+  isRequired: true
+  description: |+
+    Mounts an image in a WIM or VHD file that was already mounted at the specified *Path*, but has become inaccessible for servicing.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScratchDirectory
+  description: |+
+    Specifies a temporary directory that will be used when extracting files for use during servicing.
+    The directory must exist locally.
+    If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+    Items in the scratch directory are deleted after each operation. 
+    You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+    The directory used for extracting files for temporary usage during servicing should be a local directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DISM.Mount-WindowsImage
+name: Mount-WindowsImage
+description: |-
+  The **Mount-WindowsImage** cmdlet maps a Windows image in a WIM or VHD file to the specified directory so that it is accessible for servicing.
+
+  The *Path* parameter specifies the location where you want to mount the Windows image.
+
+  The *ImagePath* parameter specifies the location of the WIM or VHD file containing the Windows image you want to mount.
+
+  Use the *Index* or *Name* parameter to specify which image in a WIM or VHD file that you want to mount.
+  For a VHD file, the *Index* must be 1.
+
+  The *Optimize* parameter reduces the amount of time it takes to initially mount the image.
+  However, processes that are ordinarily performed during a mount will instead be completed the first time that you access a directory.
+  As a result, there may be an increase in the time that is required to access a directory for the first time after mounting an image using the *Optimize* parameter.
+
+  The *Remount* parameter mounts an image in a WIM or VHD file that was already mounted at the specified *Path*, but has become inaccessible for servicing.
+
+  The *CheckIntegrity* parameter detects and tracks .wim file corruption.
+  *CheckIntegrity* stops the operation if DISM detects that the .wim file is corrupted when used with the **Mount-WindowsImage** cmdlet.
+
+  The *CheckIntegrity* parameter does not apply to virtual hard disk (VHD) files.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+  Module Name: System.Object[]
+  ms.date: 12/21/2016
+  online version: https://docs.microsoft.com/powershell/module/dism/mount-windowsimage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Mount-WindowsImage

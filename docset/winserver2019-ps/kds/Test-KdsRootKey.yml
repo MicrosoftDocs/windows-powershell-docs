@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests the root key configuration.
+module: KDS
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input objects.
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns whether the root key can be used to generate derived keys.
+links:
+- text: Add-KdsRootKey
+  href: ./Add-KdsRootKey.yml
+- text: Clear-KdsCache
+  href: ./Clear-KdsCache.yml
+- text: Get-KdsConfiguration
+  href: ./Get-KdsConfiguration.yml
+- text: Set-KdsConfiguration
+  href: ./Set-KdsConfiguration.yml
+- text: Add-KdsRootKey
+  href: ./Add-KdsRootKey.yml
+syntaxes:
+- Test-KdsRootKey [-KeyId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Test the root key configuration'
+  code: |-
+    PS C:\> Test-KdsRootKey -KeyId 4A3615F1-5A90-22E4-0B1D-1416F93D4412
+  description: |-
+    This command tests the configuration of the root key specified by key ID.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: KeyId
+  isRequired: true
+  description: |+
+    Specifies the ID of the root key to test.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: KDS.Test-KdsRootKey
+name: Test-KdsRootKey
+description: |-
+  The **Test-KdsRootKey** cmdlet tests that the root key with the specified key identifier (ID) uses a valid configuration.
+  The test verifies generation of both new group public key and group private key.
+
+  This cmdlet is useful for analyzing failures based on invalid root key configuration failures.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
+  Module Name: KDS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/kds/test-kdsrootkey?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-KdsRootKey

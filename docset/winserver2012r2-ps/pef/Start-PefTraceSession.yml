@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a PEF Trace Session.
+module: PEF
+notes: ""
+links:
+- text: Stop-PefTraceSession
+  href: ./Stop-PefTraceSession.yml
+- text: New-PefTraceSession
+  href: ./New-PefTraceSession.yml
+- text: New-PefDateTimeTrigger
+  href: ./New-PefDateTimeTrigger.yml
+- text: New-PefMessageTrigger
+  href: ./New-PefMessageTrigger.yml
+- text: New-PefProcessTrigger
+  href: ./New-PefProcessTrigger.yml
+- text: New-PefTimeSpanTrigger
+  href: ./New-PefTimeSpanTrigger.yml
+- text: Add-PefMessageSource
+  href: ./Add-PefMessageSource.yml
+syntaxes:
+- Start-PefTraceSession [-PEFSession] <IPpkTraceSession> [-Trigger <Trigger[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start a Trace Session that closes with a stop trigger'
+  code: |-
+    PS C:\> $TraceSession01 = New-PefTraceSession 
+    PS C:\> Add-PefMessageSource -PEFSession $TraceSession01 -Provider "Microsoft-Pef-WFP-MessageProvider"
+    PS C:\> $Trigger01 = New-PefMessageTrigger -Filter "icmp"
+    PS C:\> Stop-PefTraceSession -PEFSession $TraceSession01 -Trigger $Trigger01
+    PS C:\> Start-PefTraceSession -PEFSession $TraceSession01
+  description: |-
+    This example creates and starts a PEF Trace Session.
+
+    The first command uses the New-PefTraceSession cmdlet to create a Trace Session object, and then stores it in the **$TraceSession01** variable.
+
+    The second command uses the Add-PefMessageSource cmdlet to specify a provider for the Trace Session object stored in **$TraceSession01**.
+
+    The third command uses the New-PefMessageTrigger cmdlet to create a message trigger object, and then stores it in the **$Trigger01** variable.
+
+    The fourth command uses the Stop-PefTraceSession cmdlet to create a stop action for the Trace Session, which is activated by the trigger stored in **$Trigger01**.
+
+    The last command starts the PEF Trace Session stored in **$TraceSession01**.
+  summary: ""
+parameters:
+- type: <xref href="IPpkTraceSession" data-throw-if-not-resolved="False" />
+  name: PEFSession
+  isRequired: true
+  description: |+
+    Specifies an object that contains a Trace Session.
+    To create a Trace Session, use the New-PefTraceSession cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Trigger" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Trigger
+  description: |+
+    Specifies an array of **Trigger** objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PEF.Start-PefTraceSession
+name: Start-PefTraceSession
+description: |-
+  The **Start-PefTraceSession** cmdlet creates an action that starts a Protocol Engineering Framework (PEF) Trace Session.
+  You can specify a trigger for this action.
+
+  If you do not specify a new trigger or a trigger that already fired, the start action enters a message processing loop.
+  The Trace Session uses that loop to process messages that are delivered by the specified message providers.
+  The loop stops when the Trace Session stops.
+  A session is terminated when the  stop action occurs  or when there are no more messages to process.
+  Use the Stop-PefTraceSession cmdlet to create a stop action.
+metadata:
+  external help file: Microsoft.Protocols.Tools.PowerShell.dll-Help.xml
+  Module Name: PEF
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/pef/start-peftracesession?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-PefTraceSession

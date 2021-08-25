@@ -1,0 +1,134 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a message object.
+module: MSMQ
+notes: ""
+links:
+- text: Move-MsmqMessage
+  href: ./Move-MsmqMessage.yml
+syntaxes:
+- >-
+  New-MsmqMessage [[-Body] <Object>] [-Recoverable] [-Authenticated] [-Journaling] [-Label <String>]
+
+   [-AdminQueuePath <String>] [-AcknowledgeType <AcknowledgeTypes>] [-ResponseQueuePath <String>]
+
+   [-TimeToReachQueue <TimeSpan>] [-TimeToBeReceived <TimeSpan>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a test message'
+  code: |-
+    PS C:\> New-MsmqMessage -Body "Test Message" -AdminQueuePath ".\private$\adminqueue" -Recoverable
+  description: |-
+    This command creates a test message.
+    The command specifies the queue that receives the acknowledgement message.
+  summary: ""
+parameters:
+- type: <xref href="AcknowledgeTypes" data-throw-if-not-resolved="False" />
+  name: AcknowledgeType
+  description: |+
+    Specifies the type of acknowledgement messages that can be returned by Messaging Queuing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, PositiveArrival, PositiveReceive, NotAcknowledgeReachQueue, FullReachQueue, NegativeReceive, NotAcknowledgeReceive, FullReceive
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdminQueuePath
+  description: |+
+    Specifies a path.
+    The queue that the path specifies receives the acknowledgement messages that Message Queuing generates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Authenticated
+  description: |+
+    Indicates that the cmdlet sends the message as an authenticated message.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Body
+  description: |+
+    Specifies the body of the message.
+    The default value is an empty body.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Journaling
+  description: |+
+    Indicates that the originating computer keeps a copy of the message in a journal.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Label
+  description: |+
+    Specifies a label.
+    The label that this parameter specifies describes the message.
+    The default value is an empty string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recoverable
+  description: |+
+    Indicates that the cmdlet sets the recoverable property of a message object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResponseQueuePath
+  description: |+
+    Specifies a path.
+    The queue that this parameter specifies receives application-generated response messages.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: TimeToBeReceived
+  description: |+
+    Specifies the maximum amount of time, in milliseconds, for the message to be received from the destination queue.
+    The default value is 49.17:02:47.295.
+
+  defaultValue: None
+  position: Named
+  aliases: TTBR
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: TimeToReachQueue
+  description: |+
+    Specifies the maximum amount of time, in milliseconds, for the message to reach the queue.
+    The default value is 49.17:02:47.295.
+
+  defaultValue: None
+  position: Named
+  aliases: TTRQ
+  parameterValueGroup: ""
+uid: MSMQ.New-MsmqMessage
+name: New-MsmqMessage
+description: |-
+  The **New-MsmqMessage** cmdlet creates a **System.Messaging.Message** object that includes properties specified by parameters.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/new-msmqmessage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-MsmqMessage

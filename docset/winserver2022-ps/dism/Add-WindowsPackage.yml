@@ -1,0 +1,213 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a single .cab or .msu file to a Windows image.
+module: DISM
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.BasicPackageObject" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.AdvancedPackageObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WindowsPackage
+  href: ./Get-WindowsPackage.yml
+- text: Remove-WindowsPackage
+  href: ./Remove-WindowsPackage.yml
+syntaxes:
+- >-
+  Add-WindowsPackage -PackagePath <String> [-IgnoreCheck] [-PreventPending] [-NoRestart] [-Online]
+
+   [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>]
+
+   [-LogLevel <LogLevel>] [<CommonParameters>]
+- >-
+  Add-WindowsPackage -PackagePath <String> [-IgnoreCheck] [-PreventPending] [-NoRestart] -Path <String>
+
+   [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>]
+
+   [-LogLevel <LogLevel>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a package to an online image'
+  code: |-
+    PS C:\> Add-WindowsPackage -Online -PackagePath "c:\packages\package.cab"
+  description: |-
+    This command adds a .cab package to an online image.
+  summary: ""
+- title: 'Example 2: Add a file to a mounted image'
+  code: |-
+    PS C:\> Add-WindowsPackage -Path "c:\offline" -PackagePath "c:\packages\demo_package.msu" -PreventPending
+  description: |-
+    This command adds an .msu file to a mounted Windows image unless there are pending actions on the package or the image.
+  summary: ""
+- title: 'Example 3: Add several packages to a mounted image'
+  code: |-
+    PS C:\> Add-WindowsPackage -Path "c:\offline" -PackagePath "c:\packages" -IgnoreCheck
+  description: |-
+    This command adds all of the packages in a folder to a mounted Windows image without checking if they are applicable to the image.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IgnoreCheck
+  description: |+
+    Skips the applicability check for each package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: |+
+    Specifies the maximum output level shown in the logs.
+    The default log level is 3.
+    The accepted values are as follows:
+    - 1 = Errors only
+    - 2 = Errors and warnings
+    - 3 = Errors, warnings, and information
+    - 4 = All of the information listed previously, plus debug output
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LL
+  parameterValueGroup: Errors, Warnings, WarningsInfo
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the full path and file name to log to.
+    If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+    In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+    The log file will automatically be archived.
+    The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+    Each time the log file is archived the .bak file will be overwritten. 
+    When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LP
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRestart
+  description: |+
+    Suppresses reboot.
+    If a reboot is not required, this command does nothing.
+    This option will keep the application from prompting for a restart or keep it from restarting automatically.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Online
+  isRequired: true
+  description: |+
+    Specifies that the action is to be taken on the operating system that is currently running on the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackagePath
+  isRequired: true
+  description: |+
+    Specifies the location of the package to add to the image.
+
+    Valid values are:
+
+    - A single .cab or .msu file.
+    - A folder that contains a single expanded .cab file.
+    - A folder that contains a single .msu file.
+    - A folder that contains multiple .cab or .msu files.
+
+    If *PackagePath* is a folder that contains a .cab or .msu files at its root, any subfolders will also be recursively checked for .cab and .msu files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the full path to the root directory of the offline Windows image that you will service.
+    If the directory named Windows is not a subdirectory of the root directory, *WindowsDirectory* must be specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PreventPending
+  description: |+
+    Skips the installation of the package if the package or Windows image has pending online actions.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScratchDirectory
+  description: |+
+    Specifies a temporary directory that will be used when extracting files for use during servicing.
+    The directory must exist locally.
+    If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+    Items in the scratch directory are deleted after each operation. 
+    You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+    The directory used for extracting files for temporary usage during servicing should be a local directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SystemDrive
+  description: |+
+    Specifies the path to the location of the BootMgr files.
+    This is necessary only when the BootMgr files are located on a partition other than the one that you are running the command from.
+    Use -SystemDrive to service an installed Windows image from a Windows PE environment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WindowsDirectory
+  description: |+
+    Specifies the path to the Windows directory relative to the image path.
+    This cannot be the full path to the Windows directory; it should be a relative path.
+    If not specified, the default is the Windows directory in the root of the offline image directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DISM.Add-WindowsPackage
+name: Add-WindowsPackage
+description: |-
+  The **Add-WindowsPackage** cmdlet installs a specified .cab or .msu package in the image.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+  Module Name: System.Object[]
+  ms.date: 12/21/2016
+  online version: https://docs.microsoft.com/powershell/module/dism/add-windowspackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-WindowsPackage

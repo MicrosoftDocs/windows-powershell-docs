@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets a Trace Filter for a PEF Trace Session.
+module: PEF
+notes: ""
+links:
+- text: Add-PefMessageSource
+  href: ./Add-PefMessageSource.yml
+- text: New-PefTraceSession
+  href: ./New-PefTraceSession.yml
+- text: New-PefDateTimeTrigger
+  href: ./New-PefDateTimeTrigger.yml
+- text: New-PefKeyDownTrigger
+  href: ./New-PefKeyDownTrigger.yml
+- text: New-PefMessageTrigger
+  href: ./New-PefMessageTrigger.yml
+- text: New-PefProcessTrigger
+  href: ./New-PefProcessTrigger.yml
+- text: New-PefTimeSpanTrigger
+  href: ./New-PefTimeSpanTrigger.yml
+syntaxes:
+- >-
+  Set-PefTraceFilter [-PEFSession] <IPpkTraceSession> [[-Filter] <String>] [-Trigger <Trigger[]>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a Trace Filter to a Trace Session that closes with a stop trigger'
+  code: |-
+    PS C:\> $TraceSession01 = New-PefTraceSession -Mode Circular -Path "C:\Traces\IcmpTrace.matu" -SaveOnStop
+    PS C:\> $Trigger02 = New-PefTimeSpanTrigger -TimeSpan (New-TimeSpan -Seconds 150)
+    PS C:\> Set-PefTraceFilter -PEFSession $TraceSession01 -Filter "Icmp"
+    PS C:\> Add-PefMessageSource -PEFSession $TraceSession01 -Source "Microsoft-Pef-WFP-MessageProvider"
+    PS C:\> Stop-PefTraceSession -PEFSession $TraceSession01 -Trigger $Trigger02
+    PS C:\> Start-PefTraceSession -PEFSession $TraceSession01
+  description: |-
+    This example sets a Trace Filter to a PEF Trace Session that stops after a 150 second interval expires.
+
+    The first command uses the New-PefTraceSession cmdlet to create a Trace Session object, and then stores it in the **$TraceSession01** variable.
+    This command includes the **SaveOnStop** parameter and specifies a file path, IcmpTrace.matu in the current directory, for the saved Trace Session.
+
+    The second command uses the New-PefTimeSpanTrigger cmdlet to create a trigger with a **TimeSpan** value of 150 seconds.
+    For information about how to use the **New-TimeSpan** cmdlet to specify a **TimeSpan** value, type `Get-Help New-TimeSpan`.
+
+    The third command sets a Trace Filter with the string value Icmp for the Trace Session stored in **$TraceSession01**.
+    Note that this filter takes effect immediately when the Trace Session starts.
+
+    The fourth command uses the Add-PefMessageSource cmdlet to specify a provider for the Trace Session stored in **$TraceSession01**.
+
+    The fifth command uses the Stop-PefTraceSession cmdlet to create a stop action for the trigger stored in the **$Trigger02** variable, and associates that action with the Trace Session stored in **$TraceSession01**.
+
+    The last command uses the Start-PefTraceSession cmdlet to start the Trace Session stored in **$TraceSession01**.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Specifies a string that acts as a Trace Filter.
+    A Trace Filter defines the messages that a Trace Session retrieves according to the specified filtering criteria.
+    To learn more about Trace Filters, see Creating and Applying Trace Filtershttp://technet.microsoft.com/en-us/library/jj674813.aspx in the Message Analyzer Operating Guidehttp://technet.microsoft.com/en-us/library/jj649776.aspx.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPpkTraceSession" data-throw-if-not-resolved="False" />
+  name: PEFSession
+  isRequired: true
+  description: |+
+    Specifies an object that contains a Trace Session.
+    To create a Trace Session, use the New-PefTraceSession cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Trigger" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Trigger
+  description: |+
+    Specifies an array of **Trigger** objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PEF.Set-PefTraceFilter
+name: Set-PefTraceFilter
+description: |-
+  The **Set-PefTraceFilter** cmdlet sets a Trace Filter to a Protocol Engineering Framework (PEF) Trace Session.
+metadata:
+  external help file: Microsoft.Protocols.Tools.PowerShell.dll-Help.xml
+  Module Name: PEF
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/pef/set-peftracefilter?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-PefTraceFilter

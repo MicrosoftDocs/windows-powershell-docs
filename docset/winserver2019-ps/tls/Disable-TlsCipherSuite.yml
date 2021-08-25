@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables a TLS cipher suite.
+module: TLS
+notes: ""
+links:
+- text: Enable-TlsCipherSuite
+  href: ./Enable-TlsCipherSuite.yml
+- text: Get-TlsCipherSuite
+  href: ./Get-TlsCipherSuite.yml
+syntaxes:
+- Disable-TlsCipherSuite [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable a cipher suite'
+  code: |-
+    PS C:\>Disable-TlsCipherSuite -Name "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+  description: |-
+    This command disables the cipher suite named TLS_RSA_WITH_3DES_EDE_CBC_SHA.
+    The command removes the cipher suite from the list of TLS protocol cipher suites.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the TLS cipher suite to disable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: TLS.Disable-TlsCipherSuite
+name: Disable-TlsCipherSuite
+description: |-
+  The **Disable-TlsCipherSuite** cmdlet disables a cipher suite.
+  This cmdlet removes the cipher suite from the list of Transport Layer Security (TLS) protocol cipher suites for the computer.
+
+  For more information about the TLS cipher suites, see the documentation for the Enable-TlsCipherSuite cmdlet or type `Get-Help Enable-TlsCipherSuite`.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
+  Module Name: TLS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/tls/disable-tlsciphersuite?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-TlsCipherSuite

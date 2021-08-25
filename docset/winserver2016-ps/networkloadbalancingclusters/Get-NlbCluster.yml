@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about the NLB cluster object that is queried by the caller.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-NlbCluster
+  href: ./New-NlbCluster.yml
+- text: Remove-NlbCluster
+  href: ./Remove-NlbCluster.yml
+- text: Resume-NlbCluster
+  href: ./Resume-NlbCluster.yml
+- text: Set-NlbCluster
+  href: ./Set-NlbCluster.yml
+- text: Start-NlbCluster
+  href: ./Start-NlbCluster.yml
+- text: Stop-NlbCluster
+  href: ./Stop-NlbCluster.yml
+- text: Suspend-NlbCluster
+  href: ./Suspend-NlbCluster.yml
+syntaxes:
+- Get-NlbCluster [[-HostName] <String>] [[-InterfaceName] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a cluster object from the local NLB cluster'
+  code: |-
+    PS C:\>Get-NlbCluster
+    Name                IPAddress           SubnetMask          Mode 
+    ----                ---------           ----------          ---- 
+    cluster1            3.53.100.100        255.0.0.0           UNICAST
+  description: |-
+    This command gets the cluster object for the local NLB cluster.
+  summary: ""
+- title: 'Example 2: Get a cluster object for the specified NLB cluster'
+  code: |-
+    PS C:\>Get-NlbCluster -HostName "Node01"
+    Name                IPAddress           SubnetMask          Mode 
+    ----                ---------           ----------          ---- 
+    cluster2            4.53.100.100        255.0.0.0           UNICAST
+  description: |-
+    This command gets the cluster object for the NLB cluster that is named Node01.
+  summary: ""
+- title: 'Example 3: Get a cluster object for the specified NLB cluster using the specified interface'
+  code: |-
+    PS C:\>Get-NlbCluster -HostName "Node02" -InterfaceName "Vlan-2"
+    Name                IPAddress           SubnetMask          Mode 
+    ----                ---------           ----------          ---- 
+    cluster2            4.53.100.100        255.0.0.0           UNICAST
+  description: |-
+    This command gets the cluster object for the NLB cluster that node named Node02 through the interface named Vlan-2.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: "0"
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: "1"
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Get-NlbCluster
+name: Get-NlbCluster
+description: |-
+  The **Get-NlbCluster** cmdlet gets information about the Network Load Balancing (NLB) cluster.
+  The information includes the properties, or attributes, that define the cluster and its status.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/get-nlbcluster?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NlbCluster

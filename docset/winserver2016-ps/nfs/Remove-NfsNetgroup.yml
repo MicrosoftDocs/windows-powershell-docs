@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a netgroup.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="Nothing" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NfsNetgroup
+  href: ./Get-NfsNetgroup.yml
+- text: New-NfsNetgroup
+  href: ./New-NfsNetgroup.yml
+- text: Set-NfsNetgroup
+  href: ./Set-NfsNetgroup.yml
+syntaxes:
+- >-
+  Remove-NfsNetgroup [-NetGroupName] <String> [[-LdapServer] <String>] [[-LdapNamingContext] <String>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove an NFS netgroup'
+  code: |-
+    PS C:\> Remove-NfsNetgroup -NetGroupName "AppServers" -LdapInstanceName "Contoso.com"
+  description: |-
+    This command removes an NFS netgroup that is named AppServers from a netgroup store in Contoso.com.
+  summary: ""
+- title: 'Example 2: Remove an NFS netgroup from a configured store'
+  code: |-
+    PS C:\>Remove-NfsNetgroup -NetGroupName "AppServers"
+  description: |-
+    This command removes an NFS netgroup that is named AppServers.
+    Because the netgroup store is not specified, the cmdlet removes the netgroup from the netgroup store that is configured on the local NFS server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LdapNamingContext
+  description: |+
+    Specifies the Lightweight Directory Access Protocol (LDAP) naming context of a netgroup store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: dn
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LdapServer
+  description: |+
+    Specifies an LDAP server name of a netgroup store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ldap
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a netgroup to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: name, ngname
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NFS.Remove-NfsNetgroup
+name: Remove-NfsNetgroup
+description: |-
+  The **Remove-NfsNetgroup** cmdlet removes a netgroup.
+
+  You can remove netgroups that are stored in Active Directory Domain Services (AD DS) or Active Directory Lightweight Directory Services (AD LDS) only.
+  To remove a netgroup that is stored in Network Information Service (NIS), use the corresponding NIS administration tool.
+  For more information about how to manage an NIS server, see [Server for NIS Administration](https://technet.microsoft.com/en-us/library/cc753089).
+
+  If you do not specify a netgroup store, the **Remove-NfsNetgroup** cmdlet removes the netgroup from a netgroup store that is configured on the local computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FileServices.Powershell.NFS.dll-Help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/remove-nfsnetgroup?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-NfsNetgroup

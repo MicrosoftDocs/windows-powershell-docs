@@ -1,0 +1,187 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes one or more DHCPv6 option values set at the reservation level, scope level, or server level, either for the standard IPv6 options or for a specified vendor class.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6OptionDefinition" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6OptionValue" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6OptionValue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DhcpServerv6OptionValue
+  href: ./Get-DhcpServerv6OptionValue.yml
+- text: Set-DhcpServerv6OptionValue
+  href: ./Set-DhcpServerv6OptionValue.yml
+syntaxes:
+- >-
+  Remove-DhcpServerv6OptionValue [-ComputerName <String>] [[-Prefix] <IPAddress>] [-ReservedIP <IPAddress>]
+
+   [-OptionId] <UInt32[]> [-PassThru] [-VendorClass <String>] [-UserClass <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Remove-DhcpServerv6OptionValue -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020:: -OptionId 23
+  description: |-
+    This cmdlet deletes the DHCPv6 option value configured on the specified scope for the specified option ID.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Remove-DhcpServerv6OptionValue -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020:: -VendorClass MyVendorClass -OptionId 10
+  description: |-
+    This cmdlet deletes the specified vendor class specific option from the specified prefix.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Remove-DhcpServerv6OptionValue -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020:: -OptionId 23
+  description: |-
+    This cmdlet deletes the DHCPv6 option value configured on the specified scope for the specified option identifier.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer running the Dynamic Host Configuration Protocol (DHCP) server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OptionId
+  isRequired: true
+  description: |+
+    Specifies one or more numeric identifiers (IDs) for the options being deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: Prefix
+  description: |+
+    Specifies the IPv6 subnet prefix of the scope from which one or more option values are deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: ReservedIP
+  description: |+
+    Specifies the IPv6 address of the reservation from which one or more option values are deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPAddress
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserClass
+  description: |+
+    Specifies that only the option values for the specified user class is deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VendorClass
+  description: |+
+    Specifies that only the option values for the specified vendor class is deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Remove-DhcpServerv6OptionValue
+name: Remove-DhcpServerv6OptionValue
+description: |-
+  The **Remove-DhcpServerv6OptionValue** cmdlet deletes one or more DHCPv6 option values set at the reservation level, scope level, or server level, either for the standard IPv6 options or for a specified vendor class.
+
+  If only the **ReservedIP** parameter is specified, then the option values set at the reservation level are deleted.
+  If only the **Prefix** parameter is specified, then the option values set at the specified IPv6 scope are deleted.
+  If neither the **ScopeId** nor **ReservedIP** parameter is specified, then the option values set at the server level are deleted.
+  The **ScopeId** and **ReservedIP** parameters cannot both be specified.
+metadata:
+  external help file: PS_DhcpServerV6OptionValue_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/remove-dhcpserverv6optionvalue?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-DhcpServerv6OptionValue

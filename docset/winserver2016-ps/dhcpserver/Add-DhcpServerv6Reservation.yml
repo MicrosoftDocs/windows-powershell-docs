@@ -1,0 +1,222 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an IPv6 Reservation to an IPv6 prefix or scope.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Reservation" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Reservation" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DhcpServerv6FreeIPAddress
+  href: ./Get-DhcpServerv6FreeIPAddress.yml
+- text: Get-DhcpServerv6Lease
+  href: ./Get-DhcpServerv6Lease.yml
+- text: Get-DhcpServerv6Reservation
+  href: ./Get-DhcpServerv6Reservation.yml
+- text: Remove-DhcpServerv6Reservation
+  href: ./Remove-DhcpServerv6Reservation.yml
+- text: Set-DhcpServerv6Reservation
+  href: ./Set-DhcpServerv6Reservation.yml
+syntaxes:
+- >-
+  Add-DhcpServerv6Reservation [-ComputerName <String>] [-IPAddress] <IPAddress> [-ClientDuid] <String>
+
+   [-Iaid] <UInt32> [[-Name] <String>] [-Description <String>] [-Prefix] <IPAddress> [-PassThru]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Reserve an IP address'
+  code: |-
+    PS C:\> Add-DhcpServerv6Reservation -Prefix 2001:4898:7020:1020:: -IPAddress 2001:4898:7020:1020::1 -ClientDuid "00-01-00-01-15-F9-7F-AB-F0-DE-F1-7A-00-5E" -Iaid 234890455
+  description: |-
+    This example reserves the specified IPv6 address for the specified *ClientDuid* and *Iaid* parameter values.
+    After the reservation is added, the DHCP server service assigns only the specified IP address to the client request which contains the specified *ClientDuid* and *Iaid* parameter values.
+  summary: ""
+- title: 'Example 2: Reserve IP addresses from a file'
+  code: |-
+    PS C:\> Import-Csv -Path "Reservations.csv" | Add-DhcpServerv6Reservation -ComputerName "dhcpserver.contoso.com"
+  description: |-
+    This example adds all of the reservations in the file that is named Reservations.csv to the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+    The **Import-Csv** cmdlet returns the objects that have reservation fields and pipes the objects to this cmdlet, which adds these reservations to the DHCP server service.
+    The file that is named Reservations.csv should contain the reservations in the following comma-separated values (CSV) format:
+
+    Prefix,IPAddress,Name,ClientDuid,Iaid,Description 
+    2001:4898:7020:1020::,2001:4898:7020:1020::1,Computer1,00-01-00-01-15-F9-7F-AB-F0-DE-F1-7A-00-5E,234890455,Reserved for Computer1 
+    2001:4898:7020:1020::,2001:4898:7020:1020::2,Computer2,00-01-00-01-15-F9-7F-AB-F0-DE-F1-7A-00-6E,234890465,Reserved for Computer2 
+    2001:4898:7020:1020::,2001:4898:7020:1020::3,Computer3,00-01-00-01-15-F9-7F-AB-F0-DE-F1-7A-00-7E,234890475,Reserved for Computer3
+  summary: ""
+- title: 'Example 3: Reserve any IP address in a scope'
+  code: |-
+    PS C:\> $FreeIP = Get-DhcpServerv6FreeIPAddress -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020::
+    PS C:\> Add-DhcpServerv6Reservation -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020::  -IPAddress $FreeIP -ClientDuid "00-01-00-01-15-F9-7F-AB-F0-DE-F1-7A-00-5E" -Iaid 234890455 -Description "Reservation for Printer"
+  description: |-
+    This example creates a reservation for the client identified by the specified client ID from any of the free IP address in the scope 2001:4898:7020:1020::.
+    The **Get-DhcpServerv6FreeIPAddress** cmdlet fetches a free IP address in that scope, and then this cmdlet reserves the IP address for the specified client ID.
+  summary: ""
+- title: 'Example 4: Convert a lease into a reservation'
+  code: |-
+    PS C:\> Get-DhcpServerv6Lease -ComputerName "dhcpserver.contoso.com" -IPAddress 2001:4898:7020:1020::11 | Add-DhcpServerv6Reservation -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020::
+  description: |-
+    This example converts one of the leases into a reservation.
+    The **Get-DhcpServerv6Lease** cmdlet returns an IP address lease object and pipes the object to this cmdlet, which creates the reservation with the IP address, client DUID, and IAID in the lease object.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientDuid
+  isRequired: true
+  description: |+
+    Specifies the DUID of the client.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: Duid
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn, ReservationServer
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description string for the IPv6 reservation that is created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ReservationDescription
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Iaid
+  isRequired: true
+  description: |+
+    Specifies the DHCPv6 IAID of a specific network interface of the client.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  isRequired: true
+  description: |+
+    Specifies the IPv6 address to reserve for the client.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ReservedIP
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the client.
+    This parameter value can be the actual host name of the client or a name assigned to identify the reserved client on the DHCP server service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: HostName, ReservationName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: Prefix
+  isRequired: true
+  description: |+
+    Specifies the IPv6 prefix which identifies the scope in which the reservation is created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ReservationScopeID
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Add-DhcpServerv6Reservation
+name: Add-DhcpServerv6Reservation
+description: |-
+  The **Add-DhcpServerv6Reservation** cmdlet reserves a specified IPv6 address for the client identified by the specified Dynamic Host Configuration Protocol (DHCP) v6 unique identifier (ID) (DUID) and identity association ID (IAID).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerV6Reservation_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/add-dhcpserverv6reservation?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DhcpServerv6Reservation

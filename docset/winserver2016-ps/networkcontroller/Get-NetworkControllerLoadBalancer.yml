@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet retrieves the configuration of a load balancer resource from the Network Controller
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties can be retrieved for a load balancer resource:
+    1. Front end IP configuration
+    2. Back end address pools
+    3. Load balancing rules
+    4. Inbound NAT rules
+    5. Outbound NAT rules
+    6. Health Probes
+syntaxes:
+- >-
+  Get-NetworkControllerLoadBalancer [[-ResourceId] <String[]>] -ConnectionUri <Uri>
+
+   [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-NetworkControllerLoadBalancer -ConnectionUri https://networkcontroller -ResourceId lb1
+  description: ""
+  summary: |+
+    This example retrieves the configuration of a load balancer resource named lb1 from the Network Controller
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourceId
+  description: |+
+    Specifies the unique identifier for the load balancer resource.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Get-NetworkControllerLoadBalancer
+name: Get-NetworkControllerLoadBalancer
+description: |-
+  This cmdlet retrieves the configuration of a load balancer resource. The load balancer resource allows fine-grained configuration of how incoming traffic is distributed across VM instances in a virtual network. It contains the following:
+  1. Front End IP configuration - This describes the exposed IP address of the load balancer. For example, this address can be a reserved public or private IP address previously obtained by the customer, or an IP address dynamically allocated from a subnet of a virtual network.
+  2. BackEnd address pools - This describes the backend VMs behind the front end IP resource.
+  3. Load balancing rules - This defines how traffic that arrives at the front-end IP is to be sent to the backend IP
+  4. Health probe - Health probes are used by the load balancer to determine the health state of the backend pool members.
+  5. Inbound NAT rules - This can be used to forward external traffic to a specific VM in the virtual network
+  6. Outbound NAT rules - This can be used to forward VM network traffic from the virtual network to external destinations using network address translation (NAT).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollerloadbalancer?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerLoadBalancer

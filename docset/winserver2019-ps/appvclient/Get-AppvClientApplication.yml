@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns applications that are part of App-V Client Packages.
+module: AppvClient
+notes: ""
+outputs:
+- name: <xref href="Microsoft.AppV.AppvClientPowerShell.AppvClientApplication" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AppvClientConfiguration
+  href: ./Get-AppvClientConfiguration.yml
+syntaxes:
+- Get-AppvClientApplication [[-Name] <String>] [[-Version] <String>] [-All] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a version of an application for the current user'
+  code: |-
+    PS C:\> Get-AppvClientApplication -Name "AppName" -Version 1
+  description: |-
+    This command gets the application on the client that is published to the user and has the name AppName and is version 1.
+  summary: ""
+- title: 'Example 2: Get all applications'
+  code: |-
+    PS C:\> Get-AppvClientApplication -All
+  description: |-
+    This command gets all of the applications on the client.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Indicates that the cmdlet returns all applications that have been added to the computer, not just those that are visible to the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the application.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of the application.
+    If you do not specify this parameter, the cmdlet operates on all available versions of the applications on the target computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Get-AppvClientApplication
+name: Get-AppvClientApplication
+description: |-
+  The **Get-AppvClientApplication** cmdlet returns a set of applications that are part of Microsoft Application Virtualization (App-V) Client Packages, based on the criteria provided.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/get-appvclientapplication?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AppvClientApplication

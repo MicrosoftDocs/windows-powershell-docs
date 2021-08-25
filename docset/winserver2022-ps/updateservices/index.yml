@@ -1,0 +1,33 @@
+### YamlMime:PowershellModule
+children:
+- title: UpdateServices
+  cmdlets:
+  - UpdateServices.Add-WsusComputer
+  - UpdateServices.Add-WsusDynamicCategory
+  - UpdateServices.Approve-WsusUpdate
+  - UpdateServices.Deny-WsusUpdate
+  - UpdateServices.Get-WsusClassification
+  - UpdateServices.Get-WsusComputer
+  - UpdateServices.Get-WsusDynamicCategory
+  - UpdateServices.Get-WsusProduct
+  - UpdateServices.Get-WsusServer
+  - UpdateServices.Get-WsusUpdate
+  - UpdateServices.Invoke-WsusServerCleanup
+  - UpdateServices.Remove-WsusDynamicCategory
+  - UpdateServices.Set-WsusClassification
+  - UpdateServices.Set-WsusDynamicCategory
+  - UpdateServices.Set-WsusProduct
+  - UpdateServices.Set-WsusServerSynchronization
+uid: UpdateServices
+name: UpdateServices
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Windows Server Update Services (WSUS) Administration-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.2.1
+  Locale: en-US
+  Module Guid: 1c1d7545-e04a-4b31-9024-f0357c3b935f
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  title: UpdateServices

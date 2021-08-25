@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a list of root key values stored by the Microsoft Group KdsSvc.
+module: KDS
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input objects.
+outputs:
+- name: <xref href="System.Collections.Generic.List`1<KdsRootKey^>" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a list of master root keys stored in Active Directory.
+links:
+- text: Add-KdsRootKey
+  href: ./Add-KdsRootKey.yml
+- text: Clear-KdsCache
+  href: ./Clear-KdsCache.yml
+- text: Get-KdsConfiguration
+  href: ./Get-KdsConfiguration.yml
+- text: Set-KdsConfiguration
+  href: ./Set-KdsConfiguration.yml
+- text: Test-KdsRootKey
+  href: ./Test-KdsRootKey.yml
+syntaxes:
+- Get-KdsRootKey [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve a list of root key values'
+  code: |-
+    PS C:\> Get-KdsRootKey
+  description: |-
+    This command retrieves a list of root key values stored in Active Directory.
+  summary: ""
+uid: KDS.Get-KdsRootKey
+name: Get-KdsRootKey
+description: |-
+  The **Get-KdsRootKey** cmdlet retrieves the following information from Active Directory for each root key: 
+
+  - The root key identifier 
+  - The root key value 
+  - The Microsoft Group Key Distribution Service (KdsSvc)
+
+  This information is required to generate the group keys distributed by the Microsoft Group KdsSvc.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
+  Module Name: KDS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/kds/get-kdsrootkey?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-KdsRootKey

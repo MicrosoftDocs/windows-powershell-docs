@@ -1,0 +1,173 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet adds/updates a load balancing rule associated with a load balancer.
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties of a load balancing rule can be added/changed:
+    - Front end IP configuration
+    - Back end address pool
+    - Protocol
+    - Front end port
+    - Health probe for the rule
+    - Load distribution
+    - Back End port
+    - Whether floating IP is enabled
+    - Idle timeout (in minutes)
+syntaxes:
+- >-
+  New-NetworkControllerLoadBalancingRule -ConnectionUri <Uri> -LoadBalancerId <string>
+
+   -Properties <LoadBalancingRuleProperties> -ResourceId <string> [-CertificateThumbPrint <string>]
+
+   [-Credential <PSCredential>] [-Etag <string>] [-Force] [-ResourceMetadata <ResourceMetadata>]
+examples:
+- title: Example 1 - define a load balancing rule
+  code: |-
+    PS C:\> Import-Module NetworkController
+    # Frontend
+    # Create the front end IP resource
+    PS C:\> $frontEndIp = New-Object Microsoft.Windows.NetworkController.LoadBalancerFrontEndIpConfigurationProperties
+    PS C:\> $frontEndIp.PrivateIpAddress="10.127.32.12"
+    PS C:\> $frontEndIp.PrivateIPAllocationMethod="Static"
+
+    PS C:\> $FrontEndIPConfig = New-NetworkControllerLoadBalancerFrontEndIpConfiguration -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId frontEnd1 -Properties $frontEndIp
+
+    # Backend
+    # Retrieve the backend IPs that will form the pool
+    PS C:\> $backEndIp = Get-NetworkControllerNetworkInterfaceIpConfiguration -ConnectionUri https://networkcontroller -NetworkInterfaceId nw1
+
+    ## Define the properties of the backend address pool
+    PS C:\> $bePool = New-Object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPoolProperties
+    PS C:\> $bePool.BackendIPConfigurations = $backEndIp
+
+    PS C:\> $BackEndAddressPool = New-NetworkControllerLoadBalancerBackEndAddressPool -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId be1 -Properties $bePool
+
+    # Probe
+    PS C:\> $ProbeProperties = New-Object Microsoft.Windows.NetworkController.LoadBalancerProbeProperties
+    PS C:\> $ProbeProperties.protocol="HTTP"
+    PS C:\> $ProbeProperties.port="80"
+    PS C:\> $ProbeProperties.RequestPath="/health.htm"
+    PS C:\> $ProbeProperties.IntervalInSeconds=5
+    PS C:\> $ProbeProperties.NumberofProbes=8
+    PS C:\> $Probe = New-NetworkControllerLoadBalancerProbe -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId Probe1 -Properties $ProbeProperties
+
+    # Rule properties
+    PS C:\> $RuleProperties = New-Object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
+    PS C:\> $RuleProperties.FrontEndIPConfigurations += $FrontEndIPConfig
+    PS C:\> $RuleProperties.BackendAddressPool = $BackEndAddressPool
+    PS C:\> $RuleProperties.protocol = "TCP"
+    PS C:\> $RuleProperties.FrontEndPort = 80
+    PS C:\> $RuleProperties.BackEndPort = 80
+    PS C:\> $RuleProperties.IdleTimeoutInMinutes = 4
+    PS C:\> $RuleProperties.Probe = $Probe
+    PS C:\> New-NetworkControllerLoadBalancingRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -Properties $RuleProperties -ResourceId "webserver1"
+  description: |-
+    This example creates a new load balancing rule associated with load balancer resource lb1.
+  summary: ""
+parameters:
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: CertificateThumbPrint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+    This thumbprint must also be provided in the ClientCertificateThumbprint parameter in the Install-NetworkController or Set-NetworkController cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.This user must be present in the security group provided in the ClientSecurityGroup parameter in the Install-NetworkController cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="switch" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: LoadBalancerId
+  isRequired: true
+  description: |+
+    Specifies the load balancer resource where the load balancing rule belongs
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LoadBalancingRuleProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Specifies the properties of the load balancing rule
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the unique identifier of the load balancing rule
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    This parameter contains metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerLoadBalancingRule
+name: New-NetworkControllerLoadBalancingRule
+description: |-
+  This cmdlet adds/updates a load balancing rule associated with a load balancer.
+  This load balancing rule defines how traffic that arrives at the front-end IP is to be sent to the backend IP
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollerloadbalancingrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerLoadBalancingRule

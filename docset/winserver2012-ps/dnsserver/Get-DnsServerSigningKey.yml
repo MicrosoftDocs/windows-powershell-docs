@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets zone signing keys.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerSigningKey" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Add-DnsServerSigningKey
+  href: ./Add-DnsServerSigningKey.yml
+- text: Disable-DnsServerSigningKeyRollover
+  href: ./Disable-DnsServerSigningKeyRollover.yml
+- text: Enable-DnsServerSigningKeyRollover
+  href: ./Enable-DnsServerSigningKeyRollover.yml
+- text: Invoke-DnsServerSigningKeyRollover
+  href: ./Invoke-DnsServerSigningKeyRollover.yml
+- text: Remove-DnsServerSigningKey
+  href: ./Remove-DnsServerSigningKey.yml
+- text: Set-DnsServerSigningKey
+  href: ./Set-DnsServerSigningKey.yml
+syntaxes:
+- >-
+  Get-DnsServerSigningKey [-ZoneName] <String> [[-KeyId] <Guid[]>] [-AsJob] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String>] [-ThrottleLimit <Int32>]
+examples:
+- title: 'Example 1: Get keys for a signed zone'
+  code: |-
+    PS C:\> Get-DnsServerSigningKey -ZoneName "sec.contoso.com"
+  description: |-
+    This command gets keys for the signed zone sec.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a remote DNS server.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: KeyId
+  description: |+
+    Specifies an array of keys.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ZoneName
+  isRequired: true
+  description: |+
+    Specifies the name of the zone in which DNS Security Extensions (DNSSEC) operations are performed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Get-DnsServerSigningKey
+name: Get-DnsServerSigningKey
+description: |-
+  The **Get-DNSServerSigningKey** cmdlet gets and displays all the keys in a zone.
+  You can use **KeyId** parameter to return specific keys.
+metadata:
+  external help file: DnsServer_Cmdlets.xml
+  Module Name: DnsServer
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/get-dnsserversigningkey?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

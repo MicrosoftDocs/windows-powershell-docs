@@ -1,0 +1,176 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports an existing install image from an image store.
+module: WDS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_WdsInstallImage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Copy-WdsInstallImage
+  href: ./Copy-WdsInstallImage.yml
+- text: Disable-WdsInstallImage
+  href: ./Disable-WdsInstallImage.yml
+- text: Enable-WdsInstallImage
+  href: ./Enable-WdsInstallImage.yml
+- text: Get-WdsInstallImage
+  href: ./Get-WdsInstallImage.yml
+- text: Import-WdsInstallImage
+  href: ./Import-WdsInstallImage.yml
+- text: Remove-WdsInstallImage
+  href: ./Remove-WdsInstallImage.yml
+- text: Set-WdsInstallImage
+  href: ./Set-WdsInstallImage.yml
+syntaxes:
+- >-
+  Export-WdsInstallImage -Destination <String> [-NewImageName <String>] [-NewDescription <String>] [-Append]
+
+   [-Force] -ImageName <String> [-ImageGroup <String>] [-FileName <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Export an image'
+  code: |-
+    PS C:\> Export-WdsInstallImage -Append -Destination "D:\images\exported.wim" -ImageName "Windows Latest with LOB apps" -FileName "install-3.wim" -ImageGroup "Fabrikam Latest Images" -NewImageName "Fabrikam Latest"
+  description: |-
+    This command exports an image and appends the image to an existing file, if it exists.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Append
+  description: |+
+    Indicates that the cmdlet appends an image to an existing image file.
+    The cmdlet creates a new file that has the image if there is no existing image file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Destination
+  isRequired: true
+  description: |+
+    Specifies a fully qualified path that is available to the Windows Deployment Service server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileName
+  description: |+
+    Specifies a file name.
+    This is the file name of the install image.
+    Specifies the file name of the install image.
+    Use this parameter to specify the file name for the install image if the install image name does not uniquely identify the image.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImageGroup
+  description: |+
+    Specifies the name of an image group.
+    This image group contains the image to export.
+    If you do not specify an image group, and only one image group exists on the server, the cmdlet uses that image group by default.
+    If more than one image group exists on the server, you must specify the image group
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImageName
+  isRequired: true
+  description: |+
+    Specifies the name of an image.
+    This is the name of the image to export.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewDescription
+  description: |+
+    Specifies a new description for the install image to create in the export operation
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewImageName
+  description: |+
+    Specifies a new name for the image file to create in the export operation.
+    If you do not specify a name, the cmdlet uses the display name of the source image.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WDS.Export-WdsInstallImage
+name: Export-WdsInstallImage
+description: |-
+  The **Export-WdsInstallImage** cmdlet exports an existing install image from an image store to a file.
+  If an image file already is in that location, you may overwrite it, append the new image to a file, or leave it in place.
+  Specify the install image with the image name and image group name.
+  You must specify the file name if the image name and image group name do not uniquely identify the install image.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_WdsInstallImage_v1.0.cdxml-help.xml
+  Module Name: WDS
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/wds/export-wdsinstallimage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-WdsInstallImage

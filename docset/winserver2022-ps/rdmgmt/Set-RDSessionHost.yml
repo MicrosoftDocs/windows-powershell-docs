@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures one or more RD Session Host servers in a session collection.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-RDSessionHost
+  href: ./Add-RDSessionHost.yml
+- text: Get-RDSessionHost
+  href: ./Get-RDSessionHost.yml
+- text: Remove-RDSessionHost
+  href: ./Remove-RDSessionHost.yml
+syntaxes:
+- >-
+  Set-RDSessionHost [-SessionHost] <String[]> [-NewConnectionAllowed] <RDServerNewConnectionAllowed>
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set values for an RD  Session Host server'
+  code: |-
+    PS C:\> Set-RDSessionHost -SessionHost "rdsh.contoso.com" -NewConnectionAllowed Yes -ConnectionBroker "rdcb.contoso.com"
+  description: |-
+    This command specifies values for an RD Session Host server named rdsh.contoso.com.
+    Users can make new server connections to a session collection on the RD Connection Broker server named rdcb.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for this Remote Desktop deployment.
+    If this parameter does not appear, the default value is the fully qualified domain name (FQDN) of the local host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RDServerNewConnectionAllowed" data-throw-if-not-resolved="False" />
+  name: NewConnectionAllowed
+  isRequired: true
+  description: |+
+    Determines whether the RD Session Host servers specified by the **SessionHost** parameter can accept new connections.
+    The acceptable values for this parameter are: Yes, NotUntilReboot, or No.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Yes, NotUntilReboot, No
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SessionHost
+  isRequired: true
+  description: |+
+    Specifies an array that contains the fully qualified domain name (FQDN) of one or more RD Session Host servers that you configure.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Set-RDSessionHost
+name: Set-RDSessionHost
+description: |-
+  The **Set-RDSessionHost** cmdlet configures one or more Remote Desktop Session Host (RD Session Host) servers in a session collection by specifying whether each server can accept new connections.
+  RD Session Host is a Remote Desktop Services role service that lets users share Windows-based programs or the full Windows desktop.
+  Users can connect to a RD Session Host server to run programs, save files, and use network resources on that server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdsessionhost?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDSessionHost

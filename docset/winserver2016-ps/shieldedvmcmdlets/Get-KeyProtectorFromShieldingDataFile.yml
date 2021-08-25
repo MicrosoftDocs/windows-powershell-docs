@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the Key Protector from a Shielding Data File.
+module: ShieldedVmCmdlets
+notes: ""
+outputs:
+- name: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns a Byte\[\] array that represents the raw key protector structure.
+links:
+- text: Shielded Virtual Machine Provisioning Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- Get-KeyProtectorFromShieldingDataFile [-ShieldingDataFilePath] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Extract the raw byte form of the Key Protector from the shielding data file'
+  code: |-
+    PS C:\>Get-KeyProtectorFromShieldingDataFile -ShieldingDataFilePath "C:\temp\shieldingdata.pdk"
+    0 0 36 52 [...]
+  description: |-
+    This command extracts the raw byte form of the key protector from the shielding data file located at C:\temp\shieldingdata.pdk
+  summary: ""
+- title: 'Example 2: Extract the raw key protector from the shielding data and convert it to an HGS Key Protector object'
+  code: |-
+    PS C:\>$KP = Get-KeyProtectorFromShieldingDataFile -ShieldingDataFilePath 'C:\temp\shieldingdata.pdk'
+    PS C:\> ConvertTo-HgsKeyProtector -Bytes $KP
+  description: |-
+    The first command extracts the raw key protector from the shielding data file located at C:\temp\shieldingdata.pdk and stores the result in the variable named $KP.
+
+    The second command converts raw key protector stored in the $KB variable to an HGS Key Protector object for further inspection.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShieldingDataFilePath
+  isRequired: true
+  description: |+
+    Specifies the location of a Shielding Data File (.pdk).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ShieldedVmCmdlets.Get-KeyProtectorFromShieldingDataFile
+name: Get-KeyProtectorFromShieldingDataFile
+description: |-
+  The **Get-KeyProtectorFromShieldingDataFile** cmdlet gets the Key Protector from a Shielding Data File.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ShieldedVmCmdlets-help.xml
+  Module Name: ShieldedVmCmdlets
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/shieldedvmcmdlets/get-keyprotectorfromshieldingdatafile?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-KeyProtectorFromShieldingDataFile

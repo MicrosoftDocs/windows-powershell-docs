@@ -1,0 +1,204 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets masking sets.
+  Masking sets are used to grant access to a virtual disk or iSCSI VHD for one or more servers.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_InitiatorId" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an InitiatorId object to the *InitiatorId* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a StorageSubsystem object to the *StorageSubsystem* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_TargetPort" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a TargetPort object to the *TargetPort* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a VirtualDisk object to the *VirtualDisk* parameter.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_MaskingSet" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet outputs an object that represents a masking set.
+links:
+- text: Get-InitiatorPort
+  href: ./Get-InitiatorPort.yml
+- text: Get-TargetPort
+  href: ./Get-TargetPort.yml
+- text: New-MaskingSet
+  href: ./New-MaskingSet.yml
+- text: Remove-MaskingSet
+  href: ./Remove-MaskingSet.yml
+- text: Rename-MaskingSet
+  href: ./Rename-MaskingSet.yml
+- text: Get-VirtualDisk
+  href: ./Get-VirtualDisk.yml
+syntaxes:
+- >-
+  Get-MaskingSet [[-FriendlyName] <String[]>] [-HostType <HostType[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-MaskingSet [-UniqueId <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-MaskingSet [-TargetPort <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-MaskingSet [-InitiatorId <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-MaskingSet [-StorageSubSystem <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-MaskingSet [-VirtualDisk <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all masking sets'
+  code: |-
+    PS C:\> Get-MaskingSet
+  description: |-
+    This example gets and displays all existing MaskingSet objects which have been created using any available Storage Management Providers across all visible storage subsystems.
+  summary: ""
+- title: 'Example 2: Get all Microsoft Windows masking sets'
+  code: |-
+    PS C:\> Get-MaskingSet -HostType MicrosoftWindows
+  description: |-
+    This example gets and displays all masking sets hosted by a computer running Microsoft Windows.
+  summary: ""
+- title: 'Example 3: Get the masking set for a specific virtual disk'
+  code: |-
+    PS C:\> Get-MaskingSet -VirtualDisk (Get-VirtualDisk -FriendlyName CompanyData)
+  description: |-
+    This example gets the masking set for the CompanyData virtual disk.
+    It does so by using the **Get-VirtualDisk** cmdlet to get the appropriate VirtualDisk object and provide it to the *VirtualDisk* parameter of **Get-MaskingSet**.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FriendlyName
+  description: |+
+    Gets the masking set with the specified friendly name or friendly name pattern.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HostType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HostType
+  description: |+
+    Specifies the host operating system or other host environmental factors that may influence the behavior that the storage system should have when showing a virtual disk to an initiator.
+    If the HostType property is blank for the object you want to get, omit this parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, Other, Standard, Solaris, HPUX, OpenVMS, Tru64, Netware, Sequent, AIX, DGUX, Dynix, Irix, CiscoISCSIStorageRouter, Linux, MicrosoftWindows, OS400, TRESPASS, HIUX, VMwareESXi, MicrosoftWindowsServer2008, MicrosoftWindowsServer2003
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InitiatorId
+  description: |+
+    Gets the masking set associated with the specified InitiatorId object.
+    Enter an InitiatorID CIM object, which is exposed by the Get-InitiatorId cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageSubSystem
+  description: |+
+    Gets the masking set associated with the specified StorageSubSystem object.
+    Enter a StorageSubSystem CIM object, which is exposed by the Get-StorageSubSystem cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: TargetPort
+  description: |+
+    Gets the masking set associated with the specified TargetPort object.
+    Enter a TargetPort CIM object, which is exposed by the Get-TargetPort cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UniqueId
+  description: |+
+    Specifies the UniqueID of the masking set to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: VirtualDisk
+  description: |+
+    Gets the masking set associated with the specified VirtualDisk object.
+    Enter a VirtualDisk CIM object, which is exposed by the Get-VirtualDisk cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-MaskingSet
+name: Get-MaskingSet
+description: |-
+  The **Get-MaskingSet** cmdlet returns a list of created masking sets.
+  Masking sets are used to grant access to a virtual disk or iSCSI VHD for one or more servers.
+
+  ps_storage_spacesubsystem_not_remark
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MaskingSet.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-maskingset?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MaskingSet

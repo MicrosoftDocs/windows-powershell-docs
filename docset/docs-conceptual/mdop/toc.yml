@@ -1,2 +1,5 @@
+items:
 - name: MDOP PowerShell
   href: get-started.md
+metadata:
+  universal_ref_toc: /powershell/module/win-mdop2-ps/toc.json

@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports a driver package into the Windows Deployment Services driver store.
+module: WDS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_WdsDriverPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-WdsDriverPackage
+  href: ./Add-WdsDriverPackage.yml
+- text: Disable-WdsDriverPackage
+  href: ./Disable-WdsDriverPackage.yml
+- text: Enable-WdsDriverPackage
+  href: ./Enable-WdsDriverPackage.yml
+- text: Get-WdsDriverPackage
+  href: ./Get-WdsDriverPackage.yml
+- text: Remove-WdsDriverPackage
+  href: ./Remove-WdsDriverPackage.yml
+syntaxes:
+- >-
+  Import-WdsDriverPackage -Path <String> [-GroupName <String>] [-DisplayName <String>]
+
+   [-Architecture <Architecture>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Import a driver package for the x64 architecture'
+  code: |-
+    PS C:\> Import-WdsDriverPackage -Path "D:\Drivers\Fabrikam.inf" -Architecture X64 -DisplayName "Fabrikam Device Driver (x64)" -GroupName "Drivers for Fabrikam Devices"
+  description: |-
+    This command imports a driver package for the x64 architecture into the Windows Deployment Services driver store from the specified .inf file.
+    The command specifies a display name for the driver package and assigns the package to the Drivers for Fabrikam Devices group.
+  summary: ""
+parameters:
+- type: <xref href="Architecture" data-throw-if-not-resolved="False" />
+  name: Architecture
+  description: |+
+    Specifies an architecture.
+    This is the architecture of the driver package to add to the server.
+    If you do not specify this parameter, the cmdlet includes all the architectures it finds.
+    The acceptable values for this parameter are:
+
+    - Arm
+    - Ia64
+    - X64
+    - X86
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: X86, Ia64, X64, Arm
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specifies a display name for the driver package.
+    If you do not supply a display name, the cmdlet creates one based on the driver name and architecture.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupName
+  description: |+
+    Specifies the name of a driver group.
+    The cmdlet adds the driver package to this group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies an absolute path.
+    This is the path an .inf file.
+    The cmdlet imports the driver package from this file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WDS.Import-WdsDriverPackage
+name: Import-WdsDriverPackage
+description: |-
+  The **Import-WdsDriverPackage** cmdlet imports a driver package into the Windows Deployment Services driver store.
+  Specify the .inf file for the driver package to import.
+
+  You can specify a display name for the driver package.
+  You can assign it to a driver group.
+  If you want to assign a driver package to a group later, use the Add-WdsDriverPackage cmdlet.
+  A client must have access to at least one group that a driver package belongs to in order to install it.
+
+  If the package contains drivers for multiple architectures, you can specify a single architecture.
+  If you do not specify an architecture, the cmdlet adds all the architectures.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_WdsDriverPackage_v1.0.cdxml-help.xml
+  Module Name: WDS
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/wds/import-wdsdriverpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-WdsDriverPackage

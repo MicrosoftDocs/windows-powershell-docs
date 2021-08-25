@@ -1,0 +1,164 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of volumes.
+module: WindowsServerBackup
+notes: |-
+  * You can add the volumes that you get from this cmdlet to the **WBPolicy** object by using the **Add-WBVolume** cmdlet to specify them as volumes to be backed up, or by using the **New-WBBackupTarget** cmdlet to specify them as backup storage locations.
+inputs:
+- name: <xref href="WBPolicy,WBDisk,string" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet queries the **WBPolicy** object and the **WBDisk** object, and it references a string that specifies a path to the volumes where you will store the backups.
+
+    Depending on the input parameters, you can use this cmdlet to query the **WBPolicy** object for a list of volumes specified for backup, query the **WBDisk** object for a list of volumes present on a particular disk, or get a **WBVolume** object of the volume that the string specifies *VolumePath* parameter.
+
+    In addition, you can use this cmdlet with the parameters *CriticalVolumes* and *AllVolumes* to get the **WBVolume** list of all critical volumes on the system and all the volumes on the system, respectively.
+outputs:
+- name: <xref href="WBVolume " data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns an array of volumes in the **WBPolicy** object.
+links:
+- text: Add-WBVolume
+  href: ./Add-WBVolume.yml
+- text: Get-WBDisk
+  href: ./Get-WBDisk.yml
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: Remove-WBVolume
+  href: ./Remove-WBVolume.yml
+syntaxes:
+- Get-WBVolume [-Disk] <WBDisk> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Get-WBVolume [-Policy] <WBPolicy> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Get-WBVolume [-CriticalVolumes] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Get-WBVolume [-AllVolumes] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Get-WBVolume [-VolumePath] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a list of volumes on a disk'
+  code: |-
+    PS C:\> $Disks = Get-WBDisk
+    PS C:\> Get-WBVolume -Disk $Disks[0]
+  description: |-
+    This example gets all volumes present on a disk.
+
+    The first command stores the output of the [Get-WBDisk](./Get-WBDisk.yml) cmdlet in the $Disks variable.
+    The command gets a list of all disks on the system.
+
+    The second command uses the **Get-WBVolume** cmdlet to get a list of volumes on the first disk.
+  summary: ""
+- title: 'Example 2: Get a list of all volumes in the backup policy'
+  code: |-
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Get-WBVolume -Policy $Policy
+  description: |-
+    This example gets a list of all volumes that you added for backup in the **WBPolicy** object.
+
+    The first command stores the result of the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet in a variable named $Policy.
+
+    The second command gets the volumes from the $Policy variable.
+  summary: ""
+- title: 'Example 3: Get volumes for a specific drive letter'
+  code: |-
+    PS C:\> Get-WBVolume -VolumePath "E:"
+  description: |-
+    This command gets the **WBVolume** object for the volume that uses drive letter E:.
+  summary: ""
+- title: 'Example 4: Get all volumes on a computer'
+  code: |-
+    PS C:\> Get-WBVolume -AllVolumes
+  description: |-
+    This command gets a list of **WBVolume** objects of all the volumes present on the computer.
+  summary: ""
+- title: 'Example 5: Get all critical volumes on a computer'
+  code: |-
+    PS C:\> Get-WBVolume -CriticalVolumes
+  description: |-
+    This command gets the list of all the critical volumes present on the computer.
+    Critical volumes are volumes that contain operating system components and files.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllVolumes
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet lists all volumes included in the backup policy.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CriticalVolumes
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet lists only critical volumes, such as volumes that contain operating system files and components.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBDisk" data-throw-if-not-resolved="False" />
+  name: Disk
+  isRequired: true
+  description: |+
+    Specifies a volume that is associated with a certain disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: OnDisk
+  parameterValueGroup: ""
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies the policy contained in the **WBPolicy** object to display.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: InPolicy
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VolumePath
+  isRequired: true
+  description: |+
+    Specifies an array of volume drive letters for the volume where you store the backups.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Get-WBVolume
+name: Get-WBVolume
+description: |-
+  The **Get-WBVolume** cmdlet gets a list of volumes.
+  Use this cmdlet to display volumes included in the **WBPolicy** object, all critical volumes, all volumes, or volumes in the **WBDisk** object.
+  You can also use this cmdlet to get a **WBVolume** object of a volume by using the drive letter of that volume.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbvolume?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBVolume

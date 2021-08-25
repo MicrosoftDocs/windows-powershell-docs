@@ -1,0 +1,172 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves DNS server settings.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerSetting" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-DnsServerSetting
+  href: ./Set-DnsServerSetting.yml
+syntaxes:
+- >-
+  Get-DnsServerSetting [-ComputerName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-DnsServerSetting [-All] [-ComputerName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all DNS server settings'
+  code: |-
+    PS C:\> Get-DnsServerSetting -All
+
+    ComputerName                            : WIN-OLPN33S5Q3M.mytest.contoso.com
+    MajorVersion                            : 6
+    MinorVersion                            : 2
+    BuildNumber                             : 8230
+    IsReadOnlyDC                            : False
+    EnableDnsSec                            : True
+    EnableIPv6                              : True
+    EnableOnlineSigning                     : True
+    NameCheckFlag                           : 2
+    AddressAnswerLimit                      : 0
+    XfrConnectTimeout(s)                    : 30
+    BootMethod                              : 3
+    AllowUpdate                             : True
+    UpdateOptions                           : 783
+    DsAvailable                             : True
+    DisableAutoReverseZone                  : False
+    AutoCacheUpdate                         : False
+    RoundRobin                              : True
+    LocalNetPriority                        : True
+    StrictFileParsing                       : False
+    LooseWildcarding                        : False
+    BindSecondaries                         : False
+    WriteAuthorityNS                        : False
+    ForwardDelegations                      : False
+    AutoConfigFileZones                     : 1
+    EnableDirectoryPartitions               : True
+    RpcProtocol                             : 5
+    EnableVersionQuery                      : 0
+    EnableDuplicateQuerySuppression         : True
+    LameDelegationTTL                       : 00:00:00
+    AutoCreateDelegation                    : 2
+    AllowCnameAtNs                          : True
+    RemoteIPv4RankBoost                     : 5
+    RemoteIPv6RankBoost                     : 0
+    EnableRsoForRodc                        : True
+    MaximumRodcRsoQueueLength               : 300
+    MaximumRodcRsoAttemptsPerCycle          : 100
+    OpenAclOnProxyUpdates                   : True
+    NoUpdateDelegations                     : False
+    EnableUpdateForwarding                  : False
+    MaxResourceRecordsInNonSecureUpdate     : 30
+    EnableWinsR                             : True
+    LocalNetPriorityMask                    : 255
+    DeleteOutsideGlue                       : False
+    AppendMsZoneTransferTag                 : False
+    AllowReadOnlyZoneTransfer               : False
+    MaximumUdpPacketSize                    : 4000
+    TcpReceivePacketSize                    : 65536
+    EnableSendErrorSuppression              : True
+    SelfTest                                : 4294967295
+    XfrThrottleMultiplier                   : 10
+    SilentlyIgnoreCnameUpdateConflicts      : False
+    EnableIQueryResponseGeneration          : False
+    SocketPoolSize                          : 2500
+    AdminConfigured                         : True
+    SocketPoolExcludedPortRanges            : {}
+    ForestDirectoryPartitionBaseName        : ForestDnsZones
+    DomainDirectoryPartitionBaseName        : DomainDnsZones
+    ServerLevelPluginDll                    :
+    EnableRegistryBoot                      :
+    PublishAutoNet                          : False
+    QuietRecvFaultInterval(s)               : 0
+    QuietRecvLogInterval(s)                 : 0
+    ReloadException                         : False
+    SyncDsZoneSerial                        : 2
+    EnableDuplicateQuerySuppression         : True
+    SendPort                                : Random
+    MaximumSignatureScanPeriod              : 2.00:00:00
+    MaximumTrustAnchorActiveRefreshInterval : 15.00:00:00
+    ListeningIPAddress                      : {172.23.90.136}
+    AllIPAddress                            : {172.23.90.136}
+  description: |-
+    This command gets all settings of a DNS server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet gets all DNS server settings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    The acceptable values for this parameter are: an IP V4 address; an IP V6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Get-DnsServerSetting
+name: Get-DnsServerSetting
+description: |-
+  The **Get-DnsServerSetting** cmdlet retrieves basic Domain Name System (DNS) server settings; that is, the default parameter set.
+  To get advanced DNS server settings, use the *All* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerSetting_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/get-dnsserversetting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DnsServerSetting

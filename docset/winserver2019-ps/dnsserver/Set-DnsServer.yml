@@ -1,0 +1,180 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Overwrites a DNS server configuration.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServer" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DnsServer
+  href: ./Get-DnsServer.yml
+- text: Test-DnsServer
+  href: ./Test-DnsServer.yml
+syntaxes:
+- >-
+  Set-DnsServer [-InputObject] <CimInstance> [-ComputerName <String>] [-Force] [-CreateFileBackedPrimaryZones]
+
+   [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Overwrite a DNS server configuration by using an input object'
+  code: |-
+    PS C:\> Get-DnsServer -ComputerName "DNSServer13.Contoso.com" | Export-Clixml -Path "c:\DnsServerConfig.xml"
+    PS C:\> $x = Import-Clixml "c:\DnsServerConfig.xml"
+    PS C:\> Set-DnsServer -InputObject $x -ComputerName "DNSServer22.Contoso.com"
+  description: |-
+    This set of commands uses an input object to overwrite a DNS server configuration.
+
+    As shown in the code block, the first command gets DNS server configuration by using the **Get-DnsServer** cmdlet.
+    It then pipes the information to the **Export-Clixml** cmdlet, which exports the data into an XML file.
+
+    The second command gets and stores the XML file data in variable $x.
+
+    The third command uses the data that is stored in variable $x to overwrite an existing DNS server configuration.
+  summary: ""
+- title: 'Example 2: Set DNS server configuration by using the Cimsession parameter'
+  code: |-
+    PS C:\> Get-DnsServer -CimSession 172.22.50.137 | Set-DnsServer
+  description: |-
+    This command gets DNS server configuration from a server that has an IP address of 172.22.50.137 and applies it to the server on which the **Set-DnsServer** cmdlet is run.
+  summary: ""
+- title: 'Example 3: Migrate DNS server configuration by using IP addresses'
+  code: |-
+    PS C:\> Get-DnsServer -CimSession 172.22.50.137 | Set-DnsServer -ComputerName 172.22.50.138
+  description: |-
+    This command migrates DNS server configuration from a server that has an IP address of 172.22.50.137 to a server that has an IP address of 172.22.50.138.
+  summary: ""
+- title: 'Example 4: Create a file-backed primary zone'
+  code: |-
+    PS C:\> Get-DnsServer -CimSession 172.22.50.137 | Set-DnsServer -CreateFileBackedPrimaryZones
+  description: |-
+    This command creates file-backed primary zones on the specified local DNS server.
+    The file that contains resource records must exist in the %windir%\system32\dns directory.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    The acceptable values for this parameter are: an IP v4 address; an IP v6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CreateFileBackedPrimaryZones
+  description: |+
+    Indicates that you must create new file-backed primary zones in the input object.
+    The files that contains the resource records must exist in the %windir%\system32\dns directory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overrides the default confirmation setting before the cmdlet performs the action.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DnsServer.Set-DnsServer
+name: Set-DnsServer
+description: |-
+  The **Set-DnsServer** cmdlet uses an input object to overwrite a specified Domain Name System (DNS) server configuration.
+  You can generate the input object by using an XML file that is exported by using any of the following cmdlets: **Get-DnsServer**, **Export-Clixml**, or **Import-Clixml**.
+
+  For more information about **Export-Clixml**, see  [Export-Clixml](https://technet.microsoft.com/en-us/library/hh849916.aspx).
+  For more information about **Import-Clixml**, see  [Import-Clixml](https://technet.microsoft.com/en-us/library/hh849906.aspx).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServer_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DnsServer

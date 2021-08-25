@@ -1,0 +1,253 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies security filter objects, thereby modifying the Authentication, Encryption, OverrideBlockRules, LocalUser, RemoteUser, and RemoteMachine conditions of the firewall rules.
+module: NetSecurity
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetNetworkLayerSecurityFilter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetNetworkLayerSecurityFilter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-NetFirewallRule
+  href: ./Get-NetFirewallRule.yml
+- text: Get-NetFirewallSecurityFilter
+  href: ./Get-NetFirewallSecurityFilter.yml
+- text: Get-NetIPSecRule
+  href: ./Get-NetIPsecRule.yml
+- text: New-NetFirewallRule
+  href: ./New-NetFirewallRule.yml
+- text: New-NetIPSecRule
+  href: ./New-NetIPsecRule.yml
+- text: Open-NetGPO
+  href: ./Open-NetGPO.yml
+- text: Save-NetGPO
+  href: ./Save-NetGPO.yml
+- text: Set-NetFirewallRule
+  href: ./Set-NetFirewallRule.yml
+- text: Set-NetIPSecRule
+  href: ./Set-NetIPsecRule.yml
+- text: New-GPO
+  href: ../grouppolicy/New-GPO.yml
+syntaxes:
+- >-
+  Set-NetFirewallSecurityFilter [-PolicyStore <String>] [-GPOSession <String>] [-Authentication <Authentication>]
+
+   [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-LocalUser <String>] [-RemoteUser <String>]
+
+   [-RemoteMachine <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-NetFirewallSecurityFilter -InputObject <CimInstance[]> [-Authentication <Authentication>]
+
+   [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-LocalUser <String>] [-RemoteUser <String>]
+
+   [-RemoteMachine <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>$users = New-Object -TypeName System.Security.Principal.NTAccount ("corp.contoso.com\Administrators")
+
+
+
+    PS C:\>$SIDofSecureUserGroup = $users.Translate([System.Security.Principal.SecurityIdentifier]).Value
+
+
+
+    PS C:\>$SecureMachineGroupSDDL = "D:(A;;CC;;; $SIDofSecureUserGroup)"
+
+
+
+    PS C:\>$nfSecurityFilter = Get-FirewallRule -DisplayName "Authorize Secure Computer" | Get-NetFirewallSecurityFilter
+
+
+
+    PS C:\>Set-NetFirewallSecurityFilter -RemoteMachine $SecureMachineGroupSDDL -InputObject $nfSecurityFilter
+
+
+    This cmdlet can be run using only the pipeline.
+    PS C:\>Get-FirewallRule -DisplayName "Authorize Secure Computer" | Get-NetFirewallSecurityFilter | Set-NetFirewallSecurityFilter -RemoteMachine $SecureMachineGroupSDDL
+
+
+    This cmdlet can be run without the pipeline.
+    PS C:\>Set-NetFirewallRule -DisplayName "Authorize Secure Computer" -RemoteMachine $SecureMachineGroupSDDL
+  description: |-
+    This example modifies the user field of a particular firewall rule.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$nfSecurityFilter = Get-NetFirewallRule -DisplayGroup "*Printer*" | Get-NetFirewallSecurityFilter
+
+
+
+    PS C:\>Set-NetFirewallSecurityFilter -Authentication Request -InputObject $nfSecurityFilter
+
+
+    This cmdlet can be run using only the pipeline.
+    PS C:\>Get-NetFirewallRule -DisplayGroup "*Printer*" | Get-NetFirewallSecurityFilter | Set-NetFirewallSecurityFilter -Authentication Request
+  description: |-
+    This example modifies the security condition associated with the Printer firewall rules by requesting authenticated traffic.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Authentication" data-throw-if-not-resolved="False" />
+  name: Authentication
+  description: "Specifies that authentication is required on firewall rules. \r\nThe acceptable values for this parameter are: NotRequired, Required, or NoEncap. \r\n                         \r\n -- NotRequired: Any network packet matches this rule, that it is protected by IPsec.\r\nThis option is the equivalent of not selecting the allow only secure connections option in the Windows Firewall with Advanced Security MMC snap-in. \r\n                         \r\n -- Required: Network packets that are authenticated by IPsec match this rule.\r\nA separate IPsec rule must be created to authenticate the traffic.\r\nThis option is the equivalent of the allow only secure connections option in the Windows Firewall with Advanced Security MMC snap-in. \r\n                         \r\n -- NoEncap: Network connections that are authenticated, but not encapsulated by Encapsulating Security Payload (ESP) or Authentication Header (AH) match this rule.\r\nThis option is useful for connections that must be monitored by network equipment, such as intrusion detection systems (IDS), that are not compatible with ESP NULL-protected network packets.\r\nThe initial connection is authenticated by IPsec by using AuthIP, but the quick mode SA permits clear-text traffic.\r\nTo use this option, you must also configure an IPsec rule that specifies authentication with encapsulation none as a quick mode security method.\r\nIn the Microsoft Management Console (MMC), authentication and encryption are combined into one set of radio buttons.\r\nIn Windows Management Instrumentation (WMI) or Windows PowerShell®, authentication and encryption are given as two separate options. \r\n                         \r\nThe default value is Required. \r\nNote: A rule can be queried for this condition, or modified by using the security filter object.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NotRequired, Required, NoEncap
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Encryption" data-throw-if-not-resolved="False" />
+  name: Encryption
+  description: "Specifies that encryption in authentication is required on firewall rules.\r\nThe authentication is done through a separate IPsec or main mode rule. \r\nThe acceptable values for this parameter are: NotRequired, Required, or Dynamic. \r\n                         \r\n -- NotRequired: Encryption is not required for authentication. \r\n                         \r\n -- Required: Encryption is required for authentication through an IPsec rule. \r\n                         \r\n -- Dynamic: This is `authdynenc` in the netsh command-line. \r\n                         \r\nThe default value is NotRequired. \r\nNote: A rule can be queried for this condition, or modified by using the security filter object.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NotRequired, Required, Dynamic
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GPOSession
+  description: "Targets the network GPO from which to retrieve the rules to be modified. \r\n                         \r\nThis parameter is used in the same way as the **PolicyStore** parameter.\r\nWhen modifying GPOs in Windows PowerShell®, each change to a GPO requires the entire GPO to be loaded, modified, and saved back.\r\nOn a busy Domain Controller (DC), this can be a slow and resource-heavy operation.\r\nA GPO Session loads a domain GPO onto the local computer and makes all changes in a batch, before saving it back.\r\nThis reduces the load on the DC and speeds up the Windows PowerShell cmdlets.\r\nTo load a GPO Session, use the Open-NetGPO cmdlet.\r\nTo save a GPO Session, use the Save-NetGPO cmdlet.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalUser
+  description: |+
+    Specifies the principals to which the network traffic this firewall rule should apply.
+    This is an SDDL string.
+    The principals, represented by SIDs in the SDDL string, can be services, users, application containers, or any other SID that network traffic could be associated with.
+    This parameter specifies that only network packets that are authenticated as coming from or going to a principal identified in the list of accounts (SID) match this rule. 
+    Note: Querying for rules with this parameter can only be performed using filter objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: OverrideBlockRules
+  description: "Allows matching network traffic that would otherwise be modified.\r\nThe network traffic must be authenticated by using a separate IPsec rule. \r\n                         \r\nIf the **Direction** parameter is set to Inbound, then this parameter is valid only for rules that have one or more accounts listed in the **RemoteUser** parameter and optionally the **RemoteMachine** parameter.\r\nNetwork packets that match this rule and that are successfully authenticated against a computer account specified in the **RemoteUser** parameter and against a user account identified in the **RemoteMachine** parameter are permitted through the firewall. \r\n                         \r\nIf this parameter is specified, then the **Authentication** parameter cannot be set to NotRequired.\r\nThis parameter is equivalent to the override block rules checkbox in the Windows Firewall with Advanced Security MMC snap-in. \r\n                         \r\nFor computers that are running Windows® 7 or Windows Server 2008 R2, this parameter is permitted on an outbound rule.\r\nSelecting this parameter on an outbound rule causes matching traffic to be permitted through this rule even if other matching rules would block the traffic.\r\nNo accounts are required in the **RemoteMachine** or **RemoteUser** parameter for an outbound bypass rule, however, if authorized or excepted computers are listed in those groups the rules will be enforced. \r\n                         \r\nThis parameter is not valid on outbound rules on computers that are running firstref_vista or earlier. \r\nNote: Querying for rules with this parameter can only be performed using filter objects.\r\nSee the Get-NetFirewallSecurityFilter cmdlet for more information.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  description: "Targets the policy store from which to retrieve the rules to be modified. \r\n                         \r\nA policy store is a container for firewall and IPsec policy. \r\nThe acceptable values for this parameter are:\r\n                         \r\n -- PersistentStore: Sometimes called static rules, this store contains the persistent policy for the local computer.\r\nThis policy is not from GPOs, and has been created manually or programmatically (during application installation) on the computer.\r\nRules created in this store are attached to the ActiveStore and activated on the computer immediately. \r\n                         \r\n -- ActiveStore: This store contains the currently active policy, which is the sum of all policy stores that apply to the computer.\r\nThis is the resultant set of policy (RSOP) for the local computer (the sum of all GPOs that apply to the computer), and the local stores (the PersistentStore, the static Windows service hardening (WSH), and the configurable WSH). \r\n                         \r\n ---- GPOs are also policy stores.\r\nComputer GPOs can be specified as follows. \r\n                         \r\n ------ `-PolicyStore hostname`. \r\n                         \r\n ---- Active Directory GPOs can be specified as follows. \r\n                         \r\n ------ `-PolicyStore domain.fqdn.com\\GPO_Friendly_Namedomain.fqdn.comGPO_Friendly_Name`. \r\n                         \r\n ------ Such as the following. \r\n                         \r\n -------- `-PolicyStore localhost`\r\n                         \r\n -------- `-PolicyStore corp.contoso.com\\FirewallPolicy`\r\n                         \r\n ---- Active Directory GPOs can be created using the New-GPO cmdlet or the Group Policy Management Console. \r\n                         \r\n -- RSOP: This read-only store contains the sum of all GPOs applied to the local computer. \r\n                         \r\n -- SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server® 2012. \r\n                         \r\n -- StaticServiceStore: This read-only store contains all the service restrictions that ship with Windows Server 2012.\r\nOptional and product-dependent features are considered part of Windows Server 2012 for the purposes of WFAS. \r\n                         \r\n -- ConfigurableServiceStore: This read-write store contains all the service restrictions that are added for third-party services.\r\nIn addition, network isolation rules that are created for Windows Store application containers will appear in this policy store. \r\n                         \r\nThe default value is PersistentStore. \r\nNote: The Set-NetFirewallRule cmdlet cannot be used to add an object to a policy store.\r\nAn object can only be added to a policy store at creation time with the Copy-NetFirewallRule cmdlet or with the New-NetFirewallRule cmdlet.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemoteMachine
+  description: |+
+    Specifies that matching IPsec rules of the indicated computer accounts are modified.
+    This parameter specifies that only network packets that are authenticated as incoming from or outgoing to a computer identified in the list of computer accounts (SID) match this rule.
+    This parameter value is specified as an SDDL string. 
+    Note: Querying for rules with this parameter can only be performed using filter objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemoteUser
+  description: |+
+    Specifies that matching IPsec rules of the indicated user accounts are modified.
+    This parameter specifies that only network packets that are authenticated as incoming from or outgoing to a user identified in the list of user accounts (SID) match this rule.
+    This parameter value is specified as an SDDL string. 
+    Note: Querying for rules with this parameter can only be performed using filter objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetSecurity.Set-NetFirewallSecurityFilter
+name: Set-NetFirewallSecurityFilter
+description: "The **Set-NetFirewallSecurityFilter** cmdlet modifies the security conditions associated with the input firewall rules.\r\n\r\nSee the Get-NetFirewallSecurityFilter cmdlet for more information on the security filters.\r\n\r\nTo modify the security conditions, two methods can be used starting with the security filters returned by the Get-NetFirewallSecurityFilter cmdlet and optional additional querying. \r\n                       \r\n -- The network firewall security filter objects can be piped into the Get-NetFirewallRule cmdlet.\r\nThe Get-NetFirewallRule cmdlet returns the rules associated with the filters and pipes the rules into the Set-NetFirewallRule cmdlet, which configures the interface properties. \r\n                       \r\n -- Alternatively, piping the network firewall security filter objects directly to this cmdlet modifies the **Authentication**, **Encryption**, **OverrideBlockRules**, **LocalUser**, **RemoteUser**, and **RemoteMachine** parameters of the rules."
+metadata:
+  external help file: NetFirewallSecurityFilter.cmdletDefinition.cdxml-help.xml
+  Module Name: NetSecurity
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/netsecurity/set-netfirewallsecurityfilter?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetFirewallSecurityFilter

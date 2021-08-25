@@ -1,0 +1,166 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the printer properties for the specified printer.
+module: PrintManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts one printer object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet produces no output.
+links:
+- text: Get-PrinterProperty
+  href: ./Get-PrinterProperty.yml
+syntaxes:
+- >-
+  Set-PrinterProperty [-PrinterName] <String> [-PropertyName] <String> [-Value] <String> [-AsJob]
+
+   [-CimSession <CimSession>] [-ComputerName <String>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+- >-
+  Set-PrinterProperty [-InputObject] <CimInstance> [-AsJob] [-CimSession <CimSession>] [-ThrottleLimit <Int32>]
+
+   [-Confirm] [-WhatIf]
+- >-
+  Set-PrinterProperty [-PrinterObject] <CimInstance> [-PropertyName] <String> [-Value] <String> [-AsJob]
+
+   [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Set a printer property'
+  code: |-
+    PS C:\>Set-PrinterProperty -PrinterName printer2 -PropertyName "Config:PropertyName" -Value True
+  description: |-
+    This command sets the Config:PropertyName property of the printer named printer2 to True.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name for which to modify the printer properties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the printer property object which contains the printer property to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrinterName
+  isRequired: true
+  description: |+
+    Specifies the name of the printer for which to modify the properties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: PrinterObject
+  isRequired: true
+  description: |+
+    Specifies the printer object for which to update the printer properties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PropertyName
+  isRequired: true
+  description: |+
+    Specifies the property name to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Value
+  isRequired: true
+  description: |+
+    Specifies the new value of the printer property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PrintManagement.Set-PrinterProperty
+name: Set-PrinterProperty
+description: |-
+  The **Set-PrinterProperty** cmdlet modifies the printer properties for the specified printer.
+
+  You cannot use wildcard characters with **Set-PrinterProperty**.
+  You can use **Set-PrinterProperty** in a wps-2 remoting session.
+
+  You need administrator privileges to use **Set-PrinterProperty**.
+metadata:
+  external help file: PrintMgmt_Cmdlets.xml
+  Module Name: PrintManagement
+  online version: https://docs.microsoft.com/powershell/module/printmanagement/set-printerproperty?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about the URL associated with the specified Web site.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Get-WebURL [[-PSPath] <String[]>] [-Accept <String>] [-ResponseHeaders] [-Content] [<CommonParameters>]
+- Get-WebURL [[-Url] <Uri[]>] [-Accept <String>] [-ResponseHeaders] [-Content] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Request the Default Web Site --------------'
+  code: |-
+    IIS:\>Get-WebURL 'IIS:\Sites\Default Web Site'
+  description: |-
+    Returns data about the Default Web Site.
+
+    ResponseUri Contents
+
+    ----------- --------
+
+    http://localhost/ \<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Accept
+  description: |+
+    An HTTP Accept header.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Content
+  description: |+
+    The content returned by the request.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    An IIS configuration path to the site for which information is returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ResponseHeaders
+  description: |+
+    The HTTP Response headers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Url
+  description: |+
+    The URL for which information is retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebURL
+name: Get-WebURL
+description: |-
+  Gets information about the URL associated with the specified Web site.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-weburl?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

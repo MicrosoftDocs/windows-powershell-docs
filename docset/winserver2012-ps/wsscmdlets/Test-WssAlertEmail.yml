@@ -1,0 +1,31 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sends a test alert email.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssAlertEmailSetting
+  href: ./Get-WssAlertEmailSetting.yml
+- text: Set-WssAlertEmailSetting
+  href: ./Set-WssAlertEmailSetting.yml
+syntaxes:
+- Test-WssAlertEmail
+examples:
+- title: 'Example 1: Send a test alert email'
+  code: |-
+    PS C:\> Test-WssAlertEmail
+  description: |-
+    This command sends a test alert email that uses the current email settings.
+  summary: ""
+uid: WssCmdlets.Test-WssAlertEmail
+name: Test-WssAlertEmail
+description: |-
+  The **Test-WssAlertEmail** cmdlet sends a test alert email.
+  You can use this cmdlet to check that your current email settings are correct.
+  This cmdlet sends an email even if there are no alerts currently on the system.
+  You can use the Set-WssAlertEmailSetting cmdlet to change settings for alert email notification.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/test-wssalertemail?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

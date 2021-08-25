@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Extracts the encrypted BitLocker recovery key from a shielded virtual machine's operating system disk.
+module: ShieldedVMDataFile
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Unprotect-ShieldedVMRecoveryKey
+  href: Unprotect-ShieldedVMRecoveryKey.yml
+syntaxes:
+- Save-ShieldedVMRecoveryKey -VHDPath <String> -Path <String> [-Force] [-WhatIf] [-Confirm]
+- Save-ShieldedVMRecoveryKey -DiskNumber <Int32> -Path <String> [-Force] [-WhatIf] [-Confirm]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Save-ShieldedVMRecoveryKey -VHDPath 'C:\temp\MyShieldedVM.vhdx' -Path 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek'
+  description: |-
+    Extracts the encrypted recovery key from the "MyShieldedVM.vhdx" file and saves it to the temp directory.
+  summary: ""
+- title: Example 1
+  code: |-
+    PS C:\> Save-ShieldedVMRecoveryKey -DiskNumber 1 -Path 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek'
+  description: |-
+    Extracts the encrypted recovery key from the second disk (disk number 1) mounted on the system, and saves the recovery key to the temp directory.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DiskNumber
+  isRequired: true
+  description: |+
+    Identifier for the mounted disk containing the OS partition of a Windows shielded VM
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overwrites the encrypted recovery key file located at the specified path
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Location to save the encrypted recovery key
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VHDPath
+  isRequired: true
+  description: |+
+    Location of the VHDX file for a Windows shielded VM to be searched for an encrypted recovery key
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ShieldedVMDataFile.Save-ShieldedVMRecoveryKey
+name: Save-ShieldedVMRecoveryKey
+description: |-
+  The *Save-ShieldedVMRecoveryKey* cmdlet is used to extract the encrypted BitLocker recovery key from a shielded virtual machine's operaing system disk.
+  The key can be obtained from an offline VHDX or an online, mounted disk.
+  The encrypted recovery key can be passed to the [Unprotect-ShieldedVMRecoveryKey](Unprotect-ShieldedVMRecoveryKey.yml) cmdlet to decrypt the recovery key.
+
+  This cmdlet only works with Windows shielded VMs created with a shielding data file created on Windows Server, version 1709 or newer.
+metadata:
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  Module Name: ShieldedVMDataFile
+  online version: https://docs.microsoft.com/powershell/module/shieldedvmdatafile/save-shieldedvmrecoverykey?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Save-ShieldedVMRecoveryKey

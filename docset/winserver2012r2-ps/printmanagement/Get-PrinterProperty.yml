@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves printer properties for the specified printer.
+module: PrintManagement
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input objects.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterProperty" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a printer property object.
+links:
+- text: Set-PrinterProperty
+  href: ./Set-PrinterProperty.yml
+syntaxes:
+- >-
+  Get-PrinterProperty [[-PropertyName] <String[]>] [-ComputerName <String>] [-PrinterName] <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get printer properties'
+  code: |-
+    PS C:\> Get-PrinterProperty -PrinterName "Printer name"
+  description: |-
+    This command returns a list of properties for the printer specified by **PrinterName**.
+  summary: ""
+- title: 'Example 2: Get printer properties for all installed printers'
+  code: |-
+    PS C:\>$printers = get-printer * foreach ($printer in $printers){     get-printerproperty -printerName $printer.name }
+  description: |-
+    This command gets all the printers into a variable $printers and then loops through all the printers and displays the properties.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the computer from which to retrieve the printer properties.
+
+  defaultValue: None
+  position: Named
+  aliases: CN
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrinterName
+  isRequired: true
+  description: |+
+    Specifies the name of the printer from which to retrieve the printer properties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PropertyName
+  description: |+
+    Specifies the property name to retrieve.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PrintManagement.Get-PrinterProperty
+name: Get-PrinterProperty
+description: |-
+  The **Get-PrinterProperty** cmdlet retrieves one or more printer properties for the specified printer.
+
+  You cannot use wildcard characters with **Get-PrinterProperty**.
+  You can use **Get-PrinterProperty** in a Windows PowerShell remoting session.
+
+  You need administrator privileges to use **Get-PrinterProperty**.
+metadata:
+  external help file: MSFT_PrinterProperty_v1.0.cdxml-help.xml
+  Module Name: PrintManagement
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printerproperty?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-PrinterProperty

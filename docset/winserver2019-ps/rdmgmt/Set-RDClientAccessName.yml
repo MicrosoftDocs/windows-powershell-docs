@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets a DNS name that clients use to connect to a Remote Desktop deployment.
+module: RDMgmt
+notes: ""
+syntaxes:
+- Set-RDClientAccessName [[-ConnectionBroker] <String>] [-ClientAccessName] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a client access name'
+  code: |-
+    PS C:\>Set-RDClientAccessName -ConnectionBroker "RDCB.Contoso.com" -ClientAccessName "RemoteResources.Contoso.com"
+  description: |-
+    This command sets the client access name RemoteResources.Contoso.com for the Remote Desktop deployment that has the RD Connection Broker named RDCB.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientAccessName
+  isRequired: true
+  description: |+
+    Specifies a DNS name for clients to use to connect to a Remote Desktop deployment.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the RD Connection Broker server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the FQDN of the local computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Set-RDClientAccessName
+name: Set-RDClientAccessName
+description: |-
+  The **Set-RDClientAccessName** cmdlet sets a Domain Name System (DNS) name that clients use to connect to a Remote Desktop deployment.
+  For a deployment that includes a single Remote Desktop Connection Broker (RD Connection Broker) server, provide the fully qualified domain name (FQDN) of the RD Connection Broker server.
+  For deployment that uses multiple RD Connection Broker servers in an Active/Active cluster, provide the DNS round robin name that contains FQDNs of the RD Connection Broker servers.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdclientaccessname?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDClientAccessName

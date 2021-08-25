@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures port forwarding for routers.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Repair-WssRouterConfiguration
+  href: ./Repair-WssRouterConfiguration.yml
+syntaxes:
+- Start-WssRouterConfiguration [-Manual] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start router configuration'
+  code: |-
+    PS C:\> Start-WssRouterConfiguration
+  description: |-
+    This command starts automatic router configuration.
+  summary: ""
+- title: 'Example 2: Specify manual router configuration'
+  code: |-
+    PS C:\> Start-WssRouterConfiguration -Manual
+  description: |-
+    This command skips automatic router configuration.
+    The command specifies the **Manual** parameter to inform wseblue_2 that the router is manually configured.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Manual
+  description: |+
+    Indicates to wseblue_1 that router configuration was intentionally skipped.
+    If you plan to manually configure the router, specify this parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Start-WssRouterConfiguration
+name: Start-WssRouterConfiguration
+description: |-
+  The **Start-WssRouterConfiguration** cmdlet configures port forwarding for UPnP-enabled routers.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/start-wssrouterconfiguration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-WssRouterConfiguration

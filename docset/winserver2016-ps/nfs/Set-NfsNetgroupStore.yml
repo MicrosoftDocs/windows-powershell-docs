@@ -1,0 +1,189 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies netgroup configuration settings.
+module: NFS
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_NfsNetgroupStore" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: RFC-2307
+  href: http://www.rfc-editor.org/rfc/rfc2307.txt
+- text: Get-NfsNetgroupStore
+  href: ./Get-NfsNetgroupStore.yml
+- text: Set-NfsMappingStore
+  href: ./Set-NfsMappingStore.yml
+syntaxes:
+- >-
+  Set-NfsNetgroupStore [-InputObject <CimInstance[]>] [-NetgroupStoreType <String>] [-NisServer <String>]
+
+   [-NisDomain <String>] [-LdapServer <String>] [-LDAPNamingContext <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure an NFS server to get netgroups from an LDAP store'
+  code: |-
+    PS C:\> Set-NfsNetgroupStore -NetgroupSourceType "LDAP" -LdapServer "Contoso.com"
+  description: |-
+    This command configures an NFS server to get netgroups from an LDAP store that is named Contoso.com.
+  summary: ""
+- title: 'Example 2: Configure an NFS server to get netgroups from an NIS store'
+  code: |-
+    PS C:\> Set-NfsNetgroupStore -NetgroupSourceType "NIS" -NisServer "NIS.Contoso.com"
+  description: |-
+    This command configures an NFS server to get netgroups from an NIS store that is named NIS.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Indicates that this cmdlet runs the command as a background job on a remote computer.
+    Use this parameter to run commands that take an extensive time to finish.
+
+    When you use the *AsJob* parameter, the command returns an object that represents the job, and then displays the command prompt.
+    You can continue to work in the session while the job finishes.
+    To manage the job, use the **Job** cmdlets.
+    To get the job results, use the Receive-Job cmdlet.
+
+    The *AsJob* parameter resembles using the Invoke-Command cmdlet to run a Start-Job command remotely.
+    However, with *AsJob*, the job is created on the local computer, even though the job runs on a remote computer, and the results of the remote job are automatically returned to the local computer.
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251) and [about_Remote_Jobs](https://go.microsoft.com/fwlink/?LinkID=135184).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  description: |+
+    Gets an array of Common Information Model (CIM) instances from a CIM server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LDAPNamingContext
+  description: |+
+    Specifies an LDAP naming context that the NFS server uses when it performs LDAP queries to obtain netgroup information.
+
+    The NFS server uses this parameter only if the *NetgroupSourceType* parameter is set to LDAP.
+    If *NetgroupSourceType* is set to NIS or None, the NFS server ignores the value set for this parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ldapdn, nc
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LdapServer
+  description: |+
+    Specifies an LDAP server name or an Active Directory domain name that stores netgroup information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetgroupStoreType
+  description: |+
+    Specifies the type of netgroup store.
+    The acceptable values for this parameter are:
+
+    - LDAP
+    - NIS
+    - None
+
+  defaultValue: None
+  position: Named
+  aliases: netgrouptype
+  parameterValueGroup: none, ldap, nis
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NisDomain
+  description: |+
+    Specifies the NIS domain of the NIS server where information about netgroups is stored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NisServer
+  description: |+
+    Specifies the host name of the NIS server where information about netgroups is stored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NFS.Set-NfsNetgroupStore
+name: Set-NfsNetgroupStore
+description: |-
+  The **Set-NfsNetgroupStore** cmdlet modifies configuration settings that a Network File System (NFS) Server uses to obtain netgroups from a specified netgroup store.
+
+  An NFS server can get netgroups from Network Information Service (NIS) or RFC-2307-compliant Lightweight Directory Access Protocol (LDAP)-based stores, such as Active Directory Domain Services (AD DS) or Active Directory Lightweight Directory Services (AD LDS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NfsNetgroupStore.cmdletDefinition.cdxml-help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/set-nfsnetgroupstore?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NfsNetgroupStore

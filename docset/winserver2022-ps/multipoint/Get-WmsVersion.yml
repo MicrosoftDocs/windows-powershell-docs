@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the server version, the Connector version, and the SKU.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the **WmsVersion** collection as **PSObject** collection.
+syntaxes:
+- Get-WmsVersion [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the MultiPoint version'
+  code: |-
+    PS C:\> Get-WmsVersion
+    ServerVersion                 ClientVersion                         SKU     ProtocolVersion
+    -------------                 -------------                         ---     ---------------
+    10.0.10586.0                  10.0.10586.0                          77      1
+  description: |-
+    This command gets the version information for the current computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+uid: MultiPoint.Get-WmsVersion
+name: Get-WmsVersion
+description: |-
+  The **Get-WmsVersion** cmdlet gets the MultiPoint Server version, the MultiPoint Connector version, and the MultiPoint SKU.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/get-wmsversion?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WmsVersion

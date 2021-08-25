@@ -1,0 +1,140 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generates a DFS Replication health report.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Write-DfsrHealthReport [-GroupName] <String[]> [[-ReferenceComputerName] <String>]
+
+   [[-MemberComputerName] <String[]>] [[-Path] <String>] [-CountFiles] [[-DomainName] <String>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Generate a health report with a file count'
+  code: |-
+    PS C:\> Write-DfsrHealthReport -GroupName "RG01" -ReferenceComputerName "SRV01" -MemberComputerName "SRV02" -Path "C:\reports" -CountFiles
+  description: |-
+    This command generates a report for the replication group RG01 and the reference computer SRV01.
+  summary: ""
+- title: 'Example 2: Generate a health report'
+  code: |-
+    PS C:\> Write-DfsrHealthReport -GroupName "RG01" -ReferenceComputerName "SRV01" -Verbose
+    VERBOSE: Performing operation "Write-DfsrHealthReport" on Target "RG01".
+    VERBOSE: Successfully saved the health report for the replication group named "RG01". The XML file is located here: "C:\Health-RG01-04Apr2013-2022.xml". The HTML file is located here: "C:\Health-RG01-04Apr2013-2022.html".
+  description: |-
+    This command generates a health report for the RG01 replication group with a baseline computer of SRV01 and all other servers in the replication group.
+    The command writes the report to the C:\ folder.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CountFiles
+  description: |+
+    Indicates that the cmdlet counts the number of files present in the replicated content folders.
+    By default, the cmdlet does not count files, in order to save time while generating a report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains a replication group.
+    If you do not specify this parameter, the cmdlet uses the current domain of the user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replication groups.
+    If you do not specify this parameter, the cmdlet queries for all participating replication groups.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MemberComputerName
+  description: |+
+    Specifies an array of DFS Replication members to analyze in comparison to a server specified by the *ReferenceComputerName* parameter.
+    If you do not specify this parameter, the cmdlet includes all members of the replication group.
+    You can specify multiple computer names, separated by commas, as well as wildcard characters (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: MemberList, MemList
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the folder path for the report file.
+    If you do not specify this parameter, the cmdlet uses the current working directory.
+
+    The cmdlet names each report in the format Health-\<Replication Group Name\>-\<Date\>-\<Time\> with HTML and XML extensions.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: FilePath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReferenceComputerName
+  description: |+
+    Specifies the name of a reference computer in the replication group.
+    The replication backlog from this server is compared to all other members specified in the *MemberComputerName* parameter.
+    If you do not specify this parameter, the cmdlet uses the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ReferenceMember, RefMem
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSR.Write-DfsrHealthReport
+name: Write-DfsrHealthReport
+description: |-
+  The **Write-DfsrHealthReport** cmdlet generates a Distributed File System (DFS) Replication health, or diagnostic, report for two or more servers.
+  A health reports contains administrative information about replication state, efficiency, and any potential replication issues.
+
+  The cmdlet creates the reports as an HTML file, with an associated XML file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/write-dfsrhealthreport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Write-DfsrHealthReport

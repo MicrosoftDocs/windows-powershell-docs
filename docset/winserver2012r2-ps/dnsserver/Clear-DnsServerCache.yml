@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears resource records from a cache on the DNS server.
+module: DnsServer
+notes: ""
+links:
+- text: Get-DnsServerCache
+  href: ./Get-DnsServerCache.yml
+- text: Set-DnsServerCache
+  href: ./Set-DnsServerCache.yml
+- text: Show-DnsServerCache
+  href: ./Show-DnsServerCache.yml
+syntaxes:
+- >-
+  Clear-DnsServerCache [-ComputerName <String>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Clear resource records from the cache'
+  code: |-
+    PS C:\> Clear-DnsServerCache -ComputerName "Win12S-05.DNSServer-01.Contoso.com" -Force
+  description: |-
+    This command clears the DNS server cache on a specified DNS server.
+    If you do not use the Force parameter, you must confirm the action before it is performed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    The acceptable values for this parameter are: an IP V4 address; an IP V6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    If specified, overrides the default confirmation before the operation is performed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DnsServer.Clear-DnsServerCache
+name: Clear-DnsServerCache
+description: |-
+  The **Clear-DnsServerCache** cmdlet clears resource records from a Domain Name System (DNS) server cache.
+metadata:
+  external help file: PS_DnsServerCache_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/clear-dnsservercache?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-DnsServerCache

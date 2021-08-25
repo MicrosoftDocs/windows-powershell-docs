@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a diagnostic Resource Manager.
+module: MsDtc
+notes: ""
+links:
+- text: Join-DtcDiagnosticResourceManager
+  href: ./Join-DtcDiagnosticResourceManager.yml
+- text: Stop-DtcDiagnosticResourceManager
+  href: ./Stop-DtcDiagnosticResourceManager.yml
+syntaxes:
+- Start-DtcDiagnosticResourceManager [[-Port] <Int32>] [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start a diagnostic resource manager'
+  code: |-
+    PS C:\> Start-DtcDiagnosticResourceManager -Port 17124 -Name "testRM"
+  description: |-
+    This example starts a DTC diagnostic resource manager.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name for the diagnostic resource manager to start.
+    You can later refer to the RM by using this name.
+    If you do not specify a name, the RM instance ID, a GUID, is always assigned to the RM and you can refer to it by that ID.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the listening port of the test RM.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDtc.Start-DtcDiagnosticResourceManager
+name: Start-DtcDiagnosticResourceManager
+description: |-
+  The **Start-DtcDiagnosticResourceManager** cmdlet starts a diagnostic Resource Manager (RM) as a Windows PowerShell® background job.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dtc.PowerShell.dll-Help.xml
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/msdtc/start-dtcdiagnosticresourcemanager?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-DtcDiagnosticResourceManager

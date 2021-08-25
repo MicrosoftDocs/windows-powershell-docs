@@ -1,0 +1,213 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the properties related to a DirectAccess (DA) client.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DAClientSettings" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The DAClientSettings object contains the following properties: 
+
+     -- The status of force tunneling. 
+
+     -- The NRPT object (for force tunnel properties). 
+
+     -- The status of the policy to deploy DA only on laptops and notebooks and not on all computers in the domain. 
+
+     -- The status of whether appropriate policies should be deployed on down-level clients (Windows® 7) to enable them to connect to the Windows Server 2012 DA server.
+links:
+- text: Get-ChildItem
+  href: https://go.microsoft.com/fwlink/p/?LinkId=204557
+- text: Add-DAClient
+  href: ./Add-DAClient.yml
+- text: Get-DAClient
+  href: ./Get-DAClient.yml
+- text: Remove-DAClient
+  href: ./Remove-DAClient.yml
+- text: Set-DAServer
+  href: ./Set-DAServer.yml
+syntaxes:
+- >-
+  Set-DAClient [-ComputerName <String>] [-ForceTunnel <String>] [-OnlyRemoteComputers <String>]
+
+   [-Downlevel <String>] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Set-DAClient -ForceTunnel "Enabled" -OnlyRemoteComputers "Enabled" -PassThru
+    OnlyRemoteComputers   : Enabled 
+    Downlevel    : Disabled 
+    ForceTunnelingStatus  : Enabled 
+    ForceTunnelingNrptSuffix  : .
+  description: |-
+    This example configures DA only for remote laptops and computers and mandatorily route traffic through the corporate network.
+    A default Name Resolution Policy Table (NRPT) entry is added to indicate that all traffic to any suffix should be sent to the corporate network.
+    This is a global setting and will be applied across clients.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$certs = Get-ChildItem -Path Cert:\LocalMachine\Root
+
+
+
+    PS C:\>$IPSecRootCert = $certs[13]
+
+
+
+    PS C:\>Set-DAServer -IPSecRootCertificate $IPSecRootCert -UserAuthentication TwoFactor
+
+
+
+    PS C:\>Set-DAClient -Downlevel "Enabled"
+    OnlyRemoteComputers   : Enabled 
+    Downlevel    : Enabled 
+    ForceTunnelingStatus  : Enabled 
+    ForceTunnelingNrptSuffix  : .
+  description: |-
+    This example enables Windows® 7 clients to connect to the corporate networking over DA.
+    There are multiple steps involved in achieving this configuration.
+    By default PKI is disabled during DA installation and it needs to be enabled.
+    This is achieved by provisioning an IPsec root certificate on the DA server using the Set-DAServer cmdlet.
+    The enterprise needs to have a certification authority (CA) which will provision this certificate for all domain joint computers.
+    The first two steps list out the certificates present in the root certificate store of the server computer and pick an appropriate one.
+    In this case it happens to be the 13th certificate in the list.
+    This certificate is then assigned as the IPsec root certificate to enable PKI.
+    Once this is done the Down-level parameter in this cmdlet is set to Enabled to enable DA for Windows® 7 clients.
+    This causes appropriate policies to be configured on Windows® 7 computer only.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the Remote Access server computer specific tasks should be run.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Downlevel
+  description: |+
+    Specifies that the appropriate policies should be deployed on down-level clients (firstref_client_7) clients for allowing connection to a Windows Server® 2012 DA server.
+    The acceptable values for this parameter are: Enabled or Disabled. 
+
+    This parameter can be configured only when multi-site is not deployed.
+    If a user tries to configure it in a multi-site deployment, then this cmdlet displays an error.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ForceTunnel
+  description: |+
+    Specifies that force tunneling should be enabled or disabled.
+    The acceptable values for this parameter are: Enabled or Disabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OnlyRemoteComputers
+  description: |+
+    Allows a user to enable or disable deployment of DA only on remote computers such as laptops and notebooks.
+    The acceptable values for this parameter are: Enabled or Disabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Set-DAClient
+name: Set-DAClient
+description: |-
+  The **Set-DAClient** cmdlet configures the properties related to a DirectAccess (DA) client.
+
+  The DA client properties consist of the following. 
+
+   -- Force tunneling. 
+
+   -- Support for down-level clients. 
+
+   -- Support for remote computers only.
+
+  The DA client configuration is a global configuration and is applicable to all of the client computers in the DA deployment.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DAClient_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-daclient?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DAClient

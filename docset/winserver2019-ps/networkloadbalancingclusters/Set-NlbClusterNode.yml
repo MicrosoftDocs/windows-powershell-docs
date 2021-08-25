@@ -1,0 +1,198 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Edits the NLB cluster node settings.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Format-List
+  href: https://go.microsoft.com/fwlink/?LinkID=113302
+- text: Add-NlbClusterNode
+  href: ./Add-NlbClusterNode.yml
+- text: Get-NlbClusterNode
+  href: ./Get-NlbClusterNode.yml
+- text: Remove-NlbClusterNode
+  href: ./Remove-NlbClusterNode.yml
+- text: Resume-NlbClusterNode
+  href: ./Resume-NlbClusterNode.yml
+- text: Start-NlbClusterNode
+  href: ./Start-NlbClusterNode.yml
+- text: Stop-NlbClusterNode
+  href: ./Stop-NlbClusterNode.yml
+- text: Suspend-NlbClusterNode
+  href: ./Suspend-NlbClusterNode.yml
+syntaxes:
+- >-
+  Set-NlbClusterNode [[-HostName] <String>] -InterfaceName <String> [-Reload] [-HostPriority <Int32>]
+
+   [-InitialHostState <NodeInitialHostState>] [-RetainSuspended <Boolean>] [-Force] [<CommonParameters>]
+- >-
+  Set-NlbClusterNode -InputObject <Node[]> [-Reload] [-HostPriority <Int32>]
+
+   [-InitialHostState <NodeInitialHostState>] [-RetainSuspended <Boolean>] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Reload the settings of the NLB driver'
+  code: |-
+    PS C:\>Get-NlbClusterNode -NodeName "Node1" | Set-NlbClusterNode -Reload
+    Name                State               Interface           HostID 
+    ----                -----               ---------           ------ 
+    Node1               Converging          vlan-3              1
+  description: |-
+    This command instructs the NLB driver on the node named Node1 to reload all of its settings.
+    This is required if an administrator wants to force configuration changes through the driver.
+    This cmdlet must be run on Node1 locally.
+  summary: ""
+- title: 'Example 2: Set the initial host state of the specified node'
+  code: |-
+    PS C:\>Get-NlbClusterNode -NodeName "Node1" | Set-NlbClusterNode -InitialHostState Suspended
+    Name                State               Interface           HostID 
+    ----                -----               ---------           ------ 
+    Node1               Converging          vlan-3              1
+  description: |-
+    This command sets the initial host state of the node named Node1 to Suspended.
+  summary: ""
+- title: 'Example 3: Change the persist suspend on the reboot settings on a cluster node'
+  code: |-
+    PS C:\>Get-NlbClusterNode -NodeName "Node1" | Set-NlbClusterNode -RetainSuspended $True | Format-List -Property "*"
+    Cluster                   : newcluster 
+    Name                      : node1 
+    InterfaceName             : vlan-3 
+    Host                      : node1.domain.com 
+    State                     : Converging 
+    HostPriority              : 1 
+    AdapterGuid               : {99757561-22EC-44DA-B6D3-82E16B387D6C} 
+    InitialHostState          : Started 
+    PersistSuspendOnReboot    : True 
+    MaskSourceMac             : True 
+    FilterIcmp                : 0 
+    GreDescriptorTimeout      : 10
+  description: |-
+    This command changes the persist suspend on reboot setting on node named Node1 to $True.
+  summary: ""
+- title: 'Example 4: Change the host priority on a cluster node'
+  code: |-
+    PS C:\>Get-NlbClusterNode -NodeName "Node1" | Set-NlbClusterNode -HostPriority 5 | Format-List -Property "*"
+    Cluster                   : newcluster 
+    Name                      : node1 
+    InterfaceName             : vlan-3 
+    Host                      : node1.domain.com 
+    State                     : Converging 
+    HostPriority              : 5 
+    AdapterGuid               : {99757561-22EC-44DA-B6D3-82E16B387D6C} 
+    InitialHostState          : Started 
+    PersistSuspendOnReboot    : True 
+    MaskSourceMac             : True 
+    FilterIcmp                : 0 
+    GreDescriptorTimeout      : 10
+  description: |-
+    This command changes the host priority (ID) on the node named Node1 to 5.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: F
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: "0"
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: HostPriority
+  description: |+
+    Specifies the host priority or host ID for the cluster node.
+    The acceptable values for this parameter are: 1 through 32.
+
+  defaultValue: None
+  position: Named
+  aliases: Priority, HP
+  parameterValueGroup: ""
+- type: <xref href="NodeInitialHostState" data-throw-if-not-resolved="False" />
+  name: InitialHostState
+  description: |+
+    Specifies the initial host state for the cluster node.
+    The acceptable values for this parameter are:
+
+    - Started
+    - Stopped
+    - Suspended
+
+  defaultValue: None
+  position: Named
+  aliases: IHS, State
+  parameterValueGroup: Started, Stopped, Suspended
+- type: <xref href="Node" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of cluster nodes that this cmdlet sets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  isRequired: true
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Reload
+  description: |+
+    Indicates that the cmdlet reloads the NLB driver settings on the current cluster node.
+    This cmdlet is only valid for the local NLB cluster node and cannot be used to reload a remote NLB cluster node.
+
+  defaultValue: None
+  position: Named
+  aliases: R
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RetainSuspended
+  description: |+
+    Indicates whether the cmdlet sets the new retain suspended setting for the cluster node.
+
+  defaultValue: None
+  position: Named
+  aliases: RS
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Set-NlbClusterNode
+name: Set-NlbClusterNode
+description: |-
+  The **Set-NlbClusterNode** cmdlet edits the Network Load Balancing (NLB) cluster node settings.
+  The changes you can make include reconfiguring the host priority, the initial host state, and whether to persist suspended states across reboots.
+
+  This operation changes the configuration on all cluster nodes.
+  As a result, the NLB cluster will have to restart the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster should not be initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/set-nlbclusternode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NlbClusterNode

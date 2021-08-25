@@ -1,0 +1,505 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an IP address range to the configuration of an IPAM server.
+module: IpamServer
+notes: ""
+outputs:
+- name: <xref href="CimInstance#ROOT/microsoft/ipam/MSFT_IPAM_Range" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the IP address range object added to the IPAM data store.
+links:
+- text: Export-IpamRange
+  href: ./Export-IpamRange.yml
+- text: Get-IpamRange
+  href: ./Get-IpamRange.yml
+- text: Import-IpamRange
+  href: ./Import-IpamRange.yml
+- text: Remove-IpamRange
+  href: ./Remove-IpamRange.yml
+- text: Set-IpamRange
+  href: ./Set-IpamRange.yml
+syntaxes:
+- >-
+  Add-IpamRange [-CreateSubnetIfNotFound] [-NetworkId] <String> [[-StartIPAddress] <IPAddress>]
+
+   [[-EndIPAddress] <IPAddress>] [-ManagedByService <String>] [-ServiceInstance <String>]
+
+   [-NetworkType <VirtualizationType>] [-AddressSpace <String>]
+
+   [-UtilizationCalculation <UtilizationCalculation>] [-UtilizedAddresses <Double>] [-Description <String>]
+
+   [-Owner <String>] [-AssignmentType <AddressAssignment>] [-AssignmentDate <DateTime>]
+
+   [-ReservedAddress <String[]>] [-DnsServer <IPAddress[]>] [-DnsSuffix <String[]>]
+
+   [-ConnectionSpecificDnsSuffix <String>] [-WinsServer <IPAddress[]>] [-VIP <String[]>] [-Gateway <String[]>]
+
+   [-CustomConfiguration <String>] [-AssociatedReverseLookupZone <String>] [-PassThru]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add an IP address range'
+  code: |-
+    PS C:\> Add-IpamRange -NetworkId "10.13.0.0/16" -PassThru
+    Overlapping      : False
+
+    NetworkID        : 10.13.0.0/16
+
+    StartAddress     : 10.13.0.1
+
+    EndAddress       : 10.13.255.254
+
+    ManagedByService : IPAM
+
+    ServiceInstance  : Localhost
+
+    NetworkType      : NonVirtualized
+
+    Owner            :
+  description: |-
+    This command adds an IP address range that is managed by the current instance of IPAM server.
+    This range is added to the default address space.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+  summary: ""
+- title: 'Example 2: Add an IP address range by using a network ID'
+  code: |-
+    PS C:\> Add-IpamRange -NetworkId "172.16.10.0/24"
+    Add-IpamRange : No subnet exists corresponding to the range.
+
+    At line:1 char:1
+
+    + Add-IpamRange -NetworkId 172.16.10.0/24
+
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    + CategoryInfo          : ResourceUnavailable: (MSFT_IPAM_Range:ROOT/microsoft/ipam/MSFT_IPAM_Range) [Add-IpamRang
+
+    e], CimException
+
+    + FullyQualifiedErrorId : WIN32 8,Add-IpamRange
+  description: |-
+    This command adds an IP address range with network id 172.16.10.0/24.
+    IPAM does not allow creation of a range for which a corresponding subnet does not exist.
+  summary: ""
+- title: 'Example 3: Add an IP address range by using a network ID and create a subnet'
+  code: |-
+    PS C:\> Add-IpamRange -NetworkId "172.16.10.0/24" -CreateSubnetIfNotFound -WinsServer "10.10.1.1","10.10.1.2" -Gateway "10.10.5.1/Automatic","10.10.5.2/4"|Format-List Overlapping, NetworkID, StartAddress, EndAddress, ManagedByService, ServiceInstance, WinsServers, Gateway
+    Overlapping      : False
+
+    NetworkID        : 172.16.10.0/24
+
+    StartAddress     : 172.16.10.1
+
+    EndAddress       : 172.16.10.254
+
+    ManagedByService : IPAM
+
+    ServiceInstance  : Localhost
+
+    WinsServers      : {10.10.1.1, 10.10.1.2}
+
+    Gateway          : {10.10.5.1/Automatic, 10.10.5.2/4}
+  description: |-
+    This command adds an IP address range with network id 172.16.10.0/24.
+    The command uses the *CreateSubnetIfNotFound* parameter to automatically create the corresponding subnet, and adds WINS and Gateway servers to the range.
+    Gateway servers are specified in the format \<IP Address\>/\<Metric\>.
+  summary: ""
+- title: 'Example 4: Add a provider IP address range to an existing IPAM configuration'
+  code: |-
+    PS C:\> Add-IpamRange -NetworkId 172.16.19.0/24 -StartIPAddress 172.16.19.10 -EndIPAddress 172.16.19.110 -NetworkType Provider -CreateSubnetIfNotFound -PassThru
+    Overlapping      : False
+
+    NetworkID        : 172.16.19.0/24
+
+    StartAddress     : 172.16.19.10
+
+    EndAddress       : 172.16.19.110
+
+    ManagedByService : IPAM
+
+    ServiceInstance  : Localhost
+
+    NetworkType      : Provider
+
+    Owner            :
+  description: |-
+    This command adds a provider IP address range that is managed by current instance of IPAM.
+    The range will be added to default address space.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+  summary: ""
+- title: 'Example 5: Add a range of provider IP addresses'
+  code: |-
+    PS C:\> Add-IpamRange -NetworkId 172.16.19.0/24 -StartIPAddress 172.16.19.10 -EndIPAddress 172.16.19.110 -NetworkType Provider -AddressSpace ContosoDataCenter -PassThru -CreateSubnetIfNotFound
+    Overlapping      : False
+
+    NetworkID        : 172.16.19.0/24
+
+    StartAddress     : 172.16.19.10
+
+    EndAddress       : 172.16.19.110
+
+    ManagedByService : IPAM
+
+    ServiceInstance  : Localhost
+
+    NetworkType      : Provider
+
+    Owner            :
+  description: |-
+    This command adds a provider IP range 172.16.19.0/24 with start and end IP addresses 172.16.19.10 and 172.16.19.110.
+    The command adds the range to a provider address space named ContosoDataCenter.
+    Since this range is in a different address space, IPAM will not mark it as overlapping.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AddressSpace
+  description: |+
+    Specifies an address space to which this IP address range belongs.
+    An address space contains IP subnets, IP ranges, and IP addresses.
+    If you do not specify this parameter, the default address space is used.
+    The default address space is the Provider address space.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: AssignmentDate
+  description: |+
+    Specifies a date on which to assign addresses in this range.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AddressAssignment" data-throw-if-not-resolved="False" />
+  name: AssignmentType
+  description: |+
+    Specifies how IPAM assigns the addresses. 
+    The acceptable values for this parameter are:
+
+    - Static 
+    - Dynamic 
+    - Auto 
+    - VIP 
+    - Reserved
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Static, Dynamic, Auto, VIP, Reserved
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AssociatedReverseLookupZone
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionSpecificDnsSuffix
+  description: |+
+    Specifies the connection-specific DNS suffix to associate with this range.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CreateSubnetIfNotFound
+  description: |+
+    Indicates that the cmdlet creates a parent subnet for this range of addresses.
+    If you specify this parameter, the cmdlet automatically creates a parent subnet for this range, if no parent subnet exists.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CustomConfiguration
+  description: |+
+    Specifies semicolon-separated name/value pairs.
+    This parameter specifies custom metadata that is associated with the address space.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the range.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DnsServer
+  description: |+
+    Specifies an array of DNS servers to associate with this range.
+    Specify the names of the DNS servers in the order of preference, highest to lowest.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DnsSuffix
+  description: |+
+    Specifies an array of search suffixes to associate with the given range.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: EndIPAddress
+  description: |+
+    Specifies an IP address.
+    For this parameter, the address represents the high end of the range to add.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Gateway
+  description: |+
+    Specifies an array of gateway servers, imported from a DHCP Scope, to associate with a range in IPAM.
+    Specify the names of the gateway servers in the order of preference, highest to lowest.
+    The format for specification is \<ipaddress\>\\\<metric\>.
+    To specify the Automatic metric, use the format \<Ipaddress\>\Automatic.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ManagedByService
+  description: |+
+    Specifies the value of the managing service of the IP address ranges being added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: MB
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkId
+  isRequired: true
+  description: |+
+    Specifies the network and the prefix for the given range.
+    Specify the network ID in Classless Interdomain Routing (CIDR) notation in the format Network/Prefix.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualizationType" data-throw-if-not-resolved="False" />
+  name: NetworkType
+  description: |+
+    Specifies an array of network types for the addresses to be added. 
+    The acceptable values for this parameter are:
+
+    - Provider 
+    - Customer 
+    - NonVirtualized
+
+     If the value of the *AddressSpace* parameter is Default, then this parameter can use the value Provider or NonVirtualized.
+    If the value of the *AddressSpace* parameter is Provider, then the value of this parameter, if specified, must be Provider.
+    Specifying any other value for this parameter will result in an error.
+    Similarly, if the value of the *AddressSpace* parameter is Customer, then the value of this parameter, if specified, must be Customer.
+    Specifying any other value for this parameter will result in an error.
+
+    If you do not specify this parameter, network type defaults to NonVirtualized.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NonVirtualized, Provider, Customer
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Owner
+  description: |+
+    Specifies the name of an owner for an address range.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReservedAddress
+  description: |+
+    Specifies the reserved addresses in the range.
+    Specify the reserved addresses as a list, in descending order of precedence.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceInstance
+  description: |+
+    Specifies the service instance that manages the address ranges to add.
+    The value specified for this field should be present in the set of values defined for the ServiceInstance custom field in IPAM.
+    The cmdlet will report an error if this is not found to be a valid value for the ServiceInstance custom field.
+    The user can edit the associated custom field to add or delete values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SI
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: StartIPAddress
+  description: |+
+    Specifies an IP address.
+    For this parameter, the address represents the low end of the range to add.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UtilizationCalculation" data-throw-if-not-resolved="False" />
+  name: UtilizationCalculation
+  description: |+
+    Specifies the utilization information type that will be automatically calculated by IPAM or specified by the user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Auto, UserSpecified
+- type: <xref href="Double" data-throw-if-not-resolved="False" />
+  name: UtilizedAddresses
+  description: |+
+    Specifies the number of addresses to utilize from the pool of IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VIP
+  description: |+
+    Specifies an array of virtual IP addresses that are usually set aside for load balancers.
+    Specify the VIPs as a list, in descending order of precedence.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: WinsServer
+  description: |+
+    Specifies an array of Windows Internet Name Service (WINS) servers to associate with this range.
+    Specify the WINS servers in decreasing order of precedence.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IpamServer.Add-IpamRange
+name: Add-IpamRange
+description: |-
+  The **Add-IpamRange** cmdlet adds an IP address range to the configuration of an IP Address Management (IPAM) server.
+  Use this cmdlet to add a Non-Virtualized, Provider, or a Customer IP address range in IPAM.
+  If the network type is Provider or NonVirtualized, the range will be added to default address space if you do not specify an address space.
+  If the network type is Customer, you must specify an address space.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamRange.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/add-ipamrange?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-IpamRange

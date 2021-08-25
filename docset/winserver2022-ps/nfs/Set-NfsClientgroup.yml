@@ -1,0 +1,142 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds and removes client computers from a client group.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="Nothing" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NfsClientgroup
+  href: ./Get-NfsClientgroup.yml
+- text: New-NfsClientgroup
+  href: ./New-NfsClientgroup.yml
+- text: Remove-NfsClientgroup
+  href: ./Remove-NfsClientgroup.yml
+- text: Rename-NfsClientgroup
+  href: ./Rename-NfsClientgroup.yml
+syntaxes:
+- >-
+  Set-NfsClientgroup [-ClientGroupName] <String> [[-AddMember] <String[]>] [[-RemoveMember] <String[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a client computer to a client group'
+  code: |-
+    PS C:\> Set-NfsClientGroup -Name "Contoso-Group2" -AddMember "10.121.24.132"
+  description: |-
+    This command adds the client computer that has the IP address 10.121.24.132 to the client group named Contoso-Group2.
+  summary: ""
+- title: 'Example 2: Remove a client computer from a client group'
+  code: |-
+    PS C:\> Set-NfsClientGroup -ClientGroupName "Contoso-Group1" -RemoveMember "bill-laptop"
+  description: |-
+    This command removes the client computer named bill-laptop from the client group named Contoso-Group1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddMember
+  description: |+
+    Specifies an array of host names or IP addresses of client computers to add to the specified client group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: add
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Indicates that this cmdlet runs the command as a background job on a remote computer.
+    Use this parameter to run commands that take an extensive time to finish.
+
+    When you use the *AsJob* parameter, the command returns an object that represents the job, and then displays the command prompt.
+    You can continue to work in the session while the job finishes.
+    To manage the job, use the **Job** cmdlets.
+    To get the job results, use the Receive-Job cmdlet.
+
+    The *AsJob* parameter resembles using the Invoke-Command cmdlet to run a Start-Job command remotely.
+    However, with *AsJob*, the job is created on the local computer, even though the job runs on a remote computer, and the results of the remote job are automatically returned to the local computer.
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251) and [about_Remote_Jobs](https://go.microsoft.com/fwlink/?LinkID=135184).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a client group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: name, cgname
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoveMember
+  description: |+
+    Specifies an array of host names or IP addresses of client computers to remove from the specified client group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: remove
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NFS.Set-NfsClientgroup
+name: Set-NfsClientgroup
+description: |-
+  The **Set-NfsClientGroup** cmdlet adds and removes client computers from a client group on a Network File System (NFS) server.
+  Use the *ClientGroupName* parameter to specify a client group to modify.
+  Then, use the *AddMember* parameter to specify the client computers to add, and use the *RemoveMember* parameter to specify the client computers to remove.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NfsServerTasks.cmdletDefinition.cdxml-help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/set-nfsclientgroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NfsClientgroup

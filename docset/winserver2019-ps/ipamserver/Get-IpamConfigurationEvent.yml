@@ -1,0 +1,184 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets IPAM configuration events from the IPAM database.
+module: IpamServer
+notes: ""
+outputs:
+- name: <xref href="IpamConfigurationEvent" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents a configuration event for the IPAM server.
+links:
+- text: Remove-IpamConfigurationEvent
+  href: ./Remove-IpamConfigurationEvent.yml
+syntaxes:
+- >-
+  Get-IpamConfigurationEvent [-UserName <String[]>] [-UserDomainName <String[]>] [-UserForestName <String[]>]
+
+   [-StartDate <DateTime>] [-EndDate <DateTime>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get IPAM server configuration events for a span of time'
+  code: |-
+    PS C:\> $Today = Get-Date 
+    PS C:\> $LastMonth = $Today.AddDays(-30) 
+    PS C:\> Get-IpamConfigurationEvent -StartDate $LastMonth -EndDate $Today
+  description: |-
+    This example gets all configuration events for the IPAM server in last 30 days.
+
+    The first command creates a **DateTime** object by using the **Get-Date** cmdlet, and then stores it in the $Today variable.
+    By default, **Get-Date** creates the current date.
+    For more information about **Get-Date** and **DateTime** objects, type `Get-Help Get-Date`.
+
+    The second command subtracts 30 days from the **DateTime** object stored in the $Today variable, and then stores the result in the $LastMonth variable.
+
+    The third command gets the configuration events for the IPAM server in the last 30 days.
+  summary: ""
+- title: 'Example 2: Get IPAM configuration events for a user'
+  code: |-
+    PS C:\> $Today = Get-Date
+    PS C:\> $LastMonth = $Today.AddDays(-30)
+    PS C:\> Get-IpamConfigurationEvent -StartDate $LastMonth -EndDate $Today -UserName "Administrator"
+  description: |-
+    This example gets all configuration events for the IPAM server in last 30 days for a user.
+
+    The first command creates a **DateTime** object by using the **Get-Date** cmdlet, and then stores it in the $Today variable.
+    By default, **Get-Date** creates the current date.
+
+    The second command subtracts 30 days from the **DateTime** object stored in the $Today variable, and then stores the result in the $LastMonth variable.
+
+    The third command gets the configuration events for the IPAM server in the last 30 days for the user named Administrator.
+  summary: ""
+- title: 'Example 3: Get IPAM configuration events for User from domain'
+  code: |-
+    PS C:\> $Today = Get-Date
+    PS C:\> $LastMonth = $Today.AddDays(-30)
+    PS C:\> Get-IpamConfigurationEvent -StartDate $LastMonth -EndDate $Today -UserName "Administrator" -UserDomainName "Contoso.com"
+  description: |-
+    This example gets all the configuration events for the IPAM server in last 30 days for a user from a specified the domain.
+
+    The first command creates a **DateTime** object by using the **Get-Date** cmdlet, and then stores it in the $Today variable.
+    By default, **Get-Date** creates the current date.
+
+    The second command subtracts 30 days from the **DateTime** object stored in the $Today variable, and then stores the result in the $LastMonth variable.
+
+    The third command gets all the configuration events for the IPAM server in last 30 days for the user named Administrator from the domain named Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EndDate
+  description: |+
+    Specifies the end date as a **DateTime** object.
+    The cmdlet gets configuration events through this date from the IPAM database.
+    The cmdlet gets events from the start date through this date from the IPAM database.
+    To obtain a **DateTime** object, use the **Get-Date** cmdlet and specify the date in **DD/MM/YYYY** format.
+    For more information, type `Get-Help Get-Date`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartDate
+  description: |+
+    Specifies a start date as a **DateTime** object.
+    The cmdlet gets configuration events from this date through the end date from the IPAM database.
+    To obtain a **DateTime** object, use the **Get-Date** cmdlet and specify the date in **DD/MM/YYYY** format.
+    For more information, type `Get-Help Get-Date`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserDomainName
+  description: |+
+    Specifies an array of names of user domains.
+    The cmdlet filters configuration events that occur in this user domain.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserForestName
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserName
+  description: |+
+    Specifies an array of names of user names.
+    The cmdlet gets configuration events made by these users.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IpamServer.Get-IpamConfigurationEvent
+name: Get-IpamConfigurationEvent
+description: |-
+  The **Get-IpamConfigurationEvent** cmdlet gets IP Address Management (IPAM) configuration events from the IPAM database.
+  If you do not specify any parameters, the cmdlet gets all configuration events for the IPAM server.
+  You can specify the *StartDate* and *EndDate* parameters to get configuration events that occur in a span of time.
+  You can specify the *UserDomainName* parameter to filter configuration events that occur in a user domain.
+  You can specify the *UserName* parameter to filter configuration changes made by a user.
+
+  Specify values for the *StartDate* and *EndDate* parameters in the time zone of the IPAM server.
+  The cmdlet returns data that includes both the start date and end date.
+  If you do not specify the *StartDate* parameter, the cmdlet uses the start date of the first IPAM configuration event in the IPAM database.
+  If you do not specify the *EndDate* parameter, the cmdlet uses the date of the last available server configuration event in IPAM.
+
+  If there are more than 10,000 results for a command, the cmdlet returns only the first 10,000.
+  The cmdlet warns that this is a partial result.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamConfigurationEvent.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/get-ipamconfigurationevent?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-IpamConfigurationEvent

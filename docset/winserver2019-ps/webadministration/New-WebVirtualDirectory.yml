@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a virtual directory in IIS.
+module: WebAdministration
+notes: ""
+links:
+- text: Get-WebVirtualDirectory
+  href: ./Get-WebVirtualDirectory.yml
+- text: Remove-WebVirtualDirectory
+  href: ./Remove-WebVirtualDirectory.yml
+syntaxes:
+- >-
+  New-WebVirtualDirectory [-Site <String>] [-Application <String>] [-Name] <String> [-PhysicalPath <String>]
+
+   [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a virtual directory'
+  code: |-
+    IIS:\> New-WebVirtualDirectory -Site "Default Web Site" -Name "ContosoVDir" -PhysicalPath "c:\inetpub\contoso"
+  description: |-
+    This command creates a virtual directory named ContosoVDir on the default website.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Application
+  description: |+
+    Specifies the name of a web application under which this cmdlet creates the virtual directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the new virtual directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhysicalPath
+  description: |+
+    Specifies the physical path to the folder in which this cmdlet creates the virtual directory.
+    The specified folder must already exist.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Site
+  description: |+
+    Specifies the name of the site under which this cmdlet creates the virtual directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-WebVirtualDirectory
+name: New-WebVirtualDirectory
+description: |-
+  The **New-WebVirtualDirectory** cmdlet creates a virtual directory in Internet Information Services (IIS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-webvirtualdirectory?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WebVirtualDirectory

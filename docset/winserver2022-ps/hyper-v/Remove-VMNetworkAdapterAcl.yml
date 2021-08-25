@@ -1,0 +1,282 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an ACL applied to the traffic through a virtual network adapter.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None by default, **Microsoft.HyperV.PowerShell.VMNetworkAdapterAclSetting** if *PassThru* is specified.
+syntaxes:
+- >-
+  Remove-VMNetworkAdapterAcl [-VMNetworkAdapterName <String>] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-VMName] <String[]>
+
+   -Action <VMNetworkAdapterAclAction> -Direction <VMNetworkAdapterAclDirection> [-LocalIPAddress <String[]>]
+
+   [-LocalMacAddress <String[]>] [-RemoteIPAddress <String[]>] [-RemoteMacAddress <String[]>] [-Passthru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-VMNetworkAdapterAcl [-VMNetworkAdapter] <VMNetworkAdapterBase[]> -Action <VMNetworkAdapterAclAction>
+
+   -Direction <VMNetworkAdapterAclDirection> [-LocalIPAddress <String[]>] [-LocalMacAddress <String[]>]
+
+   [-RemoteIPAddress <String[]>] [-RemoteMacAddress <String[]>] [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-VMNetworkAdapterAcl [-ManagementOS] [-VMNetworkAdapterName <String>] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String[]>] [-Credential <PSCredential[]>] -Action <VMNetworkAdapterAclAction>
+
+   -Direction <VMNetworkAdapterAclDirection> [-LocalIPAddress <String[]>] [-LocalMacAddress <String[]>]
+
+   [-RemoteIPAddress <String[]>] [-RemoteMacAddress <String[]>] [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-VMNetworkAdapterAcl [-VMNetworkAdapterName <String>] [-VM] <VirtualMachine[]>
+
+   -Action <VMNetworkAdapterAclAction> -Direction <VMNetworkAdapterAclDirection> [-LocalIPAddress <String[]>]
+
+   [-LocalMacAddress <String[]>] [-RemoteIPAddress <String[]>] [-RemoteMacAddress <String[]>] [-Passthru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-VMNetworkAdapterAcl [-InputObject] <VMNetworkAdapterAclSetting[]> [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress 0.0.0.0/0 -Direction Both -Action Allow
+  description: |-
+    Removes from virtual machine Redmond the ACL allowing any IPv4 traffic sent from or to the virtual machine.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Remove-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress ::/0 -Direction Both -Action Allow
+  description: |-
+    Removes from virtual machine Redmond the ACL that allows any IPv6 traffic sent from and to the virtual machine.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Remove-VMNetworkAdapterAcl -VMName Redmond -RemoteMacAddress 03-0f-01-0e-aa-b2 -Direction Both -Action Deny
+  description: |-
+    Removes the MAC ACL to prevent virtual machine Redmond from sending traffic to or receiving traffic from a remote device with MAC address 03-0f-01-0e-aa-b2.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-VMNetworkAdapterAcl -VMName Redmond | Remove-VMNetworkAdapterAcl
+  description: |-
+    Retrieves all the port ACLs configured for virtual machine Redmond and pipelines them to Remove-VMNetworkAdapterAcl, which removes all of them from the virtual machine.
+  summary: ""
+parameters:
+- type: <xref href="VMNetworkAdapterAclAction" data-throw-if-not-resolved="False" />
+  name: Action
+  isRequired: true
+  description: |+
+    Specifies the action of the ACL to be removed.
+    Allowed values are **Allow**, **Deny**, and **Meter**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Allow, Deny, Meter
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the ACL applied to a virtual machine network adapter is to be removed.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterAclDirection" data-throw-if-not-resolved="False" />
+  name: Direction
+  isRequired: true
+  description: |+
+    The direction of the network traffic (from the perspective of the virtual machine) to which the ACL applies.
+    Allowed values are **Inbound**, **Outbound**, or **Both**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Inbound, Outbound, Both
+- type: <xref href="VMNetworkAdapterAclSetting" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the ACL to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LocalIPAddress
+  description: |+
+    Specifies the local IP address.
+    It can be either IPv4 or IPv6 address.
+    It can be either a host address or a subnet address, e.g.
+    1.2.3.4, 2001::2008, 192.168.1.0/24, or f001:f002:f003:f004::1/64.the IP address can also be a wildcard, 0.0.0.0/0 for all IPv4 addresses, ::/0 for all IPv6 addresses, or ANY for all IPv4 and IPv6 addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LocalMacAddress
+  description: |+
+    Specifies the local MAC address (e.g.
+    00-ab-00-11-22-33).
+    Use the wildcard **ANY** to specify all MAC addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagementOS
+  isRequired: true
+  description: |+
+    Specifies that the ACL is to be removed from the management (e.g.
+    the parent, or host) operating system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that a **Microsoft.HyperV.PowerShell.VMNetworkAdapterAclSetting** object is to be passed through to the pipeline representing the ACL to be removed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoteIPAddress
+  description: |+
+    Specifies the remote IP address.
+    . It can be either IPv4 or IPv6 address.
+    It can be either a host address or a subnet address, e.g.
+    1.2.3.4, 2001::2008, 192.168.1.0/24, or f001:f002:f003:f004::1/64.
+    the IP address can also be a wildcard, 0.0.0.0/0 for all IPv4 addresses, ::/0 for all IPv6 addresses, or ANY for all IPv4 and IPv6 addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoteMacAddress
+  description: |+
+    Specifies the remote MAC address.
+    . It can be a host MAC address, e.g.
+    00-ab-00-11-22-33, or a wildcard, ANY, for all MAC addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine from which the ACL is to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine from which the ACL is to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterBase" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMNetworkAdapter
+  isRequired: true
+  description: |+
+    Specifies the virtual machine network adapter from which ACL is to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapterName
+  description: |+
+    Specifies the name of the virtual machine network adapter from which the ACL is to be removed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Remove-VMNetworkAdapterAcl
+name: Remove-VMNetworkAdapterAcl
+description: |-
+  The **Remove-VMNetworkAdapterAcl** cmdlet removes an ACL applied to the traffic through a virtual network adapter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/remove-vmnetworkadapteracl?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-VMNetworkAdapterAcl

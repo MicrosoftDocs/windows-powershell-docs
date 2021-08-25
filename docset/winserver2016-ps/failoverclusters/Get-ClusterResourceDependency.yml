@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about the dependencies that have been configured between clustered resources in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResourceDependency" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterResourceDependency
+  href: ./Add-ClusterResourceDependency.yml
+- text: Get-ClusterGroup
+  href: ./Get-ClusterGroup.yml
+- text: Get-ClusterResource
+  href: ./Get-ClusterResource.yml
+- text: Remove-ClusterResourceDependency
+  href: ./Remove-ClusterResourceDependency.yml
+- text: Set-ClusterResourceDependency
+  href: ./Set-ClusterResourceDependency.yml
+syntaxes:
+- >-
+  Get-ClusterResourceDependency [[-Resource] <StringCollection>] [-Guid] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterResourceDependency -Resource cluster1FS12
+    Resource                                DependencyExpression 
+    --------                                -------------------- 
+    cluster1FS12                            [IP Address 172.24.11.0] or [IP Add ...
+  description: |-
+    This example displays the dependencies for the resource called cluster1FS12.
+  summary: ""
+- title: Example 2
+  code: "PS C:\\> Get-ClusterGroup -Name cluster1FS12 | Get-ClusterResource | Get-ClusterResourceDependency\r\nResource                                DependencyExpression \r\n--------                                -------------------- \r\ncluster1FS12                            [IP Address 172.24.11.0] or [IP Add ... \r\n \r\nCluster Disk 6 \r\nIP Address 157.56.48.0 \r\nIP Address 2001:4898:9:2:: \r\nIP Address 2002:9d38:31ca:8::"
+  description: |-
+    This example displays the dependencies for each resource in the clustered file server ─resource group─ called cluster1FS12.
+    Some resources do not have dependencies.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Guid
+  description: |+
+    Causes the generated dependency expression to have the resource GUIDs instead of the resource names.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster resource for which to get the dependency expression.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Resource
+  description: |+
+    Specifies the name of the cluster resource for which to get the dependency expression.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterResourceDependency
+name: Get-ClusterResourceDependency
+description: |-
+  The **Get-ClusterResourceDependency** cmdlet gets information about the dependencies that have been configured between clustered resources in a failover cluster.
+  Resource dependencies control the order in which resources are brought online or taken offline in the cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterresourcedependency?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterResourceDependency

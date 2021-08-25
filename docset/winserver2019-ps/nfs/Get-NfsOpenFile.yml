@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about files that are open on an NFS server for a client computer.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_NfsOpenFile" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Revoke-NfsOpenFile
+  href: ./Revoke-NfsOpenFile.yml
+syntaxes:
+- >-
+  Get-NfsOpenFile [[-Path] <String[]>] [[-StateId] <String[]>] [[-ClientId] <UInt64[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all open files on an NFS server'
+  code: |-
+    PS C:\> Get-NfsOpenFile
+  description: |-
+    This command gets all open files on an NFS server.
+  summary: ""
+- title: 'Example 2: Get all open files for a specified client computer on an NFS server'
+  code: |-
+    PS C:\> Get-NfsOpenFile -ClientId 101
+  description: |-
+    This command gets all open files on an NFS server for a client computer that has the ID 101.
+  summary: ""
+- title: 'Example 3: Get all open files on an NFS server by path and file name by using a wildcard'
+  code: |-
+    PS C:\> Get-NfsOpenFile -Path "C:\Windows\Setup*"
+  description: |-
+    This command gets all open files on an NFS server that are in the C:\Windows folder and that contain the word Setup.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Indicates that this cmdlet runs the command as a background job on a remote computer.
+    Use this parameter to run commands that take an extensive time to finish.
+
+    When you use the *AsJob* parameter, the command returns an object that represents the job, and then displays the command prompt.
+    You can continue to work in the session while the job finishes.
+    To manage the job, use the **Job** cmdlets.
+    To get the job results, use the Receive-Job cmdlet.
+
+    The *AsJob* parameter resembles using the Invoke-Command cmdlet to run a Start-Job command remotely.
+    However, with *AsJob*, the job is created on the local computer, even though the job runs on a remote computer, and the results of the remote job are automatically returned to the local computer.
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251) and [about_Remote_Jobs](https://go.microsoft.com/fwlink/?LinkID=135184).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClientId
+  description: |+
+    Specifies the ID of one or more client computers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  description: |+
+    Specifies the path and file name of an open file on an NFS server.
+    For example, C:\Windows\Setup.log.
+    You can also use a wildcard to specify multiple paths and files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: FileName, File
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StateId
+  description: |+
+    Specifies the state ID of one or more open files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NFS.Get-NfsOpenFile
+name: Get-NfsOpenFile
+description: |-
+  The **Get-NfsOpenFile** cmdlet gets information about files that are in a Network File System (NFS) share and hosted by an NFS server, and that a client computer is currently holding open.
+  You can specify a client identifier to view all files that are in an open state for the specified client.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NfsOpenFile.cmdletDefinition.cdxml-help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/get-nfsopenfile?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NfsOpenFile

@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables MSDSM to automatically claim SAN disks for MPIO.
+module: MPIO
+notes: ""
+links:
+- text: Disable-MSDSMAutomaticClaim
+  href: ./Disable-MSDSMAutomaticClaim.yml
+- text: Get-MSDSMAutomaticClaimSettings
+  href: ./Get-MSDSMAutomaticClaimSettings.yml
+syntaxes:
+- Enable-MSDSMAutomaticClaim [-BusType] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable automatic claims for iSCSI'
+  code: |-
+    PS C:\> Enable-MSDSMAutomaticClaim -BusType "iSCSI"
+  description: |-
+    This command enables MSDSM to automatically claim resources with an iSCSI bus type.
+    Specify SAS instead of iSCSI to enable for an SAS bus type.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BusType
+  isRequired: true
+  description: |+
+    Specifies a bus type.
+    The cmdlet enables MSDSM to automatically claim SAN disks for this bus type.
+    The acceptable values for this parameter are: SAS and iSCSI.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: SAS, iSCSI
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MPIO.Enable-MSDSMAutomaticClaim
+name: Enable-MSDSMAutomaticClaim
+description: |-
+  The **Enable-MSDSMAutomaticClaim** cmdlet enables an Microsoft Device Specific Module (MSDSM) to automatically claim storage area network (SAN) disks for Microsoft Multipath I/O (MPIO) for a bus type.
+
+  You must specify a valid bus type, either serial attached storage (SAS) and Internet Small Computer System Interface (iSCSI).
+  You can enable MSDSM to automatically claim both SAS and iSCSI disks.
+  Run the cmdlet two times, one time for SAS, one time for iSCSI.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Mpio-help.xml
+  Module Name: MPIO
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/mpio/enable-msdsmautomaticclaim?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-MSDSMAutomaticClaim

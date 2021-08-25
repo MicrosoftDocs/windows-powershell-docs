@@ -1,0 +1,140 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a server from the network load balancing (NLB) cluster.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The String consists of the following properties: 
+
+     -- The address (IPv4 or IPv6) or name of the server that was removed from the cluster.
+links:
+- text: Add-RemoteAccessLoadBalancerNode
+  href: ./Add-RemoteAccessLoadBalancerNode.yml
+syntaxes:
+- >-
+  Remove-RemoteAccessLoadBalancerNode [-RemoteAccessServer] <String> [-ComputerName <String>] [-PassThru]
+
+   [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: "PS C:\\>Remove-RemoteAccessLoadBalancerNode -RemoteAccessServer edge3.corp.contoso.com -ComputerName edge2.corp.contoso.com\r\nConfirm \r\nRemoving server edge3 from the load balanced cluster will reduce cluster capacity and availability. Do you want to remove the server? \r\n \r\n[Y] Yes  [N] No  [S] Suspend  [?] Help (default is ꞌYꞌ): Y \r\n\r\nIn case edge3 is not a part of the NLB cluster that contains edge2, this cmdlet returns with the following message.\r\nPS C:\\>\r\nRemove-RemoteAccessLoadBalancerNode: Server edge3 is not a part of a remote access server cluster"
+  description: |-
+    This example removes a server from an NLB Node.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 orIPv6 address, or host name, of the server on which the cmdlet runs.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemoteAccessServer
+  isRequired: true
+  description: |+
+    Specifies the IPv4 orIPv6 address, or host name, of the server that will be removed from the NLB cluster.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Remove-RemoteAccessLoadBalancerNode
+name: Remove-RemoteAccessLoadBalancerNode
+description: |-
+  The **Remove-RemoteAccessLoadBalancerNode** cmdlet removes a server from the network load balancing (NLB) cluster.
+
+  When a server is removed, DirectAccess (DA) and VPN configuration settings on it are also removed.
+
+  When the last server from a cluster is removed, the DA and VPN configuration on it is not removed.
+
+  A server can be removed from the NLB cluster even if it is not reachable.
+
+  When VPN and DA configuration are cleared the Remote Access role is not uninstalled automatically.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_RemoteAccessLoadBalancerNode_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/remove-remoteaccessloadbalancernode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-RemoteAccessLoadBalancerNode

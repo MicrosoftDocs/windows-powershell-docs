@@ -1,0 +1,150 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes custom routes from the BGP router.
+module: RemoteAccess
+notes: ""
+links:
+- text: Add-BgpCustomRoute
+  href: ./Add-BgpCustomRoute.yml
+- text: Add-BgpCustomRoute
+  href: ./Add-BgpCustomRoute.yml
+syntaxes:
+- >-
+  Remove-BgpCustomRoute [-Network <String[]>] [-Interface <String[]>] [-Force] [-RoutingDomain <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a network prefix'
+  code: |-
+    PS C:\> Remove-BgpCustomRoute -Network "172.23.90.0/29"
+
+
+
+    Confirm
+    Removing specified custom networks from BGP router. Do you want to continue?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+  description: |-
+    This command removes the network prefix of a custom network from the BGP routing table.
+  summary: ""
+- title: 'Example 2: Remove the interface for a routing domain'
+  code: |-
+    PS C:\> Remove-BgpCustomRoute -Interface "VS01" -RoutingDomain Rd_002
+
+
+
+    Confirm
+    Removing specified custom networks from BGP router of Routing Domain Rd_002. Do you want to continue?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+  description: |-
+    This command removes the router interface named VS01 from the BGP routing table for the routing domain named Rd_002.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Interface
+  description: |+
+    Specifies an array of names of router interfaces.
+    The cmdlet removes the static routes for these interfaces from the BGP routing table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Network
+  description: |+
+    Specifies an array of network prefixes, in Classless InterDomain Routing (CIDR) notation.
+    For IPv4 networks, you must specify the network prefix and its network mask.
+    The cmdlet removes the routing information for the network prefixes from the BGP routing table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DestinationNetwork
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingDomain
+  description: |+
+    Specifies the name, as a string, of a routing domain.
+    The name of a routing domain is a unique user-defined alphanumeric string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RoutingDomainName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Remove-BgpCustomRoute
+name: Remove-BgpCustomRoute
+description: |-
+  The **Remove-BgpCustomRoute** cmdlet removes Classless InterDomain Routing (CIDR) prefixes or interfaces for custom routes from the Border Gateway Protocol (BGP) routing table.
+  When you remove a custom route, the BGP router can no longer use the information from the CIDR network or interface to distribute routing information between autonomous systems (AS).
+  In addition, the BGP router sends route withdrawal messages to peers to remove the previously advertised custom routes that you remove.
+
+  You must specify at least one of the **Interface** or **Network** parameters.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_BgpCustomRoute_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/remove-bgpcustomroute?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-BgpCustomRoute

@@ -1,0 +1,193 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Specifies the policy store from which the cmdlet should pull configuration information.
+module: NetworkConnectivityStatus
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/StandardCimv2/MSFT_NCSIConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DAConnectionStatus
+  href: ./Get-DAConnectionStatus.yml
+- text: Get-NCSIPolicyConfiguration
+  href: ./Get-NCSIPolicyConfiguration.yml
+- text: Reset-NCSIPolicyConfiguration
+  href: ./Reset-NCSIPolicyConfiguration.yml
+syntaxes:
+- >-
+  Set-NCSIPolicyConfiguration [-PolicyStore <String>] [-GPOSession <String>]
+
+   [[-CorporateDNSProbeHostAddress] <String>] [[-CorporateDNSProbeHostName] <String>]
+
+   [[-CorporateSitePrefixList] <String[]>] [[-CorporateWebsiteProbeURL] <String>]
+
+   [[-DomainLocationDeterminationURL] <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-NCSIPolicyConfiguration -InputObject <CimInstance[]> [[-CorporateDNSProbeHostAddress] <String>]
+
+   [[-CorporateDNSProbeHostName] <String>] [[-CorporateSitePrefixList] <String[]>]
+
+   [[-CorporateWebsiteProbeURL] <String>] [[-DomainLocationDeterminationURL] <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Set-NCSIPolicyConfiguration -PolicyStore "contoso\User1" -CorporateWebsiteProbe http://contoso.com
+  description: |-
+    This example modifies the corporate website probe of the specified GPO.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> Get-NCSIPolicyConfiguration -PolicyStore "contoso\User1" | Set-NCSIPolicyConfiguration -CorporateWebsiteProbe http://contoso.com
+  description: |-
+    This example performs the same operation as EXAMPLE 1 using pipelining.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\> $Object = Get-NCSIPolicyConfiguration -PolicyStore "contoso\User1"
+    PS C:\> $Object.CorporateWebsiteProbe = http://ncsi.corp.microsoft.com
+    PS C:\> Set-NCSIPolicyConfiguration -InputObject $Object
+  description: |-
+    This example performs an identical operation using dot notation.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CorporateDNSProbeHostAddress
+  description: "Specifies the value to be configured. \r\n                         \r\nThis is the expected address of the host name used as for DNS probe.\r\nSuccessful resolution of the host name to this address indicates corporate connectivity, such as `2001::32`\r\n\r\n"
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CorporateDNSProbeHostName
+  description: "Specifies the value to be configured. \r\n                         \r\nThis is the host name of a PC known to be on the corporate network.\r\nSuccessful resolution of this host name to the expected address indicates corporate connectivity, such as `http://contoso.com`\r\n\r\n"
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CorporateSitePrefixList
+  description: "Specifies the value to be configured. \r\n                         \r\nThis is the list of IPv6 corporate site prefixes that should be monitored for corporate connectivity.\r\nReachability of addresses with any of these prefixes indicates corporate connectivity, such as `fe90::/9`, `fe81::/8`\r\n\r\n"
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CorporateWebsiteProbeURL
+  description: "Specifies the value to be configured. \r\n                         \r\nThis is the URL of the corporate website that will be used to perform an active probe against, such as `http://contoso.com`\r\n\r\n"
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainLocationDeterminationURL
+  description: "Specifies the value to be configured. \r\n                         \r\nThis is the HTTPS URL of the corporate website that will be used to determine the current domain location, such as inside or outside the corporate domain.\r\nReachability of the URL indicates that the location is inside corporate else it is outside, such as `https://contoso.com`\r\n\r\n"
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GPOSession
+  description: "Specifies the Group Policy session for which the cmdlet should pull configuration information from.\r\nThis parameter can be used in conjunction with the NetGPO cmdlet family to aggregate multiple operations that are performed on a Group Policy Object. \r\n                         \r\nThis parameter cannot be used in conjunction with the **PolicyStore** parameter. \r\n                         \r\nUsing this parameter allows multiple cmdlets to be aggregated to run against a local GPO cache. \r\n                         \r\nThis is a common parameter across networking with very little difference between them.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an object from the pipeline as input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: "Sends items from the interactive window down the pipeline as input to other cmdlets.\r\nBy default, this cmdlet does not generate any output.\r\nThis parameter is equivalent to using the Multiple value of the **OutputMode** parameter. \r\n                         \r\nTo send items from the interactive window down the pipeline, click to select the items and then click OK.\r\nShift-click and Ctrl-click are supported.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  description: "Specifies the policy store for which the cmdlet should pull configuration information from.\r\nThis cmdlet supports getting information from a Group Policy Object, in the form `Domain\\GPOName`. \r\n                         \r\nThe types of PolicyStore supported by this cmdlet: \r\n                         \r\n - `Domain\\GPOName`\r\n                         \r\n - `GPO: ComputerName`\r\n                         \r\nThis is a common parameter across networking with very little difference between them.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkConnectivityStatus.Set-NCSIPolicyConfiguration
+name: Set-NCSIPolicyConfiguration
+description: |-
+  The **Set-NCSIPolicyConfiguration** cmdlet allows a user to configure NCSI configuration options on a Group Policy Object.
+
+  This cmdlet supports getting information from a Group Policy Object, in the form Domain\GPOName.
+metadata:
+  external help file: MSFT_NCSIPolicyConfiguration.cdxml-help.xml
+  Module Name: NetworkConnectivityStatus
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/networkconnectivitystatus/set-ncsipolicyconfiguration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NCSIPolicyConfiguration

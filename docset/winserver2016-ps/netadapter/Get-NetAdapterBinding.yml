@@ -1,0 +1,174 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of bindings for a network adapter.
+module: NetAdapter
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapter BindingSettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Disable-NetAdapterBinding
+  href: ./Disable-NetAdapterBinding.yml
+- text: Enable-NetAdapterBinding
+  href: ./Enable-NetAdapterBinding.yml
+- text: Set-NetAdapterBinding
+  href: ./Set-NetAdapterBinding.yml
+syntaxes:
+- >-
+  Get-NetAdapterBinding [[-Name] <String[]>] [-ComponentID <String[]>] [-DisplayName <String[]>] [-IncludeHidden]
+
+   [-AllBindings] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-NetAdapterBinding -InterfaceDescription <String[]> [-ComponentID <String[]>] [-DisplayName <String[]>]
+
+   [-IncludeHidden] [-AllBindings] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get bindings for the specified network adapter'
+  code: |-
+    PS C:\> Get-NetAdapterBinding -Name "MyAdapter"
+  description: |-
+    This command gets the bindings for the network adapter named MyAdapter.
+  summary: ""
+- title: 'Example 2: Get all of the binding for the specified network adapter in an unformatted list'
+  code: |-
+    PS C:\> Get-NetAdapterBinding -Name "MyAdapter" -AllBindings
+  description: |-
+    This command gets all of the bindings for the network adapter named MyAdapter as an unformatted list .
+  summary: ""
+- title: 'Example 3: Get the state of TCP/IPv4 on the specified network adapter using the display name'
+  code: |-
+    PS C:\> Get-NetAdapterBinding -Name "MyAdapter" -DisplayName "Internet Protocol Version 4 (TCP/IPv4)"
+  description: |-
+    This command gets the state of the TCP/IPv4 on the network adapter named MyAdapter using display name.
+  summary: ""
+- title: 'Example 4: Get the state of the TCP/IPv4 transport on the specified network adapter'
+  code: |-
+    PS C:\> Get-NetAdapterBinding -Name "MyAdapter"  -ComponentID ms_tcpip
+  description: |-
+    This command gets the state of the TCP/IPv4 transport on MyAdapter using component ID.
+  summary: ""
+- title: 'Example 5: Get the state of TCP/IPv4 and TCP/IPv6 on all visible network adapters using a search string'
+  code: |-
+    PS C:\> Get-NetAdapterBinding -Name "*" -DisplayName "Internet*"
+  description: |-
+    This command gets the state of TCP/IPv4 and TCP/IPv6 on all visible network adapters using wildcard characters.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllBindings
+  description: |+
+    Indicates that the cmdlet gets all the bindings for the network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComponentID
+  description: |+
+    Specifies an array of underlying names of the transport or filter in the following form: `ms_xxxx`, such as `ms_tcpip`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DisplayName
+  description: |+
+    Specifies an array of transport or filter names shown in the Networking tab under the network adapter properties in Windows Server® 2012 and later.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeHidden
+  description: |+
+    Indicates that the cmdlet includes both visible and hidden network adapters in the operation.
+    By default only visible network adapters are included.
+    If a wildcard character is used in identifying a network adapter and this parameter has been specified, then the wildcard string is matched against both hidden and visible network adapters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceDescription
+  isRequired: true
+  description: |+
+    Specifies the network adapter interface description.
+    For a physical network adapter this is typically the name of the vendor of the network adapter followed by a part number and description, such as `Contoso 12345 Gigabit Network Device`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ifDesc, InstanceID
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of network adapter names.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ifAlias, InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetAdapter.Get-NetAdapterBinding
+name: Get-NetAdapterBinding
+description: |-
+  The **Get-NetAdapterBinding** cmdlet gets a list of bindings for a network adapter.
+  By default only the visible bindings shown in the Networking tab under the Network Adapter properties in Windows UI is returned.
+  To get all properties for a network adapter, use the *AllProperties* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetAdapterBinding.cmdletDefinition.cdxml-help.xml
+  Module Name: NetAdapter
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadapterbinding?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetAdapterBinding

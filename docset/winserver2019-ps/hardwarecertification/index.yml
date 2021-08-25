@@ -1,0 +1,24 @@
+### YamlMime:PowershellModule
+children:
+- title: HardwareCertification
+  cmdlets:
+  - HardwareCertification.Export-HwCertTestCollectionToXml
+  - HardwareCertification.Import-HwCertTestCollectionFromXml
+  - HardwareCertification.Merge-HwCertTestCollectionFromPackage
+  - HardwareCertification.Merge-HwCertTestCollectionFromXml
+  - HardwareCertification.New-HwCertProjectDefinitionFile
+  - HardwareCertification.New-HwCertTestCollection
+  - HardwareCertification.New-HwCertTestCollectionExcelReport
+uid: HardwareCertification
+name: HardwareCertification
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Windows Hardware Certification Kit (HCK) cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 3a1fcd12-4c5b-4e54-81e8-547d545a2c50
+  Module Name: HardwareCertification
+  ms.date: 12/20/2016
+  title: HardwareCertification

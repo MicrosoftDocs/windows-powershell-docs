@@ -1,2 +1,5 @@
+items:
 - name: Windows PowerShell
   href: get-started.md
+metadata:
+  universal_ref_toc: /powershell/module/WindowsServer2019-ps/toc.json

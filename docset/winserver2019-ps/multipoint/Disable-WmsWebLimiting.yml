@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables web limiting for a session.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="uint" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    You can pipe an array of session IDs to this cmdlet.
+links:
+- text: Enable-WmsWebLimiting
+  href: ./Enable-WmsWebLimiting.yml
+- text: Get-WmsWebLimiting
+  href: ./Get-WmsWebLimiting.yml
+- text: Set-WmsWebLimiting
+  href: ./Set-WmsWebLimiting.yml
+syntaxes:
+- Disable-WmsWebLimiting [-SessionId] <UInt32[]> [-Server <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Disable-WmsWebLimiting [-All] [-Server <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable web limiting for specified sessions'
+  code: |-
+    PS C:\> Disable-WmsWebLimiting -SessionId 2,4,5,6
+  description: |-
+    This command disables web limiting for sessions 2, 4, 5, and 6 on the local computer.
+  summary: ""
+- title: 'Example 2: Disable web limiting for all sessions'
+  code: |-
+    PS C:\> Disable-WmsWebLimiting -Server "sampleserver.microsoft.com" -All
+  description: |-
+    This command disables web limiting for all sessions on the computer sampleserver.microsoft.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  isRequired: true
+  description: |+
+    Indicates that this operation applies to all sessions on the target host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SessionId
+  isRequired: true
+  description: |+
+    Specifies an array of MultiPoint session IDs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MultiPoint.Disable-WmsWebLimiting
+name: Disable-WmsWebLimiting
+description: |-
+  The **Disable-WmsWebLimiting** cmdlet disables web limiting for the specified sessions.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/disable-wmsweblimiting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-WmsWebLimiting

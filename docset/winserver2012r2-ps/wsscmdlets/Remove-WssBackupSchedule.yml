@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a backup schedule from a scheduled backup policy.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.ServerBackup.ObjectModel.ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates the **BackupPolicy** parameter value.
+links:
+- text: Get-WssBackupSchedule
+  href: ./Get-WssBackupSchedule.yml
+- text: Add-WssBackupSchedule
+  href: ./Add-WssBackupSchedule.yml
+syntaxes:
+- Remove-WssBackupSchedule [-BackupPolicy] <ScheduledBackupPolicy> [-BackupTime] <DateTime> [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a scheduled backup from a policy'
+  code: |-
+    PS C:\> Remove-WssBackupSchedule -BackupPolicy $ContosoBUPolicy25 -Schedule 5:00
+  description: |-
+    This command removes the scheduled backup at 5:00 A.M.
+    daily from the policy that is stored in the variable named $ContosoBUPolicy25.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the scheduled backup policy to edit.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: BackupTime
+  isRequired: true
+  description: |+
+    Specifies the date and time of the backup to remove from the schedule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Remove-WssBackupSchedule
+name: Remove-WssBackupSchedule
+description: |-
+  The **Remove-WssBackupSchedule** cmdlet removes a date and time from a scheduled backup policy.
+  This action removes the backup that is scheduled for that date and time from the policy.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/remove-wssbackupschedule?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WssBackupSchedule

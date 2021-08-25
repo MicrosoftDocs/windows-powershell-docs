@@ -1,0 +1,64 @@
+### YamlMime:PowershellModule
+children:
+- title: WindowsServerBackup
+  cmdlets:
+  - WindowsServerBackup.Add-WBBackupTarget
+  - WindowsServerBackup.Add-WBBareMetalRecovery
+  - WindowsServerBackup.Add-WBFileSpec
+  - WindowsServerBackup.Add-WBSystemState
+  - WindowsServerBackup.Add-WBVirtualMachine
+  - WindowsServerBackup.Add-WBVolume
+  - WindowsServerBackup.Get-WBBackupSet
+  - WindowsServerBackup.Get-WBBackupTarget
+  - WindowsServerBackup.Get-WBBackupVolumeBrowsePath
+  - WindowsServerBackup.Get-WBBareMetalRecovery
+  - WindowsServerBackup.Get-WBDisk
+  - WindowsServerBackup.Get-WBFileSpec
+  - WindowsServerBackup.Get-WBJob
+  - WindowsServerBackup.Get-WBPerformanceConfiguration
+  - WindowsServerBackup.Get-WBPolicy
+  - WindowsServerBackup.Get-WBSchedule
+  - WindowsServerBackup.Get-WBSummary
+  - WindowsServerBackup.Get-WBSystemState
+  - WindowsServerBackup.Get-WBVirtualMachine
+  - WindowsServerBackup.Get-WBVolume
+  - WindowsServerBackup.Get-WBVssBackupOption
+  - WindowsServerBackup.New-WBBackupTarget
+  - WindowsServerBackup.New-WBFileSpec
+  - WindowsServerBackup.New-WBPolicy
+  - WindowsServerBackup.Remove-WBBackupSet
+  - WindowsServerBackup.Remove-WBBackupTarget
+  - WindowsServerBackup.Remove-WBBareMetalRecovery
+  - WindowsServerBackup.Remove-WBCatalog
+  - WindowsServerBackup.Remove-WBFileSpec
+  - WindowsServerBackup.Remove-WBPolicy
+  - WindowsServerBackup.Remove-WBSystemState
+  - WindowsServerBackup.Remove-WBVirtualMachine
+  - WindowsServerBackup.Remove-WBVolume
+  - WindowsServerBackup.Restore-WBCatalog
+  - WindowsServerBackup.Resume-WBBackup
+  - WindowsServerBackup.Resume-WBVolumeRecovery
+  - WindowsServerBackup.Set-WBPerformanceConfiguration
+  - WindowsServerBackup.Set-WBPolicy
+  - WindowsServerBackup.Set-WBSchedule
+  - WindowsServerBackup.Set-WBVssBackupOption
+  - WindowsServerBackup.Start-WBApplicationRecovery
+  - WindowsServerBackup.Start-WBBackup
+  - WindowsServerBackup.Start-WBFileRecovery
+  - WindowsServerBackup.Start-WBHyperVRecovery
+  - WindowsServerBackup.Start-WBSystemStateRecovery
+  - WindowsServerBackup.Start-WBVolumeRecovery
+  - WindowsServerBackup.Stop-WBJob
+uid: WindowsServerBackup
+name: WindowsServerBackup
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Windows Server Backup cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 4.0.4.1
+  Locale: en-US
+  Module Guid: d27a5d7a-8b1d-4b0a-809d-65ef33ee2f2d
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  title: WindowsServerBackup

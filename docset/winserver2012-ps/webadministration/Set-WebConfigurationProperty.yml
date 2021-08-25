@@ -1,0 +1,193 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the value of an IIS configuration property.
+module: WebAdministration
+notes: ""
+inputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-WebConfigurationProperty -Name <String> -Value <PSObject> [-Clr <String>] [-AtElement <Hashtable>]
+
+   [-AtIndex <Int32>] [-AtName <String>] [-Force] [-Location <String[]>] [-Filter] <String[]>
+
+   [[-PSPath] <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-WebConfigurationProperty -Name <String> -InputObject <Object> [-Clr <String>] [-AtElement <Hashtable>]
+
+   [-AtIndex <Int32>] [-AtName <String>] [-Force] [-Location <String[]>] [-Filter] <String[]>
+
+   [[-PSPath] <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    IIS:\>Set-WebConfigurationProperty "//handlers/add[@path='*.aspx']" -PSPath IIS:\ -Name path -Value "*.mspx"
+  description: |-
+    The cmdlet changes all handler paths to *.mspx that were mapped to *.aspx.
+  summary: ""
+- title: '-------------------------- EXAMPLE 2 --------------------------'
+  code: |-
+    IIS:\>set-webconfigurationproperty '/system.applicationHost/sites/site[@name="DemoSite"]' -PSPath IIS:\ -Name Bindings -Value (@{protocol="http";bindingInformation="*:80:DemoSite1"},@{protocol="http";bindingInformation="*:80:DemoSite2"})
+  description: |-
+    The cmdlet sets new bindings on an existing Web site.
+    The original bindings are replaced.
+  summary: ""
+- title: '-------------------------- EXAMPLE 3 --------------------------'
+  code: |-
+    IIS:\>set-webconfigurationproperty 'system.webserver/security/authentication/basicauthentication' -PSPath 'IIS:\sites\default web site\' -Name defaultlogondomain -Value 'contoso.com'
+  description: |-
+    The cmdlet sets the default domain of Basic Authentication settings on an existing Web site. Note that for this example to work, Custom Site Delegation for this type of Authentication must be set to Read/Write at the site level.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: AtElement
+  description: |+
+    The element at which the configuration property is set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: AtIndex
+  description: |+
+    The index at which the configuration property is set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AtName
+  description: |+
+    The name of the collection property for which the value is set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Clr
+  description: |+
+    Version of the .NET framework in the form vn.n, such as v4.0 or v2.0.
+    The default is v4.0.
+    This parameter is used only when PSPath is set to either Machine or Machine/Webroot.
+    If PSPath is not set to one of these values and the Clr parameter is set, PowerShell ignores the value of Clr and returns a warning.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Filter
+  isRequired: true
+  description: |+
+    Specifies the IIS configuration section or an XPath query that returns a configuration element.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    If the Force parameter is used it causes the configuration property setting to be set at a level in the configuration hierarchy above a lock in the configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an object that contains values to set for configuration properties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    The location of the configuration setting.
+    Location tags are frequently used for configuration settings that must be set more precisely than per application or per virtual directory.
+    For example, a setting for a particular file or directory could use a location tag.
+    Location tags are also used if a particular section is locked.
+    In such an instance, the configuration system would have to use a location tag in one of the parent configuration files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the configuration property to change.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies the configuration path.
+    This can be either an IIS configuration path in the formatcomputer name/webroot/apphost, or the IIS module path in this format IIS:\sites\Default Web Site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Value
+  isRequired: true
+  description: |+
+    The value of the configuration setting to change.
+
+  defaultValue: None
+  position: Named
+  aliases: v, val
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Set-WebConfigurationProperty
+name: Set-WebConfigurationProperty
+description: |-
+  The Set-WebConfigurationProperty cmdlet changes the value of an IIS configuration property.
+  The element can be specified as a configuration section or an XPath query.
+  Globbing, the use of wildcards, is supported.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/set-webconfigurationproperty?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

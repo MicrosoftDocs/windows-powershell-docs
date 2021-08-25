@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a troubleshooting pack or generates an answer file.
+module: TroubleshootingPack
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Windows.Diagnosis.DiagPack" data-throw-if-not-resolved="False" />
+  description: |-
+    The **DiagPack** object defines the troubleshooting pack.
+links:
+- text: Invoke-TroubleshootingPack
+  href: ./Invoke-TroubleshootingPack.yml
+syntaxes:
+- Get-TroubleshootingPack [-Path] <String> [-AnswerFile <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a troubleshooting pack'
+  code: |-
+    PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
+  description: |-
+    The command gets the troubleshooting pack for Audio in the specified path.
+  summary: ""
+- title: 'Example 2: Get a root cause'
+  code: |-
+    PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
+    PS C:\> $Audio.Rootcauses[2]
+  description: |-
+    This example shows how to discover a root cause from a troubleshooting pack.
+
+    The first command gets the troubleshooting pack for Audio in the specified path and saves that object in the $Audio variable.
+
+    The second command displays a root cause.
+    The $Audio object contains an array of root causes.
+    This command uses conventional array notation to access the third member of the array.
+  summary: ""
+- title: 'Example 3: Get all root causes'
+  code: |-
+    PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
+    PS C:\> $Audio.Rootcauses
+  description: |-
+    This example displays all the root causes this troubleshooting pack investigates.
+  summary: ""
+- title: 'Example 4: Get a resolution for a root cause'
+  code: |-
+    PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
+    PS C:\> $Audio.RootCauses[2].Resolutions[0]
+  description: |-
+    This example shows how to discover a resolution for a root cause.
+
+    The first command gets the troubleshooting pack for Audio in the specified path and saves that object in the $Audio variable.
+
+    The second command displays a resolution for a root cause.
+    The $Audio object contains an array of root causes, each of which contains an array of resolutions.
+    This command uses conventional array notation to access the first resolution for the third root cause.
+  summary: ""
+- title: 'Example 5: Generate an answer file'
+  code: |-
+    PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" -AnswerFile "AudioAnswerFile.xml"
+  description: |-
+    This command uses the **Get-TroubleshootingPack** cmdlet to generate an answer file.
+    The Audio troubleshooting pack provides a series of questions for the user to describe the troubleshooting situation and saves that information in the specified XML file.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AnswerFile
+  description: |+
+    Specifies a path where the cmdlet saves an answer file.
+    You can use an absolute path, a relative path, or a Universal Naming Convention (UNC) path.
+    If you specify this parameter, this cmdlet does not provide output.
+
+    You can use the **Get-TroubleshootingPack** cmdlet to generate an XML file that contains answers to troubleshooting questions.
+    You can use the answers stored in an answer file to automate question responses during package execution using the **Invoke-TroubleshootingPack** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: AF
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a path to the folder that contains the troubleshooting pack.
+    You can use an absolute path, a relative path, or a Universal Naming Convention (UNC) path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: P
+  parameterValueGroup: ""
+uid: TroubleshootingPack.Get-TroubleshootingPack
+name: Get-TroubleshootingPack
+description: |-
+  The **Get-TroubleshootingPack** cmdlet gets a **Microsoft.Windows.Diagnosis.DiagPack** object that you can pass to the **Invoke-TroubleshootingPack** cmdlet.
+
+  The **Get-TroubleshootingPack** cmdlet also gets information about a troubleshooting pack and generates an answer file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Diagnosis.TroubleshootingPack.dll-Help.xml
+  Module Name: TroubleshootingPack
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/troubleshootingpack/get-troubleshootingpack?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-TroubleshootingPack

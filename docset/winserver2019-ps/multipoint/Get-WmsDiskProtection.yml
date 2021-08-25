@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the current state and configuration of the disk protection feature.
+module: MultiPoint
+notes: ""
+outputs:
+- name: <xref href="DiskProtectionMode" data-throw-if-not-resolved="False" />
+  description: |-
+    The **DiskProtectionMode** object is an enumeration with one of three values that reflect the current mode of the disk protection feature.
+    The possible values are NotInstalled, Discard, or Passive.
+links:
+- text: Disable-WmsDiskProtection
+  href: ./Disable-WmsDiskProtection.yml
+- text: Enable-WmsDiskProtection
+  href: ./Enable-WmsDiskProtection.yml
+- text: Resume-WmsDiskProtection
+  href: ./Resume-WmsDiskProtection.yml
+- text: Suspend-WmsDiskProtection
+  href: ./Suspend-WmsDiskProtection.yml
+syntaxes:
+- Get-WmsDiskProtection [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the disk protection configuration for the local computer'
+  code: |-
+    PS C:\> Get-WmsDiskProtection
+    Discard
+  description: |-
+    This command returns the state of the disk protection feature on the local computer.
+  summary: ""
+- title: 'Example 2: Get the disk protection configuration for a specified computer'
+  code: |-
+    PS C:\> Get-WmsDiskProtection -Server "Sample.microsoft.com"
+    Passive
+  description: |-
+    This command returns the state of the disk protection feature on the specified computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+uid: MultiPoint.Get-WmsDiskProtection
+name: Get-WmsDiskProtection
+description: |-
+  The **Get-WmsDiskProtection** cmdlet gets the current configuration of the disk protection feature.
+  The configuration can be NotInstalled, Discard, or Passive.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/get-wmsdiskprotection?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WmsDiskProtection

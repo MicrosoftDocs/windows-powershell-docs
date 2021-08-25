@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an IIS application pool.
+module: WebAdministration
+notes: ""
+links:
+- text: Remove-WebAppPool
+  href: ./Remove-WebAppPool.yml
+- text: Restart-WebAppPool
+  href: ./Restart-WebAppPool.yml
+- text: Start-WebAppPool
+  href: ./Start-WebAppPool.yml
+- text: Stop-WebAppPool
+  href: ./Stop-WebAppPool.yml
+syntaxes:
+- New-WebAppPool [-Name] <String> [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an IIS application pool'
+  code: |-
+    IIS:\> New-WebAppPool -Name "NewAppPool"
+  description: |-
+    This command creates an IIS application pool named NewAppPool.
+  summary: ""
+- title: 'Example 2: Create an IIS application pool and set autoStart'
+  code: |-
+    IIS:\> $newAppPool = New-WebAppPool -Name "NewAppPool"
+    IIS:\> $newAppPool.autoStart = "false"
+    IIS:\> $newAppPool | Set-Item
+  description: |-
+    This command creates an IIS application pool named NewAppPool and sets **autoStart** property to false.
+  summary: ""
+- title: 'Example 3: Create an IIS application pool and set managedRuntimeVersion'
+  code: |-
+    IIS:\> New-WebAppPool -Name "NewAppPool"
+    IIS:\> Set-ItemProperty -Path IIS:\AppPools\NewAppPool managedRuntimeVersion "v4.0"
+  description: |-
+    This command creates an IIS application pool named NewAppPool and sets **managedRuntimeVersion** property to v4.0.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the IIS application pool to create.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-WebAppPool
+name: New-WebAppPool
+description: |-
+  The **New-WebAppPool** cmdlet creates an Internet Information Services (IIS) application pool. For changing different properties of the application pool after creation, see [PowerShell Snap-in: Making Configuration Changes to Websites and App Pools](https://docs.microsoft.com/iis/manage/powershell/powershell-snap-in-making-simple-configuration-changes-to-web-sites-and-application-pools).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-webapppool?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WebAppPool

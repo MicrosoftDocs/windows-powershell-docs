@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the global rules that trigger additional authentication providers to be invoked.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AdfsAdditionalAuthenticationRule
+  href: ./Set-AdfsAdditionalAuthenticationRule.yml
+syntaxes:
+- Get-AdfsAdditionalAuthenticationRule [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve the global additional authentication rules'
+  code: |-
+    PS C:\> Get-AdfsAdditionalAuthenticationRule
+    c:[Type == "http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser", Value == "false"]
+    => issue(Type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn");
+
+    c:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"]
+    => issue(Type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn");
+  description: |-
+    This command retrieves the global additional authentication rules configured for AD FS.
+    The output of the command shows that multiple factor authentication is required for all extranet access and all devices that are not joined to a workplace.
+  summary: ""
+uid: ADFS.Get-AdfsAdditionalAuthenticationRule
+name: Get-AdfsAdditionalAuthenticationRule
+description: |-
+  The **Get-AdfsAdditionalAuthenticationRule** cmdlet retrieves the global rules that govern all applications that trigger additional authentication providers to be invoked.
+  When the claim engine evaluates the additional authentication rules and determines that multiple factor authentication is required, the user is prompted to perform additional authentication.
+  Use this rule only when all your applications are capable of performing web based credential collection through Active Directory Federation Services (AD FS).
+  Applications that use protocols like WS-Trust will fail to obtain a security token if the trigger is true as a result of evaluation of the rules.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsadditionalauthenticationrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsAdditionalAuthenticationRule

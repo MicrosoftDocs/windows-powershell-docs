@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a certificate template to the CA.
+module: ADCSAdministration
+notes: |-
+  * To perform this procedure, you must be a member of the Domain Admins group or the Enterprise Admins group in AD DS, or you must have been delegated the appropriate authority. As a security best practice, consider using Run as to perform this procedure.
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    There is only one parameter for this cmdlet, *Name*, and it can only accept a single template each time specified by name as a string.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CATemplate
+  href: ./Get-CATemplate.yml
+- text: Remove-CATemplate
+  href: ./Remove-CATemplate.yml
+syntaxes:
+- Add-CATemplate [-Name] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a CA template'
+  code: |-
+    PS C:\> Add-CATemplate -Name "EFS"
+  description: |-
+    This command adds a CA template with the template name EFS.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a certificate template name.
+    This name must always be the template name, short name without spaces, and not the template display name.
+    For example, the certificate template with the template display name of Exchange Enrollment Agent (Offline request) must be specified by its template name, which is EnrollmentAgentOffline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADCSAdministration.Add-CATemplate
+name: Add-CATemplate
+description: |-
+  The **Add-CATemplate** cmdlet adds a certificate template to the certificate authority (CA) for issuing.
+
+  A certificate template is a preconfigured list of certificate settings that allows users and computers to enroll for certificates without having to create complex certificate requests.
+  Certificate templates allow for the customization of a certificate that can be issued by the CA.
+  The template defines items such as the cryptographic types, validity and renewal periods, and certificate purposes.
+
+  The certificate templates are stored in Active Directory Domain Services (AD DS).
+  Many default certificate templates are added to AD DS when the CA role service is installed.
+  This cmdlet does not allow you to create new templates or duplicate existing templates.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsadministration/add-catemplate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-CATemplate

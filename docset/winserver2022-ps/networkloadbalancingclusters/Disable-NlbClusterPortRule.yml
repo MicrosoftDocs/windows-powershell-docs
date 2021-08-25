@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables a port rule on a Network Load Balancing (NLB) cluster or on a specific host in the cluster.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.PortRule" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.PortRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-NlbClusterPortRule
+  href: ./Add-NlbClusterPortRule.yml
+- text: Enable-NlbClusterPortRule
+  href: ./Enable-NlbClusterPortRule.yml
+- text: Get-NlbClusterPortRule
+  href: ./Get-NlbClusterPortRule.yml
+- text: Remove-NlbClusterPortRule
+  href: ./Remove-NlbClusterPortRule.yml
+- text: Set-NlbClusterPortRule
+  href: ./Set-NlbClusterPortRule.yml
+syntaxes:
+- >-
+  Disable-NlbClusterPortRule [-Drain] [-Timeout <UInt32>] [-ClusterWide] [-HostName <String>]
+
+   [-InterfaceName <String>] [-IP <IPAddress>] [-Port] <UInt32> [<CommonParameters>]
+- Disable-NlbClusterPortRule -InputObject <PortRule[]> [-Drain] [-Timeout <UInt32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable a port rule for a port number on the local cluster'
+  code: |-
+    PS C:\>Disable-NlbClusterPortRule -Port 80
+    IPAddress State     Start     End       Protocol  Mode      Affinity  Timeout 
+    --------- -----     -----     ---       --------  ----      --------  ------- 
+    All       Disabled  80        80        Both      Multiple  Single    0
+  description: |-
+    This command disables the port rule for port number 80 on the local cluster.
+  summary: ""
+- title: 'Example 2: Disable all port rules on the local cluster'
+  code: |-
+    PS C:\>Get-NlbClusterPortRule | Disable-NlbClusterPortRule
+    IPAddress State     Start     End       Protocol  Mode      Affinity  Timeout 
+    --------- -----     -----     ---       --------  ----      --------  ------- 
+    All       Disabled  80        80        Both      Multiple  Single    0
+  description: |-
+    This command disables all port rules on the local cluster.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClusterWide
+  description: |+
+    Indicates that the cmdlet disables the given port rule on all cluster nodes.
+    If this parameter is omitted, then the port rule is only disabled on one node.
+
+  defaultValue: None
+  position: Named
+  aliases: Cluster, C
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Drain
+  description: |+
+    Indicates that the cmdlet drains existing traffic before disabling this port rule.
+    If this parameter is omitted, then existing traffic is dropped.
+
+  defaultValue: None
+  position: Named
+  aliases: D
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: Named
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="PortRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of cluster port rules that this cmdlet disables.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IP
+  description: |+
+    Specifies the IP address for the cluster port rule that this cmdlet disables.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Port
+  isRequired: true
+  description: |+
+    Specifies a port number within the port rule that will be disabled.
+    The acceptable values for this parameter are: 0 through 65535.
+
+  defaultValue: None
+  position: "0"
+  aliases: P
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Timeout
+  description: |+
+    Specifies the number of minutes to wait for the drain operation before the port rule is disabled.
+    After the time expires, the existing connections will be dropped.
+
+  defaultValue: None
+  position: Named
+  aliases: T
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Disable-NlbClusterPortRule
+name: Disable-NlbClusterPortRule
+description: |-
+  The **Disable-NlbClusterPortRule** cmdlet disables a specific port rule on a Network Load Balancing (NLB) cluster or on a specific host in the NLB cluster.
+  Disabling new traffic handling should be considered for the port rule using the optional *Drain* parameter.
+  Specifying the *Drain* parameter at the cluster level drains the specified ports on all hosts within the cluster, and specifying it at the host level drains the ports on the specific host only.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/disable-nlbclusterportrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-NlbClusterPortRule

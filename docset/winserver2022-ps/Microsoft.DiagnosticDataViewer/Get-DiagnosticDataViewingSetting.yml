@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Fetches whether diagnostic data viewing is currently enabled or disabled.
+module: Microsoft.DiagnosticDataViewer
+notes: |-
+  Requires Windows 10 version 17134 (1803) or higher
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-DiagnosticDataViewingSetting [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-DiagnosticDataViewingSetting
+  description: |-
+    Checks if Diagnostic Data Viewing is enabled.
+  summary: ""
+uid: Microsoft.DiagnosticDataViewer.Get-DiagnosticDataViewingSetting
+name: Get-DiagnosticDataViewingSetting
+description: |-
+  This cmdlet returns the current state of diagnostic data viewing.
+  This state indicates whether diagnostic data viewing is enabled for this device.
+  If disabled, this tool will throw an error.
+metadata:
+  external help file: DDVCmdlets.dll-Help.xml
+  Module Name: Microsoft.DiagnosticDataViewer
+  online version: https://docs.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/get-diagnosticdataviewingsetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DiagnosticDataViewingSetting

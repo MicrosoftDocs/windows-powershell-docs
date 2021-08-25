@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Grants application permission.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: |-
+    SwitchParameter objects are received by the *AllowAllRegisteredClients* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *ClientRoleIdentifier*, *Description*, *ScopeNames*, and *ServerRoleIdentifier* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.OAuthPermission" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the new OAuthPermission object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Get-AdfsApplicationPermission
+  href: ./Get-AdfsApplicationPermission.yml
+- text: Revoke-AdfsApplicationPermission
+  href: ./Revoke-AdfsApplicationPermission.yml
+- text: Set-AdfsApplicationPermission
+  href: ./Set-AdfsApplicationPermission.yml
+syntaxes:
+- >-
+  Grant-AdfsApplicationPermission [-ClientRoleIdentifier] <String> [-ServerRoleIdentifier] <String>
+
+   [[-ScopeNames] <String[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Grant-AdfsApplicationPermission [-AllowAllRegisteredClients] [-ServerRoleIdentifier] <String>
+
+   [[-ScopeNames] <String[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowAllRegisteredClients
+  isRequired: true
+  description: |+
+    Indicates whether to allow all registered clients.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: "true"
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientRoleIdentifier
+  isRequired: true
+  description: |+
+    Specifies a client role identifier.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ScopeNames
+  description: |+
+    Specifies an array of scope names.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServerRoleIdentifier
+  isRequired: true
+  description: |+
+    Specifies a server role identifier.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Grant-AdfsApplicationPermission
+name: Grant-AdfsApplicationPermission
+description: |-
+  The **Grant-AdfsApplicationPermission** cmdlet grants application permission in Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/grant-adfsapplicationpermission?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Grant-AdfsApplicationPermission

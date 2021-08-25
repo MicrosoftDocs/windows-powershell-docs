@@ -1,0 +1,174 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds this computer to an existing federation server farm.
+module: ADFS
+notes: ""
+links:
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+- text: Remove-AdfsFarmNode
+  href: ./Remove-AdfsFarmNode.yml
+syntaxes:
+- >-
+  Add-AdfsFarmNode [-OverwriteConfiguration] [-CertificateThumbprint <String>]
+
+   -GroupServiceAccountIdentifier <String> [-Credential <PSCredential>] -PrimaryComputerName <String>
+
+   [-PrimaryComputerPort <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-AdfsFarmNode [-OverwriteConfiguration] [-CertificateThumbprint <String>]
+
+   -ServiceAccountCredential <PSCredential> [-Credential <PSCredential>] -PrimaryComputerName <String>
+
+   [-PrimaryComputerPort <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-AdfsFarmNode [-CertificateThumbprint <String>] -ServiceAccountCredential <PSCredential>
+
+   [-Credential <PSCredential>] -SQLConnectionString <String> [-FarmBehavior <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-AdfsFarmNode [-CertificateThumbprint <String>] -GroupServiceAccountIdentifier <String>
+
+   [-Credential <PSCredential>] -SQLConnectionString <String> [-FarmBehavior <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a farm node'
+  code: |-
+    PS C:\> $fscredential = Get-Credential
+    PS C:\> Add-AdfsFarmNode -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=SQLHost;Integrated Security=True"
+  description: |-
+    This example adds the local server computer as a node in an existing federation server farm that uses a Microsoft SQL Server database installed on a computer named SQLHost.
+  summary: ""
+- title: 'Example 2: Add a farm node and overwrite the existing configuration'
+  code: |-
+    PS C:\> $fscredential = Get-Credential
+    PS C:\> Add-AdfsFarmNode -OverwriteConfiguration -PrimaryComputerName "PrimaryWIDHost" -PrimaryComputerPort 80 -ServiceAccountCredential $fscredential -CertificateThumbprint "8169c52b4ec6e77eb2ae17f028fe5da4e35c0bed"
+  description: |-
+    This example overwrites an existing AD FS configuration database and adds the local server computer as a node in an existing federation server farm that uses Windows Internal Database (WID) and whose primary node is installed on a computer named PrimaryWIDHost.
+
+    Note that the *PrimaryComputerPort* is required even if the default HTTP port of 80 is used and that the *CertificateThumbprint* parameter is only required if it is not already configured as a binding in IIS.
+    Also, when specifying a value for the *CertificateThumbprint* parameter, the value you use must specify the thumbprint of a certificate that is currently installed in the local machine My store, and the certificate must be the same certificate that is used as the SSL certificate on the primary node.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the certificate thumbprint of a digital public key X.509 certificate of a user account that has permission to perform this action.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a **PSCredential** object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: FarmBehavior
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupServiceAccountIdentifier
+  isRequired: true
+  description: |+
+    Specifies the Group Managed Service Account under which the Active Directory Federation Services (AD FS) service runs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverwriteConfiguration
+  description: |+
+    This parameter must be used to remove an existing AD FS configuration database and overwrite it with a new database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrimaryComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of the primary federation server in a federation server farm.
+    The cmdlet adds the computer to the federation server farm that has the primary federation server that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PrimaryComputerPort
+  description: |+
+    Specifies the primary computer port.
+    The computer uses the HTTP port that you specify to connect with the primary computer in order to synchronize configuration settings.
+    Specify a value of 80 for this parameter, or specify an alternate value if the HTTP port on the primary computer is not 80.
+    If this parameter is not specified, a default port value of 443 is assumed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ServiceAccountCredential
+  isRequired: true
+  description: |+
+    Specifies the Active Directory account under which the AD FS service runs.
+    All nodes in the farm must use the same service account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SQLConnectionString
+  isRequired: true
+  description: |+
+    Specifies the SQL Server database that will store the AD FS configuration settings.
+    If not specified, AD FS uses Windows Internal Database to store configuration settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Add-AdfsFarmNode
+name: Add-AdfsFarmNode
+description: |-
+  The **Add-AdfsFarmNode** cmdlet adds this computer to an existing federation server farm.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/add-adfsfarmnode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AdfsFarmNode

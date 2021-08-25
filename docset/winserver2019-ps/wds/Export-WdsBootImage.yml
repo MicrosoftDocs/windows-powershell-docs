@@ -1,0 +1,174 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports an existing boot image from an image store.
+module: WDS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_WdsBootImage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WdsBootImage
+  href: ./Get-WdsBootImage.yml
+- text: Set-WdsBootImage
+  href: ./Set-WdsBootImage.yml
+- text: Enable-WdsBootImage
+  href: ./Enable-WdsBootImage.yml
+- text: Disable-WdsBootImage
+  href: ./Disable-WdsBootImage.yml
+- text: Remove-WdsBootImage
+  href: ./Remove-WdsBootImage.yml
+- text: Import-WdsBootImage
+  href: ./Import-WdsBootImage.yml
+syntaxes:
+- >-
+  Export-WdsBootImage [-NewDescription <String>] -Destination <String> [-NewImageName <String>] [-Force]
+
+   -ImageName <String> -Architecture <Architecture> [-FileName <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Export a boot image'
+  code: |-
+    PS C:\> Export-WdsBootImage -Architecture x86 -Destination "D:\images\exported.wim" -ImageName "Fabrikam LOB setup (x86)" -NewDescription "Fabrikam LOB exported from server" -Force
+  description: |-
+    This command exports the boot image named Fabrikam LOB setup (x86) for the x86 architecture.
+    The command exports the image to the file that is named exported.wim.
+    The command specifies a description for the exported image.
+    The *Force* parameter specifies that the cmdlet overwrites a file that has the same name without prompting you for confirmation.
+  summary: ""
+parameters:
+- type: <xref href="Architecture" data-throw-if-not-resolved="False" />
+  name: Architecture
+  isRequired: true
+  description: |+
+    Specifies an architecture.
+    This is the architecture of the boot image.
+    Because you can use the same image name for boot images in different architectures, specify this parameter to make sure that you export the correct image.
+    The acceptable values for this parameter are:
+
+    - ARM
+    - ia64
+    - x64
+    - x86
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: X86, Ia64, X64, Arm
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Destination
+  isRequired: true
+  description: |+
+    Specifies the fully qualified path of the exported image.
+    The path must available to the Windows Deployment Services server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileName
+  description: |+
+    Specifies a file name.
+    This is the file name of the boot image.
+    Use this parameter to specify the file name for the boot image if the boot image name does not uniquely identify the image.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Indicates that the cmdlet overwrites an image file if the file is in the path that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImageName
+  isRequired: true
+  description: |+
+    Specifies the name of an image.
+    This is the name of the image to export.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewDescription
+  description: |+
+    Specifies a new description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewImageName
+  description: |+
+    Specifies a name for the image.
+    If you do not specify this parameter, the cmdlet uses the name of the source image for the name of the exported image.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WDS.Export-WdsBootImage
+name: Export-WdsBootImage
+description: |-
+  The **Export-WdsBootImage** cmdlet exports a boot image from the Windows Deployment Services image store to a Windows image file (.wim).
+  You can use the *Force* parameter to overwrite the image file if you export an image to a file that already exists.
+
+  Specify the boot image by using the *ImageName* and *Architecture* parameters.
+  If the image name and architecture do not uniquely identify the image, also specify the *FileName* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_WdsBootImage_v1.0.cdxml-help.xml
+  Module Name: WDS
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/wds/export-wdsbootimage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-WdsBootImage

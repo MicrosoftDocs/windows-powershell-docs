@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets high availability settings for RD Connection Broker servers for a Remote Desktop deployment.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDConnectionBrokerHighAvailability
+  href: ./Get-RDConnectionBrokerHighAvailability.yml
+syntaxes:
+- >-
+  Set-RDConnectionBrokerHighAvailability [[-ConnectionBroker] <String>] [-DatabaseConnectionString] <String>
+
+   [[-DatabaseSecondaryConnectionString] <String>] [[-DatabaseFilePath] <String>] [-ClientAccessName] <String>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set high availability settings for a dedicated database server'
+  code: |-
+    PS C:\> Set-RDConnectionBrokerHighAvailability -ConnectionBroker "RDCB.Contoso.com" -DatabaseConnectionString "DRIVER=SQL Server Native Client 10.0;SERVER=sqlserver.contoso.com;Trusted_Connection=Yes;APP=Remote Desktop Services Connection Broker;Database=RemoteDesktopDeployment" -DatabaseFilePath "C:\RDFiles\RemoteDesktopDeployment.mdf" -ClientAccessName "RemoteResources.Contoso.com"
+  description: |-
+    This command sets high availability settings for an RD Connection Broker server named RDCB.Contoso.com.
+    The command specifies a database connection string, and includes the path to the database.
+    The command specifies the client access name as RemoteResources.Contoso.com.
+  summary: ""
+- title: 'Example 2: Set high availability settings for a shared database server'
+  code: |-
+    PS C:\>Set-RDConnectionBrokerHighAvailability -ConnectionBroker "RDCB.Contoso.com" -DatabaseConnectionString "Driver={SQL Server Native Client 11.0};Server= sqlserver.contoso.com;Database= RemoteDesktopDeployment;Uid=admin1@wxm56whnww;Pwd=Password!;Encrypt=yes;Connection Timeout=30;" -DatabaseSecondaryConnectionString "Driver={SQL Server Native Client 11.0};Server= sqlserver.contoso.com;Database= RemoteDesktopDeployment;Uid=admin;Pwd=OtherPassword!;Encrypt=yes;Connection Timeout=30;"'-ClientAccessName "RemoteResources.Contoso.com"
+  description: |-
+    This command sets high availability settings for an RD Connection Broker server named RDCB.Contoso.com.
+    The command specifies a database connection string and a secondary connection string.
+    The command specifies the client access name as RemoteResources.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientAccessName
+  isRequired: true
+  description: |+
+    Specifies a Domain Name System (DNS) name for clients to use to connect to a Remote Desktop deployment.
+    This is the DNS round-robin name that contains fully qualified domain names (FQDNs) of the RD Connection Broker servers.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the RD Connection Broker server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the FQDN of the local computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseConnectionString
+  isRequired: true
+  description: |+
+    Specifies a connection string for the database that stores the high availability settings.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseFilePath
+  description: |+
+    Specifies a path to the database supplied by the *DatabaseConnectionString* parameter.
+    This parameter is optional.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseSecondaryConnectionString
+  description: |+
+    Specifies the secondary database connection string optionally used to support password expiration.
+    This string is used when the high availability configuration uses a shared database server (that is, where the method of authentication to the database server requires a user name and password).
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Set-RDConnectionBrokerHighAvailability
+name: Set-RDConnectionBrokerHighAvailability
+description: |-
+  The **Set-RDConnectionBrokerHighAvailability** cmdlet sets high availability settings for Remote Desktop Connection Broker (RD Connection Broker) servers for a Remote Desktop deployment.
+  You can use the Get-RDConnectionBrokerHighAvailability cmdlet to see current settings.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdconnectionbrokerhighavailability?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDConnectionBrokerHighAvailability

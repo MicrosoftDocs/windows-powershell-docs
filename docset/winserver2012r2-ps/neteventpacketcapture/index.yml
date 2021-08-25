@@ -1,0 +1,39 @@
+### YamlMime:PowershellModule
+children:
+- title: NetEventPacketCapture
+  cmdlets:
+  - NetEventPacketCapture.Add-NetEventNetworkAdapter
+  - NetEventPacketCapture.Add-NetEventPacketCaptureProvider
+  - NetEventPacketCapture.Add-NetEventProvider
+  - NetEventPacketCapture.Add-NetEventVmNetworkAdapter
+  - NetEventPacketCapture.Add-NetEventVmSwitch
+  - NetEventPacketCapture.Get-NetEventNetworkAdapter
+  - NetEventPacketCapture.Get-NetEventPacketCaptureProvider
+  - NetEventPacketCapture.Get-NetEventProvider
+  - NetEventPacketCapture.Get-NetEventSession
+  - NetEventPacketCapture.Get-NetEventVmNetworkAdapter
+  - NetEventPacketCapture.Get-NetEventVmSwitch
+  - NetEventPacketCapture.New-NetEventSession
+  - NetEventPacketCapture.Remove-NetEventNetworkAdapter
+  - NetEventPacketCapture.Remove-NetEventPacketCaptureProvider
+  - NetEventPacketCapture.Remove-NetEventProvider
+  - NetEventPacketCapture.Remove-NetEventSession
+  - NetEventPacketCapture.Remove-NetEventVmNetworkAdapter
+  - NetEventPacketCapture.Remove-NetEventVmSwitch
+  - NetEventPacketCapture.Set-NetEventPacketCaptureProvider
+  - NetEventPacketCapture.Set-NetEventProvider
+  - NetEventPacketCapture.Set-NetEventSession
+  - NetEventPacketCapture.Start-NetEventSession
+  - NetEventPacketCapture.Stop-NetEventSession
+uid: NetEventPacketCapture
+name: NetEventPacketCapture
+description: |-
+  This reference provides cmdlet descriptions and syntax for all NetEventPacketCapture cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
+  Help Version: 4.0.4.0
+  Locale: en-US
+  Module Guid: 7e984f2f-35da-48a2-a3c1-40ce59930a7c
+  Module Name: NetEventPacketCapture
+  ms.date: 10/29/2017
+  title: NetEventPacketCapture

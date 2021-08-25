@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a clustered file server for scale-out application data.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterFileServerRole
+  href: ./Add-ClusterFileServerRole.yml
+- text: Get-ClusterGroup
+  href: ./Get-ClusterGroup.yml
+- text: Move-ClusterGroup
+  href: ./Move-ClusterGroup.yml
+- text: Remove-ClusterGroup
+  href: ./Remove-ClusterGroup.yml
+- text: Start-ClusterGroup
+  href: ./Start-ClusterGroup.yml
+- text: Stop-ClusterGroup
+  href: ./Stop-ClusterGroup.yml
+syntaxes:
+- >-
+  Add-ClusterScaleOutFileServerRole [[-Name] <String>] [-Wait <Int32>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-ClusterScaleOutFileServerRole
+    Name                                    OwnerNode                               State 
+    ----                                    ---------                               ----- 
+    clusterSOFS                             CLUSTER-N2                              Online
+  description: |-
+    This example creates a highly available Scale-out file server role.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Add-ClusterScaleOutFileServerRole -Wait 0
+    Name                                    OwnerNode                               State 
+    ----                                    ---------                               ----- 
+    clusterSOFS                             CLUSTER-N2                              Pending
+  description: |-
+    This example creates a highly available scale out file server role.
+    The cmdlet completes without waiting for all resources to come online.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to create the highly available scale-out file server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the highly available scale-out file server being created.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the **Wait** parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterScaleOutFileServerRole
+name: Add-ClusterScaleOutFileServerRole
+description: |-
+  The **Add-ClusterScaleOutFileServerRole** cmdlet creates a clustered file server for scale-out application data.
+  A file server for scale-out application data provides storage for applications or virtual machines that leave files open for extended periods of time.
+  Client connections are distributed across nodes for better throughput.
+  This type of file server supports the Server Message Block (SMB) protocol.
+  It does not support the Network File System (NFS) protocol, or certain role services such as File Server Resource Manager (FSRM) or Distributed File System (DFS) Replication.
+
+  Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clusterscaleoutfileserverrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusterScaleOutFileServerRole

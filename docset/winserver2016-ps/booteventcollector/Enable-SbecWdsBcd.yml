@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables the BCD settings in the offline boot images imported into the WDS server.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_WdsBootImage" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet takes as input the Windows Deployment Services (WDS) Boot Image object(s) obtained from **Get-WdsBootImage**.
+    You can also specify a manually constructed hash table instead of an object if it contains the Architecture and FileName properties.
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Enable-SbecBcd
+  href: ./Enable-SbecBcd.yml
+- text: Enable-SbecBootImage
+  href: ./Enable-SbecBootImage.yml
+- text: New-SbecUnattendFragment
+  href: ./New-SbecUnattendFragment.yml
+syntaxes:
+- >-
+  Enable-SbecWdsBcd -BcdPath <String[]> -CollectorIp <String> -CollectorPort <UInt32> -Key <String>
+
+   [-BusParameters <String>] [-WdsRoot <String>] [-SkipNotifyWds] [<CommonParameters>]
+- >-
+  Enable-SbecWdsBcd [-Image <Array>] -CollectorIp <String> -CollectorPort <UInt32> -Key <String>
+
+   [-BusParameters <String>] [-WdsRoot <String>] [-SkipNotifyWds] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update boot images in WDS'
+  code: |-
+    PS C:\> Get-WdsBootImage | Enable-SbecWdsBcd -CollectorIp "192.168.1.1" -CollectorPort 50000 -Key "a.b.c.d"
+  description: |-
+    This command applies to all the boot images in WDS.
+  summary: ""
+- title: 'Example 2: Update a BCD file'
+  code: |-
+    PS C:\> Enable-SbecWdsBcd -BcdPath "c:\tmp\boot.wim.bcd" -CollectorIp "192.168.1.1" -CollectorPort 50000 -Key "a.b.c.d" -SkipNotifyWds
+  description: |-
+    This command updates the settings on a BCD file copied from WDS.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: BcdPath
+  isRequired: true
+  description: |+
+    Specifies the explicit path of the per-image BCD file(s).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BusParameters
+  description: |+
+    Specifies the bus parameters to use to select the NIC of the target computer for communication.
+    This value overrides the default choice of the first supported adapter.
+    This value applies to all the computers that use this image; it can be used only if the hardware of these computers is sufficiently homogeneous.
+    To find the value of bus parameters for a specific NIC on a machine, open Device Manager, and in Network Adapters select the desired device.
+    Right-click the device, select Properties, select the Details tab, and then select Location information.
+    It will display a string of the form PCI bus X, device Y, function Z.
+    The bus parameter to specify in this example is "X,Y,Z".
+
+  defaultValue: None
+  position: Named
+  aliases: BusParams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectorIp
+  isRequired: true
+  description: |+
+    Specifies the IPv4 address of the host on which the Boot Event Collector is located.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: CollectorPort
+  isRequired: true
+  description: |+
+    Specifies the port number (common for the target and collector).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Array" data-throw-if-not-resolved="False" />
+  name: Image
+  description: |+
+    Specifies the Windows Deployment Services (WDS) Boot Image object(s) obtained from **Get-WdsBootImage**.
+    You can also specify a manually constructed hash table instead of an object if it contains the Architecture and FileName properties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Key
+  isRequired: true
+  description: |+
+    Specifies the encryption key for the communication.
+    This value must match the key specified in the collector configuration for this target.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipNotifyWds
+  description: |+
+    Indicates that this operation does not notify the WDS service about the changed files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WdsRoot
+  description: |+
+    Specifies the root of the WDS directory tree.
+    By default, this value is obtained from the path of the exported SMB share REMINST.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Enable-SbecWdsBcd
+name: Enable-SbecWdsBcd
+description: |-
+  The **Enable-SbecWdsBcd** cmdlet enables the Boot Configuration Data (BCD) settings in the offline boot images imported into the WDS server.
+
+  After importing a boot image (such as one modified by **Enable-SbecBootImage**) into Windows Deployment Services (WDS), WDS automatically generates the BCD configuration for it.
+  Then, the boot event support must be enabled in this configuration.
+  Because this BCD file is specially formatted, you must explicitly enable it.
+
+  Because WDS does not support the separate per-client BCD files, sharing of the same BCD files by the clients means that they must use the same secret key for the communication with the Boot Event Collector.
+  The workaround is to use the common key for the setup, that can be either always be specified in the collector configuration as the second common key for all computers, or can be added to the collector configuration for the computers that are about to be set up, and removed after the setup is complete.
+
+  After modifying the BCD files, the WDS service must be notified (or restarted), to let it pick up the modified files.
+  This cmdlet performs this notification unless instructed otherwise.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/enable-sbecwdsbcd?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-SbecWdsBcd

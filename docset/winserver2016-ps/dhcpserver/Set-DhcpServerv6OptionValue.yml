@@ -1,0 +1,292 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets an IPv6 option value at the server, scope, or reservation level.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6OptionDefinition" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6OptionValue" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Reservation" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6OptionValue" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DhcpServerv6OptionValue
+  href: ./Get-DhcpServerv6OptionValue.yml
+- text: Remove-DhcpServerv6OptionValue
+  href: ./Remove-DhcpServerv6OptionValue.yml
+syntaxes:
+- >-
+  Set-DhcpServerv6OptionValue [-PassThru] [-Force] [[-Prefix] <IPAddress>] [-UserClass <String>]
+
+   [-ComputerName <String>] [-ReservedIP <IPAddress>] [-Value] <String[]> [-OptionId] <UInt32>
+
+   [-VendorClass <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-DhcpServerv6OptionValue [-PassThru] [-Force] [[-Prefix] <IPAddress>] [-UserClass <String>]
+
+   [-DnsServer <IPAddress[]>] [-DomainSearchList <String[]>] [-InfoRefreshTime <UInt32>] [-ComputerName <String>]
+
+   [-ReservedIP <IPAddress>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set server level option values'
+  code: |-
+    PS C:\> Set-DhcpServerv6OptionValue -ComputerName "dhcpserver.contoso.com" -DnsServer 2001:4898:7020:1020::2 -DomainSearchList "contoso.com"
+  description: |-
+    This example sets the DHCPv6 server level option values for DNS server and domain search list options.
+  summary: ""
+- title: 'Example 2: Set option values for a scope'
+  code: |-
+    PS C:\> Set-DhcpServerv6OptionValue -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020:: -DnsServer 2001:4898:7020:1020::2 -DomainSearchList "contoso.com"
+  description: |-
+    This example sets the DHCPv6 option values for DNS server and domain search list options on the scope 2001:4898:7020:1020::.
+  summary: ""
+- title: 'Example 3: Set service-wide option value for DNS server'
+  code: |-
+    PS C:\> Set-DhcpServerv6OptionValue -ComputerName "dhcpserver.contoso.com" -OptionId 23 -Value "2001:4898:7020:1020::2"
+  description: |-
+    This example sets server-wide DHCPv6 option value for option ID 23, or the DNS server.
+  summary: ""
+- title: 'Example 4: Set option value for DNS server for a scope'
+  code: |-
+    PS C:\> Set-DhcpServerv6OptionValue -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020:: -OptionId 23 -Value "2001:4898:7020:1020::2"
+  description: |-
+    This example sets the DHCPv6 option value for option ID 23, or the DNS server, for the specified DHCPv6 scope.
+  summary: ""
+- title: 'Example 5: Set option value for DNS server for a reservation'
+  code: |-
+    PS C:\> Set-DhcpServerv6OptionValue -ComputerName "dhcpserver.contoso.com" -ReservedIP 2001:4898:7020:1020::5 -OptionId 23 -Value "2001:4898:7020:1020::2"
+  description: |-
+    This example sets the DHCPv6 option value for option ID 23, or the DNS server, for the specified reservation.
+  summary: ""
+- title: 'Example 6: Set a vendor class specific option value'
+  code: |-
+    PS C:\> Set-DhcpServerv6OptionValue -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020:: -VendorClass "MSUCClient" -OptionId 5 -Value "6874747073"
+  description: |-
+    This example sets the vendor class specific DHCPv6 option value configured on the specified scope for the specified vendor class named MSUCClient.
+  summary: ""
+- title: 'Example 7: Set a user class specific option value for DNS server'
+  code: |-
+    PS C:\> Set-DhcpServerv6OptionValue -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020:: -UserClass "LabComputer" -OptionId 23 -Value "2001:4898:7020:1020::20"
+  description: |-
+    This example sets the user class specific DHCPv6 option value for option ID 23, or the DNS server, on the specified scope for the specified user class.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DnsServer
+  description: |+
+    Specifies one or more values for the DNS server option.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DomainSearchList
+  description: |+
+    Specifies one or more values for the domain search list option.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies that the DNS server validation is skipped.
+    This parameter is applicable only if the *DNSServer* parameter or option ID 23 is specified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: InfoRefreshTime
+  description: |+
+    Specifies the value for the information refresh option.
+    This parameter value specifies an upper bound for how long a client waits before refreshing information retrieved from DHCPv6 server.
+    This parameter is used with stateless DHCPv6 as there are no addresses or other entities with lifetimes that can tell the client when to contact the DHCPv6 server to refresh its configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: OptionId
+  isRequired: true
+  description: |+
+    Specifies the numeric identifier (ID) of the option for which a value is set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: Prefix
+  description: |+
+    Specifies the IPv6 subnet prefix of the scope on which the option value is set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: ReservedIP
+  description: |+
+    Specifies the IPv6 address of the reservation for which the option value is set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPAddress
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserClass
+  description: |+
+    Specifies the option value for the specified user class.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Value
+  isRequired: true
+  description: |+
+    Specifies the value to set for the option.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VendorClass
+  description: |+
+    Specifies the option value for the specified vendor class.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Set-DhcpServerv6OptionValue
+name: Set-DhcpServerv6OptionValue
+description: |-
+  The **Set-DhcpServerv6OptionValue** cmdlet sets an IPv6 option value at the server, scope, or reservation level.
+  The definition for the option must already exist on the Dynamic Host Configuration Protocol (DHCP) server service.
+  If you specify the *ReservedIP* parameter, the option values are set at the reservation level.
+  If you specify only the *Prefix* parameter, the option values are set at the scope level.
+  If you specify neither the *Prefix* nor *ReservedIP* parameter, the option values are set at the server level.
+  The *Prefix* and *ReservedIP* parameters cannot both be specified.
+
+  If you specify the *VendorClass* parameter, this cmdlet sets the option value for the specified vendor class.
+  If you specify the *UserClass* parameter, this cmdlet sets the option value for the specified user class.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerV6OptionValue_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv6optionvalue?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DhcpServerv6OptionValue

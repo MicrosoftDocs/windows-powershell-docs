@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables Request Tracing for the site specified.
+module: WebAdministration
+notes: ""
+links:
+- text: Disable-WebRequestTracing
+  href: ./Disable-WebRequestTracing.yml
+syntaxes:
+- >-
+  Enable-WebRequestTracing [[-Name] <String>] [-Directory <String>] [-MaxLogFiles <UInt32>]
+
+   [-MaxLogFileSize <UInt32>] [-CustomActions] [-StatusCodes <String>] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Enabling Request Tracing for the "Default Web Site" --------------'
+  code: |-
+    IIS:\>Enable-WebRequestTracing -Name "Default Web Site"
+  description: |-
+    Enables Request Tracing for the Default Web Site, which also automatically creates a rule that traces status code 500 errors.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CustomActions
+  description: |+
+    Specifies an action taken when a Request Tracing log file is generated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Directory
+  description: |+
+    The directory in which Request Tracing log files are stored.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxLogFiles
+  description: |+
+    The maximum number of log files to store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxLogFileSize
+  description: |+
+    The maximum file size of a single Request Tracing log file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the site for which tracing is enabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StatusCodes
+  description: |+
+    Status codes for which a default Request Tracing rule is configured.
+    The default code value is 500.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Enable-WebRequestTracing
+name: Enable-WebRequestTracing
+description: |-
+  This cmdlet enables Request Tracing, and automatically configures a site rule that traces responses that have a status value between 400 and 600.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/enable-webrequesttracing?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

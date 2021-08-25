@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The Publish-SslCertificate cmdlet is deprecated.
+  Instead, use the Set-AdfsSslCertificate cmdlet.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AdfsSslCertificate
+  href: ./Set-AdfsSslCertificate.yml
+syntaxes:
+- Publish-SslCertificate -Path <String> -Password <SecureString> [<CommonParameters>]
+- Publish-SslCertificate -RawPfx <Byte[]> -Password <SecureString> [<CommonParameters>]
+parameters:
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RawPfx
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Publish-SslCertificate
+name: Publish-SslCertificate
+description: |-
+  The **Publish-SslCertificate** cmdlet is deprecated in this release.
+  Instead, use the Set-AdfsSslCertificate cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/publish-sslcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Publish-SslCertificate

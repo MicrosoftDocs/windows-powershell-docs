@@ -1,0 +1,238 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a physical disk from a specified storage pool.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisks" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an array of MSFT_PhysicalDisk objects to the *PhysicalDisks* parameter
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StoragePool object to the *StoragePool* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_VirtualDisk object to the *VirtualDisk* parameter.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate output.
+links:
+- text: Add-PhysicalDisk
+  href: ./Add-PhysicalDisk.yml
+- text: Get-PhysicalDisk
+  href: ./Get-PhysicalDisk.yml
+- text: Reset-PhysicalDisk
+  href: ./Reset-PhysicalDisk.yml
+- text: Set-PhysicalDisk
+  href: ./Set-PhysicalDisk.yml
+- text: Get-StoragePool
+  href: ./Get-StoragePool.yml
+- text: Get-VirtualDisk
+  href: ./Get-VirtualDisk.yml
+syntaxes:
+- >-
+  Remove-PhysicalDisk [-StoragePool] <CimInstance> -PhysicalDisks <CimInstance[]> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-PhysicalDisk -PhysicalDisks <CimInstance[]> -VirtualDiskUniqueId <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-PhysicalDisk -PhysicalDisks <CimInstance[]> -VirtualDiskName <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-PhysicalDisk -PhysicalDisks <CimInstance[]> -VirtualDiskFriendlyName <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-PhysicalDisk -PhysicalDisks <CimInstance[]> [-VirtualDisk] <CimInstance> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-PhysicalDisk -PhysicalDisks <CimInstance[]> -StoragePoolUniqueId <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-PhysicalDisk -PhysicalDisks <CimInstance[]> -StoragePoolName <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-PhysicalDisk -PhysicalDisks <CimInstance[]> -StoragePoolFriendlyName <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> $PDToRemove = Get-PhysicalDisk -Friendlyname "PhysicalDisk25"
+    PS C:\> Remove-PhysicalDisk -PhysicalDisks $PDToRemove -StoragePoolFriendlyName "DemoPool"
+  description: |-
+    This example removes a specific Physical Disk object from the specified storage pool.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PhysicalDisks
+  isRequired: true
+  description: |+
+    Accepts one or more PhysicalDisk objects as input.
+    The Physical Disk CIM objects represent the physical disks to be removed from the storage pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StoragePool
+  isRequired: true
+  description: |+
+    Specifies a storage pool as a **CimInstance** object.
+    The cmdlet removes the physical disk associated with storage pool that you specify.
+    To obtain a storage pool object, use the Get-StoragePool cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StoragePoolFriendlyName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the storage pool from which to remove the physical disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StoragePoolName
+  isRequired: true
+  description: |+
+    Specifies the name of the storage pool from which to remove the physical disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StoragePoolUniqueId
+  isRequired: true
+  description: |+
+    Specifies the ID of the storage pool from which to remove the physical disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: VirtualDisk
+  isRequired: true
+  description: |+
+    Specifies a virtual disk as a **CimInstance** object.
+    The cmdlet removes the physical disk associated with virtual disk that you specify.
+    To obtain a virtual disk object, use the Get-VirtualDisk cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDiskFriendlyName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the virtual disk from which to remove the physical disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDiskName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual disk from which to remove the physical disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDiskUniqueId
+  isRequired: true
+  description: |+
+    Specifies the ID of the virtual disk from which to remove the physical disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Storage.Remove-PhysicalDisk
+name: Remove-PhysicalDisk
+description: |-
+  The **Remove-PhysicalDisk** cmdlet removes a physical disk from a specified storage pool.
+
+
+  If sufficient space does not exist in the storage pool to tolerate this removal, then data loss can result (the user is warned about this).
+  If the user configuration allows, then the user should add a replacement physical disk to the pool prior to removal of the old one.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: StorageCmdlets.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/remove-physicaldisk?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-PhysicalDisk

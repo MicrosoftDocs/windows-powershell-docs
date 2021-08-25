@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Queries the Network Controller for REST information.
+module: NetworkControllerDiagnostics
+notes: ""
+links:
+- text: Get-NetworkControllerReplica
+  href: ./Get-NetworkControllerReplica.yml
+syntaxes:
+- >-
+  Get-NetworkControllerDeploymentInfo [-NetworkController] <String> [[-Credential] <PSCredential>]
+
+   [[-RestURI] <String>] [[-CertificateThumbprint] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get configuration state for all REST resources for a Network Controller'
+  code: |-
+    PS C:\>$Credential = Get-Credential
+    PS C:\> Get-NetworkControllerDeploymentInfo -NetworkController "NC-0.contoso.cloud.com" -Credential $Credential
+  description: |-
+    The first command creates credentials by using the Get-Credential cmdlet, and then stores it in the $Credential variable.
+    The command prompts you for user name and password.
+
+    The second command gets configuration state for all REST resources for a Network Controller.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies certificate thumbprint to use for the Network Controller.
+    Specify this parameter for certificate deployment.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a credential to use for the Network Controller.
+    Specify this parameter for Kerberos deployment.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkController
+  isRequired: true
+  description: |+
+    Specifies the name or IP address of a Network Controller node.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RestURI
+  description: |+
+    Specifies the URI to use for Network Controller REST APIs.
+    Specify this parameter for wildcard certificate deployment.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkControllerDiagnostics.Get-NetworkControllerDeploymentInfo
+name: Get-NetworkControllerDeploymentInfo
+description: |-
+  The **Get-NetworkControllerDeploymentInfo** cmdlet queries the Network Controller for Representational State Transfer (REST) information, such the REST URI and the REST Certificate.
+
+  You can run this cmdlet from a computer that has Layer-3 connectivity to the Network Controller.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Debug-NetworkController-help.xml
+  Module Name: NetworkControllerDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontrollerdiagnostics/get-networkcontrollerdeploymentinfo?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerDeploymentInfo

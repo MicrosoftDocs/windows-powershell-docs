@@ -1,0 +1,29 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cancels the currently running backup job.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssBackupJob
+  href: ./Get-WssBackupJob.yml
+- text: Start-WssBackupJob
+  href: ./Start-WssBackupJob.yml
+syntaxes:
+- Stop-WssBackupJob
+examples:
+- title: '-------------------------- EXAMPLE Example 1: Stop a backup job --------------------------'
+  code: |-
+    PS C:\> Stop-WssBackupJob
+  description: |-
+    This command cancels the current backup job.
+  summary: |+
+    Example : Stop a backup job
+uid: WssCmdlets.Stop-WssBackupJob
+name: Stop-WssBackupJob
+description: |-
+  The **Stop-WssBackupJob** cmdlet cancels the currently running backup job.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/stop-wssbackupjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

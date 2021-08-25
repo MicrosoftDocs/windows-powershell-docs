@@ -1,0 +1,197 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an object that contains a scheduled task principal.
+module: ScheduledTasks
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_TaskPrincipal" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ScheduledTaskInfo
+  href: ./Get-ScheduledTaskInfo.yml
+- text: New-ScheduledTaskAction
+  href: ./New-ScheduledTaskAction.yml
+- text: New-ScheduledTaskSettingsSet
+  href: ./New-ScheduledTaskSettingsSet.yml
+- text: New-ScheduledTaskTrigger
+  href: ./New-ScheduledTaskTrigger.yml
+- text: Register-ScheduledTask
+  href: ./Register-ScheduledTask.yml
+syntaxes:
+- >-
+  New-ScheduledTaskPrincipal [[-Id] <String>] [[-RunLevel] <RunLevelEnum>]
+
+   [[-ProcessTokenSidType] <ProcessTokenSidTypeEnum>] [[-RequiredPrivilege] <String[]>] [-UserId] <String>
+
+   [[-LogonType] <LogonTypeEnum>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  New-ScheduledTaskPrincipal [-GroupId] <String> [[-Id] <String>] [[-RunLevel] <RunLevelEnum>]
+
+   [[-ProcessTokenSidType] <ProcessTokenSidTypeEnum>] [[-RequiredPrivilege] <String[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Register a scheduled task by using a user ID for a task principal'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+
+    The second command creates a scheduled task principal. The **New-ScheduledTaskPrincipal** cmdlet specifies that Task Scheduler uses the Local Service account to run tasks, and that the Local Service account uses the Service Account logon. The command assigns the **ScheduledTaskPrincipal** object to the $STPrin variable.
+    PS C:\>$STPrin = New-ScheduledTaskPrincipal -UserId "LOCALSERVICE" -LogonType ServiceAccount
+
+    The third command registers the scheduled task Task01 to run the task action named Cmd. The **Principal** parameter specifies that the Task Scheduler uses the Local Service account to run the task. 
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Principal $STPrin
+  description: |-
+    This example registers a scheduled task that will run as the Local Service account.
+
+    The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable.
+  summary: ""
+- title: 'Example 2: Register a scheduled task by using a user group for a task principal'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction cmd
+
+    The second command creates a scheduled task principal. The **New-ScheduledTaskPrincipal** cmdlet specifies that Task Scheduler uses the Administrators user group that has the highest privileges to run tasks. The command assigns the **ScheduledTaskPrincipal** object to the $STPrin variable.
+    PS C:\>$STPrin = New-ScheduledTaskPrincipal -GroupId "BUILTIN\Administrators" -RunLevel Highest
+
+    The third command registers the scheduled task Task01 to run the task action named Cmd. The *Principal* parameter specifies that Task Scheduler uses the Administrators user group to run the task.
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Principal $STPrin
+  description: |-
+    This example registers a scheduled task that runs under logged-in members of the Administrators user group that has the highest privileges.
+
+    The first command creates a scheduled task action named cmd and assigns the **ScheduledTaskAction** object to the $Sta variable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    Specifies the ID of a user group that Task Scheduler uses to run the tasks that are associated with the principal.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    Specifies the ID of a scheduled task principal.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LogonTypeEnum" data-throw-if-not-resolved="False" />
+  name: LogonType
+  description: |+
+    Specifies the security logon method that Task Scheduler uses to run the tasks that are associated with the principal.
+    The acceptable values for this parameter are:
+
+    - None
+    - Password
+    - S4U
+    - Interactive
+    - Group
+    - ServiceAccount
+    - InteractiveOrPassword
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: None, Password, S4U, Interactive, Group, ServiceAccount, InteractiveOrPassword
+- type: <xref href="ProcessTokenSidTypeEnum" data-throw-if-not-resolved="False" />
+  name: ProcessTokenSidType
+  description: |+
+    Specifies the security ID (SID) type of the process token.
+    The acceptable values for this parameter are:
+
+    - None
+    - Unrestricted
+    - Default
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: None, Unrestricted, Default
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RequiredPrivilege
+  description: |+
+    Specifies an array of user rights that Task Scheduler uses to run the tasks that are associated with the principal.
+    Specify the constant name that is associated with a user right.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RunLevelEnum" data-throw-if-not-resolved="False" />
+  name: RunLevel
+  description: |+
+    Specifies the level of user rights that Task Scheduler uses to run the tasks that are associated with the principal.
+    The acceptable values for this parameter are:
+
+    - Highest.
+    Tasks run by using the highest privileges.
+    - Limited.
+    Tasks run by using the least-privileged user account (LUA).
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: Limited, Highest
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserId
+  isRequired: true
+  description: |+
+    Specifies the user ID that Task Scheduler uses to run the tasks that are associated with the principal.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ScheduledTasks.New-ScheduledTaskPrincipal
+name: New-ScheduledTaskPrincipal
+description: |-
+  The **New-ScheduledTaskPrincipal** cmdlet creates an object that contains a scheduled task principal.
+  Use a scheduled task principal to run a task under the security context of a specified account.
+  When you use a scheduled task principal, Task Scheduler can run the task regardless of whether that account is logged on.
+
+  You can use the definition of a scheduled task principal to register a new scheduled task or update an existing task registration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
+  Module Name: ScheduledTasks
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/scheduledtasks/new-scheduledtaskprincipal?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-ScheduledTaskPrincipal

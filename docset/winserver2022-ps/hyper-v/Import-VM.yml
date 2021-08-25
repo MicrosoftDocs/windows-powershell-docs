@@ -1,0 +1,212 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports a virtual machine from a file.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Import-VM [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Path] <String> [-Register] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Import-VM [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Path] <String> [[-VhdDestinationPath] <String>] [-Copy] [-VirtualMachinePath <String>]
+
+   [-SnapshotFilePath <String>] [-SmartPagingFilePath <String>] [-VhdSourcePath <String>] [-GenerateNewId]
+
+   [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Import-VM [-CompatibilityReport] <VMCompatibilityReport> [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx'
+  description: |-
+    Imports the virtual machine from its configuration file.
+    The virtual machine is registered in-place, so its files are not copied.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' -Copy -GenerateNewId
+  description: |-
+    Imports the virtual machine by copying its files to the default virtual machine and virtual hard drive storage locations of the Hyper-V host.
+    The imported virtual machine will be given a new unique identifier, not the one in the configuration file.
+    This is useful when you want to import multiple copies of a virtual machine, since each virtual machine must have a unique identifier.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMCompatibilityReport" data-throw-if-not-resolved="False" />
+  name: CompatibilityReport
+  isRequired: true
+  description: |+
+    Specifies a compatibility report which resolves any incompatibilities between the virtual machine and the Hyper-V host.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which the virtual machine is to be imported.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Copy
+  isRequired: true
+  description: |+
+    Specifies that the imported virtual machine's files should be copied to the server's default locations, as opposed to registering the virtual machine in-place.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GenerateNewId
+  description: |+
+    Specifies that the imported virtual machine should be copied and given a new unique identifier.
+    (By default, **Import-VM** gives the new virtual machine the same unique identifier as the imported virtual machine.)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path to the exported virtual machine to be imported.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Register
+  description: |+
+    Specifies that the imported virtual machine is to be registered in-place, as opposed to copying its files to the server's default locations.
+    Choose this option if the virtual machines files are already in the location from which they are to run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SmartPagingFilePath
+  description: |+
+    Specifies the new path to use for a smart paging file, if one is needed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SnapshotFilePath
+  description: |+
+    Specifies the path for any snapshot files associated with the virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: CheckpointFileLocation, SnapshotFileLocation
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VhdDestinationPath
+  description: |+
+    Specifies the folder to which the virtual machine's VHD files are to be copied.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VhdSourcePath
+  description: |+
+    Specifies the folder from which the virtual machine's VHD files are to be copied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualMachinePath
+  description: |+
+    Specifies the path where the virtual machine configuration files are to be stored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Import-VM
+name: Import-VM
+description: |-
+  The **Import-VM** cmdlet imports a virtual machine from a file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/import-vm?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-VM

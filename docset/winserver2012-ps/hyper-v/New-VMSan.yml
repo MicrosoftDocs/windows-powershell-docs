@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new virtual storage area network (SAN) on a Hyper-V host.
+module: Hyper-V
+notes: ""
+syntaxes:
+- >-
+  New-VMSan [-Name] <String> [-ComputerName <String>] [-HostBusAdapter <CimInstance[]>] [-Note <String>]
+
+   [-Confirm] [-WhatIf]
+- >-
+  New-VMSan [-Name] <String> [-ComputerName <String>] [-Note <String>] -WorldWideNodeName <String[]>
+
+   -WorldWidePortName <String[]> [-Confirm] [-WhatIf]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>New-VMSan -Name Production -Note "Production SAN" -WorldWideNodeName C003FF0000FFFF00 -WorldWidePortName C003FF5778E50002
+  description: |-
+    Creates a new virtual storage area network (SAN) with the specified Name, Note, WorldWideNodeName, and WorldWidePortName.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the friendly name of a Hyper-V host on which the new virtual storage area network (SAN) is to be created.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HostBusAdapter
+  description: |+
+    Specifies the host bus adapter (HBA) to be associated with the virtual storage area network (SAN) to be created.
+    This can be retrieved by running the Get-InitiatorPort cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the virtual storage area network (SAN) to be created.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Note
+  description: |+
+    Specifies a note to be associated with the virtual storage area network (SAN) to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: WorldWideNodeName
+  isRequired: true
+  description: |+
+    Specifies the world wide node name (WWNN) of the host bus adapters to be associated with the virtual storage area network (SAN) to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: WorldWidePortName
+  isRequired: true
+  description: |+
+    Specifies the world wide port name (WWPN) of the host bus adapters to be associated with the virtual storage area network (SAN) to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.New-VMSan
+name: New-VMSan
+description: |-
+  The **New-VMSan** cmdlet creates a new virtual storage area network (SAN) on a Hyper-V host.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/new-vmsan?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

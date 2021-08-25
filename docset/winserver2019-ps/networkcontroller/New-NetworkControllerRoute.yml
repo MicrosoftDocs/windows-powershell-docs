@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet adds a new route to the Network Controller
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties can be added/modified for a route:
+    a.
+    Address prefix
+    b.
+    Next hop type
+    c.
+    Next hop IP address
+syntaxes:
+- >-
+  New-NetworkControllerRoute -ConnectionUri <Uri> -Properties <RouteProperties> -ResourceId <string>
+
+   -RouteTableId <string> [-CertificateThumbPrint <string>] [-Credential <PSCredential>] [-Etag <string>]
+
+   [-Force] [-ResourceMetadata <ResourceMetadata>]
+examples:
+- title: Example 1
+  code: |-
+    $route = new-object Microsoft.Windows.NetworkController.Route
+    $route.properties = new-object Microsoft.Windows.NetworkController.RouteProperties
+    $route.properties.AddressPrefix = "0.0.0.0/0"
+    $route.properties.nextHopType = "VirtualAppliance"
+    $route.properties.nextHopIpAddress = "192.168.1.10"
+    New-NetworkControllerRoute -ConnectionUri https://networkcontroller -RouteTableId "Table1" -ResourceId "DefaultRoute" -Properties $route.properties
+  description: ""
+  summary: |+
+    The above cmdlet adds a new route to a route table named Table1.
+    The next hop of this route is a virtual appliance.
+
+
+parameters:
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: CertificateThumbPrint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+    This thumbprint must also be provided in the ClientCertificateThumbprint parameter in the Install-NetworkController or Set-NetworkController cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.This user must be present in the security group provided in the ClientSecurityGroup parameter in the Install-NetworkController cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="switch" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RouteProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Following properties can be added/modified for a route:
+    a.
+    Address prefix
+    b.
+    Next hop type
+    c.
+    Next hop IP address
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the unique ID of the route
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    This parameter contains metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: RouteTableId
+  isRequired: true
+  description: |+
+    Specifies the route table where the route is being added
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerRoute
+name: New-NetworkControllerRoute
+description: |-
+  This cmdlet adds a new route to the Network Controller.
+  This route is added to a route table.
+  If you want to route traffic to virtual appliances in your environment, you can specify routes and associate them to a virtual subnet.
+  Subnets rely on system routes until a route table is associated to the subnet.
+  After an association exists, routing is done based on Longest Prefix Match (LPM) among both user defined routes and system routes. 
+  If there is more than one route with the same LPM match, then the user defined route is selected first - before the system route.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollerroute?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerRoute

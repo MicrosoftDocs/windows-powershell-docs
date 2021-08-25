@@ -1,0 +1,31 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays the mode for the App-V Client.
+module: AppVClient
+notes: ""
+outputs:
+- name: <xref href="Microsoft.AppV.AppvClientPowerShell.AppvClientMode" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generat **AppvClientMode** object that describes the current Appv Client mode, either Normal or Uninstall.
+links:
+- text: Set-AppvClientMode
+  href: ./set-appvclientmode.yml
+syntaxes:
+- Get-AppvClientMode [<CommonParameters>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+uid: AppVClient.Get-AppvClientMode
+name: Get-AppvClientMode
+description: |-
+  The **Get-AppvClientMode** cmdlet displays the mode that the Microsoft Application Virtualization (App-V) Client is currently set to.
+  Valid values are Normal and Uninstall.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Get-AppvClientMode

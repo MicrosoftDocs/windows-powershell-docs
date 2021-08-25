@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Collects resource utilization data for a virtual machine or resource pool.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.HyperV.PowerShell.VMResourcePoolType" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Measure-VM
+  href: ./Measure-VM.yml
+- text: Measure-VMResourcePool
+  href: ./Measure-VMResourcePool.yml
+- text: Disable-VMResourceMetering
+  href: ./Disable-VMResourceMetering.yml
+syntaxes:
+- Enable-VMResourceMetering [-ComputerName <String[]>] [-VMName] <String[]> [<CommonParameters>]
+- >-
+  Enable-VMResourceMetering [-ComputerName <String[]>] [-ResourcePoolName] <String>
+
+   [[-ResourcePoolType] <VMResourcePoolType>] [<CommonParameters>]
+- Enable-VMResourceMetering [-VM] <VirtualMachine[]> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Enable-VMResourceMetering -VMName TestVM
+  description: |-
+    This example starts collecting resource utilization data on a virtual machine named TestVM.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-VM TestVM | Enable-VMResourceMetering
+    PS C:\> Get-VM TestVM | Format-List Name,ResourceMeteringEnabled
+  description: |-
+    This example starts collecting resource utilization data on a resource pool named TestResourcePool.
+    (You can determine whether resource metering is enabled for a resource pool by querying its ResourceMeteringEnabled property.)
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Enable-VMResourceMetering -ResourcePoolName TestResourcePool -ResourcePoolType Memory
+    PS C:\> Get-VMResourcePool -Name TestResourcePool -ResourcePoolType Memory | Format-List Name,ResourceMeteringEnabled
+  description: |-
+    This example uses two commands that show resource metering being enabled and then obtain the data.
+    The first command starts collecting resource utilization data for a memory resource pool named TestResourcePool.
+    (You can determine whether resource metering is enabled for a resource pool by querying its ResourceMeteringEnabled property.) The second command retrieves the data in and formats it as a list.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Enable-VMResourceMetering -Name TestResourcePool -ResourcePoolType @("Processor","VHD","Ethernet","Memory")
+  description: |-
+    This example begins collecting resource utilization data on multiple resource pools with the name TestResourcePool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies the virtual machine host or hosts on which resource utilization data collection is to be enabled.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourcePoolName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the resource pool for which you want to collect resource utilization data.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="VMResourcePoolType" data-throw-if-not-resolved="False" />
+  name: ResourcePoolType
+  description: |+
+    Specifies the resource type of the resource pool for which you want to collect resource utilization data.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Ethernet, Memory, Processor, VHD
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine for which you want to collect resource utilization data.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the virtual machine for which you want to collect resource utilization data.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Enable-VMResourceMetering
+name: Enable-VMResourceMetering
+description: |-
+  The **Enable-VMResourceMetering** cmdlet starts collecting resource utilization data for a virtual machine or resource pool.
+
+  You can use the Measure-VM or Measure-VMResourcePool cmdlet to obtain this data.
+
+  If resource metering is enabled but no **NetworkAdapterAcls** are configured, Hyper-V configures them to measure total network traffic.
+  To measure network traffic through an IP range, configure the **NetworkAdapterAcls** for the IP range before calling this cmdlet.
+  (See Add-VMNetworkAdapterAcl for more information.)
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/enable-vmresourcemetering?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-VMResourceMetering

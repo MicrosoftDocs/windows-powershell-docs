@@ -1,0 +1,204 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Submits a certificate request to an enrollment server and installs the response or retrieves a certificate for a previously submitted request.
+module: pki
+notes: ""
+inputs:
+- name: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="False" />
+  description: |-
+    The Certificate object can either be provided as a Path object to a certificate or an **X509Certificate2** object.
+- name: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  description: |-
+    The **Uri** object can also be pipelined by the Url property name.
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.EnrollmentResult" data-throw-if-not-resolved="False" />
+  description: |-
+    The EnrollmentResult object contains the results of enrollment.
+links:
+- text: Get-ChildItem
+  href: https://go.microsoft.com/fwlink/p/?LinkId=290488
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/p/?LinkId=293936
+- text: Set-Location
+  href: https://go.microsoft.com/fwlink/p/?LinkId=293912
+- text: System Store Locations
+  href: https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations
+syntaxes:
+- >-
+  Get-Certificate [-Url <Uri>] -Template <String> [-SubjectName <String>] [-DnsName <String[]>]
+
+   [-Credential <PkiCredential>] [-CertStoreLocation <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Get-Certificate -Request <Certificate> [-Credential <PkiCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>$up = Get-Credential
+
+    PS C:\>Get-Certificate -Template SslWebServer -DnsName www.contoso.com,www.fabrikam.com -Url https://www.contoso.com/Policy/service.svc -Credential $up -CertStoreLocation cert:\LocalMachine\My
+  description: |-
+    This example submits a certificate request for the SslWebServer template to the specific URL using the user name and password credentials.
+    The request will have two DNS names in it.
+    This is for a certificate in the machine store.
+    If the request is issued, then the returned certificate is installed in the machine MY store and the certificate in the EnrollmentResult structure is returned with the status Issued.
+    If the request is made pending, then the request is installed in the machine REQUEST store and the request in the EnrollmentResult structure is returned with the status Pending.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$cert = Get-ChildItem -Path cert:\LocalMachine\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
+
+    PS C:\>$enrollResult = Get-Certificate -Template SslWebServer -DnsName www.contoso.com -Url https://www.contoso.com/policy/service.svc -Credential $cert -CertStoreLocation cert:\LocalMachine\My
+  description: |-
+    This example submits a certificate request to a specific URL using the certificate credential for authentication.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Set-Location -Path cert:\LocalMachine\My
+
+    PS cert:\LocalMachine\My>$enrollResult = Get-Certificate -Template WorkstationTemplate -Url https://www.contoso.com/service.svc
+  description: |-
+    This example authenticates the URL using the machine account and Windows integrated authentication and submits a request for a machine certificate of template named WorkstationTemplate.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\>Set-Location -Path cert:\CurrentUser\My
+
+    PS cert:\CurrentUser\My>Get-Certificate -Template User -Url ldap:
+  description: |-
+    This example uses Windows integrated authentication to enroll for a certificate of template User using direct DCOM calls to the CA.
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    PS C:\>$request = Get-ChildItem -Path cert:\LocalMachine\Request\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
+
+    PS C:\>$up = Get-Credential
+
+    PS C:\>Get-Certificate -Request $request -Credential $up
+  description: |-
+    This example retrieves and submits a pending request using a user name and password as credentials.
+  summary: ""
+- title: EXAMPLE 6
+  code: |-
+    PS C:\>$request = Get-ChildItem -Path cert:\LocalMachine\Request\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
+
+    PS C:\>Get-Certificate -Request $request
+  description: |-
+    This example retrieves the certificate identified by $request.
+    If the authentication type for $request.EnrollmentServer.AuthType is not Kerberos, then look in the credential store to see if there is a credential for $request.EnrollmentServer.Url.
+    If there is a credential, then use it.
+    If there is no credential, then Windows PowerShell® will request it (if Windows PowerShell is in Interactive mode).
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertStoreLocation
+  description: |+
+    Specifies the path to the certificate store for the received certificate.
+    If the request is made pending, then the request object is saved in the corresponding request store.
+    Note: Only My store is supported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PkiCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credential to use for certificate enrollment.
+    The credential can be a user name and password (a credential object), an X509 certificate, or the path to a certificate.
+    If a credential is not specified, then Kerberos authentication is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DnsName
+  description: |+
+    Specifies one or more DNS names to be included in the certificate request as subject alternative name extension.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Certificate" data-throw-if-not-resolved="False" />
+  name: Request
+  isRequired: true
+  description: |+
+    Specifies the X509 certificate or the path to a requested certificate located in the request store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SubjectName
+  description: |+
+    Specifies the subject name to be included in the certificate request.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Template
+  isRequired: true
+  description: |+
+    Specifies the object identifier or name of a certificate template to use with the certificate request.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Url
+  description: |+
+    Specifies the policy server URL to use for certificate enrollment.
+    Credentials are required if the endpoint requires a user name and password or certificate authentication from the client.
+    If credentials are not found and Windows PowerShell® is in interactive mode, then a prompt for credentials will appear.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: pki.Get-Certificate
+name: Get-Certificate
+description: |-
+  The **Get-Certificate** cmdlet can be used to submit a certificate request and install the resulting certificate, install a certificate from a pending certificate request, and enroll for ldap.
+  If the request is issued, then the returned certificate is installed in the store determined by the **CertStoreLocation** parameter and return the certificate in the EnrollmentResult structure with status Issued.
+  If the request is made pending, then the request is installed in the machine REQUEST store and a request is returned in the EnrollmentResult structure with status Pending.
+
+  This cmdlet can be used in a Stateless mode where this cmdlet does not look up anything in the vault or in a Stateful mode where it looks at registered certificate enrollment policy servers by identifier (ID) and credential.
+  When used with a request object and no credential, this cmdlet will look up credentials in the vault based on the URL for the enrollment policy server.
+
+  This cmdlet will not accept a policy server identifier (ID).
+  If a URL is not specified, then only the default certificate enrollment policy ID is used and the cmdlet will attempt to obtain policy information from any of its URLs.
+
+  Delegation may be required when using this cmdlet with Windows PowerShell® remoting and changing user configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  Module Name: pki
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/pki/get-certificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-Certificate

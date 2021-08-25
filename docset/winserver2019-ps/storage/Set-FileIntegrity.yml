@@ -1,0 +1,162 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets integrity for a file on an ReFS volume.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="System.IO.FileInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    To obtain a **FileInfo** object, use the [Get-Item](https://go.microsoft.com/fwlink/?LinkID=290495) cmdlet for a specified file name.
+    The cmdlet uses the **FullName** property as the value of the *FileName* parameter.
+- name: <xref href="System.IO.DirectoryInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    To obtain a **DirectoryInfo** object, use **Get-Item** for a specified directory name.
+    The cmdlet uses the **FullName** property as the value of the *FileName* parameter.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-FileIntegrity
+  href: ./Get-FileIntegrity.yml
+- text: Repair-FileIntegrity
+  href: ./Repair-FileIntegrity.yml
+syntaxes:
+- >-
+  Set-FileIntegrity [-FileName] <String> [[-Enable] <Boolean>] [-Enforce <Boolean>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable integrity'
+  code: |-
+    PS C:\>Set-FileIntegrity -FileName 'H:\Temp\New Text Document.txt' -Enable $True
+    PS C:\> Get-FileIntegrity 'H:\Temp\New Text Document.txt'
+    FileName                                Enabled                              Enforced
+
+    --------                                -------                              --------
+
+    H:\Temp\New Text Document.txt           True                                 True
+  description: |-
+    The first command enables integrity for a file by specifying the *Enable* parameter.
+
+    The second command uses the Get-FileIntegrity cmdlet to display the file integrity settings for the specified file.
+  summary: ""
+- title: 'Example 2: Enable integrity for multiple files by using the pipeline'
+  code: |-
+    PS C:\>Get-Item -Path 'H:\Temp\*' | Set-FileIntegrity -Enable $True
+    PS C:\> Get-Item -Path 'H:\Temp\*' | Get-FileIntegrity
+    FileName                                Enabled                              Enforced
+
+    --------                                -------                              --------
+
+    H:\Temp\New Text Document 07 21         True                                 True
+
+    H:\Temp\New Text Document 08 19         True                                 True
+
+    H:\Temp\New Text Document 08 22         True                                 True
+
+    H:\Temp\New Text Document 09 07         True                                 True
+  description: |-
+    The first command uses the [Get-Item](https://go.microsoft.com/fwlink/?LinkID=290495) cmdlet to get all the files in the specified folder, and then passes them to the current cmdlet by using the pipeline operator.
+    For more information, type `Get-Help Get-Item`.
+    The command enables integrity for each file in the directory.
+
+    The second command uses **Get-Item** to get all the files in the specified folder, and then passes them to the Get-FileIntegrity by using the pipeline operator.
+    The command displays the file integrity setting for all the files in the folder.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enable
+  description: |+
+    Indicates whether to enable integrity for the file.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enforce
+  description: |+
+    Indicates whether to enable blocking access to a file if integrity streams indicate data corruption.
+
+    If you specify a value of $True for this parameter, the cmdlet also enables integrity for the file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileName
+  isRequired: true
+  description: |+
+    Specifies a file name.
+    The cmdlet modifies integrity for the file that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: FullName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Storage.Set-FileIntegrity
+name: Set-FileIntegrity
+description: |-
+  The **Set-FileIntegrity** cmdlet sets integrity for a file on a Resilient File System (ReFS) volume.
+  You can enable or disable integrity.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: FileIntegrity.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/set-fileintegrity?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-FileIntegrity

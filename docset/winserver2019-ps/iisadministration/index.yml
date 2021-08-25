@@ -1,0 +1,51 @@
+### YamlMime:PowershellModule
+children:
+- title: IISAdministration
+  cmdlets:
+  - IISAdministration.Clear-IISCentralCertProvider
+  - IISAdministration.Clear-IISConfigCollection
+  - IISAdministration.Disable-IISCentralCertProvider
+  - IISAdministration.Disable-IISSharedConfig
+  - IISAdministration.Enable-IISCentralCertProvider
+  - IISAdministration.Enable-IISSharedConfig
+  - IISAdministration.Export-IISConfiguration
+  - IISAdministration.Get-IISAppPool
+  - IISAdministration.Get-IISCentralCertProvider
+  - IISAdministration.Get-IISConfigAttributeValue
+  - IISAdministration.Get-IISConfigCollection
+  - IISAdministration.Get-IISConfigCollectionElement
+  - IISAdministration.Get-IISConfigElement
+  - IISAdministration.Get-IISConfigSection
+  - IISAdministration.Get-IISServerManager
+  - IISAdministration.Get-IISSharedConfig
+  - IISAdministration.Get-IISSite
+  - IISAdministration.Get-IISSiteBinding
+  - IISAdministration.New-IISConfigCollectionElement
+  - IISAdministration.New-IISSite
+  - IISAdministration.New-IISSiteBinding
+  - IISAdministration.Remove-IISConfigAttribute
+  - IISAdministration.Remove-IISConfigCollectionElement
+  - IISAdministration.Remove-IISConfigElement
+  - IISAdministration.Remove-IISSite
+  - IISAdministration.Remove-IISSiteBinding
+  - IISAdministration.Reset-IISServerManager
+  - IISAdministration.Set-IISCentralCertProvider
+  - IISAdministration.Set-IISCentralCertProviderCredential
+  - IISAdministration.Set-IISConfigAttributeValue
+  - IISAdministration.Start-IISCommitDelay
+  - IISAdministration.Start-IISSite
+  - IISAdministration.Stop-IISCommitDelay
+  - IISAdministration.Stop-IISSite
+uid: IISAdministration
+name: IISAdministration
+description: |-
+  This reference provides cmdlet descriptions and syntax for all IIS Administration specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.3.1
+  Locale: en-uS
+  Module Guid: 07640789-476a-4713-a091-f5b365129c32
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  title: IISAdministration

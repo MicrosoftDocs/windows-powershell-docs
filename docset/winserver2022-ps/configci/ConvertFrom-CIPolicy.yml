@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Converts an .xml file that contains a Code Integrity policy into binary format.
+module: ConfigCI
+notes: ""
+links:
+- text: Get-CIPolicy
+  href: ./Get-CIPolicy.yml
+- text: Merge-CIPolicy
+  href: ./Merge-CIPolicy.yml
+- text: New-CIPolicy
+  href: ./New-CIPolicy.yml
+syntaxes:
+- ConvertFrom-CIPolicy [-XmlFilePath] <String> [-BinaryFilePath] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Converts a policy'
+  code: |-
+    PS C:\> ConvertFrom-CIPolicy -XmlFilePath ".\Policy03.xml" -BinaryFilePath "Policy03.bin" 
+    C:\Policies\Policy03.bin
+  description: |-
+    This command converts the policy in Policy03.xml into a binary named Policy03.bin.
+    The console displays the full path of the binary file.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BinaryFilePath
+  isRequired: true
+  description: |+
+    Specifies the path for the output converted policy binary file.
+
+  defaultValue: None
+  position: "2"
+  aliases: bin
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: XmlFilePath
+  isRequired: true
+  description: |+
+    Specifies the path of the .xml policy file that this cmdlet converts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: xml
+  parameterValueGroup: ""
+uid: ConfigCI.ConvertFrom-CIPolicy
+name: ConvertFrom-CIPolicy
+description: |-
+  The **ConvertFrom-CIPolicy** cmdlet converts an .xml file that contains a Code Integrity policy into binary format.
+  You can install the binary version of a policy on a computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/configci/convertfrom-cipolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: ConvertFrom-CIPolicy

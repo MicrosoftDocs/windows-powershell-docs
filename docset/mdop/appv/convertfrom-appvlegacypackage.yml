@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Converts App-V packages to the format for the current version of App-V.
+module: AppV
+notes: ""
+links:
+- text: Test-AppvLegacyPackage
+  href: ./Test-AppvLegacyPackage.yml
+syntaxes:
+- >-
+  ConvertFrom-AppvLegacyPackage [-SourcePath] <String[]> [-DestinationPath] <String>
+
+   [-DownloadFullPackageOnFirstLaunch] [-OSDsToIncludeInPackage <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Convert a package'
+  code: |-
+    PS C:\>ConvertFrom-AppvLegacyPackage -SourcePath "C:\ContosoLegacyAppV" -DestinationPath "C:\ContosoAppV50"
+  description: |-
+    This command converts a single App-V package in a previous format to the current App-V format.
+  summary: ""
+- title: 'Example 2: Convert all packages under a folder'
+  code: |-
+    PS C:\>$Packages = ,$Null
+    PS C:\> Foreach($x in (Get-ChildItem -recurse)) { if($x.FullName.EndsWith("sprj")) { $Packages += $x.PSParentPath } }
+    PS C:\> ConvertFrom-AppvLegacyPackage -SourcePath $Packages
+  description: |-
+    The first command creates an empty array named $Packages.
+
+    The second command uses the **ForEach**Windows PowerShell® language command to check recursively for files that have an .sprj file name extension.
+    The command stores all the folders that contain .sprj files in the $Packages array.
+
+    The final command converts each package stored in $Packages to the current App-V format.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationPath
+  isRequired: true
+  description: |+
+    Specifies the folder where this cmdlet stores the converted packages.
+
+  defaultValue: None
+  position: "1"
+  aliases: OutputPath
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DownloadFullPackageOnFirstLaunch
+  description: |+
+    Indicates that you should fully download the converted package before you start it, instead of streaming it.
+
+  defaultValue: None
+  position: Named
+  aliases: FullLoad
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OSDsToIncludeInPackage
+  description: |+
+    Specifies an array of Open Software Descriptors (OSDs) that contain information that this cmdlet includes in the converted App-V package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: OSDs
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SourcePath
+  isRequired: true
+  description: |+
+    Specifies an array of folders for the App-V packages that this cmdlet converts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Path, PSPath
+  parameterValueGroup: ""
+uid: AppV.ConvertFrom-AppvLegacyPackage
+name: ConvertFrom-AppvLegacyPackage
+description: |-
+  The **ConvertFrom-AppvLegacyPackage** cmdlet converts Microsoft Application Virtualization (App-V) packages created by using an earlier version of App-V.
+  This cmdlet converts packages to the format that works with the current version of App-V.
+  The cmdlet returns all packages that it successfully converts, and it returns error or warning messages that it produces while it converts packages.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.LegacyPackages.Module.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: ConvertFrom-AppvLegacyPackage

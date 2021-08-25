@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies configuration settings for trusted federation partners in AD FS.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsTrustedFederationPartner
+  href: ./Add-AdfsTrustedFederationPartner.yml
+- text: Get-AdfsTrustedFederationPartner
+  href: ./Get-AdfsTrustedFederationPartner.yml
+- text: Remove-AdfsTrustedFederationPartner
+  href: ./Remove-AdfsTrustedFederationPartner.yml
+syntaxes:
+- >-
+  Set-AdfsTrustedFederationPartner [-FederationPartnerHostName <Uri>] [-Name <String>] [-TargetName] <String>
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsTrustedFederationPartner [-FederationPartnerHostName <Uri>] [-Name <String>]
+
+   [-TargetFederationPartnerHostName] <Uri> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsTrustedFederationPartner [-FederationPartnerHostName <Uri>] [-Name <String>]
+
+   [-TargetFederationPartner] <AdfsTrustedFederationPartner> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: FederationPartnerHostName
+  description: |+
+    Specifies the URI of the federation partner.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the federation partner.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AdfsTrustedFederationPartner" data-throw-if-not-resolved="False" />
+  name: TargetFederationPartner
+  isRequired: true
+  description: |+
+    Specifies a federation partner for which to modify settings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: TargetFederationPartnerHostName
+  isRequired: true
+  description: |+
+    Specifies the URI of a federation partner for which to modify settings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of a federation partner for which to modify settings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsTrustedFederationPartner
+name: Set-AdfsTrustedFederationPartner
+description: |-
+  The **Set-AdfsTrustedFederationPartner** cmdlet modifies configuration settings of a federation partner that is trusted by this instance of Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfstrustedfederationpartner?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsTrustedFederationPartner

@@ -1,0 +1,199 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a network controller node to an existing network controller deployment.
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that contains the following fields: 
+    - Name of the node
+    - Hostname, FQDN, or IP address of the node
+    - Fault domain of the node
+    - Name of interface to be used for REST operations on the node
+    - Node certificate
+links:
+- text: Disable-NetworkControllerNode
+  href: ./Disable-NetworkControllerNode.yml
+- text: Enable-NetworkControllerNode
+  href: ./Enable-NetworkControllerNode.yml
+- text: Get-NetworkControllerNode
+  href: ./Get-NetworkControllerNode.yml
+- text: Remove-NetworkControllerNode
+  href: ./Remove-NetworkControllerNode.yml
+- text: Set-NetworkControllerNode
+  href: ./Set-NetworkControllerNode.yml
+syntaxes:
+- >-
+  Add-NetworkControllerNode -Name <String> -Server <String> -FaultDomain <String> -RestInterface <String>
+
+   [-NodeCertificate <X509Certificate2>] [-Force] [-PassThru] [-ComputerName <String>] [-UseSsl]
+
+   [-Credential <PSCredential>] [-CertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add network controller to an existing network controller deployment'
+  code: |-
+    PS C:\> Add-NetworkControllerNode -Name "Node1" -Server "NCNode1.contoso.com" -FaultDomain "fd:/rack1/host1" -RestInterface "Ethernet"                      
+    Name            : Node1
+    Server          : NCNode1.contoso.com
+    FaultDomain     : fd:/rack1/host1
+    RestInterface   : Ethernet
+    NodeCertificate : 
+    Status          : Up
+  description: |-
+    This command adds a network controller node named Node1 to the existing network controller deployment.
+    The FQDN of the computer is named NCNode1.contoso.com and the interface on the computer listening to REST requests is named Ethernet.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the network controller node on which this cmdlet operates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default is the current user.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FaultDomain
+  isRequired: true
+  description: |+
+    Specifies the servers that are likely to experience failure at the same time due to shared physical dependencies such as power and networking sources.
+
+    Fault domains typically represent hierarchies that are related to these shared dependencies, with more servers likely to fail together from a higher point in the fault domain tree.
+    During runtime, network controllers enumerate the fault domains in the cluster and attempt to spread out the network controller services so that they are in separate fault domains.
+    This process helps ensure, in case of failure of any one fault domain, that the availability of that service and its state is not compromised.
+
+    Fault domains are specified in a hierarchical format.
+    For example: /DC1/Rack1/Host1, where DC1 is the datacenter name, Rack1 is the rack name and Host1 is the name of the host where the node is placed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the computer to be added to the deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: NodeCertificate
+  description: |+
+    Specifies the certificate used for authenticating the computer.
+    You should only specify this parameter if the cluster is using certificate based authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RestInterface
+  isRequired: true
+  description: |+
+    Specifies the name of the interface on the node that will receive requests from Representational State Transfer (REST) clients.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  isRequired: true
+  description: |+
+    Specifies the fully qualified domain name (FQDN), IP address, or hostname of the computer to be added to the deployment.
+    If Kerberos is being used for cluster authentication, the FQDN must be provided.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseSsl
+  description: |+
+    Indicates that the remote computer uses the Secure Sockets Layer (SSL) protocol to establish a connection to the Network Controller node.
+    The default value of this parameter is false.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.Add-NetworkControllerNode
+name: Add-NetworkControllerNode
+description: |-
+  The **Add-NetworkControllerNode** cmdlet adds a network controller node to an existing network controller deployment.
+  If the existing computers in the deployment are not able to handle the load, this cmdlet can be used to scale up an existing deployment.
+  A two node deployment is not supported.
+  Therefore, if you are on a single node cluster and want to scale up, you must add at least two nodes to gain the benefits of high availability.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/add-networkcontrollernode?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-NetworkControllerNode

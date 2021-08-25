@@ -1,0 +1,204 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a virtual hard disk.
+module: Hyper-V
+notes: ""
+syntaxes:
+- >-
+  Set-VMHardDiskDrive [-VMName] <String> [[-ControllerType] <ControllerType>] [[-ControllerNumber] <Int32>]
+
+   [[-ControllerLocation] <Int32>] [[-Path] <String>] [-AllowUnverifiedPaths] [-ComputerName <String[]>]
+
+   [-DiskNumber <UInt32>] [-Passthru] [-ResourcePoolName <String>] [-ToControllerLocation <Int32>]
+
+   [-ToControllerNumber <Int32>] [-ToControllerType <ControllerType>] [-Confirm] [-WhatIf]
+- >-
+  Set-VMHardDiskDrive [-VMHardDiskDrive] <HardDiskDrive[]> [[-Path] <String>] [-AllowUnverifiedPaths]
+
+   [-ComputerName <String[]>] [-DiskNumber <UInt32>] [-Passthru] [-ResourcePoolName <String>]
+
+   [-ToControllerLocation <Int32>] [-ToControllerNumber <Int32>] [-ToControllerType <ControllerType>] [-Confirm]
+
+   [-WhatIf]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Set-VMHardDiskDrive -VMName TestVM -Path .\Test.vhd
+  description: |-
+    Configures the hard drive of virtual machine TestVM to use Test.vhd as its media.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VMHardDiskDrive -VMName TestVM -ControllerType IDE -ControllerNumber 1 -ControllerLocation 0 | Set-VMHardDiskDrive -ToControllerLocation 1
+  description: |-
+    Moves the virtual hard drive on virtual machine TestVM from IDE 1,0 to IDE 1,1.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowUnverifiedPaths
+  description: |+
+    Specifies that no error is to be thrown if the specified path is not verified as accessible by the cluster.
+    This parameter is applicable to clustered virtual machines.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the virtual hard drive is to be configured.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  pipelineInput: true
+  position: Named
+  aliases: PSComputerName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerLocation
+  description: |+
+    Specifies the number of the location on the controller to which the virtual hard drive to be configured is attached.
+    If not specified, all hard drives are configured.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerNumber
+  description: |+
+    Specifies the number of the controller to which the virtual hard drive to be configured is attached.
+    If not specified, all hard drives are configured.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ControllerType" data-throw-if-not-resolved="False" />
+  name: ControllerType
+  description: |+
+    Specifies the type of the controller to which the virtual hard drive to be configured is attached.
+    Allowed values are **IDE** and **SCSI**.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DiskNumber
+  description: |+
+    Specifies the disk number of the offline physical hard drive that should be connected as a passthrough disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Number
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that a **Microsoft.Virtualization.Powershell.HardDiskDrive** object is to be passed through to the pipeline representing the virtual hard drive to be configured.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path to media the virtual hard disk is to use.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourcePoolName
+  description: |+
+    Specifies the name of the virtual hard disk resource pool to which this drive belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ToControllerLocation
+  description: |+
+    Specifies the controller location to which this drive should be moved.
+    Allowed values are 0 and 1 for IDE controllers, and from 0 to 63 for SCSI controllers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ToControllerNumber
+  description: |+
+    Specifies the controller location to which this drive should be moved.
+    Allowed values are 0 and 1 for IDE controllers, and from 0 to 3 for SCSI controllers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ControllerType" data-throw-if-not-resolved="False" />
+  name: ToControllerType
+  description: |+
+    Specifies the type of controller to which this drive should be moved.
+    Allowed values are IDE and SCSI.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HardDiskDrive" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMHardDiskDrive
+  isRequired: true
+  description: |+
+    Specifies one or more hard disks to be configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine on which the virtual hard drive is to be configured.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMHardDiskDrive
+name: Set-VMHardDiskDrive
+description: |-
+  The **Set-VMHardDiskDrive** cmdlet configures a virtual hard disk.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmharddiskdrive?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

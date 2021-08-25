@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the list of services and events currently being monitored in the virtual machine.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterVMMonitoredItem" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterVMMonitoredItem
+  href: ./Add-ClusterVMMonitoredItem.yml
+- text: Remove-ClusterVMMonitoredItem
+  href: ./Remove-ClusterVMMonitoredItem.yml
+- text: Reset-ClusterVMMonitoredState
+  href: ./Reset-ClusterVMMonitoredState.yml
+syntaxes:
+- >-
+  Get-ClusterVMMonitoredItem [[-VirtualMachine] <String>] [-Wait <Int32>] [-Cluster <String>]
+
+   [<CommonParameters>]
+- Get-ClusterVMMonitoredItem [-VMId <Guid>] [-Wait <Int32>] [-Cluster <String>] [<CommonParameters>]
+- Get-ClusterVMMonitoredItem [-Wait <Int32>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
+    Name 
+    ---- 
+    Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708 
+    Spooler
+  description: |-
+    This example returns the services and events being monitored in the virtual machine named vm1 on the cluster named Cluster1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to run the cmdlet or the clustered virtual machine for which to retrieve the clustered virtual machine monitored item object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualMachine
+  description: |+
+    Specifies the name of the clustered virtual machine on which to perform monitoring.
+    When this parameter is specified, the cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
+
+  defaultValue: None
+  position: "0"
+  aliases: VM
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VMId
+  description: |+
+    Specifies the virtual machine identifier (ID).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterVMMonitoredItem
+name: Get-ClusterVMMonitoredItem
+description: |-
+  The **Get-ClusterVMMonitoredItem** cmdlet gets the list of services and events currently being monitored in the virtual machine.
+  If one of those services fails or one of the events occurs, then the system responds by taking an action based on the failover configuration for the virtual machine resource.
+  For example, the configuration might specify that the virtual machine be restarted.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clustervmmonitoreditem?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterVMMonitoredItem

@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a patch schedule for a virtual desktop.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    VirtualDesktopName: Name of virtual desktop
+    Context: Opaque binary data associated with the patch schedule
+    Deadline: System uses this to prioritize patches.
+    The patch with the earliest deadline has the highest priority.
+    StartTime : This is the earliest the patch can be started
+    EndTime : This is the latest the patch can be started
+    ID : Unique identifier of the patch schedule
+    Label : A string that describes the purpose of the patch
+    Plugin : Plugin that created the patch schedule
+    PatchStatus  :
+    - RDV_TASK_STATUS_UNKNOWN.
+    (Not used by task agent.)
+    - RDV_TASK_STATUS_SEARCHING.
+    Searching for applicable tasks.
+    - RDV_TASK_STATUS_DOWNLOADING.
+    Downloading tasks.
+    - RDV_TASK_STATUS_APPLYING.
+    Executing tasks.
+    - RDV_TASK_STATUS_REBOOTING.
+    Rebooting after performing tasks.
+    Rebooting after performing tasks.
+    - RDV_TASK_STATUS_REBOOTED.
+    Rebooted complete after performing tasks.
+    - RDV_TASK_STATUS_SUCCESS.
+    Task completed successfully.
+    - RDV_TASK_STATUS_FAILED.
+    Task failed.
+    - RDV_TASK_STATUS_TIMEOUT.
+    Task did not end in time (not used by task agent).
+links:
+- text: Set-RDPersonalVirtualDesktopPatchSchedule
+  href: ./Set-RDPersonalVirtualDesktopPatchSchedule.yml
+- text: New-RDPersonalVirtualDesktopPatchSchedule
+  href: ./New-RDPersonalVirtualDesktopPatchSchedule.yml
+- text: Remove-RDPersonalVirtualDesktopPatchSchedule
+  href: ./Remove-RDPersonalVirtualDesktopPatchSchedule.yml
+syntaxes:
+- >-
+  Get-RDPersonalVirtualDesktopPatchSchedule [[-VirtualDesktopName] <String>] [[-ID] <String>]
+
+   [[-ConnectionBroker] <String>] [<CommonParameters>]
+examples:
+- title: 'Example1: Get the patch schedule for all virtual desktops'
+  code: |-
+    PS C:\> Get-RDPersonalVirtualDesktopPatchSchedule
+  description: |-
+    This command gets the patch schedule for all virtual desktops on the local computer.
+  summary: ""
+- title: 'Example 2: Get a patch schedule by using an ID'
+  code: |-
+    PS C:\> Get-RDPersonalVirtualDesktopPatchSchedule -ID "{58E69A71-AFC9-49A6-81B9-494DA20216AC}"
+  description: |-
+    This command gets the patch schedule that has the ID 58E69A71-AFC9-49A6-81B9-494DA20216AC.
+  summary: ""
+- title: 'Example 3: Get a patch schedule by using a virtual desktop name'
+  code: |-
+    PS C:\> Get-RDPersonalVirtualDesktopPatchSchedule -VirtualDesktopName "RDS-WKS-A27"
+  description: |-
+    This command gets the patch schedule for the virtual desktop named RDS-WKS-A27.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ID
+  description: |+
+    Specifies the ID of a patch schedule.
+    The ID of a patch schedule is a system-assigned GUID.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopName
+  description: |+
+    Specifies the name of a person virtual desktop.
+    If you do not specify a value for this parameter, the cmdlet returns patch schedules for all personal virtual desktops.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Get-RDPersonalVirtualDesktopPatchSchedule
+name: Get-RDPersonalVirtualDesktopPatchSchedule
+description: |-
+  The **Get-RDPersonalVirtualDesktopPatchSchedule** cmdlet gets patch schedule details for a personal virtual desktop.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdpersonalvirtualdesktoppatchschedule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDPersonalVirtualDesktopPatchSchedule

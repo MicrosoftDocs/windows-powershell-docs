@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the properties of a relying party trust for a non-claims-aware web application or service.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Add-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Disable-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Disable-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Enable-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Enable-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Remove-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Remove-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Set-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Set-AdfsNonClaimsAwareRelyingPartyTrust.yml
+syntaxes:
+- Get-AdfsNonClaimsAwareRelyingPartyTrust [<CommonParameters>]
+- Get-AdfsNonClaimsAwareRelyingPartyTrust -TargetIdentifier <String> [<CommonParameters>]
+- Get-AdfsNonClaimsAwareRelyingPartyTrust [-TargetName] <String> [<CommonParameters>]
+- >-
+  Get-AdfsNonClaimsAwareRelyingPartyTrust
+
+   -TargetNonClaimsAwareRelyingPartyTrust <NonClaimsAwareRelyingPartyTrust> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the properties of a non-claims-aware relying party trust by using a name'
+  code: |-
+    PS C:\> Get-AdfsNonClaimsAwareRelyingPartyTrust -TargetName "ExpenseReport"
+  description: |-
+    This command gets the properties of the non-claims-aware relying party trust for the application named ExpenseReport.
+  summary: ""
+- title: 'Example 2: Get the properties of a non-claims-aware relying party trust by using an identifier'
+  code: |-
+    PS C:\> Get-AdfsNonClaimsAwareRelyingPartTrust -TargetIdentifier "http://Contosoexpense/"
+  description: |-
+    This command gets the properties of the non-claims-aware relying party trust for the expense report application that has the identifier http://Contosoexpense.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the non-claims-aware relying party trust to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the non-claims-aware relying party trust to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="NonClaimsAwareRelyingPartyTrust" data-throw-if-not-resolved="False" />
+  name: TargetNonClaimsAwareRelyingPartyTrust
+  isRequired: true
+  description: |+
+    Specifies a **NonClaimsAwareRelyingPartyTrust** object.
+    The cmdlet enables the non-claims-aware relying party trust that you specify.
+    To obtain a **NonClaimsAwareRelyingPartyTrust**, use the **Get-AdfsNonClaimsAwareRelyingPartyTrust** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsNonClaimsAwareRelyingPartyTrust
+name: Get-AdfsNonClaimsAwareRelyingPartyTrust
+description: |-
+  The **Get-AdfsNonClaimsAwareRelyingPartyTrust** cmdlet gets the properties of a relying party trust for a non-claims-aware web application or service.
+
+  A non-claims aware relying party trust is a relying party trust for web applications or services that do not rely directly on Active Directory Federation Services (AD FS) to issue tokens, but instead rely on a third party that accesses such tokens and transforms them into what applications understand.
+  A non-claims-aware relying party trust is useful for defining authentication and authorization policies for web applications and services that do not rely on AD FS tokens.
+  The Web Application Proxy requests such tokens for pre-authentication to web applications or services that have corresponding non-claims-aware relying party trusts for requests that come from outside the network through the proxy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsnonclaimsawarerelyingpartytrust?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsNonClaimsAwareRelyingPartyTrust

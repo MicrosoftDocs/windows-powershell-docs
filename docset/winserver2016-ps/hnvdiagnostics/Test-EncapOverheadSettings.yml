@@ -1,0 +1,19 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests whether a NIC supports encapsulation overhead.
+module: HNVDiagnostics
+notes: ""
+syntaxes:
+- Test-EncapOverheadSettings [<CommonParameters>]
+uid: HNVDiagnostics.Test-EncapOverheadSettings
+name: Test-EncapOverheadSettings
+description: |-
+  The **Test-EncapOverheadSettings** cmdlet tests whether a network interface card (NIC) in a host properly supports encapsulation overhead.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Test-EncapOverheadValue-help.xml
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/test-encapoverheadsettings?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-EncapOverheadSettings

@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies whether to make a user account visible in the dashboard.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Get-WssUser
+  href: ./Get-WssUser.yml
+syntaxes:
+- Set-WssUserDashboardVisibility [-Name] <String> [-Visible] [<CommonParameters>]
+- Set-WssUserDashboardVisibility [-Name] <String> [-Hidden] [<CommonParameters>]
+examples:
+- title: 'Example 1: Show a user in the dashboard'
+  code: |-
+    PS C:\> Set-WssUserDashboardVisibility -Name "PattiFuller" -Visible
+  description: |-
+    This command shows the specified user account in the dashboard by specifying the **Visible** parameter.
+  summary: ""
+- title: 'Example 2: Hide a user in the dashboard'
+  code: |-
+    PS C:\> Set-WssUserDashboardVisibility -Name "PattiFuller" -Hidden
+  description: |-
+    This command hides the specified user account in the dashboard by specifying the **Hidden** parameter.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Hidden
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet hides the user account in the dashboard.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name.
+    The cmdlet modifies the visibility for the user account that has the name that you specify.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Visible
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet shows the user account in the dashboard.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Set-WssUserDashboardVisibility
+name: Set-WssUserDashboardVisibility
+description: |-
+  The **Set-WssUserDashboardVisibility** cmdlet modifies whether to make a user account visible in the Windows Server Essentials dashboard.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssuserdashboardvisibility?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssUserDashboardVisibility

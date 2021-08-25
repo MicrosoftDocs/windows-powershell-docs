@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of Windows 8 apps and synchronization status.
+module: UEV
+notes: ""
+links:
+- text: Clear-UevAppxPackage
+  href: ./Clear-UevAppxPackage.yml
+- text: Disable-UevAppxPackage
+  href: ./Disable-UevAppxPackage.yml
+- text: Enable-UevAppxPackage
+  href: ./Enable-UevAppxPackage.yml
+syntaxes:
+- Get-UevAppxPackage [<CommonParameters>]
+- Get-UevAppxPackage [-Computer] [<CommonParameters>]
+- Get-UevAppxPackage [-CurrentComputerUser] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the list of Windows 8 apps'
+  code: |-
+    PS C:\>Get-UevAppxPackage -CurrentComputerUser
+  description: |-
+    This command gets the list of Windows 8 apps that are configured for the current user.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Computer
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets the Windows 8 apps and UE-V synchronization status for all users on the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CurrentComputerUser
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets the Windows 8 apps and UE-V synchronization status for the current user on the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: UEV.Get-UevAppxPackage
+name: Get-UevAppxPackage
+description: |-
+  The **Get-UevAppxPackage** cmdlet gets a list of Windows® 8 apps and the Microsoft User Experience Virtualization (UE-V) synchronization status for the apps.
+  If you do not specify the **Computer** or **CurrentComputerUser** parameters, the cmdlet gets the list of Windows 8 apps for the current user.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/get-uevappxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-UevAppxPackage

@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the web applications associated with a specific site or with a specified name.
+module: WebAdministration
+notes: ""
+links:
+- text: ConvertTo-WebApplication
+  href: ./ConvertTo-WebApplication.yml
+- text: New-WebApplication
+  href: ./New-WebApplication.yml
+- text: Remove-WebApplication
+  href: ./Remove-WebApplication.yml
+- text: Microsoft.Web.Administration.ConfigurationElement#Application
+  href: https://docs.microsoft.com/dotnet/api/microsoft.web.administration.application?view=iis-dotnet
+syntaxes:
+- Get-WebApplication [-Site <String>] [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the web applications associated with the default website'
+  code: |-
+    IIS:\> Get-WebApplication -Site "Default Web Site"
+
+    Name             Application pool   Protocols    Physical Path
+    ----             ----------------   ---------    -------------
+    Test             DefaultAppPool     http         C:\inetpub\wwwroot\
+  description: |-
+    This command gets the web applications associated with the default website.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the web application for which information is returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Site
+  description: |+
+    Specifies the name of the site for which this cmdlet returns application information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebApplication
+name: Get-WebApplication
+description: |-
+  The **Get-WebApplication** cmdlet gets the web applications associated with a specific site or with a specified name.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webapplication?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebApplication

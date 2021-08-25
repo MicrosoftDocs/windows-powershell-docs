@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Registers a DNS server in a DNS application directory partition.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerDirectoryPartition" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-DnsServerDirectoryPartition
+  href: ./Add-DnsServerDirectoryPartition.yml
+- text: Get-DnsServerDirectoryPartition
+  href: ./Get-DnsServerDirectoryPartition.yml
+- text: Unregister-DnsServerDirectoryPartition
+  href: ./Unregister-DnsServerDirectoryPartition.yml
+- text: Remove-DnsServerDirectoryPartition
+  href: ./Remove-DnsServerDirectoryPartition.yml
+syntaxes:
+- >-
+  Register-DnsServerDirectoryPartition [-ComputerName <String>] [-PassThru] [-Name] <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Register a DNS server to a directory application partition'
+  code: |-
+    PS C:\> Register-DnsServerDirectoryPartition -Name "ADpart"
+  description: |-
+    This command adds the local DNS server to the directory application partition named ADpart.
+  summary: ""
+- title: 'Example 2: Register a remote DNS server to a directory application partition using FQDN'
+  code: |-
+    PS C:\> Register-DnsServerDirectoryPartition -Name "hr.dept.contoso.com"
+  description: |-
+    This command adds the local DNS server to the directory application partition named hr.dept.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a remote DNS server.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the FQDN of a DNS application directory partition.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: DirectoryPartitionName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DnsServer.Register-DnsServerDirectoryPartition
+name: Register-DnsServerDirectoryPartition
+description: |-
+  The **Register-DnsServerDirectoryPartition** cmdlet registers a Domain Name System (DNS) server in a DNS application directory partition.
+  After you create a Domain Name System (DNS) application directory partition to store a zone, you must register the DNS server that hosts the zone in the application directory partition.
+  After you register a DNS server in a DNS application directory partition, the DNS server adds itself the to the replication scope of the DNS application directory partitions.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerDirectoryPartition_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/register-dnsserverdirectorypartition?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Register-DnsServerDirectoryPartition

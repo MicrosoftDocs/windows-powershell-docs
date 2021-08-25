@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Takes a device out of maintenance mode.
+module: HCS
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    No return value.
+links:
+- text: Enter-HcsMaintenanceMode
+  href: ./Enter-HcsMaintenanceMode.yml
+syntaxes:
+- Exit-HcsMaintenanceMode [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Exiting maintenance mode'
+  code: |-
+    PS C:\> Exit-HcsMaintenanceMode
+
+
+    Before exiting maintenance mode, ensure that any updates that are required on both 
+    controllers have been applied. Failure to install on each controller could result
+    in data corruption. Exiting maintenance mode will reboot both controllers, which 
+    takes a few minutes to complete. Are you sure you want to exit maintenance mode?
+    [Y] Yes  [N] No  [?] Help (default is "Y"): y
+  description: |-
+    This command exits maintenance mode.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HCS.Exit-HcsMaintenanceMode
+name: Exit-HcsMaintenanceMode
+description: |-
+  The **Exit-HcsMaintenanceMode** cmdlet takes a device out of maintenance mode.
+  Taking a device out of maintenance mode restores I/Os and restores the connection to the azure_1 Management Portal.
+
+  Before exiting maintenance mode, ensure that all updates are fully installed on all controllers.
+  You must install maintenance mode updates on each controller individually.
+  If you do not install these updates on each controller before the device enters maintenance mode, data may become corrupted.
+metadata:
+  external help file: Microsoft.HCS.Management.dll-Help.xml
+  Module Name: HCS
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/hcs/exit-hcsmaintenancemode?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Exit-HcsMaintenanceMode

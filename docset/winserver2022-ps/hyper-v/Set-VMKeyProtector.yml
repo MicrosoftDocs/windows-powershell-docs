@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a key protector for a virtual machine.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-VMKeyProtector
+  href: ./Get-VMKeyProtector.yml
+syntaxes:
+- >-
+  Set-VMKeyProtector [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String[]> [-Passthru] [-KeyProtector <Byte[]>] [-NewLocalKeyProtector]
+
+   [-RestoreLastKnownGoodKeyProtector] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMKeyProtector [-VM] <VirtualMachine[]> [-Passthru] [-KeyProtector <Byte[]>] [-NewLocalKeyProtector]
+
+   [-RestoreLastKnownGoodKeyProtector] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a key protector for a virtual machine'
+  code: |-
+    PS C:\> Set-VMKeyProtector -VM $VM1 -KeyProtector $kp.RawData
+  description: |-
+    This command specifies that virtual machine stored in the $VM1 variable is to use the key protector in $kp.
+  summary: ""
+- title: 'Example 2: Set a key protector for a virtual machine by using its name'
+  code: |-
+    PS C:\> Set-VMKeyProtector -VMName "VM10" -NewLocalKeyProtector
+  description: |-
+    This command specifies that the virtual machine named VM10 is to use a new local key protector.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts to run the cmdlet.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer.
+    Use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies a user account that has permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: KeyProtector
+  description: |+
+    Specifies the key protector to use for the virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NewLocalKeyProtector
+  description: |+
+    Specifies that this cmdlet generates a new local key protector.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RestoreLastKnownGoodKeyProtector
+  description: |+
+    Indicates that this cmdlet restores the last known good key protector.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies one or more virtual machines for which to set a key protector.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of one or more virtual machines for which to set a key protector.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMKeyProtector
+name: Set-VMKeyProtector
+description: |-
+  The **Set-VMKeyProtector** cmdlet configures a key protector for a virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmkeyprotector?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VMKeyProtector

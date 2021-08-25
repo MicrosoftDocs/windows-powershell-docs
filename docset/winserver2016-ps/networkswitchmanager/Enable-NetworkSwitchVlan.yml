@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables a VLAN for a network switch.
+module: NetworkSwitchManager
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Disable-NetworkSwitchVlan
+  href: ./Disable-NetworkSwitchVlan.yml
+- text: Get-NetworkSwitchVlan
+  href: ./Get-NetworkSwitchVlan.yml
+- text: New-NetworkSwitchVlan
+  href: ./New-NetworkSwitchVlan.yml
+- text: Remove-NetworkSwitchVlan
+  href: ./Remove-NetworkSwitchVlan.yml
+- text: Set-NetworkSwitchVlanProperty
+  href: ./Set-NetworkSwitchVlanProperty.yml
+syntaxes:
+- >-
+  Enable-NetworkSwitchVlan -CimSession <CimSession> -InstanceId <String> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Enable-NetworkSwitchVlan -CimSession <CimSession> -Name <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Enable-NetworkSwitchVlan -CimSession <CimSession> -VlanID <Int32> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable a VLAN by using an instance ID'
+  code: |-
+    PS C:\>$Session = New-CimSession -ComputerName "NetworkSwitch08"
+    PS C:\> Enable-NetworkSwitchVlan -InstanceID "Vlan02" -CimSession $Session
+  description: |-
+    The first command creates a **CimSession** for a network switch, and then stores it in the **$Session** variable.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+    The second command enables the VLAN that has the instance ID Vlan02 for the switch NetworkSwitch08 by using the **$Session** object.
+  summary: ""
+- title: 'Example 2: Enable a VLAN by using a name'
+  code: |-
+    PS C:\>Enable-NetworkSwitchVlan -CimSession $Session -Name "VLAN22"
+  description: |-
+    This command enables the VLAN named VLAN22.
+    The command includes a **CimSession**, similar to the first example.
+  summary: ""
+- title: 'Example 3: Enable a VLAN by using its ID'
+  code: |-
+    PS C:\>Enable-NetworkSwitchVlan -CimSession $Session -VlanId 74
+  description: |-
+    This command enables the VLAN that has the VLAN ID 74.
+    The command includes a **CimSession**, similar to the first example.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  isRequired: true
+  description: |+
+    Specifies the **CimSession** that this cmdlet uses to connect to the network switch.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InstanceId
+  isRequired: true
+  description: |+
+    Specifies the instance ID of a VLAN to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a VLAN to enable.
+    This **ElementName** is a friendly name.
+    It is not necessarily unique.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: VlanID
+  isRequired: true
+  description: |+
+    Specifies VLAN ID of the VLAN to enable.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkSwitchManager.Enable-NetworkSwitchVlan
+name: Enable-NetworkSwitchVlan
+description: |-
+  The **Enable-NetworkSwitchVlan** cmdlet enables a virtual local area network (VLAN) for a network switch.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: NetworkSwitchVlan-help.xml
+  Module Name: NetworkSwitchManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkswitchmanager/enable-networkswitchvlan?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-NetworkSwitchVlan

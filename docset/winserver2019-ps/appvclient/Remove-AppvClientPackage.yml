@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the package from a computer.
+module: AppvClient
+notes: ""
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvClientPackage
+  href: ./Add-AppvClientPackage.yml
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Mount-AppvClientPackage
+  href: ./Mount-AppvClientPackage.yml
+- text: Publish-AppvClientPackage
+  href: ./Publish-AppvClientPackage.yml
+- text: Repair-AppvClientPackage
+  href: ./Repair-AppvClientPackage.yml
+- text: Set-AppvClientPackage
+  href: ./Set-AppvClientPackage.yml
+- text: Stop-AppvClientPackage
+  href: ./Stop-AppvClientPackage.yml
+- text: Unpublish-AppvClientPackage
+  href: ./Unpublish-AppvClientPackage.yml
+syntaxes:
+- Remove-AppvClientPackage [-PackageId] <Guid> [-VersionId] <Guid> [<CommonParameters>]
+- Remove-AppvClientPackage [-Package] <AppvClientPackage> [<CommonParameters>]
+- Remove-AppvClientPackage [-Name] <String> [[-Version] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a version of a package by using the pipeline operator'
+  code: |-
+    PS C:\> Get-AppvPackage -Name "MyPackage" -Version 1 | Remove-Package
+  description: |-
+    This command gets version 1 of the package named MyPackage, and then removes it from the computer.
+  summary: ""
+- title: 'Example 2: Remove a version of a package'
+  code: |-
+    PS C:\> Remove-Package -Name "MyPackage" -Version 1
+  description: |-
+    This command removes version 1 of the package named MyPackage from the computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the package given during sequencing.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppvClientPackage" data-throw-if-not-resolved="False" />
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies an App-V package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageId
+  isRequired: true
+  description: |+
+    Specifies the package ID that uniquely identifies the package.
+    It can be found in the package manifest or by opening the package in the sequencer.
+    The package ID is shared by all versions of a specific package.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of an App-V package in a lineage.
+    If you do not specify this parameter, the cmdlet operates on all versions on the computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionId
+  isRequired: true
+  description: |+
+    Specifies a GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+    If you do not specify this parameter, the cmdlet operates on all versions of the package.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Remove-AppvClientPackage
+name: Remove-AppvClientPackage
+description: |-
+  The **Remove-AppvClientPackage** cmdlet removes the package from computer that runs the Microsoft Application Virtualization (App-V) client.
+  The cmdlet deletes the **AppvClientPackage** object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/remove-appvclientpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AppvClientPackage

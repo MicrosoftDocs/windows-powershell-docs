@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets VIP host mapping.
+module: HNVDiagnostics
+notes: ""
+links:
+- text: Get-NetworkControllerVipResource
+  href: ./Get-NetworkControllerVipResource.yml
+syntaxes:
+- >-
+  Get-VipHostMapping [-NetworkController] <String> [[-Credential] <PSCredential>] [-RestURI] <String>
+
+   [[-CertificateThumbprint] <String>] [-VipEndPoint] <String> [-Type] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a VIP host mapping'
+  code: |-
+    PS C:\> $Password = ConvertTo-SecureString -String $Pass -AsPlainText -Force
+    PS C:\> $Cred = New-Object PSCredential -ArgumentList (".\administrator", $Password) 
+    PS C:\> $ncIPAddress = 55.1.1.3
+    PS C:\> $NCInfo = Get-NetworkControllerDeploymentInfo -NetworkController $ncIPAddress -Credential $Cred
+    PS C:\> $vipInfo = Get-NetworkControllerVipResource -RestURI $NCInfo.NetworkControllerURI -ClientCertificate $NCInfo.ClientCertificate -IPAddress "72.1.12" -DstPort "2003" -Protocol "Tcp"
+    PS C:\> Get-VipHostMapping -NetworkController $ncIPAddress -Credential $Cred -RestURI $NCInfo.NetworkControllerURI -CertificateThumbprint $NCInfo.ClientCertificate -VipEndPoint $vipInfo.ResourceRef -L3NAT $vipInfo.L3NAT
+  description: |-
+    The first command creates a password, and then stores it in the $Password variable.
+
+    The second command creates a **PSCredential** object, and then stores it in the $Cred variable.
+
+    The third command assigns the specified Network Controller IP address to the $ncIPAddress variable.
+
+    The fourth command gets the Network Controller deployment information, and then stores it in the $NCInfo variable.
+
+    The fifth command gets the specified VIP resource, and then stores it in the $vipInfo variable.
+
+    The last command gets the VIP host mapping for the specified host.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies a certificate thumbprint for Network Controller.
+    Specify this parameter for a certificate deployment.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials to use for Network Controller.
+    Specify this parameter for a Kerberos deployment.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkController
+  isRequired: true
+  description: |+
+    Specifies a Network Controller node name or IP address.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RestURI
+  isRequired: true
+  description: |+
+    Specifies the URI to use for Network Controller REST APIs.
+    Specify this parameter for wild card certificate deployments.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the type.
+    The acceptable values for this parameter are:
+
+    - L3Nat
+    - InboundNatRule
+    - LoadBalancingRule
+    - OutboundNatRule
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: L3Nat, InboundNatRule, LoadBalancingRule, OutboundNatRule
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VipEndPoint
+  isRequired: true
+  description: |+
+    Specifies the VIP endpoint REST resource.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HNVDiagnostics.Get-VipHostMapping
+name: Get-VipHostMapping
+description: |-
+  The **Get-VipHostMapping** cmdlet gets information for a virtual IP (VIP) host, including its multiplexers (MUXes) and DIP hosts.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Get-VipConnectivityInfo-help.xml
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/get-viphostmapping?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VipHostMapping

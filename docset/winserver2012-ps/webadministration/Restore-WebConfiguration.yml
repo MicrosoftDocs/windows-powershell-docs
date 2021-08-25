@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Restores an IIS configuration backup.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Restore-WebConfiguration [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Restoring a backup --------------'
+  code: |-
+    IIS:\>Restore-WebConfiguration -Name MyBackup
+  description: |-
+    Restores the IIS configuration backup named MyBackup.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the backup to restore.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Restore-WebConfiguration
+name: Restore-WebConfiguration
+description: |-
+  Restores an IIS configuration backup that was created by using theT:Microsoft.IIs.PowerShell.Provider.Backup-WebConfigurationcmdlet.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/restore-webconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

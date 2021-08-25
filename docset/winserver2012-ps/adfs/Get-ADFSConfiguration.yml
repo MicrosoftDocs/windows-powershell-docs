@@ -1,0 +1,34 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the configuration properties of the Federation Service.
+module: ADFS
+notes: |-
+  * The ADFSConfiguration resource enumerates the current configuration properties and settings used by the Federation Service.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ServiceProperties" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure that represents the properties for the Federation Service.
+links:
+- text: Set-ADFSConfiguration
+  href: ./Set-ADFSConfiguration.yml
+syntaxes:
+- Get-ADFSConfiguration [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    PS C:\>Get-ADFSConfiguration
+  description: |-
+    Gets the current settings for all configuration properties of the Federation Service.
+  summary: ""
+uid: ADFS.Get-ADFSConfiguration
+name: Get-ADFSConfiguration
+description: |-
+  The Get-ADFSConfiguration cmdlet gets the configuration properties of the Federation Service.
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

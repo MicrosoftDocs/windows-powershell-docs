@@ -1,0 +1,203 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the status of a virtual switch extension feature applied to a virtual network adapter.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMSwitchExtensionPortData" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-VMSwitchExtensionPortData [-VMName] <String[]> [-VMNetworkAdapterName <String>]
+
+   [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-FeatureName <String[]>] [-FeatureId <Guid[]>] [-Extension <VMSwitchExtension[]>] [-ExtensionName <String[]>]
+
+   [<CommonParameters>]
+- >-
+  Get-VMSwitchExtensionPortData [-VMNetworkAdapter] <VMNetworkAdapterBase[]> [-FeatureName <String[]>]
+
+   [-FeatureId <Guid[]>] [-Extension <VMSwitchExtension[]>] [-ExtensionName <String[]>] [<CommonParameters>]
+- >-
+  Get-VMSwitchExtensionPortData [-ManagementOS] [-VMNetworkAdapterName <String>] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-FeatureName <String[]>] [-FeatureId <Guid[]>]
+
+   [-Extension <VMSwitchExtension[]>] [-ExtensionName <String[]>] [<CommonParameters>]
+- >-
+  Get-VMSwitchExtensionPortData [-ExternalPort] [-SwitchName <String>] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-FeatureName <String[]>] [-FeatureId <Guid[]>]
+
+   [-Extension <VMSwitchExtension[]>] [-ExtensionName <String[]>] [<CommonParameters>]
+- >-
+  Get-VMSwitchExtensionPortData [-VMNetworkAdapterName <String>] [-VM] <VirtualMachine[]>
+
+   [-FeatureName <String[]>] [-FeatureId <Guid[]>] [-Extension <VMSwitchExtension[]>] [-ExtensionName <String[]>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-VMSwitchExtensionPortData VM1 -FeatureId eb29f0f2-f5dc-45c6-81bb-3cd9f219bbbb
+  description: |-
+    Gets the port feature data with ID eb29f0f2-f5dc-45c6-81bb-3cd9f219bbbb from the sample forwarding extension on the virtual network adapter in virtual machine VM1.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the status of a virtual switch extension applied to a virtual network adapter is to be retrieved.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitchExtension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Extension
+  description: |+
+    Specifies the virtual switch extension for which status is to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExtensionName
+  description: |+
+    Specifies the name of the virtual switch extension for which status is to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExternalPort
+  isRequired: true
+  description: |+
+    Specifies the virtual switch port connected to the external network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FeatureId
+  description: |+
+    Specifies the unique identifier of the feature supported by the virtual switch extension.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FeatureName
+  description: |+
+    Specifies the name of the feature supported by the virtual switch extension.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagementOS
+  isRequired: true
+  description: |+
+    Specifies that the status is to be retrieved from the management (i.e.
+    parent, or host) operating system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SwitchName
+  description: |+
+    Specifies the name of the virtual switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machine objects.
+    The cmdlet gets the status of the virtual switch extension for the virtual machines that you specify.
+    To obtain a virtual machine object, use the **Get-VM** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterBase" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMNetworkAdapter
+  isRequired: true
+  description: |+
+    Specifies the virtual machine network adapter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapterName
+  description: |+
+    Specifies the name of the virtual machine network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMSwitchExtensionPortData
+name: Get-VMSwitchExtensionPortData
+description: |-
+  The **Get-VMSwitchExtensionPortData** cmdlet retrieves the status of a virtual switch extension feature applied to a virtual network adapter.
+  This port feature data surfaces runtime information and statistics on a per-port basis.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmswitchextensionportdata?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMSwitchExtensionPortData

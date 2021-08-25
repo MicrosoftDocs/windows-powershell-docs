@@ -1,0 +1,182 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures video settings for virtual machines.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMVideo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **VirtualMachine** object, if you specify the **Passthru** parameter.
+links:
+- text: Get-VMVideo
+  href: ./Get-VMVideo.yml
+- text: Get-VM
+  href: ./Get-VM.yml
+syntaxes:
+- >-
+  Set-VMVideo [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String[]> [[-ResolutionType] <ResolutionType>] [[-HorizontalResolution] <UInt16>]
+
+   [[-VerticalResolution] <UInt16>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMVideo [-VM] <VirtualMachine[]> [[-ResolutionType] <ResolutionType>] [[-HorizontalResolution] <UInt16>]
+
+   [[-VerticalResolution] <UInt16>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMVideo [-VMVideo] <VMVideo[]> [[-ResolutionType] <ResolutionType>] [[-HorizontalResolution] <UInt16>]
+
+   [[-VerticalResolution] <UInt16>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set resolution for a virtual machine display'
+  code: |-
+    PS C:\> Set-VMVideo -VMName "VM06" -HorizontalResolution 1920 -VerticalResolution 1200
+  description: |-
+    This command sets the video resolution for the virtual machine named VM06 to 1920x1200.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts that run this cmdlet.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: HorizontalResolution
+  description: |+
+    Specifies the horizontal resolution for the virtual machine display.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Indicates that this cmdlet returns the **Microsoft.HyperV.PowerShell.VMVideo** object that it modifies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResolutionType" data-throw-if-not-resolved="False" />
+  name: ResolutionType
+  description: |+
+    Specifies the resolution type for the virtual machine display.
+    The acceptable values for this parameter are:
+
+    - Maximum. 
+    The input HorizontalResolution * VerticalResolution is the maximum supported resolution.
+    All standard resolutions smaller than HorizontalResolution * VerticalResolution are also supported. 
+    - Single.
+    The input HorizontalResolution * VerticalResolution is the only supported resolution. 
+    - Default.
+    The supported resolutions are those in the list of standard resolutions.
+    Input HorizontalResolution * VerticalResolution is ignored.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Maximum, Single, Default
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: VerticalResolution
+  description: |+
+    Specifies the vertical resolution for the virtual machine display.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machines for which this cmdlet configures video settings.
+    To obtain a **VirtualMachine** object, use the **Get-VM** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies an array of names of virtual machines for which this cmdlet configures video settings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMVideo" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMVideo
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machine video settings that this cmdlet configures.
+    To obtain a **VMVideo** object, use the **Get-VMVideo** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMVideo
+name: Set-VMVideo
+description: |-
+  The **Set-VMVideo** cmdlet configures the video settings for virtual machines.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmvideo?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VMVideo

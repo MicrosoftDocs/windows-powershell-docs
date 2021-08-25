@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an association between a personal virtual desktop and a user account.
+module: RemoteDesktop
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-RDPersonalVirtualDesktopAssignment
+  href: ./Export-RDPersonalVirtualDesktopAssignment.yml
+- text: Get-RDPersonalVirtualDesktopAssignment
+  href: ./Get-RDPersonalVirtualDesktopAssignment.yml
+- text: Import-RDPersonalVirtualDesktopAssignment
+  href: ./Import-RDPersonalVirtualDesktopAssignment.yml
+- text: Remove-RDPersonalVirtualDesktopAssignment
+  href: ./Remove-RDPersonalVirtualDesktopAssignment.yml
+syntaxes:
+- >-
+  Set-RDPersonalVirtualDesktopAssignment [-CollectionName] <String> -User <String> -VirtualDesktopName <String>
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an association between a user and a personal virtual desktop'
+  code: |-
+    PS C:\>Set-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones" -PersonalVirtualDesktop "PVD-21"
+  description: |-
+    This command associates a user with a personal virtual desktop.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a personal virtual desktop collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    Specifies the user account to associate with the personal virtual desktop, in DOMAIN\User format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual desktop.
+    This parameter is required.
+    The virtual desktop identified here must be a member of the collection that the **CollectionName** parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteDesktop.Set-RDPersonalVirtualDesktopAssignment
+name: Set-RDPersonalVirtualDesktopAssignment
+description: |-
+  The **Set-RDPersonalVirtualDesktopAssignment** cmdlet creates an association between a personal virtual desktop and a user account.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdpersonalvirtualdesktopassignment?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDPersonalVirtualDesktopAssignment

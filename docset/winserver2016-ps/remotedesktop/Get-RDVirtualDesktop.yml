@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of virtual desktops in the remote desktop deployment.
+module: RemoteDesktop
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Move-RDVirtualDesktop
+  href: ./Move-RDVirtualDesktop.yml
+- text: Get-RDVirtualDesktopCollection
+  href: ./Get-RDVirtualDesktopCollection.yml
+syntaxes:
+- Get-RDVirtualDesktop [[-CollectionName] <String[]>] [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve a list of Virtual Desktops'
+  code: |-
+    PS C:\> Get-RDVirtualDesktop -ConnectionBroker "rdcb.contoso.com" | sort-object VirtualDesktopName
+  description: |-
+    This command lists virtual desktops in the collections associated with the connection broker server named rdcb.contoso.com.
+    The command uses the pipeline operator to send the results to the **Sort-Object** cmdlet, which sorts the objects in order of the VirtualDesktopName property.
+  summary: ""
+- title: 'Example 2: Retrieve a list of Virtual Desktops in a Collection'
+  code: |-
+    PS C:\> Get-RDVirtualDesktop -ConnectionBroker "rdcb.contoso.com" -CollectionName @("Virtual Desktop pool")
+  description: |-
+    This command lists virtual desktops in the collection named Virtual Desktop pool that is associated with the connection broker server named rdcb.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CollectionName
+  description: |+
+    Specifies an array of names of personal virtual desktop collections.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteDesktop.Get-RDVirtualDesktop
+name: Get-RDVirtualDesktop
+description: |-
+  The **Get-RDVirtualDesktop** cmdlet gets a list of virtual desktops in the remote desktop deployment.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdvirtualdesktop?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDVirtualDesktop

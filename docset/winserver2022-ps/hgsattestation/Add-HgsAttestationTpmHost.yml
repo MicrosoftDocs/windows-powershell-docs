@@ -1,0 +1,135 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a guarded host with TPM 2.0 to the Attestation service in HGS.
+module: HgsAttestation
+notes: ""
+outputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a string.
+links:
+- text: Get-HgsAttestationTpmHost
+  href: ./Get-HgsAttestationTpmHost.yml
+- text: Remove-HgsAttestationTpmHost
+  href: ./Remove-HgsAttestationTpmHost.yml
+syntaxes:
+- >-
+  Add-HgsAttestationTpmHost [-Name <String>] [-ForeignKey <String>] [-Force] -Path <String>
+
+   [-PolicyVersion <PolicyVersion>] [-Stage] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-HgsAttestationTpmHost [-Name <String>] [-ForeignKey <String>] [-Force] -Xml <XmlDocument>
+
+   [-PolicyVersion <PolicyVersion>] [-Stage] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a TPM host'
+  code: |-
+    PS C:\> Add-HgsAttestationTpmHost -Name "TpmHost21" -Path "C:\TpmHost21.xml"
+  description: |-
+    This command adds a TPM host to the Attestation service.
+    This command uses an .xml file that is output of the **Get-PlatformIdentifier** cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ForeignKey
+  description: |+
+    Specifies a foreign key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the friendly name of the guarded host that this cmdlet adds to the Attestation service.
+    This host must have TPM 2.0 hardware.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the full path of an .xml file.
+    Create this file by using the **Get-PlatformIdentifier** cmdlet.
+    For more information, type `Get-Help Get-PlatformIdentifier`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: FilePath
+  parameterValueGroup: ""
+- type: <xref href="PolicyVersion" data-throw-if-not-resolved="False" />
+  name: PolicyVersion
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, PolicyVersion1503, PolicyVersion1704
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Stage
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="XmlDocument" data-throw-if-not-resolved="False" />
+  name: Xml
+  isRequired: true
+  description: |+
+    Specifies the full path of an .xml file that contains binary data.
+    Create this file by using **Get-PlatformIdentifier**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HgsAttestation.Add-HgsAttestationTpmHost
+name: Add-HgsAttestationTpmHost
+description: |-
+  The **Add-HgsAttestationTpmHost** cmdlet adds a guarded host to the Attestation service in Host Guardian Service (HGS).
+  To use this cmdlet, this host must have trusted platform module (TPM) 2.0 hardware.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/add-hgsattestationtpmhost?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-HgsAttestationTpmHost

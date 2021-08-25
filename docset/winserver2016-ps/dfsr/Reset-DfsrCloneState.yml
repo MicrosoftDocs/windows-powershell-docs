@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cancels a cloning operation.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DfsrCloneState
+  href: ./Get-DfsrCloneState.yml
+syntaxes:
+- Reset-DfsrCloneState [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Cancel a cloning operation'
+  code: |-
+    PS C:\> Reset-DfsrCloneState
+  description: |-
+    This command cancels the ongoing DFS Replication cloning operation and resets the volume's database to the previous state.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSR.Reset-DfsrCloneState
+name: Reset-DfsrCloneState
+description: |-
+  The **Reset-DfsrCloneState** cmdlet cancels an ongoing Distributed File System (DFS) Replication database cloning operation and resets the database of the volume to the previous state.
+
+  When you cancel an export, the DFS Replication service restores the backup database copy that it created at the start of the process.
+  When you cancel an import, the DFS Replication service deletes the new database copy.
+  When you run the cmdlet, the cmdlet sends the reset and waits for the DFS Replication service to complete.
+  Use the **Get-DfsrState** cmdlet to determine the current reset status.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/reset-dfsrclonestate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Reset-DfsrCloneState

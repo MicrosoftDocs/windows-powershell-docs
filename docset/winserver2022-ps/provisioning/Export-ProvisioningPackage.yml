@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Extract the contents of a provisioning package.
+module: Provisioning
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Windows.Provisioning.ProvCommon.RuntimeProvPackageMetadata" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Export-ProvisioningPackage -PackageId <String> [-OutputFolder] <String> [-AllowClobber] [-AnswerFileOnly]
+
+   [-LogsDirectoryPath <String>] [-WprpFile <String>] [-ConnectedDevice]
+- >-
+  Export-ProvisioningPackage [-PackagePath] <String> [-OutputFolder] <String> [-AllowClobber] [-AnswerFileOnly]
+
+   [-LogsDirectoryPath <String>] [-WprpFile <String>] [-ConnectedDevice]
+- >-
+  Export-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-OutputFolder] <String>
+
+   [-AllowClobber] [-AnswerFileOnly] [-LogsDirectoryPath <String>] [-WprpFile <String>] [-ConnectedDevice]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Export-ProvisioningPackage -PackageId {e2ea11f5-d8b0-4db9-bf96-8c909dc2fed5} -OutputFolder D:\Package
+  description: |-
+    This example extracts the content of a Package specifying it's PackageId to the specified folder.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowClobber
+  description: |+
+    {{Fill AllowClobber Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: Force, Overwrite
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AnswerFileOnly
+  description: |+
+    Only exports the Windows provisioning answer file
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ConnectedDevice
+  description: |+
+    {{Fill ConnectedDevice Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: Device
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogsDirectoryPath
+  description: |+
+    Specifies a path to store logs files resulting from the export operation
+
+  defaultValue: None
+  position: Named
+  aliases: Logs
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutputFolder
+  isRequired: true
+  description: |+
+    Specifies the path to the output directory
+
+  defaultValue: None
+  position: "1"
+  aliases: Out
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageId
+  isRequired: true
+  description: |+
+    Id of the Package to be extracted
+
+  defaultValue: None
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackagePath
+  isRequired: true
+  description: |+
+    Path to the package to be extracted
+
+  defaultValue: None
+  position: "0"
+  aliases: Path
+  parameterValueGroup: ""
+- type: <xref href="RuntimeProvPackageMetadata" data-throw-if-not-resolved="False" />
+  name: RuntimeMetadata
+  isRequired: true
+  description: |+
+    {{Fill RuntimeMetadata Description}}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WprpFile
+  description: |+
+    {{Fill WprpFile Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: Wprp
+  parameterValueGroup: ""
+uid: Provisioning.Export-ProvisioningPackage
+name: Export-ProvisioningPackage
+description: |-
+  Extract the contents of a provisioning package to the specified folder.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: provcmdlets.dll-Help.xml
+  Module Name: Provisioning
+  ms.date: 05/09/2017
+  online version: https://docs.microsoft.com/powershell/module/provisioning/export-provisioningpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-ProvisioningPackage

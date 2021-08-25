@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about Cluster Shared Volumes in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterSharedVolume
+  href: ./Add-ClusterSharedVolume.yml
+- text: Move-ClusterSharedVolume
+  href: ./Move-ClusterSharedVolume.yml
+- text: Remove-ClusterSharedVolume
+  href: ./Remove-ClusterSharedVolume.yml
+syntaxes:
+- >-
+  Get-ClusterSharedVolume [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterSharedVolume
+    Name                       State                      Node 
+    ----                       -----                      ---- 
+    Cluster Disk 3             Online                     node1 
+    Cluster Disk 4             Online                     node2
+  description: |-
+    This example lists all the Cluster Shared Volumes on the local cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterSharedVolume -Cluster cluster1
+    Name                       State                      Node 
+    ----                       -----                      ---- 
+    Cluster Disk 1             Online                     node4
+  description: |-
+    This example lists all the Cluster Shared Volumes on the cluster named cluster1.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-ClusterSharedVolume -Name "Cluster Disk 4"
+    Name                       State                      Node 
+    ----                       -----                      ---- 
+    Cluster Disk 4             Online                     node2
+  description: |-
+    This example displays the state of the Cluster Shared Volume called Cluster Disk 4.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to enumerate the Cluster Shared Volumes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the Cluster Shared Volume to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterSharedVolume
+name: Get-ClusterSharedVolume
+description: |-
+  The **Get-ClusterSharedVolume** cmdlet gets information about Cluster Shared Volumes in a failover cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clustersharedvolume?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterSharedVolume

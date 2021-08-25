@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the manifest of an app package.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Windows.Appx.PackageManager.Commands.AppxPackage" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet accepts an array of **AppxPackage** objects that contain information, including the full name of the app package.
+outputs:
+- name: <xref href="System.XML.XMLDocument" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a read-only .xml document that contains information about the app package, like the package ID.
+links:
+- text: Package Manager API
+  href: https://go.microsoft.com/fwlink/?LinkId=245447
+- text: How to Add and Remove Apps
+  href: https://go.microsoft.com/fwlink/?LinkID=231020
+- text: Get-AppxPackage
+  href: ./Get-AppxPackage.yml
+- text: Add-AppxPackage
+  href: ./Add-AppxPackage.yml
+syntaxes:
+- Get-AppxPackageManifest [-Package] <String> [[-User] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the manifest for an app package'
+  code: |-
+    PS C:\> Get-AppxPackageManifest -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe"
+  description: |-
+    This command gets the manifest for an app package named package1_1.0.0.0_neutral__8wekyb3d8bbwe.
+  summary: ""
+- title: 'Example 2: Get the application ID for an app package'
+  code: |-
+    PS C:\> (Get-AppxPackage -Name "*WinJS*" | Get-AppxPackageManifest).package.applications.application.id
+  description: |-
+    This command gets the application ID for an app package that has the string WinJS in the name.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> (Get-AppxPackage -Name "*ZuneMusic*" | Get-AppxPackageManifest).Package.Capabilities
+  description: |-
+    This command gets the capabilities for an app package that has the string ZuneMusic in the name.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies an **AppxPackage** object or the full name of a package.
+    To get the manifest of a package on the computer that is not installed for the current user, you must run this command by using administrator permissions.
+    Wildcards are permitted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  description: |+
+    Specifies a user.
+    This cmdlet gets the manifest of packages that are installed for the user that this parameter specifies.
+    To get the list of packages for a user profile other than the profile for the current user, you must run this command by using administrator permissions.
+    The user name can be in one of these formats: 
+
+    - domain\user_name
+    - user_name@fqn.domain.tld
+    - user_name
+    - SID-string
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Appx.Get-AppxPackageManifest
+name: Get-AppxPackageManifest
+description: |-
+  The **Get-AppxPackageManifest** cmdlet gets the manifest of an app package.
+  An app package has an .msix or .appx file name extension.
+  The manifest is an .xml document that contains information about the package, like the package ID.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: Appx
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appx/get-appxpackagemanifest?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AppxPackageManifest

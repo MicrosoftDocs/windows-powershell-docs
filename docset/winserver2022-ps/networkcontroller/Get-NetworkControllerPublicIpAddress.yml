@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet retrieves a public IP address resource from the Network Controller
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties can be retrieved from this cmdlet:
+    1. The public IP Address of the resource
+    2. Allocation method of the public IP address: Static or dynamic
+    3. Properties of a DNS record associated with this public IP address
+    4. Idle timeout of the TCP connection
+    5. Reference to private IP address that the public IP address is associated to
+syntaxes:
+- >-
+  Get-NetworkControllerPublicIpAddress [[-ResourceId] <String[]>] -ConnectionUri <Uri>
+
+   [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-NetworkControllerPublicIpAddress -ConnectionUri https://networkcontroller
+  description: ""
+  summary: |+
+    This example retrieves all the public IP address resources from the Network Controller. Network Controller is represented by the REST uri https://networkcontroller.
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourceId
+  description: |+
+    Specifies the unique ID of the resource
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Get-NetworkControllerPublicIpAddress
+name: Get-NetworkControllerPublicIpAddress
+description: |-
+  This cmdlet retrieves a public IP address resource from the Network Controller. This publicIpAddress resource is used by the virtualGateway resource and the loadBalancer resource to indicate the IP Address that can be used to communicate with the virtual network from outside it.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollerpublicipaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerPublicIpAddress

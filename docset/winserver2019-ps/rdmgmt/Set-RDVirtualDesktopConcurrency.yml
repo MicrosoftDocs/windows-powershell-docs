@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the number of virtual desktops that RDS can create in parallel.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDVirtualDesktopConcurrency
+  href: ./Get-RDVirtualDesktopConcurrency.yml
+syntaxes:
+- >-
+  Set-RDVirtualDesktopConcurrency [-ConcurrencyFactor] <Int32> [[-HostServer] <String[]>]
+
+   [-ConnectionBroker <String>] [-BatchSize <Int32>] [<CommonParameters>]
+- >-
+  Set-RDVirtualDesktopConcurrency [-Allocation] <Hashtable> [-ConnectionBroker <String>] [-BatchSize <Int32>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the number of virtual desktops that RDS can create in parallel on all host servers'
+  code: |-
+    PS C:\> Set-RDVirtualDesktopConcurrency -ConnectionBroker "rdcb.contoso.com" -ConcurrencyFactor 4
+  description: |-
+    This command sets the number of virtual desktops that Remote Desktop Services (RDS) can create in parallel to 4 on all the host servers associated with the RD Connection Broker server named rdcb.contoso.com.
+  summary: ""
+- title: 'Example 2: Set the number of virtual desktops that RDS can create in parallel on host servers'
+  code: |-
+    PS C:\> Set-RDVirtualDesktopConcurrency -ConnectionBroker "rdcb.contoso.com" -ConcurrencyFactor 3 -HostServer @("rdvh-1.contoso.com","rdvh-2.contoso.com")
+  description: |-
+    This command sets the number of virtual desktops that Remote Desktop Services (RDS) can create in parallel to 3 on the host servers named rdvh-1.contoso.com and rdvh-2.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Allocation
+  isRequired: true
+  description: |+
+    Specifies a collection of values (key/value pair) that specify the concurrency factor for each RD Virtualization Host server.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: BatchSize
+  description: |+
+    Specifies the batch size.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ConcurrencyFactor
+  isRequired: true
+  description: |+
+    Specifies the number of virtual desktops that RDS can create in parallel.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HostServer
+  description: |+
+    Specifies the name of the server that hosts the session.
+    For session collections the host server has the name of the Remote Desktop Session Host (RD Session Host) server.
+    For virtual desktop collections the host server has the name of the Remote Desktop Virtualization Host (RD Virtualization Host) server.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Set-RDVirtualDesktopConcurrency
+name: Set-RDVirtualDesktopConcurrency
+description: |-
+  The **Set-RDVirtualDesktopConcurrency** cmdlet sets the number of virtual desktops that Remote Desktop Services (RDS) can create in parallel on Remote Desktop Virtualization Host (RD Virtualization Host) servers.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdvirtualdesktopconcurrency?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDVirtualDesktopConcurrency

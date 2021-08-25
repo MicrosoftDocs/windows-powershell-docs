@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports the layout of the Start screen.
+module: StartScreen
+notes: ""
+inputs:
+- name: <xref href="Enum" data-throw-if-not-resolved="False" />
+  description: |-
+    You can specify the following file formats: 
+
+    - BIN.
+    Export as a .bin file. 
+    - XML.
+    Export as an .xml file.
+links:
+- text: Import-StartLayout
+  href: ./Import-StartLayout.yml
+syntaxes:
+- Export-StartLayout [[-As] <AsFileType>] [-Path] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Export-StartLayout [[-As] <AsFileType>] [-LiteralPath] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Export the layout as a .bin file'
+  code: |-
+    PS C:\> Export-StartLayout -Path "C:\Layouts\Marketing.bin" -As BIN
+  description: |-
+    This command exports the layout of the Start screen to a file named Marketing.bin in the C:\Layouts folder.
+    The command specifies a value of BIN for the **As** parameter, so the cmdlet creates a .bin file.
+  summary: ""
+parameters:
+- type: <xref href="AsFileType" data-throw-if-not-resolved="False" />
+  name: As
+  description: |+
+    Specifies a file type to export.
+    The acceptable values for this parameter are:
+
+    - BIN.
+    Export as a .bin file. 
+    - XML.
+    Export as an .xml file. 
+
+    The default value is BIN.
+
+  defaultValue: BIN
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LiteralPath
+  isRequired: true
+  description: |+
+    Specifies a literal path to a layout file.
+    Include the file name extension, .bin or .xml.
+    This parameter does not accept the wildcard character (*).
+    If the path includes an escape character (\\), enclose the string in single quotes (').
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies an absolute path to a layout file.
+    Include the file name extension, .bin or .xml.
+
+  defaultValue: Current Location
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: StartScreen.Export-StartLayout
+name: Export-StartLayout
+description: |-
+  The **Export-StartLayout** cmdlet exports the layout of the Start screen of the current user.
+  You can export layout as an .xml file to verify the layout, or you can export layout as a .bin file to modify the layout of an existing Windows image.
+  Specify the appropriate file name extension, .bin or .xml, in the name of the file.
+  To modify the layout of a Windows image, export the layout as a .bin file, and then import it into a Windows image by using the Import-StartLayout cmdlet.
+metadata:
+  external help file: Microsoft.Windows.StartScreen.Commands.dll-Help.xml
+  Module Name: StartScreen
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/startscreen/export-startlayout?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-StartLayout

@@ -1,0 +1,342 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a specific storage pool, or a set of StoragePool objects either from all storage subsystems across all storage providers, or optionally a filtered subset based on specific parameters.
+module: Storage
+notes: |-
+  * To reduce load times, storage providers other than the Storage Spaces provider might not perform a full discovery of objects on initial load. As a result, this cmdlet might show an empty or incomplete listing of objects from a particular storage provider. To update the storage provider cache so that storage objects are available from a storage provider, use the **Update-StorageProviderCache** cmdlet.
+  * The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_PhysicalDisk object to the *PhysicalDisk* parameter to get the storage pool associated with the PhysicalDisk object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_ResiliencySetting" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_ResiliencySetting object to the *ResiliencySetting* parameter to get the storage pool associated with the ResiliencySetting object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageNode" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StorageNode object to the *StorageNode* parameter to get the storage pool associated with the StorageNode object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StorageSubsystem object to the *StorageSubsystem* parameter to get the storage pool associated with the StorageSubsystem object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageTier" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StorageTier object to the *StorageTier* parameter to get the storage pool associated with the StorageTier object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_VirtualDisk object to the *VirtualDisk* parameter to get the storage pool associated with the VirtualDisk object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    The **Get-StoragePool** cmdlet returns objects representing storage pools.
+links:
+- text: Get-Volume
+  href: ./Get-Volume.yml
+- text: New-StoragePool
+  href: ./New-StoragePool.yml
+- text: Remove-StoragePool
+  href: ./Remove-StoragePool.yml
+- text: Set-StoragePool
+  href: ./Set-StoragePool.yml
+- text: Get-StorageJob
+  href: ./Get-StorageJob.yml
+- text: Get-StorageNode
+  href: ./Get-StorageNode.yml
+- text: Get-StorageTier
+  href: ./Get-StorageTier.yml
+syntaxes:
+- >-
+  Get-StoragePool [[-FriendlyName] <String[]>] [-Usage <Usage[]>] [-IsPrimordial <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StoragePool [-UniqueId <String[]>] [-IsPrimordial <Boolean[]>] [-HealthStatus <HealthStatus[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StoragePool [-Name <String[]>] [-IsPrimordial <Boolean[]>] [-HealthStatus <HealthStatus[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StoragePool [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsPrimordial <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StoragePool [-IsPrimordial <Boolean[]>] [-HealthStatus <HealthStatus[]>] [-StorageJob <CimInstance>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StoragePool [-IsPrimordial <Boolean[]>] [-HealthStatus <HealthStatus[]>] [-Volume <CimInstance>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StoragePool [-IsPrimordial <Boolean[]>] [-HealthStatus <HealthStatus[]>] [-StorageTier <CimInstance>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StoragePool [-IsPrimordial <Boolean[]>] [-HealthStatus <HealthStatus[]>] [-ResiliencySetting <CimInstance>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StoragePool [-IsPrimordial <Boolean[]>] [-HealthStatus <HealthStatus[]>] [-VirtualDisk <CimInstance>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StoragePool [-IsPrimordial <Boolean[]>] [-HealthStatus <HealthStatus[]>] [-PhysicalDisk <CimInstance>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StoragePool [-IsPrimordial <Boolean[]>] [-HealthStatus <HealthStatus[]>] [-StorageNode <CimInstance>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StoragePool [-IsPrimordial <Boolean[]>] [-HealthStatus <HealthStatus[]>] [-StorageSubSystem <CimInstance>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all storage pools'
+  code: |-
+    PS C:\>Get-StoragePool
+    FriendlyName            OperationalStatus       HealthStatus            IsPrimordial            IsReadOnly
+    ------------            -----------------       ------------            ------------            ----------
+    CompanyData             OK                      Healthy                 False                   False
+    Primordial              OK                      Healthy                 True                    False
+  description: |-
+    This example lists all storage pools, (when run without parameter) from all Storage Management Providers, from all storage subsystems.
+    This list may optionally be filtered using one or more parameters.
+  summary: ""
+- title: 'Example 2: Get all storage pools (not including primordial pools)'
+  code: |-
+    PS C:\>Get-StoragePool -IsPrimordial $False
+    FriendlyName            OperationalStatus       HealthStatus            IsPrimordial            IsReadOnly
+    ------------            -----------------       ------------            ------------            ----------
+    CompanyData             OK                      Healthy                 False                   False
+  description: |-
+    This example lists all (concrete) storage pools, excluding primordial pools (which store physical disks that have yet to be added to a concrete storage pool).
+  summary: ""
+- title: 'Example 3: Get all storage pools that support the Mirror resiliency setting'
+  code: |-
+    PS C:\>Get-ResiliencySetting -Name Mirror | Get-StoragePool
+    FriendlyName                  OperationalStatus             HealthStatus                  IsPrimordial                  IsReadOnly
+    ------------                  -----------------             ------------                  ------------                  ----------
+    CompanyData                   OK                            Healthy                       False                         False
+    Primordial                    OK                            Healthy                       True                          False
+  description: |-
+    This example uses the Get-ResiliencySetting cmdlet to retrieve ResiliencySetting objects that represent each storage pool that supports the specified resiliency setting (also known as storage layout), in this case Mirror, and then pipes the array of objects to the Get-StoragePool cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FriendlyName
+  description: |+
+    Specifies the friendly name of the storage pool to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HealthStatus" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HealthStatus
+  description: |+
+    Specifies the health status(es) of the storage pool to get.
+    Specify one or more of the following values: **Healthy**, **Warning**, Unhealthy, or Unknown.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Healthy, Warning, Unhealthy, Unknown
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IsPrimordial
+  description: |+
+    Specifies whether to get (concrete) storage pools or primordial storage pools (which store physical disks that have yet to be added to a concrete storage pool).
+    To get (concrete) storage pools, specify the $False Boolean value.
+    To get primordial pools, specify the $True Boolean value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the storage pool to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OtherUsageDescription
+  description: |+
+    Gets any storage pools that match the specified OtherUsageDescription string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: PhysicalDisk
+  description: |+
+    Gets the storage pool that contains the specified PhysicalDisk object.
+    Enter a PhysicalDisk CIM object.
+    The Physical Disk CIM object is exposed by the Get-PhysicalDisk cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: ResiliencySetting
+  description: |+
+    Gets the storage pool associated with the specified ResiliencySetting object.
+    Enter a single ResiliencySetting CIM object as input, or pipe multiple ResiliencySetting objects to the Get-StoragePool cmdlet to view all pools that support the specified resiliency setting.
+    Resiliency Setting CIM objects are exposed by the Get-ResiliencySetting cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageJob
+  description: |+
+    Specifies an outstanding storage job as a **CimInstance** object.
+    The cmdlet gets the storage pools associated with the storage job that you specify.
+    To obtain a storage job, use the Get-StorageJob cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageNode
+  description: |+
+    Specifies a storage node as a **CimInstance** object.
+    The cmdlet gets storage pools that have read-write access on the node that you specify.
+    To obtain a storage node object, use the Get-StorageNode cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageSubSystem
+  description: |+
+    Accepts a StorageSubsystem object as input.
+    The Storage Subsystem CIM object is exposed by the [Get-StorageSubsystem](https://technet.microsoft.com/library/ea364a0b-06d6-4653-b41c-be69b8038b54) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageTier
+  description: |+
+    Specifies a storage tier as a **CimInstance** object.
+    The cmdlet gets storage pools that contain the storage tier that you specify.
+    To obtain a storage tier object, use the Get-StorageTier cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UniqueId
+  description: |+
+    Specifies the UniqueID of the storage pool to get.
+    If the UniqueID includes brackets, enclose the string in quotation marks.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="Usage" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Usage
+  description: |+
+    Gets any storage pools that match the specified Usage value.
+    Acceptable values: ReservedAsDeltaReplicaContainer, ReservedForComputerSystem, ReservedForLocalReplicationServices, ReservedForMigrationServices, ReservedForRemoteReplicationServices, ReservedForSparing, Unknown, Unrestricted, and Other
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, Other, Unrestricted, ReservedForComputerSystem, ReservedAsDeltaReplicaContainer, ReservedForMigrationServices, ReservedForLocalReplicationServices, ReservedForRemoteReplicationServices, ReservedForSparing
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: VirtualDisk
+  description: |+
+    Gets the storage pool associated with the specified virtual disk object.
+    Enter a VirtualDisk CIM object.
+    The Virtual Disk CIM object is exposed by the Get-VirtualDisk cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Volume
+  description: |+
+    Specifies a volume.
+    The cmdlet gets the storage nodes that correspond to the volume that you specify.
+    To obtain a **Volume** object, use the Get-Volume cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-StoragePool
+name: Get-StoragePool
+description: |-
+  The **Get-StoragePool** cmdlet returns either a specific storage pool, or a set of StoragePool objects either from all storage subsystems across all storage providers, or optionally a filtered subset based on specific parameters.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: StoragePool.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-storagepool?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-StoragePool

@@ -1,0 +1,365 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Applies configuration settings to the App-V Client.
+module: AppvClient
+notes: |-
+  * Before applying new configuration, the cmdlet checks if Group Policy already owns any configuration by checking `HKLM\Software\Policies\Microsoft\Application Virtualization`. If any of the provided configuration is in the Group Policy registry node, the cmdlet fails. If Group Policy does not own any of the supplied configuration, the settings are written to the `HKLM\Software\Microsoft\AppV` registry node. If the cmdlet is trying to modify multiple settings, if any are owned by Group Policy, the whole operation fails.
+  * In the case where Group Policy owns the setting, the cmdlet returns the following error: The App-V configuration trying to be modified is being managed by Group Policy. The cmdlet cannot perform the modification. An error code is returned.
+  * If any of the provided configuration are not valid App-V Client settings, the cmdlet fails and returns an error.
+  * The cmdlet checks that you have permissions to perform the specific action. If not, the cmdlet returns an error.
+  * If the action to set a property fails, the cmdlet returns an error.
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that is displayed as a two column table.
+    The first column contains the specific configuration and the second column contains the associated current value.
+
+    In the case where the name/value option is passed, the cmdlet returns the same two column table, but only for the configuration requested.
+links:
+- text: Get-AppvClientConfiguration
+  href: ./Get-AppvClientConfiguration.yml
+syntaxes:
+- >-
+  Set-AppvClientConfiguration [-AllowHighCostLaunch <Boolean>] [-AutoLoad <UInt32>]
+
+   [-CertFilterForClientSsl <String>] [-EnablePackageScripts <Boolean>] [-EnablePublishingRefreshUI <Boolean>]
+
+   [-IntegrationRootGlobal <String>] [-IntegrationRootUser <String>] [-LocationProvider <String>]
+
+   [-MigrationMode <Boolean>] [-PackageInstallationRoot <String>] [-PackageSourceRoot <String>]
+
+   [-RequirePublishAsAdmin <Boolean>] [-ReestablishmentInterval <UInt32>] [-ReestablishmentRetries <UInt32>]
+
+   [-ReportingDataBlockSize <UInt32>] [-ReportingDataCacheLimit <UInt32>] [-ReportingEnabled <Boolean>]
+
+   [-ReportingInterval <UInt32>] [-ReportingRandomDelay <UInt32>] [-ReportingServerURL <String>]
+
+   [-ReportingStartTime <UInt32>] [-RoamingFileExclusions <String>] [-RoamingRegistryExclusions <String>]
+
+   [-SharedContentStoreMode <Boolean>] [-VerifyCertificateRevocationList <Boolean>]
+
+   [-ExperienceImprovementOptIn <Boolean>] [-ProcessesUsingVirtualComponents <String[]>]
+
+   [-EnableDynamicVirtualization <Boolean>] [-IgnoreLocationProvider <Boolean>] [-SupportBranchCache <Boolean>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a client configuration parameter'
+  code: |-
+    PS C:\> Set-AppvClientConfiguration -parameter1 "parameterVal1"
+  description: |-
+    This schematic example sets a particular client configuration parameter.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowHighCostLaunch
+  description: |+
+    Specifies whether virtualized applications are started on Windows 8 computers that are connected over a metered network connection, for instance, 4G.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: AutoLoad
+  description: |+
+    Specifies how new packages should be loaded automatically by App-V on a specific computer. 
+    The acceptable values for this parameter are:
+
+    - 0 for None 
+    - 1 for Previously used
+    - 2 for All
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertFilterForClientSsl
+  description: |+
+    Specifies the path of a valid certificate in the certificate store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableDynamicVirtualization
+  description: |+
+    Specifies whether to enable dynamic virtualization.
+    Dynamic virtualization enables supported Shell Extensions, Browser Helper Objects, and Active X controls to be virtualized and work with virtual applications.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnablePackageScripts
+  description: |+
+    Specifies whether to enable the ability for scripts defined in the package manifest of configuration files to run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnablePublishingRefreshUI
+  description: |+
+    Specifies whether to enable the publishing refresh progress bar for the Client.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ExperienceImprovementOptIn
+  description: |+
+    Specifies whether to opt in ($True) or opt out ($False) of the Customer Experience Improvement Program.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IgnoreLocationProvider
+  description: |+
+    Specifies whether to force the client to ignore the Location Provider path and instead use the Package Source Root.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IntegrationRootGlobal
+  description: |+
+    Specifies the location to create symbolic links associated with the current version of a globally published package.
+    All virtual application extensions, for example shortcuts and file type associations, use this path.
+    If you do not specify a path, symbolic links are not be used when you publish the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IntegrationRootUser
+  description: |+
+    Specifies the location to create symbolic links associated with the current version of a per-user published package.
+    All virtual application extensions, for example shortcuts and file type associations, use this path.
+    If you do not specify a path, symbolic links will not be used when you publish the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocationProvider
+  description: |+
+    Specifies the class ID (CLSID) for a compatible implementation of the IAppvPackageLocationProvider interface.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: MigrationMode
+  description: |+
+    Specifies whether to use migration mode.
+    Migration mode allows the App-V client to control shortcuts and FTAs for packages published using an earlier version of App-V.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageInstallationRoot
+  description: |+
+    Specifies directory where all new applications and updates are installed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageSourceRoot
+  description: |+
+    Specifies a value that overrides source location for downloading package content.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ProcessesUsingVirtualComponents
+  description: |+
+    Specifies a list of process paths which are candidates for using dynamic virtualization of supported shell extensions, browser helper objects, and ActiveX controls.
+    This parameter may contain wildcard characters.
+    Only processes whose full path matches one of these items can use dynamic virtualization.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ReestablishmentInterval
+  description: |+
+    Specifies the number of seconds between attempts to reestablish a dropped session.
+    The acceptable values for this parameter are: between 0 and 3600.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ReestablishmentRetries
+  description: |+
+    Specifies the number of times to retry a dropped session.
+    The acceptable values for this parameter are: between 0 and 99.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ReportingDataBlockSize
+  description: |+
+    Specifies the maximum size in bytes to transmit to the server for reporting upload requests.
+    This can help avoid permanent transmission failures when the log has reached a significant size.
+    The acceptable values for this parameter are: between 1024 and unlimited.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ReportingDataCacheLimit
+  description: |+
+    Specifies the maximum size in megabytes (MB) of the XML cache for storing reporting information.
+    The size applies to the cache in memory.
+    When the limit is reached, the log file rolls over.
+    The acceptable values for this parameter are: between 0 and 1024.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ReportingEnabled
+  description: |+
+    Specifies whether to enable the client to return information to a reporting server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ReportingInterval
+  description: |+
+    Specifies the retry interval that the client uses to resend data to the reporting server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ReportingRandomDelay
+  description: |+
+    Specifies the maximum delay, in minutes, for data to be sent to the reporting server.
+    When the scheduled task is started, the client generates a random delay between 0 and *ReportingRandomDelay* and waits the specified duration before it sends data.
+    This can help prevent collisions on the server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportingServerURL
+  description: |+
+    Specifies the location on the reporting server where client information is saved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ReportingStartTime
+  description: |+
+    Specifies the time to initiate the client to send data to the reporting server.
+    The acceptable values for this parameter are: integers between 0-23 corresponding to the hour of the day.
+    By default, the *ReportingStartTime* starts on the current day at 10 P.M or 22.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RequirePublishAsAdmin
+  description: |+
+    Specifies whether an unelevated user can publish registered App-V packages.
+
+    This parameter is applicable starting in App-V 5.0 SP3.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoamingFileExclusions
+  description: |+
+    Specifies the file paths relative to `%userprofile%` that do not roam with a user's profile, for example: `'desktop;my pictures'`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoamingRegistryExclusions
+  description: |+
+    Specifies the registry paths that do not roam with a user profile, for example `'software\\\\classes;software\\\\clients'`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SharedContentStoreMode
+  description: |+
+    Specifies whether streamed package contents are not saved to the local hard disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SupportBranchCache
+  description: |+
+    Specifies whether branch caching is turned on.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: VerifyCertificateRevocationList
+  description: |+
+    Specifies whether to verify Server certificate revocation status before steaming using HTTPS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Set-AppvClientConfiguration
+name: Set-AppvClientConfiguration
+description: |-
+  The **Set-AppvClientConfiguration** cmdlet applies configuration settings to the Microsoft Application Virtualization (App-V) client.
+  Each parameter represents a setting that can be changed.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/set-appvclientconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AppvClientConfiguration

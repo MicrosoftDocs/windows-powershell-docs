@@ -1,0 +1,137 @@
+### YamlMime:PowershellModule
+children:
+- title: RemoteAccess
+  cmdlets:
+  - RemoteAccess.Add-BgpCustomRoute
+  - RemoteAccess.Add-BgpPeer
+  - RemoteAccess.Add-BgpRouteAggregate
+  - RemoteAccess.Add-BgpRouter
+  - RemoteAccess.Add-BgpRoutingPolicy
+  - RemoteAccess.Add-BgpRoutingPolicyForPeer
+  - RemoteAccess.Add-DAAppServer
+  - RemoteAccess.Add-DAClient
+  - RemoteAccess.Add-DAClientDnsConfiguration
+  - RemoteAccess.Add-DAEntryPoint
+  - RemoteAccess.Add-DAMgmtServer
+  - RemoteAccess.Add-RemoteAccessIpFilter
+  - RemoteAccess.Add-RemoteAccessLoadBalancerNode
+  - RemoteAccess.Add-RemoteAccessRadius
+  - RemoteAccess.Add-VpnIPAddressRange
+  - RemoteAccess.Add-VpnS2SInterface
+  - RemoteAccess.Add-VpnSstpProxyRule
+  - RemoteAccess.Clear-BgpRouteFlapDampening
+  - RemoteAccess.Clear-RemoteAccessInboxAccountingStore
+  - RemoteAccess.Clear-VpnS2SInterfaceStatistics
+  - RemoteAccess.Connect-VpnS2SInterface
+  - RemoteAccess.Disable-BgpRouteFlapDampening
+  - RemoteAccess.Disable-DAMultiSite
+  - RemoteAccess.Disable-DAOtpAuthentication
+  - RemoteAccess.Disable-RemoteAccessRoutingDomain
+  - RemoteAccess.Disconnect-VpnS2SInterface
+  - RemoteAccess.Disconnect-VpnUser
+  - RemoteAccess.Enable-BgpRouteFlapDampening
+  - RemoteAccess.Enable-DAMultiSite
+  - RemoteAccess.Enable-DAOtpAuthentication
+  - RemoteAccess.Enable-RemoteAccessRoutingDomain
+  - RemoteAccess.Get-BgpCustomRoute
+  - RemoteAccess.Get-BgpPeer
+  - RemoteAccess.Get-BgpRouteAggregate
+  - RemoteAccess.Get-BgpRouteFlapDampening
+  - RemoteAccess.Get-BgpRouteInformation
+  - RemoteAccess.Get-BgpRouter
+  - RemoteAccess.Get-BgpRoutingPolicy
+  - RemoteAccess.Get-BgpStatistics
+  - RemoteAccess.Get-DAAppServer
+  - RemoteAccess.Get-DAClient
+  - RemoteAccess.Get-DAClientDnsConfiguration
+  - RemoteAccess.Get-DAEntryPoint
+  - RemoteAccess.Get-DAEntryPointDC
+  - RemoteAccess.Get-DAMgmtServer
+  - RemoteAccess.Get-DAMultiSite
+  - RemoteAccess.Get-DANetworkLocationServer
+  - RemoteAccess.Get-DAOtpAuthentication
+  - RemoteAccess.Get-DAServer
+  - RemoteAccess.Get-RemoteAccess
+  - RemoteAccess.Get-RemoteAccessAccounting
+  - RemoteAccess.Get-RemoteAccessConfiguration
+  - RemoteAccess.Get-RemoteAccessConnectionStatistics
+  - RemoteAccess.Get-RemoteAccessConnectionStatisticsSummary
+  - RemoteAccess.Get-RemoteAccessHealth
+  - RemoteAccess.Get-RemoteAccessIpFilter
+  - RemoteAccess.Get-RemoteAccessLoadBalancer
+  - RemoteAccess.Get-RemoteAccessRadius
+  - RemoteAccess.Get-RemoteAccessRoutingDomain
+  - RemoteAccess.Get-RemoteAccessUserActivity
+  - RemoteAccess.Get-RoutingProtocolPreference
+  - RemoteAccess.Get-VpnAuthProtocol
+  - RemoteAccess.Get-VpnS2SInterface
+  - RemoteAccess.Get-VpnS2SInterfaceStatistics
+  - RemoteAccess.Get-VpnServerConfiguration
+  - RemoteAccess.Get-VpnSstpProxyRule
+  - RemoteAccess.Install-RemoteAccess
+  - RemoteAccess.New-VpnSstpProxyRule
+  - RemoteAccess.New-VpnTrafficSelector
+  - RemoteAccess.Remove-BgpCustomRoute
+  - RemoteAccess.Remove-BgpPeer
+  - RemoteAccess.Remove-BgpRouteAggregate
+  - RemoteAccess.Remove-BgpRouter
+  - RemoteAccess.Remove-BgpRoutingPolicy
+  - RemoteAccess.Remove-BgpRoutingPolicyForPeer
+  - RemoteAccess.Remove-DAAppServer
+  - RemoteAccess.Remove-DAClient
+  - RemoteAccess.Remove-DAClientDnsConfiguration
+  - RemoteAccess.Remove-DAEntryPoint
+  - RemoteAccess.Remove-DAMgmtServer
+  - RemoteAccess.Remove-RemoteAccessIpFilter
+  - RemoteAccess.Remove-RemoteAccessLoadBalancerNode
+  - RemoteAccess.Remove-RemoteAccessRadius
+  - RemoteAccess.Remove-VpnIPAddressRange
+  - RemoteAccess.Remove-VpnS2SInterface
+  - RemoteAccess.Remove-VpnSstpProxyRule
+  - RemoteAccess.Set-BgpPeer
+  - RemoteAccess.Set-BgpRouteAggregate
+  - RemoteAccess.Set-BgpRouteFlapDampening
+  - RemoteAccess.Set-BgpRouter
+  - RemoteAccess.Set-BgpRoutingPolicy
+  - RemoteAccess.Set-BgpRoutingPolicyForPeer
+  - RemoteAccess.Set-DAAppServerConnection
+  - RemoteAccess.Set-DAClient
+  - RemoteAccess.Set-DAClientDnsConfiguration
+  - RemoteAccess.Set-DAEntryPoint
+  - RemoteAccess.Set-DAEntryPointDC
+  - RemoteAccess.Set-DAMultiSite
+  - RemoteAccess.Set-DANetworkLocationServer
+  - RemoteAccess.Set-DAOtpAuthentication
+  - RemoteAccess.Set-DAServer
+  - RemoteAccess.Set-RemoteAccess
+  - RemoteAccess.Set-RemoteAccessAccounting
+  - RemoteAccess.Set-RemoteAccessConfiguration
+  - RemoteAccess.Set-RemoteAccessInboxAccountingStore
+  - RemoteAccess.Set-RemoteAccessIpFilter
+  - RemoteAccess.Set-RemoteAccessLoadBalancer
+  - RemoteAccess.Set-RemoteAccessRadius
+  - RemoteAccess.Set-RemoteAccessRoutingDomain
+  - RemoteAccess.Set-RoutingProtocolPreference
+  - RemoteAccess.Set-VpnAuthProtocol
+  - RemoteAccess.Set-VpnAuthType
+  - RemoteAccess.Set-VpnIPAddressAssignment
+  - RemoteAccess.Set-VpnS2SInterface
+  - RemoteAccess.Set-VpnServerConfiguration
+  - RemoteAccess.Set-VpnSstpProxyRule
+  - RemoteAccess.Start-BgpPeer
+  - RemoteAccess.Stop-BgpPeer
+  - RemoteAccess.Uninstall-RemoteAccess
+  - RemoteAccess.Update-DAMgmtServer
+uid: RemoteAccess
+name: RemoteAccess
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Remote Access-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.1.1
+  Locale: en-US
+  Module Guid: d9d222a9-756c-41f8-b23a-2a596093216b
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  title: RemoteAccess

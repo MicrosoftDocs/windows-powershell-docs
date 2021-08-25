@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Unlocks USB storage.
+module: MultiPoint
+notes: ""
+links:
+- text: Lock-WmsUsbStorage
+  href: ./Lock-WmsUsbStorage.yml
+syntaxes:
+- Unlock-WmsUsbStorage [-StationId] <UInt32[]> [-Server <String>] [<CommonParameters>]
+- Unlock-WmsUsbStorage [-All] [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Unblock USB storage devices'
+  code: |-
+    PS C:\> Unlock-WmsUsbStorage -StationId 2
+  description: |-
+    This command unblocks USB storage devices on the specified station.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  isRequired: true
+  description: |+
+    Indicates that this operation applies to all sessions on the target host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StationId
+  isRequired: true
+  description: |+
+    Specifies an array of station IDs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MultiPoint.Unlock-WmsUsbStorage
+name: Unlock-WmsUsbStorage
+description: |-
+  The **Unlock-WmsUsbStorage** cmdlet enables USB storage on the specified station or stations.
+  If a USB storage device is hidden, this cmdlet makes it available.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/unlock-wmsusbstorage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Unlock-WmsUsbStorage

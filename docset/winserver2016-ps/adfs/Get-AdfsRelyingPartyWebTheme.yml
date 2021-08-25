@@ -1,0 +1,41 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets properties of web themes applied to relying party trusts.
+module: ADFS
+notes: ""
+links:
+- text: Remove-AdfsRelyingPartyWebTheme
+  href: ./Remove-AdfsRelyingPartyWebTheme.yml
+- text: Set-AdfsRelyingPartyWebTheme
+  href: ./Set-AdfsRelyingPartyWebTheme.yml
+syntaxes:
+- Get-AdfsRelyingPartyWebTheme [-RelyingPartyName <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a web theme'
+  code: |-
+    PS C:\> Get-AdfsRelyingPartyWebTheme -TargetRelyingPartyName "urn:app1"
+  description: |-
+    This command gets the relying party web theme for the relying party named urn:app1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RelyingPartyName
+  description: |+
+    Specifies an array of names of relying parties for which to get web themes.
+
+  defaultValue: None
+  position: Named
+  aliases: Name
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsRelyingPartyWebTheme
+name: Get-AdfsRelyingPartyWebTheme
+description: |-
+  The **Get-AdfsRelyingPartyWebTheme** cmdlet gets properties of any web themes applied to relying party trusts and the names of the trusts to which these themes are applied.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsrelyingpartywebtheme?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsRelyingPartyWebTheme

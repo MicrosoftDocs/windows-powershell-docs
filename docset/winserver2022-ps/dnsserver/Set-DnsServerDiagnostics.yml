@@ -1,0 +1,539 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets debugging and logging parameters.
+module: DnsServer
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerDiagnostics" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DnsServerDiagnostics
+  href: ./Get-DnsServerDiagnostics.yml
+syntaxes:
+- >-
+  Set-DnsServerDiagnostics [-ComputerName <String>] [-PassThru] [-Answers <Boolean>] [-EventLogLevel <UInt32>]
+
+   [-FullPackets <Boolean>] [-IPFilterList <IPAddress[]>] [-LogFilePath <String>] [-MaxMBFileSize <UInt32>]
+
+   [-EnableLoggingForRemoteServerEvent <Boolean>] [-EnableLoggingForPluginDllEvent <Boolean>]
+
+   [-UseSystemEventLog <Boolean>] [-EnableLogFileRollover <Boolean>]
+
+   [-EnableLoggingForZoneLoadingEvent <Boolean>] [-EnableLoggingForLocalLookupEvent <Boolean>]
+
+   [-EnableLoggingToFile <Boolean>] [-EnableLoggingForZoneDataWriteEvent <Boolean>]
+
+   [-EnableLoggingForTombstoneEvent <Boolean>] [-EnableLoggingForRecursiveLookupEvent <Boolean>]
+
+   [-UdpPackets <Boolean>] [-UnmatchedResponse <Boolean>] [-Updates <Boolean>] [-WriteThrough <Boolean>]
+
+   [-SaveLogsToPersistentStorage <Boolean>] [-EnableLoggingForServerStartStopEvent <Boolean>]
+
+   [-Notifications <Boolean>] [-Queries <Boolean>] [-QuestionTransactions <Boolean>] [-ReceivePackets <Boolean>]
+
+   [-SendPackets <Boolean>] [-TcpPackets <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-DnsServerDiagnostics [-ComputerName <String>] [-PassThru] [-DebugLogging <UInt32>]
+
+   [-OperationLogLevel2 <UInt32>] [-OperationLogLevel1 <UInt32>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-DnsServerDiagnostics [-ComputerName <String>] [-PassThru] -All <Boolean> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable diagnostics for outgoing TCP responses for updates'
+  code: |-
+    PS C:\> Set-DnsServerDiagnostics -SendPackets $True -TcpPackets $True -Answers $True -Updates $True
+  description: |-
+    This command enables the diagnostics of outgoing TCP responses for updates.
+  summary: ""
+- title: 'Example 2: Enable all diagnostic options except for LogFilePath'
+  code: |-
+    PS C:\> Set-DnsServerDiagnostics -All $True
+  description: |-
+    This command enables all options for DNS server diagnostics except for **LogFilePath**.
+  summary: ""
+- title: 'Example 3: Log send packets'
+  code: |-
+    PS C:\> Set-DnsServerDiagnostics -DebugLogging 0x10000
+  description: |-
+    This command logs send packages.
+  summary: ""
+- title: 'Example 4: Reset debugging settings'
+  code: |-
+    PS C:\> Get-DnsServerDiagnostics -ComputerName "DNSServer01" | select -TcpPackets, -UdpPackets | Set-DnsServerDiagnostics -ComputerName "DNSServer02"
+  description: |-
+    This command resets the TCP packet debugging and UDP packet debugging options on DNSServer02 to their values on DNSServer01.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: All
+  isRequired: true
+  description: |+
+    Specifies whether the DNS server logs all events.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Answers
+  description: |+
+    Specifies whether to enable the logging of DNS responses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    The acceptable values for this parameter are: an IPv4 address, an IPv6 address, and any other value that resolves to an IP address, such as fully qualified domain name (FQDN), Hostname, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DebugLogging
+  description: |+
+    Specifies the bitmask for debug logging.
+    Valid values are:
+
+    - 0x00000001. The server logs query packet exchanges.
+    - 0x00000010. The server logs packet exchanges that are related to zone exchanges.
+    - 0x00000020. The server logs packet exchanges that are related to zone updates.
+    - 0x00000100. The server logs packets that contain questions.
+    - 0x00000200. The server logs packets that contain answers.
+    - 0x00001000. The server logs packets that it sends.
+    - 0x00002000. The server logs packets that it receives.
+    - 0x00004000. The server logs User Datagram Protocol (UDP) packet exchanges.
+    - 0x00008000. The server logs Transmission Control Protocol (TCP) packet exchanges.
+    - 0x0000FFFF. The server logs operations if you set the following fields to $True: 0x00001000, 0x00002000, 0x00008000, 0x00004000, 0x00000001, 0x00000001, 0x00000020, 0x00000100, and 0x00000200S.
+    - 0x00010000. Independent of other field values, this bitmap logs Active Directory write operations.
+    - 0x00020000. Independent of other field values, this bitmap logs Active Directory polling operations and operations that occur during DNS updates (secure and not secure) on Active Directory-integrated zones.
+    - 0x01000000. If other field values allow it, the server logs the entire packet to the log file.
+    - 0x02000000. If other field values allow it, the server logs response packets that do not match any outstanding queries.
+    - 0x80000000. If other field values allow it, the server saves packet logging information to persistent storage.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLogFileRollover
+  description: |+
+    Specifies whether to enable log file rollover.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLoggingForLocalLookupEvent
+  description: |+
+    Specifies whether the DNS server logs local lookup events.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLoggingForPluginDllEvent
+  description: |+
+    Specifies whether the DNS server logs dynamic link library (DLL) plug-in events.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLoggingForRecursiveLookupEvent
+  description: |+
+    Specifies whether the DNS server logs recursive lookup events.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLoggingForRemoteServerEvent
+  description: |+
+    Specifies whether the DNS server logs remote server events.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLoggingForServerStartStopEvent
+  description: |+
+    Specifies whether the DNS server logs server start and stop events.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLoggingForTombstoneEvent
+  description: |+
+    Specifies whether the DNS server logs tombstone events.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLoggingForZoneDataWriteEvent
+  description: |+
+    Specifies Controls whether the DNS server logs zone data write events.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLoggingForZoneLoadingEvent
+  description: |+
+    Specifies whether the DNS server logs zone load events.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLoggingToFile
+  description: |+
+    Specifies whether the DNS server logs logging-to-file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: EventLogLevel
+  description: |+
+    Specifies an event log level.
+    Valid values are:
+
+    - 0: No Events
+    - 1: Errors Only
+    - 2: Errors and warnings
+    - 3-7: All Events
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: FullPackets
+  description: |+
+    Specifies whether the DNS server logs full packets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPFilterList
+  description: |+
+    Specifies an array of IP addresses to filter.
+    When you enable logging, traffic to and from these IP addresses is logged.
+    If you do not specify any IP addresses, traffic to and from all IP addresses is logged.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: FilterIPAddressList
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogFilePath
+  description: |+
+    Specifies a log file path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxMBFileSize
+  description: |+
+    Specifies the maximum size of the log file.
+    This parameter is relevant if you set **EnableLogFileRollover** and **EnableLoggingToFile** to $True.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Notifications
+  description: |+
+    Specifies whether the DNS server logs notifications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: OperationLogLevel1
+  description: |+
+    Specifies a bit flag for the logging level.
+    Valid values are:
+
+    - 0x00000001. The DNS server saves operational logging information to persistent storage.
+    - 0x00000010. The DNS server logs event logging information to a log file.
+    - 0x00000020. The DNS server logs operational logging information for server start and stop activities to the log file.
+    - 0x00002000. The DNS server logs operational logging information for activities that are related to loading a zone from a directory server to the log file. 
+    - 0x00004000. The DNS server logs operational logging information for activities that are related to writing zone data to the directory server to the log file.
+    - 0x00020000. The DNS server logs operational logging information for activities that are related to updating nodes that have exceeded the tombstone lifetime to the log file.
+    - 0x00100000. The DNS server logs operational logging information for local resource lookup activities to the log file.
+    - 0x00200000. The DNS server logs operational logging information for activities that occur during recursive query lookup to the log file.
+    - 0x00400000. The DNS server logs operational logging information for activities that are related to interaction with remote name servers to the log file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: OperationLogLevel2
+  description: |+
+    Specifies the additional operations that the DNS server logs.
+    The default valid value is:
+
+    0x01000000.
+    Valid values for this parameter are: 0x01, 0x02, and 0x03.The DNS server logs operational logging information for activities that are related to interaction with plug-in DLLs to the log file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Queries
+  description: |+
+    Specifies whether the DNS server allows query packet exchanges to pass through the content filter, such as the *IPFilterList* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: QuestionTransactions
+  description: |+
+    Specifies whether the DNS server logs queries.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ReceivePackets
+  description: |+
+    Specifies whether the DNS server logs receive packets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SaveLogsToPersistentStorage
+  description: |+
+    Specifies whether the DNS server saves logs to persistent storage.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SendPackets
+  description: |+
+    Specifies whether the DNS server logs send packets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: TcpPackets
+  description: |+
+    Specifies whether the DNS server logs TCP packets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UdpPackets
+  description: |+
+    Specifies whether the DNS server logs UDP packets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UnmatchedResponse
+  description: |+
+    Specifies whether the DNS server logs unmatched responses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Updates
+  description: |+
+    Specifies whether the DNS server logs updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseSystemEventLog
+  description: |+
+    Specifies whether the DNS server uses the system event log for logging.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: WriteThrough
+  description: |+
+    Specifies whether the DNS server logs write-throughs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Set-DnsServerDiagnostics
+name: Set-DnsServerDiagnostics
+description: |-
+  The **Set-DnsServerDiagnostics** cmdlet sets debugging and logging parameters on a Domain Name System (DNS) server.
+
+  To enable debug logging, specify a value of $True for the *FullPackets* parameter and do the following:
+
+  - Set the *ReceivePackets* parameter or the *SendPackets* parameter to $True.
+  - Set the *TcpPackets* parameter or the *UdpPackets* parameter to $True.
+  - Set the *Notifications* parameter, the *Queries* parameter, or the *Updates* parameter to $True. 
+  - Set the *QuestionTransactions* parameter or the *Answers* parameter to $True.
+
+  If you use the *Parameters* parameter set, you must specify at least one of the options in each of the following pairs of parameters: 
+
+  - **ReceivePackets**, **SendPackets**
+  - **TcpPackets**, **UdpPackets**
+  - **Notifications**, **Updates**, **Queries**
+  - **QuestionTransactions**, **Answers**
+
+  The *All* parameter set enables all options except for the following: **LogFilePath**, **MaxMBFileSize**, **EventLogLevel**, **FilterIpAddrList**, **UseSystemEventLog**, and **EnableLogFileRollover**.
+
+  Use the *LogLevel* parameter to enable diagnostics at a more detailed level.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerDiagnostics_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverdiagnostics?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DnsServerDiagnostics

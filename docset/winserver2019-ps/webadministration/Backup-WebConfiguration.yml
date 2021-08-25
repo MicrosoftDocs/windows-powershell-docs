@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a backup of an IIS configuration.
+module: WebAdministration
+notes: ""
+links:
+- text: Add-WebConfiguration
+  href: ./Add-WebConfiguration.yml
+- text: Clear-WebConfiguration
+  href: ./Clear-WebConfiguration.yml
+- text: Get-WebConfigurationBackup
+  href: ./Get-WebConfigurationBackup.yml
+- text: Remove-WebConfigurationBackup
+  href: ./Remove-WebConfigurationBackup.yml
+- text: Restore-WebConfiguration
+  href: ./Restore-WebConfiguration.yml
+- text: Select-WebConfiguration
+  href: ./Select-WebConfiguration.yml
+- text: Set-WebConfiguration
+  href: ./Set-WebConfiguration.yml
+syntaxes:
+- Backup-WebConfiguration [-Name] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Back up an IIS configuration'
+  code: |-
+    IIS:\> Backup-WebConfiguration -Name "MyIISBackup"
+
+    Name           Creation Date
+
+    ----           -------------
+
+    MyIISBackup    2/20/2009 12:00:00 AM
+  description: |-
+    This command creates a backup of your IIS configuration in a folder named MyIISBackup.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the folder that this cmdlet creates to store the backup files.
+    If a backup with the name specified already exists, this cmdlet returns an error.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Backup-WebConfiguration
+name: Backup-WebConfiguration
+description: |-
+  The **Backup-WebConfiguration** cmdlet creates a backup of an Internet Information Services (IIS) configuration.
+  The cmdlet creates a folder with the name specified by the *Name* parameter for the backup in the $env:Windir\System32\inetsrv\backup folder.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/backup-webconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Backup-WebConfiguration

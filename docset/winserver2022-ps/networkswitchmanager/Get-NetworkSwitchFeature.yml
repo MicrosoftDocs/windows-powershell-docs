@@ -1,0 +1,117 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets features of a network switch.
+module: NetworkSwitchManager
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns an array of **CimInstance** objects that represent network switch features.
+links:
+- text: Disable-NetworkSwitchFeature
+  href: ./Disable-NetworkSwitchFeature.yml
+- text: Enable-NetworkSwitchFeature
+  href: ./Enable-NetworkSwitchFeature.yml
+syntaxes:
+- Get-NetworkSwitchFeature -CimSession <CimSession> [-Name <String>] [<CommonParameters>]
+- Get-NetworkSwitchFeature -CimSession <CimSession> [-Enabled] [<CommonParameters>]
+- Get-NetworkSwitchFeature -CimSession <CimSession> [-Disabled] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all features'
+  code: |-
+    PS C:\>$Session = New-CimSession -ComputerName "NetworkSwitch08"
+    PS C:\> Get-NetworkSwitchFeature -CimSession $Session
+    Name                                IsEnabled InstanceID             PSComputerName        
+    ----                                --------- ----------             --------------        
+    SSH                                      True Contoso:Feature:2       10.19.26.49         
+    Tacacs                                   True Contoso:Feature:3       10.19.26.49         
+    BGP                                     False Contoso:Feature:4       10.19.26.49         
+    VLAN                                     True Contoso:Feature:5       10.19.26.49         
+    LACP                                     True Contoso:Feature:6       10.19.26.49         
+    DHCP                                    False Contoso:Feature:7       10.19.26.49         
+    LLDP                                     True Contoso:Feature:8       10.19.26.49
+  description: |-
+    The first command creates a **CimSession** for a network switch, and then stores it in the **$Session** variable.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+    The second command gets the features for the switch NetworkSwitch08 by using the **$Session** object.
+    This example shows representative results.
+  summary: ""
+- title: 'Example 2: Get all enabled features'
+  code: |-
+    PS C:\>Get-NetworkSwitchFeature -CimSession $Session -Enabled
+  description: |-
+    This command gets all the enabled features on a network switch.
+    The command includes a **CimSession**, similar to the first example.
+  summary: ""
+- title: 'Example 3: Get all disabled features'
+  code: |-
+    PS C:\>Get-NetworkSwitchFeature -CimSession $Session -Disabled
+  description: |-
+    This command gets all the disabled features on a network switch.
+    The command includes a **CimSession**, similar to the first example.
+  summary: ""
+- title: 'Example 4: Get features by using a name'
+  code: |-
+    PS C:\>Get-NetworkSwitchFeature -CimSession $Session -FeatureName "*BGP*"
+  description: |-
+    This command gets all features that contain the string BGP on a network switch.
+    The command includes a **CimSession**, similar to the first example.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  isRequired: true
+  description: |+
+    Specifies the **CimSession** that this cmdlet uses to connect to the network switch.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disabled
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet gets only disabled features.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Enabled
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet gets only enabled features.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a feature to get.
+    Use wildcard characters to specify multiple features.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkSwitchManager.Get-NetworkSwitchFeature
+name: Get-NetworkSwitchFeature
+description: |-
+  The **Get-NetworkSwitchFeature** cmdlet gets features of a network switch.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: NetworkSwitchFeature-help.xml
+  Module Name: NetworkSwitchManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkswitchmanager/get-networkswitchfeature?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkSwitchFeature

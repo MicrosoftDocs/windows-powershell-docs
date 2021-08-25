@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Expands an existing App-V package.
+module: AppvSequencer
+notes: ""
+links:
+- text: New-AppvSequencerPackage
+  href: ./New-AppvSequencerPackage.yml
+- text: Update-AppvSequencerPackage
+  href: ./Update-AppvSequencerPackage.yml
+syntaxes:
+- Expand-AppvSequencerPackage [-AppvPackagePath] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Expand a package'
+  code: |-
+    PS C:\> Expand-AppvSequencerPackage -AppvPackagePath "C:\MyPackages\PreReq.appv"
+  description: |-
+    This command expands the package PreReq.appv to the sequencing computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AppvPackagePath
+  isRequired: true
+  description: |+
+    Specifies the file path to an existing App-V package to be expanded to the NTFS file system of the computer running the cmdlet.
+
+  defaultValue: None
+  position: "0"
+  aliases: AppvPackage
+  parameterValueGroup: ""
+uid: AppvSequencer.Expand-AppvSequencerPackage
+name: Expand-AppvSequencerPackage
+description: |-
+  The **Expand-AppvSequencerPackage** cmdlet expands a Microsoft Application Virtualization (App-V) package into its native form to the NTFS file system on the computer running the sequencer.
+  You can more easily add prerequisites or dependent applications to the sequencer before generating the package.
+
+  Run this cmdlet each time to expand a new package onto the computer running the sequencer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
+  Module Name: AppvSequencer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvsequencer/expand-appvsequencerpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Expand-AppvSequencerPackage

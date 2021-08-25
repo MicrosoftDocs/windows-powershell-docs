@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a binding to a website.
+module: WebAdministration
+notes: ""
+links:
+- text: Get-WebBinding
+  href: ./Get-WebBinding.yml
+- text: Remove-WebBinding
+  href: ./Remove-WebBinding.yml
+- text: Set-WebBinding
+  href: ./Set-WebBinding.yml
+syntaxes:
+- >-
+  New-WebBinding [[-Name] <String>] [-Protocol <String>] [-Port <UInt32>] [-IPAddress <String>]
+
+   [-HostHeader <String>] [-SslFlags <Int32>] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a new site binding'
+  code: |-
+    PS C:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 80 -HostHeader "TestSite"
+  description: |-
+    This command creates a binding on the default website.
+  summary: ""
+- title: 'Example 2: Add a new SSL site binding'
+  code: |-
+    PS C:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 443 -HostHeader "TestSite" -Protocol "https"
+  description: |-
+    This command creates an SSL binding on the default website.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the creation of the binding.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostHeader
+  description: |+
+    Specifies the host header of the new binding.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  description: |+
+    Specifies the IP address of the new binding.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the website on which this cmdlet creates the new binding.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the port for the new binding.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    Specifies the protocol for the new binding.
+    This protocol is usually HTTP, HTTPS, or FTP.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SslFlags
+  description: |+
+    Indicates what type of certificate and certificate storage the new website supports.
+    The acceptable values for this parameter are:
+
+    - 0: Regular certificate in Windows certificate storage. 
+    - 1: SNI certificate. 
+    - 2: Central certificate store.
+    - 3: SNI certificate in central certificate store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-WebBinding
+name: New-WebBinding
+description: |-
+  The **New-WebBinding** cmdlet adds a new binding to an existing website.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-webbinding?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WebBinding

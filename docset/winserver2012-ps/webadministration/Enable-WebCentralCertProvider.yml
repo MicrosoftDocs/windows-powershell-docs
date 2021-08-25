@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables the specified central certificate provider.
+module: WebAdministration
+notes: ""
+syntaxes:
+- >-
+  Enable-WebCentralCertProvider -CertStoreLocation <String> -UserName <String> -Password <String>
+
+   [-PrivateKeyPassword <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable a central certificate store'
+  code: |-
+    PS C:\>Enable-WebCentralCertProvider -CertStoreLocation \\MyCertServer\CertStore -UserName CertStoreUser -Password Pa$$w0rd
+  description: |-
+    Enables a new central certificate store.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertStoreLocation
+  isRequired: true
+  description: |+
+    Physical path to the central certificate store.
+    The path is either a local path (for example, `d:\CertStore`) or a UNC path (for example, `\\\\CertStoreServer\CertStore`).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Name of the user account that is used to access the central certificate store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrivateKeyPassword
+  description: |+
+    Password for the private key if one exists.
+    If provided, this password is the same for all keys.
+    The password can be $null.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  isRequired: true
+  description: |+
+    Name of the user account that is used to access the central certificate store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Enable-WebCentralCertProvider
+name: Enable-WebCentralCertProvider
+description: |-
+  Enables a central certificate provider, given its location, private key password, and the credentials of the account that accesses the certificate store.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/enable-webcentralcertprovider?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

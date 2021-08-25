@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an AD FS claims provider trust group.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsClaimsProviderTrustsGroup
+  href: ./Add-AdfsClaimsProviderTrustsGroup.yml
+- text: Get-AdfsClaimsProviderTrustsGroup
+  href: ./Get-AdfsClaimsProviderTrustsGroup.yml
+syntaxes:
+- Remove-AdfsClaimsProviderTrustsGroup -TargetIdentifier <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the ID of the target.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Remove-AdfsClaimsProviderTrustsGroup
+name: Remove-AdfsClaimsProviderTrustsGroup
+description: |-
+  The **Remove-AdfsClaimsProviderTrustsGroup** cmdlet removes an Active Directory Federation Services (AD FS) claims provider trust group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsclaimsprovidertrustsgroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AdfsClaimsProviderTrustsGroup

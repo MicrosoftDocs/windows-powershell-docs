@@ -1,0 +1,142 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a clustered role, also called a resource group, from a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterGroup
+  href: ./Add-ClusterGroup.yml
+- text: Get-ClusterGroup
+  href: ./Get-ClusterGroup.yml
+- text: Move-ClusterGroup
+  href: ./Move-ClusterGroup.yml
+- text: Start-ClusterGroup
+  href: ./Start-ClusterGroup.yml
+- text: Stop-ClusterGroup
+  href: ./Stop-ClusterGroup.yml
+syntaxes:
+- >-
+  Remove-ClusterGroup [-VMId <Guid>] [[-Name] <StringCollection>] [-Force] [-RemoveResources]
+
+   [-InputObject <PSObject>] [-Cluster <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-ClusterGroup -Name MyFileServer
+  description: |-
+    This example prompts the user for confirmation and then removes the clustered role named MyFileServer, if the resources have first been removed from it.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Remove-ClusterGroup -Name MyFileServer -Force
+  description: |-
+    This example removes the clustered role named MyFileServer, if the resources have first been removed from it.
+    The cmdlet does not prompt for confirmation.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Remove-ClusterGroup -Name MyFileServer -Force -RemoveResources
+  description: |-
+    This example removes the clustered  role named MyFileServer, without prompting for confirmation.
+    All cluster resources in MyFileServer will be deleted.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Runs the cmdlet without prompting for confirmation.
+    By default the cmdlet will ask for confirmation from the user before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the clustered role to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the clustered role to remove.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemoveResources
+  description: |+
+    Causes the cmdlet to delete all resources in the clustered role before removing the clustered role.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VMId
+  description: |+
+    Specifies the virtual machine identifier (ID).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FailoverClusters.Remove-ClusterGroup
+name: Remove-ClusterGroup
+description: |-
+  The **Remove-ClusterGroup** cmdlet removes a clustered role.
+  also called a resource group, from a failover cluster.
+
+  Use this cmdlet to delete a group.
+  If the group still has resources in it, then either remove the resources first, or specify the **RemoveResources** parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-ClusterGroup

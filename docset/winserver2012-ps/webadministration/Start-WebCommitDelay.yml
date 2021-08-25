@@ -1,0 +1,27 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Instructs the IIS configuration system to delay the commitment of changes.
+module: WebAdministration
+notes: ""
+links:
+- text: Stop-WebCommitDelay
+  href: ./Stop-WebCommitDelay.yml
+syntaxes:
+- Start-WebCommitDelay [<CommonParameters>]
+examples:
+- title: 'Example 1: Delay the commit of changes'
+  code: |-
+    PS C:\>Start-WebCommitDelay
+  description: |-
+    Delays the modification of IIS configuration settings until the Stop-WebCommitDelay cmdlet is executed.
+  summary: ""
+uid: WebAdministration.Start-WebCommitDelay
+name: Start-WebCommitDelay
+description: |-
+  Instructs the IIS configuration system to delay the commitment of changes.
+  The commitment of changes is delayed until the Stop-WebCommitDelay cmdlet is executed.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/start-webcommitdelay?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,117 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies a certificate according to the input parameters.
+module: pki
+notes: ""
+inputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.Certificate" data-throw-if-not-resolved="False" />
+  description: |-
+    The **Certificate** object can either be provided as a Path object to a certificate or an **X509Certificate2** object.
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    If the verification succeeds, then the return value is True; otherwise the return value is False.
+links:
+- text: Get-ChildItem
+  href: https://go.microsoft.com/fwlink/p/?LinkId=290488
+syntaxes:
+- >-
+  Test-Certificate [-Policy <TestCertificatePolicy>] [-User] [-EKU <String[]>] [-DNSName <String>]
+
+   [-AllowUntrustedRoot] [-Cert] <Certificate> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-ChildItem -Path Cert:\localMachine\My | Test-Certificate -Policy SSL -DNSName "dns=contoso.com"
+  description: |-
+    This example verifies each certificate in the MY store of the local machine and verifies that it is valid for SSL with the DNS name specified.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Test-Certificate -Cert cert:\currentuser\my\191c46f680f08a9e6ef3f6783140f60a979c7d3b -AllowUntrustedRoot -EKU "1.3.6.1.5.5.7.3.1" -User
+  description: |-
+    This example verifies that the provided EKU is valid for the specified certificate and its chain.
+    Revocation checking is not performed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowUntrustedRoot
+  description: |+
+    Specifies whether the root certificate is required to be trusted in chain building.
+    When this parameter is used, the certificate chain is built but an untrusted root is allowed.
+    Other errors are still verified against in this case, such as expired.
+    If this parameter is not specified, then revocation status is checked by default.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Certificate" data-throw-if-not-resolved="False" />
+  name: Cert
+  isRequired: true
+  description: |+
+    Specifies the certificate to test.
+    Either the certificate object or a path to the certificate in a certificate store can be specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: PsPath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DNSName
+  description: "Specifies the DNS name to verify as valid for the certificate. \r\n \r\nIf this parameter is specified but not the **Policy** parameter, then the CERT_CHAIN_POLICY_SSL policy is applied and the DNS name is validated for the certificate.\r\nIf a CERT_CHAIN_POLICY_SSL policy does not exist, then the cmdlet will fail. \r\n\r\nIf this parameter is not used and the **Policy** parameter is not specified, the default CERT_CHAIN_POLICY_BASE policy is applied.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EKU
+  description: |+
+    Specifies a list of enhanced key usage (EKU) object identifiers to verify for the certificate chain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TestCertificatePolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  description: |+
+    Specifies the policies that will be applied to verify the certificate.
+    The acceptable values for this parameter are: AUTHENTICODE, BASE, NTAUTH, and SSL.
+    If this parameter is not specified, then the BASE policy is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: BASE, SSL, AUTHENTICODE, NTAUTH
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: User
+  description: |+
+    Specifies whether the user or machine context is used to test the certificate.
+    If this parameter is not specified, then the machine context is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: pki.Test-Certificate
+name: Test-Certificate
+description: |-
+  The **Test-Certificate** cmdlet verifies a certificate according to input parameters.
+  The revocation status of the certificate is verified by default.
+  If the **AllowUntrustedRoot** parameter is specified, then a certificate chain is built but an untrusted root is allowed.
+  Other errors are still verified against in this case, such as expired.
+  If the **DNSName** parameter is used, then the DNS subject alternative name is used to verify SSL policy.
+  If the **EKU** parameter is used, then the specified application policy object identifiers are used to verify the chain.
+  If the **User** parameter is used, then the specified user context is used is to build and verify the chain.
+
+  Delegation may be required when using this cmdlet with Windows PowerShell® remoting and changing user configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  Module Name: pki
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/pki/test-certificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-Certificate

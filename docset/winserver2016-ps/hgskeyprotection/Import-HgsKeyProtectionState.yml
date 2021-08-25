@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports previously exported Key Protection Service configuration and certificates.
+module: HgsKeyProtection
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Export-HgsKeyProtectionState
+  href: ./Export-HgsKeyProtectionState.yml
+syntaxes:
+- >-
+  Import-HgsKeyProtectionState -Password <SecureString> [-Force] [-IgnoreImportFailures] [[-Path] <String>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Import-HgsKeyProtectionState -Password <SecureString> [-Force] [-IgnoreImportFailures] [[-Xml] <XmlDocument>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Import Key Protection Service state from a file'
+  code: |-
+    PS C:\> Import-HgsKeyProtectionState -Path "C:\example\kps.config" -Password $Password
+  description: |-
+    This command imports configuration state to a Key Protection Service from the file referenced by the path parameter.
+    If the file contains private keys for certificates, then the password must be supplied by a secure string referenced by the $Password variable.
+  summary: ""
+- title: 'Example 2: Import Key Protection Service state from an XML document'
+  code: |-
+    PS C:\> Import-HgsKeyProtectionState -Xml $XmlDoc -Password $Password
+  description: |-
+    This command imports configuration state to a Key Protection Service from an XML document referenced by the XML parameter.
+    If the file contains private keys for certificates, then the password must be supplied by a secure string referenced by the $Password variable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IgnoreImportFailures
+  description: |+
+    Indicates that this cmdlet ignores import failures.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: ""
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="XmlDocument" data-throw-if-not-resolved="False" />
+  name: Xml
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HgsKeyProtection.Import-HgsKeyProtectionState
+name: Import-HgsKeyProtectionState
+description: |-
+  The **Import-HgsKeyProtectionState** cmdlet imports previously exported configuration of Key Protection Service from a file referenced by the path parameter.
+  If the path parameter is not provided, the configuration state can be passed in as an XmlDocument to the *Xml* parameter. 
+  If the configuration contains certificates that were added to the service with pfx (containing private key), then the cmdlet also imports those certificates.
+  If the configuration contains certificates that were previously added to Key Protection Certificate as pfx, then the password supplied must match the password that was provided at the time of exporting the configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/import-hgskeyprotectionstate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-HgsKeyProtectionState

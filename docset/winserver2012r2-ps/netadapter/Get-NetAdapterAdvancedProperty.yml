@@ -1,0 +1,214 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the advanced properties for the network adapter.
+module: NetAdapter
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapterAdvancedPropertySettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Format-List
+  href: https://go.microsoft.com/fwlink/p/?LinkID=113302
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkID=113423
+- text: New-NetAdapterAdvancedProperty
+  href: ./New-NetAdapterAdvancedProperty.yml
+- text: Remove-NetAdapterAdvancedProperty
+  href: ./Remove-NetAdapterAdvancedProperty.yml
+- text: Reset-NetAdapterAdvancedProperty
+  href: ./Reset-NetAdapterAdvancedProperty.yml
+- text: Set-NetAdapterAdvancedProperty
+  href: ./Set-NetAdapterAdvancedProperty.yml
+syntaxes:
+- >-
+  Get-NetAdapterAdvancedProperty [[-Name] <String[]>] [-IncludeHidden] [-AllProperties]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-NetAdapterAdvancedProperty [[-Name] <String[]>] -RegistryKeyword <String[]> [-IncludeHidden]
+
+   [-AllProperties] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-NetAdapterAdvancedProperty [[-Name] <String[]>] -DisplayName <String[]> [-IncludeHidden] [-AllProperties]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-NetAdapterAdvancedProperty -InterfaceDescription <String[]> -RegistryKeyword <String[]> [-IncludeHidden]
+
+   [-AllProperties] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-NetAdapterAdvancedProperty -InterfaceDescription <String[]> -DisplayName <String[]> [-IncludeHidden]
+
+   [-AllProperties] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-NetAdapterAdvancedProperty -InterfaceDescription <String[]> [-IncludeHidden] [-AllProperties]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-NetAdapterAdvancedProperty -Name *
+  description: |-
+    This example gets all of the advanced properties that have a display name from all visible network adapters.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Get-NetAdapterAdvancedProperty -Name * -AllProperties
+  description: |-
+    This example gets all of the advanced properties from all visible network adapters.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Get-NetAdapterAdvancedProperty -Name * -RegistryKeyword *
+  description: |-
+    This example gets all of the advanced properties from all visible network adapters.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\>Get-NetAdapterAdvancedProperty -Name * -AllProperties -IncludeHidden
+  description: |-
+    This example gets all of the advanced properties from all network adapters.
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    PS C:\>Get-NetAdapterAdvancedProperty -Name * -RegistryKeyword * -IncludeHidden
+  description: |-
+    This example gets all of the advanced properties from all network adapters.
+  summary: ""
+- title: EXAMPLE 6
+  code: |-
+    PS C:\>Get-NetAdapterAdvancedProperty -Name MyAdapter | Format-List -Property *
+  description: |-
+    This example gets all of the unformatted, advanced properties  from the network adapter named MyAdapter.
+  summary: ""
+- title: EXAMPLE 7
+  code: |-
+    PS C:\>Get-NetAdapterAdvancedProperty -Name * | Where-Object -FilterScript { $_.DisplayName -Like "TCP*" }
+  description: |-
+    This example gets the advanced properties for network adapters that have a display name that starts with TCP.
+  summary: ""
+- title: EXAMPLE 8
+  code: |-
+    PS C:\>Get-NetAdapterAdvancedProperty -Name * | Where-Object -FilterScript { $_.DisplayName -Like "Inter*" }
+  description: |-
+    This example gets the advanced properties for network adapters that have a display name that starts with Inter.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllProperties
+  description: |+
+    Returns all the advanced properties of the network adapter.
+    If this parameter is not specified, then only advanced properties that have a **DisplayName** parameter are returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Specifies the advanced property name shown in the Advanced tab under the network adapter properties in Windows Server® 2012 and later.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DispN
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeHidden
+  description: |+
+    Specifies both visible and hidden network adapters should be included.
+    By default only visible network adapters are included.
+    If a wildcard character is used in identifying a network adapter and this parameter has been specified, then the wildcard string is matched against both hidden and visible network adapters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceDescription
+  isRequired: true
+  description: |+
+    Specifies the network adapter interface description.
+    For a physical network adapter this is typically the name of the vendor of the network adapter followed by a part number and description, such as `Contoso 12345 Gigabit Network Device`.
+
+  defaultValue: None
+  position: Named
+  aliases: ifDesc, InstanceID
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the network adapter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ifAlias, InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RegistryKeyword
+  isRequired: true
+  description: |+
+    Contains the name of the registry value to be read, such as one of the registry values found in HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002BE10318}\0007.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RegKey
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetAdapter.Get-NetAdapterAdvancedProperty
+name: Get-NetAdapterAdvancedProperty
+description: |-
+  The **Get-NetAdapterAdvancedProperty** cmdlet gets the advanced properties for the network adapter.
+  By default this cmdlet returns advanced properties that have display name values, meaning that these advanced properties are visible in the Advanced pane of the Adapter Properties in the Windows UI.
+  Advanced properties that do not have display names require that the **AllProperties** parameter is specified.
+  Individual advanced properties can also be selected either by **DisplayName** or **RegistryKeyword** parameters.
+  Both of these parameters support the use of wildcard characters.
+  The advanced properties are normally found in the following location in the registry `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002BE10318}\xxxxxxxx` where `xxxx` is a four character string representing an integer such as `0007`.
+  The standardized keywords have a RegistryKeyword name that begins with an asterisk (`*`).
+  The valid values for these keywords are available by piping the output into the Format-Listhttp://go.microsoft.com/fwlink/p/?LinkID=113302 cmdlet with the ValidDisplayValues or the ValidRegistryValues specified.
+metadata:
+  external help file: MSFT_NetAdapterAdvancedProperty.cmdletDefinition.cdxml-help.xml
+  Module Name: NetAdapter
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadapteradvancedproperty?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetAdapterAdvancedProperty

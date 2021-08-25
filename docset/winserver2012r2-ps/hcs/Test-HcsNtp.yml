@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Attempts to synchronize the time to the NTP server.
+module: HCS
+notes: ""
+links:
+- text: Get-HcsNtpClientServerAddress
+  href: ./Get-HcsNtpClientServerAddress.yml
+- text: Set-HcsNtpClientServerAddress
+  href: ./Set-HcsNtpClientServerAddress.yml
+syntaxes:
+- Test-HcsNtp [-NtpServer <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Test NTP configuration'
+  code: |-
+    PS C:\> Test-HcsNtp
+    LeapIndicator          : 0(no warning)
+    Stratum                : 3 (secondary reference - syncd by (S)NTP)
+    Precision              : -6 (15.625ms per tick)
+    RootDelay              : 0.1249761s
+    RootDisperion          : 7.8620298s
+    ReferenceId            : 0x0BDA0145 (source IP:  10.118.1.85)
+    LastSuccessfulSyncTime : 1/30/2014 9:53:03 AM
+    Source                 : time.contoso.com
+    PollInterval           : 13 (8192s)
+  description: |-
+    This command tests whether the NTP configuration for the device is valid.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NtpServer
+  description: |+
+    {{Fill NtpServer Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HCS.Test-HcsNtp
+name: Test-HcsNtp
+description: |-
+  The **Test-HcsNtp** cmdlet attempts to synchronize the time to the Network Time Protocol (NTP) server for the device, and reports the results.
+metadata:
+  external help file: Microsoft.HCS.Management.dll-Help.xml
+  Module Name: HCS
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/hcs/test-hcsntp?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-HcsNtp

@@ -1,0 +1,719 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates parameters for an S2S Interface.
+module: RemoteAccess
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnS2SInterface" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-VpnS2SInterface
+  href: ./Add-VpnS2SInterface.yml
+- text: Connect-VpnS2SInterface
+  href: ./Connect-VpnS2SInterface.yml
+- text: Disconnect-VpnS2SInterface
+  href: ./Disconnect-VpnS2SInterface.yml
+- text: Get-VpnS2SInterface
+  href: ./Get-VpnS2SInterface.yml
+- text: Remove-VpnS2SInterface
+  href: ./Remove-VpnS2SInterface.yml
+- text: Remote Access Cmdlets
+  href: ./index.yml
+syntaxes:
+- >-
+  Set-VpnS2SInterface [[-Destination] <String[]>] [-AdminStatus <Boolean>] [-PromoteAlternate <Boolean>]
+
+   [-AuthenticationMethod <String>] [-EapMethod <String>] [-InternalIPv4 <Boolean>] [-Force]
+
+   [-PostConnectionIPv4Subnet <String[]>] [-IPv4TriggerFilter <String[]>] [-IPv4TriggerFilterAction <Action>]
+
+   [-PostConnectionIPv6Subnet <String[]>] [-IPv6TriggerFilter <String[]>] [-IPv6TriggerFilterAction <Action>]
+
+   [-IPv4Subnet <String[]>] [-Name] <String> [-ResponderAuthenticationMethod <String>] [-PassThru] [-Persistent]
+
+   [-AutoConnectEnabled <Boolean>] [-InitiateConfigPayload <Boolean>] [-RadiusAttributeClass <String>]
+
+   [-EnableQoS <EnableQoS>] [-TxBandwidthKbps <UInt64>] [-RxBandwidthKbps <UInt64>]
+
+   [-NetworkOutageTimeSeconds <UInt32>] [-NumberOfTries <UInt32>] [-RetryIntervalSeconds <UInt32>]
+
+   [-SADataSizeForRenegotiationKilobytes <UInt32>] [-SALifeTimeSeconds <UInt32>] [-MMSALifeTimeSeconds <UInt32>]
+
+   [-IPv6Subnet <String[]>] [-InternalIPv6 <Boolean>] [-IdleDisconnectSeconds <UInt32>] [-UserName <String>]
+
+   [-Password <String>] [-Certificate <X509Certificate2>] [-SharedSecret <String>] [-SourceIpAddress <String>]
+
+   [-LocalVpnTrafficSelector <CimInstance[]>] [-RemoteVpnTrafficSelector <CimInstance[]>]
+
+   [-EncryptionType <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-VpnS2SInterface [[-Destination] <String[]>] [-AdminStatus <Boolean>] [-InternalIPv4 <Boolean>] [-Force]
+
+   [-IPv4Subnet <String[]>] [-Name] <String> [-PassThru] [-EnableQoS <EnableQoS>] [-TxBandwidthKbps <UInt64>]
+
+   [-RxBandwidthKbps <UInt64>] [-IPv6Subnet <String[]>] [-InternalIPv6 <Boolean>] [-SourceIpAddress <String>]
+
+   [[-GreKey] <UInt32>] [-GreTunnel] [-IPv4Address <String>] [-IPv6Address <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VpnS2SInterface [[-Destination] <String[]>] [-AdminStatus <Boolean>] [-PromoteAlternate <Boolean>]
+
+   [-AuthenticationMethod <String>] [-EapMethod <String>] [-InternalIPv4 <Boolean>] [-Force]
+
+   [-PostConnectionIPv4Subnet <String[]>] [-IPv4TriggerFilter <String[]>] [-IPv4TriggerFilterAction <Action>]
+
+   [-PostConnectionIPv6Subnet <String[]>] [-IPv6TriggerFilter <String[]>] [-IPv6TriggerFilterAction <Action>]
+
+   [-IPv4Subnet <String[]>] [-Name] <String> [-ResponderAuthenticationMethod <String>] [-PassThru] [-Persistent]
+
+   [-AutoConnectEnabled <Boolean>] [-InitiateConfigPayload <Boolean>] [-RadiusAttributeClass <String>]
+
+   [-EnableQoS <EnableQoS>] [-TxBandwidthKbps <UInt64>] [-RxBandwidthKbps <UInt64>]
+
+   [-NetworkOutageTimeSeconds <UInt32>] [-NumberOfTries <UInt32>] [-RetryIntervalSeconds <UInt32>]
+
+   [-SADataSizeForRenegotiationKilobytes <UInt32>] [-SALifeTimeSeconds <UInt32>] [-MMSALifeTimeSeconds <UInt32>]
+
+   [-IPv6Subnet <String[]>] [-InternalIPv6 <Boolean>] [-IdleDisconnectSeconds <UInt32>] [-UserName <String>]
+
+   [-Password <String>] [-Certificate <X509Certificate2>] [-SharedSecret <String>]
+
+   [-EncryptionMethod <EncryptionMethod>] [-IntegrityCheckMethod <IntegrityCheckMethod>]
+
+   [-CipherTransformConstants <CipherTransformConstants>] [-DHGroup <DHGroup>]
+
+   [-AuthenticationTransformConstants <AuthenticationTransformConstants>] [-PfsGroup <PfsGroup>] [-CustomPolicy]
+
+   [-SourceIpAddress <String>] [-LocalVpnTrafficSelector <CimInstance[]>]
+
+   [-RemoteVpnTrafficSelector <CimInstance[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the destination address of an interface'
+  code: |-
+    PS C:\>Set-VpnS2SInterface -Name "Edge1" -Destination 131.107.0.4 -PassThru
+  description: |-
+    This command modifies the destination address of interface named Edge1.
+  summary: ""
+- title: 'Example 2: Modify the initiator authentication method'
+  code: |-
+    PS C:\>Set-VpnS2SInterface -Name "Edge1" -AuthenticationMethod EAP -EapMethod EAP-MSCHAPv2 -PassThru
+  description: |-
+    This command modifies the initiator authentication method.
+  summary: ""
+- title: 'Example 3: Modify the configuration of an existing S2S VPN interface'
+  code: |-
+    PS C:\>Set-VpnS2SInterface -Name "Edge1" -IPv4Subnet 172.23.90.0/24:50 -PassThru
+    RoutingDomain   Name                 Destination          AdminStatus  ConnectionState IPv4Subnet
+    -------------   ----                 -----------          -----------  --------------- ----------
+    Rd_001          Blue-Tunnel-2        {100.0.0.7}          True         Disconnected    {172.23.90.0/24:50}
+  description: |-
+    This command modifies the configuration of an existing S2S VPN interface of a specific routing domain in a Multi-Tenant environment.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AdminStatus
+  description: |+
+    Specifies the admin status of the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AuthenticationMethod
+  description: |+
+    Specifies the AuthenticationMethod to be used by the S2S connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: 'EAP, MachineCertificates, PSKOnly, MSCHAPv2, '
+- type: <xref href="AuthenticationTransformConstants" data-throw-if-not-resolved="False" />
+  name: AuthenticationTransformConstants
+  description: |+
+    Specifies the authentication transform plumbed in IPsec policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: FirstTransformType, AuthenticationTransformConstant
+  parameterValueGroup: MD596, SHA196, SHA256128, GCMAES128, GCMAES192, GCMAES256, None
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoConnectEnabled
+  description: |+
+    Specifies a value that indicates whether auto-connect is enabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: Certificate
+  description: |+
+    Specifies the subject name of the certificate to be used in default store.
+    This parameter is applicable only if the *AuthenticationMethod* parameter is set to MachineCert.
+
+  defaultValue: None
+  position: Named
+  aliases: Cert
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CipherTransformConstants" data-throw-if-not-resolved="False" />
+  name: CipherTransformConstants
+  description: |+
+    Specifies the cipher plumbed in IPsec policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: OtherCipherAlgorithm, FirstCipherAlgorithm, CipherTransformConstant
+  parameterValueGroup: DES, DES3, AES128, AES192, AES256, GCMAES128, GCMAES192, GCMAES256, None
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CustomPolicy
+  isRequired: true
+  description: |+
+    Specifies custom Internet Key Exchange (IKE) IPsec policies, must be a separate parameter set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Destination
+  description: |+
+    Specifies the destination end-point of the S2S connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: RemoteTunnelEndpoint, RemoteTunnelHostname, RemoteAddress
+  parameterValueGroup: ""
+- type: <xref href="DHGroup" data-throw-if-not-resolved="False" />
+  name: DHGroup
+  description: |+
+    Specifies the Diffie-Hellman (DH) Group Plumbed in IPsec policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Group1, Group2, Group14, ECP256, ECP384, Group24
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EapMethod
+  description: |+
+    Specifies EAP method if IkeLocalAuthenticationMethod is EAP.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: 'EAP-TLS, EAP-PEAP, EAP-MSCHAPv2, '
+- type: <xref href="EnableQoS" data-throw-if-not-resolved="False" />
+  name: EnableQoS
+  description: |+
+    Indicates whether to enable Quality of Service (QoS) on an interface.
+    The acceptable values for this parameter are: 
+
+    - Enabled
+    - Disabled
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="EncryptionMethod" data-throw-if-not-resolved="False" />
+  name: EncryptionMethod
+  description: |+
+    Specifies the encryption method plumbed in IKE policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Encryption
+  parameterValueGroup: DES, DES3, AES128, AES192, AES256
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EncryptionType
+  description: |+
+    Specifies the type of Encryption.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoEncryption, RequireEncryption, OptionalEncryption, MaximumEncryption, CustomEncryption
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: GreKey
+  description: |+
+    Specifies the individual traffic flows within a Generic Routing Encapsulation (GRE) tunnel.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GreTunnel
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet uses the GRE tunnel capability for the Windows Server Gateway.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IdleDisconnectSeconds
+  description: |+
+    Specifies the time, in seconds, after which an idle connection is terminated.
+    Unless the idle time-out is disabled, the entire connection is terminated if the connection is idle for the specified interval.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IdleDurationSeconds, IdleDisconnectSec
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: InitiateConfigPayload
+  description: |+
+    Indicates whether to initiate a config payload negotiation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IntegrityCheckMethod" data-throw-if-not-resolved="False" />
+  name: IntegrityCheckMethod
+  description: |+
+    Specifies the integrity method plumbed in IPsec policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: FirstIntegrityAlgorithm, OtherHashAlgorithm
+  parameterValueGroup: MD5, SHA1, SHA256, SHA384
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: InternalIPv4
+  description: |+
+    Specifies that the IPv4 address should be negotiated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: InternalIPv6
+  description: |+
+    Specifies that the Ipv6 address should be negotiated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPv4Address
+  description: |+
+    Specifies the IPv4 address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPv4Subnet
+  description: |+
+    Specifies the IPv4 subnet that is routed on this connection with metric.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPv4TriggerSubnet
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPv4TriggerFilter
+  description: |+
+    Specifies an array of IPv4 filters that trigger demand dial connections.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Action" data-throw-if-not-resolved="False" />
+  name: IPv4TriggerFilterAction
+  description: |+
+    Indicates whether a filter should trigger an S2S connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Allow, Deny
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPv6Address
+  description: |+
+    Specifies the IPv6 address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPv6Subnet
+  description: |+
+    Specifies the IPv6 subnet that is routed on this connection with metric.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPv6TriggerSubnet
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPv6TriggerFilter
+  description: |+
+    Specifies an array of IPv6 filters that trigger demand dial connections.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Action" data-throw-if-not-resolved="False" />
+  name: IPv6TriggerFilterAction
+  description: |+
+    Indicates whether a filter should trigger an S2S connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Allow, Deny
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LocalVpnTrafficSelector
+  description: |+
+    Specifies the traffic selector object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MMSALifeTimeSeconds
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: MMSaLifeTimeSec
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ElementName
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NetworkOutageTimeSeconds
+  description: |+
+    Specifies the maximum network outage time after which the connection is disconnected.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: NetworkOutageTimeSec
+  parameterValueGroup: 3, 6, 9, 12, 15, 30, 60, 120, 240, 360, 720, 900
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NumberOfTries
+  description: |+
+    Specifies the number of tries the connection is retried.
+    If you specify 0, the cmdlet will retry indefinitely.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Specifies the password of the username to be used for dialing the connection.
+    This parameter is only applicable if *AuthenticationMethod* is set to EAP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Persistent
+  description: |+
+    Indicates whether the connection state is persisted across the service restart or system reboots.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PfsGroup" data-throw-if-not-resolved="False" />
+  name: PfsGroup
+  description: |+
+    Specifies the perfect forward secrecy (PFS) Group plumbed in IPsec policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: PfsGroupId
+  parameterValueGroup: None, PFS1, PFS2, PFS2048, ECP256, ECP384, PFSMM, PFS24
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PostConnectionIPv4Subnet
+  description: |+
+    Specifies the IPv4 subnet routes that are added to a S2S interface after the connection is established.
+    The values specified are not used to initiate the S2S VPN connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PostConnectionIPv6Subnet
+  description: |+
+    Specifies the IPv6 subnet routes that are added to a S2S interface after the connection is established.
+    The values specified are not used to initiate the S2S VPN connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: PromoteAlternate
+  description: |+
+    Specifies an alternate IP address that when it successfully connects becomes the primary IP address, and the current primary IP address is moved to the alternate list.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RadiusAttributeClass
+  description: |+
+    Specifies a RADIUS attribute.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoteVpnTrafficSelector
+  description: |+
+    Specifies the traffic selector object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResponderAuthenticationMethod
+  description: |+
+    Specifies the responder AuthenticationMethod to be used by the S2S connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: 'MachineCertificates, PSKOnly, '
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: RetryIntervalSeconds
+  description: |+
+    Specifies the number of seconds between retries.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RetryIntervalSec
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: RxBandwidthKbps
+  description: |+
+    Specifies the receive bandwidth limit, in kilobits per second (Kbps).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SADataSizeForRenegotiationKilobytes
+  description: |+
+    Specifies the number of kilobytes that are allowed to transfer using a security association (SA), after which the SA will be renegotiated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SARenegotiationDataSizeKB, LifeTimeKiloBytes
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SALifeTimeSeconds
+  description: |+
+    Specifies the lifetime of a SA in seconds, after which the SA is no longer valid.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SaLifeTimeSec, LifeTimeSeconds, QMSALifeTimeSeconds
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SharedSecret
+  description: |+
+    Specifies the text of the shared secret to be used in dialing the connection.
+    This parameter is only applicable if *AuthenticationMethod* is set to PSK.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceIpAddress
+  description: |+
+    Specifies the source IPv4 or IPv6 addresses to use when dialing the connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent connections that can be established to run this command.
+    If you omit this parameter or enter a value of 0, the default value, 32, is used.
+
+    The throttle limit applies only to the current command, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: TxBandwidthKbps
+  description: |+
+    Specifies a transmit bandwidth limit, in Kbps, for the interface.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  description: |+
+    Specifies the username to be used for dialing this connection.
+    This parameter is only applicable if *AuthenticationMethod* is set to EAP.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: User
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Set-VpnS2SInterface
+name: Set-VpnS2SInterface
+description: |-
+  The **Set-VpnS2SInterace** cmdlet is used to update parameters for a site-to-site (S2S) interface.
+  If the connection is already connected, the changes take effect after disconnection. 
+  You can use the *CustomPolicy* parameter to customize Internet Protocol security (IPSec) settings.
+  If the *AuthenticationMethod* parameter is set to pre-shared key (PSK), then only one interface can be enabled per destination and the initiator and responder policies are governed by what is specified for each interface.
+  If the *AuthenticationMethod* parameter is set to user name or computer certificates (machine certificates), then only the initiator policies are governed by what is specified for each interface and the responder policies are governed by what is specified on the server. 
+  For incoming connections: 
+
+  - If the authentication method is pre shared key, the interface whose destination IP matches the incoming IP is activated. 
+  - If the authentication method is username, the interface whose name matches the username is activated. 
+  - If the authentication method is certificates the interface whose name matches the certificate subject name is activated. 
+
+  This cmdlet is used to modify parameters a S2S Interface.
+  If the connection is already connected, the changes take effect after disconnection.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_VpnS2SInterface_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-vpns2sinterface?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VpnS2SInterface

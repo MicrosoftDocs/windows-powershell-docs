@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of RD Session Host servers in a session collection.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.RDServer" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-RDSessionHost
+  href: ./Add-RDSessionHost.yml
+- text: Remove-RDSessionHost
+  href: ./Remove-RDSessionHost.yml
+- text: Set-RDSessionHost
+  href: ./Set-RDSessionHost.yml
+syntaxes:
+- Get-RDSessionHost [-CollectionName] <String> [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve a list of RD  Session Host servers in a session collection'
+  code: |-
+    PS C:\> Get-RDSessionHost -CollectionName "Session Collection" -ConnectionBroker rdcb.contoso.com
+  description: |-
+    This command retrieves a list of the RD Session Host servers in the session collection named Session Collection, which is associated with the RD Connection Broker server named rdcb.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of the RD Session Host collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD  Connection Broker) server for this Remote Desktop deployment.
+    If this parameter does not appear, the default value is the fully qualified domain name (FQDN) of the local host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Get-RDSessionHost
+name: Get-RDSessionHost
+description: |-
+  The **Get-RDSessionHost** cmdlet gets a list of Remote Desktop Session Host (RD Session Host) servers in a session collection.
+  RD Session Host is a Remote Desktop Services role service that lets users share Windows-based programs or the full Windows desktop.
+  Users can connect to an RD Session Host server to run programs, save files, and use network resources on that server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdsessionhost?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDSessionHost

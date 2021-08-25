@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the network controller application deployed on a network controller cluster.
+module: NetworkController
+notes: ""
+links:
+- text: Get-NetworkController
+  href: ./Get-NetworkController.yml
+- text: Install-NetworkController
+  href: ./Install-NetworkController.yml
+- text: Set-NetworkController
+  href: ./Set-NetworkController.yml
+syntaxes:
+- >-
+  Uninstall-NetworkController [-Force] [-ComputerName <String>] [-UseSsl] [-Credential <PSCredential>]
+
+   [-CertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a network controller application'
+  code: |-
+    PS C:\> Uninstall-NetworkController -ComputerName "Node01.Contoso.com"
+  description: ""
+  summary: |+
+    This command removes the network controller application.
+    The computer Node01.Contoso.com must be a node in the network controller cluster.
+    If you do not specify a computer name, this cmdlet removes the network controller application on the local computer.
+
+
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    Specify the certificate thumbprint of the certificate.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the network controller node on which this cmdlet operates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default is the current user.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseSsl
+  description: |+
+    Indicates that the remote computer uses the Secure Sockets Layer (SSL) protocol to establish a connection to the Network Controller node.
+    The default value of this parameter is false.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.Uninstall-NetworkController
+name: Uninstall-NetworkController
+description: |-
+  The **Uninstall-NetworkController** cmdlet removes the network controller application deployed on a network controller cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/uninstall-networkcontroller?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Uninstall-NetworkController

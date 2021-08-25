@@ -1,0 +1,297 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports an install image to an image store.
+module: WDS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_WdsInstallImage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Copy-WdsInstallImage
+  href: ./Copy-WdsInstallImage.yml
+- text: Disable-WdsInstallImage
+  href: ./Disable-WdsInstallImage.yml
+- text: Enable-WdsInstallImage
+  href: ./Enable-WdsInstallImage.yml
+- text: Export-WdsInstallImage
+  href: ./Export-WdsInstallImage.yml
+- text: Get-WdsInstallImage
+  href: ./Get-WdsInstallImage.yml
+- text: Remove-WdsInstallImage
+  href: ./Remove-WdsInstallImage.yml
+- text: Set-WdsInstallImage
+  href: ./Set-WdsInstallImage.yml
+syntaxes:
+- >-
+  Import-WdsInstallImage [-SkipVerify] [-ImageGroup <String>] [-DisplayOrder <UInt32>] [-UnattendFile <String>]
+
+   -Path <String> [-NewImageName <String>] [-NewDescription <String>] [-NewFileName <String>]
+
+   [-ImageName <String>] [-TransmissionName <String>] [-Multicast] [-ManualStart] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Import-WdsInstallImage [-SkipVerify] [-ImageGroup <String>] [-DisplayOrder <UInt32>] [-UnattendFile <String>]
+
+   -Path <String> [-NewImageName <String>] [-NewDescription <String>] [-NewFileName <String>]
+
+   [-ImageName <String>] [-ClientCount <UInt32>] [-StartTime <DateTime>] [-TransmissionName <String>]
+
+   [-Multicast] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Import-WdsInstallImage [-SkipVerify] [-ImageGroup <String>] [-DisplayOrder <UInt32>] [-UnattendFile <String>]
+
+   -Path <String> [-NewImageName <String>] [-NewDescription <String>] [-NewFileName <String>]
+
+   [-ImageName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Import an image'
+  code: |-
+    PS C:\> Import-WdsInstallImage -Path "D:\images\install.wim" -ImageGroup "Fabrikam Latest Images" -SkipVerify
+  description: |-
+    This command imports an install image and skips the verification of the image.
+  summary: ""
+- title: 'Example 2: Import an install image by using an unattend file'
+  code: |-
+    PS C:\>Import-WdsInstallImage -Path "D:\images\install.wim" -ImageName "Fabrikam Latest with LOB apps" -ImageGroup "Fabrikam Latest Images" -DisplayOrder 0 -NewImageName "Fabrikam Latest with LOB v2.0 apps" -UnattendFile "D:\images\unattend\FabrikamLatestwLOB.xml"
+  description: |-
+    This command imports an install image by using an answer file that is named FabrikamLatestwLOB.xml.
+  summary: ""
+- title: 'Example 3: Import an install image and create a multicast transmission'
+  code: |-
+    PS C:\>Import-WdsInstallImage -Path "D:\images\install.wim" -ImageName "Fabrikam Latest with LOB apps" -ImageGroup "Fabrikam Latest Images" -Multicast -TransmissionName "Fabrikam Latest AutoCast"
+  description: |-
+    This command imports an install image and creates a multicast transmission.
+  summary: ""
+- title: 'Example 4: Import an install image and create a multicast transmission with a start time'
+  code: |-
+    PS C:\>Import-WdsInstallImage -Path "D:\images\install.wim" -ImageName "Fabrikam Latest with LOB apps" -ImageGroup "Fabrikam Latest Images" -Multicast -ClientCount 50 -StartTime 2014/12/01:11:00 -TransmissionName "Fabrikam Latest ScheduledCast with automatic start"
+  description: |-
+    This command imports an install image and create a multicast transmission with an automatic start time.
+  summary: ""
+- title: 'Example 5: Import an install image and create a multicast transmission with manual start'
+  code: |-
+    PS C:\>Import-WdsInstallImage -Path "D:\images\install.wim" -ImageName "Fabrikam Latest with LOB apps" -ImageGroup "Fabrikam Latest Images" -Multicast -ManualStart -TransmissionName "Fabrikam Latest ScheduledCast with manual start"
+  description: |-
+    This command imports an install image and creates a multicast transmission with a manual start.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ClientCount
+  description: |+
+    Specifies the number of clients that must connect to a transmission.
+    If you also specify *MulticastTransmission*, this parameter specifies the number of clients that must connect to the ScheduledCast transmission for it to begin.
+    The *StartScheduledCast* parameter can start a transmission before reaching the client count.
+    If you specify the *ClientCount* parameter with the *StartTime* parameter, the transmission starts when either a sufficient number of clients connect, or at the time specified by the *StartTime* parameter.
+
+    D not use this parameter together with the *ManualStart* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DisplayOrder
+  description: |+
+    Specifies the order in which images appear in the boot menu on Pre-Boot Execution Environment (PXE) clients.
+    The menu lists the boot images in ascending order, smallest number to largest number.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImageGroup
+  description: |+
+    Specifies the name of an image group.
+    This image group contains the image to import.
+    If you do not specify an image group, and only one image group exists on the server, the cmdlet uses that image group by default.
+    If more than one image group exists on the server, you must specify the image group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImageName
+  description: |+
+    Specifies the name of an image.
+    This is the name of the image to import.
+    This parameter does not support VHD images.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManualStart
+  isRequired: true
+  description: |+
+    Indicates that the transmission uses a manual start.
+    If you also specify the *MulticastTransmission* parameter, the cmdlet creates a ScheduledCast transmission that does not begin until a StartScheduledCast command is given.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Multicast
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet enables an AutoCast transmission on the image.
+    If you do not specify a name by using the *TransmissionName* parameter, the multicast transmission uses the image name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewDescription
+  description: |+
+    Specifies a new description for the install image to create in the import operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewFileName
+  description: |+
+    Specifies a new file name for the install image to create in the import operation.
+    If you do not specify a name, the cmdlet uses the display name of the source image.
+    The file name must be unique.
+    If you add more than one image, a number is appended to the file name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewImageName
+  description: |+
+    Specifies a new name for the image file to create in the import operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a fully-qualified path that is available to the Windows Deployment Services server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipVerify
+  description: |+
+    Indicates that Windows Deployment Services does not verify the source image file before it adds it to the image store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartTime
+  description: |+
+    Specifies a day and time, in MM/DD/YYYY.hh:mm:ss format, that denotes the start time.
+    When you specify the *MulticastTransmission* parameter, this parameter denotes the time the ScheduledCast transmission starts.
+    The StartScheduledCast command can start a transmission before reaching the client count.
+    If you specify both the *StartTime* parameter and the *ClientCount* parameter, the transmission starts when either a sufficient number of clients connect, or the time specified in this parameter is reached.
+    Do not specify this parameter together with the *ManualStart* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TransmissionName
+  description: |+
+    Specifies a name for the multicast transmission.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UnattendFile
+  description: |+
+    Specifies the full path of the answer file associated with the image.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WDS.Import-WdsInstallImage
+name: Import-WdsInstallImage
+description: |-
+  The **Import-WdsInstallImage** cmdlet imports an install image to an image store.
+  You can import a single image from a WIM file, all images from a WIM file, or a VHD image.
+  If you add a single image, you can also specify a new name, description, and file name for the image.
+
+  When you work with multicast transmissions that use a single install image as content you can do any of the following:
+
+  - Create and name an AutoCast transmission.
+  - Create and name a ScheduledCast transmission which starts when a preset number of clients are ready to start, at a specific time, or both.
+  - Create a manually started ScheduledCast transmission.
+
+  An AutoCast transmission is a multicast transmission.
+  When a client requests an install image, the multicast transmission starts.
+  Clients that request the same image are joined to the multicast transmission.
+
+  A ScheduledCast transmission is a multicast transmission.
+  When a specified number of clients request an image, or a specified time of day is reached, the multicast transmission starts.
+  If you do not specify either of these conditions, you must manually start the transmission.
+
+  If you add multiple images, they will be added to the same image group.
+  You can associate an answer file for unattended install with the images that you import.
+  Specify the image to import by using the full path of the image file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_WdsInstallImage_v1.0.cdxml-help.xml
+  Module Name: WDS
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/wds/import-wdsinstallimage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-WdsInstallImage

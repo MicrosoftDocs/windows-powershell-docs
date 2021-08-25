@@ -1,0 +1,50 @@
+### YamlMime:PowershellModule
+children:
+- title: WDS
+  cmdlets:
+  - WDS.Add-WdsDriverPackage
+  - WDS.Approve-WdsClient
+  - WDS.Copy-WdsInstallImage
+  - WDS.Deny-WdsClient
+  - WDS.Disable-WdsBootImage
+  - WDS.Disable-WdsDriverPackage
+  - WDS.Disable-WdsInstallImage
+  - WDS.Disconnect-WdsMulticastClient
+  - WDS.Enable-WdsBootImage
+  - WDS.Enable-WdsDriverPackage
+  - WDS.Enable-WdsInstallImage
+  - WDS.Export-WdsBootImage
+  - WDS.Export-WdsInstallImage
+  - WDS.Get-WdsBootImage
+  - WDS.Get-WdsClient
+  - WDS.Get-WdsDriverPackage
+  - WDS.Get-WdsInstallImage
+  - WDS.Get-WdsInstallImageGroup
+  - WDS.Get-WdsMulticastClient
+  - WDS.Import-WdsBootImage
+  - WDS.Import-WdsDriverPackage
+  - WDS.Import-WdsInstallImage
+  - WDS.New-WdsClient
+  - WDS.New-WdsInstallImageGroup
+  - WDS.Remove-WdsBootImage
+  - WDS.Remove-WdsClient
+  - WDS.Remove-WdsDriverPackage
+  - WDS.Remove-WdsInstallImage
+  - WDS.Remove-WdsInstallImageGroup
+  - WDS.Set-WdsBootImage
+  - WDS.Set-WdsClient
+  - WDS.Set-WdsInstallImage
+  - WDS.Set-WdsInstallImageGroup
+uid: WDS
+name: WDS
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Windows Deployment Services cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 4.0.3.1
+  Locale: en-US
+  Module Guid: 95b28fd4-92c3-41e8-b338-2df356ba9eca
+  Module Name: WDS
+  ms.date: 12/27/2016
+  title: WDS

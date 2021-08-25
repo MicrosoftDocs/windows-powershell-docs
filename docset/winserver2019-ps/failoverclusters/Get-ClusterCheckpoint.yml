@@ -1,0 +1,117 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a cryptographic key checkpoint or registry checkpoint for a resource.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterCheckpoint
+  href: ./Add-ClusterCheckpoint.yml
+- text: Remove-ClusterCheckpoint
+  href: ./Remove-ClusterCheckpoint.yml
+syntaxes:
+- >-
+  Get-ClusterCheckpoint [[-ResourceName] <StringCollection>] [-CheckpointName <String>] [-RegistryCheckpoint]
+
+   [-CryptoCheckpoint] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterCheckpoint
+    Resource                      Name                          Type                          Key 
+    --------                      ----                          ----                          --- 
+    Cluster Name                  Microsoft Enhanced Cryptog...                               b5a571f2-c28b-48fa-b82f-a8... 
+    Cluster Name                  software\clusname
+  description: |-
+    This example retrieves all cluster checkpoints.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterResource -ResourceName "Cluster Name" | Get-ClusterCheckpoint -CryptoCheckpoint
+    Resource                      Name                          Type                          Key 
+    --------                      ----                          ----                          --- 
+    Cluster Name                  Microsoft Enhanced Cryptog...                               b5a571f2-c28b-48fa-b82f-a8...
+  description: |-
+    This example retrieves the cryptographic checkpoints for the resource named Cluster Name.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CheckpointName
+  description: |+
+    Specifies the name of checkpoints for which to search.
+    Use of wildcard expressions is accepted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CryptoCheckpoint
+  description: |+
+    Specifies that cryptographic checkpoints will be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to run the cmdlet or the cluster resource for which to retrieve the checkpoint.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RegistryCheckpoint
+  description: |+
+    Specifies that registry checkpoints will be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: ResourceName
+  description: |+
+    Specifies the resource for which to retrieve the checkpoint.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterCheckpoint
+name: Get-ClusterCheckpoint
+description: |-
+  The **Get-ClusterCheckpoint** cmdlet retrieves a cryptographic key checkpoint or registry checkpoint for a resource.
+
+  Checkpoints help provide failover support for applications that store configuration information locally instead of or in addition to storing information in the cluster configuration database.
+  Applications might store information locally in two ways.
+  One way is to store configuration information in the registry on the local server; another way is to use cryptographic keys on the local server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clustercheckpoint?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterCheckpoint

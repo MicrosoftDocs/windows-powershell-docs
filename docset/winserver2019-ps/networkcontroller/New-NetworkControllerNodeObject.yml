@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a network controller node object.
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that contains the following fields: 
+    - Name of the node
+    - Hostname, FQDN, or IP address of the node
+    - Fault domain of the node
+    - Name of interface to be used for REST operations on the node 
+    - Node certificate
+links:
+- text: Install-NetworkController
+  href: ./Install-NetworkController.yml
+- text: Install-NetworkControllerCluster
+  href: ./Install-NetworkControllerCluster.yml
+syntaxes:
+- >-
+  New-NetworkControllerNodeObject -Name <String> -Server <String> -FaultDomain <String> -RestInterface <String>
+
+   [-NodeCertificate <X509Certificate2>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a network controller node object'
+  code: |-
+    PS C:\> New-NetworkControllerNodeObject -Name "Node1" -Server "NCNode1.contoso.com" -FaultDomain "fd:/rack1/host1" -RestInterface "Ethernet"
+  description: |-
+    This command creates a network controller node object named Node1.
+    The fully qualified domain name of the computer is NCNode1.contoso.com and the interface on the computer listening to REST requests is named Ethernet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FaultDomain
+  isRequired: true
+  description: |+
+    Specifies the servers that are likely to experience failure at the same time due to shared physical dependencies such as power and networking sources.
+
+    Fault domains typically represent hierarchies that are related to these shared dependencies, with more servers likely to fail together from a higher point in the fault domain tree.
+    During runtime, a network controller considers the fault domains in the cluster and attempts to spread out the network controller services so that they are in separate fault domains.
+    This process helps ensure, in case of failure of any one fault domain, that the availability of that service and its state is not compromised.
+
+    Fault domains are specified in a hierarchical format.
+    For example: /DC1/Rack1/Host1, where DC1 is the datacenter name, Rack1 is the rack name and Host1 is the name of the host where the node is placed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the computer to be added to the deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: NodeCertificate
+  description: |+
+    Specifies the certificate used for authenticating the computer.
+    You only need to specify this parameter if the cluster is using certificate based authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RestInterface
+  isRequired: true
+  description: |+
+    Specifies the name of the interface on the node that will receive requests from the representational state transfer (REST) clients.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  isRequired: true
+  description: |+
+    Specifies the fully qualified domain name (FQDN), IP address, or hostname of the computer to be added to the deployment.
+    If Kerberos authentication is being used for cluster authentication, FQDN must be provided.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerNodeObject
+name: New-NetworkControllerNodeObject
+description: |-
+  The **New-NetworkControllerNodeObject** cmdlet creates a network controller node object.
+  This cmdlet is used for configuring a network controller for the first time.
+  The object created from this cmdlet is passed to the **Install-NetworkControllerCluster** cmdlet to create a network controller cluster.
+
+  The steps for configuring a network controller are: 
+
+  - Install the network controller role on all the computers that will be functioning as a network controller in your deployment.
+  - From one of those computers (or any other remote computer), run the **New-NetworkControllerNodeObject** cmdlet to enter the details of the node to be part of the deployment.
+  Repeat this step for all the computers that are part of the deployment.
+  These node objects will be passed as a parameter to the next cmdlet. 
+  - Run the **Install-NetworkControllerCluster** cmdlet to create a new network controller cluster.
+  - Run the **Install-NetworkController** cmdlet to create the network controller application on top of the cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollernodeobject?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerNodeObject

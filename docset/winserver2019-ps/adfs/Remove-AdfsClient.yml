@@ -1,0 +1,114 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes registration information for an OAuth 2.0 client that is currently registered with AD FS.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsClient" data-throw-if-not-resolved="False" />
+  description: |-
+    AdfsClient objects are received by the *TargetClient* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *TargetClientId* and *TargetName* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsClient" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the deleted AdfsClient object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Add-AdfsClient
+  href: ./Add-AdfsClient.yml
+- text: Disable-AdfsClient
+  href: ./Disable-AdfsClient.yml
+- text: Enable-AdfsClient
+  href: ./Enable-AdfsClient.yml
+- text: Get-AdfsClient
+  href: ./Get-AdfsClient.yml
+- text: Set-AdfsClient
+  href: ./Set-AdfsClient.yml
+syntaxes:
+- Remove-AdfsClient [-TargetName] <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Remove-AdfsClient [-TargetClientId] <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Remove-AdfsClient [-TargetClient] <AdfsClient> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Delete registration information for an OAuth client'
+  code: |-
+    PS C:\> Remove-AdfsClient -TargetName "Payroll Application"
+  description: |-
+    This command deletes registration information for the OAuth 2.0 client that is identified by the name Payroll Application.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AdfsClient" data-throw-if-not-resolved="False" />
+  name: TargetClient
+  isRequired: true
+  description: |+
+    Specifies the registered OAuth 2.0 client to delete.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetClientId
+  isRequired: true
+  description: |+
+    Specifies the client identifier for the registered OAuth 2.0 client to delete.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the registered OAuth 2.0 client to delete.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Remove-AdfsClient
+name: Remove-AdfsClient
+description: |-
+  The **Remove-AdfsClient** cmdlet deletes registration information for an OAuth 2.0 client that is currently registered with Active Directory Federation Services (AD FS).
+  After you delete the registration information for the OAuth 2.0 client, AD FS no longer issues authorization codes or access tokens to that OAuth 2.0 client.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsclient?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AdfsClient

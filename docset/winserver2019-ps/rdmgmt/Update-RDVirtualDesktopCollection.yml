@@ -1,0 +1,170 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Associates a virtual desktop collection with a new virtual desktop template.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDVirtualDesktopCollection
+  href: ./Get-RDVirtualDesktopCollection.yml
+- text: New-RDVirtualDesktopCollection
+  href: ./New-RDVirtualDesktopCollection.yml
+- text: Remove-RDVirtualDesktopCollection
+  href: ./Remove-RDVirtualDesktopCollection.yml
+syntaxes:
+- >-
+  Update-RDVirtualDesktopCollection [-CollectionName] <String> -VirtualDesktopTemplateName <String>
+
+   -VirtualDesktopTemplateHostServer <String> [-DisableVirtualDesktopRollback]
+
+   [-VirtualDesktopPasswordAge <Int32>] [-ConnectionBroker <String>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Update-RDVirtualDesktopCollection [-CollectionName] <String> -VirtualDesktopTemplateName <String>
+
+   -VirtualDesktopTemplateHostServer <String> [-DisableVirtualDesktopRollback]
+
+   [-VirtualDesktopPasswordAge <Int32>] [-ConnectionBroker <String>] [-Force] -StartTime <DateTime>
+
+   -ForceLogoffTime <DateTime> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-RDVirtualDesktopCollection [-CollectionName] <String> -VirtualDesktopTemplateName <String>
+
+   -VirtualDesktopTemplateHostServer <String> [-DisableVirtualDesktopRollback]
+
+   [-VirtualDesktopPasswordAge <Int32>] [-ConnectionBroker <String>] [-Force] -ForceLogoffTime <DateTime>
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a virtual desktop collection'
+  code: |-
+    PS C:\>Update-RDVirtualDesktopCollection -CollectionName "Virtual Desktop pool" VirtualDesktopTemplateName "RDS-Template" -VirtualDesktopTemplateHostServer "rdvh-1.contoso.com" -ForceLogoffTime 12:00am -DisableVirtualDesktopRollback -VirtualDesktopPasswordAge 31 -ConnectionBroker "rdcb.contoso.com"
+  description: |-
+    This command updates the virtual desktop collection named Virtual Desktop pool with the virtual desktop template named RDS-Template on the host server named rdvh-1.contoso.com.
+
+    The command specifies that the server ends the session if the update operation is still running at 12:00am.
+    The command disables the rollback of a virtual desktop deployment and specifies that the server forces a password update for the computer account for a virtual desktop after 31 days.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a virtual desktop collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableVirtualDesktopRollback
+  description: |+
+    Indicates that the server prevents the rollback of a virtual desktop deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: ForceLogoffTime
+  isRequired: true
+  description: |+
+    Specifies a date and time by which the server ends the session if the operation is still running.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartTime
+  isRequired: true
+  description: |+
+    Specifies a date and time to start the operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopPasswordAge
+  description: |+
+    Specifies the number of days after which the server forces a password update for the computer account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopTemplateHostServer
+  isRequired: true
+  description: |+
+    Specifies the fully qualified domain name (FQDN) of the server where the virtual desktop template associated with the collection is stored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopTemplateName
+  isRequired: true
+  description: |+
+    Specifies a descriptive name for the virtual desktop template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RDMgmt.Update-RDVirtualDesktopCollection
+name: Update-RDVirtualDesktopCollection
+description: |-
+  The **Update-RDVirtualDesktopCollection** cmdlet associates an existing virtual desktop collection with a new virtual desktop template.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/update-rdvirtualdesktopcollection?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-RDVirtualDesktopCollection

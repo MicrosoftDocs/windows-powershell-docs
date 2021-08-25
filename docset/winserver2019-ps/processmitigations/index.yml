@@ -1,0 +1,18 @@
+### YamlMime:PowershellModule
+children:
+- title: ProcessMitigations
+  cmdlets:
+  - ProcessMitigations.ConvertTo-ProcessMitigationPolicy
+  - ProcessMitigations.Get-ProcessMitigation
+  - ProcessMitigations.Set-ProcessMitigation
+uid: ProcessMitigations
+name: ProcessMitigations
+description: |-
+  The ProcessMitigations module (also known as the Process Mitigation Management Tool) provides functionalities to allow users to configure and audit exploit mitigations for increased process security or for converting existing Enhanced Mitigation Experience Toolkit (EMET) policy settings.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 1e8f5a4c-f11b-41a5-bdbd-4695ca4a503e
+  Module Name: ProcessMitigations
+  title: ProcessMitigations

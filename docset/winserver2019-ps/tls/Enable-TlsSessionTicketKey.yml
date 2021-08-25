@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a TLS server with a TLS session ticket key.
+module: TLS
+notes: ""
+links:
+- text: New-TlsSessionTicketKey
+  href: ./New-TlsSessionTicketKey.yml
+- text: Export-TlsSessionTicketKey
+  href: ./Export-TlsSessionTicketKey.yml
+- text: Disable-TlsSessionTicketKey
+  href: ./Disable-TlsSessionTicketKey.yml
+syntaxes:
+- >-
+  Enable-TlsSessionTicketKey [-ServiceAccountName] <NTAccount> [-Path] <String> [-Password] <SecureString>
+
+   [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure a TLS server with a TLS session ticket key for the NetworkService account'
+  code: |-
+    PS C:\>$Password = Read-Host -AsSecureString
+    PS C:\> Enable-TlsSessionTicketKey -Password $Password -Path "C:\KeyConfig\TlsSessionTicketKey.config" -ServiceAccountName "NetworkService"
+  description: |-
+    The second command configures the session ticket key for the TLS server.
+    The command specifies the path for the configuration file on the TLS server, and specifies that the TLS session use the password stored in **$Password** to access the configuration file and configure the key for the specified service account.
+  summary: ""
+- title: 'Example 2: Configure a TLS server with a TLS session ticket key for System account'
+  code: |-
+    PS C:\>$Password = Read-Host -AsSecureString
+    PS C:\> Enable-TlsSessionTicketKey -Password $Password -Path "C:\KeyConfig\TlsSessionTicketKey.config" -ServiceAccountName "System"
+  description: |-
+    The second command configures the session ticket key for the TLS server.
+    The command specifies the path for the configuration file on the TLS server, and specifies that the TLS session use the password stored in **$Password** to access the configuration file and configure the key for the specified service account.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+    If you specify this parameter, the cmdlet overwrites the existing session ticket key and configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Specifies the password, as a secure string, for the configuration file of the TLS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the configuration file for the TLS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: FullName
+  parameterValueGroup: ""
+- type: <xref href="NTAccount" data-throw-if-not-resolved="False" />
+  name: ServiceAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of a service account.
+    The cmdlet configures the TLS session ticket key for the service account.
+    Only System, LocalService, NetworkService, and SID of virtual accounts are supported.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: TLS.Enable-TlsSessionTicketKey
+name: Enable-TlsSessionTicketKey
+description: |-
+  The **Enable-TlsSessionTicketKey** cmdlet configures a Transport Layer Security (TLS) server with an administrator-managed TLS session ticket key, created with New-TlsSessionTicketKey, and configures the rule that uses the key for the application service account.
+  For example, Internet Information Services (IIS) runs under System account so the **ServiceAccountName** parameter should be System.
+
+  TLS creates a session ticket by using the TLS Session Resumption without Server-Side State mechanism.
+  For more information, see New-TlsSessionTicketKey or type `Get-Help New-TlsSessionTicketKey`.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
+  Module Name: TLS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/tls/enable-tlssessionticketkey?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-TlsSessionTicketKey

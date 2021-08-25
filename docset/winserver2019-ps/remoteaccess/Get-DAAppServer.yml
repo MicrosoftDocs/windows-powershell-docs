@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays the list of application server security groups that are part of the DirectAccess (DA) deployment and the properties of the connections made to the application servers in the groups.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DAAppServer" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The object consists of the following properties: 
+
+    The list of application server security groups.
+    Each security group is specified in the `Domain\GroupName` format. 
+
+    The list of application server GPOs.
+    Each GPO is specified in the `Domain\GPOName` format. 
+
+    The properties of the connection to the application server.
+    If there are no application servers configured, then the default value is NoE2EAuth, which means no end-to-end authentication is required. 
+
+    Whether or not IPsec traffic protection is enabled.
+    If there are no application servers configured, then the default value is Disabled.
+links:
+- text: Add-DAAppServer
+  href: ./Add-DAAppServer.yml
+- text: Get-DAAppServer
+  href: ./Get-DAAppServer.yml
+- text: Remove-DAAppServer
+  href: ./Remove-DAAppServer.yml
+- text: Set-DAAppServerConnection
+  href: ./Set-DAAppServerConnection.yml
+syntaxes:
+- >-
+  Get-DAAppServer [-ComputerName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Get-DAAppServer -ComputerName edge1.corp.contoso.com
+    SecurityGroupNameList : {corp.contoso.com\daappservergrp} 
+    GpoName               : {corp.contoso.com\DirectAccess Application Server Settings} 
+    ConnectionType        : E2EAuthOnlyToAppServer 
+    TrafficProtection     : Enabled
+  description: |-
+    This example lists the application security groups and the application servers Group Policy Objects (GPOs) configured with DA.
+    Since application server settings are global to DA configuration, the ConnectionType and, TrafficProtection are the same for all application servers.
+    These settings can change using the Set-DAAppServerConnection cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the Remote Access server computer specific tasks should be run.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteAccess.Get-DAAppServer
+name: Get-DAAppServer
+description: |-
+  The **Get-DAAppServer** cmdlet displays the list of application server security groups that are part of the DirectAccess (DA) deployment and the properties of the connections made to the application servers in the groups.
+  This cmdlet is not applicable when DA is deployed only for the management of remote clients.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DAAppServer_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/get-daappserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DAAppServer

@@ -1,0 +1,34 @@
+### YamlMime:PowershellModule
+children:
+- title: HNVDiagnostics
+  cmdlets:
+  - HNVDiagnostics.Debug-SlbDatapath
+  - HNVDiagnostics.Debug-VirtualMachineQueueOperation
+  - HNVDiagnostics.Disable-MuxEchoResponder
+  - HNVDiagnostics.Enable-MuxEchoResponder
+  - HNVDiagnostics.Get-CustomerRoute
+  - HNVDiagnostics.Get-NetworkControllerVipResource
+  - HNVDiagnostics.Get-PACAMapping
+  - HNVDiagnostics.Get-ProviderAddress
+  - HNVDiagnostics.Get-VipHostMapping
+  - HNVDiagnostics.Get-VMNetworkAdapterPortId
+  - HNVDiagnostics.Get-VMSwitchExternalPortId
+  - HNVDiagnostics.Test-DipHostReachability
+  - HNVDiagnostics.Test-EncapOverheadSettings
+  - HNVDiagnostics.Test-LogicalNetworkConnection
+  - HNVDiagnostics.Test-LogicalNetworkSupportsJumboPacket
+  - HNVDiagnostics.Test-VipReachability
+  - HNVDiagnostics.Test-VirtualNetworkConnection
+uid: HNVDiagnostics
+name: HNVDiagnostics
+description: |-
+  This table lists the Hyper-V Network Virtualization (HNV) cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.1.1
+  Locale: en-US
+  Module Guid: 75e89c8e-8680-4ea4-bb7e-e55316bd56a6
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  title: HNVDiagnostics

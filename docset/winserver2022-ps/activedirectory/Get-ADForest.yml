@@ -1,0 +1,222 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an Active Directory forest.
+module: ActiveDirectory
+notes: |-
+  * This cmdlet does not work with AD LDS.
+  * This cmdlet does not work when targeting a snapshot using the *Server* parameter.
+inputs:
+- name: <xref href="None or Microsoft.ActiveDirectory.Management.ADForest" data-throw-if-not-resolved="False" />
+  description: |-
+    A forest object is received by the *Identity* parameter.
+outputs:
+- name: <xref href="Microsoft.ActiveDirectory.Management.ADForest" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more forest objects.
+
+    This cmdlet returns all of the properties of the forest.
+    To view all of the properties for an **ADForest** object, use the following command and replace \<forest\> with a forest identifier such as a DNS host name.
+
+    `Get-ADForest`\<forest\>`| Get-Member`
+links:
+- text: Set-ADForest
+  href: ./Set-ADForest.yml
+syntaxes:
+- >-
+  Get-ADForest [-AuthType <ADAuthType>] [-Credential <PSCredential>] [-Current <ADCurrentForestType>]
+
+   [-Server <String>] [<CommonParameters>]
+- >-
+  Get-ADForest [-AuthType <ADAuthType>] [-Credential <PSCredential>] [-Identity] <ADForest> [-Server <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information for a domain forest'
+  code: |-
+    PS C:\> Get-ADForest -Identity Fabrikam.com
+  description: |-
+    This command gets information for the Fabrikam.com forest.
+  summary: ""
+- title: 'Example 2: Get information for a local computer forest'
+  code: |-
+    PS C:\> Get-ADForest -Current LocalComputer
+  description: |-
+    This command gets the information for the current local computer's forest.
+  summary: ""
+- title: "Example 3: Get information for the current user's forest"
+  code: |-
+    PS C:\> Get-ADForest -Current LoggedOnUser
+  description: |-
+    This command gets the forest information of the currently logged on user.
+  summary: ""
+- title: "Example 4: Get information for the current user's forest"
+  code: |-
+    PS C:\> Get-ADForest
+    ApplicationPartitions  : {DC=ForestDnsZones,DC=Fabrikam,DC=com, DC=DomainDnsZones,DC=Fabrikam,DC=com}
+    CrossForestReferences  : {CN=northwind,CN=Partitions,CN=Configuration,DC=Fabrikam,DC=com}
+    DomainNamingMaster     : Fabrikam-DC1.Fabrikam.com
+    Domains                : {Fabrikam.com}
+    ForestMode             : Windows2003Forest
+    GlobalCatalogs         : {Fabrikam-DC1.Fabrikam.com, CSD2722780.Fabrikam.com}
+    Name                   : Fabrikam.com
+    PartitionsContainer    : CN=Partitions,CN=Configuration,DC=Fabrikam,DC=com
+    RootDomain             : Fabrikam.com
+    SchemaMaster           : Fabrikam-DC1.Fabrikam.com
+    Sites                  : {Default-First-Site-Name, UnitedKingdomHQ, BO3, RODC-Site-Name}
+    SPNSuffixes            : {}
+    UPNSuffixes            : {}
+  description: |-
+    This command gets the forest information of the currently logged on user.
+  summary: ""
+- title: 'Example 5: Get all of the domain controllers for all domains in a forest'
+  code: |-
+    PS C:\> $AllDCs = (Get-ADForest).Domains | %{ Get-ADDomainController -Filter * -Server $_ }
+  description: |-
+    This command gets all the domain controllers for all domains in a forest.
+  summary: ""
+parameters:
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use.
+    The acceptable values for this parameter are:
+
+    - Negotiate or 0
+    - Basic or 1
+
+    The default authentication method is Negotiate.
+
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user account credentials to use to perform this task.
+    The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
+    If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
+
+    To specify this parameter, you can type a user name such as User1 or Domain01\User01, or you can specify a **PSCredential** object.
+    If you specify a user name for this parameter, the cmdlet prompts for a password.
+
+    You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+    You can then set the *Credential* parameter to the **PSCredential** object.
+
+    If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADCurrentForestType" data-throw-if-not-resolved="False" />
+  name: Current
+  description: |+
+    Specifies whether to return the domain of the local computer or the current logged on user.
+    The acceptable values for this parameter are:
+
+    - LocalComputer or 0
+    - LoggedOnUser  or 1
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: LocalComputer, LoggedOnUser
+- type: <xref href="ADForest" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies an Active Directory forest object by providing one of the following attribute values.
+    The identifier in parentheses is the Lightweight Directory Access Protocol (LDAP) display name for the attribute.
+    The acceptable values for this parameter are:
+
+    - A fully qualified domain name
+    - A GUID (objectGUID) 
+    - A DNS host name
+    - A NetBIOS name
+
+    The cmdlet searches the default naming context or partition to find the object.
+    If two or more objects are found, the cmdlet returns a non-terminating error.
+
+    This parameter can also get this object through the pipeline or you can set this parameter to a forest object instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the Active Directory Domain Services (AD DS) instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following: Active Directory Lightweight Directory Services (AD LDS), AD DS, or Active Directory snapshot instance.
+
+    Specify the AD DS instance in one of the following ways: 
+
+    Domain name values:
+
+    - Fully qualified domain name
+    - NetBIOS name
+
+    Directory server values:  
+
+    - Fully qualified directory server name
+    - NetBIOS name
+    - Fully qualified directory server name and port
+
+    The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+    - By using the **Server** value from objects passed through the pipeline
+    - By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
+    - By using the domain of the computer running Windows PowerShell
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ActiveDirectory.Get-ADForest
+name: Get-ADForest
+description: |-
+  The **Get-ADForest** cmdlet gets the specified Active Directory forest.
+  You can specify the forest by setting the *Identity* or *Current* parameters.
+
+  The *Identity* parameter specifies the Active Directory forest to get.
+  You can identify a forest by its fully qualified domain name (FQDN), DNS host name, or NetBIOS name.
+  You can also set the parameter to a forest object variable, such as `$<localForestObject>`, or you can pass a forest object through the pipeline to the *Identity* parameter.
+
+  To get the forest of the local computer or current logged on user, set the *Current* parameter to LocalComputer or LoggedOnUser.
+  When you set the *Current*parameter, you do not need to set the *Identity* parameter.
+
+  When the *Current* parameter is set to LocalComputer or LoggedOnUser, the cmdlet uses the *Server* and *Credential* parameter values to determine the domain and the credentials to use to identify the domain of the forest according to the following rules:
+
+  - If both the *Server* and *Credential* parameters are not specified:
+
+  The domain is set to the domain of the LocalComputer or LoggedOnUser and a server is located in this domain.
+  The credentials of the current logged on user are used to get the domain.
+
+  - If the *Server* parameter is specified and the *Credential* parameter is not specified:
+
+  The domain is set to the domain of the specified server and the cmdlet checks to make sure that the server is in the domain of the LocalComputer or LoggedOnUser.
+  Then the credentials of the current logged on user are used to get the domain.
+  An error is returned when the server is not in the domain of the LocalComputer or LoggedOnUser.
+
+  - If the *Server* parameter is not specified and the *Credential* parameter is specified:
+
+  The domain is set to the domain of the LocalComputer or LoggedOnUser and a server is located in this domain.
+  Then the credentials specified by the *Credential* parameter are used to get the domain.
+
+  - If the *Server* and *Credential* parameters are specified:
+
+  The domain is set to the domain of the specified server and the cmdlet checks to make sure that the server is in the domain of the LocalComputer or LoggedOnUser.
+  Then the credentials specified by the *Credential* parameter are used to get the domain.
+  An error is returned when the server is not in the domain of the LocalComputer or LoggedOnUser.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/get-adforest?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ADForest

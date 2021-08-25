@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Installs and initializes an AD LDS instance as an identity mapping store.
+module: NFS
+notes: ""
+inputs:
+- name: <xref href="Nothing" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Nothing" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NfsMappedIdentity
+  href: ./Get-NfsMappedIdentity.yml
+- text: New-NfsMappedIdentity
+  href: ./New-NfsMappedIdentity.yml
+- text: Remove-NfsMappedIdentity
+  href: ./Remove-NfsMappedIdentity.yml
+- text: Resolve-NfsMappedIdentity
+  href: ./Resolve-NfsMappedIdentity.yml
+- text: Set-NfsMappedIdentity
+  href: ./Set-NfsMappedIdentity.yml
+- text: Set-NfsMappingStore
+  href: ./Set-NfsMappingStore.yml
+- text: Test-NfsMappingStore
+  href: ./Test-NfsMappingStore.yml
+- text: Test-NfsMappedIdentity
+  href: ./Test-NfsMappedIdentity.yml
+syntaxes:
+- Install-NfsMappingStore [-InstanceName <String>] [-LdapPort <Int32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Install AD LDS and create an AD LDS instance as an identity mapping store'
+  code: |-
+    PS C:\> Install-NfsMappingStore -InstanceName "NFSMappingStore" -LdapPort 389
+    Successfully created ADLDS instance named NFSMappingStore on server NfsServer01. The instance is running on port 389 and the partition is CN=nfs,DC=nfs.
+  description: |-
+    This command installs the AD LDS role on a local computer and creates the AD LDS instance NFSMappingStore, which runs on port 389.
+    It also creates the partition CN=nfs,DC=nfs and sets the default naming context to CN=nfs,DC=nfs.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InstanceName
+  description: |+
+    Specifies the name for the for the new AD LDS instance.
+
+  defaultValue: NFSInstance
+  pipelineInput: true
+  position: Named
+  aliases: instance
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: LdapPort
+  description: |+
+    Specifies the LDAP port number for the new AD LDS instance.
+
+  defaultValue: "389"
+  pipelineInput: true
+  position: Named
+  aliases: port
+  parameterValueGroup: ""
+uid: NFS.Install-NfsMappingStore
+name: Install-NfsMappingStore
+description: |-
+  The **Install-NfaMappingStore** cmdlet installs the Active Directory Lightweight Directory Services (AD LDS) role on a local computer.
+  It then initializes an AD LDS instance as an identity mapping store.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FileServices.Powershell.NFS.dll-Help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/install-nfsmappingstore?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Install-NfsMappingStore

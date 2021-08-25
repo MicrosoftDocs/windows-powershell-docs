@@ -1,0 +1,161 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves details of the network interfaces configured on a specified computer.
+module: DnsClient
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_DNSClient" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_DNSClientServerAddress" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetAdapter" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetIPInterface" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_DNSClient" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Register-DnsClient
+  href: ./Register-DnsClient.yml
+- text: Set-DnsClient
+  href: ./Set-DnsClient.yml
+syntaxes:
+- >-
+  Get-DnsClient [-InterfaceIndex <UInt32[]>] [[-InterfaceAlias] <String[]>]
+
+   [-ConnectionSpecificSuffix <String[]>] [-RegisterThisConnectionsAddress <Boolean[]>]
+
+   [-UseSuffixWhenRegistering <Boolean[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-DnsClient
+  description: |-
+    This example gets configuration details of network interfaces on a computer.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$dnsClient1 = Get-DnsClient -InterfaceAlias "Wired Ethernet Connection"
+
+
+
+    PS C:\>Set-DnsClientServerAddress -InputObject $dnsClinet1 -ServerAddresses ("10.0.0.1","10.0.0.2")
+
+
+    This is a version of the cmdlet using the pipeline.
+    PS C:\>Get-DnsClient | Set-DnsClientServerAddress -ServerAddresses ("10.0.0.1","10.0.0.2")
+  description: |-
+    This example sets the DNS server IP address on all of the wired Ethernet connections on a computer.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Get-DnsClient | Set-DnsClientServerAddress -ResetServerAddresses
+  description: |-
+    This example resets all of the network interfaces to use DHCP-specified DNS server addresses.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ConnectionSpecificSuffix
+  description: |+
+    Specifies the connection-specific suffixes that are to be appended.
+    This parameter is a per-connection DNS suffix which will be appended to the computer name to construct a Fully Qualified Domain Name (FQDN).
+    This FQDN will be used as the host name for name resolution by the DNS client.
+
+  defaultValue: None
+  position: Named
+  aliases: Suffix
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceAlias
+  description: |+
+    Specifies the friendly name of the interface.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceIndex
+  description: |+
+    Specifies the index number of the interface.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RegisterThisConnectionsAddress
+  description: |+
+    Specifies the registration policy for this interface. 
+
+    This parameter specifies that the computer should automatically register the IP address associated with this connection with the DNS server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UseSuffixWhenRegistering
+  description: |+
+    Specifies the registration suffix policy for this interface. 
+
+    This parameter specifies that suffixes need to be used while registering an IP address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsClient.Get-DnsClient
+name: Get-DnsClient
+description: |-
+  The **Get-DnsClient** cmdlet retrieves configuration details specific to the different network interfaces on a specified computer.
+metadata:
+  external help file: MSFT_DnsClient.cdxml-help.xml
+  Module Name: DnsClient
+  online version: https://docs.microsoft.com/powershell/module/dnsclient/get-dnsclient?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

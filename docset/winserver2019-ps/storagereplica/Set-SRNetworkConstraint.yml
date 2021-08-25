@@ -1,0 +1,152 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates or modifies a replication network constraint for servers and partnerships.
+module: StorageReplica
+notes: ""
+links:
+- text: Get-SRNetworkConstraint
+  href: ./Get-SRNetworkConstraint.yml
+- text: Remove-SRNetworkConstraint
+  href: ./Remove-SRNetworkConstraint.yml
+syntaxes:
+- >-
+  Set-SRNetworkConstraint [[-SourceComputerName] <String>] [[-SourceRGName] <String>]
+
+   [-SourceNWInterface] <String[]> [[-DestinationComputerName] <String>] [[-DestinationRGName] <String>]
+
+   [-DestinationNWInterface] <String[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a constraint for stand-alone computers'
+  code: |-
+    Set-SRNetworkConstraint -SourceComputerName "SR-SRV06" -SourceRGName "ReplicationGroup02" -SourceNWInterface 6 -DestinationComputerName "SR-SRV05" -DestinationRGName "ReplicationGroup01" -DestinationNWInterface 2
+
+    Update-SmbMultichannelConnection
+  description: |-
+    This example sets the network constraint for interfaces and replication groups on stand-alone computers.
+  summary: |+
+    The first command sets the network constraint for interfaces and replication groups. The final command makes sure that the constraint takes effect immediately by using the **Update-SmbMultichannelConnection** cmdlet.
+
+- title: 'Example 2: Set a constraint for a stretch cluster'
+  code: |-
+    Set-SRNetworkConstraint -SourceComputerName "SR-SRV01" -SourceRGName "Group01" -SourceNWInterface "Cluster Network 1","Cluster Network 2" -DestinationComputerName "SR-SRV03" -DestinationRGName "Group02" -DestinationNWInterface "Cluster Network 1","Cluster Network 2"
+  description: |-
+    This command sets a network constraint for a specific set of cluster networks in a stretch cluster.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationComputerName
+  description: |+
+    Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN) of the destination computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: DCN
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DestinationNWInterface
+  isRequired: true
+  description: |+
+    Specifies an array of network interfaces.
+    Specify the interfaces for Storage Replica to use.
+    Other interfaces no longer accept Storage Replica traffic.
+
+    You can display these interfaces by using the Get-NetIPConfiguration cmdlet for stand-alone servers and the Get-ClusterNetwork cmdlet on failover clusters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: DNI
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationRGName
+  description: |+
+    Specifies the name of the destination replication group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: DGN
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceComputerName
+  description: |+
+    Specifies a single replica host computer NetBIOS name or FQDN of the source computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: SCN
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SourceNWInterface
+  isRequired: true
+  description: |+
+    Specifies an array of network interfaces.
+    Specify the interfaces for Storage Replica to use.
+    Other interfaces no longer accept Storage Replica traffic.
+
+    You can display these interfaces by using **Get-NetIPConfiguration** and **Get-ClusterNetwork**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: SNI
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceRGName
+  description: |+
+    Specifies the name of the source replication group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: SGN
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: StorageReplica.Set-SRNetworkConstraint
+name: Set-SRNetworkConstraint
+description: |-
+  The **Set-SRNetworkConstraint** cmdlet creates or modifies a replication network constraint for servers and partnerships.
+  You can apply network constraints to one or more network adapter interfaces, in order to control which networks Storage Replica can use.
+  Any networks not specified by this cmdlet are no longer used by Storage Replica.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_WvrAdminTasks.cdxml-help.xml
+  Module Name: StorageReplica
+  ms.date: 07/28/2021
+  online version: https://docs.microsoft.com/powershell/module/storagereplica/set-srnetworkconstraint?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-SRNetworkConstraint

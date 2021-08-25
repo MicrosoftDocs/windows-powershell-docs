@@ -1,0 +1,228 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves the storage of a virtual machine.
+module: Hyper-V
+notes: ""
+syntaxes:
+- >-
+  Move-VMStorage [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Name] <String> [-DestinationStoragePath] <String> [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource]
+
+   [-RemoveSourceUnmanagedVhds] [-AllowUnverifiedPaths] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Move-VMStorage [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Name] <String> [-VirtualMachinePath <String>] [-SnapshotFilePath <String>] [-SmartPagingFilePath <String>]
+
+   [-Vhds <Hashtable[]>] [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource] [-RemoveSourceUnmanagedVhds]
+
+   [-AllowUnverifiedPaths] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Move-VMStorage [-VM] <VirtualMachine> [-DestinationStoragePath] <String> [-ResourcePoolName <String>]
+
+   [-RetainVhdCopiesOnSource] [-RemoveSourceUnmanagedVhds] [-AllowUnverifiedPaths] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Move-VMStorage [-VM] <VirtualMachine> [-VirtualMachinePath <String>] [-SnapshotFilePath <String>]
+
+   [-SmartPagingFilePath <String>] [-Vhds <Hashtable[]>] [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource]
+
+   [-RemoveSourceUnmanagedVhds] [-AllowUnverifiedPaths] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Move-VMStorage "Test VM" -DestinationStoragePath D:\TestVM
+  description: |-
+    Moves all files associated with a virtual machine test VM to D:\TestVM
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Move-VMStorage "Test VM" -VirtualMachinePath D:\TestVM\Config -SnapshotFilePath D:\TestVM\Snapshots -SmartPagingFilePath D:\TestVM\SmartPaging -VHDs @(@{"SourceFilePath" = "C:\TestVM\Disk1.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk1.VHDX"}, @{"SourceFilePath" = "C:\TestVM\Disk2.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk2.VHDX"})
+  description: |-
+    Moves all files associated with a virtual machine test VM to different locations under D:\TestVM.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowUnverifiedPaths
+  description: |+
+    Allows the move operation to be attempted even if the paths specified for the destination computer cannot be verified prior to attempting the move operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more virtual machine hosts on which the virtual machine storage is to be moved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationStoragePath
+  isRequired: true
+  description: |+
+    Specifies a destination storage path to which all virtual machine storage is to be moved.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: VMName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemoveSourceUnmanagedVhds
+  description: |+
+    Indicates that Hyper-V deletes the parent virtual hard disk on the source after this cmdlet moves a differencing virtual hard disk, when the migration is finished.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourcePoolName
+  description: |+
+    Specifies the name of the storage resource pool to use after the move operation is complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RetainVhdCopiesOnSource
+  description: |+
+    Specify **$true** to keep any parent virtual hard disks on the source computer.
+    If not specified, all virtual hard disks will be removed from the source computer once the virtual machine is successfully moved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SmartPagingFilePath
+  description: |+
+    Specifies the new path to use for a smart paging file, if one is needed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SnapshotFilePath
+  description: |+
+    Specifies the new path for any snapshot files associated with the virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: CheckpointFileLocation, SnapshotFileLocation
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Vhds
+  description: |+
+    Specifies an array of hashtables that contain locations for each individual virtual hard disk to be moved.
+    Each hashtable should have two entries.
+    The first entry specifies the current location of the virtual hard disk to move, and has a key of SourceFilePath.
+    The second entry specifies the new location for the virtual hard disk, and has a key of DestinationFilePath.
+    The virtual hard disk name must be identical in both entries.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualMachinePath
+  description: |+
+    Specifies the path to the virtual machine configuration file and associated memory files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" />
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine whose storage is to be moved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Move-VMStorage
+name: Move-VMStorage
+description: |-
+  The **Move-VMStorage** cmdlet moves the storage of a virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/move-vmstorage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Move-VMStorage

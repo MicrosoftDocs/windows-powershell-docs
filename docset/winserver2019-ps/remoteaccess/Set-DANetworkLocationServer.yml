@@ -1,0 +1,194 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the Network Location Server (NLS).
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DANetworkLocationServer" data-throw-if-not-resolved="False" />
+  description: "The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.\r\nThe path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.\r\n                         \r\nThe DANetworkLocationServer object consists of the following properties: \r\n                         \r\n -- If the NLS is configured on the DA server or on a different server. \r\n                         \r\n -- The URL used for detecting whether a remote computer is inside or outside the corporate network (if NLS is configured on a different server). \r\n                         \r\n -- The certificate used for NLS (if it is configured on the DA server). \r\n                         \r\n -- Reachability of the NLS (if on a different server)."
+links:
+- text: Get-ChildItem
+  href: https://go.microsoft.com/fwlink/?LinkId=204557
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/?LinkId=113423
+- text: Get-DANetworkLocationServer
+  href: ./Get-DANetworkLocationServer.yml
+syntaxes:
+- >-
+  Set-DANetworkLocationServer [-Url] <String> [-CheckReachability] [-ComputerName <String>] [-Force] [-PassThru]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-DANetworkLocationServer [-ComputerName <String>] [-Force] [-PassThru] [-Certificate <X509Certificate2>]
+
+   [-NlsOnDAServer] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: "PS C:\\>Set-DANetworkLocationServer -NlsOnDAServer -PassThru\r\nCertificate NLS cannot be located on the Remote Access server. Do you want DirectAccess to create and use a self-signed certificate? \r\nConfirm \r\n \r\n[Y] Yes  [N] No  [S] Suspend  [?] Help (default is ꞌYꞌ): Y \r\n \r\nNlsLocation  : DirectAccessServer \r\nUrl          : \r\nReachability : \r\nCertificate  : [Subject] \r\nCN=directaccess-nls.corp.contoso.com \r\n[Issuer] \r\nCN=directaccess-nls.corp.contoso.com \r\n[Serial Number] \r\n6C70EDD2DEAEF2AF46B30823778E0CE2 \r\n[Not Before] \r\n11/29/2011 9:45:22 PM \r\n[Not After] \r\n11/29/2016 1:55:22 PM \r\n[Thumbprint] \r\n49D3CE5C1E51F9AA18D4415A8EEA7291DDC4D917"
+  description: |-
+    This example configures the NLS on the DA server.
+    This cmdlet first looks for an appropriate certificate on the DA computer itself.
+    Since it is not able to find one it decides to create a self-signed certificate and prompts the user to accept before going ahead and creating one.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$a = Get-ChildItem -Path cert:\localmachine\my
+
+
+
+    PS C:\>$cert = $a | Where-Object -Property Subject -Value CN=edge1.corp.contoso.com -Clike
+
+
+
+    PS C:\>Set-DANetworkLocationServer -NlsOnDAServer -Certificate $cert
+  description: "This example looks for an appropriate certificate for NLS and manually uses the certificate to configure the NLS on the DA server. \r\n                         \r\nAll the certificates will be retrieved from local computer store.\r\nThis list will be filtered on the certificate for our DA server edge1 to obtain the SSL certificate required.\r\nThis certificate is then passed to this cmdlet to configure NLS.\r\nSince DA NLS configuration is global it will be created on all Client GPOs."
+  summary: ""
+- title: EXAMPLE 3
+  code: "PS C:\\>Set-DANetworkLocationServer -Url https://nsl.corp.contoso.com -CheckReachability -PassThru\r\nConfirm\r\n\r\nIf the NLS is moved to another computer, then clients without updated GPOs will not be able to connect to the new location. When these clients are located in the internal network they will not be able to connect to internal resources as expected.\r\nPS C:\\>\r\n[Y] Yes  [N] No  [S] Suspend  [?] Help (default is ꞌYꞌ): Y \r\n \r\nNlsLocation  : ExternalServer \r\nUrl          : https://nsl.corp.contoso.com/ \r\nReachability : True \r\nCertificate  :"
+  description: |-
+    This example configures an external server as the NLS by specifying the URL https://nsl.corp.contoso.com hosted on that server.
+    Since the NLS is configured on the DA server in the setup this cmdlet will prompt, that the users which do not receive the new policies resulting from this change will not be able to access internal resources when inside the corporate network as they will be detected to be outside the corporate network.
+    Once the user confirms to the prompt, this cmdlet first checks whether the given URL is reachable and if it is reachable then it sets this URL in the DA configuration.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: Certificate
+  description: |+
+    Specifies the certificate to be used when the NLS is configured to be on the DA server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CheckReachability
+  description: |+
+    Performs a reachability check to the specified URL and configures the NLS on that server only if the URL is reachable.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the DA server computer specific tasks should be run.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: "Forces the command to run without asking for user confirmation.\r\n                         \r\nWhen suppressed the cmdlet assumes user confirmation for the following conditions. \r\n                         \r\n -- Creation of self-signed certificate when configuring the NLS on the DA server. \r\n                         \r\n -- Moving the NLS from the DA server to an external server: The corresponding URL on the DA server is decommissioned.\r\nClients outside corpnet will not receive the updated policies.\r\nWhen the clients enter corporate network, the URL will be inaccessible and the clients will be detected to be outside corporate network.\r\nAs a result the client will not be able to access corporate resources.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NlsOnDAServer
+  isRequired: true
+  description: "Specifies that NLS should be configured on the DA Server, that is the server on which the cmdlet is run. \r\n                         \r\nIn order for the DA server to act as a NLS an appropriate certificate is required to be installed on the server.\r\nBy default the cmdlet looks for a certificate on the server.\r\nIn case of multi-site, load balancing configuration, or multi-site and load balancing configuration the certificate has to be present on all of the servers. \r\n                         \r\nIf a certificate is not found, then a self-signed certificate is created for this purpose.\r\nBefore creating the self-signed certificate the cmdlet asks for user confirmation.\r\nIf the user wishes to specify a certificate explicitly, then the **Certificate** parameter can be used.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Specifies the URL of a website hosted on a highly available external server which is used as the NLS that provides clients with location information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Set-DANetworkLocationServer
+name: Set-DANetworkLocationServer
+description: |-
+  The **Set-DANetworkLocationServer** cmdlet configures the Network Location Server (NLS).
+  The NLS can be present on the DirectAccess (DA) server or on some other highly available server
+
+  NLS configuration is applicable globally.
+  It is either present on every DA server or when present on a separate, highly available server it acts as the NLS for all DA clients.
+  Hence this cmdlet is not impacted by multi-site deployments.
+
+  The IIS role and IP and Domain Restrictions role service are required on the DA server if it has to be configured as the NLS.
+  These roles get automatically installed during Remote Access installation itself.
+
+  If the NLS is already configured on the DA server and this cmdlet is used to move it to a different computer, then this cmdlet does not uninstall IIS and IP and Domain Restrictions roles.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DANetworkLocationServer_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-danetworklocationserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DANetworkLocationServer

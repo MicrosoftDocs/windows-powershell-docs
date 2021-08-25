@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an IIS configuration element at the specified path.
+module: WebAdministration
+notes: ""
+inputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-WebConfiguration [-Recurse] [-Metadata] [-Clr <String>] [-Location <String[]>] [-Filter] <String[]>
+
+   [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Querying authentication settings --------------'
+  code: |-
+    IIS:\>Get-WebConfiguration system.webServer/security/authentication/* -Recurse | where {$_.enabled -eq $true} | format-list
+  description: |-
+    This example queries for all authentication settings specified under the Default Web Site.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Clr
+  description: |+
+    Version of the .NET framework in the form vn.n, such as v4.0 or v2.0.
+    The default is v4.0.
+    This parameter is used only when PSPath is set to either Machine or Machine/Webroot.
+    If PSPath is not set to one of these values and the Clr parameter is set, PowerShell ignores the value of Clr and returns a warning.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Filter
+  isRequired: true
+  description: |+
+    Specifies the configuration path for which the configuration elements are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    Location of the configuration setting.
+    Location tags are frequently used for configuration settings that must be set more precisely than per application or per virtual directory.
+    For example, a setting for a particular file or directory could use a location tag.
+    Location tags are also used if a particular section is locked.
+    In such an instance, the configuration system would have to use a location tag in one of the parent configuration files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Metadata
+  description: |+
+    Returns configuration metadata such as encryption or locking settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies the configuration path.
+    This can be either an IIS configuration path in the formatcomputer name/webroot/apphost, or the IIS module path in this format IIS:\sites\Default Web Site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recurse
+  description: |+
+    Returns all elements contained in the specified location and the subsequent hierarchy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebConfiguration
+name: Get-WebConfiguration
+description: |-
+  Gets the IIS configuration element at the specified location.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

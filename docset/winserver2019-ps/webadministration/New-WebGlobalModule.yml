@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an IIS global module.
+module: WebAdministration
+notes: ""
+links:
+- text: Disable-WebGlobalModule
+  href: ./Disable-WebGlobalModule.yml
+- text: Enable-WebGlobalModule
+  href: ./Enable-WebGlobalModule.yml
+- text: Get-WebGlobalModule
+  href: ./Get-WebGlobalModule.yml
+- text: Remove-WebGlobalModule
+  href: ./Remove-WebGlobalModule.yml
+- text: Set-WebGlobalModule
+  href: ./Set-WebGlobalModule.yml
+syntaxes:
+- New-WebGlobalModule [-Name] <String> [-Image <String>] [-Precondition <String>] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a new module'
+  code: |-
+    IIS:\> New-WebGlobalModule -Name "testGlobalModule" -Image "c:\test\test.dll"
+  description: |-
+    This command adds a new module to the global Modules list.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the creation of the new module.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Image
+  description: |+
+    Specifies the path to a DLL image file (native modules only) for the new module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the new module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Precondition
+  description: |+
+    Specifies any preconditions to be used for the new module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-WebGlobalModule
+name: New-WebGlobalModule
+description: |-
+  The **New-WebGlobalModule** cmdlet creates an Internet Information Services (IIS) global module.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-webglobalmodule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WebGlobalModule

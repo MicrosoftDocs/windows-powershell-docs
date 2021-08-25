@@ -1,0 +1,165 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes backups from a target catalog, a system catalog, or both.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="Windows.ServerBackup.Commands.WBBackupSet,System.Int32,System.Management.Automation.SwitchParameter, Windows.ServerBackup.Commands.WBBackupTarget, System.String, System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Windows.ServerBackup.Commands.WBBackupSet" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WBBackupSet
+  href: ./Get-WBBackupSet.yml
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+syntaxes:
+- >-
+  Remove-WBBackupSet [[-BackupSet] <WBBackupSet[]>] [[-KeepVersions] <Int32>] [-DeleteOldest]
+
+   [[-MachineName] <String>] [-Force] [<CommonParameters>]
+- >-
+  Remove-WBBackupSet [[-BackupSet] <WBBackupSet[]>] [[-KeepVersions] <Int32>] [-DeleteOldest]
+
+   [-BackupTarget] <WBBackupTarget> [[-MachineName] <String>] [-Force] [<CommonParameters>]
+- >-
+  Remove-WBBackupSet [[-BackupSet] <WBBackupSet[]>] [[-KeepVersions] <Int32>] [-DeleteOldest]
+
+   [-VolumePath] <String> [[-MachineName] <String>] [-Force] [<CommonParameters>]
+- >-
+  Remove-WBBackupSet [[-BackupSet] <WBBackupSet[]>] [[-KeepVersions] <Int32>] [-DeleteOldest]
+
+   [-NetworkPath] <String> [[-Credential] <PSCredential>] [-NonInheritAcl] [[-MachineName] <String>] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove oldest backup set'
+  code: |-
+    PS C:\> $Ret = Remove-WBBackupSet -DeleteOldest -BackupTarget $WB_BackupTarget -MachineName $MachineName -Force
+  description: |-
+    This command deletes the oldest backup of the computer that has its name in the $MachineName variable from the backup target and stores the result in the variable named $Ret.
+    Because the command includes the *Force* parameter, it does not ask for confirmation of the deletion.
+  summary: ""
+parameters:
+- type: <xref href="WBBackupSet" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: BackupSet
+  description: |+
+    Specifies an array of backup set objects that determine which backup or which backup sets that this cmdlet removes.
+    You can specify one backup or an array of backup sets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBBackupTarget" data-throw-if-not-resolved="False" />
+  name: BackupTarget
+  isRequired: true
+  description: |+
+    Specifies a backup target object that indicates the storage location with the backups that you want to remove.
+
+    Use this parameter to delete backups from computers other than the local computer.
+    The cmdlet deletes the backup sets from the catalog on the computer that you specify in this parameter and from the system catalog of the local computer.
+    These locations can be locally attached disk drives or remote shared folders.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a **PSCredential** object that contains the username and password for a user account that has access permissions for the location that stores backups.
+
+    To obtain a credential object, use the Get-Credential cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeleteOldest
+  description: |+
+    Indicates that the cmdlet removes the oldest backup in the set.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: KeepVersions
+  description: |+
+    Specifies the number of the most recent backups to keep on the backup target.
+    The cmdlet removes backups over this number from the target.
+
+    If you specify this parameter along with the *BackupTarget* and *MachineName* parameters, the cmdlet examines the target location on the specified computer for backups to remove.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MachineName
+  description: |+
+    Specifies the name of the computer for which this cmdlet removes backups.
+
+    Use this parameter when you specify the *BackupTarget* parameter or when multiple computers store backups in the same location.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkPath
+  isRequired: true
+  description: |+
+    Specifies the path to the remote shared folder from which the cmdlet removes backups.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NonInheritAcl
+  description: |+
+    Do not use.
+    This parameter is not implemented in this version of the module.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VolumePath
+  isRequired: true
+  description: |+
+    Specifies the drive letter of the volume where the cmdlet stores backups.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Remove-WBBackupSet
+name: Remove-WBBackupSet
+description: |-
+  The **Remove-WBBackupSet** cmdlet removes a set of backups from a target catalog, a system catalog, or both.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/remove-wbbackupset?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WBBackupSet

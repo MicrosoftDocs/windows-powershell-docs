@@ -1,0 +1,161 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures an application controlled by a script that runs in Windows Script Host, within a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterGenericApplicationRole
+  href: ./Add-ClusterGenericApplicationRole.yml
+- text: Add-ClusterGenericServiceRole
+  href: ./Add-ClusterGenericServiceRole.yml
+- text: Get-ClusterGroup
+  href: ./Get-ClusterGroup.yml
+- text: Move-ClusterGroup
+  href: ./Move-ClusterGroup.yml
+- text: Remove-ClusterGroup
+  href: ./Remove-ClusterGroup.yml
+- text: Start-ClusterGroup
+  href: ./Start-ClusterGroup.yml
+- text: Stop-ClusterGroup
+  href: ./Stop-ClusterGroup.yml
+syntaxes:
+- >-
+  Add-ClusterGenericScriptRole -ScriptFilePath <String> [-Storage <StringCollection>]
+
+   [-StaticAddress <StringCollection>] [-IgnoreNetwork <StringCollection>] [[-Name] <String>] [-Wait <Int32>]
+
+   [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure a script to run on a failover cluster'
+  code: |-
+    PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs"
+    Name                       OwnerNode                           State 
+    ----                       ---------                           ----- 
+    cluster1GenScript          node2                              Online
+  description: |-
+    This example configures the script named script1.vbs to run within a failover cluster, using defaults for the name and IP address, and does not assign a disk.
+  summary: ""
+- title: 'Example 2: Configure a script on a failover cluster and assign a clustered script name'
+  code: |-
+    PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Storage "Cluster Disk 4" -Name "script1"
+    Name                       OwnerNode                           State 
+    ----                       ---------                           ----- 
+    script1                    node2                              Online
+  description: |-
+    This example configures the script named script1.vbs to run within a failover cluster and use Cluster Disk 4.
+    The cmdlet assigns the clustered script the name script1.
+  summary: ""
+- title: 'Example 3: Configure a script to run on a fail over cluster without waiting for resources'
+  code: |-
+    PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Wait 0
+    Name                       OwnerNode                           State 
+    ----                       ---------                           ----- 
+    cluster1GenScript          node2                             Pending
+  description: |-
+    This example configures the script called script1.vbs to run within a failover cluster, using defaults for the name and IP address, and does not assign a disk.
+    The cmdlet completes without waiting for all resources to come online.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: IgnoreNetwork
+  description: |+
+    Specifies one or more networks to ignore when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the *StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to create the highly available script.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the highly available script to create.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScriptFilePath
+  isRequired: true
+  description: |+
+    Specifies the path of the script file to use for the highly available script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: StaticAddress
+  description: |+
+    Specifies one or more static addresses to use when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the *StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Storage
+  description: |+
+    Specifies the cluster disk resource to be added to the created highly available script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterGenericScriptRole
+name: Add-ClusterGenericScriptRole
+description: |-
+  The **Add-ClusterGenericScriptRole** cmdlet configures an application controlled by a script that runs in Windows Script Host, within a failover cluster.
+
+  The script provides the cluster software with information about the current state of the application.
+  As needed, the cluster software will restart or fail over the script.
+  Through the script, the application will be restarted or failed over.
+
+  Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergenericscriptrole?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusterGenericScriptRole

@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the home location setting for the current user account.
+module: International
+notes: ""
+links:
+- text: RegionInfo.GeoId Property
+  href: https://go.microsoft.com/fwlink/?LinkID=242310
+- text: Get-WinHomeLocation
+  href: ./Get-WinHomeLocation.yml
+syntaxes:
+- Set-WinHomeLocation [-GeoId] <Int32> [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the home location'
+  code: |-
+    PS C:\> Set-WinHomeLocation -GeoId 0xF4
+  description: |-
+    This command sets the home location for the current user account to 0xF4 (hex) (United States).
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: GeoId
+  isRequired: true
+  description: |+
+    Specifies a GeoID setting.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: International.Set-WinHomeLocation
+name: Set-WinHomeLocation
+description: |-
+  The **Set-WinHomeLocation** cmdlet sets the value of the user **GeoID** object.
+  The Windows GeoID setting is a user setting that describes the home location of the current user account.
+  A home location is the country or region.
+  Applications that require the home location of the current user account, such as a driver for a television tuner application, can use this setting.
+
+  For a table of GeoIDs, see Table of [Geographical Locations](https://go.microsoft.com/fwlink/?LinkID=242308).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/international/set-winhomelocation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WinHomeLocation

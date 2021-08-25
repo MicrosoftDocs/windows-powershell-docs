@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets permission for an application.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *ClientRoleIdentifiers*, *Identifiers*, and *ServerRoleIdentifiers* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.OAuthPermission" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more OAuthPermission objects that represent the application permissions for the Federation Service.
+links:
+- text: Grant-AdfsApplicationPermission
+  href: ./Grant-AdfsApplicationPermission.yml
+- text: Revoke-AdfsApplicationPermission
+  href: ./Revoke-AdfsApplicationPermission.yml
+- text: Set-AdfsApplicationPermission
+  href: ./Set-AdfsApplicationPermission.yml
+syntaxes:
+- Get-AdfsApplicationPermission [[-Identifiers] <String[]>] [<CommonParameters>]
+- Get-AdfsApplicationPermission [[-ClientRoleIdentifiers] <String[]>] [<CommonParameters>]
+- Get-AdfsApplicationPermission [[-ServerRoleIdentifiers] <String[]>] [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClientRoleIdentifiers
+  description: |+
+    Specifies an array of client role identifiers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identifiers
+  description: |+
+    Specifies an array of identifiers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ServerRoleIdentifiers
+  description: |+
+    Specifies an array of server role identifiers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsApplicationPermission
+name: Get-AdfsApplicationPermission
+description: |-
+  The **Get-AdfsApplicationPermission** cmdlet gets permission for an application in Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsapplicationpermission?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsApplicationPermission

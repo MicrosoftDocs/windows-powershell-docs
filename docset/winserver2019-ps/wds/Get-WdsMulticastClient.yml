@@ -1,0 +1,219 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of clients connected to a multicast transmission or namespace.
+module: WDS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_WdsMulticastClient" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disconnect-WdsMulticastClient
+  href: ./Disconnect-WdsMulticastClient.yml
+syntaxes:
+- >-
+  Get-WdsMulticastClient [-FileName <String>] [-ImageGroup <String>] -InstallImageName <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-WdsMulticastClient [-FileName <String>] -Architecture <BootImageArchitecture> -BootImageName <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-WdsMulticastClient -BootImageObject <CimInstance> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+- >-
+  Get-WdsMulticastClient -InstallImageObject <CimInstance> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+- >-
+  Get-WdsMulticastClient [-TransmissionName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Return a list of multicast clients by boot image name'
+  code: |-
+    PS C:\> Get-WdsMulticastClient -Architecture x86 -BootImageName "Fabrikam Latest setup (x86)"
+  description: |-
+    This command returns a list of multicast clients by using the boot image name.
+  summary: ""
+- title: 'Example 2: Return a list of multicast clients by boot image object'
+  code: |-
+    PS C:\> $BootImageObject = Get-WdsBootImage -Architecture x86 -ImageName "Fabrikam Latest setup (x86)"
+    PS C:\> Get-WdsMulticastClient -BootImageObject $BootImageObject
+  description: |-
+    This example returns a list of multicast clients by using a boot image object.
+
+    The first command uses the Get-WdsBootImage cmdlet to obtain a boot image object, and stores the object in the variable named $BootImageObject.
+
+    The second command returns a list of client for the boot image object.
+  summary: ""
+- title: 'Example 3: Return a list of multicast clients by file name'
+  code: |-
+    PS C:\> Get-WdsMulticastClient -InstallImageName "Fabrikam Latest with LOB apps" -ImageGroup "Fabrikam Latest Images" -FileName "install-3.wim"
+  description: |-
+    This command uses the *FileName* parameter to identify the clients for an install image.
+  summary: ""
+- title: 'Example 4: Return a list of multicast clients by file name and object'
+  code: |-
+    PS C:\> $InstallImageObject = Get-WdsInstallImage -ImageName "Fabrikam Latest with LOB apps" -ImageGroup "Fabrikam Latest Images" -FileName "install-3.wim"
+    PS C:\> Get-WdsMulticastClient -InstallImageObject $InstallImageObject
+  description: |-
+    This example returns a list of multicast clients by using a file name to obtain an object, and then using that object to return a list of clients.
+
+    The first command uses the Get-WdsInstallImage cmdlet to obtain an object for an install image, and stores the object in the variable named $InstallImageObject.
+
+    The second command returns a list of clients for the object.
+  summary: ""
+- title: 'Example 5: Return a list of multicast clients by transmission name'
+  code: |-
+    PS C:\>Get-WdsMulticastClient -TransmissionName "Custom WinPE multicast"
+  description: |-
+    This command returns a list of multicast clients for a transmission named Custom WinPE multicast.
+  summary: ""
+parameters:
+- type: <xref href="BootImageArchitecture" data-throw-if-not-resolved="False" />
+  name: Architecture
+  isRequired: true
+  description: |+
+    Specifies an architecture.
+    This is the architecture of the image with the multicast transmission from which to return the client.
+    Since it is possible to have the same image name for boot images in different architectures, you should specify the architecture to ensure the correct image is used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, X86, Ia64, X64, Arm
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BootImageName
+  isRequired: true
+  description: |+
+    Specifies the name of the boot image with the multicast transmission to return.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: BootImageObject
+  isRequired: true
+  description: |+
+    Specifies the boot image object that has the multicast transmission to return.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileName
+  description: |+
+    Specifies a file name.
+    Use this parameter to specify the file name for the image if the boot image or install image name does not uniquely identify the image.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImageGroup
+  description: |+
+    Specifies the image group that contains the image from which to return the client.
+    If you do not specify an image group, and only one image group exists on the server, that image group is used by default.
+    If more than one image group exists on the server, you must specify an image group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InstallImageName
+  isRequired: true
+  description: |+
+    Specifies the name of the install image with the multicast transmission to return.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InstallImageObject
+  isRequired: true
+  description: |+
+    Specifies the install image object that has the multicast transmission to return.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TransmissionName
+  description: |+
+    Specifies a name for the multicast transmission.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WDS.Get-WdsMulticastClient
+name: Get-WdsMulticastClient
+description: |-
+  The **Get-WdsMulticastClient** cmdlet gets a list of clients connected to a multicast transmission or namespace.
+  Use this cmdlet to return a list of multicast client IDs to use with the Disconnect-WdsMulticastClient cmdlet.
+  You can specify the transmission by any of the following:
+
+  - The transmission name.
+  - The name and architecture of the boot image, with the file name if it is required to identify the image uniquely, if the transmission is based on a boot image in the Windows Deployment Services image store. 
+  - The boot image object directly, if the transmission is based on a boot image in the Windows Deployment Services image store. 
+  - The file name, if it is required to identify the image uniquely, and, if the transmission is based on an install image in the Windows Deployment Services image store, the name and group name of the install image the transmission is based on.
+  - The install image object directly, if the transmission is based on an install image in the Windows Deployment Store image store.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_WdsMulticastClient_v1.0.cdxml-help.xml
+  Module Name: WDS
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/wds/get-wdsmulticastclient?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WdsMulticastClient

@@ -1,0 +1,293 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an entry point to a multi-site deployment.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DAEntryPoint" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DAEntryPoint
+  href: ./Get-DAEntryPoint.yml
+- text: Remove-DAEntryPoint
+  href: ./Remove-DAEntryPoint.yml
+- text: Set-DAEntryPoint
+  href: ./Set-DAEntryPoint.yml
+syntaxes:
+- >-
+  Add-DAEntryPoint [-ComputerName <String>] [-ServerGpoName <String>] [-Name] <String> [-GslbIP <IPAddress>]
+
+   [-DeployNat] [-NoPrerequisite] [-PassThru] -RemoteAccessServer <String> [-InternalInterface <String>]
+
+   [-InternetInterface <String>] [-ClientIPv6Prefix <String>] -ConnectToAddress <String> [-Force]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Add-DAEntryPoint -Name "Entry Point 2" -InternalInterface CorpNet1 -RemoteAccessServer "da2.domain1.corp.contoso.com" -InternetInterface Internet -ClientIPv6Prefix 3000:0:30:2000::/64 -ConnectToAddress "ep2.da.contoso.com" -PassThru -Force
+
+    EntryPointName                 GslbIp                         Servers 
+    --------------                 ------                         ------- 
+    Entry Point 2                  0.0.0.0                        {DA2.domain1.corp.contoso.com} 
+
+
+    To validate the name of the GPO which was created by this cmdlet, the following script should be used.
+    PS C:\>$daServer = Get-DAServer -EntrypointName "Entry Point 2"
+
+
+
+    PS C:\>$daServer.ServerConfiguration.GpoName
+
+    domain1.corp.contoso.com\DirectAccess Server Settings - Entry Point 2
+
+
+    In addition, running the Get-DAMultiSite cmdlet displays the newly added entry point.
+    PS C:\>Get-DAMultiSite
+
+    EnterpriseName             : Company Enterprise 
+    GslbFqdn                   : 
+    ManualSiteSelectionAllowed : Enabled 
+    DAEntryPoints              : {Entry Point 1, Entry Point 2}
+  description: |-
+    This example adds the edge server named da2.domain1.corp.contoso.com to the multi-site deployment, names the server Entry Point 2 and declares CorpNet1 as the network interface which is connected to the corporate internal network.
+    Since the company uses IPv6 prefixes, IPHTTPS remote clients will connect via ep2.da.contoso.com using predefined prefix 3000:0:30:2000::/64.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Add-DAEntryPoint -Name "Entry Point 2" -InternalInterface CorpNet1 -RemoteAccessServer "da2.domain1.corp.contoso.com" -InternetInterface Internet -ClientIPv6Prefix 3000:0:30:2000::/64 -ConnectToAddress "ep2.da.contoso.com" -ServerGpoName "domain1.corp.contoso.com\EP2ServerGpo"  -PassThru -Force
+
+    EntryPointName                 GslbIp                         Servers 
+    --------------                 ------                         ------- 
+    Entry Point 2                  0.0.0.0                        {DA2.domain1.corp.contoso.com}
+
+
+    To validate, the following script should be used.
+    PS C:\>$daServer = Get-DAServer -EntrypointName "Entry Point 2"
+
+
+
+    PS C:\>$daServer.ServerConfiguration.GpoName
+
+    domain1.corp.contoso.com\ EP2ServerGpo
+  description: |-
+    This example adds the edge server named da2.domain1.corp.contoso.com to the multi-site deployment, names the server Entry Point 2 and declares CorpNet1 as the network interface which is connected to the corporate internal network using a pre-created GPO domain2.corp.contoso.com\EP2ServerGpo.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>Add-DAEntryPoint -Name "Entry Point 2" -InternalInterface CorpNet1 -RemoteAccessServer "da2.domain1.corp.contoso.com" -InternetInterface Internet -ClientIPv6Prefix 3000:0:30:2000::/64 -ConnectToAddress "ep2dmz.da.contoso.com" -ServerGpoName "domain1.corp.contoso.com\EP2ServerGpo" -PassThru -Force
+
+    EntryPointName                 GslbIp                         Servers 
+    --------------                 ------                         ------- 
+    Entry Point 2                  0.0.0.0                        {da2.domain1.corp.contoso.com}
+  description: |-
+    This example adds the edge server named da2.domain1.corp.contoso.com to the multi-site deployment, names the server Entry Point 2 and declares CorpNet1 as the network interface which is connected to the corporate internal network behind the NAT named DeployNat , with a defined internet interface named DMZNet1 and directs clients to connect to the entry point through ep2dmz.da.contoso.com.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\>Add-DAEntryPoint -Name "Entry Point 2" -InternalInterface CorpNet1 -RemoteAccessServer "da2.domain1.corp.contoso.com" -InternetInterface Internet -ClientIPv6Prefix 3000:0:30:2000::/64 -ConnectToAddress "ep2.da.contoso.com" -GslbIP "137.5.0.50" -PassThru -Force
+
+    EntryPointName                 GslbIp                         Servers 
+    --------------                 ------                         ------- 
+    Entry Point 2                  137.5.0.50                     {da2.domain1.corp.contoso.com}
+  description: |-
+    This example adds the edge server named da2.domain1.corp.contoso.com to the multi-site deployment, names the server Entry Point 2 and declares CorpNet1 as the network interface which is connected to the corporate internal network using GSLB and the IP address for Entry Point 2 is 137.5.0.50.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientIPv6Prefix
+  description: |+
+    Specifies the IPv6 address prefix assigned to remote clients connecting over IP-HTTPS.
+    The prefix length must be `59` or `64` bits.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name or address, either IPv4 or IPv6, of a server or server cluster in the multi-site deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectToAddress
+  isRequired: true
+  description: |+
+    Specifies the public name, or IPv4 address, of the Remote Access server, or network address translation (NAT) server, to which remote clients connect.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeployNat
+  description: |+
+    Indicates that the server or server cluster is deployed behind a NAT device.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: GslbIP
+  description: |+
+    Specifies the IPv4 or IPv6 dedicated IP address (DIP) of the server, or the virtual IP address (VIP) of the server cluster, to be used for global load balancing.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InternalInterface
+  description: |+
+    Specifies the name of the internal network adapter of the first server in the entry point.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InternetInterface
+  description: |+
+    Specifies the name of the external network adapter of the first server in the entry point.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name to be assigned to the entry point.
+
+  defaultValue: None
+  position: "1"
+  aliases: EntryPointName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoPrerequisite
+  description: |+
+    Indicates that a prerequisite check for DirectAccess deployment requirements should not be performed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemoteAccessServer
+  isRequired: true
+  description: |+
+    Specifies the name or IP address, IPv4 or IPv6, of the server that will be the first server in the entry point.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServerGpoName
+  description: |+
+    Specifies the name of the GPO in which DirectAccess server configuration settings for the entry point are stored.
+    The GPO is created in the domain that contains the server specified in RemoteAccessServer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Add-DAEntryPoint
+name: Add-DAEntryPoint
+description: |-
+  The **Add-DAEntrypoint** cmdlet adds an entry point to a multi-site deployment.
+  This cmdlet checks that the server complies with the prerequisites for DirectAccess deployment, and adds the server as an entry point.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DAEntryPoint_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/add-daentrypoint?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DAEntryPoint

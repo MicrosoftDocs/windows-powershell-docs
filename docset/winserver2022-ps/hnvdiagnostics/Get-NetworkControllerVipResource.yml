@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a VIP resource.
+module: HNVDiagnostics
+notes: ""
+syntaxes:
+- >-
+  Get-NetworkControllerVipResource [[-RestURI] <String>] [[-CertificateThumbprint] <String>]
+
+   [[-Credential] <PSCredential>] [[-Direction] <String>] [-IPAddress] <String> [[-DstPort] <String>]
+
+   [[-Protocol] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a Network Controller VIP resource'
+  code: |-
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Get-NetworkControllerVipResource -Credential $Cred -DstPort 80 -IPAddress 10.123.176.108 -Direction "In"
+  description: |-
+    The first command gets the credentials and stores them in the $Cred variable.
+
+    The second command gets the specified VIP resource using the credentials in $Cred.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies a certificate thumbprint for Network Controller.
+    Specify this parameter for a certificate deployment.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials to use for Network Controller.
+    Specify this parameter for a Kerberos deployment.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Direction
+  description: |+
+    Specifies the direction of the traffic flow.
+    The acceptable values for this parameter are:
+
+    - In
+    - Out
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: Out, In
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DstPort
+  description: |+
+    Specifies the port for the VIP resource to get.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  isRequired: true
+  description: |+
+    Specifies the IP address of the VIP resource to get.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    Specifies the protocol of the VIP resource to get.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: Tcp, Udp, All
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RestURI
+  description: |+
+    Specifies the URI to use for Network Controller REST APIs.
+    Specify this parameter for a wild card certificate deployment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HNVDiagnostics.Get-NetworkControllerVipResource
+name: Get-NetworkControllerVipResource
+description: |-
+  The **Get-NetworkControllerVipResource** cmdlet gets information, such as the MUXes and DIP hosts, for the specified virtual IP address (VIP) resource.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Get-VipConnectivityInfo-help.xml
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/get-networkcontrollervipresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerVipResource

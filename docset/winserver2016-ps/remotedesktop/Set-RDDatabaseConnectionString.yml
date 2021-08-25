@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the database connection string for the database server used in a high availability environment.
+module: RemoteDesktop
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-RDDatabaseConnectionString
+  href: ./Remove-RDDatabaseConnectionString.yml
+syntaxes:
+- >-
+  Set-RDDatabaseConnectionString [[-DatabaseConnectionString] <String>]
+
+   [[-DatabaseSecondaryConnectionString] <String>] [[-ConnectionBroker] <String>] [-RestoreDatabaseConnection]
+
+   [-RestoreDBConnectionOnAllBrokers] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a remote desktop database connection string'
+  code: |-
+    PS C:\> Set-RDDatabaseConnectionString -ConnectionBroker "Rdcb.Contoso.com" -DatabaseConnectionString "DRIVER=SQL Server Native Client 10.0;SERVER=Sqlserver.Contoso.com;Trusted_Connection=Yes;APP=Remote Desktop Services Connection Broker;Database=RemoteDesktopDeployment"
+  description: |-
+    This command sets the database connection string for the RD Connection Broker named Rdcb.Contoso.com.
+  summary: ""
+- title: 'Example 2: Set a remote desktop secondary database connection string'
+  code: |-
+    PS C:\>Set-RDDatabaseConnectionString -ConnectionBroker "Rdcb.Contoso.com" -DatabaseSecondaryConnectionString "DRIVER=SQL Server Native Client 10.0;SERVER=Sqlserver.Contoso.com; Uid=admin1;Pwd= OtherPassword!;Encrypt=yes;Connection Timeout=30;;APP=Remote Desktop Services Connection Broker;Database=RemoteDesktopDeployment"
+  description: |-
+    This command sets the secondary database connection string for the RD Connection Broker named Rdcb.Contoso.com.
+  summary: ""
+- title: 'Example 3: Update a database connection string on an RD Connection Broker server'
+  code: |-
+    PS C:\>Set-RDDatabaseConnectionString -ConnectionBroker "Rdcb.Contoso.com" -DatabaseConnectionString "DRIVER=SQL Server Native Client 10.0;SERVER=Sqlserver.Contoso.com; Uid=admin1;Pwd= OtherPassword1!;Encrypt=yes;Connection Timeout=30;APP=Remote Desktop Services Connection Broker;Database=RemoteDesktopDeployment" -DatabaseSecondaryConnectionString "DRIVER=SQL Server Native Client 10.0;SERVER=Sqlserver.Contoso.com; Uid=admin2;Pwd= OtherPassword2!;Encrypt=yes;Connection Timeout=30;APP=Remote Desktop Services Connection Broker;Database=RemoteDesktopDeployment" -RestoreDatabaseConnection
+  description: |-
+    This command sets the primary and secondary database connection strings for the RD Connection Broker named Rdcb.Contoso.com after the connection to the database is lost.
+    Connectivity can be lost if the password expires or if the database administrator changes the connection string.
+  summary: ""
+- title: 'Example 4: Update database connection strings on all RD Connection Broker servers'
+  code: |-
+    PS C:\>Set-RDDatabaseConnectionString -ConnectionBroker "Rdcb.Contoso.com" -DatabaseConnectionString "DRIVER=SQL Server Native Client 10.0;SERVER=Sqlserver.Contoso.com; Uid=admin1;Pwd= OtherPassword1!;Encrypt=yes;Connection Timeout=30;APP=Remote Desktop Services Connection Broker;Database=RemoteDesktopDeployment" -DatabaseSecondaryConnectionString "DRIVER=SQL Server Native Client 10.0;SERVER=Sqlserver.Contoso.com; Uid=admin2;Pwd= OtherPassword2!;Encrypt=yes;Connection Timeout=30;APP=Remote Desktop Services Connection Broker;Database=RemoteDesktopDeployment" -RestoreDatabaseConnection -RestoreDBConnectionOnAllBrokers
+  description: |-
+    This command sets the primary and secondary database connection strings for all the RD Connection Broker servers in a deployment after the connection to the database is lost.
+    Connectivity can be lost if the password expires or if the database administrator changes the connection string.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the RD Connection Broker server for a remote desktop deployment.
+    If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseConnectionString
+  description: |+
+    Specifies the database connection string.
+    The database connection string supports both high availability configurations:
+
+    - Dedicated database server.
+    Uses Windows Authentication to connect to the database.
+    - Shared database server.
+    Uses database authentication (such as SQL authentication) with a user name and password to connect to the database.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseSecondaryConnectionString
+  description: |+
+    Specifies the secondary database connection string optionally used to support password expiration.
+    Specify the secondary connection string if the high availability configuration uses a shared database server in which authentication to the database requires a user name and password.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RestoreDatabaseConnection
+  description: |+
+    Indicates that this operation restores the database connection string(s) when database access is lost for dedicated or shared configurations.
+
+    You can use **Set-RDDatabaseConnectionString** on the active management broker to restore the database connection string(s) on the specified broker, or you can specify the *RestoreDBConnectionOnAllBrokers* parameter to restore the database connection string(s) on all RD Connection Brokers in the deployment.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RestoreDBConnectionOnAllBrokers
+  description: |+
+    Indicates that this operation restores the database connection string(s) on all RD Connection Brokers in a deployment to re-establish database connectivity.
+    If you specify this parameter, you must also specify the *RestoreDatabaseConnection* parameter.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteDesktop.Set-RDDatabaseConnectionString
+name: Set-RDDatabaseConnectionString
+description: |-
+  The **Set-RDDatabaseConnectionString** cmdlet configures database connection settings for the database server used in a high availability environment with multiple Remote Desktop Connection Broker (RD Connection Broker) servers.
+
+  High availability supports multiple RD Connection Broker roles and servers, and uses a database server to store the configuration information for RD Connection Broker servers.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rddatabaseconnectionstring?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDDatabaseConnectionString

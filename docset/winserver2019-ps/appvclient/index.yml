@@ -1,0 +1,50 @@
+### YamlMime:PowershellModule
+children:
+- title: AppvClient
+  cmdlets:
+  - AppvClient.Add-AppvClientConnectionGroup
+  - AppvClient.Add-AppvClientPackage
+  - AppvClient.Add-AppvPublishingServer
+  - AppvClient.Disable-Appv
+  - AppvClient.Disable-AppvClientConnectionGroup
+  - AppvClient.Enable-Appv
+  - AppvClient.Enable-AppvClientConnectionGroup
+  - AppvClient.Get-AppvClientApplication
+  - AppvClient.Get-AppvClientConfiguration
+  - AppvClient.Get-AppvClientConnectionGroup
+  - AppvClient.Get-AppvClientMode
+  - AppvClient.Get-AppvClientPackage
+  - AppvClient.Get-AppvPublishingServer
+  - AppvClient.Get-AppvStatus
+  - AppvClient.Get-AppvVirtualProcess
+  - AppvClient.Mount-AppvClientConnectionGroup
+  - AppvClient.Mount-AppvClientPackage
+  - AppvClient.Publish-AppvClientPackage
+  - AppvClient.Remove-AppvClientConnectionGroup
+  - AppvClient.Remove-AppvClientPackage
+  - AppvClient.Remove-AppvPublishingServer
+  - AppvClient.Repair-AppvClientConnectionGroup
+  - AppvClient.Repair-AppvClientPackage
+  - AppvClient.Send-AppvClientReport
+  - AppvClient.Set-AppvClientConfiguration
+  - AppvClient.Set-AppvClientMode
+  - AppvClient.Set-AppvClientPackage
+  - AppvClient.Set-AppvPublishingServer
+  - AppvClient.Start-AppvVirtualProcess
+  - AppvClient.Stop-AppvClientConnectionGroup
+  - AppvClient.Stop-AppvClientPackage
+  - AppvClient.Sync-AppvPublishingServer
+  - AppvClient.Unpublish-AppvClientPackage
+uid: AppvClient
+name: AppvClient
+description: |-
+  The following list contains links to the help topics for the Microsoft Application Virtualization (App-V) Client cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 596d7b43-928b-44d4-89e7-17d34740ecc2
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  title: AppvClient

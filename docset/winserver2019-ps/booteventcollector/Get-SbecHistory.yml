@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the recent history of changes in connection status.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="CIM/WMI objects of class \Root\Microsoft\Windows\BootEventCollector\TargetForwardingHistory" data-throw-if-not-resolved="False" />
+  description: |-
+    The CIM/WMI objects contain the following fields
+
+    - `<TargetEndpoint>`: The target computer's endpoint information in human-readable format, as its host:port string (for example, 127.0.0.1:50000). 
+    - `<TargetMac>`: The target computer's MAC address (if known). 
+    - `<TargetGuid>`: The target computer's SMBIOS GUID (if known). 
+    - `<CollectorEndpoint>`: The host:port information of the endpoint on the collector side. 
+    - `<Computer>`: Target computer name, as determined by the collector according to its configuration. 
+    - `<ForwarderType>`: Type of the forwarder (such as 'etl'). 
+    - `<Destination>`: Destination of the data.
+    The meaning depends on the forwarder type.
+    A file name (such as for the ETL forwarder), or some other identification. 
+    - `<DestinationPattern>`: Pattern used to generate the destination of the data.
+    The meaning depends on the forwarder type and configuration.
+    For a fixed destination, would be the same as the destination itself.
+    For the destination with rotation of the files would contain the pattern characters that will be replaced with the actual index in the destination. 
+    - `<Error>`: Error message if an error was encountered.
+    Otherwise will be empty.`<ConnectedSince>`: CIM timestamp of when the connection was established. 
+    - `<DisconnectedSince>`: CIM timestamp of when the connection was dropped. 
+    - `<WmiDateTime>`: CIM timestamp of when this state change was recorded.
+links:
+- text: Get-SbecDestination
+  href: ./Get-SbecDestination.yml
+- text: Get-SbecForwarding
+  href: ./Get-SbecForwarding.yml
+syntaxes:
+- Get-SbecHistory [[-ComputerName] <String[]>] [[-CimSession] <CimSession[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the connection history'
+  code: |-
+    PS C:\> $x = @(Get-SbecHistory)
+  description: |-
+    This command gets the connection history.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet on the remote computers through a remote session.
+    Enter a session object, such as the output of a **New-CimSession** or **Get-CimSession** cmdlet, or an array of these objects.
+    The default is to run the cmdlet on the local computer.
+    For more information, see About_CimSession.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies the names of the computers on which you want to perform the operation.
+    You can specify a fully qualified domain name (FQDN), a NetBIOS name, or an IP address for each computer.
+    For more information see [Invoke-CimMethod](https://go.microsoft.com/fwlink/?LinkId=808801) on MSDN.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Get-SbecHistory
+name: Get-SbecHistory
+description: |-
+  The **Get-SbecHistory** cmdlet gets the recent history of changes in connection status from the Setup and Boot Event Collector.
+
+  The length of the history kept in the Collector and returned by this command is limited by an absolute number.
+  After the history grows beyond this size, new events cause the older events to disappear.
+  Because of this, the returned history is not full but only recent.
+  Reading the history doesn't erase it.
+
+  The similar information, in a reduced form, can be written by the Collector into the status log file.
+  The reduction is in the sense that the status log only shows the points when a new ETL file is opened for a connection.
+  The information from the status log file can be obtained with **Get-SbecDestination**.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/get-sbechistory?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-SbecHistory

@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports an iSCSI virtual disk snapshot.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.VirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Dismount-IscsiVirtualDiskSnapshot
+  href: ./Dismount-IscsiVirtualDiskSnapshot.yml
+- text: Get-IscsiVirtualDiskSnapshot
+  href: ./Get-IscsiVirtualDiskSnapshot.yml
+- text: Mount-IscsiVirtualDiskSnapshot
+  href: ./Mount-IscsiVirtualDiskSnapshot.yml
+- text: Remove-IscsiVirtualDiskSnapshot
+  href: ./Remove-IscsiVirtualDiskSnapshot.yml
+- text: Set-IscsiVirtualDiskSnapshot
+  href: ./Set-IscsiVirtualDiskSnapshot.yml
+syntaxes:
+- >-
+  Export-IscsiVirtualDiskSnapshot [-SnapshotId] <String> [-ComputerName <String>] [-Credential <PSCredential>]
+
+   [<CommonParameters>]
+- >-
+  Export-IscsiVirtualDiskSnapshot -InputObject <IscsiVirtualDiskSnapshot> [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Expose a snapshot as a virtual disk'
+  code: |-
+    PS C:\> Export-IscsiVirtualDiskSnapshot -Snapshot "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}"
+  description: |-
+    This example exposes a snapshot with the Id {E9A5BA03-85B9-40CA-85DF-DC1695690B40} as a virtual disk object.
+    To access it, assign the virtual disk with path \\\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy{41667F16-0FDD-11E1-BA2A-0010184F53D6}\vhd01 to a target.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an iSCSI virtual disk snapshot object from the input pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SnapshotId
+  isRequired: true
+  description: |+
+    Specifies the identifier (ID) for the snapshot.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Export-IscsiVirtualDiskSnapshot
+name: Export-IscsiVirtualDiskSnapshot
+description: |-
+  The **Export-IscsiVirtualDiskSnapshot** cmdlet exports a snapshot.
+  This cmdlet creates a virtual disk object and associates the snapshot with it.
+  Once the virtual disk object adds to a target, the initiator can access the snapshot.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/export-iscsivirtualdisksnapshot?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-IscsiVirtualDiskSnapshot

@@ -1,0 +1,134 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new authorization entry that allows one or more primary servers to replicate data to a specified Replica server.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMReplicationAuthorizationEntry" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-VMReplicationAuthorizationEntry [-AllowedPrimaryServer] <String> [-ReplicaStorageLocation] <String>
+
+   [-TrustGroup] <String> [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-VMReplicationAuthorizationEntry server01.domain01.contoso.com D:\ReplicaVMStorage DEFAULT
+  description: |-
+    This example creates a replication authorization entry on the local server for a primary server named server01.domain01.contoso.com and a trust group named DEFAULT.
+    It also specifies D:\ReplicaVMStorage as the location to create replica virtual hard disks for virtual machines replicated from server01.domain01.contoso.com.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> New-VMReplicationAuthorizationEntry *.domain01.contoso.com D:\ReplicaVMStorage MyDomain01 -ComputerName server02.domain01.contoso.com
+  description: |-
+    This example creates a replication authorization entry on server server02.domain01.contoso.com that allows replication from all primary servers in the domain domain01.contoso.com that also belong to the trust group MyDomain01.
+    It also specifies D:\ReplicaVMStorage as the location to create replica virtual hard disks for virtual machines replicated from these allowed primary servers.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AllowedPrimaryServer
+  isRequired: true
+  description: |+
+    Specifies the server that is allowed to send replication data to the Replica server.
+    Only fully-qualified domain names and fully qualified international domain names are supported.
+    You can use a wildcard (for example, "*") in the first octect to specify a fully qualified domain name, such as *.contoso.com.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: AllowedPS
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the authorization entry is to be created.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReplicaStorageLocation
+  isRequired: true
+  description: |+
+    Specifies the location to store the Replica virtual hard disk files sent from the allowed server when a new Replica virtual machine is created.
+
+  defaultValue: None
+  position: "1"
+  aliases: StorageLoc
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TrustGroup
+  isRequired: true
+  description: |+
+    Identifies a group of primary servers within which a given primary virtual machine can move so replications of the primary virtual machine are accepted by the Replica server only from primary servers that belong to the trust group.
+    You can use any string to create a new trust group.
+    Ensure all primary servers within a specific trust group use the same string as the value you specify for this parameter.
+
+    Use of a trust group can help you keep virtual machines isolated by maintaining control over which primary servers are trusted to provide replication, while also allowing the virtual machines to move from one primary server to another (such as through live migration or failover from a cluster node).
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.New-VMReplicationAuthorizationEntry
+name: New-VMReplicationAuthorizationEntry
+description: |-
+  The **New-VMReplicationAuthorizationEntry** cmdlet creates a new authorization entry that allows one or more primary servers to replicate data.
+  To use this cmdlet, the value of the ReplicationAllowedFromAnyServer property of the Replica server must be false.
+  You can use the **Get-VMReplicationServer** cmdlet to check the value of this property.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/new-vmreplicationauthorizationentry?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-VMReplicationAuthorizationEntry

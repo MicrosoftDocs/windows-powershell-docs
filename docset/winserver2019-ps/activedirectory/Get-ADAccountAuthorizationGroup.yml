@@ -1,0 +1,254 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the accounts token group information.
+module: ActiveDirectory
+notes: |-
+  * This cmdlet does not work with an Active Directory snapshot.
+inputs:
+- name: <xref href="Microsoft.ActiveDirectory.Management.ADAccount" data-throw-if-not-resolved="False" />
+  description: |-
+    An account object that represents the user, computer or service account is received by the *Identity* parameter.
+    Derived types, such as the following are also accepted:
+
+    - **Microsoft.ActiveDirectory.Management.ADUser**
+    - **Microsoft.ActiveDirectory.Management.ADComputer**
+    - **Microsoft.ActiveDirectory.Management.ADServiceAccount**
+outputs:
+- name: <xref href="Microsoft.ActiveDirectory.Management.ADGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns group objects that represent the security groups for the account.
+links:
+- text: Get-ADComputer
+  href: ./Get-ADComputer.yml
+- text: Get-ADServiceAccount
+  href: ./Get-ADServiceAccount.yml
+- text: Get-ADUser
+  href: ./Get-ADUser.yml
+- text: Search-ADAccount
+  href: ./Search-ADAccount.yml
+- text: AD DS Administration Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Get-ADAccountAuthorizationGroup [-AuthType <ADAuthType>] [-Credential <PSCredential>] [-Identity] <ADAccount>
+
+   [-Partition <String>] [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all security groups for a specified account'
+  code: |-
+    PS C:\> Get-ADAccountAuthorizationGroup -Identity DavidCh
+    GroupScope        : DomainLocal
+    objectGUID        : 00000000-0000-0000-0000-000000000000
+    GroupCategory     : Security
+    SamAccountName    : Everyone
+    name              : Everyone
+    objectClass       : SID               : S-1-1-0
+    distinguishedName : GroupScope        : DomainLocal
+    objectGUID        : 00000000-0000-0000-0000-000000000000
+    GroupCategory     : Security
+    SamAccountName    : Authenticated Users
+    name              : Authenticated Users
+    objectClass       : SID               : S-1-5-11
+    distinguishedName : GroupScope        : Global
+    objectGUID        : 86c0f0d5-8b4d-4f35-a867-85a006b92902
+    GroupCategory     : Security
+    SamAccountName    : Domain Users
+    name              : Domain Users
+    objectClass       : group
+    SID               : S-1-5-21-41432690-3719764436-1984117282-513
+    distinguishedName : CN=Domain Users,CN=Users,DC=Fabrikam,DC=com
+
+    GroupScope        : DomainLocal
+    objectGUID        : 869fb7ad-8cf2-4dd0-ac0f-4bd3bf324669
+    GroupCategory     : Security
+    SamAccountName    : Pre-Windows 2000 Compatible Access
+    name              : Pre-Windows 2000 Compatible Access
+    objectClass       : group
+    SID               : S-1-5-32-554
+    distinguishedName : CN=Pre-Windows 2000 Compatible Access,CN=Builtin,DC=Fabrikam,DC=com
+
+    GroupScope        : DomainLocal
+    objectGUID        : c1e397c5-1e44-4270-94d1-88d6c4b78ee6
+    GroupCategory     : Security
+    SamAccountName    : Users
+    name              : Users
+    objectClass       : group
+    SID               : S-1-5-32-545
+    distinguishedName : CN=Users,CN=Builtin,DC=Fabrikam,DC=com
+  description: |-
+    This command returns all security groups for the specified account with SamAccountName DavidCh.
+  summary: ""
+- title: 'Example 2: Get all security groups for a specified account using a distinguished name'
+  code: |-
+    PS C:\> Get-ADAccountAuthorizationGroup -Identity "CN=DavidCh,DC=AppNC" -Server "<Server>:50000"
+    distinguishedName : CN=AdminGroup,DC=AppNC
+    GroupCategory     : Security
+    GroupScope        : Global
+    name              : AdminGroup
+    objectClass       : group
+    objectGUID        : 4d72873f-fe09-4834-9ada-a905636d10df
+    SamAccountName    : SID               : S-1-510474493-936115905-4021890855-1253703389-3958791574-3542197427
+  description: |-
+    This command returns all security groups for the specified account with DistinguishedName cn=DavidCh,dc=AppNC in the AD LDS instance \<Server\>:50000.
+  summary: ""
+- title: 'Example 3: Get a filtered list of security groups'
+  code: |-
+    PS C:\> Get-ADAccountAuthorizationGroup -Server "<Server>:50000" -Identity Administrator | where { $_.objectClass -ne $null } | ft name, objectClass
+    name                                                        objectClass
+    ----                                                        -----------
+    Domain Users                                                group
+    Administrators                                              group
+    Users                                                       group
+    Pre-Windows 2000 Compatible Access                          group
+    Group Policy Creator Owners                                 group
+    Domain Admins                                               group
+    Enterprise Admins                                           group
+    Schema Admins                                               group
+    Denied RODC Password Replication Group                      group
+  description: |-
+    This command returns a filtered list of built-in security groups that do not have an empty or null setting for objectclass, such as Everyone or Authenticated Users.
+    Note: This type of filtering of groups in output can be useful when piping the output of this cmdlet to be used as input to other Active Directory cmdlets.
+  summary: ""
+parameters:
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use.
+    The acceptable values for this parameter are:
+
+    - Negotiate or 0
+    - Basic or 1
+
+    The default authentication method is Negotiate.
+
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user account credentials to use to perform this task.
+    The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
+    If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
+
+    To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+    If you specify a user name for this parameter, the cmdlet prompts for a password.
+
+    You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+    You can then set the *Credential* parameter to the **PSCredential** object.
+
+    If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADAccount" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies an Active Directory account object by providing one of the following property values.
+    The identifier in parentheses is the Lightweight Directory Access Protocol (LDAP) display name for the attribute.
+    The acceptable values for this parameter are:
+
+    - A distinguished name
+    - A GUID (objectGUID) 
+    - A Security Identifier (objectSid) 
+    - A SAM Account Name (SAMAccountName)
+
+    The cmdlet searches the default naming context or partition to find the object.
+    If two or more objects are found, the cmdlet returns a non-terminating error.
+
+    This parameter can also get this object through the pipeline or you can set this parameter to an account object instance.
+
+    Derived types such as the following are also accepted: 
+
+    - **Microsoft.ActiveDirectory.Management.ADServiceAccount**
+    - **Microsoft.ActiveDirectory.Management.ADComputer**
+    - **Microsoft.ActiveDirectory.Management.ADUser**
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Partition
+  description: |+
+    Specifies the distinguished name of an Active Directory partition.
+    The distinguished name must be one of the naming contexts on the current directory server.
+    The cmdlet searches this partition to find the object defined by the *Identity* parameter.
+
+    In many cases, a default value is used for the *Partition* parameter if no value is specified.
+    The rules for determining the default value are given below.
+    Note that rules listed first are evaluated first and once a default value can be determined, no further rules are evaluated.
+
+    In Active Directory Domain Services (AD DS) environments, a default value for *Partition* is set in the following cases: 
+
+    - If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+    - If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+    - If none of the previous cases apply, the default value of *Partition* is set to the default partition or naming context of the target domain.
+
+    In Active Directory Lightweight Directory Services (AD LDS) environments, a default value for *Partition* is set in the following cases: 
+
+    - If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name. 
+    - If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+    - If the target AD LDS instance has a default naming context, the default value of *Partition* is set to the default naming context.
+    To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
+    - If none of the previous cases apply, the *Partition* parameter will not take any default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+
+    Specify the Active Directory Domain Services instance in one of the following ways: 
+
+    Domain name values:
+
+    - Fully qualified domain name
+    - NetBIOS name
+
+    Directory server values: 
+
+    - Fully qualified directory server name
+    - NetBIOS name
+    - Fully qualified directory server name and port
+
+    The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+    - By using the *Server* value from objects passed through the pipeline
+    - By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
+    - By using the domain of the computer running Windows PowerShell
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ActiveDirectory.Get-ADAccountAuthorizationGroup
+name: Get-ADAccountAuthorizationGroup
+description: |-
+  The **Get-ADAccountAuthorizationGroup** cmdlet gets the security groups from the specified user, computer, or service accounts token.
+  This cmdlet requires a global catalog to perform the group search.
+  If the forest that contains the account does not have a global catalog, the cmdlet returns a non-terminating error.
+
+  The *Identity* parameter specifies the user, computer, or service account.
+  You can identify a user, computer, or service account object by its distinguished name, GUID, security identifier (SID), Security Account Manager (SAM) account name or user principal name.
+  You can also set the *Identity* parameter to an account object variable, such as `$<localAccountObject>`, or pass an account object through the pipeline to the *Identity* parameter.
+  For example, you can use the Get-ADUser, Get-ADComputer, Get-ADServiceAccount or Search-ADAccount cmdlets to retrieve an account object and then pass the object through the pipeline to the Get-ADAccountAuthorizationGroup cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/get-adaccountauthorizationgroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ADAccountAuthorizationGroup

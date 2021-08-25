@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new traffic class.
+module: DcbQoS
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosTrafficClassSettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The MSFT_NetQosTrafficClassSettingData object contains a network traffic class.
+links:
+- text: Get-NetQosTrafficClass
+  href: ./Get-NetQosTrafficClass.yml
+- text: Set-NetQosTrafficClass
+  href: ./Set-NetQosTrafficClass.yml
+syntaxes:
+- >-
+  New-NetQosTrafficClass [-Name] <String> [-Algorithm] <Algorithm> [-Priority] <Byte[]> [-AsJob]
+
+   [-BandwidthPercentage <Byte>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> New-NetQosTrafficClass -Name "SMB" -Priority 3 -Algorithm ETS -BandwidthPercentage 60
+    Name                      Algorithm Bandwidth(%) Priority 
+    ----                      --------- ------------ -------- 
+    SMB                       ETS       60           3
+  description: |-
+    Create a traffic class for traffic tagged with the 802.1p value of 3.
+    This traffic class, named as SMB, has 60 percent of the entire bandwidth.
+  summary: ""
+parameters:
+- type: <xref href="Algorithm" data-throw-if-not-resolved="False" />
+  name: Algorithm
+  isRequired: true
+  description: |+
+    Specifies the transmission selection algorithm to assign to the traffic class.
+    The acceptable values for this parameter are: ETS or Strict
+    ETS refers to IEEE 802.1Qaz Enhanced Transmission Selection.
+    Strict refers to Strict Priority scheduling.
+    Both of the algorithms are specified in the IEEE 802.1Q standard.
+
+  defaultValue: Ets
+  position: "2"
+  aliases: Tsa
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: BandwidthPercentage
+  description: |+
+    Specifies the percent of total bandwidth to assign to the traffic class.
+
+  defaultValue: None
+  position: Named
+  aliases: Bandwidth, Bw
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the traffic class.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Priority
+  isRequired: true
+  description: |+
+    Specifies the IEEE 802.1p priority values.
+    One priority can be mapped to only one traffic class whereas multiple priorities can be mapped to the same traffic class.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DcbQoS.New-NetQosTrafficClass
+name: New-NetQosTrafficClass
+description: |-
+  This **New-NetQosTrafficClass** cmdlet creates a new traffic class.
+  Traffic class is specified in the enhanced transmission selection (ETS) specification in the IEEE data center bridging (DCB) standard.
+  In creating a traffic class, the user specifies which types of traffic, differentiated by the IEEE 802.1p priority, are mapped to the traffic class, what transmission algorithm it uses, and how much bandwidth it gets.
+  If Windows Server® 2012 or later is set to be not willing to accept DCB configurations from a remote device, then Windows Server 2012 or later will program DCB capable network adapters to add this new traffic class.
+
+  For more information on remote device configurations, see the Set-NetQosDcbxSetting cmdlet.
+
+  There is a default traffic class created by Windows Server 2012 or later.
+  All 8 priorities are mapped to this default traffic class, which selects ETS as its transmission algorithm and has all of the total bandwidth.
+  Users cannot delete the default traffic class.
+  Since a traffic class must have at least one type of traffic mapped to it and there are 8 or less types of such traffic, which is limited by IEEE 802.1p, only 7 additional traffic classes can be created.
+
+  In reality, a network adapter that supports DCB may support less than 8 traffic classes.
+  If there are more traffic classes configured in Windows Server 2012 or later than what a network adapter can support, then Windows Server 2012 or later will not send the configurations to the network adapter.
+metadata:
+  external help file: DcbQos_Cmdlets.xml
+  Module Name: DcbQoS
+  online version: https://docs.microsoft.com/powershell/module/dcbqos/new-netqostrafficclass?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

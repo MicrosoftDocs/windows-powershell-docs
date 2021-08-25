@@ -1,0 +1,29 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets access control lists for the local queue manager.
+module: MSMQ
+notes: ""
+links:
+- text: Set-MsmqQueueManagerACL
+  href: ./Set-MsmqQueueManagerACL.yml
+syntaxes:
+- Get-MsmqQueueManagerACL [<CommonParameters>]
+examples:
+- title: 'Example 1: Get message queue manager ACLs for the local queue manager'
+  code: |-
+    PS C:\> Get-MsmqQueueManagerACL
+  description: |-
+    This command gets the message queue manager ACLs for the local queue manager.
+  summary: ""
+uid: MSMQ.Get-MsmqQueueManagerACL
+name: Get-MsmqQueueManagerACL
+description: |-
+  The **Get-MsmqQueueManagerACL** cmdlet gets an array of **MsmqQueueManagerAcl** objects for the local queue manager.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/get-msmqqueuemanageracl?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MsmqQueueManagerACL

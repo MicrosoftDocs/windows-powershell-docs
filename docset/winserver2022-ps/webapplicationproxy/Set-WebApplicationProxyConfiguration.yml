@@ -1,0 +1,197 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the configuration settings of a Web Application Proxy server.
+module: WebApplicationProxy
+notes: ""
+links:
+- text: Get-WebApplicationProxyConfiguration
+  href: ./Get-WebApplicationProxyConfiguration.yml
+syntaxes:
+- >-
+  Set-WebApplicationProxyConfiguration [-ADFSUrl <Uri>] [-ADFSTokenSigningCertificatePublicKey <String>]
+
+   [-ADFSWebApplicationProxyRelyingPartyUri <Uri>] [-RegenerateAccessCookiesEncryptionKey]
+
+   [-ConnectedServersName <String[]>] [-OAuthAuthenticationURL <Uri>]
+
+   [-ConfigurationChangesPollingIntervalSec <UInt32>] [-UpgradeConfigurationVersion]
+
+   [-ADFSTokenAcceptanceDurationSec <UInt32>] [-ADFSSignOutURL <Uri>] [-UserIdleTimeoutSec <UInt32>]
+
+   [-UserIdleTimeoutAction <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the proxy to check for configuration changes'
+  code: |-
+    PS C:\> Set-WebApplicationProxyConfiguration -ConfigurationChangesPollingIntervalSec 300
+  description: |-
+    This command modifies the Web Application Proxy to query the federation server every 300 seconds for configuration changes.
+  summary: ""
+parameters:
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ADFSSignOutURL
+  description: |+
+    Specifies the sign out URL for Web Application Proxy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ADFSTokenAcceptanceDurationSec
+  description: |+
+    Specifies the maximum duration in seconds until when the Web Application Proxy server accepts the edge token issued by the AD FS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ADFSTokenSigningCertificatePublicKey
+  description: |+
+    Specifies the thumbprint of the certificate that the federation server uses to sign the edge token.
+    The thumbprint is the SHA-1 hash of the certificate and consists of 40 hexadecimal characters.
+    Specify this parameter only when the AD FS token signing certificate changes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ADFSUrl
+  description: |+
+    Specifies the URL for the federation server that is used by the Web Application Proxy.
+    The Web Application Proxy Configuration Wizard populates this setting, and there is no requirement that you manually change it.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ADFSWebApplicationProxyRelyingPartyUri
+  description: |+
+    Specifies the URI for the Web Application Proxy server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ConfigurationChangesPollingIntervalSec
+  description: |+
+    Specifies the time interval, in seconds, that elapses before the Web Application Proxy servers query a federation server for configuration changes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ConnectedServersName
+  description: |+
+    Specifies an array of Web Application Proxy servers that are connected to a federation server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: OAuthAuthenticationURL
+  description: |+
+    Specifies the URL of the federation server that performs Open Authorization (OAuth) authentication when end users connect to a published web application using a Windows Store app.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RegenerateAccessCookiesEncryptionKey
+  description: |+
+    Specifies whether to create a new encryption key to be used by Web Application Proxy servers to encrypt proxy cookies.
+    All Web Application Proxy servers use the encryption key to validate the access cookie, even if the cookie was issued by another Web Application Proxy server.
+
+    You should specify this parameter whenever you want to change the encryption key that is used to encrypt the proxy cookies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UpgradeConfigurationVersion
+  description: |+
+    Indicates whether this cmdlet uses the upgrade configuration version setting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserIdleTimeoutAction
+  description: |+
+    Specifies whether inactive user will be redirected to the AD FS for signout or reauthentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Signout, Reauthenticate
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: UserIdleTimeoutSec
+  description: |+
+    Specifies the inactivity time interval, in seconds, after which Web Application Proxy will redirect users to AD FS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebApplicationProxy.Set-WebApplicationProxyConfiguration
+name: Set-WebApplicationProxyConfiguration
+description: |-
+  The **Set-WebApplicationProxyConfiguration** cmdlet modifies the configuration settings of a Web Application Proxy server.
+  The settings include the Active Directory Federation Services (AD FS) URL, the token signing certificate, and the edge server URI.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: WebApplicationProxy-help.xml
+  Module Name: WebApplicationProxy
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/webapplicationproxy/set-webapplicationproxyconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WebApplicationProxyConfiguration

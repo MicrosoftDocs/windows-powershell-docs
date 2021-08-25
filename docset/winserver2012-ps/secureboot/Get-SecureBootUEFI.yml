@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the UEFI variable values related to Secure Boot such as the SetupMode, SecureBoot, KEK, PK, SignatureDatabase, and forbidden SignatureDatabase.
+module: SecureBoot
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The String object represents the UEFI variable name.
+outputs:
+- name: <xref href="Microsoft.SecureBoot.Commands.UEFIEnvironmentVariable" data-throw-if-not-resolved="False" />
+  description: |-
+    The UEFIEnvironmentVariable object contains the following properties: 
+
+     -- Name 
+
+     -- Bytes 
+
+     -- Attributes
+links:
+- text: Confirm-SecureBootUEFI
+  href: ./Confirm-SecureBootUEFI.yml
+- text: Format-SecureBootUEFI
+  href: ./Format-SecureBootUEFI.yml
+- text: Get-SecureBootPolicy
+  href: ./Get-SecureBootPolicy.yml
+- text: Set-SecureBootUEFI
+  href: ./Set-SecureBootUEFI.yml
+syntaxes:
+- Get-SecureBootUEFI [-Name] <String> [-OutputFilePath <String>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-SecureBootUefi -Name PK | Format-List
+    Name       : PK 
+    Bytes      : {161, 89, 192, 165...} 
+    Attributes : NON VOLATILE 
+                 BOOTSERVICE ACCESS 
+                 RUNTIME ACCESS 
+                 TIME BASED AUTHENTICATED WRITE ACCESS
+  description: |-
+    Grabs information about the PK from the UEFI variable.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the UEFI environment variable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: n
+  parameterValueGroup: PK, KEK, db, dbx, SetupMode, SecureBoot
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutputFilePath
+  description: |+
+    Specifies the output file path of the UEFI environment variable.
+
+  defaultValue: None
+  position: Named
+  aliases: f
+  parameterValueGroup: ""
+uid: SecureBoot.Get-SecureBootUEFI
+name: Get-SecureBootUEFI
+description: |-
+  The **Get-SecureBootUEFI** cmdlet gets the UEFI variable values related to Secure Boot which are: SetupMode, SecureBoot, KEK, PK, SignatureDatabase (DB), and forbidden SignatureDatabase (DBX).
+
+  If the computer does not support Secure Boot or is a BIOS (non-UEFI) computer, then this cmdlet will return an error displaying the following: `Cmdlet not supported on this platform.`
+
+  If the variable does not exist, then this cmdlet will return an error displaying the following: `Variable is currently undefined.`
+
+  If Windows PowerShell® is not run in administrator mode, then this cmdlet will return an error displaying the following: `Unable to set proper privileges.
+  Access was denied.`
+metadata:
+  external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
+  Module Name: SecureBoot
+  online version: https://docs.microsoft.com/powershell/module/secureboot/get-securebootuefi?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

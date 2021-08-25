@@ -1,0 +1,191 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the DNS server and proxy server addresses of a Name Resolution Policy Table (NRPT) entry and configures the local name resolution property.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DAClientDnsConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The DAClientDnsConfiguration object contains the following properties: 
+
+     -- The NRPT entries in the NRPT table: each entry is an instance of the DnsClientNrptRule object. 
+
+     -- The DnsClientNrptGlobal object which contains the local name resolution settings.
+links:
+- text: Add-DAClientDnsConfiguration
+  href: ./Add-DAClientDnsConfiguration.yml
+- text: Get-DAClientDnsConfiguration
+  href: ./Get-DAClientDnsConfiguration.yml
+- text: Remove-DAClientDnsConfiguration
+  href: ./Remove-DAClientDnsConfiguration.yml
+syntaxes:
+- >-
+  Set-DAClientDnsConfiguration [-DnsSuffix <String>] [-DnsIPAddress <String[]>] [-ProxyServer <String>]
+
+   [-Local <String>] [-ComputerName <String>] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Set-DAClientDNSConfiguration -DNSSuffix 'contoso.com' -DnsIPAddress 2006:2005:1::3
+  description: |-
+    This example will change the list of configured DNS Servers for contoso.com to 2006:2005:1::3.
+    These changes will be made in all of the DA client GPOs.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Set-DAClientDNSConfiguration -DNSSuffix 'contoso.com' -ProxyServer 'webproxy.contoso.com:400'
+  description: |-
+    This example configures a proxy server for suffix contoso.com.
+    Since NRPT entry settings in DA are global, this change will apply to all of the DA clients.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Set-DAClientDnsConfiguration -Local 'FallbackSecure'
+  description: |-
+    This example configures local name resolution to FallbackSecure, therefore ensuring that local name resolution is used only if the resource name does not exist in DNS.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the Remote Access server computer specific tasks should be run.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DnsIPAddress
+  description: |+
+    Specifies the new list of DNS server IPv4 or IPv6 addresses for the specified DNS suffix in the NRPT.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DirectAccessDnsServers
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DnsSuffix
+  description: |+
+    Specifies the DNS suffix entry in the NRPT that needs to be modified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Namespace
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Local
+  description: |+
+    Specifies the property of the local name resolution.
+    The acceptable values for this parameter are:
+
+     -- FallbackSecure: Only use local name resolution if the name does not exist in DNS, which is most restrictive. 
+
+     -- FallbackPrivate: Fall back to local name resolution if the name does not exist in the DNS or the DNS servers are unreachable when the client computer is on a private network, which is recommended. 
+
+     -- FallbackUnsecure: Fall back to local name resolution for any kind of DNS resolution error, which is least secure.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SecureNameQueryFallback
+  parameterValueGroup: FallbackSecure, FallbackPrivate, FallbackUnsecure
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProxyServer
+  description: |+
+    Specifies the new proxy server for the specified DNS suffix in the NRPT.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DirectAccessProxyName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Set-DAClientDnsConfiguration
+name: Set-DAClientDnsConfiguration
+description: |-
+  The **Set-DAClientDnsConfiguration** cmdlet configures the DNS server and proxy server addresses of a Name Resolution Policy Table (NRPT) entry and configures the local name resolution property.
+
+  To modify an NRPT entry the user needs to specify the DNS suffix, the new DNS IP address or the proxy server, or the new DNS IP address and the proxy server for this suffix.
+  To modify the local name resolution setting the **Local** parameter is used.
+
+  When an NRPT entry or local name resolution property is modified in a multi-domain scenario, it is correspondingly updated in all of the client Group Policy Objects (GPOs) in various domains.
+  This is true for multi-site and firstref_server_7 GPOs as well.
+
+  The NRPT configuration is applicable globally to the entire DirectAccess (DA) deployment and therefore is not impacted by multi-site deployment.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DAClientDNSConfiguration_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-daclientdnsconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DAClientDnsConfiguration

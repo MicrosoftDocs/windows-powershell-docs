@@ -1,0 +1,160 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests that a specified computer is a functioning DNS server.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerValidity" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Get-DnsServer
+  href: ./Get-DnsServer.yml
+- text: Set-DnsServer
+  href: ./Set-DnsServer.yml
+syntaxes:
+- >-
+  Test-DnsServer [-IPAddress] <IPAddress[]> [-ComputerName <String>] [[-Context] <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Test-DnsServer [-IPAddress] <IPAddress[]> [-ComputerName <String>] -ZoneName <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Test whether a DNS server is functional'
+  code: |-
+    PS C:\> Test-DnsServer -IPAddress 10.123.183.155
+
+    IPAddress               Result                  RoundTripTime           TcpTried                UdpTried
+    ---------               --------                 ------------           --------                --------
+    10.123.183.155           Success                 00:00:11                False                  True
+  description: |-
+    This command tests whether the computer that has an IP address of 10.123.183.155 is a functional DNS server.
+  summary: ""
+- title: 'Example 2: Test whether a DNS server is functional and has valid configured forwarders'
+  code: |-
+    PS C:\> Test-DnsServer -IPAddress 10.123.183.155 -Context Forwarder
+
+    IPAddress               Result                  RoundTripTime           TcpTried                UdpTried
+    ---------               --------                 ------------           --------                --------
+    10.123.183.155           Success                 00:00:11                False                    True
+  description: |-
+    This command tests whether the computer that has an IP address of 10.123.183.155 is a functional DNS server that has valid configured forwarders.
+  summary: ""
+- title: 'Example 3: Test whether a DNS server is functional and has valid configured root hints'
+  code: |-
+    PS C:\> Test-DnsServer -IPAddress 10.123.183.155 -Context RootHints
+
+    IPAddress               Result                  RoundTripTime           TcpTried                UdpTried
+    ---------               --------                 ------------           --------                --------
+    10.123.183.155           NoResponse              00:00:12                False                   True
+  description: |-
+    This command tests whether the computer that has an IP address of 10.123.183.155 is a functional DNS server that has valid configured root hints.
+  summary: ""
+- title: 'Example 4: Test whether a DNS server is functional and hosts the Contoso.com zone'
+  code: |-
+    PS C:\> Test-DnsServer -IPAddress 10.123.183.155 -ZoneName "Contoso.com"
+
+    IPAddress               Result                  RoundTripTime           TcpTried                UdpTried
+    ---------               --------                 ------------           --------                --------
+    10.123.183.155           Success                 00:00:00                False                   True
+  description: |-
+    This command tests whether the computer that has an IP address of 10.123.183.155 is a functional DNS server that hosts the Contoso.com zone.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    The acceptable values for this parameter are: an IPv4 address; an IPv6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies functionalities to test.
+    Valid values are: DnsServer, Forwarder , and RootHints.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: DnsServer, Forwarder, RootHints
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPAddress
+  isRequired: true
+  description: |+
+    Specifies an array of DNS server IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ZoneName
+  isRequired: true
+  description: |+
+    Specifies the name of the zone that the server hosts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Test-DnsServer
+name: Test-DnsServer
+description: |-
+  The **Test-DnsServer cmdlet** tests whether a computer is a functioning Domain Name System (DNS) server.
+  The DNS server must be running Windows Server® 2008 R2 operating system or above.
+
+  When you specify a computer by its IP address only, the cmdlet tests whether the computer is a DNS server.
+  If you also specify a zone name, the cmdlet validates that the DNS server can resolve the specified zone.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServer_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/test-dnsserver?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-DnsServer

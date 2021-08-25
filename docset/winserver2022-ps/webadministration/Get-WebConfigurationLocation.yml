@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the location of a configuration setting.
+module: WebAdministration
+notes: ""
+links:
+- text: Remove-WebConfigurationLocation
+  href: ./Remove-WebConfigurationLocation.yml
+- text: Rename-WebConfigurationLocation
+  href: ./Rename-WebConfigurationLocation.yml
+syntaxes:
+- Get-WebConfigurationLocation [[-Name] <String>] [-Recurse] [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get location tags'
+  code: |-
+    IIS:\> Get-WebConfigurationLocation
+  description: |-
+    This command returns all locations that are configured by using location tags.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the configuration location.
+    If you do not specify this parameter, this cmdlet gets all locations.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies an IIS configuration path to the location.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recurse
+  description: |+
+    Indicates that this cmdlet returns locations within the hierarchy of the specified location.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebConfigurationLocation
+name: Get-WebConfigurationLocation
+description: |-
+  The **Get-WebConfigurationLocation** cmdlet gets the location of a specified configuration setting.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webconfigurationlocation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebConfigurationLocation

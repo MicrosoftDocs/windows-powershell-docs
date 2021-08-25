@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Uninstalls the Certificate Enrollment Web service or individual instances of it.
+module: ADCSDeployment
+notes: |-
+  * The application directories are removed from their respective instance folders in the file system. The uninstall command does not remove the Secure Sockets Layer/Transport Layer Security (SSL/TLS) or the secure hypertext transfer protocol (https) bindings.
+inputs:
+- name: <xref href="string,enum,bool" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Deployment.Commands.CES.EnrollmentServiceResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Install-AdcsEnrollmentWebService
+  href: ./Install-AdcsEnrollmentWebService.yml
+syntaxes:
+- >-
+  Uninstall-AdcsEnrollmentWebService -CAConfig <String> -AuthenticationType <AuthenticationType> [-Force]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- Uninstall-AdcsEnrollmentWebService [-AllEnrollmentServices] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Uninstall all Enrollment Web Service role services'
+  code: |-
+    PS C:\> Uninstall-AdcsEnrollmentWebService -AllEnrollmentServices -Force
+  description: |-
+    This command uninstalls all the Enrollment Web Service role services without prompting for confirmation.
+  summary: ""
+- title: 'Example 2: Uninstall an Enrollment Web Service role service using the specified CA'
+  code: |-
+    PS C:\> Uninstall-AdcsEnrollmentWebService -CAConfig "APP1.corp.contoso.com\corp-APP1-CA" -AuthenticationType Certificate
+  description: |-
+    This command uninstalls the Certificate Enrollment Web Service using the CA specified by the configuration named APP1.corp.contoso.com\corp-APP1-CA.
+    The CA configuration is the CA Computer Name and CA common name separated by a backslash.
+    The authentication type in use is Certificate.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllEnrollmentServices
+  description: |+
+    Indicates that this cmdlet removes all Certificate Enrollment Web Service instances.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AuthenticationType" data-throw-if-not-resolved="False" />
+  name: AuthenticationType
+  isRequired: true
+  description: |+
+    Specifies the authentication type of the of enrollment services instance to be uninstalled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Kerberos, UserName, Certificate
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CAConfig
+  isRequired: true
+  description: |+
+    Specifies the configuration string of the certification authority (CA) for which this cmdlet uninstalls enrollment services.
+    This parameter is used to identify which instance of the Certificate Enrollment Web Service is to be uninstalled when multiple are present.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADCSDeployment.Uninstall-AdcsEnrollmentWebService
+name: Uninstall-AdcsEnrollmentWebService
+description: |-
+  The **Uninstall-AdcsEnrollmentWebService** cmdlet uninstalls the Certificate Enrollment Web Service either entirely removing all instances of it or partially by removing individual instances.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+  Module Name: ADCSDeployment
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsdeployment/uninstall-adcsenrollmentwebservice?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Uninstall-AdcsEnrollmentWebService

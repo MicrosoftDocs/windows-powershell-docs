@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a collection of backup sets from a server backup.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssBackupJob
+  href: ./Get-WssBackupJob.yml
+- text: Start-WssBackupJob
+  href: ./Start-WssBackupJob.yml
+- text: Stop-WssBackupJob
+  href: ./Stop-WssBackupJob.yml
+syntaxes:
+- Get-WssBackupSet [[-BackupTarget] <BackupTarget>] [[-MachineName] <String>]
+examples:
+- title: 'Example 1: Get backup sets from a server backup'
+  code: |-
+    PS C:\> Get-WssBackupSet -BackupTarget $ContosoWest01
+  description: |-
+    This command gets a list of backup sets from the server backup that is stored in the variable named **$ContosoWest01**.
+  summary: ""
+parameters:
+- type: <xref href="BackupTarget" data-throw-if-not-resolved="False" />
+  name: BackupTarget
+  description: |+
+    Specifies the target volume from which to get the backup sets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MachineName
+  description: |+
+    Specifies the name of the server whose data is in the backup set.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Get-WssBackupSet
+name: Get-WssBackupSet
+description: |-
+  The **Get-WssBackupSet** cmdlet gets a collection of backup sets from a server backup.
+  A backup set is the output of a successful backup operation.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssbackupset?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

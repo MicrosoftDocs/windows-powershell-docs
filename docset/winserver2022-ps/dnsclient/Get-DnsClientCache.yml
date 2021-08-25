@@ -1,0 +1,175 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the contents of the DNS client cache.
+module: DnsClient
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_DnsClientCache" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The **MSFT_DnsClientCache** object contains all of the entries in the DNS client cache.
+links:
+- text: Clear-DnsClientCache
+  href: ./Clear-DnsClientCache.yml
+syntaxes:
+- >-
+  Get-DnsClientCache [[-Entry] <String[]>] [-Name <String[]>] [-Type <Type[]>] [-Status <Status[]>]
+
+   [-Section <Section[]>] [-TimeToLive <UInt32[]>] [-DataLength <UInt16[]>] [-Data <String[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the DNS client cache'
+  code: |-
+    PS C:\> Get-DnsClientCache
+  description: |-
+    This example gets the contents of the DNS client cache.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Data
+  description: |+
+    Specifies the record data.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DataLength
+  description: |+
+    Specifies the record data length.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Entry
+  description: |+
+    Specifies the cache entry name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the record name.
+
+  defaultValue: None
+  position: Named
+  aliases: RecordName
+  parameterValueGroup: ""
+- type: <xref href="Section" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Section
+  description: |+
+    Specifies the record section.
+    The acceptable values for this parameter are:
+
+    - Answer
+    - Authority
+    - Additional
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Answer, Authority, Additional
+- type: <xref href="Status" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Status
+  description: |+
+    Specifies the record status.
+    The acceptable values for this parameter are:
+
+    - Success
+    - NotExist
+    - NoRecords
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Success, NotExist, NoRecords
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TimeToLive
+  description: |+
+    Specifies the record time-to-live, in seconds.
+
+  defaultValue: None
+  position: Named
+  aliases: TTL
+  parameterValueGroup: ""
+- type: <xref href="Type" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Type
+  description: |+
+    Specifies the record type.
+    The acceptable values for this parameter are:
+
+    - A
+    - NS
+    - CNAME
+    - SOA
+    - PTR
+    - MX
+    - AAAA
+    - SRV
+
+  defaultValue: None
+  position: Named
+  aliases: RecordType
+  parameterValueGroup: A, NS, CNAME, SOA, PTR, MX, AAAA, SRV
+uid: DnsClient.Get-DnsClientCache
+name: Get-DnsClientCache
+description: |-
+  The **Get-DnsClientCache** cmdlet retrieves the contents of the local DNS client cache.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_DnsClientCache.cdxml-help.xml
+  Module Name: DnsClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsclient/get-dnsclientcache?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DnsClientCache

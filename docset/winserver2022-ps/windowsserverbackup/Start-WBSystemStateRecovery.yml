@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a system state recovery operation.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBBackupSet" data-throw-if-not-resolved="False" />
+  description: |-
+    Specifies the backup set that contains volume backup of all the system critical volumes, or contains backup of the system state for the system state recovery operation.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    If you do not specify the *Async* parameter, the recovery operation outputs status at periodic intervals until the recovery operation completes.
+    You can also call Get-WBJob to get the status of the current recovery operation.
+    After completion of recovery, run Get-WBJob with the *Previous* parameter and an argument of 1 to get the final recovery status.
+links:
+- text: Get-WBBackupSet
+  href: ./Get-WBBackupSet.yml
+- text: Get-WBJob
+  href: ./Get-WBJob.yml
+syntaxes:
+- >-
+  Start-WBSystemStateRecovery [-BackupSet] <WBBackupSet> [[-TargetPath] <String>] [-AuthoritativeSysvolRecovery]
+
+   [-RestartComputer] [-Async] [-Force] [<CommonParameters>]
+- >-
+  Start-WBSystemStateRecovery [-BackupSet] <WBBackupSet> [-ADIFM] [-TargetPath] <String> [-Async] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Start a system state recovery operation'
+  code: |-
+    PS C:\> $Backup = Get-WBBackupSet
+    PS C:\> Start-WBSystemStateRecovery -BackupSet $Backup -Force -RestartComputer -Async
+  description: |-
+    This example starts a system state recovery operation, and then restarts the computer at the end of the recovery operation.
+
+    The first command stores the result of [Get-WBBackupSet](./Get-WBBackupSet.yml) in a variable named $Backup.
+
+    The second command starts the system state recovery from the backup stored in the $Backup variable.
+    The command also uses the *Force* parameter to perform the recovery without prompting, the *RestartComputer* parameter to restart the computer when recovery finishes, and the *Async* parameter to suppress status output.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ADIFM
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet recovers all the related data needed for Active Directory Domain Services from an install from a media (IFM) operation.
+    Active Directory Install From Media (ADIFM) creates a copy of the Active Directory database, registry, and SYSVOL state, and then saves this information in the location specified by the *RecoveryTarget* parameter.
+    Use this parameter only when *RecoveryTarget* is specified.
+    This parameter is valid only if the backup set contains an Active Directory system state backup.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Async
+  description: |+
+    Indicates that Windows PowerShell returns immediately after starting the backup, and does not output status to the screen.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AuthoritativeSysvolRecovery
+  description: |+
+    Indicates that this cmdlet performs an authoritative recovery of SYSVOL, the System Volume shared directory.
+    This parameter is valid only if the backup set contains an Active Directory system state backup.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBBackupSet" data-throw-if-not-resolved="False" />
+  name: BackupSet
+  isRequired: true
+  description: |+
+    Specifies the backup set from which this cmdlet performs system state recovery.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RestartComputer
+  description: |+
+    Indicates that this cmdlet performs a system restart at the completion of the system state recovery operation.
+    Use this parameter only for a recovery to the original location.
+    Do not use this parameter if you need to perform steps after the recovery operation.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetPath
+  isRequired: true
+  description: |+
+    Specifies an alternate location where the files belonging to system state can be recovered from the backup set.
+    If you do not specify this parameter, system state recovery is performed for the actual computer, which needs a restart at the end of the operation.
+    ADIFM recovery requires this parameter.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Start-WBSystemStateRecovery
+name: Start-WBSystemStateRecovery
+description: |-
+  The **Start-WBSystemStateRecovery** cmdlet starts a system state recovery operation.
+  If the System State recovery operation is performed on the actual computer, completion of the operation requires a restart.
+  If recovery is performed on an Active Directory (AD) computer, this cmdlet must be run in Directory Services Restore Mode (DSRM).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/start-wbsystemstaterecovery?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-WBSystemStateRecovery

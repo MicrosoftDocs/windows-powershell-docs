@@ -1,0 +1,164 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds members to a virtual switch team.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMSwitch" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **VMSwitch** object, if you specify the **Passthru** parameter.
+links:
+- text: Remove-VMSwitchTeamMember
+  href: ./Remove-VMSwitchTeamMember.yml
+- text: Get-VMSwitch
+  href: ./Get-VMSwitch.yml
+syntaxes:
+- >-
+  Add-VMSwitchTeamMember [-ComputerName <String[]>] [-VMSwitchName] <String[]> [-NetAdapterName <String[]>]
+
+   [-Passthru] [-CimSession <CimSession[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-VMSwitchTeamMember [-ComputerName <String[]>] [-VMSwitchName] <String[]>
+
+   [-NetAdapterInterfaceDescription <String[]>] [-Passthru] [-CimSession <CimSession[]>]
+
+   [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-VMSwitchTeamMember [-ComputerName <String[]>] [-VMSwitch] <VMSwitch[]>
+
+   [-NetAdapterInterfaceDescription <String[]>] [-Passthru] [-CimSession <CimSession[]>]
+
+   [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-VMSwitchTeamMember [-ComputerName <String[]>] [-VMSwitch] <VMSwitch[]> [-NetAdapterName <String[]>]
+
+   [-Passthru] [-CimSession <CimSession[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Add network adapters to a switch team'
+  code: |-
+    PS C:\> $VMSwitch = Get-VMSwitch -Name "Switch03"
+    PS C:\> Add-VMSwitchTeamMember -VMSwitch $VMSwitch -NetAdapterName "Adapter01","Adapter04"
+  description: |-
+    The first command gets the virtual switch team named Switch03, and then stores it in the **$VMSwitch** variable.
+
+    The second command adds the network adapters named Adapter01 and Adapter04 as team members to the switch team in **$VMSwitch**.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts that runs this cmdlet.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: PSComputerName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NetAdapterInterfaceDescription
+  description: |+
+    Specifies an array of interface descriptions of the virtual network adapters that this cmdlet adds to the switch team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NetAdapterName
+  description: |+
+    Specifies an array of names of virtual network adapters that this cmdlet adds to the switch team.
+
+  defaultValue: None
+  position: Named
+  aliases: InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Indicates that this cmdlet returns the **Microsoft.HyperV.PowerShell.VMSwitch** object that it modifies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitch" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMSwitch
+  isRequired: true
+  description: |+
+    Specifies an array of virtual switches that this cmdlet configures.
+    To obtain a **VMSwitch** object, use the **Get-VMSwitch** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMSwitchName
+  isRequired: true
+  description: |+
+    Specifies an array of names of virtual switches that this cmdlet configures.
+
+  defaultValue: None
+  position: "0"
+  aliases: SwitchName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Add-VMSwitchTeamMember
+name: Add-VMSwitchTeamMember
+description: |-
+  The **Add-VMSwitchTeamMember** cmdlet adds adapters as members to a virtual switch team.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/add-vmswitchteammember?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-VMSwitchTeamMember

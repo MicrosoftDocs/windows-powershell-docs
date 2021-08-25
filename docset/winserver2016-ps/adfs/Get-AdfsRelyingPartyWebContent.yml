@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets web content objects for relying parties.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent, Microsoft.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet generates a **System.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent** object that represents web content of a relying party, or an array of such objects.
+    The object includes the following properties: 
+
+    - Locale: **System.Globalization.CultureInfo**
+    - Name: **System.String**
+    - ErrorPageGenericErrorMessage: **System.String**
+    - ErrorPageAuthorizationErrorMessage: **System.String**
+    - ErrorPageDeviceAuthenticationErrorMessage: **System.String**
+links:
+- text: Remove-AdfsRelyingPartyWebContent
+  href: ./Remove-AdfsRelyingPartyWebContent.yml
+- text: Set-AdfsRelyingPartyWebContent
+  href: ./Set-AdfsRelyingPartyWebContent.yml
+syntaxes:
+- Get-AdfsRelyingPartyWebContent [-Locale <CultureInfo>] [-RelyingPartyName <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all web content objects'
+  code: |-
+    PS C:\> Get-AdfsRelyingPartyWebContent
+  description: |-
+    This command gets web content objects for all relying parties and locales.
+  summary: ""
+- title: 'Example 2: Get web content objects for a specified relying party'
+  code: |-
+    PS C:\> Get-AdfsRelyingPartyWebContent -Name "RelyingParty01"
+  description: |-
+    This command gets web content objects for the relying party named RelyingParty01 for all locales.
+  summary: ""
+- title: 'Example 3: Get the web content object for a specified relying party and locale'
+  code: |-
+    PS C:\> Get-AdfsRelyingPartyWebContent -Locale en-us -Name "RelyingParty01"
+  description: |-
+    This command gets web content objects for the relying party named RelyingParty01 for the specified locale.
+  summary: ""
+parameters:
+- type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  name: Locale
+  description: |+
+    Specifies a locale.
+    The cmdlet gets relying party web content for the locale that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RelyingPartyName
+  description: |+
+    Specifies an array of names of relying parties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Name
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsRelyingPartyWebContent
+name: Get-AdfsRelyingPartyWebContent
+description: |-
+  The **Get-AdfsRelyingPartyWebContent** cmdlet gets web content objects for relying parties.
+  Specify a relying party by name.
+  If you do not specify a name, the cmdlet gets all relying party web content objects.
+  If you do not specify a locale, the cmdlet gets web content for all locales.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsrelyingpartywebcontent?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsRelyingPartyWebContent

@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an iSCSI Virtual Disk object using an existing virtual hard disk (VHD) file.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Checkpoint-IscsiVirtualDisk
+  href: ./Checkpoint-IscsiVirtualDisk.yml
+- text: Convert-IscsiVirtualDisk
+  href: ./Convert-IscsiVirtualDisk.yml
+- text: Get-IscsiVirtualDisk
+  href: ./Get-IscsiVirtualDisk.yml
+- text: New-IscsiVirtualDisk
+  href: ./New-IscsiVirtualDisk.yml
+- text: Remove-IscsiVirtualDisk
+  href: ./Remove-IscsiVirtualDisk.yml
+- text: Restore-IscsiVirtualDisk
+  href: ./Restore-IscsiVirtualDisk.yml
+- text: Set-IscsiVirtualDisk
+  href: ./Set-IscsiVirtualDisk.yml
+syntaxes:
+- >-
+  Import-IscsiVirtualDisk [-Description <String>] [-Path] <String> [-PassThru] [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a virtual disk for a VHD file'
+  code: |-
+    PS C:\> Import-IscsiVirtualDisk -Path "E:\Temp\test.vhd" -Description "Migrated from fs1"
+  description: |-
+    This example creates a Virtual Disk object for an existing VHD file located at E:\Temp\test.vhd and sets the Virtual Disk object description to Migrated from fs1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description for the iSCSI virtual disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the VHD file that is associated with the iSCSI virtual disk.
+    Filter the iSCSI Virtual Disk object using this parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DevicePath
+  parameterValueGroup: ""
+uid: IscsiTarget.Import-IscsiVirtualDisk
+name: Import-IscsiVirtualDisk
+description: |-
+  The **Import-IscsiVirtualDisk** cmdlet adds an iSCSI Virtual Disk object using an existing virtual hard disk (VHD) file.
+  This cmdlet imports virtual disks in both VHD and VHDX formats.
+  The **New-IscsiVirtualDisk** cmdlet creates virtual disks in the VHDX format only.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/import-iscsivirtualdisk?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-IscsiVirtualDisk

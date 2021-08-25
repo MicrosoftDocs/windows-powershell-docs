@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves a clustered resource from one clustered role to another within a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterResource
+  href: ./Add-ClusterResource.yml
+- text: Get-ClusterResource
+  href: ./Get-ClusterResource.yml
+- text: Remove-ClusterResource
+  href: ./Remove-ClusterResource.yml
+- text: Resume-ClusterResource
+  href: ./Resume-ClusterResource.yml
+- text: Start-ClusterResource
+  href: ./Start-ClusterResource.yml
+- text: Stop-ClusterResource
+  href: ./Stop-ClusterResource.yml
+- text: Suspend-ClusterResource
+  href: ./Suspend-ClusterResource.yml
+syntaxes:
+- >-
+  Move-ClusterResource [[-Name] <String>] [[-Group] <String>] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Move-ClusterResource -Name resource1 -Group group2
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    resource1           Offline             group2              IP Address
+  description: |-
+    This command moves the cluster resource called resource1 to the resource group called group2 on the local cluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  description: |+
+    Specifies the name of the cluster group to which to move the resource.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster resource to move.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster resource to move.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Move-ClusterResource
+name: Move-ClusterResource
+description: |-
+  The **Move-ClusterResource** cmdlet moves a clustered resource from one clustered role to another within a failover cluster.
+  When a clustered resource is moved to a different clustered role, the clustered resource will then fail over with that clustered role.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/move-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Move-ClusterResource

@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disconnects a VPN connection originated by a specific user or originating from a specific client computer.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The array of strings consists of the list of user names or host addresses of the connections that were disconnected.
+links:
+- text: Format-List
+  href: https://go.microsoft.com/fwlink/p/?LinkId=113302
+- text: Get-RemoteAccessConnectionStatistics
+  href: ./Get-RemoteAccessConnectionStatistics.yml
+syntaxes:
+- >-
+  Disconnect-VpnUser [-ComputerName <String>] [-PassThru] [-UserName] <String[]> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Disconnect-VpnUser [-ComputerName <String>] [-PassThru] -HostIPAddress <String[]> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Disconnect-VpnUser -HostIPAddress 10.1.1.11 -PassThru 10.1.1.11
+  description: |-
+    This example disconnects a VPN connection by specifying the host address.
+    There is one active VPN connection in this example.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the Remote Access server computer specific tasks should be run.
+    When this parameter is specified the cmdlet looks for the specified user or host IP on that Remote Access server.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HostIPAddress
+  isRequired: true
+  description: |+
+    Specifies the list of tunnel IP addresses of the VPN connection.
+    These can be IPv4 or IPv6 addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserName
+  isRequired: true
+  description: |+
+    Specifies the list of users that need to be disconnected.
+    The Remote Access login name of the user that is used may be a domain account.
+    If the user is a domain account, then it can be specified in `DOMAIN\USERNAME` format otherwise it is specified as a normal string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Disconnect-VpnUser
+name: Disconnect-VpnUser
+description: "The **Disconnect-VpnUser** cmdlet disconnects a VPN connection originated by a specific user or originating from a specific client computer.\r\n\r\nThe list of active VPN connections originating or ending on a VPN server is stored in the inbox accounting store on the server.\r\nTherefore, this cmdlet would have to be run on the server where the connection starts or ends to disconnect a user.\r\n\r\nA VPN connection can be disconnected in one of the following two ways.\r\nNote: Only one of these methods can be used at a time. \r\n                       \r\n -- By user name of the user who originated the connection. \r\n                       \r\n -- By tunnel IP address assigned by the VPN server."
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_VPNUser_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/disconnect-vpnuser?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disconnect-VpnUser

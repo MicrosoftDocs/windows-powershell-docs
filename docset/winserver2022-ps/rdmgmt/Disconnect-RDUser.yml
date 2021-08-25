@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disconnects a user from a session that runs on a remote server.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDUserSession
+  href: ./Get-RDUserSession.yml
+- text: Invoke-RDUserLogoff
+  href: ./Invoke-RDUserLogoff.yml
+- text: Send-RDUserMessage
+  href: ./Send-RDUserMessage.yml
+syntaxes:
+- Disconnect-RDUser [-HostServer] <String> [-UnifiedSessionID] <Int32> [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disconnect a User from a session on an RD Session Host Server'
+  code: |-
+    PS C:\> Disconnect-RDUser -HostServer sessionhost.contoso.com -UnifiedSessionID 2
+  description: |-
+    This command disconnects the user connected to session 2 on the host server sessionhost.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostServer
+  isRequired: true
+  description: |+
+    Specifies the name of the server that hosts the session.
+    For session collections the server name is the name of the Remote Desktop Session Host (RD Session Host) server.
+    For virtual desktop collections the server name is the name of the Remote Desktop Virtualization Host (RD Virtualization Host) server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: UnifiedSessionID
+  isRequired: true
+  description: |+
+    Provides the unique ID for the session.
+    Use the Get-RDUserSession cmdlet to retrieve the user session ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Disconnect-RDUser
+name: Disconnect-RDUser
+description: |-
+  The **Disconnect-RDUser** cmdlet disconnects a specified user from a session that runs on the remote server.
+  All applications continue to run.
+
+  Use the Invoke-RDUserLogoff cmdlet to end a session and close running applications.
+
+  Use the Get-RDUserSessioncmdlet to retrieve the value for the user session ID.
+  Because the user session ID is unique only within the context of a session host, a different session host server can share the same user session ID.
+  The host server and session ID that you specify in this cmdlet uniquely identify a session within a deployment.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/disconnect-rduser?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disconnect-RDUser

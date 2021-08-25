@@ -1,0 +1,64 @@
+### YamlMime:PowershellModule
+children:
+- title: MultiPoint
+  cmdlets:
+  - MultiPoint.Add-WmsSystem
+  - MultiPoint.Clear-WmsStation
+  - MultiPoint.Close-WmsApp
+  - MultiPoint.Close-WmsSession
+  - MultiPoint.Disable-WmsDiskProtection
+  - MultiPoint.Disable-WmsScheduledUpdate
+  - MultiPoint.Disable-WmsWebLimiting
+  - MultiPoint.Disconnect-WmsSession
+  - MultiPoint.Enable-WmsDiskProtection
+  - MultiPoint.Enable-WmsScheduledUpdate
+  - MultiPoint.Enable-WmsWebLimiting
+  - MultiPoint.Get-WmsAlert
+  - MultiPoint.Get-WmsApp
+  - MultiPoint.Get-WmsDiskProtection
+  - MultiPoint.Get-WmsScheduledUpdate
+  - MultiPoint.Get-WmsSession
+  - MultiPoint.Get-WmsStation
+  - MultiPoint.Get-WmsSystem
+  - MultiPoint.Get-WmsUser
+  - MultiPoint.Get-WmsVersion
+  - MultiPoint.Get-WmsWebLimiting
+  - MultiPoint.Hide-WmsIdentifier
+  - MultiPoint.Join-WmsStation
+  - MultiPoint.Lock-WmsSession
+  - MultiPoint.Lock-WmsUsbStorage
+  - MultiPoint.New-WmsUser
+  - MultiPoint.Open-WmsApp
+  - MultiPoint.Publish-WmsDesktop
+  - MultiPoint.Remove-WmsSystem
+  - MultiPoint.Remove-WmsUser
+  - MultiPoint.Restart-WmsSystem
+  - MultiPoint.Resume-WmsDiskProtection
+  - MultiPoint.Search-WmsSystem
+  - MultiPoint.Set-WmsScheduledUpdate
+  - MultiPoint.Set-WmsStation
+  - MultiPoint.Set-WmsSystem
+  - MultiPoint.Set-WmsUser
+  - MultiPoint.Set-WmsWebLimiting
+  - MultiPoint.Show-WmsDesktop
+  - MultiPoint.Show-WmsIdentifier
+  - MultiPoint.Split-WmsStation
+  - MultiPoint.Stop-WmsSystem
+  - MultiPoint.Suspend-WmsDiskProtection
+  - MultiPoint.Unlock-WmsSession
+  - MultiPoint.Unlock-WmsUsbStorage
+  - MultiPoint.Unpublish-WmsDesktop
+  - MultiPoint.Update-WmsStation
+uid: MultiPoint
+name: MultiPoint
+description: |-
+  The MultiPoint cmdlets in this module are used to manage Windows MultiPoint Server sessions and users.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: ef349263-9fc1-4b71-8da7-f74e0e18a151
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  title: MultiPoint

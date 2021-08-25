@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets FSRM-supported macros.
+module: FileServerResourceManager
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMMacro" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-FsrmQuota
+  href: ./Get-FsrmQuota.yml
+- text: Get-FsrmFileScreen
+  href: ./Get-FsrmFileScreen.yml
+- text: Get-FsrmFileManagementJob
+  href: ./Get-FsrmFileManagementJob.yml
+- text: Get-FsrmAdrSetting
+  href: ./Get-FsrmAdrSetting.yml
+syntaxes:
+- >-
+  Get-FsrmMacro [-Type <FsrmMacroTypeEnum[]>] [-Name <String[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get FSRM-supported macros for quotas'
+  code: |-
+    PS C:\>Get-FsrmMacro -Type Quota
+  description: |-
+    This command gets all the FSRM-supported macros for quotas.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of macro names.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FsrmMacroTypeEnum" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Type
+  description: |+
+    Specifies an array of FSRM object types.
+    The acceptable values for this parameter are:
+    - Quota
+    - FileScreen
+    - FileManagementJob
+    - ADR
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Quota, FileScreen, FileManagementJob, Adr
+uid: FileServerResourceManager.Get-FsrmMacro
+name: Get-FsrmMacro
+description: |-
+  The **Get-FsrmMacro** cmdlet gets one or more macros that File Server Resource Manager (FSRM) supports for configuration options.
+  This cmdlet gets the FSRM-supported macros for the FSRM object that you specify in the **Type** parameter.
+metadata:
+  external help file: FsrmMacro.cdxml-help.xml
+  Module Name: FileServerResourceManager
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/get-fsrmmacro?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-FsrmMacro

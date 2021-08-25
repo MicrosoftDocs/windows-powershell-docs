@@ -1,0 +1,263 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a physical disk to the specified storage pool or manually assigns a physical disk to a specific virtual disk.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an MSFT_StoragePool object to the *StoragePool* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an MSFT_VirtualDisk object to the *VirtualDisk* parameter.
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkID=809329
+- text: Get-PhysicalDisk
+  href: ./Get-PhysicalDisk.yml
+- text: Remove-PhysicalDisk
+  href: ./Remove-PhysicalDisk.yml
+- text: Reset-PhysicalDisk
+  href: ./Reset-PhysicalDisk.yml
+- text: Set-PhysicalDisk
+  href: ./Set-PhysicalDisk.yml
+syntaxes:
+- >-
+  Add-PhysicalDisk [-StoragePool] <CimInstance> -PhysicalDisks <CimInstance[]> [-Usage <Usage>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-PhysicalDisk -PhysicalDisks <CimInstance[]> -VirtualDiskUniqueId <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-PhysicalDisk -PhysicalDisks <CimInstance[]> -VirtualDiskName <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-PhysicalDisk -PhysicalDisks <CimInstance[]> -VirtualDiskFriendlyName <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-PhysicalDisk -PhysicalDisks <CimInstance[]> [-VirtualDisk] <CimInstance> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-PhysicalDisk -PhysicalDisks <CimInstance[]> [-Usage <Usage>] -StoragePoolUniqueId <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-PhysicalDisk -PhysicalDisks <CimInstance[]> [-Usage <Usage>] -StoragePoolName <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-PhysicalDisk -PhysicalDisks <CimInstance[]> [-Usage <Usage>] -StoragePoolFriendlyName <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Adding a physical disk by storage pool friendly name'
+  code: |-
+    PS C:\> $PDToAdd = Get-PhysicalDisk -FriendlyName PhysicalDisk5
+    PS C:\> Add-PhysicalDisk -PhysicalDisks $PDToAdd -StoragePoolFriendlyName CompanyData
+  description: |-
+    This example gets the PhysicalDisk object for the physical disk named PhysicalDisk5 and assigns it to the $PDToAdd variable.
+    It then adds the PhysicalDisk object to the storage pool named CompanyData.
+  summary: ""
+- title: 'Example 2: Adding all available physical disks'
+  code: |-
+    PS C:\> $PDToAdd = Get-PhysicalDisk -CanPool $True
+    PS C:\> Add-PhysicalDisk -StoragePoolFriendlyName "Demo Pool" -PhysicalDisks $PDToAdd
+  description: |-
+    This example gets all PhysicalDisk objects that can be added to a storage pool and assigns them to the $PDToAdd variable.
+    It then adds the available physical disks to the storage pool named Demo Pool.
+  summary: ""
+- title: 'Example 3: Piping a storage pool to Add-PhysicalDisk'
+  code: |-
+    PS C:\> Get-StoragePool -IsPrimordial $False | Add-PhysicalDisk -PhysicalDisks (Get-PhysicalDisk -CanPool $True)
+  description: |-
+    This example gets all storage pools (except primordial pools) and pipes the output to the Add-PhysicalDisk cmdlet (this will not work if you created more than one storage pool).
+    This example then uses the Get-Physical Disk cmdlet inside of parentheses to specify all available physical disks without using variables.
+  summary: ""
+- title: 'Example 4: Manually assigning physical disks to a virtual disk'
+  code: |-
+    PS C:\> Add-PhysicalDisk -VirtualDiskFriendlyName UserData -PhysicalDisks (Get-PhysicalDisk -FriendlyName PhysicalDisk3, PhysicalDisk4)
+  description: |-
+    This example gets two physical disks that have already been added to the storage pool and designated as ManualSelect disks, PhysicalDisk3 and PhysicalDisk4, and assigns them to the virtual disk UserData.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PhysicalDisks
+  isRequired: true
+  description: |+
+    Specifies the physical disk objects to add to the storage pool.
+    Enter one or more PhysicalDisk CIM objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StoragePool
+  isRequired: true
+  description: |+
+    Specifies the storage pool object to which you want to add the physical disk(s).
+    Enter a StoragePool CIM object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StoragePoolFriendlyName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the storage pool to which to add the physical disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StoragePoolName
+  isRequired: true
+  description: |+
+    Specifies the name of the storage pool, provided by the Storage Management Provider, to which to add the physical disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StoragePoolUniqueId
+  isRequired: true
+  description: |+
+    Specifies the ID of the storage pool to which to add the physical disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Usage" data-throw-if-not-resolved="False" />
+  name: Usage
+  description: |+
+    Specifies the allocation method (usage) for the disk.
+    Valid values are AutoSelect, HotSpare, Journal, ManualSelect, Retired, and Unknown.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: AutoSelect, ManualSelect, HotSpare, Retired, Journal
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: VirtualDisk
+  isRequired: true
+  description: |+
+    Specifies the virtual disk object to which to exclusively assign the physical disk(s).
+    Enter one or more VirtualDisk CIM objects.
+
+    To manually assign a physical disk to a virtual disk, first add the physical disk to the appropriate pool and set the Usage property on the disk to ManualSelect.
+    You can do so by using the Add-PhysicalDisk or Set-PhysicalDisk cmdlets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDiskFriendlyName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the virtual disk to which to exclusively assign the physical disks.
+
+    To manually assign a physical disk to a virtual disk, first add the physical disk to the appropriate pool and set the Usage property on the disk to ManualSelect.
+    You can do so by using the Add-PhysicalDisk or Set-PhysicalDisk cmdlets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDiskName
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDiskUniqueId
+  isRequired: true
+  description: |+
+    Specifies the ID of the virtual disk to which to exclusively assign the physical disks.
+
+    To manually assign a physical disk to a virtual disk, first add the physical disk to the appropriate pool and set the Usage property on the disk to ManualSelect.
+    You can do so by using the Add-PhysicalDisk or Set-PhysicalDisk cmdlets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Storage.Add-PhysicalDisk
+name: Add-PhysicalDisk
+description: |-
+  The **Add-PhysicalDisk** cmdlet adds a physical disk to the specified storage pool.
+  The cmdlet can also assign a ManualSelect physical disk already in the storage pool to a specific virtual disk.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: StorageCmdlets.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/add-physicaldisk?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-PhysicalDisk

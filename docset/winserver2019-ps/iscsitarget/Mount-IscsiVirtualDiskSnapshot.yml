@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Mounts a snapshot locally.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Dismount-IscsiVirtualDiskSnapshot
+  href: ./Dismount-IscsiVirtualDiskSnapshot.yml
+- text: Export-IscsiVirtualDiskSnapshot
+  href: ./Export-IscsiVirtualDiskSnapshot.yml
+- text: Get-IscsiVirtualDiskSnapshot
+  href: ./Get-IscsiVirtualDiskSnapshot.yml
+- text: Remove-IscsiVirtualDiskSnapshot
+  href: ./Remove-IscsiVirtualDiskSnapshot.yml
+- text: Set-IscsiVirtualDiskSnapshot
+  href: ./Set-IscsiVirtualDiskSnapshot.yml
+syntaxes:
+- >-
+  Mount-IscsiVirtualDiskSnapshot [-SnapshotId] <String> [-ComputerName <String>] [-Credential <PSCredential>]
+
+   [<CommonParameters>]
+- >-
+  Mount-IscsiVirtualDiskSnapshot -InputObject <IscsiVirtualDiskSnapshot> [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Mount a snapshot by using an ID'
+  code: |-
+    PS C:\> Mount-IscsiVirtualDiskSnapshot -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}"
+  description: |-
+    This example mounts the snapshot that has the ID {E9A5BA03-85B9-40CA-85DF-DC1695690B40} on the local server, which can be accessed by the backup server to perform backup.
+  summary: ""
+- title: 'Example 2: Mount a snapshot by using a name'
+  code: |-
+    PS C:\> Mount-IscsiVirtualDiskSnapshot -InputObject $VhdSnapshot
+  description: |-
+    This example mounts the Snapshot object stored in a variable named $VhdSnapshot on the local server, which can be accessed by the backup server to perform backup.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an iSCSI Virtual Disk Snapshot object from the input pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SnapshotId
+  isRequired: true
+  description: |+
+    Specifies the identifier (ID) for the snapshot.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Mount-IscsiVirtualDiskSnapshot
+name: Mount-IscsiVirtualDiskSnapshot
+description: |-
+  Note: This cmdlet is deprecated and might be removed in a future release.
+  We recommend that you do not use this cmdlet.
+
+  The **Mount-IscsiVirtualDiskSnapshot** cmdlet mounts a snapshot locally.
+  This cmdlet operates on snapshots in the virtual disk 1.0 (VHD) format only.
+
+  Mounting a snapshot locally exposes the snapshot as a disk to the local computer.
+  Use diskmgmt.msc or cmdlets to bring the disk online.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/mount-iscsivirtualdisksnapshot?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Mount-IscsiVirtualDiskSnapshot

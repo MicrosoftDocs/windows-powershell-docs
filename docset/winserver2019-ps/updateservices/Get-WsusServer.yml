@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the WSUS update server object.
+module: UpdateServices
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.UpdateServices.Commands.IUpdateServer" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-WsusServer [<CommonParameters>]
+- Get-WsusServer [-Name] <String> [-UseSsl] -PortNumber <Int32> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the local server'
+  code: |-
+    PS C:\> Get-WsusServer
+    Name : contoso
+  description: |-
+    This command gets the **IUpdateServer** object for the local computer.
+  summary: ""
+- title: 'Example 2: Get a remote server'
+  code: |-
+    PS C:\> Get-WsusServer -Name "contoso" -PortNumber 8530
+    Name : contoso
+  description: |-
+    This command gets the **IUpdateServer** object for a remote computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a WSUS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PortNumber
+  isRequired: true
+  description: |+
+    Specifies the port number to use to communicate with the upstream WSUS server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseSsl
+  description: |+
+    Specifies that the WSUS server should use Secure Sockets Layer (SSL) via HTTPS to communicate with an upstream server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: UpdateServices.Get-WsusServer
+name: Get-WsusServer
+description: |-
+  The **Get-WsusServer** cmdlet gets the Windows Server Update Services (WSUS) update server object. This cmdlet requires the server name, port number and a flag that specifies if the server uses Secure Sockets Layer (SSL) as parameters.
+
+  Given a server name, port number, and flag specifying whether to use SSL, returns an **IUpdateServer** object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/updateservices/get-wsusserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WsusServer

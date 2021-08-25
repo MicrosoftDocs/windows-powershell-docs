@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the schedule for Windows updates and custom maintenance scripts.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-WmsScheduledUpdate
+  href: ./Disable-WmsScheduledUpdate.yml
+- text: Enable-WmsScheduledUpdate
+  href: ./Enable-WmsScheduledUpdate.yml
+- text: Get-WmsScheduledUpdate
+  href: ./Get-WmsScheduledUpdate.yml
+syntaxes:
+- >-
+  Set-WmsScheduledUpdate [-AutomaticUpdateMode <EAutomaticUpdateMode>] [-HourToScheduleUpdates <UInt32>]
+
+   [-CustomScript <String>] [-MaxTimeAllowedForCustomScript <UInt32>] [-ReturnState <EScheduleUpdateReturnState>]
+
+   [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable Windows updates on MultiPoint Server'
+  code: |-
+    PS C:\> Set-WmsScheduledUpdate -AutomaticUpdateMode WindowsOnly -HourToScheduleUpdates 2 -ReturnState PreviousState
+  description: |-
+    This command configures the local MultiPoint Server to check for available Windows updates at 2:00 AM, apply the updates, and return the computer to the power state it was in before updates were applied.
+    To update the MultiPoint Server, the command performs these operations: 
+
+    - Restart the computer to disable disk protection.
+    - Apply pending Windows updates.
+    - Restart the computer to enable disk protection and to return it to the previous power state.
+  summary: ""
+parameters:
+- type: <xref href="EAutomaticUpdateMode" data-throw-if-not-resolved="False" />
+  name: AutomaticUpdateMode
+  description: |+
+    Specifies the type of automatic updates to process.
+    The acceptable values for this parameter are:
+
+    - None
+    - WindowsOnly
+    - WindowsAndOtherPrograms
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, WindowsOnly, WindowsAndOtherPrograms
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CustomScript
+  description: |+
+    Specifies the full path of a user-supplied command to run at update time.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: HourToScheduleUpdates
+  description: |+
+    Specifies the hour at which to run automatic updates.
+    The acceptable values for this parameter are: 0-23.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxTimeAllowedForCustomScript
+  description: |+
+    Specifies the maximum amount of time that the custom script is allowed to run.
+    After this amount of time expires, the process is stopped and the system is restarted to re-enable disk protection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="EScheduleUpdateReturnState" data-throw-if-not-resolved="False" />
+  name: ReturnState
+  description: |+
+    Specifies the state in which to place the computer after updates are complete.
+    The acceptable values for this parameter are: Shutdown and PreviousState.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Shutdown, PreviousState
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+uid: MultiPoint.Set-WmsScheduledUpdate
+name: Set-WmsScheduledUpdate
+description: |-
+  The **Set-WmsScheduledUpdate** cmdlet sets the schedule for Windows updates and custom maintenance scripts for a computer running MultiPoint Server with disk protection enabled and configured for discard mode.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/set-wmsscheduledupdate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WmsScheduledUpdate

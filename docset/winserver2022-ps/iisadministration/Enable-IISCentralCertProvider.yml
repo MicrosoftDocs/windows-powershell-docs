@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables the IIS central certificate store.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Clear-IISCentralCertProvider
+  href: ./Clear-IISCentralCertProvider.yml
+- text: Disable-IISCentralCertProvider
+  href: ./Disable-IISCentralCertProvider.yml
+- text: Get-IISCentralCertProvider
+  href: ./Get-IISCentralCertProvider.yml
+- text: Set-IISCentralCertProvider
+  href: ./Set-IISCentralCertProvider.yml
+- text: Set-IISCentralCertProviderCredential
+  href: ./Set-IISCentralCertProviderCredential.yml
+syntaxes:
+- >-
+  Enable-IISCentralCertProvider -CertStoreLocation <String> -UserName <String> -Password <SecureString>
+
+   -PrivateKeyPassword <SecureString> [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable the central certificate store'
+  code: |-
+    PS C:\> Enable-IISCentralCertProvider -CertStoreLocation "\\CertStoreServer\CertStore" -UserName "IISCertificateAdmin" -Password "P@ssw0rd"
+  description: |-
+    This command enables the IIS central certificate store.
+    In this example, the certificate store is located on file share \\\\CertStoreServer\CertStore and accessed by using the user account IISCertificateAdmin.
+  summary: ""
+- title: 'Example 2: Enable the central certificate store and specify the private key password'
+  code: |-
+    PS C:\> Enable-IISCentralCertProvider -CertStoreLocation "\\CertStoreServer\CertStore" -UserName "IISCertificateAdmin" -Password "P@ssw0rd" -PrivateKeyPassword "pa$$W0rd"
+  description: |-
+    This command is a variation of the command shown in Example 1.
+    In Example 2, however, the *PrivateKeyPassword* parameter is included to specify the private key password that has been assigned to all the IIS certificates.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertStoreLocation
+  isRequired: true
+  description: |+
+    Specifies the physical path to the central certificate store; this can be either a local path (e.g., D:\CertStore) or a UNC path.
+    For example:
+
+    `-CertStoreLocation "\\\\CertStoreServer\CertStore"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Specifies the password for the user account used to access the certificate store.
+    For example:
+
+    `-Password "P@ssw0rd"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: PrivateKeyPassword
+  isRequired: true
+  description: |+
+    Specifies the private key password for your IIS certificates.
+    For example:
+
+    `-PrivateKeyPassword "pa$$W0rd"`
+
+    This parameter should only be used if all your IIS certificates share the same password.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  isRequired: true
+  description: |+
+    Specifies the user account used to access the certificate store; this can be either an Active Directory SAM Account Name or a user principal name.
+    For example:
+
+    `-UserName "IISCertificateAdmin"`
+
+    It is recommended that you create a user account reserved solely for certificate administration, and that you give this account only the privileges required to manage the certificate store (most notably, the account needs read access to the store location).
+    The certificate store user account can be either a local account or a domain account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Enable-IISCentralCertProvider
+name: Enable-IISCentralCertProvider
+description: |-
+  The **Enable-IISCentralCertProvider** cmdlet enables the IIS central certificate store.
+  The central certificate store allows you to store all your IIS certificates in a centralized location (such as a file share); IIS servers then retrieve certificate from this centralized location.
+  That means that you only have to install certificates in one location; there is no need to install the same certificate on each and every IIS server.
+
+  When you install the central certificate store the store is disabled by default.
+  To actually use this capability you need to run the **Enable-IISCentralCertProvider** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/enable-iiscentralcertprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-IISCentralCertProvider

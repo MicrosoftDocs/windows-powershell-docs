@@ -1,0 +1,210 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the domain mode for an Active Directory domain.
+module: ActiveDirectory
+notes: |-
+  * This cmdlet does not work with Active Directory Lightweight Directory Services (AD LDS).
+  * This cmdlet does not work with an Active Directory snapshot.
+  * This cmdlet does not work with a read-only domain controller.
+  * This cmdlet does not work when connected to Global Catalog port.
+inputs:
+- name: <xref href="Microsoft.ActiveDirectory.Management.ADDomain" data-throw-if-not-resolved="False" />
+  description: |-
+    A domain object is received by the *Identity* parameter.
+outputs:
+- name: <xref href="None or Microsoft.ActiveDirectory.Management.ADDomain" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the modified domain object when the *PassThru* parameter is specified.
+    By default, this cmdlet does not generate any output.
+links:
+- text: Get-ADDomain
+  href: ./Get-ADDomain.yml
+- text: AD DS Administration Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Set-ADDomainMode [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
+
+   [-DomainMode] <ADDomainMode> [-Identity] <ADDomain> [-PassThru] [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the domain mode of a specified user to Windows2003Domain'
+  code: |-
+    PS C:\> Set-ADDomainMode -Identity user01.com -DomainMode Windows2003Domain
+  description: |-
+    This command sets the **DomainMode** property of the user01.com domain to Windows2003Domain.
+  summary: ""
+- title: "Example 2: Set the domain mode of the current user's domain to Windows2003Domain"
+  code: |-
+    PS C:\> $PDC = Get-ADDomainController -Discover -Service PrimaryDC
+    PS C:\> Set-ADDomainMode -Identity $PDC.Domain -Server $PDC.HostName[0] -DomainMode Windows2003Domain
+  description: |-
+    This example sets the **DomainMode** of the current logged on user's domain to Windows2003Domain.
+    The set operation targets the PrimaryDC FSMO to apply the update.
+  summary: ""
+parameters:
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use.
+    The acceptable values for this parameter are:
+
+    - Negotiate or 0
+    - Basic or 1
+
+    The default authentication method is Negotiate.
+
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user account credentials to use to perform this task.
+    The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
+    If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
+
+    To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+    If you specify a user name for this parameter, the cmdlet prompts for a password.
+
+    You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+    You can then set the *Credential* parameter to the **PSCredential** object.
+
+    If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADDomainMode" data-throw-if-not-resolved="False" />
+  name: DomainMode
+  isRequired: true
+  description: |+
+    Specifies the domain functional level of the first domain in the creation of a new forest.
+    Supported values for this parameter can be either a valid integer or a corresponding enumerated string value.
+    For example, to set the domain mode level to Windows Server 2008 R2, you can specify either a value of **4** or **Windows2008R2Domain**.
+
+    The following are the currently supported values: 
+
+    - Windows Server 2000: **0** or **Windows2000Domain**
+    - Windows Server 2003 Interim Domain: **1** or **Windows2003InterimDomain**
+    - Windows Server 2003: **2** or **Windows2003Domain**
+    - Windows Server 2008: **3** or **Windows2008Domain**
+    - Windows Server 2008 R2: **4** or **Windows2008R2Domain**
+    - Windows Server 2012: **5** or **Windows2012Domain**
+    - Windows Server 2012 R2: **6** or **Windows2012R2Domain**
+    - Windows Server 2016: **7** or **WinThreshold**
+
+    The domain functional level cannot be lower than the forest functional level, but it can be higher.
+    The functional level can be increased, and also decreased as long as no feature that requires that functional level is in use, such as the Active Directory Recycle Bin.
+    The default is automatically computed and set.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: Windows2000Domain, Windows2003InterimDomain, Windows2003Domain, Windows2008Domain, Windows2008R2Domain, Windows2012Domain, Windows2012R2Domain, Windows2016Domain, UnknownDomain
+- type: <xref href="ADDomain" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies an Active Directory domain object by providing one of the following property values.
+    The identifier in parentheses is the Lightweight Directory Access Protocol (LDAP) display name for the attribute.
+    All values are for the domainDNS object that represents the domain.
+    The acceptable values for this parameter are:
+
+    - A distinguished name
+    - A GUID (objectGUID) 
+    - A security identifier (objectSid) 
+    - A   DNS domain name
+    - A NetBIOS domain name
+
+    The cmdlet searches the default naming context or partition to find the object.
+    If two or more objects are found, the cmdlet returns a non-terminating error.
+
+    This parameter can also get this object through the pipeline or you can set this parameter to a domain object instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+
+    Specify the Active Directory Domain Services instance in one of the following ways:  
+
+    Domain name values:
+
+    - Fully qualified domain name
+    - NetBIOS name
+
+    Directory server values: 
+
+    - Fully qualified directory server name
+    - NetBIOS name
+    - Fully qualified directory server name and port
+
+    The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+    - By using the *Server* value from objects passed through the pipeline
+    - By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
+    - By using the domain of the computer running Windows PowerShell
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ActiveDirectory.Set-ADDomainMode
+name: Set-ADDomainMode
+description: |-
+  The **Set-ADDomainMode** cmdlet sets the domain mode for a domain.
+  You specify the domain mode by setting the *DomainMode* parameter.
+
+  The *Identity* parameter specifies the Active Directory domain to modify.
+  You can identify a domain by its distinguished name, GUID, security identifier (SID), DNS domain name, or NetBIOS name.
+  You can also set the *Identity* parameter to a domain object variable such as `$<localADDomainObject>`, or you can pass a domain object through the pipeline to the *Identity* parameter.
+  For example, you can use the Get-ADDomain cmdlet to retrieve a domain object and then pass the object through the pipeline operator to the **Set-ADDomainMode** cmdlet.
+
+  The **Set-ADDomainMode** cmdlet always prompts for permission unless you specify *Confirm:$False*.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/set-addomainmode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-ADDomainMode

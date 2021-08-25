@@ -1,0 +1,96 @@
+### YamlMime:PowershellModule
+children:
+- title: RDMgmt
+  cmdlets:
+  - RDMgmt.Add-RDServer
+  - RDMgmt.Add-RDSessionHost
+  - RDMgmt.Add-RDVirtualDesktopToCollection
+  - RDMgmt.Disable-RDVirtualDesktopADMachineAccountReuse
+  - RDMgmt.Disconnect-RDUser
+  - RDMgmt.Enable-RDVirtualDesktopADMachineAccountReuse
+  - RDMgmt.Export-RDPersonalSessionDesktopAssignment
+  - RDMgmt.Export-RDPersonalVirtualDesktopAssignment
+  - RDMgmt.Get-RDAvailableApp
+  - RDMgmt.Get-RDCertificate
+  - RDMgmt.Get-RDConnectionBrokerHighAvailability
+  - RDMgmt.Get-RDDeploymentGatewayConfiguration
+  - RDMgmt.Get-RDFileTypeAssociation
+  - RDMgmt.Get-RDLicenseConfiguration
+  - RDMgmt.Get-RDPersonalSessionDesktopAssignment
+  - RDMgmt.Get-RDPersonalVirtualDesktopAssignment
+  - RDMgmt.Get-RDPersonalVirtualDesktopPatchSchedule
+  - RDMgmt.Get-RDRemoteApp
+  - RDMgmt.Get-RDRemoteDesktop
+  - RDMgmt.Get-RDServer
+  - RDMgmt.Get-RDSessionCollection
+  - RDMgmt.Get-RDSessionCollectionConfiguration
+  - RDMgmt.Get-RDSessionHost
+  - RDMgmt.Get-RDUserSession
+  - RDMgmt.Get-RDVirtualDesktop
+  - RDMgmt.Get-RDVirtualDesktopCollection
+  - RDMgmt.Get-RDVirtualDesktopCollectionConfiguration
+  - RDMgmt.Get-RDVirtualDesktopCollectionJobStatus
+  - RDMgmt.Get-RDVirtualDesktopConcurrency
+  - RDMgmt.Get-RDVirtualDesktopIdleCount
+  - RDMgmt.Get-RDVirtualDesktopTemplateExportPath
+  - RDMgmt.Get-RDWorkspace
+  - RDMgmt.Grant-RDOUAccess
+  - RDMgmt.Import-RDPersonalSessionDesktopAssignment
+  - RDMgmt.Import-RDPersonalVirtualDesktopAssignment
+  - RDMgmt.Invoke-RDUserLogoff
+  - RDMgmt.Move-RDVirtualDesktop
+  - RDMgmt.New-RDCertificate
+  - RDMgmt.New-RDPersonalVirtualDesktopPatchSchedule
+  - RDMgmt.New-RDRemoteApp
+  - RDMgmt.New-RDSessionCollection
+  - RDMgmt.New-RDSessionDeployment
+  - RDMgmt.New-RDVirtualDesktopCollection
+  - RDMgmt.New-RDVirtualDesktopDeployment
+  - RDMgmt.Remove-RDDatabaseConnectionString
+  - RDMgmt.Remove-RDPersonalSessionDesktopAssignment
+  - RDMgmt.Remove-RDPersonalVirtualDesktopAssignment
+  - RDMgmt.Remove-RDPersonalVirtualDesktopPatchSchedule
+  - RDMgmt.Remove-RDRemoteApp
+  - RDMgmt.Remove-RDServer
+  - RDMgmt.Remove-RDSessionCollection
+  - RDMgmt.Remove-RDSessionHost
+  - RDMgmt.Remove-RDVirtualDesktopCollection
+  - RDMgmt.Remove-RDVirtualDesktopFromCollection
+  - RDMgmt.Send-RDUserMessage
+  - RDMgmt.Set-RDActiveManagementServer
+  - RDMgmt.Set-RDCertificate
+  - RDMgmt.Set-RDClientAccessName
+  - RDMgmt.Set-RDConnectionBrokerHighAvailability
+  - RDMgmt.Set-RDDatabaseConnectionString
+  - RDMgmt.Set-RDDeploymentGatewayConfiguration
+  - RDMgmt.Set-RDFileTypeAssociation
+  - RDMgmt.Set-RDLicenseConfiguration
+  - RDMgmt.Set-RDPersonalSessionDesktopAssignment
+  - RDMgmt.Set-RDPersonalVirtualDesktopAssignment
+  - RDMgmt.Set-RDPersonalVirtualDesktopPatchSchedule
+  - RDMgmt.Set-RDRemoteApp
+  - RDMgmt.Set-RDRemoteDesktop
+  - RDMgmt.Set-RDSessionCollectionConfiguration
+  - RDMgmt.Set-RDSessionHost
+  - RDMgmt.Set-RDVirtualDesktopCollectionConfiguration
+  - RDMgmt.Set-RDVirtualDesktopConcurrency
+  - RDMgmt.Set-RDVirtualDesktopIdleCount
+  - RDMgmt.Set-RDVirtualDesktopTemplateExportPath
+  - RDMgmt.Set-RDWorkspace
+  - RDMgmt.Stop-RDVirtualDesktopCollectionJob
+  - RDMgmt.Test-RDOUAccess
+  - RDMgmt.Test-RDVirtualDesktopADMachineAccountReuse
+  - RDMgmt.Update-RDVirtualDesktopCollection
+uid: RDMgmt
+name: RDMgmt
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Remote Desktop Service-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.2.0
+  Locale: en-US
+  Module Guid: 81d5df9c-8fe3-46d7-a9bf-2aedd60d1843
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  title: RDMgmt

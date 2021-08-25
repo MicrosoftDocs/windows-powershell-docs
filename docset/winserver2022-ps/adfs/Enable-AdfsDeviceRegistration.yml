@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet has been deprecated.
+module: ADFS
+notes: ""
+links:
+- text: Disable-AdfsDeviceRegistration
+  href: ./Disable-AdfsDeviceRegistration.yml
+- text: Get-AdfsDeviceRegistration
+  href: ./Get-AdfsDeviceRegistration.yml
+- text: Initialize-ADDeviceRegistration
+  href: ./Initialize-ADDeviceRegistration.yml
+- text: Set-AdfsDeviceRegistration
+  href: ./Set-AdfsDeviceRegistration.yml
+syntaxes:
+- Enable-AdfsDeviceRegistration [-Credential <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable the device registration service'
+  code: |-
+    PS C:\> Enable-AdfsDeviceRegistration
+    Message                                                     Context                                                                                                          Status
+    -------                                                     -------                                                                                                          ------
+    The configuration completed successfully.                   DeploymentSucceeded                                                                                             Success
+  description: |-
+    This command enables the Device Registration Service on the AD FS server.
+    Note that you must perform this action on every AD FS server in the farm.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a **PSCredential** object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Enable-AdfsDeviceRegistration
+name: Enable-AdfsDeviceRegistration
+description: |-
+  This cmdlet has been deprecated for AD FS 2016.
+  For more information, see [Configure On-Premises Conditional Access using registered devices](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-device-based-conditional-access-on-premises).
+
+  The **Enable-AdfsDeviceRegistration** cmdlet configures a server in an Active Directory Federation Services (AD FS) farm to host the Device Registration Service.
+  To completely enable the Device Registration Service, you must run this command on each AD FS server in your AD FS farm.
+  You must run the **Initialize-ADDeviceRegistration** cmdlet before you run this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/enable-adfsdeviceregistration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-AdfsDeviceRegistration

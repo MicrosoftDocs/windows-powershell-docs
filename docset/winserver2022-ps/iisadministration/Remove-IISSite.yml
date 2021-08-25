@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a web site from an IIS server.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="string, string" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Get-IISSite
+  href: ./Get-IISSite.yml
+- text: New-IISSite
+  href: ./New-IISSite.yml
+- text: Start-IISSite
+  href: ./Start-IISSite.yml
+- text: Stop-IISSite
+  href: ./Stop-IISSite.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- Remove-IISSite [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a web site from an IIS server'
+  code: |-
+    PS C:\> Remove-IISSite -Name "TestSite"
+  description: |-
+    This command removes a website named TestSite from an IIS server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the IIS website to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: IISAdministration.Remove-IISSite
+name: Remove-IISSite
+description: |-
+  The **Remove-IISSite** cmdlet removes a web site with the given name from an Internet Information Services (IIS) server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/remove-iissite?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-IISSite

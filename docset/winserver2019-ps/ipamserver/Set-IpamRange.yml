@@ -1,0 +1,619 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an existing IP address range.
+module: IpamServer
+notes: ""
+outputs:
+- name: <xref href="CimInstance#ROOT/microsoft/ipam/MSFT_IPAM_Range" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that contains the modified IP address range.
+links:
+- text: Add-IpamRange
+  href: ./Add-IpamRange.yml
+- text: Export-IpamRange
+  href: ./Export-IpamRange.yml
+- text: Get-IpamRange
+  href: ./Get-IpamRange.yml
+- text: Import-IpamRange
+  href: ./Import-IpamRange.yml
+- text: Remove-IpamRange
+  href: ./Remove-IpamRange.yml
+syntaxes:
+- >-
+  Set-IpamRange [-StartIPAddress] <IPAddress[]> [-EndIPAddress] <IPAddress[]> [-ManagedByService <String[]>]
+
+   [-ServiceInstance <String[]>] [-NetworkType <VirtualizationType[]>] [-AddressSpace <String[]>]
+
+   [-CreateSubnetIfNotFound] [-NewNetworkId <String>] [-NewStartIPAddress <IPAddress>]
+
+   [-NewEndIPAddress <IPAddress>] [-NewManagedByService <String>] [-NewServiceInstance <String>]
+
+   [-NewNetworkType <VirtualizationType>] [-NewAddressSpace <String>] [-AssignmentType <AddressAssignment>]
+
+   [-AssignmentDate <DateTime>] [-UtilizationCalculation <UtilizationCalculation>] [-UtilizedAddresses <Double>]
+
+   [-Description <String>] [-Owner <String>] [-ReservedAddress <String[]>] [-DnsServer <IPAddress[]>]
+
+   [-DnsSuffix <String[]>] [-ConnectionSpecificDnsSuffix <String>] [-WinsServer <IPAddress[]>] [-VIP <String[]>]
+
+   [-Gateway <String[]>] [-AddCustomConfiguration <String>] [-RemoveCustomConfiguration <String>]
+
+   [-AssociatedReverseLookupZone <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-IpamRange -InputObject <CimInstance[]> [-CreateSubnetIfNotFound] [-NewNetworkId <String>]
+
+   [-NewStartIPAddress <IPAddress>] [-NewEndIPAddress <IPAddress>] [-NewManagedByService <String>]
+
+   [-NewServiceInstance <String>] [-NewNetworkType <VirtualizationType>] [-NewAddressSpace <String>]
+
+   [-AssignmentType <AddressAssignment>] [-AssignmentDate <DateTime>]
+
+   [-UtilizationCalculation <UtilizationCalculation>] [-UtilizedAddresses <Double>] [-Description <String>]
+
+   [-Owner <String>] [-ReservedAddress <String[]>] [-DnsServer <IPAddress[]>] [-DnsSuffix <String[]>]
+
+   [-ConnectionSpecificDnsSuffix <String>] [-WinsServer <IPAddress[]>] [-VIP <String[]>] [-Gateway <String[]>]
+
+   [-AddCustomConfiguration <String>] [-RemoveCustomConfiguration <String>]
+
+   [-AssociatedReverseLookupZone <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify an existing IP address range'
+  code: |-
+    PS C:\> Get-IpamRange -StartIPAddress 10.12.1.1 -EndIPAddress 10.12.1.254|Set-IpamRange -NewManagedByService VMM -NewServiceInstance "vmm1.contoso.com" -PassThru
+
+    Overlapping      : False
+
+    NetworkID        : 10.12.0.0/16
+
+    StartAddress     : 10.12.1.1
+
+    EndAddress       : 10.12.1.254
+
+    ManagedByService : VMM
+
+    ServiceInstance  : vmm1.contoso.com
+
+    NetworkType      : NonVirtualized
+
+    Owner            :
+  description: |-
+    This command modifies an existing IP address range that is currently managed by IPAM, to be managed by Virtual Machine Manager (VMM).
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+  summary: ""
+- title: 'Example 2: Add custom metadata to an IP address range'
+  code: |-
+    PS C:\> Get-IpamRange -StartIPAddress 10.12.1.1 -EndIPAddress 10.12.1.254|Set-IpamRange -AddCustomConfiguration "ADSite=ContosoCorporate" -PassThru| Format-List Overlapping, StartAddress, EndAddress, ManagedByService, ServiceInstance, CustomConfiguration
+
+    Overlapping         : False
+
+    StartAddress        : 10.12.1.1
+
+    EndAddress          : 10.12.1.254
+
+    ManagedByService    : VMM
+
+    ServiceInstance     : vmm1.contoso.com
+
+    CustomConfiguration : ADSite= ContosoCorporate;
+  description: |-
+    This command adds custom metadata to an IP range by using a custom field to identify the location.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+  summary: ""
+- title: 'Example 3: Modify the network type for an IP address range'
+  code: |-
+    PS C:\> Set-IpamRange -StartIPAddress 10.12.3.1 -EndIPAddress 10.12.3.254 -ManagedByService IPAM -ServiceInstance localhost -AddressSpace "Default" -NetworkType NonVirtualized -NewNetworkType Provider -PassThru
+
+    Overlapping      : False
+
+    NetworkID        : 10.12.0.0/16
+
+    StartAddress     : 10.12.3.1
+
+    EndAddress       : 10.12.3.254
+
+    ManagedByService : IPAM
+
+    ServiceInstance  : Localhost
+
+    NetworkType      : Provider
+
+    Owner            :
+  description: |-
+    This command modifies the network type of an IP address range from non-virtualized to provider.
+    By default, the provider address range will be assigned to the default provider address space.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+  summary: ""
+- title: 'Example 4: Modify the network type for an IP address range to its previous state'
+  code: |-
+    PS C:\> Set-IpamRange -StartIPAddress 10.12.3.1 -EndIPAddress 10.12.3.254 -ManagedByService IPAM -ServiceInstance localhost -AddressSpace Default -NetworkType Provider -NewNetworkType NonVirtualized -PassThru
+
+    Overlapping      : False
+
+    NetworkID        : 10.12.0.0/16
+
+    StartAddress     : 10.12.3.1
+
+    EndAddress       : 10.12.3.254
+
+    ManagedByService : IPAM
+
+    ServiceInstance  : Localhost
+
+    NetworkType      : NonVirtualized
+
+    Owner            :
+  description: |-
+    This command modifies the network type of an IP address range from provider to non-virtualized.
+    The non-virtualized address range will be added to the default address space.
+    You cannot specify the provider address space in this case.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+  summary: ""
+- title: 'Example 5: Modify the network type for an IP address range and assign the IP addresses'
+  code: |-
+    PS C:\> Set-IpamRange -StartIPAddress 10.12.3.1 -EndIPAddress 10.12.3.254 -ManagedByService IPAM -ServiceInstance localhost -AddressSpace Default -NetworkType NonVirtualized -NewNetworkType Provider -NewAddressSpace ContosoDataCenter -PassThru | Format-List IpAddress, NetworkType, ProviderAddressSpace, CustomerAddressSpace
+    Overlapping       : False
+
+    NetworkID         : 10.12.0.0/16
+
+    StartAddress      : 10.12.3.1
+
+    EndAddress        : 10.12.3.254
+
+    ManagedByService  : IPAM
+
+    ServiceInstance   : Localhost
+
+    NetworkType       : Provider
+
+    ProviderAddressSpace : ContosoDataCenter
+
+    CustomerAddressSpace :
+  description: |-
+    This command modifies the network type of an IP address from non-virtualized to provider.
+    The command assigns the IP address to the provider address space ContosoDataCenter.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AddCustomConfiguration
+  description: |+
+    Specifies semi-colon (;) separated name/value pairs.
+    This parameter specifies custom metadata that are associated with the address space.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressSpace
+  description: |+
+    Specifies an array of names of address spaces.
+    If you do not specify a value, the cmdlet modifies matching ranges from all address spaces.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: AssignmentDate
+  description: |+
+    Specifies the date on which to assign addresses in this range.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AddressAssignment" data-throw-if-not-resolved="False" />
+  name: AssignmentType
+  description: |+
+    Specifies the address assignment type from this range.
+
+    The acceptable values for this parameter are:
+
+    - Static 
+    - Dynamic 
+    - Auto 
+    - VIP 
+    - Reserved
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Static, Dynamic, Auto, VIP, Reserved
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AssociatedReverseLookupZone
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionSpecificDnsSuffix
+  description: |+
+    Specifies the connection-specific DNS suffix to associate with this range.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CreateSubnetIfNotFound
+  description: |+
+    Indicates that the cmdlet creates a parent subnet for this range of addresses.
+    If you specify this parameter, the cmdlet automatically creates a parent subnet for this range, if no parent subnet exists.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the range to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DnsServer
+  description: |+
+    Specifies an array of Domain Name System (DNS) servers to associate with this range.
+    Specify the names of the DNS servers in the order of preference, highest to lowest.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DnsSuffix
+  description: |+
+    Specifies an array of suffixes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EndIPAddress
+  isRequired: true
+  description: |+
+    Specifies an array of IP addresses.
+    For this parameter, the addresses represent the high end of the range to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Gateway
+  description: |+
+    Specifies an array of gateway servers, imported from a Dynamic Host Configuration Protocol (DHCP) scope, to associate with a range in IPAM.
+    Specify the names of the gateway servers in the order of preference, highest to lowest.
+    The format for specification is \<ipaddress\>\\\<metric\>.
+    To specify Automatic metric, the format is \<Ipaddress\>\Automatic.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ManagedByService
+  description: |+
+    Specifies an array of services that manage the range to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: MB
+  parameterValueGroup: ""
+- type: <xref href="VirtualizationType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NetworkType
+  description: |+
+    Specifies an array of network types for the addresses to modify.
+
+    The acceptable values for this parameter are:
+
+    - Provider 
+    - Customer 
+    - NonVirtualized
+
+    If you do not specify a value, the cmdlet modifies all matching IP address ranges of network type Provider, Customer, and NonVirtualized.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NonVirtualized, Provider, Customer
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewAddressSpace
+  description: |+
+    Specifies the name of a new address space for the IP address range.
+    A range with network type NonVirtualized can only belong to Default address space.
+    A range with network type Provider can belong to either the Default address space or a Provider address space.
+    A range with network type Customer can only belong to a Customer address space.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: NewEndIPAddress
+  description: |+
+    Specifies a new IP address.
+    For this parameter, the address represents the new high end of the range.
+    An error occurs if the value is not compatible with the network ID and the starting IP address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewManagedByService
+  description: |+
+    Specifies the name of a new value of the **ManagedByService** property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewNetworkId
+  description: |+
+    Specifies the name of a new value of the **NetworkId** property.
+    Choose a value compatible with the existing beginning and ending IP addresses for the range, or specify new values for starting and ending IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualizationType" data-throw-if-not-resolved="False" />
+  name: NewNetworkType
+  description: |+
+    Specifies the name of a new value of network type for this address.
+    You can change the network type from NonVirtualized to Provider, or from Provider to NonVirtualized.
+    However, you cannot convert network type from NonVirtualized or Provider to Customer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NonVirtualized, Provider
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewServiceInstance
+  description: |+
+    Specifies the name of a new value of the service instance property.
+    Choose a new value compatible with the value of *ManagedByService* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: NewStartIPAddress
+  description: |+
+    Specifies a new IP address.
+    For this parameter, the address represents the new low end of the range.
+    An error occurs if the value is not compatible with the network ID and the ending IP address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Owner
+  description: |+
+    Specifies the name of an owner for an address range.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemoveCustomConfiguration
+  description: |+
+    Specifies a list of custom metadata fields to remove from the range object.
+    The list is a string of name-value pairs, separated by semicolons (;).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReservedAddress
+  description: |+
+    Specifies an array of reserved addresses from the given range.
+    This list will overwrite the existing list of reserved addresses for the given range.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ServiceInstance
+  description: |+
+    Specifies an array of service instances that manage the address ranges to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SI
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StartIPAddress
+  isRequired: true
+  description: |+
+    Specifies an array of IP addresses.
+    For this parameter, the addresses represent the low end of the range to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UtilizationCalculation" data-throw-if-not-resolved="False" />
+  name: UtilizationCalculation
+  description: |+
+    Specifies whether the utilization information will be automatically calculated by IPAM or specified by the user.
+    The utilization calculation provides a visual alert when the utilization level of IP addresses is greater than a threshold value.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Auto, UserSpecified
+- type: <xref href="Double" data-throw-if-not-resolved="False" />
+  name: UtilizedAddresses
+  description: |+
+    Specifies the number of addresses to utilize from the pool of IP addresses.
+    Use this parameter when the utilization calculation is set to the value in **UserSpecified**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VIP
+  description: |+
+    Specifies an array of virtual IP addresses, usually set aside for load balancers, from the range.
+    Specify the Virtual IPs (VIP) as a list, in descending order of precedence.
+    This list overwrites any existing VIPs specified for the given range.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: WinsServer
+  description: |+
+    Specifies an array of Windows Internet Name Service (WINS) servers to associate with this range.
+    Specify the WINS servers in decreasing order of precedence.
+    This list overwrites any existing list of WINS servers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IpamServer.Set-IpamRange
+name: Set-IpamRange
+description: |-
+  The **Set-IpamRange** cmdlet modifies an existing IP address range that an IP Address Management (IPAM) server manages.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamRange.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/set-ipamrange?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-IpamRange

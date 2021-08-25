@@ -1,0 +1,190 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays diagnostic information for a connection.
+module: NetTCPIP
+notes: ""
+inputs:
+- name: <xref href="none" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="NetConnectionResults" data-throw-if-not-resolved="False" />
+  description: |-
+    Results of the connectivity test to the specified computer name
+syntaxes:
+- >-
+  Test-NetConnection [[-ComputerName] <String>] [-TraceRoute] [-Hops <Int32>] [-InformationLevel <String>]
+
+   [<CommonParameters>]
+- >-
+  Test-NetConnection [[-ComputerName] <String>] [-CommonTCPPort] <String> [-InformationLevel <String>]
+
+   [<CommonParameters>]
+- Test-NetConnection [[-ComputerName] <String>] -Port <Int32> [-InformationLevel <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Test a connection'
+  code: |-
+    PS C:\>Test-NetConnection
+    ComputerName : gateway.contoso.com 
+
+    RemoteAddress : 2620:0:30::197 
+
+    InterfaceAlias : Ethernet 3 
+
+    SourceAddress : 2001:4898:1b:1046:cda8:e200:e2cd:1e8b 
+
+    PingSucceeded : True
+  description: |-
+    This command tests a network connection.
+  summary: ""
+- title: 'Example 2: Test a connection and display detailed results'
+  code: |-
+    PS C:\>Test-NetConnection -Port 80 -InformationLevel Detailed
+    ComputerName : gateway.contoso.com 
+
+    RemoteAddress : 2620:0:30::197 
+
+    RemotePort : 80 
+
+    AllNameResolutionResults : 10.253.21.197 
+
+    10.79.197.197 
+
+    2620:0:30::197 
+
+    MatchingIPsecRules : Ipsec-Win8/Domain-TrafficFromInternet-v6 
+
+    NetworkIsolationContext : Internet 
+
+    InterfaceAlias : Ethernet 3 
+
+    SourceAddress : 2001:4898:1b:1046:cda8:e200:e2cd:1e8b 
+
+    NetRoute (NextHop) : fe80::21a:30ff:feaf:5400 
+
+    PingSucceeded : True 
+
+    PingReplyDetails (RTT) : 1 ms 
+
+    TcpTestSucceeded : True
+  description: |-
+    This command tests a network connection and sets the **InformationLevel** parameter to Detailed.
+  summary: ""
+- title: 'Example 3: Test a connection to a remote host'
+  code: |-
+    PS C:\>Test-NetConnection -ComputerName www.contoso.com -InformationLevel Detailed
+    ComputerName : www.contoso.com 
+
+    RemoteAddress : 2600:1409::1703:6929 
+
+    AllNameResolutionResults : 10.3.105.104 
+
+    10.3.105.113 
+
+    10.3.105.114 
+
+    10.3.105.41 
+
+    10.3.105.43 
+
+    2600:1409::1703:6929 
+
+    2600:1409::1703:692b 
+
+    2600:1409::1703:6972 
+
+    InterfaceAlias : Ethernet 3 
+
+    SourceAddress : 2001:4898:1b:1046:cda8:e200:e2cd:1e8b 
+
+    NetRoute (NextHop) : fe80::21a:30ff:feaf:5400 
+
+    PingSucceeded : True 
+
+    PingReplyDetails (RTT) : 164 ms
+  description: |-
+    This command tests a network connection to a remote host named www.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CommonTCPPort
+  isRequired: true
+  description: |+
+    Specifies the common service TCP port number.
+    The acceptable values for this parameter are:
+
+    - SMB 
+    - HTTP 
+    - RDP
+    - PING
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: HTTP, RDP, SMB, WINRM
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the Domain Name System (DNS) name or IP address of the target computer that runs the Dynamic Host Configuration Protocol (DHCP) server service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RemoteAddress, cn
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Hops
+  description: |+
+    Specifies the number of hops to traverse in a trace route command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InformationLevel
+  description: |+
+    Specifies the information level.
+    The acceptable values for this parameter are:
+
+    - Detailed
+    - Quiet 
+
+    If you set this parameter to Quiet, the cmdlet returns a Boolean value that indicates if the attempt to ping a host or port succeeded.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Quiet, Detailed
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  isRequired: true
+  description: |+
+    Specifies the TCP port number on the remote computer.
+    The cmdlet uses this port number to test connectivity to the remote machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RemotePort
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TraceRoute
+  description: |+
+    Indicates that Tracert runs to test connectivity to the remote host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetTCPIP.Test-NetConnection
+name: Test-NetConnection
+description: |-
+  The **Test-NetConnection** cmdlet displays diagnostic information for a connection.
+  The output includes the results of a DNS lookup, a listing of IP interfaces, an option to test a TCP connection, IPsec rules, and confirmation of connection establishment.
+metadata:
+  external help file: Test-NetConnection-help.xml
+  Module Name: NetTCPIP
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/nettcpip/test-netconnection?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-NetConnection

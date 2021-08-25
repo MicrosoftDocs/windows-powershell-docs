@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the Windows UI language override setting for the current user account.
+module: International
+notes: ""
+inputs:
+- name: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an object that contains the Windows UI language override for the current user account.
+    For more information about the **CultureInfo** object, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306).
+links:
+- text: Get-WinUILanguageOverride
+  href: ./Get-WinUILanguageOverride.yml
+- text: Get-WinUserLanguageList
+  href: ./Get-WinUserLanguageList.yml
+- text: Set-WinUserLanguageList
+  href: ./Set-WinUserLanguageList.yml
+syntaxes:
+- Set-WinUILanguageOverride [[-Language] <CultureInfo>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a language override'
+  code: |-
+    PS C:\> Set-WinUILanguageOverride -Language de-DE
+  description: |-
+    This command sets the Windows UI language override to German (Germany) for the current user account.
+  summary: ""
+- title: 'Example 2: Set a language override to null'
+  code: |-
+    PS C:\> Set-WinUILanguageOverride
+  description: |-
+    This command sets the Windows UI language override to null for the current user account.
+  summary: ""
+parameters:
+- type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  name: Language
+  description: |+
+    Specifies a language.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: International.Set-WinUILanguageOverride
+name: Set-WinUILanguageOverride
+description: |-
+  The **Set-WinUILanguageOverride** cmdlet sets a user-preferred display language to be used for the Windows user interface (UI).
+  If no override setting is used, the display language is dynamically determined from the language list of the user. Log off and loging back on is required for changes to take place.
+
+  For more information, see the **Get-WinUserLanguageList** and **Set-WinUserLanguageList** cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/international/set-winuilanguageoverride?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WinUILanguageOverride

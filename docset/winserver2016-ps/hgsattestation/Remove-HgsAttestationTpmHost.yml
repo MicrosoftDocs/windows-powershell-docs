@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a guarded host with TPM 2.0 from the Attestation service in HGS.
+module: HgsAttestation
+notes: ""
+links:
+- text: Add-HgsAttestationTpmHost
+  href: ./Add-HgsAttestationTpmHost.yml
+- text: Get-HgsAttestationTpmHost
+  href: ./Get-HgsAttestationTpmHost.yml
+syntaxes:
+- >-
+  Remove-HgsAttestationTpmHost [-Name] <String> [-PolicyVersion <PolicyVersion>] [-Stage] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a TPM host'
+  code: |-
+    PS C:\> Remove-HgsAttestationTpmHost -Name "TpmHost21"
+  description: |-
+    This command removes a host named TpmHost21 from the Attestation service.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the guarded host that this cmdlet removes from the Attestation service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PolicyVersion" data-throw-if-not-resolved="False" />
+  name: PolicyVersion
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, PolicyVersion1503, PolicyVersion1704
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Stage
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsAttestation.Remove-HgsAttestationTpmHost
+name: Remove-HgsAttestationTpmHost
+description: |-
+  The **Remove-HgsAttestationTpmHost** cmdlet removes a guarded host from the Attestation service in Host Guardian Service (HGS).
+  Use this cmdlet for hosts that have trusted platform module (TPM) 2.0 hardware, and that were added by using the **Add-HgsAttestationTpmHost** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/remove-hgsattestationtpmhost?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-HgsAttestationTpmHost

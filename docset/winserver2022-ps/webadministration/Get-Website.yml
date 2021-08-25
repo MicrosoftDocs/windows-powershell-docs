@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets configuration information for an IIS website.
+module: WebAdministration
+notes: ""
+links:
+- text: New-Website
+  href: ./New-Website.yml
+- text: Remove-Website
+  href: ./Remove-Website.yml
+- text: Start-Website
+  href: ./Start-Website.yml
+- text: Stop-Website
+  href: ./Stop-Website.yml
+syntaxes:
+- Get-Website [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information about the default website'
+  code: |-
+    IIS:\> Get-Website -Name "Default Web Site"
+    Name             ID State   Physical Path                 Bindings
+    ----             -- -----   -------------                 --------
+    Default Web Site 1  Started %SystemDrive%\inetpub\wwwroot http *:80:
+                                                              net.tcp 808:*
+  description: |-
+    This command returns the configuration information for the default website.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the website about which this cmdlet returns configuration information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-Website
+name: Get-Website
+description: |-
+  The **Get-Website** cmdlet gets configuration information for an Internet Information Services (IIS) website.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-website?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-Website

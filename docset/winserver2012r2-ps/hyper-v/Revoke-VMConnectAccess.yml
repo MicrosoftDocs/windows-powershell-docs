@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Revokes access for one or more users to connect to a one or more virtual machines.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None by default; **Microsoft.HyperV.PowerShell.VMConnectAce** if **-PassThru** is specified.
+syntaxes:
+- >-
+  Revoke-VMConnectAccess [-VMName] <String[]> [-UserName] <String[]> [-Passthru] [-ComputerName <String[]>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Revoke-VMConnectAccess [-VMId] <Guid[]> [-UserName] <String[]> [-Passthru] [-ComputerName <String[]>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Revoke-VMConnectAccess -VMName VM1 -UserName Contoso\John
+  description: |-
+    This command revokes the access of user Contoso\John to connect to virtual machine VM1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more virtual machine hosts on which access to connect to a virtual machine or machines is to be revoked.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that a **VMConnectAce** is to be passed through to the pipeline for each revocation of access.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserName
+  isRequired: true
+  description: "Specifies the user or users to whom access to connect to a virtual machine or machines is to be revoked, in one of the following forms.\r\n\r\nLocal User Account:\r\n    john\r\n    ComputerName\\john\r\n                         \r\nDomain User Account:\r\n    CONTOSO\\john\r\n    Contoso.com\\john\r\n                         \r\nUser Principal Name (UPN):\r\n    john@contoso.com\r\n                         \r\nSecurity Identifier:\r\n    S-1-5-21-3165297888-301567370-576410423-1103\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: UserId, Sid
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMId
+  isRequired: true
+  description: |+
+    Specifies the unique identifier of a virtual machine or machines to which connect access is to be revoked.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name or names of the virtual machine or machines to which access is being revoked.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Revoke-VMConnectAccess
+name: Revoke-VMConnectAccess
+description: |-
+  The **Revoke-VMConnectAccess** cmdlet revokes access for one or more users to connect to one or more virtual machines.
+  This cmdlet is intended for use in providing other applications with the appropriate permissions required to initiate a session with Virtual Machine Connection.
+  Examples of such applications are Virtual Machine Manager.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/revoke-vmconnectaccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Revoke-VMConnectAccess

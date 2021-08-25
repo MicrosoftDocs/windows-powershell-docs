@@ -1,0 +1,709 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes one or more firewall rules that match the specified criteria.
+module: NetSecurity
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetAddressFilter" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetApplicationFilter" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetFirewallProfile" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetInterfaceFilter" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetInterfaceTypeFilter" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetNetworkLayerSecurityFilter" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetProtocolPortFilter" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetServiceFilter" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Copy-NetFirewallRule
+  href: ./Copy-NetFirewallRule.yml
+- text: Enable-NetFirewallRule
+  href: ./Enable-NetFirewallRule.yml
+- text: Disable-NetFirewallRule
+  href: ./Disable-NetFirewallRule.yml
+- text: Get-NetFirewallAddressFilter
+  href: ./Get-NetFirewallAddressFilter.yml
+- text: Get-NetFirewallApplicationFilter
+  href: ./Get-NetFirewallApplicationFilter.yml
+- text: Get-NetFirewallInterfaceFilter
+  href: ./Get-NetFirewallInterfaceFilter.yml
+- text: Get-NetFirewallPortFilter
+  href: ./Get-NetFirewallPortFilter.yml
+- text: Get-NetFirewallProfile
+  href: ./Get-NetFirewallProfile.yml
+- text: Get-NetFirewallRule
+  href: ./Get-NetFirewallRule.yml
+- text: Get-NetFirewallSecurityFilter
+  href: ./Get-NetFirewallSecurityFilter.yml
+- text: Get-NetFirewallServiceFilter
+  href: ./Get-NetFirewallServiceFilter.yml
+- text: New-NetFirewallRule
+  href: ./New-NetFirewallRule.yml
+- text: Open-NetGPO
+  href: ./Open-NetGPO.yml
+- text: Rename-NetFirewallRule
+  href: ./Rename-NetFirewallRule.yml
+- text: Save-NetGPO
+  href: ./Save-NetGPO.yml
+- text: Set-NetFirewallRule
+  href: ./Set-NetFirewallRule.yml
+- text: Show-NetFirewallRule
+  href: ./Show-NetFirewallRule.yml
+syntaxes:
+- >-
+  Remove-NetFirewallRule [-All] [-PolicyStore <String>] [-GPOSession <String>] [-TracePolicyStore]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule [-Name] <String[]> [-PolicyStore <String>] [-GPOSession <String>] [-TracePolicyStore]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule -DisplayName <String[]> [-PolicyStore <String>] [-GPOSession <String>]
+
+   [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule [-Description <String[]>] [-DisplayGroup <String[]>] [-Group <String[]>]
+
+   [-Enabled <Enabled[]>] [-Direction <Direction[]>] [-Action <Action[]>]
+
+   [-EdgeTraversalPolicy <EdgeTraversal[]>] [-LooseSourceMapping <Boolean[]>] [-LocalOnlyMapping <Boolean[]>]
+
+   [-Owner <String[]>] [-PrimaryStatus <PrimaryStatus[]>] [-Status <String[]>] [-PolicyStoreSource <String[]>]
+
+   [-PolicyStoreSourceType <PolicyStoreType[]>] [-PolicyStore <String>] [-GPOSession <String>]
+
+   [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule -AssociatedNetFirewallAddressFilter <CimInstance> [-PolicyStore <String>]
+
+   [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule -AssociatedNetFirewallApplicationFilter <CimInstance> [-PolicyStore <String>]
+
+   [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule -AssociatedNetFirewallInterfaceFilter <CimInstance> [-PolicyStore <String>]
+
+   [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule -AssociatedNetFirewallInterfaceTypeFilter <CimInstance> [-PolicyStore <String>]
+
+   [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule -AssociatedNetFirewallPortFilter <CimInstance> [-PolicyStore <String>]
+
+   [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule -AssociatedNetFirewallSecurityFilter <CimInstance> [-PolicyStore <String>]
+
+   [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule -AssociatedNetFirewallServiceFilter <CimInstance> [-PolicyStore <String>]
+
+   [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule -AssociatedNetFirewallProfile <CimInstance> [-PolicyStore <String>]
+
+   [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-NetFirewallRule -InputObject <CimInstance[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Remove-NetFirewallRule
+  description: |-
+    This example removes all of the static local firewall rules.
+    This is useful for removing any policy conflicts with the domain GPO.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Remove-NetFirewallRule -DisplayName "Network Discovery (NB-Name-In)"
+  description: |-
+    This example deletes a firewall rule based on the localized name.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Remove-NetFirewallRule -Enabled False -PolicyStore contoso.com\gpo_name
+  description: |-
+    This example removes all of the firewall rules that are currently disabled on a GPO.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\>$fwAppFilter = Get-NetFirewallApplicationFilter -Program "C:\Program Files (x86)\Messenger\msmsgs.exe"
+
+
+
+    PS C:\>Remove-NetFirewallRule -InputObject $fwAppFilter
+  description: |-
+    This example removes all of the firewall rules associated with the Windows Messenger application.
+  summary: ""
+parameters:
+- type: <xref href="Action" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Action
+  description: |+
+    Specifies that matching firewall rules of the indicated action are removed. 
+    This parameter specifies the action to take on traffic that matches this rule. 
+    The acceptable values for this parameter are: Allow or Block. 
+
+    - Allow: Network packets that match all criteria specified in this rule are permitted through the firewall. 
+    - Block: Network packets that match all criteria specified in this rule are dropped by the firewall. 
+
+    The default value is Allow. 
+    The OverrideBlockRules field changes an allow rule into an allow bypass rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NotConfigured, Allow, Block
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Indicates that all of the firewall rules within the specified policy store are removed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedNetFirewallAddressFilter
+  isRequired: true
+  description: |+
+    Gets the firewall rules that are associated with the given address filter to be removed. 
+    A **NetFirewallAddressFilter** object represents the address conditions associated with a rule.
+    See the Get-NetFirewallAddressFilter cmdlet for more information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedNetFirewallApplicationFilter
+  isRequired: true
+  description: |+
+    Gets the firewall rules that are associated with the given application filter to be removed. 
+    A **NetFirewallApplicationFilter** object represents the applications associated with a rule.
+    See the Get-NetFirewallApplicationFilter cmdlet for more information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedNetFirewallInterfaceFilter
+  isRequired: true
+  description: |+
+    Gets the firewall rules that are associated with the given interface filter to be removed. 
+    A **NetFirewallInterfaceFilter** object represents the interface conditions associated with a rule.
+    See the Get-NetFirewallInterfaceFilter cmdlet for more information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedNetFirewallInterfaceTypeFilter
+  isRequired: true
+  description: |+
+    Gets the firewall rules that are associated with the given interface type filter to be removed. 
+    A **NetFirewallInterfaceTypeFilter** object represents the interface conditions associated with a rule.
+    See the Get-NetFirewallInterfaceTypeFilter cmdlet for more information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedNetFirewallPortFilter
+  isRequired: true
+  description: |+
+    Gets the firewall rules that are associated with the given port filter to be removed. 
+    A **NetFirewallPortFilter** object represents the port conditions associated with a rule.
+    See the Get-NetFirewallPortFilter cmdlet for more information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedNetFirewallProfile
+  isRequired: true
+  description: |+
+    Gets the firewall rules that are associated with the given firewall profile type to be removed. 
+    A **NetFirewallProfile** object represents the profile conditions associated with a rule.
+    See the Get-NetFirewallProfile cmdlet for more information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedNetFirewallSecurityFilter
+  isRequired: true
+  description: |+
+    Gets the firewall rules that are associated with the given security filter to be removed. 
+    A **NetFirewallSecurityFilter** object represents the security conditions associated with a rule.
+    See the Get-NetFirewallSecurityFilter cmdlet for more information.
+    The security conditions include the *Authentication*, *Encryption*, *LocalUser*, *RemoteUser*, and *RemoteMachine* parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedNetFirewallServiceFilter
+  isRequired: true
+  description: |+
+    Gets the firewall rules that are associated with the given service filter to be removed. 
+    A **NetFirewallServiceFilter** object represents the profile conditions associated with a rule.
+    See the Get-NetFirewallServiceFilter cmdlet for more information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Description
+  description: |+
+    Specifies that matching firewall rules of the indicated description are removed.
+    Wildcard characters are accepted. 
+    This parameter provides information about the firewall rule.
+    This parameter specifies the localized, user-facing description of the IPsec rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Direction" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Direction
+  description: |+
+    Specifies that matching firewall rules of the indicated direction are removed. 
+    This parameter specifies which direction of traffic to match with this rule. 
+    The acceptable values for this parameter are: Inbound or Outbound. 
+    The default value is Inbound.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Inbound, Outbound
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DisplayGroup
+  description: |+
+    Specifies that only matching firewall rules of the indicated group association are removed.
+    Wildcard characters are accepted. 
+    The *Group* parameter specifies the source string for this parameter.
+    If the value for this parameter is a localizable string, then the *Group* parameter contains an indirect string.
+    Rule groups can be used to organize rules by influence and allows batch rule modifications.
+    Using the Set-NetFirewallRule cmdlet, if the group name is specified for a set of rules or sets, then all of the rules or sets in that group receive the same set of modifications.
+    It is good practice to specify the *Group* parameter value with a universal and world-ready indirect @FirewallAPI name. 
+    This parameter cannot be specified upon object creation using the New-NetFirewallRule cmdlet, but can be modified using dot-notation and the Set-NetFirewallRule cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Specifies that only matching firewall rules of the indicated display name are removed.
+    Wildcard characters are accepted. 
+    Specifies the localized, user-facing name of the firewall rule being created.
+    When creating a rule this parameter is required.
+    This parameter value is locale-dependent.
+    If the object is not modified, this parameter value may change in certain circumstances.
+    When writing scripts in multi-lingual environments, the *Name* parameter should be used instead, where the default value is a randomly assigned value. 
+    This parameter cannot be set to All.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="EdgeTraversal" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EdgeTraversalPolicy
+  description: |+
+    Specifies that matching firewall rules of the indicated edge traversal policy are removed. 
+    This parameter specifies how this firewall rule will handle edge traversal cases.
+    Edge traversal allows the computer to accept unsolicited inbound packets that have passed through an edge device, such as a network address translation (NAT) router or firewall.
+    This option applies to inbound rules only. 
+    The acceptable values for this parameter are: Block, Allow, DeferToUser, or DeferToApp 
+
+    - Block: Prevents applications from receiving unsolicited traffic from the Internet through a NAT edge device. 
+    - Allow: Allows applications to receive unsolicited traffic directly from the Internet through a NAT edge device. 
+    - DeferToUser: Allows the user to decide whether to allow unsolicited traffic from the Internet through a NAT edge device when an application requests it. 
+    - DeferToApp: Allows each application to determine whether to allow unsolicited traffic from the Internet through a NAT edge device. 
+
+    The default value is Block. 
+    The DeferToApp and DeferToUser options are only valid for computers running firstref_client_7, firstref_server_7, and Windows Server® 2012.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Block, Allow, DeferToUser, DeferToApp
+- type: <xref href="Enabled" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Enabled
+  description: |+
+    Specifies that matching firewall rules of the indicated state are removed. 
+    This parameter specifies that the rule object is administratively enabled or administratively disabled.
+    The acceptable values for this parameter are:
+
+    - True: Specifies the rule is currently enabled. 
+    - False: Specifies the rule is currently disabled.
+    A disabled rule will not actively modify computer behavior, but the management construct still exists on the computer so it can be re-enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: True, False
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GPOSession
+  description: |+
+    Specifies the network GPO from which to retrieve the rules to be removed. 
+    This parameter is used in the same way as the *PolicyStore* parameter.
+    When modifying GPOs in Windows PowerShell®, each change to a GPO requires the entire GPO to be loaded, modified, and saved back.
+    On a busy Domain Controller (DC), this can be a slow and resource-heavy operation.
+    A GPO Session loads a domain GPO onto the local computer and makes all changes in a batch, before saving it back.
+    This reduces the load on the DC and speeds up the Windows PowerShell cmdlets.
+    To load a GPO Session, use the Open-NetGPO cmdlet.
+    To save a GPO Session, use the Save-NetGPO cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Group
+  description: |+
+    Specifies that only matching firewall rules of the indicated group association are removed.
+    Wildcard characters are accepted. 
+    This parameter specifies the source string for the *DisplayGroup* parameter.
+    If the *DisplayGroup* parameter value is a localizable string, then this parameter contains an indirect string.
+    Rule groups can be used to organize rules by influence and allows batch rule modifications.
+    Using the Set-NetFirewallRule cmdlets, if the group name is specified for a set of rules or sets, then all of the rules or sets in that group receive the same set of modifications.
+    It is good practice to specify this parameter value with a universal and world-ready indirect @FirewallAPI name. 
+    The *DisplayGroup* parameter cannot be specified upon object creation using the New-NetFirewallRule cmdlet, but can be modified using dot-notation and the Set-NetFirewallRule cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LocalOnlyMapping
+  description: |+
+    Indicates that matching firewall rules of the indicated value are removed. 
+    This parameter specifies the firewall rules for local only mapping, which describes whether a packet must pass through a local address on the way to the destination. 
+    Non-TCP traffic is session-less.
+    Windows Firewall authorizes traffic per session, not per packet, for performance reasons.
+    Generally, non-TCP sessions are inferred by checking the following fields: local address, remote address, protocol, local port, and remote port. 
+    If this parameter is set to True, then the remote address and port will be ignored when inferring remote sessions.
+    Sessions will be grouped based on local address, protocol, and local port. 
+    This is similar to the *LooseSourceMapping* parameter, but performs better in cases where the traffic does not need to be filtered by remote address.
+    This could improve performance on heavy server workloads where UDP requests come from dynamic client ports.
+    For instance, Teredo relay servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LooseSourceMapping
+  description: |+
+    Indicates that matching firewall rules of the indicated value are removed. 
+    This parameter specifies the firewall rules for loose source mapping, which describes whether a packet can have a non-local source address when being forwarded to a destination. 
+    If this parameter is set to True, then the rule accepts packets incoming from a host other than the one to which the packets were sent.
+    This parameter applies only to UDP protocol traffic. 
+    The default value is False.
+
+  defaultValue: None
+  position: Named
+  aliases: LSM
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies that only matching firewall rules of the indicated name are removed.
+    Wildcard characters are accepted. 
+    This parameter acts just like a file name, in that only one rule with a given name may exist in a policy store at a time.
+    During group policy processing and policy merge, rules that have the same name but come from multiple stores being merged, will overwrite one another so that only one exists.
+    This overwriting behavior is desirable if the rules serve the same purpose.
+    For instance, all of the firewall rules have specific names, so if an administrator can copy these rules to a GPO, and the rules will override the local versions on a local computer.
+    GPOs can have precedence.
+    So if an administrator has a different or more specific rule with the same name in a higher-precedence GPO, then it overrides other rules that exist. 
+    The default value is a randomly assigned value. 
+    When the defaults for main mode encryption need to overridden, specify the customized parameters and set this parameter, making it the new default setting for encryption.
+
+  defaultValue: None
+  position: "0"
+  aliases: ID
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Owner
+  description: |+
+    Specifies that matching firewall rules of the indicated owner are removed. 
+    This parameter specifies the owner of the firewall rule, represented as an SDDL string.
+    All Windows Store applications that require network traffic create network isolation rules (normally through installing via the Store), where the user that installed the application is the owner.
+    This parameter specifies that only network packets that are authenticated as coming from or going to an owner identified in the list of accounts (SID) match this rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  description: |+
+    Specifies the policy store from which to retrieve the rules to be removed. 
+    A policy store is a container for firewall and IPsec policy. 
+    The acceptable values for this parameter are:
+
+    - PersistentStore: Sometimes called static rules, this store contains the persistent policy for the local computer.
+    This policy is not from GPOs, and has been created manually or programmatically (during application installation) on the computer.
+    Rules created in this store are attached to the ActiveStore and activated on the computer immediately. 
+    - ActiveStore: This store contains the currently active policy, which is the sum of all policy stores that apply to the computer.
+    This is the resultant set of policy (RSOP) for the local computer (the sum of all GPOs that apply to the computer), and the local stores (the PersistentStore, the static Windows service hardening (WSH), and the configurable WSH).
+    ---- GPOs are also policy stores.
+    Computer GPOs can be specified as follows. 
+    ------ `-PolicyStore hostname`. 
+    ---- Active Directory GPOs can be specified as follows. 
+    ------ `-PolicyStore domain.fqdn.com\GPO_Friendly_Namedomain.fqdn.comGPO_Friendly_Name`. 
+    ------ Such as the following. 
+    -------- `-PolicyStore localhost`
+    -------- `-PolicyStore corp.contoso.com\FirewallPolicy`
+    ---- Active Directory GPOs can be created using the **New-GPO** cmdlet or the Group Policy Management Console. 
+    - RSOP: This read-only store contains the sum of all GPOs applied to the local computer. 
+    - SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server® 2012. 
+    - StaticServiceStore: This read-only store contains all the service restrictions that ship with Windows.
+    Optional and product-dependent features are considered part of Windows Server 2012 for the purposes of WFAS. 
+    - ConfigurableServiceStore: This read-write store contains all the service restrictions that are added for third-party services.
+    In addition, network isolation rules that are created for Windows Store application containers will appear in this policy store. 
+    The default value is PersistentStore. 
+    The Set-NetFirewallRule cmdlet cannot be used to add an object to a policy store.
+    An object can only be added to a policy store at creation time with the Copy-NetFirewallRule cmdlet or with the New-NetFirewallRule cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PolicyStoreSource
+  description: |+
+    Specifies that firewall rules matching the indicated policy store source are removed. 
+    This parameter contains a path to the policy store where the rule originated if the object is retrieved from the ActiveStore with the TracePolicyStoreSource option set.
+    This parameter value is automatically generated and should not be modified. 
+    The monitoring output from this parameter is not completely compatible with the *PolicyStore* parameter.
+    This parameter value cannot always be passed into the *PolicyStore* parameter.
+    Domain GPOs are one example in which this parameter contains only the GPO name, not the domain name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PolicyStoreType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PolicyStoreSourceType
+  description: |+
+    Specifies that firewall rules that match the indicated policy store source type are removed. 
+    This parameter describes the type of policy store where the rule originated if the object is retrieved from the ActiveStore with the TracePolicyStoreSource option set.
+    This parameter value is automatically generated and should not be modified. 
+    The acceptable values for this parameter are:
+
+    - Local: The object originates from the local store. 
+    - GroupPolicy: The object originates from a GPO. 
+    - Dynamic: The object originates from the local runtime state.
+    This policy store name is not valid for use in cmdlets, but may appear when monitoring active policy. 
+    - Generated: The object was generated automatically.
+    This policy store name is not valid for use in cmdlets, but may appear when monitoring active policy. 
+    - Hardcoded: The object was hard-coded.
+    This policy store name is not valid for use in cmdlets, but may appear when monitoring active policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Local, GroupPolicy, Dynamic, Generated, Hardcoded
+- type: <xref href="PrimaryStatus" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PrimaryStatus
+  description: |+
+    Specifies that firewall rules that match the indicated primary status are removed. 
+    This parameter specifies the overall status of the rule. 
+    - OK: Specifies that the rule will work as specified. 
+    - Degraded: Specifies that one or more parts of the rule will not be enforced. 
+     -- Error: Specifies that the computer is unable to use the rule at all. 
+    See the Status and StatusCode fields of the object for more detailed status information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, OK, Inactive, Error
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Status
+  description: |+
+    Specifies that firewall rules that match the indicated status are removed. 
+    This parameter describes the status message for the specified status code value.
+    The status code is a numerical value that indicates any syntax, parsing, or run-time errors in the rule or set.
+    This parameter value should not be modified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TracePolicyStore
+  description: |+
+    Indicates that the firewall rules that match the indicated policy store are removed. 
+    This parameter specifies that the name of the source GPO is set to the *PolicyStoreSource* parameter value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetSecurity.Remove-NetFirewallRule
+name: Remove-NetFirewallRule
+description: |-
+  The **Remove-NetFirewallRule** cmdlet permanently deletes one or more firewall rules from the specified policy store.
+
+  This cmdlet gets one or more firewall rules to be deleted with the *Name* parameter (default), the *DisplayName* parameter, rule properties, or by associated filters or objects.
+  The resulting queried rule is removed from the computer.
+
+  This cmdlet permanently removes a previously enabled firewall rule to be inactive within the computer or a group policy organizational unit.
+  This cmdlet differs from the Disable-NetFirewallRule cmdlet that disables a previously enabled firewall rule to be inactive within the computer or a group policy organizational unit.
+  A disabled rule will not actively modify computer behavior, but it still exists on the computer or in a GPO so it can be re-enabled.
+
+  After copying the firewall rules into a domain GPO, run this cmdlet, so the firewall rule does not conflict with the new domain GPO.
+  When developing firewall policies, the firewall rules can be created on the local computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: NetFirewallRule.cmdletDefinition.cdxml-help.xml
+  Module Name: NetSecurity
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/netsecurity/remove-netfirewallrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-NetFirewallRule

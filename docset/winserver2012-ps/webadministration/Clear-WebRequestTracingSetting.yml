@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears the Request Tracing configuration from the specified Web site.
+module: WebAdministration
+notes: ""
+links:
+- text: Disable-WebRequestTracing
+  href: ./Disable-WebRequestTracing.yml
+- text: Clear-WebRequestTracingSettings
+  href: ./Clear-WebRequestTracingSettings.yml
+syntaxes:
+- Clear-WebRequestTracingSetting [[-Name] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Removing Request Tracing from the Default Web Site --------------'
+  code: |-
+    IIS:\>Clear-WebRequestTracingSettings -Name "Default Web Site"
+  description: |-
+    Demonstrates how to remove Request Tracing from the Default Web Site.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the site from which Request Trace settings are cleared.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Clear-WebRequestTracingSetting
+name: Clear-WebRequestTracingSetting
+description: |-
+  Clears Request Tracing settings from the specified Web site.
+  It also disables Request Tracing for the site.
+  This command is identical to Clear-WebRequestTracingSettings.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/clear-webrequesttracingsetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

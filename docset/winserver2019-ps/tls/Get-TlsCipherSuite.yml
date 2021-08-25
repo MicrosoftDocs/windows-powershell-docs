@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the TLS cipher suites for a computer.
+module: TLS
+notes: ""
+links:
+- text: Disable-TlsCipherSuite
+  href: ./Disable-TlsCipherSuite.yml
+- text: Enable-TlsCipherSuite
+  href: ./Enable-TlsCipherSuite.yml
+syntaxes:
+- Get-TlsCipherSuite [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all cipher suites'
+  code: |-
+    PS C:\>Get-TlsCipherSuite
+    KeyType               : 0
+    Certificate           : RSA
+    MaximumExchangeLength : 65536
+    MinimumExchangeLength : 0
+    Exchange              : ECDH
+    HashLength            : 0
+    Hash                  : 
+    CipherBlockLength     : 16
+    CipherLength          : 256
+    BaseCipherSuite       : 49200
+    CipherSuite           : 49200
+    Cipher                : AES
+    Name                  : TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+    Protocols             : {771}
+
+
+    KeyType               : 0
+    Certificate           : RSA
+    MaximumExchangeLength : 65536
+    MinimumExchangeLength : 0
+    Exchange              : ECDH
+    HashLength            : 0
+    Hash                  : 
+    CipherBlockLength     : 16
+    CipherLength          : 128
+    BaseCipherSuite       : 49199
+    CipherSuite           : 49199
+    Cipher                : AES
+    Name                  : TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+    Protocols             : {771}
+  description: |-
+    This command gets all TLS cipher suites for the computer.
+  summary: ""
+- title: 'Example 2: Get the cipher suites that match a string'
+  code: |-
+    PS C:\>Get-TlsCipherSuite -Name "AES"
+    KeyType               : 0
+    Certificate           : ECDSA
+    MaximumExchangeLength : 65536
+    MinimumExchangeLength : 0
+    Exchange              : ECDH
+    HashLength            : 0
+    Hash                  :
+    CipherBlockLength     : 16
+    CipherLength          : 256
+    BaseCipherSuite       : 49196
+    CipherSuite           : 49196
+    Cipher                : AES
+    Name                  : TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+    Protocols             : {771, 65277}
+
+    KeyType               : 0
+    Certificate           : ECDSA
+    MaximumExchangeLength : 65536
+    MinimumExchangeLength : 0
+    Exchange              : ECDH
+    HashLength            : 0
+    Hash                  :
+    CipherBlockLength     : 16
+    CipherLength          : 128
+    BaseCipherSuite       : 49195
+    CipherSuite           : 49195
+    Cipher                : AES
+    Name                  : TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+    Protocols             : {771, 65277}
+  description: |-
+    This command gets all the cipher suites that have names that contain the string `AES`.
+    Note that the name match is case sensitive and this command returns no output for the name `aes`.
+    The output includes a field for the TLS/SSL protocols supported by the cipher. See [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/desktop/secauthn/cipher-suites-in-schannel) for more information.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the TLS cipher suite to get.
+    The cmdlet gets cipher suites that match the string that this parameter specifies, so you can specify a partial name.
+    The name match is case sensitive.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: TLS.Get-TlsCipherSuite
+name: Get-TlsCipherSuite
+description: |-
+  The **Get-TlsCipherSuite** cmdlet gets an ordered collection of cipher suites for a computer that Transport Layer Security (TLS) can use.
+
+  For more information about the TLS cipher suites, see the documentation for the Enable-TlsCipherSuite cmdlet or type `Get-Help Enable-TlsCipherSuite`.
+
+  For more information about protocol versions , see [BCRYPT_KDF_TLS_PRF (L"TLS_PRF")](https://docs.microsoft.com/windows/desktop/api/bcrypt/nf-bcrypt-bcryptderivekey#bcrypt_kdf_tls_prf-ltls_prf) .
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
+  Module Name: TLS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/tls/get-tlsciphersuite?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-TlsCipherSuite

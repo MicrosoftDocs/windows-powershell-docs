@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Specifies configuration settings for a RADIUS client.
+module: NPS
+notes: ""
+outputs:
+- name: <xref href="NpsRadiusClient" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NpsRadiusClient
+  href: ./Get-NpsRadiusClient.yml
+- text: New-NpsRadiusClient
+  href: ./New-NpsRadiusClient.yml
+- text: Remove-NpsRadiusClient
+  href: ./Remove-NpsRadiusClient.yml
+syntaxes:
+- >-
+  Set-NpsRadiusClient [-Name] <String> [-Address <String>] [-AuthAttributeRequired <Boolean>]
+
+   [-SharedSecret <String>] [-VendorName <String>] [-Enabled <Boolean>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a RADIUS client settings'
+  code: |-
+    PS C:\>Set-NpsRadiusClient -Name "WirelessAP" -Address "10.0.0.201" -Enabled $False -SharedSecret "1234567890"
+  description: |-
+    This command changes settings for the RADIUS client named WirelessAP.
+    It sets the IP address to 10.0.0.201 and the shared secret to 1234567890.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Address
+  description: |+
+    Specifies the fully qualified domain name (FQDN) or IP address of a RADIUS client.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AuthAttributeRequired
+  description: |+
+    Indicates whether verification for Access-Request messages is enabled.
+    The default value for this parameter is $False, which indicates that verification is disabled.
+
+    Set this parameter to $True if your access server supports use of the Message Authenticator attribute, also known as the signature attribute, for additional security.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    Indicates whether the RADIUS client is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the RADIUS client to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SharedSecret
+  description: |+
+    Specifies a shared secret key that is configured at the RADIUS client.
+    Windows Server® 2012 uses the shared secret key to validate messages between the RADIUS client and NPS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VendorName
+  description: |+
+    Specifies the vendor name for the RADIUS client.
+    The default name is RADIUS standard.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NPS.Set-NpsRadiusClient
+name: Set-NpsRadiusClient
+description: |-
+  The **Set-NpsRadiusClient** cmdlet specifies configuration settings for a Remote Authentication Dial-In User Service (RADIUS) client.
+  A RADIUS client uses a RADIUS server to manage authentication, authorization, and accounting requests that the client sends.
+  A RADIUS client can be an access server, such as a dial-up server or wireless access point, or a RADIUS proxy.
+
+  For more information about RADIUS client options, see [Managing RADIUS Clients](https://technet.microsoft.com/library/cc754717.aspx) on TechNet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NPS.Commands.dll-Help.xml
+  Module Name: NPS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nps/set-npsradiusclient?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NpsRadiusClient

@@ -1,0 +1,173 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an enrollment policy server to the current user or local system configuration.
+module: pki
+notes: ""
+inputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.EnrollmentPolicyServer" data-throw-if-not-resolved="False" />
+  description: |-
+    The **EnrollmentPolicyServer** object contains information about the certificate enrollment policy.
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.EnrollmentPolicyServer" data-throw-if-not-resolved="False" />
+  description: |-
+    The **EnrollmentPolicyServer** object contains information about the certificate enrollment policy.
+links:
+- text: Get-ChildItem
+  href: https://go.microsoft.com/fwlink/p/?LinkId=290488
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/p/?LinkId=293936
+- text: Get-CertificateEnrollmentPolicyServer
+  href: ./Get-CertificateEnrollmentPolicyServer.yml
+- text: Remove-CertificateEnrollmentPolicyServer
+  href: ./Remove-CertificateEnrollmentPolicyServer.yml
+syntaxes:
+- >-
+  Add-CertificateEnrollmentPolicyServer [-NoClobber] -Url <Uri> [-RequireStrongValidation]
+
+   [-Credential <PkiCredential>] -context <Context> [-AutoEnrollmentEnabled] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Add-CertificateEnrollmentPolicyServer -Url $url -Context Machine
+  description: |-
+    This example loads a policy from $url using Windows integrated authentication under the computer context, using the computer account credentials.
+    This example also adds the policy server to the local computer configuration.
+    Auto enrollment is off and strong validation is off.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$cert = Get-ChildItem -Path cert:\LocalMachine\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
+
+    PS C:\>Add-CertificateEnrollmentPolicyServer -Url $cert.EnrollmentPolicyEndPoint.Url -Credential $cert -Context Machine
+  description: |-
+    This example loads a policy using $cert as the authentication credential and adds the policy to the local computer local configuration since the context is the local computer (Machine).
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>$up = Get-Credential
+
+    PS C:\>Add-CertificateEnrollmentPolicyServer -Url $url -Context Machine -Credential $up
+  description: |-
+    This example loads a policy using the username and password from $url.
+    This example adds the policy server to the local computer configuration.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\>$cert = Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
+
+    PS C:\>Add-CertificateEnrollmentPolicyServer -Url $cert.EnrollmentPolicyEndPoint.Url -Credential $cert.PSPath -Context Machine
+  description: |-
+    This example loads policy using the Path object for a certificate.
+    Use the certificate to authenticate to the URL and add the policy server into the local user configuration.
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    PS C:\>$up = Get-Credential
+
+    PS C:\>Add-CertificateEnrollmentPolicyServer -Url $url -Context User -Credential $up -WhatIf
+    What if: Policy successfully loaded from {$url} using username/password credentials. 
+    Policy server configuration will be added to current user context.
+  description: |-
+    This example shows that if the policy cannot be loaded or if there is a conflict with an identifier (ID) or URL, then this will be the output. 
+
+    If the policy server already exists, then the output will state that the existing policy server configuration will be overwritten.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AutoEnrollmentEnabled
+  description: |+
+    Enables auto-enrollment for the policy server being added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Context" data-throw-if-not-resolved="False" />
+  name: context
+  isRequired: true
+  description: |+
+    Stores information about the policy server in the configuration for the Current User or Local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Machine, User
+- type: <xref href="PkiCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credential used to authenticate to the policy server.
+    This credential can be a **PSCredential** object, which is a username and password, an x509 certificate, or a path to an x509 certificate.
+    Kerberos authentication is used if no credential is specified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoClobber
+  description: |+
+    Prevents an enrollment policy server from overwriting an existing one.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RequireStrongValidation
+  description: |+
+    Specifies that the certificate obtained through this enrollment policy server must be trusted on the client.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Identifies the uniform resource locator (URL) of the enrollment policy server to configure.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: pki.Add-CertificateEnrollmentPolicyServer
+name: Add-CertificateEnrollmentPolicyServer
+description: |-
+  The **Add-CertificateEnrollmentPolicyServer** cmdlet adds an enrollment policy server to the current user or local system configuration.
+  If an enrollment policy server already exists, then this cmdlet will overwrite it.
+  Group Policy can be configured to prevent enrollment policy servers from being added.
+
+  Delegation may be required when using this cmdlet with Windows PowerShell® remoting and changing user configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  Module Name: pki
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/pki/add-certificateenrollmentpolicyserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-CertificateEnrollmentPolicyServer

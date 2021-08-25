@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a listing of the sections to include in a health report.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.Administration.WssReportSection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-WssReportSection
+  href: ./Set-WssReportSection.yml
+syntaxes:
+- Get-WssReportSection [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the report sections'
+  code: |-
+    PS C:\> Get-WssReportSection
+  description: |-
+    This command gets the report sections for a health report on the server on which you run the cmdlet.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+uid: WSSCmdlets.Get-WssReportSection
+name: Get-WssReportSection
+description: |-
+  The **Get-WssReportSection** cmdlet gets a listing of the sections to include in a health report.
+  The sections include: 
+
+  - Backups 
+  - CriticalAlertsAndWarnings 
+  - ErrorsInEventLog 
+  - SecurityAndUpdates 
+  - ServiceNotRunning 
+  - Storage
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssreportsection?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssReportSection

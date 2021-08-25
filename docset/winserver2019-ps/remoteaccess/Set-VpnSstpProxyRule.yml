@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet updates the tenant ID to gateway mapping for SSTP Proxy.
+module: RemoteAccess
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnSstpProxyRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-VpnSstpProxyRule
+  href: ./Add-VpnSstpProxyRule.yml
+- text: Get-VpnSstpProxyRule
+  href: ./Get-VpnSstpProxyRule.yml
+- text: New-VpnSstpProxyRule
+  href: ./New-VpnSstpProxyRule.yml
+- text: Remove-VpnSstpProxyRule
+  href: ./Remove-VpnSstpProxyRule.yml
+syntaxes:
+- >-
+  Set-VpnSstpProxyRule [-TenantID] <String> [-GatewayAddress] <String[]> [-PassThru] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a VPN SSTP proxy rule'
+  code: |-
+    PS C:\>Set-VpnSstpProxyRule -TenantID "Contso" -GatewayAddress "10.10.10.100" -Confirm:$False
+  description: |-
+    This command updates a VPN SSTP proxy rule.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GatewayAddress
+  isRequired: true
+  description: |+
+    Specifies an array of gateway IP Addresses or names for the Tenant.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantID
+  isRequired: true
+  description: |+
+    Specifies the Tenant ID or Group ID to configure the SSTP proxy mapping.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: GroupID
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent connections that can be established to run this command.
+    If you omit this parameter or enter a value of 0, the default value, 32, is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Set-VpnSstpProxyRule
+name: Set-VpnSstpProxyRule
+description: |-
+  The **Set-VpnSstpProxyRule** cmdlet updates the tenant ID to gateway mapping for SSTP Proxy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_VpnSstpProxyRule_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-vpnsstpproxyrule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VpnSstpProxyRule

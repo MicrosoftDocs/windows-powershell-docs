@@ -1,0 +1,316 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures an IPAM access scope.
+module: IpamServer
+notes: ""
+links:
+- text: IP Address Management (IPAM) Server Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Set-IpamAccessScope [-IpamRange] [-AccessScopePath <String>] [-IsInheritedAccessScope]
+
+   -InputObject <CimInstance[]> [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-IpamAccessScope [-AccessScopePath <String>] [-IsInheritedAccessScope] -InputObject <CimInstance[]>
+
+   [-PassThru] [-IpamDnsServer] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-IpamAccessScope [-AccessScopePath <String>] [-IsInheritedAccessScope] -InputObject <CimInstance[]>
+
+   [-PassThru] [-IpamDhcpServer] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-IpamAccessScope [-AccessScopePath <String>] [-IsInheritedAccessScope] -InputObject <CimInstance[]>
+
+   [-PassThru] [-IpamDhcpSuperscope] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-IpamAccessScope [-AccessScopePath <String>] [-IsInheritedAccessScope] -InputObject <CimInstance[]>
+
+   [-PassThru] [-IpamDhcpScope] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-IpamAccessScope [-AccessScopePath <String>] [-IsInheritedAccessScope] -InputObject <CimInstance[]>
+
+   [-PassThru] [-IpamDnsConditionalForwarder] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-IpamAccessScope [-AccessScopePath <String>] [-IsInheritedAccessScope] -InputObject <CimInstance[]>
+
+   [-PassThru] [-IpamDnsResourceRecord] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-IpamAccessScope [-AccessScopePath <String>] [-IsInheritedAccessScope] -InputObject <CimInstance[]>
+
+   [-PassThru] [-IpamDnsZone] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-IpamAccessScope [-AccessScopePath <String>] [-IsInheritedAccessScope] -InputObject <CimInstance[]>
+
+   [-PassThru] [-IpamAddressSpace] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-IpamAccessScope [-AccessScopePath <String>] [-IsInheritedAccessScope] -InputObject <CimInstance[]>
+
+   [-PassThru] [-IpamSubnet] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-IpamAccessScope [-AccessScopePath <String>] [-IsInheritedAccessScope] -InputObject <CimInstance[]>
+
+   [-PassThru] [-IpamBlock] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure an access scope'
+  code: |-
+    PS C:\> $Zone = Get-IpamDnsZone -ZoneType Forward -ZoneName "dublin.contoso.com"
+    PS C:\> Set-IpamAccessScope -IpamDnsZone -InputObject $Zone -AccessScopePath "\Global\Europe" -PassThru
+  description: |-
+    The first command gets the IPAM DNS zone named dublin.contoso.com and stores it in the variable named $Zone.
+    The second command adds DHCP scopes and superscopes to the access scope Global\Europe.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.Universal Time Coordinate
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessScopePath
+  description: |+
+    Specifies the path to the access scope.
+    All access scopes must be children of the global scope.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    The acceptable values for this parameter are:
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IpamAddressSpace
+  isRequired: true
+  description: |+
+    Indicates that the access scope is assigned to the IPAM address space object.
+    An address space contains IP blocks, IP subnets, IP ranges, and IP addresses.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IpamBlock
+  isRequired: true
+  description: |+
+    Indicates that the access scope is assigned to the IP address block object.
+    An IP address block is the largest unit used for address space management, and is comprised of smaller units called IP address ranges.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IpamDhcpScope
+  isRequired: true
+  description: |+
+    Indicates that the access scope is assigned to the DHCP scope object.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IpamDhcpServer
+  isRequired: true
+  description: |+
+    Indicates that the access scope is assigned to DHCP servers.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IpamDhcpSuperscope
+  isRequired: true
+  description: |+
+    Indicates that the access scope is assigned to DHCP superscopes.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IpamDnsConditionalForwarder
+  isRequired: true
+  description: |+
+    Indicates that the access scope is assigned to DNS conditional forwarders.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IpamDnsResourceRecord
+  isRequired: true
+  description: |+
+    Indicates that the access scope is assigned to DNS resource records.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IpamDnsServer
+  isRequired: true
+  description: |+
+    Indicates that the access scope is assigned to DNS servers.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IpamDnsZone
+  isRequired: true
+  description: |+
+    Indicates that the access scope is assigned to DNS zones.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IpamRange
+  isRequired: true
+  description: |+
+    Indicates that the access scope is assigned to IPv4 or IPv6 address ranges.
+    Address ranges are collections of IP addresses based on characteristics such as address family and starting/ending addresses.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IpamSubnet
+  isRequired: true
+  description: |+
+    Indicates that the access scope is assigned to IP subnets.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IsInheritedAccessScope
+  description: |+
+    Indicates that the input object is assigned to the access scope of its parent object.
+    For example, if the input object is DNS resource record, its access scope will be set to the access scope of the DNS zone the resource record is part of.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: IpamServer.Set-IpamAccessScope
+name: Set-IpamAccessScope
+description: |-
+  The **Set-IpamAccessScope** configures an IP Address Management (IPAM) server access scope.
+  Access scopes are used to manage permissions to IPAM objects such as Domain Name System (DNS) servers, Dynamic Host Configuration Protocol (DHCP) scopes, IP address ranges, etc..
+
+  When you install IPAM a global scope is automatically created for you.
+  By default, users with permissions to the global scope have access to all the items in the IPAM infrastructure.
+  To provide more control over access permissions you can create subscopes such as a geographic location or job role.
+  You can use the **Set-IpamAccessScope** cmdlet to assign access scopes to specific IPAM objects.
+
+  The IPAM objects on which the access scope is to be set is provided in **InputObject** parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamAccessScope.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/set-ipamaccessscope?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-IpamAccessScope

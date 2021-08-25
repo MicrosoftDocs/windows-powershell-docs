@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of running compute systems from the Hyper-V Host Compute Service.
+module: HostComputeService
+notes: ""
+links:
+- text: Stop-ComputeProcess
+  href: ./Stop-ComputeProcess.yml
+syntaxes:
+- Get-ComputeProcess [[-Name] <String[]>] [-Owner <String[]>] [-Type <ComputeProcessType[]>] [<CommonParameters>]
+- Get-ComputeProcess [-Id] <String[]> [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies an array of IDs of compute systems that this cmdlet gets.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the compute system that this cmdlet gets.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Owner
+  description: |+
+    Specifies the management client that owns the compute systems that this cmdlet gets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ComputeProcessType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Type
+  description: |+
+    Specifies the type of compute systems that this cmdlet gets.
+    The acceptable values for this parameter are: VirtualMachine and Container.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Container, VirtualMachine
+uid: HostComputeService.Get-ComputeProcess
+name: Get-ComputeProcess
+description: |-
+  The **Get-ComputeProcess** cmdlet gets a list of running compute systems from the Hyper-V Host Compute Service, including virtual machines and containers.
+
+  You must run this cmdlet from an elevated PowerShell session.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HostCompute.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: HostComputeService
+  ms.date: 12/21/2016
+  online version: https://docs.microsoft.com/powershell/module/hostcomputeservice/get-computeprocess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ComputeProcess

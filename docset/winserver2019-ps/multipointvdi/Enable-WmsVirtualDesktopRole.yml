@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Installs the Hyper-V virtual desktop role and customizes it for use with MultiPoint services.
+module: MultipointVdi
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-WmsVirtualDesktopRole
+  href: ./Disable-WmsVirtualDesktopRole.yml
+syntaxes:
+- Enable-WmsVirtualDesktopRole [-Restart] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Install the Hyper-V virtual desktop role'
+  code: |-
+    PS C:\> Enable-WmsVirtualDesktopRole -Restart
+  description: |-
+    This command installs the Hyper-V virtual desktop role and reboots the computer to apply the change.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Restart
+  description: |+
+    Indicates that this operation automatically restarts the computer to apply the change.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MultipointVdi.Enable-WmsVirtualDesktopRole
+name: Enable-WmsVirtualDesktopRole
+description: |-
+  The **Enable-WmsVirtualDesktopRole** cmdlet installs the virtual desktop Hyper-V role if it isn't already installed, and optionally restarts the computer to apply the change.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPointVdi.dll-Help.xml
+  Module Name: MultipointVdi
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipointvdi/enable-wmsvirtualdesktoprole?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-WmsVirtualDesktopRole

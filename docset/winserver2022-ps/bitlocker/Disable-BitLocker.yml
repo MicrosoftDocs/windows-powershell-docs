@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables BitLocker Drive Encryption for a volume.
+module: BitLocker
+notes: ""
+inputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" /><span>[</span><xref href="], String[" data-throw-if-not-resolved="False" /><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Enable-BitLocker
+  href: ./Enable-BitLocker.yml
+- text: Get-BitLockerVolume
+  href: ./Get-BitLockerVolume.yml
+- text: Lock-BitLocker
+  href: ./Lock-BitLocker.yml
+- text: Resume-BitLocker
+  href: ./Resume-BitLocker.yml
+- text: Suspend-BitLocker
+  href: ./Suspend-BitLocker.yml
+- text: Unlock-BitLocker
+  href: ./Unlock-BitLocker.yml
+syntaxes:
+- Disable-BitLocker [-MountPoint] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable BitLocker for a volume'
+  code: |-
+    PS C:\> Disable-BitLocker -MountPoint "C:"
+  description: |-
+    This command disables BitLocker for the specified BitLocker volume.
+    BitLocker begins decrypting data on C: immediately.
+  summary: ""
+- title: 'Example 2: Disable BitLocker for all volumes'
+  code: |-
+    PS C:\>$BLV = Get-BitLockerVolume
+    PS C:\>Disable-BitLocker -MountPoint $BLV
+  description: |-
+    This example disables BitLocker encryption for all volumes.
+
+    The first command uses **Get-BitLockerVolume** to get all the BitLocker volumes for the current computer and stores them in the $BLV variable.
+
+    The second command disables BitLocker encryption for all the BitLocker volumes stored in the $BLV variable.
+    BitLocker begins decrypting data on the volumes.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MountPoint
+  isRequired: true
+  description: |+
+    Specifies an array of drive letters or BitLocker volume objects.
+    The cmdlet disables protection for the volumes specified.
+    To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: BitLocker.Disable-BitLocker
+name: Disable-BitLocker
+description: |-
+  The **Disable-BitLocker** cmdlet disables BitLocker Drive Encryption for a BitLocker volume.
+  When you run this cmdlet, it removes all key protectors and begins decrypting the content of the volume.
+
+  If the volume that hosts the operating system contains any automatic unlocking keys, the cmdlet does not proceed.
+  You can use the **Clear-BitLockerAutoUnlock** cmdlet to remove all automatic unlocking keys.
+  Then you can disable BitLocker for the volume.
+
+  For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BitLocker-help.xml
+  Module Name: BitLocker
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/bitlocker/disable-bitlocker?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-BitLocker

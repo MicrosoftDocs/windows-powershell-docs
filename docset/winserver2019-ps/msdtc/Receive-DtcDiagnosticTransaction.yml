@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Propagates a transaction from a given diagnostic Resource Manager.
+module: MsDtc
+notes: ""
+links:
+- text: Complete-DtcDiagnosticTransaction
+  href: ./Complete-DtcDiagnosticTransaction.yml
+- text: New-DtcDiagnosticTransaction
+  href: ./New-DtcDiagnosticTransaction.yml
+- text: Send-DtcDiagnosticTransaction
+  href: ./Send-DtcDiagnosticTransaction.yml
+- text: Undo-DtcDiagnosticTransaction
+  href: ./Undo-DtcDiagnosticTransaction.yml
+syntaxes:
+- >-
+  Receive-DtcDiagnosticTransaction [[-ComputerName] <String>] [[-Port] <Int32>]
+
+   [[-PropagationMethod] <DtcTransactionPropagation>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Receive a diagnostic transaction'
+  code: |-
+    PS C:\> Receive-DtcDiagnosticTransaction -ComputerName "Host1" -Port 17123 -PropagationMethod Pull
+
+    Id
+    --
+    d23fd4b1-1b54-486a-9e9f-a92550a19ce2
+  description: |-
+    This command pulls a diagnostic transaction from Host1 port 17123.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the host name of the computer on which the RM runs.
+    If you do not specify a host name, this cmdlet uses the name of the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the listening port of the test RM.
+
+  defaultValue: "3002"
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DtcTransactionPropagation" data-throw-if-not-resolved="False" />
+  name: PropagationMethod
+  description: |+
+    Specifies the propagation mechanism, pull or push, to use.
+    The default is pull.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: Pull, Push
+uid: MsDtc.Receive-DtcDiagnosticTransaction
+name: Receive-DtcDiagnosticTransaction
+description: |-
+  The **Receive-DtcDiagnosticTransaction** cmdlet propagates a transaction from a specified diagnostic Resource Manager (RM).
+  A transaction is created on the specified RM and propagated to the Windows PowerShell® client using either pull or push propagation.
+  Use the **PropagationMethod** parameter to specify the propagation mechanism.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dtc.PowerShell.dll-Help.xml
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/msdtc/receive-dtcdiagnostictransaction?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Receive-DtcDiagnosticTransaction

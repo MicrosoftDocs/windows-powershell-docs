@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Uninstalls the CA role service and removes the configuration information.
+module: ADCSDeployment
+notes: |-
+  * To uninstall the CA role service, ensure you run Windows PowerShell as an administrator. You can run the command with the *Force* parameter to bypass the prompt for confirmation.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Deployment.Commands.CA.CertificationAuthoritySetupResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Install-AdcsCertificationAuthority
+  href: ./Install-AdcsCertificationAuthority.yml
+syntaxes:
+- Uninstall-AdcsCertificationAuthority [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Uninstall the Active Directory CA role service'
+  code: |-
+    PS C:\> Uninstall-AdcsCertificationAuthority -Force
+  description: |-
+    This command uninstalls the Active Directory Certification Authority role service and does not prompt for user confirmation.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADCSDeployment.Uninstall-AdcsCertificationAuthority
+name: Uninstall-AdcsCertificationAuthority
+description: |-
+  The **Uninstall-AdcsCertificationAuthority** cmdlet removes the Active certificate authority (CA) role and removes the configuration information.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+  Module Name: ADCSDeployment
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsdeployment/uninstall-adcscertificationauthority?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Uninstall-AdcsCertificationAuthority

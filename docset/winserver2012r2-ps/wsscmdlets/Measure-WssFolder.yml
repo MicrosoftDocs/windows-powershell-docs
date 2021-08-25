@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Calculates the size of a given server folder.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.Storage.CalculateFolderSizeRequest" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates the CalculateFolderSizeRequest object which can be used to calculate the size of a server folder.
+links:
+- text: Get-WssFolder
+  href: ./Get-WssFolder.yml
+- text: Add-WssFolder
+  href: ./Add-WssFolder.yml
+- text: Set-WssFolder
+  href: ./Set-WssFolder.yml
+- text: Remove-WssFolder
+  href: ./Remove-WssFolder.yml
+syntaxes:
+- Measure-WssFolder [-Folder] <Folder> [<CommonParameters>]
+examples:
+- title: 'Example 1: Calculate the size of a server folder'
+  code: |-
+    PS C:\> $Pfolder = Get-WssFolder -Name "Projects01"
+    Measure-WssFolder -Folder $Pfolder
+  description: |-
+    The first command gets the folder named Projects01, and stores the folder in the **$Pfolder** variable.
+    The second command calculates the size of the server folder stored in **$Pfolder**.
+  summary: ""
+parameters:
+- type: <xref href="Folder" data-throw-if-not-resolved="False" />
+  name: Folder
+  isRequired: true
+  description: |+
+    Specifies the folder to calculate the size of.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Measure-WssFolder
+name: Measure-WssFolder
+description: |-
+  The **Measure-WssFolder** cmdlet calculates the size of a given server folder.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/measure-wssfolder?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Measure-WssFolder

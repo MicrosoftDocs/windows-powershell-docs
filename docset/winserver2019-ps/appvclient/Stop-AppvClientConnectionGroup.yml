@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Shuts down the shared virtual environment of a connection group.
+module: AppvClient
+notes: |-
+  * The cmdlet checks that you have permissions to perform the specific action. If not, the cmdlet returns an error.
+  * If the enable operation fails, the cmdlet returns an error.
+  * If the cmdlet cannot find the connection group on the target computer, the cmdlet returns an error.
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvClientConnectionGroup
+  href: ./Add-AppvClientConnectionGroup.yml
+- text: Disable-AppvClientConnectionGroup
+  href: ./Disable-AppvClientConnectionGroup.yml
+- text: Enable-AppvClientConnectionGroup
+  href: ./Enable-AppvClientConnectionGroup.yml
+- text: Get-AppvClientConnectionGroup
+  href: ./Get-AppvClientConnectionGroup.yml
+- text: Mount-AppvClientConnectionGroup
+  href: ./Mount-AppvClientConnectionGroup.yml
+- text: Remove-AppvClientConnectionGroup
+  href: ./Remove-AppvClientConnectionGroup.yml
+- text: Repair-AppvClientConnectionGroup
+  href: ./Repair-AppvClientConnectionGroup.yml
+syntaxes:
+- Stop-AppvClientConnectionGroup [-Global] [-GroupId] <Guid> [-VersionId] <Guid> [<CommonParameters>]
+- Stop-AppvClientConnectionGroup [-Global] [-Name] <String> [<CommonParameters>]
+- Stop-AppvClientConnectionGroup [-Global] [-ConnectionGroup] <AppvClientConnectionGroup> [<CommonParameters>]
+examples:
+- title: 'Example 1: Stop a virtual environment for a named group'
+  code: |-
+    PS C:\> Stop-AppvClientConnectionGroup -Name "MyGroup"
+  description: |-
+    This command stops the virtual environment of the enabled connection group that has the name MyGroup.
+  summary: ""
+- title: 'Example 2: Stop a virtual environment for a group by using its ID'
+  code: |-
+    PS C:\> Stop-AppvClientConnectionGroup -GroupID 793afd37-bd68-4ea1-859a-669f6afd0aa8
+  description: |-
+    This command stops the virtual environment of the enabled connection group that has the group ID 793afd37-bd68-4ea1-859a-669f6afd0aa8.
+  summary: ""
+- title: 'Example 3: Stop virtual environment for groups with names that match a string'
+  code: |-
+    PS C:\> Get-AppvClientConnectionGroup -Name "MyGr*" | Stop-AppvClientConnectionGroup
+  description: |-
+    This command gets all of the enabled connection groups that have the string MyGr in the name, and then stops each of their virtual environments.
+  summary: ""
+parameters:
+- type: <xref href="AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+  name: ConnectionGroup
+  isRequired: true
+  description: |+
+    Specifies an App-V Connection Group object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    Indicates that the cmdlet shuts down virtual environments for the specified connection groups for all users on the computer.
+    Usage of the *Global* parameter requires administrative credentials.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    Specifies the group ID of a specific connection group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the Microsoft Application Virtualization (App-V) connection group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionId
+  isRequired: true
+  description: |+
+    Specifies a GUID that differentiates a connection group version from other versions, whether older, newer, or of a different lineage.
+    If you do not specify this parameter, the cmdlet operates on all versions of the connection group.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Stop-AppvClientConnectionGroup
+name: Stop-AppvClientConnectionGroup
+description: |-
+  The **Stop-AppvClientConnectionGroup** cmdlet shuts down the shared virtual environment of a connection group.
+  All running processes in the connection group virtual environment are shutdown.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/stop-appvclientconnectiongroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-AppvClientConnectionGroup

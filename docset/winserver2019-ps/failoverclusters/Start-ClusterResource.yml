@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Brings a resource online in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterResource
+  href: ./Add-ClusterResource.yml
+- text: Get-ClusterResource
+  href: ./Get-ClusterResource.yml
+- text: Move-ClusterResource
+  href: ./Move-ClusterResource.yml
+- text: Remove-ClusterResource
+  href: ./Remove-ClusterResource.yml
+- text: Resume-ClusterResource
+  href: ./Resume-ClusterResource.yml
+- text: Stop-ClusterResource
+  href: ./Stop-ClusterResource.yml
+- text: Suspend-ClusterResource
+  href: ./Suspend-ClusterResource.yml
+syntaxes:
+- >-
+  Start-ClusterResource [[-Name] <String>] [-IgnoreLocked] [-ChooseBestNode] [-Wait <Int32>]
+
+   [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Start-ClusterResource -Name "IP Address 172.24.11.0"
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    IP Address 172.2...  Online              cluster1FS12        IP Address
+  description: |-
+    This example brings the resource called IP Address 172.24.11.0 online on the local cluster.
+    Before bringing the resource online, this cmdlet brings online any resources on which the resource depends.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Start-ClusterResource -Name "IP Address 172.24.11.0" -Wait 0
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    IP Address 172.2...  OnlinePending       cluster1FS12        IP Address
+  description: |-
+    This example brings the resource called IP Address 172.24.11.0 online on the local cluster.
+    Before bringing the resource online, this cmdlet brings online any resources on which the resource depends.
+    The Windows PowerShell® prompt returns as soon as the action has been initiated.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ChooseBestNode
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IgnoreLocked
+  description: |+
+    Specifies that locked groups are ignored when running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster resource to bring online.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster resource to bring online.
+    This can also be the name of a Cluster Shared Volume (CSV).
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the **Wait** parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Start-ClusterResource
+name: Start-ClusterResource
+description: |-
+  The **Start-ClusterResource** cmdlet brings a resource online in a failover cluster.
+  Before the resource is brought online, any resources that it depends are brought online.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/start-clusterresource?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-ClusterResource

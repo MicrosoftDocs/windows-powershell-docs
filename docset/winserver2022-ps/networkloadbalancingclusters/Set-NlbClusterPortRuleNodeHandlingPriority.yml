@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the host priority of a port rule for a specific Network Load Balancing (NLB) node.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.PortRule" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.PortRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-NlbClusterPortRule
+  href: ./Add-NlbClusterPortRule.yml
+- text: Set-NlbClusterPortRule
+  href: ./Set-NlbClusterPortRule.yml
+- text: Set-NlbClusterPortRuleNodeWeight
+  href: ./Set-NlbClusterPortRuleNodeWeight.yml
+syntaxes:
+- >-
+  Set-NlbClusterPortRuleNodeHandlingPriority [-HostName <String>] -InterfaceName <String> -IP <IPAddress>
+
+   [-Port] <UInt32> -HandlingPriority <Int32> [<CommonParameters>]
+- >-
+  Set-NlbClusterPortRuleNodeHandlingPriority -InputObject <PortRule[]> -HandlingPriority <Int32>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the handling priority of a given port rule'
+  code: |-
+    PS C:\>Get-NlbClusterNode -NodeName "Node001" | Get-NlbClusterPortRule | Set-NlbClusterPortRuleNodeHandlingPriority -HandlingPriority 3
+    IPAddress State     Start     End       Protocol  Mode      Affinity  Timeout 
+    --------- -----     -----     ---       --------  ----      --------  ------- 
+    All       Enabled   0         65535     Both      Single
+  description: |-
+    This command changes the handling priority of the given port rule for the node named Node001 to 3.
+    This is applicable for port rules with Single mode.
+  summary: ""
+- title: 'Example 2: Change the handling priority of a given port rule'
+  code: |-
+    PS C:\>Set-NlbClusterPortRuleNodeHandlingPriority -HostName "Node002" -Interface "Vlan-3" -IP 255.255.255.255 -Port 80 -HandlingPriority 4
+    IPAddress State     Start     End       Protocol  Mode      Affinity  Timeout 
+    --------- -----     -----     ---       --------  ----      --------  ------- 
+    All       Enabled   0         65535     Both      Single
+  description: |-
+    This command changes the handling priority of the given port rule for the node named Node001 to 4.
+    This is applicable for port rules with Single mode.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: HandlingPriority
+  isRequired: true
+  description: |+
+    Specifies the handling priority for the cluster node.
+    This is only applicable when the filtering mode of the port rule is Single host.
+
+  defaultValue: None
+  position: Named
+  aliases: HP
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: Named
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="PortRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the cluster port rule on which this cmdlet set the handling priority.
+    This is only applicable when the filtering mode for the port rule is Single host.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  isRequired: true
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IP
+  isRequired: true
+  description: |+
+    Specifies the IP address for the cluster port rule on which this cmdlet sets the handling priority.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Port
+  isRequired: true
+  description: |+
+    Specifies a port number within the port rule on which this cmdlet sets the node handling priority.
+    The acceptable values for this parameter are:0 through 65535.
+
+  defaultValue: None
+  position: "0"
+  aliases: P
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Set-NlbClusterPortRuleNodeHandlingPriority
+name: Set-NlbClusterPortRuleNodeHandlingPriority
+description: |-
+  The **Set-NlbClusterPortRuleNodeHandlingPriority** cmdlet sets the host priority of a port rule for a specific Network Load Balancing (NLB) node.
+  The host priority specifies a unique identifier (ID) for each node.
+  The node with the lowest numerical priority among the current members of the cluster handles all of the network traffic on the cluster that is not covered by a port rule.
+  You can override these priorities or provide load balancing for specific ranges of ports by specifying rules.
+  If a new node joins the cluster and its priority conflicts with another node in the cluster, then the node is not accepted as part of the cluster.
+  The rest of the cluster continues to handle the traffic.
+
+  This operation changes the configuration on all cluster nodes.
+  As a result, the NLB cluster restarts the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster are not initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/set-nlbclusterportrulenodehandlingpriority?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NlbClusterPortRuleNodeHandlingPriority

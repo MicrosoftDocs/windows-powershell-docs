@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the secondary database connection string for the shared database server in a high availability environment configuration.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-RDDatabaseConnectionString
+  href: ./Set-RDDatabaseConnectionString.yml
+syntaxes:
+- >-
+  Remove-RDDatabaseConnectionString [-DatabaseConnectionString] [[-ConnectionBroker] <String>] [-Force]
+
+   [<CommonParameters>]
+- >-
+  Remove-RDDatabaseConnectionString [-DatabaseSecondaryConnectionString] [[-ConnectionBroker] <String>] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: Remove a remote desktop database connection string
+  code: |-
+    PS C:\> remove-RDDatabaseConnectionString -ConnectionBroker "Rdcb.Contoso.com" -DatabaseConnectionString "DRIVER=SQL Server Native Client 10.0;SERVER=Sqlserver.Contoso.com;Trusted_Connection=Yes;APP=Remote Desktop Services Connection Broker;Database=RemoteDesktopDeployment"
+  description: |-
+    This command removes the database connection string for the RD Connection Broker named Rdcb.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the RD Connection Broker server for a remote desktop deployment.
+    If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DatabaseConnectionString
+  isRequired: true
+  description: |+
+    This parameter is not currently supported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DatabaseSecondaryConnectionString
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet removes the secondary database connection string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Remove-RDDatabaseConnectionString
+name: Remove-RDDatabaseConnectionString
+description: |-
+  The **Remove-RDDatabaseConnectionString** cmdlet removes the secondary database connection string for the database server in a high availability environment with multiple Remote Desktop Connection Broker (RD Connection Broker) servers.
+
+  High availability supports multiple RD Connection Broker roles and servers, and uses a database server to store the configuration information for RD Connection Broker servers.
+
+  A secondary database connection string allows for connectivity in the case of an expired password for the primary database connection string.
+  The secondary database connection string is optional.
+  You can set this string by using the Set-RDDatabaseConnectionString cmdlet.
+  You can remove the string by using the current cmdlet.
+
+  Currently, you cannot use this cmdlet to remove the primary database connection string.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/remove-rddatabaseconnectionstring?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-RDDatabaseConnectionString

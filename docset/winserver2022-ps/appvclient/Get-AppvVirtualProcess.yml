@@ -1,0 +1,117 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays the virtual processes running on a computer.
+module: AppvClient
+notes: ""
+inputs:
+- name: <xref href="System.Diagnosis.Process" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Start-AppvVirtualProcess
+  href: ./Start-AppvVirtualProcess.yml
+syntaxes:
+- >-
+  Get-AppvVirtualProcess [[-Name] <String[]>] [-ComputerName <String[]>] [-Module] [-FileVersionInfo]
+
+   [<CommonParameters>]
+- >-
+  Get-AppvVirtualProcess -Id <Int32[]> [-ComputerName <String[]>] [-Module] [-FileVersionInfo]
+
+   [<CommonParameters>]
+- >-
+  Get-AppvVirtualProcess [-ComputerName <String[]>] [-Module] [-FileVersionInfo] -InputObject <Process[]>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Display all active virtual processes'
+  code: |-
+    PS C:\> Get-AppvVirtualProcess
+  description: |-
+    This command displays all active virtual processes.
+  summary: ""
+- title: 'Example 2: Display file information for a virtual process'
+  code: |-
+    PS C:\> Get-AppvVirtualProcess -Name "myVirtualProcess" -FileVersionInfo
+  description: |-
+    This command displays file information for the process named myVirtualProcess.
+  summary: ""
+- title: 'Example 3: Display file information for a virtual process by using the pipeline operator'
+  code: |-
+    PS C:\> Get-Process -Name "myVirtualProcess" | Get-AppvVirtualProcess -FileVersionInfo
+  description: |-
+    This command displays file information for the process named myVirtualProcess.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies an array of computer names.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FileVersionInfo
+  description: |+
+    Indicates that this cmdlet returns the **ProductVersion**, **FileVersion** and un-virtualized **Filename** for each **ProcessName**.
+
+  defaultValue: None
+  position: Named
+  aliases: FV, FVI
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the Virtual Process ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: PID
+  parameterValueGroup: ""
+- type: <xref href="Process" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Module
+  description: |+
+    Specifies a module.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of a process, which is also known as **ProcessName**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ProcessName
+  parameterValueGroup: ""
+uid: AppvClient.Get-AppvVirtualProcess
+name: Get-AppvVirtualProcess
+description: |-
+  The **Get-AppvVirtualProcess** cmdlet displays each of the virtual processes that are running on a computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: AppVClientCmdlets-help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/get-appvvirtualprocess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AppvVirtualProcess

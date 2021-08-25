@@ -1,0 +1,361 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the IPsec parameters of a VPN connection.
+module: VpnClient
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnConnectionIPsecConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-VpnConnection
+  href: ./Add-VpnConnection.yml
+syntaxes:
+- >-
+  Set-VpnConnectionIPsecConfiguration [-ConnectionName] <String> [-Force] [-AllUserConnection] [-RevertToDefault]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VpnConnectionIPsecConfiguration [-ConnectionName] <String>
+
+   [-AuthenticationTransformConstants] <AuthenticationTransformConstants>
+
+   [-CipherTransformConstants] <CipherTransformConstants> [-EncryptionMethod] <EncryptionMethod>
+
+   [-IntegrityCheckMethod] <IntegrityCheckMethod> [-PfsGroup] <PfsGroup> [-DHGroup] <DHGroup> [-PassThru]
+
+   [-Force] [-AllUserConnection] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the IPsec configuration for an IKEv2 tunnel'
+  code: |-
+    PS C:\> Add-VpnConnection -Name "Contoso" -ServerAddress 176.16.1.2 -TunnelType "Ikev2"
+    PS C:\> Set-VpnConnectionIPsecConfiguration -ConnectionName "Contoso" -AuthenticationTransformConstants None -CipherTransformConstants AES256 -EncryptionMethod AES256 -IntegrityCheckMethod SHA384 -PfsGroup None -DHGroup ECP384 -PassThru -Force
+    AuthenticationTransformConstants : None
+
+    CipherTransformConstants         : AES256
+
+    DHGroup                          : ECP384
+
+    IntegrityCheckMethod             : SHA384
+
+    PfsGroup                         : None
+
+    EncryptionMethod                 : AES256
+  description: |-
+    This example sets the IPsec configuration for a VPN connection using IKEv2.
+
+    The first command uses the Add-VpnConnection cmdlet to add a VPN connection on the server with the address 176.16.1.2.
+    The cmdlet specifies an IKEv2 tunnel.
+
+    The second command uses the **Set-VpnConnectionIPsecConfiguration** cmdlet to set the configuration by using the *ConnectionName* parameter.
+    The command also specifies values for the *CipherTransformConstants*, *EncryptionMethod*, *IntegrityCheckMethod*, and *DHGroup* parameters.
+  summary: ""
+- title: 'Example 2: Set the IPsec configuration for an L2TP tunnel'
+  code: |-
+    PS C:\> Add-VpnConnection -Name "Contoso" -ServerAddress 176.16.1.2 -TunnelType "L2tp"
+    PS C:\> Set-VpnConnectionIPsecConfiguration -ConnectionName "Contoso" -AuthenticationTransformConstants None -CipherTransformConstants AES128 -EncryptionMethod AES128 -IntegrityCheckMethod SHA256 -PfsGroup None -DHGroup ECP256 -PassThru -Force
+    AuthenticationTransformConstants : None
+
+    CipherTransformConstants         : AES128
+
+    DHGroup                          : ECP256
+
+    IntegrityCheckMethod             : SHA256
+
+    PfsGroup                         : None
+
+    EncryptionMethod                 : AES128
+  description: |-
+    This example sets the IPsec configuration for an L2TP tunnel.
+
+    The first command uses **Add-VpnConnection** to add a VPN connection on the server with the address 176.16.1.2.
+    The command also specifies an L2TP tunnel.
+
+    The second command uses **Set-VpnConnectionIPsecConfiguration** to set the configuration.
+    The command also specifies values for the *CipherTransformConstants*, *EncryptionMethod*, *IntegrityCheckMethod*, and *DHGroup* parameters.
+  summary: ""
+- title: 'Example 3: Set the IPsec configuration for an IKEv2 tunnel with 128-bit data blocks'
+  code: |-
+    PS C:\>Add-VpnConnection -Name "Contoso" -ServerAddress 176.16.1.2 -TunnelType "Ikev2"
+    PS C:\> Set-VpnConnectionIPsecConfiguration -ConnectionName "Contoso" -AuthenticationTransformConstants GCMAES128 -CipherTransformConstants None -EncryptionMethod AES128 -IntegrityCheckMethod SHA256 -PfsGroup None -DHGroup ECP256 -PassThru -Force
+    AuthenticationTransformConstants : GCMAES128
+
+    CipherTransformConstants         : None
+
+    DHGroup                          : ECP256
+
+    IntegrityCheckMethod             : SHA256
+
+    PfsGroup                         : None
+
+    EncryptionMethod                 : AES128
+  description: |-
+    This example sets the IPsec configuration for an IKEv2 tunnel with authentication transform constants.
+
+    The first command uses *Add-VpnConnection* to add a VPN connection on the server with the address 176.16.1.2.
+    The cmdlet specifies an IKEv2 tunnel.
+
+    The second command uses **Set-VpnConnectionIPsecConfiguration** to set the configuration.
+    The command also specifies values for the *CipherTransformConstants*, *EncryptionMethod*, *IntegrityCheckMethod*, and *DHGroup* parameters, as well as specifying a value for the *AuthenticationTransformConstants* parameter.
+  summary: ""
+- title: 'Example 4: Set the IPsec configuration for an IKEv2 tunnel with 256-bit data blocks'
+  code: |-
+    PS C:\>Add-VpnConnection -Name "Contoso" -ServerAddress 176.16.1.2 -TunnelType "Ikev2"
+    PS C:\> Set-VpnConnectionIPsecConfiguration -ConnectionName "Contoso" -AuthenticationTransformConstants GCMAES256 -CipherTransformConstants None -EncryptionMethod AES256 -IntegrityCheckMethod SHA384 -PfsGroup None -DHGroup ECP384 -PassThru -Force
+    AuthenticationTransformConstants : GCMAES256
+
+    CipherTransformConstants         : None
+
+    DHGroup                          : ECP384
+
+    IntegrityCheckMethod             : SHA384
+
+    PfsGroup                         : None
+
+    EncryptionMethod                 : AES256
+  description: |-
+    This example sets the IPsec configuration for an IKEv2 tunnel, and specifies authentication transform constants.
+
+    The first command uses **Add-VpnConnection** to add a VPN connection on the server with the address 176.16.1.2.
+    The cmdlet specifies an IKEv2 tunnel.
+
+    The second command uses **Set-VpnConnectionIPsecConfiguration** to set the configuration.
+    The command also specifies values for the *CipherTransformConstants*, *EncryptionMethod*, *IntegrityCheckMethod*, and *DHGroup* parameters, as well as specifying a value for the *AuthenticationTransformConstants* parameter.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllUserConnection
+  description: |+
+    Indicates that the VPN connection being modified is in the global phone book.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AuthenticationTransformConstants" data-throw-if-not-resolved="False" />
+  name: AuthenticationTransformConstants
+  isRequired: true
+  description: |+
+    Specifies authentication header (AH) transform in the IPsec policy.
+    For more information, see the Set-VpnServerIPsecConfiguration cmdlet.
+    The acceptable values for this parameter are:
+
+    - MD596
+    - SHA196
+    - SHA256128
+    - GCMAES128
+    - GCMAES192
+    - GCMAES256
+    - None
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: MD596, SHA196, SHA256128, GCMAES128, GCMAES192, GCMAES256, None
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CipherTransformConstants" data-throw-if-not-resolved="False" />
+  name: CipherTransformConstants
+  isRequired: true
+  description: |+
+    Specifies Encapsulating Security Payload (ESP) cipher transform in the IPsec policy.
+    Acceptable values for this parameter are: 
+
+    - DES
+    - DES3
+    - AES128
+    - AES192
+    - AES256
+    - GCMAES128
+    - GCMAES192
+    - GCMAES256
+    - None
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: DES, DES3, AES128, AES192, AES256, GCMAES128, GCMAES192, GCMAES256, None
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a VPN connection profile to modify.
+    To view existing VPN connection profiles, use the Get-VpnConnection cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="DHGroup" data-throw-if-not-resolved="False" />
+  name: DHGroup
+  isRequired: true
+  description: |+
+    Specifies the Diffie-Hellman (DH) Group to use during IKE key exchanges.
+    The acceptable values for this parameter are:
+
+    - None
+    - Group1
+    - Group2
+    - Group14
+    - ECP256
+    - ECP384
+    - Group24
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: None, Group1, Group2, Group14, ECP256, ECP384, Group24
+- type: <xref href="EncryptionMethod" data-throw-if-not-resolved="False" />
+  name: EncryptionMethod
+  isRequired: true
+  description: |+
+    Specifies the encryption method.
+    The acceptable values for this parameter are:
+
+    - DES
+    - DES3
+    - AES128
+    - AES192
+    - AES256
+    - GCMAES128
+    - GCMAES256
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: DES, DES3, AES128, AES192, AES256, GCMAES128, GCMAES256
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IntegrityCheckMethod" data-throw-if-not-resolved="False" />
+  name: IntegrityCheckMethod
+  isRequired: true
+  description: |+
+    Specifies the integrity check method used to protect data from tampering.
+    The acceptable values for this parameter are:
+
+    - MD5
+    - SHA1
+    - SHA256
+    - SHA384
+
+  defaultValue: None
+  pipelineInput: true
+  position: "6"
+  aliases: ""
+  parameterValueGroup: MD5, SHA1, SHA256, SHA384
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+    If you specify this parameter, the cmdlet returns the **VpnConnection** object that contains the **VpnConnection** configuration settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PfsGroup" data-throw-if-not-resolved="False" />
+  name: PfsGroup
+  isRequired: true
+  description: |+
+    Specifies the Perfect Forwarding Secrecy (PFS) Group in the IPsec policy.
+    The acceptable values for this parameter are:
+
+    - None
+    - PFS1
+    - PFS2
+    - PFS2048
+    - ECP256
+    - ECP384
+    - PFSMM
+    - PFS24
+
+  defaultValue: None
+  pipelineInput: true
+  position: "7"
+  aliases: ""
+  parameterValueGroup: None, PFS1, PFS2, PFS2048, ECP256, ECP384, PFSMM, PFS24
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RevertToDefault
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet sets the IPsec parameters to the default values.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: VpnClient.Set-VpnConnectionIPsecConfiguration
+name: Set-VpnConnectionIPsecConfiguration
+description: |-
+  The **Set-VpnConnectionIpsecConfiguration** cmdlet sets the IPsec parameters of a VPN connection.
+  The settings apply only to IKEv2 and L2TP VPN connections.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_VpnConnectionIPsecConfiguration_v1.0.cdxml-help.xml
+  Module Name: VpnClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/vpnclient/set-vpnconnectionipsecconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VpnConnectionIPsecConfiguration

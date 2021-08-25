@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the File History managed status of a computer.
+module: WssCmdlets
+notes: ""
+syntaxes:
+- Set-WssFileHistoryManagementStatus [-ComputerName] <String> [-Delete] [-Force] [-UnManage] [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Change the File History managed status of a computer'
+  code: |-
+    PS C:\> Set-WssFileHistoryManagementStatus -ComputerName "Workstation071" -UnManage -Delete
+  description: |-
+    This command changes the File History managed status of a client computer named Workstation071 to unmanaged, and deletes the File History Backup folder for the client computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of a computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Delete
+  description: |+
+    Indicates that the cmdlet deletes the File History Backup folder for the client computer when you specify the **UnManage** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UnManage
+  description: |+
+    Indicates that the server does not manage the File History of the client computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Set-WssFileHistoryManagementStatus
+name: Set-WssFileHistoryManagementStatus
+description: |-
+  The **Set-WssFileHistoryManagementStatus** cmdlet changes the File History managed status of a computer.
+  Specify the **UnManage** parameter if you do not want the server to manage the client computer that you specify in the **ComputerName** parameter.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssfilehistorymanagementstatus?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

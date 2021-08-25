@@ -1,0 +1,165 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the configuration that is common to both DirectAccess (DA) and VPN such SSL certificate, Internal interface, and Internet interface.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#RemoteAccessCommon" data-throw-if-not-resolved="False" />
+  description: "The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.\r\nThe path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.\r\n                         \r\nThe RemoteAccessCommon object consists of the following properties: \r\n                         \r\n -- The status of DA: installed or uninstalled. \r\n                         \r\n -- The status of VPN: installed or uninstalled. \r\n                         \r\n -- The status of site-to-site VPN: installed or uninstalled. \r\n                         \r\n -- The status of load balancing: enabled or disabled. \r\n                         \r\n -- The name of the internet-facing interface of the RA server. \r\n                         \r\n -- The name of the internal-facing interface of the RA server. \r\n                         \r\n -- The SSL certificate which is used for IP-HTTPS and SSTP."
+links:
+- text: Get-RemoteAccess
+  href: ./Get-RemoteAccess.yml
+- text: Install-RemoteAccess
+  href: ./Install-RemoteAccess.yml
+- text: Set-DAServer
+  href: ./Set-DAServer.yml
+- text: Uninstall-RemoteAccess
+  href: ./Uninstall-RemoteAccess.yml
+syntaxes:
+- >-
+  Set-RemoteAccess [-SslCertificate <X509Certificate2>] [-ComputerName <String>] [-InternetInterface <String>]
+
+   [-InternalInterface <String>] [-Force] [-PassThru] [-CapacityKbps <UInt64>] [-UseHttp <Boolean>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Set-RemoteAccess -InternalInterface 'DomainConnection' -InternetInterface 'Public Network'
+  description: |-
+    This example will change the internal and external interfaces configured for DA.
+    Since in our example setup, DA is deployed in edge topology, the cmdlet will look for the IP configured in ConnectToAddress while installing DA and compare it with the new internet interface IP to make sure that there is a match.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: CapacityKbps
+  description: |+
+    Specifies the bandwidth processing capacity of the gateway in Kbps.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the Remote Access (RA) server computer specific tasks should be run.
+    If this parameter is specified, then the configuration changes take place on that RA server.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: "Forces the command to run without asking for user confirmation.\r\n                         \r\nWhen suppressed, the cmdlet assumes user confirmation for the following conditions. \r\n                         \r\n -- Changing the interfaces: This results in re-configuration which is time consuming and the server cannot accept connections during this time.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InternalInterface
+  description: "Specifies the name of the corpnet facing interface. \r\n                         \r\n -- In a single-network-adapter configuration, if the administrator wants to change the interface, then the new name should be specified for both this and the **InternetInterface** parameters.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InternetInterface
+  description: "Specifies the name of the internet facing interface. \r\n                         \r\n -- In a single-network-adapter configuration, if the administrator wants to change the interface, then the new name should be specified for both the **InternalInterface** and this parameters. \r\n                         \r\n -- When changing the internet interface, if the IP address of the ConnectTo is known, then the IP address of the specified interface is compared with the ConnectTo address.\r\nIf there is a mismatch, then the interface is not changed and the cmdlet errors out.\r\nIf only the name of ConnectTo is known and it cannot be resolved or if the RA server is deployed behind NAT, then it is assumed that the new interface matches with the ConnectTo address.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: SslCertificate
+  description: "Specifies the certificate that will be used to secure remote clients connectivity over HTTPS, in case of DA, or SSTP, in case of VPN. \r\n                         \r\n -- SSL certificate changes are allowed only within the bounds of the current value of the ConnectTo address (configurable through the Set-DAServer cmdlet), such as the subject name of the new certificate should always match ConnectTo.\r\nAll other certificates are rejected and the cmdlet errors out, even if all other criteria for an SSL certificate are satisfied.\r\nThis behavior is applicable irrespective of whether NAT is deployed or not and whether the server has a single network adapter or two network adapters. \r\n                         \r\n -- In a network load balancing scenario the changes take effect on all nodes.\r\nHence, the specified certificate is required to be present on all nodes in the cluster. \r\n                         \r\n ---- If the certificate is not found on one or more nodes, then this cmdlet displays an error. \r\n                         \r\n ---- If one or more nodes are down when changing the certificate, then the change applies only on the nodes that are up.\r\nBut the DA server GPO is updated to ensure that when these computers come up load balancing is in stopped state on them due to a certificate mismatch.\r\nFor the certificate change to take effect, the administrator needs to install a similar certificate on them and re-run this cmdlet.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseHttp
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Set-RemoteAccess
+name: Set-RemoteAccess
+description: "The **Set-RemoteAccess** cmdlet modifies the configuration that is common to both DirectAccess (DA) and VPN such as SSL certificate, Internal interface, and Internet interface.\r\n\r\nAll settings configured by this cmdlet result in changes only on the server on which the cmdlet is run.\r\nIn a network load balancing scenario the SSL certificate changes take effect on all nodes. \r\n                       \r\nAs a result, this cmdlet is not impacted by multi-site deployments."
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_RemoteAccess_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-remoteaccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RemoteAccess

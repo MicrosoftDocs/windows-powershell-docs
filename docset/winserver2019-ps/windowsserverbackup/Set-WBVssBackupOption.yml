@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets a value that determines the VSS setting in the backup policy.
+module: WindowsServerBackup
+notes: |-
+  * The **WBPolicy** object must be in edit mode. To put the **WBPolicy** object in edit mode for a policy that you set as the scheduled backup policy, use the [New-WBPolicy](./New-WBPolicy.yml) cmdlet with the *Editable* parameter. The **New-WBPolicy** cmdlet creates a new **WBPolicy** object that is already in edit mode.
+inputs:
+- name: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet queries the specified **WBPolicy** object.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WBVssBackupOption
+  href: ./Get-WBVssBackupOption.yml
+syntaxes:
+- Set-WBVssBackupOption [-Policy] <WBPolicy> [-VssCopyBackup] [-VssFullBackup] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the VSS backup policy'
+  code: |-
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Set-WBVssBackupOption -Policy $Policy -VssFullBackup
+  description: |-
+    This example sets the backup policy to create backups that are VSS full backups.
+
+    The first command stores the result of the **Get-WBPolicy** cmdlet in the variable named $Policy.
+
+    The second command sets the VSS setting for the backup policy in the $Policy variable.
+  summary: ""
+parameters:
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies the **WBPolicy** object to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: VssCopyBackup
+  description: |+
+    Indicates that the backups in the backup policy are VSS copy backups.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: VssFullBackup
+  description: |+
+    Indicates that the backups in the backup policy are VSS full backups.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Set-WBVssBackupOption
+name: Set-WBVssBackupOption
+description: |-
+  The **Set-WBVssBackupOption** cmdlet sets a value that determines whether the backups created through the **WBPolicy** object are Volume Shadow Copy Service (VSS) copy backups or VSS full backups.
+
+  Create VSS full backups if you are not using any other product to back up applications.
+  This option updates the backup history of each file and deletes the application log files.
+  Create VSS copy backups if you are using another product to back up applications that are on the volumes included in the backup.
+  This option retains the application log files.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/set-wbvssbackupoption?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WBVssBackupOption

@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Initiates the App-V Publishing Refresh operation.
+module: AppVClient
+notes: ""
+links:
+- text: Add-AppvPublishingServer
+  href: ./add-appvpublishingserver.yml
+- text: Get-AppvPublishingServer
+  href: ./get-appvpublishingserver.yml
+- text: Remove-AppvPublishingServer
+  href: ./remove-appvpublishingserver.yml
+- text: Set-AppvPublishingServer
+  href: ./set-appvpublishingserver.yml
+- text: Sync-AppvPublishingServer
+  href: ./sync-appvpublishingserver.yml
+syntaxes:
+- >-
+  Sync-AppvPublishingServer [-ServerId] <UInt32> [-Global] [-Force] [-NetworkCostAware]
+
+   [-HidePublishingRefreshUI] [<CommonParameters>]
+- >-
+  Sync-AppvPublishingServer [-Server] <AppvPublishingServer> [-Global] [-Force] [-NetworkCostAware]
+
+   [-HidePublishingRefreshUI] [<CommonParameters>]
+- >-
+  Sync-AppvPublishingServer [[-Name] <String>] [[-URL] <String>] [-Global] [-Force] [-NetworkCostAware]
+
+   [-HidePublishingRefreshUI] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Sync-AppvPublishingServer -Name "MyServer"
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Indicates that the cmdlet forces all publishes and unpublishes of packages.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    Indicates that the cmdlet synchronizes packages from the App-V publishing server that are provisioned to the computer and are published to all users on the computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: HidePublishingRefreshUI
+  description: |+
+    Indicates that the cmdlet suppresses the Publishing Refresh Progress bar.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the friendly name of the server.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NetworkCostAware
+  description: ""
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppvPublishingServer" data-throw-if-not-resolved="False" />
+  name: Server
+  isRequired: true
+  description: |+
+    Not Specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ServerId
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: URL
+  description: |+
+    Specifies the URL path to the server.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppVClient.Sync-AppvPublishingServer
+name: Sync-AppvPublishingServer
+description: |-
+  The **Sync-AppvPublishingServer** cmdlet Initiates the Microsoft Application Virtualization (App-V) publishing refresh operation in the context of the current user.
+  The publishing refresh connects to all added servers on the client and expose new App-V packages and their respective extension points to the user.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Sync-AppvPublishingServer

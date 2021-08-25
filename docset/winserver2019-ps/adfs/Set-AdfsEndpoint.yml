@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the endpoint on a Web Application Proxy.
+module: ADFS
+notes: |-
+  * This cmdlet has three parameter-sets. You can use the Address, FullUrl, or TargetEndpoint parameter set, over the pipeline, to identify the endpoint. This cmdlet only allows you to modify the Proxy property of the endpoint.
+
+  * Endpoints provide access to the federation server functionality of AD FS, such as token issuance and the publishing of federation metadata.
+  Depending on the type of endpoint, you can enable or disable the endpoint or control whether the endpoint is published to Web Application Proxy.
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.Endpoint" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a class structure that represents an endpoint.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-AdfsEndpoint
+  href: ./Disable-AdfsEndpoint.yml
+- text: Enable-AdfsEndpoint
+  href: ./Enable-AdfsEndpoint.yml
+- text: Get-AdfsEndpoint
+  href: ./Get-AdfsEndpoint.yml
+syntaxes:
+- >-
+  Set-AdfsEndpoint [[-TargetAddressPath] <String>] -Proxy <Boolean> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AdfsEndpoint -TargetEndpoint <Endpoint> -Proxy <Boolean> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Set-AdfsEndpoint [-TargetFullUrl] <Uri> -Proxy <Boolean> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set an endpoint'
+  code: |-
+    PS C:\> Set-AdfsEndpoint -TargetAddressPath "/adfs/services/trust/13/Windows" -Proxy $True
+  description: |-
+    This command sets the WS-Trust 1.3 endpoint for proxy use.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Proxy
+  isRequired: true
+  description: |+
+    Indicates whether the endpoint is available on the federation server proxy.
+    This is the only field of the endpoint that can be set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetAddressPath
+  description: |+
+    Specifies the address path of the endpoint.
+    The cmdlet makes the endpoint that you specify available to the extranet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Endpoint" data-throw-if-not-resolved="False" />
+  name: TargetEndpoint
+  isRequired: true
+  description: |+
+    Specifies the endpoint that the cmdlet modifies.
+    This value is typically taken from the pipeline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: TargetFullUrl
+  isRequired: true
+  description: |+
+    Specifies the full URL of the endpoint that the cmdlet modifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsEndpoint
+name: Set-AdfsEndpoint
+description: |-
+  The **Set-AdfsEndpoint** cmdlet sets endpoints on a Web Application Proxy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsendpoint?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsEndpoint

@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of publishable applications from a collection.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.StartMenuApp" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-RDAvailableApp [-CollectionName] <String> [-ConnectionBroker <String>] [<CommonParameters>]
+- >-
+  Get-RDAvailableApp [-CollectionName] <String> -VirtualDesktopName <String> [-ConnectionBroker <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the list of applications available to publish for a session collection'
+  code: |-
+    PS C:\> Get-RDAvailableApp -CollectionName "Session Collection" -ConnectionBroker "Rdcb.Contoso.com"
+  description: |-
+    This command retrieves a list of the applications available from the session collection named Session Collection, on the RD Connection Broker server named Rdcb.Contoso.com.
+  summary: ""
+- title: 'Example 2: Get the list of applications available to publish for a virtual desktop collection'
+  code: |-
+    PS C:\> Get-RDAvailableApp -CollectionName "Virtual Desktop Pool" -ConnectionBroker "Rdcb.Contoso.com" -VirtualDesktopName "RDS-WKS-A26"
+  description: |-
+    This command retrieves a list of the applications available from the session collection named Virtual Desk Pool, on the RD Connection Broker server named Rdcb.Contoso.com.
+    The cmdlet uses the virtual desktop named RDS-WKS-A26 as the source of a list of applications.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a personal virtual desktop collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual desktop.
+    This parameter is required.
+    The virtual desktop identified here must be a member of the of the collection specified by the **CollectionName** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: VMName
+  parameterValueGroup: ""
+uid: RDMgmt.Get-RDAvailableApp
+name: Get-RDAvailableApp
+description: |-
+  The **Get-RDAvailableApp** cmdlet gets a list of publishable applications from a collection specified in the **CollectionName** parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdavailableapp?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDAvailableApp

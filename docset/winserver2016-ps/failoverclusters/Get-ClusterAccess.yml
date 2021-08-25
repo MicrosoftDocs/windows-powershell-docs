@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about permissions that control access to a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterAccessRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Block-ClusterAccess
+  href: ./Block-ClusterAccess.yml
+- text: Grant-ClusterAccess
+  href: ./Grant-ClusterAccess.yml
+- text: Remove-ClusterAccess
+  href: ./Remove-ClusterAccess.yml
+syntaxes:
+- >-
+  Get-ClusterAccess [[-User] <StringCollection>] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterAccess
+    IdentityReference              AccessControlType        ClusterRights 
+    -----------------              -----------------        ------------- 
+    CONTOSO\user1                               Deny                 Full 
+    NT AUTHORITY\SYSTEM                        Allow                 Full 
+    NT AUTHORITY\NETWORK SE...                 Allow                 Full 
+    BUILTIN\Administrators                     Allow                 Full 
+    CONTOSO\user2                              Allow                 Read 
+    NT SERVICE\MSDTC                           Allow                 Full
+  description: |-
+    This example lists the level of permissions that have been assigned to users of this cluster, including users who are blocked from access.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to enumerate cluster access details.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: User
+  description: |+
+    Specifies the user for which to get cluster access.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterAccess
+name: Get-ClusterAccess
+description: |-
+  The **Get-ClusterAccess** cmdlet gets information about permissions that control access to a failover cluster.
+
+  A cluster can allow full access or read-only access.
+  Read-only access limits the user to Windows PowerShell® cmdlets that provide information about the cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusteraccess?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterAccess

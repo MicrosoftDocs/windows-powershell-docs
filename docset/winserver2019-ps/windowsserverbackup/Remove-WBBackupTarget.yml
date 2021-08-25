@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes backup storage locations from a backup policy.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBBackupTarget, WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet removes a **WBBackupTarget** object from a **WBPolicy** object that contains the backup policy.
+outputs:
+- name: <xref href="WBBackupTarget" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns a list of **WBBackupTarget** objects left in the policy.
+links:
+- text: Add-WBBackupTarget
+  href: ./Add-WBBackupTarget.yml
+- text: Get-WBBackupTarget
+  href: ./Get-WBBackupTarget.yml
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: New-WBBackupTarget
+  href: ./New-WBBackupTarget.yml
+syntaxes:
+- Remove-WBBackupTarget [-Policy] <WBPolicy> [-Target] <WBBackupTarget> [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a backup target from a backup policy'
+  code: |-
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> $BackupLocations = Get-WBBackupTarget -Policy $Policy
+    PS C:\> Remove-WBBackupTarget -Policy $Policy -Target $BackupLocations[0]
+  description: |-
+    This example removes a **WBBackupTarget** object from a **WBPolicy** object and then displays a list of backup locations left in the policy.
+
+    The first command gets the current backup policy and stores it in a variable named $Policy.
+
+    The second command gets the backup target locations and stores them in the variable named $BackupLocations.
+    The command also stores the backup policy in the variable named $Policy.
+
+    The third command removes the backup target in the first element of the $BackupLocations array from the policy stored in the $Policy variable.
+  summary: ""
+parameters:
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies the **WBPolicy** object that contains the backup policy that this cmdlet updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBBackupTarget" data-throw-if-not-resolved="False" />
+  name: Target
+  isRequired: true
+  description: |+
+    Specifies a backup target object that specifies the backup storage location to remove from the **WBPolicy** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Remove-WBBackupTarget
+name: Remove-WBBackupTarget
+description: |-
+  The **Remove-WBBackupTarget** cmdlet removes backup storage locations from a backup policy.
+  **WBBackupTarget** objects define backup storage locations.
+  A **WBPolicy** object defines the backup policy.
+
+  Before you can remove a backup target from a **WBPolicy** object, you must put the **WBPolicy** object in edit mode.
+  To put the **WBPolicy** object in edit mode for a policy that you have set as the scheduled backup policy, use the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet with the *Editable* parameter.
+  The [New-WBPolicy](./New-WBPolicy.yml) cmdlet creates a new **WBPolicy** object that is already in edit mode.
+
+  If you specify a disk as a storage location for backups, the server formats the disk before use and permanently deletes any existing data on the disk.
+
+  You can add only one storage type at a time to a policy.
+  If you specify a shared folder as the storage location, you cannot add more locations because you can specify only one shared folder as a storage location at any time.
+  However, you can specify multiple disks or volumes at one time by calling the [Add-WBBackupTarget](./Add-WBBackupTarget.yml) cmdlet for each location.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/remove-wbbackuptarget?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WBBackupTarget

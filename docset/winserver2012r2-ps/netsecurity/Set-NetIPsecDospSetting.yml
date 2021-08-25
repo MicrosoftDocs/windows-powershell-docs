@@ -1,0 +1,351 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies existing IPsec Dos protection settings.
+module: NetSecurity
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\NetIPsecDoSPSetting" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\NetIPsecDoSPSetting" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkID=113423
+- text: Get-NetIPsecDospSetting
+  href: ./Get-NetIPsecDospSetting.yml
+- text: New-NetIPsecDospSetting
+  href: ./New-NetIPsecDospSetting.yml
+- text: remove-NetIPsecDospSetting
+  href: ./Remove-NetIPsecDospSetting.yml
+syntaxes:
+- >-
+  Set-NetIPsecDospSetting [-Name] <String[]> [-StateIdleTimeoutSeconds <UInt32>]
+
+   [-PerIPRateLimitQueueIdleTimeoutSeconds <UInt32>] [-IpV6IPsecUnauthDscp <UInt32>]
+
+   [-IpV6IPsecUnauthRateLimitBytesPerSec <UInt32>] [-IpV6IPsecUnauthPerIPRateLimitBytesPerSec <UInt32>]
+
+   [-IpV6IPsecAuthDscp <UInt16>] [-IpV6IPsecAuthRateLimitBytesPerSec <UInt32>] [-IcmpV6Dscp <UInt16>]
+
+   [-IcmpV6RateLimitBytesPerSec <UInt32>] [-IpV6FilterExemptDscp <UInt32>]
+
+   [-IpV6FilterExemptRateLimitBytesPerSec <UInt32>] [-DefBlockExemptDscp <UInt16>]
+
+   [-DefBlockExemptRateLimitBytesPerSec <UInt32>] [-MaxStateEntries <UInt32>] [-MaxPerIPRateLimitQueues <UInt32>]
+
+   [-EnabledKeyingModules <DospKeyModules>] [-FilteringFlags <DospFlags>]
+
+   [-PublicInterfaceAliases <WildcardPattern[]>] [-PrivateInterfaceAliases <WildcardPattern[]>]
+
+   [-PublicV6Address <String>] [-PrivateV6Address <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-NetIPsecDospSetting -InputObject <CimInstance[]> [-StateIdleTimeoutSeconds <UInt32>]
+
+   [-PerIPRateLimitQueueIdleTimeoutSeconds <UInt32>] [-IpV6IPsecUnauthDscp <UInt32>]
+
+   [-IpV6IPsecUnauthRateLimitBytesPerSec <UInt32>] [-IpV6IPsecUnauthPerIPRateLimitBytesPerSec <UInt32>]
+
+   [-IpV6IPsecAuthDscp <UInt16>] [-IpV6IPsecAuthRateLimitBytesPerSec <UInt32>] [-IcmpV6Dscp <UInt16>]
+
+   [-IcmpV6RateLimitBytesPerSec <UInt32>] [-IpV6FilterExemptDscp <UInt32>]
+
+   [-IpV6FilterExemptRateLimitBytesPerSec <UInt32>] [-DefBlockExemptDscp <UInt16>]
+
+   [-DefBlockExemptRateLimitBytesPerSec <UInt32>] [-MaxStateEntries <UInt32>] [-MaxPerIPRateLimitQueues <UInt32>]
+
+   [-EnabledKeyingModules <DospKeyModules>] [-FilteringFlags <DospFlags>]
+
+   [-PublicInterfaceAliases <WildcardPattern[]>] [-PrivateInterfaceAliases <WildcardPattern[]>]
+
+   [-PublicV6Address <String>] [-PrivateV6Address <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Set-NetIPsecDospSetting -Name PubNet-CorpNet -PublicInterfaceAliases PubNet2
+  description: |-
+    This example modifies the internal interface of an IPsec DosP setting by using the rule name.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$nipDospSetting = Get-NetIPsecDospSetting
+
+
+
+    PS C:\>$nipDospSettingPubNet = Where-Object -FilterScript { $_.PublicInterfaceAliases -Eq "PubNet" } -InputObject $nipSospSetting
+
+
+
+    PS C:\>Set-NetIPsecDospSetting -PublicInterfaceAliases PubNet2 -InputObject $nipDospSettingPubNet
+
+
+    This cmdlet can be run using only the pipeline.
+    PS C:\>Get-NetIPsecDospSetting | Where-Object -FilterScript { $_.PublicInterfaceAliases -Eq "PubNet" } | Set-NetIPsecDospSetting -PublicInterfaceAliases PubNet2
+  description: |-
+    This example modifies the internal interface of an IPsec DosP setting by querying by property.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>$dosPSetting = Get-NetIPsecDospSetting -Name PubNet-CorpNet
+
+
+
+    PS C:\>$dosPSetting.IpV6IPsecUnauthDscp = "Disabled"
+  description: |-
+    This example turns off DSCP marking for unauthenticated IPv6 IPsec-protected traffic for a particular DosP setting.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: DefBlockExemptDscp
+  description: "Specifies the 6-bit value, specified as an integer from 1 to 63, that is placed in the differentiated services code point (DSCP) field of the IPv6 header when the traffic type matches traffic that is by default exempted from the default block behavior such as IPsec authenticated, IPsec unauthenticated, and ICMPv6 traffic.\r\nThe DSCP value can be used in Quality of Service (QoS) implementations to prioritize network traffic and help ensure that less important network packets do not consume so much bandwidth that they interfere with the successful delivery of more important network packets. \r\nThe acceptable values for this parameter are: 1 through 63, and Disabled. \r\n                         \r\n -- Disabled: This turns off DSCP marking for traffic that is by default exempted from the default block behavior.\r\nThis includes IPsec authenticated, IPsec unauthenticated, and ICMPv6 traffic.\r\nThis parameter is case sensitive and requires Disabled to be specified using dot-notation. \r\n                         \r\nThe default value is Disabled.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DefBlockExemptRateLimitBytesPerSec
+  description: "Specifies the maximum rate at which IPsec authenticated, IPsec unauthenticated, and ICMPv6 inbound network traffic such as traffic that is by default exempted from the default block behavior is forwarded from the public interface to the internal interface. \r\nThe acceptable values for this parameter are: 1 through 4,294,967,295 bytes per second. \r\n                         \r\nThe default value is 102400.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DospKeyModules" data-throw-if-not-resolved="False" />
+  name: EnabledKeyingModules
+  description: "Specifies the IPsec negotiation protocol, or keying module, to allow.\r\nThe IPv6 address or subnet to which the specified IPsec negotiation protocol is allowed to be sent with the **PrivateV6Address** parameter can be optionally specified.\r\nBy default, only IPsec negotiation traffic that uses AuthIP is allowed to all addresses. \r\n                         \r\nICMPv6 network traffic is always allowed to enable Teredo and other advanced network scenarios to work.\r\nThe IPsec-protected traffic that is part of an established connection that uses ESP is always allowed, as long as the connection has not been idle for more than the number of seconds specified with the **StateIdleTimeoutSeconds** parameter. \r\nThe acceptable values for this parameter are: None, IkeV1, IkeV2, or AuthIP. \r\n                         \r\nThe default value is AuthIP.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, IkeV1, IkeV2, AuthIP
+- type: <xref href="DospFlags" data-throw-if-not-resolved="False" />
+  name: FilteringFlags
+  description: "Specifies the action to take on network traffic that matches the Dosp setting address filters the public V6 address and the privateV6 address. \r\nOnly one filter can be applied to a specific address or subnet.\r\nIf a second Dosp setting with the exact same address or subnet parameter is created, then an error is displayed.\r\nIf an address matches more than one filter, then the most specific match is selected and the corresponding filter is applied.\r\nFor example, 2006:2006::2 matches a filter with the prefix 2006:2006::2/128 more closely than a filter with the prefix 2006:2006::2/64. \r\nThe acceptable values for this parameter are:\r\n                         \r\n -- None: IPsec DoS protection feature drops all IPv4 traffic, and all non-IPsec IPv6 traffic (except ICMPv6) that is forwarded between a public interface and an internal interface. \r\n                         \r\n -- DisableDefaultBlock: IPsec DoS protection feature blocks no traffic. \r\n                         \r\n -- FilterBlock: Specifies that network traffic that matches the Dosp setting address filters using the **PublicV6Address** and **PrivateV6Address** parameters is blocked even if it is IPsec-protected. \r\n                         \r\n -- FilterExempt: Specifies that IPv6 network traffic that matches the Dosp setting address filters using the **PublicV6Address** and **PrivateV6Address** parameters does not have to be IPsec-protected to be allowed through. \r\n                         \r\nThe default value is None.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, DisableDefaultBlock, FilterBlock, FilterExempt
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: IcmpV6Dscp
+  description: "Specifies that ICMPv6 protocol traffic is assigned the given DSCP value. \r\n                         \r\nThis parameter specifies the 6-bit value, specified as an integer from 1 to 63, that is placed in the DSCP field of the IPv6 header, when the traffic type matches ICMPv6 protocol traffic.\r\nThe DSCP value can be used in Quality of Service (QoS) implementations to prioritize network traffic and help ensure that less important network packets do not consume so much bandwidth that the packets interfere with the successful delivery of more important network packets. \r\nThe acceptable values for this parameter are: 1 through 63, and Disabled. \r\n                         \r\n- Disabled: Turns off DSCP marking for ICMPv6 protocol traffic.\r\nThis parameter is case sensitive and requires Disabled to be specified using dot-notation. \r\n                         \r\nThe default value is Disabled.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IcmpV6RateLimitBytesPerSec
+  description: "Specifies the maximum rate at which ICMPv6 inbound network traffic is forwarded from the public to the internal interface. \r\nThe acceptable values for this parameter are: 1 through 4,294,967,295 bytes per second. \r\n                         \r\nThe default value is 10240.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IpV6FilterExemptDscp
+  description: "Specifies that IPv6 traffic with an IP address that is exempted by using an address filter is assigned the given DSCP value. \r\n                         \r\nTo specify that the IPv6 network traffic that matches the Dosp setting address filters using the **PublicV6Address** and **PrivateV6Address** parameters does not have to be IPsec-protected to be allowed through set the **FilteringFlags** parameter to the filter exempt value. \r\n                         \r\nThis parameter specifies the 6-bit value, specified as an integer from 1 to 63, that is placed in the DSCP field of the IPv6 header when the traffic type matches the exempted address filter traffic.\r\nThe DSCP value can be used in Quality of Service (QoS) implementations to prioritize network traffic and help ensure that less important network packets do not consume so much bandwidth that they interfere with the successful delivery of more important network packets. \r\nThe acceptable values for this parameter are: 1 through 63, and Disabled. \r\n                         \r\n- Disabled: Turns off DSCP marking for traffic from the specified address filter, specified with the **PrivateV6Address** or **PublicV6Address** parameter.\r\nThis parameter is case sensitive and requires Disabled to be specified using dot-notation. \r\n                         \r\nThe default value is Disabled.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IpV6FilterExemptRateLimitBytesPerSec
+  description: "Specifies the maximum rate at which inbound IPv6 network traffic, that is exempted by using an address filter, is forwarded from the public to the internal interface. \r\n                         \r\nTo specify that the IPv6 network traffic that matches the Dosp setting address filters using the **PublicV6Address** and **PrivateV6Address** parameters does not have to be IPsec-protected to be allowed through set the **FilteringFlags** parameter to the filter exempt value. \r\nThe acceptable values for this parameter are: 1 through 4,294,967,295 bytes per second. \r\n                         \r\nThe default value is 102400.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: IpV6IPsecAuthDscp
+  description: "Specifies that authenticated IPv6 IPsec-protected traffic is assigned the given DSCP value. \r\n                         \r\nThis parameter specifies the 6-bit value, specified as an integer from 1 to 63, that is placed in the DSCP field of the IPv6 header, when the traffic type matches authenticated IPv6 IPsec-protected traffic.\r\nThe DSCP value can be used in Quality of Service (QoS) implementations to prioritize network traffic and help ensure that less important network packets do not consume so much bandwidth that they interfere with the successful delivery of more important network packets. \r\n                         \r\n -- Disabled: Turns off DSCP marking for authenticated IPv6 IPsec-protected traffic.\r\nThis parameter is case sensitive and requires Disabled to be specified using dot-notation. \r\n                         \r\nThe default value is Disabled.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IpV6IPsecAuthRateLimitBytesPerSec
+  description: "Specifies the maximum rate at which authenticated IPv6 IPsec-protected inbound traffic is forwarded from the public to the internal interface. \r\nThe acceptable values for this parameter are: 1 through 4,294,967,295 bytes per second. \r\n                         \r\nThe default value is 0, which disables the rate limit for this traffic.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IpV6IPsecUnauthDscp
+  description: "Specifies that unauthenticated IPv6 IPsec-protected traffic is assigned the given DSCP value. \r\n                         \r\nThis parameter specifies the 6-bit value, specified as an integer from 1 to 63, that is placed in the DSCP field of the IPv6 header when the traffic type matches unauthenticated IPv6 IPsec-protected traffic.\r\nThe DSCP value can be used in Quality of Service (QoS) implementations to prioritize network traffic and help ensure that less important network packets do not consume so much bandwidth that they interfere with the successful delivery of more important network packets. \r\nThe acceptable values for this parameter are: 1 through 63, and Disabled. \r\n                         \r\n -- Disabled: Turns off DSCP marking for unauthenticated IPv6 IPsec-protected traffic.\r\nThis parameter is case sensitive and requires Disabled to be specified using dot-notation. \r\n                         \r\nThe default value is Disabled.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IpV6IPsecUnauthPerIPRateLimitBytesPerSec
+  description: "Specifies the maximum rate at which unauthenticated IPv6 IPsec-protected inbound traffic is forwarded from the public to the internal interface. \r\n                         \r\nIf a per IP address rate limit is defined, then it is used instead of the global rate limit using the **IpV6IPsecUnauthRateLimitBytesPerSec** parameter.\r\nTo rate limit on a per IP address basis, configure the number of per IP queues to support this by using the **MaxPerIPRateLimitQueues** parameter. \r\nThe acceptable values for this parameter are: 1 through 4,294,967,295 bytes per second. \r\n                         \r\nThe default value is 10240.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IpV6IPsecUnauthRateLimitBytesPerSec
+  description: "Specifies the maximum rate at which unauthenticated IPv6 IPsec-protected inbound traffic is forwarded from the public to the internal interface.\r\nThis rate limit is applied on a per IP address basis, instead of network-wide. \r\n                         \r\nIf a per IP address rate limit is defined using the **IpV6IPsecUnauthPerIPRateLimitBytesPerSec** parameter, then it is used instead of the global rate limit.\r\nTo rate limit on a per IP address basis, configure the number of per IP queues to support this by using the **MaxPerIPRateLimitQueues** parameter. \r\nThe acceptable values for this parameter are: 1 through 4,294,967,295 bytes per second. \r\n                         \r\nThe default value is 10240.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxPerIPRateLimitQueues
+  description: "Specifies, when using rate limits on unauthenticated traffic, the maximum number of queues that can be used to hold traffic while it is delivered at the configured rate. \r\n                         \r\nThe per IP address rate limit is defined with the **IpV6IPsecUnauthPerIPRateLimitBytesPerSec** parameter. \r\nThe acceptable values for this parameter are: 1 through 4,294,967,295 queues. \r\n                         \r\nThe default value is 50000.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxStateEntries
+  description: "Specifies the maximum number of connections that the IPsec DoS protection feature can track at one time. \r\nThe acceptable values for this parameter are: 1 through 4,294,967,295 sessions. \r\n                         \r\nThe default value is 75000.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the unique identifier of the Dosp configuration setting.
+    This parameter is mandatory.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PerIPRateLimitQueueIdleTimeoutSeconds
+  description: "Specifies, when using rate limits on unauthenticated traffic on a per IP address basis, the timeout in seconds that the connection can be idle before the IPsec DoS protection feature treats the connection as stale and stops tracking the state. \r\n                         \r\nThe per IP address rate limit is defined with the **IpV6IPsecUnauthPerIPRateLimitBytesPerSec** parameter. \r\nThe acceptable values for this parameter are: 1 through 4,294,967,295 seconds. \r\n                         \r\nThe default value is 360, or six minutes.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WildcardPattern" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PrivateInterfaceAliases
+  description: "Specifies the interface to the IPsec DoS protection configuration as an internal interface to be modified. \r\n                         \r\nAt least one public interface using the **PublicInterfaceAliases** parameter and one internal interface using the **PrivateInterfaceAliases** parameter for the Dosp setting must be set to be operational.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrivateV6Address
+  description: "Specifies the internal IPsec address or subnet that matches the Dosp address filter. \r\n                         \r\nThis parameter adds a filter that either blocks or allows via exempting the network traffic that is not IPv6 and IPsec-protected from the specified public address or subnet using the **PublicV6Address** parameter to the specified internal address or subnet using this parameter.\r\nThis behavior, referring to blocking or exempting, is specified with the **FilteringFlags** parameter. \r\n                         \r\nOnly one filter can be applied to a specific address or subnet.\r\nIf a second rule with the exact same address or subnet parameter is created, then an error is displayed.\r\nIf an address matches more than one filter, then the most specific match is selected and the corresponding filter is applied.\r\nFor example, 2006:2006::2 matches a filter with the prefix 2006:2006::2/128 more closely than a filter with the prefix 2006:2006::2/64.\r\nIf both the **PublicV6Address** parameter and this parameter are specified, then the Dosp rule treats the parameter values as a logical AND operator.\r\nTraffic matches the rule if it comes from an address with the specified public prefix and the traffic is destined for an address with the specified internal prefix. \r\n                         \r\nNetwork traffic of the specified protocol as specified using the **EnabledKeyingModules** parameter that is sent from an address or subnet not on the list is dropped.\r\nTo specify a subnet, include the forward slash (/) followed by the number of digits that represent the network identifier.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WildcardPattern" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PublicInterfaceAliases
+  description: "Specifies the interface to the IPsec DoS protection configuration as a public interface to be modified. \r\n                         \r\nAt least one public interface using the **PublicInterfaceAliases** parameter and one internal interface using the **PrivateInterfaceAliases** parameter for the Dosp setting must be added to be operational.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PublicV6Address
+  description: "Specifies the external IPsec address or subnet that matches the Dosp address filter. \r\n                         \r\nThis parameter adds a filter that either blocks or allows via exempting the network traffic that is not IPv6 and IPsec-protected from the specified public address or subnet using this parameter to the specified internal address or subnet using the **PrivateV6Address** parameter.\r\nThis behavior, referring to blocking or exempting, is specified with the **FilteringFlags** parameter. \r\n                         \r\nOnly one filter can be applied to a specific address or subnet.\r\nIf a second rule with the exact same address or subnet parameter is created, then an error is displayed.\r\nIf an address matches more than one filter, then the most specific match is selected and the corresponding filter is applied.\r\nFor example, 2006:2006::2 matches a filter with the prefix 2006:2006::2/128 more closely than a filter with the prefix 2006:2006::2/64.\r\nIf both this parameter and the**PrivateV6Address** parameter are specified, then the Dosp rule treats the parameter values as a logical AND operator.\r\nTraffic matches the rule if it comes from an address with the specified public prefix and the traffic is destined for an address with the specified internal prefix. \r\n                         \r\nNetwork traffic of the specified protocol as specified using the **EnabledKeyingModules** parameter that is sent from an address or subnet not on the list is dropped.\r\nTo specify a subnet, include the forward slash (/) followed by the number of digits that represent the network identifier.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: StateIdleTimeoutSeconds
+  description: "Specifies the number of seconds that an IPsec session can be idle before the IPsec DoS protection feature stops considering it to be a valid IPsec-protected connection that is allowed by the feature.\r\nAfter the specified number of seconds, the IPsec session is considered stale, and traffic that is part of the session is no longer allowed through the feature by default. \r\nThe acceptable values for this parameter are: 1 through 4,294,967,295 seconds. \r\n                         \r\nThe default value is 360, or six minutes.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetSecurity.Set-NetIPsecDospSetting
+name: Set-NetIPsecDospSetting
+description: |-
+  The **Set-NetIPsecDospSetting** modifies existing IPsec Dos protection settings.
+
+  The settings cannot be queried by property in this cmdlet.
+  The Get-NetIPsecDospSetting cmdlet returns the queried settings and pipes the settings into this cmdlet.
+
+  When modifying the DSCP parameters including the **DefBlockExemptDscp**, **IcmpV6Dscp**, **IpV6FilterExemptDscp**, **IpV6IPsecAuthDscp**, and **IpV6IPsecUnauthDscp** parameters, the parameters are case sensitive and require Disabled to by specified using dot-notation.
+metadata:
+  external help file: NetIPsecDospSetting.cmdletDefinition.cdxml-help.xml
+  Module Name: NetSecurity
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/netsecurity/set-netipsecdospsetting?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetIPsecDospSetting

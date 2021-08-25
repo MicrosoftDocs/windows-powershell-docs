@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables a TLS cipher suite.
+module: TLS
+notes: ""
+links:
+- text: Disable-TlsCipherSuite
+  href: ./Disable-TlsCipherSuite.yml
+- text: Get-TlsCipherSuite
+  href: ./Get-TlsCipherSuite.yml
+syntaxes:
+- Enable-TlsCipherSuite [[-Position] <UInt32>] [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable a cipher suite'
+  code: |-
+    PS C:\>Enable-TlsCipherSuite -Name "TLS_DHE_DSS_WITH_AES_256_CBC_SHA"
+  description: |-
+    This command enables cipher suite named TLS_DHE_DSS_WITH_AES_256_CBC_SHA.
+    This command adds the cipher suite the TLS cipher suite list as the lowest priority.
+  summary: ""
+- title: 'Example 2: Enable a cipher suite as the lowest priority'
+  code: |-
+    PS C:\>Enable-TlsCipherSuite -Name "TLS_DHE_DSS_WITH_AES_256_CBC_SHA" -Position 4294967295
+  description: |-
+    This command enables cipher suite named TLS_DHE_DSS_WITH_AES_256_CBC_SHA.
+    This command adds the cipher suite the TLS cipher suite list as the lowest priority.
+    Unlike the first example, this command explicitly specifies position number 4294967295, which is the value of CRYPT_PRIORITY_BOTTOM.
+  summary: ""
+- title: 'Example 3: Enable a cipher suite as the highest priority'
+  code: |-
+    PS C:\>Enable-TlsCipherSuite -Name "TLS_DHE_DSS_WITH_AES_256_CBC_SHA" -Position 0
+  description: |-
+    This command enables cipher suite named TLS_DHE_DSS_WITH_AES_256_CBC_SHA.
+    This command adds the cipher suite the TLS cipher suite list at position 0, which is the highest priority.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the TLS cipher suite to enable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Position
+  description: |+
+    Specifies the position at which to insert the cipher suite in the ordered list of TLS cipher suites.
+    The cmdlet inserts the cipher suite at the position that this parameter specifies, ahead of any existing cipher suites.
+
+    Specify a value of 0 or CRYPT_PRIORITY_TOP to insert the function at the top of the list.
+    Specify a value of 4294967295 or 0xFFFFFFFF or CRYPT_PRIORITY_BOTTOM to insert the function at the end of the list.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: TLS.Enable-TlsCipherSuite
+name: Enable-TlsCipherSuite
+description: |-
+  The **Enable-TlsCipherSuite** cmdlet enables a cipher suite.
+  This cmdlet adds the cipher suite to the list of Transport Layer Security (TLS) protocol cipher suites for the computer.
+  If you do not specify a position in the list, this cmdlet adds it at the lowest position.
+
+  If a cipher suite is not enabled for TLS based secure channel (Schannel) registry settings, then the cipher suite is not used.
+
+  This cmdlet is based on Cryptography Next Generation (CNG) Cryptographic Configuration.
+  Schannel registry settings and settings specified by means of Security Support Provider Interface (SSPI) by each app can override CNG Cryptographic Configuration.
+  Other settings under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL can also configure cipher suites.
+  These settings can impact whether a cipher suite can be used.
+  For example, disabling of SHA hashes supported by TLS disables the corresponding cipher suites.
+  Additionally, applications can limit the algorithms using SSPI.
+  For more information about TLS settings, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/kb/245030).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
+  Module Name: TLS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-TlsCipherSuite

@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the email name for an office_365_2 user account.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Get-O365User
+  href: ./Get-O365User.yml
+syntaxes:
+- Update-O365AccountName [-LocalAccountName] <String> [-NewEmailName] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Update the email name for a user account'
+  code: |-
+    PS C:\> Update-O365AccountName -LocalAccountName "PattiFuller" -NewEmailName "Patti@Contoso.com"
+  description: |-
+    This command updates the email name of the office_365_2 account that is assigned to the local user account named PattiFuller.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of a local Active Directory user account.
+    The cmdlet updates the email name for the office365_sbp_3 user account that is assigned to the local user name that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewEmailName
+  isRequired: true
+  description: |+
+    Specifies the new email name for the office365_sbp_3 user account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Update-O365AccountName
+name: Update-O365AccountName
+description: |-
+  The **Update-O365AccountName** cmdlet updates the email name for an office_365_1 user account.
+  The name of an office_365_2 user account is also called a Microsoft online service ID.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/update-o365accountname?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-O365AccountName

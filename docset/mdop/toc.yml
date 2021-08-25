@@ -1,0 +1,236 @@
+items:
+- name: Reference
+  items:
+  - name: AGPM
+    uid: AGPM
+    items:
+    - name: Add-ControlledGpo
+      uid: AGPM.Add-ControlledGpo
+    - name: Get-ControlledGpo
+      uid: AGPM.Get-ControlledGpo
+    - name: Lock-ControlledGpo
+      uid: AGPM.Lock-ControlledGpo
+    - name: Publish-ControlledGpo
+      uid: AGPM.Publish-ControlledGpo
+    - name: Remove-ControlledGpo
+      uid: AGPM.Remove-ControlledGpo
+    - name: Unlock-ControlledGpo
+      uid: AGPM.Unlock-ControlledGpo
+  - name: AppV
+    uid: AppV
+    items:
+    - name: ConvertFrom-AppvLegacyPackage
+      uid: AppV.ConvertFrom-AppvLegacyPackage
+    - name: Test-AppvLegacyPackage
+      uid: AppV.Test-AppvLegacyPackage
+  - name: AppVClient
+    uid: AppVClient
+    items:
+    - name: Add-AppvClientConnectionGroup
+      uid: AppVClient.Add-AppvClientConnectionGroup
+    - name: Add-AppvClientPackage
+      uid: AppVClient.Add-AppvClientPackage
+    - name: Add-AppvPublishingServer
+      uid: AppVClient.Add-AppvPublishingServer
+    - name: Disable-AppvClientConnectionGroup
+      uid: AppVClient.Disable-AppvClientConnectionGroup
+    - name: Enable-AppvClientConnectionGroup
+      uid: AppVClient.Enable-AppvClientConnectionGroup
+    - name: Get-AppvClientApplication
+      uid: AppVClient.Get-AppvClientApplication
+    - name: Get-AppvClientConfiguration
+      uid: AppVClient.Get-AppvClientConfiguration
+    - name: Get-AppvClientConnectionGroup
+      uid: AppVClient.Get-AppvClientConnectionGroup
+    - name: Get-AppvClientMode
+      uid: AppVClient.Get-AppvClientMode
+    - name: Get-AppvClientPackage
+      uid: AppVClient.Get-AppvClientPackage
+    - name: Get-AppvPublishingServer
+      uid: AppVClient.Get-AppvPublishingServer
+    - name: Get-AppvVirtualProcess
+      uid: AppVClient.Get-AppvVirtualProcess
+    - name: Mount-AppvClientConnectionGroup
+      uid: AppVClient.Mount-AppvClientConnectionGroup
+    - name: Mount-AppvClientPackage
+      uid: AppVClient.Mount-AppvClientPackage
+    - name: Publish-AppvClientPackage
+      uid: AppVClient.Publish-AppvClientPackage
+    - name: Remove-AppvClientConnectionGroup
+      uid: AppVClient.Remove-AppvClientConnectionGroup
+    - name: Remove-AppvClientPackage
+      uid: AppVClient.Remove-AppvClientPackage
+    - name: Remove-AppvPublishingServer
+      uid: AppVClient.Remove-AppvPublishingServer
+    - name: Repair-AppvClientConnectionGroup
+      uid: AppVClient.Repair-AppvClientConnectionGroup
+    - name: Repair-AppvClientPackage
+      uid: AppVClient.Repair-AppvClientPackage
+    - name: Send-AppvClientReport
+      uid: AppVClient.Send-AppvClientReport
+    - name: Set-AppvClientConfiguration
+      uid: AppVClient.Set-AppvClientConfiguration
+    - name: Set-AppvClientMode
+      uid: AppVClient.Set-AppvClientMode
+    - name: Set-AppvClientPackage
+      uid: AppVClient.Set-AppvClientPackage
+    - name: Set-AppvPublishingServer
+      uid: AppVClient.Set-AppvPublishingServer
+    - name: Start-AppvVirtualProcess
+      uid: AppVClient.Start-AppvVirtualProcess
+    - name: Stop-AppvClientConnectionGroup
+      uid: AppVClient.Stop-AppvClientConnectionGroup
+    - name: Stop-AppvClientPackage
+      uid: AppVClient.Stop-AppvClientPackage
+    - name: Sync-AppvPublishingServer
+      uid: AppVClient.Sync-AppvPublishingServer
+    - name: Unpublish-AppvClientPackage
+      uid: AppVClient.Unpublish-AppvClientPackage
+  - name: AppVSequencer
+    uid: AppVSequencer
+    items:
+    - name: Expand-AppvSequencerPackage
+      uid: AppVSequencer.Expand-AppvSequencerPackage
+    - name: New-AppvPackageAccelerator
+      uid: AppVSequencer.New-AppvPackageAccelerator
+    - name: New-AppvSequencerPackage
+      uid: AppVSequencer.New-AppvSequencerPackage
+    - name: Update-AppvSequencerPackage
+      uid: AppVSequencer.Update-AppvSequencerPackage
+  - name: AppVServer
+    uid: AppVServer
+    items:
+    - name: Add-AppvServerConnectionGroupPackage
+      uid: AppVServer.Add-AppvServerConnectionGroupPackage
+    - name: Get-AppvServerConnectionGroup
+      uid: AppVServer.Get-AppvServerConnectionGroup
+    - name: Get-AppvServerPackage
+      uid: AppVServer.Get-AppvServerPackage
+    - name: Get-AppvServerPackageDeploymentConfiguration
+      uid: AppVServer.Get-AppvServerPackageDeploymentConfiguration
+    - name: Get-AppvServerPackageUserConfiguration
+      uid: AppVServer.Get-AppvServerPackageUserConfiguration
+    - name: Grant-AppvServerConnectionGroup
+      uid: AppVServer.Grant-AppvServerConnectionGroup
+    - name: Grant-AppvServerPackage
+      uid: AppVServer.Grant-AppvServerPackage
+    - name: Import-AppvServerPackage
+      uid: AppVServer.Import-AppvServerPackage
+    - name: New-AppvServerConnectionGroup
+      uid: AppVServer.New-AppvServerConnectionGroup
+    - name: Publish-AppvServerConnectionGroup
+      uid: AppVServer.Publish-AppvServerConnectionGroup
+    - name: Publish-AppvServerPackage
+      uid: AppVServer.Publish-AppvServerPackage
+    - name: Remove-AppvServerConnectionGroup
+      uid: AppVServer.Remove-AppvServerConnectionGroup
+    - name: Remove-AppvServerConnectionGroupPackage
+      uid: AppVServer.Remove-AppvServerConnectionGroupPackage
+    - name: Remove-AppvServerPackage
+      uid: AppVServer.Remove-AppvServerPackage
+    - name: Set-AppvServerConnectionGroup
+      uid: AppVServer.Set-AppvServerConnectionGroup
+    - name: Set-AppvServerConnectionGroupPackage
+      uid: AppVServer.Set-AppvServerConnectionGroupPackage
+    - name: Set-AppvServerPackage
+      uid: AppVServer.Set-AppvServerPackage
+    - name: Unpublish-AppvServerConnectionGroup
+      uid: AppVServer.Unpublish-AppvServerConnectionGroup
+    - name: Unpublish-AppvServerPackage
+      uid: AppVServer.Unpublish-AppvServerPackage
+    - name: Update-AppvServerConnectionGroup
+      uid: AppVServer.Update-AppvServerConnectionGroup
+  - name: MBAM
+    uid: MBAM
+    items:
+    - name: Disable-MbamCMIntegration
+      uid: MBAM.Disable-MbamCMIntegration
+    - name: Disable-MbamReport
+      uid: MBAM.Disable-MbamReport
+    - name: Disable-MbamWebApplication
+      uid: MBAM.Disable-MbamWebApplication
+    - name: Enable-MbamCMIntegration
+      uid: MBAM.Enable-MbamCMIntegration
+    - name: Enable-MbamDatabase
+      uid: MBAM.Enable-MbamDatabase
+    - name: Enable-MbamReport
+      uid: MBAM.Enable-MbamReport
+    - name: Enable-MbamWebApplication
+      uid: MBAM.Enable-MbamWebApplication
+    - name: Get-MbamBitLockerRecoveryKey
+      uid: MBAM.Get-MbamBitLockerRecoveryKey
+    - name: Get-MbamCMIntegration
+      uid: MBAM.Get-MbamCMIntegration
+    - name: Get-MbamReport
+      uid: MBAM.Get-MbamReport
+    - name: Get-MbamTPMOwnerPassword
+      uid: MBAM.Get-MbamTPMOwnerPassword
+    - name: Get-MbamWebApplication
+      uid: MBAM.Get-MbamWebApplication
+    - name: Read-ADRecoveryInformation
+      uid: MBAM.Read-ADRecoveryInformation
+    - name: Read-ADTpmInformation
+      uid: MBAM.Read-ADTpmInformation
+    - name: Test-MbamCMIntegration
+      uid: MBAM.Test-MbamCMIntegration
+    - name: Test-MbamDatabase
+      uid: MBAM.Test-MbamDatabase
+    - name: Test-MbamReport
+      uid: MBAM.Test-MbamReport
+    - name: Test-MbamWebApplication
+      uid: MBAM.Test-MbamWebApplication
+    - name: Write-MbamComputerUser
+      uid: MBAM.Write-MbamComputerUser
+    - name: Write-MbamRecoveryInformation
+      uid: MBAM.Write-MbamRecoveryInformation
+    - name: Write-MbamTPMInformation
+      uid: MBAM.Write-MbamTPMInformation
+  - name: UEV
+    uid: UEV
+    items:
+    - name: Clear-UevAppxPackage
+      uid: UEV.Clear-UevAppxPackage
+    - name: Clear-UevConfiguration
+      uid: UEV.Clear-UevConfiguration
+    - name: Disable-UevAppxPackage
+      uid: UEV.Disable-UevAppxPackage
+    - name: Disable-UevTemplate
+      uid: UEV.Disable-UevTemplate
+    - name: Enable-UevAppxPackage
+      uid: UEV.Enable-UevAppxPackage
+    - name: Enable-UevTemplate
+      uid: UEV.Enable-UevTemplate
+    - name: Export-UevConfiguration
+      uid: UEV.Export-UevConfiguration
+    - name: Export-UevPackage
+      uid: UEV.Export-UevPackage
+    - name: Get-UevAppxPackage
+      uid: UEV.Get-UevAppxPackage
+    - name: Get-UevConfiguration
+      uid: UEV.Get-UevConfiguration
+    - name: Get-UevTemplate
+      uid: UEV.Get-UevTemplate
+    - name: Get-UevTemplateProgram
+      uid: UEV.Get-UevTemplateProgram
+    - name: Import-UevConfiguration
+      uid: UEV.Import-UevConfiguration
+    - name: Register-UevTemplate
+      uid: UEV.Register-UevTemplate
+    - name: Repair-UevTemplateIndex
+      uid: UEV.Repair-UevTemplateIndex
+    - name: Restore-UevBackup
+      uid: UEV.Restore-UevBackup
+    - name: Restore-UevUserSetting
+      uid: UEV.Restore-UevUserSetting
+    - name: Set-UevConfiguration
+      uid: UEV.Set-UevConfiguration
+    - name: Set-UevTemplateProfile
+      uid: UEV.Set-UevTemplateProfile
+    - name: Test-UevTemplate
+      uid: UEV.Test-UevTemplate
+    - name: Unregister-UevTemplate
+      uid: UEV.Unregister-UevTemplate
+    - name: Update-UevTemplate
+      uid: UEV.Update-UevTemplate
+metadata:
+  universal_conceptual_toc: /powershell/mdop/win-mdop2-ps/toc.json

@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sends the log file of the specified ETW session to a destination.
+module: EventTracingManagement
+notes: |-
+  * The return values consist of a Win32 error code and a value returned by the cmdlet. The codes have the following meanings: 
+
+  - 0: **Success**. New file created. Existing file copied to the destination folder. Existing file deleted, if specified. 
+  - 1: **CreateNewFileFailed**. Operation halts at this point if a new file is not created. 
+  - 2: **CopyFileFailed**. New file created. 
+  - 3: **DeleteOldFileFailed**. New file created. Existing file copied to the destination folder.
+links:
+- text: Get-EtwTraceSession
+  href: ./Get-EtwTraceSession.yml
+- text: New-EtwTraceSession
+  href: ./New-EtwTraceSession.yml
+- text: Save-EtwTraceSession
+  href: ./Save-EtwTraceSession.yml
+- text: Start-EtwTraceSession
+  href: ./Start-EtwTraceSession.yml
+- text: Stop-EtwTraceSession
+  href: ./Stop-EtwTraceSession.yml
+- text: Update-EtwTraceSession
+  href: ./Update-EtwTraceSession.yml
+syntaxes:
+- >-
+  Send-EtwTraceSession [-Name] <String[]> -DestinationFolder <String> [-DeleteAfterSend]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Send-EtwTraceSession -InputObject <CimInstance[]> -DestinationFolder <String> [-DeleteAfterSend]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Send a trace session to a folder'
+  code: |-
+    PS C:\> Send-EtwTraceSession -Name "WFP-IPsec Trace" -DestinationFolder "\\server17\traces\" -DeleteExistingFileAfterSend
+  description: |-
+    This command sends an ETW trace session named WFP-IPsec Trace to the destination folder \\\\server17\traces\.
+    The command deletes the local copy of the original trace after it is successfully copied.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeleteAfterSend
+  description: |+
+    Deletes the original file that the ETW session was writing to after the file has been copied to the destination.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationFolder
+  isRequired: true
+  description: |+
+    Specifies the destination for the output .etl file.
+
+    If the ETW session is a buffering mode session, this parameter must be a full file path rather than a folder.
+
+  defaultValue: None
+  position: Named
+  aliases: RemoteShare
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the ETW session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: EventTracingManagement.Send-EtwTraceSession
+name: Send-EtwTraceSession
+description: |-
+  The **Send-EtwTraceSession** cmdlet sends the log file of the specified Event Tracing for Windows (ETW) session to a destination.
+
+  For file mode ETW sessions, the session will be updated to write to a new file and the previous file will be copied to the specified destination.
+
+  For buffering mode ETW sessions, the session will be flushed to the specified destination.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_EtwTraceSession_v1.0.cdxml-help.xml
+  Module Name: EventTracingManagement
+  ms.date: 01/05/2017
+  online version: https://docs.microsoft.com/powershell/module/eventtracingmanagement/send-etwtracesession?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Send-EtwTraceSession

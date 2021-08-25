@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the advanced properties on a storage device.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+outputs:
+- name: <xref href="PhysicalDiskAdvancedProperties" data-throw-if-not-resolved="False" />
+  description: |-
+    The cmdlet gets the advanced properties for **PhysicalDisk** objects: **IsPowerProtected** and **IsDeviceCacheEnabled**.
+links:
+- text: Get-PhysicalDisk
+  href: ./Get-PhysicalDisk.yml
+syntaxes:
+- Get-StorageAdvancedProperty -PhysicalDisk <CimInstance> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get advanced storage properties of a physical disk'
+  code: |-
+    PS C:\>Get-PhysicalDisk | Get-StorageAdvancedProperty
+    FriendlyName          SerialNumber    IsPowerProtected IsDeviceCacheEnabled
+    ------------          ------------    ---------------- --------------------
+    MTFDWSC128MAM-1J1     1247091D111W                True                False
+    WDC WD10EZWC-60ZF5A0  WD-WCC1S1822719             True                False
+    WDC WD10EZWC-60ZF5A0  WD-WCC1S1634655             True                False
+  description: |-
+    This command uses the Get-PhysicalDisk cmdlet to get all physical disks, and uses the pipeline operator to pass them to **Get-StorageAdvancedProperty** to get the advanced storage properties **IsPowerProtected** and **IsDeviceCacheEnabled** for the physical disks.
+  summary: ""
+- title: 'Example 2: Get advanced storage properties for the first physical disk in an array'
+  code: |-
+    PS C:\>Get-StorageAdvancedProperty -PhysicalDisk (Get-PhysicalDisk)[0]
+    FriendlyName          SerialNumber    IsPowerProtected IsDeviceCacheEnabled
+    ------------          ------------    ---------------- --------------------
+    MTFDWSC128MAM-1J1     1247091D111W                True                False
+  description: |-
+    This command gets the advanced storage properties **IsPowerProtected** and **IsDeviceCacheEnabled** for the first **PhysicalDisk** object in the array of returned physical disks.
+  summary: ""
+parameters:
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: PhysicalDisk
+  isRequired: true
+  description: |+
+    Specifies an array of physical disk objects.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-StorageAdvancedProperty
+name: Get-StorageAdvancedProperty
+description: |-
+  The **Get-StorageAdvancedProperty** cmdlet gets the advanced properties of a storage device.
+  For example, Get-PhysicalDisk gets the most commonly used attributes of a physical disk such as **CanPool**.
+  To get the cache (**IsDeviceCacheEnabled**) and power protection (**IsPowerProtected**) settings for a physical disk, you can pass a **PhysicalDisk** object to the **Get-StorageAdvancedProperty** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: StorageScripts-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-storageadvancedproperty?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-StorageAdvancedProperty

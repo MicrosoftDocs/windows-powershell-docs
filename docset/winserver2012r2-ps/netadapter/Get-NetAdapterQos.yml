@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the quality of service (QoS) properties of the network adapter, specifically data center bridging (DCB) settings.
+module: NetAdapter
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapterQosSettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The output object contains QoS capabilities and configurations on a network adapter.
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkID=113423
+- text: Disable-NetAdapterQos
+  href: ./Disable-NetAdapterQos.yml
+- text: Enable-NetAdapterQos
+  href: ./Enable-NetAdapterQos.yml
+- text: Set-NetAdapterQos
+  href: ./Set-NetAdapterQos.yml
+syntaxes:
+- >-
+  Get-NetAdapterQos [[-Name] <String[]>] [-IncludeHidden] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+- >-
+  Get-NetAdapterQos -InterfaceDescription <String[]> [-IncludeHidden] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: "PS C:\\> Get-NetAdapterQos -Name * | Where-Object -FilterScript { $_.Enabled }\r\nName                       : DCBADAPTER1 \r\nEnabled                    : True \r\nCapabilities               :                       Hardware     Current \r\n--------     ------- \r\nMacSecBypass        : NotSupported NotSupported \r\nDcbxSupport         : IEEE         None \r\nNumTCs(Max/ETS/PFC) : 8/8/8        8/8/8 \r\n \r\nOperationalTrafficClasses  : TC TSA    Bandwidth Priorities \r\n-- ---    --------- ---------- \r\n0  ETS           40 0-3,5-7 \r\n1  ETS           60 4 \r\n \r\nOperationalFlowControl     : Priority 4 Enabled \r\nOperationalClassifications : Not Available"
+  description: |-
+    This example displays the hardware QoS capabilities and the runtime QoS configurations for a network adapter on which QoS is enabled.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> Get-NetAdapterQos -Name * | Where-Object -FilterScript { $_.Enabled -Eq "False" }
+    Name         : DCBADAPTER1 
+    Enabled      : False 
+    Capabilities :                       Hardware     Current 
+    --------     ------- 
+    MacSecBypass        : NotSupported NotSupported 
+    DcbxSupport         : None         None 
+    NumTCs(Max/ETS/PFC) : 8/8/8        0/0/0
+  description: |-
+    This example displays only the hardware QoS capabilities for a network adapter on which QoS is disabled.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeHidden
+  description: |+
+    Specifies both visible and hidden network adapters should be included.
+    By default only visible network adapters are included.
+    If a wildcard character is used in identifying a network adapter and this parameter has been specified, then the wildcard string is matched against both hidden and visible network adapters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceDescription
+  isRequired: true
+  description: |+
+    Specifies the network adapter interface description.
+    For a physical network adapter this is typically the name of the vendor of the network adapter followed by a part number and description, such as `Contoso 12345 Gigabit Network Device`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ifDesc, InstanceID
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the network adapter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ifAlias, InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetAdapter.Get-NetAdapterQos
+name: Get-NetAdapterQos
+description: |-
+  The **Get-NetAdapterQos** cmdlet gets quality of service (QoS) capabilities and runtime configurations of a DCB-capable network adapter.
+  If QoS is disabled, then this cmdlet only gets the hardware QoS capabilities of the network adapter.
+  If QoS is enabled, then this cmdlet gets the operational traffic class and flow control configurations in addition.
+  If the network adapter supports the DCB Exchange protocol and is connected to a switch that also supports the protocol, then this cmdlet can also return the QoS configurations on the switch.
+
+  If a network adapter does not support QoS, specifically DCB, then this cmdlet does not return any information.
+metadata:
+  external help file: MSFT_NetAdapterQos.cdxml-help.xml
+  Module Name: NetAdapter
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadapterqos?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetAdapterQos

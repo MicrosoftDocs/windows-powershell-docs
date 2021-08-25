@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an attribute store from the Federation Service.
+module: ADFS
+notes: |-
+  * An Active Directory Federation Services (AD FS) 2.0 attribute store is a pluggable module that the policy process for AD FS 2.0 can query to retrieve claim values. You can use either an Active Directory database or a Microsoft SQL Server database as your attribute store, or you can create your own custom attribute store.
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.AttributeStore" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure that represents an AD FS 2.0 attribute store object
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ADFSAttributeStore
+  href: ./Add-ADFSAttributeStore.yml
+- text: Get-ADFSAttributeStore
+  href: ./Get-ADFSAttributeStore.yml
+- text: Set-ADFSAttributeStore
+  href: ./Set-ADFSAttributeStore.yml
+syntaxes:
+- Remove-ADFSAttributeStore [-TargetName] <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-ADFSAttributeStore [-TargetAttributeStore] <AttributeStore> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>Remove-ADFSAttributeStore -TargetName "My Attribute Store"
+  description: |-
+    Description
+
+    -----------
+
+    Removes an attribute store from the Federation Service.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Passes an object to the pipeline.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AttributeStore" data-throw-if-not-resolved="False" />
+  name: TargetAttributeStore
+  isRequired: true
+  description: |+
+    Specifies the attribute store to remove.
+    This value is typically taken from the pipeline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the attribute store to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Remove-ADFSAttributeStore
+name: Remove-ADFSAttributeStore
+description: |-
+  The Remove-ADFSAttributeStore cmdlet removes an attribute store from the Federation Service.
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsattributestore?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

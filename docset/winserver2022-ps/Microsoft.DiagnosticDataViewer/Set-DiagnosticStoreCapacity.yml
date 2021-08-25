@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the diagnostic store time and size capacity.
+module: Microsoft.DiagnosticDataViewer
+notes: |-
+  Requires Windows 10 version 17134 (1803) or higher
+inputs:
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  description: |-
+    Set size capacity of the diagnostic store.
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  description: |-
+    Set time capacity of the diagnostic store.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Set-DiagnosticStoreCapacity [[-Size] <UInt32>] [[-Time] <UInt32>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-DiagnosticStoreCapacity -Size 1024
+  description: |-
+    Set store capacity (megabytes) of the diagnostic store.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-DiagnosticStoreCapacity -Time 24
+  description: |-
+    Set time capacity (hours) of the diagnostic store.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-DiagnosticStoreCapacity -Size 1024 -Time 24
+  description: |-
+    Set store capacity (megabytes) and time capacity (hours) of the diagnostic store at the same time.
+  summary: ""
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Size
+  description: |+
+    Set size capacity of the diagnostic store.
+
+  defaultValue: "0"
+  pipelineInput: true
+  position: "0"
+  aliases: s
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Time
+  description: |+
+    Set time capacity of the diagnostic store.
+
+  defaultValue: "0"
+  pipelineInput: true
+  position: "1"
+  aliases: t
+  parameterValueGroup: ""
+uid: Microsoft.DiagnosticDataViewer.Set-DiagnosticStoreCapacity
+name: Set-DiagnosticStoreCapacity
+description: |-
+  This cmdlet sets the maximum amount of Diagnostic Data history (by time and by size) that can be shown through this tool.
+  The size cap is measured in megabytes, and the time cap is measured in days.
+  Once the either cap is reached (whichever comes first), diagnostic data history is removed based on a first in first out order.
+metadata:
+  external help file: DDVCmdlets.dll-Help.xml
+  Module Name: Microsoft.DiagnosticDataViewer
+  online version: https://docs.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/set-diagnosticstorecapacity?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DiagnosticStoreCapacity

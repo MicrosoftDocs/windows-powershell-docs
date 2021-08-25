@@ -1,0 +1,42 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Calculates the size of a given server folder.
+module: WssCmdlets
+notes: ""
+outputs:
+- name: <xref href="CalculateFolderSizeRequest" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Measure-WssFolder [-Folder] <Folder>
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    PS C:\> [Copied from spec examples]
+  description: |-
+    Description
+
+    -----------
+
+    Measure-WssFolder -Folder $folder
+  summary: ""
+parameters:
+- type: <xref href="Folder" data-throw-if-not-resolved="False" />
+  name: Folder
+  isRequired: true
+  description: |+
+    The folder to calculate the size of.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Measure-WssFolder
+name: Measure-WssFolder
+description: |-
+  Calculates the size of a given server folder.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/measure-wssfolder?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

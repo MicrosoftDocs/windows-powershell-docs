@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables AutoLogger settings in offline WinPE Setup images.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-SbecAutologger
+  href: ./Disable-SbecAutologger.yml
+- text: Enable-SbecAutologger
+  href: ./Enable-SbecAutologger.yml
+- text: Enable-SbecWdsBcd
+  href: ./Enable-SbecWdsBcd.yml
+- text: New-SbecUnattendFragment
+  href: ./New-SbecUnattendFragment.yml
+syntaxes:
+- >-
+  Enable-SbecBootImage [-Path] <String[]> [[-Logger] <String[]>] [[-PermLogger] <String[]>] [-NoDefaultLoggers]
+
+   [[-DismLogPath] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable Boot Event Collector in a WIM image'
+  code: |-
+    PS C:\> Enable-SbecBootImage -Path "C:\Images\Boot.wim"
+  description: |-
+    This command enables the Boot Event Collector for the Boot.wim image.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DismLogPath
+  description: |+
+    Specifies the path of the Deployment Image Servicing and Management (DISM) log file to use when mounting images.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Logger
+  description: |+
+    Specifies the AutoLogger sessions for which to enable forwarding.
+    The forwarding on these sessions auto-disables after the operating system starts.
+    Specifying a session explicitly in *Logger* or *PermLogger* overrides the defaults for it.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoDefaultLoggers
+  description: |+
+    Indicates that this operation does not automatically add the default set of logger sessions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies an array of full paths to the offline Windows image (WIM or VHD) files to which to apply the settings.
+    If a WIM file contains multiple images, all of them are modified.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PermLogger
+  description: |+
+    Specifies the AutoLogger sessions for which to enable forwarding.
+    The forwarding on these sessions remains enabled after the operating system starts.
+    Specifying a session explicitly in *Logger* or *PermLogger* overrides the defaults for it.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Enable-SbecBootImage
+name: Enable-SbecBootImage
+description: |-
+  The **Enable-SbecBootImage** cmdlet enables the AutoLogger settings and creates the Winpeshl.ini files in offline WinPE Setup images to forward events to the Setup and Boot Event Collector.
+
+  The default event log sessions that are configured for sending events to the Boot Event Collector are NT Kernel Logger, EventLog-System, and SetupPlatform.
+  You can configure other loggers with the parameters *Logger* and *PermLogger*.
+  Loggers are always switched to real-time mode, regardless of whether they previously wrote to a file.
+
+  The AutoLogger settings enable event forwarding during the first stage of Setup when it boots from the WinPE image.
+  The Winpeshl.ini files facilitate the configuration of events on the HDD image through Unattend.xml.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/enable-sbecbootimage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-SbecBootImage

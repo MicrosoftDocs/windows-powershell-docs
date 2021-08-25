@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a TLS session ticket key configuration file.
+module: TLS
+notes: ""
+links:
+- text: Enable-TlsSessionTicketKey
+  href: ./Enable-TlsSessionTicketKey.yml
+- text: Export-TlsSessionTicketKey
+  href: ./Export-TlsSessionTicketKey.yml
+- text: Disable-TlsSessionTicketKey
+  href: ./Disable-TlsSessionTicketKey.yml
+syntaxes:
+- New-TlsSessionTicketKey [[-Path] <String>] [-Password] <SecureString> [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a TLS session ticket key'
+  code: |-
+    PS C:\> $Password = Read-Host -AsSecureString
+    PS C:\> New-TlsSessionTicketKey -Password $Password -Path "C:\KeyConfig\TlsSessionTicketKey.config"
+  description: |-
+    The first command prompts the user to enter a password by using the **Read-Host** cmdlet.
+    The command masks the password that the user types at the prompt.
+    For more information, type `Get-Help Read-Host`.
+    The command stores the password in the **$Password** variable.
+
+    The second command creates the session ticket key configuration file which can be used to enable the TLS session ticket for a service account.
+    The command specifies the path for the output configuration file on the TLS server, and specifies that the TLS session use the password stored in **$Password** to access the configuration file.
+  summary: ""
+parameters:
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Specifies the password, as a secure string, for the configuration file of the TLS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path of the configuration file for the TLS server.
+    The cmdlet outputs the generated configuration file to this path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: FullName
+  parameterValueGroup: ""
+uid: TLS.New-TlsSessionTicketKey
+name: New-TlsSessionTicketKey
+description: |-
+  The **New-TlsSessionTicketKey** cmdlet creates a password protected Transport Layer Security (TLS) Session Ticket key configuration file.
+
+  TLS creates a session ticket by using the TLS Session Resumption without Server-Side State mechanism.
+  This mechanism helps to improve the performance of TLS.
+  The TLS server uses this mechanism to create a key to encrypt a session ticket.
+  The client can later use the encrypted session ticket to resume communication with the TLS server.
+  Otherwise, the client must restart the communication by acquiring of new session ticket.
+  For more information, see [RFC 5077, Transport Layer Security (TLS) Session Resumption without Server-Side State](http://rfc5077.openrfc.org/).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
+  Module Name: TLS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/tls/new-tlssessionticketkey?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-TlsSessionTicketKey

@@ -1,0 +1,168 @@
+### YamlMime:PowershellModule
+children:
+- title: ActiveDirectory
+  cmdlets:
+  - ActiveDirectory.Add-ADCentralAccessPolicyMember
+  - ActiveDirectory.Add-ADComputerServiceAccount
+  - ActiveDirectory.Add-ADDomainControllerPasswordReplicationPolicy
+  - ActiveDirectory.Add-ADFineGrainedPasswordPolicySubject
+  - ActiveDirectory.Add-ADGroupMember
+  - ActiveDirectory.Add-ADPrincipalGroupMembership
+  - ActiveDirectory.Add-ADResourcePropertyListMember
+  - ActiveDirectory.Clear-ADAccountExpiration
+  - ActiveDirectory.Clear-ADClaimTransformLink
+  - ActiveDirectory.Disable-ADAccount
+  - ActiveDirectory.Disable-ADOptionalFeature
+  - ActiveDirectory.Enable-ADAccount
+  - ActiveDirectory.Enable-ADOptionalFeature
+  - ActiveDirectory.Get-ADAccountAuthorizationGroup
+  - ActiveDirectory.Get-ADAccountResultantPasswordReplicationPolicy
+  - ActiveDirectory.Get-ADAuthenticationPolicy
+  - ActiveDirectory.Get-ADAuthenticationPolicySilo
+  - ActiveDirectory.Get-ADCentralAccessPolicy
+  - ActiveDirectory.Get-ADCentralAccessRule
+  - ActiveDirectory.Get-ADClaimTransformPolicy
+  - ActiveDirectory.Get-ADClaimType
+  - ActiveDirectory.Get-ADComputer
+  - ActiveDirectory.Get-ADComputerServiceAccount
+  - ActiveDirectory.Get-ADDCCloningExcludedApplicationList
+  - ActiveDirectory.Get-ADDefaultDomainPasswordPolicy
+  - ActiveDirectory.Get-ADDomain
+  - ActiveDirectory.Get-ADDomainController
+  - ActiveDirectory.Get-ADDomainControllerPasswordReplicationPolicy
+  - ActiveDirectory.Get-ADDomainControllerPasswordReplicationPolicyUsage
+  - ActiveDirectory.Get-ADFineGrainedPasswordPolicy
+  - ActiveDirectory.Get-ADFineGrainedPasswordPolicySubject
+  - ActiveDirectory.Get-ADForest
+  - ActiveDirectory.Get-ADGroup
+  - ActiveDirectory.Get-ADGroupMember
+  - ActiveDirectory.Get-ADObject
+  - ActiveDirectory.Get-ADOptionalFeature
+  - ActiveDirectory.Get-ADOrganizationalUnit
+  - ActiveDirectory.Get-ADPrincipalGroupMembership
+  - ActiveDirectory.Get-ADReplicationAttributeMetadata
+  - ActiveDirectory.Get-ADReplicationConnection
+  - ActiveDirectory.Get-ADReplicationFailure
+  - ActiveDirectory.Get-ADReplicationPartnerMetadata
+  - ActiveDirectory.Get-ADReplicationQueueOperation
+  - ActiveDirectory.Get-ADReplicationSite
+  - ActiveDirectory.Get-ADReplicationSiteLink
+  - ActiveDirectory.Get-ADReplicationSiteLinkBridge
+  - ActiveDirectory.Get-ADReplicationSubnet
+  - ActiveDirectory.Get-ADReplicationUpToDatenessVectorTable
+  - ActiveDirectory.Get-ADResourceProperty
+  - ActiveDirectory.Get-ADResourcePropertyList
+  - ActiveDirectory.Get-ADResourcePropertyValueType
+  - ActiveDirectory.Get-ADRootDSE
+  - ActiveDirectory.Get-ADServiceAccount
+  - ActiveDirectory.Get-ADTrust
+  - ActiveDirectory.Get-ADUser
+  - ActiveDirectory.Get-ADUserResultantPasswordPolicy
+  - ActiveDirectory.Grant-ADAuthenticationPolicySiloAccess
+  - ActiveDirectory.Install-ADServiceAccount
+  - ActiveDirectory.Move-ADDirectoryServer
+  - ActiveDirectory.Move-ADDirectoryServerOperationMasterRole
+  - ActiveDirectory.Move-ADObject
+  - ActiveDirectory.New-ADAuthenticationPolicy
+  - ActiveDirectory.New-ADAuthenticationPolicySilo
+  - ActiveDirectory.New-ADCentralAccessPolicy
+  - ActiveDirectory.New-ADCentralAccessRule
+  - ActiveDirectory.New-ADClaimTransformPolicy
+  - ActiveDirectory.New-ADClaimType
+  - ActiveDirectory.New-ADComputer
+  - ActiveDirectory.New-ADDCCloneConfigFile
+  - ActiveDirectory.New-ADFineGrainedPasswordPolicy
+  - ActiveDirectory.New-ADGroup
+  - ActiveDirectory.New-ADObject
+  - ActiveDirectory.New-ADOrganizationalUnit
+  - ActiveDirectory.New-ADReplicationSite
+  - ActiveDirectory.New-ADReplicationSiteLink
+  - ActiveDirectory.New-ADReplicationSiteLinkBridge
+  - ActiveDirectory.New-ADReplicationSubnet
+  - ActiveDirectory.New-ADResourceProperty
+  - ActiveDirectory.New-ADResourcePropertyList
+  - ActiveDirectory.New-ADServiceAccount
+  - ActiveDirectory.New-ADUser
+  - ActiveDirectory.Remove-ADAuthenticationPolicy
+  - ActiveDirectory.Remove-ADAuthenticationPolicySilo
+  - ActiveDirectory.Remove-ADCentralAccessPolicy
+  - ActiveDirectory.Remove-ADCentralAccessPolicyMember
+  - ActiveDirectory.Remove-ADCentralAccessRule
+  - ActiveDirectory.Remove-ADClaimTransformPolicy
+  - ActiveDirectory.Remove-ADClaimType
+  - ActiveDirectory.Remove-ADComputer
+  - ActiveDirectory.Remove-ADComputerServiceAccount
+  - ActiveDirectory.Remove-ADDomainControllerPasswordReplicationPolicy
+  - ActiveDirectory.Remove-ADFineGrainedPasswordPolicy
+  - ActiveDirectory.Remove-ADFineGrainedPasswordPolicySubject
+  - ActiveDirectory.Remove-ADGroup
+  - ActiveDirectory.Remove-ADGroupMember
+  - ActiveDirectory.Remove-ADObject
+  - ActiveDirectory.Remove-ADOrganizationalUnit
+  - ActiveDirectory.Remove-ADPrincipalGroupMembership
+  - ActiveDirectory.Remove-ADReplicationSite
+  - ActiveDirectory.Remove-ADReplicationSiteLink
+  - ActiveDirectory.Remove-ADReplicationSiteLinkBridge
+  - ActiveDirectory.Remove-ADReplicationSubnet
+  - ActiveDirectory.Remove-ADResourceProperty
+  - ActiveDirectory.Remove-ADResourcePropertyList
+  - ActiveDirectory.Remove-ADResourcePropertyListMember
+  - ActiveDirectory.Remove-ADServiceAccount
+  - ActiveDirectory.Remove-ADUser
+  - ActiveDirectory.Rename-ADObject
+  - ActiveDirectory.Reset-ADServiceAccountPassword
+  - ActiveDirectory.Restore-ADObject
+  - ActiveDirectory.Revoke-ADAuthenticationPolicySiloAccess
+  - ActiveDirectory.Search-ADAccount
+  - ActiveDirectory.Set-ADAccountAuthenticationPolicySilo
+  - ActiveDirectory.Set-ADAccountControl
+  - ActiveDirectory.Set-ADAccountExpiration
+  - ActiveDirectory.Set-ADAccountPassword
+  - ActiveDirectory.Set-ADAuthenticationPolicy
+  - ActiveDirectory.Set-ADAuthenticationPolicySilo
+  - ActiveDirectory.Set-ADCentralAccessPolicy
+  - ActiveDirectory.Set-ADCentralAccessRule
+  - ActiveDirectory.Set-ADClaimTransformLink
+  - ActiveDirectory.Set-ADClaimTransformPolicy
+  - ActiveDirectory.Set-ADClaimType
+  - ActiveDirectory.Set-ADComputer
+  - ActiveDirectory.Set-ADDefaultDomainPasswordPolicy
+  - ActiveDirectory.Set-ADDomain
+  - ActiveDirectory.Set-ADDomainMode
+  - ActiveDirectory.Set-ADFineGrainedPasswordPolicy
+  - ActiveDirectory.Set-ADForest
+  - ActiveDirectory.Set-ADForestMode
+  - ActiveDirectory.Set-ADGroup
+  - ActiveDirectory.Set-ADObject
+  - ActiveDirectory.Set-ADOrganizationalUnit
+  - ActiveDirectory.Set-ADReplicationConnection
+  - ActiveDirectory.Set-ADReplicationSite
+  - ActiveDirectory.Set-ADReplicationSiteLink
+  - ActiveDirectory.Set-ADReplicationSiteLinkBridge
+  - ActiveDirectory.Set-ADReplicationSubnet
+  - ActiveDirectory.Set-ADResourceProperty
+  - ActiveDirectory.Set-ADResourcePropertyList
+  - ActiveDirectory.Set-ADServiceAccount
+  - ActiveDirectory.Set-ADUser
+  - ActiveDirectory.Show-ADAuthenticationPolicyExpression
+  - ActiveDirectory.Sync-ADObject
+  - ActiveDirectory.Test-ADServiceAccount
+  - ActiveDirectory.Uninstall-ADServiceAccount
+  - ActiveDirectory.Unlock-ADAccount
+uid: ActiveDirectory
+name: ActiveDirectory
+description: |-
+  The Active Directory module for Windows PowerShell is a PowerShell module that consolidates a group of cmdlets. You can use these cmdlets to manage your Active Directory domains, Active Directory Lightweight Directory Services (AD LDS) configuration sets, and Active Directory Database Mounting Tool instances in a single, self-contained package.
+
+  If you don't have the Active Directory module installed on your machine, you need to download the correct Remote Server Administration Tools (RSAT) package for your OS.  If you're running Windows 7, you will also need to run the `import-module ActiveDirectory` command from an elevated PowerShell prompt. For more detail, see [RSAT for Windows operating systems](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems). Starting with Windows 10 October 2018 Update, RSAT is included as a set of Features on Demand right from Windows 10. Now, instead of downloading an RSAT package you can just go to Manage optional features in Settings and click Add a feature to see the list of available RSAT tools. Select and install the specific RSAT tools you need. To see installation progress, click the Back button to view status on the Manage optional features page.
+
+  If you want to use this module in PowerShell 7, please see [PowerShell 7 module compatibility](https://docs.microsoft.com/powershell/scripting/whats-new/module-compatibility).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 4.0.6.1
+  Locale: en-US
+  Module Guid: 43c15630-959c-49e4-a977-758c5cc93408
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  title: ActiveDirectory

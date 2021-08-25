@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets physical network routes for a virtualized network.
+module: NetWNV
+notes: ""
+links:
+- text: New-NetVirtualizationProviderRoute
+  href: ./New-NetVirtualizationProviderRoute.yml
+- text: Remove-NetVirtualizationProviderRoute
+  href: ./Remove-NetVirtualizationProviderRoute.yml
+- text: Set-NetVirtualizationProviderRoute
+  href: ./Set-NetVirtualizationProviderRoute.yml
+syntaxes:
+- >-
+  Get-NetVirtualizationProviderRoute [-AsJob] [-CimSession <CimSession[]>] [-DestinationPrefix <String[]>]
+
+   [-InterfaceIndex <UInt32[]>] [-Metric <UInt32[]>] [-NextHop <String[]>] [-ThrottleLimit <Int32>]
+examples:
+- title: 'Example 1: Get provider routes for a specified interface'
+  code: |-
+    PS C:\> Get-NetVirtualizationProviderRoute -InterfaceIndex 21
+  description: |-
+    This command gets the provider routes for the interface that has the interface index 21.
+  summary: ""
+- title: 'Example 2: Get provider routes for destination prefix'
+  code: |-
+    PS C:\>Get-NetVirtualizationProviderRoute -DestinationPrefix "172.16.0.0/16"
+  description: |-
+    This command gets the provider routes that have the specified destination prefix.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DestinationPrefix
+  description: |+
+    Specifies an array of IP prefixes, as strings, for destination networks.
+    You can specify IPv4 and IPv6 addresses.
+    Use prefix notation: **0.0.0.0/0**.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceIndex
+  description: |+
+    Specifies an array of indexes for network interfaces that have hv_win8_2 Network Virtualization enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Metric
+  description: |+
+    Specifies an array of integer values.
+    Network Virtualization selects the route with the lowest metric value from a group of usable routes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NextHop
+  description: |+
+    Specifies an array of IP addresses for next hop gateways.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetWNV.Get-NetVirtualizationProviderRoute
+name: Get-NetVirtualizationProviderRoute
+description: |-
+  The **Get-NetVirtualizationProviderRoute** cmdlet gets physical network routes for a hv_win8_1 virtual network.
+  Network Virtualization allows more than one virtual network to exist on the same physical network.
+  Computers can exchange network traffic with a virtual machine (VM) by using a Customer Address within the virtual network.
+  Network Virtualization uses Provider Routes to direct network traffic on the physical network.
+  For more information, see Network Virtualization technical detailshttp://technet.microsoft.com/library/jj134174.aspx (http://technet.microsoft.com/library/jj134174.aspx) on TechNet.
+
+  You can specify Provider Routes by using any combination of the following: 
+
+  - Destination. 
+  - Interface. 
+  - Metric. 
+  - Next hop gateway.
+metadata:
+  external help file: NetWNV_Cmdlets.xml
+  Module Name: NetWNV
+  online version: https://docs.microsoft.com/powershell/module/netwnv/get-netvirtualizationproviderroute?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

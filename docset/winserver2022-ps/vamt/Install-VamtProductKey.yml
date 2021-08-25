@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Installs the specified product key on a product or a group of products.
+module: VAMT
+notes: ""
+links:
+- text: Add-VamtProductKey
+  href: ./Add-VamtProductKey.yml
+- text: Get-VamtProduct
+  href: ./Get-VamtProduct.yml
+- text: Get-VamtProductKey
+  href: ./Get-VamtProductKey.yml
+syntaxes:
+- >-
+  Install-VamtProductKey -Products <Product[]> -ProductKey <String> [-DbConnectionString <String>]
+
+   [-Username <String>] [-Password <String>] [-DbCommandTimeout <Int32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Install a product key'
+  code: |-
+    PS C:\> $Product = Get-VamtProduct | where { $_.fullyqualifieddomainname -eq 'mymachine' }
+    PS C:\> Install-VamtProductKey -Products $Product -ProductKey "12345-67890-12345-67890-12345"
+  description: |-
+    This command gets a specified product by using the fully qualified domain name and then installs the specified product key on that product.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DbCommandTimeout
+  description: |+
+    Indicates how long dep_nextref_vamt waits for a response from the database before timing out.
+    The default value is 30 seconds.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DbConnectionString
+  description: |+
+    Specifies the database where the product keys are installed.
+    If no database connection string is provided, dep_nextref_vamt attempts to use the database that the dep_nextref_vamt user console used on the local computer.
+    If dep_nextref_vamt does not find a database, it returns an error.
+    You can find the connection string in the dep_nextref_vamt UI in the Preferences dialog box.
+    On the menu bar, click View, and then click Preferences to open the Volume Activation Management Tool Preferences dialog box.
+    The connection string is in the Database Settings section under Current connection string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Provides a password for password-protected environments.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProductKey
+  isRequired: true
+  description: |+
+    Specifies the product key to be installed on the product or products.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Product" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Products
+  isRequired: true
+  description: |+
+    Specifies the product or products to install the product key.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Username
+  description: |+
+    Provides a user name for password-protected environments.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: VAMT.Install-VamtProductKey
+name: Install-VamtProductKey
+description: |-
+  The **Install-VamtProductKey** cmdlet installs the specified product key on a single product or on a group of products.
+  The cmdlet returns a value to indicate whether the product key is valid.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/vamt/install-vamtproductkey?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Install-VamtProductKey

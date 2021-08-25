@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an application pool from IIS.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Remove-WebAppPool [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Removing an Application Pool --------------'
+  code: |-
+    IIS:\>New-WebAppPool MyNewAppPool "Sleep for 5 seconds before AppPool gets removed"; Sleep 5 Remove-WebAppPool MyNewAppPool
+  description: |-
+    This example demonstrates how to create a new application pool, and then removes it after waiting 5 seconds.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the application pool to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Remove-WebAppPool
+name: Remove-WebAppPool
+description: |-
+  Removes an application pool from IIS.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/remove-webapppool?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

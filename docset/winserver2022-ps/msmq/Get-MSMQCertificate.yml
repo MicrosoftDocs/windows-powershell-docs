@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets certificates registered in Active Directory Domain Services.
+module: MSMQ
+notes: ""
+links:
+- text: Enable-MsmqCertificate
+  href: ./Enable-MSMQCertificate.yml
+- text: Remove-MsmqCertificate
+  href: ./Remove-MsmqCertificate.yml
+syntaxes:
+- Get-MsmqCertificate [[-ComputerName] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all certificates of the current user'
+  code: |-
+    PS C:\> Get-MsmqCertificate
+  description: |-
+    This command gets the certificates of the current user for all hosts or virtual servers.
+  summary: ""
+- title: 'Example 2: Get the certificates of the current user for a host or virtual server'
+  code: |-
+    PS C:\> Get-MsmqCertificate -ComputerName "Contoso27"
+  description: |-
+    This command gets the certificates of the current user for the host or virtual server named Contoso27.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of a host or virtual server.
+    This cmdlet gets the certificates of the current user for the specified host or virtual server.
+    If you do not specify this parameter, this cmdlet gets the certificates of the current user for all hosts or virtual servers.
+
+  defaultValue: None
+  position: "0"
+  aliases: cn
+  parameterValueGroup: ""
+uid: MSMQ.Get-MSMQCertificate
+name: Get-MSMQCertificate
+description: |-
+  The **Get-MsmqCertificate** cmdlet gets an array of **System.Security.Cryptography.X509Certificates.X509Certificate** objects.
+  Each object represents a personal certificate that is currently registered in Active Directory® Domain Services.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/get-msmqcertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MSMQCertificate

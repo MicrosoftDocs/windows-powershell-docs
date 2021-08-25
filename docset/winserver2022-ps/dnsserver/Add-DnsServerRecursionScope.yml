@@ -1,0 +1,164 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a recursion scope on a DNS server.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerRecursionScope" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DnsServerRecursionScope
+  href: ./Get-DnsServerRecursionScope.yml
+- text: Remove-DnsServerRecursionScope
+  href: ./Remove-DnsServerRecursionScope.yml
+- text: Set-DnsServerRecursionScope
+  href: ./Set-DnsServerRecursionScope.yml
+syntaxes:
+- >-
+  Add-DnsServerRecursionScope [-Name] <String> [[-Forwarder] <IPAddress[]>] [[-EnableRecursion] <Boolean>]
+
+   [-PassThru] [-ComputerName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a recursion scope'
+  code: |-
+    PS C:\> Add-DnsServerRecursionScope -Name "ScopeInternal" -Forwarder 10.0.0.1,172.22.0.1 -EnableRecursion $True -PassThru
+    Name                                             Forwarder                                        EnableRecursion
+    ----                                             ---------                                        ---------------
+    ScopeInternal                                    {10.0.0.1, 172.22.0.1}                             True
+  description: |-
+    This command adds a recursion scope to the DNS server.
+    This scope enables recursion and specifies two forwarders.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a remote DNS server.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableRecursion
+  description: |+
+    Indicates whether to enable recursion.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Forwarder
+  description: |+
+    Specifies an array IP addresses of forwarders for this recursion scope.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the recursion scope.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DnsServer.Add-DnsServerRecursionScope
+name: Add-DnsServerRecursionScope
+description: |-
+  The **Add-DnsServerRecursionScope** cmdlet adds a recursion scope on a Domain Name System (DNS) server.
+  Recursion scopes are unique instances of a group of settings that control recursion on a DNS server.
+  A recursion scope contains a list of forwarders and specifies whether recursion is enabled.
+  A DNS server can have many recursion scopes.
+
+  DNS server recursion policies allow you to choose a recursion scope for a set of queries.
+  If the DNS server is not authoritative for certain queries, DNS server recursion policies allow you to control how to resolve those queries.
+  You can specify which forwarders to use and whether to use recursion.
+
+  The legacy recursion setting and list of forwarders are now referred as the default recursion scope.
+  You cannot add or remove the default recursion scope, identified by name as dot (.).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerRecursionScope_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverrecursionscope?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DnsServerRecursionScope

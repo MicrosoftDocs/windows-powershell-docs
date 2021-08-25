@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes IP address audit events from the IPAM database.
+module: IpamServer
+notes: ""
+outputs:
+- name: <xref href="IpamIpAuditEvent" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents an IP address audit event in IPAM.
+links:
+- text: Get-IpamIpAddressAuditEvent
+  href: ./Get-IpamIpAddressAuditEvent.yml
+syntaxes:
+- >-
+  Remove-IpamIpAddressAuditEvent -EndDate <DateTime> [-Force] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove all event data'
+  code: |-
+    PS C:\> $Today = Get-Date
+    PS C:\> Remove-IpamIpAuditEvent -EndDate $Today
+    Confirm
+
+    All Event catalog data up to and including the date selected by you will be deleted permanently. Do you want to
+
+    continue?
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+  description: |-
+    The first command gets today's date through the **Get-Date** cmdlet then stores the result in the variable named $Today.
+    The second command removes all IP address audit event data prior to the date stored in the $Today variable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EndDate
+  isRequired: true
+  description: |+
+    Specifies the end date, in YYYY/MM/DD.hh:mm:ss format, for which to delete the event data.
+    The cmdlet deletes all event data up to, and including, this date.
+    The value cannot be the same as the current date.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: IpamServer.Remove-IpamIpAddressAuditEvent
+name: Remove-IpamIpAddressAuditEvent
+description: |-
+  The **Remove-IpamIpAddressAuditEvent** cmdlet permanently removes all IP address audit events, including the events collected on the date identified by the *EndDate* parameter, from the IP Address Management (IPAM) database.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamIpAuditEvent.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/remove-ipamipaddressauditevent?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-IpamIpAddressAuditEvent

@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Grants permissions to users and groups to access a DFS namespace folder.
+module: DFSN
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_DfsNamespaceAccess" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DfsnAccess
+  href: ./Get-DfsnAccess.yml
+- text: Remove-DfsnAccess
+  href: ./Remove-DfsnAccess.yml
+- text: Revoke-DfsnAccess
+  href: ./Revoke-DfsnAccess.yml
+syntaxes:
+- >-
+  Grant-DfsnAccess [-Path] <String> [-AccountName] <String[]> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Grant a permission to a user'
+  code: |-
+    PS C:\> Grant-DfsnAccess -Path "\\Contoso\Software\Projects" -AccountName "Western\SarahJones"
+  description: |-
+    This command grants the user Western\SarahJones permissions for the folder \\\\Contoso\Software\Projects.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AccountName
+  isRequired: true
+  description: |+
+    Specifies an array of user and group accounts.
+    This cmdlet grants permissions to the accounts specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Account, user
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a path for a DFS namespace folder.
+    This cmdlet grants permissions to access the folder specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DfsPath, FolderPath, NamespacePath
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSN.Grant-DfsnAccess
+name: Grant-DfsnAccess
+description: |-
+  The **Grant-DfsnAccess** cmdlet grants permissions to users and groups for a Distributed File System (DFS) namespace folder.
+  This cmdlet grants permissions to access a folder and to enumerate its contents.
+  You can use the Get-DfsnAccess cmdlet to see the current permissions, and you can use the Revoke-DfsnAccess cmdlet to revoke permissions.
+
+  For a DFS namespace which has Access-based enumeration enabled, users can see only the folders that they can access.
+
+  For more information about DFS namespaces, see Overview of DFS Namespaceshttp://technet.microsoft.com/library/cc730736 (http://technet.microsoft.com/library/cc730736) on TechNet.
+metadata:
+  external help file: DfsNamespaceAccess.cdxml-help.xml
+  Module Name: DFSN
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/dfsn/grant-dfsnaccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Grant-DfsnAccess

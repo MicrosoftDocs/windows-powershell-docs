@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports the current map of personal session desktops to users.
+module: RDMgmt
+notes: ""
+links:
+- text: Get-RDPersonalSessionDesktopAssignment
+  href: ./Get-RDPersonalSessionDesktopAssignment.yml
+- text: Import-RDPersonalSessionDesktopAssignment
+  href: ./Import-RDPersonalSessionDesktopAssignment.yml
+- text: Remove-RDPersonalSessionDesktopAssignment
+  href: ./Remove-RDPersonalSessionDesktopAssignment.yml
+- text: Set-RDPersonalSessionDesktopAssignment
+  href: ./Set-RDPersonalSessionDesktopAssignment.yml
+syntaxes:
+- >-
+  Export-RDPersonalSessionDesktopAssignment [-CollectionName] <String> -path <String>
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a personal session desktop collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: path
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Export-RDPersonalSessionDesktopAssignment
+name: Export-RDPersonalSessionDesktopAssignment
+description: |-
+  The **Export-RDPersonalSessionDesktopAssignment** cmdlet exports the current map of personal session desktops to users.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/export-rdpersonalsessiondesktopassignment?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-RDPersonalSessionDesktopAssignment

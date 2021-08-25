@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a server from a Remote Desktop deployment.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-RDServer
+  href: ./Add-RDServer.yml
+- text: Get-RDServer
+  href: ./Get-RDServer.yml
+syntaxes:
+- >-
+  Remove-RDServer [-Server] <String> [-Role] <String> [[-ConnectionBroker] <String>] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove an RD Virtualization Host'
+  code: |-
+    PS C:\> Remove-RDServer -Server "RDVH.Contoso.com" -Role "RDS-VIRTUALIZATION" -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command removes an RD Virtualization Host server named RDVH.Contoso.com from the deployment that has an RD Connection Broker server named RDCB.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Role
+  isRequired: true
+  description: |+
+    Specifies an RDS role service name.
+    The acceptable values for this parameter are:
+
+    - RDS-VIRTUALIZATION.
+    Remote Desktop Virtualization Host (RD Virtualization Host).
+    - RDS-RD-SERVER.
+    Remote Desktop Session Host (RD Session Host).
+    - RDS-CONNECTION-BROKER.
+    RD Connection Broker.
+    - RDS-WEB-ACCESS.
+    Remote Desktop Web Access (RD Web Access).
+    - RDS-GATEWAY.
+    Remote Desktop Gateway (RD Gateway).
+    - RDS-LICENSING.
+    Remote Desktop Licensing (RD Licensing).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: RDS-CONNECTION-BROKER, RDS-VIRTUALIZATION, RDS-RD-SERVER, RDS-WEB-ACCESS, RDS-GATEWAY, RDS-LICENSING
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  isRequired: true
+  description: |+
+    Specifies the FQDN of the server to be removed from the Remote Desktop deployment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Remove-RDServer
+name: Remove-RDServer
+description: |-
+  The **Remove-RDServer** cmdlet removes a specified Remote Desktop Services (RDS) server from a Remote Desktop deployment.
+  This cmdlet does not uninstall a server or server role.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/remove-rdserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-RDServer

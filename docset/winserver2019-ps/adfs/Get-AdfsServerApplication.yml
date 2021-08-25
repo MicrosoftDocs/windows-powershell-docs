@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets configuration settings for a server application role for an application in AD FS.
+module: ADFS
+notes: |-
+  Microsoft.IdentityServer.Management.Resources.ServerApplication inherits from Microsoft.IdentityServer.Management.Resources.ClientApplication object and implements the Microsoft.IdentityServer.Management.Resources.IApplication interface.
+
+  Microsoft.IdentityServer.Management.Resources.ClientApplication
+
+  ApplicationGroupIdentifier                        string
+  Description                                       string
+  Enabled                                           bool
+  Identifier                                        string
+  Name                                              string
+  RedirectUri                                       string[]
+
+  Microsoft.IdentityServer.Management.Resources.IApplication
+
+  ApplicationGroupIdentifier                        string
+  Enabled                                           bool
+  Name                                              string
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    Microsoft.IdentityServer.Management.Resources.ServerApplication
+    Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.ServerApplication" data-throw-if-not-resolved="False" />
+  description: |-
+    ADUserPrincipalName                               string
+    ApplicationGroupIdentifier                        string
+    ClientSecret                                      string
+    Description                                       string
+    Enabled                                           bool
+    Identifier                                        string
+    JWKSUri                                           uri
+    JWTSigningCertificateRevocationCheck              Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
+    JWTSigningKeys                                    System.Collections.Generic.IDictionary[string,System.Object]
+    Name                                              string
+    RedirectUri                                       string[]
+- name: <xref href="Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting" data-throw-if-not-resolved="False" />
+  description: |-
+    RevocationSetting
+    {
+       None = 0,
+       CheckEndCert = 1,
+       CheckEndCertCacheOnly = 2,
+       CheckChain = 3,
+       CheckChainCacheOnly = 4,
+       CheckChainExcludeRoot = 5,
+       CheckChainExcludeRootCacheOnly = 6,
+    }
+links:
+- text: Add-AdfsServerApplication
+  href: ./Add-AdfsServerApplication.yml
+- text: Remove-AdfsServerApplication
+  href: ./Remove-AdfsServerApplication.yml
+- text: Set-AdfsServerApplication
+  href: ./Set-AdfsServerApplication.yml
+syntaxes:
+- Get-AdfsServerApplication [[-Identifier] <String[]>] [<CommonParameters>]
+- Get-AdfsServerApplication [-Name] <String[]> [<CommonParameters>]
+- Get-AdfsServerApplication [-Application] <ServerApplication> [<CommonParameters>]
+- Get-AdfsServerApplication [-ApplicationGroupIdentifier] <String> [<CommonParameters>]
+- Get-AdfsServerApplication [-ApplicationGroup] <ApplicationGroup> [<CommonParameters>]
+parameters:
+- type: <xref href="ServerApplication" data-throw-if-not-resolved="False" />
+  name: Application
+  isRequired: true
+  description: |+
+    Specifies the server application to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ApplicationGroup" data-throw-if-not-resolved="False" />
+  name: ApplicationGroup
+  isRequired: true
+  description: |+
+    Specifies the application group from which to get server applications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationGroupIdentifier
+  isRequired: true
+  description: |+
+    Specifies the ID of the application group from which to get server applications.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identifier
+  description: |+
+    Specifies an array of IDs of the application groups from which to get server applications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names of the application groups from which to get server applications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsServerApplication
+name: Get-AdfsServerApplication
+description: |-
+  The **Get-AdfsServerApplication** cmdlet gets configuration settings for a server application role for an application in Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsserverapplication?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsServerApplication

@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starting at Windows 10 Insider Preview Build 20215 you get access to the `Reset-AppxPackage` PowerShell Cmdlet for use in resetting your installed Windows Apps.
+
+  Restores the Windows app to its initial configuration.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.IO.FileInfo" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Package Manager API
+  href: http://go.microsoft.com/fwlink/?LinkId=245447
+- text: How to Add and Remove Apps
+  href: http://go.microsoft.com/fwlink/?LinkID=231020
+- text: Get-AppxPackage
+  href: ./Get-AppxPackage.yml
+- text: Get-AppxPackageManifest
+  href: ./Get-AppxPackageManifest.yml
+- text: Move-AppxPackage
+  href: ./Move-AppxPackage.yml
+- text: Remove-AppxPackage
+  href: ./Remove-AppxPackage.yml
+syntaxes:
+- >-
+  Reset-AppxPackage [-Package] <string>
+
+                    [-WhatIf] 
+
+                    [-Confirm] 
+
+                    [<CommonParameters>]
+examples:
+- title: 'Example 1: Reset app package'
+  code: |-
+    PS C:\> Reset-AppxPackage -Package publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe
+  description: |-
+    This cmdlet will reset the `publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe` application back to its original settings.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies the package full name (PFuN) of the app which will be reset.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: None
+  parameterValueGroup: ""
+uid: Appx.Reset-AppxPackage
+name: Reset-AppxPackage
+description: |-
+  The **Reset-AppxPackage** cmdlet will reset the app to its original settings, and the app will react as a freshly installed app. 
+
+  After resetting the app, any initial prompts by the app will be prompted for user input.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+  Module Name: Appx
+  ms.date: 10/20/2020
+  online version: https://docs.microsoft.com/powershell/module/appx/reset-appxpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Reset-AppxPackage

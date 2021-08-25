@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an RDS server to a Remote Desktop deployment.
+module: RDMgmt
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input.
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDServer
+  href: ./Get-RDServer.yml
+- text: Remove-RDServer
+  href: ./Remove-RDServer.yml
+syntaxes:
+- >-
+  Add-RDServer [-Server] <String> [-Role] <String> [[-ConnectionBroker] <String>]
+
+   [[-GatewayExternalFqdn] <String>] [-CreateVirtualSwitch] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add an RD Session Host server'
+  code: |-
+    PS C:\> Add-RDServer -Server "SessionHost.Contoso.com" -Role "RDS-RD-SERVER" -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command adds a server named SessionHost.Contoso.com as an RD Session Host server to a deployment that has an RD Connection Broker server named RDCB.Contoso.com.
+    The RDS-RD-SERVER role indicates an RD Session Host server.
+  summary: ""
+- title: 'Example 2: Add an RD Virtualization Host server and create a virtual switch'
+  code: |-
+    PS C:\>Add-RDServer -Server "VirtualizationHost.Contoso.com" -Role "RDS-VIRTUALIZATION" -ConnectionBroker "RDCB.Contoso.com" -CreateVirtualSwitch
+  description: |-
+    This command adds a server named VirtualizationHost.Contoso.com as an RD Virtualization Host server to a deployment that has an RD Connection Broker server named RDCB.Contoso.com.
+    The command creates a virtual switch.
+  summary: ""
+- title: 'Example 3: Add an RD Gateway server'
+  code: |-
+    PS C:\>Add-RDServer -Server "Gateway.Contoso.com" -Role "RDS-GATEWAY" -ConnectionBroker "RDCB.Contoso.com" -GatewayExternalFqdn "ExternalFQDN.NorthWindTraders.com"
+  description: |-
+    This command adds a server named Gateway.Contoso.com as an external gateway to a deployment that has an RD Connection Broker server named RDCB.Contoso.com.
+    The external FQDN of the gateway is ExternalFQDN.NorthWindTraders.com.
+  summary: ""
+- title: 'Example 4: Add an RD Connection Broker server'
+  code: |-
+    PS C:\>Add-RDServer -Server "RDCB02Contoso.com" -Role "RDS-CONNECTION-BROKER" -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command adds a server named RDCB02Contoso.com as an RD Connection Broker server to a deployment that has an RD Connection Broker server named RDCB.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the FQDN of the local computer.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CreateVirtualSwitch
+  description: |+
+    Indicates that the cmdlet creates a virtual switch.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GatewayExternalFqdn
+  description: |+
+    Specifies the external FQDN of the RD Gateway server for this Remote Desktop deployment.
+    Use this parameter when you are adding the RD Gateway role service.
+    The **Role** parameter value is RDS-GATEWAY.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Role
+  isRequired: true
+  description: |+
+    Specifies an RDS role service name.
+    The acceptable values for this parameter are:
+
+    - RDS-VIRTUALIZATION.
+    Remote Desktop Virtualization Host (RD Virtualization Host).
+    - RDS-RD-SERVER.
+    Remote Desktop Session Host (RD Session Host).
+    - RDS-CONNECTION-BROKER.
+    RD Connection Broker.
+    - RDS-WEB-ACCESS.
+    Remote Desktop Web Access (RD Web Access).
+    - RDS-GATEWAY.
+    RD Gateway.
+    - RDS-LICENSING.
+    Remote Desktop Licensing (RD Licensing).
+
+    If you select a value of RDS-GATEWAY for this parameter, supply a value for the **GatewayExternalFqdn** parameter.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: RDS-CONNECTION-BROKER, RDS-VIRTUALIZATION, RDS-RD-SERVER, RDS-WEB-ACCESS, RDS-GATEWAY, RDS-LICENSING
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  isRequired: true
+  description: |+
+    Specifies the FQDN of the server to add to the Remote Desktop deployment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Add-RDServer
+name: Add-RDServer
+description: |-
+  The **Add-RDServer** cmdlet adds a Remote Desktop Services (RDS) server to a Remote Desktop deployment.
+  Specify a server to add by using a fully qualified domain name (FQDN) and role service name.
+  If you add a Remote Desktop Gateway (RD Gateway) role, specify the FQDN for the external gateway.
+  You can use this cmdlet to create a virtual switch.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/add-rdserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-RDServer

@@ -1,0 +1,169 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMNetworkAdapterTeamMappingSetting" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-VMNetworkAdapterTeamMapping
+  href: ./Get-VMNetworkAdapterTeamMapping.yml
+- text: Set-VMNetworkAdapterTeamMapping
+  href: ./Set-VMNetworkAdapterTeamMapping.yml
+syntaxes:
+- >-
+  Remove-VMNetworkAdapterTeamMapping [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [-VMName] <String> [-Name <String>] [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-VMNetworkAdapterTeamMapping [-ManagementOS] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [-Name <String>] [-SwitchName <String>] [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-VMNetworkAdapterTeamMapping [-VMNetworkAdapter] <VMNetworkAdapterBase> [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-VMNetworkAdapterTeamMapping [-VM] <VirtualMachine> [-Name <String>] [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagementOS
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet operates on the parent or host operating system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a virtual machine network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: VMNetworkAdapterName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SwitchName
+  description: |+
+    Specifies the name of a switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" />
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies a virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of a virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterBase" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapter
+  isRequired: true
+  description: |+
+    Specifies a virtual machine network adapter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Remove-VMNetworkAdapterTeamMapping
+name: Remove-VMNetworkAdapterTeamMapping
+description: |-
+  The **Remove-VMNetworkAdapterTeamMapping** cmdlet
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/remove-vmnetworkadapterteammapping?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-VMNetworkAdapterTeamMapping

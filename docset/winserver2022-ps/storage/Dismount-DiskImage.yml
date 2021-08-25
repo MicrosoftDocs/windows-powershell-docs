@@ -1,0 +1,157 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Dismounts a disk image (virtual hard disk or ISO) so that it can no longer be accessed as a disk.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_DiskImage" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a DiskImage object to the InputObject parameter.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_DiskImage" data-throw-if-not-resolved="False" />
+  description: |-
+    If you specify the *PassThru* parameter, this cmdlet outputs an object that represents the disk image that you dismounted.
+links:
+- text: Get-DiskImage
+  href: ./Get-DiskImage.yml
+- text: Mount-DiskImage
+  href: ./Mount-DiskImage.yml
+syntaxes:
+- >-
+  Dismount-DiskImage [-ImagePath] <String[]> [-StorageType <StorageType>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Dismount-DiskImage -DevicePath <String[]> [-StorageType <StorageType>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Dismount-DiskImage -InputObject <CimInstance[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Dismount a disk image by path'
+  code: |-
+    PS C:\>Dismount-DiskImage -ImagePath "E:\ISO-Files\My US Visit Fall 2010 Pictures.iso"
+  description: |-
+    This example ejects an ISO named My US Visit Fall 2010 Pictures by specifying the image path at E:\ISO-Files.
+  summary: ""
+- title: 'Example 2: Dismount a disk image by device path'
+  code: |-
+    PS C:\>Dismount-DiskImage -DevicePath \\.\CDROM1
+  description: |-
+    This example ejects an ISO by specifying device path for cdrom1.
+    Refer to the Get-DiskImage cmdlet to learn how to find the device path of an ISO or VHD file.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DevicePath
+  isRequired: true
+  description: |+
+    Specifies the device path of the ISO/VHD file.
+    You cannot use this parameter with the *ImagePath* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ImagePath
+  isRequired: true
+  description: |+
+    Specifies the path of the ISO or VHD file.
+    You cannot use this parameter with the *DevicePath* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StorageType" data-throw-if-not-resolved="False" />
+  name: StorageType
+  description: |+
+    Specifies the storage type of a file: ISO, VHD, VHDx, or Unknown.
+    If the *StorageType* parameter is not specified or the Unknown type is provided, the storage type is determined by file extension.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, ISO, VHD, VHDX, VHDSet
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Storage.Dismount-DiskImage
+name: Dismount-DiskImage
+description: |-
+  The **Dismount-DiskImage** cmdlet dismounts a disk image (virtual hard disk or ISO) so that it can no longer be accessed as a disk.
+  This cmdlet requires either the full image path of the ISO or VHD file, or the device path.
+
+  To eject a VHD file, administrator privilege is required.
+  Administrator privilege is not needed to eject an ISO file on Windows® 8.
+  On Windows Server® 2012, only an administrator is allowed to mount or eject ISO file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DiskImage.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/dismount-diskimage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Dismount-DiskImage

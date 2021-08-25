@@ -1,0 +1,39 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a collection of VHDs from a backup set.
+module: WssCmdlets
+notes: ""
+links:
+- text: Select-WssMountVhd
+  href: ./Select-WssMountVhd.yml
+syntaxes:
+- Get-WssMountVhd [-BackupSet] <BackupSet>
+examples:
+- title: 'Example 1: Get VHDs from a backup set'
+  code: |-
+    PS C:\> $ContosoBUSet25VHD = Get-WssMountVhd -BackupSet $ContosoBUSet25
+  description: |-
+    This example gets the VHD collection from the backup set that is stored in the variable named $ContosoBUSet25 and stores the collection in the variable named $ContosoBUSet25VHD.
+  summary: ""
+parameters:
+- type: <xref href="BackupSet" data-throw-if-not-resolved="False" />
+  name: BackupSet
+  isRequired: true
+  description: |+
+    Specifies the backup set from which to get the collection of VHDs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Get-WssMountVhd
+name: Get-WssMountVhd
+description: |-
+  The **Get-WssMountVhd** cmdlet gets a collection of virtual hard drives (VHDs) from a backup set.
+  Each VHD represents a backup volume in the set.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssmountvhd?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,270 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Optimizes a volume.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Volume" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a Volume object to the *InputObject* parameter.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate output.
+links:
+- text: Format-Volume
+  href: ./Format-Volume.yml
+- text: Get-Volume
+  href: ./Get-Volume.yml
+- text: Repair-Volume
+  href: ./Repair-Volume.yml
+- text: Set-Volume
+  href: ./Set-Volume.yml
+syntaxes:
+- >-
+  Optimize-Volume [-DriveLetter] <Char[]> [-ReTrim] [-Analyze] [-Defrag] [-SlabConsolidate] [-TierOptimize]
+
+   [-NormalPriority] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Optimize-Volume -ObjectId <String[]> [-ReTrim] [-Analyze] [-Defrag] [-SlabConsolidate] [-TierOptimize]
+
+   [-NormalPriority] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Optimize-Volume -Path <String[]> [-ReTrim] [-Analyze] [-Defrag] [-SlabConsolidate] [-TierOptimize]
+
+   [-NormalPriority] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Optimize-Volume -FileSystemLabel <String[]> [-ReTrim] [-Analyze] [-Defrag] [-SlabConsolidate] [-TierOptimize]
+
+   [-NormalPriority] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Optimize-Volume -InputObject <CimInstance[]> [-ReTrim] [-Analyze] [-Defrag] [-SlabConsolidate] [-TierOptimize]
+
+   [-NormalPriority] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Perform TRIM optimization'
+  code: |-
+    PS C:\>Optimize-Volume -DriveLetter H -ReTrim -Verbose
+  description: |-
+    This example optimizes drive H by re-sending Trim requests.
+    This is useful on SSD media, and thinly provisioned storage.
+  summary: ""
+- title: 'Example 2: Analyze a volume'
+  code: |-
+    PS C:\>Optimize-Volume -DriveLetter H -Analyze -Verbose
+  description: |-
+    This example reports only the current optimization state of drive H.
+  summary: ""
+- title: 'Example 3: Defragment a volume'
+  code: |-
+    PS C:\>Optimize-Volume -DriveLetter H -Defrag -Verbose
+  description: |-
+    This example defragments drive H.
+  summary: ""
+- title: 'Example 4: Perform slab consolidation'
+  code: |-
+    PS C:\>Optimize-Volume -DriveLetter H -SlabConsolidate -Verbose
+  description: |-
+    This example performs slab consolidation on the storage space backing volume H.
+  summary: ""
+- title: 'Example 5: Tier optimize a volume'
+  code: |-
+    PS C:\>Optimize-Volume -DriveLetter H -TierOptimize
+  description: |-
+    This example performs tier optimization on the tiered storage space backing volume H.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Analyze
+  description: |+
+    Analyzes the volume specified for fragmentation statistics.
+    Performs analysis only and reports the current optimization state of the volume.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Defrag
+  description: |+
+    Indicates that the cmdlet initiates defragmentation on the specified volume.
+    Defragmentation consolidates fragmented regions of files to improve performance of sequential reads or writes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Char" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DriveLetter
+  isRequired: true
+  description: |+
+    Specifies the drive letter of the volume to optimize.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FileSystemLabel
+  isRequired: true
+  description: |+
+    Specifies the file system label of the volume to optimize.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NormalPriority
+  description: |+
+    Indicates that this cmdlet the operation at normal priority.
+    By default, the priority is low.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ObjectId
+  isRequired: true
+  description: |+
+    Specifies the ID of the volume to optimize.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the volume to optimize.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReTrim
+  description: |+
+    Generates TRIM and Unmap hints for all currently unused sectors of the volume, notifying the underlying storage that the sectors are no longer needed and can be purged.
+    This can recover unused capacity on thinly provisioned drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SlabConsolidate
+  description: |+
+    Indicates that the cmdlet performs slab consolidation on the storage to optimize slab allocations and to reduce the number of used slabs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TierOptimize
+  description: |+
+    Indicates that the cmdlet performs tier optimization of the volume, which places file data on the optimal storage tier according to heat or desired placement.
+    This parameter only applies to tiered spaces volumes with more than one storage tier.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Storage.Optimize-Volume
+name: Optimize-Volume
+description: |-
+  The **Optimize-Volume** cmdlet optimizes a volume, performing defragmentation, trim, slab consolidation, and storage tier processing.
+  If no parameter is specified, then the default operation will be performed per the drive type as follows.
+
+  - HDD, Fixed VHD, Storage Space. -Analyze -Defrag.
+  - Tiered Storage Space. -TierOptimize.
+  - SSD with TRIM support. -Retrim.
+  - Storage Space (Thinly provisioned), SAN Virtual Disk (Thinly provisioned), Dynamic VHD, Differencing VHD. -Analyze -SlabConsolidate -Retrim.
+  - SSD without TRIM support, Removable FAT, Unknown. No operation.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Volume.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/optimize-volume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Optimize-Volume

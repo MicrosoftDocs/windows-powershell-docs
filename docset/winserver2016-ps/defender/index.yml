@@ -1,0 +1,33 @@
+### YamlMime:PowershellModule
+children:
+- title: Defender
+  cmdlets:
+  - Defender.Add-MpPreference
+  - Defender.Get-MpComputerStatus
+  - Defender.Get-MpPreference
+  - Defender.Get-MpThreat
+  - Defender.Get-MpThreatCatalog
+  - Defender.Get-MpThreatDetection
+  - Defender.Remove-MpPreference
+  - Defender.Remove-MpThreat
+  - Defender.Set-MpPreference
+  - Defender.Start-MpScan
+  - Defender.Start-MpWDOScan
+  - Defender.Update-MpSignature
+uid: Defender
+name: Defender
+description: |-
+  This reference provides functions descriptions and syntax for all Defender-specific functions. 
+  It lists the functions in alphabetical order based on the verb at the beginning of the functions.
+
+  > [!NOTE]
+  > You might also hear these functions being referred to as cmdlets. They were designed to appear like cmdlets, even though they were developed as PowerShell functions.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.3.1
+  Locale: en-US
+  Module Guid: c46be3dc-30a9-452f-a5fd-4bf9ca87a854
+  Module Name: Defender
+  ms.date: 12/20/2016
+  title: Defender

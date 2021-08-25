@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the configuration of the load balancer from the Network Controller
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties can be retrieved for a load balancer configuration:
+
+    - Load balancer manager virtual IP address (Load balancer manager is a service inside Network Controller)
+    - Virtual IP pools associated with the load balancer. These should be existing IP pools as part of existing logical networks
+    - IP address ranges to be excluded from outbound NAT
+syntaxes:
+- >-
+  Get-NetworkControllerLoadBalancerConfiguration [-ConnectionUri <Uri>] [-CertificateThumbprint <String>]
+
+   [-Credential <PSCredential>] [-PassInnerException] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-NetworkControllerLoadBalancerConfiguration -ConnectionUri https://networkcontroller
+  description: ""
+  summary: |+
+    This example retrieves the load balancer configuration from Network Controller. In this example, The Network Controller is hosted at https://networkcontroller.
+
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Get-NetworkControllerLoadBalancerConfiguration
+name: Get-NetworkControllerLoadBalancerConfiguration
+description: |-
+  Retrieves the configuration of the load balancer from the Network Controller. This includes the load balancing service virtual IP (VIP) and the different VIP pools associated with the load balancer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollerloadbalancerconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerLoadBalancerConfiguration

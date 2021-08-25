@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables one-time password (OTP) authentication for DirectAccess (DA) users.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DAOtpAuth" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The DAOtpAuth object contains the following OTP authentication configuration settings for DA:. 
+
+     -- OtpStatus specifies whether OTP authentication is enabled or disabled.
+
+     -- RadiusServer specifies the OTP RADIUS server names and addresses. 
+
+     -- UserSecurityGroupName specifies the security group of users that are exempt from two-factor authentication. 
+
+     -- CAServer specifies the certification authority (CA) servers used for OTP authentication. 
+
+     -- CertificateTemplateName specifies the name of the OTP certificate template. 
+
+     -- SigningCertificateTemplateName specifies the name of the certificate template used to enroll the certificate used by Remote Access to sign certificates used for OTP authentication.
+links:
+- text: Enable-DAOtpAuthentication
+  href: ./Enable-DAOtpAuthentication.yml
+- text: Get-DAOtpAuthentication
+  href: ./Get-DAOtpAuthentication.yml
+- text: Set-DAOtpAuthentication
+  href: ./Set-DAOtpAuthentication.yml
+syntaxes:
+- >-
+  Disable-DAOtpAuthentication [-ComputerName <String>] [-Force] [-PassThru] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: "PS C:\\>Disable-DAOtpAuthentication -PassThru -Force\r\nOtpStatus                      : Disabled\r\nCAServers                      : {dc1.corp.contoso.com\\corp-DC1-CA}\r\nCertificateTemplateName        : DAOTPLogon\r\nRadiusServer                   : {rsa.corp.contoso.com}\r\nUserSecuriotyGroupName         : \r\n\r\nIf the **Force** parameter is not used, then the DA administrator is presented with the following prompt.\r\nPS C:\\>Disable-DAOtpAuthentication -PassThru\r\nOtpStatus                      : Disabled\r\nCAServers                      : {dc1.corp.contoso.com\\corp-DC1-CA}\r\nCertificateTemplateName        : DAOTPLogon\r\nRadiusServer                   : {rsa.corp.contoso.com}\r\nUserSecuriotyGroupName         : \r\n \r\nDisabling OTP authentication will change DirectAccess user authentication settings. Do you want to continue? \r\n[Y] Yes  [N] No  [S] Suspend  [?] Help  (default is \"Y\"):"
+  description: |-
+    This example disables OTP authentication for DA users.
+    All of the current OTP settings will be kept while OTP status will be changed to disabled.
+    Note: This cmdlet does not disable two-factor user authentication and computer certificate for IPsec.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the server on which the cmdlet should run.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Disable-DAOtpAuthentication
+name: Disable-DAOtpAuthentication
+description: |-
+  The **Disable-DAOtpAuthentication** cmdlet disables one-time password (OTP) authentication for DirectAccess (DA) users.
+  This cmdlet does not disable two-factor authentication, or delete OTP settings in DA Group Policy Objects (GPOs).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DAOtpAuthentication_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/disable-daotpauthentication?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-DAOtpAuthentication

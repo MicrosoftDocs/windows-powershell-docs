@@ -1,0 +1,206 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the DNS client NRPT rules.
+module: DnsClient
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DNS/DnsClientNrptRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DNS/DnsClientNrptRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: "The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.\r\nThe path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.\r\n                         \r\nThe **DnsClientNrptRule** object contains all of the properties of the DNS client NRPT rule."
+links:
+- text: Add-DnsClientNrptRule
+  href: ./Add-DnsClientNrptRule.yml
+- text: Get-DnsClientNrptGlobal
+  href: ./Get-DnsClientNrptGlobal.yml
+- text: Get-DnsClientNrptPolicy
+  href: ./Get-DnsClientNrptPolicy.yml
+- text: Remove-DnsClientNrptRule
+  href: ./Remove-DnsClientNrptRule.yml
+- text: Set-DnsClientNrptGlobal
+  href: ./Set-DnsClientNrptGlobal.yml
+- text: Set-DnsClientNrptRule
+  href: ./Set-DnsClientNrptRule.yml
+syntaxes:
+- >-
+  Get-DnsClientNrptRule [-GpoName <String>] [[-Name] <String[]>] [-Server <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get NRPT rules for a specified GPO'
+  code: |-
+    PS C:\> Get-DnsClientNrptRule -GpoName "corp.contoso.com\DirectAccess Client Settings"
+
+    Name                             : DA-{FD4B6054-F8C8-4868-94E6-8132AC707DBD} 
+    Version                          : 1 
+    Namespace                        : {.corp.contoso.com} 
+    IPsecCARestriction               : 
+    DirectAccessDnsServers           : {2001:db8:1::2, 2001:db8:2::20, 2001:db8:6::6} 
+    DirectAccessEnabled              : True 
+    DirectAccessProxyType            : NoProxy 
+    DirectAccessProxyName            : 
+    DirectAccessQueryIPsecEncryption : 
+    DirectAccessQueryIPsecRequired   : False 
+    NameServers                      : 
+    DnsSecEnabled                    : False 
+    DnsSecQueryIPsecEncryption       : 
+    DnsSecQueryIPsecRequired         : 
+    DnsSecValidationRequired         : 
+    NameEncoding                     : Disable 
+    DisplayName                      : 
+    Comment                          : 
+
+    Name                             : DA-{274D94E4-E38B-4997-BA9F-84700712C09E} 
+    Version                          : 1 
+    Namespace                        : {nls.corp.contoso.com} 
+    IPsecCARestriction               : 
+    DirectAccessDnsServers           : 
+    DirectAccessEnabled              : True 
+    DirectAccessProxyType            : UseDefault 
+    DirectAccessProxyName            : 
+    DirectAccessQueryIPsecEncryption : 
+    DirectAccessQueryIPsecRequired   : False 
+    NameServers                      : 
+    DnsSecEnabled                    : False 
+    DnsSecQueryIPsecEncryption       : 
+    DnsSecQueryIPsecRequired         : 
+    DnsSecValidationRequired         : 
+    NameEncoding                     : Disable 
+    DisplayName                      : 
+    Comment                          :
+  description: |-
+    This example retrieves NRPT rules for the specified GPO.
+  summary: ""
+- title: 'Example 2: Get the NRPT rules on a specified server'
+  code: |-
+    PS C:\> Get-DnsClientNrptRule -GpoName "corp.contoso.com\DirectAccess Client Settings" -Server "dc1"
+
+    Name                             : DA-{FD4B6054-F8C8-4868-94E6-8132AC707DBD} 
+    Version                          : 1 
+    Namespace                        : {.corp.contoso.com} 
+    IPsecCARestriction               : 
+    DirectAccessDnsServers           : {2001:db8:1::2, 2001:db8:2::20, 2001:db8:6::6} 
+    DirectAccessEnabled              : True 
+    DirectAccessProxyType            : NoProxy 
+    DirectAccessProxyName            : 
+    DirectAccessQueryIPsecEncryption : 
+    DirectAccessQueryIPsecRequired   : False 
+    NameServers                      : 
+    DnsSecEnabled                    : False 
+    DnsSecQueryIPsecEncryption       : 
+    DnsSecQueryIPsecRequired         : 
+    DnsSecValidationRequired         : 
+    NameEncoding                     : Disable 
+    DisplayName                      : 
+    Comment                          : 
+
+    Name                             : DA-{274D94E4-E38B-4997-BA9F-84700712C09E} 
+    Version                          : 1 
+    Namespace                        : {nls.corp.contoso.com} 
+    IPsecCARestriction               : 
+    DirectAccessDnsServers           : 
+    DirectAccessEnabled              : True 
+    DirectAccessProxyType            : UseDefault 
+    DirectAccessProxyName            : 
+    DirectAccessQueryIPsecEncryption : 
+    DirectAccessQueryIPsecRequired   : False 
+    NameServers                      : 
+    DnsSecEnabled                    : False 
+    DnsSecQueryIPsecEncryption       : 
+    DnsSecQueryIPsecRequired         : 
+    DnsSecValidationRequired         : 
+    NameEncoding                     : Disable 
+    DisplayName                      : 
+    Comment                          :
+  description: |-
+    This example retrieves an NRPT rule for the specified GPO on the specified server.
+  summary: ""
+- title: 'Example 3: Get the NRPT rules on a remote computer'
+  code: |-
+    PS C:\> Get-DnsClientNrptRule -GpoName "corp.contoso.com\DirectAccess Client Settings" -CimSession 2-dc1.corp2.corp.contoso.com
+  description: |-
+    This example retrieves the NRPT rules on the remote computer named 2-dc1.corp2.corp.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GpoName
+  description: "Specifies the name of the Group Policy Object (GPO). \r\n                         \r\n- If this parameter and the *Server* parameter are specified, then the NRPT rule is added in the GPO of domain.\r\nThe *Server* parameter specifies the domain controller (DC). \r\n- If neither this parameter nor the *Server* parameter is specified, then the NRPT rule is added for local client computer. \r\n- If this parameter is specified and the *Server* parameter is not specified, then the DC of the domain specified by this parameter value is found and NRPT rule is added to the GPO. \r\n- If this parameter is not specified and the *Server* parameter is specified, then an error is displayed.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name which uniquely identifies a rule.
+    If this parameter is not specified, then all of the available NRPT rules are retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the server hosting the GPO.
+    This parameter is only applicable with the *GpoName* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsClient.Get-DnsClientNrptRule
+name: Get-DnsClientNrptRule
+description: "The **Get-DnsClientNrptRule** cmdlet retrieves DNS client Name Resolution Policy Table (NRPT) rules with the following details: \r\n                 \r\n- DNS client name setting. \r\n- DNS client version setting. \r\n- DNS client namespace setting. \r\n- DNS client IPsec Certification Authority (CA) restriction setting. \r\n- Direct Access (DA) DNS servers setting. \r\n- DA enabled setting. \r\n- DA proxy type setting. \r\n- DA proxy name setting. \r\n- DA query IPsec encryption setting. \r\n- DA query IPsec required setting. \r\n- DNS client name servers setting. \r\n- DNS security enabled setting. \r\n- DNS security query IPsec encryption setting. \r\n- DNS security query IPsec required setting. \r\n- DNS security validation required setting. \r\n- DNS client name encoding setting. \r\n- DNS client display name setting. \r\n- DNS client comment setting."
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsClientNRPTRule_v1.0.0.cdxml-help.xml
+  Module Name: DnsClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsclient/get-dnsclientnrptrule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DnsClientNrptRule

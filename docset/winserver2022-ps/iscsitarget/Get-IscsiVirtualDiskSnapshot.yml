@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the properties of the snapshots.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Dismount-IscsiVirtualDiskSnapshot
+  href: ./Dismount-IscsiVirtualDiskSnapshot.yml
+- text: Export-IscsiVirtualDiskSnapshot
+  href: ./Export-IscsiVirtualDiskSnapshot.yml
+- text: Mount-IscsiVirtualDiskSnapshot
+  href: ./Mount-IscsiVirtualDiskSnapshot.yml
+- text: Remove-IscsiVirtualDiskSnapshot
+  href: ./Remove-IscsiVirtualDiskSnapshot.yml
+- text: Set-IscsiVirtualDiskSnapshot
+  href: ./Set-IscsiVirtualDiskSnapshot.yml
+syntaxes:
+- >-
+  Get-IscsiVirtualDiskSnapshot [[-OriginalPath] <String>] [-ComputerName <String>] [-Credential <PSCredential>]
+
+   [<CommonParameters>]
+- >-
+  Get-IscsiVirtualDiskSnapshot [-SnapshotId <String>] [-ComputerName <String>] [-Credential <PSCredential>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all virtual disk snapshots'
+  code: |-
+    PS C:\> Get-IscsiVirtualDiskSnapshot
+  description: |-
+    This example gets all of the virtual disk snapshots on the local server.
+  summary: ""
+- title: 'Example 2: Get virtual disk snapshots by ID'
+  code: |-
+    PS C:\> Get-IscsiVirtualDiskSnapshot -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}"
+  description: |-
+    This example gets all of the virtual disk snapshots with the Id {E9A5BA03-85B9-40CA-85DF-DC1695690B40} on the local server.
+  summary: ""
+- title: 'Example 3: Get snapshots for a virtual disk'
+  code: |-
+    PS C:\> Get-IscsiVirtualDiskSnapshot -Path "E:\temp\test.vhdx"
+  description: |-
+    This example gets the snapshots that were taken for the virtual disk E:\temp\test.vhdx.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OriginalPath
+  description: |+
+    Specifies the path of the virtual hard disk (VHD) file that is associated with the iSCSI virtual disk to which the snapshot belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Path
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SnapshotId
+  description: |+
+    Specifies the identifier (ID) for the snapshot.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Get-IscsiVirtualDiskSnapshot
+name: Get-IscsiVirtualDiskSnapshot
+description: |-
+  The **Get-IscsiVirtualDiskSnapshot** cmdlet gets properties of snapshots on a iSCSI virtual disk.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/get-iscsivirtualdisksnapshot?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-IscsiVirtualDiskSnapshot

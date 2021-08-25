@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves registration information for an OAuth 2.0 client.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *ClientId* and *Name* parameters.
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsClient" data-throw-if-not-resolved="False" />
+  description: |-
+    AdfsClient objects are received by the *InputObject* parameter.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsClient" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more AdfsClient objects that represent the Adfs Clients for the Federation Service.
+links:
+- text: Add-AdfsClient
+  href: ./Add-AdfsClient.yml
+- text: Disable-AdfsClient
+  href: ./Disable-AdfsClient.yml
+- text: Enable-AdfsClient
+  href: ./Enable-AdfsClient.yml
+- text: Remove-AdfsClient
+  href: ./Remove-AdfsClient.yml
+- text: Set-AdfsClient
+  href: ./Set-AdfsClient.yml
+syntaxes:
+- Get-AdfsClient [[-Name] <String[]>] [<CommonParameters>]
+- Get-AdfsClient [-ClientId] <String[]> [<CommonParameters>]
+- Get-AdfsClient [-InputObject] <AdfsClient> [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve registration information for all clients'
+  code: |-
+    PS C:\> Get-AdfsClient
+
+
+
+    RedirectUri : {ms-app://windows.immersivecontrolpanel/}
+    Name        : Device Registration Client
+    Description : Client for the Device Registration Service
+    ClientId    : dd762716-544d-4aeb-a526-687b73838a22
+    BuiltIn     : True
+    Enabled     : True
+    ClientType  : Public
+
+    RedirectUri : {https://168f3ee4-63fc-4723-a61a-6473f6cb515c/redir}
+    Name        : Windows Server Work Folders Client
+    Description : Client for syncing user files to a Work Folders sync share
+    ClientId    : 168f3ee4-63fc-4723-a61a-6473f6cb515c
+    BuiltIn     : True
+    Enabled     : True
+    ClientType  : Public
+  description: |-
+    This command retrieves registration information for all OAuth 2.0 clients currently registered withAD FS.
+  summary: ""
+- title: 'Example 2: Retrieve registration information by client name'
+  code: |-
+    PS C:\> Get-AdfsClient -Name "Device Registration Client"
+
+
+
+    RedirectUri : {ms-app://windows.immersivecontrolpanel/}
+    Name        : Device Registration Client
+    Description : Client for the Device Registration Service
+    ClientId    : dd762716-544d-4aeb-a526-687b73838a22
+    BuiltIn     : True
+    Enabled     : True
+    ClientType  : Public
+  description: |-
+    This command retrieves registration information for the OAuth 2.0 client named Device Registration Client.
+  summary: ""
+- title: 'Example 3: Retrieve registration information by client ID'
+  code: |-
+    PS C:\> Get-AdfsClient -ClientId "dd762716-544d-4aeb-a526-687b73838a22"
+
+
+
+    RedirectUri : {ms-app://windows.immersivecontrolpanel/}
+    Name        : Device Registration Client
+    Description : Client for the Device Registration Service
+    ClientId    : dd762716-544d-4aeb-a526-687b73838a22
+    BuiltIn     : True
+    Enabled     : True
+    ClientType  : Public
+  description: |-
+    This command retrieves registration information for the OAuth 2.0 client specified by the client identifier dd762716-544d-4aeb-a526-687b73838a22.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClientId
+  isRequired: true
+  description: |+
+    Specifies an array of client identifiers for the OAuth 2.0 client for which to retrieve registration information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AdfsClient" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an object of type **AdfsClient** that represents an OAuth 2.0 client for which to retrieve registration information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the OAuth 2.0 client for which to retrieve registration information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsClient
+name: Get-AdfsClient
+description: |-
+  The **Get-AdfsClient** cmdlet retrieves registration information for an OAuth 2.0 client that was previously registered with Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsclient?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsClient

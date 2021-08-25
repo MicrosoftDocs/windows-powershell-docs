@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets alerts that the server generated.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="System.Collections.IEnumerable<Microsoft.WindowsServerSolutions.NetworkHealth.AlertFramework.Alert" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a collection of alert objects.
+links:
+- text: Enable-WssAlert
+  href: ./Enable-WssAlert.yml
+- text: Disable-WssAlert
+  href: ./Disable-WssAlert.yml
+- text: Clear-WssAlert
+  href: ./Clear-WssAlert.yml
+- text: Repair-WssAlert
+  href: ./Repair-WssAlert.yml
+syntaxes:
+- Get-WssAlert [-Network] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get alerts'
+  code: |-
+    PS C:\> Get-WssAlert
+  description: |-
+    This command gets alerts that the server generated.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Network
+  description: |+
+    Indicates that the cmdlet gets alerts for all computers in the home network.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Get-WssAlert
+name: Get-WssAlert
+description: |-
+  The **Get-WssAlert** cmdlet gets alerts that the server generated for issues that relate to computer backups, server storage, low disk space, files system, and hard drives.
+  Specify the **Network** parameter to get the alerts that the server generates for the local computer and the computers in your network that the server monitors.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssalert?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssAlert

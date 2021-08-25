@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes all settings for the central certificate provider.
+module: WebAdministration
+notes: ""
+links:
+- text: Disable-WebCentralCertProvider
+  href: ./Disable-WebCentralCertProvider.yml
+- text: Enable-WebCentralCertProvider
+  href: ./Enable-WebCentralCertProvider.yml
+- text: Get-WebCentralCertProvider
+  href: ./Get-WebCentralCertProvider.yml
+- text: Set-WebCentralCertProvider
+  href: ./Set-WebCentralCertProvider.yml
+syntaxes:
+- Clear-WebCentralCertProvider [-PrivateKeyPassword] [<CommonParameters>]
+examples:
+- title: 'Example 1: Clear certificates'
+  code: |-
+    PS C:\> Clear-WebCentralCertProvider
+  description: |-
+    This command removes all settings for the central certificate provider without removing the provider itself.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PrivateKeyPassword
+  description: |+
+    Indicates the password for the private key if one exists.
+    If specified, this password is the same for all keys.
+    The password can be $Null.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Clear-WebCentralCertProvider
+name: Clear-WebCentralCertProvider
+description: |-
+  The **Clear-WebCentralCertProvider** cmdlet removes all settings for the central certificate provider.
+  The settings that are affected include whether the provider is enabled, the location of the centralized certification store, the user name and password, and the private key password.
+  This cmdlet does not delete the provider.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/clear-webcentralcertprovider?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-WebCentralCertProvider

@@ -1,0 +1,206 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures an App-V server package group.
+module: AppVServer
+notes: |-
+  * The cmdlet accepts an ordered list of package groups. This list overwrites the current listing of packages for the specified group and increments the *VersionID* of the package. The server version will NOT be incremented. All existing metadata associated with the package, such as entitlements, are copied over to the new version.
+  * If the cmdlet cannot find a package group, the cmdlet returns the following error: The specified package group could not be found on the system. The cmdlet fails the entire operation.
+  * If the cmdlet cannot find any of the specified packages, the cmdlet returns the following error: One or more of the specified packages could not be found on the system. The cmdlet fails the entire operation and returns a listing of the packages.
+  * If multiple versions of a package group are selected, the latest version will be updated, and its version incremented. The other package groups are ignored.
+inputs:
+- name: <xref href="AppvServer.AppvServerPackage, AppvServer.AppvServerConnectionGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="AppvServer.AppvServerConnectionGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AppvServerPackage
+  href: ./Get-AppvServerPackage.yml
+- text: Get-AppvServerConnectionGroup
+  href: ./Get-AppvServerConnectionGroup.yml
+- text: Grant-AppvServerConnectionGroup
+  href: ./Grant-AppvServerConnectionGroup.yml
+- text: New-AppvServerConnectionGroup
+  href: ./New-AppvServerConnectionGroup.yml
+- text: Publish-AppvServerConnectionGroup
+  href: ./Publish-AppvServerConnectionGroup.yml
+- text: Remove-AppvServerConnectionGroup
+  href: ./Remove-AppvServerConnectionGroup.yml
+- text: Unpublish-AppvServerConnectionGroup
+  href: ./Unpublish-AppvServerConnectionGroup.yml
+- text: Update-AppvServerConnectionGroup
+  href: ./Update-AppvServerConnectionGroup.yml
+syntaxes:
+- >-
+  Set-AppvServerConnectionGroup [[-AppvServerPackage] <PackageVersion[]>] [-Name] <String> [-Priority <UInt32>]
+
+   [-Order <Int32[]>] [[-Version] <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AppvServerConnectionGroup [[-AppvServerPackage] <PackageVersion[]>]
+
+   [-AppvServerConnectionGroup] <SerializableConnectionGroup> [-Priority <UInt32>] [-Order <Int32[]>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-AppvServerConnectionGroup [[-AppvServerPackage] <PackageVersion[]>] [-Priority <UInt32>] [-Order <Int32[]>]
+
+   [-GroupID] <Guid> [[-VersionID] <Guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a package group'
+  code: |-
+    PS C:\> $P11 = Get-AppvServerPackage -Name "Item03" -Version 1
+    PS C:\> $P12 = Get-AppvServerPackage -Name "Item14" -Version 2
+    PS C:\> $P13 = Get-AppvServerPackage -Name "MyGroup" -Version 3
+    PS C:\> $Group = New-AppvServerConnectionGroup -Name MyGroup
+    PS C:\> Set-AppvServerConnectionGroup -AppvServerConnectionGroup $Group -AppVServerPackage $P11,$P12,$P13 -Order 2,0,1 -Priority 1,0,1
+  description: |-
+    This example sets the new package group, $Group, to contain the packages stored in $P11, $P12, $P13.
+    The priority and order fields are also added to each respective package in the group.
+  summary: ""
+- title: 'Example 2: Modify priority and order properties'
+  code: |-
+    PS C:\> $Group.GroupedAppvServerPackage[0].priority = 1
+    PS C:\> $Group.GroupedAppvServerPackage[0].order = 1
+    PS C:\> Set-AppvServerConnectionGroup $Group
+  description: |-
+    This example modifies the priority and order properties of the first package object that was added to the group.
+    The example applies the modifications to the group by using the **Set-AppvServerPackageGroup** cmdlet.
+  summary: ""
+- title: 'Example 3: Modify a package group by using the pipeline operator'
+  code: |-
+    PS C:\> Get-AppvServerPackage -Name "Office" | Set-AppvServerConnectionGroup -Name "MyGroup" -Version 3
+  description: |-
+    This command modifies the package group named MyGroup to contain the Office package.
+    Although the result of the **Get-AppvServerPackage** cmdlet might contain multiple versions of the package, only the latest version is added to the package group.
+  summary: ""
+- title: 'Example 4: Add packages and metadata'
+  code: |-
+    PS C:\> $Group = New-AppvServerConnectionGroup -Name "MyGroup"
+    PS C:\> $Group.Set("$Package01, $Package02", "0,0", "1,0")
+  description: |-
+    This example creates a group called MyGroup, and then adds $Package01 and $Package02 to the group.
+    The example includes priority and order metadata for each respective package.
+  summary: ""
+parameters:
+- type: <xref href="SerializableConnectionGroup" data-throw-if-not-resolved="False" />
+  name: AppvServerConnectionGroup
+  isRequired: true
+  description: |+
+    Specifies the connection group object.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PackageVersion" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AppvServerPackage
+  description: |+
+    Specifies an array of **AppVServerPackage** objects.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: GroupID
+  isRequired: true
+  description: |+
+    Specifies the GUID of specific package group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the package group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Order
+  description: |+
+    Specifies the order in which a package's virtual environment will be loaded when the package group is invoked on the App-V client.
+
+    Specify the order as a comma separated list, with each value corresponding to the list of packages being placed in the group.
+
+    If you do not specify this parameter, the order in which the packages are listed will be used as the virtual environment load order.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    Specifies a numerical value used to resolve conflicts between Virtual Application Packages that appear in multiple Package Groups.
+    Valid values are: 0 and 1.
+    The default value is 0.
+
+    Specify the priority as a comma separated list, with each value corresponding to the list of packages being placed in the group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of the specified package group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionID
+  description: |+
+    Specifies the version GUID of the package group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AppVServer.Set-AppvServerConnectionGroup
+name: Set-AppvServerConnectionGroup
+description: |-
+  The **Set-AppvServerConnectionGroup** cmdlet sets the packages within the Microsoft Application Virtualization (App-V) specified package group.
+  The cmdlet modifies the packages in the group, as well as the order of those packages.
+
+  The cmdlet returns an **AppvServerConnectionGroup** object.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: AppVServerCmdlets.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Set-AppvServerConnectionGroup

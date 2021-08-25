@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets configuration properties of the CAU clustered role on the specified cluster.
+module: ClusterAwareUpdating
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauParameter" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-CauClusterRole
+  href: ./Add-CauClusterRole.yml
+- text: Disable-CauClusterRole
+  href: ./Disable-CauClusterRole.yml
+- text: Enable-CauClusterRole
+  href: ./Enable-CauClusterRole.yml
+- text: Remove-CauClusterRole
+  href: ./Remove-CauClusterRole.yml
+- text: Set-CauClusterRole
+  href: ./Set-CauClusterRole.yml
+syntaxes:
+- Get-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information about a CAU clustered role on the specified cluster'
+  code: |-
+    PS C:\> Get-CauClusterRole -ClusterName "CONTOSO-FC1"
+
+    Name                                                        Value 
+    ----                                                        ----- 
+    ResourceGroupName                                           CAUCAUCldy8 
+    Status                                                      Online 
+    StartDate                                                   10/14/2011 3:00:00 AM 
+    MaxFailedNodes                                              2 
+    MaxRetriesPerNode                                           2 
+    PostUpdateScript                                            G:\verifyupdatesinstalled.ps1 
+    RequireAllNodesOnline                                       On 
+    DaysOfWeek                                                  Tuesday, Saturday 
+    WeeksOfMonth                                                {2, 4}
+  description: |-
+    This command gets information about the CAU clustered role on the cluster named CONTOSO-FC1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  description: |+
+    Specifies the name of the cluster for which the CAU clustered role information that this cmdlet gets.
+    This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the administrative credentials for the target cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ClusterAwareUpdating.Get-CauClusterRole
+name: Get-CauClusterRole
+description: |-
+  The **Get-CauClusterRole** cmdlet gets configuration properties of the Cluster-Aware Updating (CAU) clustered role on the specified cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  Module Name: ClusterAwareUpdating
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-cauclusterrole?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-CauClusterRole

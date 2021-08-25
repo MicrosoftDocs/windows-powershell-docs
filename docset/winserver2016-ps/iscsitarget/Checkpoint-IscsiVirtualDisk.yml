@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a virtual disk snapshot.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Convert-IscsiVirtualDisk
+  href: ./Convert-IscsiVirtualDisk.yml
+- text: Get-IscsiVirtualDisk
+  href: ./Get-IscsiVirtualDisk.yml
+- text: Import-IscsiVirtualDisk
+  href: ./Import-IscsiVirtualDisk.yml
+- text: New-IscsiVirtualDisk
+  href: ./New-IscsiVirtualDisk.yml
+- text: Remove-IscsiVirtualDisk
+  href: ./Remove-IscsiVirtualDisk.yml
+- text: Restore-IscsiVirtualDisk
+  href: ./Restore-IscsiVirtualDisk.yml
+- text: Set-IscsiVirtualDisk
+  href: ./Set-IscsiVirtualDisk.yml
+syntaxes:
+- >-
+  Checkpoint-IscsiVirtualDisk [-Description <String>] [-OriginalPath] <String> [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a snapshot of a VHD'
+  code: |-
+    PS C:\> Checkpoint-IscsiVirtualDisk -OriginalPath "D:\VHDs\DB.vhdx"
+  description: |-
+    This example creates a snapshot of the VHD with the path D:\VHDs\DB.vhdx.
+  summary: ""
+- title: 'Example 2: Create a snapshot of a VHD with description'
+  code: |-
+    PS C:\> Checkpoint-IscsiVirtualDisk -OriginalPath "D:\VHDs\DB.vhdx" -Description "Before database merge" -ComputerName "fssvr.contoso.com"
+  description: |-
+    This example creates a snapshot of the VHD with the path D:\VHDs\DB.vhdx, and gives a description of the snapshot.
+    The operation occurs on a remote computer that has the name fssvr.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description for the iSCSI virtual disk snapshot.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OriginalPath
+  isRequired: true
+  description: |+
+    Specifies the path of the virtual hard disk (VHD) file that is associated with the iSCSI virtual disk to which the snapshot belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Path
+  parameterValueGroup: ""
+uid: IscsiTarget.Checkpoint-IscsiVirtualDisk
+name: Checkpoint-IscsiVirtualDisk
+description: |-
+  The **Checkpoint-IscsiVirtualDisk** cmdlet creates a snapshot.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/checkpoint-iscsivirtualdisk?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Checkpoint-IscsiVirtualDisk

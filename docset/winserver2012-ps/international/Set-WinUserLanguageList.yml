@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the language list and associated properties for the current user account.
+module: International
+notes: ""
+inputs:
+- name: <xref href="System.Collections.Generic.List<Microsoft.InternationalSettings.Commands.WinUserLanguage>" data-throw-if-not-resolved="False" />
+  description: |-
+    A list of **WinUserLanguage** objects that contain one or more languages and associated properties from the current user account's language list. 
+    The language object contains the following properties:
+
+    - BCP-47 (READ). A standard language tag that is used to identify languages. For more information, see the Internet Engineering Task Force (IETF) BCP 47 RFChttp://go.microsoft.com/fwlink/?LinkID=242207. 
+    - Autonym (LP database) (READ). The name of the language in the language itself. 
+    - English name (LP database) (READ). The name of the language in English. 
+    - Localized name (LP database) (READ). The name of the language in the current Windows display language. 
+    - Script (LP database) (READ). The writing system of the language. 
+    - Input methods (READ/WRITE). A list of input method Tablet Input Panel (TIP) strings that are enabled for this language. The enabled input methods are listed in the format Language ID: Keyboard layout ID. 
+    - Handwriting recognition input mode (READ/WRITE). This value is either 0 (freehand) or 1 (write each character separately).
+syntaxes:
+- >-
+  Set-WinUserLanguageList
+
+   [-LanguageList] <System.Collections.Generic.List`1[Microsoft.InternationalSettings.Commands.WinUserLanguage]>
+
+   [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: "Example 1: Add a language to a user's language list"
+  code: |-
+    PS C:\> $OldList = Get-WinUserLanguageList
+    PS C:\> $OldList.Add("fr-FR")
+    PS C:\> Set-WinUserLanguageList $OldList
+  description: |-
+    This command adds the language French (France) to the user's language list.
+  summary: ""
+- title: 'Example 2: Change a setting for a language'
+  code: |-
+    PS C:\>$1 = New-WinUserLanguageList -Language "en-US"
+    PS C:\>$1[0].Handwriting = 1
+    PS C:\> Set-WinUserLanguageList -LanguageList $1
+  description: |-
+    This command changes the handwriting setting for the language English (United States) in the user's language list to ON (write each character separately).
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.InternationalSettings.Commands.WinUserLanguage" data-throw-if-not-resolved="False" /><span>]</span>
+  name: LanguageList
+  isRequired: true
+  description: |+
+    Specifies a list of **WinUserLanguage** objects.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: International.Set-WinUserLanguageList
+name: Set-WinUserLanguageList
+description: |-
+  The **Set-WinUserLanguageList** cmdlet sets the current user language settings.
+  These settings include input method, spelling setting, text prediction setting, and handwriting input mode.
+  For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306) and [Manage the input and display language settings in Windows 10](https://support.microsoft.com/help/4496404/windows-10-manage-the-input-and-display-language#input_language).
+metadata:
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  online version: https://docs.microsoft.com/powershell/module/international/set-winuserlanguagelist?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

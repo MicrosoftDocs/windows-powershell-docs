@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a list of available relying parties configured on a federation server.
+module: WebApplicationProxy
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#RelyingPartyMetadata" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+syntaxes:
+- >-
+  Get-WebApplicationProxyAvailableADFSRelyingParty [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve a list of all relying parties'
+  code: |-
+    PS C:\> Get-WebApplicationProxyAvailableADFSRelyingParty
+    Enabled        : True
+    ID             : dad606b5-64b7-e211-9af2-00155d813cfa
+    IWA            : False
+    Name           : fedpassive
+    Published      : True
+    PSComputerName : 
+
+    Enabled        : True
+    ID             : d34df8bf-64b7-e211-9af2-00155d813cfa
+    IWA            : True
+    Name           : WiaApp
+    Published      : False
+    PSComputerName : 
+
+    Enabled        : True
+    ID             : 45e907cd-64b7-e211-9af2-00155d813cfa
+    IWA            : False
+    Name           : fedpassive2
+    Published      : False
+    PSComputerName :
+  description: |-
+    This command retrieves all relying parties on this server.
+  summary: ""
+- title: 'Example 2: Retrieve a list of all published relying parties'
+  code: |-
+    PS C:\> Get-WebApplicationProxyAvailableADFSRelyingParty | Where-Object {$_.Published -eq $True}
+    Enabled        : True
+    ID             : dad606b5-64b7-e211-9af2-00155d813cfa
+    IWA            : False
+    Name           : fedpassive
+    Published      : True
+  description: |-
+    This command retrieves published relying parties on this server.
+  summary: ""
+- title: 'Example 3: Retrieve a list of all relying parties and format the list'
+  code: |-
+    PS C:\> Get-WebApplicationProxyAvailableADFSRelyingParty | Format-Table -AutoSize
+    Enabled ID                                     IWA Name                        Published 
+    ------- --                                     --- ----                        --------- 
+       True dad606b5-64b7-e211-9af2-00155d813cfa False fedpassive                       True
+       True d34df8bf-64b7-e211-9af2-00155d813cfa  True WiaApp                          False
+       True 45e907cd-64b7-e211-9af2-00155d813cfa False fedpassive2                     False
+       True ca8f1ed5-64b7-e211-9af2-00155d813cfa  True WiaApp2                         False
+       True 4dd358e8-64b7-e211-9af2-00155d813cfa False msofba                          False
+       True d7be97f6-64b7-e211-9af2-00155d813cfa False WSA                             False
+  description: |-
+    This command retrieves the relying parties on this server, and then displays the output in table format.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebApplicationProxy.Get-WebApplicationProxyAvailableADFSRelyingParty
+name: Get-WebApplicationProxyAvailableADFSRelyingParty
+description: |-
+  The **Get-WebApplicationProxyAvailableADFSRelyingParty** cmdlet retrieves a list of all the relying parties configured on a federation server.
+  A relying party is a Federation Service or application that consumes claims or Windows Integrated authentication.
+
+  Web Application Proxy can publish all of the AD FS relying parties that this command retrieves.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: WebApplicationProxy-help.xml
+  Module Name: WebApplicationProxy
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/webapplicationproxy/get-webapplicationproxyavailableadfsrelyingparty?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebApplicationProxyAvailableADFSRelyingParty

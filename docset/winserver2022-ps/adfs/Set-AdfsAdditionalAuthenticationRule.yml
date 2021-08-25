@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the global rules that provide the trigger for additional authentication providers to be invoked.
+module: ADFS
+notes: ""
+links:
+- text: Get-AdfsAdditionalAuthenticationRule
+  href: ./Get-AdfsAdditionalAuthenticationRule.yml
+syntaxes:
+- >-
+  Set-AdfsAdditionalAuthenticationRule [-AdditionalAuthenticationRules] <String> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AdfsAdditionalAuthenticationRule [-AdditionalAuthenticationRulesFile] <String> [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a global additional authentication rule'
+  code: |-
+    PS C:\> Set-AdfsAdditionalAuthenticationRule -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'
+  description: |-
+    This command sets an additional authentication rule to require multiple-factor authentication.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRules
+  isRequired: true
+  description: |+
+    Specifies rules for additional authentication.
+    For more information about the claims language for rules, see [Understanding Claim Rule Language in AD FS 2.0 & Higher](https://social.technet.microsoft.com/wiki/contents/articles/4792.understanding-claim-rule-language-in-ad-fs-2-0-higher.aspx) on TechNet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRulesFile
+  isRequired: true
+  description: |+
+    Specifies the fully qualified file path of a text file that contains claim rules.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsAdditionalAuthenticationRule
+name: Set-AdfsAdditionalAuthenticationRule
+description: |-
+  The **Set-AdfsAdditionalAuthenticationRule** cmdlet sets the global rules that provide the trigger for additional authentication providers to be invoked.
+  When the claims engine evaluates the additional authentication rules and determines the requirement for multiple factor authentication, the user is prompted to perform additional authentication.
+  You may specify rules in the form of claim rules strings, or designate a file that contains claim rules.
+
+  Use this rule only when all your applications are capable of performing web based credential collection through Active Directory Federation Services (AD FS).
+  Applications that use protocols like WS-Trust will fail to obtain a security token if the trigger is true as a result of evaluation of the rules.
+
+  You can also set rules on the individual relying party trust using the **Set-AdfsRelyingPartyTrust** cmdlet with the **AdditionalAuthenticationRule** parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsadditionalauthenticationrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsAdditionalAuthenticationRule

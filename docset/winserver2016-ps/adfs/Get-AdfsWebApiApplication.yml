@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets Web API application roles in AD FS.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.WebApiApplication" data-throw-if-not-resolved="False" />
+  description: |-
+    WebApiApplication objects are received by the *Application* parameter.
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.ApplicationGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    ApplicationGroup objects are received by the *ApplicationGroup* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *ApplicationGroupIdentifier*, *Identifier*, and *Name* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.WebApiApplication" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more WebApiApplication objects that represent the web API applications of the Federation Service.
+links:
+- text: Add-AdfsWebApiApplication
+  href: ./Add-AdfsWebApiApplication.yml
+- text: Remove-AdfsWebApiApplication
+  href: ./Remove-AdfsWebApiApplication.yml
+- text: Set-AdfsWebApiApplication
+  href: ./Set-AdfsWebApiApplication.yml
+syntaxes:
+- Get-AdfsWebApiApplication [[-Identifier] <String[]>] [<CommonParameters>]
+- Get-AdfsWebApiApplication [-Name] <String[]> [<CommonParameters>]
+- Get-AdfsWebApiApplication [-PrefixIdentifier] <String> [<CommonParameters>]
+- Get-AdfsWebApiApplication [-Application] <WebApiApplication> [<CommonParameters>]
+- Get-AdfsWebApiApplication [-ApplicationGroupIdentifier] <String> [<CommonParameters>]
+- Get-AdfsWebApiApplication [-ApplicationGroup] <ApplicationGroup> [<CommonParameters>]
+parameters:
+- type: <xref href="WebApiApplication" data-throw-if-not-resolved="False" />
+  name: Application
+  isRequired: true
+  description: |+
+    Specifies a Web API application to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ApplicationGroup" data-throw-if-not-resolved="False" />
+  name: ApplicationGroup
+  isRequired: true
+  description: |+
+    Specifies an application group for which to get Web API applications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationGroupIdentifier
+  isRequired: true
+  description: |+
+    Specifies the ID of an application group for which to get Web API applications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identifier
+  description: |+
+    Specifies an ID of a Web API application to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names of Web API applications to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrefixIdentifier
+  isRequired: true
+  description: |+
+    Specifies the prefix identifier of Web API applications to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsWebApiApplication
+name: Get-AdfsWebApiApplication
+description: |-
+  The **Get-AdfsWebApiApplication** cmdlet gets Web API application roles in Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfswebapiapplication?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsWebApiApplication

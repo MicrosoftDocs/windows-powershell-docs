@@ -1,0 +1,184 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets an app packages as non-removable (can not be uninstalled).
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.IO.FileInfo" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-NonRemovableAppsPolicy 
+
+      -PackageFamilyName <string> 
+
+      -NonRemovable <int> 
+
+      -Path <string> 
+
+      [-WindowsDirectory <string>]
+
+      [-SystemDrive <string>] 
+
+      [-LogPath <string>] 
+
+      [-ScratchDirectory <string>] 
+
+      [-LogLevel {Errors | Warnings | WarningsInfo}]
+
+      [<CommonParameters>]
+- >-
+  Set-NonRemovableAppsPolicy 
+
+      -PackageFamilyName <string> 
+
+      -NonRemovable <int> 
+
+      -Online 
+
+      [-WindowsDirectory <string>] 
+
+      [-SystemDrive <string>] 
+
+      [-LogPath <string>] 
+
+      [-ScratchDirectory <string>] 
+
+      [-LogLevel {Errors | Warnings | WarningsInfo}] 
+
+      [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the app package Application1 as non-removable'
+  code: |-
+    PS C:\> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
+  description: |-
+    This command sets the app package Application1 as non-removable.
+  summary: ""
+- title: 'Example 2: Set the app package Application1 as removable'
+  code: |-
+    PS C:\> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 0
+  description: |-
+    This command sets the app package Application1 as removable.
+  summary: ""
+- title: 'Example 3: Sets the app package Application1 as non-removable on an offline Windows image'
+  code: |-
+    PS C:\> Set-NonRemovableAppsPolicy -Path ".\wim\image.wim" -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
+  description: |-
+    This command sets the app package Application1 as non-removable on an offline Windows image.
+  summary: ""
+parameters:
+- type: <xref href="Loglevel" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: |+
+    Specifies the maximum output level shown in the logs. The default log level is 3. The accepted values are as follows:
+    - 1 = Error
+    - 2 = Errors and warnings
+    - 3 = Errors, warnings, and information
+    - 4 = All of the information listed previously, plus debug output
+
+  defaultValue: "3"
+  pipelineInput: true
+  position: Named
+  aliases: LL
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the full path and file name to log to. If not set, the default is `%WINDIR%\Logs\Dism\dism.log`. In Windows PE, the default directory is the RAMDISK scratch space which can be as small as 32MB. The log file will automatically be archived. The archived log file will be saved with .bak appended to the file name and a new log file will be generated. Each time the log file is archived the .bak file will be overwritten. When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+
+  defaultValue: '%WINDIR%\Logs\Dism\dism.log'
+  pipelineInput: true
+  position: Named
+  aliases: LP
+  parameterValueGroup: ""
+- type: <xref href="Integer" data-throw-if-not-resolved="False" />
+  name: NonRemovable
+  isRequired: true
+  description: |+
+    Specifies that the app package will be configured as non-removable or not. Accepted values are as follows:
+    - 1 = Sets the application as non-removable, and unable to be uninstalled.
+    - 0 = Sets the application as removable, and capable of being uninstalled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Online
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet operates on a running operating system on the local host.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageFamilyName
+  isRequired: true
+  description: |+
+    Specifies the Package Family Name of the app package that will have it's non-removable status set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the full path to the root directory of the offline Windows image that you will service. If the directory named Windows is not a subdirectory of the root directory, WindowsDirectory must be specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScratchDirectory
+  description: |+
+    Specifies a temporary directory that will be used when extracting files for use during servicing. The directory must exist locally. If not specified, the `\Windows\Temp` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM. Items in the scratch directory are deleted after each operation. You should not use a network share location as a scratch directory to expand a package(.cab or .msu file) for installation.
+
+  defaultValue: '\Windows\Temp'
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SystemDrive
+  description: |+
+    Specifies the path to the location of the BootMgr files. This is necessary only when the BootMgr files are located on a partition other than the one that you are running the command from. Use -SystemDrive to inquire an installed Windows image from a Windows PE environment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WindowsDirectory
+  description: |+
+    Specifies the path to the Windows directory relative to the image path. This cannot be the full path to the Windows directory; it should be a relative path. If not specified, the default is the Windows directory in the root of the offline image directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Appx.Set-NonRemovableAppsPolicy
+name: Set-NonRemovableAppsPolicy
+description: |-
+  The **Set-NonRemovableAppsPolicy** cmdlet sets an installed app package as either removable (capable of being uninstalled) or non-removable (can not be uninstalled). An app package has a .msix or .appx file name extension.
+metadata:
+  audiencems.localizationpriority: ITPro
+  description: Use this topic to help prevent the uninstall of specific Windows apps with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+  Module Name: Appx
+  ms.date: 02/05/2020
+  online version: https://docs.microsoft.com/powershell/module/appx/set-nonremovableappspolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NonRemovableAppsPolicy

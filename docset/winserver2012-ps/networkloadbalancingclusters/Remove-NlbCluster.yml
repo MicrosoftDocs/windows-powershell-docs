@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes a Network Load Balancing (NLB) cluster.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None or Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NlbCluster
+  href: ./Get-NlbCluster.yml
+- text: New-NlbCluster
+  href: ./New-NlbCluster.yml
+- text: Resume-NlbCluster
+  href: ./Resume-NlbCluster.yml
+- text: Set-NlbCluster
+  href: ./Set-NlbCluster.yml
+- text: Start-NlbCluster
+  href: ./Start-NlbCluster.yml
+- text: Stop-NlbCluster
+  href: ./Stop-NlbCluster.yml
+- text: Suspend-NlbCluster
+  href: ./Suspend-NlbCluster.yml
+syntaxes:
+- Remove-NlbCluster [[-HostName] <String>] [[-InterfaceName] <String>] [-Force] [-PassThru]
+- Remove-NlbCluster [[-HostName] <String>] [-Force] [-PassThru] -InputObject <Cluster>
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Remove-NlbCluster
+  description: |-
+    This example removes the NLB cluster after asking for user confirmation.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Remove-NlbCluster -Force
+  description: |-
+    This example removes the NLB cluster without asking for user confirmation.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Runs the cmdlet without prompting for confirmation.
+    By default the cmdlet will ask for confirmation from the user before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: "1"
+  aliases: hn
+  parameterValueGroup: ""
+- type: <xref href="Cluster" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the cluster to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Sends items from the interactive window down the pipeline as input to other cmdlets.
+    By default, this cmdlet does not generate any output. 
+
+    To send items from the interactive window down the pipeline, click to select the items and then click OK.
+    Shift-click and Ctrl-click are supported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Remove-NlbCluster
+name: Remove-NlbCluster
+description: |-
+  The **Remove-NlbCluster** cmdlet deletes a Network Load Balancing (NLB) cluster.
+  When the cluster is deleted, all existing connections to the hosts in the cluster will be lost and the cluster will no longer exist.
+metadata:
+  external help file: NLB_Cmdlets.xml
+  Module Name: NetworkLoadBalancingClusters
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/remove-nlbcluster?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

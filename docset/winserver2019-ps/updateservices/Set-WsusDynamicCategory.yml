@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the synchronization status of a dynamic category.
+module: UpdateServices
+notes: ""
+inputs:
+- name: <xref href="IDynamicCategory" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-WsusDynamicCategory
+  href: ./Add-WsusDynamicCategory.yml
+- text: Get-WsusDynamicCategory
+  href: ./Get-WsusDynamicCategory.yml
+- text: Remove-WsusDynamicCategory
+  href: ./Remove-WsusDynamicCategory.yml
+- text: Get-WsusServer
+  href: ./Get-WsusServer.yml
+syntaxes:
+- >-
+  Set-WsusDynamicCategory [-UpdateServer <IUpdateServer>] -Name <String>
+
+   -DynamicCategoryType <DynamicCategoryType> -Status <WsusDynamicCategoryStatus> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-WsusDynamicCategory [-UpdateServer <IUpdateServer>] [-Status <WsusDynamicCategoryStatus>]
+
+   -InputObject <IDynamicCategory> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the synchronization status of a dynamic category'
+  code: |-
+    PS C:\> Get-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07" | Set-WsusDynamicCategory -Status Blocked
+  description: |-
+    This command gets a dynamic category from the local server by using the [Get-WsusDynamicCategory](./Get-WsusDynamicCategory.yml) cmdlet. The command passes the dynamic category to the current cmdlet by using the pipeline operator. The current cmdlet sets the synchronization status to Blocked. This value means that no updates are synchronized for this dynamic category.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="DynamicCategoryType" data-throw-if-not-resolved="False" />
+  name: DynamicCategoryType
+  isRequired: true
+  description: |+
+    Specifies the type of the dynamic category that this cmdlet modifies. The acceptable values for this parameter are:
+
+    - ComputerModel
+    - Device
+    - Application
+
+  defaultValue: None
+  position: Named
+  aliases: Type
+  parameterValueGroup: ComputerModel, Device, Application, Any
+- type: <xref href="IDynamicCategory" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies a dynamic category object. This cmdlet modifies the synchronization settings for the dynamic category that this parameter specifies. To obtain a dynamic category, use the **Get-WsusDynamicCategory** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the dynamic category to modify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WsusDynamicCategoryStatus" data-throw-if-not-resolved="False" />
+  name: Status
+  isRequired: true
+  description: |+
+    Specifies the update synchronization status for the dynamic category. The acceptable values for this parameter are:
+
+    - Blocked. No updates are being synchronized for this dynamic category.
+    - SyncUpdates. Updates are being synchronized for this dynamic category.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Blocked, InventoryOnly, SyncUpdates, Blocked, InventoryOnly, SyncUpdates
+- type: <xref href="IUpdateServer" data-throw-if-not-resolved="False" />
+  name: UpdateServer
+  description: |+
+    Specifies a WSUS server. This cmdlet modifies a dynamic category on the server that this parameter specifies. To obtain a server, use the [Get-WsusServer](./Get-WsusServer.yml) cmdlet. If you do not specify a value for this parameter, the cmdlet modifies dynamic categories on the local server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UpdateServices.Set-WsusDynamicCategory
+name: Set-WsusDynamicCategory
+description: |-
+  The **Set-WsusDynamicCategory** cmdlet sets the synchronization status of a dynamic category in a specified Windows Server Update Services (WSUS) server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/updateservices/set-wsusdynamiccategory?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WsusDynamicCategory

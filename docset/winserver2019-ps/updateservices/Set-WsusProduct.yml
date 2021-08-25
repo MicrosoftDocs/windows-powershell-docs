@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets whether the product representing the category of updates to synchronize is enabled.
+module: UpdateServices
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkID=289623
+- text: Get-WsusProduct
+  href: ./Get-WsusProduct.yml
+- text: Get-WsusServer
+  href: ./Get-WsusServer.yml
+syntaxes:
+- Set-WsusProduct -Product <WsusProduct> [-Disable] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Specify updates for a product'
+  code: |-
+    PS C:\> Get-WsusServer | Get-WsusProduct | Where-Object -FilterScript {$_.product.title -Eq "Antigen"} | Set-WsusProduct
+  description: |-
+    This command specifies that you want updates for the Antigen product.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disable
+  description: |+
+    Specifies that updates are not to be synchronized for the specified product.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WsusProduct" data-throw-if-not-resolved="False" />
+  name: Product
+  isRequired: true
+  description: |+
+    Specifies the product for which the updates are to be synchronized. If the **Disable** parameter is used, then this parameter specifies the product for which the updates are not to be synchronized. This parameter value is passed from the [Get-WsusProduct](./Get-WsusProduct.yml) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UpdateServices.Set-WsusProduct
+name: Set-WsusProduct
+description: |-
+  The **Set-WsusProduct** cmdlet enables or disables the product representing the category of updates to synchronize. In order to use this cmdlet, the Get-WsusProduct cmdlet must be run with its results passed into this cmdlet. You can run the [Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423) cmdlet to filter results.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/updateservices/set-wsusproduct?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WsusProduct

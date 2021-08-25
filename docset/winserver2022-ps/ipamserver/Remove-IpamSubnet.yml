@@ -1,0 +1,278 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a subnet from IPAM.
+module: IpamServer
+notes: ""
+outputs:
+- name: <xref href="IpamSubnet" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents the subnet deleted from the IPAM Server.
+links:
+- text: Add-IpamSubnet
+  href: ./Add-IpamSubnet.yml
+- text: Export-IpamSubnet
+  href: ./Export-IpamSubnet.yml
+- text: Get-IpamSubnet
+  href: ./Get-IpamSubnet.yml
+- text: Import-IpamSubnet
+  href: ./Import-IpamSubnet.yml
+- text: Set-IpamSubnet
+  href: ./Set-IpamSubnet.yml
+syntaxes:
+- >-
+  Remove-IpamSubnet -NetworkId <String[]> [-NetworkType <VirtualizationType[]>] [-AddressSpace <String[]>]
+
+   [-DeleteAssociatedRanges] [-DeleteAssociatedAddresses] [-Force] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-IpamSubnet -InputObject <CimInstance[]> [-DeleteAssociatedRanges] [-DeleteAssociatedAddresses] [-Force]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1 Remove a non-virtualized subnet with a mapped range
+  code: |-
+    PS C:\> Remove-IpamSubnet -NetworkId 10.12.0.0/16 -NetworkType NonVirtualized
+
+    Confirm
+
+    Deleting the non-virtualized subnet Contoso_2 with network 10.12.0.0/16.
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+
+    Remove-IpamSubnet : There are ranges associated with this subnet.
+
+    At line:1 char:1
+
+    + Remove-IpamSubnet -InputObject $subnet
+
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    + CategoryInfo          : ResourceUnavailable: (MSFT_IPAM_Subnet (InstanceID = "86-2"):ROOT/microsoft/ipam/MSFT_IP
+
+    AM_Subnet) [Remove-IpamSubnet], CimException
+
+    + FullyQualifiedErrorId : WIN32 8,Remove-IpamSubnet
+  description: |-
+    This command removes a NonVirtualized subnet with a mapped range.
+    An error occurs because a subnet cannot be deleted if there are ranges mapped to it
+  summary: ""
+- title: 'Example 2: Remove a non-virtualized subnet'
+  code: |-
+    PS C:\> Remove-IpamSubnet -NetworkId 10.12.0.0/16 -NetworkType NonVirtualized -DeleteAssociatedRanges
+
+    Confirm
+
+    Deleting the non-virtualized subnet Contoso_2 with network 10.12.0.0/16. Ranges mapped to this subnet will also be
+
+    deleted.
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+  description: |-
+    This command removes a NonVirtualized subnet along with any ranges that are mapped to it.
+    The cmdlet moves the mapped IP addresses to unmapped address space.
+  summary: ""
+- title: 'Example 3: Remove a non-virtualized subnet'
+  code: |-
+    PS C:\> Remove-IpamSubnet -NetworkId 10.12.0.0/16 -NetworkType NonVirtualized -DeleteAssociatedRanges -DeleteAssociatedAddresses
+
+    Confirm
+
+    Deleting the non-virtualized subnet Contoso_2 with network 10.12.0.0/16. Ranges mapped to this subnet and IP Addresses
+
+    associated via Ranges with this Subnet will also be deleted.
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+  description: |-
+    This command removes a NonVirtualized subnet along with ranges that map to it.
+    Also remove any IP addresses that map to this subnet via the ranges that map to this subnet.
+  summary: ""
+- title: 'Example 4: Remove a subnet for a provider network type'
+  code: |-
+    PS C:\> Remove-IpamSubnet -NetworkId 10.13.0.0/16 -NetworkType Provider -AddressSpace Default -DeleteAssociatedRanges
+
+    Confirm
+
+    Deleting the fabric subnet Contoso_3 with network 10.13.0.0/16. Ranges mapped to this subnet will also be deleted.
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+  description: |-
+    This command removes a subnet for a provider network type from the default address space.
+  summary: ""
+- title: 'Example 5: Remove a subnet for a customer network type'
+  code: |-
+    PS C:\> Remove-IpamSubnet -NetworkId 10.11.8.0/24 -NetworkType Customer -AddressSpace Contoso -DeleteAssociatedRanges
+
+    Confirm
+
+    Deleting the virtual subnet Contoso_1 with network 10.11.8.0/24. Ranges mapped to this subnet will also be deleted.
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+  description: |-
+    This command removes a subnet for a customer network type from the customer address space named Contoso.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressSpace
+  description: |+
+    Specifies an array of names of address spaces.
+    If you not specify an address space, the cmdlet removes all address spaces configured in IPAM.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeleteAssociatedAddresses
+  description: |+
+    Indicates that the cmdlet deletes the addresses associated with these ranges.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeleteAssociatedRanges
+  description: |+
+    Indicates that the cmdlet deletes subnets and any associated ranges.
+    If you do not specify this parameter, the cmdlet generates an error when there are ranges associated with the subnet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NetworkId
+  isRequired: true
+  description: |+
+    Specifies an array of networks for the subnets to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualizationType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NetworkType
+  description: |+
+    Specifies an array of network types for the subnets to delete.
+
+    The acceptable values for this parameter are:
+
+    - Provider
+     --  Customer
+     --  NonVirtualized
+
+      If you do not specify a value, all matching IP subnets of network type Provider, Customer and NonVirtualized will be deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NonVirtualized, Provider, Customer
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: IpamServer.Remove-IpamSubnet
+name: Remove-IpamSubnet
+description: |-
+  The **Remove-IpamSubnet** cmdlet removes a given subnet from IP Address Management (IPAM).
+  By default, the cmdlet returns an error if there are ranges associated with the subnet.
+  You can use the *DeleteAssociatedRanges* parameter to delete the associated ranges.
+  You can specify the *DeleteAssociatedAddresses* parameter to delete the associated IP Addresses.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamSubnet.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/remove-ipamsubnet?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-IpamSubnet

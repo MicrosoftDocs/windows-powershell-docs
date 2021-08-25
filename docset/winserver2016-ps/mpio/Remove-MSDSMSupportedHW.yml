@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a hardware ID with the specific vendor ID and product ID combination from the MSDSM supported hardware list.
+module: MPIO
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Clear-MSDSMSupportedHW
+  href: ./Clear-MSDSMSupportedHW.yml
+- text: Get-MSDSMSupportedHW
+  href: ./Get-MSDSMSupportedHW.yml
+- text: New-MSDSMSupportedHW
+  href: ./New-MSDSMSupportedHW.yml
+- text: Update-MPIOClaimedHW
+  href: ./Update-MPIOClaimedHW.yml
+syntaxes:
+- >-
+  Remove-MSDSMSupportedHW [-VendorId] <String[]> [-ProductId] <String[]> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+- >-
+  Remove-MSDSMSupportedHW -InputObject <CimInstance[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-PassThru] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a hardware ID for a vendor ID and product ID'
+  code: |-
+    PS C:\> Remove-MSDSMSupportedHW -VendorId "VendorX" -ProductId "ProductY"
+  description: |-
+    This example removes the combination of the vendor ID VendorX and the product ID ProductY from the MSDSM supported hardware list.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Passes the object through to the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ProductId
+  isRequired: true
+  description: |+
+    Specifies the product ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VendorId
+  isRequired: true
+  description: |+
+    Specifies the vendor ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MPIO.Remove-MSDSMSupportedHW
+name: Remove-MSDSMSupportedHW
+description: |-
+  The **Remove-MSDSMSupportedHW** cmdlet removes a hardware identifier (ID) with the specific vendor ID and product ID combination from the Microsoft Device Specific Module (MSDSM) supported hardware list.
+
+  Unlike MPCLAIM.exe, when you specify the vendor ID and product ID, do not pad the fields with spaces.
+
+  The **Update-MPIOClaimedHW** cmdlet needs to be run to have the Multipath I/O (MPIO) claiming process take effect.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSDSMSupportedHW.cdxml-help.xml
+  Module Name: MPIO
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/mpio/remove-msdsmsupportedhw?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-MSDSMSupportedHW

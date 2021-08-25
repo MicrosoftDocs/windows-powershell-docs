@@ -1,0 +1,339 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new storage pool using a group of physical disks.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass one or more MSFT_PhysicalDisk objects to the *PhysicalDisks* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StorageSubsystem object to the *InputObject* parameter.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object representing the newly created storage pool.
+links:
+- text: Get-PhysicalDisk
+  href: ./Get-PhysicalDisk.yml
+- text: Get-StoragePool
+  href: ./Get-StoragePool.yml
+- text: New-Volume
+  href: ./New-Volume.yml
+- text: Remove-StoragePool
+  href: ./Remove-StoragePool.yml
+- text: Set-StoragePool
+  href: ./Set-StoragePool.yml
+syntaxes:
+- >-
+  New-StoragePool [-StorageSubSystemFriendlyName] <String[]> -FriendlyName <String> [-Usage <Usage>]
+
+   [-OtherUsageDescription <String>] -PhysicalDisks <CimInstance[]> [-ProvisioningTypeDefault <ProvisioningType>]
+
+   [-MediaTypeDefault <MediaType>] [-EnclosureAwareDefault <Boolean>]
+
+   [-FaultDomainAwarenessDefault <FaultDomainType>] [-ResiliencySettingNameDefault <String>]
+
+   [-LogicalSectorSizeDefault <UInt64>] [-WriteCacheSizeDefault <UInt64>] [-AutoWriteCacheSize <Boolean>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  New-StoragePool -StorageSubSystemUniqueId <String[]> -FriendlyName <String> [-Usage <Usage>]
+
+   [-OtherUsageDescription <String>] -PhysicalDisks <CimInstance[]> [-ProvisioningTypeDefault <ProvisioningType>]
+
+   [-MediaTypeDefault <MediaType>] [-EnclosureAwareDefault <Boolean>]
+
+   [-FaultDomainAwarenessDefault <FaultDomainType>] [-ResiliencySettingNameDefault <String>]
+
+   [-LogicalSectorSizeDefault <UInt64>] [-WriteCacheSizeDefault <UInt64>] [-AutoWriteCacheSize <Boolean>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  New-StoragePool -StorageSubSystemName <String[]> -FriendlyName <String> [-Usage <Usage>]
+
+   [-OtherUsageDescription <String>] -PhysicalDisks <CimInstance[]> [-ProvisioningTypeDefault <ProvisioningType>]
+
+   [-MediaTypeDefault <MediaType>] [-EnclosureAwareDefault <Boolean>]
+
+   [-FaultDomainAwarenessDefault <FaultDomainType>] [-ResiliencySettingNameDefault <String>]
+
+   [-LogicalSectorSizeDefault <UInt64>] [-WriteCacheSizeDefault <UInt64>] [-AutoWriteCacheSize <Boolean>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  New-StoragePool -InputObject <CimInstance[]> -FriendlyName <String> [-Usage <Usage>]
+
+   [-OtherUsageDescription <String>] -PhysicalDisks <CimInstance[]> [-ProvisioningTypeDefault <ProvisioningType>]
+
+   [-MediaTypeDefault <MediaType>] [-EnclosureAwareDefault <Boolean>]
+
+   [-FaultDomainAwarenessDefault <FaultDomainType>] [-ResiliencySettingNameDefault <String>]
+
+   [-LogicalSectorSizeDefault <UInt64>] [-WriteCacheSizeDefault <UInt64>] [-AutoWriteCacheSize <Boolean>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a new storage pool using Storage Spaces'
+  code: |-
+    PS C:\> $PhysicalDisks = (Get-PhysicalDisk -CanPool $True)
+    PS C:\> New-StoragePool -FriendlyName CompanyData -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks $PhysicalDisks
+  description: |-
+    The first line uses the **Get-PhysicalDisk** cmdlet to get all PhysicalDisk objects that are not yet in a (concrete) storage pool and assigns the array of objects to the `$PhysicalDisks` variable.
+
+    The second line creates a new storage pool using the `$PhysicalDisks` variable to specify the disks to include from the WindowsStorage subsystem (specified with a wildcard * to remove the need to modify the friendly name for different computers).
+
+    This example creates a new storage pool named CompanyData using the Storage Spaces subsytem, using the minimum parameters, and assuming that there are no other storage subsystems attached to the computer that have available disks.
+  summary: ""
+- title: 'Example 2: Create a new pool and set defaults for virtual disks'
+  code: |-
+    PS C:\> $PhysicalDisks = (Get-PhysicalDisk -CanPool $True)
+    PS C:\> New-StoragePool -FriendlyName CompanyData -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks $PhysicalDisks -ResiliencySettingNameDefault Mirror -ProvisioningTypeDefault Thin -Verbose
+  description: |-
+    This example creates a new storage pool named CompanyData using the Windows Storage subsystem and sets default values for virtual disk creation.
+  summary: ""
+- title: 'Example 3: Create a new storage pool, virtual disk, partition, and volume'
+  code: |-
+    PS C:\> $PhysicalDisks = Get-StorageSubSystem -FriendlyName "Windows Storage*" | Get-PhysicalDisk -CanPool $True
+    PS C:\> New-StoragePool -FriendlyName "CompanyData" -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks $PhysicalDisks | New-VirtualDisk -FriendlyName "UserData" -Size 100GB -ProvisioningType Thin | Initialize-Disk -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume
+  description: |-
+    This example creates a new storage pool, and then makes use of the pipeline to create a new virtual disk in the pool, initialize the disk, create a new partition on the disk, and then format the new partition (volume).
+    Alternatively you can use the New-Volume cmdlet to achieve a similar result in a single command.
+  summary: |+
+    The first line (`$PhysicalDisks = …`) gets the storage subsystem object for the Windows Storage subsystem, passes it to the **Get-PhysicalDisk** cmdlet, which then gets the physical disks in the specified subsystem that are available to add to a storage pool, and assigns these disks to the $PhysicalDisks variable.
+
+    The second line of the command has five parts, connected by the pipeline (|).
+
+    The first part (`New-StoragePool …`) creates a new storage pool using the physical disks in the `$PhysicalDisks` variable and then passes the new storage pool down the pipeline. All of the following commands are logically part of one command and should be entered as such.
+
+    The second part (`New-VirtualDisk …`) creates a new virtual disk on the passed in storage pool and then passes the new virtual disk down the pipeline.
+    The third part (`Initialize-Disk …`) initializes the disk that was passed in and then passes the disk down the pipeline.
+
+    The fourth part (`New-Partition …`) creates a new partition on the disk that was passed in, assigns it the next available drive letter, and then passes the partition down the pipeline.
+
+    The final part of the command (`Format-Volume`) formats the partition that was passed in.
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoWriteCacheSize
+  description: |+
+    Indicates whether to set the size of the write-back cache to 1 GB for all types of storage spaces, which include simple, mirror, and parity, to create from the pool.
+    If the number or size of the solid-state drives (SSDs) or journal disks in the storage pool is not sufficient and you specify a value of $True for this parameter, the cmdlet sets the write-back cache size to 0 for simple and mirror spaces, and to 32 MB for parity spaces.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnclosureAwareDefault
+  description: |+
+    Specifies the default allocation policy for virtual disks created in an enclosure-aware storage pool.
+    For example, an enclosure-aware subsystem could balance each data copy of the virtual disk across multiple physical enclosures such that each enclosure contains a full data copy of the virtual disk.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FaultDomainType" data-throw-if-not-resolved="False" />
+  name: FaultDomainAwarenessDefault
+  description: |+
+    Specifies the default fault domain for new virtual disks created in this storage pool.
+    The acceptable values for this parameter are:
+
+    - PhysicalDisk
+    - StorageScaleUnit
+    - StorageChassis
+    - StorageEnclosure
+    - StorageRack
+
+    The fault domain specifies at what level you want to be fault tolerant.
+    For example, specify StorageScaleUnit to store data copies on separate nodes of a Storage Spaces Direct cluster.
+    This cmdlet refers to nodes of a Storage Spaces Direct cluster as storage scale units because you can expand the scale of the cluster by adding more nodes.
+
+  defaultValue: PhysicalDisk
+  position: Named
+  aliases: ""
+  parameterValueGroup: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FriendlyName
+  isRequired: true
+  description: |+
+    Specifies a friendly name for the storage pool to be created.
+    The friendly name may be defined by a user and is not guaranteed to be unique.
+
+  defaultValue: None
+  position: Named
+  aliases: StoragePoolFriendlyName
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: LogicalSectorSizeDefault
+  description: |+
+    Specifies the default logical sector size to use for virtual disks created in this pool.
+    Valid logical sector size values (in bytes) for virtual disks created by using the Windows Storage subsystem are 512 and 4096.
+
+  defaultValue: "512"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MediaType" data-throw-if-not-resolved="False" />
+  name: MediaTypeDefault
+  description: ""
+  defaultValue: Unspecified
+  position: Named
+  aliases: ""
+  parameterValueGroup: HDD, SSD, SCM
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OtherUsageDescription
+  description: |+
+    Specifies the usage description for the storage pool.
+
+  defaultValue: None
+  position: Named
+  aliases: StoragePoolOtherUsageDescription
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PhysicalDisks
+  isRequired: true
+  description: |+
+    Accepts one or more PhysicalDisk objects as input.
+    The Physical Disk CIM objects represent the physical disks to be added to the storage pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ProvisioningType" data-throw-if-not-resolved="False" />
+  name: ProvisioningTypeDefault
+  description: |+
+    Specifies the default type of provisioning for virtual disks created in this pool.
+    The acceptable values for this parameter are: Unknown, Fixed or Thin.
+
+  defaultValue: Fixed
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, Thin, Fixed
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResiliencySettingNameDefault
+  description: |+
+    Specifies the default resiliency setting (also known as storage layout) to use for virtual disks created in the specified storage pool. The supported resiliency settings vary by storage subsystem.
+    For the Windows Storage subsystem, acceptable values are Mirror, Parity, and Simple. "Mirror" is the default value.
+
+  defaultValue: Mirror
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StorageSubSystemFriendlyName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the storage subsystem on which you want to create the storage pool.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StorageSubSystemName
+  isRequired: true
+  description: |+
+    Specifies the name of the storage subsystem (provided by the Storage Management) on which you want to create the storage pool.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StorageSubSystemUniqueId
+  isRequired: true
+  description: |+
+    Specifies the ID of the storage subsystem on which you want to create the storage pool
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: StorageSubsystemId
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Usage" data-throw-if-not-resolved="False" />
+  name: Usage
+  description: |+
+    Specifies the usage setting for the storage pool.
+    The acceptable values for this parameter are:
+    - Other
+    - ReservedAsDeltaReplicaContainer
+    - ReservedForComputerSystem
+    - ReservedForLocalReplicationServices
+    - ReservedForMigrationServices
+    - ReservedForRemoteReplicationServices
+    - ReservedForSparing
+    - Unrestricted
+
+  defaultValue: Other
+  position: Named
+  aliases: StoragePoolUsage
+  parameterValueGroup: Other, Unrestricted, ReservedForComputerSystem, ReservedAsDeltaReplicaContainer, ReservedForMigrationServices, ReservedForLocalReplicationServices, ReservedForRemoteReplicationServices, ReservedForSparing
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: WriteCacheSizeDefault
+  description: |+
+    Specifies the default write-back cache size for virtual disks in the storage pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.New-StoragePool
+name: New-StoragePool
+description: |-
+  The **New-StoragePool** cmdlet creates a new storage pool using a group of physical disks exposed by a specific storage subsystem.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: StorageSubSystem.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/new-storagepool?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-StoragePool

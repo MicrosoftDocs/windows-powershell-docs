@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a trusted federation partner in AD FS.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsTrustedFederationPartner
+  href: ./Add-AdfsTrustedFederationPartner.yml
+- text: Get-AdfsTrustedFederationPartner
+  href: ./Get-AdfsTrustedFederationPartner.yml
+- text: Set-AdfsTrustedFederationPartner
+  href: ./Set-AdfsTrustedFederationPartner.yml
+syntaxes:
+- >-
+  Remove-AdfsTrustedFederationPartner [-TargetName] <String> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-AdfsTrustedFederationPartner [-TargetFederationPartnerHostName] <Uri> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-AdfsTrustedFederationPartner [-TargetFederationPartner] <AdfsTrustedFederationPartner> [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AdfsTrustedFederationPartner" data-throw-if-not-resolved="False" />
+  name: TargetFederationPartner
+  isRequired: true
+  description: |+
+    Specifies a federation partner to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: TargetFederationPartnerHostName
+  isRequired: true
+  description: |+
+    Specifies the URI of a federation partner to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of a federation partner to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Remove-AdfsTrustedFederationPartner
+name: Remove-AdfsTrustedFederationPartner
+description: |-
+  The **Remove-AdfsTrustedFederationPartner** cmdlet removes a federation partner that is trusted by this instance of Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfstrustedfederationpartner?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AdfsTrustedFederationPartner

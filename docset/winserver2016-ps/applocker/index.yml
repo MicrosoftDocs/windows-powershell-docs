@@ -1,0 +1,24 @@
+### YamlMime:PowershellModule
+children:
+- title: AppLocker
+  cmdlets:
+  - AppLocker.Get-AppLockerFileInformation
+  - AppLocker.Get-AppLockerPolicy
+  - AppLocker.New-AppLockerPolicy
+  - AppLocker.Set-AppLockerPolicy
+  - AppLocker.Test-AppLockerPolicy
+uid: AppLocker
+name: AppLocker
+description: |-
+  The Windows PowerShell cmdlets for AppLocker are designed to streamline the administration of application control policies. The cmdlets can be used to help author, test, maintain, and troubleshoot application control policies and can be used in conjunction with the AppLocker user interface that is accessed through the Microsoft Management Console (MMC) snap-in extension to the Local Security Policy snap-in and Group Policy Management Console.
+
+  Note that AppLocker cmdlets only interact with group policy and do not have any knowledge of the AppLocker CSP.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 9dafd409-67de-4108-8ee9-73cd61f5b7bf
+  Module Name: AppLocker
+  ms.date: 09/28/2020
+  title: AppLocker

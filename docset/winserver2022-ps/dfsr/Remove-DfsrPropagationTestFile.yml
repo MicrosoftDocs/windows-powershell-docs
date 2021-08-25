@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes DFS Replication propagation test files.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder, string" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Start-DfsrPropagationTest
+  href: ./Start-DfsrPropagationTest.yml
+- text: Write-DfsrPropagationReport
+  href: ./Write-DfsrPropagationReport.yml
+syntaxes:
+- >-
+  Remove-DfsrPropagationTestFile [-GroupName] <String[]> [-FolderName] <String[]> [[-ComputerName] <String>]
+
+   [-AgeInDays] <UInt32> [-Force] [[-DomainName] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove all test files from a specified replicated folder'
+  code: |-
+    PS C:\> Remove-DfsrPropagationTestFile -GroupName "RG01" -FolderName "RF07" -ComputerName "SRV01" -AgeInDays 0
+    This operation will remove the propagation test files from the computer named "SRV01" that are more than 0 days old.
+    Are you sure you want to continue to remove this propagation test file?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+  description: |-
+    This command removes all propagation test files from the RF07 folder on the computer named SRV01.
+    This computer is part of the group named RG01.
+    The value of zero (0) for the *AgeInDays* parameter causes the command to remove all test files, no matter how long ago you created them.
+    The command does not include the *Force* parameter, so you must confirm the removal.
+  summary: ""
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: AgeInDays
+  isRequired: true
+  description: |+
+    Specifies the age, in days, of propagation test files to delete.
+    To delete propagation files created within the past 24 hours or to delete all propagation test files, set this value to zero (0).
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of a replication member computer.
+    If you do not specify this parameter, the cmdlet uses the current computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: Member, Mem
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains the replication group.
+    If you do not specify this parameter, the cmdlet uses the domain of the current user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FolderName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replicated folders.
+    You can use a comma separated list and the wildcard character (*).
+    If you do not specify this parameter, the cmdlet removes test files from all replicated folders.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: RF, RfName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replication groups.
+    You can use a comma separated list and the wildcard character (*).
+    If you do not specify this parameter, the cmdlet removes test files from replicated folders for all groups within the specified domain.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSR.Remove-DfsrPropagationTestFile
+name: Remove-DfsrPropagationTestFile
+description: |-
+  The **Remove-DfsrPropagationTestFile** cmdlet removes test files from a Distributed File System (DFS) Replication replicated folder.
+  Once you remove the file from one member computer in a replication group, DFS Replication removes the file from all other members.
+  To create test files, use the **Start-DfsrPropagationTest** cmdlet.
+
+  Test files contain only test metadata.
+  You can remove them at any time.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/remove-dfsrpropagationtestfile?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-DfsrPropagationTestFile

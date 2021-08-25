@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a VLAN for a network switch.
+module: NetworkSwitchManager
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Disable-NetworkSwitchVlan
+  href: ./Disable-NetworkSwitchVlan.yml
+- text: Enable-NetworkSwitchVlan
+  href: ./Enable-NetworkSwitchVlan.yml
+- text: Get-NetworkSwitchVlan
+  href: ./Get-NetworkSwitchVlan.yml
+- text: Remove-NetworkSwitchVlan
+  href: ./Remove-NetworkSwitchVlan.yml
+- text: Set-NetworkSwitchVlanProperty
+  href: ./Set-NetworkSwitchVlanProperty.yml
+syntaxes:
+- >-
+  New-NetworkSwitchVlan [-CimSession] <CimSession> [[-Caption] <String>] [[-Description] <String>]
+
+   [-VlanID] <Int32> [-Name] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a VLAN'
+  code: |-
+    PS C:\>$Session = New-CimSession -ComputerName "NetworkSwitch08"
+    PS C:\> New-NetworkSwitchVlan -Name "Contoso07VLAN" -Caption "VLAN 07" -CimSession $Session
+    Caption             Description         ElementName         InstanceID                       VlanID PSComputerName    
+    -------             -----------         -----------         ----------                       ------ --------------    
+    VLAN 07                                 VLAN0004            Contoso:NetworkVL...                  4 10.19.26.4
+  description: |-
+    The first command creates a **CimSession** for a network switch, and then stores it in the **$Session** variable.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+    The second creates a VLAN for the switch NetworkSwitch08 by using the **$Session** object.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Caption
+  description: |+
+    Specifies a caption for the new VLAN.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  isRequired: true
+  description: |+
+    Specifies the **CimSession** that this cmdlet uses to connect to the network switch.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description of the new VLAN.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name to use as the VLAN **ElementName**.
+    This is a friendly name.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: VlanID
+  isRequired: true
+  description: |+
+    Specifies a VLAN ID for the new VLAN.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkSwitchManager.New-NetworkSwitchVlan
+name: New-NetworkSwitchVlan
+description: |-
+  The **New-NetworkSwitchVlan** cmdlet creates a virtual local area network (VLAN) for a network switch.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: NetworkSwitchVlan-help.xml
+  Module Name: NetworkSwitchManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkswitchmanager/new-networkswitchvlan?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkSwitchVlan

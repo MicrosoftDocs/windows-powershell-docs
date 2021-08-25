@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet retrieves the configuration of a load balancer VM managed by the Network Controller
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties can be retrieved for a load balancer MUX:
+    1. Router configuration - This includes local ASN of the MUX router and peer router configuration (Name, local IP address, peer IP address, Peer ASN)
+    2. Certificate of the MUX
+    3. An array of connections that specifies the information needed to connect to the MUX for the purposes of managing and controlling the device.
+    4. Virtual server associated with the MUX resource
+syntaxes:
+- >-
+  Get-NetworkControllerLoadBalancerMux [[-ResourceId] <String[]>] -ConnectionUri <Uri>
+
+   [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-NetworkControllerLoadBalancerMux -ConnectionUri https://networkcontroller -ResourceId Mux1
+  description: ""
+  summary: |+
+    This example retrieves the configuration of a load balancer MUX named Mux1 from the Network Controller
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourceId
+  description: |+
+    Specifies the unique identifier for the resource
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Get-NetworkControllerLoadBalancerMux
+name: Get-NetworkControllerLoadBalancerMux
+description: |-
+  This cmdlet retrieves the configuration of a load balancer VM managed by the Network Controller. Multiple load balancer VMs can be deployed to load balance traffic to virtual machines in the virtual network.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollerloadbalancermux?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerLoadBalancerMux

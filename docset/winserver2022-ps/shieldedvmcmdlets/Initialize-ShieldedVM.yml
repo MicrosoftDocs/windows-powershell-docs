@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Provisions a Shielded virtual machine.
+module: ShieldedVmCmdlets
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a CimInstance object that represents the provisioning job for the shielded virtual machine.
+links:
+- text: Get-KeyProtectorFromShieldingDataFile
+  href: ./Get-KeyProtectorFromShieldingDataFile.yml
+- text: Get-ShieldedVMProvisioningStatus
+  href: ./Get-ShieldedVMProvisioningStatus.yml
+- text: New-ShieldedVMSpecializationDataFile
+  href: ./New-ShieldedVMSpecializationDataFile.yml
+- text: Test-ShieldingDataApplicability
+  href: ./Test-ShieldingDataApplicability.yml
+syntaxes:
+- >-
+  Initialize-ShieldedVM [-ShieldingDataFilePath] <String> [[-ShieldedVMSpecializationDataFilePath] <String>]
+
+   [-VM] <VirtualMachine> [<CommonParameters>]
+- >-
+  Initialize-ShieldedVM [-ShieldingDataFilePath] <String> [[-ShieldedVMSpecializationDataFilePath] <String>]
+
+   [-VMName] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Provision a Shielded virtual machine'
+  code: |-
+    PS C:\>Initialize-ShieldedVM -ShieldingDataFilePath "C:\temp\Tenant01-Shielded.pdk" -ShieldedVMSpecializationDataFilePath "C:\temp\Tenant01-VM01.fsk" -VMName "VM01"
+  description: |-
+    This command starts provisioning the virtual machine named VM01 on the local system using the shielding data file at C:\temp\Tenant01-Shielded.pdk and substituting values from the specialization file at C:\temp\Tenant01-VM01.fsk.
+  summary: ""
+- title: 'Example 2: Provision a Shielded virtual machine that is stored in a variable'
+  code: |-
+    PS C:\>Initialize-ShieldedVM -ShieldingDataFilePath "C:\temp\Tenant01-Shielded.pdk" -ShieldedVMSpecializationDataFilePath "C:\temp\Tenant01-VM01.fsk" -VirtualMachine $VM
+  description: |-
+    This command starts provisioning the virtual machine stored in the variable named $VM that uses the shielding data file at C:\temp\Tenant01-Shielded.pdk and substitutes values from the specialization file at C:\temp\Tenant01-VM01.fsk.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShieldedVMSpecializationDataFilePath
+  description: |+
+    Specifies the location of a specialization data file (.fsk) used to substitute values in the specialization phase of the shielded virtual machine.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShieldingDataFilePath
+  isRequired: true
+  description: |+
+    Specifies the location of a shielding data file (.pdk) used to configure and specialize the virtual machine.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" />
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine that this cmdlet provisions.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine that this cmdlet provisions.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ShieldedVmCmdlets.Initialize-ShieldedVM
+name: Initialize-ShieldedVM
+description: |-
+  The **Initialize-ShieldedVM** cmdlet provisions a shielded virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ShieldedVmCmdlets-help.xml
+  Module Name: ShieldedVmCmdlets
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/shieldedvmcmdlets/initialize-shieldedvm?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Initialize-ShieldedVM

@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Debugs VMQ/VMMQ traffic.
+module: HNVDiagnostics
+notes: ""
+syntaxes:
+- >-
+  Debug-VirtualMachineQueueOperation [[-HostName] <String>] [[-MgmtIp] <String>] [[-Creds] <PSCredential>]
+
+   [-VMName] <String> [-VMNetworkAdapterName] <String> [[-SampleCount] <UInt32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Debug VMMQ on a remote computer'
+  code: |-
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Debug-VirtualMachineQueueOperation -HostName "NCHost.corp.com" -MgmtIp "10.123.176.108" -Creds $Cred -VMName "MuxVM" -VMNetworkAdapterName "Ethernet"
+  description: |-
+    The first command gets the credentials for the current user, and then stores them in the $Cred variable.
+
+    The second command gets debug information for VMMQ on a remote computer.
+  summary: ""
+- title: 'Example 2: Debug VMMQ on the local host'
+  code: |-
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Debug-VirtualMachineQueueOperation -VMName "MuxVM" -VMNetworkAdapterName "Ethernet" -SampleCount 90
+  description: |-
+    The first command gets the credentials for the current user, and then stores them in the $Cred variable.
+
+    The second command gets debug information for VMMQ on the local host.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Creds
+  description: |+
+    Specifies the credentials to use to connect to a remote host.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the remote host on which to run the diagnostics.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MgmtIp
+  description: |+
+    Specifies the management IP address of the remote host.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SampleCount
+  description: |+
+    Specifies the number of seconds to analyze network traffic.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine to analyze.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapterName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine network adapter to analyze.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HNVDiagnostics.Debug-VirtualMachineQueueOperation
+name: Debug-VirtualMachineQueueOperation
+description: |-
+  The **Debug-VirtualMachineQueueOperation** cmdlet analyzes virtual machine queue (VMQ) and VMMQ traffic.
+  You can use this cmdlet to identify whether VMQ/VMMQ is degrading throughput or is contributing to high utilization on some cores.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Debug-VirtualMachineQueueOperation-help.xml
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/debug-virtualmachinequeueoperation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Debug-VirtualMachineQueueOperation

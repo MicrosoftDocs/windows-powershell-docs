@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables Request Tracing for the specified site.
+module: WebAdministration
+notes: |-
+  * Request Tracing settings can be removed by using theT:Microsoft.IIs.PowerShell.Provider.Clear-WebRequestTracingSettingscmdlet.
+links:
+- text: Enable-WebRequestTracing
+  href: ./Enable-WebRequestTracing.yml
+syntaxes:
+- Disable-WebRequestTracing [[-Name] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Disabling Request Tracing for the "Default Web Site" --------------'
+  code: |-
+    IIS:\>Disable-WebRequestTracing -Name "Default Web Site"
+  description: |-
+    Disables Request Tracing for the Default Web Site.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of site for which Request Tracing is disabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Disable-WebRequestTracing
+name: Disable-WebRequestTracing
+description: |-
+  Disables Request Tracing for the specified site, but does not remove Request Tracing settings.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/disable-webrequesttracing?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,59 @@
+### YamlMime:PowershellModule
+children:
+- title: NFS
+  cmdlets:
+  - NFS.Disconnect-NfsSession
+  - NFS.Get-NfsClientConfiguration
+  - NFS.Get-NfsClientgroup
+  - NFS.Get-NfsClientLock
+  - NFS.Get-NfsMappedIdentity
+  - NFS.Get-NfsMappingStore
+  - NFS.Get-NfsMountedClient
+  - NFS.Get-NfsNetgroup
+  - NFS.Get-NfsNetgroupStore
+  - NFS.Get-NfsOpenFile
+  - NFS.Get-NfsServerConfiguration
+  - NFS.Get-NfsSession
+  - NFS.Get-NfsShare
+  - NFS.Get-NfsSharePermission
+  - NFS.Get-NfsStatistics
+  - NFS.Grant-NfsSharePermission
+  - NFS.Install-NfsMappingStore
+  - NFS.New-NfsClientgroup
+  - NFS.New-NfsMappedIdentity
+  - NFS.New-NfsNetgroup
+  - NFS.New-NfsShare
+  - NFS.Remove-NfsClientgroup
+  - NFS.Remove-NfsMappedIdentity
+  - NFS.Remove-NfsNetgroup
+  - NFS.Remove-NfsShare
+  - NFS.Rename-NfsClientgroup
+  - NFS.Reset-NfsStatistics
+  - NFS.Resolve-NfsMappedIdentity
+  - NFS.Revoke-NfsClientLock
+  - NFS.Revoke-NfsMountedClient
+  - NFS.Revoke-NfsOpenFile
+  - NFS.Revoke-NfsSharePermission
+  - NFS.Set-NfsClientConfiguration
+  - NFS.Set-NfsClientgroup
+  - NFS.Set-NfsMappedIdentity
+  - NFS.Set-NfsMappingStore
+  - NFS.Set-NfsNetgroup
+  - NFS.Set-NfsNetgroupStore
+  - NFS.Set-NfsServerConfiguration
+  - NFS.Set-NfsShare
+  - NFS.Test-NfsMappedIdentity
+  - NFS.Test-NfsMappingStore
+uid: NFS
+name: NFS
+description: |-
+  This reference provides cmdlet descriptions and syntax for all NFS cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 108ae179-3094-4223-91e4-b9099069017a
+  Module Name: NFS
+  ms.date: 12/20/2016
+  title: NFS

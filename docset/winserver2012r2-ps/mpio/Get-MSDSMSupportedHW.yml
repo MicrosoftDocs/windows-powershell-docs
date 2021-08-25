@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists hardware identifiers (IDs) in the Microsoft Device Specific Module (MSDSM) supported hardware list.
+module: MPIO
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Clear-MSDSMSupportedHW
+  href: ./Clear-MSDSMSupportedHW.yml
+- text: New-MSDSMSupportedHW
+  href: ./New-MSDSMSupportedHW.yml
+- text: Remove-MSDSMSupportedHW
+  href: ./Remove-MSDSMSupportedHW.yml
+syntaxes:
+- >-
+  Get-MSDSMSupportedHW [[-VendorId] <String[]>] [[-ProductId] <String[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-MSDSMSupportedHW
+  description: |-
+    This example gets all of the hardware IDs from the MSDSM supported hardware list.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Get-MSDSMSupportedHW -VendorId "VendorX"
+  description: |-
+    This example gets all of the hardware IDs for which the vendor ID is VendorX from the MSDSM supported hardware list.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Get-MSDSMSupportedHW -ProductId "ProductY"
+  description: |-
+    This example gets all of the hardware IDs for which the product ID is ProductY from the MSDSM supported hardware list.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\>Get-MSDSMSupportedHW -VendorId "VendorX" -ProductId "ProductY"
+  description: |-
+    This example gets all of the hardware IDs for which the vendor ID is VendorX and the product ID is ProductY from the MSDSM supported hardware list.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ProductId
+  description: |+
+    Returns hardware IDs that contain the specified product ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VendorId
+  description: |+
+    Return hardware IDs that contain the specified vendor ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MPIO.Get-MSDSMSupportedHW
+name: Get-MSDSMSupportedHW
+description: |-
+  The **Get-MSDSMSupportedHW** cmdlet lists hardware identifiers (IDs) in the Microsoft Device Specific Module (MSDSM) supported hardware list.
+
+  Note: When using the **VendorID** and the **ProductID** parameters it is not required to pad the parameter values with trailing spaces like was required with MPCLAIM.EXE.
+metadata:
+  external help file: MSDSMSupportedHW.cdxml-help.xml
+  Module Name: MPIO
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/mpio/get-msdsmsupportedhw?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MSDSMSupportedHW

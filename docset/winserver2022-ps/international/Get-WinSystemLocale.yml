@@ -1,0 +1,40 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the System-locale setting for the current computer.
+module: International
+notes: ""
+outputs:
+- name: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the system locale of the current computer.
+    For more information about the CultureInfo object, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306).
+links:
+- text: Manage the input and display language settings in Windows 10
+  href: https://support.microsoft.com/help/4496404/windows-10-manage-the-input-and-display-language#input_language
+- text: Set-WinSystemLocale
+  href: ./Set-WinSystemLocale.yml
+syntaxes:
+- Get-WinSystemLocale [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the system locale'
+  code: |-
+    PS C:\> GET-WinSystemLocale
+    LCID             Name             DisplayName
+    ----             ----             -----------
+    1033             en-US            English (United States)
+  description: |-
+    This command gets and displays the System-locale setting for the current computer.
+  summary: ""
+uid: International.Get-WinSystemLocale
+name: Get-WinSystemLocale
+description: |-
+  The **Get-WinSystemLocale** cmdlet returns the current value of the System-locale setting.
+  The System-locale setting determines which code pages, which include ANSI, DOS, and Macintosh, the computer uses by default.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/international/get-winsystemlocale?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WinSystemLocale

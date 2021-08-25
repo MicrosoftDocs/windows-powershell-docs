@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts routing sessions for BGP peers.
+module: RemoteAccess
+notes: ""
+links:
+- text: Add-BgpPeer
+  href: ./Add-BgpPeer.yml
+- text: Get-BgpPeer
+  href: ./Get-BgpPeer.yml
+- text: Remove-BgpPeer
+  href: ./Remove-BgpPeer.yml
+- text: Set-BgpPeer
+  href: ./Set-BgpPeer.yml
+- text: Stop-BgpPeer
+  href: ./Stop-BgpPeer.yml
+syntaxes:
+- >-
+  Start-BgpPeer [-RoutingDomain <String>] [-Name] <String[]> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start a routing session'
+  code: |-
+    PS C:\> Start-BgpPeer -Name "Site17"
+  description: |-
+    This command starts a BGP routing session for the BGP router named Site17.
+  summary: ""
+- title: 'Example 2: Start a routing session in a multitenant environment'
+  code: |-
+    PS C:\> Start-BgpPeer -Name "Tenant22" -RoutingDomain "Rd001"
+  description: |-
+    This command starts a routing session for the peer named Tenant22 in the specified routing domain of a multitenant environment.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names.
+    The cmdlet starts routing sessions for the named peers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: PeerList, PeerId, PeerName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingDomain
+  description: |+
+    Specifies the name of the routing domain as a string.
+    The name is a unique, for the multitenant gateway, user-defined alphanumeric string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RoutingDomainName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteAccess.Start-BgpPeer
+name: Start-BgpPeer
+description: |-
+  The **Start-BgpPeer** cmdlet starts routing sessions for Border Gateway Protocol (BGP) peers.
+  Use the Stop-BgpPeer cmdlet to stop a routing session.
+  By default, when you add a peer by using the Add-BgpPeer cmdlet, exchange of route information begins immediately.
+  If you add a peer in manual peering mode, use this cmdlet to start the session.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_BgpPeer_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/start-bgppeer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-BgpPeer

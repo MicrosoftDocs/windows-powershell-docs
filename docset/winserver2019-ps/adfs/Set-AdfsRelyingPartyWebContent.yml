@@ -1,0 +1,323 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties for the relying party web content objects.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="System.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a **System.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent** object that represents web content of a relying party, or an array of such objects.
+    The object includes the following properties: 
+
+    - Locale: **System.Globalization.CultureInfo**
+    - Name: **System.String**
+    - ErrorPageGenericErrorMessage: **System.String**
+    - ErrorPageAuthorizationErrorMessage: **System.String**
+    - ErrorPageDeviceAuthenticationErrorMessage: **System.String**
+links:
+- text: Get-AdfsRelyingPartyWebContent
+  href: ./Get-AdfsRelyingPartyWebContent.yml
+- text: Remove-AdfsRelyingPartyWebContent
+  href: ./Remove-AdfsRelyingPartyWebContent.yml
+syntaxes:
+- >-
+  Set-AdfsRelyingPartyWebContent [-CertificatePageDescriptionText <String>] [-CompanyName <String>]
+
+   [-ErrorPageDescriptionText <String>] [-ErrorPageGenericErrorMessage <String>]
+
+   [-ErrorPageAuthorizationErrorMessage <String>] [-ErrorPageDeviceAuthenticationErrorMessage <String>]
+
+   [-ErrorPageSupportEmail <String>] [-HelpDeskLink <Uri>] [-HelpDeskLinkText <String>] [-HomeLink <Uri>]
+
+   [-HomeLinkText <String>] [-HomeRealmDiscoveryOtherOrganizationDescriptionText <String>]
+
+   [-HomeRealmDiscoveryPageDescriptionText <String>] [-OrganizationalNameDescriptionText <String>]
+
+   [-PrivacyLink <Uri>] [-PrivacyLinkText <String>] [-SignInPageDescriptionText <String>]
+
+   [-SignInPageAdditionalAuthenticationDescriptionText <String>] [-PassThru] [[-Locale] <CultureInfo>]
+
+   -TargetRelyingPartyName <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsRelyingPartyWebContent [-CertificatePageDescriptionText <String>] [-CompanyName <String>]
+
+   [-ErrorPageDescriptionText <String>] [-ErrorPageGenericErrorMessage <String>]
+
+   [-ErrorPageAuthorizationErrorMessage <String>] [-ErrorPageDeviceAuthenticationErrorMessage <String>]
+
+   [-ErrorPageSupportEmail <String>] [-HelpDeskLink <Uri>] [-HelpDeskLinkText <String>] [-HomeLink <Uri>]
+
+   [-HomeLinkText <String>] [-HomeRealmDiscoveryOtherOrganizationDescriptionText <String>]
+
+   [-HomeRealmDiscoveryPageDescriptionText <String>] [-OrganizationalNameDescriptionText <String>]
+
+   [-PrivacyLink <Uri>] [-PrivacyLinkText <String>] [-SignInPageDescriptionText <String>]
+
+   [-SignInPageAdditionalAuthenticationDescriptionText <String>] [-PassThru]
+
+   [-TargetRelyingPartyWebContent] <AdfsRelyingPartyWebContent> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Specify a generic error message'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyWebContent -Name "RelyingParty01" -ErrorPageGenericErrorMessage "There is an error."
+  description: |-
+    This command specifies a generic error message to display to users for the relying party named RelyingParty01.
+  summary: ""
+- title: 'Example 2: Specify multiple error messages'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyWebContent -Locale en-us -Name "RelyingParty02" -ErrorPageAuthorizationErrorMessage "There is an authorization error." -ErrorPageDeviceAuthenticationErrorMessage "There is a device authentication error." -ErrorPageGenericErrorMessage "There is an error."
+  description: |-
+    This command assigns multiple error messages to display to users for the relying party named RelyingParty01 with the specified locale.
+  summary: ""
+- title: 'Example 2: Create a custom message on the Sign in page'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyWebContent -SignInPageDescription "If you have forgotten your password, visit <A href='https://passwordreset.microsoftonline.com/'>Azure AD self-service password reset</A>." -TargetRelyingPartyName "Microsoft Office 365 Identity Platform"
+  description: |-
+    The command creates a custom message on the Sign in page for the Office 365 relying party.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificatePageDescriptionText
+  description: |+
+    Specifies text to display under the text for the *CompanyName* parameter on the certificate selection page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CompanyName
+  description: |+
+    Specifies the heading text on Sign in page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ErrorPageAuthorizationErrorMessage
+  description: |+
+    Specifies an error message to display when a user encounters any authorization errors that occur for a token request.
+    This string can be an HTML fragment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ErrorPageDescriptionText
+  description: |+
+    Specifies the text under the text for the *CompanyName* parameter on the Sign in error page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ErrorPageDeviceAuthenticationErrorMessage
+  description: |+
+    Specifies an error message to display for any device authentication errors that occur for a token request.
+    Device authentication errors occur when the user presents an expired user@device certificate to Active Directory Federation Services (AD FS), a certificate that is not found in Active Directory® Domain Services, or a certificate that is disabled in Active Directory Domain Services.
+    This string can be an HTML fragment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ErrorPageGenericErrorMessage
+  description: |+
+    Specifies an error message to display for any generic errors that occur for a token request.
+    This string can be an HTML fragment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ErrorPageSupportEmail
+  description: |+
+    Specifies the email address to display on the Sign in error page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: HelpDeskLink
+  description: |+
+    Specifies the target of the Help Desk link at the bottom of the Sign in page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HelpDeskLinkText
+  description: |+
+    Specifies the text of the Help Desk link at the bottom of the Sign in page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: HomeLink
+  description: |+
+    Specifies the target of the Home link at the bottom of the Sign in page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HomeLinkText
+  description: |+
+    Specifies the text of the Home link at the bottom of the Sign in page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HomeRealmDiscoveryOtherOrganizationDescriptionText
+  description: |+
+    Specifies a description displayed above the user name entry prompt.
+    If you configure a UPN suffix mapping to one or more claims provider trusts, the home realm discovery page features an option for Other organization.
+    If users select this option, they are prompted to enter a user name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HomeRealmDiscoveryPageDescriptionText
+  description: |+
+    Specifies text to display under the text for the *CompanyName* parameter on the home realm discovery page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  name: Locale
+  description: |+
+    Specifies a locale.
+    The cmdlet sets relying party web content for the locale that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OrganizationalNameDescriptionText
+  description: |+
+    Specifies the text under the text for the *CompanyName* parameter on the Sign in page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: PrivacyLink
+  description: |+
+    Specifies the target of the Privacy link at the bottom of the Sign in page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrivacyLinkText
+  description: |+
+    Specifies the text of the Privacy link at the bottom of the Sign in page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignInPageAdditionalAuthenticationDescriptionText
+  description: |+
+    Specifies the text under the text for the *CompanyName* parameter on the additional authentication choice page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignInPageDescriptionText
+  description: |+
+    Specifies the text under the sign in options on the Sign in page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetRelyingPartyName
+  isRequired: true
+  description: |+
+    Specifies the name of the relying party trust to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="AdfsRelyingPartyWebContent" data-throw-if-not-resolved="False" />
+  name: TargetRelyingPartyWebContent
+  isRequired: true
+  description: |+
+    Specifies the name of the relying party web content to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: TargetWebContent
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsRelyingPartyWebContent
+name: Set-AdfsRelyingPartyWebContent
+description: |-
+  The **Set-AdfsRelyingPartyWebContent** cmdlet sets properties for a relying party web content object.
+  These properties override equivalent values set by using the **Set-AdfsGlobalWebContent** cmdlet to obtain a web content object.
+  Specify a relying party web content object by using a name and locale, or use the **Get-AdfsRelyingPartyWebContent** cmdlet.
+  If you do not specify a locale, the cmdlet uses the invariant locale.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsrelyingpartywebcontent?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsRelyingPartyWebContent

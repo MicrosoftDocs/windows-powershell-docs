@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a tenant ID to gateway mapping object.
+module: RemoteAccess
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnSstpProxyRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-VpnSstpProxyRule
+  href: ./Add-VpnSstpProxyRule.yml
+- text: Get-VpnSstpProxyRule
+  href: ./Get-VpnSstpProxyRule.yml
+- text: Remove-VpnSstpProxyRule
+  href: ./Remove-VpnSstpProxyRule.yml
+- text: Set-VpnSstpProxyRule
+  href: ./Set-VpnSstpProxyRule.yml
+- text: Remote Access Cmdlets
+  href: ./index.yml
+syntaxes:
+- >-
+  New-VpnSstpProxyRule [-TenantID] <String> [-GatewayAddress] <String[]> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a VPN SSTP Proxy rule'
+  code: |-
+    PS C:\>$Rule = New-VpnSstpProxyRule -TenantID "Contoso" -Gateway "100.10.10.10"
+  description: |-
+    This command creates a VPN SSTP proxy rule with a tenant ID named Contoso.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GatewayAddress
+  isRequired: true
+  description: |+
+    Specifies the gateway IP address or the name for the tenant.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantID
+  isRequired: true
+  description: |+
+    Specifies the tenant ID or group ID to configure the SSTP proxy mapping.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: GroupID
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent connections that can be established to run this command.
+    If you omit this parameter or enter a value of 0, the default value, 32, is used.
+
+    The throttle limit applies only to the current command, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteAccess.New-VpnSstpProxyRule
+name: New-VpnSstpProxyRule
+description: |-
+  The **New-VpnSstpProxyRule** cmdlet creates a tenant ID to gateway mapping object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_VpnSstpProxyRule_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/new-vpnsstpproxyrule?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-VpnSstpProxyRule

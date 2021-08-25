@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a certificate for the AD FS farm to use to connect to Azure MFA, or returns the currently configured certificate.
+module: ADFS
+notes: ""
+links:
+- text: Set-AdfsAzureMfaTenant
+  href: ./Set-AdfsAzureMfaTenant.yml
+syntaxes:
+- >-
+  New-AdfsAzureMfaTenantCertificate -TenantId <String> [-Renew <Boolean>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a certificate and enable Azure MFA on an AD FS farm'
+  code: |-
+    PS C:\> $certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID>
+    PS C:\> New-AzureADServicePrincipalKeyCredential -ObjectId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64
+    PS C:\> Set-AdfsAzureMfaTenant -TenantId <your tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
+  description: |-
+    These commands create a certificate for Azure MFA, register the certificate in a tenant, and enable Azure MFA on an AD FS farm.
+
+    > [!NOTE]
+    > Customers are encouraged to use the newer Azure Active Directory PowerShell 2.0 module. For more information about the v2.0 module please see [AzureAD PowerShell 2.0](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0).
+  summary: ""
+- title: 'Example 2: Determine which certificate Azure MFA is using'
+  code: |-
+    PS C:\> New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID> | Out-File amfacert.cer
+  description: |-
+    After AD FS has been configured for Azure MFA, this command determines which certificate Azure MFA is using.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Renew
+  description: |+
+    Renew certificate. Do not use if the certificate has already expired. In this scenario, the existing expired certificate is replaced with a new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantId
+  isRequired: true
+  description: |+
+    Specifies the GUID representation of the Azure AD tenant ID.
+    This can be found in the URL bar of the Azure AD portal, as in this example: `https://manage.windowsazure.com/contoso.onmicrosoft.com#Workspaces/ActiveDirectoryExtension/Directory/<tenantID_GUID>/directoryQuickStart`
+
+    Alternatively, you can use the **Login-AzureRmAccount** cmdlet to get the tenant ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.New-AdfsAzureMfaTenantCertificate
+name: New-AdfsAzureMfaTenantCertificate
+description: |-
+  The **New-AdfsAzureMfaTenantCertificate** cmdlet creates a certificate for an Active Directory Federation Services (AD FS) farm to use to connect to Azure Multi-Factor Authentication (MFA), or returns the currently configured certificate.
+
+  The cmdlet looks in the local machine My store for a certificate with Issuer and Subject equal to: 
+
+  - `CN = <tenant ID>`
+  - `OU = Microsoft AD FS Azure MFA`
+
+  If it does not find one, it generates it.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/new-adfsazuremfatenantcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-AdfsAzureMfaTenantCertificate

@@ -1,0 +1,268 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets storage nodes.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+outputs:
+- name: <xref href="MSFT_StorageNode" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet outputs an array of objects that represent storage nodes and their operational statuses.
+links:
+- text: Get-Disk
+  href: ./Get-Disk.yml
+- text: Get-PhysicalDisk
+  href: ./Get-PhysicalDisk.yml
+- text: Get-StorageEnclosure
+  href: ./Get-StorageEnclosure.yml
+- text: Get-StoragePool
+  href: ./Get-StoragePool.yml
+- text: Get-StorageSubSystem
+  href: ./Get-StorageSubsystem.yml
+- text: Get-VirtualDisk
+  href: ./Get-VirtualDisk.yml
+- text: Get-Volume
+  href: ./Get-Volume.yml
+syntaxes:
+- >-
+  Get-StorageNode [-Name <String[]>] [-OperationalStatus <OperationalStatus[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageNode [-UniqueId <String[]>] [-OperationalStatus <OperationalStatus[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageNode [-ObjectId <String[]>] [-OperationalStatus <OperationalStatus[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageNode [-OperationalStatus <OperationalStatus[]>] [-Volume <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageNode [-OperationalStatus <OperationalStatus[]>] [-VirtualDisk <CimInstance>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageNode [-OperationalStatus <OperationalStatus[]>] [-PhysicalDisk <CimInstance>] [-PhysicallyConnected]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageNode [-OperationalStatus <OperationalStatus[]>] [-StoragePool <CimInstance>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageNode [-OperationalStatus <OperationalStatus[]>] [-StorageEnclosure <CimInstance>]
+
+   [-PhysicallyConnected] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageNode [-OperationalStatus <OperationalStatus[]>] [-StorageSubSystem <CimInstance>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageNode [-OperationalStatus <OperationalStatus[]>] [-Disk <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a storage node'
+  code: |-
+    PS C:\>Get-StorageNode -Name "StorageNode21"
+  description: |-
+    This command gets a storage node named StorageNode21.
+  summary: ""
+- title: 'Example 2: Get the operational statuses for all physical disks'
+  code: |-
+    PS C:\>Get-PhysicalDisk | Get-StorageNode
+  description: |-
+    This command uses the **Get-PhysicalDisk** cmdlet to obtain all the physical disks, and then passes them to the current cmdlet by using the pipeline operator.
+    The cmdlet gets the storage nodes and operational statuses for the physical disks.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Disk
+  description: |+
+    Specifies a disk for which this cmdlet gets storage notes.
+    To obtain a **Disk** object, use the **Get-Disk** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of names.
+    The cmdlet gets the storage nodes that you specify by name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ObjectId
+  description: |+
+    Specifies an array of object IDs, as strings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: StorageNodeObjectId
+  parameterValueGroup: ""
+- type: <xref href="OperationalStatus" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OperationalStatus
+  description: |+
+    Specifies an array of **OperationStatus** objects.
+    The cmdlet gets storage nodes that match the operational statuses that you specify.
+    The acceptable values for this parameter are:
+
+    - Dormant
+    - Down
+    - LowerLayerDown
+    - NotPresent
+    - Testing
+    - Unknown
+    - Up
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, Up, Down, Joining, Paused
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: PhysicalDisk
+  description: |+
+    Specifies a physical disk as a **CimInstance** object.
+    The cmdlet gets the storage nodes that correspond to the disk that you specify.
+    To obtain a physical disk object, use the **Get-PhysicalDisk** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PhysicallyConnected
+  description: |+
+    Indicates that this cmdlet gets the storage nodes that are physically connected to a device.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageEnclosure
+  description: |+
+    Specifies a storage enclosure that is associated with the storage nodes to get.
+    To obtain a **StorageEnclosure** object, use the Get-StorageEnclosure cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StoragePool
+  description: |+
+    Specifies a storage pool as a **CimInstance** object.
+    The cmdlet gets storage node associated with storage pool that you specify.
+    To obtain a storage pool object, use the **Get-StoragePool** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageSubSystem
+  description: |+
+    Specifies a storage subsystem as a **CimInstance** object.
+    The cmdlet gets the storage nodes that belong to the subsystem that you specify.
+    To obtain a storage subsystem object, use the **Get-StorageSubSystem** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UniqueId
+  description: |+
+    Specifies an array of unique IDs, as strings.
+    The cmdlet gets the storage nodes that have the IDs that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: VirtualDisk
+  description: |+
+    Specifies a virtual disk as a **CimInstance** object.
+    The cmdlet gets the storage nodes that correspond to the disk that you specify.
+    To obtain a virtual disk object, use the **Get-VirtualDisk** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Volume
+  description: |+
+    Specifies a volume.
+    The cmdlet gets the storage nodes that correspond to the volume that you specify.
+    To obtain a **Volume** object, use the Get-Volume cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-StorageNode
+name: Get-StorageNode
+description: |-
+  The **Get-StorageNode** cmdlet gets objects that represent storage nodes and their operational statuses.
+  Use this cmdlet to get storage nodes to pass to the **Get-PhysicalDisk** cmdlet or the **Get-VirtualDisk** cmdlet to get the physical or virtual disks connected to storage nodes.
+  Use the current cmdlet with the **Get-StoragePool** cmdlet to get the storage pools that storage nodes own.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: StorageNode.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-storagenode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-StorageNode

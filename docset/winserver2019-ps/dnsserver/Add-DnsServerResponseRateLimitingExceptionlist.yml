@@ -1,0 +1,214 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an RRL exception list on the DNS server.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerResponseRateLimitingExceptionlist" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Add-DnsServerClientSubnet
+  href: ./Add-DnsServerClientSubnet.yml
+- text: Get-DnsServerResponseRateLimitingExceptionlist
+  href: ./Get-DnsServerResponseRateLimitingExceptionlist.yml
+- text: Set-DnsServerResponseRateLimiting
+  href: ./Set-DnsServerResponseRateLimiting.yml
+- text: Set-DnsServerResponseRateLimitingExceptionlist
+  href: ./Set-DnsServerResponseRateLimitingExceptionlist.yml
+syntaxes:
+- >-
+  Add-DnsServerResponseRateLimitingExceptionlist [[-ClientSubnet] <String>] [[-Fqdn] <String>]
+
+   [[-ServerInterfaceIP] <String>] [[-Name] <String>] [[-Condition] <String>] [-PassThru]
+
+   [-ComputerName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a domain to an RRL exception list'
+  code: |-
+    PS C:\> Add-DnsServerResponseRateLimitingExceptionlist -Name "SafeList1" -Fqdn "EQ,*.contoso.com"
+  description: |-
+    This command adds an RRL exception for the domain contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientSubnet
+  description: |+
+    Specifies the client subnet values for the exception list.
+
+    This parameter must have the following format: `COMPARATOR, value1, value2,..., COMPARATOR, value 3, value 4,..` where the COMPARATOR can be EQ or NE.
+    There can be only one EQ and one NE in a value.
+
+    The values following the EQ operator will be treated as multiple assertions which are logically combined using the OR operator.
+    The values following the NE operator will be treated as multiple assertions which are logically differenced using the AND operator.
+
+    Multiple values are combined using the *Condition* parameter as a logical operator.
+    The same operator is also used for combining EQ and NE expressions within a value.
+
+    For example, `EQ, America, Asia, NE, Europe` specifies that the client subnets of America and Asia are in the exception list, and the client subnet of Europe is not.
+
+    For details, see **Add-DnsServerClientSubnet**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a remote DNS server on which to run the command.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NetBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Condition
+  description: |+
+    Specifies a logical operator for combining multiple values of the **ClientSubnet**, **Fqdn** and **ServerIp** parameters.
+    The values for the parameters are combined using the *Condition* parameter as a logical operator.
+    The same operator is also used for combining EQ and NE expressions within a value.
+    The default value is AND.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: AND, OR
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Fqdn
+  description: |+
+    Specifies FQDN values for the exception list.
+
+    The value must have the following format: `COMPARATOR, value1, value2,..., COMPARATOR, value 3, value 4,..` where the COMPARATOR can be EQ or NE.
+    There can be only one EQ and one NE in a value.
+
+    The values following the EQ operator will be treated as multiple assertions which are logically combined using the OR operator.
+    The values following the NE operator will be treated as multiple assertions which are logically differenced using the AND operator.
+
+    Multiple values are combined using the *Condition* parameter as a logical operator.
+    The same operator is also used for combining EQ and NE expressions within a value.
+
+    For example, `EQ,*.contoso.com` specifies that the contoso.com domain should be added to the exception list.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the RRL exception list.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServerInterfaceIP
+  description: |+
+    Specifies the server interface on which the DNS server is listening.
+
+    The value must have the following format: `COMPARATOR, value1, value2,..., COMPARATOR, value 3, value 4,..` where the COMPARATOR can be EQ or NE.
+    There can be only one EQ and one NE in a value.
+
+    The values following the EQ operator are treated as multiple assertions which are logically combined using the OR operator.
+    The values following the NE operator are treated as multiple assertions which are logically differenced using the AND operator.
+
+    Multiple values are combined using the *Condition* parameter as a logical operator.
+    The same operator is also used for combining EQ and NE expressions within a value.
+
+    For example, `EQ,10.0.0.3` specifies that all queries received on a server interface that has the IP address of 10.0.0.3 should be exempt from RRL.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DnsServer.Add-DnsServerResponseRateLimitingExceptionlist
+name: Add-DnsServerResponseRateLimitingExceptionlist
+description: |-
+  The **Add-DnsServerResponseRateLimiting** cmdlet adds a Response Rate Limiting (RRL) exception list on the DNS server.
+  The RRL exception list indicates that responses to queries for specified Fully Qualified Domain Names (FQDNs), queries originating from specified client subnets, queries received on specified server interfaces, or any combination of these values, are exempt from RRL.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerResponseRateLimitingExceptionlist_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresponseratelimitingexceptionlist?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DnsServerResponseRateLimitingExceptionlist

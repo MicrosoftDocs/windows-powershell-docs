@@ -1,0 +1,212 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a routing domain from a virtual network adapter.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMNetworkAdapterRoutingDomainSetting" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-VMNetworkAdapterRoutingDomainMapping
+  href: ./Get-VMNetworkAdapterRoutingDomainMapping.yml
+- text: Add-VmNetworkAdapterRoutingDomainMapping
+  href: ./Add-VmNetworkAdapterRoutingDomainMapping.yml
+- text: Set-VmNetworkAdapterRoutingDomainMapping
+  href: ./Set-VmNetworkAdapterRoutingDomainMapping.yml
+syntaxes:
+- >-
+  Remove-VMNetworkAdapterRoutingDomainMapping [-VMNetworkAdapterName <String>] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-VMName] <String[]> [-RoutingDomainID <Guid>]
+
+   [-RoutingDomainName <String>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-VMNetworkAdapterRoutingDomainMapping [-VMNetworkAdapter] <VMNetworkAdapterBase[]>
+
+   [-RoutingDomainID <Guid>] [-RoutingDomainName <String>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-VMNetworkAdapterRoutingDomainMapping [-ManagementOS] [-VMNetworkAdapterName <String>]
+
+   [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-RoutingDomainID <Guid>] [-RoutingDomainName <String>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-VMNetworkAdapterRoutingDomainMapping [-VMNetworkAdapterName <String>] [-VM] <VirtualMachine[]>
+
+   [-RoutingDomainID <Guid>] [-RoutingDomainName <String>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-VMNetworkAdapterRoutingDomainMapping [-InputObject] <VMNetworkAdapterRoutingDomainSetting[]> [-Passthru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a tenant from a multitenant virtual machine'
+  code: |-
+    PS C:\> Remove-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC" -RoutingDomainID "{5a07361e-6a54-49fc-9210-bfbf14a5c56f}"
+  description: |-
+    This command removes the specified routing domain from the virtual network adapter named Internal NIC.
+    The command specifies that the adapter belongs to the multitenant virtual machine named Gateway01.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies an array of Hyper-V hosts.
+    The cmdlet removes the virtual subnets from the Hyper-V hosts that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterRoutingDomainSetting" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagementOS
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet removes the virtual subnet on the parent partition or host operating system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: RoutingDomainID
+  description: |+
+    Specifies the ID of a routing domain.
+    The ID of a routing domain is a system-assigned GUID.
+    The cmdlet removes the virtual subnet from the routing domain that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingDomainName
+  description: |+
+    Specifies the name of a routing domain.
+    The cmdlet removes the virtual subnet from the routing domain that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machines.
+    The cmdlet removes the virtual subnet from the virtual machines that you specify.
+    To obtain a virtual machine object, use the **Get-VM** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies an array of names of virtual machines.
+    The cmdlet removes the virtual subnet from the virtual machines that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterBase" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMNetworkAdapter
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machine network adapters as **VMNetworkAdapterBase** objects.
+    The cmdlet removes the virtual subnet for the adapters that you specify.
+    To obtain a network adapter, use the **Get-VMNetworkAdapter** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapterName
+  description: |+
+    Specifies the name of a virtual network adapter.
+    The cmdlet removes the virtual subnet for the adapter that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Remove-VMNetworkAdapterRoutingDomainMapping
+name: Remove-VMNetworkAdapterRoutingDomainMapping
+description: |-
+  The **Remove-VmNetworkAdapterRoutingDomainMapping** cmdlet removes a routing domain from a virtual network adapter on a multitenant gateway virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/remove-vmnetworkadapterroutingdomainmapping?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-VMNetworkAdapterRoutingDomainMapping

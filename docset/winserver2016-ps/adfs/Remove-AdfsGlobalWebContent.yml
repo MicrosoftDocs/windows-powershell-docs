@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a global web content object.
+module: ADFS
+notes: ""
+links:
+- text: Get-AdfsGlobalWebContent
+  href: ./Get-AdfsGlobalWebContent.yml
+- text: Set-AdfsGlobalWebContent
+  href: ./Set-AdfsGlobalWebContent.yml
+- text: Remove-AdfsGlobalWebContent
+  href: ./Remove-AdfsGlobalWebContent.yml
+syntaxes:
+- Remove-AdfsGlobalWebContent [[-Locale] <CultureInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-AdfsGlobalWebContent [-TargetWebContent] <AdfsGlobalWebContent> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove the global web content for the invariant locale'
+  code: |-
+    PS C:\> Remove-AdfsGlobalWebContent
+  description: |-
+    This command removes the global web content object that corresponds to the invariant locale.
+  summary: ""
+- title: 'Example 2: Remove the global web content for a locale'
+  code: |-
+    PS C:\> Remove-AdfsGlobalWebContent -Locale en-us
+  description: |-
+    This command removes the global web content object that corresponds to en-us locale.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  name: Locale
+  description: |+
+    Specifies a locale.
+    The cmdlet removes the global web content that corresponds to the locale that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AdfsGlobalWebContent" data-throw-if-not-resolved="False" />
+  name: TargetWebContent
+  isRequired: true
+  description: |+
+    Specifies the **AdfsGlobalWebContent** object to remove.
+    To obtain an **AdfsGlobalWebContent** object, use the **Get-AdfsGlobalWebContent** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Remove-AdfsGlobalWebContent
+name: Remove-AdfsGlobalWebContent
+description: |-
+  The **Remove-AdfsGlobalWebContent** cmdlet removes a global web content object that corresponds to a locale.
+  If you do not specify the *Locale* parameter, the cmdlet removes the global web content object of the invariant locale.
+  Active Directory Federation Services (AD FS) reverts to its default values when you remove all the global web content objects.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsglobalwebcontent?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AdfsGlobalWebContent

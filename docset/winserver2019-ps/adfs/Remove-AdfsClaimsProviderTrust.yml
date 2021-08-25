@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a claims provider trust from the Federation Service.
+module: ADFS
+notes: |-
+  * The claims provider collects and authenticates a user's credentials, builds up claims for that user, and packages the claims into security tokens or Information Cards. In other words, a claims provider represents the organization for whose users the claims provider issues security tokens or Information Cards on their behalf. When you configure Active Directory Federation Services (AD FS), the role of the claims provider is to enable its users to access resources that are hosted in a relying party organization by establishing one side of a federation trust relationship. After the trust is established, tokens and Information Cards can be presented to a relying party across the federation trust.
+inputs:
+- name: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate.X509Certificate2" data-throw-if-not-resolved="False" />
+  description: |-
+    X509Certificate2 objects are received by the *TargetCertificate* parameter.
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    ClaimsProviderTrust objects are received by the *TargetClaimsProviderTrust* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *TargetIdentifier* and *TargetName* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the removed ClaimsProviderTrust object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Add-AdfsClaimsProviderTrust
+  href: ./Add-AdfsClaimsProviderTrust.yml
+- text: Disable-AdfsClaimsProviderTrust
+  href: ./Disable-AdfsClaimsProviderTrust.yml
+- text: Enable-AdfsClaimsProviderTrust
+  href: ./Enable-AdfsClaimsProviderTrust.yml
+- text: Get-AdfsClaimsProviderTrust
+  href: ./Get-AdfsClaimsProviderTrust.yml
+- text: Set-AdfsClaimsProviderTrust
+  href: ./Set-AdfsClaimsProviderTrust.yml
+- text: Update-AdfsClaimsProviderTrust
+  href: ./Update-AdfsClaimsProviderTrust.yml
+syntaxes:
+- >-
+  Remove-AdfsClaimsProviderTrust -TargetClaimsProviderTrust <ClaimsProviderTrust> [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Remove-AdfsClaimsProviderTrust -TargetCertificate <X509Certificate2> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Remove-AdfsClaimsProviderTrust -TargetIdentifier <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Remove-AdfsClaimsProviderTrust -TargetName <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a claims provider trust'
+  code: |-
+    PS C:\> Remove-AdfsClaimsProviderTrust -TargetName "Fabrikam claims provider"
+  description: |-
+    This command removes the claims provider trust named Fabrikam claims provider.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: TargetCertificate
+  isRequired: true
+  description: |+
+    Specifies the token-signing certificate of the claims provider trust to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  name: TargetClaimsProviderTrust
+  isRequired: true
+  description: |+
+    Specifies a **ClaimsProviderTrust** object.
+    The cmdlet enables the claims provider trust that you specify.
+    To obtain a **ClaimsProviderTrust** object, use the **Get-AdfsClaimsProviderTrust** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the claims provider trust to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the claims provider trust to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Remove-AdfsClaimsProviderTrust
+name: Remove-AdfsClaimsProviderTrust
+description: |-
+  The **Remove-AdfsClaimsProviderTrust** cmdlet removes a claims provider trust from the Federation Service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsclaimsprovidertrust?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AdfsClaimsProviderTrust

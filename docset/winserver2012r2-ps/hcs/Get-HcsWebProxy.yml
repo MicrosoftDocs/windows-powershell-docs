@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the web proxy configuration.
+module: HCS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HCS.Management.Platform.Support.WebProxyInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    The WebProxyInfo object has the following properties:
+
+    - String ConnectionURI 
+    - public WebProxyAuthType Authentication 
+    - String Username 
+    - IsEnabled
+links:
+- text: Disable-HcsWebProxy
+  href: ./Disable-HcsWebProxy.yml
+- text: Enable-HcsWebProxy
+  href: ./Enable-HcsWebProxy.yml
+- text: Set-HcsWebProxy
+  href: ./Set-HcsWebProxy.yml
+syntaxes:
+- Get-HcsWebProxy [<CommonParameters>]
+examples:
+- title: 'Example 1: Get web proxy configuration'
+  code: |-
+    PS C:\> Get-HcsWebProxy
+    ConnectionURI                                Authentication Username                                          IsEnabled
+    -------------                                -------------- --------                                          ---------
+    None                                                       False
+  description: |-
+    This command gets web proxy configuration for your device.
+  summary: ""
+uid: HCS.Get-HcsWebProxy
+name: Get-HcsWebProxy
+description: |-
+  The **Get-HcsWebProxy** cmdlet gets the web proxy configuration.
+  The cmdlet does not get the password.
+metadata:
+  external help file: Microsoft.HCS.Management.dll-Help.xml
+  Module Name: HCS
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/hcs/get-hcswebproxy?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-HcsWebProxy

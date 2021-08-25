@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables the specified IIS module.
+module: WebAdministration
+notes: ""
+links:
+- text: Disable-WebGlobalModule
+  href: ./Disable-WebGlobalModule.yml
+syntaxes:
+- >-
+  Enable-WebGlobalModule [-Name] <String> [-Type <String>] [-Precondition <String>] [-Force]
+
+   [-Location <String[]>] [[-PSPath] <String[]>] [<CommonParameters>]
+- >-
+  Enable-WebGlobalModule -InputObject <PSObject> [-Force] [-Location <String[]>] [[-PSPath] <String[]>]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Enable a module for a site --------------'
+  code: |-
+    IIS:\>Enable-WebGlobalModule -Name UriCacheModule -PSPath 'IIS:\sites\Default Web Site'
+  description: |-
+    Demonstrates how to enable the module named UriCacheModule for the Default Web Site.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the module to be enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Input object that contains the module information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    The location in which the module is enabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the module to enable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Precondition
+  description: |+
+    Specifies a precondition for the module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies the configuration path.
+    This can be either an IIS configuration path in the formatcomputer name/webroot/apphost, or the IIS module path in this format IIS:\sites\Default Web Site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the managed type of the module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Enable-WebGlobalModule
+name: Enable-WebGlobalModule
+description: |-
+  Enables the specified IIS module.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/enable-webglobalmodule?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

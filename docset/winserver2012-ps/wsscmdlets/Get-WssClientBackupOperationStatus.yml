@@ -1,0 +1,39 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the status of backup-related operations.
+module: WssCmdlets
+notes: ""
+inputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.PCBackup.BackupUtil.WcfContracts.OperationStatusResponse" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-WssClientBackup
+  href: ./Disable-WssClientBackup.yml
+- text: Enable-WssClientBackup
+  href: ./Enable-WssClientBackup.yml
+- text: Get-WssClientBackup
+  href: ./Get-WssClientBackup.yml
+- text: Set-WssClientBackup
+  href: ./Set-WssClientBackup.yml
+- text: Start-WssClientBackup
+  href: ./Start-WssClientBackup.yml
+- text: Stop-WssClientBackup
+  href: ./Stop-WssClientBackup.yml
+syntaxes:
+- Get-WssClientBackupOperationStatus
+examples:
+- title: 'Example 1: Get status for backup operations'
+  code: |-
+    PS C:\> Get-WssClientBackupOperationStatus
+  description: |-
+    This command gets the status of backup-related operations for the current server.
+  summary: ""
+uid: WssCmdlets.Get-WssClientBackupOperationStatus
+name: Get-WssClientBackupOperationStatus
+description: |-
+  The **Get-WssClientBackupOperationStatus** cmdlet gets the status of backup-related operations for the server.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssclientbackupoperationstatus?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

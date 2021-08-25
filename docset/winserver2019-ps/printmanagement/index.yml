@@ -1,0 +1,39 @@
+### YamlMime:PowershellModule
+children:
+- title: PrintManagement
+  cmdlets:
+  - PrintManagement.Add-Printer
+  - PrintManagement.Add-PrinterDriver
+  - PrintManagement.Add-PrinterPort
+  - PrintManagement.Get-PrintConfiguration
+  - PrintManagement.Get-Printer
+  - PrintManagement.Get-PrinterDriver
+  - PrintManagement.Get-PrinterPort
+  - PrintManagement.Get-PrinterProperty
+  - PrintManagement.Get-PrintJob
+  - PrintManagement.Read-PrinterNfcTag
+  - PrintManagement.Remove-Printer
+  - PrintManagement.Remove-PrinterDriver
+  - PrintManagement.Remove-PrinterPort
+  - PrintManagement.Remove-PrintJob
+  - PrintManagement.Rename-Printer
+  - PrintManagement.Restart-PrintJob
+  - PrintManagement.Resume-PrintJob
+  - PrintManagement.Set-PrintConfiguration
+  - PrintManagement.Set-Printer
+  - PrintManagement.Set-PrinterProperty
+  - PrintManagement.Suspend-PrintJob
+  - PrintManagement.Write-PrinterNfcTag
+uid: PrintManagement
+name: PrintManagement
+description: |-
+  This reference provides cmdlet descriptions and syntax for all print management cmdlets. It lists the cmdlets in alphabetical order.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 8466ae97-2c03-4385-a501-7e74cf6bb1df
+  Module Name: PrintManagement
+  ms.date: 12/20/2016
+  title: PrintManagement

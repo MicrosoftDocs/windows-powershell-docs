@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets local claims provider trusts.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsLocalClaimsProviderTrust
+  href: ./Add-AdfsLocalClaimsProviderTrust.yml
+- text: Disable-AdfsLocalClaimsProviderTrust
+  href: ./Disable-AdfsLocalClaimsProviderTrust.yml
+- text: Enable-AdfsLocalClaimsProviderTrust
+  href: ./Enable-AdfsLocalClaimsProviderTrust.yml
+- text: Remove-AdfsLocalClaimsProviderTrust
+  href: ./Remove-AdfsLocalClaimsProviderTrust.yml
+- text: Set-AdfsLocalClaimsProviderTrust
+  href: ./Set-AdfsLocalClaimsProviderTrust.yml
+syntaxes:
+- Get-AdfsLocalClaimsProviderTrust [[-Name] <String[]>] [<CommonParameters>]
+- Get-AdfsLocalClaimsProviderTrust [-Identifier] <String[]> [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identifier
+  isRequired: true
+  description: |+
+    Specifies an array of IDs of the local claims provider trusts to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of names of the local claims provider trusts to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsLocalClaimsProviderTrust
+name: Get-AdfsLocalClaimsProviderTrust
+description: |-
+  The **Get-AdfsLocalClaimsProviderTrust** cmdlet gets local claims provider trusts.
+  Specify names or IDs of trusts to get.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfslocalclaimsprovidertrust?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsLocalClaimsProviderTrust

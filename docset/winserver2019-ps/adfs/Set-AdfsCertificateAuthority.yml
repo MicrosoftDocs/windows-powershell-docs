@@ -1,0 +1,164 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a certificate authority.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsCertificateAuthority" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the updated AdfsCertificateAuthority object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Disable-AdfsCertificateAuthority
+  href: ./Disable-AdfsCertificateAuthority.yml
+- text: Get-AdfsCertificateAuthority
+  href: ./Get-AdfsCertificateAuthority.yml
+syntaxes:
+- Set-AdfsCertificateAuthority [-SelfIssued] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsCertificateAuthority [-RolloverSigningCertificate] [-ForcePromotion] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AdfsCertificateAuthority [-EnrollmentAgent] [-CertificateAuthority <String>]
+
+   [-LogonCertificateTemplate <String>] [-WindowsHelloCertificateTemplate <String>]
+
+   [-EnrollmentAgentCertificateTemplate <String>] [-AutoEnrollEnabled <Boolean>]
+
+   [-CertificateGenerationThresholdDays <Int32>] [-WindowsHelloCertificateProxyEnabled <Boolean>] [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoEnrollEnabled
+  description: |+
+    {{Fill AutoEnrollEnabled Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateAuthority
+  description: |+
+    Specifies a certificate authority.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CertificateGenerationThresholdDays
+  description: |+
+    {{Fill CertificateGenerationThresholdDays Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnrollmentAgent
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EnrollmentAgentCertificateTemplate
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForcePromotion
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogonCertificateTemplate
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RolloverSigningCertificate
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SelfIssued
+  isRequired: true
+  description: |+
+    Indicates whether the certificate authority is self-issued.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: WindowsHelloCertificateProxyEnabled
+  description: |+
+    {{Fill WindowsHelloCertificateProxyEnabled Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WindowsHelloCertificateTemplate
+  description: |+
+    {{Fill WindowsHelloCertificateTemplate Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsCertificateAuthority
+name: Set-AdfsCertificateAuthority
+description: |-
+  The **Set-AdfsCertificateAuthority** cmdlet modifies a certificate authority in Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfscertificateauthority?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsCertificateAuthority

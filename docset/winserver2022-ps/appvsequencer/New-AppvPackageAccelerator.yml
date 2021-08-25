@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generates a package accelerator.
+module: AppvSequencer
+notes: ""
+links:
+- text: Expand-AppvSequencerPackage
+  href: ./Expand-AppvSequencerPackage.yml
+- text: Update-AppvSequencerPackage
+  href: ./Update-AppvSequencerPackage.yml
+syntaxes:
+- >-
+  New-AppvPackageAccelerator [-InputPackagePath] <String> [-Installer] <String>
+
+   [-AcceleratorDescriptionFile <String>] [-Path] <String> [<CommonParameters>]
+- >-
+  New-AppvPackageAccelerator [-InputPackagePath] <String> [-InstalledFilesPath] <String>
+
+   [-AcceleratorDescriptionFile <String>] [-Path] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a package accelerator'
+  code: |-
+    PS C:\> New-AppvPackageAccelerator -AppvPackageFilePath "C:\MyPackages\Package1\Package1.appv" -Installer "C:\MyPackages\Package1" -OutputPath "C:\Output\packages\Package1.cab"
+  description: |-
+    This command creates a package accelerator using an installer folder containing, for example, MSI installers.
+  summary: ""
+- title: 'Example 2: Create a package accelerator with instruction sheet'
+  code: |-
+    PS C:\> New-AppvPackageAccelerator -AppvPackageFilePath "C:\MyPackages\Package1\Package1.appv" -InstalledFilesPath "C:\Program Files\Package1InstallFolder" -OutputPath "C:\Output\packages\Package1.cab" -AcceleratorDescriptionFilePath "C:\MyPackages\Package1\Package1Description.rtf"
+  description: |-
+    This command creates a package accelerator and inserts an instruction sheet on how to accelerate package.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AcceleratorDescriptionFile
+  description: |+
+    Specifies the package accelerator description file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InputPackagePath
+  isRequired: true
+  description: |+
+    Specifies the path to the App-V package used as input to generate the accelerator from.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InstalledFilesPath
+  isRequired: true
+  description: |+
+    Specifies the path to the folder containing the directory where the package is installed to, to generate an accelerator for.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Installer
+  isRequired: true
+  description: |+
+    Specifies the path to the folder of the application installer to generate an accelerator from.
+    The installer must be of the format msi, or cab, or zip.
+    If you do not have an installer of this format, use the *InstalledFilesPath* parameter instead.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the full path to the .cab package accelerator output file.
+
+  defaultValue: None
+  position: "3"
+  aliases: OutputPath
+  parameterValueGroup: ""
+uid: AppvSequencer.New-AppvPackageAccelerator
+name: New-AppvPackageAccelerator
+description: |-
+  The **New-AppvPackageAccelerator** cmdlet generates a package accelerator object.
+  It accepts an existing Application Virtualization (App-V) 5.0 package file along with the appropriately installed files or installation media.
+  The cmdlet then generates a package accelerator file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
+  Module Name: AppvSequencer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvsequencer/new-appvpackageaccelerator?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-AppvPackageAccelerator

@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports a test collection to an .xml file.
+module: HardwareCertification
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Windows.Kits.Hardware.Certification.TestCollectionRecord" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Import-HwCertTestCollectionFromXml
+  href: ./Import-HwCertTestCollectionFromXml.yml
+- text: New-HwCertTestCollection
+  href: ./New-HwCertTestCollection.yml
+- text: Merge-HwCertTestCollectionFromXml
+  href: ./Merge-HwCertTestCollectionFromXml.yml
+- text: Merge-HwCertTestCollectionFromPackage
+  href: ./Merge-HwCertTestCollectionFromPackage.yml
+syntaxes:
+- >-
+  Export-HwCertTestCollectionToXml [-InputObject] <TestCollectionRecord[]> -Output <String>
+
+   [-TestPassIdentifier <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Filter a test collection'
+  code: |-
+    PS C:\> Import-HwCertTestCollectionFromXml -Input "C:\Temp\All.xml" | Where-Object { $_.ContentLevelSet.Contains("Basic") } | Export-HwCertTestCollectionToXml -Output "C:\Temp\Basic.xml"
+  description: |-
+    This command imports a test collection, finds the results that belong to a specified content level, and exports a new test collection .xml file that contains only those results.
+    The command uses the **Import-HwCertTestCollectionFromXml** cmdlet to import a test collection named All.xml, as a **TestCollectionRecord** object, and then passes that object to the **Where-Object** cmdlet by using the pipeline operator.
+    The **Where-Object** cmdlet filters the imported object for results belong to the Basic content level.
+    For more information, type `Get-Help Where-Object`.
+    The command passes those items to the **Export-HwCertTestCollectionToXml** cmdlet, which exports the test collection to the file named Basic.xml.
+  summary: ""
+parameters:
+- type: <xref href="TestCollectionRecord" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of **TestCollectionRecord** objects.
+    To obtain a **TestCollectionRecord** object, use the **New-HwCertTestCollection** cmdlet.
+    You can also use the **Merge-HwCertTestCollectionFromXml** cmdlet or the **Merge-HwCertTestCollectionFromPackage** cmdlet to obtain merged results, as a **TestCollectionRecord** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Output
+  isRequired: true
+  description: |+
+    Specifies a full path for the exported file.
+
+  defaultValue: None
+  position: Named
+  aliases: Path
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TestPassIdentifier
+  description: |+
+    Specifies a case-sensitive identifier that you assign to the exported test collection.
+
+  defaultValue: None
+  position: Named
+  aliases: TP, ID
+  parameterValueGroup: ""
+uid: HardwareCertification.Export-HwCertTestCollectionToXml
+name: Export-HwCertTestCollectionToXml
+description: |-
+  The **Export-HwCertTestCollectionToXml** cmdlet exports a test collection to an .xml file.
+  For more information, see [Windows Hardware Certification Kit downloads](https://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
+
+  After you export a test collection, you can use the **Merge-HwCertTestCollectionFromXml** cmdlet to merge it with other test collections.
+  Use the **Import-HwCertTestCollectionFromXml** cmdlet to import test collections that you previously exported.
+  After you import a test collection, you can filter it by using **TestCollectionRecord** properties, and then use this cmdlet to export the filtered test collection.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: microsoft.windows.kits.hardware.certification.management.dll-Help.xml
+  Module Name: HardwareCertification
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hardwarecertification/export-hwcerttestcollectiontoxml?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-HwCertTestCollectionToXml

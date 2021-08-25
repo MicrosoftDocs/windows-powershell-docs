@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Captures an image of customized or serviced Windows components on a Windows Image File Boot (WIMBoot) configured device.
+module: DISM
+notes: ""
+inputs:
+- name: <xref href="none" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-WindowsCustomImage -CapturePath <String> [-ConfigFilePath <String>] [-CheckIntegrity] [-Verify]
+
+   [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Capture image customization files'
+  code: |-
+    PS C:\> New-WindowsCustomImage -CapturePath "c:\"
+  description: |-
+    This command captures image customization files in a WIM and saves the files on the c:\ directory.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CapturePath
+  isRequired: true
+  description: |+
+    Specifies the drive or path to the Windows operating system that is to be captured to an image file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CheckIntegrity
+  description: |+
+    Detects and tracks .wim file corruption when used with the **Add-WindowsImage**, **Dismount-WindowsImage**, or **Save-WindowsImage** cmdlet.
+    CheckIntegrity stops the operation if DISM detects that the .wim file is corrupted when used with the **Expand-WindowsImage** or **Mount-WindowsImage** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConfigFilePath
+  description: |+
+    Specifies the location of a configuration file that lists exclusions for image capture and compress commands.
+    For more information, see [DISM Configuration List and WimScript.ini Files](https://go.microsoft.com/fwlink/?LinkID=313768).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: |+
+    Specifies the maximum output level shown in the logs.
+    The default log level is 3.
+    The accepted values are as follows:
+    - 1 = Errors only
+    - 2 = Errors and warnings
+    - 3 = Errors, warnings, and information
+    - 4 = All of the information listed previously, plus debug output
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LL
+  parameterValueGroup: Errors, Warnings, WarningsInfo
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the full path and file name to log to.
+    If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+    In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+    The log file will automatically be archived.
+    The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+    Each time the log file is archived the .bak file will be overwritten. 
+    When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LP
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScratchDirectory
+  description: |+
+    Specifies a temporary directory that will be used when extracting files for use during servicing.
+    The directory must exist locally.
+    If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+    Items in the scratch directory are deleted after each operation. 
+    You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+    The directory used for extracting files for temporary usage during servicing should be a local directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Verify
+  description: |+
+    Checks for errors and file duplication. 
+     During an apply operation, for example, using the **Add-WindowsImage** cmdlet, the size and the hash of the file being applied are checked against the image file to verify they are both equal. 
+     During a capture operation, for example, when using the **New-WindowsImage** cmdlet, after the files is captured into a Windows image, the file is written to a temporary file and compared on a bit-by-bit basis with the original file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DISM.New-WindowsCustomImage
+name: New-WindowsCustomImage
+description: |-
+  The **New-WindowsCustomImage** cmdlet captures image customizations into a new WIM file on a Windows Image File Boot (WIMBoot) system.
+
+  Captured directories include all subfolders and data.
+
+  You cannot capture an empty directory.
+
+  Note: This command only captures customization files.
+
+  The command cannot be used to capture installation files into a new WIM.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+  Module Name: System.Object[]
+  ms.date: 12/21/2016
+  online version: https://docs.microsoft.com/powershell/module/dism/new-windowscustomimage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WindowsCustomImage

@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the BIOS of a virtual machine or snapshot.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Virtualization.Powershell.Bios" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-VMBios [-VMName] <String[]> [-ComputerName <String[]>]
+- Get-VMBios [-VM] <VirtualMachine[]>
+- Get-VMBios [-VMSnapshot] <VMSnapshot>
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMBios TestVM
+  description: |-
+    Gets the BIOS object for virtual machine TestVM.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the BIOS of a virtual machine or snapshot is to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine whose BIOS is to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine whose BIOS is to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSnapshot" data-throw-if-not-resolved="False" />
+  name: VMSnapshot
+  isRequired: true
+  description: |+
+    Specifies the virtual machine snapshot whose BIOS is to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMBios
+name: Get-VMBios
+description: |-
+  The **Get-VMBios** cmdlet gets the BIOS of a virtual machine or snapshot.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmbios?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

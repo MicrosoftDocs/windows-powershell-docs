@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets queue access control lists.
+module: MSMQ
+notes: ""
+links:
+- text: Get-MsmqQueue
+  href: ./Get-MsmqQueue.yml
+- text: Set-MsmqQueueACL
+  href: ./Set-MsmqQueueACL.yml
+syntaxes:
+- Get-MsmqQueueACL [-InputObject] <MessageQueue[]> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get message queue ACLs'
+  code: |-
+    PS C:\> Get-MsmqQueue -Name "Order*" | Get-MsmqQueueACL
+  description: |-
+    This command gets message queues that have names that start with Order by using the **Get-MsmqQueue** cmdlet.
+    The command passes the results to the current cmdlet by using the pipeline operator.
+    The current cmdlet gets ACLs for these queues.
+  summary: ""
+parameters:
+- type: <xref href="MessageQueue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of **MsmqQueue** objects.
+    The cmdlet gets access control list (ACL) information for queues that the **MsmqQueue** objects specify.
+    This parameter accepts pipeline input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MSMQ.Get-MsmqQueueACL
+name: Get-MsmqQueueACL
+description: |-
+  The **Get-MsmqQueueACL** cmdlet gets **MsmqQueueAcl** objects.
+  The cmdlet applies to private, public, system journal, system dead-letter, and system transactional dead-letter queues.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/get-msmqqueueacl?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MsmqQueueACL

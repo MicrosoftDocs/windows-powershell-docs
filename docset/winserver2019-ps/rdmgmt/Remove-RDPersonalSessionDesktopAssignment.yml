@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the association between a personal session desktop assignment and a user.
+module: RDMgmt
+notes: ""
+links:
+- text: Get-RDPersonalSessionDesktopAssignment
+  href: ./Get-RDPersonalSessionDesktopAssignment.yml
+- text: Export-RDPersonalSessionDesktopAssignment
+  href: ./Export-RDPersonalSessionDesktopAssignment.yml
+- text: Import-RDPersonalSessionDesktopAssignment
+  href: ./Import-RDPersonalSessionDesktopAssignment.yml
+- text: Set-RDPersonalSessionDesktopAssignment
+  href: ./Set-RDPersonalSessionDesktopAssignment.yml
+syntaxes:
+- >-
+  Remove-RDPersonalSessionDesktopAssignment [-CollectionName] <String> [-User] <String>
+
+   [-ConnectionBroker <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-RDPersonalSessionDesktopAssignment [-CollectionName] <String> [-Name] <String>
+
+   [-ConnectionBroker <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a personal session desktop collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the personal session desktop assignment to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    Specifies a user account in DOMAIN\user format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RDMgmt.Remove-RDPersonalSessionDesktopAssignment
+name: Remove-RDPersonalSessionDesktopAssignment
+description: |-
+  **The Remove-RDPersonalSessionDesktopAssignment** cmdlet removes the association between a personal session desktop assignment and a user.
+  This operation makes the personal session desktop that you remove available for use.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/remove-rdpersonalsessiondesktopassignment?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-RDPersonalSessionDesktopAssignment

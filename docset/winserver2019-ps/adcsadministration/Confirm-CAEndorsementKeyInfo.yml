@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Checks whether the local CA trusts secure hardware for key attestation.
+module: ADCSAdministration
+notes: ""
+inputs:
+- name: <xref href="System.String, System.Security.Cryptography.X509Certificate2" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Confirm-CAEndorsementKeyInfo [-PublicKeyHash] <String> [<CommonParameters>]
+- Confirm-CAEndorsementKeyInfo [-Certificate] <X509Certificate2> [<CommonParameters>]
+examples:
+- title: 'Example 1: Check an endorsement certificate'
+  code: |-
+    PS C:\> Confirm-CAEndorsementKeyInfo -Certificate Contoso87.cer
+
+    True
+  description: |-
+    This command checks whether the endorsement certificate Contoso87.cer connects, by means of a certificate chain, to a trusted anchor.
+    This example returns a value of $True.
+  summary: ""
+- title: 'Example 2: Check an endorsement key'
+  code: |-
+    PS C:\> Confirm-CAEndorsementKeyInfo -PublicKeyHash "1dd117facfbdcbd8713b9c588eef305e61ce3d8e3c6e21e6323a877476ecd167"
+    False
+  description: |-
+    The command checks for the endorsement public certificate specified as an SHA-256 hash code.
+    This example returns a value of $False.
+    Therefore, the CA does not have this public key.
+  summary: ""
+parameters:
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: Certificate
+  isRequired: true
+  description: |+
+    Specifies an X509 public key certificate issued to secure hardware.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PublicKeyHash
+  isRequired: true
+  description: |+
+    Specifies an endorsement public key of the secure hardware, as the result of the SHA-256 hash algorithm.
+    This is a 64 character hexadecimal string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADCSAdministration.Confirm-CAEndorsementKeyInfo
+name: Confirm-CAEndorsementKeyInfo
+description: |-
+  The **Confirm-CAEndorsementKeyInfo** cmdlet checks whether the local certification authority (CA) trusts secure hardware, such as a Trusted Platform Module (TPM), for key attestation.
+  The cmdlet checks the endorsement key or certificate.
+  An endorsement key is permanently embedded in the security hardware.
+  The public portion of the endorsement key helps to recognize genuine security hardware.
+
+  This cmdlet verifies whether the endorsement public certificate connects by means of a certificate chain to an anchor that the CA trusts for key attestation.
+  Specify an X509 certificate by using the *Certificate* parameter.
+
+  This cmdlet checks whether the endorsement public key exists as a file in a folder configured at the local CA for key attestation.
+  Specify the public key by using the *PublicKeyHash* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsadministration/confirm-caendorsementkeyinfo?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Confirm-CAEndorsementKeyInfo

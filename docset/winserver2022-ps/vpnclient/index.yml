@@ -1,0 +1,36 @@
+### YamlMime:PowershellModule
+children:
+- title: VpnClient
+  cmdlets:
+  - VpnClient.Add-VpnConnection
+  - VpnClient.Add-VpnConnectionRoute
+  - VpnClient.Add-VpnConnectionTriggerApplication
+  - VpnClient.Add-VpnConnectionTriggerDnsConfiguration
+  - VpnClient.Add-VpnConnectionTriggerTrustedNetwork
+  - VpnClient.Get-VpnConnection
+  - VpnClient.Get-VpnConnectionTrigger
+  - VpnClient.New-EapConfiguration
+  - VpnClient.New-VpnServerAddress
+  - VpnClient.Remove-VpnConnection
+  - VpnClient.Remove-VpnConnectionRoute
+  - VpnClient.Remove-VpnConnectionTriggerApplication
+  - VpnClient.Remove-VpnConnectionTriggerDnsConfiguration
+  - VpnClient.Remove-VpnConnectionTriggerTrustedNetwork
+  - VpnClient.Set-VpnConnection
+  - VpnClient.Set-VpnConnectionIPsecConfiguration
+  - VpnClient.Set-VpnConnectionProxy
+  - VpnClient.Set-VpnConnectionTriggerDnsConfiguration
+  - VpnClient.Set-VpnConnectionTriggerTrustedNetwork
+uid: VpnClient
+name: VpnClient
+description: |-
+  This reference provides cmdlet descriptions and syntax for all VPN Client-specific cmdlets. It lists the cmdlets in alphabetical order.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 3389cc73-daa3-4d25-bd50-b1730925d2df
+  Module Name: VpnClient
+  ms.date: 12/20/2016
+  title: VpnClient

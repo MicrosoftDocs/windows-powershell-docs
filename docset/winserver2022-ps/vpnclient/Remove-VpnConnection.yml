@@ -1,0 +1,217 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes specified VPN connection profiles.
+module: VpnClient
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnConnection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    This cmdlet returns a **VpnConnection** object that contains the VPN Connection configuration settings.
+links:
+- text: Add-VpnConnection
+  href: ./Add-VpnConnection.yml
+- text: Get-VpnConnection
+  href: ./Get-VpnConnection.yml
+- text: Set-VpnConnection
+  href: ./Set-VpnConnection.yml
+- text: New-EapConfiguration
+  href: ./New-EapConfiguration.yml
+syntaxes:
+- >-
+  Remove-VpnConnection [-Name] <String[]> [-Force] [-PassThru] [-AllUserConnection] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a single VPN connection'
+  code: |-
+    PS C:\> Remove-VpnConnection -Name "Test1" -Force -PassThru
+    Name                  : Test1
+    ServerAddress         : 10.1.1.2
+    AllUserConnection     : False
+    Guid                  : {65EA2A6D-60A5-49DA-AEDF-5542171D3794}
+    TunnelType            : Automatic
+    AuthenticationMethod  : {MsChapv2}
+    EncryptionLevel       : Required
+    L2tpIPsecAuth         : Certificate
+    UseWinlogonCredential : False
+    EapConfigXmlStream    : 
+    ConnectionStatus      : Disconnected
+    NapState              : NotConnected
+    RememberCredential    : False
+    SplitTunneling        : False
+    DnsSuffix             : 
+    IdleDisconnectSeconds : 0
+  description: |-
+    This command removes the VPN connection named Test1.
+    The *Force* parameter suppresses warnings and non-terminating errors.
+
+    By specifying the *PassThru* parameter, you can see the configuration of the VPN connection object.
+  summary: ""
+- title: 'Example 2: Remove multiple VPN connections'
+  code: |-
+    PS C:\>Remove-VpnConnection -Name "Test3",  "Test4",  "Test5" -AllUserConnection -Force -PassThru
+    Name                  : Test3
+    ServerAddress         : 10.1.1.1
+    AllUserConnection     : True
+    Guid                  : {E37453AF-EE0B-4DD8-9AC0-30B262B0CA74}
+    TunnelType            : L2tp
+    AuthenticationMethod  : {Pap}
+    EncryptionLevel       : Optional
+    L2tpIPsecAuth         : Certificate
+    UseWinlogonCredential : False
+    EapConfigXmlStream    : 
+    ConnectionStatus      : Disconnected
+    NapState              : NotConnected
+    RememberCredential    : False
+    SplitTunneling        : False
+    DnsSuffix             : washington.contoso.com
+    IdleDisconnectSeconds : 600
+
+    Name                  : Test4
+    ServerAddress         : 10.1.1.1
+    AllUserConnection     : True
+    Guid                  : {C5D5579E-FF9D-4F31-ABE1-B26AB38107CD}
+    TunnelType            : L2tp
+    AuthenticationMethod  : {Eap}
+    EncryptionLevel       : Required
+    L2tpIPsecAuth         : Psk
+    UseWinlogonCredential : False
+    EapConfigXmlStream    : #document
+    ConnectionStatus      : Disconnected
+    NapState              : NotConnected
+    RememberCredential    : True
+    SplitTunneling        : True
+    DnsSuffix             : 
+    IdleDisconnectSeconds : 0
+
+    Name                  : Test5
+    ServerAddress         : 10.1.1.1
+    AllUserConnection     : True
+    Guid                  : {CF59A4C3-57DB-41FA-9793-D0C785756ABD}
+    TunnelType            : L2tp
+    AuthenticationMethod  : {Eap}
+    EncryptionLevel       : Required
+    L2tpIPsecAuth         : Certificate
+
+    UseWinlogonCredential : False
+    EapConfigXmlStream    : #document
+    ConnectionStatus      : Disconnected
+    NapState              : NotConnected
+    RememberCredential    : True
+    SplitTunneling        : True
+    DnsSuffix             : 
+    IdleDisconnectSeconds : 0
+  description: |-
+    This command removes the VPN connections named Test3, Test4 and Test5.
+    By specifying the *AllUserConnection* parameter, the connections are removed from the global phone book.
+    The *Force* parameter suppresses warnings and non-terminating errors.
+
+    By specifying the *PassThru* parameter, you can see the configuration of all of the VPN connection objects.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllUserConnection
+  description: |+
+    Indicates that the VPN connection is removed from the global phone book.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the removal of the VPN profile from the phone book.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the VPN connection profile.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ConnectionName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: VpnClient.Remove-VpnConnection
+name: Remove-VpnConnection
+description: |-
+  The **Remove-VpnConnection** cmdlet removes one or more specified VPN connection profiles.
+  If errors occur when you remove the VPN profile, or if the specified VPN profile does not exist, the error information is returned.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_VpnConnection_v1.0.0.cdxml-help.xml
+  Module Name: VpnClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/vpnclient/remove-vpnconnection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-VpnConnection

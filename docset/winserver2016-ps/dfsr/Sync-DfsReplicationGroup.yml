@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Synchronizes replication between computers regardless of schedule.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, uint, string Computername, string Computername" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DfsReplicationGroup
+  href: ./Get-DfsReplicationGroup.yml
+- text: New-DfsReplicationGroup
+  href: ./New-DfsReplicationGroup.yml
+- text: Remove-DfsReplicationGroup
+  href: ./Remove-DfsReplicationGroup.yml
+- text: Set-DfsReplicationGroup
+  href: ./Set-DfsReplicationGroup.yml
+- text: Suspend-DfsReplicationGroup
+  href: ./Suspend-DfsReplicationGroup.yml
+syntaxes:
+- >-
+  Sync-DfsReplicationGroup [-GroupName] <String[]> [-SourceComputerName] <String>
+
+   [-DestinationComputerName] <String> [-DurationInMinutes] <UInt32> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Replicate between servers for 15 minutes'
+  code: |-
+    PS C:\> Sync-DfsReplicationGroup -GroupName "RG01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -DurationInMinutes 15
+  description: |-
+    This command allows replication from server SRV01 to SRV02 in the RG01 replication group for 15 minutes, even if the replication happens during a closed replication schedule.
+  summary: ""
+- title: 'Example 2: Replicate between servers with verbose output'
+  code: |-
+    PS C:\> Sync-DfsReplicationGroup -GroupName "RG01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -DurationInMinutes 5 -Verbose
+    VERBOSE: Performing operation "Sync-DfsReplicationGroup" on Target "SRV01".
+    VERBOSE: The **Sync-DfsReplicationGroup** cmdlet completed successfully.
+  description: |-
+    This command allows replication from server SRV01 to SRV02 in the RG01 replication group for 5 minutes.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of the receiving computer.
+    A destination computer is also  called an inbound or downstream computer.
+    This computer overrides its schedule and replicates inbound.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ReceivingMember, RMem
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DurationInMinutes
+  isRequired: true
+  description: |+
+    Specifies the number of minutes to allow replication.
+
+  defaultValue: None
+  position: "3"
+  aliases: Time
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replication groups.
+    If you do not specify this parameter, the cmdlet queries for all participating replication groups.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of the sending computer.
+    A source computer is also called an outbound or upstream computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: SendingMember, SMem
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSR.Sync-DfsReplicationGroup
+name: Sync-DfsReplicationGroup
+description: |-
+  The **Sync-DfsReplicationGroup** cmdlet synchronizes replication between a source computer and a destination computer, even if replication is not scheduled by either a replication group or a connection.
+
+  This cmdlet ignores the schedule for the specified number of minutes.
+  Use this cmdlet to alter the schedule temporarily to allow replication, because this cmdlet does not require Active Directory replication and LDAP polling.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/sync-dfsreplicationgroup?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Sync-DfsReplicationGroup

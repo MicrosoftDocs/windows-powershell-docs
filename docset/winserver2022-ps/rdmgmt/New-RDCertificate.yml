@@ -1,0 +1,154 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a certificate for an RDS role.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDCertificate
+  href: ./Get-RDCertificate.yml
+- text: Set-RDCertificate
+  href: ./Set-RDCertificate.yml
+syntaxes:
+- >-
+  New-RDCertificate [-Role] <RDCertificateRole> -DnsName <String> [-ExportPath <String>] -Password <SecureString>
+
+   [-ConnectionBroker <String>] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a certificate'
+  code: |-
+    PS C:\> $Password = ConvertTo-SecureString -String "Wings%%83Potato" -AsPlainText -Force
+    PS C:\> New-RDCertificate -Role RDPublishing -DnsName "RDWA01.Contoso.com " -Password $Password -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This example creates a certificate for an RDS role.
+
+    The first command uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies, and stores it in the **$Password** variable.
+    For more information, type `Get-Help ConvertTo-SecureString`.
+
+    The second command creates a certificate for the publishing role and uses the secure string stored in **$Password** to help secure it.
+    The command specifies the DNS name of the RDS host and the name of the connection broker.
+  summary: ""
+- title: 'Example 2: Create and export a certificate'
+  code: |-
+    PS C:\> $Password = ConvertTo-SecureString -String "Cups34Horses&&" -AsPlainText -Force
+    PS C:\> New-RDCertificate -Role RDWebAccess -DnsName "RDWA01.Contoso.com" -Password $Password -ExportPath "C:\Certificates\RDWA102.pfx" -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This example creates a certificate for an RDS role and exports it to a specified file.
+
+    The first command uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies, and stores it in the **$Password** variable.
+
+    The second command creates a certificate for the web access role and uses the secure string stored in **$Password** to help secure it.
+    The command specifies the DNS name of the RDS host and the name of the connection broker.
+    This command also exports the certificate to the specified .pfx file.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DnsName
+  isRequired: true
+  description: |+
+    Specifies the Domain Name Service (DNS) name for a computer.
+    The cmdlet creates a self-signed certificate for this computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ExportPath
+  description: |+
+    Specifies a full file path for the certificate.
+    The file has a .pfx extension.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Specifies a secure string used to help secure the certificate.
+    See the Examples section.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RDCertificateRole" data-throw-if-not-resolved="False" />
+  name: Role
+  isRequired: true
+  description: |+
+    Specifies a certificate type associated with an RDS server role.
+    The acceptable values for this parameter are:
+
+    - RDGateway
+    - RDWebAccess
+    - RDRedirector
+    - RDPublishing
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: RDGateway, RDWebAccess, RDRedirector, RDPublishing
+uid: RDMgmt.New-RDCertificate
+name: New-RDCertificate
+description: |-
+  The **New-RDCertificate** cmdlet creates a certificate for a Remote Desktop Services (RDS) role.
+
+  This cmdlet creates an object that contains the following information:
+
+  - Subject.
+  The subject of the certificate.
+  - SubjectAlternateName.
+  A list of subject alternative name entries of the certificate.
+  - IssuedBy.
+  Common name of the issuer of the certificate.
+  - IssuedTo.
+  Common name of the IssuedTo field of the certificate.
+  - ExpiresOn.
+  Expiration date of the certificate.
+  - Thumbprint.
+  Thumbprint of the certificate.
+  - Role.
+  Remote desktop role service name.
+  The possible roles are: RDGateway, RDWebAccess, RDRedirector, and RDPublishing.
+  - Level.
+  Certification level.
+
+  The certification levels are:
+
+  - Not Configured.
+  The role service is not configured with a certificate or the certificate is not valid.
+  - Untrusted.
+  The role service is configured with a self-signed certificate.
+  - Trusted.
+  The role service is configured with either enterprise certificate or public certificate.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/new-rdcertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-RDCertificate

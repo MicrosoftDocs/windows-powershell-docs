@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Add a volume to a scheduled backup policy.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssBackupVolume
+  href: ./Get-WssBackupVolume.yml
+- text: Remove-WssBackupVolume
+  href: ./Remove-WssBackupVolume.yml
+syntaxes:
+- Add-WssBackupVolume [-BackupPolicy] <ScheduledBackupPolicy> [-BackupVolume] <BackupVolume>
+examples:
+- title: 'Example 1: Add a backup volume to a backup policy'
+  code: |-
+    PS C:\>$ContosoBUPolicy24 = Get-WBPolicy -Editable PS C:\>$ContosoEmpData10 = Get-WBVolume -VolumePath F:\ PS C:\>Add-WssBackupVolume -BackupPolicy $ContosoBUPolicy24 -BackupVolume $ContosoEmpData10
+  description: |-
+    This example adds a backup volume to scheduled backup policy.
+
+    The first command gets the current backup policy for the computer, makes it editable, and stores it in the variable named **$ContosoBUPolicy24**.
+
+    The second command creates a backup volume from drive F: and stores it in the variable named **$ContosoEmpData10**.
+
+    The third command adds the backup volume that is stored in **$ContosoEmpData10** to the scheduled backup policy that is stored in **$ContosoBUPolicy24**.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the scheduled backup policy to which to add the volume.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="BackupVolume" data-throw-if-not-resolved="False" />
+  name: BackupVolume
+  isRequired: true
+  description: |+
+    Specifies the volume to add to the scheduled backup policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Add-WssBackupVolume
+name: Add-WssBackupVolume
+description: |-
+  The **Add-WssBackupVolume** cmdlet adds a volume to a scheduled backup policy.
+  Use the cmdlet to add volumes and the files they contain to a backup.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/add-wssbackupvolume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

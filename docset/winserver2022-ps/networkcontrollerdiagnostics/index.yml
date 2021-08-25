@@ -1,0 +1,22 @@
+### YamlMime:PowershellModule
+children:
+- title: NetworkControllerDiagnostics
+  cmdlets:
+  - NetworkControllerDiagnostics.Debug-NetworkController
+  - NetworkControllerDiagnostics.Debug-NetworkControllerConfigurationState
+  - NetworkControllerDiagnostics.Debug-ServiceFabricNodeStatus
+  - NetworkControllerDiagnostics.Get-NetworkControllerDeploymentInfo
+  - NetworkControllerDiagnostics.Get-NetworkControllerReplica
+uid: NetworkControllerDiagnostics
+name: NetworkControllerDiagnostics
+description: |-
+  This reference provides cmdlet descriptions and syntax for Network Controller diagnostics.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.1.0
+  Locale: en-US
+  Module Guid: d6df305a-d5c8-4ad6-9161-5ee6ba44b501
+  Module Name: NetworkControllerDiagnostics
+  ms.date: 12/20/2016
+  title: NetworkControllerDiagnostics

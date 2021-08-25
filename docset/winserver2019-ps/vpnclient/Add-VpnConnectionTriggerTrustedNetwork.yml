@@ -1,0 +1,135 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds DNS suffixes as trusted networks to the VPN profile.
+module: VpnClient
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnConnectionTriggerTrustedNetwork" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-VpnConnectionTriggerTrustedNetwork
+  href: ./Remove-VpnConnectionTriggerTrustedNetwork.yml
+- text: Get-VpnConnectionTrigger
+  href: ./Get-VpnConnectionTrigger.yml
+syntaxes:
+- >-
+  Add-VpnConnectionTriggerTrustedNetwork [-ConnectionName] <String> [-DnsSuffix] <String[]> [-PassThru] [-Force]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add trusted networks to a VPN profile'
+  code: |-
+    PS C:\> Add-VpnConnectionTriggerTrustedNetwork -ConnectionName "Contoso" -DnsSuffix "newyork.contoso.com","washington.contoso.com" -PassThru
+    ConnectionName : Contoso
+
+    DnsSuffix      : {newyork.contoso.com, washington.contoso.com}
+  description: |-
+    This command adds trusted networks to the Contoso VPN profile.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a VPN connection profile.
+    To view existing VPN connection profiles, use the Get-VpnConnection cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DnsSuffix
+  isRequired: true
+  description: |+
+    Specifies an array of DNS suffixes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: TrustedNetwork
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+    If you specify this parameter, the cmdlet returns the **VpnConnectionTriggerTrustedNetwork** object that contains the list of trusted networks for auto triggering.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: VpnClient.Add-VpnConnectionTriggerTrustedNetwork
+name: Add-VpnConnectionTriggerTrustedNetwork
+description: |-
+  The **Add-VpnConnectionTriggerTrustedNetwork** cmdlet adds Domain Name System (DNS) suffixes as trusted networks to the virtual private network (VPN) profile.
+  When a DNS suffix that you add to the VPN profile is present on the physical interface on the client, the VPN connection does not start even if the client tries to access an application that is part of triggering properties.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_VpnConnectionTriggerTrustedNetwork_v1.0.cdxml-help.xml
+  Module Name: VpnClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/vpnclient/add-vpnconnectiontriggertrustednetwork?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-VpnConnectionTriggerTrustedNetwork

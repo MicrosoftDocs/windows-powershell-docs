@@ -1,0 +1,146 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets dynamic categories on a WSUS server.
+module: UpdateServices
+notes: ""
+inputs:
+- name: <xref href="IUpdateServer" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="IDynamicCategory" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-WsusDynamicCategory
+  href: ./Add-WsusDynamicCategory.yml
+- text: Remove-WsusDynamicCategory
+  href: ./Remove-WsusDynamicCategory.yml
+- text: Set-WsusDynamicCategory
+  href: ./Set-WsusDynamicCategory.yml
+- text: Get-WsusServer
+  href: ./Get-WsusServer.yml
+syntaxes:
+- >-
+  Get-WsusDynamicCategory [-UpdateServer <IUpdateServer>] [-DynamicCategoryTypeFilter <DynamicCategoryType>]
+
+   [-First <Int64>] [-Skip <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Get-WsusDynamicCategory [-UpdateServer <IUpdateServer>] -DynamicCategoryType <DynamicCategoryType>
+
+   -Name <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all dynamic categories for specified servers'
+  code: |-
+    PS C:\> Get-WsusServer | Get-WsusDynamicCategory
+    Name                                     Type                                     Status
+    ----                                     ----                                     ------
+    5d6a452a-55ba-4e11-adac-85e180bda3d6     ComputerModel                            True
+    PCI/Device07                             Device                                   True
+  description: |-
+    This command gets all dynamic categories from the current update server by using the [Get-WsusServer](./Get-WsusServer.yml) cmdlet. The command passes the server to the current cmdlet by using the pipeline operator. The current cmdlet gets the available dynamic categories for the update server.
+  summary: ""
+- title: 'Example 2: Get a named dynamic category'
+  code: |-
+    PS C:\> Get-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07"
+    Name                                     Type                                     Status
+    ----                                     ----                                     ------
+    PCI/Device07                             Device                                   True
+  description: |-
+    This command gets the dynamic category named PCI/Device07 that is a Device type.
+  summary: ""
+- title: 'Example 3: Get dynamic categories by type'
+  code: |-
+    PS C:\> Get-WsusDynamicCategory -DynamicCategoryTypeFilter ComputerModel
+    Name                                     Type                                     Status
+    ----                                     ----                                     ------
+    5d6a452a-55ba-4e11-adac-85e180bda3d6     ComputerModel                            True
+  description: |-
+    This command gets dynamic categories of the type ComputerModel that are currently available on the local server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="DynamicCategoryType" data-throw-if-not-resolved="False" />
+  name: DynamicCategoryType
+  isRequired: true
+  description: |+
+    Specifies the type of the dynamic category. The acceptable values for this parameter are:
+
+    - ComputerModel
+    - Device
+    - Application
+
+  defaultValue: None
+  position: Named
+  aliases: Type
+  parameterValueGroup: ComputerModel, Device, Application, Any
+- type: <xref href="DynamicCategoryType" data-throw-if-not-resolved="False" />
+  name: DynamicCategoryTypeFilter
+  description: |+
+    Specifies the type of the dynamic categories that this cmdlet gets. The possible values are the same as those of the _DynamicCategoryType_ parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: TypeFilter
+  parameterValueGroup: ComputerModel, Device, Application, Any
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: First
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the dynamic category to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: Skip
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IUpdateServer" data-throw-if-not-resolved="False" />
+  name: UpdateServer
+  description: |+
+    Specifies a WSUS server. This cmdlet gets dynamic categories on the server that this parameter specifies. To obtain a server, use the Get-WsusServer cmdlet. If you do not specify a value for this parameter, the cmdlet gets dynamic category from the local server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UpdateServices.Get-WsusDynamicCategory
+name: Get-WsusDynamicCategory
+description: |-
+  The **Get-WsusDynamicCategory** cmdlet gets dynamic categories on a Windows Server Update Services (WSUS) server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/updateservices/get-wsusdynamiccategory?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WsusDynamicCategory

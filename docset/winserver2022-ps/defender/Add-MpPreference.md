@@ -17,8 +17,11 @@ Modifies settings for Windows Defender.
 
 ```
 Add-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
- [-ThreatIDDefaultAction_Ids <Int64[]>] [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-ExclusionIpAddress <String[]>] [-ThreatIDDefaultAction_Ids <Int64[]>]
+ [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-AttackSurfaceReductionOnlyExclusions <String[]>]
+ [-ControlledFolderAccessAllowedApplications <String[]>] [-ControlledFolderAccessProtectedFolders <String[]>]
+ [-AttackSurfaceReductionRules_Ids <String[]>] [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>]
+ [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,6 +62,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AttackSurfaceReductionOnlyExclusions
+{{ Fill AttackSurfaceReductionOnlyExclusions Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttackSurfaceReductionRules_Actions
+{{ Fill AttackSurfaceReductionRules_Actions Description }}
+
+```yaml
+Type: ASRRuleActionType[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttackSurfaceReductionRules_Ids
+{{ Fill AttackSurfaceReductionRules_Ids Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer. 
 Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
@@ -76,9 +124,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ControlledFolderAccessAllowedApplications
+{{ Fill ControlledFolderAccessAllowedApplications Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ControlledFolderAccessProtectedFolders
+{{ Fill ControlledFolderAccessProtectedFolders Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExclusionExtension
 Specifies an array of file name extensions, such as obj or lib, to exclude from scheduled, custom, and real-time scanning.
 This cmdlet adds these file name extensions to the exclusions.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExclusionIpAddress
+{{ Fill ExclusionIpAddress Description }}
 
 ```yaml
 Type: String[]

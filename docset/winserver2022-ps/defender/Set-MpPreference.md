@@ -17,30 +17,48 @@ Configures preferences for Windows Defender scans and updates.
 
 ```
 Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
- [-RealTimeScanDirection <ScanDirection>] [-QuarantinePurgeItemsAfterDelay <UInt32>]
- [-RemediationScheduleDay <Day>] [-RemediationScheduleTime <DateTime>]
- [-ReportingAdditionalActionTimeOut <UInt32>] [-ReportingCriticalFailureTimeOut <UInt32>]
- [-ReportingNonCriticalTimeOut <UInt32>] [-ScanAvgCPULoadFactor <Byte>]
- [-CheckForSignaturesBeforeRunningScan <Boolean>] [-ScanPurgeItemsAfterDelay <UInt32>]
- [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>] [-ScanScheduleDay <Day>]
- [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleTime <DateTime>] [-SignatureFirstAuGracePeriod <UInt32>]
- [-SignatureAuGracePeriod <UInt32>] [-SignatureDefinitionUpdateFileSharesSources <String>]
+ [-ExclusionIpAddress <String[]>] [-RealTimeScanDirection <ScanDirection>]
+ [-QuarantinePurgeItemsAfterDelay <UInt32>] [-RemediationScheduleDay <Day>]
+ [-RemediationScheduleTime <DateTime>] [-ReportingAdditionalActionTimeOut <UInt32>]
+ [-ReportingCriticalFailureTimeOut <UInt32>] [-ReportingNonCriticalTimeOut <UInt32>]
+ [-ScanAvgCPULoadFactor <Byte>] [-CheckForSignaturesBeforeRunningScan <Boolean>]
+ [-ScanPurgeItemsAfterDelay <UInt32>] [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>]
+ [-ScanScheduleDay <Day>] [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleTime <DateTime>]
+ [-SignatureFirstAuGracePeriod <UInt32>] [-SignatureAuGracePeriod <UInt32>]
+ [-SignatureDefinitionUpdateFileSharesSources <String>]
  [-SignatureDisableUpdateOnStartupWithoutEngine <Boolean>] [-SignatureFallbackOrder <String>]
- [-SignatureScheduleDay <Day>] [-SignatureScheduleTime <DateTime>] [-SignatureUpdateCatchupInterval <UInt32>]
- [-SignatureUpdateInterval <UInt32>] [-MAPSReporting <MAPSReportingType>]
- [-SubmitSamplesConsent <SubmitSamplesConsentType>] [-DisableAutoExclusions <Boolean>]
- [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>] [-DisableBehaviorMonitoring <Boolean>]
+ [-SharedSignaturesPath <String>] [-SignatureScheduleDay <Day>] [-SignatureScheduleTime <DateTime>]
+ [-SignatureUpdateCatchupInterval <UInt32>] [-SignatureUpdateInterval <UInt32>]
+ [-SignatureBlobUpdateInterval <UInt32>] [-SignatureBlobFileSharesSources <String>]
+ [-MeteredConnectionUpdates <Boolean>] [-AllowNetworkProtectionOnWinServer <Boolean>]
+ [-DisableDatagramProcessing <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>]
+ [-MAPSReporting <MAPSReportingType>] [-SubmitSamplesConsent <SubmitSamplesConsentType>]
+ [-DisableAutoExclusions <Boolean>] [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>]
+ [-SchedulerRandomizationTime <UInt32>] [-DisableBehaviorMonitoring <Boolean>]
  [-DisableIntrusionPreventionSystem <Boolean>] [-DisableIOAVProtection <Boolean>]
  [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
- [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [- DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>]
+ [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
  [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
  [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-UnknownThreatDefaultAction <ThreatAction>]
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
- [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>]
+ [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>]
+ [-CloudBlockLevel <CloudBlockLevelType>] [-CloudExtendedTimeout <UInt32>]
+ [-EnableNetworkProtection <ASRRuleActionType>] [-EnableControlledFolderAccess <ControlledFolderAccessType>]
+ [-AttackSurfaceReductionOnlyExclusions <String[]>] [-ControlledFolderAccessAllowedApplications <String[]>]
+ [-ControlledFolderAccessProtectedFolders <String[]>] [-AttackSurfaceReductionRules_Ids <String[]>]
+ [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>] [-EnableLowCpuPriority <Boolean>]
+ [-EnableFileHashComputation <Boolean>] [-EnableFullScanOnBatteryPower <Boolean>] [-ProxyPacUrl <String>]
+ [-ProxyServer <String>] [-ProxyBypass <String[]>] [-ForceUseProxyOnly <Boolean>]
+ [-DisableTlsParsing <Boolean>] [-DisableHttpParsing <Boolean>] [-DisableDnsParsing <Boolean>]
+ [-DisableDnsOverTcpParsing <Boolean>] [-DisableSshParsing <Boolean>]
+ [-PlatformUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>]
+ [-SignaturesUpdatesChannel <UpdatesChannelType>] [-DisableGradualRelease <Boolean>]
+ [-AllowNetworkProtectionDownLevel <Boolean>] [-AllowDatagramProcessingOnWinServer <Boolean>]
+ [-EnableDnsSinkhole <Boolean>] [-DisableInboundConnectionFiltering <Boolean>] [-DisableRdpParsing <Boolean>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,6 +98,51 @@ This command configures preferences to check for definition updates 120 minutes 
 
 ## PARAMETERS
 
+### -AllowDatagramProcessingOnWinServer
+{{ Fill AllowDatagramProcessingOnWinServer Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: adpows
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowNetworkProtectionDownLevel
+{{ Fill AllowNetworkProtectionDownLevel Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: anpdl
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowNetworkProtectionOnWinServer
+{{ Fill AllowNetworkProtectionOnWinServer Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: anpws
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 
@@ -92,6 +155,51 @@ For more information about Windows PowerShell background jobs, see [about_Jobs](
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttackSurfaceReductionOnlyExclusions
+{{ Fill AttackSurfaceReductionOnlyExclusions Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttackSurfaceReductionRules_Actions
+{{ Fill AttackSurfaceReductionRules_Actions Description }}
+
+```yaml
+Type: ASRRuleActionType[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttackSurfaceReductionRules_Ids
+{{ Fill AttackSurfaceReductionRules_Ids Description }}
+
+```yaml
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,6 +237,66 @@ The default is the current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CloudBlockLevel
+{{ Fill CloudBlockLevel Description }}
+
+```yaml
+Type: CloudBlockLevelType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CloudExtendedTimeout
+{{ Fill CloudExtendedTimeout Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: cloudextimeout
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ControlledFolderAccessAllowedApplications
+{{ Fill ControlledFolderAccessAllowedApplications Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ControlledFolderAccessProtectedFolders
+{{ Fill ControlledFolderAccessProtectedFolders Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -240,9 +408,56 @@ Indicates whether the CPU will be throttled for scheduled scans while the device
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
 Aliases: None
+Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableDatagramProcessing
+{{ Fill DisableDatagramProcessing Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: ddtgp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableDnsOverTcpParsing
+{{ Fill DisableDnsOverTcpParsing Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: ddnstcpp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableDnsParsing
+{{ Fill DisableDnsParsing Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: ddnsp
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -263,6 +478,52 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -DisableGradualRelease
+{{ Fill DisableGradualRelease Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dgr
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableHttpParsing
+{{ Fill DisableHttpParsing Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dhttpp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableInboundConnectionFiltering
+{{ Fill DisableInboundConnectionFiltering Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dicf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -DisableIOAVProtection
 Indicates whether Windows Defender scans all downloaded files and attachments.
@@ -305,6 +566,21 @@ If you specify a value of $False or do not specify a value, privacy mode is enab
 Type: Boolean
 Parameter Sets: (All)
 Aliases: dpm
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableRdpParsing
+{{ Fill DisableRdpParsing Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: drdpp
 
 Required: False
 Position: Named
@@ -408,8 +684,158 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableSshParsing
+{{ Fill DisableSshParsing Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dsshp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableTlsParsing
+{{ Fill DisableTlsParsing Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dtlsp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableControlledFolderAccess
+{{ Fill EnableControlledFolderAccess Description }}
+
+```yaml
+Type: ControlledFolderAccessType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableDnsSinkhole
+{{ Fill EnableDnsSinkhole Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: ednss
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableFileHashComputation
+{{ Fill EnableFileHashComputation Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: efhc
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableFullScanOnBatteryPower
+{{ Fill EnableFullScanOnBatteryPower Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: efsobp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableLowCpuPriority
+{{ Fill EnableLowCpuPriority Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: elcp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNetworkProtection
+{{ Fill EnableNetworkProtection Description }}
+
+```yaml
+Type: ASRRuleActionType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EngineUpdatesChannel
+{{ Fill EngineUpdatesChannel Description }}
+
+```yaml
+Type: UpdatesChannelType
+Parameter Sets: (All)
+Aliases: erelr
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExclusionExtension
 Specifies an array of file name extensions, such as obj or lib, to exclude from scheduled, custom, and real-time scanning.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExclusionIpAddress
+{{ Fill ExclusionIpAddress Description }}
 
 ```yaml
 Type: String[]
@@ -464,7 +890,22 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceUseProxyOnly
+{{ Fill ForceUseProxyOnly Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: fupo
 
 Required: False
 Position: Named
@@ -547,6 +988,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MeteredConnectionUpdates
+{{ Fill MeteredConnectionUpdates Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: mcupd
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ModerateThreatDefaultAction
 Specifies which automatic remediation action to take for a moderate level threat.
 The acceptable values for this parameter are:
@@ -560,6 +1016,66 @@ Type: ThreatAction
 Parameter Sets: (All)
 Aliases: mtdefac
 Accepted values: Clean, Quarantine, Remove, Allow, UserDefined, NoAction, Block
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PlatformUpdatesChannel
+{{ Fill PlatformUpdatesChannel Description }}
+
+```yaml
+Type: UpdatesChannelType
+Parameter Sets: (All)
+Aliases: prelr
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyBypass
+{{ Fill ProxyBypass Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: proxbps
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyPacUrl
+{{ Fill ProxyPacUrl Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ppurl
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyServer
+{{ Fill ProxyServer Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: proxsrv
 
 Required: False
 Position: Named
@@ -878,6 +1394,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SchedulerRandomizationTime
+{{ Fill SchedulerRandomizationTime Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: srt
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SevereThreatDefaultAction
 Specifies which automatic remediation action to take for a severe level threat.
 The acceptable values for this parameter are:
@@ -899,6 +1430,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SharedSignaturesPath
+{{ Fill SharedSignaturesPath Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ssp, SecurityIntelligenceLocation, ssl
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SignatureAuGracePeriod
 Specifies a grace period, in minutes, for the definition.
 If a definition successfully updates within this period, Windows Defender abandons any service initiated updates.
@@ -907,6 +1453,36 @@ If a definition successfully updates within this period, Windows Defender abando
 Type: UInt32
 Parameter Sets: (All)
 Aliases: sigagp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureBlobFileSharesSources
+{{ Fill SignatureBlobFileSharesSources Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: sigbfs
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureBlobUpdateInterval
+{{ Fill SignatureBlobUpdateInterval Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: sigbui
 
 Required: False
 Position: Named
@@ -1036,6 +1612,21 @@ If you do not specify a value for this parameter, Windows Defender checks for de
 Type: DateTime
 Parameter Sets: (All)
 Aliases: sigst
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignaturesUpdatesChannel
+{{ Fill SignaturesUpdatesChannel Description }}
+
+```yaml
+Type: UpdatesChannelType
+Parameter Sets: (All)
+Aliases: srelr
 
 Required: False
 Position: Named

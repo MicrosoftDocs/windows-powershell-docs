@@ -17,7 +17,7 @@ Resets a TPM to its default state.
 
 ### Owner Auth (Default)
 ```
-Clear-Tpm [[-OwnerAuthorization] <String>] [<CommonParameters>]
+Clear-Tpm [-UsePPI] [[-OwnerAuthorization] <String>] [<CommonParameters>]
 ```
 
 ### File
@@ -110,6 +110,21 @@ Aliases: o
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -UsePPI
+{{ Fill UsePPI Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Owner Auth
+Aliases: ppi
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False

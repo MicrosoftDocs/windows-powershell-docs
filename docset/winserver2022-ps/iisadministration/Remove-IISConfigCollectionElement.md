@@ -46,7 +46,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -61,7 +61,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
@@ -106,6 +106,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Web.Administration.ConfigurationElementCollection, System.Collections.Hashtable
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

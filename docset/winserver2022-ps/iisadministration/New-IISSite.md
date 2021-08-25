@@ -16,9 +16,9 @@ Creates an IIS Website.
 ## SYNTAX
 
 ```
-New-IISSite -Name <String> -PhysicalPath <String> -BindingInformation <String> [-Protocol <String>]
- [-CertificateThumbPrint <String>] [-SslFlag <SslFlags>] [-CertStoreLocation <String>] [-Force] [-Passthru]
- [<CommonParameters>]
+New-IISSite [-Name] <String> [-PhysicalPath] <String> [-BindingInformation] <String> [[-Protocol] <String>]
+ [[-CertificateThumbPrint] <String>] [[-SslFlag] <SslFlags>] [[-CertStoreLocation] <String>] [-Force]
+ [-Passthru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,7 +63,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -78,7 +78,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -90,10 +90,11 @@ Specifies the certificate store path of the certificate, which is used to add a 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Accepted values: Cert:\LocalMachine\My, Cert:\LocalMachine\WebHosting, My, WebHosting
 
 Required: False
-Position: Named
+Position: 6
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -123,7 +124,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -154,7 +155,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -169,7 +170,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -181,10 +182,11 @@ Specifies the SSL flag settings of the new binding.
 ```yaml
 Type: SslFlags
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Accepted values: None, Sni, CentralCertStore, DisableHTTP2, DisableOCSPStp, DisableQUIC, DisableTLS13, DisableLegacyTLS
 
 Required: False
-Position: Named
+Position: 5
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -195,7 +197,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### String
+### System.String
+
+### Microsoft.Web.Administration.SslFlags
 
 ## OUTPUTS
 

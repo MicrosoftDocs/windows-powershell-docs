@@ -5,7 +5,7 @@ Help Version: 5.0.1.1
 Locale: en-US
 Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
 Module Name: DISM
-ms.date: 12/21/2016
+ms.date: 08/25/2021
 title: DISM
 ---
 
@@ -97,7 +97,7 @@ Expands a custom data image.
 Applies an image to a specified location.
 
 ### [Export-WindowsCapabilitySource](Export-WindowsCapabilitySource.md)
-{{ Fill in the Synopsis }}
+Creates a custom FOD repository that includes packages that support the installation of the specified capabilities.
 
 ### [Export-WindowsDriver](Export-WindowsDriver.md)
 Exports all third-party drivers from a Windows image to a destination folder.
@@ -193,7 +193,8 @@ Sets the reserved storage state of the image.
 Splits an existing .wim file into multiple read-only split .wim files.
 
 ### [Start-OSUninstall](Start-OSUninstall.md)
-{{ Fill in the Synopsis }}
+Windows gives a user the ability to uninstall and roll back to a previous version of Windows. You
+can use DISM to initiate an uninstall
 
 ### [Update-WIMBootEntry](Update-WIMBootEntry.md)
 Updates the Windows image file boot (WIMBoot) configuration entry, associated with either the specified data source ID, the renamed image file path or the moved image file path.

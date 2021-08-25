@@ -48,7 +48,7 @@ This operation will take several minutes.
 
 The *Source* parameter specifies the location of known good versions of files that can be used for the repair, such as a path to the root directory of a mounted image.
 
-*CheckHealth*, *ScanHealth*, *RestoreHealth*, *Source*, and *LimitAccess* can only be used when servicing images that are running at least Windows® 8 or Windows Server® 2012.
+*CheckHealth*, *ScanHealth*, *RestoreHealth*, *Source*, and *LimitAccess* can only be used when servicing images that are running at least Windows&reg; 8 or Windows Server&reg; 2012.
 
 ## EXAMPLES
 
@@ -81,7 +81,7 @@ Checks whether the image has been flagged as corrupted by a failed process and w
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Defer
-{{ Fill Defer Description }}
+Defers cleanup operations until the next automatic maintenance.
 
 ```yaml
 Type: SwitchParameter
@@ -108,12 +108,12 @@ Accept wildcard characters: False
 ### -LimitAccess
 Prevents DISM from contacting Windows Update (WU) when searching for the source files to repair an online image.
 
-*LimitAccess* can only be used when servicing images that are running at least Windows® 8, Windows Server® 2012, or Windows® Preinstallation Environment (Windows PE) 4.0.
+*LimitAccess* can only be used when servicing images that are running at least Windows&reg; 8, Windows Server&reg; 2012, or Windows&reg; Preinstallation Environment (Windows PE) 4.0.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
 In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
 The log file will automatically be archived.
 The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
-Each time the log file is archived the .bak file will be overwritten. 
+Each time the log file is archived the .bak file will be overwritten.
 When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
 
 ```yaml
@@ -173,7 +173,7 @@ This option will keep the application from prompting for a restart or keep it fr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ Specifies that the action is to be taken on the operating system that is current
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Online
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +204,7 @@ If the directory named Windows is not a subdirectory of the root directory, *Win
 ```yaml
 Type: String
 Parameter Sets: Offline
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetBase
-{{ Fill ResetBase Description }}
+Resets the base of superseded components to further reduce the component store size.
 
 ```yaml
 Type: SwitchParameter
@@ -235,7 +235,7 @@ This operation will take several minutes.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +251,7 @@ This operation will take several minutes.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,14 +264,14 @@ Accept wildcard characters: False
 Specifies a temporary directory that will be used when extracting files for use during servicing.
 The directory must exist locally.
 If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
-Items in the scratch directory are deleted after each operation. 
+Items in the scratch directory are deleted after each operation.
 You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
 The directory used for extracting files for temporary usage during servicing should be a local directory.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -290,12 +290,12 @@ Separate source locations with a comma.
 If you do not specify a *Source*, the default location set by Group Policy is used.
 Windows Update (WU) is also used for online images.
 
-*Source* can only be used when servicing images that are running at least Windows® 8 or Windows Server® 2012.
+*Source* can only be used when servicing images that are running at least Windows&reg; 8 or Windows Server&reg; 2012.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartComponentCleanup
-{{ Fill StartComponentCleanup Description }}
+Cleans up superseded components to reduce the size of the component store.
 
 ```yaml
 Type: SwitchParameter
@@ -327,7 +327,7 @@ Use -SystemDrive to service an installed Windows image from a Windows PE environ
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -344,7 +344,7 @@ If not specified, the default is the Windows directory in the root of the offlin
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

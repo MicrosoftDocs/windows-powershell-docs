@@ -8,7 +8,10 @@ schema: 2.0.0
 # Export-WindowsCapabilitySource
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Creates a custom FOD repository that includes packages that support the installation of the
+specified capabilities. See
+[FOD repositories](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#fod-repositories)
+for more information.
 
 ## SYNTAX
 
@@ -19,16 +22,15 @@ Export-WindowsCapabilitySource [-Name <String>] -Source <String> -Target <String
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Export-WindowsCapabilitySource** cmdlet enables you to create a repository that you can use as
+a capability installation source.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+Export-WindowsCapabilitySource -Path c:\mount\windows -Source D:\ -Target C:\repository -Name App.StepsRecorder~~~~0.0.1.0
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -76,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+The name of the capability that you're exporting packages for.
 
 ```yaml
 Type: String
@@ -128,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-{{ Fill Source Description }}
+The location that contains packages, such as a mounted Languages and Optional Features ISO or a
+custom FOD repository.
 
 ```yaml
 Type: String
@@ -160,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Target
-{{ Fill Target Description }}
+The destination for the FOD repository.
 
 ```yaml
 Type: String

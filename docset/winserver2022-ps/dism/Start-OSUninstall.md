@@ -8,7 +8,8 @@ schema: 2.0.0
 # Start-OSUninstall
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Windows gives a user the ability to uninstall and roll back to a previous version of Windows. You
+can use DISM to initiate an uninstall.
 
 ## SYNTAX
 
@@ -25,16 +26,18 @@ Start-OSUninstall [-NoRestart] [-Online] [-WindowsDirectory <String>] [-SystemDr
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Start-OSUninstall** cmdlet enables you to uninstall and roll back to a previously installed
+version of Windows.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+Start-OSUninstall -Online
 ```
 
-{{ Add example description here }}
+Uninstalls the operating system that is currently running on the local computer and rolls back to a
+previously installed version of Windows.
 
 ## PARAMETERS
 
@@ -82,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoRestart
-{{ Fill NoRestart Description }}
+Suppresses the prompt to restart and also requires a manual restart.
 
 ```yaml
 Type: SwitchParameter

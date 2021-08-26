@@ -252,7 +252,13 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDiskRepairQueueDepth
-{{ Fill VirtualDiskRepairQueueDepth Description }}
+Specifies the data resync speed by allocating resources to repair data copies (High or Very High) or run active workloads (Low or Very Low). It is recommended to set value back to Medium after use. 
+The accepted values are: 
+- Very Low
+- Low
+- Medium (default)
+- High
+- Very High
 
 ```yaml
 Type: RepairPriority

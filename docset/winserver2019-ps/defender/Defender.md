@@ -54,4 +54,9 @@ Starts a Windows Defender offline scan.
 ### [Update-MpSignature](./Update-MpSignature.md)
 Updates the antimalware definitions on a computer.
 
+### [Get-MpPerformanceReport](./Get-MpPerformanceReport.md)
+Analyzes and reports on MDAV performance recording.
+
+### [New-MpPerformanceRecording](./New-MpPerformanceRecording.md)
+Collects a performance recording of MDAV scans.
 

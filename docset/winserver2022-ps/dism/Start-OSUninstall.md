@@ -31,7 +31,7 @@ version of Windows.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Uninstall OS
 ```powershell
 Start-OSUninstall -Online
 ```

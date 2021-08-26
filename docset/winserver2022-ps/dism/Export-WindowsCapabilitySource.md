@@ -27,7 +27,7 @@ a capability installation source.
 
 ## EXAMPLES
 
-### Example 1: Export repository for Steps Recorder capability
+### Example 1: Export repository for capability
 ```powershell
 Export-WindowsCapabilitySource -Path c:\mount\windows -Source D:\ -Target C:\repository -Name App.StepsRecorder~~~~0.0.1.0
 ```

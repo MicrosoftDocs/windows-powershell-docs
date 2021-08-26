@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxIoBandwidth
-{{ Fill MaxIoBandwidth Description }}
+Specifies the maximum IO bandwidth supported by the virtual disk. 
 
 ```yaml
 Type: UInt64
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxIops
-{{ Fill MaxIops Description }}
+Specifies the maximum IOPS supported by the virtual disk. 
 
 ```yaml
 Type: UInt64
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfDataCopies
-{{ Fill NumberOfDataCopies Description }}
+Specifies the number of complete data copies to maintain. 
 
 ```yaml
 Type: UInt16
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhysicalDiskRedundancy
-{{ Fill PhysicalDiskRedundancy Description }}
+Specifies how many physical disks in the fault domain can fail without compromising data redundancy.
 
 ```yaml
 Type: UInt16
@@ -313,7 +313,10 @@ Accept wildcard characters: False
 ```
 
 ### -ProvisioningType
-{{ Fill ProvisioningType Description }}
+Specifies the provisioning type of the virtual disk. 
+The accepted values are: 
+- Fixed: Indicates the virtual disk's capacity is allocated fully at the time of creation
+- Thin: Indicates the virtual disk's capacity is allocated on demand
 
 ```yaml
 Type: ProvisioningType

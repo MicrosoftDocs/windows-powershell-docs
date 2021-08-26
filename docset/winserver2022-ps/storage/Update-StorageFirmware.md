@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageEnclosure
-{{ Fill StorageEnclosure Description }}
+Specifies the storage enclosure to recieve the firmware update. 
 
 ```yaml
 Type: CimInstance
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageEnclosureFriendlyName
-{{ Fill StorageEnclosureFriendlyName Description }}
+Specifies the storage enclosure using a friendly name to recieve the firmware update.
 
 ```yaml
 Type: String
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageEnclosureUniqueId
-{{ Fill StorageEnclosureUniqueId Description }}
+Specifies the storage enclosure using a unique ID to recieve the firmware update. 
 
 ```yaml
 Type: String

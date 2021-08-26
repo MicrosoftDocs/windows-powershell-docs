@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfDataCopies
-{{ Fill NumberOfDataCopies Description }}
+Specifies the number of complete data copies to maintain for this volume. If specified, this value will override the NumberOfDataCopiesDefault value inherited from the resiliency setting specified by ResiliencySettingName.
 
 ```yaml
 Type: UInt16
@@ -463,7 +463,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageFaultDomainsToUse
-{{ Fill StorageFaultDomainsToUse Description }}
+Specifies the storage fault domain(s) that this volume can use.
 
 ```yaml
 Type: CimInstance[]
@@ -478,7 +478,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageFaultDomainsToUseFriendlyNames
-{{ Fill StorageFaultDomainsToUseFriendlyNames Description }}
+Specifies user friendly names for the list of storage fault domains that this volume can use. 
 
 ```yaml
 Type: String[]

@@ -104,7 +104,7 @@ The **Set-StorageTier** cmdlet changes the description of the storage tier to th
 ## PARAMETERS
 
 ### -AllocationUnitSize
-{{ Fill AllocationUnitSize Description }}
+Specifies the allocation unit size for the storage tier. 
 
 ```yaml
 Type: UInt64
@@ -370,7 +370,10 @@ Accept wildcard characters: False
 ```
 
 ### -ProvisioningType
-{{ Fill ProvisioningType Description }}
+Specifies the provisioning type for the storage tier. To create a tiered thinly provisioned volume, first set all tiers in the volume to Thin. 
+The accepted values are:
+- Fixed: Storage tier's capacity is fully allocated upon creation
+- Thin: Storage tier's capacity is allocated on demand
 
 ```yaml
 Type: ProvisioningType
@@ -440,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -Usage
-{{ Fill Usage Description }}
+Set the usage for the storage tier. 
 
 ```yaml
 Type: StorageTierUsage

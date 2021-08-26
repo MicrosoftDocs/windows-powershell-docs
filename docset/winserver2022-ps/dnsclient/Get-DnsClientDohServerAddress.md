@@ -3,7 +3,7 @@ title: Get-DnsClientDohServerAddress
 description: The Get-DnsClientDohServerAddress cmdlet gets the DNS-over-HTTPS (DoH) server configuration from the supported DoH servers.
 external help file: MSFT_DnsClientDohServerAddress.cdxml-help.xml
 Module Name: DnsClient
-online version:
+online version: https://docs.microsoft.com/powershell/module/dnsclient/get-dnsclientdohserveraddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ms.date: 08/31/2021
 ---
@@ -21,7 +21,7 @@ Get-DnsClientDohServerAddress [[-ServerAddress] <String[]>] [-CimSession <CimSes
 ```
 
 ## DESCRIPTION
-The **Get-DnsClientDohServerAddress** cmdlet gets the DNS-over-HTTPS (DoH) server configuration from the supported DoH servers.
+The **Get-DnsClientDohServerAddress** cmdlet gets the DNS-over-HTTPS (DoH) server configuration for supported DoH servers.
 If you don't specify a server, the command displays all supported DoH servers.
 
 ## EXAMPLES

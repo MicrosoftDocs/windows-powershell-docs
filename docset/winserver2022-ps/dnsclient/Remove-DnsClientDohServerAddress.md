@@ -3,7 +3,7 @@ title: Remove-DnsClientDohServerAddress
 description: The Remove-DnsClientDohServerAddress cmdlet removes a DNS-over-HTTPS (DoH) server configuration from the supported DoH servers.
 external help file: MSFT_DnsClientDohServerAddress.cdxml-help.xml
 Module Name: DnsClient
-online version:
+online version: https://docs.microsoft.com/powershell/module/dnsclient/remove-dnsclientdohserveraddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ms.date: 08/31/2021
 ---
@@ -11,7 +11,7 @@ ms.date: 08/31/2021
 # Remove-DnsClientDohServerAddress
 
 ## SYNOPSIS
-Removes a DoH server configuration from the supported DoH servers.
+Removes DoH server configurations from the supported DoH servers.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Remove-DnsClientDohServerAddress -InputObject <CimInstance[]> [-CimSession <CimS
 ```
 
 ## DESCRIPTION
-The **Remove-DnsClientDohServerAddress** cmdlet removes a DNS-over-HTTPS (DoH) server configuration from the supported DoH servers.
+The **Remove-DnsClientDohServerAddress** cmdlet removes DNS-over-HTTPS (DoH) server configurations from the supported DoH servers.
 
 ## EXAMPLES
 

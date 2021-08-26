@@ -3,7 +3,7 @@ title: Set-DnsClientDohServerAddress
 description: The Set-DnsClientDohServerAddress cmdlet modifies an existing DNS-over-HTTPS (DoH) server configuration.
 external help file: MSFT_DnsClientDohServerAddress.cdxml-help.xml
 Module Name: DnsClient
-online version:
+online version: https://docs.microsoft.com/powershell/module/dnsclient/set-dnsclientdohserveraddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ms.date: 08/31/2021
 ---
@@ -40,15 +40,15 @@ PS C:\> Set-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate http
 ```
 
 This example changes the URI template for 10.23.1.1.
-The command sets the **AutoUpgrade** and **AllowFallbackToUdp** values to `False`.
+The command sets the **AutoUpgrade** and **AllowFallbackToUdp** values to the default value `False`.
 
 ### Example 2
 ```powershell
-PS C:\> -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query -AutoUpgrade $True 
+PS C:\> Set-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query -AutoUpgrade $True 
 ```
 
 This example changes the URI template for 10.23.1.1.
-The command upgrades any resolutions to 10.23.1.1 to DoH.
+The command also upgrades any resolutions to 10.23.1.1.
 The **AllowFallbackToUdp** parameter value defaults to `False`.
 If the encrypted name resolution fails, it does not revert to unencrypted DNS.
 

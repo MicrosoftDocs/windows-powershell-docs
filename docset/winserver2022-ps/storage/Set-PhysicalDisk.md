@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsHidden
-{{ Fill IsHidden Description }}
+Specifies if the physical disk should be hidden or not.
 
 ```yaml
 Type: Boolean
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageEnclosureId
-{{ Fill StorageEnclosureId Description }}
+Specifies the storage enclosure ID for the physical disk. 
 
 ```yaml
 Type: String
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageScaleUnitId
-{{ Fill StorageScaleUnitId Description }}
+Specifies the storage scale unit ID for the physical disk. 
 
 ```yaml
 Type: String

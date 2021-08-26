@@ -1,14 +1,17 @@
 ---
+title: Add-DnsClientDohServerAddress
+description: The Add-DnsClientDohServerAddress cmdlet adds a DNS-over-HTTPS (DoH) server configuration to the supported DoH servers.
 external help file: MSFT_DnsClientDohServerAddress.cdxml-help.xml
 Module Name: DnsClient
 online version:
 schema: 2.0.0
+ms.date: 08/31/2021
 ---
 
 # Add-DnsClientDohServerAddress
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Adds a DoH server configuration to the supported DoH servers.
 
 ## SYNTAX
 
@@ -19,21 +22,32 @@ Add-DnsClientDohServerAddress [-ServerAddress] <String> [[-DohTemplate] <String>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Add-DnsClientDohServerAddress** cmdlet adds a DNS-over-HTTPS (DoH) server configuration to the supported DoH servers.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Add-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query
 ```
 
-{{ Add example description here }}
+This example adds 10.23.1.1 to the system DoH list with the specified URI template.
+
+### Example 2
+```powershell
+PS C:\> Add-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query -AllowFallbackToUdp $True -AutoUpgrade $True 
+```
+
+This example adds 10.23.1.1 to the system DoH list with the specified URI template.
+The command upgrades any resolutions to 10.23.1.1 to DoH.
+If the encrypted name resolution fails, the command allows fallback to unencrypted DNS.
 
 ## PARAMETERS
 
 ### -AllowFallbackToUdp
-{{ Fill AllowFallbackToUdp Description }}
+Specifies whether to allow fallback to unencrypted DNS if the DoH query to the server fails.
+This parameter applies only if **AutoUpgrade** is `True`.
+The default is `False`.
 
 ```yaml
 Type: Boolean
@@ -48,7 +62,14 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -AutoUpgrade
-{{ Fill AutoUpgrade Description }}
+Specifies whether to encrypt all name resolutions to this server using the DoH settings.
+The upgrade occurs if the server is configured on an adapter or if it is part of a Name Resolution Policy Table (NRPT) rule.
+The default is `False`.
 
 ```yaml
 Type: Boolean
@@ -78,7 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -93,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -DohTemplate
-{{ Fill DohTemplate Description }}
+Specifies a valid URI template used to connect to the DoH server.
 
 ```yaml
 Type: String
@@ -108,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerAddress
-{{ Fill ServerAddress Description }}
+Specifies the IP address of the DoH server.
 
 ```yaml
 Type: String
@@ -123,7 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
@@ -169,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -180,6 +207,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-DnsClientNrptRule](Add-DnsClientNrptRule.md)
+
+[Get-DnsClientDohServerAddress](Get-DnsClientDohServerAddress.md)
+
+[Remove-DnsClientDohServerAddress](Remove-DnsClientDohServerAddress.md)
+
+[Set-DnsClientDohServerAddress](Set-DnsClientDohServerAddress.md)

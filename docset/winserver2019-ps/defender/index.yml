@@ -4,6 +4,7 @@ children:
   cmdlets:
   - Defender.Add-MpPreference
   - Defender.Get-MpComputerStatus
+  - Defender.Get-MpPerformanceReport
   - Defender.Get-MpPreference
   - Defender.Get-MpThreat
   - Defender.Get-MpThreatCatalog

@@ -26,16 +26,16 @@ If you don't specify a server, the command displays all supported DoH servers.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get configuration for all DoH servers
 ```powershell
-PS C:\> Get-DnsClientDohServerAddress
+Get-DnsClientDohServerAddress
 ```
 
 This example gets configuration for all supported DoH servers.
 
-### Example 2
+### Example 2: Get configuration for specific DoH servers
 ```powershell
-PS C:\> Get-DnsClientDohServerAddress -ServerAddress 10.23.1.1,10.18.1.1
+Get-DnsClientDohServerAddress -ServerAddress 10.23.1.1,10.18.1.1
 ```
 
 This example gets DoH configuration for the servers 10.23.1.1 and 10.18.1.1.

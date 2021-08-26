@@ -32,9 +32,9 @@ The **Remove-DnsClientDohServerAddress** cmdlet removes DNS-over-HTTPS (DoH) ser
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove configuration for DoH servers
 ```powershell
-PS C:\> Remove-DnsClientDohServerAddress -ServerAddress 10.23.1.1,10.18.1.1
+Remove-DnsClientDohServerAddress -ServerAddress 10.23.1.1,10.18.1.1
 ```
 
 This example removes DoH configuration for the servers 10.23.1.1 and 10.18.1.1.

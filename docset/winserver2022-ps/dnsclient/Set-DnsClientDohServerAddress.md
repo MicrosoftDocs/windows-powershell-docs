@@ -34,17 +34,17 @@ The **Set-DnsClientDohServerAddress** cmdlet modifies an existing DNS-over-HTTPS
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Change the URI template for a DoH server
 ```powershell
-PS C:\> Set-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query
+Set-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query
 ```
 
 This example changes the URI template for 10.23.1.1.
 The command sets the **AutoUpgrade** and **AllowFallbackToUdp** values to the default value `False`.
 
-### Example 2
+### Example 2: Change the URI template for a DoH server with automatic upgrade
 ```powershell
-PS C:\> Set-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query -AutoUpgrade $True 
+Set-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query -AutoUpgrade $True 
 ```
 
 This example changes the URI template for 10.23.1.1.

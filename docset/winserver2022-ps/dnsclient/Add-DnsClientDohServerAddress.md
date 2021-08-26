@@ -26,16 +26,16 @@ The **Add-DnsClientDohServerAddress** cmdlet adds a DNS-over-HTTPS (DoH) server 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Add a DoH server
 ```powershell
-PS C:\> Add-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query
+Add-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query
 ```
 
 This example adds 10.23.1.1 to the system DoH list with the specified URI template.
 
-### Example 2
+### Example 2: Add a DoH server with automatic upgrade
 ```powershell
-PS C:\> Add-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query -AllowFallbackToUdp $True -AutoUpgrade $True 
+Add-DnsClientDohServerAddress -ServerAddress 10.23.1.1 -DohTemplate https://adatum.com/dns-query -AllowFallbackToUdp $True -AutoUpgrade $True 
 ```
 
 This example adds 10.23.1.1 to the system DoH list with the specified URI template.

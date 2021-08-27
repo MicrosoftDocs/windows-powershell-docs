@@ -82,6 +82,25 @@ SelfTest           : {191, 191, 245, 191...}
 
 This command resets the TPM by using the owner authorization value included in the specified file.
 
+### Example 4: Reset TPM with Physical Presence Interface
+```
+PS C:\> Clear-Tpm -UsePPI
+TpmReady           : False
+TpmPresent         : True
+ManagedAuthLevel   : Full
+OwnerAuth          :
+OwnerClearDisabled : True
+AutoProvisioning   : Disabled
+LockedOut          : False
+SelfTest           : {191, 191, 245, 191...}
+```
+
+This command resets the TPM by using the Physical Presence Interface (PPI).
+PPI does not use a value for owner authorization.
+
+Restart the system for the clear action to take effect.
+That restart might require user input to approve the clear request.
+
 ## PARAMETERS
 
 ### -File
@@ -116,7 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -UsePPI
-{{ Fill UsePPI Description }}
+Use the PPI for the TPM reset.
+Restart the system for the changes to take effect.
+The restart might require user input to approve the clear request.
 
 ```yaml
 Type: SwitchParameter

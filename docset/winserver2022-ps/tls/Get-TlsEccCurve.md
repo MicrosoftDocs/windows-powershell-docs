@@ -15,7 +15,7 @@ Gets the list of Elliptic Curve Cryptography (ECC) cipher suites available for T
 ## SYNTAX
 
 ```
-Get-TlsEccCurve [[-Name] <String>]
+Get-TlsEccCurve [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

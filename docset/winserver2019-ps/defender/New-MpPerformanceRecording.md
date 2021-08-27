@@ -22,7 +22,7 @@ New-MpPerformanceRecording
 
 ## DESCRIPTION
 
-The `New-MpPerformanceRecording` cmdlet collects a performance recording of Microsoft Defender Antivirus scans. These performance recordings contain Microsoft-Antimalware-Engine and NT kernel process events and can be analyzed after collection using the `Get-MpPerformanceReport` (Defender) cmdlet.
+The `New-MpPerformanceRecording` cmdlet collects a performance recording of Microsoft Defender Antivirus scans. These performance recordings contain Microsoft-Antimalware-Engine and NT kernel process events and can be analyzed after collection using the [Get-MpPerformanceReport](Get-MpPerformanceReport.md#get-mpperformancereport) cmdlet.
 
 This `New-MpPerformanceRecording` cmdlet provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided “AS IS”, and is not intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-- [Get-MpPerformanceReport](Get-MpPerformanceReport.md#get-mpperformancereport) (Defender)      
+- [Get-MpPerformanceReport](Get-MpPerformanceReport.md#get-mpperformancereport)     
 - Performance Analyzer docs
 
 

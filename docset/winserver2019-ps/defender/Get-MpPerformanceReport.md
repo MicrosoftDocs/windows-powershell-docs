@@ -261,5 +261,5 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-- New-MpPerformanceRecording (Defender)
+- [New-MpPerformanceRecording](New-MpPerformanceRecording.md#new-mpperformancerecording) (Defender)
 - Performance Analyzer docs

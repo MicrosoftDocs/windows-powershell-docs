@@ -58,5 +58,5 @@ Updates the antimalware definitions on a computer.
 Analyzes and reports on MDAV performance recording.
 
 ### [New-MpPerformanceRecording](./New-MpPerformanceRecording.md)
-Collects a performance recording of MDAV scans.
+Collects a performance recording of MDAV scans
 

@@ -31,7 +31,7 @@ For more information on the Performance analyzer, see Performance Analyzer docs 
 > [!IMPORTANT]
 > This cmdlet requires elevated administrator privileges.
 
-## SUPPORTED OS VERSIONS
+## Supported OS versions
 
 Windows Version 10 and higher.
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-- Get-MpPerformanceReport (Defender)      
+- [Get-MpPerformanceReport](Get-MpPerformanceReport.md#get-mpperformancereport) (Defender)      
 - Performance Analyzer docs
 
 

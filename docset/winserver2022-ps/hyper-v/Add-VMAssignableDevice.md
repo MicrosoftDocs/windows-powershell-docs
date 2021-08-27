@@ -1,8 +1,11 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-online version:
+ms.date: 08/27/2021
+online version: https://docs.microsoft.com/powershell/module/hyper-v/add-vmassignabledevice?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Add-VMAssignableDevice
 ---
 
 # Add-VMAssignableDevice
@@ -32,7 +35,7 @@ Add-VMAssignableDevice [-VM] <VirtualMachine[]> [-InstancePath <String>] [-Locat
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
@@ -57,7 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-{{ Fill ComputerName Description }}
+Specifies one or more Hyper-v hosts. NetBIOS names, IP addresses, and fully qualified domain names
+are allowable. The default is the local computer. Use localhost or a dot (.) to specify the local
+computer explicitly.
 
 ```yaml
 Type: String[]
@@ -72,7 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies one or more user accounts that have permission to perform this action.
+The default is the current user.
 
 ```yaml
 Type: PSCredential[]

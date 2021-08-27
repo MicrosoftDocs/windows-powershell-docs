@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-ms.date: 12/20/2016
+ms.date: 08/27/2021
 online version: https://docs.microsoft.com/powershell/module/hyper-v/add-vmdvddrive?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-VMDvdDrive
@@ -70,7 +70,7 @@ This parameter is applicable to clustered virtual machines.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,7 +87,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession[]
 Parameter Sets: VMName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,15 +97,14 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies one or more Hyper-v hosts on which the DVD drive is to be added.
-NetBIOS names, IP addresses, and fully qualified domain names are allowable.
-The default is the local computer.
-Use localhost or a dot (.) to specify the local computer explicitly.
+Specifies one or more Hyper-v hosts on which the DVD drive is to be added. NetBIOS names, IP
+addresses, and fully qualified domain names are allowable. The default is the local computer. Use
+localhost or a dot (.) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
 Parameter Sets: VMName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +135,7 @@ If not specified, the number of the first available location on the controller i
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -152,7 +151,7 @@ If not specified, the first IDE controller on which the specified **ControllerLo
 ```yaml
 Type: Int32
 Parameter Sets: VMName, VMObject
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -168,7 +167,7 @@ The default is the current user.
 ```yaml
 Type: PSCredential[]
 Parameter Sets: VMName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +182,7 @@ Passes the added **Microsoft.HyperV.PowerShell.DvdDrive** through to the pipelin
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +197,7 @@ Specifies the full path to the virtual hard disk file or physical hard disk volu
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -213,7 +212,7 @@ Specifies the friendly name of the ISO resource pool to which this DVD drive is 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,7 +227,7 @@ Specifies the virtual machine to which the DVD drive is to be added.
 ```yaml
 Type: VirtualMachine[]
 Parameter Sets: VMObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -243,7 +242,7 @@ Specifies the drive controller to which the DVD drive is to be added.
 ```yaml
 Type: VMDriveController[]
 Parameter Sets: VMDriveController
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -258,7 +257,7 @@ Specifies the name of the virtual machine to which the DVD drive is to be added.
 ```yaml
 Type: String[]
 Parameter Sets: VMName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

@@ -91,7 +91,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession[]
 Parameter Sets: VM Using Name, VMGroup Using Name, VM Using ID, VMGroup Using ID
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,10 +106,11 @@ NetBIOS names, IP addresses, and fully qualified domain names are allowable.
 The default is the local computer.
 Use localhost or a dot (.) to specify the local computer explicitly.
 
+
 ```yaml
 Type: String[]
 Parameter Sets: VM Using Name, VMGroup Using Name, VM Using ID, VMGroup Using ID
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +141,7 @@ The default is the current user.
 ```yaml
 Type: PSCredential[]
 Parameter Sets: VM Using Name, VMGroup Using Name, VM Using ID, VMGroup Using ID
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +156,7 @@ Specifies the unique ID of the virtual machine group to which this cmdlet adds v
 ```yaml
 Type: Guid
 Parameter Sets: VM Using ID, VMGroup Using ID
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -170,7 +171,7 @@ Specifies the name of the virtual machine group to which this cmdlet adds virtua
 ```yaml
 Type: String
 Parameter Sets: VM Using Name, VMGroup Using Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -185,7 +186,7 @@ Indicates that this cmdlet returns the **Microsoft.HyperV.PowerShell.VMGroup** o
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +202,7 @@ To obtain a **VirtualMachine** object, use the **Get-VM** cmdlet.
 ```yaml
 Type: VirtualMachine[]
 Parameter Sets: VM Using Name, VM Using ID, VM Using InputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -217,7 +218,7 @@ To obtain a **VMGroup** object, use the **Get-VMGroup** cmdlet.
 ```yaml
 Type: VMGroup
 Parameter Sets: VMGroup Using InputObject, VM Using InputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -232,7 +233,7 @@ Specifies an array of virtual machine groups that this cmdlet adds to a virtual 
 ```yaml
 Type: VMGroup[]
 Parameter Sets: VMGroup Using Name, VMGroup Using ID, VMGroup Using InputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

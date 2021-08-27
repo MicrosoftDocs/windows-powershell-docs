@@ -42,7 +42,7 @@ Enables virtual machine eventing, suppressing the confirmation prompt.
 ```yaml
 Type: CimSession[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -60,7 +60,7 @@ Use localhost or a dot (.) to specify the local computer explicitly.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,12 +85,13 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-
+Specifies one or more user accounts that have permission to perform this action.
+The default is the current user.
 
 ```yaml
 Type: PSCredential[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +107,7 @@ Specifies that the confirmation prompt is to be suppressed.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

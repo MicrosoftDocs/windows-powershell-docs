@@ -208,11 +208,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### IUpdateServer
+### Microsoft.UpdateServices.Administration.IUpdateServer
 
 ## OUTPUTS
 
-### IDynamicCategory
+### System.Object
 
 ## NOTES
 

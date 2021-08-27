@@ -31,7 +31,7 @@ For more information on the Performance analyzer, see Performance Analyzer docs 
 > [!IMPORTANT]
 > This cmdlet requires elevated administrator privileges.
 
-## Supported OS versions
+**Supported OS versions**
 
 Windows Version 10 and higher.
 

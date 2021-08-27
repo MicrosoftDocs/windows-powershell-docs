@@ -52,7 +52,7 @@ The performance analyzer provides an insight into problematic files that could c
 
 For more information on the Performance analyzer, see Performance Analyzer docs <NEED THE HYPERLINK>.
 
-## Supported OS versions
+**Supported OS versions**
 
 Windows Version 10 and higher.
 

@@ -77,7 +77,7 @@ The final command sets the value of the printer configuration to the modified va
 
 ### Example 3: Set the default paper size of all printers
 ```
-PS C:\>$Printers = Get-Printer * Foreach ($Printer in $Printers){     Set-PrintConfiguration -PrinterName $Printer.name -PaperSize A4}
+PS C:\>$Printers = Get-Printer ; Foreach ($Printer in $Printers){     Set-PrintConfiguration -PrinterName $Printer.name -PaperSize A4}
 ```
 
 This command gets all the printers into a variable $Printers and then loops through all the printers and displays the properties.

@@ -67,9 +67,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### PSObject
+### System.Object
 A **PSObject** that contains the name and AppID for each app found in the Start screen for the user, as in this output example:
 
 Output Example: 

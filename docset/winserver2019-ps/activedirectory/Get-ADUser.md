@@ -194,7 +194,7 @@ Note: For String parameter type, PowerShell will cast the filter query to a stri
 enclosed using single quotation marks:
 **Get-ADUser -Filter "Name -like '$UserName'"**
 or two pairs of double quotes:
-**Get-ADUser -Filter "Name -like ""$UserName"""**
+**Get-ADUser -Filter "Name -like ""$UserName"""**.
 
 On the contrary, if curly braces are used to enclose the filter, the variable should not be quoted at all: **Get-ADUser -Filter {Name -like $UserName}**.
 

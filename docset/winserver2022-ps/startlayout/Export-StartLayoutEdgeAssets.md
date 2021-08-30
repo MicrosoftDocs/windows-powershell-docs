@@ -1,14 +1,16 @@
 ---
+description: The Export-StartLayoutEdgeAssets cmdlet exports secondary tiles for Microsoft Edge that display a custom image.
 external help file: Microsoft.Windows.StartLayout.Commands.dll-Help.xml
 Module Name: StartLayout
-online version:
+ms.date: 09/03/2021
+online version: https://docs.microsoft.com/powershell/module/startlayout/export-startlayoutedgeassets?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
 # Export-StartLayoutEdgeAssets
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Exports secondary tiles for Microsoft Edge that display a custom image.
 
 ## SYNTAX
 
@@ -23,21 +25,26 @@ Export-StartLayoutEdgeAssets -LiteralPath <String> [-WhatIf] [-Confirm] [<Common
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Export-StartLayoutEdgeAssets** cmdlet exports secondary tiles for Microsoft Edge that display a custom image.
+Use [Export-StartLayout](./Export-StartLayout.md) and [Import-StartLayout](./Import-StartLayout.md) along with the current cmdlet to import the assets.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Export assets.
 ```powershell
-PS C:\> {{ Add example code here }}
+Export-StartLayoutEdgeAssets -Path "C:\Layouts\assets.xml"
 ```
 
-{{ Add example description here }}
+This example exports the assets to the file `assets.xml` in the C:\Layouts folder.
+This cmdlet does not append `.xml` to a file name.
 
 ## PARAMETERS
 
 ### -LiteralPath
-{{ Fill LiteralPath Description }}
+Specifies a literal path for an asset file.
+Include the `.xml` file name extension.
+This parameter does not accept the wildcard character (*).
+If the path includes an escape character (\\), enclose the string in single quotes (').
 
 ```yaml
 Type: String
@@ -52,7 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{ Fill Path Description }}
+Specifies an absolute path for an asset file.
+Include the `.xml` file name extension.
+This parameter does not accept the wildcard character (*).
 
 ```yaml
 Type: String
@@ -110,3 +119,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-StartLayout](./Export-StartLayout.md)
+
+[Get-StartApps](Get-StartApps.md)
+
+[Import-StartLayout](./Import-StartLayout.md)

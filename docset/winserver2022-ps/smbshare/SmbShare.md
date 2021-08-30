@@ -45,7 +45,7 @@ Retrieves the connections established from the SMB client to the SMB servers.
 Gets the constrained delegation authorizations for an SMB client.
 
 ### [Get-SmbGlobalMapping](./Get-SmbGlobalMapping.md)
-{{ Fill in the Synopsis }}
+Retrieves the properties of an SMB global mapping.
 
 ### [Get-SmbMapping](./Get-SmbMapping.md)
 Retrieves the SMB client directory mappings created for a server.
@@ -60,10 +60,10 @@ Retrieves the constraints that define how the SMB client uses network interfaces
 Retrieves basic information about the files that are open on behalf of the clients of the SMB server.
 
 ### [Get-SmbServerCertificateMapping](./Get-SmbServerCertificateMapping.md)
-{{ Fill in the Synopsis }}
+Retrieves a certificate association with the SMB server for SMB over QUIC.
 
 ### [Get-SmbServerCertProps](./Get-SmbServerCertProps.md)
-{{ Fill in the Synopsis }}
+Retrieves an SMB over QUIC-mapped certificate’s properties and tests certificate validity.
 
 ### [Get-SmbServerConfiguration](./Get-SmbServerConfiguration.md)
 Retrieves the SMB server configuration.
@@ -84,7 +84,7 @@ Retrieves the ACL of the SMB share.
 Adds an allow ACE for a trustee to the security descriptor of the SMB share.
 
 ### [New-SmbGlobalMapping](./New-SmbGlobalMapping.md)
-{{ Fill in the Synopsis }}
+Creates an SMB global mapping.
 
 ### [New-SmbMapping](./New-SmbMapping.md)
 Creates an SMB mapping.
@@ -93,7 +93,7 @@ Creates an SMB mapping.
 Creates an SMB multi-channel constraint for the specified server.
 
 ### [New-SmbServerCertificateMapping](./New-SmbServerCertificateMapping.md)
-{{ Fill in the Synopsis }}
+Creates a certificate association with the SMB server for SMB over QUIC.
 
 ### [New-SmbShare](./New-SmbShare.md)
 Creates an SMB share.
@@ -102,10 +102,10 @@ Creates an SMB share.
 Removes SMB bandwidth caps.
 
 ### [Remove-SmbComponent](./Remove-SmbComponent.md)
-{{ Fill in the Synopsis }}
+Removes SMB1 components.
 
 ### [Remove-SmbGlobalMapping](./Remove-SmbGlobalMapping.md)
-{{ Fill in the Synopsis }}
+Removes an SMB global mapping to an SMB share.
 
 ### [Remove-SmbMapping](./Remove-SmbMapping.md)
 Removes the SMB mapping to an SMB share.
@@ -114,7 +114,7 @@ Removes the SMB mapping to an SMB share.
 Removes SMB multi-channel constraints.
 
 ### [Remove-SmbServerCertificateMapping](./Remove-SmbServerCertificateMapping.md)
-{{ Fill in the Synopsis }}
+Removes a certificate mapping from the SMB server for SMB over QUIC.
 
 ### [Remove-SmbShare](./Remove-SmbShare.md)
 Deletes the specified SMB shares.
@@ -132,7 +132,7 @@ Sets the SMB client configuration.
 Sets the ACL for the file system folder to match the ACL used by an SMB share.
 
 ### [Set-SmbServerCertificateMapping](./Set-SmbServerCertificateMapping.md)
-{{ Fill in the Synopsis }}
+Modifies a certificate association with the SMB server for SMB over QUIC.
 
 ### [Set-SmbServerConfiguration](./Set-SmbServerConfiguration.md)
 Sets the Server Message Block (SMB) server configuration.

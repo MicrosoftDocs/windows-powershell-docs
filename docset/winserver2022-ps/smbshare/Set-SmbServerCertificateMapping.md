@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SmbServerCertificateMapping
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Modifies a certificate association with the SMB server for SMB over QUIC.
 
 ## SYNTAX
 
@@ -27,21 +27,21 @@ Set-SmbServerCertificateMapping -InputObject <CimInstance[]> [-Flags <Flags>] [-
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Set-SmbServerCertificateMapping cmdlet modifies a certificate’s association to the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. This cmdlet is not used for Windows or other Windows Server editions. For more information, review SMB over QUIC.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-SmbServerCertificateMapping -Name 2022-ae-02.corp.contoso.com -Thumbprint 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F -StoreName my -Flags AllowNamedPipe
 ```
 
-{{ Add example description here }}
+This command specifies that Named Pipes be enabled for the SMB over QUIC endpoint, overriding the default behavior where Named Pipes are disabled for increased security.
 
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -71,7 +71,11 @@ Accept wildcard characters: False
 ```
 
 ### -Flags
-{{ Fill Flags Description }}
+Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter are: 
+
+- **None** Remove all flags
+- **NamedPipes** Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides value of RestrictNamedPipeAccessOverQuic) 
+- **DefaultCert** Not used
 
 ```yaml
 Type: Flags
@@ -87,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -102,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies a fully-qualified DNS name or NetBIOS name that must match the certificate’s subject name or an entry in the certificate’s subject alternative names.
 
 ```yaml
 Type: String[]
@@ -117,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -147,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
@@ -162,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-{{ Fill Thumbprint Description }}
+Specifies the thumbprint value of the certificate.
 
 ```yaml
 Type: String

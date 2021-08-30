@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressData
-{{ Fill CompressData Description }}
+Indicates that SMB compression is requested for all client connections that support it.
 
 ```yaml
 Type: Boolean
@@ -294,7 +294,12 @@ Accept wildcard characters: False
 ```
 
 ### -LeasingMode
-{{ Fill LeasingMode Description }}
+
+Specifies SMB leasing and oplock behaviors for application compatibility. The acceptable values for this parameter are: 
+
+- **Full** Use default lease and oplock behaviors from SMB3 
+- **Shared** Grant read-caching lease but not write or handle-caching 
+- **None** = No oplocks or leases, behave like SMB1 (not recommended)
 
 ```yaml
 Type: LeasingMode

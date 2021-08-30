@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableSmbEncryptionOnSecureConnection
-{{ Fill DisableSmbEncryptionOnSecureConnection Description }}
+Specifies that SMB encryption will also be used if configured on the SMB server. By default, QUIC encryption only is used in order to avoid double encryption affecting performance unnecessarily. If a client requires SMB encryption using Set-SmbClientConfiguration -ForceSMBEncryptionOverQuic $true then DisableSmbEncryptionOnSecureConnection value is ignored and SMB encryption occurs.
 
 ```yaml
 Type: Boolean
@@ -409,7 +409,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSMBQUIC
-{{ Fill EnableSMBQUIC Description }}
+Specifies that the SMB over QUIC protocol is enabled.
 
 ```yaml
 Type: Boolean
@@ -664,7 +664,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictNamedpipeAccessViaQuic
-{{ Fill RestrictNamedpipeAccessViaQuic Description }}
+Specifies that named pipes are allowed when using SMB over QUIC. A value of $TRUE prevents use of named pipes and is the default.
 
 ```yaml
 Type: Boolean
@@ -741,6 +741,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
 If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

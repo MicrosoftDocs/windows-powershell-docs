@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-SmbComponent
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes SMB1 components.
 
 ## SYNTAX
 
@@ -18,21 +18,21 @@ Remove-SmbComponent [-Name] <String[]> [-CimSession <CimSession[]>] [-ThrottleLi
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Remove-SmbComponent cmdlet removes SMB1 components. SMB1 is a deprecated and unsafe protocol that’s no longer installed by default in most versions of Windows and Windows Server. For more information, review SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-SmbComponent -Name SMB1Protocol
 ```
 
-{{ Add example description here }}
+This command removals all SMB1 components, including SMB1 server, SMB1 client, and the SMB1 automatic removal service.
 
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -62,7 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the SMB1 component to remove. The acceptable values for this parameter are: 
+
+- **SMB1Protocol** Remove all SMB1 components 
+- **SMB1Protocol-Client** Remove the SMB1 client components 
+- **SMB1Protocol-Server** Remove the SMB1 server components
+- **SMB1Protocol-Deprecation** Remove the SMB1 automatic removal service component (only applies to Windows, not Windows Server) 
 
 ```yaml
 Type: String[]
@@ -77,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32

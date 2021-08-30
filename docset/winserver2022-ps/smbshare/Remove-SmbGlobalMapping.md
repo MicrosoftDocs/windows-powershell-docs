@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-SmbGlobalMapping
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes an SMB global mapping to an SMB share.
 
 ## SYNTAX
 
@@ -26,21 +26,21 @@ Remove-SmbGlobalMapping -InputObject <CimInstance[]> [-Force] [-CimSession <CimS
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Remove-SmbGlobalMapping cmdlet removes the Server Message Block (SMB)global mapping to an SMB share.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-SmbGlobalMapping -LocalPath g:
 ```
 
-{{ Add example description here }}
+This command removes an SMB global mapping for the “g:” drive to an SMB share.
 
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalPath
-{{ Fill LocalPath Description }}
+Specifies the local driver letter to which the remote path is mapped.
 
 ```yaml
 Type: String[]
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePath
-{{ Fill RemotePath Description }}
+Specifies the remote path that is accessed from this computer.
 
 ```yaml
 Type: String[]
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32

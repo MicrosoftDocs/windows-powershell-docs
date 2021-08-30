@@ -101,7 +101,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -GlobalMapping
-{{ Fill GlobalMapping Description }}
+Removes an SMB global mapping to an SMB share.
 
 ```yaml
 Type: SwitchParameter

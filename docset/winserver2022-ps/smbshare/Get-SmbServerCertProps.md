@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SmbServerCertProps
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves an SMB over QUIC-mapped certificate’s properties and tests certificate validity.
 
 ## SYNTAX
 
@@ -17,21 +17,21 @@ Get-SmbServerCertProps [-Name] <String> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Get- SmbServerCertProps cmdlet retrieves the properties of a certificate associated with the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. It also tests the validity of the certificate. This cmdlet is not used for Windows or other Windows Server editions. For more information, review SMB over QUIC.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-SmbServerCertProps -Name 2022-ae-02.corp.contoso.com
 ```
 
-{{ Add example description here }}
+This command retrieves the properties and validity of the “2022-ae-02.corp.contoso.com” SMB over QUIC endpoint certificate mapping.
 
 ## PARAMETERS
 
 ### -Force
-{{ Fill Force Description }}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies a fully-qualified DNS name or NetBIOS name that must match the certificate’s subject name or an entry in the certificate’s subject alternative names.
 
 ```yaml
 Type: String

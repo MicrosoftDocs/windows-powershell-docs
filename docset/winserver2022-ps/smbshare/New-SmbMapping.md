@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressNetworkTraffic
-{{ Fill CompressNetworkTraffic Description }}
+Indicates that SMB compression is requested for the mapped drive if the SMB server supports it.
 
 ```yaml
 Type: Boolean
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalMapping
-{{ Fill GlobalMapping Description }}
+Indicates that the SMB mapping is global instead of user-specific and is equivalent to using New-SmbGlobalMapping without any explicit allow or deny settings.
 
 ```yaml
 Type: SwitchParameter
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireIntegrity
-{{ Fill RequireIntegrity Description }}
+Indicates that SMB signing is required for the mapped drive.
 
 ```yaml
 Type: Boolean
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequirePrivacy
-{{ Fill RequirePrivacy Description }}
+Indicates that SMB encryption is required for the mapped drive.
 
 ```yaml
 Type: Boolean
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateCheck
-{{ Fill SkipCertificateCheck Description }}
+Indicates that the client does not need to trust the server certificate’s issuer in order to connect using SMB over QUIC.
 
 ```yaml
 Type: SwitchParameter
@@ -255,7 +255,11 @@ Accept wildcard characters: False
 ```
 
 ### -TransportType
-{{ Fill TransportType Description }}
+Specifies the network transport used by SMB. The acceptable values for this parameter are: 
+
+- **TCP** Use TCP network transport 
+- **QUIC** Use QUIC network transport 
+- **None** Use default transport behavior (first try TCP then try QUIC)
 
 ```yaml
 Type: TransportType
@@ -285,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseWriteThrough
-{{ Fill UseWriteThrough Description }}
+Indicates that forced unit access (“write through”) is required and bypasses all OS caches, forcing IO to disk.
 
 ```yaml
 Type: Boolean

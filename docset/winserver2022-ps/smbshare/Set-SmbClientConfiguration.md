@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompression
-{{ Fill DisableCompression Description }}
+Specifies that the SMB client ignores all requests for compression from applications or SMB servers.
 
 ```yaml
 Type: Boolean
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceSMBEncryptionOverQuic
-{{ Fill ForceSMBEncryptionOverQuic Description }}
+Specifies that the SMB client uses SMB encryption inside of the SMB over QUIC TLS 1.3 encrypted tunnel even if the SMB server does not require it.
 
 ```yaml
 Type: Boolean
@@ -478,7 +478,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateCheck
-{{ Fill SkipCertificateCheck Description }}
+Specifies that the SMB client not trust the SMB over QUIC SMB server certificate issuer. Required when using a self-signed certificate.
 
 ```yaml
 Type: Boolean

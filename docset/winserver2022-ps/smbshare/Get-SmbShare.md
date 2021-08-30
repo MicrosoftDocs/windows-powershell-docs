@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressData
-{{ Fill CompressData Description }}
+Indicates that the shares being enumerated should request compression from clients.
 
 ```yaml
 Type: Boolean[]
@@ -312,7 +312,7 @@ Accept wildcard characters: False
 ```
 
 ### -LeasingMode
-{{ Fill LeasingMode Description }}
+Specifies SMB leasing and oplock behaviors
 
 ```yaml
 Type: LeasingMode[]

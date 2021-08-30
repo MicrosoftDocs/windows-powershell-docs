@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-SmbServerCertificateMapping
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes a certificate mapping from the SMB server for SMB over QUIC.
 
 ## SYNTAX
 
@@ -27,21 +27,21 @@ Remove-SmbServerCertificateMapping -InputObject <CimInstance[]> [-Force] [-CimSe
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Remove-SmbServerCertificateMapping cmdlet removes a certificate’s mapping to the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. This cmdlet is not used for Windows or other Windows Server editions. For more information, review SMB over QUIC.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-SmbServerCertificateMapping
 ```
 
-{{ Add example description here }}
+This command removes a certificate mapping for SMB server edge endpoint “fs2.contoso.com” with a specific certificate thumbprint.
 
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-{{ Fill DisplayName Description }}
+Specifies a friendly name to display for the mapping.
 
 ```yaml
 Type: String[]
@@ -86,7 +86,11 @@ Accept wildcard characters: False
 ```
 
 ### -Flags
-{{ Fill Flags Description }}
+Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter are: 
+
+- **None** Remove all flags 
+- **NamedPipes** Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides value of RestrictNamedPipeAccessOverQuic) 
+- **DefaultCert** Not used
 
 ```yaml
 Type: Flags[]
@@ -102,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -117,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeHidden
-{{ Fill IncludeHidden Description }}
+Not used.
 
 ```yaml
 Type: SwitchParameter
@@ -147,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: String[]
@@ -162,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -177,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreName
-{{ Fill StoreName Description }}
+Specifies the path to the certificate store for the certificate. The recommended value is “My” for the localmachine personal store.
 
 ```yaml
 Type: String[]
@@ -192,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Subject
-{{ Fill Subject Description }}
+Specifies the subject name of the certificate.
 
 ```yaml
 Type: String[]
@@ -207,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
@@ -222,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-{{ Fill Thumbprint Description }}
+Specifies the thumbprint value of the certificate.
 
 ```yaml
 Type: String[]
@@ -237,7 +241,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-{{ Fill Type Description }}
+**QUIC** Certificate mapping is for SMB over QUIC
 
 ```yaml
 Type: Type[]

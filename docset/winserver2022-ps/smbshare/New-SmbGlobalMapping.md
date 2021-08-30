@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-SmbGlobalMapping
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Specifies SMB leasing and oplock behaviors
 
 ## SYNTAX
 
@@ -20,21 +20,21 @@ New-SmbGlobalMapping [[-LocalPath] <String>] [-RemotePath] <String> -Credential 
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The New-SmbGlobalMapping cmdlet creates a Server Message Block (SMB) global mapping on the SMB client to an SMB share. Global mappings allow all users to use the same mapping. Its primary use is for Windows Containers.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $creds = Get-Credential New-SmbGlobalMapping -RemotePath \\fs1.contoso.com\public -Credential $creds -LocalPath G:
 ```
 
-{{ Add example description here }}
+This command will gather the credentials for the global mapping. It then maps the remote share path “\\fs1.contoso.com\public” to the “G:” drive letter. Any users, applications, or containers can now access data on the G: drive.
 
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a credential gathered with Get-Credential
 
 ```yaml
 Type: PSCredential
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -DenyAccess
-{{ Fill DenyAccess Description }}
+Specifies which accounts are denied access to the SMB mapping. Multiple accounts can be specified by supplying a comma-separated list. For example: -NoAccess "NT AUTHORITY\SYSTEM", "contoso\ned"
 
 ```yaml
 Type: String[]
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -FullAccess
-{{ Fill FullAccess Description }}
+Specifies which accounts are granted full permission to access the SMB mapping. Use a comma-separated list to specify multiple accounts. For example: -FullAccess "NT AUTHORITY\SYSTEM", "contoso\ned"
 
 ```yaml
 Type: String[]
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalPath
-{{ Fill LocalPath Description }}
+Specifies the local driver letter to which the remote path is mapped.
 
 ```yaml
 Type: String
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Persistent
-{{ Fill Persistent Description }}
+Indicates that this connection is recreated after reboot
 
 ```yaml
 Type: Boolean
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePath
-{{ Fill RemotePath Description }}
+Specifies the remote path that is accessed from this computer.
 
 ```yaml
 Type: String
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireIntegrity
-{{ Fill RequireIntegrity Description }}
+Indicates that SMB signing is required for the mapped drive.
 
 ```yaml
 Type: Boolean
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequirePrivacy
-{{ Fill RequirePrivacy Description }}
+Indicates that SMB encryption is required for the mapped drive.
 
 ```yaml
 Type: Boolean
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseWriteThrough
-{{ Fill UseWriteThrough Description }}
+Indicates that forced unit access (“write through”) is required and bypasses all OS caches, forcing IO to disk.
 
 ```yaml
 Type: Boolean

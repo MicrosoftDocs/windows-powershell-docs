@@ -67,16 +67,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
 
-### System.Object
+### PSObject
 A **PSObject** that contains the name and AppID for each app found in the Start screen for the user, as in this output example:
 
 Output Example: 
 
-```console
 Name AppID
 ---- -----
 
@@ -89,7 +86,6 @@ Fabrikam Initializer Fabrikam.Initializer.1
 A.
 Datum Connector Contoso.Datum.Connector
 Proseware Design Pro Proseware.Design.3
-```
 
 ## NOTES
 

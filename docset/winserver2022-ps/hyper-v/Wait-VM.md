@@ -35,7 +35,7 @@ Wait-VM [-VM] <VirtualMachine[]> [-AsJob] [-Passthru] [-For <WaitVMTypes>] [-Del
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

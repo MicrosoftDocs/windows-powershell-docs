@@ -44,7 +44,7 @@ Set-VMPartitionableGpu [-Passthru] [-Name <String>] [-PartitionCount <UInt16>] [
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

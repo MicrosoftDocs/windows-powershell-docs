@@ -33,7 +33,7 @@ Add-VMPmemController [-VM] <VirtualMachine[]> [-Passthru] [-WhatIf] [-Confirm] [
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

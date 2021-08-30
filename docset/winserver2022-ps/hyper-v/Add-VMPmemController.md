@@ -106,7 +106,9 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-{{ Fill VM Description }}
+Specifies an array of virtual machine objects.
+
+To obtain a virtual machine object, use the **Get-VM** cmdlet.
 
 ```yaml
 Type: VirtualMachine[]

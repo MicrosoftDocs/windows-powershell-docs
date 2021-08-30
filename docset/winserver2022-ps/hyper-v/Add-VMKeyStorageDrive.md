@@ -77,7 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerLocation
-{{ Fill ControllerLocation Description }}
+Specifies the number of the location on the controller.
+If not specified, the number of the first available location on the controller is used.
 
 ```yaml
 Type: Int32
@@ -92,7 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerNumber
-{{ Fill ControllerNumber Description }}
+Specifies the number of the controller.
+
+If not specified, this parameter assumes the value of the first available controller at the location specified in the **ControllerLocation** parameter.
 
 ```yaml
 Type: Int32
@@ -138,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourcePoolName
-{{ Fill ResourcePoolName Description }}
+Specifies the friendly name of a resource pool.
 
 ```yaml
 Type: String
@@ -153,7 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-{{ Fill VM Description }}
+Specifies an array of virtual machine objects.
+
+To obtain a virtual machine object, use the **Get-VM** cmdlet.
 
 ```yaml
 Type: VirtualMachine[]

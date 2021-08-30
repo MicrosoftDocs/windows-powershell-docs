@@ -82,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerLocation
-{{ Fill ControllerLocation Description }}
+Specifies the number of the location on the controller.
+If not specified, the number of the first available location on the controller is used.
 
 ```yaml
 Type: Int32
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerNumber
-{{ Fill ControllerNumber Description }}
+Specifies the number of the controller.
 
 ```yaml
 Type: Int32
@@ -128,7 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-{{ Fill VM Description }}
+Specifies an array of virtual machine objects.
+
+To obtain a virtual machine object, use the **Get-VM** cmdlet.
 
 ```yaml
 Type: VirtualMachine[]

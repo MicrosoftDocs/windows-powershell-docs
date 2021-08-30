@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourcePoolName
-{{ Fill ResourcePoolName Description }}
+Specifies the friendly name of a resource pool.
 
 ```yaml
 Type: String
@@ -168,8 +168,9 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-{{ Fill VM Description }}
+Specifies an array of virtual machine objects.
 
+To obtain a virtual machine object, use the **Get-VM** cmdlet.
 ```yaml
 Type: VirtualMachine[]
 Parameter Sets: VMObject

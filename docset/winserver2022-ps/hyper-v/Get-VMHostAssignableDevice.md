@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourcePoolName
-{{ Fill ResourcePoolName Description }}
+Specifies the friendly name of a resource pool.
 
 ```yaml
 Type: String[]

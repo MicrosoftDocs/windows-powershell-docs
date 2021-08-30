@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourcePoolName
-{{ Fill ResourcePoolName Description }}
+Specifies the friendly name of a resource pool.
 
 ```yaml
 Type: String[]

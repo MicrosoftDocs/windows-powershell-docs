@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementOS
-{{ Fill ManagementOS Description }}
+Specifies that the cmdlet operates on the parent or host operating system.
 
 ```yaml
 Type: SwitchParameter

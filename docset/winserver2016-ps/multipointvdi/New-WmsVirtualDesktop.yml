@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a virtual desktop.
+module: MultipointVdi
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WmsVirtualDesktop
+  href: ./Get-WmsVirtualDesktop.yml
+- text: Import-WmsVirtualDesktop
+  href: ./Import-WmsVirtualDesktop.yml
+- text: Open-WmsVirtualDesktop
+  href: ./Open-WmsVirtualDesktop.yml
+syntaxes:
+- >-
+  New-WmsVirtualDesktop [-StationId] <UInt32[]> -InputFilePath <String> [-VhdLocation <String>]
+
+   -TemplatePrefix <String> [-Domain <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-WmsVirtualDesktop [-All] -InputFilePath <String> [-VhdLocation <String>] -TemplatePrefix <String>
+
+   [-Domain <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a virtual desktop for all stations on a computer'
+  code: |-
+    PS C:\> New-WmsVirtualDesktop -All -InputFilePath "C:\Images\Windows10Enterprise.iso" -TemplatePrefix "MyVdiImage" -VhdLocation "C:\MultiPointVhdImages"
+  description: |-
+    This command creates a virtual desktop from the template in C:\Images\Windows10Enterprise.iso for all of the stations on a computer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Indicates that this operation creates a virtual desktop for all stations.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies the name of the Active Directory domain to contain the virtual desktop.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InputFilePath
+  isRequired: true
+  description: |+
+    Specifies the full path of the input file to use for the virtual desktop template.
+    Valid file types are .wim, .iso, or .vhd that contains the version of Windows to use as the guest operating system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StationId
+  isRequired: true
+  description: |+
+    Specifies an array of station IDs for which to create a virtual desktop.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TemplatePrefix
+  isRequired: true
+  description: |+
+    Specifies the prefix to use for the name of the virtual machine template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VhdLocation
+  description: |+
+    Specifies the path to store the template and station .vhd files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MultipointVdi.New-WmsVirtualDesktop
+name: New-WmsVirtualDesktop
+description: |-
+  The **New-WmsVirtualDesktop** cmdlet creates a virtual desktop from the specified virtual desktop template for a specified MultiPoint station or all stations, and replaces any existing stations in the process.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPointVdi.dll-Help.xml
+  Module Name: MultipointVdi
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipointvdi/new-wmsvirtualdesktop?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WmsVirtualDesktop

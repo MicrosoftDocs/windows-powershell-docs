@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears assigned access configured account settings.
+module: AssignedAccess
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Get-AssignedAccess
+  href: ./Get-AssignedAccess.yml
+- text: Set-AssignedAccess
+  href: ./Set-AssignedAccess.yml
+syntaxes:
+- Clear-AssignedAccess [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Clear assigned access configured settings'
+  code: |-
+    PS C:\> Clear-AssignedAccess
+  description: |-
+    This command assigned access configured account settings  and returns the user to default settings.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AssignedAccess.Clear-AssignedAccess
+name: Clear-AssignedAccess
+description: |-
+  The **Clear-AssignedAccess** cmdlet clears assigned access configured account settings and returns the user to default settings.
+
+  If a user is signed-in or the computer has a PS/2 keyboard, you must restart the computer to apply the changes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: AssignedAccess-help.xml
+  Module Name: AssignedAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/assignedaccess/clear-assignedaccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-AssignedAccess

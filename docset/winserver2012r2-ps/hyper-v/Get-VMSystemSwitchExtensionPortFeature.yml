@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the port-level features supported by virtual switch extensions on one or more Hyper-V hosts.
+module: Hyper-V
+notes: ""
+syntaxes:
+- >-
+  Get-VMSystemSwitchExtensionPortFeature [-FeatureName <String[]>] [-FeatureId <Guid[]>]
+
+   [-ExtensionName <String[]>] [-SystemSwitchExtension <VMSystemSwitchExtension[]>] [-ComputerName <String[]>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMSystemSwitchExtensionPortFeature
+  description: |-
+    Gets all port-level features, supported by various virtual switch extensions installed on the system, that can be configured on a virtual network adapter on Hyper-V.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which the available port-level features are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExtensionName
+  description: |+
+    Specifies one or more extension names for which the features are to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FeatureId
+  description: |+
+    Specifies the unique identifier of the feature to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FeatureName
+  description: |+
+    Specifies the name of the feature to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSystemSwitchExtension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SystemSwitchExtension
+  description: |+
+    Specifies one or more system extensions for which the features are to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMSystemSwitchExtensionPortFeature
+name: Get-VMSystemSwitchExtensionPortFeature
+description: |-
+  The **Get-VMSystemSwitchExtensionPortFeature** cmdlet gets the port-level features supported by virtual switch extensions on one or more Hyper-V hosts.
+  The returned feature object will contain default values for the feature.
+  The object can be used to apply the configuration on specific ports using the Add-VmSwitchExtensionPortFeature command.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmsystemswitchextensionportfeature?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMSystemSwitchExtensionPortFeature

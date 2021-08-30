@@ -1,0 +1,242 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the properties of a relying party trust for a non-claims-aware web application or service.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Add-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Disable-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Disable-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Enable-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Enable-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Get-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Get-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Remove-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Remove-AdfsNonClaimsAwareRelyingPartyTrust.yml
+syntaxes:
+- >-
+  Set-AdfsNonClaimsAwareRelyingPartyTrust [-AlwaysRequireAuthentication] [-Identifier <String[]>]
+
+   [-IssuanceAuthorizationRules <String>] [-IssuanceAuthorizationRulesFile <String>] [-Name <String>]
+
+   [-Notes <String>] [-PassThru] [-AdditionalAuthenticationRules <String>]
+
+   [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
+
+   [-AccessControlPolicyParameters <Object>] [-ClaimsProviderName <String[]>] [-TargetName] <String> [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsNonClaimsAwareRelyingPartyTrust [-AlwaysRequireAuthentication] [-Identifier <String[]>]
+
+   [-IssuanceAuthorizationRules <String>] [-IssuanceAuthorizationRulesFile <String>] [-Name <String>]
+
+   [-Notes <String>] [-PassThru] [-AdditionalAuthenticationRules <String>]
+
+   [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
+
+   [-AccessControlPolicyParameters <Object>] [-ClaimsProviderName <String[]>] -TargetIdentifier <String>
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsNonClaimsAwareRelyingPartyTrust [-AlwaysRequireAuthentication] [-Identifier <String[]>]
+
+   [-IssuanceAuthorizationRules <String>] [-IssuanceAuthorizationRulesFile <String>] [-Name <String>]
+
+   [-Notes <String>] [-PassThru] [-AdditionalAuthenticationRules <String>]
+
+   [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
+
+   [-AccessControlPolicyParameters <Object>] [-ClaimsProviderName <String[]>]
+
+   -TargetNonClaimsAwareRelyingPartyTrust <NonClaimsAwareRelyingPartyTrust> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the non-claims-aware relying party trust to always force authentication'
+  code: |-
+    PS C:\> Set-AdfsNonClaimsAwareRelyingPartyTrust -TargetName "ExpenseReport" -AlwaysRequireAuthentication $True
+  description: |-
+    This command sets the non-claims-aware relying party trust for the application named ExpenseReport to always force authentication.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyName
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyParameters
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRules
+  description: |+
+    Specifies rules for additional authentication for the relying party.
+    For more information about the claims language for rules, see [Understanding Claim Rule Language in AD FS 2.0 & Higher](https://social.technet.microsoft.com/wiki/contents/articles/4792.understanding-claim-rule-language-in-ad-fs-2-0-higher.aspx) on TechNet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRulesFile
+  description: |+
+    Specifies the file that contains all the rules for additional authentication for the relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AlwaysRequireAuthentication
+  description: |+
+    Indicates that access requires authentication, even if this relying party has previously authenticated credentials for access.
+    Specify this parameter to require users to always supply credentials to access sensitive resources.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClaimsProviderName
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identifier
+  description: |+
+    Specifies an array of unique identifiers for the non-claims-aware relying party trust.
+    No other trust can use an identifier from this list.
+    As common practice, you can use Uniform Resource Identifiers (URIs) as unique identifiers for a relying party trust, or you can use any string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceAuthorizationRules
+  description: |+
+    Specifies the authorization rules for issuing claims to the relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceAuthorizationRulesFile
+  description: |+
+    Specifies the file that contains the authorization rules for issuing claims to the relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies a name.
+    The cmdlet adds the Web Application Proxy relying party trust that has the display name that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Specifies a name.
+    The cmdlet adds the Web Application Proxy relying party trust that has the display name that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the non-claims-aware relying party trust to modify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the non-claims-aware relying party trust to modify.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="NonClaimsAwareRelyingPartyTrust" data-throw-if-not-resolved="False" />
+  name: TargetNonClaimsAwareRelyingPartyTrust
+  isRequired: true
+  description: |+
+    Specifies a **NonClaimsAwareRelyingPartyTrust** object.
+    The cmdlet removes the non-claims-aware relying party trust that you specify.
+    To obtain a **NonClaimsAwareRelyingPartyTrust**, use the **Get-AdfsNonClaimsAwareRelyingPartyTrust** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsNonClaimsAwareRelyingPartyTrust
+name: Set-AdfsNonClaimsAwareRelyingPartyTrust
+description: |-
+  The **Set-AdfsNonClaimsAwareRelyingPartyTrust** cmdlet sets properties on a relying party trust for a non-claims-aware web application or service.
+
+  A non-claims aware relying party trust is a relying party trust for web applications or services that do not rely directly on Active Directory Federation Services (AD FS) to issue tokens, but instead rely on a third party that accesses such tokens and transforms them into what applications understand.
+  A non-claims-aware relying party trust is useful for defining authentication and authorization policies for web applications and services that do not rely on AD FS tokens.
+  The Web Application Proxy requests such tokens for pre-authentication to web applications or services that have corresponding non-claims-aware relying party trusts for requests that come from outside the network through the proxy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsnonclaimsawarerelyingpartytrust?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsNonClaimsAwareRelyingPartyTrust

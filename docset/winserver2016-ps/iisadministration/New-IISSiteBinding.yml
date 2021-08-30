@@ -1,0 +1,160 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new binding to an existing Website. This cmdlet has been introduced in version 1.1.0.0 of IISAdministration module.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Web.Administration.BindingCollection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-IISSiteBinding
+  href: ./Get-IISSiteBinding.yml
+- text: Remove-IISSiteBinding
+  href: ./Remove-IISSiteBinding.yml
+- text: New-IISSite
+  href: ./New-IISSite.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  New-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] <String>]
+
+   [[-CertificateThumbPrint] <String>] [[-SslFlag] <SslFlags>] [[-CertStoreLocation] <String>] [-Force]
+
+   [-Passthru]
+examples:
+- title: 'Example 1: Create a new HTTP binding'
+  code: |-
+    PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:8080:" -Protocol http
+  description: |-
+    This command creates a new HTTP binding of "*:8080:" on a website named TestSite
+  summary: ""
+- title: 'Example 2: Create a new HTTPS binding'
+  code: |-
+    PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:443:" -CertificateThumbPrint "D043B153FCEFD5011B9C28E186A60B9F13103363" -CertStoreLocation "Cert:\LocalMachine\Webhosting" -Protocol https
+  description: |-
+    This command creates a new HTTPS binding of "*:443:" bindingInformation on a website named TestSite using an existing certificate which has a thumbprint of D043B153FCEFD5011B9C28E186A60B9F13103363 and
+    is placed at the Cert:\LocalMachine\Webhosting certificate store
+  summary: ""
+- title: 'Example 3: Create a new HTTPS binding and set it with Sni and CentralCertStore SSL flag settings'
+  code: |-
+    PS C:\> New-IISSiteBinding -Name "TestSite" "*:443:foo.com" -Protocol https -SslFlag "Sni, CentralCertStore"
+  description: |-
+    This command creates a new HTTPS binding of "*:443:foo.com" on a website named TestSite setting the SNI and CentralCertStore SSL flag settings
+  summary: ""
+- title: 'Example 4: Create a new self signed certificate and use it for adding a new HTTPS binding for testing purpose'
+  code: |-
+    $password = "string1"  # put your password on string1
+    $hostName = "localhost"
+    $port = "443"
+    $storeLocation = "Cert:\LocalMachine\My"
+    $certificate = New-SelfSignedCertificate -DnsName $hostName -CertStoreLocation $storeLocation
+    $thumbPrint = $certificate.Thumbprint
+    $bindingInformation = "*:" + $port + ":" + $hostName
+    $certificatePath = ("cert:\localmachine\my\" + $certificate.Thumbprint)
+    $securedString = ConvertTo-SecureString -String $password -Force -AsPlainText
+    Export-PfxCertificate -FilePath "C:\temp\temp.pfx" -Cert $certificatePath -Password $securedString
+    Import-PfxCertificate -FilePath "C:\temp\temp.pfx" -CertStoreLocation "Cert:\LocalMachine\Root" -Password $securedString
+    New-IISSiteBinding -Name "TestSite" -BindingInformation $bindingInformation -CertificateThumbPrint $thumbPrint -CertStoreLocation $storeLocation -Protocol https
+  description: |-
+    This powershell script example shows how to create a self-signed certificate on Personal store. Export the certificate to ROOT store to make the certificate considered as a trusted certificate
+    in the local machine and add a new HTTPS binding on a website named TestSite for testing purposes.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BindingInformation
+  isRequired: true
+  description: |+
+    Specifies the binding information string to use for the new site. The binding information of the form
+    IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which
+    is equivalent to using a wildcard character such as \*:443:. In this representation \*  indicates all IP
+    addresses and all hostnames are indicated by leaving the corresponding field blank.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbPrint
+  description: |+
+    Specifies a certificate thumbprint, which is used to add a new HTTPS binding.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertStoreLocation
+  description: |+
+    Specifies the certificate store path of the certificate, which is used to add a new HTTPS binding.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: Cert:\LocalMachine\My, Cert:\LocalMachine\WebHosting, My, WebHosting
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the IIS website.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    The protocol for which the binding is configured, usually http, https or ftp.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SslFlags" data-throw-if-not-resolved="False" />
+  name: SslFlag
+  description: |+
+    Specifies the SSL Flag(s) of the new binding.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: None, Sni, CentralCertStore
+uid: IISAdministration.New-IISSiteBinding
+name: New-IISSiteBinding
+description: |-
+  Adds a new binding to an existing website.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/new-iissitebinding?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-IISSiteBinding

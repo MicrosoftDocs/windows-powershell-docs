@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets status information about an updating run currently in progress.
+module: ClusterAwareUpdating
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauRun" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.ClusterAwareUpdating.RunState" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Invoke-CauRun
+  href: ./Invoke-CauRun.yml
+- text: Stop-CauRun
+  href: ./Stop-CauRun.yml
+syntaxes:
+- Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [<CommonParameters>]
+- Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForStart] [<CommonParameters>]
+- Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForCompletion] [<CommonParameters>]
+- Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-ShowClusterNodeState] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get status information about the updating run in progress from the specified cluster'
+  code: |-
+    PS C:\> Get-CauRun -ClusterName "CONTOSO-FC1"
+
+    RunId                   : 834dd11e-584b-41f2-8d22-4c9c0471dbad 
+    RunStartTime            : 10/13/2011 1:35:39 PM 
+    CurrentOrchestrator     : NODE1 
+    NodeStatusNotifications : { 
+    Node      : NODE1 
+    Status    : Waiting 
+    Timestamp : 10/13/2011 1:35:49 PM 
+    } 
+    NodeResults             : { 
+    Node                     : NODE2 
+    Status                   : Succeeded 
+    ErrorRecordData          : 
+    NumberOfSucceededUpdates : 0 
+    NumberOfFailedUpdates    : 0 
+    InstallResults           : Microsoft.ClusterAwareUpdating.UpdateInstallResult[] 
+    }
+  description: |-
+    This command gets status information about the updating run currently in progress on the cluster named CONTOSO-FC1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  description: |+
+    Specifies the name of the cluster for which this cmdlet gets the updating run status.
+    This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the administrative credentials for the target cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShowClusterNodeState
+  description: |+
+    Indicates that this cmdlet gets the status of the Windows Management Instrumentation (WMI) object that is created on each cluster node.
+    This can be used to debug the status of leftover objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WaitForCompletion
+  description: |+
+    Indicates that this cmdlet waits for the updating run to finish.
+    If this parameter is specified, the cmdlet also writes the updated CAU run objects to the output stream as progress is recorded by the current CAU Update Coordinator.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WaitForStart
+  description: |+
+    Indicates that this cmdlet waits for an updating run that is in progress on the specified cluster.
+    Otherwise the cmdlet waits for an updating run to begin.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ClusterAwareUpdating.Get-CauRun
+name: Get-CauRun
+description: |-
+  The **Get-CauRun** cmdlet gets status information about an updating run currently in progress.
+  Use this cmdlet to monitor current updating runs.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  Module Name: ClusterAwareUpdating
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-caurun?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-CauRun

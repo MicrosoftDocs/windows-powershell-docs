@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports the local Host Guardian Service instance's state to enable recovery scenarios.
+module: HgsServer
+notes: ""
+links:
+- text: HGS Server Cmdlets
+  href: ./index.yml
+syntaxes:
+- >-
+  Export-HgsServerState [[-Path] <String>] -Password <SecureString> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Export HGS server state and protect it with a password'
+  code: |-
+    PS C:\> Export-HgsServerState -Path "C:\HGS\ExportState.xml" -Password $Pass
+    Encrypted HGS Server State stored at the specified location
+  description: |-
+    This command exports the HGS server state and protects the exported state using a password.
+    The exported state is stored at the file specified by the **Path** parameter.
+
+    Use the **ConvertTo-SecureString** cmdlet to generate a secure string that represents the password.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Specifies the password with which to encrypt the keys.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path for the exported file.
+
+  defaultValue: None
+  position: "1"
+  aliases: FilePath
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsServer.Export-HgsServerState
+name: Export-HgsServerState
+description: |-
+  The **Export-HgsServer** cmdlet exports the Host Guardian Service (HGS) state to enable recovery scenarios.
+
+  The cmdlet causes the following Host Guardian Service state to be exported to the specified output file: 
+
+  - Attestation Service policies
+  - Attestation Service configuration data
+  - Key Protection policies
+  - Key Protection configuration data
+  - Key Protection Signer Certificates and private keys
+  - Key Protection Encryption Certificates and private keys
+
+  For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: HgsServer-help.xml
+  Module Name: HgsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsserver/export-hgsserverstate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-HgsServerState

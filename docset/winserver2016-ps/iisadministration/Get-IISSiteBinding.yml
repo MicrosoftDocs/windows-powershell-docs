@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the bindings on the specified IIS site. This cmdlet has been introduced in version 1.1.0.0 of IISAdministration module.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Web.Administration.BindingCollection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-IISSiteBinding
+  href: ./New-IISSiteBinding.yml
+- text: Remove-IISSiteBinding
+  href: ./Remove-IISSiteBinding.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- Get-IISSiteBinding [-Name] <String> [[-BindingInformation] <String>] [[-Protocol] <String>]
+examples:
+- title: 'Example 1: Get Information about an IIS website binding'
+  code: |-
+    PS C:\> Get-IISSiteBinding "Default Web Site" "*:80:"
+  description: |-
+    This command gets the binding information for the "*:80:" binding of the Default Web Site.
+  summary: ""
+- title: 'Example 2: Get information about all bindings of an IIS website'
+  code: |-
+    PS C:\> Get-IISSiteBinding "Default Web Site"
+
+    protocol bindingInformation sslFlags
+    -------- ------------------ --------
+    http     *:80:                  None
+    http     *:1234:                None
+  description: |-
+    This command gets all configuration information about all bindings of the Default Web Site
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BindingInformation
+  description: |+
+    Specifies the binding information string to use for the new site. The binding information of the form
+    IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which
+    is equivalent to using a wildcard character such as \*:443:. In this representation \* indicates all IP
+    addresses and all hostnames are indicated by leaving the corresponding field blank.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the IIS website.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    The protocol for which the binding is configured, usually http, https or ftp.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Get-IISSiteBinding
+name: Get-IISSiteBinding
+description: |-
+  The **Get-IISSiteBinding** cmdlet gets information about website bindings and their current status and other key information.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/get-iissitebinding?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-IISSiteBinding

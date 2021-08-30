@@ -1,0 +1,21 @@
+### YamlMime:PowershellModule
+children:
+- title: NetQoS
+  cmdlets:
+  - NetQoS.Get-NetQosPolicy
+  - NetQoS.New-NetQosPolicy
+  - NetQoS.Remove-NetQosPolicy
+  - NetQoS.Set-NetQosPolicy
+uid: NetQoS
+name: NetQoS
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Network Quality of Service (QoS)-specific cmdlets. It lists the cmdlets in alphabetical order.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 743692b7-a227-4389-b082-2b47de1d0d2d
+  Module Name: NetQoS
+  ms.date: 12/20/2016
+  title: NetQoS

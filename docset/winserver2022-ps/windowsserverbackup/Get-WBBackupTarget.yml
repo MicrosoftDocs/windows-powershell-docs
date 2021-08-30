@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets backup storage locations that you specified as part of a backup policy.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet queries the backup policy contained in the specified **WBPolicy** object.
+outputs:
+- name: <xref href="WBBackupTarget " data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns a list of the storage locations that the backup policy object contains.
+links:
+- text: Add-WBBackupTarget
+  href: ./Add-WBBackupTarget.yml
+- text: Get-WBDisk
+  href: ./Get-WBDisk.yml
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: New-WBBackupTarget
+  href: ./New-WBBackupTarget.yml
+- text: Remove-WBBackupTarget
+  href: ./Remove-WBBackupTarget.yml
+syntaxes:
+- Get-WBBackupTarget [-Policy] <WBPolicy> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a list of backup targets'
+  code: |-
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Get-WBBackupTarget -Policy $Policy
+  description: |-
+    This example gets a list of the storage backup locations from a backup policy.
+
+    The first command gets the current backup policy and stores it in a variable named $Policy.
+
+    The second command gets the list of storage backup locations from the **WBPolicy** object that is stored in the $Policy variable.
+  summary: ""
+parameters:
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies a backup policy object for which this cmdlet displays information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: InPolicy
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Get-WBBackupTarget
+name: Get-WBBackupTarget
+description: |-
+  The **Get-WBBackupTarget** cmdlet gets backup storage locations that you specified for a **WBPolicy** object that contains a backup policy.
+  Valid locations include disks, volumes, or remote shared folders.
+  To view the list of all online disks, use the [Get-WBDisk](./Get-WBDisk.yml) cmdlet.
+
+  You can add the locations that the cmdlet returns to a **WBPolicy** object by specifying them as backup storage locations to the [New-WBBackupTarget](./New-WBBackupTarget.yml) cmdlet.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbbackuptarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBBackupTarget

@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a replication group schedule.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsRGroupSchedule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-DfsrGroupSchedule
+  href: ./Set-DfsrGroupSchedule.yml
+syntaxes:
+- Get-DfsrGroupSchedule [[-GroupName] <String[]>] [[-DomainName] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a group schedule'
+  code: |-
+    PS C:\> Get-DfsrGroupSchedule -GroupName "RG01"
+    GroupName            : RG01
+    DomainName           : corp.contoso.com
+    ReplicationGroupGuid : 1f06f8d4-a0ae-4221-99d2-0bd1bb27882b
+    UseUTC               : False
+    HoursReplicated      : 168
+    BandwidthDetail      : FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+  description: |-
+    This command uses the **Get-DfsrGroupSchedule** cmdlet to display the replication group schedule for a resource group named RG01.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains a replication group.
+    If you do not specify this parameter, the cmdlet uses the current domain of the user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  description: |+
+    Specifies an array of names of replication groups.
+    If you do not specify this parameter, the cmdlet queries for all participating replication groups.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+uid: DFSR.Get-DfsrGroupSchedule
+name: Get-DfsrGroupSchedule
+description: |-
+  The **Get-DfsrGroupSchedule** cmdlet retrieves a schedule from a specified replication group.
+  Distributed File System (DFS) Replication schedules control the availability and bandwidth usage of replication.
+  By default, DFS Replication schedules replication 24 hours a day, 7 days a week with full bandwidth as the recommended configuration.
+
+  The DFS Replication Get-* cmdlets are useful for pipeline operations or inventory.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/get-dfsrgroupschedule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DfsrGroupSchedule

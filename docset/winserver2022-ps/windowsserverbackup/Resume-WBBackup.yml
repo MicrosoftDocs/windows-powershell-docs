@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resumes a backup operation to a removable device after you add media to the device.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="ForceFormat" data-throw-if-not-resolved="False" />
+  description: |-
+    If the media contain data and need formatting, call this cmdlet with the *ForceFormat* parameter.
+outputs:
+- name: <xref href="System.String, System.Exception" data-throw-if-not-resolved="False" />
+  description: |-
+    If the removable device does not contain the requested media, the cmdlet returns with an error message that describes the missing media.
+    If the device contains media, the cmdlet returns confirmation that the backup has resumed.
+links:
+- text: Start-WBBackup
+  href: ./Start-WBBackup.yml
+syntaxes:
+- Resume-WBBackup [-ForceFormat] [<CommonParameters>]
+examples:
+- title: 'Example 1: Resume a backup'
+  code: |-
+    PS C:\> Resume-WBBackup
+  description: |-
+    This command resumes a backup operation.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceFormat
+  description: |+
+    Indicates that the cmdlet formats the media that contains data.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Resume-WBBackup
+name: Resume-WBBackup
+description: |-
+  The **Resume-WBBackup** cmdlet resumes a backup operation when you are backing up to a removable device and must add new media.
+
+  If the media that you add contain data and you must format the media, call this cmdlet with the *ForceFormat* parameter.
+  If the device does not contain media, the cmdlet returns with an error message that describes the missing media.
+  If the device contains media, the cmdlet returns confirmation that the backup has resumed.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/resume-wbbackup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Resume-WBBackup

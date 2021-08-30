@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a volume recovery operation.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBBackupSet, WBVolume, WBVolume" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    If you do not specify the *Async* parameter, the status of the recovery operation displays at periodic intervals until the recovery operation finishes.
+    You can also use the **Get-WBJob** cmdlet to get the status of the current recovery operation.
+    Type `Get-WBJob -Previous 1` to get the status after the recovery operation completes.
+links:
+- text: Get-WBBackupSet
+  href: ./Get-WBBackupSet.yml
+- text: Get-WBVolume
+  href: ./Get-WBVolume.yml
+- text: Resume-WBVolumeRecovery
+  href: ./Resume-WBVolumeRecovery.yml
+syntaxes:
+- >-
+  Start-WBVolumeRecovery [-BackupSet] <WBBackupSet> [-VolumeInBackup] <WBVolume>
+
+   [[-RecoveryTargetVolume] <WBVolume>] [-SkipBadClusterCheck] [-Async] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start volume recovery'
+  code: |-
+    PS C:\> $Backup = Get-WBBackupSet
+    PS C:\> Start-WBVolumeRecovery -BackupSet $Backup -VolumeInBackup $Backup.Volume[0] -Force
+  description: |-
+    This example starts a volume recovery to the original location, and it uses the *Force* parameter to perform the operation without a confirmation message.
+
+    The first command stores the result of the Get-WBBackupSet cmdlet in the variable named $Backup.
+    The object stored in the variable is a **WBBackupSet** object.
+
+    The second command starts the volume recovery by using the $Backup variable as input, specifying the first item in the volume array in the **WBBackupSet** object.
+  summary: ""
+- title: 'Example 2: Start a volume recovery with a recovery target'
+  code: |-
+    PS C:\> $Backup = Get-WBBackupSet
+    PS C:\> $RecoveryTarget = Get-WBVolume
+    PS C:\> Start-WBVolumeRecovery -BackupSet $Backup -VolumeInBackup $Backup.Volume[0] -RecoveryTargetVolume $RecoveryTarget
+  description: |-
+    This example starts volume recovery for the System Reserved volume and restores to the recovery target volume.
+
+    The first command stores the output of the [Get-WBBackupSet](./Get-WBBackupSet.yml) cmdlet in the variable named $Backup.
+
+    The second command stores the output of the [Get-WBVolume](./Get-WBVolume.yml) cmdlet in the variable named $RecoveryTarget.
+
+    The third command starts the recovery operation for the volume specifying the $Backup variable as the backup to use and the $RecoveryTarget variable as the volume to restore.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Async
+  description: |+
+    Indicates that Windows PowerShell returns immediately after it starts the operation.
+    The cmdlet does not display status information.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBBackupSet" data-throw-if-not-resolved="False" />
+  name: BackupSet
+  isRequired: true
+  description: |+
+    Specifies a **WBBackupSet** object that contains the backup set for the volume recovery operation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBVolume" data-throw-if-not-resolved="False" />
+  name: RecoveryTargetVolume
+  description: |+
+    Specifies a **WBVolume** object that contains the recovery target volume.
+    If you do not specify a recovery target volume, the original volume is the recovery target volume.
+    The recovery operation formats the volume before recovery.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipBadClusterCheck
+  description: |+
+    Indicates that cmdlet does not perform bad cluster checks.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBVolume" data-throw-if-not-resolved="False" />
+  name: VolumeInBackup
+  isRequired: true
+  description: |+
+    Specifies a **WBVolume** object that contains the source volume that this cmdlet recovers.
+    The **WBBackupSet** object returned by the *BackupSet* parameter contains the **WBVolume** information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Start-WBVolumeRecovery
+name: Start-WBVolumeRecovery
+description: |-
+  The **Start-WBVolumeRecovery** cmdlet starts a volume recovery operation from a **WBBackupSet** backup.
+  The operation formats the recovery target volume before recovery.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/start-wbvolumerecovery?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-WBVolumeRecovery

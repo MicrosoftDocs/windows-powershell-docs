@@ -1,0 +1,307 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Active Directory site link for in managing replication.
+module: ActiveDirectory
+notes: ""
+inputs:
+- name: <xref href="None or Microsoft.ActiveDirectory.Management.ADReplicationSiteLink" data-throw-if-not-resolved="False" />
+  description: |-
+    A site link object that is a template for the new site link object is received by the *Instance* parameter.
+outputs:
+- name: <xref href="None or Microsoft.ActiveDirectory.Management.ADReplicationSiteLink" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ADReplicationSiteLink
+  href: ./Get-ADReplicationSiteLink.yml
+- text: Remove-ADReplicationSiteLink
+  href: ./Remove-ADReplicationSiteLink.yml
+- text: Set-ADReplicationSiteLink
+  href: ./Set-ADReplicationSiteLink.yml
+syntaxes:
+- >-
+  New-ADReplicationSiteLink [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Cost <Int32>]
+
+   [-Credential <PSCredential>] [-Description <String>] [-Instance <ADReplicationSiteLink>]
+
+   [-InterSiteTransportProtocol <ADInterSiteTransportProtocolType>] [-Name] <String>
+
+   [-OtherAttributes <Hashtable>] [-PassThru] [-ReplicationFrequencyInMinutes <Int32>]
+
+   [-ReplicationSchedule <ActiveDirectorySchedule>] [-Server <String>] [[-SitesIncluded] <ADReplicationSite[]>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a replication site link'
+  code: |-
+    PS C:\> New-ADReplicationSiteLink -Name "NorthAmerica-Europe" -SitesIncluded NorthAmerica,Europe
+  description: |-
+    This command creates a new site link named NorthAmerica-Europe linking the two sites NorthAmerica and Europe.
+  summary: ""
+- title: 'Example 2: Create a replication site link and set properties for it'
+  code: |-
+    PS C:\> New-ADReplicationSiteLink -Name "Europe-Asia" -SitesIncluded Europe,Asia -Cost 100 -ReplicationFrequencyInMinutes 15 -InterSiteTransportProtocol IP
+  description: |-
+    This command creates a new site link named Europe-Asia linking two sites Europe and Asia, and set the *Cost*, *ReplicationFrequencyInMinutes*, and *InterSiteTransportProtocol* on the new object.
+  summary: ""
+- title: 'Example 3: Create a replication site link and set its replication schedule'
+  code: |-
+    PS C:\> $Schedule = New-Object -TypeName System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule 
+    PS C:\> $Schedule.ResetSchedule() 
+    PS C:\> $Schedule.SetDailySchedule("Twenty","Zero","TwentyTwo","Thirty") 
+    PS C:\> New-ADReplicationSiteLink -Name "NorthAmerica-SouthAmerica" -SitesIncluded NorthAmerica,SouthAmerica -ReplicationSchedule $Schedule
+  description: |-
+    This example creates a new site link named NorthAmerica-SouthAmerica linking two sites NorthAmerica and SouthAmerica, and set the daily *ReplicationSchedule* from 20:00 to 22:30.
+  summary: ""
+- title: 'Example 4: Create a replication site link and enable change notification for it'
+  code: |-
+    PS C:\> New-ADReplicationSiteLink -Name "Europe-Asia" -SitesIncluded Europe,Asia -OtherAttributes @{'options'=1}
+  description: |-
+    This command creates a new site link named Europe-Asia to link two sites, Europe and Asia.
+    The command also enables change notification on the new object.
+  summary: ""
+parameters:
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use.
+    The acceptable values for this parameter are:
+
+    - Negotiate or 0
+    - Basic or 1
+
+    The default authentication method is Negotiate.
+
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Cost
+  description: |+
+    Specifies the cost to be placed on the site link.
+    For more information on determining the cost, see [Determining the Cost](https://go.microsoft.com/fwlink/?LinkId=221871) in the TechNet Library: http://go.microsoft.com/fwlink/?LinkId=221871.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user account credentials to use to perform this task.
+    The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
+    If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
+
+    To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+    If you specify a user name for this parameter, the cmdlet prompts for a password.
+
+    You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+    You can then set the *Credential* parameter to the **PSCredential** object.
+
+    If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description of the object.
+    This parameter sets the value of the **Description** property for the object.
+    The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName**) for this property is description.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADReplicationSiteLink" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Specifies an instance of a site link object to use as a template for a new site link object.
+
+    You can use an instance of an existing site link object as a template or you can construct a new site link object by using the Windows PowerShell command line or by using a script.
+
+    Method 1: Use an existing site link object as a template for a new object.
+    To retrieve an instance of an existing site link object, use a cmdlet such as **Get-ADReplicationSiteLink**.
+    Then provide this object to the *Instance* parameter of the **New-ADReplicationSiteLink** cmdlet to create a new Active Directory object.
+    You can override property values of the new object by setting the appropriate parameters.
+
+    Method 2: Create a new **ADReplicationSiteLink** and set the property values by using the Windows PowerShell command line interface.
+    Then pass this object to the Instance parameter of the **New-ADReplicationSiteLink** cmdlet to create the new site link object.
+
+    Note: Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set raises an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADInterSiteTransportProtocolType" data-throw-if-not-resolved="False" />
+  name: InterSiteTransportProtocol
+  description: |+
+    Specifies a valid intersite transport protocol option.
+    The acceptable values for this parameter are:
+
+    - IP
+    - SMTP
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: IP, SMTP
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the site link.
+    This parameter sets the **Name** property of the Active Directory object.
+    The LDAP display name (**ldapDisplayName**) of this property is name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: OtherAttributes
+  description: |+
+    Specifies object attribute values for attributes that are not represented by cmdlet parameters.
+    You can set one or more parameters at the same time with this parameter.
+    If an attribute takes more than one value, you can assign multiple values.
+    To identify an attribute, specify the LDAPDisplayName (**ldapDisplayName**) defined for it in the Active Directory schema.
+
+    Syntax:
+
+    To specify a single value for an attribute:
+
+    `-OtherAttributes @{'AttributeLDAPDisplayName'=value}`
+
+    To specify multiple values for an attribute
+
+    `-OtherAttributes @{'AttributeLDAPDisplayName'=value1,value2,...}`
+
+    You can specify values for more than one attribute by using semicolons to separate attributes.
+    The following syntax shows how to set values for multiple attributes:
+
+    `-OtherAttributes @{'Attribute1LDAPDisplayName'=value; 'Attribute2LDAPDisplayName'=value1,value2;...}`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReplicationFrequencyInMinutes
+  description: |+
+    Species the frequency, in minutes, for which replication will occur where this site link is in use between sites.
+    Active Directory preserves bandwidth between sites by minimizing the frequency of replication and by allowing you to schedule the availability of site links for replication.
+    By default, intersite replication across each site link occurs every 180 minutes (3 hours).
+    You can adjust this frequency to match your specific needs.
+    Be aware that increasing this frequency increases the amount of bandwidth used by replication.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ActiveDirectorySchedule" data-throw-if-not-resolved="False" />
+  name: ReplicationSchedule
+  description: |+
+    Specifies the default replication schedule for any connections within this site link (intra-site replication).
+    This allows you to schedule the availability of site links for use by replication.
+    By default, a site link is available to carry replication traffic 24 hours a day, 7 days a week.
+    You can limit this schedule to specific days of the week and times of day.
+    You can, for example, schedule intersite replication so that it only occurs after normal business hours.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the Active Directory Domain Services (AD DS) instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following: Active Directory Lightweight Domain Services (AD LDS), AD DS, or Active Directory snapshot instance.
+
+    Specify the AD DS instance in one of the following ways:  
+
+    Domain name values:
+
+    - Fully qualified domain name
+    - NetBIOS name
+
+    Directory server values:  
+
+    - Fully qualified directory server name
+    - NetBIOS name
+    - Fully qualified directory server name and port
+
+    The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+    - By using the *Server* value from objects passed through the pipeline
+    - By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
+    - By using the domain of the computer running Windows PowerShell
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADReplicationSite" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SitesIncluded
+  description: |+
+    Specifies the list of sites included in the site link.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ActiveDirectory.New-ADReplicationSiteLink
+name: New-ADReplicationSiteLink
+description: |-
+  The **New-ADReplicationSiteLink** cmdlet can be used to create a new Active Directory site link.
+  A site link connects two or more sites.
+  Site links reflect the administrative policy for how sites are to be interconnected and the methods used to transfer replication traffic.
+  You must connect sites with site links so that domain controllers at each site can replicate Active Directory changes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/new-adreplicationsitelink?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-ADReplicationSiteLink

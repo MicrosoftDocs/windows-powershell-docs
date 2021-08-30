@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Converts an iSCSI virtual disk to a 4K sector aligned advanced virtual disk 1.0 format.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Checkpoint-IscsiVirtualDisk
+  href: ./Checkpoint-IscsiVirtualDisk.yml
+- text: Get-IscsiVirtualDisk
+  href: ./Get-IscsiVirtualDisk.yml
+- text: Import-IscsiVirtualDisk
+  href: ./Import-IscsiVirtualDisk.yml
+- text: New-IscsiVirtualDisk
+  href: ./New-IscsiVirtualDisk.yml
+- text: Remove-IscsiVirtualDisk
+  href: ./Remove-IscsiVirtualDisk.yml
+- text: Restore-IscsiVirtualDisk
+  href: ./Restore-IscsiVirtualDisk.yml
+- text: Set-IscsiVirtualDisk
+  href: ./Set-IscsiVirtualDisk.yml
+syntaxes:
+- Convert-IscsiVirtualDisk [-Path] <String> [-DestinationPath] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Convert a VHD'
+  code: |-
+    PS C:\> Convert-IscsiVirtualDisk -Path "\\zamfirsvr\VHDs\test.vhdx" -DestinationPath "\\win8svr\VHDs\test.vhdx"
+  description: |-
+    This example copies and converts the VHD named test.vhdx from \\\\zamfirsvr\VHDs\ to \\\\win8svr\VHDs.
+    The VHD named test.vhdx can be loaded after the conversion.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationPath
+  isRequired: true
+  description: |+
+    Specifies the destination path of the iSCSI virtual disk path of which to be copied and converted.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the virtual hard disk (VHD) file that is associated with the iSCSI virtual disk.
+    Filter the iSCSI Virtual Disk object by using this parameter.
+
+  defaultValue: None
+  position: "0"
+  aliases: DevicePath
+  parameterValueGroup: ""
+uid: IscsiTarget.Convert-IscsiVirtualDisk
+name: Convert-IscsiVirtualDisk
+description: |-
+  Note: This cmdlet is deprecated and might be removed in a future release.
+  We recommend that you do not use this cmdlet.
+
+  The **Convert-IscsiVirtualDisk** cmdlet converts an iSCSI virtual disk to a 4K sector aligned advanced virtual disk 1.0 format.
+  If an attempt is made to load a VHD created by the iSCSI Target 3.3, the VHD must be converted by running this cmdlet.
+  This cmdlet performs copy and conversion at the same time.
+  A remote file share or local path for both source and destination path can be specified.
+
+  Note: Use this cmdlet if iSCSI Target 3.3 differencing virtual disks are migrated to Windows Server 2012 R2 differencing virtual disks.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/convert-iscsivirtualdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Convert-IscsiVirtualDisk

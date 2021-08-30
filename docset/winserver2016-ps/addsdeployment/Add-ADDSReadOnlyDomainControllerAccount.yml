@@ -1,0 +1,187 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a RODC account that can be used to install an RODC in Active Directory.
+module: ADDSDeployment
+notes: |-
+  * Once you have added the RODC account, you can add an RODC to a server computer by using the **Install-ADDSDomainController** cmdlet with the *ReadOnlyReplica* switch parameter.
+  * You can also delegate the ability to attach the server to a non-administrative group or user. If you are deploying RODCs in delegated administration scenarios where the machine accounts are pre-provisioned, creating the RODC account is the first stage of the RODC installation process and needs to be done by a member of the Domain Admins group. In these scenarios, once an administrator uses this cmdlet to add the RODC account in Active Directory Domain Services (AD DS), the second stage of the installation can occur. This involves attaching an actual server computer in a remote location (such as a branch office) that will operate as the RODC for the specified account created using this cmdlet.
+links:
+- text: AD DS Simplified Administration
+  href: https://go.microsoft.com/fwlink/?LinkID=237244
+- text: Install-ADDSDomainController
+  href: ./Install-ADDSDomainController.yml
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+syntaxes:
+- >-
+  Add-ADDSReadOnlyDomainControllerAccount [-SkipPreChecks] -DomainControllerAccountName <String>
+
+   -DomainName <String> -SiteName <String> [-AllowPasswordReplicationAccountName <String[]>]
+
+   [-Credential <PSCredential>] [-DelegatedAdministratorAccountName <String>]
+
+   [-DenyPasswordReplicationAccountName <String[]>] [-NoGlobalCatalog] [-InstallDns]
+
+   [-ReplicationSourceDC <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a RODC account'
+  code: |-
+    PS C:\> Add-ADDSReadOnlyDomainControllerAccount -DomainControllerAccountName "RODC1" -DomainName "corp.contoso.com" -SiteName "NorthAmerica"
+  description: |-
+    This command adds a RODC account to the corp.contoso.com domain using the North America site as the source site for the replication source domain controller.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AllowPasswordReplicationAccountName
+  description: |+
+    Specifies an array of user accounts, group accounts, and computer accounts whose passwords can be replicated to this RODC.
+    Use None if you want to keep the value empty.
+    By default, only the Allowed RODC Password Replication Group is allowed, and it is originally created empty.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user name and password that corresponds to the account used to install the domain controller.
+    Specify the **Get-Credential** cmdlet when using this parameter to prompt the user to supply a password.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DelegatedAdministratorAccountName
+  description: |+
+    Specifies the name of the user or group that installs and administers the RODC.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DenyPasswordReplicationAccountName
+  description: |+
+    Specifies the names of user accounts, group accounts, and computer accounts whose passwords are not to be replicated to this RODC.
+    Use None if you do not want to deny the replication of credentials of any users or computers.
+    By default, Administrators, Server Operators, Backup Operators, Account Operators, and the Denied RODC Password Replication Group are denied.
+    By default, the Denied RODC Password Replication Group includes Cert Publishers, Domain Admins, Enterprise Admins, Enterprise Domain Controllers, Enterprise Read-Only Domain Controllers, Group Policy Creator Owners, the krbtgt account, and Schema Admins.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainControllerAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the RODC account that this cmdlet creates.
+
+  defaultValue: <mandatory>
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  isRequired: true
+  description: |+
+    Specifies the domain name for the user name for the operation.
+    This parameter is required.
+    It also helps to specify the forest where you plan to install the domain controller or create an RODC account.
+
+  defaultValue: <mandatory>
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InstallDns
+  description: |+
+    Indicates that the cmdlet installs the DNS Server service.
+    If no value is provided, the default behavior is to automatically compute DNS configuration behavior based upon the existing environment.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoGlobalCatalog
+  description: |+
+    Indicates that the cmdlet does not set the RODC as a global catalog server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReplicationSourceDC
+  description: |+
+    Specifies the name of the domain controller to be used as the source for replicating to this RODC.
+
+  defaultValue: "NULL"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteName
+  isRequired: true
+  description: |+
+    Specifies the name of an existing site where you can place the new domain controller.
+
+  defaultValue: <mandatory>
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipPreChecks
+  description: |+
+    Indicates that the cmdlet executes only a base set of validations.
+    This behavior is equivalent to the validations that were performed when using Dcpromo.exe in earlier versions of Windows Server to add a domain controller.
+    When this switch parameter is set, it specifies that additional preliminary checks should be bypassed.
+    For more information on the scope of these additional preliminary checks that the ADDSDeployment module performs by default when using Windows Server 2012, refer to the table in the section ADPrep and Prerequisite Checking Architecture in [AD DS Simplified Administration](https://go.microsoft.com/fwlink/?LinkID=237244).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADDSDeployment.Add-ADDSReadOnlyDomainControllerAccount
+name: Add-ADDSReadOnlyDomainControllerAccount
+description: |-
+  The **Add-ADDSReadOnlyDomainControllerAccount** cmdlet creates a read-only domain controller (RODC) account that can be used to install an RODC in Active Directory.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
+  Module Name: ADDSDeployment
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/addsdeployment/add-addsreadonlydomaincontrolleraccount?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ADDSReadOnlyDomainControllerAccount

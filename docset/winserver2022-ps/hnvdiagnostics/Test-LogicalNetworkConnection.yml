@@ -1,0 +1,19 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests a logical network connection.
+module: HNVDiagnostics
+notes: ""
+syntaxes:
+- Test-LogicalNetworkConnection [<CommonParameters>]
+uid: HNVDiagnostics.Test-LogicalNetworkConnection
+name: Test-LogicalNetworkConnection
+description: |-
+  The **Test-LogicalNetworkConnection** cmdlet tests whether a logical network can be reached.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PaPing-help.xml
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/test-logicalnetworkconnection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-LogicalNetworkConnection

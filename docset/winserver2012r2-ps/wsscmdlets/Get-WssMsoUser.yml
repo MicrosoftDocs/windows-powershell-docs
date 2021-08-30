@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the online service account for a user.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    WssUserName
+    Type: System.String
+    Description: local network account name of user
+links:
+- text: Add-WssMsoUser
+  href: ./Add-WssMsoUser.yml
+- text: Disable-WssMsoUser
+  href: ./Disable-WssMsoUser.yml
+- text: Enable-WssMsoUser
+  href: ./Enable-WssMsoUser.yml
+- text: Remove-WssMsoUser
+  href: ./Remove-WssMsoUser.yml
+syntaxes:
+- Get-WssMsoUser [[-MsoUserName] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get an online service account'
+  code: |-
+    PS C:\> Get-WssMsoUser -MsoUserName "DavidChew@TSQA.Contoso.com"
+  description: |-
+    This command gets the online service account for the specified UPN.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MsoUserName
+  description: |+
+    Specifies a UPN.
+    The cmdlet gets the online service account for the UPN that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Get-WssMsoUser
+name: Get-WssMsoUser
+description: |-
+  The **Get-WssMsoUser** cmdlet gets the online service account for a user principal name (UPN) from aad_1.
+  If you do not specify a UPN, the cmdlet gets all online service accounts.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssmsouser?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssMsoUser

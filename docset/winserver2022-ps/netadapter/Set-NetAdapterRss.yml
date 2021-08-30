@@ -1,0 +1,302 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the RSS properties on a network adapter.
+module: NetAdapter
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapterRssSettingData" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapterRssSettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Disable-NetAdapterRss
+  href: ./Disable-NetAdapterRss.yml
+- text: Enable-NetAdapterRss
+  href: ./Enable-NetAdapterRss.yml
+- text: Get-NetAdapterRss
+  href: ./Get-NetAdapterRss.yml
+syntaxes:
+- >-
+  Set-NetAdapterRss [-Name] <String[]> [-IncludeHidden] [-NumberOfReceiveQueues <UInt32>] [-Profile <Profile>]
+
+   [-BaseProcessorGroup <UInt16>] [-BaseProcessorNumber <Byte>] [-MaxProcessorGroup <UInt16>]
+
+   [-MaxProcessorNumber <Byte>] [-MaxProcessors <UInt32>] [-NumaNode <UInt16>] [-Enabled <Boolean>] [-NoRestart]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-NetAdapterRss -InterfaceDescription <String[]> [-IncludeHidden] [-NumberOfReceiveQueues <UInt32>]
+
+   [-Profile <Profile>] [-BaseProcessorGroup <UInt16>] [-BaseProcessorNumber <Byte>]
+
+   [-MaxProcessorGroup <UInt16>] [-MaxProcessorNumber <Byte>] [-MaxProcessors <UInt32>] [-NumaNode <UInt16>]
+
+   [-Enabled <Boolean>] [-NoRestart] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-NetAdapterRss -InputObject <CimInstance[]> [-NumberOfReceiveQueues <UInt32>] [-Profile <Profile>]
+
+   [-BaseProcessorGroup <UInt16>] [-BaseProcessorNumber <Byte>] [-MaxProcessorGroup <UInt16>]
+
+   [-MaxProcessorNumber <Byte>] [-MaxProcessors <UInt32>] [-NumaNode <UInt16>] [-Enabled <Boolean>] [-NoRestart]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set an RSS profile for a NUMA server without dynamic load balancing'
+  code: |-
+    PS C:\> Set-NetAdapterRss -Name "Ethernet" -Profile NUMAStatic
+  description: |-
+    This command sets an RSS profile for a NUMA server without dynamic load balancing on the network adapter named Ethernet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: BaseProcessorGroup
+  description: |+
+    Specifies the base processor group of a non-uniform memory access (NUMA) node.
+    This impacts the processor array used by RSS.
+    This parameter is the lowest group number of any processors that appear in the processor array.
+
+  defaultValue: None
+  position: Named
+  aliases: BaseG
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: BaseProcessorNumber
+  description: |+
+    Specifies the base processor number of a NUMA node.
+    This parameter is the lowest processor number of any processors from the *BaseProcessorGroup* parameter that appear in the processor array.
+    This allows for partitioning processors across network adapters.
+
+  defaultValue: None
+  position: Named
+  aliases: BaseN
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    Indicates whether RSS on an interface is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeHidden
+  description: |+
+    Indicates that the cmdlet includes both visible and hidden network adapters in the operation.
+    By default only visible network adapters are included.
+    If a wildcard character is used in identifying a network adapter and this parameter has been specified, then the wildcard string is matched against both hidden and visible network adapters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceDescription
+  isRequired: true
+  description: |+
+    Specifies an array of network adapter interface descriptions.
+    For a physical network adapter this is typically the name of the vendor of the network adapter followed by a part number and description, such as `Contoso 12345 Gigabit Network Device`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ifDesc, InstanceID
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: MaxProcessorGroup
+  description: |+
+    Specifies the maximum processor group of a NUMA node.
+    This parameter is the highest group number of any processors that appear in the processor array for this network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: MaxG
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: MaxProcessorNumber
+  description: |+
+    Specifies the maximum processor number of a NUMA node.
+    This parameter is the highest processor number of any processors from the *MaxProcessorGroup* parameter that appear in the processor array for this network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: MaxN
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxProcessors
+  description: |+
+    Specifies the maximum number of processors to be used concurrently by RSS from the processor array for load balancing network transmissions from a single network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: Max
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of network adapter names.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ifAlias, InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRestart
+  description: |+
+    Indicates that the cmdlet does not restart the network adapter after completing the operation.
+    Many advanced properties require restarting the network adapter before the new settings take effect.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: NumaNode
+  description: |+
+    Specifies the NUMA node affinity for a network adapter.
+    This ensures that a given network transmission is load balanced by RSS within the NUMA node.
+    This affects the memory allocation and also impacts the preference and ordering of the processors in the processor array.
+    It does not affect the set of processors contained in the array, but it may impact the subset of the array that RSS actually uses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NumberOfReceiveQueues
+  description: |+
+    Specifies the number of receive queues per network adapter that is to be used by the interface
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Profile" data-throw-if-not-resolved="False" />
+  name: Profile
+  description: |+
+    Specifies the RSS profile.
+
+    The acceptable values for this parameter are:
+
+    - Closest: Behavior is consistent with the behavior of Windows Server® 2008 R2. 
+    - ClosestStatic: No dynamic load balancing, such as distributing but not load balancing at runtime. 
+    - NUMA: Assigns RSS processors in a round robin basis across every NUMA node to enable applications that are running on NUMA servers to scale well. 
+    - NUMAStatic: Default behavior.
+    RSS processor selection is the same as for NUMA scalability without dynamic load balancing. 
+    - Conservative: RSS uses as few processors as possible to sustain the load.
+    This option helps reduce the number of interrupts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Closest, ClosestStatic, NUMA, NUMAStatic, Conservative
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetAdapter.Set-NetAdapterRss
+name: Set-NetAdapterRss
+description: |-
+  The **Set-NetAdapterRss** cmdlet sets the receive side scaling (RSS) properties on a network adapter.
+  RSS is a scalability technology that distributes the receive network traffic among multiple processors by hashing the header of the incoming packet.
+  If RSS is disabled, network traffic is processed on a single processor core. This may impact network performance as the processor utilization increases.
+  Many properties can be configured using the parameters to optimize the performance of RSS.
+  The selection of the processors to use for RSS is an important aspect of load balancing.
+  Most of the parameters for this cmdlet help to determine the processors used by RSS.
+  A thorough understanding of RSS is recommended before modifying individual parameters.
+  Selecting the correct profile should be sufficient in most scenarios.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetAdapterRss.cmdletDefinition.cdxml-help.xml
+  Module Name: NetAdapter
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/netadapter/set-netadapterrss?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetAdapterRss

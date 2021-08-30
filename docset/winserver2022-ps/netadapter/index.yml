@@ -1,0 +1,81 @@
+### YamlMime:PowershellModule
+children:
+- title: NetAdapter
+  cmdlets:
+  - NetAdapter.Disable-NetAdapter
+  - NetAdapter.Disable-NetAdapterBinding
+  - NetAdapter.Disable-NetAdapterChecksumOffload
+  - NetAdapter.Disable-NetAdapterEncapsulatedPacketTaskOffload
+  - NetAdapter.Disable-NetAdapterIPsecOffload
+  - NetAdapter.Disable-NetAdapterLso
+  - NetAdapter.Disable-NetAdapterPowerManagement
+  - NetAdapter.Disable-NetAdapterQos
+  - NetAdapter.Disable-NetAdapterRdma
+  - NetAdapter.Disable-NetAdapterRsc
+  - NetAdapter.Disable-NetAdapterRss
+  - NetAdapter.Disable-NetAdapterSriov
+  - NetAdapter.Disable-NetAdapterVmq
+  - NetAdapter.Enable-NetAdapter
+  - NetAdapter.Enable-NetAdapterBinding
+  - NetAdapter.Enable-NetAdapterChecksumOffload
+  - NetAdapter.Enable-NetAdapterEncapsulatedPacketTaskOffload
+  - NetAdapter.Enable-NetAdapterIPsecOffload
+  - NetAdapter.Enable-NetAdapterLso
+  - NetAdapter.Enable-NetAdapterPowerManagement
+  - NetAdapter.Enable-NetAdapterQos
+  - NetAdapter.Enable-NetAdapterRdma
+  - NetAdapter.Enable-NetAdapterRsc
+  - NetAdapter.Enable-NetAdapterRss
+  - NetAdapter.Enable-NetAdapterSriov
+  - NetAdapter.Enable-NetAdapterVmq
+  - NetAdapter.Get-NetAdapter
+  - NetAdapter.Get-NetAdapterAdvancedProperty
+  - NetAdapter.Get-NetAdapterBinding
+  - NetAdapter.Get-NetAdapterChecksumOffload
+  - NetAdapter.Get-NetAdapterEncapsulatedPacketTaskOffload
+  - NetAdapter.Get-NetAdapterHardwareInfo
+  - NetAdapter.Get-NetAdapterIPsecOffload
+  - NetAdapter.Get-NetAdapterLso
+  - NetAdapter.Get-NetAdapterPowerManagement
+  - NetAdapter.Get-NetAdapterQos
+  - NetAdapter.Get-NetAdapterRdma
+  - NetAdapter.Get-NetAdapterRsc
+  - NetAdapter.Get-NetAdapterRss
+  - NetAdapter.Get-NetAdapterSriov
+  - NetAdapter.Get-NetAdapterSriovVf
+  - NetAdapter.Get-NetAdapterStatistics
+  - NetAdapter.Get-NetAdapterVmq
+  - NetAdapter.Get-NetAdapterVmqQueue
+  - NetAdapter.Get-NetAdapterVPort
+  - NetAdapter.New-NetAdapterAdvancedProperty
+  - NetAdapter.Remove-NetAdapterAdvancedProperty
+  - NetAdapter.Rename-NetAdapter
+  - NetAdapter.Reset-NetAdapterAdvancedProperty
+  - NetAdapter.Restart-NetAdapter
+  - NetAdapter.Set-NetAdapter
+  - NetAdapter.Set-NetAdapterAdvancedProperty
+  - NetAdapter.Set-NetAdapterBinding
+  - NetAdapter.Set-NetAdapterChecksumOffload
+  - NetAdapter.Set-NetAdapterEncapsulatedPacketTaskOffload
+  - NetAdapter.Set-NetAdapterIPsecOffload
+  - NetAdapter.Set-NetAdapterLso
+  - NetAdapter.Set-NetAdapterPowerManagement
+  - NetAdapter.Set-NetAdapterQos
+  - NetAdapter.Set-NetAdapterRdma
+  - NetAdapter.Set-NetAdapterRsc
+  - NetAdapter.Set-NetAdapterRss
+  - NetAdapter.Set-NetAdapterSriov
+  - NetAdapter.Set-NetAdapterVmq
+uid: NetAdapter
+name: NetAdapter
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Network Adapter-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 1042b422-63a8-4016-a6d6-293e19e8f8a6
+  Module Name: NetAdapter
+  ms.date: 12/20/2016
+  title: NetAdapter

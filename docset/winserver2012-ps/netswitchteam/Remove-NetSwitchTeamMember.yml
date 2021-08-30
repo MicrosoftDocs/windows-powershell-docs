@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a network adapter member from a switch team.
+module: NetSwitchTeam
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-NetSwitchTeamMember
+  href: ./Add-NetSwitchTeamMember.yml
+- text: Get-NetSwitchTeamMember
+  href: ./Get-NetSwitchTeamMember.yml
+syntaxes:
+- >-
+  Remove-NetSwitchTeamMember [-Name] <String> [-Team] <String> [-AsJob] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Remove-NetSwitchTeamMember -Team "MyTeam1" -Member "Ethernet 2"
+  description: |-
+    This example will remove the network adapter named Ethernet 2 from the switch team named MyTeam1.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the switch team member or an object that represents a part of a switch team.
+    The adapter names are the IfAlias names, such as Ethernet 2.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Team
+  isRequired: true
+  description: |+
+    Specifies the name of switch team from which to remove the network adapter.
+    The switch team must already exist and must be a switch team.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetSwitchTeam.Remove-NetSwitchTeamMember
+name: Remove-NetSwitchTeamMember
+description: |-
+  The **Remove-NetSwitchTeamMember** cmdlet removes a network adapter team member from the specified switch team.
+  The specified switch team must be an existing switch team.
+  The member designated must exist in the specified switch team.
+metadata:
+  external help file: NetSwitchTeam_Cmdlets.xml
+  Module Name: NetSwitchTeam
+  online version: https://docs.microsoft.com/powershell/module/netswitchteam/remove-netswitchteammember?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

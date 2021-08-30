@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the action(s) associated with a capability.
+module: SystemInsights
+inputs:
+- name: <xref href="Microsoft.SystemInsights.Management.PowerShell.Capability" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a capability object to the *Name* parameter.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-InsightsCapability
+  href: get-insightscapability.yml
+- text: Get-InsightsCapabilityAction
+  href: get-insightscapabilityaction.yml
+- text: Set-InsightsCapabilityAction
+  href: set-insightscapabilityaction.yml
+syntaxes:
+- >-
+  Remove-InsightsCapabilityAction [-Name] <String> [-AllActions] [[-ComputerName] <String>]
+
+   [-Credential <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-InsightsCapabilityAction [-Name] <String> [-Type] <PredictionStatus> [[-ComputerName] <String>]
+
+   [-Credential <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-InsightsCapabilityAction -Name "CPU capacity forecasting" -Type OK, Warning
+  description: |-
+    This example removes the **OK** and **Warning** actions for the **CPU capacity forecasting** capability.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Remove-InsightsCapabilityAction -Name "CPU capacity forecasting" -AllActions
+  description: |-
+    This example removes all actions for the **CPU capacity forecasting** capability.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllActions
+  isRequired: true
+  description: |+
+    Removes all actions associated with a capability.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a fully qualified domain name (FQDN). If not specified, uses the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: CN
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credential for accessing the computer specified by the -ComputerName parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a capability using a capability name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: N
+  parameterValueGroup: ""
+- type: <xref href="PredictionStatus" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the prediction status of the capability. If the capability outputs this status, the action associated with this status will be automatically invoked.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: None, Ok, Warning, Error, Critical
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SystemInsights.Remove-InsightsCapabilityAction
+name: Remove-InsightsCapabilityAction
+description: |-
+  The **Remove-InsightsCapabilityAction** cmdlet removes the action(s) associated with a capability.
+
+  >[!IMPORTANT]
+  >Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: http://go.microsoft.com
+  external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
+  Locale: en-US
+  Module Name: SystemInsights
+  ms.date: 06/18/2018
+  online version: https://docs.microsoft.com/powershell/module/systeminsights/remove-insightscapabilityaction?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-InsightsCapabilityAction

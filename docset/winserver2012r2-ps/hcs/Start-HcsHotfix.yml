@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Installs a hotfix on a StorSimple device.
+module: HCS
+notes: ""
+links:
+- text: Start-HcsUpdate
+  href: ./Start-HcsUpdate.yml
+syntaxes:
+- Start-HcsHotfix [-Force] [-Credential <PSCredential>] -Path <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Install a hotfix'
+  code: |-
+    PS C:\>Start-HcsHotfix -Path "\\myshare\hotfix\hotfix.exe"
+  description: |-
+    This command installs a hotfix on a StorSimple device.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a **PSCredential** object.
+    Specify a credential that has read permission for the location that the **Path** parameter specifies.
+    To obtain a **PSCredential** object, use the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a file name, including the path, to the hotfix to install.
+    The hotfix must be on a share that the StorSimple device has access to.
+    If the share requires credentials, they must be supplied with the **Credential** parameter.
+
+    If you have trouble accessing a network share by specifying a name (for example, \\\\mysharehost\temp\\), try accessing it by IP address instead (for example, \\\\192.168.0.25\temp\\).
+    Because this device is not joined to a domain, accessing network shares by name does not always work, depending on the configuration of your network.
+    The device cannot communicate over IPSEC enabled networks.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HCS.Start-HcsHotfix
+name: Start-HcsHotfix
+description: |-
+  The **Start-HcsHotfix** cmdlet installs a hotfix on a StorSimple device.
+  You must install maintenance mode updates on each controller individually.
+  If you do not install a maintenance mode hotfix on each controller, data may become lost or corrupted.
+metadata:
+  external help file: Microsoft.HCS.Management.dll-Help.xml
+  Module Name: HCS
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/hcs/start-hcshotfix?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-HcsHotfix

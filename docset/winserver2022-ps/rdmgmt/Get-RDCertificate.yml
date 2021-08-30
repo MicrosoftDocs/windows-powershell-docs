@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets certificates associated with RDS roles.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-RDCertificate
+  href: ./New-RDCertificate.yml
+- text: Set-RDCertificate
+  href: ./Set-RDCertificate.yml
+syntaxes:
+- Get-RDCertificate [[-Role] <RDCertificateRole>] [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get certificates for an RD Connection Broker'
+  code: |-
+    PS C:\> Get-RDCertificate -ConnectionBroker "RDConnectionBroker.Contoso.com"
+  description: |-
+    This command gets certificates for server roles for the RD Connection Broker server named RDConnectionBroker.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RDCertificateRole" data-throw-if-not-resolved="False" />
+  name: Role
+  description: |+
+    Specifies a certificate type associated with an RDS server role.
+    The acceptable values for this parameter are:
+
+    - RDGateway
+    - RDWebAccess
+    - RDRedirector
+    - RDPublishing
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: RDGateway, RDWebAccess, RDRedirector, RDPublishing
+uid: RDMgmt.Get-RDCertificate
+name: Get-RDCertificate
+description: |-
+  The **Get-RDCertificate** cmdlet gets certificates associated with Remote Desktop Services (RDS) roles.
+
+  This cmdlet modifies an object that contains the following information:
+
+  - Subject.
+  The subject of the certificate.
+  - SubjectAlternateName.
+  A list of subject alternative name entries of the certificate.
+  - IssuedBy.
+  Common name of the issuer of the certificate.
+  - IssuedTo.
+  Common name of the IssuedTo field of the certificate.
+  - ExpiresOn.
+  Expiration date of the certificate.
+  - Thumbprint.
+  Thumbprint of the certificate.
+  - Role.
+  Remote desktop role service name.
+  The possible roles are: RDGateway, RDWebAccess, RDRedirector, and RDPublishing.
+  - Level.
+  Certification level.
+
+  The certification levels are:
+
+  - Not Configured.
+  The role service is not configured with a certificate or the certificate is not valid.
+  - Untrusted.
+  The role service is configured with a self-signed certificate.
+  - Trusted.
+  The role service is configured with either enterprise certificate or public certificate.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdcertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDCertificate

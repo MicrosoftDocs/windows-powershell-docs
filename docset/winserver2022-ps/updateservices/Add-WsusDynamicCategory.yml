@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a dynamic category to a WSUS server.
+module: UpdateServices
+notes: ""
+inputs:
+- name: <xref href="IDynamicCategory" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="IDynamicCategory" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WsusDynamicCategory
+  href: ./Get-WsusDynamicCategory.yml
+- text: Remove-WsusDynamicCategory
+  href: ./Remove-WsusDynamicCategory.yml
+- text: Set-WsusDynamicCategory
+  href: ./Set-WsusDynamicCategory.yml
+- text: Get-WsusServer
+  href: ./Get-WsusServer.yml
+syntaxes:
+- >-
+  Add-WsusDynamicCategory [-UpdateServer <IUpdateServer>] -InputObject <IDynamicCategory> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-WsusDynamicCategory [-UpdateServer <IUpdateServer>] -Name <String>
+
+   -DynamicCategoryType <DynamicCategoryType> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a dynamic category to the local WSUS server'
+  code: |-
+    PS C:\> Add-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07"
+    Name                                     Type                                     Status
+    ----                                     ----                                     ------
+    PCI/Device07                             Device                                   True
+  description: |-
+    This command adds a dynamic category named PCI/Device07 the local update server. The command specifies that they type is Device.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="DynamicCategoryType" data-throw-if-not-resolved="False" />
+  name: DynamicCategoryType
+  isRequired: true
+  description: |+
+    Specifies the type of the dynamic category to add. The acceptable values for this parameter are:
+
+    - ComputerModel
+    - Device
+    - Application
+
+  defaultValue: None
+  position: Named
+  aliases: Type
+  parameterValueGroup: ComputerModel, Device, Application, Any
+- type: <xref href="IDynamicCategory" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the dynamic category object that this cmdlet adds to the server. To obtain a dynamic category, use the [Get-WsusDynamicCategory](./Get-WsusDynamicCategory.yml) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the dynamic category to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IUpdateServer" data-throw-if-not-resolved="False" />
+  name: UpdateServer
+  description: |+
+    Specifies the WSUS server to which this cmdlet adds the dynamic category. To obtain a server, use the [Get-WsusServer](./Get-WsusServer.yml) cmdlet. If you do not specify a value for this parameter, the cmdlet adds the dynamic category to the local server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UpdateServices.Add-WsusDynamicCategory
+name: Add-WsusDynamicCategory
+description: |-
+  The **Add-WsusDynamicCategory** cmdlet adds a dynamic category to a Windows Server Update Services (WSUS) server.
+
+  In order to transfer dynamic categories from one update server to another, pass the results of the Get-WsusDynamicCategory cmdlet to the current cmdlet by using the pipeline operator.
+
+  This cmdlet is used to add Dynamic Categories to WSUS, based on the type of requirement (computer model, device or application). The definition of Dynamic Categories in a WSUS implementation helps to categorize the applying of updates to the different categories available.
+
+  In some cases, you need advanced automation when using Dynamic Categories. If you want to download a specific device driver for a specific group of computers in the physical network, for example, advanced automation is required to use Dynamic Categories. In this case, the use of [Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/configmgr/) is needed to [install and configure a software update point](https://docs.microsoft.com/configmgr/sum/get-started/install-a-software-update-point) feature.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/updateservices/add-wsusdynamiccategory?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-WsusDynamicCategory

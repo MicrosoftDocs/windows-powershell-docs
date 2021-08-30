@@ -1,0 +1,181 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a CRL distribution point URI where AD CS publishes certification revocations.
+module: ADCSAdministration
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Administration.Commands.CA.CrlDistributionPointResult" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a Boolean object named Restart.
+    If Restart equals True, then the CA must be restarted.
+links:
+- text: Get-CACrlDistributionPoint
+  href: ./Get-CACrlDistributionPoint.yml
+- text: Remove-CACrlDistributionPoint
+  href: ./Remove-CACrlDistributionPoint.yml
+syntaxes:
+- >-
+  Add-CACrlDistributionPoint [-Uri] <String> [-AddToCertificateCdp] [-AddToFreshestCrl] [-AddToCrlCdp]
+
+   [-AddToCrlIdp] [-PublishToServer] [-PublishDeltaToServer] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a CRL distribution point URI where AD CS publishes certification revocations'
+  code: |-
+    PS C:\> Add-CACRLDistributionPoint -Uri "http://ca1.corp.contoso.com/pki/<CAName>.crl" -AddToCertificateCdp
+  description: |-
+    This command adds a CRL distribution point for the URI of `http://ca1.corp.contoso.com/pki/<CAName>.crl` and sets the CRL URI to be included in issued certificates.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AddToCertificateCdp
+  description: |+
+    Indicates that the cmdlet adds the CDP extension of issued certificates.
+    This parameter is available for use with LDAP, HTTP, Universal Naming Convention (UNC), and File paths.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AddToCrlCdp
+  description: |+
+    Indicates that the cmdlet includes the CRL.
+    This parameter is available for use with LDAP paths.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AddToCrlIdp
+  description: |+
+    Indicates that the cmdlet includes the IDP extension of issued certificates.
+    This parameter is available for use with LDAP and HTTP paths.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AddToFreshestCrl
+  description: |+
+    Indicates that the cmdlet includes the most recent CRL.
+    This parameter is available for use with LDAP, HTTP, UNC, and file paths.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PublishDeltaToServer
+  description: |+
+    Indicates that the cmdlet publishes the delta CRL.
+    This parameter is available for use with LDAP, UNC, local, and file paths.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PublishToServer
+  description: |+
+    Indicates that the cmdlet publishes the CRL to the specified server.
+    This parameter is available for use with LDAP, local, UNC, and file paths.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Uri
+  isRequired: true
+  description: |+
+    Specifies the uniform resource identifier (URI) for the distribution point location of the CRL.
+    This is the location from where status information about certificate revocation will be retrieved and the location the CRL will be published.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADCSAdministration.Add-CACrlDistributionPoint
+name: Add-CACrlDistributionPoint
+description: |-
+  The **Add-CACRLDistributionPoint** cmdlet adds a certificate revocation list (CRL) distribution point uniform resource indicator (URI) where Active Directory Certificate Services (AD CS) publishes certification revocations.
+
+  You can add CRL distribution points in issued certificates by using this Windows PowerShell cmdlet.
+  However, adding the URL for a CRL distribution point only affects newly issued certificates.
+  Previously issued certificates will continue to reference the original location.
+
+  To indicate that you want to use a URL as a CRL distribution point, use the switch parameter *PublishCRL*.
+
+  To indicate that you want to use a URL as a delta CRL distribution point, use the switch parameter *PublishDeltaCRL*.
+
+  To indicate that you want to publish this location in CRLs to point clients to a delta CRL, use the switch parameter *IncludeDeltaCRLs*.
+
+  CRL uniform resource locators can be HTTP or Lightweight Directory Access Protocol (LDAP) paths.
+  You can use the following variables depending upon the switch when specifying the address of the CRL.
+
+  `<CAName>`, which is replaced by the name of the targeted CA.
+
+  `<CAObjectClass>`, which is replaced by object class identifier for a CA, used when publishing to an LDAP URL.
+
+  `<CATruncatedName>`, which is replaced by sanitized name of the CA, truncated to 32 characters with a hash at the end.
+
+  `<CDPObjectClass>`, which is replaced by the object class identifier for CRL distribution points, used when publishing to an LDAP URL.
+
+  `<CertificateName>`, which is replaced by the renewal extension of the CA.
+
+  `<ConfigurationContainer>`, which is replaced by the location of the Configuration container in Active Directory Domain Services (AD DS) location.
+
+  `<CRLNameSuffix>`, which is replaced by inserts a name suffix at the end of the file name when publishing a CRL to a file or URL.
+
+  `<DeltaCRLAllowed>`, which is replaced by the CRLNameSuffix variable with a separate suffix to distinguish the delta CRL from the CRL; used when a delta CRL is published.
+
+  `<ServerDNSName>`, which is replaced by the DNS name of the CA server.
+
+  `<ServerShortName>`, which is replaced by the NetBIOS name of the CA server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsadministration/add-cacrldistributionpoint?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-CACrlDistributionPoint

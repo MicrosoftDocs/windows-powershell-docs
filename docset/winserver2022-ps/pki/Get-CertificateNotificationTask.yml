@@ -1,0 +1,41 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns all registered certificate notification tasks.
+module: pki
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    None
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Command.CertificateNotificationTask" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **CertificateNotificationTask** object for each certificate notification task that is currently registered by the New-CertificateNotificationTask cmdlet.
+links:
+- text: New-CertificateNotificationTask
+  href: ./New-CertificateNotificationTask.yml
+- text: Remove-CertificateNotificationTask
+  href: ./Remove-CertificateNotificationTask.yml
+- text: Switch-Certificate
+  href: ./Switch-Certificate.yml
+syntaxes:
+- Get-CertificateNotificationTask [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-CertificateNotificationTask
+  description: |-
+    This example gets all certificate notification tasks currently registered by the New-CertificateNotificationTask cmdlet.
+  summary: ""
+uid: pki.Get-CertificateNotificationTask
+name: Get-CertificateNotificationTask
+description: |-
+  The **Get-CertificateNotificationTask** cmdlet returns all certificate notification tasks currently registered by the New-CertificateNotificationTask cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  Module Name: pki
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/pki/get-certificatenotificationtask?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-CertificateNotificationTask

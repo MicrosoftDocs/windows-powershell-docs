@@ -1,0 +1,207 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Performs a DNS name query resolution for the specified name.
+module: DnsClient
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DnsClient.Commands.DnsRecord" data-throw-if-not-resolved="False" />
+  description: |-
+    The DnsRecord object contains all of the records returned from the wire for the specified DNS query.
+links:
+- text: Nslookup on TechNet
+  href: https://go.microsoft.com/fwlink/p/?LinkId=84907
+syntaxes:
+- >-
+  Resolve-DnsName [-Name] <String> [[-Type] <RecordType>] [-Server <String[]>] [-DnsOnly] [-CacheOnly]
+
+   [-DnssecOk] [-DnssecCd] [-NoHostsFile] [-LlmnrNetbiosOnly] [-LlmnrFallback] [-LlmnrOnly] [-NetbiosFallback]
+
+   [-NoIdn] [-NoRecursion] [-QuickTimeout] [-TcpOnly] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Resolve-DnsName -Name www.bing.com
+  description: |-
+    This example resolves a name using the default options.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> Resolve-DnsName -Name www.bing.com -Server 10.0.0.1
+  description: |-
+    This example resolves a name against the DNS server at 10.0.0.1.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\> Resolve-DnsName -Name www.bing.com -Type A
+  description: |-
+    This example queries for A type records for name www.bing.com.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\> Resolve-DnsName -Name www.bing.com -DnsOnly
+  description: |-
+    This example resolves a name using only DNS.
+    LLMNR and NetBIOS queries are not issued.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CacheOnly
+  description: |+
+    Resolves this query using only the local cache.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DnsOnly
+  description: |+
+    Resolves this query using only the DNS protocol.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DnssecCd
+  description: |+
+    Sets the DNSSEC checking-disabled bit for this query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DnssecOk
+  description: |+
+    Sets the DNSSEC OK bit for this query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LlmnrFallback
+  description: |+
+    Allows falling back to the LLMNR protocol when resolving this query with DNS fails.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LlmnrNetbiosOnly
+  description: |+
+    Resolves this query using only the LLMNR or NetBIOS protocols.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LlmnrOnly
+  description: |+
+    Resolves this query using only the LLMNR protocol.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name to be resolved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NetbiosFallback
+  description: |+
+    Allows fallback to the NetBIOS protocol when resolving this query with DNS fails.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoHostsFile
+  description: |+
+    Skips the hosts file when resolving this query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoIdn
+  description: |+
+    Specifies not to use IDN encoding logic for the query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRecursion
+  description: |+
+    Instructs the server not to use recursion when resolving this query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: QuickTimeout
+  description: |+
+    Uses shorter timeouts for this query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Server
+  description: |+
+    Specifies the IP addresses or host names of the DNS servers to be queried.
+    By default the interface DNS servers are queried if this parameter is not supplied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TcpOnly
+  description: |+
+    Uses only TCP for this query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RecordType" data-throw-if-not-resolved="False" />
+  name: Type
+  description: "Specifies the DNS query type that is to be issued.\r\nBy default the type is A_AAAA, the A and AAAA types will both be queried.\r\nThe acceptable values for this parameter are:\r\n\r\n -- UNKNOWN = 0, \r\n                         \r\n -- A_AAAA = 0, the DNS query type is A_AAAA. \r\n                         \r\n -- A = 1, the DNS query type is IPv4 server Address. \r\n                         \r\n -- AAAA = 28, the DNS query type is IPv6 server address. \r\n                         \r\n -- NS = 2, the DNS query type is name server. \r\n                         \r\n -- MX = 15, the DNS query type is mail routing information. \r\n                         \r\n -- MD = 3, the DNS query type is mail destination. \r\n                         \r\n -- MF = 4, the DNS query type is mail forwarder. \r\n                         \r\n -- CNAME = 5, the DNS query type is canonical name. \r\n                         \r\n -- SOA = 6, the DNS query type is start of authority zone. \r\n                         \r\n -- MB = 7, the DNS query type is mailbox domain name. \r\n                         \r\n -- MG = 8, the DNS query type is mail group member. \r\n                         \r\n -- MR = 9, the DNS query type is mail rename name. \r\n                         \r\n -- NULL = 10, the DNS query type is null resource record. \r\n                         \r\n -- WKS = 11, the DNS query type is well known service. \r\n                         \r\n -- PTR = 12, the DNS query type is domain name pointer. \r\n                         \r\n -- HINFO = 13, the DNS query type is host information. \r\n                         \r\n -- MINFO = 14, the DNS query type is mailbox information. \r\n                         \r\n -- TXT = 16, the DNS query type is text strings. \r\n                         \r\n -- RP = 17, the DNS query type is responsible person. \r\n                         \r\n -- AFSDB = 18, the DNS query type is AFS database servers. \r\n                         \r\n -- X25 = 19, the DNS query type is packet switched wide area network. \r\n                         \r\n -- ISDN = 20, the DNS query type is Integrated Services Digital Network. \r\n                         \r\n -- RT = 21, the DNS query type is DNS route through. \r\n                         \r\n -- SRV = 33, the DNS query type is server selection. \r\n                         \r\n -- DNAME = 39, the DNS query type is domain aliases. \r\n                         \r\n -- OPT = 41, the DNS query type is DNS option. \r\n                         \r\n -- DS = 43, the DNS query type is delegation signer. \r\n                         \r\n -- RRSIG = 46, the DNS query type is DNSSEC signature. \r\n                         \r\n -- NSEC = 47, the DNS query type is next-secure record. \r\n                         \r\n -- DNSKEY = 48, the DNS query type is DNS key record. \r\n                         \r\n -- DHCID = 49, the DNS query type is Dynamic Host Configuration Protocol information. \r\n                         \r\n -- NSEC3 = 50, the DNS query type is NSEC record version 3. \r\n                         \r\n -- NSEC3PARAM = 51, the DNS query type is NSEC3 parameters. \r\n                         \r\n -- ANY = 255, the DNS query type is wildcard match. \r\n                         \r\n -- ALL = 255, the DNS query type is wildcard match.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: UNKNOWN, A_AAAA, A, NS, MD, MF, CNAME, SOA, MB, MG, MR, NULL, WKS, PTR, HINFO, MINFO, MX, TXT, RP, AFSDB, X25, ISDN, RT, AAAA, SRV, DNAME, OPT, DS, RRSIG, NSEC, DNSKEY, DHCID, NSEC3, NSEC3PARAM, ANY, ALL, WINS
+uid: DnsClient.Resolve-DnsName
+name: Resolve-DnsName
+description: |-
+  The **Resolve-DnsName** cmdlet performs a DNS query for the specified name.
+  This cmdlet is functionally similar to the nslookup tool which allows users to query for names.
+metadata:
+  external help file: dnslookup.dll-Help.xml
+  Module Name: DnsClient
+  ms.date: 05/20/2019
+  online version: https://docs.microsoft.com/powershell/module/dnsclient/resolve-dnsname?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Resolve-DnsName

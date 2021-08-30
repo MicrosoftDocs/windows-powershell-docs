@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Saves CAU debug tracing information to a local zip file.
+module: ClusterAwareUpdating
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Invoke-CauRun
+  href: ./Invoke-CauRun.yml
+syntaxes:
+- >-
+  Save-CauDebugTrace [[-ClusterName] <String>] [[-FilePath] <String>] [-Credential <PSCredential>]
+
+   [-RunId <Guid>] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Save debug tracing information for the specified cluster'
+  code: |-
+    PS C:\> Save-CauDebugTrace -ClusterName "CONTOSO-FC1" -FilePath "C:\temp\testrun.zip"
+  description: |-
+    This command saves the debug tracing information for the cluster named CONTOSO-FC1, to a trace file called testrun.zip in the C:\temp folder.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  description: |+
+    Specifies the name of the cluster for which to gather CAU debug tracing information.
+    This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the administrative credentials for the target cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  description: |+
+    Specifies the name of the file to which to save the tracing information, such as `MyTrace.zip`.
+
+  defaultValue: None
+  position: "1"
+  aliases: Path
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: f
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: RunId
+  description: |+
+    Indicates that the cmdlet should only include debug trace files related to an updating run with the specified Run ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ClusterAwareUpdating.Save-CauDebugTrace
+name: Save-CauDebugTrace
+description: |-
+  The **Save-CauDebugTrace** cmdlet saves Cluster-Aware Updating (CAU) debug tracing information to a local zip file.
+  The tracing information is mainly intended for use by developers and support engineers.
+  Specify the file name with the *FilePath* parameter.
+
+  To run this cmdlet, Windows PowerShell remoting must be enabled on each node.
+  To do this, run the **Enable-PSRemoting** cmdlet.
+  In addition, ensure that the **Windows Remote Management - Compatibility Mode (HTTP-In)** firewall exception is enabled on each node.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  Module Name: ClusterAwareUpdating
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/save-caudebugtrace?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Save-CauDebugTrace

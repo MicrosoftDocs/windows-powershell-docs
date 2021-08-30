@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a replication group.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="none" data-throw-if-not-resolved="False" /><span>]</span>
+  description: ""
+links:
+- text: Get-DfsReplicationGroup
+  href: ./Get-DfsReplicationGroup.yml
+- text: New-DfsReplicationGroup
+  href: ./New-DfsReplicationGroup.yml
+- text: Set-DfsReplicationGroup
+  href: ./Set-DfsReplicationGroup.yml
+syntaxes:
+- >-
+  Remove-DfsReplicationGroup [-GroupName] <String[]> [-RemoveReplicatedFolders] [-Force] [[-DomainName] <String>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a replication group'
+  code: |-
+    PS C:\> Remove-DfsReplicationGroup -GroupName "RG01"
+    Performing this operation will remove the replication group "RG01" and the subscriptions members have to this
+    replication group. Are you sure you want to continue to remove this replication group? [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+  description: |-
+    This command removes the replication group named RG01 from the current domain.
+  summary: ""
+- title: 'Example 2: Remove replication groups using a wildcard'
+  code: |-
+    PS C:\> Remove-DfsReplicationGroup -GroupName "RG*" -RemoveReplicatedFolders -Domain "corp.contoso.com"
+    Performing this operation will remove the replication group "RG01" and the subscriptions members have to this
+    replication group. Are you sure you want to continue to remove this replication group? [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+
+    Performing this operation will remove the replication group "RG02" and the subscriptions members have to this
+    replication group. Are you sure you want to continue to remove this replication group? [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+
+    Performing this operation will remove the replication group "RG03" and the subscriptions members have to this
+    replication group. Are you sure you want to continue to remove this replication group? [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+  description: |-
+    This command removes all replication groups that include the pattern RG* in domain corp.contoso.com, even if the groups include replicated folders.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains a replication group..
+    If you do not specify this parameter, the cmdlet uses the current domain.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+    Use this parameter for scripted removal of replication groups.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replication groups.
+    You can use a comma separated list and the wildcard character (*).
+
+    If the replication group contains any replicated folders, you must specify the **RemoveReplicatedFolders** switch parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemoveReplicatedFolders
+  description: |+
+    Indicates that the cmdlet removes any replicated folders belonging to the replication group prior to deleting the replication group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSR.Remove-DfsReplicationGroup
+name: Remove-DfsReplicationGroup
+description: |-
+  The **Remove-DfsReplicationGroup** cmdlet removes a replication group.
+
+  When you remove a replication group, you remove the group from Active Directory, and you also delete all associated aspects of the Distributed File System (DFS) Replication topology for that replication group, such as members, memberships, and connections.
+  All replication halts on all members.
+  This operation does not delete any replicated file data or private data.
+  Use this command only when you decommission a replication group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/remove-dfsreplicationgroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-DfsReplicationGroup

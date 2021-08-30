@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables remote Windows PowerShell management.
+module: HCS
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: about_Remote
+  href: https://technet.microsoft.com/en-us/library/hh847900.aspx
+- text: Disable-HcsRemoteManagement
+  href: ./Disable-HcsRemoteManagement.yml
+- text: Get-HcsRemoteManagementCert
+  href: ./Get-HcsRemoteManagementCert.yml
+syntaxes:
+- Enable-HcsRemoteManagement [-AllowHttp] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable remote management'
+  code: |-
+    PS C:\>Enable-HcsRemoteManagement -AllowHttp
+  description: |-
+    This command enables remote management for this device.
+    You can manage the device by using HTTP or HTTPS.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowHttp
+  description: |+
+    Indicates that the cmdlet enables remote management over HTTP as well as HTTPS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HCS.Enable-HcsRemoteManagement
+name: Enable-HcsRemoteManagement
+description: |-
+  The **Enable-HcsRemoteManagement** cmdlet enables remote Windows PowerShell® management for this device.
+  You can manage remotely by using the SSAdmin console session configuration and the Support session configuration.
+  By default, the cmdlet enables remote management over HTTPS only.
+  Specify the **AllowHttp** parameter to enable remote management over HTTP as well.
+
+  To obtain the required certificate for connecting by using HTTPS, use the Get-HcsRemoteManagementCert cmdlet.
+
+  For more information about how to run remote commands in Windows PowerShell, type Get-Help about_Remotehttp://technet.microsoft.com/en-us/library/hh847900.aspx.
+metadata:
+  external help file: Microsoft.HCS.Management.dll-Help.xml
+  Module Name: HCS
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/hcs/enable-hcsremotemanagement?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-HcsRemoteManagement

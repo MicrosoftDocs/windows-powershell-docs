@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets global web content objects.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsGlobalWebContent;Microsoft.IdentityServer.Management.Resources.AdfsGlobalWebContent" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet generates a **System.IdentityServer.Management.Resources.AdfsGlobalWebContent** object that represents global web content.
+    The object includes the following properties:
+
+    - Locale: **System.Globalization.CultureInfo**
+    - CompanyName: **System.String**
+    - HelpDeskLink: **System.Uri**
+    - HelpDeskLinkText: **System.String**
+    - HomeLink: **System.Uri**
+    - HomeLinkText: **System.String**
+    - PrivacyLink: **System.Uri**
+    - PrivacyLinkText: **System.String**
+    - SignInPageDescriptionText: **System.String**
+    - SignOutPageDescriptionText: **System.String**
+    - ErrorPageDescriptionText: **System.String**
+    - ErrorPageGenericErrorMessage: **System.String**
+    - ErrorPageAuthorizationErrorMessage: **System.String**
+    - ErrorPageDeviceAuthenticationErrorMessage: **System.String**
+    - ErrorPageSupportEmail: **System.String**
+    - UpdatePasswordPageDescriptionText: **System.String**
+    - CertificatePageDescriptionText: **System.String**
+    - SignInPageAdditionalAuthenticationDescriptionText: **System.String**
+links:
+- text: Set-AdfsGlobalWebContent
+  href: ./Set-AdfsGlobalWebContent.yml
+- text: Remove-AdfsGlobalWebContent
+  href: ./Remove-AdfsGlobalWebContent.yml
+syntaxes:
+- Get-AdfsGlobalWebContent [-Locale <CultureInfo[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get global web content for all locales'
+  code: |-
+    PS C:\> Get-AdfsGlobalWebContent
+
+
+    Locale                                            :
+    CompanyName                                       :
+    HelpDeskLink                                      :
+    HelpDeskLinkText                                  :
+    HomeLink                                          :
+    HomeLinkText                                      :
+    PrivacyLink                                       :
+    PrivacyLinkText                                   :
+    CertificatePageDescriptionText                    :
+    SignInPageDescriptionText                         :
+    SignOutPageDescriptionText                        :
+    ErrorPageDescriptionText                          :
+    ErrorPageGenericErrorMessage                      :
+    ErrorPageAuthorizationErrorMessage                : You have been denied access.
+    ErrorPageDeviceAuthenticationErrorMessage         :
+    ErrorPageSupportEmail                             :
+    UpdatePasswordPageDescriptionText                 :
+    SignInPageAdditionalAuthenticationDescriptionText :
+  description: |-
+    This command gets the global web content for all locales.
+  summary: ""
+- title: 'Example 2: Get the global web content for a locale'
+  code: |-
+    PS C:\> Get-AdfsGlobalWebContent -Locale en-us
+  description: |-
+    This command gets the global web content for the en-us locale.
+    If you did not specify a locale when you modified properties of the global web content by using the **Set-AdfsGlobalWebContent** cmdlet, the cmdlet returns no additional information.
+  summary: ""
+parameters:
+- type: <xref href="CultureInfo" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Locale
+  description: |+
+    Specifies an array of locales.
+    The cmdlet gets the global web content associated with the locales that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsGlobalWebContent
+name: Get-AdfsGlobalWebContent
+description: |-
+  The **Get-AdfsGlobalWebContent** cmdlet gets all global web content objects or the global web content object that corresponds to the locale that you specify.
+  If you do not specify the *Locale* parameter, the cmdlet gets global web content objects for all locales.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsglobalwebcontent?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsGlobalWebContent

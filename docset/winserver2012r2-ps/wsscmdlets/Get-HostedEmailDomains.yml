@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the configuration of hosted email domains.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns an array of domain names from a hosted email provider.
+syntaxes:
+- Get-HostedEmailDomains [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the configuration of hosted email domains'
+  code: |-
+    PS C:\> Get-HostedEmailDomains
+  description: |-
+    This command gets the domain names of the hosted email providers.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+uid: WSSCmdlets.Get-HostedEmailDomains
+name: Get-HostedEmailDomains
+description: |-
+  The **Get-HostedEmailDomains** cmdlet gets the configuration of hosted email domains.
+  The cmdlet returns the domain names of the hosted email providers.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-hostedemaildomains?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-HostedEmailDomains

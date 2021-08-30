@@ -1,0 +1,307 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates S2S server parameters.
+module: RemoteAccess
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnServerIPsecConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-VpnServerConfiguration
+  href: ./Get-VpnServerConfiguration.yml
+syntaxes:
+- >-
+  Set-VpnServerConfiguration [-TunnelType <TunnelType>] [-SstpPorts <UInt32>] [-GrePorts <UInt32>]
+
+   [-IdleDisconnectSeconds <UInt32>] [-SALifeTimeSeconds <UInt32>] [-MMSALifeTimeSeconds <UInt32>]
+
+   [-SADataSizeForRenegotiationKilobytes <UInt32>] [-Ikev2Ports <UInt32>] [-L2tpPorts <UInt32>] [-PassThru]
+
+   [-EncryptionType <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-VpnServerConfiguration [-TunnelType <TunnelType>] [-PassThru] [-RevertToDefault]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VpnServerConfiguration [-TunnelType <TunnelType>] [-SstpPorts <UInt32>] [-GrePorts <UInt32>]
+
+   [-IdleDisconnectSeconds <UInt32>] [-SALifeTimeSeconds <UInt32>] [-MMSALifeTimeSeconds <UInt32>]
+
+   [-SADataSizeForRenegotiationKilobytes <UInt32>] [-Ikev2Ports <UInt32>] [-L2tpPorts <UInt32>] [-PassThru]
+
+   [-CustomPolicy] [-EncryptionMethod <EncryptionMethod>] [-IntegrityCheckMethod <IntegrityCheckMethod>]
+
+   [-CipherTransformConstants <CipherTransformConstants>] [-PfsGroup <PfsGroup>]
+
+   [-AuthenticationTransformConstants <AuthenticationTransformConstants>] [-DHGroup <DHGroup>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the idle disconnect time'
+  code: |-
+    PS C:\>Set-VpnServerConfiguration -IdleDisconnectSeconds 1000 -PassThru
+  description: |-
+    This command changes the idle disconnect time of the VPN server to 1000 seconds. The command includes the PassThru parameter, so it sends a VpnServerIPsecConfiguration object to the console.
+  summary: ""
+- title: 'Example 2: Configure a custom IPsec policy'
+  code: |-
+    PS C:\>Set-VpnServerConfiguration -CustomPolicy -EncryptionMethod "AES128" -DhGroup "Group2" -PfsGroup "PFS2" -CipherTransformConstants "AES128"  -IntegrityCheckMethod "SHA256" -AuthenticationTransformConstants "SHA256128" -PassThru
+  description: |-
+    This command configures a custom IPsec policy for incoming VPN connections and S2S protocol VPN connections that do not use a pre-shared key as an authentication method.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AuthenticationTransformConstants" data-throw-if-not-resolved="False" />
+  name: AuthenticationTransformConstants
+  description: |+
+    Specifies the authentication transform plumbed in Ipsec policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: FirstTransformType
+  parameterValueGroup: MD596, SHA196, SHA256128, GCMAES128, GCMAES192, GCMAES256, None
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CipherTransformConstants" data-throw-if-not-resolved="False" />
+  name: CipherTransformConstants
+  description: |+
+    Specifies the cipher plumbed in IPsec policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: FirstCipherAlgorithm, OtherCipherAlgorithm
+  parameterValueGroup: DES, DES3, AES128, AES192, AES256, GCMAES128, GCMAES192, GCMAES256, None
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CustomPolicy
+  isRequired: true
+  description: |+
+    Indicates the custom IKE IPSEC policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DHGroup" data-throw-if-not-resolved="False" />
+  name: DHGroup
+  description: |+
+    Specifies the DH Group Plumbed in Ipsec policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Group1, Group2, Group14, ECP256, ECP384, Group24
+- type: <xref href="EncryptionMethod" data-throw-if-not-resolved="False" />
+  name: EncryptionMethod
+  description: |+
+    Specifies the encryption method plumbed in IKE policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Encryption
+  parameterValueGroup: DES, DES3, AES128, AES192, AES256
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EncryptionType
+  description: |+
+    Specifies the type of Encryption.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoEncryption, RequireEncryption, OptionalEncryption, MaximumEncryption
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: GrePorts
+  description: |+
+    Specifies the number of Generic Routing Encapsulation (GRE) ports.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IdleDisconnectSeconds
+  description: |+
+    Specifies the time, in seconds, after which an idle connection is terminated.
+    Unless the idle time-out is disabled, the entire connection is terminated if the connection is idle for the specified interval.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IdleDurationSeconds
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Ikev2Ports
+  description: |+
+    Specifies the number of IKEv2 ports that are created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IntegrityCheckMethod" data-throw-if-not-resolved="False" />
+  name: IntegrityCheckMethod
+  description: |+
+    Specifies the integrity method plumbed in IPsec policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: FirstIntegrityAlgorithm, OtherHashAlgorithm
+  parameterValueGroup: MD5, SHA1, SHA256, SHA384
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: L2tpPorts
+  description: |+
+    Specifies the number of L2TP ports that are created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MMSALifeTimeSeconds
+  description: |+
+    Specifies the lifetime of a Main Mode security association (SA) in seconds, after which the SA is no longer valid.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PfsGroup" data-throw-if-not-resolved="False" />
+  name: PfsGroup
+  description: |+
+    Specifies the PFS Group plumbed in Ipsec policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: PfsGroupId
+  parameterValueGroup: None, PFS1, PFS2, PFS2048, ECP256, ECP384, PFSMM, PFS24
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RevertToDefault
+  isRequired: true
+  description: |+
+    Indicates that the IPsec parameters revert to a default value
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SADataSizeForRenegotiationKilobytes
+  description: |+
+    Specifies the number of kilobytes that are allowed to transfer using a security association (SA), after which the SA will be renegotiated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LifeTimeKiloBytes
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SALifeTimeSeconds
+  description: |+
+    Specifies the lifetime of a SA in seconds, after which the SA is no longer valid.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LifeTimeSeconds, QMSALifeTimeSeconds
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SstpPorts
+  description: |+
+    Specifies the number of SSTP ports.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent connections that can be established to run this command.
+    If you omit this parameter or enter a value of 0, the default value, 32, is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TunnelType" data-throw-if-not-resolved="False" />
+  name: TunnelType
+  description: |+
+    Specifies the Tunnel Type to which Custom Policy is to be applied
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: IKEV2, L2TP
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Set-VpnServerConfiguration
+name: Set-VpnServerConfiguration
+description: |-
+  The **Set-VpnServerConfiguration** cmdlet updates IPSEC properties on RRAS server for incoming S2S VPN Interfaces.
+  By Specifying CustomPolicy, IPsec parameters can be customized.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_VpnServerIPsecConfiguration_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-vpnserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VpnServerConfiguration

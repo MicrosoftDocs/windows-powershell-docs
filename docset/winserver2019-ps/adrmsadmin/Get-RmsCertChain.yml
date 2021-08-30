@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generates a report about the certificate chain of a particular user request for the AD RMS cluster.
+module: ADRMSAdmin
+notes: ""
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Get-RmsCertInfo
+  href: ./Get-RmsCertInfo.yml
+- text: Get-RmsChildCert
+  href: ./Get-RmsChildCert.yml
+- text: Get-RmsUserRequestReport
+  href: ./Get-RmsUserRequestReport.yml
+syntaxes:
+- Get-RmsCertChain -RequestId <Int64> [-Path] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a certificate chain by ID'
+  code: |-
+    PS C:\> Get-RmsCertChain -Path "." -RequestId 100
+  description: |-
+    This command displays the certification chain of the request with the ID of 100.
+  summary: ""
+- title: 'Example 2: Pass in a user request ID to get its certificate chain'
+  code: |-
+    PS C:\> Get-RmsUserRequestReport -Path "." -RequestType GetClientLicensorCertificate -UserId 1 | Get-RmsCertChain -Path "."
+  description: |-
+    This command uses the **Get-RmsUserRequestReport** cmdlet to retrieve the ID of a user request and then pipes the ID to the **Get-RmsCertChain** cmdlet to display the certificate chain of the request.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a provider drive and path or relative path on the current drive.
+    Use a dot (.) to specify the current location.
+    This parameter does not accept wildcards and has no default value.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: RequestId
+  isRequired: true
+  description: |+
+    Specifies the unique internal ID of a user request.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADRMSAdmin.Get-RmsCertChain
+name: Get-RmsCertChain
+description: |-
+  The **Get-RmsCertChain** cmdlet generates a report about the certificate chain of a particular user request on the Active Directory Rights Management Services (AD RMS) cluster.
+
+  To obtain the report, specify the RequestID of the user request for which you want a report and then set the *Path* parameter to the AD RMS provider drive path `<PSDrive>:\`Report where `<PSDrive>` is the provider drive ID.
+  You can also specify a relative path.
+  For example, a dot (.) specifies the current location.
+
+  Use the **Get-RmsUserRequestReport** cmdlet to obtain the RequestID of the user request for which you want a certificate chain report.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adrmsadmin/get-rmscertchain?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RmsCertChain

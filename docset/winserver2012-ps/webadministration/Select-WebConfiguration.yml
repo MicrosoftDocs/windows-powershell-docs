@@ -1,0 +1,36 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns Web configuration objects.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Select-WebConfiguration [-Filter] <String[]> [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Get configuration settings --------------'
+  code: |-
+    IIS:\>Select-WebConfiguration "get-config(MACHINE/WEBROOT/APPHOST/testSite)/appSettings"
+  description: |-
+    Returns the configuration collection from the appSettings location.
+    The specified location must exist or an error is returned.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Filter
+  isRequired: true
+  description: |+
+    An XPath filter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Select-WebConfiguration
+name: Select-WebConfiguration
+description: |-
+  Returns information about IIS configuration objects.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/select-webconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

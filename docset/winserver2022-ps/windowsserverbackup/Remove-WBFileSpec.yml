@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a backup file specification from a backup policy.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBFileSpec, WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet removes a **WBFileSpec** object from a **WBPolicy** object.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    None
+links:
+- text: Get-WBFileSpec
+  href: ./Get-WBFileSpec.yml
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+syntaxes:
+- Remove-WBFileSpec [-Policy] <WBPolicy> [-FileSpec] <WBFileSpec> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a backup file specification from a backup policy'
+  code: |-
+    PS C:\> $Filespeclist = Get-WBFileSpec -Policy $Policy
+    PS C:\> Remove-WBFileSpec -Policy $Policy -FileSpec $Filespeclist[1]
+  description: |-
+    This example removes a backup file specification from a backup policy.
+
+    The first command gets a list of the backup file specifications from the backup policy in the variable named $Policy.
+    The command assigns the backup file specifications to the array in the variable named $Filespeclist.
+
+    The second command removes the backup file specification in the first element of $Filespeclist from the policy stored in the $Policy variable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="WBFileSpec" data-throw-if-not-resolved="False" />
+  name: FileSpec
+  isRequired: true
+  description: |+
+    Specifies a backup file specification object to remove from the **WBPolicy** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies a backup policy object that contains the backup policy that this cmdlet updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Remove-WBFileSpec
+name: Remove-WBFileSpec
+description: |-
+  The **Remove-WBFileSpec** cmdlet removes a **WBFileSpec** object that contains a backup file specification from a **WBPolicy** object that contains a backup policy.
+  A backup file specification contains a list of items to include in or exclude from backups that use the backup policy.
+
+  Before you can remove a backup file specification from a **WBPolicy** object, you must put the **WBPolicy** object in edit mode.
+  To put the **WBPolicy** object in edit mode for a policy that you set as the scheduled backup policy, use the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet with the *Editable* parameter.
+  The [New-WBPolicy](./New-WBPolicy.yml) cmdlet creates a new **WBPolicy** object that is already in edit mode.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/remove-wbfilespec?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WBFileSpec

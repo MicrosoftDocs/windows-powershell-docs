@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets all PhysicalDisk objects that can be used with Storage Spaces to form a storage pool.
+module: StorageSpaces
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns objects that represent physical disks.
+syntaxes:
+- Get-SpacesPhysicalDisk [-OnlyListAvailable] [[-BusType] <String>] [[-Throttle] <Int32>]
+- >-
+  Get-SpacesPhysicalDisk [-OnlyListAvailable] [[-BusType] <String>] [-ClusterFriendlyName] <String>
+
+   [[-Throttle] <Int32>]
+- >-
+  Get-SpacesPhysicalDisk [-OnlyListAvailable] [[-BusType] <String>] [-ServerToCompare] <String[]>
+
+   [[-Throttle] <Int32>]
+examples:
+- title: Example 1 - Display physical disks
+  code: |-
+    PS C:\>Get-SpacesPhysicalDisk
+    FriendlyName        CanPool             OperationalStatus   HealthStatus        Usage                              Size
+
+    ------------        -------             -----------------   ------------        -----                              ----
+
+    PhysicalDisk1       False               OK                  Healthy             Auto-Select                   999.25 GB
+
+    PhysicalDisk2       False               OK                  Healthy             Auto-Select                   999.25 GB
+
+    PhysicalDisk3       False               OK                  Healthy             Auto-Select                   999.25 GB
+
+    PhysicalDisk4       True                OK                  Healthy             Auto-Select                     1000 GB
+
+    PhysicalDisk5       True                OK                  Healthy             Auto-Select                     1000 GB
+
+    PhysicalDisk6       True                OK                  Healthy             Auto-Select                     1000 GB
+
+    PhysicalDisk0       False               OK                  Healthy             Auto-Select                       40 GB
+  description: |-
+    This example displays all physical disks available to Storage Spaces on the local computer.
+  summary: ""
+- title: Example 2 - Display physical disks not in a pool
+  code: |-
+    PS C:\>Get-SpacesPhysicalDisk -OnlyListAvailable
+  description: |-
+    This example displays physical disks that are not currently allocated to a storage pool.
+  summary: ""
+- title: Example 3 - Display physical disks common to the local computer and remote servers
+  code: |-
+    PS C:\>Get-SpacesPhysicalDisk -ServerToCompare BigOrange1, BigOrange2
+  description: |-
+    This example displays all common physical disks between the local computer and two servers, BigOrange1 and BigOrange2.
+  summary: ""
+- title: Example 4 - Display physical disks common to a failover cluster
+  code: |-
+    PS C:\>Get-SpacesPhysicalDisk -ClusterFriendlyName DeepSpaceCluster
+  description: |-
+    This example displays all common physical disks among nodes in cluster named DeepSpaceCluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BusType
+  description: |+
+    Specifies on which bus to obtain PhysicalDisk objects.
+    The acceptable values for this parameter are: **iSCSI**, **SAS**, **SATA**, and **USB**.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterFriendlyName
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OnlyListAvailable
+  description: |+
+    Specifies that the cmdlet should only get PhysicalDisk objects that are available to add to a storage pool (they do not already belong to a storage pool other than the primordial pool).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ServerToCompare
+  isRequired: true
+  description: |+
+    Gets all physical disks that are common between the local computer and the specified remote computers.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Throttle
+  description: ""
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+uid: StorageSpaces.Get-SpacesPhysicalDisk
+name: Get-SpacesPhysicalDisk
+description: |-
+  The Get-SpacesPhysicalDisk cmdlet gets all PhysicalDisk objects that are available to use with Storage Spaces.
+metadata:
+  external help file: StorSpaces2_Cmdlets.xml
+  Module Name: StorageSpaces
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/storagespaces/get-spacesphysicaldisk?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-SpacesPhysicalDisk

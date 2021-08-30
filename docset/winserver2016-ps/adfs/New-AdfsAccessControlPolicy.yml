@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an AD FS access control policy.
+module: ADFS
+notes: ""
+links:
+- text: Get-AdfsAccessControlPolicy
+  href: ./Get-AdfsAccessControlPolicy.yml
+- text: Remove-AdfsAccessControlPolicy
+  href: ./Remove-AdfsAccessControlPolicy.yml
+- text: Set-AdfsAccessControlPolicy
+  href: ./Set-AdfsAccessControlPolicy.yml
+syntaxes:
+- >-
+  New-AdfsAccessControlPolicy -Name <String> [-SourceName <String>] [-Identifier <String>]
+
+   [-Description <String>] [-PolicyMetadata <PolicyMetadata>] [-PolicyMetadataFile <String>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a policy template from a policy metadata file'
+  code: |-
+    PS C:\> $t=New-AdfsAccessControlPolicy -Name "DemoOne" -PolicyMetadataFile "C:\filepath\ PolicyTemplateIntranetWithOneGroupParameterMFA.xml"
+  description: |-
+    This command creates a policy template from a policy metadata file.
+  summary: ""
+- title: 'Example 2: Create a relying party using the policy template'
+  code: |-
+    PS C:\> Add-AdfsRelyingPartyTrust -Name "DemoRP1" -Identifier "https://DemoRP1" -AccessControlPolicyName DemoOne -AccessControlPolicyParameters "Administrators"
+  description: |-
+    This command creates a relying party using the policy template.
+  summary: ""
+- title: 'Example 3: Change parameters'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyParameters ("Administrators","Users") -AccessControlPolicyName "DemoOne"
+  description: |-
+    This command changes parameters for an access control policy.
+  summary: ""
+- title: 'Example 4: Un-assign a policy template'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyName $null
+  description: |-
+    This command un-assigns a policy template.
+  summary: ""
+- title: 'Example 5: Create a policy template from an existing template'
+  code: |-
+    PS C:\> New-AdfsAccessControlPolicy -Name "DemoCopyOne" -SourceName "DemoOne"
+  description: |-
+    This command creates a policy template from an existing template.
+  summary: ""
+- title: 'Example 6: Create a policy template from existing metadata'
+  code: |-
+    PS C:\> New-AdfsAccessControlPolicy -Name "DemoCopyTwo" -PolicyMetadata $t.PolicyMetadata
+  description: |-
+    This command creates a policy template from existing metadata.
+    The $t variable is an object from **New-AccessControlPolicy**.
+  summary: ""
+- title: 'Example 7: Create a policy template from a relying party result policy'
+  code: |-
+    PS C:\> New-AdfsAccessControlPolicy -Name "DemoCopyWithAssignment" -PolicyMetadata $r.ResultantPolicy
+  description: |-
+    This command creates a policy template from a relying party result policy.
+    The $r variable is the object returned from **Get-AdfsRelyingPartyTrust**.
+  summary: ""
+- title: 'Example 8: Change the relying party to use a new template'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyName "DemoTwo" -AccessControlPolicyParameters @{PermitGroup="Users";RejectGroup="Administrators"}
+  description: |-
+    This command changes the relying party to use a new template.
+  summary: ""
+- title: 'Example 9: Complicated conditions with specific claims'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyName DemoRP -AccessControlPolicyParameters`
+        @{"SPParameter"= @{ClaimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/OfficeLocation"; Operator="Equals"; Value="Redmond"}}
+  description: ""
+  summary: ""
+- title: 'Example 10: Two specific claims for single parameter'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyName "DemoRP" -AccessControlPolicyParameters`
+        @{"SPParameter"= (@{ClaimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/OfficeLocation"; Operator="Equals"; Value=("Redmond","DC")},`
+                          @{ClaimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/Department"; Operator="Equals"; Value="Azure"})}
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identifier
+  description: |+
+    Specifies an ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PolicyMetadata" data-throw-if-not-resolved="False" />
+  name: PolicyMetadata
+  description: |+
+    Specifies metadata for the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyMetadataFile
+  description: |+
+    Specifies a file that contains metadata for the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceName
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.New-AdfsAccessControlPolicy
+name: New-AdfsAccessControlPolicy
+description: |-
+  The **New-AdfsAccessControlPolicy** cmdlet creates an Active Directory Federation Services (AD FS) access control policy from a policy metadata file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/new-adfsaccesscontrolpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-AdfsAccessControlPolicy

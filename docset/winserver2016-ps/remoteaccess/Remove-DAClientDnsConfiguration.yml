@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the Name Resolution Policy Table (NRPT) entry corresponding to the specified DNS suffix from the NRPT.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsClientNRPTRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The array of DnsClientNRPTRule objects contains the following properties: 
+
+     -- The NRPT object for the NRPT entry that was removed.
+links:
+- text: Add-DAClientDnsConfiguration
+  href: ./Add-DAClientDnsConfiguration.yml
+- text: Get-DAClientDnsConfiguration
+  href: ./Get-DAClientDnsConfiguration.yml
+- text: Set-DAClientDnsConfiguration
+  href: ./Set-DAClientDnsConfiguration.yml
+syntaxes:
+- >-
+  Remove-DAClientDnsConfiguration [-DnsSuffix] <String[]> [-ComputerName <String>] [-PassThru]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Remove-DAClientDnsConfiguration -DnsSuffix 'contoso.com' -PassThru
+    Name                             : 
+    Version                          : 1 
+    Namespace                        : {hrnet.com} 
+    IPsecCARestriction               : 
+    DirectAccessDnsServers           : fdad:34fb:a649:7777::404:404 
+    DirectAccessEnabled              : True 
+    DirectAccessProxyType            : Direct 
+    DirectAccessProxyName            : 
+    DirectAccessQueryIPsecEncryption : None 
+    DirectAccessQueryIPsecRequired   : False 
+    NameServers                      : 
+    DnsSecEnabled                    : 
+    DnsSecQueryIPsecEncryption       : None 
+    DnsSecQueryIPsecRequired         : False 
+    DnsSecValidationRequired         : False 
+    NameEncoding                     : 
+    DisplayName                      : 
+    Comment                          :
+  description: |-
+    This example removes the NRPT rules for contoso.com from DA configuration.
+    This change is propagated across all of the client GPOs.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the Remote Access server computer specific tasks should be run.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DnsSuffix
+  isRequired: true
+  description: |+
+    Specifies a list of DNS suffixes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Namespace
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Remove-DAClientDnsConfiguration
+name: Remove-DAClientDnsConfiguration
+description: |-
+  The **Remove-DAClientDnsConfiguration** cmdlet removes the Name Resolution Policy Table (NRPT) entry corresponding to the specified DNS suffix from the NRPT.
+
+  In a multi-domain scenario; when an NRPT entry is removed, the entry is correspondingly deleted from the all the client GPOs in various domains.
+  Note: In a Windows deployment with firstref_server_7 GPOs, removal of a suffix will removes it from both the nextref_server_7 GPOs and Windows Server® 2012 GPOs
+
+  The NRPT configuration is applicable globally to the entire DA deployment and therefore is not impacted by multi-site deployments.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DAClientDNSConfiguration_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/remove-daclientdnsconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-DAClientDnsConfiguration

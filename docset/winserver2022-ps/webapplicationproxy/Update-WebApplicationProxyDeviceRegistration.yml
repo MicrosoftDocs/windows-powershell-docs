@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the AD FS SSL endpoint listeners that correspond to the UPN suffixes.
+module: WebApplicationProxy
+notes: ""
+links:
+- text: Get-WebApplicationProxyApplication
+  href: ./Get-WebApplicationProxyApplication.yml
+syntaxes:
+- Update-WebApplicationProxyDeviceRegistration [-NetworkCredential] <PSCredential> [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure AD FS SSL endpoint listeners'
+  code: |-
+    PS C:\>Update-WebApplicationProxyDeviceRegistration
+  description: |-
+    This command discovers the UPN suffixes in AD FS and configures the SSL endpoint listeners that correspond to the UPN suffixes.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: NetworkCredential
+  isRequired: true
+  description: |+
+    Specifies a **PSCredential** object that contains the credentials of the AD FS identity that is authorized to register new the Federation server proxies.
+    By default, this is the account under which the Federation Service runs or an account that is a member of the administrators group on the federation server.
+
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebApplicationProxy.Update-WebApplicationProxyDeviceRegistration
+name: Update-WebApplicationProxyDeviceRegistration
+description: |-
+  The **Update-WebApplicationProxyDeviceRegistration** cmdlet discovers the user principal name (UPN) suffixes that you have set in Active Directory Federation Services (AD FS) and configures the AD FS Secure Sockets Layer (SSL) endpoint listeners that correspond to the UPN suffixes.
+  Any UPN suffix that the cmdlet discovers must have a corresponding registration name in the AD FS SSL certificate, in the form ienterpriseregistration.UpnSuffix.
+  You can also use a wild-card SSL certificate that covers all possible registration names.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.Proxy.dll-Help.xml
+  Module Name: WebApplicationProxy
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/webapplicationproxy/update-webapplicationproxydeviceregistration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-WebApplicationProxyDeviceRegistration

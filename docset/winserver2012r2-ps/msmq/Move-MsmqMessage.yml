@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves messages between subqueues or between the main queue and a subqueue.
+module: MSMQ
+notes: ""
+links:
+- text: New-MsmqMessage
+  href: ./New-MsmqMessage.yml
+- text: Get-MsmqQueue
+  href: ./Get-MsmqQueue.yml
+syntaxes:
+- >-
+  Move-MsmqMessage -InputObject <MessageQueue> -DestinationQueue <MessageQueue> -Message <Message>
+
+   [-Transactional] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $srcQueue = Get-MsmqQueue -QueueType Private -Name "Myqueue" 
+    PS C:\> $dstQueue = Get-MsmqQueue -QueueType Private -Name "Myqueue" -SubQueue "MySubqueue"
+    PS C:\> $Message = $srcQueue | Receive-MsmqQueue -Peek
+    PS C:\> $srcQueue | Move-MsmqMessage -DestinationQueue $dstQueue -Message $Message
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="MessageQueue" data-throw-if-not-resolved="False" />
+  name: DestinationQueue
+  isRequired: true
+  description: |+
+    Specifies a **MsmqQueue** object that represents the destination queue to which to move the message.
+    The destination queue can be a subqueue or the main queue.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MessageQueue" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies a **MsmqQueue** object.
+    The cmdlet moves the message from the source queue that this parameter specifies.
+    The source queue can be a subqueue or the main queue.
+    This parameter accepts pipeline input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Message" data-throw-if-not-resolved="False" />
+  name: Message
+  isRequired: true
+  description: |+
+    Specifies a **Message** object that represents the message to move.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Transactional
+  description: |+
+    Indicates that this cmdlet moves the message within a transaction context.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MSMQ.Move-MsmqMessage
+name: Move-MsmqMessage
+description: |-
+  The **Move-MsmqMessage** cmdlet moves messages between subqueues of the same queue or between the main queue and one of its subqueues.
+  This cmdlet returns a **Message** object that represents the moved message.
+  Move and open operations implicitly create subqueues.
+  You can get subqueues by using the Get-MsmqQueue cmdlet.
+metadata:
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/msmq/move-msmqmessage?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Move-MsmqMessage

@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the current volume backup performance settings.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="SwitchParameter, WBVolume" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe global settings or the per volume performance setting.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WBPerformanceConfiguration
+  href: ./Get-WBPerformanceConfiguration.yml
+syntaxes:
+- >-
+  Set-WBPerformanceConfiguration [-Volume] <WBVolume> [-PerformanceSetting] <WBPerformanceConfiguration>
+
+   [<CommonParameters>]
+- >-
+  Set-WBPerformanceConfiguration [-OverallPerformanceSetting] [-PerformanceSetting] <WBPerformanceConfiguration>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the global performance setting'
+  code: |-
+    PS C:\> Set-WBPerformanceConfiguration -OverallPerformanceSetting AlwaysIncremental
+  description: |-
+    This command sets the global performance settings as incremental for volume backups.
+  summary: ""
+- title: 'Example 2: Set a specific volume performance setting'
+  code: |-
+    PS C:\> $Backup = Get-WBBackupSet
+    PS C:\> Set-WBPerformanceConfiguration -Volume $Backup.Volume[1] AlwaysFull
+  description: |-
+    This example sets the performance settings for a specific volume.
+
+    The first command stores the result of the [Get-WBBackupSet](./Get-WBBackupSet.yml) cmdlet in the variable named $Backup.
+
+    The second command sets the **AlwaysFull** performance setting on the second volume of $Backup.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverallPerformanceSetting
+  isRequired: true
+  description: |+
+    Indicates that the changes affect the global performance setting.
+    If you do not use this parameter, then the *Volume* parameter must be specified.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBPerformanceConfiguration" data-throw-if-not-resolved="False" />
+  name: PerformanceSetting
+  isRequired: true
+  description: |+
+    Specifies the performance settings for which this cmdlet sets.
+    The acceptable values for this parameter are:: 
+
+    - **AlwaysFull**: The time to create a backup is proportional to the size of volume being backed up.
+    This can be set at a global level for all volumes or specific for some volumes.
+    - **AlwaysIncremental**: Increase the backup speed by just tracking the changes between the last and current backup.
+    This option is not recommended for servers with disk-intensive operation which may experience reduced disk throughput on volumes included in the backup.
+    This can be set at a global level for all volumes or specific for some volumes.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: AlwaysFull, AlwaysIncremental, Custom
+- type: <xref href="WBVolume" data-throw-if-not-resolved="False" />
+  name: Volume
+  isRequired: true
+  description: |+
+    Specifies the object for which this cmdlet sets the current performance settings.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Set-WBPerformanceConfiguration
+name: Set-WBPerformanceConfiguration
+description: |-
+  The **Set-WBPerformanceSetting** cmdlet sets the current volume backup performance settings.
+  The settings are applicable only for volume backups; these settings are not applicable for files, folders, system state, or applications.
+  The settings apply globally to all volumes in a backup, or to specific volumes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/set-wbperformanceconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WBPerformanceConfiguration

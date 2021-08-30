@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Optimizes the allocation of space used by virtual hard disk files, except for fixed virtual hard disks.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Vhd.PowerShell.VirtualHardDisk" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Optimize-VHD [-Path] <String[]> [-Mode <VhdCompactMode>] [-AsJob] [-Passthru] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Optimize-VHD -Path c:\test\dynamic.vhdx -Mode Full
+  description: |-
+    Runs the compact operation in Full mode.
+    (If the VHDX-format file is not attached as read-only prior to the operation, it will default to Prezeroed mode.)
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Optimize-VHD -Path c:\test\dynamic.vhdx -Mode Retrim
+  description: |-
+    Runs the compact operation in Retrim mode.
+    (If the VHDX-format disk is not mounted as read-only prior to the operation, running the cmdlet returns an error.)
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Optimize-VHD -Path c:\test\dynamic.vhdx -Mode Quick
+  description: |-
+    Runs the compact operation in Quick mode.
+    (If the VHDX-format file is not attached as read-only prior to the operation, it defaults to Pretrimmed mode.)
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which a virtual machine is to be optimized.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VhdCompactMode" data-throw-if-not-resolved="False" />
+  name: Mode
+  description: |+
+    Specifies the mode in which the virtual hard disk is to be optimized.
+    For a **VHD** disk, the default mode is **Full**.
+    For a **VHDX** disk, the default mode is **Quick**.
+    Valid modes are as follows:
+
+    - **Full** scans for zero blocks and reclaims unused blocks. (Allowable only if the virtual hard disk is mounted read-only.)
+    - **Pretrimmed** performs as **Quick** mode, but does not require the virtual hard disk to be mounted read-only. The detection of unused space is less effective than **Quick** mode (in which the virtual hard disk had been mounted read-only) because the scan cannot query information about free space in the NTFS file system within the virtual hard disk. Useful when the VHDX-format file has been used by operating system instances that are at least Windows 8 or Windows Server 2012, or when this cmdlet has already been run on a .vhdx file in **Retrim** mode.
+    - **Prezeroed** performs as **Quick** mode, but does not require the virtual hard disk to be mounted read-only. The unused space detection will be less effective than if the virtual hard disk had been mounted read-only as the scan will be unable to query information about free space in the NTFS file system within the virtual hard disk. Useful if a tool was run previously to zero all the free space on the virtual disk as this mode of compaction can then reclaim that space for subsequent block allocations. This form of compaction can also be useful in handling virtual hard disk containing file systems other than NTFS.
+    - **Quick** reclaims unused blocks, but does not scan for zero blocks. (Allowable only if the virtual hard disk is mounted read-only.)
+    - **Retrim** sends down retrims without scanning for zero blocks or reclaiming unused blocks. (Allowable only if the virtual hard disk is mounted read-only.)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Full, Quick, Retrim, Pretrimmed, Prezeroed
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that an object is to be passed through to the pipeline representing the virtual hard disk to be optimized.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies one or more paths to the dynamic or differencing virtual hard disk files to be optimized.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: FullName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Optimize-VHD
+name: Optimize-VHD
+description: |-
+  The **Optimize-VHD** cmdlet optimizes the allocation of space in one or more virtual hard disk files, except for fixed virtual hard disks.
+  The **Compact** operation is used to optimize the files.
+  This operation reclaims unused blocks as well as rearranges the blocks to be more efficiently packed, which reduces the size of a virtual hard disk file.
+
+  To use Optimize-VHD, the virtual hard disk must not be attached or must be attached in read-only mode.
+
+  The compact operation can succeed without reducing the file size, if no optimization is possible.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/optimize-vhd?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Optimize-VHD

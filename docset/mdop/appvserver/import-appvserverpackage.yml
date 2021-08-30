@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a package to the App-V Management server.
+module: AppVServer
+notes: ""
+outputs:
+- name: <xref href="AppvServer.AppvServerPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AppvServerPackage
+  href: ./Get-AppvServerPackage.yml
+- text: Grant-AppvServerPackage
+  href: ./Grant-AppvServerPackage.yml
+- text: Publish-AppvServerPackage
+  href: ./Publish-AppvServerPackage.yml
+- text: Remove-AppvServerPackage
+  href: ./Remove-AppvServerPackage.yml
+- text: Set-AppvServerPackage
+  href: ./Set-AppvServerPackage.yml
+- text: Unpublish-AppvServerPackage
+  href: ./Unpublish-AppvServerPackage.yml
+syntaxes:
+- Import-AppvServerPackage [-PackagePath] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackagePath
+  isRequired: true
+  description: |+
+    Specifies full path to the App-V package.
+    This can either be an SMB or HTTP/HTTPS path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AppVServer.Import-AppvServerPackage
+name: Import-AppvServerPackage
+description: |-
+  The **Import-AppvServerPackage** cmdlet accepts a path to a valid APPV package.
+  The specified package is imported into the Microsoft Application Virtualization (App-V) Management server and an object to the package is returned.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: AppVServerCmdlets.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Import-AppvServerPackage

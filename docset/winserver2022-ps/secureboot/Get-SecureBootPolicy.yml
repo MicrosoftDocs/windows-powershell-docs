@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the publisher GUID and the policy version of the Secure Boot configuration policy.
+module: SecureBoot
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.SecureBoot.Commands.SecureBootPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **SecureBootPolicy** object that contains the following information about the Secure Boot policy for the computer: 
+
+    - A GUID named Publisher. 
+    - An unsigned 32-bit integer named Version.
+links:
+- text: Confirm-SecureBootUEFI
+  href: ./Confirm-SecureBootUEFI.yml
+- text: Format-SecureBootUEFI
+  href: ./Format-SecureBootUEFI.yml
+- text: Get-SecureBootUEFI
+  href: ./Get-SecureBootUEFI.yml
+- text: Set-SecureBootUEFI
+  href: ./Set-SecureBootUEFI.yml
+syntaxes:
+- Get-SecureBootPolicy [<CommonParameters>]
+examples:
+- title: 'Example 1: Get Secure Boot policy'
+  code: |-
+    PS C:\> Get-SecureBootPolicy | Format-List
+    Publisher: 77fa9abd-0359-4d32-bd60-28f4e78f784b 
+    Version  : 1
+  description: |-
+    This command gets the publisher GUID and the policy version of the Secure Boot configuration policy.
+  summary: ""
+uid: SecureBoot.Get-SecureBootPolicy
+name: Get-SecureBootPolicy
+description: |-
+  The **Get-SecureBootPolicy** cmdlet gets the publisher GUID and the policy version of the Secure Boot configuration policy.
+
+  The cmdlet runs on both UEFI and BIOS (non-UEFI) computers.
+
+  If the computer does not support Secure Boot or is a non-UEFI computer, this cmdlet displays the following: 
+
+  `Secure Boot policy is not enabled on this machine.`
+
+  If you do not run Windows PowerShell® in administrator mode, this cmdlet returns an error displaying the following: 
+
+  `Incorrect authentication data.`
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
+  Module Name: SecureBoot
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/secureboot/get-securebootpolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-SecureBootPolicy

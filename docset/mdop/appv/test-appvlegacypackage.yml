@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Validates App-V packages for conversion.
+module: AppV
+notes: ""
+links:
+- text: ConvertFrom-AppvLegacyPackage
+  href: ./ConvertFrom-AppvLegacyPackage.yml
+syntaxes:
+- Test-AppvLegacyPackage [-SourcePath] <String[]> [<CommonParameters>]
+examples:
+- title: 'Example 1: Validate a package for conversion'
+  code: |-
+    PS C:\>Test-AppvLegacyPackage -SourcePath "C:\ContosoLegacyAppV"
+  description: |-
+    This command validates whether an App-V package is compatible for conversion to the current App-V package format.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SourcePath
+  isRequired: true
+  description: |+
+    Specifies an array of folders for the App-V packages that this cmdlet validates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Path, PSPath
+  parameterValueGroup: ""
+uid: AppV.Test-AppvLegacyPackage
+name: Test-AppvLegacyPackage
+description: |-
+  The **Test-AppvLegacyPackage** cmdlet performs basic validation on Microsoft Application Virtualization (App-V) packages created by using an earlier version of App-V.
+  This cmdlet tests whether packages are compatible for conversion to the current App-V package format.
+
+  This cmdlet performs only basic validation, such as making sure that all files are present, and that the **ConvertFrom-AppvLegacyPackage** cmdlet supports the package version.
+  This validation does not guarantee success of a package conversion.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.LegacyPackages.Module.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Test-AppvLegacyPackage

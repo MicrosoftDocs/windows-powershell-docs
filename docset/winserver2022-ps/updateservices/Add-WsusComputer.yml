@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a client computer to a target group.
+module: UpdateServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.UpdateServices.Commands.WsusComputer" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WsusComputer
+  href: ./Get-WsusComputer.yml
+- text: Get-WsusServer
+  href: ./Get-WsusServer.yml
+syntaxes:
+- Add-WsusComputer -Computer <WsusComputer> -TargetGroupName <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add computers to a target group'
+  code: |-
+    PS C:\> Get-WsusServer -Name "contoso" | Get-WsusComputer -NameIncludes "winvm" | Add-WsusComputer -TargetGroupName "Windows Virtual Machines"
+  description: |-
+    This command adds all computers with winvm in the name to the target group named Windows Virtual Machines on the server named contoso.
+  summary: ""
+parameters:
+- type: <xref href="WsusComputer" data-throw-if-not-resolved="False" />
+  name: Computer
+  isRequired: true
+  description: |+
+    Specifies the object that contains the client computer to be added. This value is obtained by running the **Get-WsusComputer** cmdlet and piping the resulting **WsusComputer** object into this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the computer target group for which to run this cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UpdateServices.Add-WsusComputer
+name: Add-WsusComputer
+description: |-
+  The **Add-WsusComputer** cmdlet adds the specified computer to the specified target group on the local server or a specified server. You can invoke this command by using the pipeline operator for the results of the [Get-WsusComputer](./Get-WsusComputer.yml) cmdlet. Calling the **Get-WsusComputer** cmdlet and passing the results into this cmdlet enables you to leverage the filtering capabilities of the **Get-WsusComputer** cmdlet in moving the desired computers to the specified target group. The server used in the **Get-WsusComputer** cmdlet is also used in this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/updateservices/add-wsuscomputer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-WsusComputer

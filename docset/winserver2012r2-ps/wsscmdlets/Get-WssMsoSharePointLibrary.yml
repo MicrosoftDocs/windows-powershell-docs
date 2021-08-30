@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a sp_online_2 library.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    Name
+
+    Type: System.String
+
+    Description: Name of the SharePoint library
+outputs:
+- name: <xref href="SharePointLibrary" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: New-WssMsoSharePointLibrary
+  href: ./New-WssMsoSharePointLibrary.yml
+- text: Remove-WssMsoSharePointLibrary
+  href: ./Remove-WssMsoSharePointLibrary.yml
+- text: Set-WssMsoSharePointLibrary
+  href: ./Set-WssMsoSharePointLibrary.yml
+syntaxes:
+- Get-WssMsoSharePointLibrary [[-Name] <String>] [[-Site] <SharePointSite>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a SharePoint library'
+  code: |-
+    PS C:\> $Site = Get-WssMsoSharePointSite | Select-Object -First 1
+    PS C:\> Get-WssMsoSharePointLibrary -Name "Documents" -Site $Site
+  description: |-
+    The first command uses the Get-WssMsoSharePointSite cmdlet to get a site, and stores the result in the $Site variable.
+
+    The second command gets the SharePoint Online library for the site specified in the $Site variable.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a sp_online_2 library.
+    The cmdlet gets the library for the name that you specify.
+    If you do not specify the **Name** parameter, the cmdlet returns libraries in the default team site that match other parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SharePointSite" data-throw-if-not-resolved="False" />
+  name: Site
+  description: |+
+    Specifies a sp_2013_1 site.
+    The cmdlet gets the library for the site that you specify.
+    If you do not specify the **Site** parameter, the cmdlet returns libraries in the default team site that match other parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Get-WssMsoSharePointLibrary
+name: Get-WssMsoSharePointLibrary
+description: |-
+  The **Get-WssMsoSharePointLibrary** cmdlet retrieves a sp_online_1 library.
+  A office_365_1 site stores the sp_online_2 library.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssmsosharepointlibrary?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssMsoSharePointLibrary

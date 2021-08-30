@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new IIS global module.
+module: WebAdministration
+notes: ""
+syntaxes:
+- New-WebGlobalModule [-Name] <String> [-Image <String>] [-Precondition <String>] [-Force] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Adding a new module --------------'
+  code: |-
+    IIS:\>New-WebGlobalModule -Name testGlobalModule -Image c:\test\test.dll
+  description: |-
+    Adds a new module to theglobalModuleslist.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the creation of the new module.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Image
+  description: |+
+    The path to a DLL image (native modules only) for the new module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the new module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Precondition
+  description: |+
+    Specifies any preconditions to be used for the new module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-WebGlobalModule
+name: New-WebGlobalModule
+description: |-
+  Creates a new IIS global module.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-webglobalmodule?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

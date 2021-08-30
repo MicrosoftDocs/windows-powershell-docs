@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets principals that have permissions for a replication group.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, String[], String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrDelegation" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Grant-DfsrDelegation
+  href: ./Grant-DfsrDelegation.yml
+- text: Revoke-DfsrDelegation
+  href: ./Revoke-DfsrDelegation.yml
+syntaxes:
+- Get-DfsrDelegation [[-GroupName] <String[]>] [[-DomainName] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get principals for a replication group'
+  code: |-
+    PS C:\> Get-DfsrDelegation -GroupName "RG01"
+
+    GroupName   : RG01
+    AccountName : NT AUTHORITY\SYSTEM
+    IsInherited : False
+
+    GroupName   : RG01
+    AccountName : TSQA\Domain Admins
+    IsInherited : False
+
+    GroupName   : RG01
+    AccountName : TSQA\DFSR Admins
+    IsInherited : False
+
+    GroupName   : RG01
+    AccountName : TSQA\Enterprise Admins
+    IsInherited : True
+  description: |-
+    This command gets the users and groups that have delegated permissions for the replication group named RG01.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains the replication group.
+    If you do not specify this parameter, the cmdlet uses the domain of the current user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  description: |+
+    Specifies an array of names of replication groups.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+uid: DFSR.Get-DfsrDelegation
+name: Get-DfsrDelegation
+description: |-
+  The **Get-DfsrDelegation** cmdlet gets the users and groups that have permission to create replicated folders, connections, members, and memberships for a replication group.
+  For more information about delegation in the Distributed File System (DFS) Replication service, see the documentation for the **Grant-DfsrDelegation** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/get-dfsrdelegation?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DfsrDelegation

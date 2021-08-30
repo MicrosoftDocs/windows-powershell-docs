@@ -1,0 +1,451 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a TCP setting.
+module: NetTCPIP
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetTCPSetting" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NetTCPSetting
+  href: ./Get-NetTCPSetting.yml
+- text: Get-NetTransportFilter
+  href: ./Get-NetTransportFilter.yml
+- text: Get-NetUDPSetting
+  href: ./Get-NetUDPSetting.yml
+- text: New-NetTransportFilter
+  href: ./New-NetTransportFilter.yml
+- text: Remove-NetTransportFilter
+  href: ./Remove-NetTransportFilter.yml
+- text: Set-NetUDPSetting
+  href: ./Set-NetUDPSetting.yml
+syntaxes:
+- >-
+  Set-NetTCPSetting [[-SettingName] <String[]>] [-MinRtoMs <UInt32>] [-InitialCongestionWindowMss <UInt32>]
+
+   [-CongestionProvider <CongestionProvider>] [-CwndRestart <CwndRestart>] [-DelayedAckTimeoutMs <UInt32>]
+
+   [-DelayedAckFrequency <Byte>] [-MemoryPressureProtection <MemoryPressureProtection>]
+
+   [-AutoTuningLevelLocal <AutoTuningLevelLocal>] [-EcnCapability <EcnCapability>] [-Timestamps <Timestamps>]
+
+   [-InitialRtoMs <UInt32>] [-ScalingHeuristics <ScalingHeuristics>] [-DynamicPortRangeStartPort <UInt16>]
+
+   [-DynamicPortRangeNumberOfPorts <UInt16>] [-AutomaticUseCustom <AutomaticUseCustom>]
+
+   [-NonSackRttResiliency <NonSackRttResiliency>] [-ForceWS <ForceWS>] [-MaxSynRetransmissions <Byte>]
+
+   [-AutoReusePortRangeStartPort <UInt16>] [-AutoReusePortRangeNumberOfPorts <UInt16>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-NetTCPSetting -InputObject <CimInstance[]> [-MinRtoMs <UInt32>] [-InitialCongestionWindowMss <UInt32>]
+
+   [-CongestionProvider <CongestionProvider>] [-CwndRestart <CwndRestart>] [-DelayedAckTimeoutMs <UInt32>]
+
+   [-DelayedAckFrequency <Byte>] [-MemoryPressureProtection <MemoryPressureProtection>]
+
+   [-AutoTuningLevelLocal <AutoTuningLevelLocal>] [-EcnCapability <EcnCapability>] [-Timestamps <Timestamps>]
+
+   [-InitialRtoMs <UInt32>] [-ScalingHeuristics <ScalingHeuristics>] [-DynamicPortRangeStartPort <UInt16>]
+
+   [-DynamicPortRangeNumberOfPorts <UInt16>] [-AutomaticUseCustom <AutomaticUseCustom>]
+
+   [-NonSackRttResiliency <NonSackRttResiliency>] [-ForceWS <ForceWS>] [-MaxSynRetransmissions <Byte>]
+
+   [-AutoReusePortRangeStartPort <UInt16>] [-AutoReusePortRangeNumberOfPorts <UInt16>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the custom TCP setting'
+  code: |-
+    PS C:\>Set-NetTCPSetting -SettingName "InternetCustom" -CongestionProvider CTCP -InitialCongestionWindowMss 6
+  description: |-
+    This command changes the custom TCP setting to have a value of 6 for the initial congestion window and use compound TCP.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AutomaticUseCustom" data-throw-if-not-resolved="False" />
+  name: AutomaticUseCustom
+  description: |+
+    Specifies whether the automatic profile assigns a custom template, either Datacenter Custom or Internet Custom, to a connection.
+    The acceptable values for this parameter are:
+
+    - Enabled 
+    - Disabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: AutoReusePortRangeNumberOfPorts
+  description: |+
+    Specifies the number of ports for the auto-reuse port range, which is a port range used for local ephemeral port selection by outbound TCP connections for which either SO_REUSE_UNICASTPORT has been set on the socket, or for which connect() has been called without calling bind() on the socket.
+
+    If you specify 0, the auto-reuse feature is disabled and ephemeral ports are drawn instead from the dynamic port range as specified by *DynamicPortRangeStartPort* and *DynamicPortRangeNumberOfPorts*, even if SO_REUSE_UNICASTPORT is set on a socket.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: AutoReusePortRangeStartPort
+  description: |+
+    Specifies the number of ports for the auto-reuse port range, which is a port range used for local ephemeral port selection by outbound TCP connections for which either SO_REUSE_UNICASTPORT has been set on the socket, or for which connect() has been called without calling bind() on the socket.
+
+    If you specify 0, the auto-reuse feature is disabled and ephemeral ports are drawn instead from the dynamic port range as specified by *DynamicPortRangeStartPort* and *DynamicPortRangeNumberOfPorts*, even if SO_REUSE_UNICASTPORT is set on a socket.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AutoTuningLevelLocal" data-throw-if-not-resolved="False" />
+  name: AutoTuningLevelLocal
+  description: |+
+    Specifies a TCP auto-tuning level for the host computer.
+    TCP auto-tuning can improve throughput on high throughput, high latency networks.
+    The acceptable values for this parameter are:
+
+    - Disabled.
+    Sets the TCP receive window to the default value. 
+    - HighlyRestricted.
+    Sets the TCP receive window to grow beyond the default value, but very conservatively. 
+    - Restricted.
+    Sets the TCP receive window to grow beyond the default value, but less conservatively than HighlyRestricted. 
+    - Normal.
+    Sets the TCP receive window to grow to accommodate almost all scenarios. 
+    - Experimental.
+    Sets the TCP receive window to grow to accommodate extreme scenarios.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, HighlyRestricted, Restricted, Normal, Experimental
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="CongestionProvider" data-throw-if-not-resolved="False" />
+  name: CongestionProvider
+  description: |+
+    Specifies the congestion provider property that TCP uses.
+    The acceptable values for this parameter are:
+
+    - CTCP.
+    Compound TCP increases the receive window and amount of data sent.
+    CTCP can improve throughput on higher latency connections. 
+    - DCTCP.
+    Data Center TCP adjusts the TCP window based on network congestion feedback based on Explicit Congestion Notification (ECN) signaling.
+    DCTCP may improve throughput on low latency links. 
+    - Default.
+    Servers use DCTCP by default.
+    Client computers use NewReno.
+    For information about NewReno, see [RFC 3782](http://www.ietf.org/rfc/rfc3782.txt).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, CTCP, DCTCP
+- type: <xref href="CwndRestart" data-throw-if-not-resolved="False" />
+  name: CwndRestart
+  description: |+
+    Specifies whether to enable congestion window restart.
+    Congestion window restart can avoid slow start to optimize throughput on low latency networks.
+    For more information about congestion window restart, see [RFC 2581](http://www.ietf.org/rfc/rfc2581.txt).
+    The acceptable values for this parameter are:
+
+    - True.
+    TCP uses congestion window restart. 
+    - False.
+    TCP uses the default setting of the connection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: False, True
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: DelayedAckFrequency
+  description: |+
+    Specifies the number of acknowledgments (ACKs) received before the computer sends a response.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DelayedAckTimeoutMs
+  description: |+
+    Specifies the time to wait, in milliseconds, before the computer sends an ACK if the computer receives fewer than delayed acknowledgment frequency of packets.
+    Use the *DelayedAckFrequency* parameter to specify the delayed ACK frequency value.
+    Reducing the time to wait can increase throughput on low latency networks by accelerating growth in TCP window size.
+    The acceptable values for this parameter are: increments of 10, from 10 through 600.
+
+  defaultValue: None
+  position: Named
+  aliases: DelayedAckTimeout
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: DynamicPortRangeNumberOfPorts
+  description: |+
+    Specifies the number of ports for the dynamic port range that starts from the port that you specify for the *DynamicPortRangeStartPort* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: DynamicPortRangeStartPort
+  description: |+
+    Specifies the starting port for the dynamic port range.
+    This parameter sets the starting port to send and receive TCP traffic.
+    The acceptable values for this parameter are: 1 through 65535.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="EcnCapability" data-throw-if-not-resolved="False" />
+  name: EcnCapability
+  description: |+
+    Specifies whether to enable ECN capability.
+    The acceptable values for this parameter are:
+
+    - Enabled.
+    Uses ECN capability. 
+    - Disabled.
+    Does not use ECN capability. 
+
+    If you specify a value of Disabled, UseECT0, or UseEct1 for the *EcnMarking* parameter of the Set-NetIPInterface cmdlet, the current parameter has no effect.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="ForceWS" data-throw-if-not-resolved="False" />
+  name: ForceWS
+  description: |+
+    Specifies whether to force window scaling for retransmission.
+    The acceptable values for this parameter are:
+
+    - Enabled.
+    Requires window scaling for retransmission. 
+    - Disabled.
+    Does not require window scaling for retransmission. 
+
+    The default value is Disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: InitialCongestionWindowMss
+  description: |+
+    Specifies the initial size of the congestion window.
+    Provide a value to multiply by the maximum segment size (MSS).
+    The acceptable values for this parameter are: even numbers from 2 through 64.
+
+  defaultValue: None
+  position: Named
+  aliases: InitialCongestionWindow
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: InitialRtoMs
+  description: |+
+    Specifies the period, in milliseconds, before connect, or SYN, retransmit.
+    The acceptable values for this parameter are: increments of 10, from 300 ms through 3000 ms.
+
+  defaultValue: None
+  position: Named
+  aliases: InitialRto
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: MaxSynRetransmissions
+  description: |+
+    Specifies the maximum number of times the computer sends SYN packets without receiving a response.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MemoryPressureProtection" data-throw-if-not-resolved="False" />
+  name: MemoryPressureProtection
+  description: |+
+    Specifies whether to use memory pressure protection.
+    TCP memory pressure protection helps ensure that a computer continues normal operation when low on memory due to denial of service attacks.
+    The acceptable values for this parameter are:
+
+    - Enabled.
+    When low on memory, during an attack, close existing TCP connections and drop incoming SYN requests. 
+    - Disabled.
+    Do not use memory pressure protection. 
+    - Default.
+    Use the computer default value for memory pressure protection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled, Default
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MinRtoMs
+  description: |+
+    Specifies a value, in milliseconds, for the TCP retransmission to time out.
+    The acceptable values for this parameter are: increments of 10, from 20 ms through 300 ms.
+
+  defaultValue: None
+  position: Named
+  aliases: MinRto
+  parameterValueGroup: ""
+- type: <xref href="NonSackRttResiliency" data-throw-if-not-resolved="False" />
+  name: NonSackRttResiliency
+  description: |+
+    Specifies whether to enable round trip time resiliency for clients that do not support selective acknowledgment.
+    The acceptable values for this parameter are:
+
+    - Enabled 
+    - Disabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ScalingHeuristics" data-throw-if-not-resolved="False" />
+  name: ScalingHeuristics
+  description: |+
+    Specifies whether to enable scaling heuristics.
+    The acceptable values for this parameter are:
+
+    - Enabled 
+    - Disabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SettingName
+  description: |+
+    Specifies an array of setting names.
+    You can specify only Custom for this parameter.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Timestamps" data-throw-if-not-resolved="False" />
+  name: Timestamps
+  description: |+
+    Specifies whether to enable timestamps.
+    Timestamps facilitate round trip measurement, and can help protect against wrapped sequence numbers on high throughput links.
+    For more information about TCP timestamps, see [RFC 1323](http://www.ietf.org/rfc/rfc1323.txt).
+    The acceptable values for this parameter are:
+
+    - Enabled 
+    - Disabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetTCPIP.Set-NetTCPSetting
+name: Set-NetTCPSetting
+description: |-
+  The **Set-NetTCPSetting** cmdlet modifies a TCP setting.
+  TCP settings are optimized for different network conditions including latency and congestion.
+  To apply a TCP setting to a port number or destination IP address range, create a transport filter by using the New-NetTransportFilter cmdlet.
+
+  **Note:**
+  >1) You can modify custom and non-custom settings on Windows server 2016 and 2019.
+  >2) You can modify only custom settings. Internet and Datacenter settings cannot be modified on Windows 2012 or earlier versions.
+  >3) On Windows 10, the following parameters are read-only and cannot be modified:
+
+  > * MinRtoMs
+  > * InitialCongestionWindowMss
+  > * AutomaticUseCustom
+  > * CongestionProvider
+  > * CwndRestart
+  > * DelayedAckTimeoutMs
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetTCPSetting.cdxml-help.xml
+  Module Name: NetTCPIP
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nettcpip/set-nettcpsetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetTCPSetting

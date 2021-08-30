@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the relying party trusts of the Federation Service.
+module: ADFS
+notes: |-
+  * If no Target* parameter is provided, all RelyingParty objects are returned. A relying party in Active Directory Federation Services (AD FS) 2.0 is an organization in which Web servers that host one or more Web-based applications reside. Tokens and Information Cards that originate from a claims provider can then be presented and ultimately consumed by the Web-based resources that are located in the relying party organization. When AD FS 2.0 is configured in the role of the relying party, it acts as a partner that trusts a claims provider to authenticate users. Therefore, the relying party consumes the claims that are packaged in security tokens that come from users in the claims provider. In other words, a relying party is the organization whose Web servers are protected by the resource-side federation server. The federation server at the relying party uses the security tokens that the claims provider produces to issue tokens to the Web servers that are located in the relying party.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure that represents a relying party trust.
+links:
+- text: Add-ADFSRelyingPartyTrust
+  href: ./Add-ADFSRelyingPartyTrust.yml
+- text: Disable-ADFSRelyingPartyTrust
+  href: ./Disable-ADFSRelyingPartyTrust.yml
+- text: Enable-ADFSRelyingPartyTrust
+  href: ./Enable-ADFSRelyingPartyTrust.yml
+- text: Remove-ADFSRelyingPartyTrust
+  href: ./Remove-ADFSRelyingPartyTrust.yml
+- text: Set-ADFSRelyingPartyTrust
+  href: ./Set-ADFSRelyingPartyTrust.yml
+- text: Update-ADFSRelyingPartyTrust
+  href: ./Update-ADFSRelyingPartyTrust.yml
+syntaxes:
+- Get-ADFSRelyingPartyTrust [[-Name] <String[]>] [<CommonParameters>]
+- Get-ADFSRelyingPartyTrust [-Identifier] <String[]> [<CommonParameters>]
+- Get-ADFSRelyingPartyTrust [-PrefixIdentifier] <String> [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>Get-ADFSRelyingPartyTrust -Name SampleApp
+  description: |-
+    Description
+
+    -----------
+
+    Gets the current property settings for a relying party trust that is specified by name SampleApp.
+  summary: ""
+- title: '-------------------------- EXAMPLE 2 --------------------------'
+  code: |-
+    C:\PS>Get-ADFSRelyingPartyTrust -Identifier https://SampleApp.SampleServer.org
+  description: |-
+    Description
+
+    -----------
+
+    Gets the current property settings for a relying party trust that is specified by the identifier https://SampleApp.SampleServer.org.
+  summary: ""
+- title: '-------------------------- EXAMPLE 3 --------------------------'
+  code: |-
+    C:\PS>Get-ADFSRelyingPartyTrust | Where-Object{ $_.LastUpdateTime  -le  (get-date).subtract((new-timespan -hours 24))}
+  description: |-
+    Description
+
+    -----------
+
+    Gets the current property settings for any relying party trusts that have been updated within the last 24 hours.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identifier
+  isRequired: true
+  description: |+
+    Specifies the unique identifier of the relying party trust to retrieve.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the display name of the relying party trust to retrieve.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrefixIdentifier
+  isRequired: true
+  description: |+
+    Specifies a prefix identifier of the relying party trust to retrieve. 
+    Prefix matching is used to support wildcard-type filtering and do matches based on a specific prefix URL.
+    Matches are done using string data type evaluation and are not case-sensitive.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-ADFSRelyingPartyTrust
+name: Get-ADFSRelyingPartyTrust
+description: |-
+  The Get-ADFSRelyingPartyTrust cmdlet retrieves the relying party trusts in the Federation Service.
+  You can use this cmdlet with no parameters to get all relying party trust objects.
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsrelyingpartytrust?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

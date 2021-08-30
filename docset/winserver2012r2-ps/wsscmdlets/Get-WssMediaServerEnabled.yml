@@ -1,0 +1,34 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the status of media streaming for a server.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a Boolean value that indicates whether or not media streaming is enabled on the server.
+links:
+- text: Set-WssMediaServerEnabled
+  href: ./Set-WssMediaServerEnabled.yml
+syntaxes:
+- Get-WssMediaServerEnabled [<CommonParameters>]
+examples:
+- title: 'Example 1: Get media streaming status'
+  code: |-
+    PS C:\> Get-WssMediaServerEnabled
+  description: |-
+    This command gets the media streaming status for the current server.
+    Media streaming is either enabled or disabled.
+  summary: ""
+uid: WSSCmdlets.Get-WssMediaServerEnabled
+name: Get-WssMediaServerEnabled
+description: |-
+  The **Get-WssMediaServerEnabled** cmdlet gets the status of media streaming for the current server.
+  You can use the Set-WssMediaServerEnabled cmdlet to enable or disable media streaming.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssmediaserverenabled?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssMediaServerEnabled

@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Prepares an AD RMS server for transitioning to Cryptographic Mode 2.
+module: ADRMSAdmin
+notes: ""
+inputs:
+- name: <xref href="string[], string, bool, SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+syntaxes:
+- >-
+  Initialize-RmsCryptoMode2 -FilePath <String[]> [-CspName <String>] [-Regenerate] [-Force] [-Path] <String[]>
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Export the SLC'
+  code: |-
+    PS C:\> Initialize-RmsCryptoMode2 -Path "." -FilePath "c:\test.tud"
+  description: |-
+    This command exports the server licensor certificate (SLC) for the current AD RMS server to the trusted user domain c:\test.tud for a server that uses centrally managed keys.
+  summary: ""
+- title: 'Example 2: Force regeneration of cryptographic mode 2 keys'
+  code: |-
+    PS C:\> Initialize-RmsCryptoMode2 -Path "." -FilePath "c:\test2.tud" -Regenerate
+
+    Initialize cryptographic mode 2
+
+    This will regenerate the cryptographic mode 2 key pair.  Are you sure you want to continue? 
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+  description: |-
+    This command forces regeneration of the cryptographic mode 2 keys.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CspName
+  description: |+
+    Specifies the name of the cryptographic service provider (CSP) to use for generating the mode 2 TUD when this cmdlet is executed.
+    This CSP must be of the type PROV_RSA_AES to support mode 2 operation (in contrast to mode 1 keys which use the CSP type PROV_RSA_FULL).
+
+    The *CspName* parameter is for CSP-based installs only.
+    If a CSP name is specified for a server with a centrally managed key, an error is returned if this parameter is included in the command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the name and location for the file generated when this cmdlet is executed.
+    This file contains the mode 2 SLC (server licensor certificate) which is exported as part of transitioning a trusted user domain (TUD) to mode operation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the cmdlet to save (overwrite) an existing file if one is found to exist under the name and location specified as part of the *FilePath* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    This parameter is for CSP-based installs only.
+    If a CSP name is specified for a server with a centrally managed key, an error is returned if this parameter is included in the command.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Regenerate
+  description: |+
+    Forces the AD RMS server to generate a new key even if the cmdlet has previously run.
+    This overwrites any previously generated key.
+    Because you can run this cmdlet multiple times, if this parameter is omitted, the same key is exported each subsequent time the cmdlet is run.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADRMSAdmin.Initialize-RmsCryptoMode2
+name: Initialize-RmsCryptoMode2
+description: |-
+  The **Initialize-RmsCryptoMode2** cmdlet prepares an Active Directory Rights Management Services (AD RMS) server for transitioning to Cryptographic Mode 2.
+
+  Cryptographic Mode 2 is an updated and enhanced AD RMS cryptographic implementation.
+  It supports 2048-bit RSA encryption and 256-bit length keys using the SHA-2 hashing algorithm (SHA-2/SHA-256) standards.
+
+  While this cmdlet is useful for performing the initial steps required in transitioning an AD RMS deployment to Cryptographic Mode 2, additional tasks are required.
+  First, all client computers in the AD RMS cluster environment must be patched to support this updated and enhanced mode.
+  Depending on your deployment configuration, you may need to update some or all servers.
+  When all computers are updated, as the final transition task to Cryptographic Mode 2, you can run the **Update-ADRMS** cmdlet with the *UpdateCryptographicModeOnly* parameter specified to effectively switch the cluster to using mode 2 instead of mode 1.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adrmsadmin/initialize-rmscryptomode2?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Initialize-RmsCryptoMode2

@@ -1,0 +1,184 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Publishes the App-V package.
+module: AppvClient
+notes: ""
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvClientPackage
+  href: ./Add-AppvClientPackage.yml
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Mount-AppvClientPackage
+  href: ./Mount-AppvClientPackage.yml
+- text: Remove-AppvClientPackage
+  href: ./Remove-AppvClientPackage.yml
+- text: Repair-AppvClientPackage
+  href: ./Repair-AppvClientPackage.yml
+- text: Set-AppvClientPackage
+  href: ./Set-AppvClientPackage.yml
+- text: Stop-AppvClientPackage
+  href: ./Stop-AppvClientPackage.yml
+- text: Unpublish-AppvClientPackage
+  href: ./Unpublish-AppvClientPackage.yml
+syntaxes:
+- >-
+  Publish-AppvClientPackage [-Global] [-UserSID <String>] [[-DynamicUserConfigurationPath] <String>]
+
+   [-DynamicUserConfigurationType <DynamicUserConfiguration>] [-PackageId] <Guid> [-VersionId] <Guid>
+
+   [<CommonParameters>]
+- >-
+  Publish-AppvClientPackage [-Global] [-UserSID <String>] [[-DynamicUserConfigurationPath] <String>]
+
+   [-DynamicUserConfigurationType <DynamicUserConfiguration>] [-Package] <AppvClientPackage> [<CommonParameters>]
+- >-
+  Publish-AppvClientPackage [-Global] [-UserSID <String>] [[-DynamicUserConfigurationPath] <String>]
+
+   [-DynamicUserConfigurationType <DynamicUserConfiguration>] [-Name] <String> [[-Version] <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Publish a version of a package to all users'
+  code: |-
+    PS C:\> Publish-AppvClientPackage -Name "MyApp" -Version 1 -Global -DynamicUserConfiguration "C:\content\policies\MyApp.policy"
+  description: |-
+    This command publishes version 1 of the package named MyApp to all users on the computer and applies the Dynamic User Configuration policy file.
+  summary: ""
+- title: 'Example 2: Publish a version of a package to a user'
+  code: |-
+    PS C:\> Publish-AppvClientPackage -Name "MyApp" -Version 1 -UserPolicy "C:\content\policies\MyAppConfiguration.xml"
+  description: |-
+    This command publishes version 1 of the package named "MyApp" to the user and applies the Dynamic User Configuration policy file.
+  summary: ""
+- title: 'Example 3: Publish the latest version of a package to all users'
+  code: |-
+    PS C:\> Publish-AppvClientPackage -Name "MyApp" -Global
+  description: |-
+    This command publishes the package named MyApp to all users on the computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DynamicUserConfigurationPath
+  description: |+
+    Specifies the path of a Dynamic User configuration file for the specified App-V package to be added.
+    The cmdlet uses the Dynamic User Configuration file to override the default behavior provided in the user section of the package manifest or the Dynamic Deployment Configuration.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DynamicUserConfiguration" data-throw-if-not-resolved="False" />
+  name: DynamicUserConfigurationType
+  description: |+
+    Specifies what should be done without a defined dynamic user configuration file.
+    The acceptable values for this parameter are:
+
+    - UseDeploymentConfiguration.
+    The package uses the user configuration part of deployment configuration. 
+    - UseNoConfiguration.
+    Clear any previous configuration and use settings from the manifest.
+    - UseExistingConfiguration.
+    Make no changes to the configuration and use the last published configuration.
+
+    If you do not specify this parameter, this cmdlet uses UseExistingConfiguration if the package is already published or UseDeploymentConfiguration if it is not.
+
+    Use this parameter only during user publishing.
+    It is not valid for global publish.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: UseDeploymentConfiguration, UseNoConfiguration, UseExistingConfiguration
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    Indicates that the provided package is published to all users that log into the targeted computer.
+    Otherwise, the packages are only published to the currently running user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the package given when it was sequenced.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppvClientPackage" data-throw-if-not-resolved="False" />
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies an App-V package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageId
+  isRequired: true
+  description: |+
+    Specifies a GUID that identifies the package.
+    The information can be found in the package manifest or by opening the package in the App-V sequencer.
+    The package ID is shared by all versions of a package.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserSID
+  description: |+
+    Specifies the SID of the intended user, in the form of S-1-2-34-56789012-3456789012-345678901-2345.
+    This parameter requires elevated rights to run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of an App-V package in a lineage.
+    If you do not specify this parameter, the cmdlet operates on the latest of the package on the computer running the App-V client.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionId
+  isRequired: true
+  description: |+
+    Specifies a GUID that differentiates a package version from other versions.
+    If you do not specify this parameter, the cmdlet operates on the latest version of the package.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Publish-AppvClientPackage
+name: Publish-AppvClientPackage
+description: |-
+  The **Publish-AppvClientPackage** cmdlet publishes the appropriate extension points of a set of Microsoft Application Virtualization (App-V) packages.
+  Examples of common extension points include shortcuts and FTAs.
+  You can publish the package to the current user or to all users that log into the targeted computer.
+  You can also provide a Dynamic User Configuration file for the package.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/publish-appvclientpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Publish-AppvClientPackage

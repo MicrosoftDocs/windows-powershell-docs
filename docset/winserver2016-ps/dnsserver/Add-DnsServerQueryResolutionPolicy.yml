@@ -1,0 +1,730 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a policy for query resolution to a DNS server.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DnsServerQueryResolutionPolicy
+  href: ./Get-DnsServerQueryResolutionPolicy.yml
+- text: Remove-DnsServerQueryResolutionPolicy
+  href: ./Remove-DnsServerQueryResolutionPolicy.yml
+- text: Set-DnsServerQueryResolutionPolicy
+  href: ./Set-DnsServerQueryResolutionPolicy.yml
+- text: Add-DnsServerClientSubnet
+  href: ./Add-DnsServerClientSubnet.yml
+- text: Add-DnsServerZoneScope
+  href: ./Add-DnsServerZoneScope.yml
+- text: Add-DnsServerResourceRecord
+  href: ./Add-DnsServerResourceRecord.yml
+- text: Set-DnsServerRecursionScope
+  href: ./Set-DnsServerRecursionScope.yml
+- text: Add-DnsServerZoneTransferPolicy
+  href: ./Add-DnsServerZoneTransferPolicy.yml
+syntaxes:
+- >-
+  Add-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] [-Name] <String> [-Fqdn <String>]
+
+   [-ClientSubnet <String>] [-TimeOfDay <String>] [-TransportProtocol <String>] [-InternetProtocol <String>]
+
+   [[-Action] <String>] [-ApplyOnRecursion] [-ServerInterfaceIP <String>] [-QType <String>]
+
+   [-ProcessingOrder <UInt32>] [[-Condition] <String>] [-RecursionScope <String>] [-Disable]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] [-ZoneName] <String> [-Name] <String>
+
+   [-Fqdn <String>] [-ClientSubnet <String>] [-TimeOfDay <String>] [-TransportProtocol <String>]
+
+   [-InternetProtocol <String>] [[-Action] <String>] [-ServerInterfaceIP <String>] [-QType <String>]
+
+   [-ProcessingOrder <UInt32>] [[-Condition] <String>] [-Disable] [-ZoneScope <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] [-InputObject] <CimInstance>
+
+   [[-ZoneName] <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create traffic management policies'
+  code: |-
+    The first two commands create client subnets by using the **Add-DnsServerClientSubnet** cmdlet. The client subnets are for clients in North America and clients in Europe.
+    PS C:\> Add-DnsServerClientSubnet -Name "NorthAmericaSubnet" -IPv4Subnet "172.21.33.0/24" -PassThru
+    PS C:\> Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet "172.17.44.0/24" -PassThru
+    Name                                             IPV4Subnet                                       IPV6Subnet
+    ----                                             ----------                                       ----------
+    NorthAmericaSubnet                                    {172.21.33.0/24}
+    EuropeSubnet                                     {172.17.44.0/24}
+
+    The next two commands create zone scopes for North America and for Europe by using the **Add-DnsServerZoneScope** cmdlet.
+    PS C:\> Add-DnsServerZoneScope -ZoneName "Contoso.com" -Name "NorthAmericaZoneScope" -PassThru
+    PS C:\> Add-DnsServerZoneScope -ZoneName "Contoso.com" -Name "EuropeZoneScope" -PassThru
+    FileName       : NorthAmericaZoneScope.dns
+    ZoneName       : contoso.com
+    ZoneScope      : NorthAmericaZoneScope
+    PSComputerName : 
+
+
+    FileName       : EuropeZoneScope.dns
+    ZoneName       : contoso.com
+    ZoneScope      : EuropeZoneScope
+    PSComputerName : 
+
+    The next two commands add resource records for the zone Contoso.com by using the **Add-DnsServerResourceRecord** cmdlet. The name for both records is the same, career, but the two records point to different addresses. The records also have different scopes. 
+    PS C:\> Add-DnsServerResourceRecord -ZoneName "Contoso.com" -A -Name "career" -IPv4Address "172.17.97.97" -ZoneScope "EuropeZoneScope" -PassThru
+    PS C:\> Add-DnsServerResourceRecord -ZoneName "Contoso.com" -A -Name "career" -IPv4Address "172.21.21.21" -ZoneScope "NorthAmericaZoneScope" -PassThru
+    DistinguishedName : career
+    HostName          : career
+    RecordClass       : IN
+    RecordData        : DnsServerResourceRecordA
+    RecordType        : A
+    Timestamp         : 
+    TimeToLive        : 01:00:00
+    PSComputerName    : 
+
+
+    DistinguishedName : career
+    HostName          : career
+    RecordClass       : IN
+    RecordData        : DnsServerResourceRecordA
+    RecordType        : A
+    Timestamp         : 
+    TimeToLive        : 01:00:00
+    PSComputerName    :
+
+    The final two commands create two policies. The policies allow queries for members of different subnets. The policies differ in scope, so that some clients receive one response to a query, while other clients receive a different response to the same query. 
+    PS C:\> Add-DnsServerQueryResolutionPolicy -Name "NorthAmericaPolicy" -Action ALLOW -ClientSubnet "eq,NorthAmericaSubnet" -ZoneScope "NorthAmericaZoneScope,1" -ZoneName "Contoso.com" -PassThru
+    PS C:\> Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "EuropeZoneScope,1" -ZoneName contoso.com -PassThru
+    Action          : Allow
+    AppliesOn       : QueryProcessing
+    Condition       : And
+    Content         : {DnsServerPolicyContent}
+    Criteria        : {DnsServerPolicyCriteria}
+    IsEnabled       : True
+    Level           : Zone
+    Name            : NorthAmericaPolicy
+
+
+    ProcessingOrder : 1
+    ZoneName        : contoso.com
+    PSComputerName  : 
+
+
+    Action          : Allow
+    AppliesOn       : QueryProcessing
+    Condition       : And
+    Content         : {DnsServerPolicyContent}
+    Criteria        : {DnsServerPolicyCriteria}
+    IsEnabled       : True
+    Level           : Zone
+    Name            : EuropePolicy
+    ProcessingOrder : 2
+    ZoneName        : contoso.com
+    PSComputerName  :
+  description: |-
+    This example shows how to create traffic management policies to direct the customers from a certain subnet to a North American datacenter and from another subnet to a European datacenter.
+  summary: ""
+- title: 'Example 2: Allow queries for a zone'
+  code: |-
+    PS C:\> Add-DnsServerQueryResolutionPolicy -Name "LBPolicy" -ZoneName "contoso.com" -Action ALLOW -FQDN "EQ,career.contoso.com" -ZoneScope "NorthAmericaZoneScope,7;EuropeZoneScope,3" -PassThru
+    Name                                               ProcessingOrder                                    IsEnabled                                         Action
+    ----                                               ---------------                                    ---------                                         ------
+    LBPolicy                                           3                                                  True                                              Allow
+  description: |-
+    This command creates a policy named LBPolicy to allow queries for the contoso.com zone.
+    The policy includes two weighted zone scopes.
+  summary: ""
+- title: 'Example 3: Add policies from one server to another'
+  code: |-
+    PS C:\> $Policies = Get-DnsServerQueryResolutionPolicy -ComputerName "Server01"
+    PS C:\> $Policies | Add-DnsServerQueryResolutionPolicy -ComputerName "Server07" -ThrottleLimit 1
+  description: |-
+    The first command gets all the server level policies on the DNS server named Server01, and then stores the properties in the $Policies variable.
+
+    The second command adds the policies stored in $Policies to a different DNS server.
+    This command specifies a value of one (1) for the *ThrottleLimit* parameter.
+    This value maintains the order of processing policies in the pipeline.
+  summary: ""
+- title: 'Example 4: Block queries for a domain'
+  code: |-
+    PS C:\> Add-DnsServerQueryResolutionPolicy -Name "BlackholePolicy" -Action IGNORE -FQDN "EQ,*.contoso.com" -PassThru | Format-List *
+    Action                : Ignore
+    AppliesOn             : QueryProcessing
+    Condition             : And
+    Content               : 
+    Criteria              : {DnsServerPolicyCriteria}
+    IsEnabled             : True
+    Level                 : Server
+    Name                  : BlackholePolicy
+    ProcessingOrder       : 1
+    ZoneName              : 
+    PSComputerName        : 
+    CimClass              : root/Microsoft/Windows/DNS:DnsServerPolicy
+    CimInstanceProperties : {Action, AppliesOn, Condition, Content...} 
+    CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
+  description: |-
+    This command creates a policy that blocks queries from a particular domain.
+    The command uses the **Format-List** cmdlet to control the appearance of the output.
+    For more information, type `Get-Help Format-List`.
+  summary: ""
+- title: 'Example 5: Block queries from a subnet'
+  code: |-
+    PS C:\> Add-DnsServerClientSubnet -Name "MaliciousSubnet06" -IPv4Subnet 172.0.33.0/24 -PassThru
+    PS C:\> Add-DnsServerQueryResolutionPolicy -Name "BlackholePolicyMalicious06" -Action IGNORE -ClientSubnet  "EQ,MaliciousSubnet06" -PassThru | Format-List *
+    Action                : Ignore
+    AppliesOn             : QueryProcessing
+    Condition             : And
+    Content               : 
+    Criteria              : {DnsServerPolicyCriteria}
+    IsEnabled             : True
+    Level                 : Server
+    Name                  : BlackholePolicyMalicious
+    ProcessingOrder       : 2
+    ZoneName              : 
+    PSComputerName        : 
+    CimClass              : root/Microsoft/Windows/DNS:DnsServerPolicy
+    CimInstanceProperties : {Action, AppliesOn, Condition, Content...} 
+    CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
+  description: |-
+    The first command creates a client subnet named MaliciousSubnet06.
+
+    The second command creates a policy to block queries from the subnet named MaliciousSubnet06.
+    The policy takes an action of IGNORE, which drops those queries.
+  summary: ""
+- title: 'Example 6: Block a type of query'
+  code: |-
+    PS C:\> Add-DnsServerQueryResolutionPolicy -Name "BlackholePolicyQType" -Action IGNORE -QType "EQ,ANY" -PassThru | Format-List *
+    Action                : Ignore
+    AppliesOn             : QueryProcessing
+    Condition             : And
+    Content               : 
+    Criteria              : {DnsServerPolicyCriteria}
+    IsEnabled             : True
+    Level                 : Server
+    Name                  : BlackholePolicyQType
+    ProcessingOrder       : 3
+    ZoneName              : 
+    PSComputerName        : 
+    CimClass              : root/Microsoft/Windows/DNS:DnsServerPolicy
+    CimInstanceProperties : {Action, AppliesOn, Condition, Content...} 
+    CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
+  description: |-
+    This command creates a policy to block queries for a particular query type.
+    The policy drops ANY query.
+  summary: ""
+- title: 'Example 7: Allow recursion for internal clients'
+  code: |-
+    PS C:\> Add-DnsServerRecursionScope -Name "InternalClients" -EnableRecursion $True
+    PS C:\> Set-DnsServerRecursionScope -Name . -EnableRecursion $False 
+    PS C:\> Add-DnsServerQueryResolutionPolicy -Name "SplitBrainPolicy" -Action ALLOW -ApplyOnRecursion -RecursionScope "InternalClients" -ServerInterfaceIP  "EQ,10.0.0.34" -PassThru 
+    Action          : Allow
+    AppliesOn       : Recursion
+    Condition       : And
+    Content         : {DnsServerPolicyContent}
+    Criteria        : {DnsServerPolicyCriteria}
+    IsEnabled       : True
+    Level           : Server
+    Name            : SplitBrainPolicy
+    ProcessingOrder : 1
+    ZoneName        : 
+    PSComputerName  :
+  description: |-
+    The first command creates a recursion scope called InternalClients.
+    Recursion is enabled for this scope.
+
+    The second command modifies the default recursion scope by using the **Set-DnsServerRecursionScope** cmdlet.
+    The default scope, identified by a dot (.), has recursion disabled.
+
+    The final command creates a policy that uses the InternalClients scope.
+    For that scope, on the specified server interface address, the policy allows recursion.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Action
+  description: |+
+    Specifies the action to take if a query matches this policy.
+    The acceptable values for this parameter are:
+
+    - ALLOW. 
+    - DENY.
+    Respond with SERV_FAIL. 
+    - IGNORE.
+    Do not respond.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ALLOW, DENY, IGNORE
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ApplyOnRecursion
+  description: |+
+    Indicates that this policy is a server level recursion policy.
+
+    Recursion policies are special class of server level policies that control how the DNS server performs recursion for a query.
+    Recursion policies apply only when query processing reaches the recursion path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientSubnet
+  description: |+
+    Specifies the client subnet criterion.
+    This is a client subnet from which the query was sent.
+    For more information, see **Add-DnsServerClientSubnet**.
+    Specify a criterion in the following format: 
+
+    operator, value01, value02, .
+    . .
+    ; operator, value03, value04, .
+    . .
+
+    The operator is either EQ or NE.
+    You can specify no more than one of each operator in a criterion.
+
+    The policy treats values that follow the EQ operator as multiple assertions which are logically combined (OR'd).
+    The policy treats values that follow the NE operator as multiple assertions which are logically differenced (AND'd).
+    The criterion is satisfied if the subnet of the request matches one of the EQ values and does not match any of the NE values.
+
+    Example criterion: `"EQ,NorthAmerica,Asia,NE,Europe"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a remote DNS server.
+    You can specify an IP address or any value that resolves to an IP address, such as an FQDN, host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Condition
+  description: |+
+    Specifies how the policy treats multiple criteria.
+    The acceptable values for this parameter are:
+
+    - OR.
+    The policy evaluates criteria as multiple assertions which are logically combined (OR'd). 
+    - AND.
+    The policy evaluates criteria as multiple assertions which are logically differenced (AND'd). 
+
+    The default value is AND.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: AND, OR
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disable
+  description: |+
+    Indicates that this cmdlet disables the policy.
+    If you do not specify this parameter, the cmdlet creates the policy and enables it.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Fqdn
+  description: |+
+    Specifies the FQDN criterion.
+    This is the FQDN of record in the query.
+    Specify a criterion in the following format: 
+
+    operator, value01, value02, .
+    . .
+    ; operator, value03, value04, .
+    . .
+
+    The operator is either EQ or NE.
+    You can specify no more than one of each operator a criterion.
+
+    The policy treats values that follow the EQ operator as multiple assertions which are logically combined (OR'd).
+    The policy treats values that follow the NE operator as multiple assertions which are logically differenced (AND'd).
+    The criterion is satisfied if the FQDN of the request matches one of the EQ values and does not match any of the NE values.
+    You can include the asterisk (*) as the wildcard character.
+    For example, `EQ,*.contoso.com,NE,*.fabrikam.com`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InternetProtocol
+  description: |+
+    Specifies the Internet Protocol criterion.
+    This is the IP version of the query.
+    Valid values are: IPv4 and IPv6.
+    Specify a criterion in the following format: 
+
+    operator, value01, value02, .
+    . .
+    ; operator, value03, value04, .
+    . .
+
+    The operator is either EQ or NE.
+    You can specify no more than one of each operator in a criterion.
+
+    The policy treats values that follow the EQ operator as multiple assertions which are logically combined (OR'd).
+    The policy treats values that follow the NE operator as multiple assertions which are logically differenced (AND'd).
+    The criterion is satisfied if the IP address of the request matches one of the EQ values and does not match any of the NE values.
+
+    Example criteria: `"EQ,IPv4"` and `"EQ,IPv6"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the new policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ProcessingOrder
+  description: |+
+    Specifies the precedence of the policy.
+    Higher integer values have lower precedence.
+    By default, this cmdlet adds a new policy as the lowest precedence.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: QType
+  description: |+
+    Specifies the query type criterion.
+    This is the type of record that is being queried.
+    Specify a criterion in the following format: 
+
+    operator, value01, value02, .
+    . .
+    ; operator, value03, value04, .
+    . .
+
+    The operator is either EQ or NE.
+    You can specify no more than one of each operator in a criterion.
+
+    The policy treats values the follow the EQ operator as multiple assertions which are logically combined (OR'd).
+    The policy treats values that follow the NE operator as multiple assertions which are logically differenced (AND'd).
+    The criterion is satisfied if the type of query of the request matches one of the EQ values and does not match any of the NE values.
+
+    Example criterion: `"EQ,TXT,SRV,NE,MX"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RecursionScope
+  description: |+
+    Specifies the scope of recursion.
+    If the policy is a recursion policy, and if a query matches it, the DNS server uses settings from this scope to perform recursion for the query.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServerInterfaceIP
+  description: |+
+    Specifies the IP address of the server interface on which the DNS server listens.
+    Specify a criterion in the following format: 
+
+    operator, value01, value02, .
+    . .
+    ; operator, value03, value04, .
+    . .
+
+    The operator is either EQ or NE.
+    You can specify no more than one of each operator in the criterion.
+
+    The policy treats values the follow the EQ operator as multiple assertions which are logically combined (OR'd).
+    The policy treats values that follow the NE operator as multiple assertions which are logically differenced (AND'd).
+    The criterion is satisfied if the IP address of the interface matches one of the EQ values and does not match any of the NE values.
+
+    Example criteria: `"EQ,10.0.0.1"` and `"NE,192.168.1.1"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TimeOfDay
+  description: |+
+    Specifies the time of day criterion.
+    This is when the server receives the query.
+    Specify a criterion in the following format: 
+
+    operator, value01, value02, .
+    . .
+    ; operator, value03, value04, .
+    . .
+
+    The operator is either EQ or NE.
+    You can specify no more than one of each operator in the criterion.
+
+    The policy treats values the follow the EQ operator as multiple assertions which are logically combined (OR'd).
+    The policy treats values that follow the NE operator as multiple assertions which are logically differenced (AND'd).
+    The criterion is satisfied if the time of day of the request matches one of the EQ values and does not match any of the NE values.
+
+    Example criterion: `"EQ,10:00-12:00,22:00-23:00"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TransportProtocol
+  description: |+
+    Specifies the transport protocol criterion.
+    This is the transport protocol of the query.
+    Valid values are: TCP and UDP.
+    Specify a criterion in the following format: 
+
+    operator, value01, value02, .
+    . .
+    ; operator, value03, value04, .
+    . .
+
+    The operator is either EQ or NE.
+    You can specify no more than one of each operator in the string.
+
+    The policy treats values the follow the EQ operator as multiple assertions which are logically combined (OR'd).
+    The policy treats values that follow the NE operator as multiple assertions which are logically differenced (AND'd).
+    The criterion is satisfied if the transport protocol of the request matches one of the EQ values and does not match any of the NE values.
+
+    Example criteria: `"EQ,TCP"` and `"NE,UDP"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ZoneName
+  isRequired: true
+  description: |+
+    Specifies the name of a DNS zone on which this cmdlet creates a zone level policy.
+    The zone must exist on the DNS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ZoneScope
+  description: |+
+    Specifies a list of scopes and weights for the zone.
+    Specify the value as a string in this format: 
+
+    Scope01, Weight01; Scope02, Weight02;
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Add-DnsServerQueryResolutionPolicy
+name: Add-DnsServerQueryResolutionPolicy
+description: |-
+  The **Add-DnsServerQueryResolutionPolicy** cmdlet adds a policy for query resolution to a Domain Name System (DNS) server.
+  A policy determines the resolution of queries based on criteria that you specify in the policy.
+
+  A policy consists of criteria, action, and scopes.
+
+  The criteria are a logical combination of client subnet, server interface IP address, fully qualified domain name (FQDN), Internet Protocol (IPv4/IPv6), transport protocol (UDP/TCP), time of day, and query type.
+
+  Specify criteria in the following format: 
+
+  operator, value01, value02, .
+  . .
+  ; operator, value03, value04, .
+  . .
+
+  The operator is either EQ or NE.
+  You can specify no more than one of each operator in a criterion.
+
+  The policy treats values that follow the EQ operator as multiple assertions which are logically combined (OR'd).
+  The policy treats values that follow the NE operator as multiple assertions which are logically differenced (AND'd).
+
+  This cmdlet combines multiple criteria by using the value of the *Condition* parameter as the logical operator.
+  This parameter takes one of the following values: 
+
+  - OR.
+  The policy evaluates criteria as multiple assertions which are logically combined (OR'd). 
+  - AND.
+  The policy evaluates criteria as multiple assertions which are logically differenced (AND'd).
+
+  If a query meets the criteria of a policy, the action is the response that the policy requires.
+  You can specify ALLOW, DENY, or IGNORE.
+
+  If you specify an action of ALLOW in a policy for a server that is authoritative for a query, the policy determines which zone scopes to use to respond to the query and in what ratio.
+  If the answer for the query is cached, the policy determines which cache scopes to use and in what ratio.
+  Otherwise, the policy determines which recursion scope to use.
+
+  You can create policies for query resolution at either the server level or the zone level.
+  Server level policies apply on every query that comes to the DNS server.
+  Zone level policies apply only on the queries that can be resolved from a zone hosted on the DNS server.
+  Server level policies apply either on the incoming queries or on the recursive outgoing queries.
+  On the incoming queries, server level policies can only DENY or IGNORE.
+  The most common use for server level policies is to implement blocked or safe lists.
+
+  Recursion policies are a special class of server level policies.
+  Recursion policies control how the DNS server performs recursion for a query.
+  Recursion policies apply only when query processing reaches the recursion path.
+  You can chose a value of DENY or IGNORE for recursion for a set of queries.
+  Alternatively, you can choose a set of forwarders for a set of queries.
+  To configure this behavior, specify a recursion scope in the recursion policies.
+  You can use recursion policies to implement a Split-brain DNS configuration.
+  In this configuration, the DNS server performs recursion for a set of clients for a query, while the DNS server does not perform recursion for other clients for that query.
+
+  Zone level policies apply to the zone in which you create them.
+  Zone level policies apply only when that zone is found during the query lookup.
+  You cannot create a zone level policy without a zone.
+  If you remove a zone, that removal deletes the associated zone level policies.
+  In a zone level policy, you can specify a value of DENY or IGNORE for a set of queries for records in a zone.
+  Alternatively, if the action is Allow, zone level policies can decide which zone scopes to use to answer queries and in what ratio.
+  One use of such zone level policies is application load balancing by means of DNS.
+
+  The DNS server applies server level policies first, except for recursion policies.
+  Then, the DNS server applies zone level policies, and then recursion policies.
+  Each policy has a precedence value.
+  You can specify the precedence by using the *ProcessingOrder* parameter.
+  The DNS server evaluates queries against policies in the order of precedence for each type of policy.
+
+  If the criteria of a server level policy match a query, and if the action is DENY, the DNS server returns REFUSED.
+  If the action is IGNORE, the DNS server drops the query.
+  If the query does not match any server level policy, and if the server is authoritative for the zone for the query, the server evaluates the query with regard to the zone level policies.
+
+  If the criteria of a zone level policy in that zone match a query, and if the action is DENY, the server returns REFUSED.
+  If the action is IGNORE, the server drops the query.
+  If the action is ALLOW, the DNS server responds to the query from one of the zone scopes specified in the policy.
+  You can chose to distribute the responses from multiple zone scopes in a particular ratio.
+
+  For policy processing, the cache is treated as a zone.
+  The DNS server repeats the process for zone level policies for the cache.
+
+  If the server is not authoritative for the zone for which the query has been received, and the response is not found in the cache or the specified cache scope, the DNS server matches the query against the server level recursion policies in order of their precedence.
+  If the criteria of a recursion policy match a query and the action is DENY, the DNS server returns REFUSED.
+  If the action is IGNORE, the DNS server drops the query.
+  If the action is ALLOW, the DNS server gets settings from the configured recursion scope.
+  Based on those settings, the DNS server gets the response for the query by using recursion.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerQueryResolutionPolicy_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DnsServerQueryResolutionPolicy

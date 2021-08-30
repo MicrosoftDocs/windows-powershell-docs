@@ -1,0 +1,41 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the user culture for the current user account.
+module: International
+notes: |-
+  Changes made by the use of this cmdlet will take effect on subsequent PowerShell sessions.
+links:
+- text: GetCulture Class
+  href: https://go.microsoft.com/fwlink/?LinkID=243343
+syntaxes:
+- Set-Culture [-CultureInfo] <CultureInfo> [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the culture for the current user'
+  code: |-
+    PS C:\>Set-Culture -CultureInfo de-DE
+  description: |-
+    This command sets the culture for the current user account to German (Germany).
+  summary: ""
+parameters:
+- type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  name: CultureInfo
+  isRequired: true
+  description: |+
+    Specifies the culture.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: International.Set-Culture
+name: Set-Culture
+description: |-
+  The **Set-Culture** cmdlet sets a specific culture (also known as a locale for unmanaged code development) for the current user account.
+  The information includes the names for the culture, the writing system, the calendar, and formatting for dates and sort strings.
+  For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306) and [Manage the input and display language settings in Windows 10](https://support.microsoft.com/help/4496404/windows-10-manage-the-input-and-display-language#input_language).
+metadata:
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  online version: https://docs.microsoft.com/powershell/module/international/set-culture?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

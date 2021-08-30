@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the domain name configuration of the server.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssDomainNameConfiguration
+  href: ./Get-WssDomainNameConfiguration.yml
+- text: Join-WssDomain
+  href: ./Join-WssDomain.yml
+- text: Exit-WssDomain
+  href: ./Exit-WssDomain.yml
+syntaxes:
+- >-
+  Set-WssDomainNameConfiguration [-DomainName] <String> [-CertificatePath] <String>
+
+   [[-CertificateFilePassword] <SecureString>] [-NoCertificateVerification]
+examples:
+- title: 'Example 1: Change the domain name configuration of the server'
+  code: |-
+    PS C:\>$SecureString_pwd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force PS C:\> Set-WssDomainNameConfiguration -CertificateFilePassword $SecureString_pwd -CertificatePath "c:\cert.pfx" -DomainName "Contoso.com" -NoCertificateVerification
+  description: |-
+    The first command converts the plain text string "P@ssW0rD!" into a secure string and stores the result in the **$SecureString_pwd** variable.
+
+    The second command specifies the domain name of the server, sets the password stored in the **$SecureString_pwd** variable, sets the path for the SSL certificate file, and specifies that the server skips verification of the SSL certificate.
+  summary: ""
+parameters:
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: CertificateFilePassword
+  description: |+
+    Specifies the password, as a secure string, for the SSL certificate file.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificatePath
+  isRequired: true
+  description: |+
+    Specifies the path of the SSL certificate file.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  isRequired: true
+  description: |+
+    Specifies the domain name for the server.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoCertificateVerification
+  description: |+
+    Indicates that the server skips verification of the SSL certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Set-WssDomainNameConfiguration
+name: Set-WssDomainNameConfiguration
+description: |-
+  The **Set-WssDomainNameConfiguration** cmdlet changes the domain name configuration settings of the server.
+  You can use this cmdlet to change the domain name of the server and configure the Secure Sockets Layer (SSL) certificate binding to the Web Server, terminal server, and virtual private network (VPN) server.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssdomainnameconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

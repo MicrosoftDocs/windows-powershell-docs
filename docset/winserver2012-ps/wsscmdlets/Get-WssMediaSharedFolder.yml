@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the shared folders included in the Media Library.
+module: WssCmdlets
+notes: ""
+links:
+- text: Set-WssMediaLibraryInclusion
+  href: ./Set-WssMediaLibraryInclusion.yml
+- text: Get-WssMediaServerEnabled
+  href: ./Get-WssMediaServerEnabled.yml
+- text: Get-WssMediaLibraryName
+  href: ./Get-WssMediaLibraryName.yml
+syntaxes:
+- Get-WssMediaSharedFolder
+examples:
+- title: 'Example 1: Get shared folders'
+  code: |-
+    PS C:\> Get-WssMediaSharedFolder
+  description: |-
+    This command gets the shared folders included in the Medial Library.
+  summary: ""
+uid: WssCmdlets.Get-WssMediaSharedFolder
+name: Get-WssMediaSharedFolder
+description: |-
+  The **Get-WssMediaSharedFolder** cmdlet gets the shared folders included in the Media Library.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssmediasharedfolder?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

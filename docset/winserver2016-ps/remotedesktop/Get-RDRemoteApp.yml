@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets RemoteApp programs in a Remote Desktop deployment.
+module: RemoteDesktop
+notes: ""
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.RemoteApp" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-RDRemoteApp
+  href: ./New-RDRemoteApp.yml
+- text: Remove-RDRemoteApp
+  href: ./Remove-RDRemoteApp.yml
+- text: Set-RDRemoteApp
+  href: ./Set-RDRemoteApp.yml
+syntaxes:
+- >-
+  Get-RDRemoteApp [[-CollectionName] <String>] [[-Alias] <String>] [-DisplayName <String[]>]
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get RemoteApp programs for a collection'
+  code: |-
+    PS C:\> Get-RDRemoteApp -CollectionName "Session Collection"
+  description: |-
+    This command gets RemoteApp programs for the collection named Session Collection, as specified by the **CollectionName** parameter.
+  summary: ""
+- title: 'Example 2: Get RemoteApp programs by using a display name'
+  code: |-
+    PS C:\> Get-RDRemoteApp -DisplayName Note*
+  description: |-
+    This command gets RemoteApp programs that begin with the string Note.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Alias
+  description: |+
+    Specifies an alias for a RemoteApp program.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  description: |+
+    Specifies the name of a personal virtual desktop collection or session collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DisplayName
+  description: |+
+    Specifies an array of names to display to users for RemoteApp programs.
+    You can use a wildcard character.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteDesktop.Get-RDRemoteApp
+name: Get-RDRemoteApp
+description: |-
+  The **Get-RDRemoteApp** cmdlet gets Windows Server 2012 RemoteApp programs in a Remote Desktop deployment.
+  You can specify a collection name, an alias, or one or more display names.
+
+  RemoteApp allows Remote Desktop Services (RDS) to run a program remotely that appears as if it runs locally on a client computer.
+  A RemoteApp program runs in its own resizable window and has its own entry on the taskbar.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdremoteapp?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDRemoteApp

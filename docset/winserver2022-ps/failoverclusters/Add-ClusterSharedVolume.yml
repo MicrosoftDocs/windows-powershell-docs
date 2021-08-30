@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Makes a volume available in Cluster Shared Volumes in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterDisk
+  href: ./Add-ClusterDisk.yml
+- text: Get-ClusterSharedVolume
+  href: ./Get-ClusterSharedVolume.yml
+- text: Move-ClusterSharedVolume
+  href: ./Move-ClusterSharedVolume.yml
+- text: Remove-ClusterSharedVolume
+  href: ./Remove-ClusterSharedVolume.yml
+syntaxes:
+- >-
+  Add-ClusterSharedVolume [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-ClusterSharedVolume -Name "Cluster Disk 4"
+    Name                       State                      Node 
+    ----                       -----                      ---- 
+    Cluster Disk 4             Online                     node2
+  description: |-
+    This example adds Cluster Disk 4 to the Cluster Shared Volumes on the local cluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster disk resource to be added to the Cluster Shared Volumes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster disk resource to add.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterSharedVolume
+name: Add-ClusterSharedVolume
+description: |-
+  The **Add-ClusterSharedVolume** cmdlet makes a volume available in the Cluster Shared Volumes in a failover cluster.
+  The Cluster Shared Volume must be chosen from the disks in Available Storage (that is, disks that have been added to the cluster but not assigned to a specific use in the cluster).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustersharedvolume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusterSharedVolume

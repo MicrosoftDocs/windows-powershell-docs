@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a virtual desktop template hard disk image.
+module: MultipointVdi
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WmsVirtualDesktop
+  href: ./Get-WmsVirtualDesktop.yml
+- text: New-WmsVirtualDesktop
+  href: ./New-WmsVirtualDesktop.yml
+- text: Open-WmsVirtualDesktop
+  href: ./Open-WmsVirtualDesktop.yml
+syntaxes:
+- >-
+  Import-WmsVirtualDesktop -InputFilePath <String> [-VhdLocation <String>] -TemplatePrefix <String> [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Import a template'
+  code: |-
+    PS C:\> Import-WmsVirtualDesktop -InputFilePath "C:\Images\Windows10Enterprise.iso" -TemplatePrefix "MyVdiImage" -VhdLocation "C:\MultiPointVhdImages"
+  description: |-
+    This command creates a virtual machine template named MyVdiImage that installs the guest operating system from C:\images\Windows10Enterprise.iso, and stores the resulting .vhd file in the folder C:\MultiPointVhdImages.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InputFilePath
+  isRequired: true
+  description: |+
+    Specifies the full path of the input file to use for the virtual desktop template.
+    Valid file types are .wim, .iso, or .vhd that contains the version of Windows to use as the guest operating system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TemplatePrefix
+  isRequired: true
+  description: |+
+    Specifies the prefix to use for the name of the virtual machine template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VhdLocation
+  description: |+
+    Specifies the path in which to store the template and station .vhd files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MultipointVdi.Import-WmsVirtualDesktop
+name: Import-WmsVirtualDesktop
+description: |-
+  The **Import-WmsVirtualDesktop** cmdlet creates the Windows MultiPoint Services (WMS) virtual switch if it doesn't already exist, shuts down any existing MultiPoint station virtual machines that may be running, and creates a template virtual machine hard disk (.vhd) from the specified Windows image.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPointVdi.dll-Help.xml
+  Module Name: MultipointVdi
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipointvdi/import-wmsvirtualdesktop?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-WmsVirtualDesktop

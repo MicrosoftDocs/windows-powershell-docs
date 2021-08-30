@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Publishes a connection group.
+module: AppVServer
+notes: |-
+  * If the cmdlet cannot find the specified package groups  on the server, the cmdlet returns the following error an error: The following package group(s) could not be found on the system. It lists the packages. The cmdlet fails the operation.
+  * If you do not specify version information, the cmdlet publishes all existing versions of the package group.
+  * If you do not specify any parameters, the cmdlet publishes all the package groups and subsequent versions on the computer.
+  * If a specified package group does not have at least one entitlement associated with it, the cmdlet return the following error: The following package group(s) could not be published because no associated entitlement group could be found. The cmdlet returns a list of the package groups and fails the operation for only those specific groups.
+  * If any of the specified groups are empty, the cmdlet returns the following error: One or more of the provided package groups is empty. The publishing operation has failed. The cmdlet returns a list of the package groups.
+inputs:
+- name: <xref href="AppvServer.AppvServerPackageGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AppvServerPackage
+  href: ./Get-AppvServerPackage.yml
+- text: Get-AppvServerConnectionGroup
+  href: ./Get-AppvServerConnectionGroup.yml
+- text: Grant-AppvServerConnectionGroup
+  href: ./Grant-AppvServerConnectionGroup.yml
+- text: New-AppvServerConnectionGroup
+  href: ./New-AppvServerConnectionGroup.yml
+- text: Remove-AppvServerConnectionGroup
+  href: ./Remove-AppvServerConnectionGroup.yml
+- text: Set-AppvServerConnectionGroup
+  href: ./Set-AppvServerConnectionGroup.yml
+- text: Unpublish-AppvServerConnectionGroup
+  href: ./Unpublish-AppvServerConnectionGroup.yml
+- text: Update-AppvServerConnectionGroup
+  href: ./Update-AppvServerConnectionGroup.yml
+syntaxes:
+- >-
+  Publish-AppvServerConnectionGroup [-AppvServerConnectionGroup] <SerializableConnectionGroup> [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Publish-AppvServerConnectionGroup [-Name] <String> [[-Version] <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Publish-AppvServerConnectionGroup [-GroupID] <Guid> [[-VersionID] <Guid>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SerializableConnectionGroup" data-throw-if-not-resolved="False" />
+  name: AppvServerConnectionGroup
+  isRequired: true
+  description: |+
+    Specifies the package group object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: GroupID
+  isRequired: true
+  description: |+
+    Specifies the GUID of a specific package group.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the package group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of the specified package group.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionID
+  description: |+
+    Specifies the version GUID of the package group.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AppVServer.Publish-AppvServerConnectionGroup
+name: Publish-AppvServerConnectionGroup
+description: |-
+  The **Publish-AppvServerConnectionGroup** cmdlet publishes the specified connection group.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: AppVServerCmdlets.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Publish-AppvServerConnectionGroup

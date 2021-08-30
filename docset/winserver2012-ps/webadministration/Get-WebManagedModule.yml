@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the managed modules that are configured for a particular application.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Get-WebManagedModule [[-Name] <String>] [-Location <String[]>] [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Get modules for the Default Web Site --------------'
+  code: |-
+    IIS:\>Get-WebManagedModule -PSPath 'IIS:\sites\Default Web Site'
+  description: |-
+    Gets configuration information for modules configured for the Default Web Site.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    The configuration location from which the cmdlet retrieves configuration information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the managed module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    An IIS configuration path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebManagedModule
+name: Get-WebManagedModule
+description: |-
+  Gets the managed modules that are configured for a particular application.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webmanagedmodule?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

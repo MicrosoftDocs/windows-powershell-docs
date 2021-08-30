@@ -1,0 +1,93 @@
+### YamlMime:PowershellModule
+children:
+- title: IpamServer
+  cmdlets:
+  - IpamServer.Add-IpamAddress
+  - IpamServer.Add-IpamAddressSpace
+  - IpamServer.Add-IpamBlock
+  - IpamServer.Add-IpamCustomField
+  - IpamServer.Add-IpamCustomFieldAssociation
+  - IpamServer.Add-IpamCustomValue
+  - IpamServer.Add-IpamDiscoveryDomain
+  - IpamServer.Add-IpamRange
+  - IpamServer.Add-IpamServerInventory
+  - IpamServer.Add-IpamSubnet
+  - IpamServer.Disable-IpamCapability
+  - IpamServer.Enable-IpamCapability
+  - IpamServer.Export-IpamAddress
+  - IpamServer.Export-IpamRange
+  - IpamServer.Export-IpamSubnet
+  - IpamServer.Find-IpamFreeAddress
+  - IpamServer.Find-IpamFreeRange
+  - IpamServer.Find-IpamFreeSubnet
+  - IpamServer.Get-IpamAddress
+  - IpamServer.Get-IpamAddressSpace
+  - IpamServer.Get-IpamAddressUtilizationThreshold
+  - IpamServer.Get-IpamBlock
+  - IpamServer.Get-IpamCapability
+  - IpamServer.Get-IpamConfiguration
+  - IpamServer.Get-IpamConfigurationEvent
+  - IpamServer.Get-IpamCustomField
+  - IpamServer.Get-IpamCustomFieldAssociation
+  - IpamServer.Get-IpamDatabase
+  - IpamServer.Get-IpamDhcpConfigurationEvent
+  - IpamServer.Get-IpamDhcpScope
+  - IpamServer.Get-IpamDhcpServer
+  - IpamServer.Get-IpamDhcpSuperscope
+  - IpamServer.Get-IpamDiscoveryDomain
+  - IpamServer.Get-IpamDnsConditionalForwarder
+  - IpamServer.Get-IpamDnsResourceRecord
+  - IpamServer.Get-IpamDnsServer
+  - IpamServer.Get-IpamDnsZone
+  - IpamServer.Get-IpamIpAddressAuditEvent
+  - IpamServer.Get-IpamRange
+  - IpamServer.Get-IpamServerInventory
+  - IpamServer.Get-IpamSubnet
+  - IpamServer.Import-IpamAddress
+  - IpamServer.Import-IpamRange
+  - IpamServer.Import-IpamSubnet
+  - IpamServer.Invoke-IpamGpoProvisioning
+  - IpamServer.Invoke-IpamServerProvisioning
+  - IpamServer.Move-IpamDatabase
+  - IpamServer.Remove-IpamAddress
+  - IpamServer.Remove-IpamAddressSpace
+  - IpamServer.Remove-IpamBlock
+  - IpamServer.Remove-IpamConfigurationEvent
+  - IpamServer.Remove-IpamCustomField
+  - IpamServer.Remove-IpamCustomFieldAssociation
+  - IpamServer.Remove-IpamCustomValue
+  - IpamServer.Remove-IpamDhcpConfigurationEvent
+  - IpamServer.Remove-IpamDiscoveryDomain
+  - IpamServer.Remove-IpamIpAddressAuditEvent
+  - IpamServer.Remove-IpamRange
+  - IpamServer.Remove-IpamServerInventory
+  - IpamServer.Remove-IpamSubnet
+  - IpamServer.Remove-IpamUtilizationData
+  - IpamServer.Rename-IpamCustomField
+  - IpamServer.Rename-IpamCustomValue
+  - IpamServer.Set-IpamAccessScope
+  - IpamServer.Set-IpamAddress
+  - IpamServer.Set-IpamAddressSpace
+  - IpamServer.Set-IpamAddressUtilizationThreshold
+  - IpamServer.Set-IpamBlock
+  - IpamServer.Set-IpamConfiguration
+  - IpamServer.Set-IpamCustomFieldAssociation
+  - IpamServer.Set-IpamDatabase
+  - IpamServer.Set-IpamDiscoveryDomain
+  - IpamServer.Set-IpamRange
+  - IpamServer.Set-IpamServerInventory
+  - IpamServer.Set-IpamSubnet
+  - IpamServer.Update-IpamServer
+uid: IpamServer
+name: IpamServer
+description: |-
+  This reference provides cmdlet descriptions and syntax for all IP Address Management (IPAM) Server-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.2.1
+  Locale: en-US
+  Module Guid: 69775f93-9317-4234-a558-13b6655fc41b
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  title: IpamServer

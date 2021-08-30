@@ -1,0 +1,22 @@
+### YamlMime:PowershellModule
+children:
+- title: AppX
+  cmdlets:
+  - AppX.Add-AppxPackage
+  - AppX.Get-AppxLastError
+  - AppX.Get-AppxLog
+  - AppX.Get-AppxPackage
+  - AppX.Get-AppxPackageManifest
+  - AppX.Remove-AppxPackage
+uid: AppX
+name: AppX
+description: |-
+  The Windows PowerShell cmdlets for AppX are designed to streamline the administration of AppX package management.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
+  Help Version: 4.0.4.0
+  Locale: en-US
+  Module Guid: aeef2bef-eba9-4a1d-a3d2-d0b52df76deb
+  Module Name: AppX
+  ms.date: 10/29/2017
+  title: AppX

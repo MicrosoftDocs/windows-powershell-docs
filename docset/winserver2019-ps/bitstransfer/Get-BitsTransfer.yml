@@ -1,0 +1,140 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the associated BitsJob object for an existing BITS transfer job.
+module: BitsTransfer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.BackgroundIntelligentTransfer.Management.BitsJob" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet accepts one or more **BitsJob** objects as input that populates the JobId parameter (based on the property name).
+outputs:
+- name: <xref href="Microsoft.BackgroundIntelligentTransfer.Management.BitsJob" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet generates the **BitsJob** objects that are associated with the retrieved BITS transfer jobs.
+links:
+- text: Add-BitsFile
+  href: ./Add-BitsFile.yml
+- text: Complete-BitsTransfer
+  href: ./Complete-BitsTransfer.yml
+- text: Remove-BitsTransfer
+  href: ./Remove-BitsTransfer.yml
+- text: Resume-BitsTransfer
+  href: ./Resume-BitsTransfer.yml
+- text: Set-BitsTransfer
+  href: ./Set-BitsTransfer.yml
+- text: Start-BitsTransfer
+  href: ./Start-BitsTransfer.yml
+- text: Suspend-BitsTransfer
+  href: ./Suspend-BitsTransfer.yml
+syntaxes:
+- Get-BitsTransfer [[-Name] <String[]>] [-AllUsers] [<CommonParameters>]
+- Get-BitsTransfer [-JobId] <Guid[]> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all BitsJob objects owned by the current user'
+  code: |-
+    PS C:\> Get-BitsTransfer
+
+    JobId                   DisplayName             TransferType            JobState                OwnerAccount
+    -----                   -----------             ------------            --------                ------------
+    07acbe90-7d25-4d05-a... TestJob2                Download                Suspended               DOMAIN01\user01
+    c0dd3d8c-c3a2-4562-8... TestJob1                Download                Transferred             DOMAIN01\user01
+    1ef8c549-7a92-4173-b... BitsJobTransfer         Download                Transferred             DOMAIN01\user01
+    2c8302d5-3f44-4981-8... BitsJobTransfer         Download                Transferred             DOMAIN01\user01
+  description: |-
+    This command gets all the **BitsJob** objects that are owned by the current user.
+  summary: ""
+- title: 'Example 2: Get the BitsJob object identified by job ID'
+  code: |-
+    PS C:\> Get-BitsTransfer -JobId C0DD3D8C-C3A2-4562-8324-80B19224879C
+
+    JobId                   DisplayName             TransferType            JobState                OwnerAccount
+    -----                   -----------             ------------            --------                ------------
+    c0dd3d8c-c3a2-4562-8... TestJob1                Download                Transferred             DOMAIN01\user01
+  description: |-
+    This command gets the **BitsJob** object that is identified by the specified job ID.
+  summary: ""
+- title: 'Example 3: Get all BitsJob objects with a specific display name'
+  code: |-
+    PS C:\> Get-BitsTransfer -AllUsers -Name "*Microsoft*", "*Windows*"
+
+    JobId                   DisplayName             TransferType            JobState                OwnerAccount
+    -----                   -----------             ------------            --------                ------------
+    07acbe90-7d25-4d05-a... MicrosoftTest           Download                Suspended               DOMAIN01\user01
+    c0dd3d8c-c3a2-4562-8... WindowsTest             Download                Transferred             DOMAIN01\user02
+  description: |-
+    This command gets all the **BitsJob** objects, owned by all users, where the **DisplayName** property of the **BitsJob** object contains either Microsoft or Windows.
+    If the user does not have administrative credentials, this command returns an error because it uses the *AllUsers* parameter.
+  summary: ""
+- title: 'Example 4: Get a BitsJob object identified by a specific display name'
+  code: |-
+    C:\PS>Get-BitsTransfer -Name "TestJob1"
+
+    JobId                   DisplayName             TransferType            JobState                OwnerAccount
+    -----                   -----------             ------------            --------                ------------
+    c0dd3d8c-c3a2-4562-8... TestJob1                Download                Transferred             DOMAIN01\user01
+  description: |-
+    This command gets the **BitsJob** object that is identified by the specified display name.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllUsers
+  description: |+
+    Indicates that this cmdlet gets BITS transfer jobs that are owned by all users.
+    If this parameter is not specified, only jobs that are owned by the current user are returned.
+    This parameter requires administrative credentials.
+
+  defaultValue: None
+  position: "1"
+  aliases: all
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: JobId
+  isRequired: true
+  description: |+
+    Specifies an array of BITS jobs by job ID.
+    Only the BITS jobs that include a job ID in this array are returned.
+    If **BitsJob** objects are piped to this cmdlet, their job IDs are used as the values of this parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: id
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of BITS jobs based on job name.
+    Only BITS jobs with job names that match a name in this array are returned.
+    You can use standard wildcard characters  such as the asterisk (*) and the question mark (?).
+    Or, you can use a range operator such as"\[a-r\]".
+
+    For example, you can use any of the following commands:
+
+    `Get-BitsTransfer -Name "BITS*"`
+
+    `Get-BitsTransfer -Name "BITS Transfer"`
+
+    `Get-BitsTransfer -Name "BITS Transfe[a-r]"`
+
+    A combination of the wildcard character and range operators is also possible.
+
+  defaultValue: None
+  position: "0"
+  aliases: n
+  parameterValueGroup: ""
+uid: BitsTransfer.Get-BitsTransfer
+name: Get-BitsTransfer
+description: |-
+  The **Get-BitsTransfer** cmdlet retrieves a set of Background Intelligent Transfer Service (BITS) transfer jobs.
+  By default, the cmdlet returns the jobs that are owned by the current user.
+  However, if you have administrative credentials, you can specify the *AllUsers* parameter so that the command returns jobs that are owned by all users.
+  The returned jobs can be filtered by name or ID.
+  The jobs are represented by **BitsJob** objects.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.BackgroundIntelligentTransfer.Management.dll-Help.xml
+  Module Name: BitsTransfer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/bitstransfer/get-bitstransfer?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-BitsTransfer

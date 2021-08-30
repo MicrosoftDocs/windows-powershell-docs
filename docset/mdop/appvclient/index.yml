@@ -1,0 +1,48 @@
+### YamlMime:PowershellModule
+children:
+- title: AppVClient
+  cmdlets:
+  - AppVClient.Add-AppvClientConnectionGroup
+  - AppVClient.Add-AppvClientPackage
+  - AppVClient.Add-AppvPublishingServer
+  - AppVClient.Disable-AppvClientConnectionGroup
+  - AppVClient.Enable-AppvClientConnectionGroup
+  - AppVClient.Get-AppvClientApplication
+  - AppVClient.Get-AppvClientConfiguration
+  - AppVClient.Get-AppvClientConnectionGroup
+  - AppVClient.Get-AppvClientMode
+  - AppVClient.Get-AppvClientPackage
+  - AppVClient.Get-AppvPublishingServer
+  - AppVClient.Get-AppvVirtualProcess
+  - AppVClient.Mount-AppvClientConnectionGroup
+  - AppVClient.Mount-AppvClientPackage
+  - AppVClient.Publish-AppvClientPackage
+  - AppVClient.Remove-AppvClientConnectionGroup
+  - AppVClient.Remove-AppvClientPackage
+  - AppVClient.Remove-AppvPublishingServer
+  - AppVClient.Repair-AppvClientConnectionGroup
+  - AppVClient.Repair-AppvClientPackage
+  - AppVClient.Send-AppvClientReport
+  - AppVClient.Set-AppvClientConfiguration
+  - AppVClient.Set-AppvClientMode
+  - AppVClient.Set-AppvClientPackage
+  - AppVClient.Set-AppvPublishingServer
+  - AppVClient.Start-AppvVirtualProcess
+  - AppVClient.Stop-AppvClientConnectionGroup
+  - AppVClient.Stop-AppvClientPackage
+  - AppVClient.Sync-AppvPublishingServer
+  - AppVClient.Unpublish-AppvClientPackage
+uid: AppVClient
+name: AppVClient
+description: |-
+  The following list contains links to the help topics for the App-V Client cmdlets.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  Download Help Link: http://go.microsoft.com/fwlink/?LinkId=403112
+  Help Version: 4.0.1.0
+  Locale: en-US
+  Module Guid: 596D7B43-928B-44D4-89E7-17D34740ECC2
+  Module Name: AppVClient
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  title: AppVClient

@@ -1,10 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: MSFT_MpPerformanceRecording.cdxml-help.xml
 Module Name: Defender
 ms.date: 08/26/2021
-online version: https://docs.microsoft.com/powershell/module/defender/new-mpperformancerecording?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
-schema: 2.0.0
 title: New-MpPerformanceRecording
 ---
 
@@ -15,10 +12,8 @@ Collects a performance recording of MDAV scans.
 
 ## SYNTAX
 
-```
-New-MpPerformanceRecording
-   [-RecordTo <String >]
-```
+`New-MpPerformanceRecording [-RecordTo <String >]`
+
 
 ## DESCRIPTION
 

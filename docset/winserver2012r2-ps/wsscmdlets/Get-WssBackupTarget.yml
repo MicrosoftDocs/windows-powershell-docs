@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves all backup targets from a scheduled backup policy.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.ServerBackup.ObjectModel.BackupTarget" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a list of backup targets.
+links:
+- text: Add-WssBackupTarget
+  href: ./Add-WssBackupTarget.yml
+- text: New-WssBackupTarget
+  href: ./New-WssBackupTarget.yml
+- text: Remove-WssBackupTarget
+  href: ./Remove-WssBackupTarget.yml
+syntaxes:
+- Get-WssBackupTarget [-BackupPolicy] <ScheduledBackupPolicy> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all backup targets from a scheduled backup policy'
+  code: |-
+    PS C:\> Get-WssBackupTarget -BackupPolicy $ContosoBUPolicy213
+  description: |-
+    This command gets all backup targets from the backup policy that is stored in the variable named **$ContosoBUPolicy213**.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the scheduled backup policy from which to retrieve the backup target.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Get-WssBackupTarget
+name: Get-WssBackupTarget
+description: |-
+  The **Get-WssBackupTarget** cmdlet retrieves all backup targets from a scheduled backup policy.
+  A scheduled backup policy is a backup file specification that has a backup schedule associated with it.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssbackuptarget?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssBackupTarget

@@ -1,0 +1,417 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes configuration settings for an NFS server.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_NfsServerConfig" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NfsServerConfiguration
+  href: ./Get-NfsServerConfiguration.yml
+syntaxes:
+- >-
+  Set-NfsServerConfiguration [-InputObject <CimInstance[]>] [-PortmapProtocol <String[]>]
+
+   [-MountProtocol <String[]>] [-Nfsprotocol <String[]>] [-NlmProtocol <String[]>] [-NsmProtocol <String[]>]
+
+   [-MapServerProtocol <String[]>] [-NisProtocol <String[]>] [-EnableNFSV2 <Boolean>] [-EnableNFSV3 <Boolean>]
+
+   [-EnableNFSV4 <Boolean>] [-EnableAuthenticationRenewal <Boolean>] [-AuthenticationRenewalIntervalSec <UInt32>]
+
+   [-DirectoryCacheSize <UInt32>] [-CharacterTranslationFile <String>] [-HideFilesBeginningInDot <Boolean>]
+
+   [-NlmGracePeriodSec <UInt32>] [-LogActivity <String[]>] [-GracePeriodSec <UInt32>]
+
+   [-NetgroupCacheTimeoutSec <UInt32>] [-PreserveInheritance <Boolean>] [-UnmappedUserAccount <String>]
+
+   [-WorldAccount <String>] [-AlwaysOpenByName <Boolean>] [-LeasePeriodSec <UInt32>] [-ClearMappingCache]
+
+   [-OnlineTimeoutSec <UInt32>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a grace period on a local NFS server'
+  code: |-
+    PS C:\> Set-NfsServerConfiguration -NlmGracePeriodSec 45 -GracePeriodSec 240
+  description: |-
+    This command sets the grace period for the NLM protocol to 45 seconds and sets the grace period for NFS v4.1 to 240 seconds on a local NFS server.
+  summary: ""
+- title: 'Example 2: Set NFS versions on a local NFS server'
+  code: |-
+    PS C:\> Set-NfsServerConfiguration -EnableNfsv2 $False -EnableNfsv4 $True -EnableNfsv3 $True
+  description: |-
+    This command disables versions 2 and 3 of the NFS protocol and enables NFS v4.1 on a local NFS server.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AlwaysOpenByName
+  description: |+
+    Specifies whether an NFS server opens files and directories by name, instead of opening by file ID.
+    You can enable this setting for compatibility with filter drivers that intercept requests for opening files and directories by file name, or for applications that rely on directory change notifications to work with NFS shares.
+
+    The default value is $False.
+    By default, an NFS server opens files and directories by ID to improve performance.
+
+  defaultValue: None
+  position: Named
+  aliases: OpenByName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Indicates that this cmdlet runs the command as a background job on a remote computer.
+    Use this parameter to run commands that take an extensive time to finish.
+
+    When you use the *AsJob* parameter, the command returns an object that represents the job, and then displays the command prompt.
+    You can continue to work in the session while the job finishes.
+    To manage the job, use the **Job** cmdlets.
+    To get the job results, use the Receive-Job cmdlet.
+
+    The *AsJob* parameter resembles using the Invoke-Command cmdlet to run a Start-Job command remotely.
+    However, with *AsJob*, the job is created on the local computer, even though the job runs on a remote computer, and the results of the remote job are automatically returned to the local computer.
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251) and [about_Remote_Jobs](https://go.microsoft.com/fwlink/?LinkID=135184).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: AuthenticationRenewalIntervalSec
+  description: |+
+    Specifies an interval, in seconds, when an NFS server renews authentication.
+
+  defaultValue: "600"
+  position: Named
+  aliases: interval, renewauthinterval, AuthRenewalInterval, AuthenticationRenewalInterval
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CharacterTranslationFile
+  description: |+
+    Specifies a path for a file that an NFS server uses for character translation.
+
+  defaultValue: None
+  position: Named
+  aliases: translationfile
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearMappingCache
+  description: |+
+    Specifies whether to clear the mapping and netgroup cache of an NFS server.
+
+  defaultValue: None
+  position: Named
+  aliases: clearmapcache
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DirectoryCacheSize
+  description: |+
+    Specifies the size of the directory cache, in kilobytes.
+    This value is a multiple of 4.
+
+  defaultValue: "128"
+  position: Named
+  aliases: dircache, dcache
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableAuthenticationRenewal
+  description: |+
+    Specifies whether an NFS server renews authentication when cached credentials expire.
+
+  defaultValue: None
+  position: Named
+  aliases: renewauth, EnableAuthRenewal
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableNFSV2
+  description: |+
+    Specifies whether an NFS server can export shares via the NFS v2 protocol.
+
+  defaultValue: "3"
+  position: Named
+  aliases: v2, nfsv2
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableNFSV3
+  description: |+
+    Specifies whether an NFS server can export shares via the NFS v3 protocol.
+
+  defaultValue: None
+  position: Named
+  aliases: v3, nfsv3
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableNFSV4
+  description: |+
+    Specifies whether an NFS server can export shares via the NFS v4.1 protocol.
+
+  defaultValue: None
+  position: Named
+  aliases: v4, nfsv4
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: GracePeriodSec
+  description: |+
+    Specifies a grace period, in seconds, for an NFS server.
+    During this period, clients can reclaim file locks.
+    The value must be at least twice the value specified in the *LeasePeriodSec* parameter.
+
+    The grace period applies to clients connected via the NFS v4.1 protocol.
+
+  defaultValue: None
+  position: Named
+  aliases: nfsv4graceperiod, GracePeriod
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: HideFilesBeginningInDot
+  description: |+
+    Specifies whether an NFS server creates files that have names that begin with a dot (.) as hidden files.
+
+  defaultValue: "0"
+  position: Named
+  aliases: hidedotfiles, dotfileshidden
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LeasePeriodSec
+  description: |+
+    Specifies a lease period, in seconds, for an NFS server.
+    The minimum value is 5.
+    The maximum value is 300.
+
+  defaultValue: None
+  position: Named
+  aliases: Lease, LeasePeriod
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LogActivity
+  description: |+
+    Specifies the activities that an NFS server logs for audit purposes.
+    The acceptable values for this parameter are:
+
+    - Mount
+    - Unmount
+    - Read
+    - Write
+    - Create
+    - Delete
+    - Lock
+    - Unlock
+    - All
+    - None
+
+    You can specify multiple values.
+    Specify All to log all activities or None to log none of these activities.
+
+  defaultValue: None
+  position: Named
+  aliases: audit
+  parameterValueGroup: mount, unmount, read, write, create, delete, lock, unlock, none, all
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MapServerProtocol
+  description: |+
+    Specifies one or more preferred underlying transport protocols that an NFS server uses for the User Name Mapping server (MAPSVR) protocol.
+    You must specify at least one of these two values: Tcp and Udp.
+
+  defaultValue: "3"
+  position: Named
+  aliases: MapsvrProtocol
+  parameterValueGroup: tcp, udp
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MountProtocol
+  description: |+
+    Specifies one or more preferred underlying transport protocols that an NFS server uses for the Mount protocol.
+    You must specify at least one of these two values: Tcp and Udp.
+
+  defaultValue: "3"
+  position: Named
+  aliases: ""
+  parameterValueGroup: tcp, udp
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NetgroupCacheTimeoutSec
+  description: |+
+    Specifies a time-out period, in seconds, for an NFS server.
+    An NFS server enforces this time-out on entries in its netgroup cache.
+
+  defaultValue: None
+  position: Named
+  aliases: NetgroupTimeout, NetgroupCacheTimeout
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Nfsprotocol
+  description: |+
+    Specifies one or more preferred underlying transport protocols that an NFS server uses for the NFS protocol.
+    You must specify at least one of these two values: Tcp and Udp.
+
+  defaultValue: "3"
+  position: Named
+  aliases: ""
+  parameterValueGroup: tcp, udp
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NisProtocol
+  description: |+
+    Specifies one or more preferred underlying transport protocols that an NFS server uses for the Network Information System (NIS) protocol.
+    You must specify at least one of these two values: Tcp and Udp.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: tcp, udp
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NlmGracePeriodSec
+  description: |+
+    Specifies a grace period, in seconds, that an NFS server enforces for the Network Lock Manager (NLM) protocol.
+    The default value is 45.
+
+  defaultValue: "45"
+  position: Named
+  aliases: lockperiod, nlmgrace, NlmGracePeriod
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NlmProtocol
+  description: |+
+    Specifies one or more preferred underlying transport protocols that an NFS server uses for the NLM protocol.
+    You must specify at least one of these two values: Tcp and Udp.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: tcp, udp
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NsmProtocol
+  description: |+
+    Specifies one or more preferred underlying transport protocols that an NFS server uses for the Network Status Manager (NSM) protocol.
+    You must specify at least one of these two values: Tcp and Udp.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: tcp, udp
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: OnlineTimeoutSec
+  description: |+
+    Specifies a time-out value, in seconds, for an NFS server.
+    An NFS server waits for this length of time for a resource to come online before it processes an incoming request.
+
+  defaultValue: None
+  position: Named
+  aliases: onlinetimeout, OnlineTimeoutInSeconds
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PortmapProtocol
+  description: |+
+    Specifies one or more preferred underlying transport protocols that an NFS server uses for the Portmap protocol.
+    You must specify at least one of these two values: Tcp and Udp.
+
+  defaultValue: "3"
+  position: Named
+  aliases: ""
+  parameterValueGroup: tcp, udp
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: PreserveInheritance
+  description: |+
+    Specifies whether an NFS server creates inheritable access control entries (ACEs).
+    These ACEs apply to newly created files and folders on NFS shares.
+    The default value is $False for non-inheritable ACEs.
+
+  defaultValue: None
+  position: Named
+  aliases: Inheritance
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UnmappedUserAccount
+  description: |+
+    Specifies the Windows account that an NFS server uses to represent users who have no mapping configured in the mapping store.
+    By default, an NFS server uses NT AUTHORITY\Anonymous.
+
+  defaultValue: None
+  position: Named
+  aliases: UnmappedAccount
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WorldAccount
+  description: |+
+    Specifies the Windows account that an NFS server uses to represent World/Other permissions on files when it uses AUTH_UNIX security.
+    By default, the NFS server uses the BUILTIN\Everyone account.
+
+  defaultValue: None
+  position: Named
+  aliases: World
+  parameterValueGroup: ""
+uid: NFS.Set-NfsServerConfiguration
+name: Set-NfsServerConfiguration
+description: |-
+  The **Set-NfsServerConfig** cmdlet changes the configuration settings for an existing Network File System (NFS) server.
+
+  For some changes to take effect, you must restart Services for NFS.
+  The cmdlet prompts you to restart if necessary.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NfsServerConfig.cmdletDefinition.cdxml-help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/set-nfsserverconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NfsServerConfiguration

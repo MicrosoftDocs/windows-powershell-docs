@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the Network Controller binaries.
+module: NetworkController
+notes: ""
+links:
+- text: Get-NetworkController
+  href: ./Get-NetworkController.yml
+- text: Get-NetworkController
+  href: ./Get-NetworkController.yml
+- text: Set-NetworkController
+  href: ./Set-NetworkController.yml
+- text: Uninstall-NetworkController
+  href: ./Uninstall-NetworkController.yml
+syntaxes:
+- >-
+  Update-NetworkController [-ComputerName <String>] [-UseSsl] [-Credential <PSCredential>]
+
+   [-CertificateThumbprint <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Update-NetworkController
+  description: ""
+  summary: |+
+    This command updates the Network Controller binaries on all the computers in the Network Controller cluster. Run this cmdlet on a Network Controller computer.
+
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    Specify the certificate thumbprint of the certificate.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the network controller node on which this cmdlet operates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default is the current user.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseSsl
+  description: |+
+    Indicates that the remote computer uses the Secure Sockets Layer (SSL) protocol to establish a connection to the Network Controller node.
+    The default value of this parameter is false.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Update-NetworkController
+name: Update-NetworkController
+description: |-
+  The **Update-NetworkController** cmdlet updates the Network Controller binaries after a software update is installed or after the operating system is upgraded.
+
+  Network Controller automatically updates binaries after no longer than one hour. If you want the binaries to be updated immediately, run this cmdlet.
+
+  For this cmdlet to run, the software update has to be installed on all the computers in the Network Controller cluster. In case of an operating system upgrade, for this cmdlet to run, the operating system has to be upgraded on all computers in the Network Controller cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/update-networkcontroller?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-NetworkController

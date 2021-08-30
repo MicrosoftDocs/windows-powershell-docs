@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a HGS Diagnostics target object.
+module: HgsDiagnostics
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Windows.HostGuardianService.Diagnostics.Payload.InputTarget" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a target object that is a collection of metadata that contains connection information of a host operating in a guarded fabric as well as its role in the fabric.
+links:
+- text: Test-HgsTraceTarget
+  href: ./Test-HgsTraceTarget.yml
+- text: Get-HgsTrace
+  href: ./Get-HgsTrace.yml
+syntaxes:
+- >-
+  New-HgsTraceTarget -HostName <String> [-Credential <PSCredential>] [-PSSessionConfigurationName <String>]
+
+   [-Role <BaseHgsRoles[]>] [<CommonParameters>]
+- New-HgsTraceTarget -HostName <String> [-NoAccess] -Role <BaseHgsRoles[]> [<CommonParameters>]
+- New-HgsTraceTarget [-Local] [-Role <BaseHgsRoles[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a default target object'
+  code: |-
+    PS C:\> New-HgsTraceTarget -Local
+  description: |-
+    This command creates a target object named localhost.
+    Since this command does not specify a role, the cmdlet will use the credentials of the current session and then infers the role though the list of installed features on the target.
+  summary: ""
+- title: 'Example 2: Create a target with different credentials and a specified role'
+  code: |-
+    PS C:\> New-HgsTraceTarget -HostName "hgs-01.contoso.com" -Credential (Get-Credential) -Role HostGuardianService
+  description: |-
+    This command creates a target object with hostname named hgs-01.contoso.com that uses the provided credentials and makes the target a HGS node.
+  summary: ""
+- title: 'Example 3: Create a target to which no access is available with a specified role'
+  code: |-
+    PS C:\> New-HgsTraceTarget -HostName "hyperv-02.contoso.com" -NoAccess -Role GuardedHost
+  description: |-
+    This command creates a target object with hostname named hyperv-02.contoso.com that has no credentials but is regarded as a guarded host.
+    No attempt will be made to connect to a NoAccess target.
+  summary: ""
+- title: "Example 4: Create a target that reuses the current session's credentials and a specified role"
+  code: |-
+    PS C:\> New-HgsTraceTarget -HostName "hgs-01.contoso.com" -role HostGuardianService
+  description: |-
+    This command creates a target object with hostname named hgs-01.contoso.com that reuses the credentials of the current session and makes the target a HGS node.
+  summary: ""
+- title: "Example 5: Create a target that reuses the current session's credentials and infer the role"
+  code: |-
+    PS C:\> New-HgsTraceTarget -HostName "hyperv-02.contoso.com"
+  description: |-
+    This command creates a target object with hostname hyperv-02.contoso.com that reuses the credentials of the current session and then infers the role though the list of installed features on the target.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a **PSCredential** object under which the management group connection runs.
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  isRequired: true
+  description: |+
+    Specifies the hostname of the target.
+    This parameter is used to resolve an IP address when a remote Windows PowerShell® session is opened.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Local
+  isRequired: true
+  description: |+
+    Indicates that the created target is the current local host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoAccess
+  isRequired: true
+  description: |+
+    Indicates that no access is available to the target.
+    Therefore, connections will never be opened to this target.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PSSessionConfigurationName
+  description: |+
+    Specifies the remote Windows PowerShell session configuration to utilize when a remote runspace is opened.
+    If you omit this parameter, the default runspace is utilized by the **Get-HgsTrace** cmdlet, or the HGS configuration for targets that have the HostGuardianService role.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="BaseHgsRoles" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Role
+  isRequired: true
+  description: |+
+    Specifies the role a particular target plays in a guarded fabric.
+    This can be a HGS node (HostGuardianService) or a Guarded Host (GuardedHost).
+    If you do not specify a role, it will be inferred by the open connection and the inspection of the installed Windows features.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, HostGuardianService, GuardedHost, None, HostGuardianService, GuardedHost
+uid: HgsDiagnostics.New-HgsTraceTarget
+name: New-HgsTraceTarget
+description: |-
+  The **New-HgsTraceTarget** cmdlet creates a Host Guardian Service (HGS) Diagnostics target object.
+  The **Get-HgsTrace** cmdlet can use this information to determine how to connect to a particular host as well as what aspects of the host to trace and diagnose.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.HostGuardianService.Diagnostics.Payload.dll-Help.xml
+  Module Name: HgsDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsdiagnostics/new-hgstracetarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-HgsTraceTarget

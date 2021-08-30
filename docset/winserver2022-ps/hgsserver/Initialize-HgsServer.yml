@@ -1,0 +1,351 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Initializes the Host Guardian Service server.
+module: HgsServer
+notes: ""
+links:
+- text: HGS Server Cmdlets
+  href: ./index.yml
+syntaxes:
+- >-
+  Initialize-HgsServer [-HgsServiceName] <String> [-UseHgsDomain] [-LogDirectory <String>] [-Http] [-Https]
+
+   [-HttpPort <UInt16>] [-HttpsPort <UInt16>] [-HttpsCertificatePath <String>]
+
+   [-HttpsCertificatePassword <SecureString>] [-HttpsCertificateThumbprint <String>] [-TrustActiveDirectory]
+
+   [-TrustTpm] [-EncryptionCertificateThumbprint <String>] [-EncryptionCertificatePath <String>]
+
+   [-EncryptionCertificatePassword <SecureString>] [-SigningCertificateThumbprint <String>]
+
+   [-SigningCertificatePath <String>] [-SigningCertificatePassword <SecureString>] [-HgsVersion <HgsVersion>]
+
+   [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Initialize-HgsServer [-HgsServiceName] <String> [-UseExistingDomain] [-LogDirectory <String>]
+
+   -JeaAdministratorsGroup <ADGroup> -JeaReviewersGroup <ADGroup> -ServiceAccount <ADServiceAccount>
+
+   [-ClusterName <String>] [-Http] [-Https] [-HttpPort <UInt16>] [-HttpsPort <UInt16>]
+
+   [-HttpsCertificatePath <String>] [-HttpsCertificatePassword <SecureString>]
+
+   [-HttpsCertificateThumbprint <String>] [-TrustActiveDirectory] [-TrustTpm]
+
+   [-EncryptionCertificateThumbprint <String>] [-EncryptionCertificatePath <String>]
+
+   [-EncryptionCertificatePassword <SecureString>] [-SigningCertificateThumbprint <String>]
+
+   [-SigningCertificatePath <String>] [-SigningCertificatePassword <SecureString>] [-HgsVersion <HgsVersion>]
+
+   [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Initialize-HgsServer [-HgsServerIPAddress] <String> [-LogDirectory <String>] [-Http] [-Https]
+
+   [-HttpPort <UInt16>] [-HttpsPort <UInt16>] [-HttpsCertificatePath <String>]
+
+   [-HttpsCertificatePassword <SecureString>] [-HttpsCertificateThumbprint <String>] [-Force] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Initialize the HGS on the primary node in TPM mode'
+  code: |-
+    PS C:\> Initialize-HgsServer -HgsServiceName "SecureFabricHgs" -EncryptionCertificateThumbprint $EncryptionCert.Thumbprint -SigningCertificateThumbprint $SigningCert.Thumbprint
+  description: |-
+    This command initializes the HGS server on the primary node.
+    By default, the server is accessible on HTTP port 80 and the Attestation service is set to TPM mode.
+    The specified certificates are used by the Key Protection service.
+  summary: ""
+- title: 'Example 2: Initialize the HGS on a secondary node in TPM mode'
+  code: |-
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Initialize-HgsServer -HgsServerIPAddress "100.100.100.1" -HgsDomainCredential $Cred
+  description: |-
+    This command initializes the HGS server on a secondary node.
+    By default, the server is accessible on HTTP port 80 and the Attestation service is set to TPM mode.
+    The Key Protection service uses the encryption and signing certificates set by the primary server.
+  summary: ""
+- title: 'Example 3: Initialize the HGS on the primary node in Active Directory mode'
+  code: |-
+    PS C:\> Initialize-HgsServer -TrustActiveDirectory -HgsServiceName "SecureFabricHgs" -EncryptionCertificateThumbprint $EncryptionCert.Thumbprint -SigningCertificateThumbprint $SigningCert.Thumbprint
+  description: |-
+    This command initializes the HGS server on the primary node and sets the Attestation service to Active Directory (AD) mode.
+    By default, the server is accessible on HTTP port 80.
+    The specified certificates are used by the Key Protection service.
+  summary: ""
+- title: 'Example 4: Initialize the HGS on the primary node in TPM mode and enable HTTPS'
+  code: |-
+    PS C:\> Initialize-HgsServer -HgsServiceName "SecureFabricHgs" -EncryptionCertificateThumbprint $EncryptionCert.Thumbprint -SigningCertificateThumbprint $SigningCert.Thumbprint -http -https -HttpsCertificatePath $PathToPfx -HttpsCertificatePassword $PfxSecureString
+  description: |-
+    This command initializes the HGS server on the primary node.
+    The server is set to be accessible by HTTP and HTTPS on the default ports, and with the specified certificate for HTTPS.
+    By default, the server is accessible on HTTP port 80 and the Attestation service is set to TPM mode.
+    The specified certificates are used by the Key Protection service.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  description: |+
+    Specifies a cluster name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: EncryptionCertificatePassword
+  description: |+
+    Specifies the password for the certificate file specified in **EncryptionCertificatePath**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EncryptionCertificatePath
+  description: |+
+    Specifies the path to the encryption certificate used by the Key Protection service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EncryptionCertificateThumbprint
+  description: |+
+    Specifies the thumbprint of the encryption certificate used by the Key Protection service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HgsServerIPAddress
+  isRequired: true
+  description: |+
+    Specifies the IP address of the HGS server that is a domain controller for the specified HGS domain.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HgsServiceName
+  isRequired: true
+  description: |+
+    Specifies the HGS name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HgsVersion" data-throw-if-not-resolved="False" />
+  name: HgsVersion
+  description: |+
+    Reserved for future use.
+
+  defaultValue: $script:HgsSupportedLevels[0]
+  position: Named
+  aliases: ""
+  parameterValueGroup: HgsVersion1503, HgsVersion1704
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Http
+  description: |+
+    Indicates that the HGS server is accessible over HTTP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: HttpPort
+  description: |+
+    Specifies the HTTP port of the HGS server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Https
+  description: |+
+    Indicates that the HGS server is accessible over HTTPS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: HttpsCertificatePassword
+  description: |+
+    Specifies the password to the certificate file identified by **HttpsCertificatePath**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HttpsCertificatePath
+  description: |+
+    Specifies the path to the HTTPS certificate file (.pfx).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HttpsCertificateThumbprint
+  description: |+
+    Indicates the thumbprint of the HTTPS certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: HttpsPort
+  description: |+
+    Specifies the HTTPS port of the HGS server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADGroup" data-throw-if-not-resolved="False" />
+  name: JeaAdministratorsGroup
+  isRequired: true
+  description: |+
+    Identifies the Active Directory group of users who can administer HGS through Just Enough Administration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADGroup" data-throw-if-not-resolved="False" />
+  name: JeaReviewersGroup
+  isRequired: true
+  description: |+
+    Identifies the Active Directory group of users who can view, but not change, HGS settings through Just Enough Administration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogDirectory
+  description: |+
+    Specifies the directory for the output log.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADServiceAccount" data-throw-if-not-resolved="False" />
+  name: ServiceAccount
+  isRequired: true
+  description: |+
+    Identifies the Group Managed Service Account that will be used for the Key Protection Service. The specified account must already be installed and configured for use on this machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: SigningCertificatePassword
+  description: |+
+    Specifies the password for the certificate file identified by **SigningCertificatePath**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SigningCertificatePath
+  description: |+
+    Specifies the path to the signing certificate for use by the Key Protection service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SigningCertificateThumbprint
+  description: |+
+    Specifies the thumbprint of the signing certificate for use by the Key Protection service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TrustActiveDirectory
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TrustTpm
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseExistingDomain
+  isRequired: true
+  description: |+
+    Indicates that HGS was joined to an existing domain and did not establish its own domain (with Install-HgsServer). HGS must already be joined to the existing domain to continue.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseHgsDomain
+  description: |+
+    Indicates that HGS was set up with its own dedicated Active Directory forest using the Install-HgsServer cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsServer.Initialize-HgsServer
+name: Initialize-HgsServer
+description: "The **Initialize-HgsServer** cmdlet configures the necessary infrastructure components for Host Guardian Service (HGS) after it is rebooted.\r\n\r\nThis cmdlet performs the following configuration actions on infrastructure components of the first HGS node: \r\n\r\n- Creates one-node failover cluster.\r\n- Configures a failover cluster with a distributed network name resource corresponding to the fully qualified domain name of the HGS name: \\<HgsServerName\\>.\\<LocalDomain\\>.\r\n- Registers and configures the Attestation service web application with the IIS service.\r\n- Registers and configures the Key Protection service web application with the IIS service.\r\n- Configures the Attestation service signer certificate with the Key Protection service.\r\n- Enables Just Enough Administration on the local node.\r\n\r\nThis cmdlet makes the following configuration changes to components on an additional HGS node: \r\n\r\n- Adds the local node to the existing failover cluster on a node specified by the **HgsServerIPAddress** parameter using the credential specified in the **HgsDomainCredential** parameter.\r\n \r\n- Registers and configures the Attestation service web application with the IIS service.\r\n- Registers and configures the Key Protection service web application with the IIS service.\r\n- Configures the Attestation service signer certificate with the Key Protection service.\r\n- Enables Just Enough Administration on the local node.\r\n\r\nFor more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209)."
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: HgsServer-help.xml
+  Module Name: HgsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsserver/initialize-hgsserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Initialize-HgsServer

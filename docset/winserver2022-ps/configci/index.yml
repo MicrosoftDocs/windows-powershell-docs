@@ -1,0 +1,33 @@
+### YamlMime:PowershellModule
+children:
+- title: ConfigCI
+  cmdlets:
+  - ConfigCI.Add-SignerRule
+  - ConfigCI.ConvertFrom-CIPolicy
+  - ConfigCI.Edit-CIPolicyRule
+  - ConfigCI.Get-CIPolicy
+  - ConfigCI.Get-CIPolicyIdInfo
+  - ConfigCI.Get-CIPolicyInfo
+  - ConfigCI.Get-SystemDriver
+  - ConfigCI.Merge-CIPolicy
+  - ConfigCI.New-CIPolicy
+  - ConfigCI.New-CIPolicyRule
+  - ConfigCI.Remove-CIPolicyRule
+  - ConfigCI.Set-CIPolicyIdInfo
+  - ConfigCI.Set-CIPolicyVersion
+  - ConfigCI.Set-HVCIOptions
+  - ConfigCI.Set-RuleOption
+uid: ConfigCI
+name: ConfigCI
+description: |-
+  This reference provides cmdlet descriptions and syntax for the Configurable Code Integrity Cmdlets. 
+  These cmdlets belong to the **ConfigCI** module.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.2.1
+  Locale: en-US
+  Module Guid: 28c9a37e-c849-4370-b672-e5563447b0e1
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  title: ConfigCI

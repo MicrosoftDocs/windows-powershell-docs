@@ -1,0 +1,252 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Runs prerequisite checks for installing a new federation server farm.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+- text: Install-AdfsFarm
+  href: ./Install-AdfsFarm.yml
+- text: Test-AdfsFarmJoin
+  href: ./Test-AdfsFarmJoin.yml
+syntaxes:
+- >-
+  Test-AdfsFarmInstallation [-CertificateThumbprint <String>] [-Credential <PSCredential>]
+
+   -FederationServiceName <String> [-FederationServiceDisplayName <String>]
+
+   -ServiceAccountCredential <PSCredential> [-OverwriteConfiguration] [-SSLPort <Int32>] [-TlsClientPort <Int32>]
+
+   [-AdminConfiguration <Hashtable>] [<CommonParameters>]
+- >-
+  Test-AdfsFarmInstallation [-CertificateThumbprint <String>] [-Credential <PSCredential>]
+
+   -DecryptionCertificateThumbprint <String> -FederationServiceName <String>
+
+   [-FederationServiceDisplayName <String>] -ServiceAccountCredential <PSCredential>
+
+   -SigningCertificateThumbprint <String> [-OverwriteConfiguration] [-SSLPort <Int32>] [-TlsClientPort <Int32>]
+
+   [-AdminConfiguration <Hashtable>] [<CommonParameters>]
+- >-
+  Test-AdfsFarmInstallation [-CertificateThumbprint <String>] [-Credential <PSCredential>]
+
+   -DecryptionCertificateThumbprint <String> -FederationServiceName <String>
+
+   [-FederationServiceDisplayName <String>] -ServiceAccountCredential <PSCredential>
+
+   -SigningCertificateThumbprint <String> -SQLConnectionString <String> [-OverwriteConfiguration]
+
+   [-SSLPort <Int32>] [-TlsClientPort <Int32>] [-AdminConfiguration <Hashtable>] [<CommonParameters>]
+- >-
+  Test-AdfsFarmInstallation [-CertificateThumbprint <String>] [-Credential <PSCredential>]
+
+   -DecryptionCertificateThumbprint <String> -FederationServiceName <String>
+
+   [-FederationServiceDisplayName <String>] -GroupServiceAccountIdentifier <String>
+
+   -SigningCertificateThumbprint <String> [-OverwriteConfiguration] [-SSLPort <Int32>] [-TlsClientPort <Int32>]
+
+   [-AdminConfiguration <Hashtable>] [<CommonParameters>]
+- >-
+  Test-AdfsFarmInstallation [-CertificateThumbprint <String>] [-Credential <PSCredential>]
+
+   -DecryptionCertificateThumbprint <String> -FederationServiceName <String>
+
+   [-FederationServiceDisplayName <String>] -GroupServiceAccountIdentifier <String>
+
+   -SigningCertificateThumbprint <String> -SQLConnectionString <String> [-OverwriteConfiguration]
+
+   [-SSLPort <Int32>] [-TlsClientPort <Int32>] [-AdminConfiguration <Hashtable>] [<CommonParameters>]
+- >-
+  Test-AdfsFarmInstallation [-CertificateThumbprint <String>] [-Credential <PSCredential>]
+
+   -FederationServiceName <String> [-FederationServiceDisplayName <String>]
+
+   -ServiceAccountCredential <PSCredential> -SQLConnectionString <String> [-OverwriteConfiguration]
+
+   [-SSLPort <Int32>] [-TlsClientPort <Int32>] [-AdminConfiguration <Hashtable>] [<CommonParameters>]
+- >-
+  Test-AdfsFarmInstallation [-CertificateThumbprint <String>] [-Credential <PSCredential>]
+
+   -FederationServiceName <String> [-FederationServiceDisplayName <String>]
+
+   -GroupServiceAccountIdentifier <String> [-OverwriteConfiguration] [-SSLPort <Int32>] [-TlsClientPort <Int32>]
+
+   [-AdminConfiguration <Hashtable>] [<CommonParameters>]
+- >-
+  Test-AdfsFarmInstallation [-CertificateThumbprint <String>] [-Credential <PSCredential>]
+
+   -FederationServiceName <String> [-FederationServiceDisplayName <String>]
+
+   -GroupServiceAccountIdentifier <String> -SQLConnectionString <String> [-OverwriteConfiguration]
+
+   [-SSLPort <Int32>] [-TlsClientPort <Int32>] [-AdminConfiguration <Hashtable>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Test the creation of a node in a federation server farm'
+  code: |-
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Test-AdfsFarmInstallation -CertificateThumbprint 8169c52b4ec6e77eb2ae17f028fe5da4e35c0bed -FederationServiceName "FS.Corp.Contoso.com" -ServiceAccountCredential $Cred
+  description: |-
+    The first command uses the **Get-Credential** cmdlet to create a credential object for the Active Directory account under which the AD FS service runs.
+    The command stores the credential object in the $Cred variable.
+
+    The second command tests the creation the first node in a federation server farm that uses the Windows Internal Database on the local server computer.
+    The command specifies a thumbprint of the certificate.
+    AD FS uses this certificate as the SSL certificate and the service communications certificate.
+    The command uses automatically generated, self-signed certificates for the token signing and token decryption certificates.
+    The command specifies the credentials stored in $Cred for the Active Directory account under which the AD FS service runs.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: AdminConfiguration
+  description: |+
+    Specifies admin configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the value of the thumbprint of the certificate that the Secure Sockets Layer (SSL) binding of the default website uses in Internet Information Services (IIS).
+    This value must match the thumbprint of a valid certificate in the certificate store of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a **PSCredential** object based on a user name and password.
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DecryptionCertificateThumbprint
+  isRequired: true
+  description: |+
+    Specifies the value of the thumbprint of the certificate that Active Directory Federation Services (AD FS) uses for token decryption.
+    If you specify this parameter, AD FS disables automatic certificate rollover, and you must specify a token signing certificate by specifying the **SigningCertificateThumbprint** parameter.
+    This value must match the thumbprint of a valid certificate in the certificate store of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FederationServiceDisplayName
+  description: |+
+    Specifies the display name of the Federation Service.
+    The name of the Federation Service appears by default in sign-in pages.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FederationServiceName
+  isRequired: true
+  description: |+
+    Specifies the Domain Name System (DNS) name of the Federation Service.
+    This value must match the subject name of the certificate that you configure on the SSL binding in IIS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupServiceAccountIdentifier
+  isRequired: true
+  description: |+
+    Specifies the name of the group Managed Service Account that the AD FS service uses as the logon identity for the AD FS Windows service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverwriteConfiguration
+  description: |+
+    Indicates that the AD FS service removes an existing AD FS configuration database and overwrites it with a new database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ServiceAccountCredential
+  isRequired: true
+  description: |+
+    Specifies a **PSCredential** object based on a user name and password for the service account in Active Directory® Domain Services under which the AD FS service runs.
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SigningCertificateThumbprint
+  isRequired: true
+  description: |+
+    Specifies the value of the thumbprint of the certificate that the AD FS service uses for token signing.
+    If you specify this parameter, AD FS disables automatic certificate rollover, and you must also specify a token decryption certificate by using the **DecryptionCertificateThumbprint** parameter.
+    This value must match the thumbprint of a valid certificate in the certificate store of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SQLConnectionString
+  isRequired: true
+  description: |+
+    Specifies the Microsoft SQL Server database that stores the AD FS configuration settings.
+    If you do not specify this parameter, the AD FS installer uses the Windows Internal Database to store configuration settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SSLPort
+  description: |+
+    Specifies the value of the port number of the SSL binding that the AD FS website uses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TlsClientPort
+  description: |+
+    Specifies the port number that the AD FS service uses for Transport Layer Security (TLS) authentication for the user certificate client.
+    The default value is 49443.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Test-AdfsFarmInstallation
+name: Test-AdfsFarmInstallation
+description: |-
+  The **Test-AdfsFarmInstallation** cmdlet performs the checks that you must complete before you run the Install-AdfsFarm cmdlet to install a new federation server farm.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/test-adfsfarminstallation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-AdfsFarmInstallation

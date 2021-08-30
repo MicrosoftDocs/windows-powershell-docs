@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about client backup jobs.
+module: WssCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.PCBackup.BackupUtil.WcfContracts.ClientJobInfo" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-WssClientBackup
+  href: ./Disable-WssClientBackup.yml
+- text: Enable-WssClientBackup
+  href: ./Enable-WssClientBackup.yml
+- text: Set-WssClientBackup
+  href: ./Set-WssClientBackup.yml
+- text: Start-WssClientBackup
+  href: ./Start-WssClientBackup.yml
+- text: Stop-WssClientBackup
+  href: ./Stop-WssClientBackup.yml
+syntaxes:
+- Get-WssClientBackup [-ComputerName] <String>
+- Get-WssClientBackup [-ComputerSid] <String>
+examples:
+- title: 'Example 1: Get client backup job information'
+  code: |-
+    PS C:\> Get-WssClientBackup -ComputerName "Workstation073"
+  description: |-
+    This command gets information for client backup jobs for a computer named Workstation073.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of a computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerSid
+  isRequired: true
+  description: |+
+    Specifies the SID of a computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Get-WssClientBackup
+name: Get-WssClientBackup
+description: |-
+  The **Get-WssClientBackup** cmdlet gets information about client backup jobs for a computer.
+  Specify a computer by name or security identifier (SID).
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssclientbackup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the firmware configuration of a virtual machine.
+module: Hyper-V
+notes: |-
+  * Note: This cmdlet is supported only on Generation 2 virtual machines.
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMFirmware" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-VMFirmware
+  href: ./Set-VMFirmware.yml
+syntaxes:
+- >-
+  Get-VMFirmware [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String[]> [<CommonParameters>]
+- Get-VMFirmware [-VM] <VirtualMachine[]> [<CommonParameters>]
+- Get-VMFirmware [-VMSnapshot] <VMSnapshot> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-VMFirmware "Test VM"
+  description: |-
+    This example returns a virtual machine firmware object for the virtual machine "Test VM".
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies an array of Hyper-V hosts.
+    The cmdlet gets the virtual machine firmware from the hosts you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machine objects.
+    The cmdlet gets the firmware configuration for the virtual machines you specify.
+    To obtain a virtual machine object, use the **Get-VM** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies an array of names of virtual machines.
+    The cmdlet gets the firmware configuration for the virtual machines you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSnapshot" data-throw-if-not-resolved="False" />
+  name: VMSnapshot
+  isRequired: true
+  description: |+
+    Specifies the virtual machine snapshot to be used with the VM when retrieving the firmware configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: VMCheckpoint
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMFirmware
+name: Get-VMFirmware
+description: |-
+  The **Get-VMFirmware** cmdlet gets the firmware configuration of a virtual machine.
+  Note: This cmdlet is supported only on Generation 2 virtual machines.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmfirmware?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMFirmware

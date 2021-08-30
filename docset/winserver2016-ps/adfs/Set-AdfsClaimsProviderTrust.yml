@@ -1,0 +1,593 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the properties of a claims provider trust.
+module: ADFS
+notes: |-
+  * The claims provider collects and authenticates a user's credentials, builds up claims for that user, and packages the claims into security tokens or Information Cards. In other words, a claims provider represents the organization for whose users the claims provider issues security tokens or Information Cards on their behalf. When you configure Active Directory Federation Services (AD FS), the role of the claims provider is to enable its users to access resources that are hosted in a relying party organization by establishing one side of a federation trust relationship. After the trust is established, tokens and Information Cards can be presented to a relying party across the federation trust.
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    ClaimDescription objects are received by the *ClaimOffered* parameter.
+- name: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate.X509Certificate2" data-throw-if-not-resolved="False" />
+  description: |-
+    X509Certificate2 objects are received by the *TargetCertificate* parameter.
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    ClaimsProviderTrust objects are received by the *TargetClaimsProviderTrust* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *AcceptanceTransformRules*, *SamlEndpoint*, *TargetIdentifier*, and *TargetName* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the changed ClaimsProviderTrust object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Add-AdfsClaimsProviderTrust
+  href: ./Add-AdfsClaimsProviderTrust.yml
+- text: Disable-AdfsClaimsProviderTrust
+  href: ./Disable-AdfsClaimsProviderTrust.yml
+- text: Enable-AdfsClaimsProviderTrust
+  href: ./Enable-AdfsClaimsProviderTrust.yml
+- text: Get-AdfsClaimsProviderTrust
+  href: ./Get-AdfsClaimsProviderTrust.yml
+- text: Remove-AdfsClaimsProviderTrust
+  href: ./Remove-AdfsClaimsProviderTrust.yml
+- text: Update-AdfsClaimsProviderTrust
+  href: ./Update-AdfsClaimsProviderTrust.yml
+syntaxes:
+- >-
+  Set-AdfsClaimsProviderTrust [-Name <String>] [-Identifier <String>] [-SignatureAlgorithm <String>]
+
+   [-TokenSigningCertificate <X509Certificate2[]>] [-MetadataUrl <Uri>] [-AcceptanceTransformRules <String>]
+
+   [-AcceptanceTransformRulesFile <String>] [-AllowCreate <Boolean>] [-AutoUpdateEnabled <Boolean>]
+
+   [-CustomMFAUri <Uri>] [-SupportsMFA <Boolean>] [-WSFedEndpoint <Uri>]
+
+   [-EncryptionCertificate <X509Certificate2>] [-EncryptionCertificateRevocationCheck <String>]
+
+   [-MonitoringEnabled <Boolean>] [-Notes <String>] [-OrganizationalAccountSuffix <String[]>]
+
+   [-LookupForests <String[]>] [-AlternateLoginID <String>] [-Force] [-ClaimOffered <ClaimDescription[]>]
+
+   [-SamlEndpoint <SamlEndpoint[]>] [-ProtocolProfile <String>] [-RequiredNameIdFormat <Uri>]
+
+   [-EncryptedNameIdRequired <Boolean>] [-SignedSamlRequestsRequired <Boolean>]
+
+   [-SamlAuthenticationRequestIndex <UInt16>] [-SamlAuthenticationRequestParameters <String>]
+
+   [-SamlAuthenticationRequestProtocolBinding <String>] [-SigningCertificateRevocationCheck <String>]
+
+   [-PromptLoginFederation <PromptLoginFederation>] [-PromptLoginFallbackAuthenticationType <String>]
+
+   [-AnchorClaimType <String>] -TargetClaimsProviderTrust <ClaimsProviderTrust> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AdfsClaimsProviderTrust [-Name <String>] [-Identifier <String>] [-SignatureAlgorithm <String>]
+
+   [-TokenSigningCertificate <X509Certificate2[]>] [-MetadataUrl <Uri>] [-AcceptanceTransformRules <String>]
+
+   [-AcceptanceTransformRulesFile <String>] [-AllowCreate <Boolean>] [-AutoUpdateEnabled <Boolean>]
+
+   [-CustomMFAUri <Uri>] [-SupportsMFA <Boolean>] [-WSFedEndpoint <Uri>]
+
+   [-EncryptionCertificate <X509Certificate2>] [-EncryptionCertificateRevocationCheck <String>]
+
+   [-MonitoringEnabled <Boolean>] [-Notes <String>] [-OrganizationalAccountSuffix <String[]>]
+
+   [-LookupForests <String[]>] [-AlternateLoginID <String>] [-Force] [-ClaimOffered <ClaimDescription[]>]
+
+   [-SamlEndpoint <SamlEndpoint[]>] [-ProtocolProfile <String>] [-RequiredNameIdFormat <Uri>]
+
+   [-EncryptedNameIdRequired <Boolean>] [-SignedSamlRequestsRequired <Boolean>]
+
+   [-SamlAuthenticationRequestIndex <UInt16>] [-SamlAuthenticationRequestParameters <String>]
+
+   [-SamlAuthenticationRequestProtocolBinding <String>] [-SigningCertificateRevocationCheck <String>]
+
+   [-PromptLoginFederation <PromptLoginFederation>] [-PromptLoginFallbackAuthenticationType <String>]
+
+   [-AnchorClaimType <String>] -TargetCertificate <X509Certificate2> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AdfsClaimsProviderTrust [-Name <String>] [-Identifier <String>] [-SignatureAlgorithm <String>]
+
+   [-TokenSigningCertificate <X509Certificate2[]>] [-MetadataUrl <Uri>] [-AcceptanceTransformRules <String>]
+
+   [-AcceptanceTransformRulesFile <String>] [-AllowCreate <Boolean>] [-AutoUpdateEnabled <Boolean>]
+
+   [-CustomMFAUri <Uri>] [-SupportsMFA <Boolean>] [-WSFedEndpoint <Uri>]
+
+   [-EncryptionCertificate <X509Certificate2>] [-EncryptionCertificateRevocationCheck <String>]
+
+   [-MonitoringEnabled <Boolean>] [-Notes <String>] [-OrganizationalAccountSuffix <String[]>]
+
+   [-LookupForests <String[]>] [-AlternateLoginID <String>] [-Force] [-ClaimOffered <ClaimDescription[]>]
+
+   [-SamlEndpoint <SamlEndpoint[]>] [-ProtocolProfile <String>] [-RequiredNameIdFormat <Uri>]
+
+   [-EncryptedNameIdRequired <Boolean>] [-SignedSamlRequestsRequired <Boolean>]
+
+   [-SamlAuthenticationRequestIndex <UInt16>] [-SamlAuthenticationRequestParameters <String>]
+
+   [-SamlAuthenticationRequestProtocolBinding <String>] [-SigningCertificateRevocationCheck <String>]
+
+   [-PromptLoginFederation <PromptLoginFederation>] [-PromptLoginFallbackAuthenticationType <String>]
+
+   [-AnchorClaimType <String>] -TargetIdentifier <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsClaimsProviderTrust [-Name <String>] [-Identifier <String>] [-SignatureAlgorithm <String>]
+
+   [-TokenSigningCertificate <X509Certificate2[]>] [-MetadataUrl <Uri>] [-AcceptanceTransformRules <String>]
+
+   [-AcceptanceTransformRulesFile <String>] [-AllowCreate <Boolean>] [-AutoUpdateEnabled <Boolean>]
+
+   [-CustomMFAUri <Uri>] [-SupportsMFA <Boolean>] [-WSFedEndpoint <Uri>]
+
+   [-EncryptionCertificate <X509Certificate2>] [-EncryptionCertificateRevocationCheck <String>]
+
+   [-MonitoringEnabled <Boolean>] [-Notes <String>] [-OrganizationalAccountSuffix <String[]>]
+
+   [-LookupForests <String[]>] [-AlternateLoginID <String>] [-Force] [-ClaimOffered <ClaimDescription[]>]
+
+   [-SamlEndpoint <SamlEndpoint[]>] [-ProtocolProfile <String>] [-RequiredNameIdFormat <Uri>]
+
+   [-EncryptedNameIdRequired <Boolean>] [-SignedSamlRequestsRequired <Boolean>]
+
+   [-SamlAuthenticationRequestIndex <UInt16>] [-SamlAuthenticationRequestParameters <String>]
+
+   [-SamlAuthenticationRequestProtocolBinding <String>] [-SigningCertificateRevocationCheck <String>]
+
+   [-PromptLoginFederation <PromptLoginFederation>] [-PromptLoginFallbackAuthenticationType <String>]
+
+   [-AnchorClaimType <String>] -TargetName <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable auto-update for a claims provider trust'
+  code: |-
+    PS C:\> Set-ADFSClaimsProviderTrust -TargetName "Fabrikam claims provider" -AutoUpdateEnabled $False
+  description: |-
+    This command enables auto-update for the claims provider trust named Fabrikam claims provider.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AcceptanceTransformRules
+  description: |+
+    Specifies the claim acceptance transform rules for accepting claims from this claims provider.
+    These rules determine the information that is accepted from the partner represented by the claims provider trust.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AcceptanceTransformRulesFile
+  description: |+
+    Specifies a file that contains the claim acceptance transform rules for accepting claims from this claims provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCreate
+  description: |+
+    Indicates whether the Security Assertion Markup Language (SAML) parameter *AllowCreate* is sent in SAML requests to the claims provider.
+    The default value is True.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AlternateLoginID
+  description: |+
+    Specifies the LDAP name of the attribute that you want to use for login.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AnchorClaimType
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoUpdateEnabled
+  description: |+
+    Indicates whether changes to the federation metadata by the *MetadataURL* parameter apply automatically to the configuration of the trust relationship.
+    If this parameter has a value of $True, partner claims, certificates, and endpoints are updated automatically. 
+
+    Note: When auto-update is enabled, fields that can be overwritten by metadata become read only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClaimDescription" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClaimOffered
+  description: |+
+    Specifies an array of claims that are offered by this claims provider.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: CustomMFAUri
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EncryptedNameIdRequired
+  description: |+
+    Indicates whether the relying party requires that the **NameID** claim be encrypted.
+    This setting applies to SAML logout requests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: EncryptionCertificate
+  description: |+
+    Specifies the certificate to be used for encrypting a **NameID** to this claims provider in SAML logout requests.
+    Encrypting the **NameID** is optional.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EncryptionCertificateRevocationCheck
+  description: |+
+    Specifies the type of validation that occurs for the encryption certificate before it is used for encrypting claims.
+    The acceptable values for this parameter are:
+
+    - None
+    - CheckEndCert
+    - CheckEndCertCacheOnly
+    - CheckChain
+    - CheckChainCacheOnly
+    - CheckChainExcludeRoot
+    - CheckChainExcludeRootCacheOnly
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: CheckChain, CheckChainCacheOnly, CheckChainExcludeRoot, CheckChainExcludeRootCacheOnly, CheckEndCert, CheckEndCertCacheOnly, None
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identifier
+  description: |+
+    Specifies the unique identifier for this claims provider trust.
+    No other trust can use an identifier from this list.
+    Uniform Resource Identifiers (URIs) are often used as unique identifiers for a claims provider trust, but you can use any string of characters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LookupForests
+  description: |+
+    Specifies the forest DNS names that can be used to look up the **AlternateLoginID**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: MetadataUrl
+  description: |+
+    Specifies the URL at which the federation metadata for this claims provider trust is available.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: MonitoringEnabled
+  description: |+
+    Indicates whether periodic monitoring of this claims provider's federation metadata is enabled.
+    The URL of the claims provider's federation metadata is specified by the *MetadataUrl* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the friendly name of this claims provider trust.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Specifies notes for this claims provider trust.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OrganizationalAccountSuffix
+  description: |+
+    Specifies a list of organizational account suffixes that an administrator can configure for the claims provider trust for Home Realm Discovery (HRD) scenarios.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PromptLoginFallbackAuthenticationType
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PromptLoginFederation" data-throw-if-not-resolved="False" />
+  name: PromptLoginFederation
+  description: |+
+    The acceptable values for this parameter are:
+
+    - None.
+    Do not federate prompt=login request and error instead. 
+    - FallbackToProtocolSpecificParameters.
+    Translate prompt=login to wfresh=0 and Wauth=forms during federation.
+    If wauth is present in the original request, it will be preserved. 
+    - ForwardPromptAndHintsOverWsFederation.
+    Forward prompt, login_hint, and domain_hint parameters during federation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, FallbackToProtocolSpecificParameters, ForwardPromptAndHintsOverWsFederation, Disabled
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProtocolProfile
+  description: |+
+    Specifies which protocol profiles the claims provider supports.
+    The acceptable values for this parameter are:
+
+    - SAML
+    - WsFederation
+    - WsFed-SAML
+
+    By default, both SAML and WS-Federation protocols are supported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: WsFed-SAML, WSFederation, SAML
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: RequiredNameIdFormat
+  description: |+
+    Specifies the format that is required for **NameID** claims to be included in SAML requests to the claims provider.
+    By default, no format is required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: SamlAuthenticationRequestIndex
+  description: |+
+    Specifies the value of **AssertionConsumerServiceIndex** that is placed in SAML authentication requests that are sent to the claims provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SamlAuthenticationRequestParameters
+  description: |+
+    Specifies which of the following parameters to use in SAML authentication requests to the claims provider: **AssertionConsumerServiceIndex**, **AssertionConsumerServiceUrl**, and **ProtocolBinding**.
+    The acceptable values for this parameter are:
+
+    - None
+    - Index
+    - Url
+    - ProtocolBinding
+    - UrlWithProtocolBinding
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Index, None, , ProtocolBinding, Url, UrlWithProtocolBinding
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SamlAuthenticationRequestProtocolBinding
+  description: |+
+    Specifies the value of **ProtocolBinding** to place in SAML authentication requests to the claims provider.
+    The acceptable values for this parameter are:
+
+    - Artifact
+    - POST
+    - Redirect
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Artifact, , POST, Redirect
+- type: <xref href="SamlEndpoint" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SamlEndpoint
+  description: |+
+    Specifies an array of SAML protocol endpoints for this claims provider.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignatureAlgorithm
+  description: |+
+    Specifies the signature algorithm that the claims provider uses for signing and verification.
+    The acceptable values for this parameter are:
+
+    - http://www.w3.org/2000/09/xmldsig#rsa-sha1
+    - http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: http://www.w3.org/2000/09/xmldsig#rsa-sha1, http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SignedSamlRequestsRequired
+  description: |+
+    Indicates whether the Federation Service requires signed SAML protocol requests from the relying party.
+    If you specify a value of $True, the Federation Service rejects unsigned SAML protocol requests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SigningCertificateRevocationCheck
+  description: |+
+    Specifies the type of certificate validation that occurs when signatures are verified on responses or assertions from the claims provider.
+    The acceptable values for this parameter are:
+
+    - None
+    - CheckEndCert
+    - CheckEndCertCacheOnly
+    - CheckChain
+    - CheckChainCacheOnly
+    - CheckChainExcludeRoot
+    - CheckChainExcludeRootCacheOnly
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: CheckChain, CheckChainCacheOnly, CheckChainExcludeRoot, CheckChainExcludeRootCacheOnly, CheckEndCert, CheckEndCertCacheOnly, None
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SupportsMFA
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: TargetCertificate
+  isRequired: true
+  description: |+
+    Specifies the certificate of the claims provider trust that is modified by the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  name: TargetClaimsProviderTrust
+  isRequired: true
+  description: |+
+    Specifies a **ClaimsProviderTrust** object.
+    The cmdlet modifies the claims provider trust that you specify.
+    To obtain a **ClaimsProviderTrust** object, use the **Get-AdfsClaimsProviderTrust** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the claims provider trust that is modified by the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the claims provider trust that is modified by the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TokenSigningCertificate
+  description: |+
+    Specifies an array of token-signing certificates that the claims provider use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: WSFedEndpoint
+  description: |+
+    Specifies the WS-Federation Passive URL for this claims provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsClaimsProviderTrust
+name: Set-AdfsClaimsProviderTrust
+description: |-
+  The **Set-AdfsClaimsProviderTrust** cmdlet configures the trust relationship with a claims provider.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsclaimsprovidertrust?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsClaimsProviderTrust

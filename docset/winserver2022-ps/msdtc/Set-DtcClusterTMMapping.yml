@@ -1,0 +1,158 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an existing cluster DTC mapping.
+module: MsDtc
+notes: |-
+  * This cmdlet returns a **DtcClusterTMMapping** object that contains modified mapping information.
+outputs:
+- name: <xref href="DtcClusterTMMapping" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-DtcClusterTMMapping
+  href: ./Add-DtcClusterTMMapping.yml
+- text: Get-DtcClusterTMMapping
+  href: ./Get-DtcClusterTMMapping.yml
+- text: Remove-DtcClusterTMMapping
+  href: ./Remove-DtcClusterTMMapping.yml
+syntaxes:
+- >-
+  Set-DtcClusterTMMapping -Name <String> [-ClusterResourceName <String>] [-Local <Boolean>] -Service <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Set-DtcClusterTMMapping -Name <String> -ClusterResourceName <String> [-Local <Boolean>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Set-DtcClusterTMMapping -Name <String> [-ClusterResourceName <String>] -Local <Boolean>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Set-DtcClusterTMMapping -Name <String> [-ClusterResourceName <String>] [-Local <Boolean>]
+
+   -ExecutablePath <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Set-DtcClusterTMMapping -Name <String> -ComPlusAppId <String> [-ClusterResourceName <String>]
+
+   [-Local <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a DTC cluster mapping'
+  code: |-
+    PS C:\> Set-DtcClusterTMMapping -ExecutablePath "C:\TestApp\SampleApp.exe" -Name "LocalTestAppMapping" -ClusterResourceName "DtcResource2"
+  description: |-
+    This command modifies an existing DTC cluster TM mapping.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterResourceName
+  isRequired: true
+  description: |+
+    Specifies the name of a cluster DTC resource.
+    This cmdlet sets the TM mapping of the resource that the name specifies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComPlusAppId
+  isRequired: true
+  description: |+
+    Specifies the COM+ application identifier to associate with this mapping.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ExecutablePath
+  isRequired: true
+  description: |+
+    Specifies the path of the application to associate with this mapping.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Local
+  isRequired: true
+  description: |+
+    Specifies whether the application type is local.
+    If you specify a value of $False, the application is a clustered resource.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the DTC mapping to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Service
+  isRequired: true
+  description: |+
+    Specifies the name of the Windows service to associate with this mapping.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDtc.Set-DtcClusterTMMapping
+name: Set-DtcClusterTMMapping
+description: |-
+  The **Set-DtcClusterTMMapping** cmdlet modifies an existing cluster Distributed Transaction Coordinator (DTC) mapping.
+  This cmdlet is supported on clustered computers only.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_DtcClusterTMMappingTask_v1.0.cdxml-help.xml
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/msdtc/set-dtcclustertmmapping?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DtcClusterTMMapping

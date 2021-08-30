@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns App-V Server objects.
+module: AppVClient
+notes: |-
+  * The cmdlet checks that you have permissions to perform the specific action. If not, the cmdlet returns the following error:  The action could not be performed due to current App-V permissions. Please modify the permissions and try the operation again.
+  * If the get operation fails, the cmdlet returns the following error: The get operation could not be completed. An error code is returned.
+  * If the cmdlet cannot find the servers, the cmdlet returns the following error: The specified App-V publishing server(s) could not be found. An error code is returned.
+outputs:
+- name: <xref href="Microsoft.AppV.AppvClientPowerShell.AppvPublishingServer" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvPublishingServer
+  href: ./add-appvpublishingserver.yml
+- text: Remove-AppvPublishingServer
+  href: ./remove-appvpublishingserver.yml
+- text: Set-AppvPublishingServer
+  href: ./set-appvpublishingserver.yml
+- text: Sync-AppvPublishingServer
+  href: ./sync-appvpublishingserver.yml
+syntaxes:
+- Get-AppvPublishingServer [[-ServerId] <UInt32>] [<CommonParameters>]
+- Get-AppvPublishingServer [[-Name] <String>] [[-URL] <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AppvPublishingServer -Name "Server*"
+  description: ""
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AppvPublishingServer -ServerId 1
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the App-V publishing server.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ServerId
+  description: |+
+    Specifies the unique identifier of the App-V Publishing Server.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: URL
+  description: |+
+    Specifies the URL path to the App-V Publishing server
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppVClient.Get-AppvPublishingServer
+name: Get-AppvPublishingServer
+description: |-
+  The **Get-AppvPublishingServer** cmdlet returns an Microsoft Application Virtualization (App-V) Server object or set of App-V Server objects based on the criteria provided.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Get-AppvPublishingServer

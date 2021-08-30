@@ -1,0 +1,38 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the configuration of the Key Protection Service.
+module: HgsKeyProtection
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="Microsoft.Windows.KpsServer.Common.Store.Data.ServiceConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the configuration of Key Protection Service set up on the local computer.
+links:
+- text: Set-HgsKeyProtectionConfiguration
+  href: ./Set-HgsKeyProtectionConfiguration.yml
+syntaxes:
+- Get-HgsKeyProtectionConfiguration [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the configuration of the Key Protection Service'
+  code: |-
+    PS C:\> Get-HgsKeyProtectionConfiguration
+  description: |-
+    This command gets the configuration of the Key Protection Service on the local computer.
+  summary: ""
+uid: HgsKeyProtection.Get-HgsKeyProtectionConfiguration
+name: Get-HgsKeyProtectionConfiguration
+description: |-
+  The **Get-HgsKeyProtectionConfiguration** cmdlet gets the configuration of the Key Protection Service that runs on the local computer.
+  The configuration contains the communication certificate that the Key Protection Service uses to sign the metadata provided by the service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/get-hgskeyprotectionconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-HgsKeyProtectionConfiguration

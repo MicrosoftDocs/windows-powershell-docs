@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the configuration for the computer running the IP Address Management (IPAM) server, including the TCP port number over which the computer running the IPAM Remote Server Administration Tools (RSAT) client connects with the computer running the IPAM server.
+module: IpamServer
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Windows.Ipam.Commands.IpamConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    This object contains an IPAM configuration.
+links:
+- text: Get-IpamConfiguration
+  href: ./Get-IpamConfiguration.yml
+syntaxes:
+- Set-IpamConfiguration [-Port] <UInt16> [-Force] [-PassThru] [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: "PS C:\\>Set-IpamServerConfiguration -Port 45000 -PassThru -Force\r\nVersion : 1.3 \r\n \r\nPort : 45000"
+  description: |-
+    This example changes the IPAM server management port to 45000 and suppresses the default confirmation text and returns the modified IPAM server configuration object.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the default confirmation text.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: Port
+  isRequired: true
+  description: |+
+    Specifies the TCP port number being configured for communication between computers running the IPAM RSAT client and IPAM server.
+    The required firewall rules are also set up for this port.
+    Although IPAM allows any port number from `1` through `65535` to be configured for communication between computers running the IPAM client and server; it is recommended, to avoid port conflicts with well-known ports, that a port from the unassigned port range `48620` through `49150` is selected.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IpamServer.Set-IpamConfiguration
+name: Set-IpamConfiguration
+description: |-
+  The **Set-IpamConfiguration** cmdlet sets the IP Address Management (IPAM) server configuration, including the TCP port over which the computer running the IPAM Remote Server Administration Tools (RSAT) client connects and communicates with the computer running the IPAM server.
+  This cmdlet can be leveraged to specify an alternate firewall port number for remotely managing the computer running the IPAM server, in the event of a port conflict.
+  The default port number used by IPAM is `48885`.
+  The cmdlet configures appropriate custom IPAM server firewall rules for the specified new port, enables appropriate custom IPAM server firewall rules for the specified new port, and restarts the IPAM application pool to listen on the specified new port.
+  This cmdlet must be run from an elevated Windows PowerShell® prompt with administrator privileges on the computer running the IPAM server.
+metadata:
+  external help file: IpamServer_Cmdlets.xml
+  Module Name: IpamServer
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/set-ipamconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,32 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Specifies a security group for the NAS Limit.
+module: WssCmdlets
+notes: ""
+syntaxes:
+- Set-WssImportGroup [-ImportGroup <String>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImportGroup
+  description: |+
+    Specifies the name of an AD DS security group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Set-WssImportGroup
+name: Set-WssImportGroup
+description: |-
+  The **Set-WssImportGroup** cmdlet specifies an Active Directory Domain Services (AD DS) security group as the import group for the Network Access Server (NAS) Limit.
+  By default, the server imports all users in the domain, up to the maximum allowed by the server.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssimportgroup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

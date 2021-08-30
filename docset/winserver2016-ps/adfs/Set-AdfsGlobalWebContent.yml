@@ -1,0 +1,357 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties for global web content objects.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="System.IdentityServer.Management.Resources.AdfsGlobalWebContent" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a **System.IdentityServer.Management.Resources.AdfsGlobalWebContent** object that represents global web content.
+    The object includes the following properties:
+
+    - Locale: **System.Globalization.CultureInfo**
+    - CompanyName: **System.String**
+    - HelpDeskLink: **System.Uri**
+    - HelpDeskLinkText: **System.String**
+    - HomeLink: **System.Uri**
+    - HomeLinkText: **System.String**
+    - PrivacyLink: **System.Uri**
+    - PrivacyLinkText: **System.String**
+    - SignInPageDescriptionText: **System.String**
+    - SignOutPageDescriptionText: **System.String**
+    - ErrorPageDescriptionText: **System.String**
+    - ErrorPageGenericErrorMessage: **System.String**
+    - ErrorPageAuthorizationErrorMessage: **System.String**
+    - ErrorPageDeviceAuthenticationErrorMessage: **System.String**
+    - ErrorPageSupportEmail: **System.String**
+    - UpdatePasswordPageDescriptionText: **System.String**
+    - SignInPageAdditionalAuthenticationDescriptionText: **System.String**
+links:
+- text: Get-AdfsGlobalWebContent
+  href: ./Get-AdfsGlobalWebContent.yml
+- text: Remove-AdfsGlobalWebContent
+  href: ./Remove-AdfsGlobalWebContent.yml
+- text: Set-AdfsRelyingPartyWebContent
+  href: ./Set-AdfsRelyingPartyWebContent.yml
+syntaxes:
+- >-
+  Set-AdfsGlobalWebContent [-CompanyName <String>] [-HelpDeskLink <Uri>] [-HelpDeskLinkText <String>]
+
+   [-HomeLink <Uri>] [-HomeLinkText <String>] [-HomeRealmDiscoveryOtherOrganizationDescriptionText <String>]
+
+   [-HomeRealmDiscoveryPageDescriptionText <String>] [-OrganizationalNameDescriptionText <String>]
+
+   [-PrivacyLink <Uri>] [-PrivacyLinkText <String>] [-CertificatePageDescriptionText <String>]
+
+   [-SignInPageDescriptionText <String>] [-SignOutPageDescriptionText <String>]
+
+   [-ErrorPageDescriptionText <String>] [-ErrorPageGenericErrorMessage <String>]
+
+   [-ErrorPageAuthorizationErrorMessage <String>] [-ErrorPageDeviceAuthenticationErrorMessage <String>]
+
+   [-ErrorPageSupportEmail <String>] [-UpdatePasswordPageDescriptionText <String>]
+
+   [-SignInPageAdditionalAuthenticationDescriptionText <String>] [-PassThru] [[-Locale] <CultureInfo>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsGlobalWebContent [-CompanyName <String>] [-HelpDeskLink <Uri>] [-HelpDeskLinkText <String>]
+
+   [-HomeLink <Uri>] [-HomeLinkText <String>] [-HomeRealmDiscoveryOtherOrganizationDescriptionText <String>]
+
+   [-HomeRealmDiscoveryPageDescriptionText <String>] [-OrganizationalNameDescriptionText <String>]
+
+   [-PrivacyLink <Uri>] [-PrivacyLinkText <String>] [-CertificatePageDescriptionText <String>]
+
+   [-SignInPageDescriptionText <String>] [-SignOutPageDescriptionText <String>]
+
+   [-ErrorPageDescriptionText <String>] [-ErrorPageGenericErrorMessage <String>]
+
+   [-ErrorPageAuthorizationErrorMessage <String>] [-ErrorPageDeviceAuthenticationErrorMessage <String>]
+
+   [-ErrorPageSupportEmail <String>] [-UpdatePasswordPageDescriptionText <String>]
+
+   [-SignInPageAdditionalAuthenticationDescriptionText <String>] [-PassThru]
+
+   [-TargetWebContent] <AdfsGlobalWebContent> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the company name for the global web content'
+  code: |-
+    PS C:\> Set-AdfsGlobalWebContent -Locale "" -CompanyName "Contoso"
+  description: |-
+    This command sets the company name of the global web content for the invariant locale.
+    If there is no logo, the sign-in page displays the company name Contoso.
+  summary: ""
+- title: 'Example 2: Set the text and links for the sign-in pages'
+  code: |-
+    PS C:\> Set-AdfsWebContent -Locale "en-us" -CompanyName "Contoso" -HelpDeskLink "http://helpdesklink" -HelpDeskLinkText "Help desk" -HomeLink "http://homelink" -HomeLinkText "Home" -PrivacyLink "http://privacylink" -PrivacyLinkText "Privacy statement" -SignInPageDescriptionText "Sign in here" -SignOutPageDescriptionText "Sign out here" -ErrorPageGenericErrorMessage "An error occurred." -ErrorPageSupportEmail "support@contoso.com" -UpdatePasswordPageDescriptionText "Update password here"
+  description: |-
+    This command specifies the text to display in the sign-in pages for AD FS for the en-us locale.
+  summary: ""
+- title: 'Example 3: Set the text and links for the certificate page'
+  code: |-
+    PS C:\> Set-AdfsGlobalWebContent -Locale "en-us" -CompanyName "Contoso" -HomeLink "http://homelink" -HomeLinkText "Home" -PrivacyLink "http://privaylink" -PrivacyLinkText "Privacy statement" -SignInPageDescriptionText "<p>Sign-in to Contoso requires device registration. Click <A href='http://fs1.contoso.com/deviceregistration/'>here</A> for more information.</p>" -SignOutPageDescriptionText "Sign out here" -ErrorPageGenericErrorMessage "An error occurred." -ErrorPageSupportEmail "support@contoso.com" -UpdatePasswordPageDescriptionText "Update password here" -CertificatePageDescriptionText "Sign in with your Smartcard"
+  description: |-
+    This command specifies the text and links to display when an application prompts a user prompted for a certificate.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificatePageDescriptionText
+  description: |+
+    Specifies the text on the certificate page.
+    Active Directory Federation Services (AD FS) displays the text that you specify when it prompts the user for a certificate.
+    In earlier versions of AD FS, the user sees a blank page when AD FS prompts the user for a certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CompanyName
+  description: |+
+    Specifies the company name.
+    AD FS displays the company name in the sign-in pages when you have not set a logo on the active web theme.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ErrorPageAuthorizationErrorMessage
+  description: |+
+    Specifies an error message to display when a user encounters any authorization errors that occur for a token request.
+    This string can be an HTML fragment.
+    You can override this message for an application by using the **Set-AdfsRelyingPartyWebContent** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ErrorPageDescriptionText
+  description: |+
+    Specifies an error message to display when a user encounters any generic errors that occur for a token request.
+    This string can be an HTML fragment.
+    You can override this message for an application by using the **Set-AdfsRelyingPartyWebContent** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ErrorPageDeviceAuthenticationErrorMessage
+  description: |+
+    Specifies an error message to display for any device authentication errors that occur for a token request.
+    Device authentication errors occur when the user presents an expired user@device certificate to AD FS, a certificate is not found in AD DS, or a certificate is disabled in AD DS.
+    This string can be an HTML fragment.
+    You can override this message for an application by using the **Set-AdfsRelyingPartyWebContent** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ErrorPageGenericErrorMessage
+  description: |+
+    Specifies an error message to display for any generic errors that occur for a token request.
+    This string can be an HTML fragment.
+    You can override this message for an application by using the **Set-AdfsRelyingPartyWebContent** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ErrorPageSupportEmail
+  description: |+
+    Specifies the support email address on the error page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: HelpDeskLink
+  description: |+
+    Specifies the help desk link that is shown on the logon pages for AD FS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HelpDeskLinkText
+  description: |+
+    Specifies the help desk link text that is shown on the logon pages for AD FS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: HomeLink
+  description: |+
+    Specifies the Home link that is shown on the logon pages for AD FS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HomeLinkText
+  description: |+
+    Specifies the Home link text that is shown on the logon pages for AD FS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HomeRealmDiscoveryOtherOrganizationDescriptionText
+  description: |+
+    Specifies the text for the home realm discovery description for other organization.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HomeRealmDiscoveryPageDescriptionText
+  description: |+
+    Specifies the text for the home realm discovery page description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  name: Locale
+  description: |+
+    Specifies a locale.
+    The cmdlet sets global web content for the locale that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OrganizationalNameDescriptionText
+  description: |+
+    Specifies text for the organizational name description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: PrivacyLink
+  description: |+
+    Specifies the Privacy policy link that is shown on the logon pages for AD FS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrivacyLinkText
+  description: |+
+    Specifies the Privacy policy link text that is shown on the logon pages for AD FS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignInPageAdditionalAuthenticationDescriptionText
+  description: |+
+    Specifies the description to display when an application prompts a user for additional authentication.
+    The sign-in page can also display a description that is provided by the additional authentication provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignInPageDescriptionText
+  description: |+
+    Specifies the description to display when a user signs in to applications by using AD FS.
+    When you use Integrated Windows Authentication in the intranet, users do not see this page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignOutPageDescriptionText
+  description: |+
+    Specifies the description to display when a user signs out of applications.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AdfsGlobalWebContent" data-throw-if-not-resolved="False" />
+  name: TargetWebContent
+  isRequired: true
+  description: |+
+    Specifies an **AdfsGlobalWebContent** object.
+    The cmdlet modifies content for the object that you specify.
+    To obtain a **AdfsGlobalWebContent** object, use the **Get-AdfsGlobalWebContent** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UpdatePasswordPageDescriptionText
+  description: |+
+    Specifies the description to display in the update password page when users change their passwords.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsGlobalWebContent
+name: Set-AdfsGlobalWebContent
+description: |-
+  The **Set-AdfsGlobalWebContent** cmdlet sets properties for a global web content object.
+  Specify a global web object by using a locale, or use the **Get-AdfsGlobalWebContent** cmdlet to obtain a web object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsglobalwebcontent?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsGlobalWebContent

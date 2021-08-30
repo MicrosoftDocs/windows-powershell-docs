@@ -1,0 +1,161 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes a VLAN ID or prefix length for a Provider Address.
+module: NetWNV
+notes: ""
+links:
+- text: Get-NetVirtualizationProviderAddress
+  href: ./Get-NetVirtualizationProviderAddress.yml
+- text: New-NetVirtualizationProviderAddress
+  href: ./New-NetVirtualizationProviderAddress.yml
+- text: Remove-NetVirtualizationProviderAddress
+  href: ./Remove-NetVirtualizationProviderAddress.yml
+syntaxes:
+- >-
+  Set-NetVirtualizationProviderAddress [-AddressState <AddressState[]>] [-AsJob] [-CimSession <CimSession[]>]
+
+   [-InterfaceIndex <UInt32[]>] [-PassThru] [-PrefixLength <Byte>] [-ProviderAddress <String[]>]
+
+   [-ThrottleLimit <Int32>] [-VlanID <UInt16>]
+- >-
+  Set-NetVirtualizationProviderAddress [-AsJob] [-CimSession <CimSession[]>] [-PassThru] [-PrefixLength <Byte>]
+
+   [-ThrottleLimit <Int32>] [-VlanID <UInt16>] -InputObject <CimInstance[]>
+examples:
+- title: 'Example 1: Change a virtual LAN ID'
+  code: |-
+    PS C:\> Set-NetVirtualizationProviderAddress -ProviderAddress "192.168.2.3" -InterfaceIndex 17 -VlanID 201
+  description: |-
+    This command changes the virtual LAN ID for the Provider Address 192.168.2.3 on the interface that has the Index 17.
+  summary: ""
+- title: 'Example 2: Change a virtual LAN ID for specified Provider Addresses'
+  code: |-
+    PS C:\>Get-NetVirtualizationProviderAddress -InterfaceIndex 23 | Set-NetVirtualizationProviderAddress -VlanID 20
+  description: |-
+    This command uses the Get-NetVirtualizationProviderAddress cmdlet to get all the Provider Addresses for the interface that has the index 23, and then passes them to the Set-NetVirtualizationProviderAddress cmdlet by using the pipe operator.
+    The command assigns a value of 20 for the virtual LAN ID of all the Provider Address for the interface.
+  summary: ""
+parameters:
+- type: <xref href="AddressState" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressState
+  description: |+
+    Specifies an array of states of Provider Addresses.
+    The acceptable values for this parameter are:
+
+    - Preferred.
+    The address is unique. 
+    - Tentative.
+    The address is not yet verified. 
+    - Duplicate.
+    There is a duplicate address on the network. 
+    - Invalid.
+    The address lifetime has expired. 
+    - Deprecated.
+    The address cannot start new connections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceIndex
+  description: |+
+    Specifies an array of indexes for network interfaces that have hv_win8_2 Network Virtualization enabled.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: PrefixLength
+  description: |+
+    Specifies the length of an IP prefix.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ProviderAddress
+  description: |+
+    Specifies an array of IP addresses.
+    You can use IPv4 or IPv6 addresses.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: VlanID
+  description: |+
+    Specifies an ID for a VLAN for the Provider Address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetWNV.Set-NetVirtualizationProviderAddress
+name: Set-NetVirtualizationProviderAddress
+description: |-
+  The **Set-NetVirtualizationProviderAddress** cmdlet changes a virtual local area network (VLAN) ID or prefix length for Provider Addresses used with hv_win8_1 Network Virtualization.
+  For more information, see Network Virtualization technical detailshttp://technet.microsoft.com/library/jj134174.aspx (http://technet.microsoft.com/library/jj134174.aspx) on TechNet.
+
+  You can specify which Provider Addresses to modify by using address state, interface index, or IP address, or you can use the Get-NetVirtualizationProviderAddress cmdlet to get Provider Addresses to modify.
+metadata:
+  external help file: NetWNV_Cmdlets.xml
+  Module Name: NetWNV
+  online version: https://docs.microsoft.com/powershell/module/netwnv/set-netvirtualizationprovideraddress?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

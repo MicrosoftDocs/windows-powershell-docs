@@ -1,0 +1,39 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Provides information about Developer Mode for the current computer.
+module: WindowsDeveloperLicense
+notes: ""
+outputs:
+- name: <xref href="WindowsDeveloperLicense" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Enable your device for development
+  href: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx
+- text: Unregister-WindowsDeveloperLicense
+  href: ./Unregister-WindowsDeveloperLicense.yml
+- text: Show-WindowsDeveloperLicenseRegistration
+  href: ./Show-WindowsDeveloperLicenseRegistration.yml
+syntaxes:
+- Get-WindowsDeveloperLicense [<CommonParameters>]
+examples:
+- title: 'Example 1: Check the status of Developer Mode DM'
+  code: |-
+    PS C:\> Get-WindowsDeveloperLicense
+  description: |-
+    This command checks the status of Developer Mode for the current computer.
+  summary: ""
+uid: WindowsDeveloperLicense.Get-WindowsDeveloperLicense
+name: Get-WindowsDeveloperLicense
+description: |-
+  The **Get-WindowsDeveloperLicense** cmdlet provides information about whether you enabled Developer Mode for the current computer.
+  You no longer need a developer license.
+  Therefore, there is no longer an expiration date for a developer license.
+  For more information, see [Enable your device for development](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) (https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) in the Microsoft Developer Network library.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.DeveloperLicense.Commands.dll-Help.xml
+  Module Name: WindowsDeveloperLicense
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsdeveloperlicense/get-windowsdeveloperlicense?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WindowsDeveloperLicense

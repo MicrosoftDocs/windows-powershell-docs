@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the global client backup policy.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Get-WssGlobalClientBackupPolicy
+  href: ./Get-WssGlobalClientBackupPolicy.yml
+- text: Enable-WssClientBackup
+  href: ./Enable-WssClientBackup.yml
+syntaxes:
+- >-
+  Set-WssGlobalClientBackupPolicy [-BackupStartTime <TimeSpan>] [-BackupEndTime <TimeSpan>]
+
+   [-DailyRetainCount <UInt32>] [-WeeklyRetainCount <UInt32>] [-MonthlyRetainCount <UInt32>]
+
+   [-YearlyRetainCount <UInt32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Set-WssGlobalClientBackupPolicy [-Default] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the backup window for the global policy'
+  code: |-
+    PS C:\> Set-WssGlobalClientBackupPolicy -BackupEndTime 8:00 -BackupStartTime 19:00
+  description: |-
+    This command changes the backup window for the global backup policy.
+    The command specifies new start and end times for the policy.
+  summary: ""
+- title: 'Example 2: Restore default settings for the backup policy'
+  code: |-
+    PS C:\> Set-WssGlobalClientBackupPolicy -Default
+  description: |-
+    This command restores default settings for the global backup policy.
+    The command includes the **Default** parameter.
+  summary: ""
+parameters:
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: BackupEndTime
+  description: |+
+    Specifies the end of the backup window as a **TimeSpan** object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: BackupStartTime
+  description: |+
+    Specifies the beginning of the backup window as a **TimeSpan** object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DailyRetainCount
+  description: |+
+    Specifies the number of daily backups to keep.
+    The default value is five.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Default
+  description: |+
+    Indicates that the cmdlet resets all the settings to their default values.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MonthlyRetainCount
+  description: |+
+    Specifies the number of monthly backups to keep.
+    The default value is six.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: WeeklyRetainCount
+  description: |+
+    Specifies the number of weekly backups to keep.
+    The default value is four.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: YearlyRetainCount
+  description: |+
+    Specifies the number of yearly backups to keep.
+    The default value is ten.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Set-WssGlobalClientBackupPolicy
+name: Set-WssGlobalClientBackupPolicy
+description: |-
+  The **Set-WssGlobalClientBackupPolicy** cmdlet changes the global client backup policy.
+  This policy includes the following values: 
+
+  - BackupStartTime.
+  The beginning of the backup window.
+  The default value is 18:00.
+  - BackupEndTime.
+  The end of the backup window.
+  The default value is 9:00.
+  - DailyRetainCount.
+  The number of daily backups to keep.
+  The default value is five. 
+  - WeeklyRetainCount.
+  The number of weekly backups to keep.
+  The default value is four.
+  - MonthlyRetainCount.
+  The number of monthly backups to keep.
+  The default value is six. 
+  - YearlyRetainCount.
+  The number of yearly backups to keep.
+  The default value is ten.
+
+  This cmdlet can change any of these values, or you can use the **Default** parameter to reset all the settings to the default values.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssglobalclientbackuppolicy?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssGlobalClientBackupPolicy

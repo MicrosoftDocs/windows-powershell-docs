@@ -1,0 +1,323 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the SMB shares on the computer.
+module: SmbShare
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/SMB/MSFT_SmbShare" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+    The **MSFT_SmbShare** object represents the SMB shares on the computer.
+links:
+- text: New-SmbShare
+  href: ./New-SmbShare.yml
+- text: Remove-SmbShare
+  href: ./Remove-SmbShare.yml
+- text: Set-SmbShare
+  href: ./Set-SmbShare.yml
+syntaxes:
+- >-
+  Get-SmbShare [[-Name] <String[]>] [[-ScopeName] <String[]>] [-Scoped <Boolean[]>] [-Special <Boolean[]>]
+
+   [-ContinuouslyAvailable <Boolean[]>] [-ShareState <ShareState[]>]
+
+   [-FolderEnumerationMode <FolderEnumerationMode[]>] [-CachingMode <CachingMode[]>]
+
+   [-ConcurrentUserLimit <UInt32[]>] [-AvailabilityType <AvailabilityType[]>] [-CaTimeout <UInt32[]>]
+
+   [-EncryptData <Boolean[]>] [-IncludeHidden] [-SmbInstance <SmbInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get SMB shares'
+  code: |-
+    PS C:\>Get-SMBShare
+    Name                          ScopeName                     Path                          Description 
+    ----                          ---------                     ----                          ----------- 
+    ADMIN$                        *                             C:\Windows                    Remote Admin 
+    C$                            *                             C:\                           Default share 
+    ClusterStorage$               Contoso-SO                    C:\ClusterStorage             Cluster Shared Volumes Def... 
+    D$                            *                             D:\                           Default share 
+    F$                            *                             F:\                           Default share 
+    G$                            *                             G:\                           Default share 
+    H$                            *                             H:\                           Default share 
+    I$                            Contoso-FS                    I:\                           Cluster Default Share 
+    I$                            *                             I:\                           Default share 
+    IPC$                          *                                                           Remote IPC 
+    J$                            Contoso-FS                    J:\                           Cluster Default Share 
+    J$                            *                             J:\                           Default share 
+    K$                            *                             K:\                           Default share 
+    L$                            *                             L:\                           Default share 
+    M$                            *                             M:\                           Default share 
+    N$                            *                             N:\                           Default share 
+    VMS1                          Contoso-FS                    I:\VMS 
+    VMS2                          Contoso-FS                    J:\VMS 
+    VMS3                          Contoso-SO                    C:\ClusterStorage\Volume1\VMS 
+    VMS4                          Contoso-SO                    C:\ClusterStorage\Volume2\VMS 
+    VMS5                          *                             D:\VMS
+  description: |-
+    This command retrieves the SMB shares on the computer.
+  summary: ""
+- title: 'Example 2: Get a specific SMB share on the local computer'
+  code: |-
+    PS C:\>Get-SmbShare -Name "VMS1"
+    Name                          ScopeName                     Path                          Description 
+    ----                          ---------                     ----                          ----------- 
+    VMS1                          Contoso-FS                    I:\VMS
+  description: |-
+    This command retrieves information about the SMB share named 'VMS1' on the local computer.
+  summary: ""
+- title: "Example 3: Display information about the SMB share named 'VMS1' on the local computer in a list"
+  code: |-
+    PS C:\>Get-SmbShare -Name "VMS1" | Format-List
+    Name        : VMS1 
+    ScopeName   : Contoso-FS 
+    Path        : I:\VMS 
+    Description :
+  description: |-
+    This command displays the information about the SMB share named 'VMS1' on the local computer as a formatted list.
+  summary: ""
+- title: 'Example 4: Display all properties about a specific SMB share on the local computer in a list'
+  code: |-
+    PS C:\>Get-SmbShare -Name "VMS1" | Format-List -Property *
+    PresetPathAcl         : System.Security.AccessControl.DirectorySecurity 
+    ShareState            : Online 
+    AvailabilityType      : Clustered 
+    ShareType             : FileSystemDirectory 
+    FolderEnumerationMode : Unrestricted 
+    CachingMode           : Manual 
+    CATimeout             : 0 
+    ConcurrentUserLimit   : 0 
+    ContinuouslyAvailable : True 
+    CurrentUsers          : 3 
+    Description           : 
+    EncryptData           : False 
+    Name                  : VMS1 
+    Path                  : I:\VMS 
+    Scoped                : True 
+    ScopeName             : Contoso-FS 
+    SecurityDescriptor    : O:BAG:DUD:(A;;FA;;;S-1-5-21-219828122-4198910963-4161819395-500)(A;;FA;;;S-1-5-21-219828122-419 
+                            8910963-4161819395-1106)(A;;FA;;;S-1-5-21-219828122-4198910963-4161819395-1109) 
+    ShadowCopy            : False 
+    Special               : False 
+    Temporary             : False 
+    Volume                : \\?\Volume{b02c4ba7-e6f1-11e1-93eb-0008a1c0ef0d}\ 
+    PSComputerName        : 
+    CimClass              : ROOT/Microsoft/Windows/SMB:MSFT_SmbShare 
+    CimInstanceProperties : {AvailabilityType, CachingMode, CATimeout, ConcurrentUserLimit...} 
+    CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
+  description: |-
+    This command displays all of the information about the SMB share named 'VMS1' on the local computer as a formatted list.
+  summary: ""
+- title: 'Example 5: Get shares on the local computer that have scaled out availability'
+  code: |-
+    PS C:\>Get-SmbShare | Where-Object -Property AvailabilityType -Eq ScaleOut
+    Name                          ScopeName                     Path                          Description 
+    ----                          ---------                     ----                          ----------- 
+    ClusterStorage$               Contoso-SO                    C:\ClusterStorage             Cluster Shared Volumes Def... 
+    VMS3                          Contoso-SO                    C:\ClusterStorage\Volume1\VMS 
+    VMS4                          Contoso-SO                    C:\ClusterStorage\Volume2\VMS
+  description: |-
+    This command retrieves the SMB shares on the computer that have scaled out availability.
+  summary: ""
+- title: 'Example 6: Get shares that are connected to a specific server'
+  code: |-
+    PS C:\>Get-SmbShare -ScopeName "Contoso-FS"
+    Name                          ScopeName                     Path                          Description 
+    ----                          ---------                     ----                          ----------- 
+    I$                            Contoso-FS                    I:\                           Cluster Default Share 
+    J$                            Contoso-FS                    J:\                           Cluster Default Share 
+    VMS1                          Contoso-FS                    I:\VMS 
+    VMS2                          Contoso-FS                    J:\VMS
+  description: |-
+    This command retrieves the SMB shares on the computer that are connected to the SMB server named Contoso-FS.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AvailabilityType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AvailabilityType
+  description: |+
+    Specifies the cluster type of the shares being enumerated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NonClustered, Clustered, ScaleOut, CSV, DFS
+- type: <xref href="CachingMode" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CachingMode
+  description: |+
+    Specifies the caching mode of the shares being enumerated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Manual, Documents, Programs, BranchCache, Unknown
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CaTimeout
+  description: |+
+    Specifies the continuous availability time-out of the shares being enumerated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ConcurrentUserLimit
+  description: |+
+    Specifies the concurrent user limit of the shares being enumerated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ContinuouslyAvailable
+  description: |+
+    Indicates that the shares being enumerated should be continuously available.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EncryptData
+  description: |+
+    Indicates that the shares being enumerated should be encrypted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FolderEnumerationMode" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FolderEnumerationMode
+  description: |+
+    Specifies the folder enumeration mode of the shares being enumerated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: AccessBased, Unrestricted
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeHidden
+  description: |+
+    Indicates that shares that are created and used internally are also enumerated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies one or more SMB shares by share name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Scoped
+  description: |+
+    Indicates that the shares to be numerated should be scoped.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ScopeName
+  description: |+
+    Specifies the scope of the share by name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ShareState" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ShareState
+  description: |+
+    Specifies the state of the shares being enumerated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Pending, Online, Offline
+- type: <xref href="SmbInstance" data-throw-if-not-resolved="False" />
+  name: SmbInstance
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, CSV, SBL, SR
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Special
+  description: |+
+    Indicates that the shares to be numerated should be special.
+    Admin share, default shares, IPC$ share are examples of special shares.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: SmbShare.Get-SmbShare
+name: Get-SmbShare
+description: |-
+  The **Get-SmbShare** cmdlet retrieves objects that represent the Server Message Block (SMB) shares being displayed by the computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: SmbShare.cdxml-help.xml
+  Module Name: SmbShare
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/smbshare/get-smbshare?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-SmbShare

@@ -1,0 +1,308 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds one or more members to an Active Directory group.
+module: ActiveDirectory
+notes: |-
+  * This cmdlet does not work with a read-only domain controller.
+  * This cmdlet does not work with an Active Directory snapshot.
+inputs:
+- name: <xref href="Microsoft.ActiveDirectory.Management.ADGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    A group object is received by the *Identity* parameter.
+outputs:
+- name: <xref href="None or Microsoft.ActiveDirectory.Management.ADGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the modified group object when the *PassThru* parameter is specified.
+    By default, this cmdlet does not generate any output.
+links:
+- text: Add-ADPrincipalGroupMembership
+  href: ./Add-ADPrincipalGroupMembership.yml
+- text: Get-ADGroup
+  href: ./Get-ADGroup.yml
+- text: Get-ADGroupMember
+  href: ./Get-ADGroupMember.yml
+- text: Get-ADPrincipalGroupMembership
+  href: ./Get-ADPrincipalGroupMembership.yml
+- text: Remove-ADGroupMember
+  href: ./Remove-ADGroupMember.yml
+- text: Remove-ADPrincipalGroupMembership
+  href: ./Remove-ADPrincipalGroupMembership.yml
+syntaxes:
+- >-
+  Add-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
+
+   [-Identity] <ADGroup> [-Members] <ADPrincipal[]> [-MemberTimeToLive <TimeSpan>] [-Partition <String>] 
+
+   [-PassThru] [-Server <String>] [-DisablePermissiveModify] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add specified user accounts to a group'
+  code: |-
+    PS C:\> Add-ADGroupMember -Identity SvcAccPSOGroup -Members SQL01,SQL02
+  description: |-
+    This command adds the user accounts with the SAM account names SQL01 and SQL02 to the group SvcAccPSOGroup.
+  summary: ""
+- title: 'Example 2: Add all user accounts to a group'
+  code: |-
+    PS C:\> Add-ADGroupMember
+    cmdlet Add-ADGroupMember at command pipeline position 1
+    Supply values for the following parameters: 
+    Identity: RodcAdmins
+    Members[0]: DavidChew
+    Members[1]: PattiFuller
+    Members[2]:
+  description: |-
+    This command adds user accounts with SAM account names DavidChew and PattiFuller to the group RodcAdmins.
+  summary: ""
+- title: 'Example 3: Add an account by distinguished name to a filtered group'
+  code: |-
+    PS C:\> Get-ADGroup -Server localhost:60000 -SearchBase "OU=AccountDeptOU,DC=AppNC" -Filter "name -like 'AccountLeads'" | Add-ADGroupMember -Members "CN=PattiFuller,OU=AccountDeptOU,DC=AppNC"
+  description: |-
+    This command gets a group from the organizational unit OU=AccountDeptOU,DC=AppNC in the AD LDS instance localhost:60000 that has the name AccountLeads, and then pipes it to **Add-ADGroupMember**, which then adds the user account with the distinguished name CN=PattiFuller,OU=AccountDeptOU,DC=AppNC to it.
+  summary: ""
+- title: 'Example 4: Add a user from a domain to a group in another domain'
+  code: |-
+    PS C:\> $User = Get-ADUser -Identity "CN=Chew David,OU=UserAccounts,DC=NORTHAMERICA,DC=FABRIKAM,DC=COM" -Server "northamerica.fabrikam.com"
+    PS C:\> $Group = Get-ADGroup -Identity "CN=AccountLeads,OU=UserAccounts,DC=EUROPE,DC=FABRIKAM,DC=COM" -Server "europe.fabrikam.com"
+    PS C:\> Add-ADGroupMember -Identity $Group -Members $User -Server "europe.fabrikam.com"
+  description: |-
+    This command adds the user CN=Chew David,OU=UserAccounts from the North America domain to the group CN=AccountLeads,OU=UserAccounts in the Europe domain.
+  summary: ""
+parameters:
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use. 
+    The acceptable values for this parameter are:
+
+    - Negotiate or 0
+    - Basic or 1
+
+    The default authentication method is Negotiate.
+
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user account credentials to use to perform this task.
+    The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
+    If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
+
+    To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+    If you specify a user name for this parameter, the cmdlet prompts for a password.
+
+    You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+    You can then set the *Credential* parameter to the **PSCredential** object.
+
+    If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisablePermissiveModify
+  description: |+
+    Group membership updates use permissive modify by default. This suppresses an error when adding a member that is already member of the group.
+    When this parameter is used, an error “The specified account name is already a member of the group” is returned.
+
+    This parameter is available in Windows Server 2019 with the September 2020 Updates.
+
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADGroup" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies an Active Directory group object by providing one of the following values.
+    The identifier in parentheses is the Lightweight Directory Access Protocol (LDAP) display name for the attribute.
+    The acceptable values for this parameter are:
+
+    - A distinguished name
+    - A GUID (objectGUID) 
+    - A security identifier (objectSid) 
+    - A Security Account Manager account name (sAMAccountName)
+
+    The cmdlet searches the default naming context or partition to find the object.
+    If two or more objects are found, the cmdlet returns a non-terminating error.
+
+    This parameter can also get this object through the pipeline or you can set this parameter to an object instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADPrincipal" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Members
+  isRequired: true
+  description: |+
+    Specifies an array of user, group, and computer objects in a comma-separated list to add to a group.
+    To identify each object, use one of the following property values.
+    Note: The identifier in parentheses is the LDAP display name.
+    The acceptable values for this parameter are:
+
+    - Distinguished name 
+    - GUID (objectGUID) 
+    - Security identifier (objectSid) 
+    - SAM account name (sAMAccountName)
+
+    You can also provide objects to this parameter directly.
+
+    The following examples show how to specify this parameter.
+
+    This example specifies a user and group to add by specifying the distinguished name and the SAM account name properties.
+
+    `-Members "CN=SaraDavis,CN=employees,CN=Users,DC=contoso,DC=com", "saradavisreports"`
+
+    This example specifies a user and a group object that are defined in the current Windows PowerShell session as input for the parameter.
+
+    `-Members $userObject, $GroupObject`
+
+    The objects specified for this parameter are processed as **Microsoft.ActiveDirectory.Management.ADPrincipal** objects.
+    Derived types, such as the following are also received by this parameter.
+
+    - **Microsoft.ActiveDirectory.Management.ADUser**
+    - **Microsoft.ActiveDirectory.Management.ADComputer**
+    - **Microsoft.ActiveDirectory.Management.ADServiceAccount**
+    - **Microsoft.ActiveDirectory.Management.ADGroup**
+
+    You cannot pass objects through the pipeline to this parameter.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: MemberTimeToLive
+  description: |+
+    Specifies a Time to Live (TTL) for the new group members.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Partition
+  description: |+
+    Specifies the distinguished name of an Active Directory partition.
+    The distinguished name must be one of the naming contexts on the current directory server.
+    The cmdlet searches this partition to find the object defined by the *Identity* parameter.
+
+    In many cases, a default value is used for the *Partition* parameter if no value is specified.
+    The rules for determining the default value are given below.
+    Note that rules listed first are evaluated first and once a default value can be determined, no further rules are evaluated.
+
+    In Active Directory Domain Services (AD DS) environments, a default value for *Partition* is set in the following cases: 
+
+    - If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+    - If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+    - If none of the previous cases apply, the default value of *Partition* is set to the default partition or naming context of the target domain.
+
+    In Active Directory Lightweight Directory Services (AD LDS) environments, a default value for *Partition* is set in the following cases:
+
+    - If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name. 
+    - If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+    - If the target AD LDS instance has a default naming context, the default value of *Partition* is set to the default naming context.
+    To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
+    - If none of the previous cases apply, the *Partition* parameter does not take a default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the Active Directory Domain Services (AD DS) instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following: Active Directory Lightweight Domain Services (AD LDS), AD DS, or Active Directory snapshot instance.
+
+    Specify the AD DS instance in one of the following ways:  
+
+    Domain name values:
+
+    - Fully qualified domain name
+    - NetBIOS name
+
+    Directory server values:  
+
+    - Fully qualified directory server name
+    - NetBIOS name
+    - Fully qualified directory server name and port
+
+    The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+    - By using the **Server** value from objects passed through the pipeline
+    - By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
+    - By using the domain of the computer running Windows PowerShell
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ActiveDirectory.Add-ADGroupMember
+name: Add-ADGroupMember
+description: |-
+  The **Add-ADGroupMember** cmdlet adds one or more users, groups, service accounts, or computers as new members of an Active Directory group.
+
+  The *Identity* parameter specifies the Active Directory group that receives the new members.
+  You can identify a group by its distinguished name, GUID, security identifier, or Security Account Manager (SAM) account name.
+  You can also specify group object variable, such as `$<localGroupObject>`, or pass a group object through the pipeline to the *Identity* parameter.
+  For example, you can use the **Get-ADGroup** cmdlet to get a group object and then pass the object through the pipeline to the **Add-ADGroupMember** cmdlet.
+
+  The *Members* parameter specifies the new members to add to a group.
+  You can identify a new member by its distinguished name, GUID, security identifier, or SAM account name.
+  You can also specify user, computer, and group object variables, such as `$<localUserObject>`.
+  If you are specifying more than one new member, use a comma-separated list.
+  You cannot pass user, computer, or group objects through the pipeline to this cmdlet.
+  To add user, computer, or group objects to a group by using the pipeline, use the **Add-ADPrincipalGroupMembership** cmdlet.
+
+  For Active Directory Lightweight Directory Services (AD LDS) environments, the *Partition* parameter must be specified except in the following two conditions:
+
+  - The cmdlet is run from an Active Directory provider drive.
+  - A default naming context or partition is defined for the AD LDS environment.
+  To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (nTDSDSA) for the AD LDS instance.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/add-adgroupmember?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ADGroupMember

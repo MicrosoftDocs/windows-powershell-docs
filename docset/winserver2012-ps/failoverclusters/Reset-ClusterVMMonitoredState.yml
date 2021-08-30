@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the Application Critical state of a virtual machine, so that the virtual machine is no longer marked as being in a critical state in the cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterVMMonitoredItem
+  href: ./Add-ClusterVMMonitoredItem.yml
+- text: Get-ClusterVMMonitoredItem
+  href: ./Get-ClusterVMMonitoredItem.yml
+- text: Remove-ClusterVMMonitoredItem
+  href: ./Remove-ClusterVMMonitoredItem.yml
+syntaxes:
+- Reset-ClusterVMMonitoredState [[-VirtualMachine] <String>] [-InputObject <PSObject>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Reset-ClusterVMMoniteredState
+  description: |-
+    This example resets the state of the virtual machine and clears the critical state.
+  summary: ""
+parameters:
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to run the cmdlet and the clustered virtual machine to reset.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualMachine
+  description: |+
+    Specifies the name of the clustered virtual machine to reset.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Reset-ClusterVMMonitoredState
+name: Reset-ClusterVMMonitoredState
+description: |-
+  The **Reset-ClusterVMMonitoredState** cmdlet resets the Application Critical state of a virtual machine, so that the virtual machine is no longer marked as being in a critical state in the cluster.
+  Note: This cmdlet can only be run locally on the virtual machine or through Windows PowerShell® remoting to the virtual machine.
+metadata:
+  external help file: Failoverv2_Cmdlets.xml
+  Module Name: FailoverClusters
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/reset-clustervmmonitoredstate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

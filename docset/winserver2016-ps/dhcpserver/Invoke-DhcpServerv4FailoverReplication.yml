@@ -1,0 +1,173 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Replicates scope configuration between failover partner DHCP server services.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Failover" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Add-DhcpServerv4Failover
+  href: ./Add-DhcpServerv4Failover.yml
+- text: Add-DhcpServerv4FailoverScope
+  href: ./Add-DhcpServerv4FailoverScope.yml
+- text: Get-DhcpServerv4Failover
+  href: ./Get-DhcpServerv4Failover.yml
+- text: Remove-DhcpServerv4Failover
+  href: ./Remove-DhcpServerv4Failover.yml
+- text: Remove-DhcpServerv4FailoverScope
+  href: ./Remove-DhcpServerv4FailoverScope.yml
+- text: Set-DhcpServerv4Failover
+  href: ./Set-DhcpServerv4Failover.yml
+syntaxes:
+- >-
+  Invoke-DhcpServerv4FailoverReplication [-ComputerName <String>] [-Force] [[-Name] <String[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Invoke-DhcpServerv4FailoverReplication [-ComputerName <String>] [-Force] -ScopeId <IPAddress[]>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Replicate configuration of scopes for a failover relationship'
+  code: |-
+    PS C:\> Invoke-DhcpServerv4FailoverReplication -ComputerName "dhcpserver.contoso.com" -Name "SFO-SIN-Failover"
+  description: |-
+    This example replicates the configuration of all scopes which are part of the failover relationship named SFO-SIN-Failover on the DHCP server service that runs on the computer named dhcpserver.contoso.com to the partner DHCP server service.
+  summary: ""
+- title: 'Example 2: Replicate configuration of scopes for failover relationships for a server'
+  code: |-
+    PS C:\> Invoke-DhcpServerv4FailoverReplication -ComputerName "dhcpserver.contoso.com"
+  description: |-
+    This example replicates all of the failover scopes on the DHCP server service that runs on the computer named dhcpserver.contoso.com to one or more respective partner DHCP server services based on one or more failover relationships in which the DHCP server services are included.
+  summary: ""
+- title: 'Example 3: Replicate configuration of scopes'
+  code: |-
+    PS C:\> Invoke-DhcpServerv4FailoverReplication -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0,10.20.20.0
+  description: |-
+    This example replicates the configuration of the scopes 10.10.10.0 and 10.20.20.0 to the respective partner computers that runs the DHCP server services of the failover relationships in which the scopes are included.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the failover relationship.
+    All scopes for one or more specified relationships are replicated to the partner DHCP server service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ScopeId
+  description: |+
+    Specifies the scope identifier (ID), in IPv4 address format, whose configuration are replicated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Invoke-DhcpServerv4FailoverReplication
+name: Invoke-DhcpServerv4FailoverReplication
+description: |-
+  The **Invoke-DhcpServerv4FailoverReplication** cmdlet replicates scope configuration between failover partner Dynamic Host Configuration Protocol (DHCP) server services.
+
+  If you specify the *ScopeId* parameter, if the scope is part of a failover relationship, the scope configuration for the specified scopes is replicated to the failover partner DHCP server service.
+  The scope configuration includes all scope properties, reservations, scope option values, and policies.
+
+  If you specify the *Name* parameter, the configuration for all of the scopes which are part of the failover relationship is replicated to the partner DHCP server service.
+
+  If you specify no parameters, the configuration for all of the failover scopes on the DHCP server service will be replicated to the respective partner DHCP server services.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerv4FailoverReplication_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/invoke-dhcpserverv4failoverreplication?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Invoke-DhcpServerv4FailoverReplication

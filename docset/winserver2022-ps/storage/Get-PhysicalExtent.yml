@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet gets physical allocations for a physical disk, storage tier, or virtual disk. The "extent" (also known as "allocation" or "slab")  is the area on a pooled disk containing one fragment of data for storage space.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pass a **PhysicalDisk** object to this cmdlet.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageTier" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pass a **StorageTier** object to this cmdlet.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pass a **VirtualDisk** object to this cmdlet.
+outputs:
+- name: <xref href="PhysicalExtent" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the physical allocation that is associated with the input object.
+links:
+- text: Get-PhysicalDisk
+  href: ./Get-PhysicalDisk.yml
+- text: Get-PhysicalExtentAssociation
+  href: ./Get-PhysicalExtentAssociation.yml
+- text: Get-StorageTier
+  href: ./Get-StorageTier.yml
+- text: Get-VirtualDisk
+  href: ./Get-VirtualDisk.yml
+syntaxes:
+- Get-PhysicalExtent -VirtualDisk <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
+- Get-PhysicalExtent -StorageTier <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
+- Get-PhysicalExtent -PhysicalDisk <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get physical extents on one specific physical disks'
+  code: |-
+    PS C:\>Get-PhysicalExtent -PhysicalDisk $(Get-PhysicalDisk)[0]
+  description: |-
+    This command gets physical extents on all physical disks on the computer.
+  summary: ""
+- title: 'Example 2: Get all physical extents on all physical disks'
+  code: |-
+    PS C:\>Get-PhysicalDisk | Get-PhysicalExtent
+  description: |-
+    This command gets all physical extents on all physical disks on the computer.
+  summary: ""
+- title: 'Example 3: Get extents on a specific disk'
+  code: |-
+    PS C:\>Get-PhysicalExtent -PhysicalDisk (Get-PhysicalDisk -FriendlyName "PhysicalDisk4")
+  description: |-
+    This command gets all physical extents on the physical disk named PhysicalDisk4.
+    The command uses **Get-PhysicalDisk** to obtain PhysicalDisk4.
+  summary: ""
+- title: 'Example 4: Get all physical extents on a disk (Other Version)'
+  code: |-
+    PS C:\>Get-PhysicalDisk -FriendlyName "PhysicalDisk4" | Get-PhysicalExtent
+  description: |-
+    This command gets all physical extents on the physical disk named PhysicalDisk4, using PowerShell pipe.
+    The command uses **Get-PhysicalDisk** to obtain PhysicalDisk4.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: PhysicalDisk
+  isRequired: true
+  description: |+
+    Specifies physical disk.
+    To obtain a **PhysicalDisk** object, use the Get-PhysicalDisk cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageTier
+  isRequired: true
+  description: |+
+    Specifies storage tier.
+    To obtain a **StorageTier** object, use the Get-StorageTier cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: VirtualDisk
+  isRequired: true
+  description: |+
+    Specifies virtual disk.
+    To obtain a **VirtualDisk** object, use the Get-VirtualDisk cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-PhysicalExtent
+name: Get-PhysicalExtent
+description: |-
+  The **Get-PhysicalExtent** cmdlet gets the physical allocations for a physical disk, storage tier, or virtual disk.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: StorageScripts-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-physicalextent?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-PhysicalExtent

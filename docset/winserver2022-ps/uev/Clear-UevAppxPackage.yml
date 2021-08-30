@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears a setting in the computer or user sections of the registry.
+module: UEV
+notes: ""
+links:
+- text: Disable-UevAppxPackage
+  href: ./Disable-UevAppxPackage.yml
+- text: Enable-UevAppxPackage
+  href: ./Enable-UevAppxPackage.yml
+- text: Get-UevAppxPackage
+  href: ./Get-UevAppxPackage.yml
+syntaxes:
+- >-
+  Clear-UevAppxPackage [-CurrentComputerUser] [-PackageFamilyName] <String[]> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Clear-UevAppxPackage [-Computer] [-PackageFamilyName] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Clear-UevAppxPackage [-Computer] [-All] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Clear-UevAppxPackage [-CurrentComputerUser] [-All] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove Windows 8 apps'
+  code: |-
+    PS C:\>Clear-UevAppxPackage -Computer -All
+  description: |-
+    This command removes all Windows 8 apps from the Windows 8 app list on the computer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet clears all of the computer or user settings for the package families that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Computer
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet clears the setting for package families that you specify for all users on the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CurrentComputerUser
+  description: |+
+    Indicates that the cmdlet clears the setting for the package families that you specify for the current user on the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PackageFamilyName
+  isRequired: true
+  description: |+
+    Specifies an array of names of package families.
+    The cmdlet clears the setting for the package families of Windows 8 apps that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UEV.Clear-UevAppxPackage
+name: Clear-UevAppxPackage
+description: |-
+  The **Clear-UevAppxPackage** cmdlet clears a setting in the computer or user sections of the registry that enables or disables the Microsoft User Experience Virtualization (UE-V) synchronization of Windows® 8 apps.
+  If you do not specify the *Computer* or *CurrentComputerUser* parameter, the cmdlet clears the setting for the package families for the current user.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/clear-uevappxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-UevAppxPackage

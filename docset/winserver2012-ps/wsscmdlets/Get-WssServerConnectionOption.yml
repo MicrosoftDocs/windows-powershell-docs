@@ -1,0 +1,27 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the server connection option.
+module: WssCmdlets
+notes: ""
+links:
+- text: Set-WssServerConnectionOption
+  href: ./Set-WssServerConnectionOption.yml
+syntaxes:
+- Get-WssServerConnectionOption
+examples:
+- title: 'Example 1: Get the server connection option'
+  code: |-
+    PS C:\> Get-WssServerConnectionOption
+  description: |-
+    This command gets the server connection option.
+  summary: ""
+uid: WssCmdlets.Get-WssServerConnectionOption
+name: Get-WssServerConnectionOption
+description: |-
+  The **Get-WssServerConnectionOption** cmdlet retrieves the server connection option in sbs_sbs8_2.
+  WSS supports the use of a terminal session directly to the server (RemoteDesktop) or the use of the dashboard as a remote application (RemoteApp).
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssserverconnectionoption?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

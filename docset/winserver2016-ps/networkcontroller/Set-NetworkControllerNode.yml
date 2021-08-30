@@ -1,0 +1,161 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets a node in a network controller cluster.
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that contains the following fields: 
+    - Name of the node
+    - Hostname, fully qualified domain name (FQDN), or IP address of the node
+    - Fault domain of the node
+    - Name of interface to use for REST operations on the node
+    - Node certificate
+links:
+- text: Add-NetworkControllerNode
+  href: ./Add-NetworkControllerNode.yml
+- text: Disable-NetworkControllerNode
+  href: ./Disable-NetworkControllerNode.yml
+- text: Enable-NetworkControllerNode
+  href: ./Enable-NetworkControllerNode.yml
+- text: Get-NetworkControllerNode
+  href: ./Get-NetworkControllerNode.yml
+- text: Remove-NetworkControllerNode
+  href: ./Remove-NetworkControllerNode.yml
+syntaxes:
+- >-
+  Set-NetworkControllerNode -Name <String> [-RestInterface <String>] [-NodeCertificate <X509Certificate2>]
+
+   [-PassThru] [-ComputerName <String>] [-UseSsl] [-Credential <PSCredential>] [-CertificateThumbprint <String>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the REST interface for a network controller node'
+  code: |-
+    PS C:\> Set-NetworkControllerNode -Name "Node1" -RestInterface "Corpnet" -PassThru
+    Name            : Node1
+    Server          : NCNode1.contoso.com
+    FaultDomain     : fd:/rack1/host1
+    RestInterface   : Corpnet
+    NodeCertificate : 
+    Status          : Up
+  description: |-
+    This command sets the REST interface to Corpnet for the node named Node1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    Specify the certificate thumbprint of the certificate.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the network controller node on which this cmdlet operates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default is the current user.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a node.
+    This cmdlet updates the settings for the node that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: NodeCertificate
+  description: |+
+    Specifies the certificate to use to authenticate a computer.
+    You should only specify this parameter if the cluster uses certificate-based authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RestInterface
+  description: |+
+    Specifies the name of the interface on the node that receives requests from REST clients.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseSsl
+  description: |+
+    Indicates that the remote computer uses the Secure Sockets Layer (SSL) protocol to establish a connection to the Network Controller node.
+    The default value of this parameter is false.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.Set-NetworkControllerNode
+name: Set-NetworkControllerNode
+description: |-
+  The **Set-NetworkControllerNode** cmdlet changes the settings of a node in a network controller cluster.
+  Use this cmdlet to modify the settings for the interface on which the node listens for representational state transfer (REST) requests, and to set the node certificate.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/set-networkcontrollernode?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetworkControllerNode

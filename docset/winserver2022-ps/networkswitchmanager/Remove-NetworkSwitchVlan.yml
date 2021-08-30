@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes network switch VLANs.
+module: NetworkSwitchManager
+notes: ""
+inputs:
+- name: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    You can pipe an array of **CimInstance** objects that correspond to network switch VLANs to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Disable-NetworkSwitchVlan
+  href: ./Disable-NetworkSwitchVlan.yml
+- text: Enable-NetworkSwitchVlan
+  href: ./Enable-NetworkSwitchVlan.yml
+- text: Get-NetworkSwitchVlan
+  href: ./Get-NetworkSwitchVlan.yml
+- text: New-NetworkSwitchVlan
+  href: ./New-NetworkSwitchVlan.yml
+- text: Set-NetworkSwitchVlanProperty
+  href: ./Set-NetworkSwitchVlanProperty.yml
+syntaxes:
+- >-
+  Remove-NetworkSwitchVlan -CimSession <CimSession> [-InstanceId <String>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Remove-NetworkSwitchVlan -CimSession <CimSession> [-Name <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Remove-NetworkSwitchVlan -CimSession <CimSession> [-VlanId <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-NetworkSwitchVlan -CimSession <CimSession> -InputObject <CimInstance[]> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a VLAN that has a specified ID'
+  code: |-
+    PS C:\>$Session = New-CimSession -ComputerName "NetworkSwitch08"
+    PS C:\> Remove-NetworkSwitchVlan -CimSession $Session -VlanID 2
+  description: |-
+    The first command creates a **CimSession** for a network switch, and then stores it in the **$Session** variable.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+    The second command removes the VLAN that has a VLAN ID of 2 for the switch NetworkSwitch08 by using the **$Session** object.
+  summary: ""
+- title: 'Example 2: Remove a VLAN for a specified instance ID'
+  code: |-
+    PS C:\>Remove-NetworkSwitchVlan -CimSession $Session -InstanceID "Contoso:NetworkVLAN:Vlan4"
+  description: |-
+    This command removes the VLAN for the specified instance ID.
+    The command includes a **CimSession**, similar to the first example.
+  summary: ""
+- title: 'Example 3: Remove VLANs that have names that contain a string'
+  code: |-
+    PS C:\>Remove-NetworkSwitchVlan -CimSession $Session -Name "*Contoso*"
+  description: |-
+    This command removes all VLANs that have friendly names that include the string Contoso.
+    The command includes a **CimSession**, similar to the first example.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  isRequired: true
+  description: |+
+    Specifies the **CimSession** that this cmdlet uses to connect to the network switch.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InstanceId
+  description: |+
+    Specifies the instance ID of a VLAN to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies a name for a VLAN to remove.
+    You can use wildcard characters to select multiple VLANs to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: VlanId
+  description: |+
+    Specifies the ID of a VLAN to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkSwitchManager.Remove-NetworkSwitchVlan
+name: Remove-NetworkSwitchVlan
+description: |-
+  The **Remove-NetworkSwitchVlan** cmdlet removes virtual local area networks (VLANs) from a network switch.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: NetworkSwitchVlan-help.xml
+  Module Name: NetworkSwitchManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkswitchmanager/remove-networkswitchvlan?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-NetworkSwitchVlan

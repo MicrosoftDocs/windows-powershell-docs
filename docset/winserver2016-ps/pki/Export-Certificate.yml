@@ -1,0 +1,149 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports a certificate from a certificate store into a file.
+module: pki
+notes: ""
+inputs:
+- name: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="False" />
+  description: |-
+    A Certificate object can be piped into to this cmdlet.
+outputs:
+- name: <xref href="System.IO.FileInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    The **FileInfo** object contains the information about the certificate file.
+links:
+- text: Get-ChildItem
+  href: https://go.microsoft.com/fwlink/?LinkId=290488
+- text: Import-Certificate
+  href: ./Import-Certificate.yml
+syntaxes:
+- >-
+  Export-Certificate [-Type <CertType>] [-NoClobber] [-Force] -FilePath <String> -Cert <Certificate> [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>$cert = Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
+
+    PS C:\>Export-Certificate -Cert $cert -FilePath c:\certs\user.sst -Type SST
+  description: |-
+    This example exports a certificate to the file system as a Microsoft serialized certificate store without its private key.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$cert = Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
+
+    PS C:\>Export-Certificate -Cert $cert -FilePath c:\certs\user.cer
+  description: |-
+    This example exports a certificate to the file system as a DER-encoded `.cer` file without its private key.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>$cert = Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
+
+    PS C:\>Export-Certificate -Cert $cert -FilePath c:\certs\user.p7b -Type p7b
+  description: |-
+    This example exports a certificate to the file system as a PKCS#7-formatted .p7b file without its private key.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\>Get-ChildItem -Path cert:\CurrentUser\my | Export-Certificate -FilePath c:\certs\allcerts.sst -Type SST
+  description: |-
+    This example exports all certificates under CurrentUser\my store into a Microsoft serialized certificate store allcerts.sst.
+  summary: ""
+parameters:
+- type: <xref href="Certificate" data-throw-if-not-resolved="False" />
+  name: Cert
+  isRequired: true
+  description: |+
+    Specifies one or more certificates to be exported to a file.
+    A single certificate object, an array of certificate objects, or a path to one or more certificates in a certificate store can be specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the location where the exported certificate will be stored.
+
+  defaultValue: None
+  position: Named
+  aliases: FullName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies that the exported certificate file will overwrite an existing certificate file, even if it has the Read-only attribute set.
+    The **NoClobber** parameter takes precedence over this parameter when both are used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoClobber
+  description: |+
+    Prevents an exported certificate file from overwriting an existing certificate file.
+    This parameter takes precedence over the **Force** parameter, which permits this cmdlet to overwrite an existing certificate file, even if it has the Read-only attribute set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CertType" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the type of output file for the certificate export as follows. 
+
+     -- SST: A Microsoft serialized certificate store (.sst) file format which can contain one or more certificates.
+    This is the default value for multiple certificates. 
+
+     -- CERT: A .cer file format which contains a single DER-encoded certificate.
+    This is the default value for one certificate. 
+
+     -- P7B: A PKCS#7 file format which can contain one or more certificates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SST, CERT, P7B
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: pki.Export-Certificate
+name: Export-Certificate
+description: |-
+  The **Export-Certificate** cmdlet exports a certificate from a certificate store to a file.
+  The private key is not included in the export.
+  If more than one certificate is being exported, then the default file format is SST.
+  Otherwise, the default format is CERT.
+  Use the **Type** parameter to change the file format.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  Module Name: pki
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/pki/export-certificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-Certificate

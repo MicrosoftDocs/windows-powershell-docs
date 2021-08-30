@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes job retention policy and description for a client backup.
+module: WssCmdlets
+notes: ""
+links:
+- text: Disable-WssClientBackup
+  href: ./Disable-WssClientBackup.yml
+- text: Enable-WssClientBackup
+  href: ./Enable-WssClientBackup.yml
+- text: Get-WssClientBackup
+  href: ./Get-WssClientBackup.yml
+- text: Start-WssClientBackup
+  href: ./Start-WssClientBackup.yml
+- text: Stop-WssClientBackup
+  href: ./Stop-WssClientBackup.yml
+syntaxes:
+- >-
+  Set-WssClientBackup [-ComputerName] <String> [-BackupIndex] <Int32> [-Description <String>] [-Retention]
+
+   [-Confirm] [-WhatIf]
+- >-
+  Set-WssClientBackup [-ComputerSid] <String> [-BackupIndex] <Int32> [-Description <String>] [-Retention]
+
+   [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Change a description for a client backup'
+  code: |-
+    PS C:\> Set-WssClientBackup -ComputerName "Workstation073" -BackupIndex 1 -Description "January backup"
+  description: |-
+    This command changes the description for a backup of the computer named Workstation073.
+    The command specifies the backup by using its index.
+    The description is January backup.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: BackupIndex
+  isRequired: true
+  description: |+
+    Specifies the index for a backup job.
+    To obtain a backup index, use the Get-WssClientBackup cmdlet.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of a computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerSid
+  isRequired: true
+  description: |+
+    Specifies the SID of a computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the backup.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Retention
+  description: |+
+    Specifies a retention policy for the backup.
+    The acceptable values for this parameter are:
+
+    - Automatic
+    - Delete
+    - Keep
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Automatic, Delete, Invalid, Keep
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Set-WssClientBackup
+name: Set-WssClientBackup
+description: |-
+  The **Set-WssClientBackup** cmdlet changes job retention policy and description for a client backup for a computer.
+  Specify a computer by name or security identifier (SID).
+  Specify which backup to change by using its backup index.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssclientbackup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

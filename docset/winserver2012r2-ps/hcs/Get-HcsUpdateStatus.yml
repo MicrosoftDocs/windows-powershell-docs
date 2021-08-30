@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the current status of updates.
+module: HCS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HCS.Management.Patching.HcsUpdateStatus" data-throw-if-not-resolved="False" />
+  description: |-
+    The HcsUpdateStatus object has the following properties:
+
+    - RunInprogress 
+    - DateTime LastHotfixTimestamp 
+    - DateTime LastUpdateTimestamp 
+    - IEnumerable\<HcsUpdateEvent\> Controller0Events 
+    - IEnumerable\<HcsUpdateEvent\> Controller1Events
+links:
+- text: Get-HcsUpdateAvailability
+  href: ./Get-HcsUpdateAvailability.yml
+- text: Start-HcsUpdate
+  href: ./Start-HcsUpdate.yml
+- text: Start-HcsHotfix
+  href: ./Start-HcsHotfix.yml
+syntaxes:
+- Get-HcsUpdateStatus [<CommonParameters>]
+examples:
+- title: 'Example 1: Get status of updates'
+  code: |-
+    PS C:\>Get-HcsUpdateStatus
+  description: |-
+    This command gets the current status of updates on your device.
+  summary: ""
+uid: HCS.Get-HcsUpdateStatus
+name: Get-HcsUpdateStatus
+description: |-
+  The **Get-HcsUpdateStatus** cmdlet gets the current status of updates.
+  The cmdlet provides the timestamp of the last update, indicates whether any updates are in progress, and provides any errors that occurred after the last successful update.
+metadata:
+  external help file: Microsoft.HCS.Management.dll-Help.xml
+  Module Name: HCS
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/hcs/get-hcsupdatestatus?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-HcsUpdateStatus

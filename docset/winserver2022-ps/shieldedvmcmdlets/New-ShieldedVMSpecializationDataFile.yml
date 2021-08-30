@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a specialization data file to be used when provisioning a shielded virtual machine.
+module: ShieldedVmCmdlets
+notes: ""
+links:
+- text: Get-KeyProtectorFromShieldingDataFile
+  href: ./Get-KeyProtectorFromShieldingDataFile.yml
+- text: Get-ShieldedVMProvisioningStatus
+  href: ./Get-ShieldedVMProvisioningStatus.yml
+- text: Initialize-ShieldedVM
+  href: ./Initialize-ShieldedVM.yml
+- text: Test-ShieldingDataApplicability
+  href: ./Test-ShieldingDataApplicability.yml
+syntaxes:
+- >-
+  New-ShieldedVMSpecializationDataFile [-ShieldedVMSpecializationDataFilePath] <String>
+
+   [-SpecializationDataPairs] <Hashtable> [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a specialization data file to be used when provisioning a shielded virtual machine'
+  code: |-
+    PS C:\>New-ShieldedVMSpecializationDataFile -ShieldedVMSpecializationDataFilePath "C:\temp\VM01.fsk" -SpecializationDataPairs @{ "@ComputerName@" = "PC-001"; "@TimeZone@" = "GMT Standard Time" }
+  description: |-
+    This command creates a specialization data file mapping the string @ComputerName@ in answer files to PC-001 and @TimeZone@ to GMT Standard Time.
+    The file is stored at C:\temp\VM01.fsk.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShieldedVMSpecializationDataFilePath
+  isRequired: true
+  description: |+
+    Specifies the path where the specialization data file (.fsk) is saved.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: SpecializationDataPairs
+  isRequired: true
+  description: |+
+    Specifies a table of key-value pairs used to replace strings in the answer file.
+    The values must be strings.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ShieldedVmCmdlets.New-ShieldedVMSpecializationDataFile
+name: New-ShieldedVMSpecializationDataFile
+description: |-
+  The **New-ShieldedVMSpecializationDataFile** cmdlet creates a specialization data file to be used when provisioning a shielded virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ShieldedVmCmdlets-help.xml
+  Module Name: ShieldedVmCmdlets
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/shieldedvmcmdlets/new-shieldedvmspecializationdatafile?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-ShieldedVMSpecializationDataFile

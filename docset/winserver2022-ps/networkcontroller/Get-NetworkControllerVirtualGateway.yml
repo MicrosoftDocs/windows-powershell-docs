@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the configuration of one or more virtual gateways.
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns objects that contain the following fields. 
+
+    - Resource reference URI.
+    - Created time of the resource.
+    - Instance ID of the resource.
+    - Resource metadata.
+    - Resource ID.
+    - Properties of the resource (a virtual gateway/tenant gateway):
+      - Reference to the virtual network IP subnet used for routing between gateway and virtual network.
+      - Array of network connections configured in the virtual gateway.
+      - Routing type configured for CA space routing.
+      - Array of CA space BGP routers configured in the virtual gateway and their configurations.
+      - Array of BGP routing policy maps configured for the tenant. 
+      - Array of references to gateway pools where the virtual gateway is configured.
+links:
+- text: New-NetworkControllerVirtualGateway
+  href: ./New-NetworkControllerVirtualGateway.yml
+- text: Remove-NetworkControllerVirtualGateway
+  href: ./Remove-NetworkControllerVirtualGateway.yml
+syntaxes:
+- >-
+  Get-NetworkControllerVirtualGateway [[-ResourceId] <String[]>] -ConnectionUri <Uri>
+
+   [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException] [<CommonParameters>]
+examples:
+- title: 'Example 1: Display all virtual gateway configurations'
+  code: |-
+    PS C:\> Get-NetworkControllerVirtualGateway -ConnectionUri "https://networkcontroller"
+    Tags             : 
+    ResourceRef      : /VirtualGateways/Contoso
+    InstanceId       : 49931c9d-8d5e-47a0-8c2c-7b5d597e9bc1
+    Etag             : W/"b2e94f9d-c589-4c11-84dc-fc2241135352"
+    ResourceMetadata : 
+    ResourceId       : Contoso
+    Properties       : Microsoft.Windows.NetworkController.VirtualGatewayProperties
+    Tags             : 
+    ResourceRef      : /VirtualGateways/Woodgrove
+    InstanceId       : ad2b0c59-7eb4-4851-b0ef-0181376b622c
+    Etag             : W/"09d07a70-0ae1-4914-9bd5-76d53ff06659"
+    ResourceMetadata : 
+    ResourceId       : Woodgrove
+    Properties       : Microsoft.Windows.NetworkController.VirtualGatewayProperties
+  description: |-
+    This command gets all virtual gateways configured with the Network Controller.
+  summary: ""
+- title: 'Example 2: Display a specified virtual gateway configuration'
+  code: |-
+    PS C:\> Get-NetworkControllerVirtualGateway -ConnectionUri "https://networkcontroller" -ResourceId "Contoso"
+    Tags             : 
+    ResourceRef      : /VirtualGateways/Contoso
+    InstanceId       : 49931c9d-8d5e-47a0-8c2c-7b5d597e9bc1
+    Etag             : W/"b2e94f9d-c589-4c11-84dc-fc2241135352"
+    ResourceMetadata : 
+    ResourceId       : Contoso
+    Properties       : Microsoft.Windows.NetworkController.VirtualGatewayProperties
+  description: |-
+    This command gets the virtual gateway configuration for the tenant Contoso.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.
+    This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourceId
+  description: |+
+    Specifies an array of resource IDs.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Get-NetworkControllerVirtualGateway
+name: Get-NetworkControllerVirtualGateway
+description: |-
+  The **Get-NetworkControllerVirtualGateway** cmdlet gets the virtual gateway configuration for one or more tenants specified by the *ResourceId* parameter.
+  If you do not specify the *ResourceId*, this cmdlet gets all virtual gateways for all tenants.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollervirtualgateway?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerVirtualGateway

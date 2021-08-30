@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets settings for DFS namespaces.
+module: DFSN
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_DfsNamespace" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: New-DfsnRoot
+  href: ./New-DfsnRoot.yml
+- text: Remove-DfsnRoot
+  href: ./Remove-DfsnRoot.yml
+- text: Set-DfsnRoot
+  href: ./Set-DfsnRoot.yml
+syntaxes:
+- >-
+  Get-DfsnRoot [[-Domain] <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-DfsnRoot [[-Path] <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-DfsnRoot [[-ComputerName] <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get DFS namespace configuration settings'
+  code: |-
+    PS C:\> Get-DfsnRoot -Path "\\Contoso\AccountingResources" | Format-List
+    Path          : \\Contoso\AccountingResources
+    Description   :
+    Type          : Standalone
+    State         : Online
+    Flags         : Site Costing
+    TimeToLiveSec : 300
+  description: |-
+    This command gets configuration settings for the namespace that has the Path \\\\Contoso\AccountingResources.
+    The command uses the **Format-List** cmdlet to format the output.
+    For more information about this cmdlet, type `Get-Help Format-List`.
+  summary: ""
+- title: 'Example 2: Get all DFS namespaces for a domain'
+  code: |-
+    PS C:\> Get-DfsnRoot -Domain "Contoso.com"
+  description: |-
+    This command gets all the DFS namespaces hosted in the domain Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of a server.
+    This cmdlet gets configuration settings for all DFS namespaces that the specified server hosts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Server
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies a domain name.
+    This cmdlet gets configuration settings for DFS namespaces in the domain specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies a path for the root folder of a DFS namespace.
+    This cmdlet gets configuration settings for the DFS namespace that has the root path specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RootPath, root, namespace, NamespaceRoot
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DFSN.Get-DfsnRoot
+name: Get-DfsnRoot
+description: |-
+  The **Get-DfsnRoot** cmdlet gets configuration settings for Distributed File System (DFS) namespaces.
+  You can specify DFS namespaces by using a standalone or domain-based namespace path, by using a server, or by using a domain.
+  Use this cmdlet without parameters to see information on all DFS namespaces.
+  You can make changes to DFS settings by using the Set-DfsnRoot cmdlet.
+
+  For more information about DFS namespaces, see Overview of DFS Namespaceshttp://technet.microsoft.com/library/cc730736 (http://technet.microsoft.com/library/cc730736) on TechNet.
+metadata:
+  external help file: DfsNamespace.cdxml-help.xml
+  Module Name: DFSN
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/dfsn/get-dfsnroot?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DfsnRoot

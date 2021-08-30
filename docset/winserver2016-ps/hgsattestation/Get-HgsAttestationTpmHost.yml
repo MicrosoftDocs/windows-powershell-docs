@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets guarded hosts with TPM 2.0 from the Attestation service HGS.
+module: HgsAttestation
+notes: ""
+outputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns an array of strings.
+links:
+- text: Add-HgsAttestationTpmHost
+  href: ./Add-HgsAttestationTpmHost.yml
+- text: Remove-HgsAttestationTpmHost
+  href: ./Remove-HgsAttestationTpmHost.yml
+syntaxes:
+- Get-HgsAttestationTpmHost [-Name <String>] [-PolicyVersion <PolicyVersion>] [-Stage] [<CommonParameters>]
+- >-
+  Get-HgsAttestationTpmHost [-Name <String>] -Path <String> [-PolicyVersion <PolicyVersion>] [-Stage]
+
+   [<CommonParameters>]
+- >-
+  Get-HgsAttestationTpmHost [-Name <String>] -Xml <XmlDocument> [-PolicyVersion <PolicyVersion>] [-Stage]
+
+   [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the friendly name of the guarded host that this cmdlet gets from the Attestation service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the full path of an .xml file for which this cmdlet gets hosts.
+    Create this file by using the **Get-PlatformIdentifier** cmdlet.
+    For more information, type `Get-Help Get-PlatformIdentifier`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: FilePath
+  parameterValueGroup: ""
+- type: <xref href="PolicyVersion" data-throw-if-not-resolved="False" />
+  name: PolicyVersion
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, PolicyVersion1503, PolicyVersion1704
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Stage
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XmlDocument" data-throw-if-not-resolved="False" />
+  name: Xml
+  isRequired: true
+  description: |+
+    Specifies the full path of an .xml file that contains binary data for which this cmdlet gets hosts.
+    Create this file by using **Get-PlatformIdentifier**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HgsAttestation.Get-HgsAttestationTpmHost
+name: Get-HgsAttestationTpmHost
+description: |-
+  The **Get-HgsAttestationTpmHost** cmdlet retrieves guarded hosts from the Attestation service in the Host Guardian Service (HGS).
+  Use this cmdlet for hosts that have trusted platform module (TPM) 2.0 hardware, and that were added by using the **Add-HgsAttestationTpmHost** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/get-hgsattestationtpmhost?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-HgsAttestationTpmHost

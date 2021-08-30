@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Suspends Bitlocker encryption for the specified volume.
+module: BitLocker
+notes: ""
+inputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" /><span>[</span><xref href="], String[" data-throw-if-not-resolved="False" /><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Disable-BitLocker
+  href: ./Disable-BitLocker.yml
+- text: Enable-BitLocker
+  href: ./Enable-BitLocker.yml
+- text: Get-BitLockerVolume
+  href: ./Get-BitLockerVolume.yml
+- text: Lock-BitLocker
+  href: ./Lock-BitLocker.yml
+- text: Resume-BitLocker
+  href: ./Resume-BitLocker.yml
+- text: Unlock-BitLocker
+  href: ./Unlock-BitLocker.yml
+syntaxes:
+- Suspend-BitLocker [-MountPoint] <String[]> [[-RebootCount] <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Suspend BitLocker protection'
+  code: |-
+    PS C:\> Suspend-BitLocker -MountPoint "C:" -RebootCount 0
+  description: |-
+    This command suspends Bitlocker encryption on the BitLocker volume specified by the *MountPoint* parameter.
+    Because the *RebootCount* parameter value is 0, BitLocker encryption remains suspended until you run the **Resume-BitLocker** cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MountPoint
+  isRequired: true
+  description: |+
+    Specifies an array of drive letters or BitLocker volume objects.
+    This cmdlet suspends protection for the volumes specified.
+    To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RebootCount
+  description: |+
+    Specifies the number of computer restarts before BitLocker restores protection.
+    The acceptable values for this parameter are: integers from 0 to 15.
+
+    Specify zero to suspend protection indefinitely until you resume it by using the **Resume-BitLocker** cmdlet.
+
+    If you do not include this parameter, the cmdlet uses a value of one.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: BitLocker.Suspend-BitLocker
+name: Suspend-BitLocker
+description: |-
+  The **Suspend-BitLocker** cmdlet suspends Bitlocker encryption, allowing users to access encrypted data on a volume that uses BitLocker Drive Encryption.
+  This cmdlet makes the encryption key available in the clear.
+
+  Suspension of BitLocker does not mean that BitLocker decrypts data on the volume.
+  Instead, suspension makes key used to decrypt the data available to everyone in the clear.
+  New data written to the disk is still encrypted.
+
+  While suspended, BitLocker does not validate system integrity at start up.
+  You might suspend BitLocker protection for firmware upgrades or system updates.
+
+  You can specify the number of times that a computer restarts before the BitLocker suspension ends by using the *RebootCount* parameter, or you can use the **Resume-BitLocker** cmdlet to manually resume protection.
+  If you do not specify the *RebootCount* parameter, the cmdlet uses a value of one (1), so BitLocker protection resumes after the next restart.
+
+  For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BitLocker-help.xml
+  Module Name: BitLocker
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/bitlocker/suspend-bitlocker?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Suspend-BitLocker

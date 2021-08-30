@@ -1,0 +1,28 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Checks for an installation of VPN server.
+module: WssCmdlets
+notes: ""
+links:
+- text: Install-WssVpnServer
+  href: ./Install-WssVpnServer.yml
+- text: Uninstall-WssVpnServer
+  href: ./Uninstall-WssVpnServer.yml
+syntaxes:
+- Test-WssVpnServerInstallation
+examples:
+- title: 'Example 1: Test VPN server installation'
+  code: |-
+    PS C:\> Test-WssVpnServerInstallation
+  description: |-
+    This command tests the VPN server installation.
+  summary: ""
+uid: WssCmdlets.Test-WssVpnServerInstallation
+name: Test-WssVpnServerInstallation
+description: |-
+  The **Test-WssVpnServerInstallation** cmdlet checks for an installation of VPN server on the sbs_sbs8_2 server.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/test-wssvpnserverinstallation?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the functional level of a mixed-version cluster.
+module: FailoverClusters
+notes: |-
+  * This cmdlet performs a one-time, one-way transformation of the cluster functional level. You cannot lower this level.
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts a **Cluster**.
+    This cmdlet updates the functional level of this cluster.
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **Cluster**.
+    This cmdlet updates the functional level of this cluster.
+links:
+- text: Add-ClusterNode
+  href: ./Add-ClusterNode.yml
+- text: Suspend-ClusterNode
+  href: ./Suspend-ClusterNode.yml
+- text: Remove-ClusterNode
+  href: ./Remove-ClusterNode.yml
+syntaxes:
+- >-
+  Update-ClusterFunctionalLevel [-Force] [-WhatIf] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Test a possible update'
+  code: |-
+    PS C:\> Update-ClusterFunctionalLevel -WhatIf
+    Name
+    ----
+    cluster_17
+  description: |-
+    This command tests whether an update would finish successfully.
+    Because the command includes the *WhatIf* common parameter, the command does not perform the update.
+  summary: ""
+- title: 'Example 2: Update a cluster functional level'
+  code: |-
+    PS C:\> Update-ClusterFunctionalLevel -Cluster "cluster_17"
+    Name
+    ----
+    cluster_17
+  description: |-
+    This command updates the cluster functional level of the cluster named cluster_17.
+    All of the nodes of this cluster must already be updated before you run this command.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Update-ClusterFunctionalLevel
+name: Update-ClusterFunctionalLevel
+description: |-
+  The **Update-ClusterFunctionalLevel** cmdlet updates the functional level of a mixed-version cluster.
+  You can update the cluster after all nodes have been updated.
+
+  Starting with Windows Server 2016, you can add a node that runs a more recent version of the Windows operating system into a cluster of nodes that run a previous version of the Windows operating system.
+  To add a cluster node, use the **Add-ClusterNode** cmdlet.
+
+  After you add a node that runs a different version of the Windows operating system, the cluster becomes a mixed-version cluster.
+  You can implement a mixed-version cluster to continue to run while you upgrade the operating system on each node in the cluster.
+
+  We recommend that you upgrade all nodes in the cluster within a month.
+  We do not recommend using a mixed-version cluster permanently.
+
+  You can use this cmdlet to support a rolling operating system upgrade for a cluster.
+  If you use cluster that runs Hyper-V in which all the nodes run Windows Server 2012 R2, you can upgrade the nodes of that cluster without downtime for your virtual machines.
+
+  First, drain one cluster node by specifying the *Drain* parameter of the **Suspend-ClusterNode** cmdlet.
+  This cmdlet causes all virtual machines to live-migrate to one of the other hosts.
+
+  Next, remove the host from the cluster by using the **Remove-ClusterNode** cmdlet.
+
+  Next, install a new version of the operating system.
+  Do not perform an upgrade or in-place installation.
+
+  Next, add the Hyper-V role and the **Failover Clustering** feature by using the **Install-WindowsFeature** cmdlet.
+  For more information, type `Get-Help Install-WindowsFeature`.
+
+  Finally, add the node into the cluster by using the **Add-ClusterNode** cmdlet.
+
+  Repeat these steps for each node of the cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-ClusterFunctionalLevel

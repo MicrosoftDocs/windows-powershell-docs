@@ -1,0 +1,140 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Registers an active iSCSI session to be persistent using the session identifier as input.
+module: iSCSI
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiSession" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: iSCSI on TechNet
+  href: https://www.microsoft.com/iSCSI
+- text: Storage on TechNet
+  href: https://go.microsoft.com/fwlink/?linkid=191356
+syntaxes:
+- >-
+  Register-IscsiSession -SessionIdentifier <String[]> [-IsMultipathEnabled <Boolean>] [-ChapUsername <String>]
+
+   [-ChapSecret <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru]
+
+   [<CommonParameters>]
+- >-
+  Register-IscsiSession -InputObject <CimInstance[]> [-IsMultipathEnabled <Boolean>] [-ChapUsername <String>]
+
+   [-ChapSecret <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Register-IscsiSession -SessionIdentifier fffffa800d008430-4000013700000001
+  description: |-
+    This example registers the iSCSI session with the session ID fffffa800d008430-4000013700000001 to be persistent across reboots.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ChapSecret
+  description: |+
+    Specifies the CHAP secret to use when establishing a connection authenticated by using CHAP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ChapUsername
+  description: |+
+    Specifies the user name to use when establishing a connection authenticated by using Mutual CHAP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an object from the pipeline as input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsMultipathEnabled
+  description: |+
+    Indicates that the initiator has enabled Multipath I/O (MPIO) and it will be used when logging into the target portal.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: "Sends items from the interactive window down the pipeline as input to other cmdlets.\r\nBy default, this cmdlet does not generate any output. \r\n                         \r\nTo send items from the interactive window down the pipeline, click to select the items and then click OK.\r\nShift-click and Ctrl-click are supported.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SessionIdentifier
+  isRequired: true
+  description: |+
+    Specifies the session identifier.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: iSCSI.Register-IscsiSession
+name: Register-IscsiSession
+description: |-
+  The **Register-IscsiSession** cmdlet registers an existing iSCSI session to make it persistent.
+  Once an iSCSI session is registered, it will automatically attempt to reconnect on reboot.
+
+  Note: Registering a connection multiple times will automatically re-establish multiple sessions for use with Multipath I/O (MPIO).
+metadata:
+  external help file: iSCSISession.cdxml-help.xml
+  Module Name: iSCSI
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/iscsi/register-iscsisession?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Register-IscsiSession

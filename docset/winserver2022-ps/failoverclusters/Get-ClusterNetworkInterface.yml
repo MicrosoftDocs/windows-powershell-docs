@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about one or more network adapters in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNetwork" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNetworkInterface" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterNetwork
+  href: ./Get-ClusterNetwork.yml
+syntaxes:
+- >-
+  Get-ClusterNetworkInterface [[-Name] <StringCollection>] [-Node <StringCollection>]
+
+   [-Network <StringCollection>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterNetworkInterface
+    Name                Node                Network                           State 
+    ----                ----                -------                           ----- 
+    node1 - Local A ...  node1               Cluster Network 1                    Up 
+    node2 - Local A ...  node2               Cluster Network 1                    Up 
+    node1 - Local A ...  node1               Cluster Network 2                    Up 
+    node2 - Local A ...  node2               Cluster Network 2                    Up
+  description: |-
+    This example displays information about the physical network adapters used by the local cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterNode -Name node1 | Get-ClusterNetworkInterface
+    Name                Node                Network                           State 
+    ----                ----                -------                           ----- 
+    node1 - Local A ...  node1               Cluster Network 1                    Up 
+    node1 - Local A ...  node1               Cluster Network 2                    Up
+  description: |-
+    This example displays information about the physical network adapters used by node1 in the local cluster.
+    This cmdlet is equivalent to `Get-ClusterNetworkInterface -Node node1`.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to enumerate the cluster network interfaces.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster network interface to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Network
+  description: |+
+    Specifies the name of the cluster network for which to enumerate the network interfaces.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Node
+  description: |+
+    Specifies the name of the cluster node on which to enumerate the network interfaces.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterNetworkInterface
+name: Get-ClusterNetworkInterface
+description: |-
+  The **Get-ClusterNetworkInterface** cmdlet gets information about one or more network adapters in a failover cluster.
+  A failover cluster requires network connectivity among nodes and between clients and nodes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternetworkinterface?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterNetworkInterface

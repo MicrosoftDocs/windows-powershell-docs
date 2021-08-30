@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an app package from one or more user accounts.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Windows.Appx.PackageManager.Commands.AppxPackage" data-throw-if-not-resolved="False" />
+  description: |-
+    An **AppxPackage** object that contain information, including the full name of the app package.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: PackageManager class
+  href: https://go.microsoft.com/fwlink/?LinkId=245447
+- text: Sideload Apps with DISM
+  href: https://go.microsoft.com/fwlink/?LinkID=231020
+syntaxes:
+- Remove-AppxPackage [-Package]  [-PreserveApplicationData] [-WhatIf] [-Confirm] []
+- Remove-AppxPackage [-Package]  [-AllUsers] [-WhatIf] [-Confirm] []
+- Remove-AppxPackage [-Package]  -User  [-WhatIf] [-Confirm] []
+examples:
+- title: 'Example 1: Remove an app package'
+  code: |-
+    Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe"
+  description: |-
+    This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbwe from the account of the current user.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllUsers
+  description: |+
+    This parameter removes the app package for all user accounts on the computer. The parameter works off the parent package type. If it is a bundle, use -PackageTypeFilter with "Get-AppxPackage" command and specify the bundle. To use this parameter, you must run the command by using administrator permissions.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies an **AppxPackage** object or the full name of a package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PreserveApplicationData
+  description: |+
+    Specifies that the cmdlet preserves the application data during the package removal.
+    The application data is available for later use. Note that this is only applicable
+    for apps that are under development so this option can only be specified for apps
+    that are registered from file layout (Loose file registered).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    If you specify this parameter, the cmdlet removes the app package for only the user that this cmdlet specifies. To remove a package for a user profile other than the profile of the current user, you must run this command by using administrator permissions.
+
+    > [!NOTE]
+    >
+    > - This parameter only accepts user SIDs
+    > - Use the **whoami /user** command to display the current SID of a user. See [whoami syntax](https://docs.microsoft.com/windows-server/administration/windows-commands/whoami) for details.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Appx.Remove-AppxPackage
+name: Remove-AppxPackage
+description: |-
+  The **Remove-AppxPackage** cmdlet removes an app package from a user account.  
+  An app package has an .msix or .appx file name extension.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: Appx
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appx/remove-appxpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AppxPackage

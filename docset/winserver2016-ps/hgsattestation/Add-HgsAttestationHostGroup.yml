@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an attestation policy for an Active Directory host group configuration.
+module: HgsAttestation
+notes: ""
+links:
+- text: Get-HgsAttestationHostGroup
+  href: ./Get-HgsAttestationHostGroup.yml
+- text: Remove-HgsAttestationHostGroup
+  href: ./Remove-HgsAttestationHostGroup.yml
+syntaxes:
+- Add-HgsAttestationHostGroup -Name <String> -HostGroup <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Add-HgsAttestationHostGroup -Name <String> -Identifier <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a host group'
+  code: |-
+    PS C:\> Add-HgsAttestationHostGroup -Name "TrustedADHostGroup14" -Identifier $Sid
+  description: |-
+    This command adds a host group from the Active Directory fabric to the Attestation service.
+    The *Identifier* parameter specifies an SID stored in $Sid.
+    After you run this command, the Attestation service trusts all hosts that belong to this host group to host shielded virtual machines.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostGroup
+  isRequired: true
+  description: |+
+    Specifies the name of a host group on which this cmdlet bases the policy.
+    Include the domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identifier
+  isRequired: true
+  description: |+
+    Specifies the SID of a host group on which this cmdlet bases the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the host group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsAttestation.Add-HgsAttestationHostGroup
+name: Add-HgsAttestationHostGroup
+description: |-
+  The **Add-HgsAttestationHostGroup** cmdlet adds an Attestation policy that is based on the configuration of an Active Directory host group.
+  Specify a host group by name or security identifier (SID).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/add-hgsattestationhostgroup?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-HgsAttestationHostGroup

@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the current backup policy for the computer.
+module: WindowsServerBackup
+notes: |-
+  * If you use the *Editable* parameter to make changes, set the updated policy as the current policy by using the Set-WBPolicy cmdlet.
+inputs:
+- name: <xref href="Editable" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet uses the *Editable* parameter to set the **WBPolicy** object in edit mode.
+outputs:
+- name: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **WBPolicy** object.
+    The cmdlet returns a null value if no backup policy is set.
+links:
+- text: New-WBPolicy
+  href: ./New-WBPolicy.yml
+- text: Remove-WBPolicy
+  href: ./Remove-WBPolicy.yml
+- text: Set-WBPolicy
+  href: ./Set-WBPolicy.yml
+syntaxes:
+- Get-WBPolicy [-Editable] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a current backup policy'
+  code: |-
+    PS C:\> Get-WBPolicy
+  description: |-
+    This command gets information about the backup policy object.
+    The information includes all the settings for the backup policy, such as what items to back up, when to run backups, and where to store backups.
+  summary: ""
+- title: 'Example 2: Get a current backup policy in edit mode'
+  code: |-
+    PS C:\> Get-WBPolicy -Editable
+  description: |-
+    This command gets information about the backup policy object, and it makes the policy editable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Editable
+  description: |+
+    Indicates that the cmdlet returns a current backup policy in edit mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Get-WBPolicy
+name: Get-WBPolicy
+description: |-
+  The **Get-WBPolicy** cmdlet gets the backup policy object for the computer.
+  Use the *Editable* parameter to return the policy information in edit mode.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbpolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBPolicy

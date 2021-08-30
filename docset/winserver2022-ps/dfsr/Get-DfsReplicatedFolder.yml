@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a replicated folder from a replication group.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DFSR.Management.ReplicatedFolder" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-DfsReplicatedFolder
+  href: ./Set-DfsReplicatedFolder.yml
+- text: Set-DfsReplicatedFolder
+  href: ./Set-DfsReplicatedFolder.yml
+- text: Remove-DfsReplicatedFolder
+  href: ./Remove-DfsReplicatedFolder.yml
+syntaxes:
+- >-
+  Get-DfsReplicatedFolder [[-GroupName] <String[]>] [[-FolderName] <String[]>] [[-DomainName] <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a replicated folder'
+  code: |-
+    PS C:\> Get-DfsReplicatedFolder -GroupName "RG24" -FolderName "RF01"
+
+
+    GroupName              : RG24
+    DomainName             : corp.contoso.com
+    FolderName             : RF01
+    Identifier             : c335e8f6-bc3e-4671-8f7b-9cdc51a6b222
+    Description            :
+    FileNameToExclude      : {~*, *.bak, *.tmp}
+    DirectoryNameToExclude : {}
+    DfsnPath               :
+    IsDfsnPathPublished    : False
+    State                  : Normal
+  description: |-
+    This command gets the replicated folder named RF01 from replication group named RG24.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains the replication group.
+    If you do not specify this parameter, the cmdlet uses the domain of the current user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FolderName
+  description: |+
+    Specifies an array of names of replicated folders.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: RF, RfName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  description: |+
+    Specifies an array of names of replication groups.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+uid: DFSR.Get-DfsReplicatedFolder
+name: Get-DfsReplicatedFolder
+description: |-
+  The **Get-DfsReplicatedFolder** cmdlet gets existing replicated folders.
+  The cmdlet returns global settings of replicated folders such as filters and Distributed File System (DFS) Namespace associations.
+  Replicated folders are logical arrangements of replication that do not contain computer-specific settings.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/get-dfsreplicatedfolder?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DfsReplicatedFolder

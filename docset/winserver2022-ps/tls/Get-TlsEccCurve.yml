@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the list of Elliptic Curve Cryptography (ECC) cipher suites available for TLS for a computer.
+module: TLS
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-TlsEccCurve [[-Name] <String>]
+examples:
+- title: 'Example 1: Get all ECC curves'
+  code: |-
+    Get-TlsEccCurve
+  description: |-
+    This generates the following output:
+
+
+    curve25519
+    NistP256
+    NistP384
+
+
+    This command gets all ECC curves for the computer.
+  summary: ""
+- title: 'Example 2: Get the ECC curves that match a string'
+  code: |-
+    Get-TlsEccCurve -Name 'Nist'
+  description: |-
+    This generates the following output:
+
+
+    NistP256
+    NistP384
+
+
+    This command gets all the ECC curves that have names that contain the string 'Nist' (case-sensitive).
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the ECC curve to get. The cmdlet gets ECC curves that match the string that this cmdlet specifies, so you can specify a partial name. This parameter is case-sensitive. 
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: None
+  parameterValueGroup: ""
+uid: TLS.Get-TlsEccCurve
+name: Get-TlsEccCurve
+description: |-
+  Gets the list of Elliptic Curve Cryptography (ECC) cipher suites available for TLS for a computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
+  Module Name: TLS
+  ms.date: 05/09/2017
+  online version: https://docs.microsoft.com/powershell/module/tls/get-tlsecccurve?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-TlsEccCurve

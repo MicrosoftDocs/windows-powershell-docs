@@ -1,0 +1,144 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the queue manager.
+module: MSMQ
+notes: ""
+links:
+- text: Get-MsmqQueueManager
+  href: ./Get-MsmqQueueManager.yml
+syntaxes:
+- >-
+  Set-MsmqQueueManager [-RenewEncryptionKey] [-MsgStore <String>] [-MsgLogStore <String>]
+
+   [-TransactionLogStore <String>] [-MessageQuota <Int64>] [-JournalQuota <Int64>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-MsmqQueueManager [-Connect] [-RenewEncryptionKey] [-MsgStore <String>] [-MsgLogStore <String>]
+
+   [-TransactionLogStore <String>] [-MessageQuota <Int64>] [-JournalQuota <Int64>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-MsmqQueueManager [-Disconnect] [-RenewEncryptionKey] [-MsgStore <String>] [-MsgLogStore <String>]
+
+   [-TransactionLogStore <String>] [-MessageQuota <Int64>] [-JournalQuota <Int64>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure the queue manager'
+  code: |-
+    PS C:\> Set-MsmqQueueManager -MessageQuota 2048576 -MsgStore "C:\MSMQ\MessageFiles" -TransactionLogStore "C:\MSMQ\TransactionLogs"
+  description: |-
+    This command configures properties of the Message Queuing queue manager.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Connect
+  description: |+
+    Indicates that this cmdlet connects the computer to the network and to the directory service.
+    If you specify this parameter, you cannot specify the *Disconnect* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disconnect
+  description: |+
+    Indicates that this cmdlet disconnects the computer from the network and from the directory service.
+    If you specify this parameter, you cannot specify the *Connect* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: JournalQuota
+  description: |+
+    Specifies the total Journal Message Storage quota for Message Queuing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: MessageQuota
+  description: |+
+    Specifies the total Message Storage quota for Message Queuing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MsgLogStore
+  description: |+
+    Indicates that this cmdlet changes the message logger storage location and moves over all the message logger files to the new location.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MsgStore
+  description: |+
+    Specifies a new message storage location.
+    The cmdlet moves all the message files to the new location.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RenewEncryptionKey
+  description: |+
+    Indicates that this cmdlet renews the public encryption key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TransactionLogStore
+  description: |+
+    Specifies a new transaction logger storage location.
+    This cmdlet moves all the transaction logger files to the new location.
+
+  defaultValue: None
+  position: Named
+  aliases: XactLogStore
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MSMQ.Set-MsmqQueueManager
+name: Set-MsmqQueueManager
+description: |-
+  The **Set-MsmqQueueManager** cmdlet configures the properties of the Message Queuing (also known as MSMQ) queue manager.
+  This cmdlet returns a **QueueManager** object that represents the modified local queue manager.
+  If you specify the *RenewEncryptionKey* parameter to renew keys, you must restart the Message Queuing service for the new keys to become effective.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/set-msmqqueuemanager?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-MsmqQueueManager

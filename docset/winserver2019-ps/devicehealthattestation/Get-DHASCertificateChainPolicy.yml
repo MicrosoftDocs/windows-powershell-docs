@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the certificate chain policy.
+module: DeviceHealthAttestation
+notes: ""
+outputs:
+- name: <xref href="CertificateChainPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    The **CertificateChainPolicy** object that this cmdlet returns has the following members: 
+
+    - RevocationFlag.
+    A .NET [X509RevocationFlag enumeration](https://go.microsoft.com/fwlink/?LinkId=821152).
+    - RevocationMode.
+    A .NET [X509RevocationMode enumeration](https://go.microsoft.com/fwlink/?LinkId=821153).
+    - VerificationFlags.
+    A .NET [X509VerificationFlags enumeration](https://go.microsoft.com/fwlink/?LinkId=821154).
+    - UrlRetrievalTimeout.
+    A .NET [TimeSpan structure](https://go.microsoft.com/fwlink/?LinkId=821155).
+links:
+- text: Set-DHASCertificateChainPolicy
+  href: ./Set-DHASCertificateChainPolicy.yml
+syntaxes:
+- Get-DHASCertificateChainPolicy [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the certificate chain policy'
+  code: |-
+    PS C:\> Get-DHASCertificateChainPolicy
+  description: |-
+    This command gets the current certificate chain policy for the Device Health Attestation service.
+  summary: ""
+uid: DeviceHealthAttestation.Get-DHASCertificateChainPolicy
+name: Get-DHASCertificateChainPolicy
+description: |-
+  The **Get-DHASCertificateChainPolicy** cmdlet gets the certificate chain policy enforced by the Device Health Attestation service.
+  The certificate chain policy specifies parameters for certificate chain verification and revocation behavior.
+
+  You must have administrator rights to run this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.DeviceHealthAttestation.PowerShell.dll-Help.xml
+  Module Name: DeviceHealthAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/devicehealthattestation/get-dhascertificatechainpolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DHASCertificateChainPolicy

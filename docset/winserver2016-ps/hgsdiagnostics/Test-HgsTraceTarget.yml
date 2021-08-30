@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies that a remote Windows PowerShell® session can be opened to the provided target.
+module: HgsDiagnostics
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Windows.HostGuardianService.Diagnostics.Payload.InputTarget" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a target object created by the **New-HgsTraceTarget** cmdlet.
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns true if a connection can be opened and the requisite conditions are met by that target; false otherwise.
+    The cmdlet reports a detailed error if the test fails.
+links:
+- text: New-HgsTraceTarget
+  href: ./New-HgsTraceTarget.yml
+syntaxes:
+- Test-HgsTraceTarget -Target <InputTarget> [<CommonParameters>]
+parameters:
+- type: <xref href="InputTarget" data-throw-if-not-resolved="False" />
+  name: Target
+  isRequired: true
+  description: |+
+    Specifies the target object to be tested.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: InputObject
+  parameterValueGroup: ""
+uid: HgsDiagnostics.Test-HgsTraceTarget
+name: Test-HgsTraceTarget
+description: |-
+  The **Test-HgsTraceTarget** cmdlet verifies that a remote Windows PowerShell® session can be opened to the specified target and that a compatible version of the diagnostic module is available.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.HostGuardianService.Diagnostics.Payload.dll-Help.xml
+  Module Name: HgsDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsdiagnostics/test-hgstracetarget?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-HgsTraceTarget

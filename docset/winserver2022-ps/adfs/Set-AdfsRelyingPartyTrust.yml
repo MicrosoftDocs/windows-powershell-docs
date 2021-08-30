@@ -1,0 +1,704 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the properties of a relying party trust.
+module: ADFS
+notes: |-
+  * A relying party in Active Directory Federation Services (AD FS) is an organization in which Web servers that host one or more Web-based applications reside. Tokens and Information Cards that originate from a claims provider can then be presented and ultimately accessed by the Web-based resources that are located in the relying party organization. When AD FS is configured in the role of the relying party, it acts as a partner that trusts a claims provider to authenticate users. Therefore, the relying party accesses the claims that are packaged in security tokens that come from users in the claims provider. In other words, a relying party is the organization whose Web servers are protected by the resource-side federation server. The federation server in the relying party uses the security tokens that the claims provider produces to issue tokens to the Web servers that are located in the relying party.
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *AccessControlPolicyName*, *AdditionalAuthenticationRules*, *DelegationAuthorizationRules*, *ImpersonationAuthorizationRules*, *IssuanceAuthorizationRules*, *IssuanceTransformRules*, *TargetIdentifier*, and *TargetName* parameters.
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    Objects are received by the *AccessControlPolicyParameters* parameter.
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: |-
+    SwitchParameter objects are received by the *AlwaysRequireAuthentication* and *RequestMFAFromClaimsProviders* parameters.
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    ClaimDescription Objects are received by the *ClaimAccepted* parameter.
+- name: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="False" />
+  description: |-
+    X509Certificate2 objects are received by the *RequestSigningCertificate* parameter.
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.SamlEndpoint" data-throw-if-not-resolved="False" />
+  description: |-
+    SamlEndpoint objects are received by the *SamlEndpoint* parameter.
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    RelyingPartyTrust objects are received by the *TargetRelyingParty* parameter.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the updated RelyingPartyTrust object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Add-AdfsRelyingPartyTrust
+  href: ./Add-AdfsRelyingPartyTrust.yml
+- text: Disable-AdfsRelyingPartyTrust
+  href: ./Disable-AdfsRelyingPartyTrust.yml
+- text: Enable-AdfsRelyingPartyTrust
+  href: ./Enable-AdfsRelyingPartyTrust.yml
+- text: Get-AdfsRelyingPartyTrust
+  href: ./Get-AdfsRelyingPartyTrust.yml
+- text: Remove-AdfsRelyingPartyTrust
+  href: ./Remove-AdfsRelyingPartyTrust.yml
+- text: Update-AdfsRelyingPartyTrust
+  href: ./Update-AdfsRelyingPartyTrust.yml
+syntaxes:
+- >-
+  Set-AdfsRelyingPartyTrust [-AllowedAuthenticationClassReferences <String[]>] [-Name <String>]
+
+   [-NotBeforeSkew <Int32>] [-EnableJWT <Boolean>] [-Identifier <String[]>]
+
+   [-EncryptionCertificate <X509Certificate2>] [-EncryptionCertificateRevocationCheck <String>]
+
+   [-EncryptClaims <Boolean>] [-MetadataUrl <Uri>] [-IssuanceAuthorizationRules <String>]
+
+   [-IssuanceAuthorizationRulesFile <String>] [-DelegationAuthorizationRules <String>]
+
+   [-DelegationAuthorizationRulesFile <String>] [-ImpersonationAuthorizationRules <String>]
+
+   [-ImpersonationAuthorizationRulesFile <String>] [-IssuanceTransformRules <String>]
+
+   [-IssuanceTransformRulesFile <String>] [-AdditionalAuthenticationRules <String>]
+
+   [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
+
+   [-AccessControlPolicyParameters <Object>] [-AutoUpdateEnabled <Boolean>] [-WSFedEndpoint <Uri>]
+
+   [-AdditionalWSFedEndpoint <String[]>] [-ClaimsProviderName <String[]>] [-MonitoringEnabled <Boolean>]
+
+   [-Notes <String>] [-ClaimAccepted <ClaimDescription[]>] [-SamlEndpoint <SamlEndpoint[]>]
+
+   [-ProtocolProfile <String>] [-RequestSigningCertificate <X509Certificate2[]>]
+
+   [-EncryptedNameIdRequired <Boolean>] [-SignedSamlRequestsRequired <Boolean>] [-SamlResponseSignature <String>]
+
+   [-SignatureAlgorithm <String>] [-SigningCertificateRevocationCheck <String>] [-TokenLifetime <Int32>]
+
+   [-AlwaysRequireAuthentication <Boolean>] [-AllowedClientTypes <AllowedClientTypes>]
+
+   [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>] [-RefreshTokenProtectionEnabled <Boolean>]
+
+   [-RequestMFAFromClaimsProviders <Boolean>] -TargetIdentifier <String> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AdfsRelyingPartyTrust [-AllowedAuthenticationClassReferences <String[]>] [-Name <String>]
+
+   [-NotBeforeSkew <Int32>] [-EnableJWT <Boolean>] [-Identifier <String[]>]
+
+   [-EncryptionCertificate <X509Certificate2>] [-EncryptionCertificateRevocationCheck <String>]
+
+   [-EncryptClaims <Boolean>] [-MetadataUrl <Uri>] [-IssuanceAuthorizationRules <String>]
+
+   [-IssuanceAuthorizationRulesFile <String>] [-DelegationAuthorizationRules <String>]
+
+   [-DelegationAuthorizationRulesFile <String>] [-ImpersonationAuthorizationRules <String>]
+
+   [-ImpersonationAuthorizationRulesFile <String>] [-IssuanceTransformRules <String>]
+
+   [-IssuanceTransformRulesFile <String>] [-AdditionalAuthenticationRules <String>]
+
+   [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
+
+   [-AccessControlPolicyParameters <Object>] [-AutoUpdateEnabled <Boolean>] [-WSFedEndpoint <Uri>]
+
+   [-AdditionalWSFedEndpoint <String[]>] [-ClaimsProviderName <String[]>] [-MonitoringEnabled <Boolean>]
+
+   [-Notes <String>] [-ClaimAccepted <ClaimDescription[]>] [-SamlEndpoint <SamlEndpoint[]>]
+
+   [-ProtocolProfile <String>] [-RequestSigningCertificate <X509Certificate2[]>]
+
+   [-EncryptedNameIdRequired <Boolean>] [-SignedSamlRequestsRequired <Boolean>] [-SamlResponseSignature <String>]
+
+   [-SignatureAlgorithm <String>] [-SigningCertificateRevocationCheck <String>] [-TokenLifetime <Int32>]
+
+   [-AlwaysRequireAuthentication <Boolean>] [-AllowedClientTypes <AllowedClientTypes>]
+
+   [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>] [-RefreshTokenProtectionEnabled <Boolean>]
+
+   [-RequestMFAFromClaimsProviders <Boolean>] -TargetRelyingParty <RelyingPartyTrust> [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsRelyingPartyTrust [-AllowedAuthenticationClassReferences <String[]>] [-Name <String>]
+
+   [-NotBeforeSkew <Int32>] [-EnableJWT <Boolean>] [-Identifier <String[]>]
+
+   [-EncryptionCertificate <X509Certificate2>] [-EncryptionCertificateRevocationCheck <String>]
+
+   [-EncryptClaims <Boolean>] [-MetadataUrl <Uri>] [-IssuanceAuthorizationRules <String>]
+
+   [-IssuanceAuthorizationRulesFile <String>] [-DelegationAuthorizationRules <String>]
+
+   [-DelegationAuthorizationRulesFile <String>] [-ImpersonationAuthorizationRules <String>]
+
+   [-ImpersonationAuthorizationRulesFile <String>] [-IssuanceTransformRules <String>]
+
+   [-IssuanceTransformRulesFile <String>] [-AdditionalAuthenticationRules <String>]
+
+   [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
+
+   [-AccessControlPolicyParameters <Object>] [-AutoUpdateEnabled <Boolean>] [-WSFedEndpoint <Uri>]
+
+   [-AdditionalWSFedEndpoint <String[]>] [-ClaimsProviderName <String[]>] [-MonitoringEnabled <Boolean>]
+
+   [-Notes <String>] [-ClaimAccepted <ClaimDescription[]>] [-SamlEndpoint <SamlEndpoint[]>]
+
+   [-ProtocolProfile <String>] [-RequestSigningCertificate <X509Certificate2[]>]
+
+   [-EncryptedNameIdRequired <Boolean>] [-SignedSamlRequestsRequired <Boolean>] [-SamlResponseSignature <String>]
+
+   [-SignatureAlgorithm <String>] [-SigningCertificateRevocationCheck <String>] [-TokenLifetime <Int32>]
+
+   [-AlwaysRequireAuthentication <Boolean>] [-AllowedClientTypes <AllowedClientTypes>]
+
+   [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>] [-RefreshTokenProtectionEnabled <Boolean>]
+
+   [-RequestMFAFromClaimsProviders <Boolean>] -TargetName <String> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the name and identifier for a relying party trust'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyTrust -TargetName "FabrikamApp" -Identifier "http://FabrikamApp.CentralServerNew.org"
+  description: |-
+    This command sets the name and identifier for the specified relying party trust.
+  summary: ""
+- title: 'Example 2: Set the target identifier for a relying party trust'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyTrust -TargetIdentifier "http://FabrikamApp.CentralServer.org" -Identifier "http://FabrikamApp.CentralServerNew.org"
+  description: |-
+    This command sets the target identifier for the specified relying party trust.
+  summary: ""
+- title: 'Example 3: Assign a policy that uses parameters'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyParameters ("Administrators","Users") -AccessControlPolicyName "DemoOne"
+  description: |-
+    This command assigns a policy that uses parameters.
+
+    For more information about access control policy parameters, see [Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/active-directory-federation-services) (https://technet.microsoft.com/windows-server-docs/identity/active-directory-federation-services) on TechNet.
+  summary: ""
+- title: 'Example 4: Un-assign a policy template'
+  code: |-
+    PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyName $null
+  description: |-
+    This command un-assigns a policy template.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyName
+  description: |+
+    Specifies the name of an access control policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyParameters
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRules
+  description: |+
+    Specifies the additional authorization rules to require additional authentication based on user, device and location attributes after the completion of the first step of authentication. 
+    Note: These rules must only be configured after there is at least one authentication provider enabled for additional authentication.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRulesFile
+  description: |+
+    Specifies a file that contains the additional authentication rules to require additional authentication when a user is attempting to access this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AdditionalWSFedEndpoint
+  description: |+
+    Specifies an array of alternate return addresses for the application.
+    This is typically used when the application wants to indicate to AD FS what the return URL should be on successful token generation.
+    AD FS requires that all acceptable URLs are entered as trusted information by the administrator.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AllowedAuthenticationClassReferences
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AllowedClientTypes" data-throw-if-not-resolved="False" />
+  name: AllowedClientTypes
+  description: |+
+    Specifies allowed client types.
+    The acceptable values for this parameter are:
+
+    - None
+    - Public
+    - Confidential
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Public, Confidential
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AlwaysRequireAuthentication
+  description: |+
+    Indicates to always require authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoUpdateEnabled
+  description: |+
+    Indicates whether changes to the federation metadata by the *MetadataURL* parameter apply automatically to the configuration of the trust relationship.
+    If this parameter has a value of $True, partner claims, certificates, and endpoints are updated automatically.
+
+    Note: When auto-update is enabled, fields that can be overwritten by metadata become read only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClaimDescription" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClaimAccepted
+  description: |+
+    Specifies an array of claims that this relying party accepts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClaimsProviderName
+  description: |+
+    Specifies an array of claims provider names.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DelegationAuthorizationRules
+  description: |+
+    Specifies the delegation authorization rules for issuing claims to this relying party.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DelegationAuthorizationRulesFile
+  description: |+
+    Specifies a file that contains the delegation authorization rules for issuing claims to this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableJWT
+  description: |+
+    Indicates whether the JSON Web Token (JWT) format should be used to issue a token on a WS-Federation request.
+    By default, SAML tokens are issued over WS-Federation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EncryptClaims
+  description: |+
+    Indicates whether the claims that are sent to the relying party should be encrypted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EncryptedNameIdRequired
+  description: |+
+    Indicates whether the relying party requires that the **NameID** claim be encrypted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: EncryptionCertificate
+  description: |+
+    Specifies the certificate to be used for encrypting claims that are issued to this relying party.
+    Encrypting claims is optional.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EncryptionCertificateRevocationCheck
+  description: |+
+    Specifies the type of validation that occurs for the encryption certificate before it is used for encrypting claims to the relying party.
+    The acceptable values for this parameter are:
+
+    - None
+    - CheckEndCert
+    - CheckEndCertCacheOnly
+    - CheckChain
+    - CheckChainCacheOnly
+    - CheckChainExcludeRoot
+    - CheckChainExcludeRootCacheOnly
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: CheckChain, CheckChainCacheOnly, CheckChainExcludeRoot, CheckChainExcludeRootCacheOnly, CheckEndCert, CheckEndCertCacheOnly, None
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identifier
+  description: |+
+    Specifies an array of unique identifiers for this relying party trust.
+    No other trust can use an identifier from this list.
+    Uniform Resource Identifiers (URIs) are often used as unique identifiers for a relying party trust, but you can use any string of characters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImpersonationAuthorizationRules
+  description: |+
+    Specifies the impersonation authorization rules for issuing claims to this relying party.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImpersonationAuthorizationRulesFile
+  description: |+
+    Specifies a file that contains the impersonation authorization rules for issuing claims to this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceAuthorizationRules
+  description: |+
+    Specifies the issuance authorization rules for issuing claims to this relying party.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceAuthorizationRulesFile
+  description: |+
+    Specifies a file that contains the issuance authorization rules for issuing claims to this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceTransformRules
+  description: |+
+    Specifies the issuance transform rules for issuing claims to this relying party.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceTransformRulesFile
+  description: |+
+    Specifies a file that contains the issuance transform rules for issuing claims to this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RefreshTokenIssuanceDeviceTypes" data-throw-if-not-resolved="False" />
+  name: IssueOAuthRefreshTokensTo
+  description: |+
+    Specifies the refresh token issuance device types.
+    The acceptable values for this parameter are:
+
+    - NoDevice
+    - WorkplaceJoinedDevices
+    - AllDevices
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoDevice, WorkplaceJoinedDevices, AllDevices
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: MetadataUrl
+  description: |+
+    Specifies a URL at which the federation metadata for this relying party trust is available.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: MonitoringEnabled
+  description: |+
+    Indicates whether periodic monitoring of this relying party federation metadata is enabled.
+    The *MetadataUrl* parameter specifies the URL of the relying party's federation metadata.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the friendly name of this relying party trust.
+
+    Note: You can use the *Name* parameter as an identifier for the object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NotBeforeSkew
+  description: |+
+    Specifies the skew, as in integer, for the time stamp that marks the beginning of the validity period.
+    The higher this number is, the further back in time the validity period begins with respect to the time that the claims are issued for the relying party.
+    By default, this value is 0.
+    Specify a positive value if validation fails on the relying party because the validity period has not yet begun.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Specifies notes for this relying party trust.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProtocolProfile
+  description: |+
+    Specifies which protocol profiles the relying party supports.
+    The acceptable values for this parameter are: SAML and WsFederation.
+    By default, this parameter is blank, which indicates that both protocols are supported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: WsFed-SAML, WSFederation, SAML
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RefreshTokenProtectionEnabled
+  description: |+
+    Indicates that refresh token protection is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RequestMFAFromClaimsProviders
+  description: |+
+    Indicates whether to use the request MFA from claims providers option.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RequestSigningCertificate
+  description: |+
+    Specifies an array of certificate that is used to verify the signature on a request from the relying party.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SamlEndpoint" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SamlEndpoint
+  description: |+
+    Specifies an array of Security Assertion Markup Language (SAML) protocol endpoints for this relying party.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SamlResponseSignature
+  description: |+
+    Specifies the response signatures that the relying party expects.
+    The acceptable values for this parameter are:
+
+    - AssertionOnly
+    - MessageAndAssertion
+    - MessageOnly
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: AssertionOnly, MessageAndAssertion, MessageOnly
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignatureAlgorithm
+  description: |+
+    Specifies the signature algorithm that the relying party uses for signing and verification.
+    The acceptable values for this parameter are:
+
+    - http://www.w3.org/2000/09/xmldsig#rsa-sha1
+    - http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: http://www.w3.org/2000/09/xmldsig#rsa-sha1, http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SignedSamlRequestsRequired
+  description: |+
+    Indicates whether the Federation Service requires signed SAML protocol requests from the relying party.
+    If you specify a value of $True, the Federation Service rejects unsigned SAML protocol requests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SigningCertificateRevocationCheck
+  description: |+
+    Specifies the type of certificate validation that should occur when signatures on requests from the relying party are verified.
+    The acceptable values for this parameter are:
+
+    - None
+    - CheckEndCert
+    - CheckEndCertCacheOnly
+    - CheckChain
+    - CheckChainCacheOnly
+    - CheckChainExcludeRoot
+    - CheckChainExcludeRootCacheOnly
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: CheckChain, CheckChainCacheOnly, CheckChainExcludeRoot, CheckChainExcludeRootCacheOnly, CheckEndCert, CheckEndCertCacheOnly, None
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the relying party trust that is modified by the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the relying party trust that is modified by the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  name: TargetRelyingParty
+  isRequired: true
+  description: |+
+    Specifies a **RelyingPartyTrust** object.
+    The cmdlet modifies the relying party trust that you specify.
+    To obtain a **RelyingPartyTrust** object, use the **Get-AdfsRelyingPartyTrust** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TokenLifetime
+  description: |+
+    Specifies the duration, in minutes, for which the claims that are issued to the relying party are valid. The default TokenLifetime is 60 minutes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: WSFedEndpoint
+  description: |+
+    Specifies the WS-Federation Passive URL for this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsRelyingPartyTrust
+name: Set-AdfsRelyingPartyTrust
+description: |-
+  The **Set-AdfsRelyingPartyTrust** cmdlet configures the trust relationship with a specified relying party object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsrelyingpartytrust?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsRelyingPartyTrust

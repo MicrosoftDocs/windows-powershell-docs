@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new configuration element object in an IIS configuration collection.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElementCollection, System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Web.Administration.Configuration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-IISConfigCollectionElement
+  href: ./Get-IISConfigCollectionElement.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  New-IISConfigCollectionElement [-ConfigCollection] <ConfigurationElementCollection>
+
+   [-ConfigAttribute] <Hashtable> [[-AddAt] <UInt32>] [-Passthru] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a new file name to list of default documents'
+  code: |-
+    PS C:\> $ConfigSection = Get-IISConfigSection -SectionPath "system.webServer/defaultDocument"
+    PS C:\> $DefaultDocumentCollection = Get-IISConfigCollection -ConfigElement $ConfigSection -CollectionName "files"
+    PS C:\> New-IISConfigCollectionElement 
+      -ConfigCollection $DefaultDocumentCollection -ConfigAttribute @{"Value" = "MyDefDoc.htm"}
+  description: |-
+    This command creates an entry in the list of default documents.
+  summary: ""
+- title: 'Example 2: Add a new file name to the top of the list of default documents'
+  code: |-
+    PS C:\> Get-IISConfigSection -SectionPath "system.webServer/defaultDocument" | Get-IISConfigCollection -CollectionName "files" | New-IISConfigCollectionElement  -ConfigAttribute @{Value = "MyDefDoc.htm"} -AddAt 0
+  description: |-
+    This command creates a new entry in the list of default documents, and makes this new entry the first item in the collection.
+    This is done by setting the value of the *AddAt* parameter to 0; the first item in a collection is always item number 0.
+  summary: ""
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: AddAt
+  description: |+
+    Specifies the collection index for the new configuration element; by default, new elements are added to the end of the collection.
+    The collection index specifies the ordering of items in the collection: the first item in the collection is item 0; the second item in the collection is item 1; and so on.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: ConfigAttribute
+  isRequired: true
+  description: |+
+    Specifies a hashtable of the attributes for the configuration element to be inserted.
+    The cmdlet will fail if any required attributes are omitted from this table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ConfigurationElementCollection" data-throw-if-not-resolved="False" />
+  name: ConfigCollection
+  isRequired: true
+  description: |+
+    Specifies the **ConfigurationCollection** object to which the new collection element will be added.
+    If a **ConfigurationCollection** is previously obtained and assigned to a variable, you cannot pass it to this cmdlet through the pipeline because the pipeline engine will try to enumerate it, passing **ConfigurationElement** objects instead.
+    Try either passing the whole Get-IISConfigCollection cmdlet into the pipeline or use it as a parameter for correct results.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.New-IISConfigCollectionElement
+name: New-IISConfigCollectionElement
+description: |-
+  The **New-IISConfigCollectionElement** cmdlet creates a new ConfigurationElement in a given Internet Information Services (IIS) ConfigurationCollection.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/new-iisconfigcollectionelement?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-IISConfigCollectionElement

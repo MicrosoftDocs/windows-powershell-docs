@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Restarts an application pool or a Web site.
+module: WebAdministration
+notes: ""
+inputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WebItemState
+  href: ./Get-WebItemState.yml
+- text: Start-WebItem
+  href: ./Start-WebItem.yml
+- text: Stop-WebItem
+  href: ./Stop-WebItem.yml
+syntaxes:
+- Restart-WebItem [-Protocol <String>] [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Recycle an Application Pool --------------'
+  code: |-
+    IIS:\>Restart-WebItem 'IIS:\AppPools\DefaultAppPool'
+  description: |-
+    Restarts the application pool named DefaultAppPool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    The protocol binding of the item to restart (applies to sites only).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    The path to the application pool or Web site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Restart-WebItem
+name: Restart-WebItem
+description: |-
+  Use theRestart-WebItemcmdlets to recycle an application pool or a Web site.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/restart-webitem?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

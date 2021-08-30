@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets available packages for a Nano Server installation image.
+module: NanoServerImageGenerator
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Edit-NanoServerImage
+  href: ./Edit-NanoServerImage.yml
+- text: New-NanoServerImage
+  href: ./New-NanoServerImage.yml
+syntaxes:
+- Get-NanoServerPackage [[-MediaPath] <String>] [[-BasePath] <String>] [[-LogPath] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get available packages'
+  code: |-
+    PS C:\> Get-NanoServerPackage -MediaPath D:\
+  description: |-
+    This command gets packages available on the source media mounted on the D: drive.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BasePath
+  description: |+
+    Specifies the path to the source media.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the path where log files from the operation will be collected.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MediaPath
+  description: |+
+    Specifies the path of the source media.
+    If a local copy of the source media already exists, and it is specified as the base path, then no copying is performed.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NanoServerImageGenerator.Get-NanoServerPackage
+name: Get-NanoServerPackage
+description: |-
+  The **Get-NanoServerPackage** cmdlet gets packages that are available to embed into a Nano Server installation image.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: NanoServerImageGenerator-help.xml
+  Module Name: NanoServerImageGenerator
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nanoserverimagegenerator/get-nanoserverpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NanoServerPackage

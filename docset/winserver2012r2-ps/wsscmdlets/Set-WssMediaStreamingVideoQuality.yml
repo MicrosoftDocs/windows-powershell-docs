@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the video streaming quality of videos that are streamed from the server.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.MediaStreaming.VideoQuality" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WssMediaStreamingVideoQuality
+  href: ./Get-WssMediaStreamingVideoQuality.yml
+syntaxes:
+- Set-WssMediaStreamingVideoQuality [-Quality] <VideoQuality> [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the video streaming quality'
+  code: |-
+    PS C:\>Set-WssMediaStreamingVideoQuality
+  description: |-
+    This command sets the video streaming quality on the server on which you run the cmdlet.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="VideoQuality" data-throw-if-not-resolved="False" />
+  name: Quality
+  isRequired: true
+  description: |+
+    Specifies the video quality.
+    The cmdlet sets the video quality value that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: Low, Medium, High, Best
+uid: WSSCmdlets.Set-WssMediaStreamingVideoQuality
+name: Set-WssMediaStreamingVideoQuality
+description: |-
+  The **Set-WssMediaStreamingVideoQuality** cmdlet modifies the video streaming quality of videos that are streamed from the server.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssmediastreamingvideoquality?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssMediaStreamingVideoQuality

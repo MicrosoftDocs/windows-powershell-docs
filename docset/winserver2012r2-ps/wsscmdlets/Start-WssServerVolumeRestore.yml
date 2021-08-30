@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a volume restore operation.
+module: WSSCmdlets
+notes: ""
+syntaxes:
+- >-
+  Start-WssServerVolumeRestore [-BackupSet] <BackupSet> [-VolumeToRestore] <BackupVolume>
+
+   [-DestinationVolume] <BackupVolume> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Restore a volume'
+  code: |-
+    PS C:\> $Policy = Get-WssBackupPolicy
+    PS C:\> $Source = Get-WssBackupVolume -BackupPolicy $Policy
+    PS C:\> $Destination = Get-WssBackupVolume -AllVolumes
+    PS C:\> $Backupset = Get-WssBackupSet
+    PS C:\> Start-WssServerVolumeRestore -BackupSet $Backupset[0] -VolumeToRestore $Source[2] -DestinationVolume $Destination[2]
+  description: |-
+    This example restores a volume from a backup set.
+
+    The first command uses the **Get-WssBackupPolicy** cmdlet to get the current backup policy, and stores the results in the variable $Policy.
+
+    The second command uses the **Get-WssBackupVolume** cmdlet to get the backup volumes that are backed up with this policy, and stores the result in the variable named **$Source**.
+
+    The third command uses the **Get-WssBackupVolume** cmdlet to get the volumes on the system, and stores the result in the variable named **$Destination**.
+
+    The fourth command uses the **Get-WssBackupSet** cmdlet to retrieve the backup sets, and stores the result in the variable named **$Backupset**.
+
+    The fifth command uses the **Get-WssServerVolumeRestore** cmdlet to restore the volume.
+  summary: ""
+parameters:
+- type: <xref href="BackupSet" data-throw-if-not-resolved="False" />
+  name: BackupSet
+  isRequired: true
+  description: |+
+    Specifies a backup set from which to restore a volume.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="BackupVolume" data-throw-if-not-resolved="False" />
+  name: DestinationVolume
+  isRequired: true
+  description: |+
+    Specifies a destination volume to which to restore a source volume.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="BackupVolume" data-throw-if-not-resolved="False" />
+  name: VolumeToRestore
+  isRequired: true
+  description: |+
+    Specifies a source volume to restore.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WSSCmdlets.Start-WssServerVolumeRestore
+name: Start-WssServerVolumeRestore
+description: |-
+  The **Start-WssServerVolumeRestore** cmdlet starts a volume restore operation on a sbs_sbs8_2 server.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/start-wssservervolumerestore?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-WssServerVolumeRestore

@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of all user sessions in a collection or in a Remote Desktop deployment.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.RDUserSession" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-RDUserSession [[-CollectionName] <String[]>] [[-ConnectionBroker] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve a list of user sessions in a collection'
+  code: |-
+    PS C:\> Get-RDUserSession -ConnectionBroker "rdcb.contoso.com"
+  description: |-
+    This command lists user sessions in a collection that is associated with the RD Connection Broker server named rdcb.contoso.com.
+  summary: ""
+- title: 'Example 2: Retrieve a list of user sessions in multiple collections'
+  code: |-
+    PS C:\> Get-RDUserSession -ConnectionBroker "rdcb.contoso.com" -CollectionName @("Session Collection","Virtual Desktop Collection")
+  description: |-
+    This command lists user sessions in the collections named Session Collection and Virtual Desktop Collection.
+    The cmdlet associates these collections with the RD  Connection Broker server named rdcb.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CollectionName
+  description: |+
+    Specifies an array that contains the name of the virtual desktop collection that contains the user sessions.
+    If this parameter does not appear, the cmdlet returns all user sessions across all virtual desktop collections.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for this Remote Desktop deployment.
+    Remote users connect to this server to obtain views of available firstref_server_7 RemoteApp programs, session-based desktops, and virtual desktops.
+    If this parameter does not appear, the default value is the fully qualified domain name (FQDN) of the local host.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Get-RDUserSession
+name: Get-RDUserSession
+description: |-
+  The **Get-RDUserSession** cmdlet gets a list of all user sessions in a collection or in a Remote Desktop deployment.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdusersession?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDUserSession

@@ -1,0 +1,352 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the IP address configuration.
+module: NetTCPIP
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetIPAddress" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-NetRoute
+  href: ./Get-NetRoute.yml
+- text: New-NetIPAddress
+  href: ./New-NetIPAddress.yml
+- text: Remove-NetIPAddress
+  href: ./Remove-NetIPAddress.yml
+- text: Set-NetIPAddress
+  href: ./Set-NetIPAddress.yml
+syntaxes:
+- >-
+  Get-NetIPAddress [[-IPAddress] <String[]>] [-InterfaceIndex <UInt32[]>] [-InterfaceAlias <String[]>]
+
+   [-AddressFamily <AddressFamily[]>] [-Type <Type[]>] [-PrefixLength <Byte[]>] [-PrefixOrigin <PrefixOrigin[]>]
+
+   [-SuffixOrigin <SuffixOrigin[]>] [-AddressState <AddressState[]>] [-ValidLifetime <TimeSpan[]>]
+
+   [-PreferredLifetime <TimeSpan[]>] [-SkipAsSource <Boolean[]>] [-AssociatedIPInterface <CimInstance>]
+
+   [-PolicyStore <String>] [-IncludeAllCompartments] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get IPv6 address configuration'
+  code: |-
+    PS C:\>Get-NetIPAddress -AddressFamily IPv6
+  description: |-
+    This command gets information about IP address configuration for all IPv6 addresses on the computer.
+  summary: ""
+- title: 'Example 2: Get IP address information and format the output'
+  code: |-
+    PS C:\>Get-NetIPAddress | Format-Table
+  description: |-
+    This command gets information about IP address configuration, and displays that information in a table.
+    The table format provides a convenient overview for computers with many IP addresses.
+  summary: ""
+- title: 'Example 3: Get IP address information by the interface index'
+  code: |-
+    PS C:\>Get-NetIPAddress -InterfaceIndex 12
+  description: |-
+    This command gets information about IP address configuration for a specific interface index.
+  summary: ""
+- title: 'Example 4: Get IP address information and sort the output'
+  code: |-
+    PS C:\>Get-NetIPAddress | Sort-Object -Property InterfaceIndex | Format-Table
+  description: |-
+    This command gets information about IP address configuration, sorts them numerically by the interface index in the cmdlet name, and then displays them in a table format.
+    This display can help you find IP address information by interface index.
+  summary: ""
+- title: 'Example 5: Get IP address information and filter the output'
+  code: |-
+    PS C:\>Get-NetIPAddress | Where-Object -FilterScript { $_.ValidLifetime -Lt ([TimeSpan]::FromDays(1)) }
+
+
+    Similarly, this cmdlet can be used to get information about IP address configuration for IP addresses that have an Infinite ValidLifetime.
+    PS C:\>Get-NetIPAddress | Where-Object -FilterScript { $_.ValidLifetime -Eq ([TimeSpan]::MaxValue) }
+  description: |-
+    This command gets IP address configuration for IP addresses that have a **ValidLifetime** of less than one day.
+  summary: ""
+parameters:
+- type: <xref href="AddressFamily" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressFamily
+  description: |+
+    Specifies an array of IP address families.
+    The cmdlet gets the IP address configuration that matches the address families.
+    The acceptable values for this parameter are:
+
+
+     -- IPv4
+     -- IPv6
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: IPv4, IPv6
+- type: <xref href="AddressState" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressState
+  description: |+
+    Specifies an array of duplicate address detection (DAD) state values for the IP address.
+    Use this parameter to filter the output based on addresses that are valid and available for use.
+    The acceptable values for this parameter are:
+
+
+     -- Invalid.
+    IP address configuration information for addresses that are not valid and will not be used.
+
+     -- Tentative.
+    IP address configuration information for addresses that are not used for communication, as the uniqueness of those IP addresses is being verified.
+
+     -- Duplicate.
+    IP address configuration information for addresses for which a duplicate IP address has been detected and the current IP address will not be used.
+
+     -- Deprecated.
+    IP address configuration information for addresses that will no longer be used to establish new connections, but will continue to be used with existing connections.
+
+     -- Preferred.
+    IP address configuration information for addresses that are valid and available for use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Invalid, Tentative, Duplicate, Deprecated, Preferred
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedIPInterface
+  description: |+
+    Specifies an IP interface as a CIM object.
+    To obtain an IP interface, use the Get-NetIPInterface cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeAllCompartments
+  description: |+
+    Indicates that the cmdlet includes addresses from all configured network compartments.
+    If you do not specify this parameter, the cmdlet gets only addresses in the default network compartment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceAlias
+  description: |+
+    Specifies an array of aliases of network interfaces.
+    The cmdlet gets IP addresses that match the aliases.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ifAlias
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceIndex
+  description: |+
+    Specifies an array of indexes of network interfaces.
+    The cmdlet gets IP addresses that match the indexes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ifIndex
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPAddress
+  description: |+
+    Specifies an array of IPv4 or IPv6 addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: LocalAddress
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  description: |+
+    Specifies a **PolicyStore** value.
+    The acceptable values for this parameter are:
+
+
+     -- ActiveStore.
+    The IP address information is valid.
+
+     -- PersistentStore.
+    The computer saves IP address information across restarts.
+    When the computer restarts, it copies the saved settings to the ActiveStore.
+
+
+    The default value is ActiveStore.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PreferredLifetime
+  description: |+
+    Specifies an array of values of preferred lifetimes, as **TimeSpan** objects, for an IP address.
+    To obtain a **TimeSpan** object, use the **New-TimeSpan** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PrefixLength
+  description: |+
+    Specifies an array of prefix lengths.
+    This parameter defines the local subnet size, and is also known as a subnet mask.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PrefixOrigin" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PrefixOrigin
+  description: |+
+    Specifies an array of origins for address prefixes.
+    IP addresses are divided into two parts, the prefix and the suffix.
+    The address prefix identifies the network portion of an IP address, and the address suffix identifies the host portion.
+    The acceptable values for this parameter are:
+
+
+     -- Manual.
+    The IP address prefix was manually specified.
+
+     -- WellKnown.
+    The IP address prefix is from a well-known source.
+
+     -- DHCP.
+    The IP address prefix was provided by DHCP settings.
+
+     -- RouterAdvertisement.
+    The IP address prefix was obtained through a router advertisement (RA).
+
+     -- Other.
+    The IP address prefix was obtained from another source, such as a VPN.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Other, Manual, WellKnown, Dhcp, RouterAdvertisement
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SkipAsSource
+  description: |+
+    Indicates whether an address is a primary IP address.
+    This parameter identifies the primary IP address for outgoing traffic in a multiple IP address scenario.
+    If this parameter is set to True, the addresses are not used for outgoing traffic and are not registered in DNS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SuffixOrigin" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SuffixOrigin
+  description: |+
+    Specifies an array of origins for address suffixes.
+    IP addresses are divided into two parts, the prefix and the suffix.
+    The address prefix identifies the network portion of an IP address, and the address suffix identifies the host portion.
+    The acceptable values for this parameter are:
+
+
+     -- Manual.
+    The IP address suffix was manually specified.
+
+     -- WellKnown.
+    The IP address suffix is from a well-known source.
+
+     -- DHCP.
+    The IP address suffix was provided by DHCP settings.
+
+     -- Link.
+    The IP address suffix was obtained from the link-layer address.
+
+     -- Random.
+    The IP address suffix was obtained from a random source.
+
+     -- Other.
+    The IP address suffix was obtained from another source, such as a VPN.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Other, Manual, WellKnown, Dhcp, Link, Random
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Type" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Type
+  description: |+
+    Specifies an array of IP address types.
+    The acceptable values for this parameter are:
+
+
+     -- Unicast
+
+     -- Anycast
+
+
+    The default value is Unicast.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unicast, Anycast
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ValidLifetime
+  description: |+
+    Specifies an array of values for valid lifetimes, as **TimeSpan** objects, for an IP address.
+    To obtain a **TimeSpan** object, use the **New-TimeSpan** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetTCPIP.Get-NetIPAddress
+name: Get-NetIPAddress
+description: |-
+  The **Get-NetIPAddress** cmdlet gets the IP address configuration, such as IPv4 addresses, IPv6 addresses and the IP interfaces with which addresses are associated.
+  Without parameters, this cmdlet gets the entire IP address configuration for the computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetIPAddress.cdxml-help.xml
+  Module Name: NetTCPIP
+  ms.date: 06/23/2021
+  online version: https://docs.microsoft.com/powershell/module/nettcpip/get-netipaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetIPAddress

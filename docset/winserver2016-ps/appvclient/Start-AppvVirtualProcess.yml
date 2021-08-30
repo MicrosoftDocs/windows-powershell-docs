@@ -1,0 +1,212 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a virtual process.
+module: AppvClient
+notes: ""
+links:
+- text: Get-AppvClientConnectionGroup
+  href: ./Get-AppvClientConnectionGroup.yml
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Get-AppvVirtualProcess
+  href: ./Get-AppvVirtualProcess.yml
+syntaxes:
+- >-
+  Start-AppvVirtualProcess [-FilePath] <String> [[-ArgumentList] <String[]>] [-Credential <PSCredential>]
+
+   [-WorkingDirectory <String>] [-LoadUserProfile] [-NoNewWindow] [-PassThru] [-RedirectStandardError <String>]
+
+   [-RedirectStandardInput <String>] [-RedirectStandardOutput <String>] [-Wait] [-UseNewEnvironment]
+
+   -AppvClientObject <Object> [<CommonParameters>]
+- >-
+  Start-AppvVirtualProcess [-FilePath] <String> [[-ArgumentList] <String[]>] [-WorkingDirectory <String>]
+
+   [-PassThru] [-Verb <String>] [-Wait] [-WindowStyle <ProcessWindowStyle>] -AppvClientObject <Object>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Start a virtual process in a virtual environment of a package'
+  code: |-
+    PS C:\> $AppVObj = Get-AppvClientPackage -Name "MyPackage" 
+    PS C:\> Start-AppvVirtualProcess -FilePath "C:\Calc.exe" -AppvClientObject $AppVObj
+  description: |-
+    The first command gets the client package named MyPackage by using the **Get-AppvClientPackage** cmdlet.
+    The command stores the result in the $AppVObj variable.
+
+    The second command starts a new virtual process for Calc.exe in virtual environment of in $AppVObj.
+  summary: ""
+- title: 'Example 2: Start a virtual process in a virtual environment of a connection group'
+  code: |-
+    PS C:\> $AppVObj = Get-AppvClientConnectionGroup -Name MyConnectionGroup
+    PS C:\> Start-AppvVirtualProcess -FilePath "C:\Calc.exe" -AppvClientObject $AppVObj
+  description: |-
+    The first command gets the client package named MyPackage by using the **Get-AppvClientConnectionGroup** cmdlet.
+    The command stores the result in the $AppVObj variable.
+
+    The second command starts a new virtual process for Calc.exe in the virtual environment of in $AppVObj.
+  summary: ""
+parameters:
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: AppvClientObject
+  isRequired: true
+  description: |+
+    Specifies an **AppvClientPackage** or **AppvClientConnectionGroup** object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ArgumentList
+  description: |+
+    Specifies the arguments to be passed into the virtual process.
+
+  defaultValue: None
+  position: "1"
+  aliases: Args
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credential to start this process.
+
+  defaultValue: None
+  position: Named
+  aliases: RunAs
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies a file path.
+
+  defaultValue: None
+  position: "0"
+  aliases: PSPath
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LoadUserProfile
+  description: |+
+    Indicates that the cmdlet loads a user profile for use with the process.
+
+  defaultValue: None
+  position: Named
+  aliases: Lup
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoNewWindow
+  description: |+
+    Indicates that the cmdlet attempts to keep the process in the same window instead of opening a new window.
+
+  defaultValue: None
+  position: Named
+  aliases: nnw
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RedirectStandardError
+  description: |+
+    Redirects the stderr to the file specified.
+
+  defaultValue: None
+  position: Named
+  aliases: RSE
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RedirectStandardInput
+  description: |+
+    Takes the stdinput from the file specified.
+
+  defaultValue: None
+  position: Named
+  aliases: RSI
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RedirectStandardOutput
+  description: |+
+    Redirects the stdout to the file specified.
+
+  defaultValue: None
+  position: Named
+  aliases: RSO
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseNewEnvironment
+  description: |+
+    Indicates that this cmdlet uses a new environment for the process.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Verb
+  description: |+
+    Specifies a verb for the process.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Indicates that the cmdlet uses synchronous operation of the virtual process.
+    The cmdlet waits to exit until the virtual process exits.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ProcessWindowStyle" data-throw-if-not-resolved="False" />
+  name: WindowStyle
+  description: |+
+    Specifies what to do without a Process Window Style.
+    The acceptable values for this parameter are:
+
+    - Normal.
+    Display the normal window. 
+    - Hidden.
+    Launch a hidden window. 
+    - Minimized.
+    Launch a minimized window. 
+    - Maximized.
+    Launch a maximized window. 
+
+    The default value is Normal.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Normal, Hidden, Minimized, Maximized
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WorkingDirectory
+  description: |+
+    Specifies working directory of the process.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Start-AppvVirtualProcess
+name: Start-AppvVirtualProcess
+description: |-
+  The **Start-AppvVirtualProcess** cmdlet starts a new virtual process.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: AppVClientCmdlets-help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/start-appvvirtualprocess?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-AppvVirtualProcess

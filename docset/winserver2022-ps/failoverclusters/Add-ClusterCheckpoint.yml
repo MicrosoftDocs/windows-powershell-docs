@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a cryptographic key checkpoint or registry checkpoint for a resource.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterCheckpoint
+  href: ./Get-ClusterCheckpoint.yml
+- text: Get-ClusterResource
+  href: ./Get-ClusterResource.yml
+- text: Remove-ClusterCheckpoint
+  href: ./Remove-ClusterCheckpoint.yml
+syntaxes:
+- >-
+  Add-ClusterCheckpoint [[-ResourceName] <String>] [-CryptoCheckpointName <String>]
+
+   [-CryptoCheckpointType <String>] [-CryptoCheckpointKey <String>] [-RegistryCheckpoint <String>]
+
+   [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add registry checkpoint'
+  code: |-
+    PS C:\> Add-ClusterCheckpoint -ResourceName "Cluster Name" -RegistryCheckpoint "software\clusname"
+    Resource                                                    Name 
+    --------                                                    ---- 
+    Cluster Name                                                software\clusname
+  description: |-
+    This example adds a registry checkpoint called software\clusname for the resource named cluster name.
+  summary: ""
+- title: 'Example 2: Add cryptographic checkpoint'
+  code: |-
+    PS C:\> Get-ClusterResource -Name "Cluster Name" | Add-ClusterCheckpoint -CryptoCheckpointName "Microsoft Base Cryptographic Provider v1.0"  -CryptoCheckpointType 1 -CryptoCheckpointKey "Crypto"
+    Resource                      Name                          Type                          Key 
+    --------                      ----                          ----                          --- 
+    Cluster Name                  Microsoft Base Cryptograph... 1                             Crypto
+  description: |-
+    This example adds a cryptographic checkpoint for the resource named Cluster Name.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CryptoCheckpointKey
+  description: |+
+    Specifies the key of a cryptographic key checkpoint to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CryptoCheckpointName
+  description: |+
+    Specifies the name of a cryptographic key checkpoint to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CryptoCheckpointType
+  description: |+
+    Specifies the type of a cryptographic key checkpoint to add.
+    Options depend on the cryptographic provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to run the cmdlet or the cluster resource for which the checkpoint should be added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RegistryCheckpoint
+  description: |+
+    Specifies the name of the registry checkpoint to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceName
+  description: |+
+    Specifies the resource for which a checkpoint should be added.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterCheckpoint
+name: Add-ClusterCheckpoint
+description: |-
+  The **Add-ClusterCheckpoint** cmdlet adds a cryptographic key checkpoint or registry checkpoint for a resource.
+
+  Checkpoints help provide failover support for applications that store configuration information locally instead of or in addition to storing information in the cluster configuration database.
+  Applications might store information locally in two ways.
+  One way is to store configuration information in the registry on the local server; another way is to use cryptographic keys on the local server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustercheckpoint?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusterCheckpoint

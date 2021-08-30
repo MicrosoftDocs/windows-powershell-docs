@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies hypervisor Code Integrity options for a policy.
+module: ConfigCI
+notes: ""
+links:
+- text: Set-RuleOption
+  href: ./Set-RuleOption.yml
+syntaxes:
+- Set-HVCIOptions [-Enabled] [-Strict] [-DebugMode] [-FilePath] <String> [<CommonParameters>]
+- Set-HVCIOptions [-None] [-FilePath] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Assign the Strict option'
+  code: |-
+    PS C:\> Set-HVCIOptions -Strict -FilePath '.\Policy.xml'   
+    PS C:\> Get-Content -Path '.Policy.xml'
+        <CiSigner SignerId="ID_SIGNER_S_21" />
+      </CiSigners>
+      <HvciOptions>2</HvciOptions>
+    </SiPolicy>
+  description: |-
+    The first command assigns the Strict option in Policy.xml.
+
+    The second command displays the contents of the policy.
+    This example shows the last few lines of the policy, which include the **HvciOptions** property.
+    It now has a value of 2.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DebugMode
+  description: |+
+    Indicates that this cmdlet turns on DebugMode in the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    Indicates that this cmdlet turns on Enabled in the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the path of the policy .xml file that this cmdlet modifies.
+
+  defaultValue: None
+  position: "0"
+  aliases: f
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: None
+  description: |+
+    Indicates that this cmdlet removes all hypervisor Code Integrity options from the policy.
+    In the policy itself, **HvciOptions** takes a value of zero (0).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Strict
+  description: |+
+    Indicates that this cmdlet turns on Strict in the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ConfigCI.Set-HVCIOptions
+name: Set-HVCIOptions
+description: |-
+  The **Set-HVCIOptions** cmdlet modifies hypervisor Code Integrity options for a policy.
+  The policy stores these options in the **HvciOptions** property of the policy.
+  You can specify any combination of the following values: 
+
+  - Enabled  
+  - DebugMode  
+  - Strict
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/configci/set-hvcioptions?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-HVCIOptions

@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a relationship between a user and a computer for Remote Web Access.
+module: WssCmdlets
+notes: ""
+links:
+- text: Add-WssComputerAccess
+  href: ./Add-WssComputerAccess.yml
+syntaxes:
+- Remove-WssComputerAccess -ComputerName <String> -UserName <String>
+examples:
+- title: 'Example 1: Remove computer access for a user'
+  code: |-
+    PS C:\> Remove-WssComputerAccess -ComputerName "Workstation033" -UserName "SarahJones"
+  description: |-
+    This command deletes a relationship between the user SarahJones and the computer named Workstation033.
+    The user can no longer use Remote Web Access to connect to this computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of a computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  isRequired: true
+  description: |+
+    Specifies the user name of an account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Remove-WssComputerAccess
+name: Remove-WssComputerAccess
+description: |-
+  The **Remove-WssComputerAccess** cmdlet removes a relationship between a user account and a computer used for Remote Web Access.
+  After you remove the relationship, a user cannot access a computer by means of Remote Web Access.
+  You can use the Add-WssComputerAccess cmdlet to create a relationship for use with Remote Web Access.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/remove-wsscomputeraccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

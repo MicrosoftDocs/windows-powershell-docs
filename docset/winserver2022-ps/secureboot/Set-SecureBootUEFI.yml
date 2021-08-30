@@ -1,0 +1,198 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the Secure Boot-related UEFI variables.
+module: SecureBoot
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SecureBoot.Commands.UEFIFormattedVariable" data-throw-if-not-resolved="False" />
+  description: |-
+    This command accepts a **UEFIFormattedVariable** object that contains the information for the *Name*, *Time*, *Content*, and *AppendWrite* parameters.
+outputs:
+- name: <xref href="Microsoft.SecureBoot.Commands.UEFIEnvironmentVariable" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **UEFIEnvironmentVariable** object that contains the following properties: 
+
+    - **Name**
+    - **Guid**
+    - **Bytes**
+    - **Attributes**
+links:
+- text: Confirm-SecureBootUEFI
+  href: ./Confirm-SecureBootUEFI.yml
+- text: Format-SecureBootUEFI
+  href: ./Format-SecureBootUEFI.yml
+- text: Get-SecureBootPolicy
+  href: ./Get-SecureBootPolicy.yml
+- text: Get-SecureBootUEFI
+  href: ./Get-SecureBootUEFI.yml
+syntaxes:
+- >-
+  Set-SecureBootUEFI -Name <String> [-ContentFilePath <String>] [-SignedFilePath <String>] -Time <String>
+
+   [-AppendWrite] [-OutputFilePath <String>] [<CommonParameters>]
+- >-
+  Set-SecureBootUEFI -Name <String> [-Content <Byte[]>] [-SignedFilePath <String>] -Time <String> [-AppendWrite]
+
+   [-OutputFilePath <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the DBX UEFI variable'
+  code: |-
+    PS C:\> $ObjectFromFormat = ( Format-SecureBootUEFI -Name DBX -SignatureOwner 12345678-1234-1234-1234-123456789abc -Algorithm SHA256 -Hash 0011223344556677889900112233445566778899001122334455667788990011 -SignableFilePath GeneratedFileToSign.bin -Time 2011-11-01T13:30:00Z -AppendWrite ) 
+    PS C:\> .\signtool.exe sign /fd sha256 /p7 .\ /p7co 1.2.840.113549.1.7.1 /p7ce DetachedSignedData /a /f PrivateKey.pfx GeneratedFileToSign.bin
+    PS C:\> $ObjectFromFormat | Set-SecureBootUEFI -SignedFilePath GeneratedFileToSign.bin.p7
+    Name       : dbx 
+    Bytes      : {161, 89, 192, 165...} 
+    Attributes : NON VOLATILE 
+                 BOOTSERVICE ACCESS 
+                 RUNTIME ACCESS 
+                 TIME BASED AUTHENTICATED WRITE ACCESS
+  description: |-
+    This example sets the information obtained from the Format-SecureBootUEFI cmdlet to the DBX UEFI variable.
+
+    The first command supplies a path to the signed package to be authenticated.
+    The file named GeneratedFileToSign.bin is a digest created by the Format-SecureBootUEFI cmdlet that needs to be signed according to the UEFI specification.
+
+    The second command runs the SignTool.exe tool from the current directory to sign the digest.
+    The SignTool.exe tool can be downloaded from [Windows Software Development Kit (SDK) for Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=236500) on MSDN.
+
+    The third command sets the information.
+  summary: ""
+- title: 'Example 2: Set the DBX UEFI variable by using a signed package'
+  code: |-
+    PS C:\> Set-SecureBootUEFI -ContentFilePath FormattedVariable.bin -SignedFilePath GeneratedFileToSign.bin.p7
+    Name       : dbx 
+    Bytes      : {161, 89, 192, 165...} 
+    Attributes : NON VOLATILE 
+                 BOOTSERVICE ACCESS 
+                 RUNTIME ACCESS 
+                 TIME BASED AUTHENTICATED WRITE ACCESS
+  description: |-
+    This command sets the formatted data that was written to file FormattedVariable.bin to the DBX UEFI variable.
+    This cmdlet supplies a path to the signed package to be authenticated.
+  summary: ""
+- title: 'Example 3: Set the DBX UEFI variable by using unsigned data'
+  code: |-
+    PS C:\> $objectFromFormat = ( Format-SecureBootUEFI -Name DB -SignatureOwner 12345678-1234-1234-1234-123456789abc -Time 2011-11-01T13:30:00Z -CertificateFilePath db.cer -FormatWithCert )
+    PS C:\> $objectFromFormat | Set-SecureBootUEFI
+    Name       : db 
+    Bytes      : {161, 89, 192, 165...} 
+    Attributes : NON VOLATILE 
+                 BOOTSERVICE ACCESS 
+                 RUNTIME ACCESS 
+                 TIME BASED AUTHENTICATED WRITE ACCESS
+  description: |-
+    This example creates formatted data that is not signed and sets the unsigned data into the UEFI variable named db.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AppendWrite
+  description: |+
+    Indicates that the contents of the current variable are appended instead of overwritten.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: append
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Content
+  description: |+
+    Specifies the byte contents of the variable that is being set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContentFilePath
+  description: |+
+    Specifies the file that contains the contents that is being set to the environment variable.
+
+    If you specify only the name, the file must be in the current working directory.
+    Otherwise, specify the full path of the file.
+
+  defaultValue: None
+  position: Named
+  aliases: f
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the UEFI environment variable.
+    The acceptable values for this parameter are: PK, KEK, DB, and DBX.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: n
+  parameterValueGroup: PK, KEK, db, dbx
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutputFilePath
+  description: |+
+    Specifies the name of the file created that contains the contents of what is set.
+    If you specify this parameter, instead of setting the variable, the cmdlet stores the contents in this file.
+
+    The file is created in the specified path location.
+
+  defaultValue: None
+  position: Named
+  aliases: of
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignedFilePath
+  description: |+
+    Specifies the signed data that is paired with the contents that are being set to the environment variable.
+
+    If you specify only the name, the file must be in the current working directory.
+    Otherwise, specify the full path of the file.
+
+  defaultValue: None
+  position: Named
+  aliases: s
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Time
+  isRequired: true
+  description: |+
+    Specifies the timestamp that is used in the signature.
+    Format this value as follows so that it is accepted as a **DateTime** object: 
+
+    `"2011-11-01T13:30:00Z"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: t
+  parameterValueGroup: ""
+uid: SecureBoot.Set-SecureBootUEFI
+name: Set-SecureBootUEFI
+description: |-
+  The **Set-SecureBootUEFI** cmdlet takes a formatted content object that is created by running the Format-SecureBootUEFI cmdlet and a signed file, combines the two and then attempts to set the package in one of the Secure Boot variables.
+  The supported Secure Boot variables include Platform Key (PK), Key Exchange Key (KEK), Signature Database (DB), and Forbidden Signature Database (DBX).
+
+  If successful, this cmdlet returns a **UEFIEnvironmentVariable** object.
+  Otherwise, it displays an error.
+
+  This cmdlet runs on both UEFI and BIOS (non-UEFI) computers.
+  If the computer does not support Secure Boot or is a non-UEFI computer, this cmdlet displays the following: 
+
+  `Cmdlet not supported on this platform.`
+
+  If you do not run Windows PowerShell® in administrator mode, this cmdlet displays the following: 
+
+  `Unable to set proper privileges.
+  Access was denied.`
+
+  If you supply a signed file to this cmdlet that is not valid, this cmdlet displays the following: 
+
+  `Incorrect authentication data.`
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
+  Module Name: SecureBoot
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/secureboot/set-securebootuefi?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-SecureBootUEFI

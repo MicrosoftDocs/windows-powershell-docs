@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the DNS settings configured on the DHCP server service for a specific scope, reservation, or server-wide.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Reservation" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6DnsSetting" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Set-DhcpServerv6DnsSetting
+  href: ./Set-DhcpServerv6DnsSetting.yml
+syntaxes:
+- >-
+  Get-DhcpServerv6DnsSetting [-ComputerName <String>] [[-Prefix] <IPAddress>] [[-IPAddress] <IPAddress>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the server-level DNS registration setting'
+  code: |-
+    PS C:\> Get-DhcpServerv6DnsSetting -ComputerName "dhcpserver.contoso.com"
+  description: |-
+    This example gets the DHCPv6 server-level or server-wide DNS registration setting.
+  summary: ""
+- title: 'Example 2: Get the DNS registration setting for a scope'
+  code: |-
+    PS C:\> Get-DhcpServerv6DnsSetting -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020::
+  description: |-
+    This example gets the DNS registration setting configured for the scope 2001:4898:7020:1020::.
+  summary: ""
+- title: 'Example 3: Get the DNS registration setting for a reserved address'
+  code: |-
+    PS C:\> Get-DhcpServerv6DnsSetting -ComputerName "dhcpserver.contoso.com" -IPAddress 2001:4898:7020:1020::10
+  description: |-
+    This example gets the DNS registration setting configured for the reserved IP address 2001:4898:7020:1020:10.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  description: |+
+    Specifies the IPv6 address of the reservation for which the DNS settings are retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ReservedIP
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: Prefix
+  description: |+
+    Specifies the subnet prefix of the IPv6 scope for which the DNS settings are retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DhcpServer.Get-DhcpServerv6DnsSetting
+name: Get-DhcpServerv6DnsSetting
+description: |-
+  The **Get-DhcpServerv6DnsSetting** cmdlet gets the DNS settings configured on the Dynamic Host Configuration Protocol (DHCP) server service for a specific scope, reservation, or server-wide.
+
+  If you specify neither the *Prefix* or *IPAddress* parameters, the DNS settings at the server level are retrieved.
+  If you specify the *Prefix* or *IPAddress* parameter, this cmdlet gets the effective DNS setting at the specified level such as reservation, scope, or server.
+  If the DNS setting value is not configured at the specified level, the DNS settings from the level above are retrieved, if they are configured.
+  If the DNS setting is not specified at the server level, the default behavior of the DHCP server service such as DNS update is returned.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerv6DnsSetting_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverv6dnssetting?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DhcpServerv6DnsSetting

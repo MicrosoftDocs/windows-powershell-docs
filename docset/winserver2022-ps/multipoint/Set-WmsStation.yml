@@ -1,0 +1,167 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies station information.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Throws SecurityException if the specified autologon user is an administrative user.
+    This exception is not thrown if the *OverrideAdminWarning* parameter is specified for administrative users.
+links:
+- text: Clear-WmsStation
+  href: ./Clear-WmsStation.yml
+- text: Get-WmsStation
+  href: ./Get-WmsStation.yml
+- text: Join-WmsStation
+  href: ./Join-WmsStation.yml
+- text: Split-WmsStation
+  href: ./Split-WmsStation.yml
+- text: Update-WmsStation
+  href: ./Update-WmsStation.yml
+syntaxes:
+- Set-WmsStation [-StationId] <UInt32[]> -FriendlyName <String> [-Server <String>] [<CommonParameters>]
+- >-
+  Set-WmsStation [-StationId] <UInt32[]> -AutoLogonCredential <PSCredential> [-OverrideAdminWarning]
+
+   [-Server <String>] [<CommonParameters>]
+- Set-WmsStation [-StationId] <UInt32[]> [-DisableAutoLogon] [-Server <String>] [<CommonParameters>]
+- Set-WmsStation [-StationId] <UInt32[]> -SessionHost <String> [-Server <String>] [<CommonParameters>]
+- Set-WmsStation [-StationId] <UInt32[]> -VmName <String> [-Server <String>] [<CommonParameters>]
+- Set-WmsStation [-StationId] <UInt32[]> [-LocalSessionHost] [-Server <String>] [<CommonParameters>]
+- >-
+  Set-WmsStation [-StationId] <UInt32[]> -DisplayOrientation <EDisplayOrientationPS> [-Server <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a station'
+  code: |-
+    PS C:\> $Creds = Get-Credential -UserName "Student01" -Message "Enter desired password" 
+    PS C:\> Set-WmsStation -StationId 1 -FriendlyName -"Patti's Station" -AutoLogonCredential $Creds
+  description: |-
+    The first command gets the credentials for Student01, and then stores them in the $Creds variable.
+
+    The second command sets the friendly name of station 1 to Patti's Station.
+    Station 1 is now configured to auto-logon as Student01.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: AutoLogonCredential
+  isRequired: true
+  description: |+
+    Specifies the automatic logon credentials.
+    Use Get-Credential cmdlet to get a **PSCredential** object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableAutoLogon
+  isRequired: true
+  description: |+
+    Disables automatic logon for the station.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="EDisplayOrientationPS" data-throw-if-not-resolved="False" />
+  name: DisplayOrientation
+  isRequired: true
+  description: |+
+    Specifies the Display Orientation for the station.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Portrait, Landscape, PortraitFlipped, LandscapeFlipped
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FriendlyName
+  isRequired: true
+  description: |+
+    Specifies a friendly name for the station.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalSessionHost
+  isRequired: true
+  description: |+
+    Specifies the local session host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverrideAdminWarning
+  description: |+
+    Indicates that this operation overrides the Administrator warning.
+    Specify this parameter to enable an Administrator to automatically log on.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SessionHost
+  isRequired: true
+  description: |+
+    Specifies the session host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StationId
+  isRequired: true
+  description: |+
+    Specifies an array of station IDs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VmName
+  isRequired: true
+  description: |+
+    Specifies the virtual machine guest host name for Virtual Desktop Infrastructure (VDI) stations.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MultiPoint.Set-WmsStation
+name: Set-WmsStation
+description: |-
+  The **Set-WmsStation** cmdlet modifies station information.
+  You can use this cmdlet to set the automatic logon and the friendly name for the station.
+  If you want to enable a user in the Administrator group to auto-logon, specify the *OverrideAdminWarning* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/set-wmsstation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WmsStation

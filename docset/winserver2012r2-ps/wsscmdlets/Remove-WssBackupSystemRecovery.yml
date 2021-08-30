@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a bare metal recovery option from a scheduled backup policy.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.ServerBackup.ObjectModel.ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates the **BackupPolicy** parameter value.
+links:
+- text: Add-WssBackupSystemRecovery
+  href: ./Add-WssBackupSystemRecovery.yml
+- text: Get-WssBackupSystemRecovery
+  href: ./Get-WssBackupSystemRecovery.yml
+syntaxes:
+- Remove-WssBackupSystemRecovery [-BackupPolicy] <ScheduledBackupPolicy> [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a bare metal recovery option from a backup policy'
+  code: |-
+    PS C:\> Remove-WssBackupSystemRecovery -BackupPolicy $ContosoBUPolicy25
+  description: |-
+    This command removes a bare metal recovery option from the backup policy that is stored in the variable named **$ContosoBUPolicy25**.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the scheduled backup policy from which to remove the system recovery option.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Remove-WssBackupSystemRecovery
+name: Remove-WssBackupSystemRecovery
+description: |-
+  The **Remove-WssBackupSystemRecovery** cmdlet removes a bare metal recovery option from a scheduled backup policy.
+  If you remove bare metal recovery from a scheduled backup policy, disaster recovery may not be possible.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/remove-wssbackupsystemrecovery?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WssBackupSystemRecovery

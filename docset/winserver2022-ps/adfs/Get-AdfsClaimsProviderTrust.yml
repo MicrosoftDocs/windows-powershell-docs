@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the claims provider trusts in the Federation Service.
+module: ADFS
+notes: |-
+  * If you do not specify the *Name* parameter, the cmdlet lists all claims providers. The claims provider collects and authenticates a user's credentials, builds up claims for that user, and packages the claims into security tokens or Information Cards. In other words, a claims provider represents the organization for whose users the claims provider issues security tokens or Information Cards on their behalf. When you configure Active Directory Federation Services (AD FS), the role of the claims provider is to enable its users to access resources that are hosted in a relying party organization by establishing one side of the federation trust relationship. After the federation trust is established, tokens and Information Cards can be presented to the relying party across the trust.
+inputs:
+- name: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate.X509Certificate2" data-throw-if-not-resolved="False" />
+  description: |-
+    X509Certificate2 objects are received by the *Certificate* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *Identifier* and *Name* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more ClaimsProviderTrust objects that represent the claims provider trusts for the Federation Service.
+links:
+- text: Add-AdfsClaimsProviderTrust
+  href: ./Add-AdfsClaimsProviderTrust.yml
+- text: Disable-AdfsClaimsProviderTrust
+  href: ./Disable-AdfsClaimsProviderTrust.yml
+- text: Enable-AdfsClaimsProviderTrust
+  href: ./Enable-AdfsClaimsProviderTrust.yml
+- text: Remove-AdfsClaimsProviderTrust
+  href: ./Remove-AdfsClaimsProviderTrust.yml
+- text: Set-AdfsClaimsProviderTrust
+  href: ./Set-AdfsClaimsProviderTrust.yml
+- text: Update-AdfsClaimsProviderTrust
+  href: ./Update-AdfsClaimsProviderTrust.yml
+syntaxes:
+- Get-AdfsClaimsProviderTrust [[-Name] <String[]>] [<CommonParameters>]
+- Get-AdfsClaimsProviderTrust [-Certificate] <X509Certificate2[]> [<CommonParameters>]
+- Get-AdfsClaimsProviderTrust [-Identifier] <String[]> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get claims provider trusts'
+  code: |-
+    PS C:\> Get-AdfsClaimsProviderTrust -Name "Fabrikam claims provider"
+  description: |-
+    This command gets the property settings for the claims provider trust named Fabrikam claims provider.
+  summary: ""
+parameters:
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Certificate
+  isRequired: true
+  description: |+
+    Specifies an array of token-signing certificates of the claims provider trust to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identifier
+  isRequired: true
+  description: |+
+    Specifies an array of unique IDs of the claims provider trust to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of display names of the claims provider trust to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsClaimsProviderTrust
+name: Get-AdfsClaimsProviderTrust
+description: |-
+  The **Get-AdfsClaimsProviderTrust** cmdlet gets the claims provider trusts in the Federation Service.
+  You can use this cmdlet with no parameters to get all the claims provider trust objects.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsclaimsprovidertrust?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsClaimsProviderTrust

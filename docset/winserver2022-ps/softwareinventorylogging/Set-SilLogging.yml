@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Applies configuration settings for Software Inventory Logging.
+module: SoftwareInventoryLogging
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimMethodResult#msftsil_managementtasks#SetLoggingState" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SilLogging
+  href: ./Get-SilLogging.yml
+- text: Start-SilLogging
+  href: ./Start-SilLogging.yml
+- text: Stop-SilLogging
+  href: ./Stop-SilLogging.yml
+- text: Publish-SilData
+  href: ./Publish-SilData.yml
+syntaxes:
+- Set-SilLogging -TimeOfDay <DateTime> [-CimSession <CimSession[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-SilLogging [-TimeOfDay <DateTime>] [-TargetUri <String>] [-CertificateThumbprint <String>]
+
+   [-CimSession <CimSession[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Specify an aggregation server'
+  code: |-
+    PS C:\> Set-SilLogging -TargetUri "https://log03.hosts.contoso.com"
+  description: |-
+    This command specifies an aggregation server for Software Inventory Logging for the current computer.
+  summary: ""
+- title: 'Example 2: Specify a time of day'
+  code: |-
+    PS C:\> Set-SilLogging -TimeOfDay "01/01/2013 5:00:00AM"
+  description: |-
+    This command specifies the time of day that the computer forwards logging data.
+    Note that when you specify a date in the future, Software Inventory Logging does not start logging until that date and time.
+    If you specify a date in the past, only the time specified is relevant to the configuration setting.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies a certificate thumbprint as a string.
+    Software Inventory Logging encrypts logging data sent to the aggregation server by using this thumbprint.
+    If you do not specify a value for this parameter, Software Inventory Logging does not encrypt data.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetUri
+  description: |+
+    Specifies the URI of an aggregation server.
+    If you do not specify a value for this parameter, Software Inventory Logging does not send logging data over the network.
+
+    If you do not specify an aggregation server for a virtual machine that runs on a computer that runs Hyper-V, Software Inventory Logging forwards logging data to a location that its Windows Server host can access.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: TimeOfDay
+  isRequired: true
+  description: |+
+    Specifies the time of day as a **DateTime** object when Software Inventory Logging forwards data.
+    To obtain a **DateTime** object, use the Get-Date cmdlet.
+    For more information, type `Get-Help Get-Date`.
+    The default value is 3 a.m.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SoftwareInventoryLogging.Set-SilLogging
+name: Set-SilLogging
+description: |-
+  The **Set-SilLogging** cmdlet applies configuration settings for Software Inventory Logging.
+  If logging is started, Software Inventory Logging collects data daily from all Software Inventory Logging data sources, and then forwards this data over the network to an aggregation server.
+  Specify an aggregation server by using this cmdlet.
+  If you do not specify an aggregation server and the server is a virtual machine that runs on a Hyper-V host, then the daily collection forwards the Software Inventory Logging data to a location that its Windows Server host can access.
+  This cmdlet sets the time of day that the daily collection occurs, the uniform resource identifier (URI) of the aggregation server, and the certificate thumbprint to use for encryption.
+
+  Use the Start-SilLogging cmdlet to start logging.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MsftSil_ManagementTasks-help.xml
+  Module Name: SoftwareInventoryLogging
+  ms.date: 01/24/2017
+  online version: https://docs.microsoft.com/powershell/module/softwareinventorylogging/set-sillogging?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-SilLogging

@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the application domains in which the specified IIS worker process is running.
+module: WebAdministration
+notes: ""
+syntaxes:
+- >-
+  Get-WebAppDomain [-InputObject <PSObject>] [-ApplicationPool <String>] [-ProcessId <UInt32>]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Get the application domain of a running Worker Process --------------'
+  code: |-
+    IIS:\>Get-WebAppDomain -ProcessId 5872 -ApplicationPool DefaultAppPoolGet-ChildItem IIS:\AppPools\DefaultAppPool\WorkerProcesses
+  description: |-
+    The example gets the application domains loaded in the specified Worker Process.
+    The process ID can be retrieved by looking at the WorkerProcesses node below the AppPools node, for example:
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  description: |+
+    The application pool for which the application domains are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: apppool, pool
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    The input object from which parameter data is received.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ProcessId
+  description: |+
+    The ID of the worker process for which the application domain is returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: proc, procid, pid, wp
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebAppDomain
+name: Get-WebAppDomain
+description: |-
+  Gets the application domains in which the specified IIS worker process is running.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webappdomain?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

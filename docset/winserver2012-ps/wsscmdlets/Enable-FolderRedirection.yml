@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables the group policy setting for folder redirection.
+module: WssCmdlets
+notes: ""
+links:
+- text: Disable-FolderRedirection
+  href: ./Disable-FolderRedirection.yml
+syntaxes:
+- Enable-FolderRedirection [-AllFolder]
+- Enable-FolderRedirection -Folder <String[]>
+examples:
+- title: 'Example 1: Enable the group policy setting for folder redirection'
+  code: |-
+    PS C:\> Enable-FolderRedirection -Folder "Contacts","Videos"
+  description: |-
+    This command enables the group policy for folder redirection for the contacts and video folders.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllFolder
+  isRequired: true
+  description: |+
+    Indicates that the group policy setting for folder redirection affects all pre-defined folders.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Folder
+  isRequired: true
+  description: |+
+    Specifies an array of folder names for which you want to enable the group policy setting for folder redirection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Enable-FolderRedirection
+name: Enable-FolderRedirection
+description: |-
+  The **Enable-FolderRedirection** cmdlet enables the group policy setting for folder redirection.
+  This setting affects either all pre-defined folders or folders that you specify.
+  You can use folder redirection to redirect the path of a folder to a new location.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/enable-folderredirection?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

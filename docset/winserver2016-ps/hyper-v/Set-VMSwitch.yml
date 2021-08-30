@@ -1,0 +1,312 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a virtual switch.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.EthernetSwitch" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+syntaxes:
+- >-
+  Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Name] <String[]> [-SwitchType <VMSwitchType>] [-AllowManagementOS <Boolean>]
+
+   [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
+
+   [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
+
+   [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMSwitch] <VMSwitch[]> [-SwitchType <VMSwitchType>] [-AllowManagementOS <Boolean>]
+
+   [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
+
+   [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
+
+   [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Name] <String[]> [-NetAdapterInterfaceDescription] <String> [-AllowManagementOS <Boolean>]
+
+   [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
+
+   [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
+
+   [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Name] <String[]> [-NetAdapterName] <String> [-AllowManagementOS <Boolean>]
+
+   [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
+
+   [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
+
+   [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMSwitch] <VMSwitch[]> [-NetAdapterInterfaceDescription] <String> [-AllowManagementOS <Boolean>]
+
+   [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
+
+   [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
+
+   [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMSwitch] <VMSwitch[]> [-NetAdapterName] <String> [-AllowManagementOS <Boolean>]
+
+   [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
+
+   [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
+
+   [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-VMSwitch WA -SwitchType Internal
+  description: |-
+    This example converts a virtual switch named WA to an Internal switch.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-VMSwitch VMNetwork -NetAdapterName "Ethernet 2"
+  description: |-
+    This example attaches a virtual switch named VMNetwork to a physical ethernet adapter named Ethernet 2. This will also implicitly convert the VMNetwork switch to an external switch.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Set-VMSwitch CA -DefaultFlowMinimumBandwidthAbsolute 500000000
+  description: |-
+    This example sets the minimum bandwidth allocation to 500Mbps on a virtual switch named CA for all virtual machines without explicit minimum bandwidth configuration.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowManagementOS
+  description: |+
+    Specifies whether the management operating system can use the physical network adapter that is bound to the external virtual switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the virtual switch is to be configured.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: PSComputerName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: DefaultFlowMinimumBandwidthAbsolute
+  description: |+
+    Specifies the minimum bandwidth, in bits per second, that is allocated to a special category called "default flow." Any traffic sent by a virtual network adapter that is connected to this virtual switch and does not have minimum bandwidth allocated is filtered into this category.
+    Specify a value for this parameter only if the minimum bandwidth mode on this virtual switch is absolute (See the **New-VMSwitch** cmdlet).
+    By default, the virtual switch allocates 10% of the total bandwidth, which depends on the physical network adapter it binds to, to this category.
+    For example, if a virtual switch binds to a 1 GbE network adapter, this special category can use at least 100 Mbps.
+    If the value is not a multiple of 8, the value is rounded down to the nearest number that is a multiple of 8.
+    For example, a value input as 1234567 is converted to 1234560.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: DefaultFlowMinimumBandwidthWeight
+  description: |+
+    Specifies the minimum bandwidth, in relative weight, that is allocated to a special category called "default flow".
+    Any traffic sent by a virtual network adapter that is connected to this virtual switch and doesn't have minimum bandwidth allocated is filtered into this category.
+    Specify a value for this parameter only if the minimum bandwidth mode on this virtual switch is weight (See the **New-VMSwitch** cmdlet).
+    By default, this special category has a weight of 1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DefaultQueueVmmqEnabled
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DefaultQueueVmmqQueuePairs
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DefaultQueueVrssEnabled
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitchExtension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Extensions
+  description: |+
+    Specifies an ordered list of network extensions used to reorder the bindings on the virtual switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual switch to be configured.
+
+  defaultValue: None
+  position: "0"
+  aliases: SwitchName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetAdapterInterfaceDescription
+  isRequired: true
+  description: |+
+    Specifies the interface description of the physical network adapter to which an external virtual switch should be bound.
+    If you specify this parameter to convert a virtual switch, the external virtual switch is configured to allow the management operating system to share access to the physical network adapter.
+    To override this behavior, include AllowManagementOs $false in the command
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetAdapterName
+  isRequired: true
+  description: |+
+    Specifies the name of the physical network adapter to which an external virtual switch should be bound.
+    If you specify this parameter to convert a virtual switch, the external virtual switch is configured to allow the management operating system to share access to the physical network adapter.
+    To override this behavior, include AllowManagementOs $false in the command
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Specifies notes to be associated with the virtual switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that a **Microsoft.HyperV.PowerShell.EthernetSwitch** object is to be passed through to the pipeline representing the virtual switch to be configured.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitchType" data-throw-if-not-resolved="False" />
+  name: SwitchType
+  description: |+
+    Converts a virtual switch from one type to another.
+    Allowed values are **Internal** or **Private**.
+    You can convert an internal or private virtual switch to an external virtual switch, by including either the **NetAdapterInterfaceDescription** or **NetAdapterName** parameter in the command.
+    If you do this, the external virtual switch is configured to allow the management operating system to share access to the physical network adapter.
+    To override this behavior, include AllowManagementOs $false in the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Private, Internal, External
+- type: <xref href="VMSwitch" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMSwitch
+  isRequired: true
+  description: |+
+    Specifies the virtual switch to be configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMSwitch
+name: Set-VMSwitch
+description: |-
+  The **Set-VMSwitch** cmdlet configures a virtual switch.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmswitch?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VMSwitch

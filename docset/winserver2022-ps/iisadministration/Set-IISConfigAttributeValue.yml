@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets a configuration attribute value for an IIS configuration section or configuration element attribute.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElement, System.String, System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-IISConfigAttributeValue
+  href: ./Get-IISConfigAttributeValue.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Set-IISConfigAttributeValue [-ConfigElement] <ConfigurationElement> [-AttributeName] <String>
+
+   [-AttributeValue] <Object> [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the value of a configuration attribute'
+  code: |-
+    PS C:\> $ConfigSection = Get-IISConfigSection -SectionPath "system.applicationHost/sites"
+    PS C:\> $SitesCollection = Get-IISConfigCollection -ConfigElement $ConfigSection
+    PS C:\> $Site = Get-IISConfigCollectionElement -ConfigCollection $SitesCollection -ConfigAttribute @{"name" = "Default Web Site"}
+    PS C:\> $Elem = Get-IISConfigElement -ConfigElement $Site -ChildElementName "limits"
+    PS C:\> Set-IISConfigAttributeValue -ConfigElement $Elem -AttributeName "MaxUrlSegments" -AttributeValue 16
+  description: |-
+    This command sets the value of the configuration attribute MaxUrlSegments for the IIS website named Default Web Site to 16.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AttributeName
+  isRequired: true
+  description: |+
+    Specifies the name of the attribute for which the value will be set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: AttributeValue
+  isRequired: true
+  description: |+
+    Specifies the new value of the attribute.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ConfigurationElement" data-throw-if-not-resolved="False" />
+  name: ConfigElement
+  isRequired: true
+  description: |+
+    Specifies the IIS ConfigurationSection or ConfigurationElement for which the attribute value will be looked up.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Set-IISConfigAttributeValue
+name: Set-IISConfigAttributeValue
+description: |-
+  The **Set-IISConfigAttributeValue** cmdlet sets a configuration attribute value from an Internet Information Services (IIS) configuration section attribute or a configuration element attribute.
+  The value set is for the given ConfigurationElement and not necessarily the effective value for a given site / virtual directory / folder etc.
+  To set the effective attribute values, always retrieve the configuration element by specifying the commit path as the deepest level possible.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/set-iisconfigattributevalue?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-IISConfigAttributeValue

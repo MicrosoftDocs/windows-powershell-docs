@@ -1,0 +1,180 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays the resources accessed over the active DirectAccess (DA) and VPN connections and the resources accessed over historical DA and VPN connections.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#RemoteAccessUserActivity" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: "The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.\r\nThe path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.\r\n                         \r\nFor both real-time and accounting cases, the RemoteAccessUserActivity object consists of the following properties.\r\nA separate instance of the RemoteAccessUserActivity object is output for every corporate network resource that is accessed over the connection. \r\n                         \r\n -- The IP address of the server in the corporate network. \r\n                         \r\n -- The identity of the protocol used to access the server. \r\n                         \r\n -- The port number used to access the server."
+links:
+- text: Get-Date
+  href: https://go.microsoft.com/fwlink/p/?LinkId=113313
+syntaxes:
+- >-
+  Get-RemoteAccessUserActivity [-ComputerName <String>] [-EndDateTime <DateTime>] [-StartDateTime <DateTime>]
+
+   [-UserName] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-RemoteAccessUserActivity [-ComputerName <String>] -SessionId <UInt64> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-RemoteAccessUserActivity [-ComputerName <String>] -HostIPAddress <String> [-EndDateTime <DateTime>]
+
+   [-StartDateTime <DateTime>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>$startdate = Get-Date -Date "12/16/2011"
+
+
+
+    PS C:\>$startdate
+    16 December 2011 00:00:00
+
+
+    PS C:\>$enddate = Get-Date -Date "12/23/2011"
+
+
+
+    PS C:\>$enddate
+
+
+
+    PS C:\>Get-RemoteAccessUserActivity -StartDateTime $startdate -EndDateTime $enddate -UserName "corp.contoso.com\User1"
+    ServerIpAddress                          ProtocolID                     ServerPort 
+    ---------------                          ----------                     ---------- 
+    2001:4898:0:fff:0:5efe:10.57.36.131      6                              443 
+    2001:4898:0:fff:0:5efe:10.57.36.131      50                             0
+  description: |-
+    This example shows historic access details for a particular user.
+    Query the accounting store for user activity details for User1 between the start date and end date.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Get-RemoteAccessUserActivity -UserName "contoso\User1" -ComputerName edge1.corp.contoso.com
+    ServerIpAddress                          ProtocolID                     ServerPort 
+    ---------------                          ----------                     ---------- 
+    2001:4898:0:fff:0:5efe:10.166.20.136     6                              80 
+    2001:4898:0:fff:0:5efe:172.27.97.57      6                              443 
+    2a01:110:10:1005:3e4a:92ff:fee0:1443     17                             500 
+    2a01:110:10:1005:3e4a:92ff:fee0:1443     17                             389 
+    2001:4898:a8:6001:3e4a:92ff:fedb:7104    17                             500 
+    2001:4898:a8:6001:3e4a:92ff:fedb:7104    17                             389 
+    2001:4898:0:fff:0:5efe:172.27.97.57      17                             500 
+    fdbd:8187:9fc9:7777::aa6:3609            17                             53 
+    2001:4898:0:fff:0:5efe:10.166.20.136     17                             500
+  description: |-
+    This example shows the resources currently being accessed by the user named User1.
+    If the user is not active currently, then the cmdlet will not return any rows.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the remote access server computer specific tasks should be run.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EndDateTime
+  description: |+
+    Specifies the time duration for which the user activity needs to be retrieved and indicates the end date.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostIPAddress
+  isRequired: true
+  description: |+
+    Specifies the tunnel IP address of the connection.
+    This can be an IPv4 or IPv6 address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: SessionId
+  isRequired: true
+  description: |+
+    Specifies an ID for a session for which to retrieve user activity data.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartDateTime
+  description: |+
+    Specifies the time duration for which the user activity needs to be retrieved and indicates the start date.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  isRequired: true
+  description: |+
+    Specifies the user whose activity needs to be retrieved.
+    This parameter uses the `DOMAIN\USERNAME` format.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteAccess.Get-RemoteAccessUserActivity
+name: Get-RemoteAccessUserActivity
+description: "The **Get-RemoteAccessUserActivity** cmdlet displays the resources accessed over the active DirectAccess (DA) and VPN connections and the resources accessed over historical DA and VPN connections.\r\n\r\nThe resources accessed over active and historical connections starting or ending on a Remote Access server are stored in the inbox accounting store on that server.\r\nThis cmdlet retrieves the resources accessed for a specific server.\r\nThe cmdlet is not impacted by multi-site deployment. \r\n                       \r\n -- If a start date nor an end date is specified, then the resources accessed over active connections are retrieved \r\n                       \r\n -- In order to retrieve the list of resources accessed over historical connections, a time duration needs to be specified such as a start date, an end date, or both.\r\nIf only one of them is specified, then the time stamp on the first or last record in the accounting database is used to fill the missing information and create a duration.\r\n\r\nThe statistics of active connections can be explicitly filtered by the user name of the user who originated the Remote Access connection and the tunnel IP address of the client computer such as the IP address assigned by the server, from which the connection originated.\r\nHowever, only one of these filters can be used at a time."
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_RemoteAccessUserActivity_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/get-remoteaccessuseractivity?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RemoteAccessUserActivity

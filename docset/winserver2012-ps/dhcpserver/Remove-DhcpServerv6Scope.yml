@@ -1,0 +1,155 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes the IPv6 Scopes from the Dynamic Host Configuration Protocol (DHCP) server service corresponding to the specified prefixes.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Scope" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkID=113423
+- text: Add-DhcpServerv6Scope
+  href: ./Add-DhcpServerv6Scope.yml
+- text: Get-DhcpServerv6Scope
+  href: ./Get-DhcpServerv6Scope.yml
+- text: Get-DhcpServerv6ScopeStatistics
+  href: ./Get-DhcpServerv6ScopeStatistics.yml
+- text: Set-DhcpServerv6Scope
+  href: ./Set-DhcpServerv6Scope.yml
+syntaxes:
+- >-
+  Remove-DhcpServerv6Scope [-Prefix] <IPAddress[]> [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String>]
+
+   [-Force] [-Passthru] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Remove-DhcpServerv6Scope -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020::
+  description: |-
+    This example deletes the specified DHCPv6 scope from the specified DHCP server service.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Remove-DhcpServerv6Scope -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020:: -Force
+  description: |-
+    This example deletes the specified DHCPv6 scope from the specified DHCP server service without requesting user confirmation even if the scope is active or contains active client leases.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Get-DhcpServerv6Scope | Where-Object -FilterScript { $_.State -Eq "Inactive" } | Remove-DhcpServerv6Scope -Force -Passthru
+  description: |-
+    This example deletes all of the disabled scopes on the DHCP server service.
+    The Get-DhcpServerv6Scope cmdlet returns the scope objects and pipes the objects into the Where-Objecthttp://go.microsoft.com/fwlink/p/?LinkID=113423 cmdlet.
+    The Where-Objecthttp://go.microsoft.com/fwlink/p/?LinkID=113423 cmdlet filters the scope objects for the state being InActive (or disabled) and pipes the objects into this cmdlet, which deletes the disabled scopes passed through the pipeline.
+    If non-empty scopes are deleted without the **Force** parameter, then the cmdlet displays an error.
+    This cmdlet does not prompt for user confirmation.
+    Active scopes that are empty get deleted without the **Force** parameter.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer running the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies that the scope will be deleted even if there are active leases in the scope.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Prefix
+  isRequired: true
+  description: |+
+    Specifies one or more IPv6 subnet prefixes of the scopes being deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DhcpServer.Remove-DhcpServerv6Scope
+name: Remove-DhcpServerv6Scope
+description: |-
+  The **Remove-DhcpServerv6Scope** cmdlet deletes the IPv6 Scopes from the Dynamic Host Configuration Protocol (DHCP) server service corresponding to the specified prefixes.
+  Deleting a scope deletes all of the associated settings and leases, if any are present in the scope.
+metadata:
+  external help file: DhcpServer_Cmdlets.xml
+  Module Name: DhcpServer
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/remove-dhcpserverv6scope?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

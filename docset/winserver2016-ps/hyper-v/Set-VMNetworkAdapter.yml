@@ -1,0 +1,604 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures features of the virtual network adapter in a virtual machine or the management operating system.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None by default.
+    if *PassThru* is specified, then a **Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter** is passed through to the pipeline if **-ManagementOS** is also specified, otherwise **Microsoft.HyperV.PowerShell.VMNetworkAdapter**.
+syntaxes:
+- >-
+  Set-VMNetworkAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String> [-Name <String>] [-DynamicMacAddress] [-StaticMacAddress <String>]
+
+   [-MacAddressSpoofing <OnOffState>] [-DhcpGuard <OnOffState>] [-RouterGuard <OnOffState>]
+
+   [-PortMirroring <VMNetworkAdapterPortMirroringMode>] [-IeeePriorityTag <OnOffState>] [-VmqWeight <UInt32>]
+
+   [-IovQueuePairsRequested <UInt32>] [-IovInterruptModeration <IovInterruptModerationValue>]
+
+   [-IovWeight <UInt32>] [-IPsecOffloadMaximumSecurityAssociation <UInt32>] [-MaximumBandwidth <Int64>]
+
+   [-MinimumBandwidthAbsolute <Int64>] [-MinimumBandwidthWeight <UInt32>] [-MandatoryFeatureId <String[]>]
+
+   [-ResourcePoolName <String>] [-TestReplicaPoolName <String>] [-TestReplicaSwitchName <String>]
+
+   [-VirtualSubnetId <UInt32>] [-AllowTeaming <OnOffState>] [-NotMonitoredInCluster <Boolean>]
+
+   [-StormLimit <UInt32>] [-DynamicIPAddressLimit <UInt32>] [-DeviceNaming <OnOffState>]
+
+   [-FixSpeed10G <OnOffState>] [-PacketDirectNumProcs <UInt32>] [-PacketDirectModerationCount <UInt32>]
+
+   [-PacketDirectModerationInterval <UInt32>] [-VrssEnabled <Boolean>] [-VmmqEnabled <Boolean>]
+
+   [-VmmqQueuePairs <UInt32>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMNetworkAdapter [-ManagementOS] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [-Name <String>] [-MacAddressSpoofing <OnOffState>] [-DhcpGuard <OnOffState>]
+
+   [-RouterGuard <OnOffState>] [-PortMirroring <VMNetworkAdapterPortMirroringMode>]
+
+   [-IeeePriorityTag <OnOffState>] [-VmqWeight <UInt32>] [-IovQueuePairsRequested <UInt32>]
+
+   [-IovInterruptModeration <IovInterruptModerationValue>] [-IovWeight <UInt32>]
+
+   [-IPsecOffloadMaximumSecurityAssociation <UInt32>] [-MaximumBandwidth <Int64>]
+
+   [-MinimumBandwidthAbsolute <Int64>] [-MinimumBandwidthWeight <UInt32>] [-MandatoryFeatureId <String[]>]
+
+   [-ResourcePoolName <String>] [-TestReplicaPoolName <String>] [-TestReplicaSwitchName <String>]
+
+   [-VirtualSubnetId <UInt32>] [-AllowTeaming <OnOffState>] [-NotMonitoredInCluster <Boolean>]
+
+   [-StormLimit <UInt32>] [-DynamicIPAddressLimit <UInt32>] [-DeviceNaming <OnOffState>]
+
+   [-FixSpeed10G <OnOffState>] [-PacketDirectNumProcs <UInt32>] [-PacketDirectModerationCount <UInt32>]
+
+   [-PacketDirectModerationInterval <UInt32>] [-VrssEnabled <Boolean>] [-VmmqEnabled <Boolean>]
+
+   [-VmmqQueuePairs <UInt32>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMNetworkAdapter [-VMNetworkAdapter] <VMNetworkAdapterBase> [-DynamicMacAddress]
+
+   [-StaticMacAddress <String>] [-MacAddressSpoofing <OnOffState>] [-DhcpGuard <OnOffState>]
+
+   [-RouterGuard <OnOffState>] [-PortMirroring <VMNetworkAdapterPortMirroringMode>]
+
+   [-IeeePriorityTag <OnOffState>] [-VmqWeight <UInt32>] [-IovQueuePairsRequested <UInt32>]
+
+   [-IovInterruptModeration <IovInterruptModerationValue>] [-IovWeight <UInt32>]
+
+   [-IPsecOffloadMaximumSecurityAssociation <UInt32>] [-MaximumBandwidth <Int64>]
+
+   [-MinimumBandwidthAbsolute <Int64>] [-MinimumBandwidthWeight <UInt32>] [-MandatoryFeatureId <String[]>]
+
+   [-ResourcePoolName <String>] [-TestReplicaPoolName <String>] [-TestReplicaSwitchName <String>]
+
+   [-VirtualSubnetId <UInt32>] [-AllowTeaming <OnOffState>] [-NotMonitoredInCluster <Boolean>]
+
+   [-StormLimit <UInt32>] [-DynamicIPAddressLimit <UInt32>] [-DeviceNaming <OnOffState>]
+
+   [-FixSpeed10G <OnOffState>] [-PacketDirectNumProcs <UInt32>] [-PacketDirectModerationCount <UInt32>]
+
+   [-PacketDirectModerationInterval <UInt32>] [-VrssEnabled <Boolean>] [-VmmqEnabled <Boolean>]
+
+   [-VmmqQueuePairs <UInt32>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMNetworkAdapter [-VM] <VirtualMachine> [-Name <String>] [-DynamicMacAddress] [-StaticMacAddress <String>]
+
+   [-MacAddressSpoofing <OnOffState>] [-DhcpGuard <OnOffState>] [-RouterGuard <OnOffState>]
+
+   [-PortMirroring <VMNetworkAdapterPortMirroringMode>] [-IeeePriorityTag <OnOffState>] [-VmqWeight <UInt32>]
+
+   [-IovQueuePairsRequested <UInt32>] [-IovInterruptModeration <IovInterruptModerationValue>]
+
+   [-IovWeight <UInt32>] [-IPsecOffloadMaximumSecurityAssociation <UInt32>] [-MaximumBandwidth <Int64>]
+
+   [-MinimumBandwidthAbsolute <Int64>] [-MinimumBandwidthWeight <UInt32>] [-MandatoryFeatureId <String[]>]
+
+   [-ResourcePoolName <String>] [-TestReplicaPoolName <String>] [-TestReplicaSwitchName <String>]
+
+   [-VirtualSubnetId <UInt32>] [-AllowTeaming <OnOffState>] [-NotMonitoredInCluster <Boolean>]
+
+   [-StormLimit <UInt32>] [-DynamicIPAddressLimit <UInt32>] [-DeviceNaming <OnOffState>]
+
+   [-FixSpeed10G <OnOffState>] [-PacketDirectNumProcs <UInt32>] [-PacketDirectModerationCount <UInt32>]
+
+   [-PacketDirectModerationInterval <UInt32>] [-VrssEnabled <Boolean>] [-VmmqEnabled <Boolean>]
+
+   [-VmmqQueuePairs <UInt32>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-VMNetworkAdapter -VMName Redmond -DhcpGuard On
+  description: |-
+    This example enables DHCP Guard on all the virtual network adapters of virtual machine Redmond.
+    When DHCP Guard enabled, if virtual machine Redmond replies to requests from DHCP clients, these replies are dropped.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-VMNetworkAdapter -VMName Kirkland -PortMirroring Source
+  description: |-
+    This example enables port mirroring for all virtual network adapters on virtual machine Kirkland.
+    When port mirroring is enabled, every packet sent or received by this virtual machine is copied and sent to a monitoring virtual machine.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Set-VMNetworkAdapter -VMName Bellevue -Name PM_Dest -PortMirroring Destination
+  description: |-
+    This example configures the virtual network adapter named PM_Dest as the destination for port mirroring, which configures the virtual machine named Bellevue to monitor network traffic.
+    That is, a copy of every packet sent or received by a monitored virtual machine connected to the same virtual switch is sent to virtual machine Bellevue through virtual network adapter PM_Dest.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-VMNetworkAdapter -All | Set-VMNetworkAdapter -VmqWeight 100
+  description: |-
+    This example enables VMQ and sets a weight of 100 on every virtual network adapter on the local host.
+  summary: ""
+- title: Example 5
+  code: |-
+    PS C:\> Get-VM Redmond | Set-VMNetworkAdapter -AllowTeaming On
+  description: |-
+    This example configures NIC Teaming for all virtual network adapters of the virtual machine named Redmond.
+  summary: ""
+- title: Example 6
+  code: |-
+    PS C:\> Get-VMNetworkAdapter -VMName Redmond,Kirkland,Bellevue | Set-VMNetworkAdapter -MinimumBandwidthWeight 1
+  description: |-
+    This example sets the same minimum bandwidth weight for all virtual network adapters of three virtual machines: Redmond, Kirkland, and Bellevue.
+    This configuration shares bandwidth equally among all of the virtual network adapters of these virtual machines.
+  summary: ""
+parameters:
+- type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+  name: AllowTeaming
+  description: |+
+    Specifies whether the virtual network adapter can be teamed with other network adapters connected to the same virtual switch.
+    The value can be **On** (allowed) or **Off** (disallowed).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: On, Off
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which features of the network adapter are to be configured.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+  name: DeviceNaming
+  description: |+
+    Specifies whether this adapter uses device naming.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: On, Off
+- type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+  name: DhcpGuard
+  description: |+
+    Specifies whether to drop DHCP messages from a virtual machine claiming to be a DHCP server.
+    Allowed values are **On**, which drops DHCP messages because the virtualized DHCP server is considered untrusted) or **Off**, which allows the message to be received because the virtualized DHCP server is considered to be trustworthy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: On, Off
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DynamicIPAddressLimit
+  description: |+
+    Specifies the dynamic IP address limit, an integer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DynamicMacAddress
+  description: |+
+    Assigns a dynamically generated MAC address to the virtual network adapter..
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+  name: FixSpeed10G
+  description: |+
+    Specifies whether the adapter uses fix speed of 10G.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: On, Off
+- type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+  name: IeeePriorityTag
+  description: |+
+    Specifies whether IEEE 802.1p tagged packets from the virtual machine should be trusted.
+    The value should be either **On** (trusted) or **Off** (not trusted).
+    If it is on, the IEEE 802.1p tagged packets will be let go as is.
+    If it is off, the priority value is reset to 0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: On, Off
+- type: <xref href="IovInterruptModerationValue" data-throw-if-not-resolved="False" />
+  name: IovInterruptModeration
+  description: |+
+    Specifies the interrupt moderation value for a single-root I/O virtualization (SR-IOV) virtual function assigned to a virtual network adapter.
+    Allowed values are **Default**, **Adaptive**, **Off**, **Low**, **Medium**, and **High**.
+    If **Default** is chosen, the value is determined by the physical network adapter vendor's setting.
+    If **Adaptive** is chosen, the interrupt moderation rate will be based on the runtime traffic pattern.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, Adaptive, Off, Low, Medium, High
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IovQueuePairsRequested
+  description: |+
+    Specifies the number of hardware queue pairs to be allocated to an SR-IOV virtual function.
+    If receive-side scaling (RSS) is required, and if the physical network adapter that binds to the virtual switch supports RSS on SR-IOV virtual functions, then more than one queue pair is required.
+    Allowed values range from 1 to 4294967295.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IovWeight
+  description: |+
+    Specifies whether single-root I/O virtualization (SR-IOV) is to be enabled on this virtual network adapter.
+    The relative weight sets the affinity of the virtual network adapter to the assigned SR-IOV virtual function.
+    The range of the value is from 0 through 100.
+    Specify 0 to disable SR-IOV on the virtual network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IPsecOffloadMaximumSecurityAssociation
+  description: |+
+    Specifies the maximum number of security associations that can be offloaded to the physical network adapter that is bound to the virtual switch and that supports IPSec Task Offload.
+    Specify zero to disable the feature.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+  name: MacAddressSpoofing
+  description: |+
+    Specifies whether virtual machines may change the source MAC address in outgoing packets to one not assigned to them.
+    Allowed values are **On** (allowing the virtual machine to use a different MAC address) and **Off** (allowing the virtual machine to use only the MAC address assigned to it).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: On, Off
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagementOS
+  isRequired: true
+  description: |+
+    Specifies the virtual network adapter in the management operating system to be configured.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MandatoryFeatureId
+  description: |+
+    Specifies the unique identifiers of the virtual switch extension features that are required for this virtual network adapter to operate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: MaximumBandwidth
+  description: |+
+    Specifies the maximum bandwidth, in bits per second, for the virtual network adapter.
+    The specified value is rounded to the nearest multiple of eight.
+    Specify zero to disable the feature.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: MinimumBandwidthAbsolute
+  description: |+
+    Specifies the minimum bandwidth, in bits per second, for the virtual network adapter.
+    The specified value is rounded to the nearest multiple of eight.
+    A value larger than 100 Mbps is recommended.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MinimumBandwidthWeight
+  description: |+
+    Specifies the minimum bandwidth, in terms of relative weight, for the virtual network adapter.
+    The weight describes how much bandwidth to provide to the virtual network adapter relative to other virtual network adapters connected to the same virtual switch.
+    The range of the value is from 0 through 100.
+    Specify 0 to disable the feature.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name for the virtual network adapter.
+    The cmdlet changes the name to the value that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: VMNetworkAdapterName
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: NotMonitoredInCluster
+  description: |+
+    Indicates whether to not monitor the network adapter if the virtual machine that it belongs to is part of a cluster.
+    By default, network adapters for clustered virtual machines are monitored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PacketDirectModerationCount
+  description: |+
+    Specifies the number of packets to wait for before signaling an interrupt.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PacketDirectModerationInterval
+  description: |+
+    Specifies the amount of time, in milliseconds, to wait before signaling an interrupt after a packet arrives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PacketDirectNumProcs
+  description: |+
+    Specifies the number of processors to use for virtual switch processing inside of the host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that an object is to be passed through to the pipeline representing the virtual network adapter to be configured.
+    This is a  **Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter** object, if ManagementOS is specified; or a **Microsoft.HyperV.PowerShell.VMNetworkAdapter** object otherwise.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterPortMirroringMode" data-throw-if-not-resolved="False" />
+  name: PortMirroring
+  description: |+
+    Specifies the port mirroring mode for the network adapter to be configured.
+    Allowed values are **None**, **Source**, and **Destination**.
+    If a virtual network adapter is configured as **Source**, every packet it sends or receives is copied and forwarded to a virtual network adapter configured to receive the packets.
+    If a virtual network adapter is configured as **Destination**, it receives copied packets from the source virtual network adapter.
+    The source and destination virtual network adapters must be connected to the same virtual switch.
+    Specify **None** to disable the feature.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Destination, Source
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourcePoolName
+  description: |+
+    Specifies the name of the resource pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+  name: RouterGuard
+  description: |+
+    Specifies whether to drop **Router Advertisement** and **Redirection** messages from unauthorized virtual machines.
+    The value can be either **On** or **Off**.
+    If **On** is specified, such messages are dropped.
+    If **Off** is specified, such messages are sent.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: On, Off
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StaticMacAddress
+  description: |+
+    Assigns a specific a MAC address to the virtual network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: StormLimit
+  description: |+
+    Specifies the number of broadcast, multicast, and unknown unicast packets per second a virtual machine is allowed to send through the specified virtual network adapter.
+    Broadcast, multicast, and unknown unicast packets beyond the limit during that one second interval are dropped.
+    A value of zero (0) means there is no limit.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TestReplicaPoolName
+  description: |+
+    This parameter applies only to virtual machines that are enabled for replication.
+    It specifies the name of the network resource pool that will be used by this virtual network adapter when its virtual machine is created during a test failover.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TestReplicaSwitchName
+  description: |+
+    This parameter applies only to virtual machines that are enabled for replication.
+    It specifies the name of the virtual switch to which the virtual network adapter should be connected when its virtual machine is created during a test failover.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: VirtualSubnetId
+  description: |+
+    Specifies the virtual subnet ID to use with Hyper-V Network Virtualization.
+    Allowed values range from 4096 to 16777215 (2^24 - 1), in addition to 0.
+    Use 0 to clear this parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" />
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine that has the virtual network you want to configure.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: VmmqEnabled
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: VmmqQueuePairs
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine that has the virtual network adapteryou want to configure.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterBase" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapter
+  isRequired: true
+  description: |+
+    Specifies the virtual network adapter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: VmqWeight
+  description: |+
+    Specifies whether virtual machine queue (VMQ) is to be enabled on the virtual network adapter.
+    . The relative weight describes the affinity of the virtual network adapter to use VMQ.
+    The range of value is from 0 through 100.
+    Specify 0 to disable VMQ on the virtual network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: VrssEnabled
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMNetworkAdapter
+name: Set-VMNetworkAdapter
+description: |-
+  The **Set-VMNetworkAdapter** cmdlet configures features of the virtual network adapter in a virtual machine or the management operating system.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmnetworkadapter?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VMNetworkAdapter

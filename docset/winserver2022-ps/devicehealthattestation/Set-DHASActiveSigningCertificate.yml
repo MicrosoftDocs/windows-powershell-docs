@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the active signing certificate.
+module: DeviceHealthAttestation
+notes: ""
+inputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    The input type is a string for the active signing certificate thumbprint.
+links:
+- text: Get-DHASActiveSigningCertificate
+  href: ./Get-DHASActiveSigningCertificate.yml
+syntaxes:
+- Set-DHASActiveSigningCertificate [-Thumbprint] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the active signing certificate'
+  code: |-
+    PS C:\> Set-DHASActiveSigningCertificate -Thumbprint "0123456789ABCDEF0123456789ABCDEF01234567"
+  description: |-
+    This command sets the active signing certificate.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  isRequired: true
+  description: |+
+    Specifies the signing certificate thumbprint.
+    The value must contain only hexadecimal digits (0-9, A-F) and be 40 characters in length.
+    This value is case-insensitive.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DeviceHealthAttestation.Set-DHASActiveSigningCertificate
+name: Set-DHASActiveSigningCertificate
+description: |-
+  The **Set-DHASActiveSigningCertificate** cmdlet sets the active signing certificate for the Device Health Attestation service.
+
+  You must have administrator rights to run this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.DeviceHealthAttestation.PowerShell.dll-Help.xml
+  Module Name: DeviceHealthAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/devicehealthattestation/set-dhasactivesigningcertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DHASActiveSigningCertificate

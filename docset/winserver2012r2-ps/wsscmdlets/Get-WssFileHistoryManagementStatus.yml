@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the File History managed status of a user.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates the file history managed status for a user, which is $True if the user's file history setting is managed by the server.
+links:
+- text: Set-WssFileHistoryManagementStatus
+  href: ./Set-WssFileHistoryManagementStatus.yml
+- text: Get-WssFileHistoryConfiguration
+  href: ./Get-WssFileHistoryConfiguration.yml
+syntaxes:
+- Get-WssFileHistoryManagementStatus [-UserName] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the File History managed status of a user'
+  code: |-
+    PS C:\> Get-WssFileHistoryManagementStatus -UserName "DaveB"
+  description: |-
+    This command gets the File History managed status of a user named DaveB.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  isRequired: true
+  description: |+
+    Specifies the user name of an account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: un
+  parameterValueGroup: ""
+uid: WSSCmdlets.Get-WssFileHistoryManagementStatus
+name: Get-WssFileHistoryManagementStatus
+description: |-
+  The **Get-WssFileHistoryManagementStatus** cmdlet gets the File History managed status of a user.
+  The cmdlet returns $True if the File History setting of the user is managed by the server.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssfilehistorymanagementstatus?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssFileHistoryManagementStatus

@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of the virtual directories on the specified site.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Get-WebVirtualDirectory [-Site <String>] [-Application <String>] [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Getting a virtual directory --------------'
+  code: |-
+    IIS:\>Get-WebVirtualDirectory -site 'Default Web Site' -Application testApp
+  description: |-
+    This cmdlet returns the list of virtual directories on the Default Web Site on which the application named testApp is configured.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Application
+  description: |+
+    The name of a Web application with which virtual directories are associated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of a virtual directory to return.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Site
+  description: |+
+    The name of the site for which a list of virtual directories is returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebVirtualDirectory
+name: Get-WebVirtualDirectory
+description: |-
+  Gets a list of the virtual directories on the specified site.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webvirtualdirectory?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

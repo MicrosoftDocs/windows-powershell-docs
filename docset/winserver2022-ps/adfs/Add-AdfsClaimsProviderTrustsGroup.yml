@@ -1,0 +1,140 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a claims provider trust group based on metadata that contains multiple entities.
+module: ADFS
+notes: ""
+links:
+- text: Get-AdfsClaimsProviderTrustsGroup
+  href: ./Get-AdfsClaimsProviderTrustsGroup.yml
+- text: Remove-AdfsClaimsProviderTrustsGroup
+  href: ./Remove-AdfsClaimsProviderTrustsGroup.yml
+syntaxes:
+- >-
+  Add-AdfsClaimsProviderTrustsGroup -MetadataFile <String> [-Force] [-PassThru]
+
+   [-AcceptanceTransformRules <String>] [-AcceptanceTransformRulesFile <String>] [-MonitoringEnabled <Boolean>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-AdfsClaimsProviderTrustsGroup -MetadataUrl <Uri> [-AutoUpdateEnabled <Boolean>] [-Force] [-PassThru]
+
+   [-AcceptanceTransformRules <String>] [-AcceptanceTransformRulesFile <String>] [-MonitoringEnabled <Boolean>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a trust group by metadata URL'
+  code: |-
+    PS C:\> Add-AdfsClaimsProviderTrustsGroup -MetadataUrl https://www.contosoconsortium.com/metadata/metadata.xml
+  description: |-
+    This command specifies a metadata URL to add a trust group
+  summary: ""
+- title: 'Example 2: Add a trust group by metadata file'
+  code: |-
+    PS C:\> Add-AdfsClaimsProviderTrustsGroup -MetadataFile "C:\metadata.xml"
+  description: |-
+    This command specifies a metadata file to add a trust group.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AcceptanceTransformRules
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AcceptanceTransformRulesFile
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoUpdateEnabled
+  description: |+
+    Indicates whether automatic updates are enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MetadataFile
+  isRequired: true
+  description: |+
+    Specifies the file path and name of a metadata file on the local file system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: MetadataUrl
+  isRequired: true
+  description: |+
+    Specifies the URL of a metadata file available on the public Internet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: MonitoringEnabled
+  description: |+
+    Indicates whether monitoring is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Add-AdfsClaimsProviderTrustsGroup
+name: Add-AdfsClaimsProviderTrustsGroup
+description: |-
+  The **Add-AdfsClaimsProviderTrustsGroup** cmdlet creates a claims provider trust group based on metadata that contains multiple entities.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/add-adfsclaimsprovidertrustsgroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AdfsClaimsProviderTrustsGroup

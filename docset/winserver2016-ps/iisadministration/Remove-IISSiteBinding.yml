@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a binding from an IIS website. This cmdlet has been introduced in version 1.1.0.0 of IISAdministration module.
+module: IISAdministration
+notes: ""
+links:
+- text: Get-IISSiteBinding
+  href: ./Get-IISSiteBinding.yml
+- text: New-IISSiteBinding
+  href: ./New-IISSiteBinding.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Remove-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] <String>]
+
+   [-RemoveConfigOnly] [-WhatIf] [-Confirm]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-IISSiteBinding -Name "TestSite" -BindingInformation "*:8080:"
+  description: |-
+    This command removes a binding of "*:8080:" from a website named TestSite.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BindingInformation
+  isRequired: true
+  description: |+
+    Specifies the binding information string to use for the new site. The binding information of the form
+    IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which
+    is equivalent to using a wildcard character such as \*:443:. In this representation \*  indicates all IP
+    addresses and all hostnames are indicated by leaving the corresponding field blank.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the IIS website.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    The protocol for which the binding is configured, usually http, https or ftp.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemoveConfigOnly
+  description: |+
+    Indicates that this operation does not remove the SSL certificate information and only removes the IIS binding configuration information in the applicationhost.config.
+
+    If you want to delete a HTTPS binding configuration that shares a SSL certificate with other existing bindings, only the IIS binding configuration should be removed so that the SSL certificate information remains.
+    This is to ensure that the other existing bindings will still have access to the certificate.
+
+    This parameter is ignored if you are removing a binding which does not have a certificate.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: IISAdministration.Remove-IISSiteBinding
+name: Remove-IISSiteBinding
+description: |-
+  Removes a binding from an IIS website.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/remove-iissitebinding?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-IISSiteBinding

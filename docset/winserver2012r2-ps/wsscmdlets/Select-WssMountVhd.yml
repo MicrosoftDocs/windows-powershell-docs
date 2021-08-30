@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Selects a VHD from a backup set to mount for a file restore operation.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.ServerBackup.ObjectModel.MountVhdData" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates mount VHD data.
+links:
+- text: Get-WssMountVhd
+  href: ./Get-WssMountVhd.yml
+syntaxes:
+- Select-WssMountVhd [-BackupSet] <BackupSet> [-Vhd] <MountVhdData> [<CommonParameters>]
+examples:
+- title: 'Example 1: Select a VHD for a restore operation'
+  code: |-
+    PS C:\> Select-WssMountVhd -BackupSet $ContosoBU122412 -Vhd $ContosoVHD122412
+  description: |-
+    This command selects the backup set that is stored in the variable named $ContosoBU122412 from the VHD that is stored in the variable named $ContosoVHD122412.
+  summary: ""
+parameters:
+- type: <xref href="BackupSet" data-throw-if-not-resolved="False" />
+  name: BackupSet
+  isRequired: true
+  description: |+
+    Specifies the backup set from which to restore files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MountVhdData" data-throw-if-not-resolved="False" />
+  name: Vhd
+  isRequired: true
+  description: |+
+    Specifies the VHD to mount.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Select-WssMountVhd
+name: Select-WssMountVhd
+description: |-
+  The **Select-WssMountVhd** cmdlet selects a virtual hard drive (VHD) from a backup set to mount for a file restore operation.
+  Each VHD represents a backup volume in the set.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/select-wssmountvhd?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Select-WssMountVhd

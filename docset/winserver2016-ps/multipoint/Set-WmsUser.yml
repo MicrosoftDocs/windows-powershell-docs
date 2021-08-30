@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a Windows MultiPoint Server user account.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-WmsUser [-Name] <String> [-FullName <String>] [-Description <String>] [-UserType <UserTypePS>]
+
+   [-Server <String>] [<CommonParameters>]
+- >-
+  Set-WmsUser [-Credential] <PSCredential> [-FullName <String>] [-Description <String>] [-UserType <UserTypePS>]
+
+   [-Server <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-WmsUser -Name "Student01" -Description "New Student" -FullName "Patti Fuller"
+  description: |-
+    This command updates a user account with the description New Student, the name as Student01, and the full name as Patti Fuller.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  isRequired: true
+  description: |+
+    Specifies a **PSCredential** object. Use the **Get-Credential** cmdlet to get a **PSCredential** object.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FullName
+  description: |+
+    Specifies the full name of the user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the user.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command. The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+- type: <xref href="UserTypePS" data-throw-if-not-resolved="False" />
+  name: UserType
+  description: |+
+    Specifies the user type. The acceptable values for this parameter are:
+
+     - Administrator
+     - Standard
+     - DashboardUser
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Administrator, Standard, DashboardUser
+uid: MultiPoint.Set-WmsUser
+name: Set-WmsUser
+description: |-
+  The **Set-WmsUser** cmdlet updates a local user on the current Windows MultiPoint Server system.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/set-wmsuser?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WmsUser

@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the extension points for packages.
+module: AppvClient
+notes: ""
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvClientPackage
+  href: ./Add-AppvClientPackage.yml
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Mount-AppvClientPackage
+  href: ./Mount-AppvClientPackage.yml
+- text: Publish-AppvClientPackage
+  href: ./Publish-AppvClientPackage.yml
+- text: Remove-AppvClientPackage
+  href: ./Remove-AppvClientPackage.yml
+- text: Repair-AppvClientPackage
+  href: ./Repair-AppvClientPackage.yml
+- text: Set-AppvClientPackage
+  href: ./Set-AppvClientPackage.yml
+- text: Stop-AppvClientPackage
+  href: ./Stop-AppvClientPackage.yml
+syntaxes:
+- >-
+  Unpublish-AppvClientPackage [-Global] [-UserSID <String>] [-PackageId] <Guid> [-VersionId] <Guid>
+
+   [<CommonParameters>]
+- Unpublish-AppvClientPackage [-Global] [-UserSID <String>] [-Package] <AppvClientPackage> [<CommonParameters>]
+- >-
+  Unpublish-AppvClientPackage [-Global] [-UserSID <String>] [-Name] <String> [[-Version] <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Unpublish a version of a package'
+  code: |-
+    PS C:\> Unpublish-AppvClientPackage -Name "MyApp" -Version 3
+  description: |-
+    This command unpublishes version 3 of the package named MyApp.
+  summary: ""
+- title: 'Example 2: Unpublish a version of a package for all users'
+  code: |-
+    PS C:\> Unpublish-AppvClientPackage -Name "MyApp" -Version 3 -Global
+  description: |-
+    This command unpublishes version 3 of the package named MyApp for all users on the computer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    Indicates that the packages are unpublished to all users that log into the targeted computer.
+    Otherwise, the packages are only unpublished to the currently running user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the package given during Sequencing time.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppvClientPackage" data-throw-if-not-resolved="False" />
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies an App-V package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageId
+  isRequired: true
+  description: |+
+    Specifies a GUID that uniquely identifies the package.
+    It can be found in the package manifest or by opening the package in the Microsoft Application Virtualization (App-V) Sequencer.
+    The package ID is shared by all versions of a package.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserSID
+  description: |+
+    Specifies the SID of the intended user, in the form of S-1-2-34-56789012-3456789012-345678901-2345.
+    This cmdlet parameter requires elevated rights to run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of an App-V package in one specific lineage.
+    If you do not specify this parameter, the cmdlet operates on the latest version found.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionId
+  isRequired: true
+  description: |+
+    Specifies a GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+    If you do not specify this parameter, the cmdlet operates on the latest version of the package.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Unpublish-AppvClientPackage
+name: Unpublish-AppvClientPackage
+description: |-
+  The **Unpublish-AppvClientPackage** cmdlet removes all the extension points of the specified packages.
+  The package contents remain on the target computer.
+  The package is still added on the client and the appropriate **AppvClientPackage** object persists.
+
+  The package can be unpublished for the current user or if all users that log on to the target computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/unpublish-appvclientpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Unpublish-AppvClientPackage

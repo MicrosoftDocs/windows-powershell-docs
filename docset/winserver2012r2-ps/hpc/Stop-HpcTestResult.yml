@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cancels a diagnostic test if it is still running.
+module: HPC
+notes: |-
+  * The built-in ConfirmImpact setting for this cmdlet is Medium. If this ConfirmImpact setting is equal to or higher than the value of the $ConfirmPreference variable for your environment, the cmdlet prompts for confirmation unless you specify `-Confirm:$False`. If this ConfirmImpact setting is lower than the value of the $ConfirmPreference variable for your environment, the cmdlet does not prompt for confirmation unless you specify `-Confirm` or `-Confirm:$True`.
+  * You must be a cluster administrator to run this cmdlet successfully.
+inputs:
+- name: <xref href="HpcTestResult" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-HpcTestResult
+  href: ./Export-HpcTestResult.md
+- text: Get-HpcTestResult
+  href: ./Get-HpcTestResult.md
+- text: Invoke-HpcTest
+  href: ./Invoke-HpcTest.md
+syntaxes:
+- >-
+  Stop-HpcTestResult [-RunId] <Int32>  [-Scheduler <String[]>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Stop-HpcTestResult -Run <HpcTestResult>  [-Scheduler <String[]>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Cancel a test by ID'
+  code: |-
+    PS C:\>Stop-HpcTestResult -RunId 6
+  description: |-
+    This command cancels the diagnostic test run with an ID of 6.
+  summary: ""
+- title: 'Example 2: Get a test result and cancel the test if the user confirms'
+  code: |-
+    PS C:\>Get-HpcTestResult -Alias "ping" | Select-Object -Last 1 | Stop-HpcTestResult -Confirm
+  description: |-
+    This command gets the **HpcTestResult** object for the most recent run of the Ping Test and cancels that test run if the user confirms the cancellation when prompted.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="HpcTestResult" data-throw-if-not-resolved="False" />
+  name: Run
+  isRequired: true
+  description: |+
+    Specifies the **HpcTestResult** object for the running diagnostic test that you want to cancel.
+    Use the Get-HpcTestResult cmdlet to get the **HpcTestResult** object for a running diagnostic test.
+    You cannot specify both the *Run* and *RunId* parameters.
+
+    This parameter was named *TestResult* in HPC Pack 2008.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: TestResult
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RunId
+  isRequired: true
+  description: |+
+    Specifies the ID for the diagnostic test run that you want to cancel.
+    Use the Get-HpcTestResult cmdlet to see the diagnostic test runs for an HPC cluster.
+    You cannot specify both the *RunId* and *Run* parameters.
+
+    This parameter was introduced in HPC Pack 2008 R2.
+    It is not supported in previous versions.
+
+  defaultValue: None
+  position: "1"
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Scheduler
+  description: |+
+    Specifies the host name or IP address of the head node for the cluster on which the diagnostic test is running.
+    The value must be a valid computer name or IP address.
+    If you do not specify the *Scheduler* parameter, this cmdlet uses the scheduler on the head node that the CCP_SCHEDULER environment variable specifies.
+    To set this environment variable, run the following cmdlet:
+
+    `Set-Content Env:CCP_SCHEDULER \<head_node_name\>`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HPC.Stop-HpcTestResult
+name: Stop-HpcTestResult
+description: |-
+  The **Stop-HpcTestResult** cmdlet cancels the specified diagnostic test run if it is still running.
+  You can specify the test run ID or an **HpcTestResult** object for the diagnostic test to cancel it.
+  If the diagnostic test run is not running, an error occurs.
+metadata:
+  external help file: CCPPSH.dll-Help.xml
+  Module Name: HPC
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hpc/stop-hpctestresult?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-HpcTestResult

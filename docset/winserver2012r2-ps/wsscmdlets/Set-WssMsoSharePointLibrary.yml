@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the properties of a sp_online_2 library.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.O365Integration.SharePointLibrary" data-throw-if-not-resolved="False" />
+  description: |-
+    Library
+
+    Type: Microsoft.WindowsServerSolutions.O365Integration.SharePointLibrary
+
+    Description: SharePoint library
+outputs:
+- name: <xref href="SharePointLibrary" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WssMsoSharePointLibrary
+  href: ./Get-WssMsoSharePointLibrary.yml
+- text: New-WssMsoSharePointLibrary
+  href: ./New-WssMsoSharePointLibrary.yml
+- text: Remove-WssMsoSharePointLibrary
+  href: ./Remove-WssMsoSharePointLibrary.yml
+syntaxes:
+- >-
+  Set-WssMsoSharePointLibrary [-Library] <SharePointLibrary> [[-Name] <String>] [[-Description] <String>]
+
+   [-EnableVersioning] [-ForceCheckout] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set properties of a SharePoint library'
+  code: |-
+    PS C:\> $Library = Get-WssMsoSharePointLibrary | Select-Object -First 1
+    PS C:\> Set-WssMSOSharePointLibrary -Library $Library -Name "New Name" -Description "New Description" -ForceCheckout -EnableVersioning
+  description: |-
+    The first command uses the Get-WssMsoSharePointLibrary cmdlet to get a library, and stores the result in the $Library variable.
+
+    The second command sets the properties of a library by using the $Library variable.
+    The command also sets the **ForceCheckout** and **EnableVersioning** parameters.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description of a sp_online_2 library.
+    The cmdlet modifies the properties of a library with the description you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableVersioning
+  description: |+
+    Indicates that versioning is enabled for this library.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceCheckout
+  description: |+
+    Indicates that force checkout is enabled for this library.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SharePointLibrary" data-throw-if-not-resolved="False" />
+  name: Library
+  isRequired: true
+  description: |+
+    Specifies a  sp_online_2 library object.
+    The cmdlet modifies the library that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a library.
+    The cmdlet modifies the name of a sp_online_2 library with the name that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Set-WssMsoSharePointLibrary
+name: Set-WssMsoSharePointLibrary
+description: |-
+  The **Set-WssMsoSharePointLibrary** cmdlet sets the properties of a sp_online_1 library.
+  A office_365_1 site stores the sp_online_2 library.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssmsosharepointlibrary?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssMsoSharePointLibrary

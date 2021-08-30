@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets an SSL certificate for HTTPS bindings for AD FS.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AdfsSslCertificate
+  href: ./Get-AdfsSslCertificate.yml
+syntaxes:
+- >-
+  Set-AdfsSslCertificate -Thumbprint <String> [-Force <Boolean>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a certificate'
+  code: |-
+    PS C:\> Set-AdfsSslCertificate -Thumbprint "FC85DDB0FC58E63D8CB52654F22E4BE7900FE349"
+  description: |-
+    This command sets the specified certificate for HTTPS bindings for AD FS.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Force
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  isRequired: true
+  description: |+
+    Specifies the thumbprint of a certificate.
+    The thumbprint that you specify corresponds to the certificate installed on the federation server in the local store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsSslCertificate
+name: Set-AdfsSslCertificate
+description: |-
+  The **Set-AdfsSslCertificate** cmdlet sets an SSL certificate for HTTPS bindings for Active Directory Federation Services (AD FS).
+  Use this cmdlet to change the SSL certificate associated with the AD FS service.  On Server 2016, this is a multi-node commandlet, meaning it only has to run on the primary and all nodes in the farm will be updated. On Server 2012R2, run the command on each ADFS server in the ADFS farm.
+
+  Use this cmdlet to change the deployment from one in which both user certificate authentication and device certificate authentication use port 443, to one in which user certificate authentication uses a non-standard port.
+  Specify a new certificate that does not contain a Subject Alternative Name (SAN) for `certauth`.\<federation service name\>, as in `certauth.contoso.com`.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfssslcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsSslCertificate

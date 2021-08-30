@@ -1,0 +1,323 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes data deduplication settings on one or more volumes.
+module: Deduplication
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Deduplication/MSFT_DedupVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-DedupVolume
+  href: ./Disable-DedupVolume.yml
+- text: Enable-DedupVolume
+  href: ./Enable-DedupVolume.yml
+- text: Get-DedupVolume
+  href: ./Get-DedupVolume.yml
+syntaxes:
+- >-
+  Set-DedupVolume [-VolumeId <String[]>] [-OptimizeInUseFiles] [-OptimizePartialFiles] [-NoCompress <Boolean>]
+
+   [-Verify <Boolean>] [-MinimumFileAgeDays <UInt32>] [-MinimumFileSize <UInt32>]
+
+   [-ChunkRedundancyThreshold <UInt32>] [-ExcludeFolder <String[]>] [-ExcludeFileType <String[]>]
+
+   [-ExcludeFileTypeDefault <String[]>] [-NoCompressionFileType <String[]>] [-InputOutputScale <UInt32>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+- >-
+  Set-DedupVolume [-Volume] <String[]> [-OptimizeInUseFiles] [-OptimizePartialFiles] [-NoCompress <Boolean>]
+
+   [-Verify <Boolean>] [-MinimumFileAgeDays <UInt32>] [-MinimumFileSize <UInt32>]
+
+   [-ChunkRedundancyThreshold <UInt32>] [-ExcludeFolder <String[]>] [-ExcludeFileType <String[]>]
+
+   [-ExcludeFileTypeDefault <String[]>] [-NoCompressionFileType <String[]>] [-InputOutputScale <UInt32>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+- >-
+  Set-DedupVolume -InputObject <CimInstance[]> [-OptimizeInUseFiles] [-OptimizePartialFiles]
+
+   [-NoCompress <Boolean>] [-Verify <Boolean>] [-MinimumFileAgeDays <UInt32>] [-MinimumFileSize <UInt32>]
+
+   [-ChunkRedundancyThreshold <UInt32>] [-ExcludeFolder <String[]>] [-ExcludeFileType <String[]>]
+
+   [-ExcludeFileTypeDefault <String[]>] [-NoCompressionFileType <String[]>] [-InputOutputScale <UInt32>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the exclude folders on a volume'
+  code: |-
+    PS C:\> Set-DedupVolume -Volume "F:" -ExcludeFolder "F:\temp","F:\SQL"
+  description: |-
+    This command sets the root folders under which all files are skipped during data deduplication.
+    The *ExcludeFolder* parameter specifies that the data deduplication engine processes the files in all of the folders on volume F: except for files in the Temp folder and the SQL folder.
+    If you exclude folders that contain previously optimized files, this command does not unoptimize those files.
+    You have to manually unoptimze any previously optimized files specified by *ExcludeFolder*.
+
+    Note if the ExcludeFolder already contains optimized files, those optimized files are not automatically unoptimized by this command.
+    Any previously optimized files under the ExcludeFolder will need to be manually unoptimized.
+  summary: ""
+- title: 'Example 2: Set the minimum file age on a volume'
+  code: |-
+    PS C:\> Set-DedupVolume -Volume "E:" -MinimumFileAgeDays 10
+  description: |-
+    This command sets the number of days since the file was created before the deduplication engine optimizes the file.
+    The *MinimumFileAgeDays* parameter specifies that the data deduplication engine processes the files in all of the folders on volume E: that were created at least 10 days ago.
+  summary: ""
+- title: 'Example 3: Set the chunk redundancy threshold on a volume'
+  code: |-
+    PS C:\> Set-DedupVolume -Volume "D:" -MinimumFileAgeDays 15 -ChunkRedundancyThreshold 50
+  description: |-
+    This command sets the number of identical chunks of data that the deduplication engine encounters during deduplication before the server creates a redundant copy of the data chunk.
+    The *MinimumFileAgeDays* parameter specifies that the data deduplication engine processes the files in all of the folders on volume D: that were created at least 15 days ago.
+    The *ChunkRedundancyThreshold* parameter specifies that if the data deduplication engine discovers 50 chunks of identical data, it makes one redundant copy as a safeguard.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ChunkRedundancyThreshold
+  description: |+
+    Specifies the number of identical chunks of data that the deduplication engine encounters before the server creates a redundant copy of the data chunk.
+    This increases the reliability of the server by adding redundancy to the most referenced chunks of data.
+
+    Deduplication detects corruptions and the deduplication scrubbing job restores the corrupted chunks from a redundant copy, if it is available.
+    The default value is 100.
+    The minimum value that you can set is 20.
+    A low value for the *ChunkRedundancyThreshold* parameter reduces the effectiveness of data deduplication by creating more redundant copies of a chunk, and consumes more memory and disk space.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExcludeFileType
+  description: |+
+    Specifies an array of extension types that the deduplication engine excludes from data deduplication and optimization.
+    Specify comma-separated values that are not preceded with a period (.).
+    When you change this setting, you override the existing values.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExcludeFileTypeDefault
+  description: |+
+    Specifies an array of extension types, as strings, that the server does not optimize.
+
+    The **Enable-DedupVolume** cmdlet modifies this behavior, depending on the value of the *UsageType* parameter.
+    If you use the current parameter to modify this behavior, and then run Enable-DedupVolume again, that cmdlet overrides your changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExcludeFolder
+  description: |+
+    Specifies an array of names of root folders under which all files are skipped during data deduplication.
+    Full paths are accepted, however mount points are ignored since the mount point can change after configuration.
+    When you change this setting, you override the existing values.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: InputOutputScale
+  description: |+
+    Specifies the level of input/output parallelization during optimization for this volume.
+    The acceptable values for this parameter are: integers from 0 to 36.
+    The default value of 0 sets the system to automatically select an **InputOutputScale** value based on the size of the volume to deduplicate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MinimumFileAgeDays
+  description: |+
+    Number of days after the file is created before the file is considered to be in-policy for optimization.
+
+    The **Default** and **HyperV** usage types set this value to 3 to maximize performance on hot or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive or if you do not care about the extra latency associated with deduplication.
+
+  defaultValue: None
+  position: Named
+  aliases: MinimumFileAge
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MinimumFileSize
+  description: |+
+    Specifies the minimum size threshold, in bytes, for files that are optimized.
+    The deduplication engine does not optimize files that do not meet the minimum threshold.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: NoCompress
+  description: |+
+    Indicates whether or not the server compresses data after deduplication.
+    Compression uses more processor cycles but provides additional space savings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NoCompressionFileType
+  description: |+
+    Specifies an array of file types that the deduplication engine excludes from compression.
+    These file types are deduplicated but not compressed, typically because the file format is already compressed.
+    Specify comma-separated values that are not preceded with a period (.).
+    When you change this setting, you override the existing values.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OptimizeInUseFiles
+  description: |+
+    Indicates that the server attempts to optimize currently open files.
+    After specifying this parameter, the server may wait up to 15 minutes before it attempts to optimize open files.
+
+    **Enable-DedupVolume** modifies this behavior, depending on the value of the *UsageType* parameter.
+    If you use the current parameter to modify this behavior, and then run **Enable-DedupVolume** again, that cmdlet overrides your changes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OptimizePartialFiles
+  description: |+
+    Indicates that the server optimizes all files, including portions of files that are old enough, according to the value of the *MinimumFileAgeDays* parameter.
+
+    **Enable-DedupVolume** modifies this behavior, depending on the value of the *UsageType* parameter.
+    If you use the current parameter to modify this behavior, and then run **Enable-DedupVolume** again, that cmdlet overrides your changes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Verify
+  description: |+
+    Indicates whether the deduplication engine performs a byte-for-byte verification for each duplicate chunk that optimization creates, rather than relying on a cryptographically strong hash.
+    We do not recommend that you use this parameter.
+    Setting this parameter to $True can degrade optimization performance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Volume
+  isRequired: true
+  description: |+
+    Specifies an array of system volumes.
+    Specify one or more volume IDs, drive letters, or volume GUID paths.
+    For drive letters, use the format D:.
+    For volume GUID paths, use the format \\\\?\Volume{{GUID}}\.
+    Separate multiple volumes with a comma.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VolumeId
+  description: |+
+    Specifies an array of volume IDs. 
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DeviceId, Path, Id
+  parameterValueGroup: ""
+uid: Deduplication.Set-DedupVolume
+name: Set-DedupVolume
+description: |-
+  The **Set-DedupVolume** cmdlet changes data deduplication settings on one or more volumes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DedupVolume.cdxml-help.xml
+  Module Name: Deduplication
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/deduplication/set-dedupvolume?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DedupVolume

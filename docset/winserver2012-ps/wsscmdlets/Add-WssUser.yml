@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new user account.
+module: WssCmdlets
+notes: ""
+outputs:
+- name: <xref href="User" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WssUser
+  href: ./Get-WssUser.yml
+- text: Import-WssUser
+  href: ./Import-WssUser.yml
+- text: Remove-WssUser
+  href: ./Remove-WssUser.yml
+- text: Sync-WssUser
+  href: ./Sync-WssUser.yml
+syntaxes:
+- >-
+  Add-WssUser [-Name] <String> [-Password] <SecureString> [-AccessLevel <String>] [-AllowRemoteAccess]
+
+   [-AllowVpnAccess] [-FirstName <String>] [-LastName <String>]
+examples:
+- title: 'Example 1: Add a user'
+  code: |-
+    PS C:\> Add-WssUser -AccessLevel "Administrator" -Name "SarahJones" -FirstName "Sarah" -LastName "Jones" -AllowRemoteAccess
+  description: |-
+    This command adds a user with administrative access and remote web access to a sbs_sbs8_2 server.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessLevel
+  description: |+
+    Specifies the access level for a user.
+    To give the user administrative access, specify Administrator; otherwise, specify User for a standard user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowRemoteAccess
+  description: |+
+    Indicates that the user can access the Remote Web Access website.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowVpnAccess
+  description: |+
+    Indicates that the user can access the VPN server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FirstName
+  description: |+
+    Specifies the first name of a user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LastName
+  description: |+
+    Specifies the last name of a user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a user account name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Specifies a password for a user, as a secure string.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Add-WssUser
+name: Add-WssUser
+description: |-
+  The **Add-WssUser** cmdlet adds a new user account to the sbs_sbs8_2 server.
+  Use the parameters to grant the account access to services or set access levels.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/add-wssuser?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

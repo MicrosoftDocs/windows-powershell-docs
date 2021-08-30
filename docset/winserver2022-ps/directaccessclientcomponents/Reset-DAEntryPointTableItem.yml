@@ -1,0 +1,216 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the specified DirectAccess entry point configuration to the default configuration.
+module: DirectAccessClientComponents
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/StandardCimv2/MSFT_DASiteTableEntry" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts as input a CIM object which contains a DA site table entry.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DAEntryPointTableItem
+  href: ./Get-DAEntryPointTableItem.yml
+- text: New-DAEntryPointTableItem
+  href: ./New-DAEntryPointTableItem.yml
+- text: Remove-DAEntryPointTableItem
+  href: ./Remove-DAEntryPointTableItem.yml
+- text: Rename-DAEntryPointTableItem
+  href: ./Rename-DAEntryPointTableItem.yml
+- text: Set-DAEntryPointTableItem
+  href: ./Set-DAEntryPointTableItem.yml
+syntaxes:
+- >-
+  Reset-DAEntryPointTableItem [-EntryPointName <String[]>] -PolicyStore <String> [-TeredoServerIP]
+
+   [-IPHttpsProfile] [-GslbIP] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Reset-DAEntryPointTableItem [-EntryPointName <String[]>] -GPOSession <String> [-TeredoServerIP]
+
+   [-IPHttpsProfile] [-GslbIP] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Reset-DAEntryPointTableItem -InputObject <CimInstance[]> [-TeredoServerIP] [-IPHttpsProfile] [-GslbIP]
+
+   [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Reset an entry point property'
+  code: |-
+    PS C:\> Reset-DAEntryPointTableItem -GslbIP -EntryPointName "Paris" -PolicyStore "Contoso\GPO1"
+  description: |-
+    This cmdlet resets the GslbIP property to not-configured for the Paris entry point.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EntryPointName
+  description: |+
+    Specifies the name of the entry point to modify.
+    The entry point name is usually the friendly name of the location, such as Redmond or Paris.
+
+    Specify the name of the entry point by using double quotes (" ").
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GPOSession
+  isRequired: true
+  description: |+
+    Specifies the Group Policy session to send configuration information.
+    You can use *GPOSession* with the **NetGPO** cmdlets to aggregate multiple operations performed on a Group Policy Object.
+
+    *GPOSession* cannot be used in conjunction with **PolicyStore**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GslbIP
+  description: |+
+    Resets the global server load balancing (GSLB) IP of the specified sites to a non-configured state.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IPHttpsProfile
+  description: |+
+    Resets the IpHTTPsProfile property of the specified sites to a non-configured state.
+    For more information about IPHTTPs profiles, see the **NetIPHTTPsConfiguration** cmdlets in the **NetworkTransition** module.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Sends items from an interactive window down the pipeline as input to other cmdlets.
+    By default, this cmdlet does not generate any output.
+    However, to send items from the interactive window down the pipeline, click to select the items and then click OK.
+    Shift-click and Ctrl-click are supported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  isRequired: true
+  description: |+
+    Specifies the policy store into which the cmdlet adds the entry point.
+
+    To add the entry point to a Group Policy Object, specify the GPO name using the format "Domain\GPOName".
+
+    To add the entry point information to a computer's local GPO, specify the computer's local GPO name in the format "GPO:\<computername\>"
+
+    *PolicyStore* cannot be used in conjunction with *GPOSession*.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TeredoServerIP
+  description: |+
+    Resets the TeredoServerIP property of the specified sites to a non-configured state.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DirectAccessClientComponents.Reset-DAEntryPointTableItem
+name: Reset-DAEntryPointTableItem
+description: |-
+  The **Reset-DAEntryPointTableItem** cmdlet resets the configuration of the entry point specified by *EntryPointName* to the default configuration.
+  You can use the optional parameters to reset specific configuration settings to the default configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_DASiteTableEntry.cdxml-help.xml
+  Module Name: DirectAccessClientComponents
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/directaccessclientcomponents/reset-daentrypointtableitem?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Reset-DAEntryPointTableItem

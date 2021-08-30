@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Suspends the self-updating functionality on the specified cluster.
+module: ClusterAwareUpdating
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Enable-CauClusterRole
+  href: ./Enable-CauClusterRole.yml
+- text: Get-CauClusterRole
+  href: ./Get-CauClusterRole.yml
+- text: Remove-CauClusterRole
+  href: ./Remove-CauClusterRole.yml
+- text: Set-CauClusterRole
+  href: ./Set-CauClusterRole.yml
+syntaxes:
+- >-
+  Disable-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable a CAU clustered role on the specified cluster'
+  code: |-
+    PS C:\> Disable-CauClusterRole -ClusterName CONTOSO-FC1 -Force
+  description: |-
+    This command prevents the CAU clustered role on the CONTOSO-FC1 cluster from performing Updating Runs.
+    The cmdlet changes the status of the CAU clustered role to Offline.
+    Because the command specified the *Force* parameter, the cmdlet runs without displaying confirmation prompts.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  description: |+
+    Specifies the name of the cluster on which to disable the self-updating functionality.
+    This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the administrative credentials for the target cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ClusterAwareUpdating.Disable-CauClusterRole
+name: Disable-CauClusterRole
+description: |-
+  The **Disable-CauClusterRole** cmdlet suspends the self-updating functionality on the specified cluster.
+  The self-updating functionality of the cluster can be re-enabled with the **Enable-CauClusterRole** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  Module Name: ClusterAwareUpdating
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/disable-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-CauClusterRole

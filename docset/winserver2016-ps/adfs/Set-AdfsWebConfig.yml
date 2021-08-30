@@ -1,0 +1,142 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies web customization configuration settings.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="System.String;System.String[];System.Uri;System.Int32;System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates string for a theme to save as the active theme.
+links:
+- text: Get-AdfsWebConfig
+  href: ./Get-AdfsWebConfig.yml
+- text: New-AdfsWebTheme
+  href: ./New-AdfsWebTheme.yml
+syntaxes:
+- >-
+  Set-AdfsWebConfig [-ActiveThemeName <String>] [-CDCCookieReader <Uri>] [-CDCCookieWriter <Uri>]
+
+   [-HRDCookieLifetime <Int32>] [-HRDCookieEnabled <Boolean>] [-ContextCookieEnabled <Boolean>] [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set customization configuration properties'
+  code: |-
+    PS C:\> Set-AdfsWebConfig -ActiveThemeName "Default" -CDCCookieReader https://www.Contoso.com/reader.aspx -CDCCookieWriter https://www.Contoso.com/writer.aspx -ContextCookieEnabled $True -HRDCookieEnabled $True -HRDCookieLifetime 30
+
+    ActiveThemeName      : Default
+
+    CDCCookieReader      :
+
+    CDCCookieWriter      :
+
+    HRDCookieLifetime    : 30
+
+    HRDCookieEnabled     : True
+
+    ContextCookieEnabled : True
+  description: |-
+    This command sets properties in the web customization configuration settings.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ActiveThemeName
+  description: |+
+    Specifies the name of a web theme to be set as the active web theme in the web customization configuration.
+    To create a web theme, use the **New-AdfsWebTheme** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: CDCCookieReader
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Common Domain Cookie (CDC) reader.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: CDCCookieWriter
+  description: |+
+    Specifies the URI of the CDC writer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ContextCookieEnabled
+  description: |+
+    Indicates whether to enable the context cookie.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: HRDCookieEnabled
+  description: |+
+    Indicates whether to enable the HRD cookie.
+    If you specify a value of $False, when AD FS has more than one claims provider trust enabled, end users must select the home realm in every application request.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: HRDCookieLifetime
+  description: |+
+    Specifies the lifetime, in days, of an HRD cookie.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsWebConfig
+name: Set-AdfsWebConfig
+description: |-
+  The **Set-AdfsWebConfig** cmdlet modifies web customization configuration settings.
+  These settings impact any protocol that Active Directory Federation Services (AD FS) supports where a web browser facilitates token requests for home realm discovery (HRD) and authentication.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfswebconfig?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsWebConfig

@@ -1,0 +1,211 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the properties of a claim description.
+module: ADFS
+notes: |-
+  * All Set-* cmdlets have a positional parameter (at position 0) with a name that starts with Target*. This parameter defines the search criteria, and the parameter set. For example, **Set-ADFSRelyingParty** has the parameters *TargetName*, *TargetIdentifierUri*, and *TargetRelyingParty*. You can use only one of these *Target** parameters to identify which RelyingParty to modify. Because these parameters are positional, you do not have to specify their name. Therefore, the following commands are identical in effect. The commands change the RelyingParty object named RP1 to RP2.
+
+  - `Set-ADFSRelyingParty -TargetName RP1Name -Name RP2Name`
+  - `Set-ADFSRelyingParty RP1Name -Name RP2Name`
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    A ClaimDescription object is received by the *TargetClaimDescription* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *TargetClaimType*, *TargetName*, and *TargetShortName* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the updated ClaimDescription object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Add-AdfsClaimDescription
+  href: ./Add-AdfsClaimDescription.yml
+- text: Get-AdfsClaimDescription
+  href: ./Get-AdfsClaimDescription.yml
+- text: Remove-AdfsClaimDescription
+  href: ./Remove-AdfsClaimDescription.yml
+syntaxes:
+- >-
+  Set-AdfsClaimDescription [-IsAccepted <Boolean>] [-IsOffered <Boolean>] [-IsRequired <Boolean>]
+
+   [-Notes <String>] [-Name <String>] [-ClaimType <String>] [-ShortName <String>] [-TargetName] <String>
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsClaimDescription [-IsAccepted <Boolean>] [-IsOffered <Boolean>] [-IsRequired <Boolean>]
+
+   [-Notes <String>] [-Name <String>] [-ClaimType <String>] [-ShortName <String>] [-TargetShortName] <String>
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsClaimDescription [-IsAccepted <Boolean>] [-IsOffered <Boolean>] [-IsRequired <Boolean>]
+
+   [-Notes <String>] [-Name <String>] [-ClaimType <String>] [-ShortName <String>] [-TargetClaimType] <String>
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsClaimDescription [-IsAccepted <Boolean>] [-IsOffered <Boolean>] [-IsRequired <Boolean>]
+
+   [-Notes <String>] [-Name <String>] [-ClaimType <String>] [-ShortName <String>]
+
+   [-TargetClaimDescription] <ClaimDescription> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the name of a claim description'
+  code: |-
+    PS C:\> Set-AdfsClaimDescription -TargetName "Role" -Name "RoleDesc"
+  description: |-
+    This command changes the name of the claim description named Role to RoleDesc.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClaimType
+  description: |+
+    Specifies the claim type URI of the claim.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsAccepted
+  description: |+
+    Indicates whether the claim is published in federation metadata as a claim that is accepted by the Federation Service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsOffered
+  description: |+
+    Indicates whether the claim is published in federation metadata as a claim that is offered by the Federation Service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsRequired
+  description: |+
+    Indicates whether the claim is published in federation metadata as a claim that is required by the Federation Service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the friendly name of the claim to modify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Specifies text that describes the purpose of the claim description.
+    The cmdlet adds the notes to the claim description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShortName
+  description: |+
+    Specifies the unique short name identifier for the claim description that is used for issuing and consuming JWT tokens.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClaimDescription" data-throw-if-not-resolved="False" />
+  name: TargetClaimDescription
+  isRequired: true
+  description: |+
+    Specifies a **ClaimDescription** object.
+    The cmdlet modifies the **ClaimDescription** object that you specify.
+    To obtain a claim description, use the **Get-AdfsClaimDescription** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetClaimType
+  isRequired: true
+  description: |+
+    Specifies the claim type of the claim description to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the claim description to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetShortName
+  isRequired: true
+  description: |+
+    Specifies the short name identifier that AD FS uses to lookup an existing claim description.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsClaimDescription
+name: Set-AdfsClaimDescription
+description: |-
+  The **Set-AdfsClaimDescription** cmdlet modifies properties on a Active Directory Federation Services (AD FS) claim description.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsclaimdescription?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsClaimDescription

@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Backs up the CA database and private key information.
+module: ADCSAdministration
+notes: ""
+links:
+- text: ConvertTo-SecureString
+  href: https://go.microsoft.com/fwlink/?LinkID=113291
+- text: Restore-CARoleService
+  href: ./Restore-CARoleService.yml
+syntaxes:
+- Backup-CARoleService [-Path] <String> [-Force] [-KeyOnly] [-Password <SecureString>] [<CommonParameters>]
+- Backup-CARoleService [-Path] <String> [-Force] [-DatabaseOnly] [-Incremental] [-KeepLog] [<CommonParameters>]
+- >-
+  Backup-CARoleService [-Path] <String> [-Force] [-Password <SecureString>] [-Incremental] [-KeepLog]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Back up the CA database and private key information'
+  code: |-
+    PS C:\> Backup-CARoleService -Path "C:\CABackup"
+  description: |-
+    This command exports the CA database and private key information to the specified path.
+  summary: ""
+- title: 'Example 2: Back up the CA database only'
+  code: |-
+    PS C:\> Backup-CARoleService -Path "C:\CABackup" -DatabaseOnly
+  description: |-
+    This command exports the CA database to the specified path.
+    The command does not back up the CA private key information.
+  summary: ""
+- title: 'Example 3: Back up the CA key only'
+  code: |-
+    PS C:\> Backup-CARoleService -Path "C:\CABackup" -KeyOnly
+  description: |-
+    This command exports the CA private key information to the specified path.
+    The command does not back up the CA database.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DatabaseOnly
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet backs up only the certification authority database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Incremental
+  description: |+
+    Indicates that the cmdlet performs incremental database back up.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: KeepLog
+  description: |+
+    Indicates that the cmdlet does not truncate database logs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: KeyOnly
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet backs up only the CA private key and certificate.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Specifies a password, as a secure string, to protect private key and certificate information.
+    To obtain a secure string, use the [ConvertTo-SecureString](https://go.microsoft.com/fwlink/?LinkID=113291) cmdlet.
+    For more information, type `Get-Help ConvertTo-SecureString`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the directory to which the cmdlet backs up the CA database and private key.
+    If you back up the database, the cmdlet creates a new subdirectory named Database that contains the database backup.
+    If you back up the private key, the cmdlet writes the private key to a .p12 file in the Database subdirectory in the path that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADCSAdministration.Backup-CARoleService
+name: Backup-CARoleService
+description: |-
+  The **Backup-CARoleService** cmdlet backs up the certification authority (CA) database and private key information to a specified path.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsadministration/backup-caroleservice?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Backup-CARoleService

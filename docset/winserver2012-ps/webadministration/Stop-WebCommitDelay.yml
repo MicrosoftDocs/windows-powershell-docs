@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Instructs the IIS configuration system to resume the commitment of changes.
+module: WebAdministration
+notes: ""
+links:
+- text: Start-WebCommitDelay
+  href: ./Start-WebCommitDelay.yml
+syntaxes:
+- Stop-WebCommitDelay [[-Commit] <Boolean>] [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Commit configuration changes'
+  code: |-
+    PS C:\>Stop-WebCommitDelay -Commit $true
+  description: |-
+    Commits the configuration changes made since the Start-WebCommitDelay cmdlet was executed.
+  summary: ""
+- title: 'Example 2: Discard configuration changes'
+  code: |-
+    PS C:\>Stop-WebCommitDelay -Commit $false
+  description: |-
+    Discards the configuration changes made since the Start-WebCommitDelay cmdlet was executed.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Commit
+  description: |+
+    Commit flag that tells the IIS configuration system to commit changes when the flag is set to $true, or to discard changes when set to $false.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies the configuration path.
+    This can be either an IIS configuration path in the format computer name/webroot/apphost, or the IIS module path in this format IIS:\sites\Default Web Site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Stop-WebCommitDelay
+name: Stop-WebCommitDelay
+description: |-
+  Instructs the configuration system to end the delay of commitment changes started by the Start-WebCommitDelay cmdlet.
+  You can choose to either commit or discard configuration changes made by using the *Commit* parameter.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/stop-webcommitdelay?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

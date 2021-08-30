@@ -1,0 +1,406 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Compares a virtual machine and a virtual machine host for compatibility, returning a compatibility report.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMCompatibilityReport" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Compare-VM [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-AsJob] [-Name] <String>
+
+   [-DestinationHost] <String> [-DestinationCredential <PSCredential>] [-IncludeStorage]
+
+   [-DestinationStoragePath <String>] [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Compare-VM [-CimSession <CimSession[]>] [-AsJob] [-Name] <String> [-DestinationCimSession] <CimSession>
+
+   [-IncludeStorage] [-DestinationStoragePath <String>] [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Compare-VM [-CimSession <CimSession[]>] -VirtualMachinePath <String> [-SnapshotFilePath <String>]
+
+   [-SmartPagingFilePath <String>] [-AsJob] [-Name] <String> [-DestinationCimSession] <CimSession>
+
+   [-Vhds <Hashtable[]>] [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Compare-VM [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-AsJob]
+
+   [-Path] <String> [-Register] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Compare-VM [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VirtualMachinePath <String>] [-SnapshotFilePath <String>] [-SmartPagingFilePath <String>] [-AsJob]
+
+   [-Path] <String> [[-VhdDestinationPath] <String>] [-Copy] [-VhdSourcePath <String>] [-GenerateNewId] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Compare-VM [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-VirtualMachinePath <String>]
+
+   [-SnapshotFilePath <String>] [-SmartPagingFilePath <String>] [-AsJob] [-Name] <String>
+
+   [-DestinationHost] <String> [-DestinationCredential <PSCredential>] [-Vhds <Hashtable[]>]
+
+   [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Compare-VM [-VirtualMachinePath <String>] [-SnapshotFilePath <String>] [-SmartPagingFilePath <String>] [-AsJob]
+
+   [-VM] <VirtualMachine> [-DestinationHost] <String> [-DestinationCredential <PSCredential>]
+
+   [-Vhds <Hashtable[]>] [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Compare-VM -VirtualMachinePath <String> [-SnapshotFilePath <String>] [-SmartPagingFilePath <String>] [-AsJob]
+
+   [-VM] <VirtualMachine> [-DestinationCimSession] <CimSession> [-Vhds <Hashtable[]>]
+
+   [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Compare-VM [-CompatibilityReport] <VMCompatibilityReport> [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Compare-VM [-AsJob] [-VM] <VirtualMachine> [-DestinationCimSession] <CimSession> [-IncludeStorage]
+
+   [-DestinationStoragePath <String>] [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Compare-VM [-AsJob] [-VM] <VirtualMachine> [-DestinationHost] <String> [-DestinationCredential <PSCredential>]
+
+   [-IncludeStorage] [-DestinationStoragePath <String>] [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Compare-VM -Name TestVM -DestinationHost TestDestinationHost
+  description: |-
+    Compares virtual machine TestVM and Hyper-V host TestDestinationHost for compatibility.
+  summary: ""
+- title: Example 2
+  code: |-
+    Attempts import of a virtual machine; the attempt fails due to incompatibilities with the Hyper-V host.
+    PS C:\> Import-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML'
+    Import-VM : Unable to import virtual machine due to configuration errors.  Please use Compare-VM to repair the virtual machine.
+    At line:1 char:1
+    + import-vm -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XM ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        + CategoryInfo          : NotSpecified: (:) [Import-VM], VirtualizationOperationFailedException
+        + FullyQualifiedErrorId : Microsoft.HyperV.PowerShell.Commands.ImportVMCommand 
+
+    Gets a compatibility report that describes the attempted import and lists the virtual machine's incompatibilities with the Hyper-V host.
+    PS C:\> $report = Compare-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML'
+
+
+    Displays the compatibility report, revealing that the virtual network adapter was connected to switch Production. The Hyper-V host has no switch by that name.
+    PS C:\> $report.Incompatibilities | Format-Table -AutoSize
+    Message                                      MessageId Source
+    -------                                      --------- ------
+    Could not find Ethernet switch 'Production'.     33012 Microsoft.HyperV.PowerShell.VMNetworkAdapter 
+
+    Disconnects the virtual network adapter.
+    PS C:\> $report.Incompatibilities[0].Source | Disconnect-VMNetworkAdapter
+
+
+    Generates a new compatibility report to determine if the virtual machine is compatible with the Hyper-V host.
+    PS C:\> Compare-VM -CompatibilityReport $report
+
+
+    Displays the compatibility report.
+    PS C:\> $report
+    VM                 : Microsoft.HyperV.PowerShell.VirtualMachine
+    OperationType      : ImportVirtualMachine
+    Destination        : HYPER-V-1
+    Path               : D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML
+    SnapshotPath       : D:\vm1\Snapshots
+    VhdDestinationPath :
+    VhdSourcePath      :
+    Incompatibilities  :
+
+    Imports the virtual machine.
+    PS C:\> import-vm -CompatibilityReport $report
+    Name State CPUUsage(%) MemoryAssigned(M) MemoryDemand(M) MemoryStatus Uptime   Status             ReplicationState
+    ---- ----- ----------- ----------------- --------------- ------------ ------   ------             ----------------
+    VM1  Off   0           0                 0                            00:00:00 Operating normally Disabled
+  description: |-
+    Imports a virtual machine whose configuration is not compatible with the Hyper-V host.
+    Note the use of **Compare-VM** to troubleshoot the import failure in the first step.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMCompatibilityReport" data-throw-if-not-resolved="False" />
+  name: CompatibilityReport
+  isRequired: true
+  description: |+
+    Specifies a compatibility report which resolves any incompatibilities between the virtual machine and the virtual machine host.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-v hosts that run this cmdlet.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Copy
+  isRequired: true
+  description: |+
+    Specifies that the comparison should be made for a copy import operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: DestinationCimSession
+  isRequired: true
+  description: |+
+    Specifies the **CIMSession** on the Hyper-V host to which this cmdlet compares the virtual machine for compatibility.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DestinationCredential
+  description: |+
+    Specifies a user account that has permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationHost
+  isRequired: true
+  description: |+
+    Specifies the Hyper-V host to which the virtual machine is to be compared for compatibility.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationStoragePath
+  description: |+
+    Specifies a destination storage path to which all virtual machine storage is to be moved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GenerateNewId
+  description: |+
+    Specifies that the virtual machine should be copied and given a new unique identifier.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeStorage
+  description: |+
+    Specifies that the compatibility comparison should include both the virtual machine and its storage.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine to be compared.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path to the configuration file of the virtual machine to be compared.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Register
+  description: |+
+    Specifies that the comparison should be made for an in-place import operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourcePoolName
+  description: |+
+    Specifies the friendly name of the resource pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RetainVhdCopiesOnSource
+  description: |+
+    Indicates that this cmdlet retains parent virtual hard disks on the source computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SmartPagingFilePath
+  description: |+
+    Specifies the new path to use for a smart paging file, if one is needed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SnapshotFilePath
+  description: |+
+    Specifies the path for any snapshot files associated with the virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: CheckpointFileLocation, SnapshotFileLocation
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VhdDestinationPath
+  description: |+
+    Specifies the folder to which the virtual machine's VHD is to be copied.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Vhds
+  description: |+
+    Specifies an array of hash tables that specifies a location for each individual virtual hard disk that needs to be compared.
+    Each hash table has two entries.
+    The first entry specifies the current location of the virtual hard disk to move, and has a key of **SourceFilePath**.
+    The second entry specifies the new location for the virtual hard disk, and has a key of **DestinationFilePath**.
+    The virtual hard disk names must be identical in both entries.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VhdSourcePath
+  description: |+
+    Specifies the folder from which the virtual machine's VHD files are to be copied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualMachinePath
+  isRequired: true
+  description: |+
+    Specifies the path where the resulting virtual machine configuration files are to be stored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" />
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies a virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Compare-VM
+name: Compare-VM
+description: |-
+  The **Compare-VM** cmdlet compares a virtual machine and a virtual machine host for compatibility, returning a compatibility report.
+  This is useful when trying to import or migrate a virtual machine that is incompatible with the target server that runs Hyper-V.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/compare-vm?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Compare-VM

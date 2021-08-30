@@ -1,0 +1,150 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Increases the amount of cache storage space that is available on a hosted cache server by adding a new cache file.
+module: BranchCache
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimV2\MSFT_NetBranchCacheDataCacheExtension" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-BCDataCacheExtension
+  href: ./Get-BCDataCacheExtension.yml
+- text: Remove-BCDataCacheExtension
+  href: ./Remove-BCDataCacheExtension.yml
+syntaxes:
+- >-
+  Add-BCDataCacheExtension [[-Path] <String>] [-Force] [-PassThru] [[-Percentage] <UInt32>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-BCDataCacheExtension [[-Path] <String>] [-Force] [-PassThru] -SizeBytes <UInt64>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Add-BCDataCacheExtension
+  description: |-
+    This example creates a data cache extension in the default location reserving 5% of the drive.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Add-BCDataCacheExtension -Path C:\datacache -Percentage 10
+  description: |-
+    This example adds a data cache extension in the C:\datacache directory reserving 10% of the drive C.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Runs the cmdlet without prompting for confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Sends items from the interactive window down the pipeline as input to other cmdlets.
+    By default, this cmdlet does not generate any output. 
+    To send items from the interactive window down the pipeline, click to select the items and then click OK.
+    Shift-click and Ctrl-click are supported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the location where the data cache file is created.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Percentage
+  description: "Specifies the size of the cache file as a percentage of the disk space. \r\n                         \r\nFor example, if the value of `15` is provided, then the data cache file has a maximum size of fifteen percent of the disk space on the hard drive where the file is created.\r\n\r\n"
+  defaultValue: "5"
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: SizeBytes
+  isRequired: true
+  description: |+
+    Specifies the size of the cache file in bytes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: BranchCache.Add-BCDataCacheExtension
+name: Add-BCDataCacheExtension
+description: |-
+  The **Add-BCDataCacheExtension** cmdlet adds a new data cache file to increase the amount of cache storage space that is available on a hosted cache server.
+  Data cache files can be spread across multiple disks to maximize performance.
+metadata:
+  external help file: BranchCacheOrchestrator.cdxml-help.xml
+  Module Name: BranchCache
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/branchcache/add-bcdatacacheextension?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-BCDataCacheExtension

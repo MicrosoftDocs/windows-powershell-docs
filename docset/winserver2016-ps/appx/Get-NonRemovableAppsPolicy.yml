@@ -1,0 +1,140 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the  a list of the app packages that are installed and configured as non-removable apps.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-NonRemovableAppsPolicy 
+
+      -Path <string> 
+
+      [-WindowsDirectory <string>] 
+
+      [-SystemDrive <string>] 
+
+      [-LogPath <string>]
+
+      [-ScratchDirectory <string>] 
+
+      [-LogLevel {Errors | Warnings | WarningsInfo}]  
+
+      [<CommonParameters>]
+- >-
+  Get-NonRemovableAppsPolicy 
+
+      -Online 
+
+      [-WindowsDirectory <string>] 
+
+      [-SystemDrive <string>] 
+
+      [-LogPath <string>] 
+
+      [-ScratchDirectory <string>] 
+
+      [-LogLevel {Errors | Warnings | WarningsInfo}]  
+
+      [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all installed non-removable app packages'
+  code: |-
+    PS C:\> Get-NonRemovableAppsPolicy -Online
+  description: |-
+    This command gets information about all installed app packages which have been previously configured as non-removable.
+  summary: ""
+- title: 'Example 2: Get all non-removable apps from an offline Windows image'
+  code: |-
+    PS C:\> Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
+  description: |-
+    This command gets all apps packages that have been loaded into the offline operating system image.
+  summary: ""
+parameters:
+- type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: "Specifies the maximum output level shown in the logs. The default log level is 3. The accepted values are as follows:\r\n    \r\n    - 1 = Error\r\n    - 2 = Errors and warnings\r\n    - 3 = Errors, warnings, and information\r\n    - 4 = All of the information listed previously, plus debug output\r\n\r\n"
+  defaultValue: "3"
+  pipelineInput: true
+  position: Named
+  aliases: LL
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the full path and file name to log to. If not set, the default is `%WINDIR%\Logs\Dism\dism.log`. In Windows PE, the default directory is the RAMDISK scratch space which can be as small as 32MB. The log file will automatically be archived. The archived log file will be saved with .bak appended to the file name and a new log file will be generated. Each time the log file is archived the .bak file will be overwritten. When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+
+  defaultValue: '%WINDIR%\Logs\Dism\dism.log'
+  pipelineInput: true
+  position: Named
+  aliases: LP
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Online
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet operates on a running operating system on the local host.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the full path to the root directory of the offline Windows image that you will inquire into. If the directory named Windows is not a subdirectory of the root directory, WindowsDirectory must be specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScratchDirectory
+  description: |+
+    Specifies a temporary directory that will be used when extracting files for use during inquiry. The directory must exist locally. If not spcified, the `\Windows\Temp` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM. Items in the scratch directory are deleted after each operation. You should not use a network share location as a scratch directory to expand a package(.cab or .msu file) for installation.
+
+  defaultValue: '\Windows\Temp'
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SystemDrive
+  description: |+
+    Specifies the path to the location of the BootMgr files. This is necessary only when the BootMgr files are located on a partition other than the one that you are running the command from. Use -SystemDrive to inquire an installed Windows image from a Windows PE environment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WindowsDirectory
+  description: |+
+    Specifies the path to the Windows directory relative to the image path. This cannot be the full path to the Windows directory; it should be a relative path. If not specified, the default is the Windows directory in the root of the offline image directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Appx.Get-NonRemovableAppsPolicy
+name: Get-NonRemovableAppsPolicy
+description: |-
+  The **Get-NonRemovableAppsPolicy** cmdlet gets a list of the app packages what are installed, and have been configured as non-removable (can not be uninstalled). An app package has a .msix or .appx file name extension.
+metadata:
+  audiencems.localizationpriority: ITPro
+  description: Use this topic to help prevent the uninstall of specific Windows apps with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+  Module Name: Appx
+  ms.date: 02/05/2020
+  online version: https://docs.microsoft.com/powershell/module/appx/get-nonremovableappspolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NonRemovableAppsPolicy

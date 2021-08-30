@@ -1,0 +1,158 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes multicast scopes.
+module: DhcpServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DhcpServerv4MulticastScope" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Get-DhcpServerv4MulticastScope
+  href: ./Get-DhcpServerv4MulticastScope.yml
+- text: Set-DhcpServerv4MulticastScope
+  href: ./Set-DhcpServerv4MulticastScope.yml
+- text: Add-DhcpServerv4MulticastScope
+  href: ./Add-DhcpServerv4MulticastScope.yml
+- text: Get-DhcpServerv4MulticastScopeStatistics
+  href: ./Get-DhcpServerv4MulticastScopeStatistics.yml
+syntaxes:
+- >-
+  Remove-DhcpServerv4MulticastScope [-ComputerName <String>] -Name <String[]> [-Force] [-PassThru]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a multicast scope by using a name'
+  code: |-
+    PS C:\> Remove-DhcpServerv4MulticastScope -Name "Multicast_VideoConference" -ComputerName "DhcpServer01.Contoso.com"
+  description: |-
+    This command removes the multicast scope named Multicast_VideoConference from the DHCP server named DhcpServer01.Contoso.com.
+  summary: ""
+- title: 'Example 2: Remove a multicast scope without a confirmation'
+  code: |-
+    PS C:\> Remove-DhcpServerv4MulticastScope -Name "Multicast_AudioConference" -ComputerName "DhcpServer01.Contoso.com" -Force
+  description: |-
+    This command removes the multicast scope named Multicast_AudioConference from the DHCP server named DhcpServer01.Contoso.com.
+    The cmdlet does not prompt the user for confirmation, regardless if the scopes are active or contain active client leases.
+  summary: ""
+- title: 'Example 3: Remove inactive multicast scopes'
+  code: |-
+    PS C:\> Get-DhcpServerv4MulticastScope | Where-Object -FilterScript { $_.State -Eq "Inactive" } | Remove-DhcpServerv4MulticastScope -Force -PassThru
+  description: |-
+    This command removes all of the disabled multicast scopes on the DHCP Server service.
+    The **Get-DhcpServerv4MulticastScope** cmdlet returns the multicast scope objects and passes the objects to the **Where-Object** cmdlet by using the pipeline operator.
+    For more information, type `Get-Help Where-Object`.
+
+    The **Where-Object** cmdlet filters the multicast scope objects for inactive multicast scopes, and passes the objects to the **Remove-DhcpServerv4MulticastScope** cmdlet by using the pipeline operator.
+    The **Remove-DhcpServerv4MulticastScope** cmdlet removes the inactive scopes.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name or IP address of the target computer that runs the DHCP Server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+    If you specify this parameter, the cmdlet removes the scope regardless if there are active leases in the scope.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names of multicast scopes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Remove-DhcpServerv4MulticastScope
+name: Remove-DhcpServerv4MulticastScope
+description: |-
+  The **Remove-DhcpServerv4MulticastScope** cmdlet removes the specified multicast scopes from the Dynamic Host Configuration Protocol (DHCP) server.
+  When you remove a multicast scope, the DHCP server cannot assign the range of IP addresses to DHCP clients.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerV4MulticastScope_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/remove-dhcpserverv4multicastscope?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-DhcpServerv4MulticastScope

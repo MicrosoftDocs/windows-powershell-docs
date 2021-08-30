@@ -1,0 +1,208 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies properties of a web theme.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="System.IdentityServer.Management.Resources.AdfsWebTheme" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a web customization object, **System.IdentityServer.Management.Resources.AdfsWebTheme**.
+    This object includes the following properties: 
+
+    - Name: **System.String**
+    - IsBuiltinTheme: **System.Boolean**
+    - StyleSheet: **IDictionary\<string, byte\[\]\>**
+    - Logo: **IDictionary\<string, byte\[\]\>**
+    - Illustration: **IDictionary\<string, byte\[\]\>**
+    - RTLStyleSheet: **byte\[\]**
+    - AdditionalFileResources: **IDictionary\<string, byte\[\]\>**
+links:
+- text: Export-AdfsWebTheme
+  href: ./Export-AdfsWebTheme.yml
+- text: Get-AdfsWebTheme
+  href: ./Get-AdfsWebTheme.yml
+- text: New-AdfsWebTheme
+  href: ./New-AdfsWebTheme.yml
+- text: Remove-AdfsWebTheme
+  href: ./Remove-AdfsWebTheme.yml
+syntaxes:
+- >-
+  Set-AdfsWebTheme [-StyleSheet <Hashtable[]>] [-RTLStyleSheetPath <String>] [-OnLoadScriptPath <String>]
+
+   [-Logo <Hashtable[]>] [-Illustration <Hashtable[]>] [-AdditionalFileResource <Hashtable[]>] [-PassThru]
+
+   [-TargetName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsWebTheme [-StyleSheet <Hashtable[]>] [-RTLStyleSheetPath <String>] [-OnLoadScriptPath <String>]
+
+   [-Logo <Hashtable[]>] [-Illustration <Hashtable[]>] [-AdditionalFileResource <Hashtable[]>] [-PassThru]
+
+   [-TargetWebTheme] <AdfsWebTheme> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a web named theme'
+  code: |-
+    PS C:\> Set-AdfsWebTheme -TargetName "Theme01" -Illustration @{Locale="";Path="c:\illustration.png"} -Logo @{Locale="";Path="c:\logo.png"} -RTLStyleSheetPath "C:\StyleSheet.css" -StyleSheet @{Locale="";Path="c:\stylesheet.css"}
+  description: |-
+    This command modifies a web theme named Theme01.
+    The command uses standard Windows PowerShell® syntax to create hash tables.
+    For more information, type `Get-Help about_Hash_Tables`.
+    The command specifies an illustration image, a logo image, an RTL style sheet, and a cascading style sheet for Theme01.
+    The command specifies no value for **Locale** for any of these parameters, and, therefore, the illustration, logo, and style sheet all use the invariant locale.
+  summary: ""
+- title: 'Example 2: Specify an additional resource'
+  code: |-
+    PS C:\> Set-AdfsWebTheme -TargetName "Theme02" -AdditionalFileResource @{Uri="/adfs/portal/Background.png";Path="Background.png"}
+  description: |-
+    This command specifies an additional file resource for the web theme named Theme02.
+    The command makes a resource, in this case, BackGround.png, available to cascading style sheets or JavaScript applications.
+  summary: ""
+- title: 'Example 3: Modify a web theme by using a variable'
+  code: |-
+    PS C:\> $Theme = Get-AdfsWebTheme -Name "Theme03"
+    PS C:\> Set-AdfsWebTheme -TargetWebTheme $Theme -Illustration @{Locale="";Path="C:\Illustration.png"} -Logo @{Locale="";Path="C:\Logo.png"} -RTLStyleSheetPath "C:\StyleSheet.css" -StyleSheet @{Locale="";Path="C:\StyleSheet.css"}
+  description: |-
+    The first command uses the **Get-AdfsWebTheme** cmdlet to get the web theme named Theme03, and then stores it in the $Theme variable.
+
+    The second command modifies the web theme stored in the $Theme.
+    The command specifies an illustration image, a logo image, an RTL style sheet, and a cascading style sheet for that theme.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AdditionalFileResource
+  description: |+
+    Specifies an array of **Hashtable** objects that specify additional file resources by using two string keys: **Uri** and **Path**.
+    For more information, type `Get-Help about_Hash_Tables`.
+    **Uri** is the relative Uniform Resource Identifier (URI) string for a resource.
+    The URI always begins with /adfs/portal/.
+    **Path** is the file path of a resource.
+    If you do not specify the path, the cmdlet removes the file resource that corresponds to the specified URI.
+
+    Specify this parameter to make resources, such as images, available to cascading style sheets or JavaScript applications.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Illustration
+  description: |+
+    Specifies an array of **Hashtable** objects that specify illustrations by using two string keys: **Locale** and **Path**.
+    **Locale** is a **CultureInfo** object.
+    **Path** is a file path.
+    If you do not specify a locale, **Locale** refers to the invariant locale.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Logo
+  description: |+
+    Specifies an array of **Hashtable** objects that specify logos by using two string keys: **Locale** and **Path**.
+    **Locale** is a **CultureInfo** object.
+    **Path** is a file path.
+    If you do not specify a locale, **Locale** refers to the invariant locale.
+    If you do not specify a path, the cmdlet removes the file content that corresponds to the specified locale.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OnLoadScriptPath
+  description: |+
+    Specify this parameter to make resources, such as images, available to cascading style sheets or JavaScript applications.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RTLStyleSheetPath
+  description: |+
+    Specifies a file path to a run-time library (RTL) style sheet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StyleSheet
+  description: |+
+    Specifies an array of **Hashtable** objects that specify style sheets by using two string keys: **Locale** and **Path**.
+    **Locale** is a **CultureInfo** object for a style sheet.
+    **Path** is a file path of the style sheet.
+    If you do not specify a locale, **Locale** refers to the invariant locale.
+    If you do not specify a path, the cmdlet removes the file content that corresponds to the specified locale.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies a name.
+    The cmdlet modifies the theme that you specify by name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AdfsWebTheme" data-throw-if-not-resolved="False" />
+  name: TargetWebTheme
+  isRequired: true
+  description: |+
+    Specifies an **AdfsWebTheme** object.
+    The cmdlet modifies the theme that you specify.
+    To obtain an **AdfsWebTheme** object, use the **Get-AdfsWebTheme** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsWebTheme
+name: Set-AdfsWebTheme
+description: |-
+  The **Set-AdfsWebTheme** cmdlet modifies properties of an **AdfsWebTheme** object.
+  Specify a web theme by name or by using the **Get-AdfsWebTheme** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfswebtheme?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsWebTheme

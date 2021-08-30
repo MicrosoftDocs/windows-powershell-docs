@@ -1,0 +1,34 @@
+### YamlMime:PowershellModule
+children:
+- title: Deduplication
+  cmdlets:
+  - Deduplication.Disable-DedupVolume
+  - Deduplication.Enable-DedupVolume
+  - Deduplication.Expand-DedupFile
+  - Deduplication.Get-DedupJob
+  - Deduplication.Get-DedupMetadata
+  - Deduplication.Get-DedupSchedule
+  - Deduplication.Get-DedupStatus
+  - Deduplication.Get-DedupVolume
+  - Deduplication.Measure-DedupFileMetadata
+  - Deduplication.New-DedupSchedule
+  - Deduplication.Remove-DedupSchedule
+  - Deduplication.Set-DedupSchedule
+  - Deduplication.Set-DedupVolume
+  - Deduplication.Start-DedupJob
+  - Deduplication.Stop-DedupJob
+  - Deduplication.Update-DedupStatus
+uid: Deduplication
+name: Deduplication
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Windows Server Data Deduplication-specific cmdlets. 
+  It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.5.1
+  Locale: en-US
+  Module Guid: 1395eca7-7eaf-4958-a114-fb8ab76b86cc
+  Module Name: Deduplication
+  ms.date: 12/20/2016
+  title: Deduplication

@@ -1,0 +1,242 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates and links group policies in the specified domain for provisioning required access settings on the servers managed by the computer running the IPAM server.
+module: IpamServer
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.GroupPolicy.Gpo" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Add-IpamCustomField
+  href: ./Add-IpamCustomField.yml
+- text: Add-IpamCustomValue
+  href: ./Add-IpamCustomValue.yml
+- text: Export-IpamAddress
+  href: ./Export-IpamAddress.yml
+- text: Export-IpamRange
+  href: ./Export-IpamRange.yml
+- text: Get-IpamConfiguration
+  href: ./Get-IpamConfiguration.yml
+- text: Get-IpamCustomField
+  href: ./Get-IpamCustomField.yml
+- text: Import-IpamAddress
+  href: ./Import-IpamAddress.yml
+- text: Import-IpamRange
+  href: ./Import-IpamRange.yml
+- text: Set-IpamConfiguration
+  href: ./Set-IpamConfiguration.yml
+syntaxes:
+- >-
+  Invoke-IpamGpoProvisioning [-Domain] <String> [-GpoPrefixName] <String> [-IpamServerFqdn <String>]
+
+   [-DelegatedGpoUser <String[]>] [-DelegatedGpoGroup <String[]>] [-DomainController <String>] [-PassThru]
+
+   [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Provision GPOs'
+  code: |-
+    PS C:\> Invoke-IpamGpoProvisioning -Domain "child.contoso.com" -GpoPrefixName "IPAM1" -Force
+  description: |-
+    This command creates the universal group IPAMUG in the domain named child.contoso,com, if not already present, and adds the computer account of the local computer running the IPAM server to the group.
+    This cmdlet creates and links the following IPAM GPOs: IPAM1_DHCP, IPAM1_DNS, and IPAM1_DC_NPS in the child.contoso.com domain  to enable access for the group IPAMUG.
+    This cmdlet also enables DNS read access for IPAMUG using domain wide DNS ACL.
+    Since the domain controller is not explicitly specified, this cmdlet contacts the PDC emulator to complete the GPO operations.
+    This cmdlet suppresses the default confirmation text.
+  summary: ""
+- title: 'Example 2: Provision a GPO by using a specific domain controller'
+  code: |-
+    PS C:\> Invoke-IpamGpoProvisioning -Domain "child.contoso.com" -GpoPrefixName "IPAM1" -DomainController "dc1.child.contoso.com" -Force
+  description: |-
+    This command creates the universal group IPAMUG in the domain named child.contoso.com, if not already present, and adds the computer account of the local computer running the IPAM server to the group.
+    This cmdlet also creates and links the following IPAM GPOs: IPAM1_DHCP, IPAM1_DNS, and IPAM1_DC_NPS in the domain child.contoso.com to enable access for the group IPAMUG.
+    This cmdlet enables DNS read access for IPAMUG using domain-wide DNS ACL.
+    This cmdlet uses the domain controller named dc1.child.contoso.com as the DC to complete the GPO operations.
+    This cmdlet suppresses the default confirmation text.
+  summary: ""
+- title: 'Example 3: Provision a GPO by using an FQDN'
+  code: |-
+    PS C:\> Invoke-IpamGpoProvisioning -Domain "child.contoso.com" -GpoPrefixName "IPAM2" -IpamServerFqdn "Ipam2.Contoso.com" -Force
+  description: |-
+    This command creates the universal group named IPAMUG, if not already present, and adds the computer account of the specified computer running the IPAM server named ipam2.contoso.com to the group.
+    This cmdlet creates and links the following IPAM GPOs: IPAM2_DHCP, IPAM2_DNS, and IPAM2_DC_NPS in the domain child.contoso.com to enable access for the universal group named IPAMUG.
+    This cmdlet enables DNS read access for the universal group named IPAMUG using domain-wide DNS ACL.
+    This cmdlet suppresses the default confirmation text.
+  summary: ""
+- title: 'Example 4: Provision a GPO and delegate GPO users'
+  code: |-
+    PS C:\> Invoke-IpamGpoProvisioning -Domain "child.contoso.com" -GpoPrefixName "IPAM1" -DelegatedGpoUser "NetworkAdmin1,NetworkAdmin2" -Force
+  description: |-
+    This command creates the universal group named IPAMUG in domain child.contoso.com, if not already present, and adds the computer account of the local computer running the IPAM server to the group.
+    This cmdlet creates and links the following IPAM GPOs: IPAM1_DHCP, IPAM1_DNS, and IPAM1_DC_NPS in the domain child.contoso.com to enable access for the universal group named IPAMUG.
+    This cmdlet delegates GPO edit privileges to users NetworkAdmin1 and NetworkAdmin2.
+    This cmdlet enables DNS read access for the universal group named IPAMUG using domain-wide DNS ACL.
+    This cmdlet suppresses the default confirmation text.
+  summary: ""
+- title: 'Example 5: Provision GPO and delegate a GPO group'
+  code: |-
+    PS C:\> Invoke-IpamGpoProvisioning -Domain "child.contoso.com" -GpoPrefixName "IPAM1" -DelegatedGpoGroup "IPAMAdmins" -Force
+  description: |-
+    This command creates the universal group named IPAMUG in domain child.contoso.com, if not already present, and adds the computer account of the local computer running the IPAM server to the group.
+    This cmdlet creates and links the following IPAM GPOs: IPAM1_DHCP, IPAM1_DNS, and IPAM1_DC_NPS in the domain child.contoso.com to enable access for the universal group named IPAMUG.
+    This cmdlet delegates GPO edit privileges to the group IPAMAdmins.
+    This cmdlet enables DNS read access for the universal group named IPAMUG using domain-wide DNS ACL.
+    This cmdlet suppresses the default confirmation text.
+  summary: ""
+- title: 'Example 6: Provision GPO and output the objects'
+  code: "PS C:\\> Invoke-IpamGpoProvisioning -Domain \"Ds2-infra.Contoso.com\" -GpoPrefixName \"IPAM1\" -PassThru -Force\r\nDisplayName : IPAM1_DNS \r\nDomainName : ds2-infra.contoso.com \r\nOwner : DS2-INFRA\\Domain Admins \r\nId : ac9dcf5e-8581-442d-ba12-ae7569985313 \r\nGpoStatus : AllSettingsEnabled \r\nDescription : \r\nCreationTime : 2/7/2012 1:04:18 AM \r\nModificationTime : 2/7/2012 1:04:28 AM \r\nUserVersion : AD Version: 1, SysVol Version: 1 \r\nComputerVersion : AD Version: 1, SysVol Version: 1 \r\nWmiFilter : \r\n \r\nDisplayName : IPAM1_DC_NPS \r\nDomainName : ds2-infra.contoso.com \r\nOwner : DS2-INFRA\\Domain Admins \r\nId : 5aaf16d7-9818-47c4-ade9-3860bc00c292 \r\nGpoStatus : AllSettingsEnabled \r\nDescription : \r\nCreationTime : 2/7/2012 1:04:19 AM \r\nModificationTime : 2/7/2012 1:04:28 AM \r\nUserVersion : AD Version: 1, SysVol Version: 1 \r\nComputerVersion : AD Version: 1, SysVol Version: 1 \r\nWmiFilter : \r\n \r\nDisplayName : IPAM1_DHCP \r\nDomainName : ds2-infra.contoso.com \r\nOwner : DS2-INFRA\\Domain Admins \r\nId : 51fb3dee-0032-4d9a-8b92-84af318dcb51 \r\nGpoStatus : AllSettingsEnabled \r\nDescription : \r\nCreationTime : 2/7/2012 1:04:20 AM \r\nModificationTime : 2/7/2012 1:04:28 AM \r\nUserVersion : AD Version: 1, SysVol Version: 1 \r\nComputerVersion : AD Version: 1, SysVol Version: 1 \r\nWmiFilter :"
+  description: |-
+    This command creates the universal group named IPAMUG in the domain child.contoso.com, if not already present, and adds the computer account of the local computer running the IPAM server to the group.
+    This cmdlet creates and links the following IPAM GPOs: IPAM1_DHCP, IPAM1_DNS, and IPAM1_DC_NPS in the domain Ds2-infra.Contoso.com to enable access for the universal group named IPAMUG.
+    This cmdlet enables DNS read access for the universal group named IPAMUG using a domain-wide DNS ACL.
+    This cmdlet suppresses the default confirmation text.
+    This cmdlet outputs the GPOs created during this operation.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DelegatedGpoGroup
+  description: |+
+    Specifies the comma separated list of domain groups which are delegated edit permissions on the three IPAM GPOs created by this cmdlet.
+    The standard GPO delegation privilege of `Edit settings, Delete, Modify Security` is enabled for these groups.
+    Delegation for users or groups without domain administrator privileges can also be enabled from GPMC or GPO cmdlets for the existing IPAM GPOs.
+    This delegation is leveraged by the computer running the IPAM server to automatically edit the GPO filter list in security context of the logged in user who is modifying the server manageability status from the IPAM server inventory view.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DelegatedGpoUser
+  description: |+
+    Specifies the comma separated list of domain users which are delegated edit permissions on the three IPAM GPOs created by this cmdlet.
+    The standard GPO delegation privilege of `Edit settings, Delete, Modify Security` is enabled for these users.
+    Delegation for users or groups without domain administrator privileges can also be enabled from GPMC or GPO cmdlets for the existing IPAM GPOs.
+    This delegation is leveraged by the computer running the IPAM server to automatically edit the GPO filter list in security context of the logged in user who is modifying the server manageability status from the IPAM server inventory view.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  isRequired: true
+  description: |+
+    Specifies the FQDN of the domain for which the IPAM GPOs are created and linked.
+    Specify only one domain name at a time.
+    This cmdlet needs to be invoked one by one for each domain in the Active Directory (AD) forest that needs to be managed by the computer running IPAM server.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Specifies the name of the domain controller that is contacted to complete the GPO operation.
+    Either the FQDN or simply the host name of the domain controller can be specified.
+    A valid domain controller name for the specified domain must be provided.
+    By default, the computer running the IPAM server contacts the PDC emulator of the specified domain unless this parameter is explicitly provided.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GpoPrefixName
+  isRequired: true
+  description: |+
+    Specifies the unique GPO prefix name to use when creating the group policy objects.
+    The GPO prefix name, such as IPAMGPO_ServerX, specified here must be same as the one specified in the IPAM provisioning wizard while selecting Group Policy based provisioning method.
+    The three IPAM GPOs are created with the suffixes `_DHCP`, `_DNS`, and `_DC_NPS` appended to this parameter value, such as IPAMGPO_ServerX_DHCP, IPAMGPO_ServerX_DNS, and IPAMGPO_ServerX_DC_NPS.
+    These suffixes signify the three different types of access settings that are propagated by them depending on the type of server role managed by the computer running the IPAM server.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IpamServerFqdn
+  description: |+
+    Specifies the FQDN of the computer running the IPAM server for which the GPOs enables access settings.
+    By default, IPAM uses the FQDN of the computer running the IPAM server from where the cmdlet is running to enable access settings.
+    The specified computer account is added to the universal group named IPAMUG created by this cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: IpamServer.Invoke-IpamGpoProvisioning
+name: Invoke-IpamGpoProvisioning
+description: |-
+  The **Invoke-IpamGpoProvisioning** cmdlet creates and links three group policies specified in the **Domain** parameter for provisioning required access settings on the server roles managed by the computer running the IP Address Management (IPAM) server.
+  The **GpoPrefixName** parameter specified should be the same as the prefix configured in the IPAM provisioning wizard.
+  The three Group Policy Objects (GPOs) are created with the suffixes `_DHCP`, `_DNS`, and `_DC_NPS` appended to the **GpoPrefixName** parameter value.
+  These suffixes signify the three different types of access settings that are propagated by them depending on the type of server role managed by the computer running the IPAM server.
+
+  The access settings propagated by the created GPOs are required by the periodic IPAM data collection tasks which run under the Network Service account by default.
+  Access settings are propagated for the computer account of the computer running the IPAM server, since that is the credential presented by Network Service to access remote resources.
+  If required the administrator can explicitly specify the fully qualified domain name (FQDN) of the computer running the IPAM server by using the **IpamServerFqdn** parameter By default the localhost name is used as the IpamServerFqdn value, if not specified.
+  The cmdlet creates a universal group named IPAMUG in the domain specified by the **Domain** parameter.
+  If the universal group is already present, then the creation step is skipped.
+  This cmdlet then adds the computer account specified by the **IpamServerFqdn** to the universal group named IPAMUG.
+  Any access setting propagation by IPAM GPOs is done for the universal group named IPAMUG.
+  The cmdlet also modifies the domain wide DNS ACL to enable DNS RPC access for the universal group named IPAMUG.
+
+  By default the GPO creation is done on the PDC emulator for the specified domain.
+  The Domain Controller on which the GPO creation is done may be explicitly selected using the **DomainController** parameter.
+  The GPOs created by this cmdlet can be returned using the **PassThru** parameter.
+
+  At the time of creation of GPOs, the security filter list of IPAM GPOs is empty.
+  When the manageability status of a server is edited by the user in IPAM server inventory view, the computer running the IPAM server automatically adds or deletes the server into the appropriate GPO security filter list, as appropriate.
+  Managed servers are added to the GPO security filtering and unmanaged servers are deleted from the list.
+
+  NOTE: The cmdlet requires domain administrator privileges in order to create the GPOs.
+  Subsequent IPAM GPO editing privileges can be delegated to IPAM administrators who are not domain or enterprise administrators, using the **DelegatedGpoUser** and **DelegatedGpoGroup** parameters.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamGpo-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/invoke-ipamgpoprovisioning?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Invoke-IpamGpoProvisioning

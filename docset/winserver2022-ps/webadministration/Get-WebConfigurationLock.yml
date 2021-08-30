@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the lock status of an IIS configuration location.
+module: WebAdministration
+notes: ""
+links:
+- text: Add-WebConfigurationLock
+  href: ./Add-WebConfigurationLock.yml
+- text: Remove-WebConfigurationLock
+  href: ./Remove-WebConfigurationLock.yml
+syntaxes:
+- >-
+  Get-WebConfigurationLock [-Location <String[]>] [-Filter] <String[]> [[-PSPath] <String[]>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the locking status of an IIS configuration'
+  code: |-
+    IIS:\> Get-WebConfigurationLock -Filter "//asp" -PSPath "IIS:\"
+  description: |-
+    This command returns the locking status of the asp IIS configuration section.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Filter
+  isRequired: true
+  description: |+
+    Specifies an XPath filter expression.
+    This expression can be in XPath format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    Specifies the location of the IIS configuration setting.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies an IIS configuration path in the format computer name/webroot/apphost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebConfigurationLock
+name: Get-WebConfigurationLock
+description: |-
+  The **Get-WebConfigurationLock** cmdlet gets the locking status of the specified Internet Information Services (IIS) configuration location.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webconfigurationlock?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebConfigurationLock

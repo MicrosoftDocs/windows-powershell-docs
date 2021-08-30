@@ -1,0 +1,142 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the virtual network adapters of a virtual machine, snapshot, management OS, or of a virtual machine and management OS.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    **Microsoft.Virtualization.Powershell.VMInternalNetworkAdapter** if **ManagementOS** is specified; **Microsoft.Virtualization.Powershell.VMInternalNetworkAdapter** and **Microsoft.Virtualization.Powershell.VMNetworkAdapter** if **All** is specified;**Microsoft.Virtualization.Powershell.VMNetworkAdapter** in all other cases.
+syntaxes:
+- Get-VMNetworkAdapter [-VMName] <String[]> [[-Name] <String>] [-ComputerName <String[]>] [-IsLegacy <Boolean>]
+- Get-VMNetworkAdapter [[-Name] <String>] [-All] [-ComputerName <String[]>]
+- Get-VMNetworkAdapter [[-Name] <String>] [-ComputerName <String[]>] [-SwitchName <String>] [-ManagementOS]
+- Get-VMNetworkAdapter [-VM] <VirtualMachine[]> [[-Name] <String>] [-IsLegacy <Boolean>]
+- Get-VMNetworkAdapter [-VMSnapshot] <VMSnapshot> [[-Name] <String>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMNetworkAdapter -VMName *
+  description: |-
+    Gets virtual network adapters from all virtual machines on the local Hyper-V host.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VMNetworkAdapter -ManagementOS
+  description: |-
+    Gets the virtual network adapters in the ManagementOS (i.e.
+    the local Hyper-V host).
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>Get-VMNetworkAdapter -All
+  description: |-
+    Gets virtual network adapters from all virtual machines as well as the management OS.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  isRequired: true
+  description: |+
+    Specifies all virtual network adapters in the system, regardless of whether the virtual network adapter is in the management OS or in a virtual machine.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsLegacy
+  description: |+
+    Specify as **$TRUE** to retrieve only legacy network adapters, or as **$FALSE** to retrieve only synthetic network adapters.
+    If not specified, virtual network adapters of both types are retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagementOS
+  isRequired: true
+  description: |+
+    Specifies the management OS, i.e.
+    the virtual machine host OS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the network adapter to be retrieved.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SwitchName
+  description: |+
+    Specifies the name of the virtual switch whose network adapters are to be retrieved.
+    (This parameter is available only for virtual network adapters in the management OS.)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine whose virtual network adapters are to be retrieved.
+    . The asterisk, "*", is the wildcard.
+    If it is specified the cmdlet returns virtual network adapters from every virtual machine in the system.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine whose network adapters are to be retrieved.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSnapshot" data-throw-if-not-resolved="False" />
+  name: VMSnapshot
+  isRequired: true
+  description: |+
+    Specifies the snapshot whose network adapters are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMNetworkAdapter
+name: Get-VMNetworkAdapter
+description: |-
+  The **Get-VMNetworkAdapter** cmdlet gets the virtual network adapters of the specified virtual machine, snapshot, or management OS.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmnetworkadapter?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

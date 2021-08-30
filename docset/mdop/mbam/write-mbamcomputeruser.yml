@@ -1,0 +1,148 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Writes a set of users to a computer's Trusted Platform Module (TPM) owner authorization and each of the currently known computer's encrypted volumes.
+module: MBAM
+notes: ""
+links:
+- text: Write-MbamRecoveryInformation
+  href: write-mbamrecoveryinformation.yml
+- text: Write-MbamTPMInformation
+  href: write-mbamtpminformation.yml
+- text: Microsoft BitLocker Administration and Monitoring
+  href: https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/
+syntaxes:
+- >-
+  Write-MbamComputerUser -ComputerUser <String[]> -Computer <String> -RecoveryServiceEndPoint <Uri>
+
+   [-RetryCount <Int32>] [-RetryIntervalSeconds <Int32>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Give a user permission to recover TPM and Bitlocker information for a specified computer'
+  code: |-
+    PS C:\>Write-MbamComputerUser -RecoveryServiceEndPoint http://MBAMServer.contoso.com:8080 -Computer User12-PC.Contoso.com -user @("User12@Contoso.com")
+  description: |-
+    This command gives User12@Contoso.com permission to recover TPM and Bitlocker information from self-service portal for computer User12-PC.Contoso.com and its volumes.
+  summary: ""
+- title: 'Example 2: Give a user permission to recover TPM and Bitlocker information for a specified computer and suppress user confirmation'
+  code: |-
+    PS C:\>Write-MbamComputerUser -RecoveryServiceEndPoint http://MBAMServer.contoso.com:8080 -Computer User12-PC.Contoso.com -user @("User12@Contoso.com") -Force
+  description: |-
+    This command gives User12@Contoso.com permission to recover TPM and Bitlocker information from self-service portal for computer User12-PC.Contoso.com and its volumes.
+
+    This command additionally suppresses user confirmation.
+  summary: ""
+- title: 'Example 3: Give multiple users permission to recover TPM and Bitlocker information for a specified computer and attempt recovery if the cmdlet fails'
+  code: |-
+    PS C:\>Write-MbamComputerUser -svc http://MBAMServer.contoso.com:8080 -Computer User12-PC.Contoso.com -ComputerUser @("User12@Contoso.com", "User13@Contoso.net") -RetryCount 2 -RetryIntervalSeconds 10 -Force
+  description: |-
+    This command gives  User12@Contoso.com and User13@Contoso.com permission to recover TPM and Bitlocker information from self-service portal for computer User12-PC.Contoso.com and its volumes.
+
+    The command also attempts recovery two more times with a ten second wait time between attempts.
+    This command additionally suppresses user confirmation.
+  summary: ""
+- title: 'Example 4: Give a user permission to recover TPM and Bitlocker information for a specified computer and attempt recovery if the cmdlet fails'
+  code: |-
+    PS C:\>Write-MbamComputerUser -service http://MBAMServer.contoso.com:8080 -Computer User13-Desktop.Domain.Net -user @("User12@Contoso.com") -rc 2 -ri 10
+  description: |-
+    This command gives User12@Contoso.com permission to recover TPM and Bitlocker information from self-service portal for the computer User13-Desktop.Domain.Net and its volumes.
+
+    This command attempts recovery two more times with a ten second wait time between attempts.
+  summary: ""
+- title: 'Example 5: Give a user permission to recover TPM and Bitlocker information for a specified machine and attempt recovery if the cmdlet fails'
+  code: |-
+    PS C:\>Write-MbamComputerUser -service http://MBAMServer.contoso.com:8080 -Computer User13-Desktop.Domain.Net -user @("User12@Contoso.com") -rc 2 -ri 10 -Confirm
+  description: |-
+    This command gives  User12@Contoso.com permission to recover TPM and Bitlocker information from the self-service portal for the machine User13-Desktop.Domain.Net and its volumes.
+
+    This command also attempts recovery two more times with a ten second wait time between attempts.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Computer
+  isRequired: true
+  description: |+
+    Specifies the domain name and machine name of the domain-joined computer in \<domain name\>\\\<machine name\> format (For instance, "contoso.com\ user12-pc").
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerUser
+  isRequired: true
+  description: |+
+    Specifies an array of fully qualified domain user accounts that have permission to access this volume recovery information in user principal name (UPN) (\<login name\>@\<domain name\> format (For instance, @("user12@contoso.com", " user13@contoso.com")).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: user
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: RecoveryServiceEndPoint
+  isRequired: true
+  description: |+
+    Specifies the path to the Microsoft BitLocker Administration and Monitoring (MBAM) Recovery Service endpoint on the network.
+    The URL for the MBAM Recovery service endpoint is http(s)://\<servername\>:\<port\>/MBAMRecoveryAndHardwareService/CoreService.svc (for instance, https://mbamserver.contoso.com:8080/ MBAMRecoveryAndHardwareService/CoreService.svc).
+
+  defaultValue: None
+  position: Named
+  aliases: svc, service
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RetryCount
+  description: |+
+    Specifies the maximum number of times to retry to send recovery information.
+    The cmdlet proceeds to the next record after the retry limit is exceeded.
+
+  defaultValue: None
+  position: Named
+  aliases: rc
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RetryIntervalSeconds
+  description: |+
+    Specifies the amount of time in seconds to wait before the cmdlet retries to send the recovery information.
+
+  defaultValue: None
+  position: Named
+  aliases: ri
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MBAM.Write-MbamComputerUser
+name: Write-MbamComputerUser
+description: |-
+  The **Write-MbamComputerUser** cmdlet writes a set of users to a computer's Trusted Platform Module (TPM) owner authorization and each of the currently known computer's encrypted volumes.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Write-MbamComputerUser

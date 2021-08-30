@@ -1,0 +1,134 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the configuration information of a printer.
+module: PrintManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts one printer object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_PrinterConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a printer configuration object.
+links:
+- text: Set-PrintConfiguration
+  href: ./Set-PrintConfiguration.yml
+syntaxes:
+- >-
+  Get-PrintConfiguration [-ComputerName <String>] [-PrinterName] <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-PrintConfiguration [-PrinterObject] <CimInstance> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the printer configuration'
+  code: |-
+    PS C:\> Get-PrintConfiguration -PrinterName "Microsoft XPS Document Writer"
+  description: |-
+    This command returns the printer configuration for the printer named "Microsoft XPS Document Writer".
+  summary: ""
+- title: 'Example 2: Get the print configuration for all printers'
+  code: |-
+    PS C:\>$Printers = Get-Printer *
+    PS C:\>Foreach ($Printer in $Printers){Get-PrintConfiguration -PrinterName $Printer.name}
+  description: |-
+    This command gets all the printers into a variable $Printers and then loops through all the printers and displays the properties.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the computer from which to retrieve the printer configuration information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Computer, CN
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrinterName
+  isRequired: true
+  description: |+
+    Specifies the name of the printer from which to retrieve the configuration information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: PN
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: PrinterObject
+  isRequired: true
+  description: |+
+    Specifies the object which contains the printer from which to retrieve configuration information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Printer
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PrintManagement.Get-PrintConfiguration
+name: Get-PrintConfiguration
+description: |-
+  The **Get-PrintConfiguration** cmdlet gets the configuration information about the specified printer. 
+  Using **Get-PrintConfiguration** cmdlet, you can manage the configuration of the following features: 
+
+  - Collate
+  - Color
+  - Duplexing Mode
+  - N-Up
+  - Paper Size
+
+  You cannot use wildcard characters with **Get-PrintConfiguration**.
+  You can use **Get-PrintConfiguration** in a Windows PowerShell remoting session.
+
+  You do not need administrator credentials to run **Get-PrintConfiguration**.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_PrinterConfiguration_v1.0.cdxml-help.xml
+  Module Name: PrintManagement
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-PrintConfiguration

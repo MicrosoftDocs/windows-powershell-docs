@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Queries a Network Controller for detailed diagnostic information.
+module: NetworkControllerDiagnostics
+notes: ""
+links:
+- text: Debug-NetworkControllerConfigurationState
+  href: ./Debug-NetworkControllerConfigurationState.yml
+- text: Debug-ServiceFabricNodeStatus
+  href: ./Debug-ServiceFabricNodeStatus.yml
+syntaxes:
+- >-
+  Debug-NetworkController [-NetworkController] <String> [-SetupDiagnostics] [[-IncludeTraces] <Boolean>]
+
+   [[-OutputDirectory] <String>] [[-Credential] <PSCredential>] [[-RestURI] <String>]
+
+   [[-CertificateThumbprint] <String>] [[-DeviceCredentials] <Hashtable>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set up logging on nodes and hosts'
+  code: |-
+    PS C:\>Debug-NetworkController -NetworkController "NC-0.contoso.cloud.com" -SetupDiagnostics
+  description: |-
+    This command sets up logging on all Network Controller nodes and hosts.
+  summary: ""
+- title: 'Example 2: Collect diagnostics data and logs from all nodes and hosts'
+  code: |-
+    PS C:\>$Credential = Get-Credential
+    PS C:\> Debug-NetworkController -NetworkController "NC-0.contoso.cloud.com" -Credential $Credential -OutputDirectory "C:\DiagnosticsData"
+  description: |-
+    The first command creates credentials by using the Get-Credential cmdlet, and then stores it in the $Credential variable.
+    The command prompts you for user name and password.
+
+    The second command collects diagnostics data and logs from all Network Controller nodes and hosts.
+  summary: ""
+- title: 'Example 3: Collect diagnostics data only'
+  code: |-
+    PS C:\>$Credential = Get-Credential
+    PS C:\> Debug-NetworkController -NetworkController "NC-0.contoso.cloud.com" -Credential $Credential -OutputDirectory C:\DiagnosticsData -IncludeTraces:$False
+  description: |-
+    The first command creates credentials, and then stores it in the $Credential variable.
+
+    The second command collects diagnostics data only.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the certificate thumbprint to use for the Network Controller.
+    Specify this parameter for certificate deployment.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a credential to use for the Network Controller.
+    Specify this parameter for Kerberos deployment.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: DeviceCredentials
+  description: |+
+    List of device Credentials. Specify if device credentials are different then Network Controller.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IncludeTraces
+  description: |+
+    Indicates that this cmdlet includes Host Agent and Network Controller Traces.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkController
+  isRequired: true
+  description: |+
+    Specifies the name or IP address of a Network Controller node.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutputDirectory
+  description: |+
+    Specifies the full path of a folder for the results.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RestURI
+  description: |+
+    Specifies the URI to use for Network Controller REST APIs.
+    Specify this parameter for wildcard certificate deployment.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SetupDiagnostics
+  description: |+
+    Indicates that logging is to be enabled.
+    If you do not specify this parameter, logs are to be collected, but logging is not enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkControllerDiagnostics.Debug-NetworkController
+name: Debug-NetworkController
+description: |-
+  The **Debug-NetworkController** cmdlet queries a Network Controller for detailed diagnostic information.
+
+  You can run this cmdlet from a computer that has Layer-3 connectivity to the Representational State Transfer (REST) IP address of the Network Controller.
+  The computer must have the Network Controller REST certificate installed.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Debug-NetworkController-help.xml
+  Module Name: NetworkControllerDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontrollerdiagnostics/debug-networkcontroller?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Debug-NetworkController

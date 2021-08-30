@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Determines which node the Network Controller service modules use as primary.
+module: NetworkControllerDiagnostics
+notes: ""
+links:
+- text: Get-NetworkControllerDeploymentInfo
+  href: ./Get-NetworkControllerDeploymentInfo.yml
+syntaxes:
+- Get-NetworkControllerReplica [[-ServiceTypeName] <String>] [-AllReplicas] [<CommonParameters>]
+examples:
+- title: 'Example 1: Determine which node is primary for Virtual Switch Service'
+  code: |-
+    PS C:\>Get-NetworkControllerReplica -ServiceTypeName "VSwitchService"
+  description: |-
+    This command determines which node is primary for VSwitchService, or the Virtual Switch Service.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllReplicas
+  description: |+
+    Indicates that this cmdlet queries all replicas for only the primaries.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceTypeName
+  description: |+
+    Specifies the service type that this cmdlet queries.
+    The acceptable values for this parameter are:
+
+    - ControllerService
+    - ApiService
+    - SlbManagerService
+    - ServiceInsertion
+    - FirewallService
+    - VSwitchService
+    - GatewayManager
+    - MonitoringService
+    - TopologyService
+    - FnmService
+    - HelperService
+    - UpdateService
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkControllerDiagnostics.Get-NetworkControllerReplica
+name: Get-NetworkControllerReplica
+description: |-
+  The **Get-NetworkControllerReplica** cmdlet queries the Network Controller Service Fabric to determine which node a Network Controller service module uses as primary.
+  The service modules include SDNAPI and SlbManagerService.
+  This cmdlet also checks whether there is a quorum of service module replicas.
+  A quorum is required for consensus and correct operation.
+
+  You can run this cmdlet from one of the Network Controller nodes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Get-NetworkControllerReplica-help.xml
+  Module Name: NetworkControllerDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontrollerdiagnostics/get-networkcontrollerreplica?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerReplica

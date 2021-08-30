@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Recycles an application pool.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Restart-WebAppPool [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Recycling an Application Pool --------------'
+  code: |-
+    IIS:\>Restart-WebAppPool DefaultAppPool
+  description: |-
+    Recycles the application pool named DefaultAppPool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the application pool to restart.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Restart-WebAppPool
+name: Restart-WebAppPool
+description: |-
+  Causes the specified application pool to be recycled.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/restart-webapppool?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

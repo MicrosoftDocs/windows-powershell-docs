@@ -1,0 +1,150 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a configuration checkpoint.
+module: BootEventCollector
+notes: ""
+outputs:
+- name: <xref href="hashtable" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a hashtable that includes the following elements: 
+
+    - `<Success>`
+    - `<ErrorType>`
+    - `<ErrorString>`
+    - `<WarningString>`
+    - `<InfoString>`
+
+    The Success element is $True on success, $False otherwise.
+    You can use the *Continue* parameter to not throw an error on failure.
+
+    The `<ErrorType>` element contains 0 on success.
+    If a failure occurs, `<ErrorType>` has a code that describes the error: 
+
+    - 1 - Bad argument format.
+    - 2 - Bad argument value. 
+    - 3 - Resource (socket) open error.
+    - 4 - Persistence (backup configuration file) error. 
+    - 5 - Atomicity error (that is, the old timestamp does not match).
+
+    `<ErrorString>`, `<WarningString>`, and `<InfoString>` contain detailed error messages.
+    `<ErrorString>` contains information only if an error occurs.
+links:
+- text: Get-SbecBackupConfig
+  href: ./Get-SbecBackupConfig.yml
+- text: Redo-SbecActiveConfig
+  href: ./Redo-SbecActiveConfig.yml
+- text: Restore-SbecBackupConfig
+  href: ./Restore-SbecBackupConfig.yml
+- text: Set-SbecActiveConfig
+  href: ./Set-SbecActiveConfig.yml
+- text: Undo-SbecActiveConfig
+  href: ./Undo-SbecActiveConfig.yml
+syntaxes:
+- >-
+  Checkpoint-SbecActiveConfig [[-OldTimestamp] <UInt64>] [-Continue] [[-ComputerName] <String[]>]
+
+   [[-CimSession] <CimSession[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Undo a configuration and create a checkpoint'
+  code: |-
+    PS C:\> Undo-SbecActiveConfig | Format-List; Checkpoint-SbecActiveConfig | Format-List
+  description: |-
+    This command undoes a configuration and creates a checkpoint, in a simple way.
+    **Format-List** formats the information that this cmdlet returns.
+  summary: ""
+- title: 'Example 2: Undo a configuration and create a checkpoint atomically'
+  code: |-
+    PS C:\> $res = Undo-SbecActiveConfig | Format-List 
+    PS C:\> $res = Checkpoint-SbecActiveConfig -OldTimestamp $res.OriginalTimestamp | Format-LIst
+  description: |-
+    This command undoes a configuration and creates a checkpoint, making sure that no other changes are done in between, and throwing on errors.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet on the remote computers through a remote session.
+    Enter a session object, such as the output of a **New-CimSession** or **Get-CimSession** cmdlet, or an array of these objects.
+    The default is to run the cmdlet on the local computer.
+    For more information, see About_CimSession.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies the names of the computers on which you want to perform the operation.
+    You can specify a fully qualified domain name (FQDN), a NetBIOS name, or an IP address for each computer.
+    For more information see [Invoke-CimMethod](https://go.microsoft.com/fwlink/?LinkId=808801) on MSDN.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Continue
+  description: |+
+    Indicates that this operation will not throw an exception if a failure occurs.
+    Instead, the caller should examine the output of the cmdlet for the error information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: OldTimestamp
+  description: |+
+    Specifies the timestamp of the previous active configuration.
+    This provides a way to perform the atomic changes of the configuration.
+
+    Each configuration has a timestamp (the time when it was last set or restored) and an original timestamp (if the configuration was restored, the time when it was originally set, otherwise the same as the normal timestamp).
+    This operation checks that the *OldTimestamp* value matches either the normal or original timestamp of the current active configuration, thus ensuring that the active configuration has not changed since the last time you examined it.
+    If the values do not match, an error is returned.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Checkpoint-SbecActiveConfig
+name: Checkpoint-SbecActiveConfig
+description: |-
+  The **Checkpoint-SbecActiveConfig** cmdlet creates a checkpoint for the active Boot Event Collector configuration.
+
+  The checkpoint enables you to return to this configuration later using the **Undo-SbecActiveConfig**, **Redo-SbecActiveConfig**, and **Restore-SbecBackupConfig** cmdlets.
+  The checkpoints mark the known good configurations that you can revert to if a new configuration is incorrect.
+  For example, if you changed a configuration yesterday, find an issue with it today, and want to revert to yesterday's configuration before you made a change, you can use the checkpointed configuration from yesterday.
+
+  Most checkpoints are created automatically, but on rare occasions you might need to explicitly create them.
+  Automatic checkpoints are created when the current configuration has not yet been checkpointed and one of the following events occurs: 
+
+  - The Collector service is restarted. 
+  - The configuration that was running for more than an hour is replaced with another configuration.
+  In this case, the old configuration is checkpointed before being replaced. 
+  - A new configuration is set with **Set-SbecActiveConfig**.
+  This new configuration is immediately checkpointed.
+
+  A checkpoint ensures that the current configuration is remembered, but it doesn't immediately create a backup configuration file.
+  Instead, the checkpointed current configuration is saved to a backup file when the configuration changes.
+
+  The repeated checkpointing succeeds but has no effect, because it only flags the configuration to create a backup in the future.
+
+  The **Undo-SbecActiveConfig**, **Redo-SbecActiveConfig**, and **Restore-SbecBackupConfig** cmdlets change the current configuration by browsing through the backup configurations, but they don't do an immediate checkpointing.
+  This lets you browse through the past configurations, try them out, and change your mind if a configuration doesn't work well without causing a flurry of spurious checkpoints and backup files with identical content.
+  When you are satisfied with a configuration, checkpoint it with **Checkpoint-SbecActiveConfig**.
+  If you forget to create a checkpoint for a configuration, it is automatically checkpointed after an hour.
+
+  Use **Get-SbecBackupConfig** to get the list of backup configuration files.
+
+  You can use the *OldTimestamp* parameter to modify the configuration atomically.
+
+  You must have the Builtin Administrator rights to run the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/checkpoint-sbecactiveconfig?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Checkpoint-SbecActiveConfig

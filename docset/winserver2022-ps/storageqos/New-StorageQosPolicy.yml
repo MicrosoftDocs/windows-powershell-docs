@@ -1,0 +1,201 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a Storage QoS policy.
+module: StorageQoS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_StorageQoSPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet outputs a Common Information Model (CIM) object of type MSFT_StorageQoSPolicyhttps://msdn.microsoft.com/en-us/library/mt164592(v=vs.85).aspx (https://msdn.microsoft.com/en-us/library/mt164592(v=vs.85).aspx).
+
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-StorageQoSFlow
+  href: ./Get-StorageQoSFlow.yml
+- text: Get-StorageQosPolicy
+  href: ./Get-StorageQosPolicy.yml
+- text: Get-StorageQosVolume
+  href: ./Get-StorageQosVolume.yml
+- text: Remove-StorageQosPolicy
+  href: ./Remove-StorageQosPolicy.yml
+- text: Set-StorageQosPolicy
+  href: ./Set-StorageQosPolicy.yml
+syntaxes:
+- >-
+  New-StorageQosPolicy [[-PolicyId] <Guid>] [[-Name] <String>] [[-MaximumIops] <UInt64>]
+
+   [[-MinimumIops] <UInt64>] [[-MaximumIOBandwidth] <UInt64>] [[-ParentPolicy] <CimInstance>]
+
+   [[-PolicyType] <PolicyType>] [-AsJob] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-StorageQosPolicy [-Policy] <CimInstance> [-AsJob] [-CimSession <CimSession>] [-ThrottleLimit <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a policy'
+  code: |-
+    PS C:\>New-StorageQosPolicy -Name "Policy01" -MaximumIops 100 -MinimumIops 10
+
+    Name    MinimumIops MaximumIops Status
+
+    ----    ----------- ----------- ------
+
+    Policy01 10          100         Ok
+  description: |-
+    This command creates a policy with a maximum of 100 8KB-normalized IOPS and a minimum of 10.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: MaximumIOBandwidth
+  description: |+
+    Specifies the bandwidth limit for the policy, in bytes per seconds.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: MaximumIops
+  description: |+
+    Specifies the throughput limit for the policy, in units of 8KB-normalized Input/Output Operations Per Second (IOPS).
+
+    Storage usage is measured in normalized IOPS.
+    This is a count of the storage input/output operations per second.
+    Any IO that is 8KB or smaller is considered as one normalized IOPS.
+    Any IO that is larger than 8KB is treated as multiple normalized IOPS.
+    For example, a 256KB request is treated as 32 normalized IOPS.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: MinimumIops
+  description: |+
+    Specifies the throughput reservation for the policy, in 8KB-normalized IOPS.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the policy to create.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: ParentPolicy
+  description: |+
+    Specifies the parent policy of the policy that this cmdlet creates.
+    The object must specify the **PolicyId** field.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies the storage QoS Policy that this cmdlet creates in the policy manager.
+    Must be a valid MSFT_StorageQoSPolicy instance that specifies **MaximumIops** and **MinimumIops**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PolicyId
+  description: |+
+    Specifies the GUID of the policy that this cmdlet creates.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PolicyType" data-throw-if-not-resolved="False" />
+  name: PolicyType
+  description: |+
+    Specifies the type of the policy that this cmdlet creates.
+    The acceptable values for this parameter are: Aggregated and Dedicated.
+    In an aggregated policy, the maximum and minimum throughputs apply to the aggregate throughput of all initiators.
+    In a dedicated policy, the minimum and maximum throughputs apply to each initiator individually.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: Aggregated, Dedicated
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: StorageQoS.New-StorageQosPolicy
+name: New-StorageQosPolicy
+description: |-
+  The **New-StorageQoSPolicy** cmdlet creates a Storage Quality of Service (Storage QoS) policy that specifies the maximum and minimum throughput.
+
+  This cmdlet generates the ID of the policy that it creates, if the **PolicyId** parameter is not specified.
+
+  For more information about Storage QoS, see Storage Quality of Servicehttps://technet.microsoft.com/en-us/library/Mt126108 (https://technet.microsoft.com/en-us/library/Mt126108).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Policy-help.xml
+  Module Name: StorageQoS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storageqos/new-storageqospolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-StorageQosPolicy

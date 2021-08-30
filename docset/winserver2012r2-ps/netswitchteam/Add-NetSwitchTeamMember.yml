@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a network adapter member to an existing switch team.
+module: NetSwitchTeam
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NetSwitchTeamMember
+  href: ./Get-NetSwitchTeamMember.yml
+- text: Remove-NetSwitchTeamMember
+  href: ./Remove-NetSwitchTeamMember.yml
+syntaxes:
+- >-
+  Add-NetSwitchTeamMember [-Name] <String> [-Team] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Add-NetSwitchTeamMember -Team "SwitchTeam1" -Name "Ethernet 2"
+  description: |-
+    This example adds the network adapter named Ethernet 2 as a member of team named SwitchTeam1.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies one or more names of one or more network adapters to be added to the switch team.
+    Wildcard characters are allowed.
+    Network adapter names are the IfAlias names, such as Ethernet 3.
+    Only wired adapters that are not part of another team, switch team, or LBFO team can be added.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Team
+  isRequired: true
+  description: |+
+    Specifies the name of the switch team to which to add a network adapter.
+    The switch team must already exist. 
+
+    The team name cannot be a NetLbfo team name.
+    Use the NetLbfoTeam cmdlets for a NetLbfo team.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetSwitchTeam.Add-NetSwitchTeamMember
+name: Add-NetSwitchTeamMember
+description: |-
+  The **Add-NetSwitchTeamMember** cmdlet adds a network adapter member to an existing switch team.
+  The switch team algorithms are part of the forward extension in a Hyper-V extensible switch.
+metadata:
+  external help file: MSFT_NetSwitchTeam.cdxml-help.xml
+  Module Name: NetSwitchTeam
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/netswitchteam/add-netswitchteammember?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-NetSwitchTeamMember

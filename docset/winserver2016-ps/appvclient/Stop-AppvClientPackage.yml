@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Shuts down virtual environments for specified packages.
+module: AppvClient
+notes: ""
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvClientPackage
+  href: ./Add-AppvClientPackage.yml
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Mount-AppvClientPackage
+  href: ./Mount-AppvClientPackage.yml
+- text: Publish-AppvClientPackage
+  href: ./Publish-AppvClientPackage.yml
+- text: Remove-AppvClientPackage
+  href: ./Remove-AppvClientPackage.yml
+- text: Repair-AppvClientPackage
+  href: ./Repair-AppvClientPackage.yml
+- text: Set-AppvClientPackage
+  href: ./Set-AppvClientPackage.yml
+- text: Unpublish-AppvClientPackage
+  href: ./Unpublish-AppvClientPackage.yml
+syntaxes:
+- Stop-AppvClientPackage [-Global] [-PackageId] <Guid> [-VersionId] <Guid> [<CommonParameters>]
+- Stop-AppvClientPackage [-Global] [-Package] <AppvClientPackage> [<CommonParameters>]
+- Stop-AppvClientPackage [-Global] [-Name] <String> [[-Version] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Shut down a virtual environment for a version of a package'
+  code: |-
+    PS C:\> Stop-AppvClientPackage -Name "MyPackage" -Version 2
+  description: |-
+    This command shuts down the virtual environment of version 2 of package named MyPackage.
+  summary: ""
+- title: 'Example 2: Shut down a virtual environment for all versions of a package'
+  code: |-
+    PS C:\> Get-AppvClientPackage -Name "MyPackage" | Stop-AppvClientPackage
+  description: |-
+    This command gets all versions of the package named MyPackage, and then shuts down the virtual environment for those results.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    Specifies that the cmdlet shuts down virtual environments for the specified packages for all users on the computer.
+    Usage of the *Global* parameter requires administrative credentials.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the package given during Sequencing time.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppvClientPackage" data-throw-if-not-resolved="False" />
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies an App-V package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageId
+  isRequired: true
+  description: |+
+    Specifies a GUID that uniquely identifies the package.
+    It can be found in the package manifest or by opening the package in the Microsoft Application Virtualization (App-V) Sequencer.
+    The package ID is shared by all versions of a package.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of an App-V package in a lineage.
+    If you do not specify this parameter, the cmdlet operates on all available versions of the package on the computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionId
+  isRequired: true
+  description: |+
+    Specifies a GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+    If you do not specify this parameter, the cmdlet operates on all versions of the package.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Stop-AppvClientPackage
+name: Stop-AppvClientPackage
+description: |-
+  The **Stop-AppvClientPackage** cmdlet shuts down the virtual environment for the specified packages.
+  All applications and processes within that package are forced to shut down.
+  Any unsaved application data is lost.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/stop-appvclientpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-AppvClientPackage

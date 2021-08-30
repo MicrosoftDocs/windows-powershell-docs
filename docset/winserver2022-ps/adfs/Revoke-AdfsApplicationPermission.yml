@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Revokes permission for an application.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.OAuthPermission" data-throw-if-not-resolved="False" />
+  description: |-
+    OAuthPermission objects are received by the *InputObject* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *TargetClientRoleIdentifier*, *TargetIdentifier*, and *TargetServerRoleIdentifier* parameters.
+links:
+- text: Get-AdfsApplicationPermission
+  href: ./Get-AdfsApplicationPermission.yml
+- text: Grant-AdfsApplicationPermission
+  href: ./Grant-AdfsApplicationPermission.yml
+- text: Set-AdfsApplicationPermission
+  href: ./Set-AdfsApplicationPermission.yml
+syntaxes:
+- Revoke-AdfsApplicationPermission [-TargetIdentifier] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Revoke-AdfsApplicationPermission [[-TargetClientRoleIdentifier] <String>]
+
+   [[-TargetServerRoleIdentifier] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Revoke-AdfsApplicationPermission [-InputObject] <OAuthPermission> [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="OAuthPermission" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an **OAuthPermission** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetClientRoleIdentifier
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetServerRoleIdentifier
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Revoke-AdfsApplicationPermission
+name: Revoke-AdfsApplicationPermission
+description: |-
+  The **Revoke-AdfsApplicationPermission** cmdlet revokes permission for an application in Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/revoke-adfsapplicationpermission?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Revoke-AdfsApplicationPermission

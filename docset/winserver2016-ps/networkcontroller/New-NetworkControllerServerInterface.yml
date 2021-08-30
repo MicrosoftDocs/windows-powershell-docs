@@ -1,0 +1,202 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates or updates a physical network interface resource in the Network Controller.
+module: NetworkController
+notes: ""
+links:
+- text: Get-NetworkControllerServerInterface
+  href: ./Get-NetworkControllerServerInterface.yml
+- text: Install-NetworkController
+  href: ./Install-NetworkController.yml
+- text: Remove-NetworkControllerServerInterface
+  href: ./Remove-NetworkControllerServerInterface.yml
+- text: Set-NetworkController
+  href: ./Set-NetworkController.yml
+syntaxes:
+- >-
+  New-NetworkControllerServerInterface [-ServerId] <String> [-ResourceId] <String>
+
+   [-Properties] <NwInterfaceProperties> [[-ResourceMetadata] <ResourceMetadata>] [[-Etag] <String>] [-Force]
+
+   -ConnectionUri <Uri> [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a server interface'
+  code: |-
+    PS C:\> $InterfaceIPConfig = New-Object Microsoft.Windows.NetworkController.InterfaceIPConfiguration
+    PS C:\> $InterfaceIPConfig.IpAddress = "10.0.0.1"
+    PS C:\> $InterfaceIPConfig.NetworkPrefix = "24"
+    PS C:\> $InterfaceIPConfig.DefaultGateway = "10.0.0.100"
+    PS C:\> $InterfaceIPConfig.VLAN = "1"
+    PS C:\> $InterfaceIPConfig.IsDhcpEnabled = "False"
+    PS C:\> $NwInterfaceProp = New-Object Microsoft.Windows.NetworkController.NwInterfaceProperties
+    PS C:\> $NwInterfaceProp.IPConfiguration = @($InterfaceIPConfig)
+    PS C:\> $NwInterfaceProp.InterfaceIndex = "2"
+    PS C:\> $NwInterfaceProp.InterfaceName = "Corp"
+    PS C:\> $NwInterfaceProp.Mac = "00:11:22:33:44:AA"
+    PS C:\> New-NetworkControllerServerInterface -ConnectionUri "https://networkcontroller" -ServerId "Server01" -ResourceId "Interface01" -Properties $NwInterfaceProp
+  description: |-
+    The first command creates an **InterfaceIPConfiguration** by using the **New-Object** cmdlet.
+    The command stores the object in the $InterfaceIPConfig variable.
+
+    The next five commands assign values to properties of $InterfaceIPConfig.
+
+    The seventh command creates an **NwInterfaceProperties** object by using **New-Object**.
+    The command stores the object in the $NwInterfaceProp variable.
+
+    The next four commands assign values to properties of $NwInterfaceProp.
+    This includes the value of $InterfaceIPConfig for the **IPConfiguration** property.
+
+    The final command creates a server interface that has the resource ID Interface01.
+    The interface is on a server that has the resource ID Server01.
+    The URI identifies the Network Controller.
+    The $NwInterfaceProp variable specifies the properties of the interface.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the certificate thumbprint of a digital public key X.509 certificate of a user account that has permission to perform this action.
+    In order for Network Controller to authorize the account, specify this thumbprint by using the *ClientCertificateThumbprint* parameter of the **Install-NetworkController** or **Set-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller.
+    All Representational State Transfer (REST) clients use this URI to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.
+    This user must be present in the security group specified in the *ClientSecurityGroup* parameter in **Install-NetworkController**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag is an HTTP response header returned by an HTTP-compliant web server.
+    An ETag is used to determine change in the content of a resource.
+    The value of the header is an opaque string that represents the state of the resource when the response was generated.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="NwInterfaceProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Specifies properties of a server interface that this cmdlet adds or updates.
+    You can specify the following properties: 
+
+    - Interface index.
+    - Interface name.
+    - Interface speed.
+    - IP configuration of the interface.
+    The configuration contains an IP address, network prefix, default gateway, VLANs, and whether the IP address has been obtained over DHCP.
+    - Logical subnets to which the network interface is connected.
+    - MAC address.
+    - VLAN IDs of networks to which the interface is connected.
+    - Whether this interface is a baseboard management controller (BMC) interface.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the resource ID of the server interface that this cmdlet adds or updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServerId
+  isRequired: true
+  description: |+
+    Specifies the server to which the interface belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerServerInterface
+name: New-NetworkControllerServerInterface
+description: |-
+  The **New-NetworkControllerServerInterface** cmdlet creates a physical network interface resource or updates an existing physical network interface resource in the Network Controller.
+  Before you can create an interface resource, there must be a server resource to which it belongs.
+  For more information, see the **New-NetworkControllerServer** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollerserverinterface?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerServerInterface

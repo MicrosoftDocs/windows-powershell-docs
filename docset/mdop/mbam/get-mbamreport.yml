@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the configuration of the Reports feature.
+module: MBAM
+notes: ""
+outputs:
+- name: <xref href="Microsoft.MBAM.Server.Commands.ReportConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-MbamReport
+  href: disable-mbamreport.yml
+- text: Enable-MbamReport
+  href: enable-mbamreport.yml
+- text: Test-MbamReport
+  href: test-mbamreport.yml
+syntaxes:
+- Get-MbamReport [<CommonParameters>]
+examples:
+- title: 'Example 1: Get configuration of the Reports feature'
+  code: |-
+    PS C:\> Get-MbamReport
+    Name                                 : Reports
+    Enabled                              : True
+    Description                          : This feature includes reports for the Compliance and Auditing data that has been gathered by the MBAM Client.
+    ComplianceAndAuditDBConnectionString : Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog="MBAM Compliance Status";
+    ComplianceAndAuditDBUser             : ContosoDomain\ReportAccount
+    SsrsInstance                         : MSSQLSERVER
+    ReportsReadOnlyAccessGroup           : ContosoDomain\ReportGroup
+    ReportUrl                            : https://ContosoReportsServer:443/ReportServer/ReportService2005.asmx
+  description: |-
+    Gets the configuration of the Reports feature on the local server.
+  summary: ""
+uid: MBAM.Get-MbamReport
+name: Get-MbamReport
+description: |-
+  The **Get-MbamReport** cmdlet gets the configuration of the Microsoft BitLocker Administration and Monitoring (MBAM) Reports feature.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Get-MbamReport

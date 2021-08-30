@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes a data cache file.
+module: BranchCache
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/?LinkID=113423
+- text: Add-BCDataCacheExtension
+  href: ./Add-BCDataCacheExtension.yml
+- text: Get-BCDataCacheExtension
+  href: ./Get-BCDataCacheExtension.yml
+syntaxes:
+- >-
+  Remove-BCDataCacheExtension [-Force] [-Path] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-BCDataCacheExtension [-Force] [-DataCacheExtension] <CimInstance[]> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-BCDataCacheExtension | Where-Object -FilterScript {$_.MaxCacheSizeAsPercentageOfDiskVolume -Eq 10} | Remove-BCDataCacheExtension
+  description: |-
+    This example removes data cache extensions configured to occupy 10% of disk volume.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DataCacheExtension
+  isRequired: true
+  description: "Specifies the data cache extension that should be removed.\r\nA BranchCache CimInstance#root\\StandardCimv2\\MSFT_NetBranchCacheDataCacheExtension CIM object can be obtained using the Get-BCDataCacheExtension cmdlet. \r\n                         \r\nIf a value for this parameter is specified, then do not specify a value for the **Path** parameter, or an error will occur.\r\nUse either this parameter or the **Path** parameter, but not both.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Runs the cmdlet without prompting for confirmation.
+    By default the cmdlet asks for confirmation from the user before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Removes the data cache extension at the location that you specify.
+    If a value for this parameter is specified, then do not specify a value for the **DataCacheExtension** parameter, or an error will occur.
+    Use either this parameter or the **DataCacheExtension** parameter, but not both
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: BranchCache.Remove-BCDataCacheExtension
+name: Remove-BCDataCacheExtension
+description: |-
+  The **Remove-BCDataCacheExtension** cmdlet deletes the cache file that is specified.
+metadata:
+  external help file: BranchCacheOrchestrator.cdxml-help.xml
+  Module Name: BranchCache
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/branchcache/remove-bcdatacacheextension?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-BCDataCacheExtension

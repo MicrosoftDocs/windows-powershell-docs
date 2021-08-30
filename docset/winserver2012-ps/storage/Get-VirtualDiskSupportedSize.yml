@@ -1,0 +1,266 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns all sizes supported by a storage pool for virtual disk creation based on the specified resiliency setting name.
+module: Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_ResiliencySetting" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="System.UInt64" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ResiliencySetting
+  href: ./Get-ResiliencySetting.yml
+- text: New-VirtualDisk
+  href: ./New-VirtualDisk.yml
+- text: Set-ResiliencySetting
+  href: ./Set-ResiliencySetting.yml
+syntaxes:
+- >-
+  Get-VirtualDiskSupportedSize [[-FriendlyName] <String[]>] [-AsJob] [-CimSession <CimSession[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-IsPrimordial <Boolean[]>] [-ResiliencySettingName <String>]
+
+   [-ThrottleLimit <Int32>] [-Usage <Usage[]>]
+- >-
+  Get-VirtualDiskSupportedSize [-AsJob] [-CimSession <CimSession[]>] [-HealthStatus <HealthStatus[]>]
+
+   [-IsPrimordial <Boolean[]>] [-PhysicalDisk <CimInstance>] [-ResiliencySettingName <String>]
+
+   [-ThrottleLimit <Int32>]
+- >-
+  Get-VirtualDiskSupportedSize [-AsJob] [-CimSession <CimSession[]>] [-HealthStatus <HealthStatus[]>]
+
+   [-IsPrimordial <Boolean[]>] [-ResiliencySettingName <String>] [-StorageSubSystem <CimInstance>]
+
+   [-ThrottleLimit <Int32>]
+- >-
+  Get-VirtualDiskSupportedSize [-AsJob] [-CimSession <CimSession[]>] [-HealthStatus <HealthStatus[]>]
+
+   [-IsPrimordial <Boolean[]>] [-OtherUsageDescription <String[]>] [-ResiliencySettingName <String>]
+
+   [-ThrottleLimit <Int32>] [-Usage <Usage[]>]
+- >-
+  Get-VirtualDiskSupportedSize [-AsJob] [-CimSession <CimSession[]>] [-HealthStatus <HealthStatus[]>]
+
+   [-IsPrimordial <Boolean[]>] [-Name <String[]>] [-ResiliencySettingName <String>] [-ThrottleLimit <Int32>]
+- >-
+  Get-VirtualDiskSupportedSize [-AsJob] [-CimSession <CimSession[]>] [-HealthStatus <HealthStatus[]>]
+
+   [-IsPrimordial <Boolean[]>] [-ResiliencySettingName <String>] [-ThrottleLimit <Int32>] [-UniqueId <String[]>]
+- >-
+  Get-VirtualDiskSupportedSize [-AsJob] [-CimSession <CimSession[]>] [-ResiliencySettingName <String>]
+
+   [-ThrottleLimit <Int32>] -InputObject <CimInstance[]>
+- >-
+  Get-VirtualDiskSupportedSize [-AsJob] [-CimSession <CimSession[]>] [-HealthStatus <HealthStatus[]>]
+
+   [-IsPrimordial <Boolean[]>] [-ResiliencySetting <CimInstance>] [-ResiliencySettingName <String>]
+
+   [-ThrottleLimit <Int32>]
+- >-
+  Get-VirtualDiskSupportedSize [-AsJob] [-CimSession <CimSession[]>] [-HealthStatus <HealthStatus[]>]
+
+   [-IsPrimordial <Boolean[]>] [-ResiliencySettingName <String>] [-ThrottleLimit <Int32>]
+
+   [-VirtualDisk <CimInstance>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-VirtualDiskSupportedSize -ResiliencySettingsName Mirror
+  description: |-
+    This example lists the minimum and maximum supported sizes for virtual disk creation using the specified resiliency settings name.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FriendlyName
+  description: |+
+    Specifies a friendly name for a storage pool.
+    The friendly name may be defined by a user and is not guaranteed to be unique.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HealthStatus" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HealthStatus
+  description: |+
+    Specifies the status of an object and indicates if the object is **Healthy** or **Warning Unhealthy**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an object from the pipeline as input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IsPrimordial
+  description: |+
+    Specifies that the storage pool is a Primordial pool.
+    Multiple Primordial pools are possible with some Storage Management providers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of an object or setting.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OtherUsageDescription
+  description: |+
+    Specifies the usage of this object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: PhysicalDisk
+  description: |+
+    Accepts a PhysicalDisk object as input.
+    The Physical Disk CIM object is exposed by the Get-PhysicalDiskhttp://technet.microsoft.com/library/a204dcde-bfac-43ac-9b79-d81384f255be cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: ResiliencySetting
+  description: |+
+    Accepts a ResiliencySetting object as input.
+    The Resiliency Setting CIM object is exposed by the com/library/ea364a0b-06d6-4653-b41c-be69b8038b54" \t "_blank" Get-ResiliencySetting cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResiliencySettingName
+  description: |+
+    Specifies the name of the desired resiliency setting, for example **Simple**, **Mirror**, or **Parity**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageSubSystem
+  description: |+
+    Accepts a StorageSubsystem object as input.
+    The Storage Subsystem CIM object is exposed by the Get-StorageSubsystemhttp://technet.microsoft.com/library/ea364a0b-06d6-4653-b41c-be69b8038b54 cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UniqueId
+  description: |+
+    Specifies an ID used to uniquely identify a Disk object in the system.
+    The ID persists through restarts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="Usage" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Usage
+  description: |+
+    Specifies the intended usage.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: VirtualDisk
+  description: |+
+    Accepts a VirtualDisk object as input.
+    The Virtual Disk CIM object is exposed by the Get-VirtualDiskhttp://technet.microsoft.com/library/0eeba53f-6468-485f-a680-49260b4c83f0 cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-VirtualDiskSupportedSize
+name: Get-VirtualDiskSupportedSize
+description: |-
+  The **Get-VirtualDiskSupportedSize** cmdlet returns all sizes supported by a storage pool for virtual disk creation based on the specified resiliency setting name.
+metadata:
+  external help file: Storage2_Cmdlets.xml
+  Module Name: Storage
+  online version: https://docs.microsoft.com/powershell/module/storage/get-virtualdisksupportedsize?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

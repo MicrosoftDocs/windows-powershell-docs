@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the configuration of one or more gateway virtual machines.
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns one or more objects that contain the following fields: 
+
+
+    - Resource reference URI
+    - Created time of the resource
+    - Instance ID of the resource.
+    - Resource metadata.
+    - Resource ID.
+    - Properties of the resource (a gateway virtual machine): 
+      - Gateway virtual machine type.
+      - Health state.
+      - Gateway virtual machine role/state (active/redundant). 
+      - Total capacity.
+      - Available capacity.
+      - Array of external source IP addresses.
+      - Reference to the corresponding virtual server.
+      - References to the associated internal and external network interfaces. 
+      - Reference to the corresponding gateway pool.
+      - Array of references to the virtual gateways configured on the gateway virtual machine.
+      - PA space Border Gateway Protocol (BGP) configuration of the gateway virtual machine.
+      - Array of connections.
+links:
+- text: New-NetworkControllerGateway
+  href: ./New-NetworkControllerGateway.yml
+- text: Remove-NetworkControllerGateway
+  href: ./Remove-NetworkControllerGateway.yml
+syntaxes:
+- >-
+  Get-NetworkControllerGateway [[-ResourceId] <String[]>] -ConnectionUri <Uri> [-CertificateThumbprint <String>]
+
+   [-Credential <PSCredential>] [-PassInnerException] [<CommonParameters>]
+examples:
+- title: 'Example 1: Display all gateway virtual machine configurations'
+  code: |-
+    PS C:\> Get-NetworkControllerGateway -ConnectionUri "https://networkcontroller"
+    Tags             : 
+    ResourceRef      : /Gateways/MTGW01
+    InstanceId       : 6b77e9b1-8a08-4a5e-8c0a-ef07785efc7b
+    Etag             : W/"db8d83eb-9a14-4af8-a000-f0c74ac4957f"
+    ResourceMetadata : 
+    ResourceId       : MTGW01
+    Properties       : Microsoft.Windows.NetworkController.GatewayProperties
+    Tags             : 
+    ResourceRef      : /Gateways/MTGW02
+    InstanceId       : 72451c9e-82e8-40e4-b426-1186ca1fae6f
+    Etag             : W/"c3eccdc9-08a2-4557-a8d0-cbbfc03349ce"
+    ResourceMetadata : 
+    ResourceId       : MTGW02
+    Properties       : Microsoft.Windows.NetworkController.GatewayProperties
+  description: |-
+    This command gets all gateway virtual machines configured with the Network Controller.
+  summary: ""
+- title: 'Example 2: Display the configuration for a specified gateway virtual machine'
+  code: |-
+    PS C:\> Get-NetworkControllerGateway -ConnectionUri https://networkcontroller -ResourceId "MTGW01"
+    Tags             : 
+    ResourceRef      : /Gateways/MTGW01
+    InstanceId       : 6b77e9b1-8a08-4a5e-8c0a-ef07785efc7b
+    Etag             : W/"db8d83eb-9a14-4af8-a000-f0c74ac4957f"
+    ResourceMetadata : 
+    ResourceId       : MTGW01
+    Properties       : Microsoft.Windows.NetworkController.GatewayProperties
+  description: |-
+    This command gets the gateway virtual machine configuration for MTGW01.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+
+    This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.
+    This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: |+
+    This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourceId
+  description: |+
+    Specifies an array of resource IDs.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Get-NetworkControllerGateway
+name: Get-NetworkControllerGateway
+description: |-
+  The **Get-NetworkControllerGateway** cmdlet gets the configuration of the gateway virtual machines specified by the *ResourceId* parameter.
+  If you do not specify a *ResourceId*, this cmdlet gets the configuration of all gateway virtual machines.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollergateway?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerGateway

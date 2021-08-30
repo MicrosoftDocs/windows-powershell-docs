@@ -1,0 +1,476 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets Active Directory user, computer, or service accounts.
+module: ActiveDirectory
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.ActiveDirectory.Management.ADAccount" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns one or more account objects that meet the conditions set by the parameters.
+links:
+- text: Clear-ADAccountExpiration
+  href: ./Clear-ADAccountExpiration.yml
+- text: Disable-ADAccount
+  href: ./Disable-ADAccount.yml
+- text: Enable-ADAccount
+  href: ./Enable-ADAccount.yml
+- text: Get-ADAccountResultantPasswordReplicationPolicy
+  href: ./Get-ADAccountResultantPasswordReplicationPolicy.yml
+- text: Set-ADAccountControl
+  href: ./Set-ADAccountControl.yml
+- text: Set-ADAccountExpiration
+  href: ./Set-ADAccountExpiration.yml
+- text: Set-ADAccountPassword
+  href: ./Set-ADAccountPassword.yml
+- text: Unlock-ADAccount
+  href: ./Unlock-ADAccount.yml
+syntaxes:
+- >-
+  Search-ADAccount [-AccountDisabled] [-AuthType <ADAuthType>] [-ComputersOnly] [-Credential <PSCredential>]
+
+   [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-SearchBase <String>] [-SearchScope <ADSearchScope>]
+
+   [-Server <String>] [-UsersOnly] [<CommonParameters>]
+- >-
+  Search-ADAccount [-AccountExpired] [-AuthType <ADAuthType>] [-ComputersOnly] [-Credential <PSCredential>]
+
+   [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-SearchBase <String>] [-SearchScope <ADSearchScope>]
+
+   [-Server <String>] [-UsersOnly] [<CommonParameters>]
+- >-
+  Search-ADAccount [-AccountExpiring] [-AuthType <ADAuthType>] [-ComputersOnly] [-Credential <PSCredential>]
+
+   [-DateTime <DateTime>] [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-SearchBase <String>]
+
+   [-SearchScope <ADSearchScope>] [-Server <String>] [-TimeSpan <TimeSpan>] [-UsersOnly] [<CommonParameters>]
+- >-
+  Search-ADAccount [-AccountInactive] [-AuthType <ADAuthType>] [-ComputersOnly] [-Credential <PSCredential>]
+
+   [-DateTime <DateTime>] [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-SearchBase <String>]
+
+   [-SearchScope <ADSearchScope>] [-Server <String>] [-TimeSpan <TimeSpan>] [-UsersOnly] [<CommonParameters>]
+- >-
+  Search-ADAccount [-AuthType <ADAuthType>] [-ComputersOnly] [-Credential <PSCredential>] [-LockedOut]
+
+   [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-SearchBase <String>] [-SearchScope <ADSearchScope>]
+
+   [-Server <String>] [-UsersOnly] [<CommonParameters>]
+- >-
+  Search-ADAccount [-AuthType <ADAuthType>] [-ComputersOnly] [-Credential <PSCredential>] [-PasswordExpired]
+
+   [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-SearchBase <String>] [-SearchScope <ADSearchScope>]
+
+   [-Server <String>] [-UsersOnly] [<CommonParameters>]
+- >-
+  Search-ADAccount [-AuthType <ADAuthType>] [-ComputersOnly] [-Credential <PSCredential>] [-PasswordNeverExpires]
+
+   [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-SearchBase <String>] [-SearchScope <ADSearchScope>]
+
+   [-Server <String>] [-UsersOnly] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all users, computers, and service accounts that are disabled'
+  code: |-
+    PS C:\> Search-ADAccount -AccountDisabled | FT Name,ObjectClass -A
+    Name            ObjectClass
+    ----            -----------
+    Guest           user
+    Pattith         user
+    PattiFul_51399   user
+    PattyFul-LPTOP   computer
+    PattyFul-DSKTOP  computer
+  description: |-
+    This command returns all users, computers, and service accounts that are disabled.
+  summary: ""
+- title: 'Example 2: Get all users that are disabled'
+  code: |-
+    PS C:\> Search-ADAccount -AccountDisabled -UsersOnly | FT Name,ObjectClass -A
+    Name         ObjectClass
+    ----         -----------
+    Guest         user
+    PattiFul       user
+    PattiFul_51399 user
+  description: |-
+    This command returns all users that are disabled.
+  summary: ""
+- title: 'Example 3: Get all users, computers, and service accounts that are expired'
+  code: |-
+    PS C:\> Search-ADAccount -AccountExpired | FT Name,ObjectClass -A
+    Name            ObjectClass
+    ----            -----------
+    Evan Narvaez    user
+    Patti Fuller    user
+    David Chew      user
+  description: |-
+    This command returns all users, computers, and service accounts that are expired.
+  summary: ""
+- title: 'Example 4: Get all users, computers, and service accounts that will expire in a specified time'
+  code: |-
+    PS C:\> Search-ADAccount -AccountExpiring -TimeSpan 6.00:00:00 | FT Name,ObjectClass -A
+    Name           ObjectClass
+    ----           -----------
+    David Chew     user
+    Evan Narvaez   user
+    Patti Fuller   user
+  description: |-
+    This command returns all users, computers, and service accounts that will expire in the next 6 days.
+  summary: ""
+- title: 'Example 5: Get all accounts that have expired'
+  code: |-
+    PS C:\> Search-ADAccount -PasswordExpired | FT Name,ObjectClass -A
+    Name                        ObjectClass
+    ----                        -----------
+    David Chew                  user
+    Evan Narvaez                user
+    Patti Fuller                user
+  description: |-
+    This command returns all accounts where the password has expired.
+  summary: ""
+- title: 'Example 6: Get all accounts that are locked out'
+  code: |-
+    PS C:\> Search-ADAccount -LockedOut | FT Name,ObjectClass -A
+    Name           ObjectClass
+    ----           -----------
+    Patti Fuller       user
+  description: |-
+    This command returns all accounts that have been locked out.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AccountDisabled
+  isRequired: true
+  description: |+
+    Specifies a search for accounts that are disabled.
+    An account is disabled when the ADAccount **Enabled** property is set to false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AccountExpired
+  isRequired: true
+  description: |+
+    Specifies a search for accounts that are expired.
+    An account is expired when the ADAccount **AccountExpirationDate** property is set to a time in the past.
+    The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName**) for the **AccountExpirationDate** property is accountExpires.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AccountExpiring
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet searches for accounts that are expiring in a given time period or by a specified time.
+    To specify a time period, use the *AccountExpiring* parameter with the *TimeSpan* parameter.
+    To specify a specific time, use the *AccountExpiring* parameter with the *DateTime* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AccountInactive
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet searches for accounts that have not logged in within a given time period or since a specified time.
+    To specify a time period, use the *TimeSpan* parameter.
+    To specify a specific time, use the *DateTime* parameter.
+    Note that this attribute is only used when the domain is in Windows Server 2003 Domain Functional Level or higher, so this parameter will only work in that mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use.
+    The acceptable values for this parameter are:
+
+    - Negotiate or 0
+    - Basic or 1
+
+    The default authentication method is Negotiate.
+
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ComputersOnly
+  description: |+
+    Indicates that this cmdlet searches only computer accounts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user account credentials to use to perform this task.
+    The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
+    If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
+
+    To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+    If you specify a user name for this parameter, the cmdlet prompts for a password.
+
+    You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+    You can then set the *Credential* parameter to the **PSCredential** object.
+
+    If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
+
+    Specifies the credentials for the security context under which the task is performed.
+    If this security context doesn't have directory level permissions to perform the task, then an error is returned by the directory.
+    If running under the context of an Active Directory module for Windows PowerShell provider drive, the credentials information associated with the drive is used as the default value; otherwise, the currently logged on user security context is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: DateTime
+  description: |+
+    Specifies a distinct time value for **Search-ADAccount** parameters such as *AccountExpiring*, *AccountInactive*, and *PasswordExpiring*.
+
+    Time is assumed to be local time unless otherwise specified.
+    When a time value is not specified, the time is assumed to midnight local time.
+    If you do not specify a date, the date is assumed to be the current date.
+    The following examples show commonly-used syntax to specify a *DateTime* object. 
+
+    - "4/17/2006" 
+    - "Monday, April 17, 2006" 
+    - "2:22:45 PM" 
+    - "Monday, April 17, 2006 2:22:45 PM"
+
+    These examples specify the same date and the time without the seconds. 
+
+    - "4/17/2006 2:22 PM" 
+    - "Monday, April 17, 2006 2:22 PM"
+    - "2:22 PM"
+
+    The following example shows how to specify a date and time by using the RFC1123 standard.
+    This example defines time by using Greenwich Mean Time (GMT). 
+
+    - "Mon, 17 Apr 2006 21:22:48 GMT"
+
+    The following example shows how to specify a value as Coordinated Universal Time (UTC).
+    This example represents Monday, April 17, 2006 at 2:22:48 PM UTC. 
+
+    - "2000-04-17T14:22:48.0000000"
+
+    The following example shows how to set the *AccountExpiring* parameter to a *DateTime* value of June 18, 2012 at 2:00:00 AM. 
+
+    `-AccountExpiring -DateTime "6/18/2012 2:00:00 AM"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LockedOut
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet searches for accounts that are locked out.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PasswordExpired
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet searches for accounts that have an expired password.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PasswordNeverExpires
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet searches for accounts that have a password that does not expire.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ResultPageSize
+  description: |+
+    Specifies the number of objects to include in one page for an Active Directory Domain Services query.
+
+    The default is 256 objects per page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ResultSetSize
+  description: |+
+    Specifies the maximum number of objects to return for an Active Directory Domain Services query.
+    If you want to receive all of the objects, set this parameter to $Null (null value).
+    You can use Ctrl+C to stop the query and return of objects.
+    The default is $Null.
+
+    The following example shows how to set this parameter so that you receive all of the returned objects: 
+
+    `-ResultSetSize $Null`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SearchBase
+  description: |+
+    Specifies an Active Directory path to search.
+
+    When you run a cmdlet from an Active Directory provider drive, the default value of this parameter is the current path of the drive.
+
+    When you run a cmdlet outside of an Active Directory provider drive against an Active Directory Domain Services (AD DS) target, the default value of this parameter is the default naming context of the target domain.
+
+    When you run a cmdlet outside of an Active Directory provider drive against an Active Directory Lightweight Directory Services (AD LDS) target, the default value is the default naming context of the target AD LDS instance if one has been specified by setting the **msDS-defaultNamingContext** property of the Active Directory service agent object **nTDSDSA** for the AD LDS instance. 
+    If no default naming context has been specified for the target AD LDS instance, then this parameter has no default value.
+
+    The following example shows how to set this parameter to search under an organizational unit. 
+
+    `-SearchBase "ou=mfg,dc=noam,dc=corp,dc=contoso,dc=com"`
+
+    When the value of the *SearchBase* parameter is set to an empty string and you are connected to a global catalog port, all partitions are searched.
+    If the value of the *SearchBase* parameter is set to an empty string and you are not connected to a global catalog port, an error is generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADSearchScope" data-throw-if-not-resolved="False" />
+  name: SearchScope
+  description: |+
+    Specifies the scope of an Active Directory search.
+    The acceptable values for this parameter are:
+
+    - Base or 0
+    - OneLevel or 1
+    - Subtree or 2
+
+    A Base query searches only the current path or object.
+    A OneLevel query searches the immediate children of that path or object.
+    A Subtree query searches the current path or object and all children of that path or object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Base, OneLevel, Subtree
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+
+    Specify the Active Directory Domain Services instance in one of the following ways: 
+
+    Domain name values:
+
+    - Fully qualified domain name
+    - NetBIOS name
+
+    Directory server values: 
+
+    - Fully qualified directory server name
+    - NetBIOS name
+    - Fully qualified directory server name and port
+
+    The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+    - By using the *Server* value from objects passed through the pipeline
+    - By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
+    - By using the domain of the computer running Windows PowerShell
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: TimeSpan
+  description: |+
+    Specifies a time interval.
+    This parameter is used to specify a time value for **Search-ADAccount** parameters such as *AccountExpiring*.
+    Specify the time interval in the following format: 
+
+    \[-\]D.H:M:S.F
+
+    where: 
+
+    - D = Days (0 to 10675199) 
+    - H = Hours (0 to 23) 
+    - M = Minutes (0 to 59) 
+    - S = Seconds (0 to 59) 
+    - F = Fractions of a second (0 to 9999999)
+
+    Note: Time values must be between the following values: -10675199:02:48:05.4775808 and 10675199:02:48:05.4775807.
+
+    The following examples show how to set this parameter. 
+
+    Set the time to 2 days
+
+    `-TimeSpan "2.00:00:00"` 
+
+      Set the time span to the previous 2 days
+
+    `-TimeSpan "-2.00:00.00"` 
+
+      Set the time to 4 hours
+
+    `-TimeSpan "4:00"`
+
+    For example, to search for all accounts that are expiring in 10 days, specify the *AccountExpiring* and *TimeSpan* parameters as follows.
+
+      `-AccountExpiring -TimeSpan "10.00:00.00"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UsersOnly
+  description: |+
+    Indicates that this cmdlet searches for user accounts only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ActiveDirectory.Search-ADAccount
+name: Search-ADAccount
+description: |-
+  The **Search-ADAccount** cmdlet retrieves one or more user, computer, or service accounts that meet the criteria specified by the parameters.
+  Search criteria include account and password status.
+  For example, you can search for all accounts that have expired by specifying the *AccountExpired* parameter.
+  Similarly, you can search for all accounts with an expired password by specifying the *PasswordExpired* parameter.
+  You can limit the search to user accounts by specifying the *UsersOnly* parameter.
+  Similarly, when you specify the *ComputersOnly* parameter, the cmdlet only retrieves computer accounts.
+
+  Some search parameters, such as *AccountExpiring* and *AccountInactive* use a default time that you can change by specifying the *DateTime* or *TimeSpan* parameter.
+  The *DateTime* parameter specifies a distinct time.
+  The *TimeSpan* parameter specifies a time range from the current time.
+  For example, to search for all accounts that expire in 10 days, specify the *AccountExpiring* and *TimeSpan* parameter and set the value of *TimeSpan* to 10.00:00:00.
+  To search for all accounts that expire before December 31, 2012, set the *DateTime* parameter to 12/31/2012.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/search-adaccount?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Search-ADAccount

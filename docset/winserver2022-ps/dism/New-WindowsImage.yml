@@ -1,0 +1,244 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Captures an image of a drive to a new WIM file.
+module: DISM
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageObjectWithState" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Dism.Commands.OfflineImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Dismount-WindowsImage
+  href: ./Dismount-WindowsImage.yml
+- text: Expand-WindowsImage
+  href: ./Expand-WindowsImage.yml
+- text: Export-WindowsImage
+  href: ./Export-WindowsImage.yml
+- text: Get-WindowsImage
+  href: ./Get-WindowsImage.yml
+- text: Mount-WindowsImage
+  href: ./Mount-WindowsImage.yml
+- text: Remove-WindowsImage
+  href: ./Remove-WindowsImage.yml
+- text: Repair-WindowsImage
+  href: ./Repair-WindowsImage.yml
+- text: Save-WindowsImage
+  href: ./Save-WindowsImage.yml
+- text: Split-WindowsImage
+  href: ./Split-WindowsImage.yml
+syntaxes:
+- >-
+  New-WindowsImage -ImagePath <String> -CapturePath <String> [-CompressionType <String>]
+
+   [-ConfigFilePath <String>] [-Description <String>] -Name <String> [-CheckIntegrity] [-NoRpFix] [-Setbootable]
+
+   [-Verify] [-WIMBoot] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Capture an image of a drive for a WIM file'
+  code: |-
+    PS C:\> New-WindowsImage -ImagePath "c:\imagestore\custom.wim" -CapturePath "d:\" -Name "Drive D"
+  description: |-
+    This command captures the Drive D image in the WIM file located on d:\ and save to the file c:\imagestore\custom.wim.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CapturePath
+  isRequired: true
+  description: |+
+    Specifies the drive or path to the Windows operating system that is to be captured to an image file.
+
+    When the path specified is not the root folder of a drive, the captured image will inherit the parent folder security descriptors. If you are capturing an image that was previously applied, apply the original image to the root folder of the drive to ensure that the security descriptors of the new image remain the same.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CheckIntegrity
+  description: |+
+    Detects and tracks .wim file corruption when used with the **Add-WindowsImage**, **Dismount-WindowsImage**, or **Save-WindowsImage** cmdlet.
+    CheckIntegrity stops the operation if DISM detects that the .wim file is corrupted when used with the **Expand-WindowsImage** or **Mount-WindowsImage** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CompressionType
+  description: |+
+    Specifies the type of compression used for the initial capture operation: 
+
+    - **Max** = This option provides the best compression but takes more time to capture the image. 
+    - **Fast** = This option provides faster image compression but the resulting files are larger than those compressed using the maximum (max) option.
+    - **None** = This option does not compress the captured image at all. 
+
+    The *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
+
+  defaultValue: Fast
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConfigFilePath
+  description: |+
+    Specifies the location of a configuration file that lists exclusions for image capture commands and compress commands.
+    For more information, see [DISM Configuration List and WimScript.ini Files](https://go.microsoft.com/fwlink/?LinkID=313768) in the TechNet Library.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description of the image to be captured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImagePath
+  isRequired: true
+  description: |+
+    Specifies the location of a WIM file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: |+
+    Specifies the maximum output level shown in the logs. 
+    The default log level is WarningsInfo.  
+    The accepted values are as follows:        
+
+    - Errors = Errors only
+    - Warnings = Errors and warnings            
+    - WarningsInfo = Errors, warnings, and information 
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LL
+  parameterValueGroup: Errors, Warnings, WarningsInfo
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the full path and file name to log to.
+    If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+    In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+    The log file will automatically be archived.
+    The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+    Each time the log file is archived the .bak file will be overwritten. 
+    When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LP
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of an image in a WIM file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRpFix
+  description: |+
+    Disables the reparse point tag fix.
+    A reparse point is a file that contains a link to another file on the file system.
+    If the parameter is not specified, reparse points that resolve to paths outside of the value specified by the *ImagePath* parameter will not be captured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScratchDirectory
+  description: |+
+    Specifies a temporary directory that will be used when extracting files for use during servicing.
+    The directory must exist locally.
+    If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+    Items in the scratch directory are deleted after each operation. 
+    You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+    The directory used for extracting files for temporary usage during servicing should be a local directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Setbootable
+  description: |+
+    Marks a volume image as being a bootable image.
+    This argument is available only for Windows PE images.
+    Only one volume image can be marked as bootable in a .wim file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SB
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Verify
+  description: |+
+    Checks for errors and file duplication. 
+     During an apply operation, for example, using the **Add-WindowsImage** cmdlet, the size and the hash of the file being applied are checked against the image file to verify they are both equal. 
+     During a capture operation, for example, when using the **New-WindowsImage** cmdlet, after the files is captured into a Windows image, the file is written to a temporary file and compared on a bit-by-bit basis with the original file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WIMBoot
+  description: |+
+    Specifies that the image will be formatted to install on a Windows Image Format Boot (WIMBoot) system.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DISM.New-WindowsImage
+name: New-WindowsImage
+description: |-
+  The **New-WindowsImage** cmdlet captures an image of a drive to a new WIM file.
+  Captured directories include all subfolders and data.
+  You cannot capture an empty directory.
+  A directory must contain at least one file.
+
+  This cmdlet does not apply to virtual hard disk (VHD) files.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+  Module Name: System.Object[]
+  ms.date: 12/21/2016
+  online version: https://docs.microsoft.com/powershell/module/dism/new-windowsimage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WindowsImage

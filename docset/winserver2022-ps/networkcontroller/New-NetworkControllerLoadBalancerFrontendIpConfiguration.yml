@@ -1,0 +1,149 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet adds/updates the front end IP configuration of a load balancer resource.
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties can be added/updated for this resource:
+    1.
+    Private IP address (VIP) of the resource
+    2.
+    Private IP address allocation method
+    3.
+    Subnet with which the resource is associated
+syntaxes:
+- >-
+  New-LoadBalancerFrontEndIpConfiguration -ConnectionUri <Uri> -LoadBalancerId <string>
+
+   -Properties <LoadBalancerBackendAddressPoolProperties> -ResourceId <string> [-CertificateThumbPrint <string>]
+
+   [-Credential <PSCredential>] [-Etag <string>] [-Force] [-ResourceMetadata <ResourceMetadata>]
+examples:
+- title: Example 1
+  code: |-
+    //Retrieve the subnet for front end IP
+    $subnet = Get-NetworkControllerSubnet -ConnectionUri https://networkcontroller -NetworkId ln1 -ResourceId subnet1
+
+    //Create the front end IP resource
+    $frontEndIp=New-Object Microsoft.Windows.NetworkController.LoadBalancerFrontEndIpConfigurationProperties
+    $frontEndIp.PrivateIpAddress="10.127.32.12"
+    $frontEndIp.PrivateIPAllocationMethod="Static"
+
+    New-NetworkControllerLoadBalancerFrontEndIpConfiguration -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId frontEnd1 -Properties $frontEndIp
+  description: ""
+  summary: |+
+    This example creates a front end IP configuration resource named frontEnd1 for a load balancer resource named lb1
+
+parameters:
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: CertificateThumbPrint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+    This thumbprint must also be provided in the ClientCertificateThumbprint parameter in the Install-NetworkController or Set-NetworkController cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.This user must be present in the security group provided in the ClientSecurityGroup parameter in the Install-NetworkController cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="switch" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: LoadBalancerId
+  isRequired: true
+  description: |+
+    Specifies the load balancer with which the resource is associated
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LoadBalancerBackendAddressPoolProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Following properties can be added/updated for this resource:
+    1.
+    Private IP address (VIP) of the resource
+    2.
+    Private IP address allocation method
+    3.
+    Subnet with which the resource is associated
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the unique identifier of the resource
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    This parameter contains metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerLoadBalancerFrontendIpConfiguration
+name: New-NetworkControllerLoadBalancerFrontendIpConfiguration
+description: |-
+  This cmdlet adds/updates the front end IP configuration of a load balancer resource.
+  The front-end IP is commonly referred to as a Virtual IP (VIP).
+  The VIP must be taken from an unused IP in one of the logical network IP Pool which has been previously given to the load balancer manager.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollerloadbalancerfrontendipconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerLoadBalancerFrontendIpConfiguration

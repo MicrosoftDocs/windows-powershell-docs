@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Invokes the Commit process if the specified transaction is the root transaction; otherwise, invokes the Complete method on a transaction object.
+module: MsDtc
+notes: ""
+inputs:
+- name: <xref href="Default" data-throw-if-not-resolved="False" />
+  description: |-
+    Specifies the **DtcDiagnosticTransaction** object on which to invoke the **Complete** method.
+    You can use the pipeline operator to pass this parameter value to the cmdlet.
+links:
+- text: New-DtcDiagnosticTransaction
+  href: ./New-DtcDiagnosticTransaction.yml
+- text: Receive-DtcDiagnosticTransaction
+  href: ./Receive-DtcDiagnosticTransaction.yml
+- text: Send-DtcDiagnosticTransaction
+  href: ./Send-DtcDiagnosticTransaction.yml
+- text: Undo-DtcDiagnosticTransaction
+  href: ./Undo-DtcDiagnosticTransaction.yml
+syntaxes:
+- Complete-DtcDiagnosticTransaction [-Transaction] <DtcDiagnosticTransaction> [<CommonParameters>]
+examples:
+- title: 'Example 1: Complete a DTC diagnostic transaction'
+  code: |-
+    PS C:\> $Tx = New-DtcDiagnosticTransaction
+    PS C:\> Complete-DtcDiagnosticTransaction -Transaction $Tx
+  description: |-
+    The first command creates a new DTC diagnostic transaction and assigns it to a variable.
+
+    The second command invokes the Commit process of the transaction.
+  summary: ""
+parameters:
+- type: <xref href="DtcDiagnosticTransaction" data-throw-if-not-resolved="False" />
+  name: Transaction
+  isRequired: true
+  description: |+
+    Specifies the **DtcDiagnosticTransaction** object on which to invoke the **Complete** method or to commit.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDtc.Complete-DtcDiagnosticTransaction
+name: Complete-DtcDiagnosticTransaction
+description: |-
+  The **Complete-DtcDiagnosticTransaction** cmdlet invokes the Commit process if the specified transaction is the root transaction; otherwise, it invokes the **Complete** method on the transaction object specified by the **DtcDiagnosticTransaction** object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dtc.PowerShell.dll-Help.xml
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/msdtc/complete-dtcdiagnostictransaction?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Complete-DtcDiagnosticTransaction

@@ -1,0 +1,197 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a relying party trust for the Web Application Proxy.
+module: ADFS
+notes: ""
+links:
+- text: Disable-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Disable-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Enable-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Enable-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Get-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Get-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Remove-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Remove-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Set-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Set-AdfsWebApplicationProxyRelyingPartyTrust.yml
+syntaxes:
+- >-
+  Add-AdfsWebApplicationProxyRelyingPartyTrust [-Name] <String> [-Identifier] <String[]>
+
+   [-AlwaysRequireAuthentication] [-Enabled <Boolean>] [-AccessControlPolicyName <String>]
+
+   [-AccessControlPolicyParameters <Object>] [-AdditionalAuthenticationRules <String>]
+
+   [-AdditionalAuthenticationRulesFile <String>] [-NotBeforeSkew <Int32>] [-Notes <String>] [-PassThru]
+
+   [-TokenLifetime <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a relying party trust'
+  code: |-
+    PS C:\> Add-AdfsWebApplicationProxyRelyingPartyTrust
+  description: |-
+    This command adds the Web Application Proxy relying party trust.
+    When you first deploy the Web Application Proxy role service, the trust exists by default.
+    Use this example only if you deleted the Web Application Proxy relying party trust.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyName
+  description: |+
+    Specifies the name of the access control policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyParameters
+  description: |+
+    Specifies the parameters of the access control policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRules
+  description: |+
+    Specifies rules for additional authentication on the proxy.
+    For more information about the claims language for rules, see [Understanding Claim Rule Language in AD FS 2.0 & Higher](https://social.technet.microsoft.com/wiki/contents/articles/4792.understanding-claim-rule-language-in-ad-fs-2-0-higher.aspx) on TechNet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRulesFile
+  description: |+
+    Specifies a file that contains rules for additional authentication for this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AlwaysRequireAuthentication
+  description: |+
+    Indicates that the proxy requires authentication for access, even if the proxy has previously authenticated credentials for access.
+    Specify this parameter to require users to always supply credentials to access sensitive resources.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    Indicates whether to enable this relying party trust.
+    Specify a value of $True for this parameter to allow authentication and authorization to the proxy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identifier
+  isRequired: true
+  description: |+
+    Specifies an array of unique identifiers.
+    The proxy uses the identifiers that you specify to specify its corresponding relying party trust when it initiates sign-in requests to obtain tokens for itself.
+    No other trust can use an identifier from this list.
+    As common practice, you can use Uniform Resource Identifiers (URIs) as unique identifiers for a relying party trust, or use any string.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name.
+    The cmdlet adds the Web Application Proxy relying party trust that has the friendly name that you specify.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NotBeforeSkew
+  description: |+
+    Specifies the skew, as an integer, for the time stamp that marks the beginning of the validity period.
+    The higher this number is, the further back in time the validity period begins with respect to the time that the claims are issued for the relying party.
+    By default, this value is 0.
+    Specify a positive value if validation fails on the Web Application Proxy relying party because the validity period has not yet begun.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Specifies notes.
+    The cmdlet stores the notes that you specify for the Web Application Proxy relying party trust.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TokenLifetime
+  description: |+
+    Specifies the duration, in minutes, for which the claims that are issued to the relying party are valid.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Add-AdfsWebApplicationProxyRelyingPartyTrust
+name: Add-AdfsWebApplicationProxyRelyingPartyTrust
+description: |-
+  The **Add-AdfsWebApplicationProxyRelyingPartyTrust** cmdlet adds a relying party trust for Web Application Proxy.
+  Authentication and authorization policies for access to internal web applications through the proxy require Web Application Proxy relying party trust.
+  By default, when you deploy Web Application Proxy, a relying party trust exists.
+
+  The Web Application Proxy relying party trust is useful to manage global network access from outside the corporate network.
+  By setting authentication and authorization policies, an administrator can restrict access to internal web applications and services that are published through the Web Application Proxy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/add-adfswebapplicationproxyrelyingpartytrust?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AdfsWebApplicationProxyRelyingPartyTrust

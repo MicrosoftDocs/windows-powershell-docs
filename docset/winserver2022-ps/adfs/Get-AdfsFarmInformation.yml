@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets AD FS behavior level and farm node information.
+module: ADFS
+notes: ""
+links:
+- text: Set-AdfsFarmInformation
+  href: ./Set-AdfsFarmInformation.yml
+syntaxes:
+- Get-AdfsFarmInformation [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get farm information'
+  code: |-
+    PS C:\> Get-AdfsFarmInformation
+  description: |-
+    This cmdlet gets AD FS behavior level and farm node information.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsFarmInformation
+name: Get-AdfsFarmInformation
+description: |-
+  The **Get-AdfsFarmInformation** cmdlet gets the current Active Directory Federation Services (AD FS) behavior level and farm node information.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsfarminformation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsFarmInformation

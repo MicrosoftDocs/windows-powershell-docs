@@ -1,0 +1,202 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  (Cmdlet applicable starting in App-V 5.0 SP3) Appends a package to a connection group package list.
+module: AppVServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.AppV.Server.AppVMgmtDataTypes.SerializableConnectionGroup, Microsoft.AppV.Server.AppVMgmtDataTypes.PackageVersion" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-AppvServerConnectionGroupPackage
+  href: ./Remove-AppvServerConnectionGroupPackage.yml
+- text: Set-AppvServerConnectionGroupPackage
+  href: ./Set-AppvServerConnectionGroupPackage.yml
+syntaxes:
+- >-
+  Add-AppvServerConnectionGroupPackage [-AppvServerConnectionGroup] <SerializableConnectionGroup>
+
+   [[-AppvServerPackage] <PackageVersion>] [-PackageName <String>] [-PackageVersion <String>] [-PackageID <Guid>]
+
+   [-PackageVersionID <Guid>] [-Optional] [-UseAnyPackageVersion] [-Order <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-AppvServerConnectionGroupPackage [-ConnectionGroupName] <String> [[-AppvServerPackage] <PackageVersion>]
+
+   [[-ConnectionGroupVersion] <Int32>] [-PackageName <String>] [-PackageVersion <String>] [-PackageID <Guid>]
+
+   [-PackageVersionID <Guid>] [-Optional] [-UseAnyPackageVersion] [-Order <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-AppvServerConnectionGroupPackage [-ConnectionGroupID] <Guid> [[-ConnectionGroupVersionID] <Guid>]
+
+   [[-AppvServerPackage] <PackageVersion>] [-PackageName <String>] [-PackageVersion <String>] [-PackageID <Guid>]
+
+   [-PackageVersionID <Guid>] [-Optional] [-UseAnyPackageVersion] [-Order <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SerializableConnectionGroup" data-throw-if-not-resolved="False" />
+  name: AppvServerConnectionGroup
+  isRequired: true
+  description: |+
+    Specifies the connection group object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PackageVersion" data-throw-if-not-resolved="False" />
+  name: AppvServerPackage
+  description: |+
+    Specifies an **AppVServerPackage** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ConnectionGroupID
+  isRequired: true
+  description: |+
+    Specifies the GUID of the connection group.
+
+  defaultValue: None
+  position: "1"
+  aliases: GroupID
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the connection group.
+
+  defaultValue: None
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ConnectionGroupVersion
+  description: |+
+    Specifies the version of the connection group.
+
+  defaultValue: None
+  position: "2"
+  aliases: Version
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ConnectionGroupVersionID
+  description: |+
+    Specifies the GUID of the connection group version.
+
+  defaultValue: None
+  position: "2"
+  aliases: VersionID
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Optional
+  description: |+
+    Specifies whether the package is optional.
+    Optional packages are not required when a connection group virtual environment is started.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Order
+  description: |+
+    Specifies the order in which packages are loaded into the virtual environment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageID
+  description: |+
+    Specifies the GUID that uniquely identifies the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageName
+  description: |+
+    Specifies the name of the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageVersion
+  description: |+
+    Specifies the version of the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageVersionID
+  description: |+
+    Specifies the GUID that uniquely identifies the version of the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseAnyPackageVersion
+  description: |+
+    Specifies whether to the latest added package version when the connection group virtual environment is started.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AppVServer.Add-AppvServerConnectionGroupPackage
+name: Add-AppvServerConnectionGroupPackage
+description: |-
+  The **Add-AppvServerConnectionGroupPackage** cmdlet appends a package to the end of a connection group package list.
+  You can configure the package as optional and/or with no version within the connection group.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: AppVServerCmdlets.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Add-AppvServerConnectionGroupPackage

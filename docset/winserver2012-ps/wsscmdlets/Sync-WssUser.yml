@@ -1,0 +1,34 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Refreshes user account information from a domain controller.
+module: WssCmdlets
+notes: ""
+links:
+- text: Add-WssUser
+  href: ./Add-WssUser.yml
+- text: Get-WssUser
+  href: ./Get-WssUser.yml
+- text: Import-WssUser
+  href: ./Import-WssUser.yml
+- text: Remove-WssUser
+  href: ./Remove-WssUser.yml
+syntaxes:
+- Sync-WssUser
+examples:
+- title: 'Example 1: Sync account information from a domain controller'
+  code: |-
+    PS C:\> Sync-WssUser
+  description: |-
+    This command synchronizes the account information from a domain controller.
+  summary: ""
+uid: WssCmdlets.Sync-WssUser
+name: Sync-WssUser
+description: |-
+  The **Sync-WssUser** cmdlet refreshes user account information from a domain controller.
+  By default, synchronization occurs every 30 minutes.
+  Use this cmdlet to refresh the account information immediately.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/sync-wssuser?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

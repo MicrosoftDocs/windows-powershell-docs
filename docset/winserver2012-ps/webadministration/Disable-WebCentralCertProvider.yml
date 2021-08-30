@@ -1,0 +1,33 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Takes the central certificate provider offline.
+module: WebAdministration
+notes: ""
+links:
+- text: Clear-WebCentralCertProvider
+  href: ./Clear-WebCentralCertProvider.yml
+- text: Get-WebCentralCertProvider
+  href: ./Get-WebCentralCertProvider.yml
+- text: Set-WebCentralCertProvider
+  href: ./Set-WebCentralCertProvider.yml
+- text: Set-WebCentralCertProvider
+  href: ./Set-WebCentralCertProvider.yml
+syntaxes:
+- Disable-WebCentralCertProvider [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable provider'
+  code: |-
+    PS C:\>Disable-WebCentralCertProvider
+  description: |-
+    Takes the central certificate provider off line.
+  summary: ""
+uid: WebAdministration.Disable-WebCentralCertProvider
+name: Disable-WebCentralCertProvider
+description: |-
+  Takes the central certificate provider offline.
+  Use Set-WebCentralCertProvider to re-enable the provider.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/disable-webcentralcertprovider?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

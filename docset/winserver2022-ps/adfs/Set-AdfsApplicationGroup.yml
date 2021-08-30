@@ -1,0 +1,149 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an application group.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *ApplicationGroupIdentifer*, *Description*, *Name*, *TargetApplicationGroupIdentifier*, and *TargetName* parameters.
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.ApplicationGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    ApplicationGroup objects are received by the *TargetApplicationGroup* parameter.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.ApplicationGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the updated ApplicationGroup object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Disable-AdfsApplicationGroup
+  href: ./Disable-AdfsApplicationGroup.yml
+- text: Enable-AdfsApplicationGroup
+  href: ./Enable-AdfsApplicationGroup.yml
+- text: Get-AdfsApplicationGroup
+  href: ./Get-AdfsApplicationGroup.yml
+- text: New-AdfsApplicationGroup
+  href: ./New-AdfsApplicationGroup.yml
+- text: Remove-AdfsApplicationGroup
+  href: ./Remove-AdfsApplicationGroup.yml
+syntaxes:
+- >-
+  Set-AdfsApplicationGroup [-TargetApplicationGroupIdentifier] <String> [-Name <String>]
+
+   [-ApplicationGroupIdentifier <String>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AdfsApplicationGroup [-TargetName] <String> [-Name <String>] [-ApplicationGroupIdentifier <String>]
+
+   [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsApplicationGroup [-TargetApplicationGroup] <ApplicationGroup> [-Name <String>]
+
+   [-ApplicationGroupIdentifier <String>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationGroupIdentifier
+  description: |+
+    Specifies the ID of an application group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for an application group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies a name for an application group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ApplicationGroup" data-throw-if-not-resolved="False" />
+  name: TargetApplicationGroup
+  isRequired: true
+  description: |+
+    Specifies the target application group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetApplicationGroupIdentifier
+  isRequired: true
+  description: |+
+    Specifies the ID for an application group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name for an application group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsApplicationGroup
+name: Set-AdfsApplicationGroup
+description: |-
+  The **Set-AdfsApplicationGroup** cmdlet modifies an application group in Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsapplicationgroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsApplicationGroup

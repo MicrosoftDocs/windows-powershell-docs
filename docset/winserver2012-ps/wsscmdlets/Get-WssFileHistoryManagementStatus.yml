@@ -1,0 +1,41 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the File History managed status of a computer.
+module: WssCmdlets
+notes: ""
+links:
+- text: Set-WssFileHistoryManagementStatus
+  href: ./Set-WssFileHistoryManagementStatus.yml
+- text: Get-WssFileHistoryConfiguration
+  href: ./Get-WssFileHistoryConfiguration.yml
+syntaxes:
+- Get-WssFileHistoryManagementStatus [-ComputerName] <String>
+examples:
+- title: 'Example 1: Get the File History managed status of a computer'
+  code: |-
+    PS C:\> Get-WssFileHistoryManagementStatus -ComputerName "Workstation071"
+  description: |-
+    This command gets the File History managed status of a computer named Workstation071.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of a computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: cn
+  parameterValueGroup: ""
+uid: WssCmdlets.Get-WssFileHistoryManagementStatus
+name: Get-WssFileHistoryManagementStatus
+description: |-
+  The **Get-WssFileHistoryManagementStatus** cmdlet gets the File History managed status of a computer.
+  The cmdlet returns $True if the File History setting of the computer is managed by the server.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssfilehistorymanagementstatus?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

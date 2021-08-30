@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an IIS configuration location.
+module: WebAdministration
+notes: ""
+links:
+- text: Get-WebConfigurationLocation
+  href: ./Get-WebConfigurationLocation.yml
+- text: Rename-WebConfigurationLocation
+  href: ./Rename-WebConfigurationLocation.yml
+syntaxes:
+- >-
+  Remove-WebConfigurationLocation [[-Name] <String>] [-Recurse] [[-PSPath] <String[]>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Add and remove a configuration location'
+  code: |-
+    IIS:\> Set-WebConfigurationProperty -PSPath "IIS:\" -Filter "//windowsAuthentication" -Location "Default Web Site/mypage.htm" -Name "enabled" -Value $True 
+    IIS:\> Get-WebConfigurationLocation -Name "Default Web Site" -PSPath "IIS:\" "Sleep 5 seconds before removing the configuration location"; Sleep 5 
+    IIS:\> Remove-WebConfigurationLocation -Name "Default Web Site/my*" 
+    IIS:\> Get-WebConfigurationLocation -Name "Default Web Site" -PSPath "IIS:\"
+  description: |-
+    This example adds, and then removes, a configuration location.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the configuration location that this cmdlet removes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies an IIS configuration path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recurse
+  description: |+
+    Indicates that this cmdlet removes locations within the hierarchy of the specified location.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Remove-WebConfigurationLocation
+name: Remove-WebConfigurationLocation
+description: |-
+  The **Remove-WebConfigurationLocation** cmdlet removes an Internet Information Services (IIS) configuration location.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/remove-webconfigurationlocation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WebConfigurationLocation

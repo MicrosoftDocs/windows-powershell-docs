@@ -1,0 +1,17 @@
+### YamlMime:PowershellModule
+children:
+- title: WindowsDeveloperLicense
+  cmdlets:
+  - WindowsDeveloperLicense.Get-WindowsDeveloperLicense
+  - WindowsDeveloperLicense.Show-WindowsDeveloperLicenseRegistration
+  - WindowsDeveloperLicense.Unregister-WindowsDeveloperLicense
+uid: WindowsDeveloperLicense
+name: WindowsDeveloperLicense
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Windows Developer License cmdlets.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2012-pshelp
+  Help Version: 3.0.0.0
+  Locale: en-US
+  Module Guid: 8ab5fe0d-db4a-49f2-93a3-040cf12840cc
+  Module Name: WindowsDeveloperLicense

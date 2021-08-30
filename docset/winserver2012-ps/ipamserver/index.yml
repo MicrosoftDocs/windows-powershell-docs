@@ -1,0 +1,24 @@
+### YamlMime:PowershellModule
+children:
+- title: IpamServer
+  cmdlets:
+  - IpamServer.Add-IpamCustomField
+  - IpamServer.Add-IpamCustomValue
+  - IpamServer.Export-IpamAddress
+  - IpamServer.Export-IpamRange
+  - IpamServer.Get-IpamConfiguration
+  - IpamServer.Get-IpamCustomField
+  - IpamServer.Import-IpamAddress
+  - IpamServer.Import-IpamRange
+  - IpamServer.Invoke-IpamGpoProvisioning
+  - IpamServer.Set-IpamConfiguration
+uid: IpamServer
+name: IpamServer
+description: |-
+  This reference provides cmdlet descriptions and syntax for all IP Address Management (IPAM) Server-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2012-pshelp
+  Help Version: 3.0.0.0
+  Locale: en-US
+  Module Guid: 69775f93-9317-4234-a558-13b6655fc41b
+  Module Name: IpamServer

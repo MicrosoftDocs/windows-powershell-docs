@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the application domains in which the specified IIS worker process is running.
+module: WebAdministration
+notes: ""
+syntaxes:
+- >-
+  Get-WebAppDomain [-InputObject <PSObject>] [-ApplicationPool <String>] [-ProcessId <UInt32>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the application domain of a running worker process'
+  code: |-
+    IIS:\> Get-WebAppDomain -ProcessId 5872 -ApplicationPool "DefaultAppPool" 
+    IIS:\> Get-ChildItem IIS:\AppPools\DefaultAppPool\WorkerProcesses
+  description: |-
+    The first command gets the application domains loaded in the specified worker process.
+    The second command gets the process ID from the WorkerProcesses node below the AppPools node.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  description: |+
+    Specifies the application pool for which application domains are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: apppool, pool
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the input object from which parameter data is received.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ProcessId
+  description: |+
+    Specifies the ID of the worker process for which the application domain is returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: proc, procid, pid, wp
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebAppDomain
+name: Get-WebAppDomain
+description: |-
+  The **Get-WebAppDomain** cmdlet gets the application domains in which the specified Internet Information Services (IIS) worker process is running.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webappdomain?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebAppDomain

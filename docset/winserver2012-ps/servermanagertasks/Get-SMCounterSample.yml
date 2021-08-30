@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets performance counter samples for a particular time stamp.
+module: ServerManagerTasks
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_ServerPerformanceCounterSamples" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+syntaxes:
+- >-
+  Get-SMCounterSample [-AsJob] [-BatchSize <UInt32>] [-CimSession <CimSession[]>] [-EndTime <DateTime>]
+
+   [-StartTime <DateTime>] [-ThrottleLimit <Int32>] -CollectorName <String> -CounterPath <String[]>
+- >-
+  Get-SMCounterSample [-AsJob] [-BatchSize <UInt32>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   -CollectorName <String> -CounterPath <String[]> -Timestamp <DateTime[]>
+examples:
+- title: 'Example 1: Get a counter sample from a data collector set'
+  code: |-
+    PS C:\>Get-SMCounterSample -CollectorName "ContosoPerf" -CounterPath "C:\PerfLogs\Admin\"-EndTime 12:00 -StartTime 11:00
+  description: |-
+    This command gets the performance sample for the collector named ContosoPerf and the counter path specified as C:\PerfLogs\Admin\ within a specified timeframe.
+  summary: ""
+- title: 'Example 2: Get a counter sample at a specified time'
+  code: |-
+    PS C:\>Get-SMCounterSample -CollectorName "ContosoPerf" -CounterPath "C:\PerfLogs\Admin\" -TimeStamp @(1,3,5,7)
+  description: |-
+    This command gets the performance sample for the collector named ContosoPerf and the counter path named C:\PerfLogs\Admin\ at a specified time.
+    The timestamp is an array of **DateTime** objects.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: BatchSize
+  description: |+
+    Specifies the batch size that the command uses to stream results.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectorName
+  isRequired: true
+  description: |+
+    Specifies the name of the data collector set in Performance Log Analyzer (PLA) to query.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CounterPath
+  isRequired: true
+  description: |+
+    Specifies an array of paths to the counter data.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EndTime
+  description: |+
+    Specifies the end time for the sample data collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartTime
+  description: |+
+    Specifies a start time for the sample data collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Timestamp
+  isRequired: true
+  description: |+
+    Specifies an array of **DateTime** objects.
+    The objects specify when the sampling occurs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ServerManagerTasks.Get-SMCounterSample
+name: Get-SMCounterSample
+description: |-
+  The **Get-SMCounterSample** cmdlet gets performance counter samples for a particular time.
+metadata:
+  external help file: SMTasks_Cmdlets.xml
+  Module Name: ServerManagerTasks
+  online version: https://docs.microsoft.com/powershell/module/servermanagertasks/get-smcountersample?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

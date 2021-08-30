@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops the Cluster service on all nodes in a failover cluster, which will stop all services and applications configured in the cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-Cluster
+  href: ./Get-Cluster.yml
+- text: New-Cluster
+  href: ./New-Cluster.yml
+- text: Remove-Cluster
+  href: ./Remove-Cluster.yml
+- text: Start-Cluster
+  href: ./Start-Cluster.yml
+- text: Test-Cluster
+  href: ./Test-Cluster.yml
+syntaxes:
+- Stop-Cluster [-Cluster <String>] [-Force] [-InputObject <PSObject>]
+- Stop-Cluster [[-Name] <String>] [-Cluster <String>] [-Force]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Stop-Cluster
+  description: |-
+    This example stops the Cluster service on all nodes in the local cluster, which will stop all services and applications configured in the cluster.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Stop-Cluster cluster1
+  description: |-
+    This example stops the Cluster service on all nodes in the cluster named cluster1, which will stop all services and applications configured in the cluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Runs the cmdlet without prompting for confirmation.
+    By default the cmdlet will ask for confirmation from the user before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster to stop.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster to stop.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Stop-Cluster
+name: Stop-Cluster
+description: |-
+  The **Stop-Cluster** cmdlet stops the Cluster service on all nodes in a failover cluster, which will stop all services and applications configured in the cluster.
+  A node can only function as part of the cluster when the Cluster service is running on that node.
+metadata:
+  external help file: Failoverv2_Cmdlets.xml
+  Module Name: FailoverClusters
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/stop-cluster?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

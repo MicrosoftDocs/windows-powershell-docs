@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Repairs a corrupted UE-V template index.
+module: UEV
+notes: ""
+syntaxes:
+- Repair-UevTemplateIndex [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Repair the template index'
+  code: |-
+    PS C:\> Repair-UevTemplateIndex
+  description: |-
+    This command repairs the corrupted template index.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UEV.Repair-UevTemplateIndex
+name: Repair-UevTemplateIndex
+description: |-
+  The **Repair-UevTemplateIndex** cmdlet repairs the index for the Microsoft User Experience Virtualization (UE-V) settings location templates.
+  A corrupted template prevents you from enumerating the UE-V templates, and can prevent UE-V from synchronizing settings for any application on the computer.
+  You must have administrator privileges to run this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/repair-uevtemplateindex?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Repair-UevTemplateIndex

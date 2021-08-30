@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets settings for the DFS Replication service on group members.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrServiceConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-DfsrServiceConfiguration
+  href: ./Set-DfsrServiceConfiguration.yml
+syntaxes:
+- Get-DfsrServiceConfiguration [[-ComputerName] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get DFS Replication service settings for the local computer'
+  code: |-
+    PS C:\> Get-DfsrServiceConfiguration
+    ComputerName                      : SRV01
+    RPCPort                           : 
+    DynamicRPCPort                    : True
+    DisableDebugLog                   : False
+    MaximumDebugLogFiles              : 1000
+    DebugLogPath                      : C:\Windows\debug
+    DebugLogSeverity                  : 4
+    MaximumDebugLogMessages           : 200000
+    UnexpectedAutoRecovery            : False
+    CleanupStagingFolderAtPercent     : 90
+    CleanupStagingFolderUntilPercent  : 60
+    CleanupConflictFolderAtPercent    : 90
+    CleanupConflictFolderUntilPercent : 60
+  description: |-
+    This command gets the DFS Replication service settings for the local computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies an array of names of replication member computers.
+    You can use a comma separated list and the wildcard character (*).
+    If you do not specify this parameter, the cmdlet uses the current computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: MemberList, MemList
+  parameterValueGroup: ""
+uid: DFSR.Get-DfsrServiceConfiguration
+name: Get-DfsrServiceConfiguration
+description: |-
+  The **Get-DfsrServiceConfiguration** cmdlet gets settings for the Distributed File System (DFS) Replication service on replication group members.
+  Members of a replication group host replicated folders.
+  Use this cmdlet to view settings for cleanup, debug logging, and automatic recovery for unexpected shut down.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/get-dfsrserviceconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DfsrServiceConfiguration

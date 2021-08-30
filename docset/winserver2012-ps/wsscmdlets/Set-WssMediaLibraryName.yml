@@ -1,0 +1,39 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the name of the Media Library.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssMediaLibraryName
+  href: ./Get-WssMediaLibraryName.yml
+syntaxes:
+- Set-WssMediaLibraryName [-MediaLibraryName] <String>
+examples:
+- title: 'Example 1: Rename a Media Library'
+  code: |-
+    PS C:\> Set-WssMediaLibraryName -MediaLibraryName "Accounting Library"
+  description: |-
+    This command gives the Media Library the name Accounting Library.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MediaLibraryName
+  isRequired: true
+  description: |+
+    Specifies a new name for the Media Library shared by the server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Set-WssMediaLibraryName
+name: Set-WssMediaLibraryName
+description: |-
+  The **Set-WssMediaLibraryName** cmdlet changes the name of the Media Library for the current server.
+  You can use the Get-WssMediaLibraryName cmdlet to see the Media Library name.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssmedialibraryname?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

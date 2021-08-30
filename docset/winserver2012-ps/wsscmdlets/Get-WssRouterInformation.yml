@@ -1,0 +1,26 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves information about the router for the local network.
+module: WssCmdlets
+notes: ""
+syntaxes:
+- Get-WssRouterInformation
+examples:
+- title: 'Example 1: Retrieve router information'
+  code: |-
+    PS C:\> Get-WssRouterInformation
+  description: |-
+    This command retrieves the router information for the local network.
+  summary: ""
+uid: WssCmdlets.Get-WssRouterInformation
+name: Get-WssRouterInformation
+description: |-
+  The **Get-WssRouterInformation** cmdlet retrieves information about the router, including the IP address, name, and model.
+
+  If the router supports Universal Plug and Play (UPnP), sbs_sbs8_2 server may be able to configure the router for your local network.
+  If the router does not support UPnP, you must manually configure the router.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssrouterinformation?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

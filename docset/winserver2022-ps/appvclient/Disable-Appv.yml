@@ -1,0 +1,34 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables the App-V service.
+module: AppvClient
+notes: ""
+links:
+- text: Enable-Appv
+  href: ./Enable-Appv.yml
+- text: Get-AppvStatus
+  href: ./Get-AppvStatus.yml
+syntaxes:
+- Disable-Appv [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable the App-V service'
+  code: |-
+    PS C:\> Disable-Appv
+  description: |-
+    This command disables the App-V service.
+  summary: ""
+uid: AppvClient.Disable-Appv
+name: Disable-Appv
+description: |-
+  The **Disable-Appv** cmdlet disables the Microsoft Application Virtualization (App-V) service on Windows 10 Anniversary Edition computers.
+  This cmdlet disables the download of all App-V apps from App-V Server or Configuration Manager.
+  If this cmdlet succeeds, it returns a message.
+  You must restart the computer for the change to take effect.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/disable-appv?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-Appv

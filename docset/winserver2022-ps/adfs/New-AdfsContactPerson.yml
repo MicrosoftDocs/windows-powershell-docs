@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a contact person object.
+module: ADFS
+notes: |-
+  * You can publish this contact person in the federation metadata of the Federation Service by using the **Set-AdfsProperties** cmdlet.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ContactPerson" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a class structure that represents a contact person object in the Federation Service.
+links:
+- text: Get-AdfsProperties
+  href: ./Get-AdfsProperties.yml
+- text: Set-AdfsProperties
+  href: ./Set-AdfsProperties.yml
+syntaxes:
+- >-
+  New-AdfsContactPerson [-Company <String>] [-EmailAddress <String[]>] [-GivenName <String>]
+
+   [-TelephoneNumber <String[]>] [-Surname <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create and publish contact person object'
+  code: |-
+    PS C:\> $CP = New-AdfsContactPerson -EmailAddress "support@fabrikam.com"
+    PS C:\> Set-AdfsProperties -ContactPerson $CP
+  description: |-
+    The first command creates a contact person who has the specified address, and then assigns it to the $CP variable.
+
+    The second command uses the **Set-AdfsProperties** cmdlet to publish the contact person object to the Federation Service.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Company
+  description: |+
+    Specifies the company name of the contact person.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EmailAddress
+  description: |+
+    Specifies an array of e-mail addresses of the contact person.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GivenName
+  description: |+
+    Specifies the given name of the contact person.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Surname
+  description: |+
+    Specifies the surname, or last name, of the contact person.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TelephoneNumber
+  description: |+
+    Specifies an array of telephone numbers of the contact person.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.New-AdfsContactPerson
+name: New-AdfsContactPerson
+description: |-
+  The **New-AdfsContactPerson** cmdlet creates a contact person object in ADFS.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/new-adfscontactperson?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-AdfsContactPerson

@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Checks server prerequisites and validates parameter values for the Reports feature.
+module: MBAM
+notes: ""
+outputs:
+- name: <xref href="bool" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-MbamReport
+  href: disable-mbamreport.yml
+- text: Enable-MbamReport
+  href: enable-mbamreport.yml
+- text: Get-MbamReport
+  href: get-mbamreport.yml
+- text: Microsoft BitLocker Administration and Monitoring
+  href: https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/
+syntaxes:
+- >-
+  Test-MbamReport [-Detailed] [-ComplianceAndAuditDBConnectionString <String>]
+
+   -ComplianceAndAuditDBCredential <PSCredential> [-SsrsInstance <String>] -ReportsReadOnlyAccessGroup <String>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Check prerequisites and validate parameters for the Reports feature'
+  code: |-
+    PS C:\> Test-MbamReport -ComplianceAndAuditDBConnectionString "Data Source=MyDatabaseServer;Initial Catalog=MBAM Compliance Status;Integrated Security=True" -ReportsReadOnlyAccessGroup "MyDomain\MyReportsGroup"
+    True
+  description: |-
+    This command checks the prerequisites and validates the parameters for the Reports feature on the local server.
+    The connection string specifies that ContosoDatabaseServer hosts the Compliance and Audit Database.
+    The cmdlet prompts you to enter credentials for the Compliance and Audit Database.
+    The reports group is ContosoDomain\ReportsGroup.
+  summary: ""
+- title: 'Example 2: View details about prerequisites and validation for the Reports feature'
+  code: |-
+    PS C:\> Test-MbamReport -ComplianceAndAuditDBConnectionString "Data Source=MyDatabaseServer;Initial Catalog=MBAM Compliance Status;Integrated Security=True" -ReportsReadOnlyAccessGroup "MyDomain\MyReportsGroup" -Detailed
+    ID                  Type  Message
+    --                  ----  -------
+    ReportsInstallation Error Unable to connect to the Reporting Services web service. Error message: The request failed with HTTP status 504: Proxy Timeout (The connection timed out.).
+    False
+  description: |-
+    This command displays detailed information about prerequisites and validation of parameters for the Reports feature.
+    This command specifies the *Detailed* parameter.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComplianceAndAuditDBConnectionString
+  description: |+
+    Specifies a connection string.
+    The local Microsoft SQL Server Reporting Services uses the string that this parameter specifies to connect to the Compliance and Audit Database feature.
+    The connection string must contain values for the **Integrated Security** and **Initial Catalog** fields.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComplianceDB
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ComplianceAndAuditDBCredential
+  isRequired: true
+  description: |+
+    Specifies the domain account credentials that the local SQL Server Reporting Services instance uses to connect to the Compliance and Audit Database.
+    The domain user in the credentials must be the same as or a member of the report account of the Compliance and Audit Database.
+
+    Important: For improved security, use an account that has limited privileges.
+    Also, configure the account so that the password never expires.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComplianceDBCred
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Detailed
+  description: |+
+    Indicates that the cmdlet displays detailed information about the prerequisite check and parameter validation failures.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportsReadOnlyAccessGroup
+  isRequired: true
+  description: |+
+    Specifies a domain user group.
+    Specify a group that has read permissions for the reports.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ReportsGroup
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SsrsInstance
+  description: |+
+    Specifies the SQL Server Reporting Services instance.
+    After installation, this instance hosts the reports.
+    If you do not specify an instance, the cmdlet uses the default instance, MSSQLSERVER.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MBAM.Test-MbamReport
+name: Test-MbamReport
+description: |-
+  The **Test-MbamReport** cmdlet checks server prerequisites and validates parameter values for the Microsoft BitLocker Administration and Monitoring (MBAM) Reports feature.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Test-MbamReport

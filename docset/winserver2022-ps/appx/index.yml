@@ -1,0 +1,37 @@
+### YamlMime:PowershellModule
+children:
+- title: Appx
+  cmdlets:
+  - Appx.Add-AppxPackage
+  - Appx.Add-AppxVolume
+  - Appx.Dismount-AppxVolume
+  - Appx.Get-AppxDefaultVolume
+  - Appx.Get-AppxLastError
+  - Appx.Get-AppxLog
+  - Appx.Get-AppxPackage
+  - Appx.Get-AppxPackageAutoUpdateSettings
+  - Appx.Get-AppxPackageManifest
+  - Appx.Get-AppxVolume
+  - Appx.Get-NonRemovableAppsPolicy
+  - Appx.Invoke-CommandInDesktopPackage
+  - Appx.Mount-AppxVolume
+  - Appx.Move-AppxPackage
+  - Appx.Remove-AppxPackage
+  - Appx.Remove-AppxVolume
+  - Appx.Reset-AppxPackage
+  - Appx.Set-AppxDefaultVolume
+  - Appx.Set-AppxPackageAutoUpdateSettings
+  - Appx.Set-NonRemovableAppsPolicy
+uid: Appx
+name: Appx
+description: |-
+  The Windows PowerShell cmdlets for AppX are designed to streamline the administration of MSIX or AppX package management.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.6.4
+  Locale: en-US
+  Module Guid: aeef2bef-eba9-4a1d-a3d2-d0b52df76deb
+  Module Name: Appx
+  ms.date: 05/19/2017
+  title: Appx

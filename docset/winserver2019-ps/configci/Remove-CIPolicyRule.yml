@@ -1,0 +1,40 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is not supported.
+module: ConfigCI
+notes: ""
+outputs:
+- name: <xref href="Rule" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Remove-CIPolicyRule [-Id] <String> -FilePath <String> [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: f
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ConfigCI.Remove-CIPolicyRule
+name: Remove-CIPolicyRule
+description: |-
+  The **Remove-CIPolicyRule** cmdlet is not supported.
+  Do not use this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/configci/remove-cipolicyrule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-CIPolicyRule

@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests whether you can restore an AD FS farm to a previous behavior level.
+module: ADFS
+notes: ""
+links:
+- text: Invoke-AdfsFarmBehaviorLevelRaise
+  href: ./Invoke-AdfsFarmBehaviorLevelRaise.yml
+- text: Restore-AdfsFarmBehaviorLevel
+  href: ./Restore-AdfsFarmBehaviorLevel.yml
+- text: Test-AdfsFarmBehaviorLevelRaise
+  href: ./Test-AdfsFarmBehaviorLevelRaise.yml
+syntaxes:
+- >-
+  Test-AdfsFarmBehaviorLevelRestore [-Member <String[]>] [-Credential <PSCredential>] -FarmBehavior <Int32>
+
+   [-Force] [<CommonParameters>]
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies credentials necessary to run this cmdlet for an AD FS farm that uses SQL Server as the policy database.
+    The credentials provided must be an administrator on each AD FS server.
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: FarmBehavior
+  isRequired: true
+  description: |+
+    Specifies the farm behavior.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Member
+  description: |+
+    Specifies an array of members.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Test-AdfsFarmBehaviorLevelRestore
+name: Test-AdfsFarmBehaviorLevelRestore
+description: |-
+  The **Test-AdfsFarmBehaviorLevelRestore** cmdlet tests whether the **Restore-AdfsFarmBehaviorLevel** cmdlet can restore an Active Directory Federation Services (AD FS) farm to a previous behavior level.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/test-adfsfarmbehaviorlevelrestore?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-AdfsFarmBehaviorLevelRestore

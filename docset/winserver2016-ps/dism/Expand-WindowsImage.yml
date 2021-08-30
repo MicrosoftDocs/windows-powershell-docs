@@ -1,0 +1,245 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Applies an image to a specified location.
+module: DISM
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageObjectWithState" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Dism.Commands.OfflineImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Dismount-WindowsImage
+  href: ./Dismount-WindowsImage.yml
+- text: Export-WindowsImage
+  href: ./Export-WindowsImage.yml
+- text: Get-WindowsImage
+  href: ./Get-WindowsImage.yml
+- text: Mount-WindowsImage
+  href: ./Mount-WindowsImage.yml
+- text: New-WindowsImage
+  href: ./New-WindowsImage.yml
+- text: Remove-WindowsImage
+  href: ./Remove-WindowsImage.yml
+- text: Repair-WindowsImage
+  href: ./Repair-WindowsImage.yml
+- text: Save-WindowsImage
+  href: ./Save-WindowsImage.yml
+- text: Split-WindowsImage
+  href: ./Split-WindowsImage.yml
+syntaxes:
+- >-
+  Expand-WindowsImage -ImagePath <String> -Name <String> [-SplitImageFilePattern <String>] -ApplyPath <String>
+
+   [-CheckIntegrity] [-ConfirmTrustedFile] [-NoRpFix] [-Verify] [-WIMBoot] [-Compact] [-LogPath <String>]
+
+   [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+- >-
+  Expand-WindowsImage -ImagePath <String> -Index <UInt32> [-SplitImageFilePattern <String>] -ApplyPath <String>
+
+   [-CheckIntegrity] [-ConfirmTrustedFile] [-NoRpFix] [-Verify] [-WIMBoot] [-Compact] [-LogPath <String>]
+
+   [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Apply an image in a file to a partion'
+  code: |-
+    PS C:\> Expand-WindowsImage -ImagePath "c:\imagestore\custom.wim" -ApplyPath "d:\" -Index 1
+  description: |-
+    This command applies an image at index 1 in the c:\imagestore\custom.wim file to partition d:.
+  summary: ""
+- title: 'Example 2: Apply a split image'
+  code: |-
+    PS C:\> Expand-WindowsImage -ImagePath "c:\imagestore\split\custom.swm" -SplitImageFilePattern "c:\imagestore\split\custom*.swm" -ApplyPath "d:\" -Name "Windows Pro" -Verify
+  description: |-
+    This command applies the split image with a name that matches c:\imagestore\split\custom*.swm with a name of Windows Pro to partition d:.
+    Check for errors and file duplication while applying the image.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplyPath
+  isRequired: true
+  description: |+
+    Specifies the location where the image is to be applied.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CheckIntegrity
+  description: |+
+    Detects and tracks .wim file corruption when used with the **Add-WindowsImage**, **Dismount-WindowsImage**, or **Save-WindowsImage** cmdlet.
+    CheckIntegrity stops the operation if DISM detects that the .wim file is corrupted when used with the **Expand-WindowsImage** or **Mount-WindowsImage** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Compact
+  description: |+
+    Indicates that this cmdlet applies the operating system image to the specified drive with individual operating system files compressed.
+    If you do not specify this parameter, this cmdlet lays down all of the files in the image without compression.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ConfirmTrustedFile
+  description: |+
+    Specifies that this cmdlet validates the image for Trusted Desktop on a Windows® 8 or Windows® 8.1.
+    This option can only be run on a computer running at least Windows® Preinstallation Environment (Windows PE) 4.0.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImagePath
+  isRequired: true
+  description: |+
+    Specifies the location of a WIM file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Index
+  isRequired: true
+  description: |+
+    Specifies the index number of a Windows image in a WIM or VHD file.
+    For a VHD file, the Index must be 1.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: |+
+    Specifies the maximum output level shown in the logs.
+    The default log level is 3.
+    The accepted values are as follows:
+    - 1 = Errors only
+    - 2 = Errors and warnings
+    - 3 = Errors, warnings, and information
+    - 4 = All of the information listed previously, plus debug output
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LL
+  parameterValueGroup: Errors, Warnings, WarningsInfo
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the full path and file name to log to.
+    If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+    In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+    The log file will automatically be archived.
+    The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+    Each time the log file is archived the .bak file will be overwritten. 
+    When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LP
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of an image in a WIM file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRpFix
+  description: |+
+    Disables the reparse point tag fix.
+    A reparse point is a file that contains a link to another file on the file system.
+    If the parameter is not specified, reparse points that resolve to paths outside of the value specified by the *ImagePath* parameter will not be captured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScratchDirectory
+  description: |+
+    Specifies a temporary directory that will be used when extracting files for use during servicing.
+    The directory must exist locally.
+    If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+    Items in the scratch directory are deleted after each operation. 
+    You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+    The directory used for extracting files for temporary usage during servicing should be a local directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SplitImageFilePattern
+  description: |+
+    Specifies the location and name of the base split image file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Verify
+  description: |+
+    Checks for errors and file duplication. 
+     During an apply operation, for example, using the **Add-WindowsImage** cmdlet, the size and the hash of the file being applied are checked against the image file to verify they are both equal. 
+     During a capture operation, for example, when using the **New-WindowsImage** cmdlet, after the files is captured into a Windows image, the file is written to a temporary file and compared on a bit-by-bit basis with the original file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WIMBoot
+  description: |+
+    Specifies that the offline image to be added will be formatted to install on a Windows Image Format Boot (WIMBoot) system.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DISM.Expand-WindowsImage
+name: Expand-WindowsImage
+description: |-
+  The **Expand-WindowsImage** cmdlet applies an image to a specified location.
+
+  This cmdlet does not apply to virtual hard disk (VHD) files.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+  Module Name: System.Object[]
+  ms.date: 12/21/2016
+  online version: https://docs.microsoft.com/powershell/module/dism/expand-windowsimage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Expand-WindowsImage

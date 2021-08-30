@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Forces a station to reload its configuration settings.
+module: MultiPoint
+notes: ""
+links:
+- text: Clear-WmsStation
+  href: ./Clear-WmsStation.yml
+- text: Get-WmsStation
+  href: ./Get-WmsStation.yml
+- text: Join-WmsStation
+  href: ./Join-WmsStation.yml
+- text: Set-WmsStation
+  href: ./Set-WmsStation.yml
+- text: Split-WmsStation
+  href: ./Split-WmsStation.yml
+syntaxes:
+- Update-WmsStation [-StationId] <UInt32[]> [-Server <String>] [<CommonParameters>]
+- Update-WmsStation [-All] [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update station settings'
+  code: |-
+    PS C:\> Update-WmsStation -StationId 2
+  description: |-
+    This command forces station 2 to reload its configuration settings.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  isRequired: true
+  description: |+
+    Indicates that this operation applies to all sessions on the target host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StationId
+  isRequired: true
+  description: |+
+    Specifies an array of station IDs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MultiPoint.Update-WmsStation
+name: Update-WmsStation
+description: |-
+  The **Update-WmsStation** cmdlet forces the specified station to reload its configuration settings.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/update-wmsstation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-WmsStation

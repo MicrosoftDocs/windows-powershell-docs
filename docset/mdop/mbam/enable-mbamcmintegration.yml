@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables the MBAM Microsoft Endpoint Configuration Manager Integration feature.
+module: MBAM
+notes: ""
+links:
+- text: Disable-MbamCMIntegration
+  href: disable-mbamcmintegration.yml
+- text: Get-MbamCMIntegration
+  href: get-mbamcmintegration.yml
+- text: Test-MbamCMIntegration
+  href: test-mbamcmintegration.yml
+syntaxes:
+- >-
+  Enable-MbamCMIntegration [-SkipValidation] [-SsrsServer <String>] [-SsrsInstance <String>] [-ReportsOnly]
+
+   -ReportsCollectionID <String> -BitLockerProtectionBaselineLogicalName <String>
+
+   -OperatingSystemDriveConfigurationItemLogicalName <String>
+
+   -FixedDataDriveConfigurationItemLogicalName <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Enable-MbamCMIntegration [-SkipValidation] [-SsrsServer <String>] [-SsrsInstance <String>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable the Integration feature'
+  code: |-
+    PS C:\> Enable-MbamCMIntegration
+  description: |-
+    This command enables the MBAM Microsoft Endpoint Configuration Manager Integration feature on the local Configuration Manager server.
+    The MBAM reports are deployed on the default SQL Server Reporting Services instance, MSSQLSERVER.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BitLockerProtectionBaselineLogicalName
+  isRequired: true
+  description: |+
+    Specifies the logical name of the BitLocker protection baseline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: BaselineLogicalName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FixedDataDriveConfigurationItemLogicalName
+  isRequired: true
+  description: |+
+    Specifies the logical name of the fixed data drive configuration item.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: FDDLogicalName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OperatingSystemDriveConfigurationItemLogicalName
+  isRequired: true
+  description: |+
+    Specifies the logical name of the operating system drive configuration item.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: OSDLogicalName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportsCollectionID
+  isRequired: true
+  description: |+
+    Specifies an existing collection ID.
+    This ID is used by the reports to set the default collection for which the reports display compliance data.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReportsOnly
+  isRequired: true
+  description: |+
+    Indicates that only the Configuration Manager reports are deployed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipValidation
+  description: |+
+    Indicates that this cmdlet bypasses validation of parameter values.
+    If you specify this parameter, the feature may not function properly after you enable it.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SsrsInstance
+  description: |+
+    Specifies the SQL Server Reporting Services instance.
+    This instance hosts the Configuration Manager reports.
+    This parameter is ignored if the server has Configuration Manager installed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SsrsServer
+  description: |+
+    Specifies the server with the SQL Server Reporting Services point role.
+    This server hosts the Configuration Manager reports.
+    If you do not specify a server, the Configuration Manager reports are deployed to the local server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MBAM.Enable-MbamCMIntegration
+name: Enable-MbamCMIntegration
+description: |-
+  The **Enable-MbamCMIntegration** cmdlet enables the Microsoft BitLocker Administration and Monitoring (MBAM) Microsoft Endpoint Configuration Manager Integration feature.
+  This feature integrates Configuration Manager with MBAM, and moves the compliance and reporting infrastructure into the Configuration Manager environment.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Enable-MbamCMIntegration

@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resumes a node in a NLB cluster.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-NlbClusterNode
+  href: ./Add-NlbClusterNode.yml
+- text: Get-NlbClusterNode
+  href: ./Get-NlbClusterNode.yml
+- text: Remove-NlbClusterNode
+  href: ./Remove-NlbClusterNode.yml
+- text: Set-NlbClusterNode
+  href: ./Set-NlbClusterNode.yml
+- text: Start-NlbClusterNode
+  href: ./Start-NlbClusterNode.yml
+- text: Stop-NlbClusterNode
+  href: ./Stop-NlbClusterNode.yml
+- text: Suspend-NlbClusterNode
+  href: ./Suspend-NlbClusterNode.yml
+syntaxes:
+- Resume-NlbClusterNode [[-HostName] <String>] [[-InterfaceName] <String>] [<CommonParameters>]
+- Resume-NlbClusterNode -InputObject <Node[]> [<CommonParameters>]
+examples:
+- title: 'Example 1: Resume the local cluster node'
+  code: |-
+    PS C:\>Resume-NlbClusterNode
+    Name                State               Interface           HostID 
+    ----                -----               ---------           ------ 
+    node2               Stopped             vlan-3              2
+  description: |-
+    This command resumes the local cluster node.
+    The node is in the Stopped state and needs to be started after coming back from the Suspended state.
+  summary: ""
+- title: 'Example 2: Resume the specified cluster node on the local cluster'
+  code: |-
+    PS C:\>Resume-NlbClusterNode -InputObject "Node003"
+    Name                State               Interface           HostID 
+    ----                -----               ---------           ------ 
+    Node003               Stopped             vlan-3              2
+  description: |-
+    This command resumes the cluster node named Node003 on the local cluster.
+    The node is in the Stopped state and needs to be started after coming back from the Suspended state.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: "0"
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="Node" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of cluster nodes to resume.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: "1"
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Resume-NlbClusterNode
+name: Resume-NlbClusterNode
+description: |-
+  The **Resume-NlbClusterNode** cmdlet resumes the node in a Network Load Balancing (NLB) cluster that was suspended.
+  To override any remote control cmdlets that are issued, a node may need to be suspended and resumed.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/resume-nlbclusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Resume-NlbClusterNode

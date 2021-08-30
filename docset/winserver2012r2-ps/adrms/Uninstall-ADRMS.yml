@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes configuration for an existing deployment of AD RMS Server.
+module: ADRMS
+notes: |-
+  * To totally remove the rms_2 role from the system, the **Remove-WindowsFeature** cmdlet must be run after this cmdlet is used. The command to do so is the **Remove-WindowsFeature ADRMS -IncludeManagementTools** command.
+inputs:
+- name: <xref href="SwitchParameter, PSCredential" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Install-ADRMS
+  href: ./Install-ADRMS.yml
+- text: Update-ADRMS
+  href: ./Update-ADRMS.yml
+syntaxes:
+- Uninstall-ADRMS [-ADFSOnly] [-Credential <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>Uninstall-ADRMS -Force
+  description: |-
+    Description
+
+    -----------
+
+    This command removes the rms_2 configuration on this computer.
+    For more information on using this cmdlet, see http://go.microsoft.com/fwlink/?LinkId=136806
+  summary: ""
+- title: '-------------------------- EXAMPLE 2 --------------------------'
+  code: |-
+    C:\PS>Uninstall-ADRMS -ADFSOnly -Force
+  description: |-
+    Description
+
+    -----------
+
+    This command removes the Identity Federation Support configuration on this computer.
+    For more information on using this cmdlet, see http://go.microsoft.com/fwlink/?LinkId=136806
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ADFSOnly
+  description: |+
+    Removes configuration support for Active Directory Federated Services (AD FS) from this computer, but does not otherwise change the AD RMS configuration.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies user credentials to use for the configuration process.
+    If this parameter is specified, you will be prompted to enter credentials.
+    This parameter operates in a similar manner to the RunAs command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces completion of the command by overriding restrictions that would prevent it from succeeding (so long as a the changes made do not compromise security).
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADRMS.Uninstall-ADRMS
+name: Uninstall-ADRMS
+description: |-
+  The Uninstall-ADRMS cmdlet removes configuration for the Active Directory Rights Management Services (AD RMS) server role and, if appropriate, role services that were installed with AD RMS.
+  To remove configuration for Identity Federation Support only, specify the ADFSOnly parameter.
+metadata:
+  external help file: Microsoft.RightsManagementServices.Configuration.dll-Help.xml
+  Module Name: ADRMS
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/adrms/uninstall-adrms?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Uninstall-ADRMS

@@ -1,0 +1,170 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a traffic class.
+module: DcbQoS
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosTrafficClassSettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+    This cmdlet returns a **MSFT_NetQosTrafficClassSettingData** object that contains a network traffic class.
+links:
+- text: Get-NetQosTrafficClass
+  href: ./Get-NetQosTrafficClass.yml
+- text: Set-NetQosTrafficClass
+  href: ./Set-NetQosTrafficClass.yml
+syntaxes:
+- >-
+  New-NetQosTrafficClass [-Name] <String> [-Algorithm] <Algorithm> [-BandwidthPercentage <Byte>]
+
+   [-Priority] <Byte[]> [-InterfaceAlias <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetQosTrafficClass [-Name] <String> [-Algorithm] <Algorithm> [-BandwidthPercentage <Byte>]
+
+   [-Priority] <Byte[]> [-InterfaceIndex <UInt32>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a traffic class'
+  code: |-
+    PS C:\> New-NetQosTrafficClass -Name "SMB" -Priority 3 -Algorithm ETS -BandwidthPercentage 60
+
+    Name                      Algorithm Bandwidth(%) Priority 
+    ----                      --------- ------------ -------- 
+    SMB                       ETS       60           3
+  description: |-
+    This command creates a traffic class for traffic tagged with the 802.1p value of 3.
+    This traffic class, named as SMB, has 60 percent of the bandwidth.
+  summary: ""
+parameters:
+- type: <xref href="Algorithm" data-throw-if-not-resolved="False" />
+  name: Algorithm
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: "1"
+  aliases: tsa
+  parameterValueGroup: Strict, ETS
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: BandwidthPercentage
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: Bandwidth, bw
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer. 
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
+    The default is the current session on the local computer. 
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceAlias
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IfAlias
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: InterfaceIndex
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IfIndex
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Priority
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: "2"
+  aliases: p, pri
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DcbQoS.New-NetQosTrafficClass
+name: New-NetQosTrafficClass
+description: |-
+  This **New-NetQosTrafficClass** cmdlet creates a traffic class.
+  Traffic class is specified in the enhanced transmission selection (ETS) specification in the IEEE data center bridging (DCB) standard.
+  In creating a traffic class, the user specifies which types of traffic, differentiated by the IEEE 802.1p priority, are mapped to the traffic class, what transmission algorithm it uses, and how much bandwidth it gets.
+  If Windows Server® 2012 or later is set to be **not willing** to accept DCB configurations from a remote device, then Windows Server 2012 or later programs DCB capable network adapters to add this new traffic class.
+
+  For more information about remote device configurations, see the **Set-NetQosDcbxSetting** cmdlet.
+
+  There is a default traffic class created by Windows Server 2012 or later.
+  All 8 priorities are mapped to this default traffic class, which selects ETS as its transmission algorithm and has all of the total bandwidth.
+  Users cannot delete the default traffic class.
+  Since a traffic class must have at least one type of traffic mapped to it and there are 8 or less types of such traffic, which is limited by IEEE 802.1p, only 7 additional traffic classes can be created.
+
+  In reality, a network adapter that supports DCB may support less than 8 traffic classes.
+  If there are more traffic classes configured in Windows Server 2012 or later than what a network adapter can support, then Windows Server 2012 or later will not send the configurations to the network adapter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetQosTrafficClass.cdxml-help.xml
+  Module Name: DcbQoS
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/dcbqos/new-netqostrafficclass?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetQosTrafficClass

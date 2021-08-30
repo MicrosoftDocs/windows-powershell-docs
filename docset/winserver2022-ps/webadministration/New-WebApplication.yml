@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an IIS web application.
+module: WebAdministration
+notes: ""
+links:
+- text: ConvertTo-WebApplication
+  href: ./ConvertTo-WebApplication.yml
+- text: Get-WebApplication
+  href: ./Get-WebApplication.yml
+- text: Remove-WebApplication
+  href: ./Remove-WebApplication.yml
+syntaxes:
+- >-
+  New-WebApplication [-Site <String>] [-Name] <String> [-PhysicalPath <String>] [-ApplicationPool <String>]
+
+   [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a web application'
+  code: |-
+    IIS:\> New-WebApplication -Name "TestApp" -Site "Default Web Site" -PhysicalPath "C:\Test" -ApplicationPool "DefaultAppPool"
+  description: |-
+    This command creates a web application named TestApp on the default website.
+    The application files are stored in the C:\Test folder, and the application runs in the DefaultAppPool application pool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  description: |+
+    Specifies the name of the application pool in which the new web application runs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the creation of the application without prompting for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the web application to create.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhysicalPath
+  description: |+
+    Specifies the physical path to the web application files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Site
+  description: |+
+    Specifies the name of the site on which this cmdlet creates an application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-WebApplication
+name: New-WebApplication
+description: |-
+  The **New-WebApplication** cmdlet creates an Internet Information Services (IIS) web application.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-webapplication?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WebApplication

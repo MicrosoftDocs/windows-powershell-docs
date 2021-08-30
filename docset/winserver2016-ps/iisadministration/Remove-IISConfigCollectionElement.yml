@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a configuration element object from an IIS configuration collection.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElementCollection, System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-IISConfigCollectionElement
+  href: ./Get-IISConfigCollectionElement.yml
+- text: New-IISConfigCollectionElement
+  href: ./New-IISConfigCollectionElement.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Remove-IISConfigCollectionElement [-ConfigCollection] <ConfigurationElementCollection>
+
+   [[-ConfigAttribute] <Hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a file name from the list of default documents'
+  code: |-
+    PS C:\> $ConfigSection = Get-IISConfigSection -SectionPath "system.webServer/defaultDocument"
+    PS C:\> Get-IISConfigCollection $ConfigSection "Files" | Remove-IISConfigCollectionElement  -ConfigAttribute @{"Value" = "MyDefDoc.htm"}
+  description: |-
+    This command removes a configuration entry from the list of default documents.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: ConfigAttribute
+  description: |+
+    Specifies a hashtable of the attributes to match while searching for the configuration elements to delete in the collection.
+    For the configuration attributes that are not specified, no filtering will be done.
+    If you omit this parameter, all the elements in the collection are deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ConfigurationElementCollection" data-throw-if-not-resolved="False" />
+  name: ConfigCollection
+  isRequired: true
+  description: |+
+    Specifies the ConfigurationCollection from which the matching ConfigurationElements will be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: IISAdministration.Remove-IISConfigCollectionElement
+name: Remove-IISConfigCollectionElement
+description: |-
+  The **Remove-IISConfigCollectionElement** cmdlet removes a ConfigurationElement from a given Internet Information Services (IIS) ConfigurationCollection.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/remove-iisconfigcollectionelement?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-IISConfigCollectionElement

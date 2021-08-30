@@ -1,0 +1,560 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes global FSRM settings for the computer.
+module: FileServerResourceManager
+notes: ""
+links:
+- text: Get-FsrmSetting
+  href: ./Get-FsrmSetting.yml
+syntaxes:
+- >-
+  Set-FsrmSetting [-InputObject <CimInstance[]>] [-SmtpServer <String>] [-FromEmailAddress <String>]
+
+   [-AdminEmailAddress <String>] [-EmailNotificationLimit <Int32>] [-EventNotificationLimit <Int32>]
+
+   [-CommandNotificationLimit <Int32>] [-ReportNotificationLimit <Int32>] [-ReportLimitMaxFile <Int32>]
+
+   [-ReportLimitMaxFileGroup <Int32>] [-ReportLimitMaxOwner <Int32>] [-ReportLimitMaxFilesPerFileGroup <Int32>]
+
+   [-ReportLimitMaxFilesPerOwner <Int32>] [-ReportLimitMaxFilesPerDuplicateGroup <Int32>]
+
+   [-ReportLimitMaxDuplicateGroup <Int32>] [-ReportLimitMaxQuota <Int32>]
+
+   [-ReportLimitMaxFileScreenEvent <Int32>] [-ReportLimitMaxPropertyValue <Int32>]
+
+   [-ReportLimitMaxFilesPerPropertyValue <Int32>] [-ReportLocationIncident <String>]
+
+   [-ReportLocationScheduled <String>] [-ReportLocationOnDemand <String>]
+
+   [-ReportFileScreenAuditDaysSince <Int32>] [-ReportFileScreenAuditUser <String[]>]
+
+   [-ReportFileGroupIncluded <String[]>] [-ReportFileOwnerUser <String[]>] [-ReportFileOwnerFilePattern <String>]
+
+   [-ReportPropertyName <String>] [-ReportPropertyFilePattern <String>] [-ReportLargeFileMinimum <UInt64>]
+
+   [-ReportLargeFilePattern <String>] [-ReportLeastAccessedMinimum <Int32>]
+
+   [-ReportLeastAccessedFilePattern <String>] [-ReportMostAccessedMaximum <Int32>]
+
+   [-ReportMostAccessedFilePattern <String>] [-ReportQuotaMinimumUsage <Int32>] [-ReportFileScreenAuditEnable]
+
+   [-ReportClassificationFormat <FsrmReportClassificationFormatEnum[]>] [-ReportClassificationMailTo <String>]
+
+   [-ReportClassificationLog <FsrmReportClassificationLogEnum[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the FSRM setting for administrator email address'
+  code: |-
+    PS C:\> Set-FsrmSetting -AdminEmailAddress "john@contoso.com"
+  description: |-
+    This command specifies the address "john@contoso.com" for the recipient of email that the server sends to the administrator.
+  summary: ""
+- title: 'Example 2: Change the FSRM setting for command notification limit'
+  code: |-
+    PS C:\> Set-FsrmSetting -CommandNotificationLimit 80
+  description: |-
+    This command specifies 80 as the minimum number of minutes between individual running events of a command-type notification.
+  summary: ""
+- title: 'Example 3: Change the FSRM setting for report classification format'
+  code: |-
+    PS C:\> Set-FsrmSetting -ReportClassificationFormat @('Xml')
+  description: |-
+    This command specifies XML as the format of classification reports that the server generates.
+  summary: ""
+- title: 'Example 4: Change the FSRM setting for report classification log type'
+  code: |-
+    PS C:\> Set-FsrmSetting -ReportClassificationLog @('ErrorsInSystemLog')
+  description: |-
+    This command specifies ErrorsInSystemLog as the type of log that the File Classification Infrastructure generates during classification.
+  summary: ""
+- title: 'Example 5: Change the FSRM settings for large file reports and quota usage reports'
+  code: |-
+    PS C:\> Set-FsrmSetting -ReportLargeFilePattern '*' -ReportLimitMaxQuota 100
+  description: |-
+    This command specifies the wildcard character (*) to indicate that the large file report includes any files that match the value set for the **ReportLargeFileMinimum** parameter.
+    The command also specifies that 100 is the maximum number of quotas to include in a quota usage report.
+  summary: ""
+- title: 'Example 6: Change the FSRM setting for the SMTP server and file by owner reports'
+  code: |-
+    PS C:\> Set-FsrmSetting -SmtpServer "10.121.24.132" -ReportFileOwnerFilePattern "*.xml"
+  description: |-
+    This command specifies 10.121.24.132 as the IP address of the SMTP server that FSRM uses to send email.
+    The command also specifies *.XML as the file pattern to match for the file by owner report.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdminEmailAddress
+  description: |+
+    Specifies a semicolon-separated list of email addresses for the recipients of any email that the server sends to the administrator.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CommandNotificationLimit
+  description: |+
+    Specifies the minimum number of minutes between individual running events of a command-type notification.
+    If multiple command notifications occur, the server runs the command notification only if at least this amount of time has passed since the server last performed this action.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: EmailNotificationLimit
+  description: |+
+    Specifies the minimum number of minutes between individual running events of an email-type notification.
+    If multiple command notifications occur, the server runs the command notification only if at least this amount of time has passed since the server last performed this action.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: EventNotificationLimit
+  description: |+
+    Specifies the minimum number of minutes between individual running events of an event-type notification.
+    If multiple command notifications occur, the server runs the command notification only if at least this amount of time has passed since the server last performed this action.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FromEmailAddress
+  description: |+
+    Specifies the default email address from which FSRM sends email messages.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FsrmReportClassificationFormatEnum" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReportClassificationFormat
+  description: |+
+    Specifies an array of formats of classification reports that the server generates.
+    The acceptable values for this parameter are:
+
+    - DHTML
+    - HTML
+    - XML
+    - CSV
+    - Text
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: DHtml, Html, Text, Csv, Xml
+- type: <xref href="FsrmReportClassificationLogEnum" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReportClassificationLog
+  description: |+
+    Specifies an array of types of logs that the File Classification Infrastructure can generate during classification.
+    The acceptable values for this parameter are:
+
+    - None
+    - ClassificationsInLogFile
+    - ErrorsInLogFile
+    - ClassificationsInSystemLog
+    - ErrorsInSystemLog
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ClassificationsInLogFile, ErrorsInLogFile, ClassificationsInSystemLog, ErrorsInSystemLog
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportClassificationMailTo
+  description: |+
+    Specifies a semicolon-separated list of email addresses.
+    The server sends the classification reports to the email addresses after a scheduled classification is complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReportFileGroupIncluded
+  description: |+
+    Specifies an array of names of file groups to include in the report.
+    Each string must be the name of a valid file group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportFileOwnerFilePattern
+  description: |+
+    Specifies a file pattern string that indicates which files to include in the file by owner report.
+    You can use the wildcard characters \* and ?
+    in the string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReportFileOwnerUser
+  description: |+
+    Specifies an array of users, in Domain\User format, to include files for in the file by owner report.
+    The default value is an empty list, which indicates all users.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportFileScreenAuditDaysSince
+  description: |+
+    Specifies the minimum number of days since the audit event to include in the report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReportFileScreenAuditEnable
+  description: |+
+    Indicates that file screen auditing is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReportFileScreenAuditUser
+  description: |+
+    Specifies an array of user email addresses to include audit events for.
+    The default value is an empty list, which indicates all users.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: ReportLargeFileMinimum
+  description: |+
+    Specifies the minimum file size to include in the large file report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportLargeFilePattern
+  description: |+
+    Specifies a string of files to include in the large file report.
+    You can use the wildcard characters \* and ?
+    in the string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportLeastAccessedFilePattern
+  description: |+
+    Specifies a string of files to include in the least frequently accessed report.
+    You can use the wildcard characters \* and ?
+    in the string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLeastAccessedMinimum
+  description: |+
+    Specifies the minimum number of days since the report was last accessed, to include in the least frequently accessed report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLimitMaxDuplicateGroup
+  description: |+
+    Specifies the maximum number of groups of duplicate files to include in the duplicate files report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLimitMaxFile
+  description: |+
+    Specifies the maximum number of files to include in a storage report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLimitMaxFileGroup
+  description: |+
+    Specifies the maximum number of file groups to include in a file group report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLimitMaxFileScreenEvent
+  description: |+
+    Specifies the maximum number of file screens events to include in a file screen audit report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLimitMaxFilesPerDuplicateGroup
+  description: |+
+    Specifies the maximum number of files in an individual duplicate group to include in a duplicate files report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLimitMaxFilesPerFileGroup
+  description: |+
+    Specifies the maximum number of files in any file group to include in a file group report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLimitMaxFilesPerOwner
+  description: |+
+    Specifies the maximum number of files for any owner to include in a files by owner report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLimitMaxFilesPerPropertyValue
+  description: |+
+    Specifies the maximum number of files for each property value to include in a files by property report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLimitMaxOwner
+  description: |+
+    Specifies the maximum number of owners to include in a files by owner report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLimitMaxPropertyValue
+  description: |+
+    Specifies the maximum number of property values to include in a files by property report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportLimitMaxQuota
+  description: |+
+    Specifies the maximum number of quotas to include in a quota usage report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportLocationIncident
+  description: |+
+    Specifies a path to a folder where the server stores incident reports.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportLocationOnDemand
+  description: |+
+    Specifies a path to a folder where the server stores on demand reports.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportLocationScheduled
+  description: |+
+    Specifies a path to a folder where the server stores scheduled reports.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportMostAccessedFilePattern
+  description: |+
+    Specifies a string of files to include in the most frequently accessed report.
+    You can use the wildcard characters \* and ?
+    in the string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportMostAccessedMaximum
+  description: |+
+    Specifies the maximum number of days since the report was last accessed, to include in the most frequently accessed report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportNotificationLimit
+  description: |+
+    Specifies the minimum number of minutes between individual running events of a report notification.
+    If multiple report notifications occur, the server runs the report notification only if at least this amount of time have passed since the server last performed this action.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportPropertyFilePattern
+  description: |+
+    Specifies a string of files to include in the file by property report.
+    You can use the wildcard characters \* and ?
+    in the string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportPropertyName
+  description: |+
+    Specifies the property name to report on for a file by property report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReportQuotaMinimumUsage
+  description: |+
+    Specifies the minimum quota usage level to include in the quota usage report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SmtpServer
+  description: |+
+    Specifies the fully qualified domain name (FQDN) or IP address of the SMTP server that FSRM uses to send email.
+
+    You can use the **Send-FsrmTestEmail** cmdlet to send an email messages to test the SMTP server that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FileServerResourceManager.Set-FsrmSetting
+name: Set-FsrmSetting
+description: |-
+  The **Set-FsrmSetting** cmdlet changes global File Server Resource Manager (FSRM) settings for the computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: FsrmSetting.cdxml-help.xml
+  Module Name: FileServerResourceManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/set-fsrmsetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-FsrmSetting

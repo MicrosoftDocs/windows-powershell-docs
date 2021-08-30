@@ -1,0 +1,234 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the WSUS computer object that represents the client computer.
+module: UpdateServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.UpdateServices.Commands.IUpdateServer" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-WsusComputer
+  href: ./Add-WsusComputer.yml
+- text: Get-WsusServer
+  href: ./Get-WsusServer.yml
+syntaxes:
+- Get-WsusComputer [-UpdateServer <IUpdateServer>] [-All] [<CommonParameters>]
+- >-
+  Get-WsusComputer [-UpdateServer <IUpdateServer>] [-NameIncludes <String>]
+
+   [-ComputerTargetGroups <StringCollection>] [-IncludeSubgroups]
+
+   [-ComputerUpdateStatus <WsusUpdateInstallationState>]
+
+   [-ExcludedInstallationStates <UpdateInstallationStates[]>]
+
+   [-IncludedInstallationStates <UpdateInstallationStates[]>] [-FromLastSyncTime <DateTime>]
+
+   [-ToLastSyncTime <DateTime>] [-FromLastReportedStatusTime <DateTime>] [-ToLastReportedStatusTime <DateTime>]
+
+   [-IncludeDownstreamComputerTargets] [-RequestedTargetGroupNames <StringCollection>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all client computers'
+  code: |-
+    PS C:\> Get-WsusComputer -All
+    Computer                      IP Address                    Operating System              Last Status Report
+    --------                      ----------                    ----------------              ------------------
+    contoso                       XXXX:XXXX:XX:X:XXXX:XXX:XXXX: Windows Server 2008           6/2/2010 12:00:00 AM
+                                  XXXX                          Enterprise Edition (full                                                             installation)
+  description: |-
+    This command gets all client computers.
+  summary: ""
+- title: 'Example 2: Get client computers that have names that contain a string'
+  code: |-
+    PS C:\> Get-WsusComputer -NameIncludes "contoso"
+    Computer                      IP Address                    Operating System              Last Status Report
+    --------                      ----------                    ----------------              ------------------
+    contoso                       XXXX:XXXX:XX:X:XXXX:XXX:XXXX: Windows Server 2008           6/2/2010 12:00:00 AM
+                                  XXXX                          Enterprise Edition (full
+                                                                installation)
+  description: |-
+    This command gets the client computer whose name includes contoso.
+  summary: ""
+- title: 'Example 3: Get client computers by specifying dates'
+  code: |-
+    PS C:\> Get-WsusComputer -FromLastReportedStatusTime 6/1/10 -ToLastReportedStatusTime 6/30/10
+    Computer                      IP Address                    Operating System              Last Status Report
+    --------                      ----------                    ----------------              ------------------
+    contoso                       XXXX:XXXX:XX:X:XXXX:XXX:XXXX: Windows Server 2008           6/2/2010 12:00:00 AM
+                                  XXXX                          Enterprise Edition (full
+                                                                installation)
+  description: |-
+    This command gets all client computers with a last reported status date and time between June 1, 2010 and June 30, 2010.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Specifies that all computers are to be returned. The information displayed includes the computer name, IP address, operating system, and last status report time.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: ComputerTargetGroups
+  description: |+
+    Specifies the list of target group to search.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WsusUpdateInstallationState" data-throw-if-not-resolved="False" />
+  name: ComputerUpdateStatus
+  description: |+
+    Specifies the computer update state as represented in the WSUS Console user interface. The acceptable values for this parameter are:
+
+    - FailedOrNeeded
+    - InstalledNotApplicableOrNoStatus
+    - Failed
+    - InstalledNotApplicable
+    - NoStatus
+    - Any
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoStatus, InstalledOrNotApplicable, InstalledOrNotApplicableOrNoStatus, Failed, Needed, FailedOrNeeded, Any
+- type: <xref href="UpdateInstallationStates" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExcludedInstallationStates
+  description: |+
+    Specifies the installation states to exclude. The acceptable values for this parameter are:
+
+    - All
+    - Downloaded
+    - Failed
+    - Installed
+    - InstalledPendingReboot
+    - NotApplicable
+    - NotInstalled
+    - Unknown
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, NotApplicable, NotInstalled, Downloaded, Installed, Failed, InstalledPendingReboot, All
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: FromLastReportedStatusTime
+  description: |+
+    Specifies the earliest reported status time. This parameter can be used in combination with the _ToLastReportedStatusTime_ parameter in order to create a date range to use in the search.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: FromLastSyncTime
+  description: |+
+    Specifies the earliest last synchronization time for which to search. This parameter can be used in combination with the _ToLastSynchTime_ parameter in order to create a date range to use in the search.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UpdateInstallationStates" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IncludedInstallationStates
+  description: |+
+    Specifies the installation states to include. The acceptable values for this parameter are:
+
+    - All
+    - Downloaded
+    - Failed
+    - Installed
+    - InstalledPendingReboot
+    - NotApplicable
+    - NotInstalled
+    - Unknown
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, NotApplicable, NotInstalled, Downloaded, Installed, Failed, InstalledPendingReboot, All
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeDownstreamComputerTargets
+  description: |+
+    Specifies that clients of a downstream server should be included, not clients of this server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeSubgroups
+  description: |+
+    Specifies that the _ComputerTargetGroups_ parameter should include descendant groups. This value has no impact if the _ComputerTargetGroups_ parameter is not used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NameIncludes
+  description: |+
+    Specifies the partial name of the computer for which to search.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: RequestedTargetGroupNames
+  description: |+
+    Specifies the list of requested target group names for which to search.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: ToLastReportedStatusTime
+  description: |+
+    Specifies the latest reported status time. This parameter can be used in combination with the _FromLastReportedStatusTime_ parameter in order to create a date range to use in the search.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: ToLastSyncTime
+  description: |+
+    Specifies the latest last synchronization time for which to search. This parameter can be used in combination with the _FromLastSynchTime_ parameter in order to create a date range to use in the search.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IUpdateServer" data-throw-if-not-resolved="False" />
+  name: UpdateServer
+  description: |+
+    Specifies the object that contains the WSUS server. This value is obtained by calling the [Get-WsusServer](./Get-WsusServer.yml) cmdlet and passing the resulting _IUpdateServer_ object into this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: UpdateServices.Get-WsusComputer
+name: Get-WsusComputer
+description: |-
+  The **Get-WsusComputer** cmdlet gets one or more Windows Server Update Services (WSUS) computers based on the specified filtering criteria such as operating system, computer name, update installation status, last reported status time, and etcetera.
+
+  If the [Get-WsusServer](./Get-WsusServer.yml) cmdlet is run and the resulting **IUpdateServer** object is passed into this cmdlet, then the specified server will be used rather than the local server.
+
+  This cmdlet can be passed into the [Add-WsusComputer](./Add-WsusComputer.yml) cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/updateservices/get-wsuscomputer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WsusComputer

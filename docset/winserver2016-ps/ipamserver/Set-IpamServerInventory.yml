@@ -1,0 +1,221 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the properties of an infrastructure server in the IPAM server inventory.
+module: IpamServer
+notes: ""
+outputs:
+- name: <xref href="IpamServerInventory" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents an infrastructure server in IPAM system.
+links:
+- text: Add-IpamServerInventory
+  href: ./Add-IpamServerInventory.yml
+- text: Get-IpamServerInventory
+  href: ./Get-IpamServerInventory.yml
+- text: Remove-IpamServerInventory
+  href: ./Remove-IpamServerInventory.yml
+syntaxes:
+- >-
+  Set-IpamServerInventory [-Name] <String> [[-NewName] <String>] [-ManageabilityStatus <ManageabilityStatus>]
+
+   [-Owner <String>] [-ServerType <ServerRole[]>] [-Description <String>] [-AddCustomConfiguration <String>]
+
+   [-RemoveCustomConfiguration <String>] [-Force] [-PassThru] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the properties of a server'
+  code: |-
+    PS C:\> Set-IpamServerInventory -Name "Dhcp01" -ManageabilityStatus Managed -PassThru
+  description: |-
+    This command modifies the properties of an infrastructure server named Dhcp01, and makes it manageable by IPAM.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AddCustomConfiguration
+  description: |+
+    Specifies custom configuration to add to the server inventory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ManageabilityStatus" data-throw-if-not-resolved="False" />
+  name: ManageabilityStatus
+  description: |+
+    Specifies the manageability status of a server.
+
+    The acceptable values for this parameter are:
+
+    - Unspecified
+    - Managed
+    - Unmanaged 
+
+    If you specify a value of Managed for this parameter, IPAM gathers data from the server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unspecified, Unmanaged, Managed
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the FQDN of the infrastructure server to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ServerName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewName
+  description: |+
+    Specifies the new name or FQDN of an infrastructure server.
+    IPAM tries to resolve the name to an IP address and reports an error if it cannot resolve the name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Owner
+  description: |+
+    Specifies the owner of the Dynamic Host Configuration Protocol (DHCP) server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemoveCustomConfiguration
+  description: |+
+    Specifies the metadata fields to modify.
+    List the metadata as a series of custom field names, separated by semicolons (;).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ServerRole" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ServerType
+  description: |+
+    Specifies an array of server roles that are present on the server.
+
+    The acceptable values for this parameter are:
+
+    - DHCP 
+    - DC 
+    - DNS 
+    - NPS
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: DC, DNS, DHCP, NPS
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: IpamServer.Set-IpamServerInventory
+name: Set-IpamServerInventory
+description: |-
+  The **Set-IpamServerInventory** cmdlet modifies the properties of an infrastructure server in an IP Address Management (IPAM) server inventory.
+  Use the server name or fully qualified domain name (FQDN) to identify the server.
+  If you only specify the server name, IPAM tries to resolve the server name.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamServerInventory.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/set-ipamserverinventory?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-IpamServerInventory

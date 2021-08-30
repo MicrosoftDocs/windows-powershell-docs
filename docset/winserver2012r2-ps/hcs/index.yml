@@ -1,0 +1,53 @@
+### YamlMime:PowershellModule
+children:
+- title: HCS
+  cmdlets:
+  - HCS.Disable-HcsNetInterface
+  - HCS.Disable-HcsRemoteManagement
+  - HCS.Disable-HcsSupportAccess
+  - HCS.Disable-HcsWebProxy
+  - HCS.Enable-HcsNetInterface
+  - HCS.Enable-HcsRemoteManagement
+  - HCS.Enable-HcsSupportAccess
+  - HCS.Enable-HcsWebProxy
+  - HCS.Enter-HcsMaintenanceMode
+  - HCS.Enter-HcsSupportSession
+  - HCS.Exit-HcsMaintenanceMode
+  - HCS.Export-HcsSupportPackage
+  - HCS.Get-HcsDnsClientServerAddress
+  - HCS.Get-HcsFirmwareVersion
+  - HCS.Get-HcsNetInterface
+  - HCS.Get-HcsNtpClientServerAddress
+  - HCS.Get-HcsRemoteManagementCert
+  - HCS.Get-HcsSupportAccess
+  - HCS.Get-HcsSystem
+  - HCS.Get-HcsUpdateAvailability
+  - HCS.Get-HcsUpdateStatus
+  - HCS.Get-HcsWebProxy
+  - HCS.Get-HcsWuaVersion
+  - HCS.Invoke-HcsSetupWizard
+  - HCS.Restart-HcsController
+  - HCS.Set-HcsDnsClientServerAddress
+  - HCS.Set-HcsNetInterface
+  - HCS.Set-HcsNtpClientServerAddress
+  - HCS.Set-HcsPassword
+  - HCS.Set-HcsRemoteManagementCert
+  - HCS.Set-HcsSystem
+  - HCS.Set-HcsWebProxy
+  - HCS.Start-HcsFirmwareCheck
+  - HCS.Start-HcsHotfix
+  - HCS.Start-HcsUpdate
+  - HCS.Stop-HcsController
+  - HCS.Test-HcsNtp
+uid: HCS
+name: HCS
+description: |-
+  {{Manually Enter Description Here}}
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
+  Help Version: 4.0.1.0
+  Locale: en-US
+  Module Guid: ecd3acda-cb76-43f1-b968-eede82710337
+  Module Name: HCS
+  ms.date: 12/05/2017
+  title: HCS

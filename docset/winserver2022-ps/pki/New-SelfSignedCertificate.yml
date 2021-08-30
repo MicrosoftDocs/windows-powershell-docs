@@ -1,0 +1,772 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new self-signed certificate for testing purposes.
+module: pki
+notes: ""
+inputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.Certificate" data-throw-if-not-resolved="False" />
+  description: |-
+    The **Certificate** object can either be provided as a Path object to a certificate or an **X509Certificate2** object.
+outputs:
+- name: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="False" />
+  description: |-
+    An **X509Certificate2** object for the certificate that has been created.
+links:
+- text: System Store Locations
+  href: https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations
+syntaxes:
+- >-
+  New-SelfSignedCertificate [-SecurityDescriptor <FileSecurity>] [-TextExtension <String[]>]
+
+   [-Extension <X509Extension[]>] [-HardwareKeyUsage <HardwareKeyUsage[]>]
+
+   [-KeyUsageProperty <KeyUsageProperty[]>] [-KeyUsage <KeyUsage[]>] [-KeyProtection <KeyProtection[]>]
+
+   [-KeyExportPolicy <KeyExportPolicy[]>] [-KeyLength <Int32>] [-KeyAlgorithm <String>] [-SmimeCapabilities]
+
+   [-ExistingKey] [-KeyLocation <String>] [-SignerReader <String>] [-Reader <String>] [-SignerPin <SecureString>]
+
+   [-Pin <SecureString>] [-KeyDescription <String>] [-KeyFriendlyName <String>] [-Container <String>]
+
+   [-Provider <String>] [-CurveExport <CurveParametersExportType>] [-KeySpec <KeySpec>] [-Type <CertificateType>]
+
+   [-FriendlyName <String>] [-NotAfter <DateTime>] [-NotBefore <DateTime>] [-SerialNumber <String>]
+
+   [-Subject <String>] [-DnsName <String[]>] [-SuppressOid <String[]>] [-HashAlgorithm <String>]
+
+   [-AlternateSignatureAlgorithm] [-TestRoot] [-Signer <Certificate>] [-CloneCert <Certificate>]
+
+   [-CertStoreLocation <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> New-SelfSignedCertificate -DnsName "www.fabrikam.com", "www.contoso.com" -CertStoreLocation "cert:\LocalMachine\My"
+  description: |-
+    This example creates a self-signed SSL server certificate in the computer MY store with the subject alternative name set to www.fabrikam.com, www.contoso.com and Subject and Issuer name set to www.fabrikam.com.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> Set-Location -Path "cert:\LocalMachine\My"
+    PS Cert:\LocalMachine\My> $OldCert = (Get-ChildItem -Path E42DBC3B3F2771990A9B3E35D0C3C422779DACD7)
+    PS Cert:\LocalMachine\My> New-SelfSignedCertificate -CloneCert $OldCert
+  description: |-
+    This example creates a copy of the certificate specified by the **CloneCert** parameter and puts it in the computer MY store.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>New-SelfSignedCertificate -Type Custom -Subject "E=patti.fuller@contoso.com,CN=Patti Fuller" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.4","2.5.29.17={text}email=patti.fuller@contoso.com&upn=pattifuller@contoso.com") -KeyAlgorithm RSA -KeyLength 2048 -SmimeCapabilities -CertStoreLocation "Cert:\CurrentUser\My"
+  description: |-
+    This example creates a self-signed S/MIME certificate in the user MY store.
+    The certificate uses the default provider, which is the Microsoft Software Key Storage Provider.
+    The certificate uses an RSA asymmetric key with a key size of 2048 bits.
+    This certificate has the subject alternative names of patti.fuller@contoso.com as RFC822 and pattifuller@contoso.com as Principal Name.
+
+    This command does not specify the **NotAfter** parameter.
+    Therefore, the certificate expires in one year.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\>New-SelfSignedCertificate -Type Custom -Subject "CN=Patti Fuller,OU=UserAccounts,DC=corp,DC=contoso,DC=com" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2","2.5.29.17={text}upn=pattifuller@contoso.com") -KeyUsage DigitalSignature -KeyAlgorithm RSA -KeyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My"
+  description: |-
+    This example creates a self-signed client authentication certificate in the user MY store.
+    The certificate uses the default provider, which is the Microsoft Software Key Storage Provider.
+    The certificate uses an RSA asymmetric key with a key size of 2048 bits.
+    The certificate has a subject alternative name of pattifuller@contoso.com.
+
+    The certificate expires in one year.
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    PS C:\>New-SelfSignedCertificate -Type Custom -Subject "CN=Patti Fuller,OU=UserAccounts,DC=corp,DC=contoso,DC=com" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2","2.5.29.17={text}upn=pattifuller@contoso.com") -KeyUsage DigitalSignature -KeyAlgorithm ECDSA_nistP256 -CurveExport CurveName -CertStoreLocation "Cert:\CurrentUser\My"
+  description: |-
+    This example creates a self-signed client authentication certificate in the user MY store.
+    The certificate uses the default provider, which is the Microsoft Software Key Storage Provider.
+    The certificate uses an elliptic curve asymmetric key and the curve parameters nist256, which creates a 256-bit key.
+    The subject alternative name is pattifuller@contoso.com.
+
+    The certificate expires in one year.
+  summary: ""
+- title: EXAMPLE 6
+  code: |-
+    PS C:\>New-SelfSignedCertificate -Type Custom -Provider "Microsoft Platform Crypto Provider" -Subject "CN=Patti Fuller" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2","2.5.29.17={text}upn=pattifuller@contoso.com") -KeyExportPolicy NonExportable -KeyUsage DigitalSignature -KeyAlgorithm RSA -KeyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My"
+  description: |-
+    This example creates a self-signed client authentication certificate in the user MY store.
+    The certificate uses the Microsoft Platform Crypto Provider.
+    This provider uses the Trusted Platform Module (TPM) of the device to create the asymmetric key.
+    The key is an RSA 2048-bit key that cannot be exported.
+    The subject alternative name is pattifuller@contoso.com.
+    The certificate expires in one year.
+  summary: ""
+- title: EXAMPLE 7
+  code: |-
+    PS C:\>New-SelfSignedCertificate -Type Custom -Container test* -Subject "CN=Patti Fuller" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2","2.5.29.17={text}upn=pattifuller@contoso.com") -KeyUsage DigitalSignature -KeyAlgorithm RSA -KeyLength 2048 -NotAfter (Get-Date).AddMonths(6)
+  description: |-
+    This example creates a self-signed client authentication certificate in the user MY store.
+    The certificate uses the default provider, which is the Microsoft Software Key Storage Provider.
+    The certificate uses an RSA asymmetric key with a key size of 2048 bits.
+    The subject alternative name is pattifuller@contoso.com.
+
+    This command specifies a value for **NotAfter**.
+    The certificate expires in six months.
+  summary: ""
+- title: EXAMPLE 8
+  code: |-
+    PS C:\>New-SelfSignedCertificate -Type Custom -Subject "E=patti.fuller@contoso.com,CN=Patti Fuller" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.4","2.5.29.17={text}email=patti.fuller@contoso.com&email=pattifuller@contoso.com") -KeyAlgorithm RSA -KeyLength 2048 -SmimeCapabilities -CertStoreLocation "Cert:\CurrentUser\My"
+  description: |-
+    This example creates a self-signed S/MIME certificate in the user MY store.
+    The certificate uses the default provider, which is the Microsoft Software Key Storage Provider.
+    The certificate uses an RSA asymmetric key with a key size of 2048 bits.
+    This certificate has the subject alternative names of patti.fuller@contoso.com and pattifuller@contoso.com both as RFC822.
+
+    This command does not specify the **NotAfter** parameter.
+    Therefore, the certificate expires in one year.
+  summary: ""
+- title: EXAMPLE 9
+  code: |-
+    PS C:\> New-SelfSignedCertificate -Subject "localhost" -TextExtension @("2.5.29.17={text}DNS=localhost&IPAddress=127.0.0.1&IPAddress=::1")
+  description: |-
+    This example creates a self-signed SSL server certificate with Subject and Issuer name set to `localhost` and with subject alternative name set to IPAddress `127.0.0.1` and `::1` via TextExtension.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AlternateSignatureAlgorithm
+  description: |+
+    Indicates that this cmdlet uses RSA-PSS (PKCSv2.1) or an elliptic curve cryptography (ECC) equivalent.
+    If you do not specify this parameter, the cmdlet uses the default, RSA-PSS (PKCSv1.5) or an ECC equivalent.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertStoreLocation
+  description: |+
+    Specifies the certificate store in which to store the new certificate. 
+    If the current path is Cert:\CurrentUser or Cert:\CurrentUser\My, the default store is Cert:\CurrentUser\My.
+    If the current path is Cert:\LocalMachine or Cert:\LocalMachine\My, the default store is Cert:\LocalMachine\My.
+    Otherwise, you must specify Cert:\CurrentUser\My or Cert:\LocalMachine\My for this parameter.
+    This parameter does not support other certificate stores.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Certificate" data-throw-if-not-resolved="False" />
+  name: CloneCert
+  description: |+
+    Identifies the certificate to copy when creating a new certificate.
+    The certificate being cloned can be identified by an X509 certificate or the file path in the certificate provider.
+    When this parameter is used, all fields and extensions of the certificate will be inherited except the public key, a new key of the same algorithm and length will be created, and the **NotAfter** and **NotBefore** fields.
+    The default validity period will be the same as the certificate to copy, except that the **NotBefore** field will be set to ten minutes in the past.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Container
+  description: |+
+    Specifies the name of the container in which this cmdlet stores the key for the new certificate.
+
+    When you create a key, a trailing asterisk (*) indicates that the rest of the container name string is a prefix.
+    An appended GUID string makes the container name unique.
+
+    When you use an existing key, the container name must identify an existing key.
+    You may also have to specify the provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CurveParametersExportType" data-throw-if-not-resolved="False" />
+  name: CurveExport
+  description: |+
+    Specifies how the public key parameters for an elliptic curve key are represented in the new certificate.
+    The acceptable values for this parameter are:
+
+    - CurveParameters
+    - CurveName
+    - None (default) 
+
+    The default value, None, indicates that this cmdlet uses the default value from the underlying key storage provider (KSP).
+    This parameter is not supported with the RSA algorithm or with cryptographic service providers (CSPs).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, CurveParameters, CurveName
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DnsName
+  description: |+
+    Specifies one or more DNS names to put into the subject alternative name extension of the certificate when a certificate to be copied is not specified via the **CloneCert** parameter.
+    The first DNS name is also saved as the Subject Name.
+    If no signing certificate is specified, the first DNS name is also saved as the Issuer Name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExistingKey
+  description: |+
+    Indicates that this cmdlet uses an existing key.
+    If you do not specify this parameter, this cmdlet creates a new key.
+    Creating a certificate from an existing key creates a new key with a new container.
+
+    When you use an existing key, specify values for the **Container** parameter, the **Provider** parameter, and the **CertStoreLocation** parameter.
+    **CertStoreLocation** determines the context.
+    The context is user or computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Extension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Extension
+  description: |+
+    Specifies an array of certificate extensions, as **X509Extension** objects, that this cmdlet includes in the new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FriendlyName
+  description: |+
+    Specifies a friendly name for the new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HardwareKeyUsage" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HardwareKeyUsage
+  description: |+
+    Specifies how a hardware key associated with the new certificate may be used.
+    This parameter applies only when you specify the Microsoft Platform Crypto Provider.
+    The acceptable values for this parameter are:
+
+    - None (default) 
+    - SignatureKey
+    - EncryptionKey
+    - GenericKey
+    - StorageKey
+    - IdentityKey
+
+    The default value, None, indicates that this cmdlet uses the default value from the underlying KSP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, SignatureKey, EncryptionKey, GenericKey, StorageKey, IdentityKey
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HashAlgorithm
+  description: |+
+    Specifies the name of the hash algorithm to use to sign the new certificate.
+    The default hash algorithm depends on the provider that stores the private key used to sign the new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: KeyAlgorithm
+  description: |+
+    Specifies the name of the algorithm that creates the asymmetric keys that are associated with the new certificate.
+    Available asymmetric key algorithms are RSA and Elliptic Curve Digital Signature Algorithms (ECDSA).
+
+    The elliptic curve algorithm syntax is the following:
+
+    `ECDSA_`curvename
+
+    To obtain a value for curvename, use the `certutil -displayEccCurve` command.
+
+    Valid curve names contain a value in the **Curve OID** column in the output of the `certutil -displayEccCurve` command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: KeyDescription
+  description: |+
+    Specifies a description for the private key that is associated with the new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="KeyExportPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: KeyExportPolicy
+  description: |+
+    Specifies the policy that governs the export of the private key that is associated with the certificate.
+    The acceptable values for this parameter are:
+
+    - Exportable 
+    - ExportableEncrypted (default) 
+    - NonExportable 
+
+    The default value of ExportableEncrypted is not compatible with KSP and CSPs that do not allow key export.
+    These include the Microsoft Smart Card Key Storage Provider and the Microsoft Platform Crypto Key Storage Provider.
+    Specify NonExportable for providers that do not allow key export.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NonExportable, ExportableEncrypted, Exportable
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: KeyFriendlyName
+  description: |+
+    Specifies a friendly name for the private key that is associated with the new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: KeyLength
+  description: |+
+    Specifies the length, in bits, of the key that is associated with the new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: KeyLocation
+  description: |+
+    Specifies the file system location where this cmdlet stores the private keys associated with the new certificate.
+    Specify this parameter only when you specify the Microsoft Platform Crypto Provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="KeyProtection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: KeyProtection
+  description: |+
+    Specifies the level of protection required to access the private key that is associated with the certificate.
+    The acceptable values for this parameter are:
+
+    - Protect
+    - ProtectHigh
+    - ProtectFingerPrint
+    - None (default) 
+
+    The default value, None, indicates that this cmdlet uses the default value from the underlying KSP or CSP.
+    For most KSPs and CSPs, the default means that no user interface is required to create and use the private key.
+    A user interface is required if the provider always requires a user interface, such as a smart card, or if the default configuration of the provider has been changed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Protect, ProtectHigh, ProtectFingerPrint
+- type: <xref href="KeySpec" data-throw-if-not-resolved="False" />
+  name: KeySpec
+  description: |+
+    Specifies whether the private key associated with the new certificate can be used for signing, encryption, or both.
+    The acceptable values for this parameter are:
+
+    - KeyExchange
+    - Signature
+    - None (default) 
+
+    The default value, None, indicates that this cmdlet uses the default value from the underlying CSP.
+
+    If the private key is managed by a legacy CSP, the value is KeyExchange or Signature.
+    If the key is managed by a Cryptography Next Generation (CNG) KSP, the value is None.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, KeyExchange, Signature
+- type: <xref href="KeyUsage" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: KeyUsage
+  description: |+
+    Specifies the key usages set in the key usage extension of the certificate.
+    The acceptable values for this parameter are:
+
+    - CertSign
+    - CRLSign
+    - DataEncipherment
+    - DecipherOnly
+    - DigitalSignature
+    - EncipherOnly
+    - KeyAgreement
+    - KeyEncipherment
+    - None (default) 
+    - NonRepudiation
+
+    The value, **None**, indicates that this cmdlet does not include the **KeyUsage** extension in the new certificate.
+
+  defaultValue: DigitalSignature,KeyEncipherment
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, EncipherOnly, CRLSign, CertSign, KeyAgreement, DataEncipherment, KeyEncipherment, NonRepudiation, DigitalSignature, DecipherOnly
+- type: <xref href="KeyUsageProperty" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: KeyUsageProperty
+  description: |+
+    Specifies the key usages for the key usages property of the private key.
+    The acceptable values for this parameter are:
+
+    - All
+    - Decrypt
+    - KeyAgreement
+    - None (default) 
+    - Sign
+
+    The default value, **None**, indicates that this cmdlet uses the default value from the underlying KSP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Decrypt, Sign, KeyAgreement, All
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: NotAfter
+  description: |+
+    Specifies the date and time, as a **DateTime** object, that the certificate expires.
+    To obtain a **DateTime** object, use the Get-Date cmdlet.
+    The default value for this parameter is one year after the certificate was created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: NotBefore
+  description: |+
+    Specifies the date and time, as a **DateTime** object, when the certificate becomes valid.
+    The default value for this parameter is 10 minutes before the certificate was created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Pin
+  description: |+
+    Specifies the personal identification number (PIN) used to access the private key of the new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Provider
+  description: |+
+    Specifies the name of the KSP or CSP that this cmdlet uses to create the certificate. See [Cryptographic Providers](https://docs.microsoft.com/en-us/windows/desktop/SecCertEnroll/understanding-cryptographic-providers) for more information.
+    Some acceptable values include:
+
+    - Microsoft Software Key Storage Provider
+    - Microsoft Smart Card Key Storage Provider
+    - Microsoft Platform Crypto Provider
+    - Microsoft Strong Cryptographic Provider
+    - Microsoft Enhanced Cryptographic Provider v1.0
+    - Microsoft Enhanced RSA and AES Cryptographic Provider
+    - Microsoft Base Cryptographic Provider v1.0
+    - The name of a third party KSP or CSP
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Reader
+  description: |+
+    Specifies the name of the smart card reader on which to store the private key for the new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FileSecurity" data-throw-if-not-resolved="False" />
+  name: SecurityDescriptor
+  description: |+
+    Specifies the private key security descriptor as a **FileSecurity** object.
+    Read access is required to use the private key.
+    This parameter does not apply to providers that do not support security descriptors on private keys, including the smart card CSP and smart card KSP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SerialNumber
+  description: |+
+    Specifies a serial number, as a hexadecimal string, that is associated with the new certificate.
+    If you do not specify this parameter, this cmdlet assigns a pseudo-randomly generated 16 byte value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Certificate" data-throw-if-not-resolved="False" />
+  name: Signer
+  description: |+
+    Specifies a **Certificate** object with which this cmdlet signs the new certificate.
+    This value must be in the Personal certificate store of the user or device.
+    This cmdlet must have read access to the private key of the certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: SignerPin
+  description: |+
+    Specifies the PIN that is required to access the private key of the certificate that is used to sign the new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignerReader
+  description: |+
+    Specifies the name of the smart card reader that is used to sign the new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SmimeCapabilities
+  description: |+
+    Indicates that the new certificate includes available encryption algorithms to a Secure/Multipurpose Internet Mail Extensions (S/MIME) capabilities extension.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Subject
+  description: |+
+    Specifies the string that appears in the subject of the new certificate.
+    This cmdlet prefixes `CN=` to any value that does not contain an equal sign.
+    For multiple subject relative distinguished names (also known as RDNs), separate each subject relative distinguished name with a comma (,).
+    If the value of the relative distinguished name contains commas, separate each subject relative distinguished name with a semicolon (;).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SuppressOid
+  description: |+
+    Specifies an array of object identifier (also known as OID) strings that identify default extensions to be removed from the new certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TestRoot
+  description: |+
+    Indicates that this cmdlet signs the new certificate by using a built-in test certificate.
+    This cmdlet adds the built-in test certificate to the intermediate certification authority (CA) certificate store of the device.
+
+    This parameter is for test purposes only.
+    The private key of the test root certificate is essentially public.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TextExtension
+  description: |+
+    Specifies an array of certificate extensions, as strings, which this cmdlet includes in the new certificate.
+    Each string must employ one of the following formats: 
+
+    oid`=`base64String, where oid is the object identifier of the extension and base64String is a value that you provide.
+    After decoding base64String, the value must be valid Abstract Syntax Notation One (ASN.1).
+    For more information, see [Abstract Syntax Notation One (ASN.1): Specification of basic notation](http://www.itu.int/ITU-T/studygroups/com17/languages/X.680-0207.pdf).
+
+    oid`={hex}`hexidecimalString, where oid is the object identifier of the extension and hexidecimalString is a value that you provide.
+    After decoding hexidecimalString, the value must be valid ASN.1.
+
+    oid`={text}`String, where oid is the object identifier of the extension and String is a value that you provide.
+    String must contain a textual representation of the extension value in a format specific to each object ID.
+    When String is processed, it will be encoded into an ASN.1 extension value before being placed into the new certificate as an extension.
+
+    To specify that an extension is critical, insert {critical} immediately following `oid=` in any of the previous cases.
+
+    The object identifiers of some common extensions are as follows: 
+
+    - Application Policy.
+    1.3.6.1.4.1.311.21.10
+    - Application Policy Mappings.
+    1.3.6.1.4.1.311.21.11
+    - Basic Constraints.
+    2.5.29.19
+    - Certificate Policies.
+    2.5.29.32
+    - Enhanced Key Usage.
+    2.5.29.37
+    - Name Constraints.
+    2.5.29.30
+    - Policy Mappings.
+    2.5.29.33
+    - Subject Alternative Name.
+    2.5.29.17
+
+    Application Policy
+    1.3.6.1.4.1.311.21.10={text}token=value&token=value…
+    The tokens have the following possible values: 
+
+    - Flags.
+    0xhexidecimalNumber
+    - GUID.
+    A globally unique ID, such as this example: f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39
+    - Notice.
+    Text notice
+    - OID.
+    Object identifier in dotted decimal notation, such as this example: 1.2.3.4.5
+    - URL.
+    The URL of a host, such as this example: http://computer07.contoso.com
+
+    To specify an Application Policy extension, specify the first object identifier, followed by zero or more other **token=value** entries.
+    These entries are subordinate to the preceding object identifier.
+    Specify subsequent object identifiers, each followed by its subordinate **token=value** entries.
+
+    Application Policy Mappings
+    1.3.6.1.4.1.311.21.11={text}oid=oid&oid=oid…
+
+    Certificate Policies
+    2.5.29.32={text}token=value&token=value…
+    The tokens have the following possible values: 
+
+    - Flags.
+    0xhexidecimalNumber
+    - GUID.
+    A globally unique ID, such as this example: f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39
+    - Notice.
+    Text notice
+    - OID.
+    Object ID in dotted decimal notation, such as this example: 1.2.3.4.5
+    - URL.
+    The URL of a host, such as this example: http://computer07.contoso.com
+
+    To specify a Certificate Policies extension, follow the same syntax as an Application Policy extension.
+
+    Enhanced Key Usage Object Identifiers
+    2.5.29.37={text}oid,oid…
+    These key usages have the following object identifiers: 
+
+    - Client Authentication.
+    1.3.6.1.5.5.7.3.2
+    - Server Authentication.
+    1.3.6.1.5.5.7.3.1
+    - Secure Email.
+    1.3.6.1.5.5.7.3.4
+    - Code Signing.
+    1.3.6.1.5.5.7.3.3
+    - Timestamp Signing.
+    1.3.6.1.5.5.7.3.8
+
+    Name Constraints
+    2.5.29.30={text}subtree=subtreeValue&token=value&token=value& …&subtree=subtreeValue&token=value&token=value…
+    The subtreeValue can have the following values: 
+
+    - Include.
+    Permitted names
+    - Exclude.
+    Excluded names
+
+    The tokens have the following possible values: 
+
+    - DirectoryName.
+    CN=Name,DC=Domain,DC=com
+    - DNS.
+    A computer name in the following format: computer.contoso.com
+    - Email.
+    An email address, such as this example: admin@contoso.com
+    - IPAddress.
+    IPV4 address,IPV4 subnet mask or IPV6 address,IPV6 subnet mask
+    - RegisteredID.
+    ID in dotted decimal notation, such as this example: 1.2.3.4.5
+    - UPN.
+    A user principal name in the following format: admin@contoso.com
+    - URL.
+    The URL of a host, such as this example: http://computer07.contoso.com/index.html
+
+    Policy Mapping
+    2.5.29.33={text}oid=oid&oid=oid…
+
+    Subject Alternative Name Syntax
+    2.5.29.17={text}token=value&token=value…
+    The tokens have the following possible values: 
+
+    - UPN.
+    A user principal name in the following format: admin@contoso.com
+    - Email.
+    An email address, such as this example: admin@contoso.com
+    - DNS.
+    A computer name in the following format: computer.contoso.com
+    - DirectoryName.
+    CN=Name,DC=Domain,DC=com
+    - URL.
+    The URL of a host, such as this example: http://computer07.contoso.com/index.html
+    - IPAddress.
+    An IP address
+    - RegisteredID.
+    ID in dotted decimal notation, such as this example: 1.2.3.4.5
+    - GUID.
+    A globally unique ID, such as this example: f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CertificateType" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the type of certificate that this cmdlet creates.
+    The acceptable values for this parameter are:
+
+    - CodeSigningCert
+    - Custom
+    - DocumentEncryptionCert
+    - DocumentEncryptionCertLegacyCsp
+    - SSLServerAuthentication (default)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Custom, CodeSigningCert, DocumentEncryptionCert, SSLServerAuthentication, DocumentEncryptionCertLegacyCsp
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: pki.New-SelfSignedCertificate
+name: New-SelfSignedCertificate
+description: |-
+  The **New-SelfSignedCertificate** cmdlet creates a self-signed certificate for testing purposes.
+  Using the **CloneCert** parameter, a test certificate can be created based on an existing certificate with all settings copied from the original certificate except for the public key.
+  The cmdlet creates a new key of the same algorithm and length.
+
+  Delegation may be required when using this cmdlet with Windows PowerShell remoting and changing user configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  Module Name: pki
+  ms.date: 10/06/2019
+  online version: https://docs.microsoft.com/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-SelfSignedCertificate

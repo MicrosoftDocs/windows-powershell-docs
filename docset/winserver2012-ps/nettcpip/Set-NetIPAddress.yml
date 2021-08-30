@@ -1,0 +1,297 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies IP address configuration properties of an existing IP address.
+module: NetTCPIP
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetIPAddress" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-TimeSpan
+  href: https://go.microsoft.com/fwlink/p/?LinkId=113360
+- text: Get-NetIPAddress
+  href: ./Get-NetIPAddress.yml
+- text: New-NetIPAddress
+  href: ./New-NetIPAddress.yml
+- text: Remove-NetIPAddress
+  href: ./Remove-NetIPAddress.yml
+syntaxes:
+- >-
+  Set-NetIPAddress [[-IPAddress] <String[]>] [-AddressFamily <AddressFamily[]>] [-AddressState <AddressState[]>]
+
+   [-AsJob] [-CimSession <CimSession[]>] [-InterfaceAlias <String[]>] [-InterfaceIndex <UInt32[]>] [-PassThru]
+
+   [-PolicyStore <String>] [-PreferredLifetime <TimeSpan>] [-PrefixLength <Byte>]
+
+   [-PrefixOrigin <PrefixOrigin[]>] [-SkipAsSource <Boolean>] [-ThrottleLimit <Int32>] [-Type <Type[]>]
+
+   [-ValidLifetime <TimeSpan>] [-Confirm] [-WhatIf]
+- >-
+  Set-NetIPAddress [-AsJob] [-CimSession <CimSession[]>] [-PassThru] [-PreferredLifetime <TimeSpan>]
+
+   [-PrefixLength <Byte>] [-SkipAsSource <Boolean>] [-ThrottleLimit <Int32>] [-ValidLifetime <TimeSpan>]
+
+   -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>New-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1
+
+
+    Note: The **PrefixLength** parameter may also be specified as part of the New-NetIPAddress cmdlet.
+    PS C:\>Set-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1 -PrefixLength 24
+  description: |-
+    This example adds a new IP address, and uses this cmdlet to change the prefix length.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$timesp = ( New-TimeSpan -Days 1 )
+
+
+
+    PS C:\>Set-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1 -PreferredLifetime $timesp
+  description: |-
+    This example modifies an IP address, setting the **ValidLifetime** parameter to one day.
+  summary: ""
+parameters:
+- type: <xref href="AddressFamily" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressFamily
+  description: |+
+    Specifies the IP address family of the IP address.
+    The acceptable values for this parameter are:
+
+     -- IPv4: IPv4 address information. 
+
+     -- IPv6: IPv6 address information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AddressState" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressState
+  description: |+
+    Specifies the duplicate address detection (DAD) state for the IP address.
+    The acceptable values for this parameter are:
+
+     -- Deprecated: IP address configuration information for addresses that will no longer be used to establish new connections, but will continue to be used with existing connections. 
+
+     -- Duplicate: IP address configuration information for addresses for which a duplicate IP address has been detected and the current IP address will not be used. 
+
+     -- Invalid: IP address configuration information for addresses that are not valid and will not be used. 
+
+     -- Preferred: IP address configuration information for addresses that are valid and available for use. 
+
+     -- Tentative: IP address configuration information for addresses that are not used for communication, as the uniqueness of those IP addresses is being verified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceAlias
+  description: |+
+    Specifies the interface on which the IP address is configured, as defined by the InterfaceAlias.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceIndex
+  description: |+
+    Specifies the interface on which the IP address is configured, as defined by the InterfaceIndex number.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPAddress
+  description: |+
+    Specifies the IPv4 or IPv6 address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  description: |+
+    Specifies the PolicyStore value.
+    The acceptable values for this parameter are:
+
+     -- ActiveStore: The IP address information is currently valid. 
+
+     -- PersistentStore: The IP address information is persistent across reboots.
+    When the computer starts, the PersistentStore settings are copied to the ActiveStore. 
+
+    The default value is ActiveStore.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: PreferredLifetime
+  description: |+
+    Modifies the PreferredLifetime to the specified values.
+    PreferredLifetime uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: PrefixLength
+  description: |+
+    Modifies the PrefixLength of the IP address.
+    The PrefixLength defines the local subnet size, and is also known as a subnet mask.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PrefixOrigin" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PrefixOrigin
+  description: |+
+    ps_deprecate_para
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SkipAsSource
+  description: |+
+    Modifies the SkipAsSource flag to True or False.
+    SkipAsSource is used in a multiple IP address scenario in which the only the primary IP address for outgoing traffic.
+    The IP addresses that have SkipAsSource set to True are not used for outgoing traffic and are not registered in DNS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Type" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Type
+  description: |+
+    Specifies the Type of the IP address.
+    The acceptable values for this parameter are:
+
+     -- Unicast: Marks the address as a unicast address. 
+
+     -- Anycast: Marks the address as an anycast address. 
+
+    The default value is Unicast.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: ValidLifetime
+  description: |+
+    Modifies the PreferredLifetime to the specified values.
+    ValidLifetime uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetTCPIP.Set-NetIPAddress
+name: Set-NetIPAddress
+description: |-
+  The **Set-NetIPAddress** cmdlet modifies IP address configuration properties of an existing IP address.
+  This cmdlet has 2 types of parameters.
+  One set of parameters identifies the NetIPAddress object to be modified.
+  These properties require that you use a IPv4 (or IPv6) address as an identifier and you may include additional properties such as InterfaceIndex.
+  The second set of parameters enables you to set specific properties.
+  These properties include Type, PrefixLength, valid or preferred lifetime and skip as source.
+
+  Note: IPAddress objects do not allow the IPv4 address or IPv6 address property to be modified after creation.
+  To create a new IPv6 address or IPv6 address, the New-NetIPAddress cmdlet must be used.
+metadata:
+  external help file: NetTCPIP_Cmdlets.xml
+  Module Name: NetTCPIP
+  online version: https://docs.microsoft.com/powershell/module/nettcpip/set-netipaddress?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

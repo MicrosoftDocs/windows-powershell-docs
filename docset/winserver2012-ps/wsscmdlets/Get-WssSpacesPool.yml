@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a storage pool, or all storage pools in the system.
+module: WssCmdlets
+notes: ""
+syntaxes:
+- Get-WssSpacesPool [-ID <String>]
+examples:
+- title: 'Example 1: Retrieve all storage pools'
+  code: |-
+    PS C:\> Get-WssSpacesPool
+  description: |-
+    This command retrieves all storage pools in the system.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ID
+  description: |+
+    Specifies the ID of a storage pool to retrieve.
+    If you do not specify this parameter, the cmdlet returns a list of all storage pools.
+    Each storage pool object includes a unique ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Get-WssSpacesPool
+name: Get-WssSpacesPool
+description: |-
+  The **Get-WssSpacesPool** cmdlet retrieves a storage pool in sbs_sbs8_2, or all storage pools in the system.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssspacespool?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

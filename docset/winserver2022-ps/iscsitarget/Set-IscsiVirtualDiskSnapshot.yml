@@ -1,0 +1,114 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the description for a snapshot.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Dismount-IscsiVirtualDiskSnapshot
+  href: ./Dismount-IscsiVirtualDiskSnapshot.yml
+- text: Export-IscsiVirtualDiskSnapshot
+  href: ./Export-IscsiVirtualDiskSnapshot.yml
+- text: Get-IscsiVirtualDiskSnapshot
+  href: ./Get-IscsiVirtualDiskSnapshot.yml
+- text: Mount-IscsiVirtualDiskSnapshot
+  href: ./Mount-IscsiVirtualDiskSnapshot.yml
+- text: Remove-IscsiVirtualDiskSnapshot
+  href: ./Remove-IscsiVirtualDiskSnapshot.yml
+syntaxes:
+- >-
+  Set-IscsiVirtualDiskSnapshot [-SnapshotId] <String> [-Description <String>] [-PassThru]
+
+   [-ComputerName <String>] [-Credential <PSCredential>] [<CommonParameters>]
+- >-
+  Set-IscsiVirtualDiskSnapshot -InputObject <IscsiVirtualDiskSnapshot> [-Description <String>] [-PassThru]
+
+   [-ComputerName <String>] [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a snapshot description'
+  code: |-
+    PS C:\> Set-IscsiVirtualDiskSnapshot -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}" -Description "before upgrade"
+  description: |-
+    This example sets a snapshot with the ID {E9A5BA03-85B9-40CA-85DF-DC1695690B40} to have the description before upgrade.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description for the iSCSI virtual disk snapshot.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an iSCSI Virtual Disk Snapshot object from the input pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SnapshotId
+  isRequired: true
+  description: |+
+    Specifies the identifier (ID) for the snapshot.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Set-IscsiVirtualDiskSnapshot
+name: Set-IscsiVirtualDiskSnapshot
+description: |-
+  The **Set-IscsiVirtualDiskSnapshot** cmdlet sets the description for a snapshot.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/set-iscsivirtualdisksnapshot?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-IscsiVirtualDiskSnapshot

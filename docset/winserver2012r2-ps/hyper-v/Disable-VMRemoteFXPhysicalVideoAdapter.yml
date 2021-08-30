@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables one or more RemoteFX physical video adapters from use with RemoteFX-enabled virtual machines.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None by default; **Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter** if **-PassThru** is specified.
+syntaxes:
+- >-
+  Disable-VMRemoteFXPhysicalVideoAdapter [-ComputerName <String[]>] [-Name] <String[]> [-Passthru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Disable-VMRemoteFXPhysicalVideoAdapter [-GPU] <VMRemoteFXPhysicalVideoAdapter[]> [-Passthru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Disable-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia*
+  description: |-
+    This example disables all RemoteFX physical video adapters that include the string "Nvidia" in their names.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia* | Disable-VMRemotePhysicalVideoAdapter
+  description: |-
+    This example disables all RemoteFX physical video adapters that include the string "Nvidia" in their names.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the RemoteFX physical video adapters are to be disabled.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="VMRemoteFXPhysicalVideoAdapter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GPU
+  isRequired: true
+  description: |+
+    Specifies one or more RemoteFX physical video adapters to disable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names of adapters.
+    The cmdlet disables the RemoteFX physical video adapters that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that **Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter** objects are to be passed to the pipeline representing the RemoteFX physical video adapters to be disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Disable-VMRemoteFXPhysicalVideoAdapter
+name: Disable-VMRemoteFXPhysicalVideoAdapter
+description: |-
+  The **Disable-VMRemoteFXPhysicalVideoAdapter** disables one or more RemoteFX physical video adapter from use with RemoteFX-enabled virtual machines.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/disable-vmremotefxphysicalvideoadapter?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-VMRemoteFXPhysicalVideoAdapter

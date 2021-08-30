@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Installs the Certification Authority Web Enrollment.
+module: ADCSDeployment
+notes: |-
+  * Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.
+  To see parameters, run the following command: `Install-AdcsWebEnrollment -?`
+inputs:
+- name: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Deployment.Commands.WebEnrollment.WebEnrollmentResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Uninstall-AdcsWebEnrollment
+  href: ./Uninstall-AdcsWebEnrollment.yml
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+syntaxes:
+- >-
+  Install-AdcsWebEnrollment [-CAConfig <String>] [-Force] [-Credential <PSCredential>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Install the Web Enrollment role service to a CA with confirmation'
+  code: |-
+    PS C:\> Install-AdcsWebEnrollment -CAConfig "<CAComputerName>\<CACommonName>"
+  description: |-
+    This command installs the Web Enrollment role service to a CA specified by `<CAComputerName>\<CACommonName>`.
+    Replace the computer name of the CA for `<CAComputerName>` and replace the CA common name for `<CACommonName>` when running the command.
+  summary: ""
+- title: 'Example 1: Install the Web Enrollment role service to a CA without confirmation'
+  code: |-
+    PS C:\> Install-AdcsWebEnrollment -CAConfig "<CAComputerName>\<CACommonName>" -Force
+  description: |-
+    This command installs the Web Enrollment role service to a CA specified by `<CAComputerName>\<CACommonName>` without requiring user confirmation.
+    Replace the computer name of the CA for `<CAComputerName>` and replace the CA common name for `<CACommonName>` when running the command.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CAConfig
+  description: |+
+    Specifies the CA config parameter string.
+    Do not specify this if there is a local CA installed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a **PSCredential** object for the CA Web Enrollment.
+    To obtain a credential object, use the **Get-Credential** cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+    If the Web Enrollment service is configured to use Standalone CA, then an account that is a member of the local Administrators on the CA is required.
+    If the Web Enrollment service is configured to use an Enterprise CA, then an account that is a member of Domain Admins is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADCSDeployment.Install-AdcsWebEnrollment
+name: Install-AdcsWebEnrollment
+description: |-
+  The **Install-AdcsWebEnrollment** cmdlet performs initial installation and configuration of the Certification Authority (CA) Web Enrollment role service.
+  To remove the Web Enrollment role service use the **Uninstall-AdcsWebEnrollment** cmdlet.
+
+  You can import the cmdlet by running the following commands from Windows PowerShell:
+
+  - `Import-Module ServerManager`
+  - `Add-WindowsFeature Adcs-Web-Enrollment`
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+  Module Name: ADCSDeployment
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcswebenrollment?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Install-AdcsWebEnrollment

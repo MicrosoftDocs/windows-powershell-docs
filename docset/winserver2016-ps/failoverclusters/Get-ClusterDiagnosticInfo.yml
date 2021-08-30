@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets diagnostics for a cluster a cluster that contains VMs and produces a zip file containing the data.
+module: FailoverClusters
+notes: ""
+links:
+- text: Failover Clusters
+  href: ./index.yml
+syntaxes:
+- >-
+  Get-ClusterDiagnosticInfo [[-WriteToPath] <String>] [[-Cluster] <String>] [[-ZipPrefix] <String>]
+
+   [-HoursOfEvents <Int32>] [-IncludeEvents] [<CommonParameters>]
+- Get-ClusterDiagnosticInfo -ReadFromPath <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Write diagnostic info to the specified path'
+  code: |-
+    PS C:\> Get-ClusterDiagnosticInfo -WriteToPath "C:\Users\MyUser\HealthTest\"
+    Writing to path : C:\Users\MyUser\HealthTest\
+  description: |-
+    This command gets and writes the cluster Diagnostics to the folder C:\Users\MyUser\HealthTest\.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster the cmdlet gets.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: HoursOfEvents
+  description: |+
+    Specifies the number of hours in the past that this cmdlet gathers system event logs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeEvents
+  description: |+
+    Indicates that this cmdlet gathers system event logs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReadFromPath
+  isRequired: true
+  description: |+
+    Specifies the path to read from when examining previously collected log files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WriteToPath
+  description: |+
+    Specifies the path to create the ZIP file that contains all of the logs.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ZipPrefix
+  description: |+
+    Specifies the name to prepend to the ZIP file that is produced.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterDiagnosticInfo
+name: Get-ClusterDiagnosticInfo
+description: |-
+  The **Get-ClusterDiagnosticInfo** cmdlet gets diagnostics for a cluster that contains virtual machines and produces a zip file containing the data.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell-help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterdiagnosticinfo?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterDiagnosticInfo

@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays the point in time values for specific server and operating system-related data.
+module: SoftwareInventoryLogging
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/InventoryLogging/MsftSil_Computer" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SilData
+  href: ./Get-SilData.yml
+- text: SIL_Cmdlets
+  href: ./index.yml
+syntaxes:
+- Get-SilComputer [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get Software Inventory Logging computer data'
+  code: |-
+    PS C:\> Get-SilComputer
+    ChassisSerialNumber       : 7ZQ7TJ1
+    CollectedDateTime         : 5/20/2013 3:18:42 PM
+    Model                     : Precision WorkStation T7400
+    Name                      : Server.Test.Contoso.com
+    NumberOfCores             : 4
+    NumberOfLogicalProcessors : 4
+    NumberOfProcessors        : 1
+    OSName                    : Microsoft Windows Server 2012 R2 Datacenter Preview
+    OSSku                     : 8
+    OSSuite                   : 400
+    OSSuiteMask               : 400
+    OSVersion                 : 6.3.9405
+    ProcessorFamily           : 179
+    ProcessorManufacturer     : GenuineIntel
+    ProcessorName             : Intel(R) Xeon(R) CPU           E5440  @ 2.83GHz
+    SystemManufacturer        : Dell Inc. 
+    VmGuid                    :
+  description: |-
+    This command displays the point in time values for all server and operating system-related data.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: SoftwareInventoryLogging.Get-SilComputer
+name: Get-SilComputer
+description: |-
+  The **Get-SilComputer** cmdlet displays the point in time values for specific server and operating system-related data needed for most common inventory purposes.
+  The data is collected at the point in time when the cmdlet runs.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MsftSil_Computer.cdxml-help.xml
+  Module Name: SoftwareInventoryLogging
+  ms.date: 01/24/2017
+  online version: https://docs.microsoft.com/powershell/module/softwareinventorylogging/get-silcomputer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-SilComputer

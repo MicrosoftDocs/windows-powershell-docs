@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the authorization entries of a Replica server.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="VMReplicationAuthorizationEntry" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-VMReplicationAuthorizationEntry [[-AllowedPrimaryServer] <String>] [-ReplicaStorageLocation <String>]
+
+   [-TrustGroup <String>] [-ComputerName <String[]>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-VMReplicationAuthorizationEntry
+  description: |-
+    This example gets the replication authorization entries  for the local Replica server.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-VMReplicationAuthorizationEntry server01.domain01.contoso.com
+  description: |-
+    This example gets the replication authorization entry for an allowed primary server named server01.domain01.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AllowedPrimaryServer
+  description: |+
+    Specifies the allowed primary server for which replication authorization entries are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: AllowedPS
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which replication authorization entries are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReplicaStorageLocation
+  description: |+
+    Specifies the location where virtual hard disk files are stored when an authorized primary server sends replication data to the specified Replica server.
+
+  defaultValue: None
+  position: Named
+  aliases: StorageLoc
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TrustGroup
+  description: |+
+    Gets the replication authorization entries that have the specified value for TrustGroup.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMReplicationAuthorizationEntry
+name: Get-VMReplicationAuthorizationEntry
+description: |-
+  The **Get-VMReplicationAuthorizationEntry** cmdlet gets the replication authorization entries specified for a Replica server.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmreplicationauthorizationentry?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMReplicationAuthorizationEntry

@@ -1,0 +1,160 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets station information.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Throws SecurityException if the specified autologon user is an administrative user.
+    This exception is not thrown if the OverrideAdminWarning option is specified for administrative users.
+syntaxes:
+- >-
+  Set-WmsStation [-StationId <Int32>] [-StationFriendlyName <String>] [-AutoLogonUserName <String>]
+
+   [-AutoLogonPassword <String>] [-OverrideAdminWarning] [-EnableAutoLogon] [-DisableAutoLogon]
+
+   [-SetFriendlyName] [-TimeoutInSecond <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example
+  code: |-
+    PS C:\> Set-WmsStation -StationId 1 -SetFriendlyName -StationFriendlyName UwB0AGEAdABpAG8AbgAxAA== -EnableAutoLogon -AutoLogonUserName "UwB0AHUAZABlAG4AdAAxAA=="  -AutoLogonPassword "UABAAHMAcwB3ADAAcgBkAA=="
+    No output.
+  description: |-
+    Station friendly name of station 1 will be set. 
+    Station #1 is now configured to autologon as "Student1" with password "P@ssw0rd". 
+    Note: -StationFriendlyName parameter value is expected to Base64 encoded.
+    To convert a string to Base64 encoded string, refer to the following example: 
+
+    PS C:\\\> $Name="Station1"
+
+    PS C:\\\> \[System.Convert\]::ToBase64String(\[System.Text.Encoding\]::UNICODE.GetBytes($Name))UwB0AGEAdABpAG8AbgAxAA==
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AutoLogonPassword
+  description: |+
+    The password for the user account that is configured for autologon.
+
+    This parameter is BASE64 encoded.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AutoLogonUserName
+  description: |+
+    The user name for the autologon account. 
+
+    This parameter is BASE64 encoded.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableAutoLogon
+  description: |+
+    Disables autologon for the specified station.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableAutoLogon
+  description: |+
+    Enables autologon for the specified station.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverrideAdminWarning
+  description: |+
+    Specify this option if the autologon account is a member of the administrators group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SetFriendlyName
+  description: |+
+    Sets the friendly name for the specified station.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StationFriendlyName
+  description: |+
+    The friendly name for the station. 
+
+    This parameter is BASE64 encoded.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: StationId
+  description: |+
+    The station to be configured.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TimeoutInSecond
+  description: |+
+    The timeout value in seconds before the operation is aborted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MultiPoint.Set-WmsStation
+name: Set-WmsStation
+description: |-
+  The Set-WmsStation cmdlet sets station information.
+  It also sets the auto-logon and the friendly name for the station based on the specified parameters.
+  If you want to enable a user in the administrator group to auto-logon, specify -OverrideAdminWarning.
+metadata:
+  external help file: WmsCmdlets.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/06/2017
+  online version: https://docs.microsoft.com/powershell/module/multipoint/set-wmsstation?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WmsStation

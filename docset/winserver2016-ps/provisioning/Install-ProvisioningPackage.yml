@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Install .PPKG package onto the local machine.
+module: Provisioning
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Install-ProvisioningPackage [-PackagePath] <String> [-ForceInstall] [-QuietInstall]
+
+   [-LogsDirectoryPath <String>] [-WprpFile <String>] [-ConnectedDevice]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Install-ProvisioningPackage -PackagePath C:\mypackage.ppkg -QuietInstall
+  description: |-
+    This will install the mypackage.ppkg file silently without customer interaction.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ConnectedDevice
+  description: |+
+    Install package to removable media.
+
+  defaultValue: None
+  position: Named
+  aliases: Device
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceInstall
+  description: |+
+    Force the installation of the package.
+
+  defaultValue: None
+  position: Named
+  aliases: Force
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogsDirectoryPath
+  description: |+
+    Specifies the logs directory path.
+
+  defaultValue: None
+  position: Named
+  aliases: Logs
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackagePath
+  isRequired: true
+  description: |+
+    Path to provisioning package
+
+  defaultValue: None
+  position: "0"
+  aliases: Path
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: QuietInstall
+  description: |+
+    Quietly installs the package without any customer interaction.
+
+  defaultValue: None
+  position: Named
+  aliases: Quiet
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WprpFile
+  description: |+
+    Specifies the name of a wprp file.
+
+  defaultValue: None
+  position: Named
+  aliases: Wprp
+  parameterValueGroup: ""
+uid: Provisioning.Install-ProvisioningPackage
+name: Install-ProvisioningPackage
+description: |-
+  This cmdlet is used to install .ppkg files that are generated and exported by the [Windows Configuration Designer tool](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-install-icd).
+
+  You can use this cmdlet to install a .ppkg file interactively or silently by specifying the -QuietInstall switch parameter.
+
+  The default is an interactive install.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: provcmdlets.dll-Help.xml
+  Module Name: Provisioning
+  ms.date: 05/09/2017
+  online version: https://docs.microsoft.com/powershell/module/provisioning/install-provisioningpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Install-ProvisioningPackage

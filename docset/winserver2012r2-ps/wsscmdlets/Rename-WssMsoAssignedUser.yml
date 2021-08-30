@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the online service account for a user.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    WssUserName
+    Type: System.String
+    Description: local network account name of user
+links:
+- text: Get-WssMsoAssignedUser
+  href: ./Get-WssMsoAssignedUser.yml
+syntaxes:
+- Rename-WssMsoAssignedUser [-WssUserName] <String> [-NewMsoUserName] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a Microsoft account'
+  code: |-
+    PS C:\> Update-WssMSOAccountName -WssUserName "DavidChew" -NewMsoUserName "DavidChew@TSQA.Contoso.com"
+  description: |-
+    This command modifies the online service account for the user account named DavidChew.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewMsoUserName
+  isRequired: true
+  description: |+
+    Specifies an online service account, as a user principal name (UPN).
+    The cmdlet assigns the UPN that you specify to the user that the **WssUserName** parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WssUserName
+  isRequired: true
+  description: |+
+    Specifies the name of a user account.
+    The cmdlet updates the online service account for the user account that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Rename-WssMsoAssignedUser
+name: Rename-WssMsoAssignedUser
+description: |-
+  The **Rename-WssMsoAssignedUser** cmdlet modifies the online service account assigned to a local network user account in aad_1.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/rename-wssmsoassigneduser?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Rename-WssMsoAssignedUser

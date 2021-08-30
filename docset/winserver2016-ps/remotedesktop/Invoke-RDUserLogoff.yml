@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Ends a user session and closes all running applications.
+module: RemoteDesktop
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disconnect-RDUser
+  href: ./Disconnect-RDUser.yml
+- text: Get-RDUserSession
+  href: ./Get-RDUserSession.yml
+- text: Send-RDUserMessage
+  href: ./Send-RDUserMessage.yml
+syntaxes:
+- Invoke-RDUserLogoff [-HostServer] <String> [-UnifiedSessionID] <Int32> [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: End a session connected to an RD Session Host server'
+  code: |-
+    PS C:\> Invoke-RDUserLogoff -HostServer "rdsh-1.contoso.com" -UnifiedSessionID 2
+  description: |-
+    This command ends the user session that has the ID 2, which is connected to the host server named rdsh-1.contoso.com.
+  summary: ""
+- title: 'Example 2: End a session connected to an RD Virtualization Host server'
+  code: |-
+    PS C:\> Invoke-RDUserLogoff -HostServer "rdvh-1.contoso.com" -UnifiedSessionID 14 -Force
+  description: |-
+    This command ends the user session that has the ID 14, which is connected to the virtualization host server named rdvh-1.contoso.com.
+    Because the command includes the **Force** parameter, it ends the session without prompting for user confirmation.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostServer
+  isRequired: true
+  description: |+
+    Specifies the name of the server that hosts the session.
+    For session collections the server name is the name of the Remote Desktop Session Host (RD Session Host) server.
+    For virtual desktop collections the server name is the name of the Remote Desktop Virtualization Host (RD Virtualization Host) server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: UnifiedSessionID
+  isRequired: true
+  description: |+
+    Specifies a unique session ID on the host.
+    Use Get-RDUserSession to retrieve the unique ID for a specific user session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteDesktop.Invoke-RDUserLogoff
+name: Invoke-RDUserLogoff
+description: |-
+  The **Invoke-RDUserLogoff** cmdlet ends a user session and closes any running applications.
+
+  To end a session without closing applications use the Disconnect-RDUser cmdlet.
+
+  To get the ID for the user session that you are ending, use the Get-RDUserSession cmdlet.
+  Because the user session ID is unique only within the context of a session host, a different session within a deploymenthost server can share the same user session ID.
+  The host server and session ID that you specify in this cmdlet uniquely identify a session within a deployment.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/invoke-rduserlogoff?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Invoke-RDUserLogoff

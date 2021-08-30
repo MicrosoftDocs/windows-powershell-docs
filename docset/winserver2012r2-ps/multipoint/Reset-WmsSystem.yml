@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Shuts down the computer that is running Windows MultiPoint Server.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Reset-WmsSystem [-TimeoutInSecond <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example
+  code: |-
+    PS C:\> Stop-WmsSystem
+    No output.
+  description: |-
+    The system will be shut down.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TimeoutInSecond
+  description: |+
+    Specifies a Remote Desktop Session (RDS) using SessionID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MultiPoint.Reset-WmsSystem
+name: Reset-WmsSystem
+description: |-
+  The Stop-WmsSystem cmdlet shuts down the computer that is running Windows MultiPoint Server by using a Windows Management Instrumentation (WMI) call.
+metadata:
+  external help file: WmsCmdlets.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/06/2017
+  online version: https://docs.microsoft.com/powershell/module/multipoint/reset-wmssystem?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Reset-WmsSystem

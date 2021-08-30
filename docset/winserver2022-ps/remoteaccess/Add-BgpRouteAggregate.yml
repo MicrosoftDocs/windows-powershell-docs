@@ -1,0 +1,165 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new aggregate route for specific BGP routes.
+module: RemoteAccess
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#BgpRouteAggregateInfo" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-BgpRouteAggregate
+  href: ./Get-BgpRouteAggregate.yml
+- text: Remove-BgpRouteAggregate
+  href: ./Remove-BgpRouteAggregate.yml
+- text: Set-BgpRouteAggregate
+  href: ./Set-BgpRouteAggregate.yml
+- text: Remote Access Cmdlets
+  href: ./index.yml
+syntaxes:
+- >-
+  Add-BgpRouteAggregate [-RoutingDomain <String>] -Prefix <String> [-SummaryOnly <SummaryOnly>]
+
+   [-AttributePolicy <String[]>] [-PreserveASPath <PreserveASPath>] [-PassThru] [-Force]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a static custom route aggregation'
+  code: |-
+    PS C:\>Add-BgpRouteAggregate -RoutingDomain "Contoso" -Prefix "172.168.0.0/16" -AttributePolicy "P_StaticAggAttrib" -PreserveASPath enable
+  description: |-
+    This command adds a static custom route aggregation.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AttributePolicy
+  description: |+
+    Specifies a list of policy names that are to be applied to the aggregate route to configure its attributes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Prefix
+  isRequired: true
+  description: |+
+    Specifies the classless IP address prefix for the aggregate IP address and its prefix length.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: AggregatePrefix
+  parameterValueGroup: ""
+- type: <xref href="PreserveASPath" data-throw-if-not-resolved="False" />
+  name: PreserveASPath
+  description: |+
+    Specifies a flag to keep the aggregated autonomous systems (AS) Paths in the AS Set of the aggregate IP address
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingDomain
+  description: |+
+    Specifies a user-defined unique alphanumeric identifier for the routing domain.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RoutingDomainName
+  parameterValueGroup: ""
+- type: <xref href="SummaryOnly" data-throw-if-not-resolved="False" />
+  name: SummaryOnly
+  description: |+
+    Specifies a flag that indicates that only the aggregate address is to be advertised to peers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent connections that can be established to run this command.
+    If you omit this parameter or enter a value of 0, the default value, 32, is used.
+
+    The throttle limit applies only to the current command, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Add-BgpRouteAggregate
+name: Add-BgpRouteAggregate
+description: |-
+  The **Add-BgpRouteAggregate** cmdlet adds a new aggregate route for specific Border Gateway Protocol (BGP) routes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_BgpRouteAggregate_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/add-bgprouteaggregate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-BgpRouteAggregate

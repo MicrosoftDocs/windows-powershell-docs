@@ -1,0 +1,29 @@
+### YamlMime:PowershellModule
+children:
+- title: VAMT
+  cmdlets:
+  - VAMT.Add-VamtProductKey
+  - VAMT.Export-VamtData
+  - VAMT.Find-VamtManagedMachine
+  - VAMT.Get-VamtConfirmationId
+  - VAMT.Get-VamtProduct
+  - VAMT.Get-VamtProductKey
+  - VAMT.Import-VamtData
+  - VAMT.Initialize-VamtData
+  - VAMT.Install-VamtConfirmationId
+  - VAMT.Install-VamtProductActivation
+  - VAMT.Install-VamtProductKey
+  - VAMT.Update-VamtProduct
+uid: VAMT
+name: VAMT
+description: |-
+  Enables network administrators and other IT professionals to automate and centrally manage the volume and retail-activation process for Windows, Microsoft Office, and select other Microsoft products. It can manage volume activation using Multiple Activation Keys (MAKs) or the Windows Key Management Service (KMS). For more information about VAMT, see the [Volume Activation Management Tool Technical Reference](https://go.microsoft.com/fwlink/?LinkId=214550).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: c04e5406-950f-4cb4-9c5d-3e8c952214e6
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  title: VAMT

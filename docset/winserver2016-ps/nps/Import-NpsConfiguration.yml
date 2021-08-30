@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports NPS settings.
+module: NPS
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-NpsConfiguration
+  href: ./Export-NpsConfiguration.yml
+syntaxes:
+- Import-NpsConfiguration [-Path] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Import settings to a Network Policy Server'
+  code: |-
+    PS C:\>Import-NpsConfiguration -Path "C:\Npsconfig.xml"
+  description: |-
+    This command imports settings from the file named C:\Npsconfig.xml to NPS.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the full file path of the NPS configuration to import.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NPS.Import-NpsConfiguration
+name: Import-NpsConfiguration
+description: |-
+  The **Import-NpsConfiguration** cmdlet imports settings for Network Policy Server (NPS).
+  NPS manages network access policies, connection request authentication, and connection request authorization.
+  You can use NPS as a Remote Authentication Dial-In User Service (RADIUS) proxy to forward connection requests to NPS or other RADIUS servers that you configure in remote RADIUS server groups.
+  For more information about NPS, see [Network Policy Server](https://technet.microsoft.com/en-us/library/cc732912.aspx) on TechNet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NPS.Commands.dll-Help.xml
+  Module Name: NPS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nps/import-npsconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-NpsConfiguration

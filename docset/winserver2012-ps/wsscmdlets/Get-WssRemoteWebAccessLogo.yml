@@ -1,0 +1,27 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the name of the file that contains the logo for the Remote Web Access website.
+module: WssCmdlets
+notes: ""
+links:
+- text: Set-WssRemoteWebAccessLogo
+  href: ./Set-WssRemoteWebAccessLogo.yml
+syntaxes:
+- Get-WssRemoteWebAccessLogo
+examples:
+- title: 'Example 1: Retrieve the name of the logo file'
+  code: |-
+    PS C:\> Get-WssRemoteWebAccessLogo
+  description: |-
+    This command retrieves the name of the file that contains the logo for the Remote Web Access website.
+  summary: ""
+uid: WssCmdlets.Get-WssRemoteWebAccessLogo
+name: Get-WssRemoteWebAccessLogo
+description: |-
+  The **Get-WssRemoteWebAccessLogo** cmdlet retrieves the name of the file that contains the logo for the Remote Web Access website in sbs_sbs8_2.
+  The logo image customizes the appearance of the Remote Web Access website.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssremotewebaccesslogo?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

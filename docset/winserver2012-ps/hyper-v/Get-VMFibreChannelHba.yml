@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the Fibre Channel host bus adapters associated with one or more virtual machines.
+module: Hyper-V
+notes: ""
+syntaxes:
+- Get-VMFibreChannelHba [-VMName] <String[]> [-ComputerName <String[]>]
+- Get-VMFibreChannelHba [-VM] <VirtualMachine[]>
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMFibreChannelHba -VMName MyVM
+  description: |-
+    Gets the Fibre Channel host bus adapters associated with the virtual machine MyVM.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the Fibre Channel host bus adapters are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies a virtual machine or machines for which the Fibre Channel host bus adapters are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the friendly name or names of the virtual machines for which the Fibre Channel host bus adapters are to be retrieved.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMFibreChannelHba
+name: Get-VMFibreChannelHba
+description: ""
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmfibrechannelhba?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

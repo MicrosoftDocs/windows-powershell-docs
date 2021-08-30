@@ -1,0 +1,236 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a list of all partition objects visible on all disks, or optionally a filtered list using specified parameters.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Disk" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Volume" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Partitions" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkID=113423
+- text: Get-Disk
+  href: ./Get-Disk.yml
+- text: Get-StorageSubSystem
+  href: ./Get-StorageSubsystem.yml
+- text: Get-Volume
+  href: ./Get-Volume.yml
+syntaxes:
+- >-
+  Get-Partition [-UniqueId <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Partition -DiskId <String[]> [-Offset <UInt64[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+- >-
+  Get-Partition [[-DiskNumber] <UInt32[]>] [[-PartitionNumber] <UInt32[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-Partition [-DriveLetter <Char[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Partition [-Disk <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Partition [-Volume <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Partition [-StorageSubSystem <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-Partition
+  description: |-
+    This example return all partitions, on all disks.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-Partition -DiskNumber 5
+    Disk Number: 5
+
+    PartitionNumber  DriveLetter Offset                                        Size Type
+    ---------------  ----------- ------                                        ---- ----
+    1                H           1048576                                  298.09 GB IFS
+  description: |-
+    This example return all partitions on disk 5.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>Get-Partition -DriveLetter C
+    Disk Number: 0
+
+    PartitionNumber  DriveLetter Offset                                        Size Type
+    ---------------  ----------- ------                                        ---- ----
+    2                C           368050176                                465.42 GB IFS
+  description: |-
+    This example partition associated with the volume for drive letter C.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\>Get-Partition | Where-Object -FilterScript {$_.Type -Eq "Basic"}
+  description: |-
+    This example returns only the basic partitions on all disks.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Disk
+  description: |+
+    Accepts a Disk object as input.
+    The Disk CIM object is exposed by the Get-Disk cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DiskId
+  isRequired: true
+  description: |+
+    Specifies an ID used to identify a disk in the system.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DiskPath
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DiskNumber
+  description: |+
+    Specifies an array of disk numbers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Char" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DriveLetter
+  description: |+
+    Specifies a letter used to identify a drive or volume in the system.
+    Specifically the drive on which the partition resides.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Offset
+  description: |+
+    Specifies the starting offset, in bytes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PartitionNumber
+  description: |+
+    Specifies the number of the partition.
+
+  defaultValue: None
+  position: "1"
+  aliases: Number
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageSubSystem
+  description: |+
+    Specifies the storage subsystem from which to get partitions.
+    To obtain a **StorageSubsystem** object, use the Get-StorageSubSystem cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UniqueId
+  description: |+
+    Specifies the ID of the partition to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Volume
+  description: |+
+    Accepts a Volume object as input.
+    The Volume CIM object is exposed by the Get-Volume cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-Partition
+name: Get-Partition
+description: |-
+  The **Get-Partition** cmdlet returns one or more Partition objects depending on the specified criteria.
+  This cmdlet will return a Volume object or a set of Volume objects given parameters to be used to uniquely identify a volume, or parameters to identify a set of volumes that meet the given set of criteria.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Partition.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-partition?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-Partition

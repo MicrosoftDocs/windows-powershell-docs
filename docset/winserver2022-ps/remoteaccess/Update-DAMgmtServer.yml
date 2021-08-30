@@ -1,0 +1,183 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the list of Management servers of the DirectAccess (DA) deployment.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DAMgmtServer" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The DAMgmtServer object contains the following properties: 
+
+     -- The list of added domain controllers. 
+
+     -- The list of removed domain controllers. 
+
+     -- The list of unchanged domain controllers. 
+
+     -- The list of added Configuration Manager servers. 
+
+     -- The list of removed Configuration Manager servers. 
+
+     -- The list of unchanged Configuration Manager servers. 
+
+     -- The list of manually entered servers that have been resolved to new IP addresses. 
+
+     -- The list of unchanged manually entered servers.
+links:
+- text: Format-Table
+  href: https://go.microsoft.com/fwlink/p/?LinkId=113303
+- text: Add-DAMgmtServer
+  href: ./Add-DAMgmtServer.yml
+- text: Get-DAMgmtServer
+  href: ./Get-DAMgmtServer.yml
+- text: Get-RemoteAccess
+  href: ./Get-RemoteAccess.yml
+- text: Remove-DAMgmtServer
+  href: ./Remove-DAMgmtServer.yml
+syntaxes:
+- >-
+  Update-DAMgmtServer [-PassThru] [-ComputerName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>$x = Update-DAMgmtServer -PassThru
+
+
+
+    PS C:\>$x.Summary
+    ChangesDetected
+
+
+    PS C:\>$x.Servers | Format-Table -AutoSize
+    Change: Added 
+    Host                         Change Type   IPAddresses 
+    ----                         ------ ----   ----------- 
+    DC3.domain1.corp.company.com Added  {DC}   {fdfe:5c64:53e1:7777::1e00:6302} 
+    SC1.domain1.corp.company.com Added  {SCCM} {fdfe:5c64:53e1:7777::1e00:845A} 
+    Change: Removed 
+
+    Host                         Change  Type IPAddresses 
+    ----                         ------  ---- ----------- 
+    DC4.domain1.corp.company.com Removed {DC} {fdfe:5c64:53e1:7777::1e00:6301, 3000:0:30::99:1} 
+    Change: Unchanged 
+    Host                         Change    Type     IPAddresses 
+    ----                         ------    ----     ----------- 
+    MGT.domain1.corp.company.com Unchanged {Manual} {fdfe:5c64:53e1:7777::1e00:6301, 3000:0:30::99:1} 
+    DC2.domain2.corp.company.com Unchanged {DC}     {fdfe:5c64:53e1:7777::3200:1, 3000:0:50::1} 
+    DC1.domain1.corp.company.com Unchanged {DC}     {fdfe:5c64:53e1:7777::1e00:1, 3000:0:30::1} 
+    Change: AddressChanged 
+    Host Change         Type     IPAddresses 
+    ---- ------         ----     ----------- 
+    mm1  AddressChanged {Manual} {fdfe:5c64:53e1:7777::1e00:431a}
+  description: |-
+    This example updates the list of management servers accessible via the infrastructure tunnel and outputs the details of the changes.
+    As seen in the output, the cmdlet performed the following: 
+
+     -- Discovered and added one domain controller and one Configuration Manager server. 
+
+     -- Removed one DC from the list since it could no longer find it listed as a DC in the domain. 
+
+     -- Left the listing for two previously discovered DCs and an existing manually added server unchanged. 
+
+     -- Changed the IP address of an existing manually entered server according, after resolving the associated fully qualified domain name (FQDN) and finding that the returned IP is different from the one that was currently listed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the Remote Access (RA) server computer specific tasks should be run.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Update-DAMgmtServer
+name: Update-DAMgmtServer
+description: |-
+  The **Update-DAMgmtServer** cmdlet updates the list of Management servers of the DirectAccess (DA) deployment.
+  A management server is any server that needs to be accessed in a DA managed-out deployment or during the first tunnel in a DA full deployment, such as update servers, domain controllers and other servers.
+
+  Domain controllers and Microsoft Endpoint Configuration Manager servers are discovered automatically.
+  Manually entered management server names are resolved to IP addresses. 
+
+  Management server configuration is applicable globally to the entire DA deployment and therefore is not impacted by multi-site deployments. 
+
+  When the cmdlet runs, the list of automatically discovered domain controllers and Configuration Manager servers is updated.
+  Discovered servers are added to the list, and servers that cannot be discovered are removed.
+  IP addresses in the list are updated in accordance with server name resolution.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DAMgmtServer_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/update-damgmtserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-DAMgmtServer

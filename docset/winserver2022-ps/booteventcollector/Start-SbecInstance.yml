@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts the Setup and Boot Event Collector service.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SbecActiveConfig
+  href: ./Get-SbecActiveConfig.yml
+- text: Set-SbecActiveConfig
+  href: ./Set-SbecActiveConfig.yml
+- text: Stop-SbecInstance
+  href: ./Stop-SbecInstance.yml
+- text: Test-SbecActiveConfig
+  href: ./Test-SbecActiveConfig.yml
+syntaxes:
+- Start-SbecInstance [-Service] [-PassThru] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start the Boot Event Collector'
+  code: |-
+    PS C:\> Start-SbecInstance -Service
+  description: |-
+    This command starts the Boot Event Collector service.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the started service.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Service
+  isRequired: true
+  description: |+
+    Starts the Setup and BEC service on the current computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Start-SbecInstance
+name: Start-SbecInstance
+description: |-
+  The **Start-SbecInstance** cmdlet starts the Setup and Boot Event Collector service.
+
+  You must have the Builtin Administrator privilege to run this command.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/start-sbecinstance?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-SbecInstance

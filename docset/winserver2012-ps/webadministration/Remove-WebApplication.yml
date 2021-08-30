@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a Web application from an IIS Web site.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Remove-WebApplication [-Site <String>] [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Adding a Web application and removing it --------------'
+  code: |-
+    IIS:\>New-WebApplication -Name TestApp -Site "Default Web Site" -PhysicalPath "$env:systemdrive\inetpub\TestApp" "Sleep for 5 seconds before Web App is removed"; Sleep 5 Remove-WebApplication -Name TestApp -Site "Default Web Site"
+  description: |-
+    This example demonstrates how to create a Web application named TestApp on the Default Web Site.
+    The application is then removed after 5 seconds.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the application to remove from the site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Site
+  description: |+
+    The name of the site from which the application is removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Remove-WebApplication
+name: Remove-WebApplication
+description: |-
+  Removes a Web application from an IIS Web site.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/remove-webapplication?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

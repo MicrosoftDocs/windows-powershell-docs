@@ -1,0 +1,34 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a listing of remote connections from Remote Web Access clients, VPN clients, or Web API applications.
+module: WssCmdlets
+notes: ""
+syntaxes:
+- Get-WssRemoteConnection [-From <DateTime>]
+examples:
+- title: 'Example 1: Retrieve a listing of remote connections'
+  code: |-
+    PS C:\> Get-WssRemoteConnection
+  description: |-
+    This command retrieves a listing of all current remote connections to the server.
+  summary: ""
+parameters:
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: From
+  description: |+
+    Specifies a starting time from which to return connections.
+    If you do not specify this parameter, the cmdlet retrieves all active connections.
+
+  defaultValue: System.DateTime.MaxValue
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Get-WssRemoteConnection
+name: Get-WssRemoteConnection
+description: |-
+  The **Get-WssRemoteConnection** cmdlet retrieves a listing of remote connections to the sbs_sbs8_2 server by Remote Web Access clients, VPN clients, or Web API applications.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssremoteconnection?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

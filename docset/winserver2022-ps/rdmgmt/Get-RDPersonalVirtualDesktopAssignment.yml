@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a list of personal virtual desktops and associated user accounts.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-RDPersonalVirtualDesktopAssignment
+  href: ./Export-RDPersonalVirtualDesktopAssignment.yml
+- text: Import-RDPersonalVirtualDesktopAssignment
+  href: ./Import-RDPersonalVirtualDesktopAssignment.yml
+- text: Remove-RDPersonalVirtualDesktopAssignment
+  href: ./Remove-RDPersonalVirtualDesktopAssignment.yml
+- text: Set-RDPersonalVirtualDesktopAssignment
+  href: ./Set-RDPersonalVirtualDesktopAssignment.yml
+syntaxes:
+- >-
+  Get-RDPersonalVirtualDesktopAssignment [-CollectionName] <String> [-ConnectionBroker <String>]
+
+   [<CommonParameters>]
+- >-
+  Get-RDPersonalVirtualDesktopAssignment [-CollectionName] <String> -VirtualDesktopName <String>
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+- >-
+  Get-RDPersonalVirtualDesktopAssignment [-CollectionName] <String> -User <String> [-ConnectionBroker <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example1: Retrieve a list of the current associations between personal virtual desktops and users'
+  code: |-
+    PS C:\>Get-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection"
+  description: |-
+    This command lists current associations between personal virtual desktops and users from the virtual desktop collection named Virtual Desktop Collection.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a personal virtual desktop collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    Specifies one or more user accounts, in DOMAIN\User format.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual desktop.
+    This parameter is required.
+    The virtual desktop identified here must be a member of the collection that the **CollectionName** parameter specifies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Get-RDPersonalVirtualDesktopAssignment
+name: Get-RDPersonalVirtualDesktopAssignment
+description: |-
+  The **Get-RDPersonalVirtualDesktopAssignment** cmdlet retrieves a list of personal virtual desktops and associated user accounts.
+  Specify one or more user accounts to retrieve the associated personal virtual desktops, or specify one or more personal virtual desktop names to retrieve the associated user accounts.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdpersonalvirtualdesktopassignment?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDPersonalVirtualDesktopAssignment

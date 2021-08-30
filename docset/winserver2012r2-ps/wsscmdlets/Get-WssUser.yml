@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a user account by name or security identifier.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.Users.User" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates the server user object with the specified properties.
+links:
+- text: Add-WssUser
+  href: ./Add-WssUser.yml
+- text: Remove-WssUser
+  href: ./Remove-WssUser.yml
+syntaxes:
+- Get-WssUser [<CommonParameters>]
+- Get-WssUser [-Name] <String> [<CommonParameters>]
+- Get-WssUser [-Sid] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve a user account by name'
+  code: |-
+    PS C:\> Get-WSSUser -Name "SarahJones"
+  description: |-
+    This command retrieves a user account by name.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the logon name of a user.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Sid
+  isRequired: true
+  description: |+
+    Specifies the security identifier of a user.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Get-WssUser
+name: Get-WssUser
+description: |-
+  The **Get-WssUser** cmdlet retrieves a sbs_sbs8_2 server user account.
+  To retrieve a user account by name, specify the login name.
+  To retrieve a user account by security identifier, specify the SID.
+  To retrieve all user accounts, use the cmdlet without arguments.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssuser?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssUser

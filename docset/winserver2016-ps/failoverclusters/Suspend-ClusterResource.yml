@@ -1,0 +1,149 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Turns on maintenance for a disk resource or CSV so that you can run a disk maintenance tool without triggering failover.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterResource
+  href: ./Add-ClusterResource.yml
+- text: Get-ClusterResource
+  href: ./Get-ClusterResource.yml
+- text: Move-ClusterResource
+  href: ./Move-ClusterResource.yml
+- text: Remove-ClusterResource
+  href: ./Remove-ClusterResource.yml
+- text: Resume-ClusterResource
+  href: ./Resume-ClusterResource.yml
+- text: Start-ClusterResource
+  href: ./Start-ClusterResource.yml
+- text: Stop-ClusterResource
+  href: ./Stop-ClusterResource.yml
+syntaxes:
+- >-
+  Suspend-ClusterResource [[-Name] <String>] [-VolumeName <String>] [-RedirectedAccess] [-Force]
+
+   [-InputObject <PSObject>] [-Cluster <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Turn on maintenance for a CSV'
+  code: |-
+    PS C:\> Suspend-ClusterResource -Name "Cluster Disk 2"
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    Cluster Disk 2      Online(Maintenance) Available Storage   Physical Disk
+  description: |-
+    This example turns on maintenance for CSV named Cluster Disk 2 so that you can run a disk maintenance tool without triggering failover.
+  summary: ""
+- title: 'Example 2: Turn on maintenance for multiple volumes'
+  code: |-
+    PS C:\> Get-ClusterSharedVolume -Name "Cluster Disk 5" | Suspend-ClusterResource
+    Name                       State                      Node 
+    ----                       -----                      ---- 
+    Cluster Disk 5             Online                     node2
+  description: |-
+    This example turns on maintenance for all volumes on the CSV named Cluster Disk 5.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster resource, a disk or CSV, to suspend.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster resource, a disk or CSV, to suspend.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RedirectedAccess
+  description: |+
+    Causes CSV access to the storage device to be redirected over the network through another cluster node.
+    This parameter is only applicable to CSVs.
+
+  defaultValue: None
+  position: Named
+  aliases: FileSystemRedirectedAccess
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VolumeName
+  description: |+
+    Specifies the name of the volume to suspend.
+    This parameter is only applicable to CSVs.
+    If this parameter is not specified, then the operation will be performed on all volumes on the CSV.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FailoverClusters.Suspend-ClusterResource
+name: Suspend-ClusterResource
+description: |-
+  The **Suspend-ClusterResource** cmdlet turns on maintenance for a disk resource or Cluster Shared Volume (CSV) so that a disk maintenance tool can be run without triggering failover.
+
+  This cmdlet only applies to disks and CSVs.
+  For Cluster Shared Volumes, turning on maintenance takes dependent resources offline, which interrupts client access.
+  For other disks, Logical Unit Number (LUNs), in cluster storage, turning on maintenance leaves dependent resources online.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusterresource?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Suspend-ClusterResource

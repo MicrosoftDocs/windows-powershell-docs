@@ -1,0 +1,218 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies cache settings for a DNS server.
+module: DnsServer
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Class DNSServerCache
+
+    {
+
+    uint32 MaxCacheTTL; // Maximum time, in seconds, that the record of a recursive name query can remain in the DNS server cache.
+    The DNS server deletes records from the cache when the value of this entry expires, even if the value of the TTL field in the record is greater.
+    The default value of this property is 86,400 seconds (one day).
+
+    uint32  MaxNegativeCacheTTL; // Maximum time, in seconds, that a name error result from a recursive query can remain in the DNS server cache.
+    The DNS server deletes records from the cache when this timer expires, even if the TTL field is greater.
+    Default value is 86,400 (one day).
+
+    boolean AutoCacheUpdate // Indicates whether the DNS Server attempts to update its cache entries by using data from root servers.
+    When a DNS server starts, it needs a list of root server hints and Host A records for the server cache file.
+    Microsoft DNS servers have a feature that enables them to attempt to write back a new cache file based on the responses from root servers.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerCache" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: RFC 2308
+  href: http://www.rfc-editor.org/rfc/rfc2308.txt
+- text: Clear-DnsServerCache
+  href: ./Clear-DnsServerCache.yml
+- text: Get-DnsServerCache
+  href: ./Get-DnsServerCache.yml
+- text: Show-DnsServerCache
+  href: ./Show-DnsServerCache.yml
+syntaxes:
+- >-
+  Set-DnsServerCache [-StoreEmptyAuthenticationResponse <Boolean>] [-MaxKBSize <UInt32>]
+
+   [-PollutionProtection <Boolean>] [-ComputerName <String>] [-LockingPercent <UInt32>]
+
+   [-MaxNegativeTtl <TimeSpan>] [-MaxTtl <TimeSpan>] [-PassThru] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the maximum cache size on a DNS server'
+  code: |-
+    PS C:\> Set-DnsServerCache -MaxKBSize 10240 -ComputerName "Win12S-05.DNSServer-01.Contoso.com"
+  description: |-
+    This command sets the maximum cache size to 10,240 kilobytes on a DNS server that has an FQDN of Win12S-05.DNSServer-01.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    The acceptable values for this parameter are: an IPv4 address, an IPv6 address, and any other value that resolves to an IP address, such as fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LockingPercent
+  description: |+
+    Specifies a percentage of the original Time to Live (TTL) value that caching can consume.
+
+    Cache locking is configured as a percent value.
+    For example, if the cache locking value is set to 50, the DNS server does not overwrite a cached entry for half of the duration of the TTL.
+    By default, the cache locking percent value is 100.
+    This value means that the DNS server will not overwrite cached entries for the entire duration of the TTL.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxKBSize
+  description: |+
+    Specifies the maximum size, in kilobytes, of the memory cache of a DNS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: MaxNegativeTtl
+  description: |+
+    Specifies how many seconds (0x1-0xFFFFFFFF) an entry that records a negative answer to a query remains stored in the DNS cache.
+    The default setting is 0x384 (900) seconds
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: MaxTtl
+  description: |+
+    Determines how many seconds (0x0-0xFFFFFFFF) a record is saved in cache.
+    If you use the 0x0 setting, the DNS server does not cache records.
+    The default setting is 0x15180 (86,400 seconds, or one day).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: PollutionProtection
+  description: |+
+    Determines whether DNS filters name service (NS) resource records that are cached.
+    Valid values are zero, which caches all responses to name queries and is the default value; and one, which caches only the records that belong to the same DNS subtree.
+
+    When you set this parameter value to False, cache pollution protection is disabled.
+    A DNS server caches the Host (A) record and all queried NS resources that are in the DNS server zone.
+    In this case, DNS can also cache the NS record of an unauthorized DNS server.
+    This event causes name resolution to fail or to be appropriated for subsequent queries in the specified domain.
+
+    When you set the value for this parameter to True, the DNS server enables cache pollution protection and ignores the Host (A) record.
+    The DNS server performs a cache update query to resolve the address of the NS if the NS is outside the zone of the DNS server.
+    The additional query minimally affects DNS server performance.
+
+    For more information about DNS cache locking, see DNS Cache Lockinghttp://technet.microsoft.com/en-us/library/ee683892(v=WS.10).aspx.
+    For more information about cache pollution protection, see Securing the DNS Server Servicehttp://technet.microsoft.com/en-us/library/cc731367.
+    For more information about NS resource records, see Managing resource recordshttp://technet.microsoft.com/en-us/library/cc783389(v=WS.10).aspx.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: StoreEmptyAuthenticationResponse
+  description: |+
+    Specifies whether a DNS server stores empty authoritative responses in the cache (RFC-2308).
+    We recommend that you limit this value to either 0x00000000 or 0x00000001, but you can specify any value.
+    The default value is 0x00000001.
+    You must allow and treat literally the value zero.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DnsServer.Set-DnsServerCache
+name: Set-DnsServerCache
+description: |-
+  The **Set-DnsServerCache** cmdlet modifies cache settings for a Domain Name System (DNS) server.
+metadata:
+  external help file: PS_DnsServerCache_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsservercache?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DnsServerCache

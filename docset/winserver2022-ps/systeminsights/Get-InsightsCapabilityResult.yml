@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the most recent prediction or the last 30 predictions from the specified capabilities.
+module: SystemInsights
+inputs:
+- name: <xref href="Microsoft.SystemInsights.Management.PowerShell.Capability" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a capability object to the *Name* parameter.
+outputs:
+- name: <xref href="Microsoft.SystemInsights.Management.PowerShell.CapabilityResult" data-throw-if-not-resolved="False" />
+  description: |-
+    The cmdlet returns one or more objects that represent the specified capability results.
+links:
+- text: Get-InsightsCapability
+  href: get-insightscapability.yml
+- text: Invoke-InsightsCapability
+  href: invoke-insightscapability.yml
+syntaxes:
+- >-
+  Get-InsightsCapabilityResult [-Name] <String> [-History] [[-ComputerName] <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-InsightsCapabilityResult -Name "CPU capacity forecasting"
+  description: |-
+    This example gets the most recent result for the **CPU capacity forecasting** capability.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-InsightsCapability | Get-InsightsCapabilityResult
+  description: |-
+    This example uses the **Get-InsightsCapability** and the pipeline operator to get the most recent result for all capabilities.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-InsightsCapabilityResult -Name "CPU capacity forecasting" -History
+  description: |-
+    This example uses the **History** parameter to get the most last 30 results for the **CPU capacity forecasting** capability.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a fully qualified domain name (FQDN). If not specified, uses the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: CN
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credential for accessing the computer specified by the -ComputerName parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: History
+  description: |+
+    Retrieves the most recent 30 predictions for the specified capability.
+
+  defaultValue: None
+  position: Named
+  aliases: H
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a capability using a capability name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: N
+  parameterValueGroup: ""
+uid: SystemInsights.Get-InsightsCapabilityResult
+name: Get-InsightsCapabilityResult
+description: |-
+  The **Get-InsightsCapabilityResult** cmdlet gets the most recent prediction or the last 30 predictions from the specified capabilities.
+
+  >[!IMPORTANT]
+  >Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: http://go.microsoft.com
+  external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
+  Locale: en-US
+  Module Name: SystemInsights
+  ms.date: 06/18/2018
+  online version: https://docs.microsoft.com/powershell/module/systeminsights/get-insightscapabilityresult?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-InsightsCapabilityResult

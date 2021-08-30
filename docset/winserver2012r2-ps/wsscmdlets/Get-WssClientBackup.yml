@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about client backup jobs.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.PCBackup.BackupUtil.WcfContracts.ClientJobInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns client job information.
+links:
+- text: Disable-WssClientBackup
+  href: ./Disable-WssClientBackup.yml
+- text: Enable-WssClientBackup
+  href: ./Enable-WssClientBackup.yml
+- text: Set-WssClientBackup
+  href: ./Set-WssClientBackup.yml
+- text: Start-WssClientBackup
+  href: ./Start-WssClientBackup.yml
+- text: Stop-WssClientBackup
+  href: ./Stop-WssClientBackup.yml
+syntaxes:
+- Get-WssClientBackup [-ComputerName] <String> [<CommonParameters>]
+- Get-WssClientBackup [-ComputerSid] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get client backup job information'
+  code: |-
+    PS C:\> Get-WssClientBackup -ComputerName "Workstation073"
+  description: |-
+    This command gets information for client backup jobs for a computer named Workstation073.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of a computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerSid
+  isRequired: true
+  description: |+
+    Specifies the SID of a computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Get-WssClientBackup
+name: Get-WssClientBackup
+description: |-
+  The **Get-WssClientBackup** cmdlet gets information about client backup jobs for a computer.
+  Specify a computer by name or security identifier (SID).
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssclientbackup?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssClientBackup

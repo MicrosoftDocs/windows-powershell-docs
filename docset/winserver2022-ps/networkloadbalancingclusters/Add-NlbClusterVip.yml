@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a virtual IP address to a Network Load Balancing (NLB) cluster.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ClusterVip" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NlbClusterVip
+  href: ./Get-NlbClusterVip.yml
+- text: Remove-NlbClusterVip
+  href: ./Remove-NlbClusterVip.yml
+- text: Set-NlbClusterVip
+  href: ./Set-NlbClusterVip.yml
+syntaxes:
+- >-
+  Add-NlbClusterVip [-IP] <IPAddress> [-SubnetMask <IPAddress>] [-HostName <String>] -InterfaceName <String>
+
+   [<CommonParameters>]
+- Add-NlbClusterVip -InputObject <Cluster[]> [-IP] <IPAddress> [-SubnetMask <IPAddress>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add an IPv6 IP address to the list of virtual NLB cluster addresses on the specified network interface'
+  code: |-
+    PS C:\>Add-NlbClusterVip -IP fe80::94dc:5e59:3626:f1d4 -InterfaceName Vlan-03
+    IPAddress                               SubnetMask 
+    ---------                               ---------- 
+    fe80::94dc:5e59:3626:f1d4               ::
+  description: |-
+    This command adds an IPv6 IP address to the list of virtual NLB cluster IP addresses on the network interface Vlan-03.
+  summary: ""
+- title: 'Example 2: Add an IPv6 IP address to the list of virtual NLB cluster addresses on the local cluster'
+  code: |-
+    PS C:\>Get-NlbCluster | Add-NlbClusterVip -IP fe80::94dc:5e59:3626:f1d4
+    IPAddress                               SubnetMask 
+    ---------                               ---------- 
+    fe80::94dc:5e59:3626:f1d4               ::
+  description: |-
+    This command adds an IPv6 IP address to the list of virtual NLB cluster IP addresses on the local cluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: Named
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="Cluster" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of clusters to which this cmdlet adds a cluster virtual IP address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  isRequired: true
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IP
+  isRequired: true
+  description: |+
+    Specifies the IP address of the new cluster to which the virtual IP address is added.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: SubnetMask
+  description: |+
+    Specifies the subnet mask for the virtual IP address of the new cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Add-NlbClusterVip
+name: Add-NlbClusterVip
+description: |-
+  The **Add-NlbClusterVIP** cmdlet adds a virtual IP address to a Network Load Balancing (NLB) cluster.
+  The virtual IP address will appear on all hosts in the cluster.
+  This IP address is used to address the cluster as a whole, and it should be the IP address that maps to the full Internet name that you specify for the cluster.
+
+  This cmdlet changes the configuration on all cluster nodes.
+  As a result, the NLB cluster will have to restart the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster should not be initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/add-nlbclustervip?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-NlbClusterVip

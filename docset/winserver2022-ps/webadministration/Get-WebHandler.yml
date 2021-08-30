@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets IIS request handlers.
+module: WebAdministration
+notes: ""
+links:
+- text: New-WebHandler
+  href: ./New-WebHandler.yml
+- text: Remove-WebHandler
+  href: ./Remove-WebHandler.yml
+- text: Set-WebHandler
+  href: ./Set-WebHandler.yml
+syntaxes:
+- Get-WebHandler [[-Name] <String>] [-Location <String[]>] [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the handler section'
+  code: |-
+    IIS:\> Get-WebHandler -PSPath "IIS:\Sites\Default Web Site"
+  description: |-
+    This command gets handlers configured for the default website.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    Specifies the location for which the cmdlet returns handler information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a handler to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies an IIS configuration path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebHandler
+name: Get-WebHandler
+description: |-
+  The **Get-WebHandler** cmdlet gets Internet Information Services (IIS) request handlers.
+  If you specify the *Name* parameter, information is returned for the specified handler.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webhandler?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebHandler

@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Merges test result information from several .hckx package files into a single test collection.
+module: HardwareCertification
+notes: ""
+links:
+- text: Export-HwCertTestCollectionToXml
+  href: ./Export-HwCertTestCollectionToXml.yml
+- text: Merge-HwCertTestCollectionFromXml
+  href: ./Merge-HwCertTestCollectionFromXml.yml
+syntaxes:
+- >-
+  Merge-HwCertTestCollectionFromPackage [-LiteralPath] <String[]> [-Force] [-IncludeAll]
+
+   [-ValidationXmlPath <String>] [-HckBuildVersion <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Merge two package files'
+  code: |-
+    PS C:\> Merge-HwCertTestCollectionFromPackage -LiteralPath ("C:\Temp\BasicTest.hckx", "C:\Temp\CertificationTest.hckx")
+  description: |-
+    This command merges the results in two .hckx package files.
+    The command specifies files named BasicTest.hckx and CertificationTest.hckx.
+  summary: ""
+- title: 'Example 2: Merge two package files and export the result information'
+  code: |-
+    PS C:\> Merge-HwCertTestCollectionFromPackage -LiteralPath ("C:\Temp\BasicTest.hckx", "C:\Temp\CertificationTest.hckx") | Export-HwCertTestCollectionToXml -Output "C:\Temp\Merged.xml"
+  description: |-
+    This command merges the results in two .hckx package files and exports the result information to an .xml file named Merged.xml.
+    The command merges files named BasicTest.hckx and CertificationTest.hckx.
+    The command passes the merged results to the **Export-HwCertTestCollectionToXml** cmdlet by using the pipeline operator.
+    That cmdlet exports the results.
+  summary: ""
+- title: 'Example 3: Merge several package files and export the result information'
+  code: |-
+    PS C:\> Get-ChildItem -Recurse "C:\Temp\*.hckx" | Merge-HwCertTestCollectionFromPackage | Export-HwCertTestCollectionToXml -Output "C:\Temp\Merged.xml"
+  description: |-
+    This command merges the results in all the .hckx package files in a specified folder and exports the merged result information to an .xml file named Merged.xml.
+    The command uses the **Get-ChildItem** cmdlet to get all the .hckx files in the C:\Temp folder.
+    For more information, type `Get-Help Get-ChildItem`.
+    The command passes the .hckx files to the **Merge-HwCertTestCollectionFromXml** cmdlet by using the pipeline operator.
+    That cmdlet merges the test results.
+    The command then passes the merged results to the **Export-HwCertTestCollectionToXml** cmdlet.
+    That cmdlet exports the results.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Indicates that the cmdlet parses the .hckx package files, and then replaces any existing cached .xml files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HckBuildVersion
+  description: |+
+    Specifies an HCK build version.
+    This cmdlet merges the results that match this build version only.
+
+  defaultValue: None
+  position: Named
+  aliases: Build, Version
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeAll
+  description: |+
+    If specified, the merge includes all test results, including any that passed, and any that failed, such as those with "not-run" results.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LiteralPath
+  isRequired: true
+  description: |+
+    Specifies an array of file paths.
+    These are file paths to .hckx package files.
+    You must have write permission for the folders that contain these files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ValidationXmlPath
+  description: |+
+    Specifies the path of a test collection .xml file to use for validation.
+    The cmdlet checks the new test collection against the validation collection to ensure that at least one result exists.
+    Validation helps to determine that all the tests merged from child lab collections meet the goals of the original test collection.
+
+    To obtain a test collection file for validation, use the **New-HwCertTestCollection** cmdlet, along with the **Export-HwCertTestCollectionToXml** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: XML
+  parameterValueGroup: ""
+uid: HardwareCertification.Merge-HwCertTestCollectionFromPackage
+name: Merge-HwCertTestCollectionFromPackage
+description: |-
+  The **Merge-HwCertTestCollectionFromPackage** cmdlet merges the test result information from several .hckx package files into a single test collection.
+  For more information, see [Windows Hardware Certification Kit downloads](https://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
+
+  You can use the **Export-HwCertTestCollectionToXml** cmdlet to export the merged test collection as an .xml file.
+  You can use the **New-HwCertTestCollectionExcelReport** cmdlet to create a Microsoft Excel report of the test results.
+
+  The cmdlet parses each .hckx package file, and then generates a cached .xml file in the same location as each parsed file.
+  Therefore, you must have write permission for the folders that contain the .hckx package files.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: microsoft.windows.kits.hardware.certification.management.dll-Help.xml
+  Module Name: HardwareCertification
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hardwarecertification/merge-hwcerttestcollectionfrompackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Merge-HwCertTestCollectionFromPackage

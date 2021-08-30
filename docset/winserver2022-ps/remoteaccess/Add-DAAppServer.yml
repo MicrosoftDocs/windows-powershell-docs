@@ -1,0 +1,188 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new application server security group to the DirectAccess (DA) deployment, adds an application servers to an application server security group that is already part of the DirectAccess deployment, and adds or updates application server Group Policy Object (GPO) in a domain.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DAAppServer" data-throw-if-not-resolved="False" />
+  description: "The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.\r\nThe path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.\r\n                         \r\nThe DAAppServer object consists of the following properties: \r\n                         \r\n -- The list of application server security groups.\r\nEach security group is specified in the `Domain\\GroupName` format. \r\n                         \r\n -- The List of application server GPOs.\r\nEach GPO is specified in the `Domain\\GPOName` format. \r\n                         \r\n -- The properties of the connection to the application server.\r\nIf there are no application servers configured then the default value is NoE2EAuth, which mean no end-to-end authentication is required. \r\n                         \r\n -- Whether or not IPsec traffic protection is enabled.\r\nIf there are no application servers configured then the default value is Disabled."
+links:
+- text: Get-DAAppServer
+  href: ./Get-DAAppServer.yml
+- text: Remove-DAAppServer
+  href: ./Remove-DAAppServer.yml
+- text: Set-DAAppServerConnection
+  href: ./Set-DAAppServerConnection.yml
+syntaxes:
+- >-
+  Add-DAAppServer [-SecurityGroupNameList <String[]>] [-GpoName <String[]>] [-ComputerName <String>] [-PassThru]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-DAAppServer [-GpoName <String[]>] [-ComputerName <String>] [-PassThru] [-SecurityGroupName] <String>
+
+   [-Name] <String[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Add-DAAppServer -SecurityGroupNameList daAppServerGrp -PassThru
+    SecurityGroupNameList: {corp.contoso.com\daappservergrp} 
+    GpoName              : {corp.contoso.com\DirectAccess Application Server Settings} 
+    ConnectionType       : E2EAuthOnlyToAppServer 
+    TrafficProtection    : Enabled
+  description: "This example adds an appserver security group to DirectAccess deployment. \r\n                         \r\nThis cmdlet adds security group daAppServerGrp consisting of application servers to the DirectAccess deployment.\r\nAdditionally, a GPO is created with default name DirectAccess Application Server Settings in the same domain as the DirectAccess server and the GPO is filtered on this security group."
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Add-DAAppServer -Name da-test-0807 -SecurityGroupName daAppServerGrp
+    SecurityGroupNameList: {corp.contoso.com\daappservergrp} 
+    GpoName              : {corp.contoso.com\DirectAccess Application Server Settings} 
+    ConnectionType       : E2EAuthOnlyToAppServer 
+    TrafficProtection    : Enabled
+  description: "This example add an application server to the application server security group. \r\n                         \r\nThis cmdlet adds the application server da-test-0807 to the pre-existing security group daappservergrp."
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Add-DAAppServer -GpoName child.corp.contoso.com\DAAppServerGpo -PassThru
+    SecurityGroupNameList: {corp.contoso.com\testappserver} 
+    GpoName              : {corp.contoso.com\DirectAccess Application Server Settings, 
+                           child.corp.contoso.com\DAAppServerGpo} 
+    ConnectionType       : E2EAuthOnlyToAppServer 
+    TrafficProtection    : Enabled
+  description: |-
+    This example adds an application server GPOs to the DirectAccess deployment.
+    The setup consists of two domains viz.
+    corp.contoso.com and child.corp.contoso.com.
+    There is already an Application Server GPO in corp.contoso.com.
+    This cmdlet adds a GPO in the domain child.corp.contoso.com
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the remote access server computer specific tasks should be run.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GpoName
+  description: "Specifies the name to be used when creating the application server GPO in the specified domain or represents the domain in which an app server GPO with the default name should be created.\r\nGPO is specified in the format `DOMAIN\\GPO_NAME`.\r\nDomain is specified in the format `DOMAIN`.\r\nIf the parameter contains only the domain name then the following default GPO name is used: \r\n                         \r\n -- \\<domain\\> application server policy for \\<DirectAccess connection friendly name\\>. \r\n                         \r\nThe Default value is DirectAccess Application Server Settings\r\n                         \r\nA list of GPOs can be specified.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the list of application servers that have to be added to the DirectAccess deployment.
+    The servers are specified by their hostnames and are added to the security group specified by the **SecurityGroupName** parameter.
+    The servers cannot be specified by their IPv4 or IPv6 addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecurityGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a security group that is already part of the DirectAccess deployment to which the specified list of application servers should be added.
+    Specified in the `DOMAIN\SG_NAME` format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SecurityGroupNameList
+  description: |+
+    Specifies the list of application server security groups that are to be added to the DirectAccess deployment.
+    Specified in `DOMAIN\SG_NAME` format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Add-DAAppServer
+name: Add-DAAppServer
+description: "The **Add-DAAppServer** cmdlet adds a new application server security group to the DirectAccess (DA) deployment, adds an application servers to an application server security group that is already part of the DirectAccess deployment, and adds or updates application server Group Policy Object (GPO) in a domain.\r\nThis cmdlet is not applicable when DA is deployed only for the management of remote clients.\r\n\r\nThe application server security group and GPO parameters are treated as independent entities.\r\nThe basic paradigm is that a user can create application server GPOs independent of the SGs and the domains where these SGs exist.\r\nEvery SG that is added to the DA deployment is added in all application server GPOs currently present.\r\nHence, all GPOs always contain all SGs even if all the corresponding domains are not represented in all the SGs.\r\nThere will never be a scenario where an SG is present only in some of the GPOs.\r\nIf this happens, then it means that the configuration is in a bad state.\r\n\r\nWith this paradigm there is still a need to parse the SG to add independent application servers in an SG because every application server has a unique end-to-end IPsec policy in all client and application server GPOs.\r\n\r\nThe following additional capabilities of the application server cmdlets justify their need though AD cmdlets are already available for the addition of SGs and GPOs. \r\n                       \r\n -- When an SG is added it is added in all GPOs.\r\nAdditionally, if the user does not have permissions to edit a GPO the SG is not added to any of the GPOs.\r\nWhen using the AD cmdlet user would have to carefully ensure that it is run for each of the domains and it is difficult to handle the case where the user does not have permissions on some domains. \r\n                       \r\n -- When a GPO is added all SGs are added in the GPO and application server specific policies are created.\r\nThe cmdlet takes care of the conditions where the GPO is created if not already present.\r\nIf the GPO is already present then it is merely edited.\r\n\r\nThe App Server configuration is a global configuration and is applicable to all DA servers in the enterprise deployment even when there is multi-site enterprise deployment.\r\n\r\nFollowing are additional behavioral notes for this cmdlet. \r\n                       \r\n -- If the user adds an SG without specifying a domain or GPO, then by default an application server GPO is created in the DA server's domain.\r\nIf the user specifies a GPO name or domain name, then the GPO is created only in that domain. \r\n                       \r\n -- Adding an application server GPO alone without any application server SGs is permitted operation.\r\nWhen adding a GPO the admin can either specify the name of the GPO and the domain to which it belongs or the domain name alone.\r\nIf only a domain is specified, then the GPO is created with a default name. \r\n                       \r\n -- If nested SGs are specified, then the cmdlet recursively parses all SGs so that all servers are retrieved and policies can be created or removed accordingly.\r\nHowever, the cmdlet does not refer to the domain to which an application server belongs.\r\nHence it is the responsibility of the user to ensure that application server GPOs are created in every supported domain by explicitly adding GPOs in that domain. \r\n                       \r\n -- When adding a new app server GPO if it is already present in the domain then it is merely configured with the SGs,IPsec policies and other settings.\r\nIf it is not present then it is created first. \r\n                       \r\n -- If user tries to re-add a GPO by either re-adding a domain or specifying the same GPO name for the domain again then no changes are made. \r\n                       \r\n - If the user tries to add a GPO with a new name in a domain that already contains an app server GPO, then no action is taken but a non-terminating error is displayed.\r\nIf this cmdlet finds that no action can be taken based on the parameters passed, then it will return a terminating error. \r\n                       \r\n -- When adding SGs if the user does not have the permissions to configure even one app server GPO among the many that might be present then the cmdlet terminates the processing of the entire list of SGs specified.\r\nHowever, it still processes any GPOs that the user might have specified to add. \r\n                       \r\n -- When adding GPOs if the user does not have the permissions to create or configure one of the specified GPOs then the cmdlet still proceeds with the processing of the remaining GPOs in the list. \r\n                       \r\n -- Each new application server GPO that is added is configured with the end-to-end authentication and IPsec traffic protection settings.\r\nThese settings are common to all GPOs.\r\nThe default values assigned by this cmdlet for end-to-end authentication is E2EAuthOnlyToAppServer and IPsec traffic protection is Disabled The default setting is Enabled.\r\nIf the user wishes to change these values, then use the Set-DAAppServerConnection cmdlet."
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DAAppServer_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/add-daappserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DAAppServer

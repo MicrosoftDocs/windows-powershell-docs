@@ -1,0 +1,42 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a bare metal restore option from a scheduled backup policy.
+module: WssCmdlets
+notes: ""
+links:
+- text: Add-WssBackupSystemRecovery
+  href: ./Add-WssBackupSystemRecovery.yml
+- text: Remove-WssBackupSystemRecovery
+  href: ./Remove-WssBackupSystemRecovery.yml
+syntaxes:
+- Get-WssBackupSystemRecovery [-BackupPolicy] <ScheduledBackupPolicy>
+examples:
+- title: 'Example 1: Get bare metal restore options from a backup policy'
+  code: |-
+    PS C:\> Get-WssBackupSystemRecovery -BackupPolicy $ContosoBUPolicy25
+  description: |-
+    This command gets the bare metal restore option from the scheduled backup policy that is stored in the variable named **$ContosoBUPolicy25**.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the scheduled backup policy for which to display information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Get-WssBackupSystemRecovery
+name: Get-WssBackupSystemRecovery
+description: |-
+  The **Get-WssBackupSystemRecovery** cmdlet gets a value that indicates whether a backup policy can perform bare metal restore operations.
+  It gets this value from a scheduled backup policy.
+  A bare metal restore operation restores a full operating system, including critical volumes, from a backup.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssbackupsystemrecovery?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an empty resource group to the failover cluster configuration, in preparation for adding clustered resources to the group.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterGroup
+  href: ./Get-ClusterGroup.yml
+- text: Move-ClusterGroup
+  href: ./Move-ClusterGroup.yml
+- text: Remove-ClusterGroup
+  href: ./Remove-ClusterGroup.yml
+- text: Start-ClusterGroup
+  href: ./Start-ClusterGroup.yml
+- text: Stop-ClusterGroup
+  href: ./Stop-ClusterGroup.yml
+syntaxes:
+- >-
+  Add-ClusterGroup [-Name] <StringCollection> [[-GroupType] <GroupType>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a resource group'
+  code: |-
+    PS C:\> Add-ClusterGroup -Name "Group1"
+    Name                       OwnerNode                                      State 
+    ----                       ---------                                      ----- 
+    Group1                     node1                                         Online
+  description: |-
+    This example adds an empty resource group called Group1 to the failover cluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="GroupType" data-throw-if-not-resolved="False" />
+  name: GroupType
+  description: |+
+    Specifies the type of group to add to the failover cluster configuration.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Cluster, AvailableStorage, Temporary, ClusterSharedVolume, ClusterStoragePool, FileServer, DhcpServer, Dtc, Msmq, Wins, StandAloneDfs, GenericApplication, GenericService, GenericScript, IScsiNameService, VirtualMachine, TsSessionBroker, IScsiTarget, ScaleoutFileServer, VMReplicaBroker, TaskScheduler, Unknown
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to create the resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group to add.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterGroup
+name: Add-ClusterGroup
+description: |-
+  The **Add-ClusterGroup** cmdlet adds an empty resource group to the failover cluster configuration, in preparation for adding clustered resources to the group.
+  A resource group, or a clustered role, is the unit of failover.
+  During failover, all resources in the resource group move together.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusterGroup

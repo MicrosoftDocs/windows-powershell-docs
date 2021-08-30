@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the current schedule for backups.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet queries a specified **WBPolicy** object.
+outputs:
+- name: <xref href="Datetime " data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns a list of **Datetime** objects in the **WBPolicy** object.
+links:
+- text: New-WBPolicy
+  href: ./New-WBPolicy.yml
+- text: Set-WBSchedule
+  href: ./Set-WBSchedule.yml
+syntaxes:
+- Get-WBSchedule [-Policy] <WBPolicy> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the scheduled backup times'
+  code: |-
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Get-WBSchedule -Policy $Policy
+  description: |-
+    This example gets the scheduled backup times from the **WBPolicy** object.
+
+    The first command stores the result of the [Get-WBPolicy](./Get-WBPolicy.yml) in the variable named $Policy.
+
+    The second command gets the backup schedule from the backup policy object.
+  summary: ""
+parameters:
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies the **WBPolicy** object to display.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Get-WBSchedule
+name: Get-WBSchedule
+description: |-
+  The **Get-WBSchedule** cmdlet gets the current schedule for backups in the **WBPolicy** object.
+  Backups run daily at the times specified in the schedule.
+  To change the schedule, use the [Set-WBSchedule](./Set-WBSchedule.yml) cmdlet.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbschedule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBSchedule

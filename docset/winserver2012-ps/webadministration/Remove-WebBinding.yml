@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a binding from an IIS Web site.
+module: WebAdministration
+notes: ""
+syntaxes:
+- >-
+  Remove-WebBinding [-Protocol <String>] [-Name <String>] [-IPAddress <String>] [-Port <String>]
+
+   [-HostHeader <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-WebBinding -InputObject <PSObject> [-Protocol <String>] [-Name <String>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-WebBinding [-Protocol <String>] [-Name <String>] -BindingInformation <String> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Adding and removing a site binding --------------'
+  code: |-
+    IIS:\>New-WebBinding -Name "Default Web Site" -Port 1234 -IPAddress * -HostHeader "testsite" "Sleep 5 seconds before removing the binding"; Sleep 5 Get-WebBinding -Port 1234 -Name "Default Web Site" | Remove-WebBinding
+  description: |-
+    The example demonstrates how to create a new binding, and then remove that binding after waiting 5 seconds.
+    Piping is used to remove the site binding returned by theGet-WebBindingcmdlet.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BindingInformation
+  isRequired: true
+  description: |+
+    ABindingInformationobject.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostHeader
+  description: |+
+    The host header of the site binding that is to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an object that contains site binding information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  description: |+
+    The IP address of the site from which the binding is removed.
+    The use of globbing (*) is supported to specify all IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the site from which the binding is removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    The port used by the binding that is to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    The protocol of the binding to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Remove-WebBinding
+name: Remove-WebBinding
+description: |-
+  Removes a binding from an IIS Web site.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/remove-webbinding?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

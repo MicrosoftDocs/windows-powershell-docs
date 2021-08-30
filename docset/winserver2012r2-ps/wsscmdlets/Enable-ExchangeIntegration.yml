@@ -1,0 +1,34 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables on-premises Exchange Server Integration.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Disable-ExchangeIntegration
+  href: ./Disable-ExchangeIntegration.yml
+syntaxes:
+- Enable-ExchangeIntegration [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable on-premises Exchange Server Integration'
+  code: |-
+    PS C:\> Enable-ExchangeIntegration
+  description: |-
+    This command enables integration of Exchange Server with the server that is running Windows Server Essentials.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+uid: WSSCmdlets.Enable-ExchangeIntegration
+name: Enable-ExchangeIntegration
+description: |-
+  The **Enable-ExchangeIntegration** cmdlet enables integration of on-premises Exchange Server with the server that is running Windows Server Essentials.
+  After you enable Exchange Server Integration, you can manage Exchange from the dashboard.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/enable-exchangeintegration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-ExchangeIntegration

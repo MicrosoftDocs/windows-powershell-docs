@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables Windows Error Reporting.
+module: WindowsErrorReporting
+notes: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    The **Disable-WindowsErrorReporting** cmdlet returns $True if it is successful.
+    Otherwise, it returns $False.
+links:
+- text: Enable-WindowsErrorReporting
+  href: ./Enable-WindowsErrorReporting.yml
+- text: Get-WindowsErrorReporting
+  href: ./Get-WindowsErrorReporting.yml
+syntaxes:
+- Disable-WindowsErrorReporting [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable Windows Error Reporting'
+  code: |-
+    PS C:\> Disable-WindowsErrorReporting
+  description: |-
+    This command disables Windows Error Reporting.
+  summary: ""
+uid: WindowsErrorReporting.Disable-WindowsErrorReporting
+name: Disable-WindowsErrorReporting
+description: |-
+  The **Disable-WindowsErrorReporting** cmdlet disables Windows Error Reporting (WER) on the server.
+
+  Windows Error Reporting is a flexible feedback infrastructure that gathers information about hardware and software problems, reports the information to Microsoft, and gives users any available solutions.
+  Windows Error Reporting generates reports in response to system events, such as application crashes or kernel faults.
+
+  To get the current WER status, use the [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.yml) cmdlet.
+  If you disable WER, you can use the [Enable-WindowsErrorReporting](./Enable-WindowsErrorReporting.yml) cmdlet to re-enable it.
+  After you run this cmdlet, WER again sends information about application failures to Microsoft. To customize the settings of Windows Error Reporting, use registry keys described in [WER Settings](https://docs.microsoft.com/windows/desktop/wer/wer-settings) article.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
+  Module Name: WindowsErrorReporting
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/windowserrorreporting/disable-windowserrorreporting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-WindowsErrorReporting

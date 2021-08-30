@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Entitles a connection group.
+module: AppVServer
+notes: |-
+  * If the cmdlet cannot find a package group, the cmdlet returns the following error: The specified package group could not be found on the system. The cmdlet fails the operation.
+  * If you specify an invalid group, the cmdlet returns the following error:  The provided entitlements are not valid. The cmdlet fails the operation.
+  * If you do not specify version information, the cmdlet operates on all available versions of the group.
+  * When entitling a package group, the cmdlet adds all entitlements to the individual packages themselves. The cmdlet returns all the packages in the group and any newly added entitlements.
+inputs:
+- name: <xref href="AppvServer.AppvServerConnectionGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AppvServerPackage
+  href: ./Get-AppvServerPackage.yml
+- text: Get-AppvServerConnectionGroup
+  href: ./Get-AppvServerConnectionGroup.yml
+- text: New-AppvServerConnectionGroup
+  href: ./New-AppvServerConnectionGroup.yml
+- text: Publish-AppvServerConnectionGroup
+  href: ./Publish-AppvServerConnectionGroup.yml
+- text: Remove-AppvServerConnectionGroup
+  href: ./Remove-AppvServerConnectionGroup.yml
+- text: Set-AppvServerConnectionGroup
+  href: ./Set-AppvServerConnectionGroup.yml
+- text: Unpublish-AppvServerConnectionGroup
+  href: ./Unpublish-AppvServerConnectionGroup.yml
+- text: Update-AppvServerConnectionGroup
+  href: ./Update-AppvServerConnectionGroup.yml
+syntaxes:
+- >-
+  Grant-AppvServerConnectionGroup [-AppvServerConnectionGroup] <SerializableConnectionGroup> [-Groups] <String[]>
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Grant-AppvServerConnectionGroup [-Groups] <String[]> [-Name] <String> [[-Version] <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Grant-AppvServerConnectionGroup [-Groups] <String[]> [-GroupID] <Guid> [[-VersionID] <Guid>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SerializableConnectionGroup" data-throw-if-not-resolved="False" />
+  name: AppvServerConnectionGroup
+  isRequired: true
+  description: |+
+    Specifies the package group object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: GroupID
+  isRequired: true
+  description: |+
+    Specifies the GUID of specific package group.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Groups
+  isRequired: true
+  description: |+
+    Specifies an array of strings containing the names of Active Directory groups.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the package group.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of the specified package group.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionID
+  description: |+
+    Specifies the version GUID of the package group.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AppVServer.Grant-AppvServerConnectionGroup
+name: Grant-AppvServerConnectionGroup
+description: |-
+  The **Grant-AppvServerConnectionGroup** cmdlet entitles an existing connection group.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: AppVServerCmdlets.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Grant-AppvServerConnectionGroup

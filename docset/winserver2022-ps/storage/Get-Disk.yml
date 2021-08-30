@@ -1,0 +1,281 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets one or more disks visible to the operating system.
+
+  > [!NOTE]
+  > This cmdlet returns physical disk objects like basic disks and partitioned drive partitions.  Dynamic disks can span multiple pieces of physical media, so they will not be returned by Get-Disk. For more information, see [Basic and Dynamic Disks](https://docs.microsoft.com/windows/desktop/FileIO/basic-and-dynamic-disks).
+module: Storage
+notes: |-
+  * The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+  * Some objects such as disks might include trailing spaces in their friendly names. If you suspect that an object name could have trailing spaces, you can use a wildcard at the end of the name, for example Disk*, or use the **Match** parameter to instruct Windows PowerShell to include all strings that include the specified characters, instead of only strings that include only the specified characters.
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_IscsiConnection" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an iSCSIConnection object to the **iSCSIConnection** parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_IscsiSession" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an iSCSISession object to the **iSCSISession** parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Partition" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a Partition object to the **Partition** parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a VirtualDisk object to the **VirtualDisk** parameter.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Disk" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet outputs one or more objects representing disks.
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkID=113423
+- text: Clear-Disk
+  href: ./Clear-Disk.yml
+- text: Get-Partition
+  href: ./Get-Partition.yml
+- text: Get-StorageJob
+  href: ./Get-StorageJob.yml
+- text: Get-StorageSubSystem
+  href: ./Get-StorageSubsystem.yml
+- text: Initialize-Disk
+  href: ./Initialize-Disk.yml
+- text: Set-Disk
+  href: ./Set-Disk.yml
+- text: Update-Disk
+  href: ./Update-Disk.yml
+syntaxes:
+- >-
+  Get-Disk [[-Number] <UInt32[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Disk [-UniqueId <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Disk [-FriendlyName <String[]>] [-SerialNumber <String[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- Get-Disk [-Path <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-Disk [-Partition <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Disk [-VirtualDisk <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Disk [-iSCSISession <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Disk [-iSCSIConnection <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Disk [-StorageSubSystem <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Disk [-StorageNode <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-Disk [-StorageJob <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all disks'
+  code: |-
+    PS C:\>Get-Disk
+  description: |-
+    This example gets all disks visible to the operating system.
+  summary: ""
+- title: 'Example 2: Get a disk by disk number'
+  code: |-
+    PS C:\>Get-Disk -Number 6
+  description: |-
+    This example gets disk 6.
+  summary: ""
+- title: 'Example 3: Get all USB disks'
+  code: |-
+    PS C:\>Get-Disk | Where-Object -FilterScript {$_.Bustype -Eq "USB"}
+  description: |-
+    This example gets all disks attached via the USB bus by piping the output of Get-Disk to the **Where-Object** cmdlet, and filtering by the USB value of the Bustype property.
+  summary: ""
+- title: 'Example 4: Get the iSCSI sessions for all iSCSI disks'
+  code: |-
+    PS C:\>Get-Disk | Where-Object -FilterScript {$_.BusType -Eq "iSCSI"} |
+    Get-IscsiSession | Format-Table
+  description: |-
+    This example gets all disks attached via the iSCSI bus by piping the output of Get-Disk to the **Where-Object** cmdlet, and filtering by the iSCSI value of the Bustype property.
+    It then passes the Disk objects in the pipeline to the **Get-IscsiSession** cmdlet, which gets the associated iSCSI sessions, and then pipes the output to the **Format-Table** cmdlet for simplified display.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FriendlyName
+  description: |+
+    Gets the disk with the specified friendly name.
+    Enter a friendly name, or use wildcard characters to enter a name pattern.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: iSCSIConnection
+  description: |+
+    Accepts an iSCSIConnection object as input.
+    The iSCSI Connection CIM object is exposed by the [Get-IscsiConnection](https://technet.microsoft.com/library/e566d297-76ad-48d0-b5af-11674f23b080) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: iSCSISession
+  description: |+
+    Accepts an iSCSISession object as input.
+    The iSCSI Session CIM object is exposed by the Get-IscsiSession cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Number
+  description: |+
+    Specifies the disk number for which to get the associated Disk object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DeviceId
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Partition
+  description: |+
+    Accepts a Partition object as input.
+    The Partition CIM object is exposed by the [Get-Partition](https://technet.microsoft.com/library/85bb3c53-536e-408f-b159-28e91afeb1a1) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  description: |+
+    Contains valid path information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SerialNumber
+  description: |+
+    Specifies an array of serial numbers associated with disks that this cmdlet gets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageJob
+  description: |+
+    Specifies a storage job object that is associated with disks that this cmdlet gets.
+    To obtain a storage job, use the Get-StorageJob cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageNode
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageSubSystem
+  description: |+
+    Specifies the storage subsystem from which this cmdlet gets disks.
+    To obtain a **StorageSubsystem** object, use the Get-StorageSubSystem cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UniqueId
+  description: |+
+    Gets only the disks with the specified IDs.
+    Type one or more IDs (separated by commas).
+
+  defaultValue: None
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: VirtualDisk
+  description: |+
+    Accepts a VirtualDisk object as input.
+    The Virtual Disk CIM object is exposed by the [Get-VirtualDisk](https://technet.microsoft.com/library/0eeba53f-6468-485f-a680-49260b4c83f0) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-Disk
+name: Get-Disk
+description: |-
+  The **Get-Disk** cmdlet gets one or more Disk objects visible to the operating system, or optionally a filtered list.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Disk.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-disk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-Disk

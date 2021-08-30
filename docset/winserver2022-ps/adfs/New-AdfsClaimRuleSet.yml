@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a set of claim rules.
+module: ADFS
+notes: |-
+  * You can assign these claim rules to a claims provider trust or relying party trust by using the corresponding cmdlets.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimRuleSet" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a class structure that represents a set of AD FS 2.0 claim rules.
+links:
+- text: Get-AdfsClaimsProviderTrust
+  href: ./Get-AdfsClaimsProviderTrust.yml
+- text: Set-AdfsClaimsProviderTrust
+  href: ./Set-AdfsClaimsProviderTrust.yml
+- text: Update-AdfsClaimsProviderTrust
+  href: ./Update-AdfsClaimsProviderTrust.yml
+- text: Set-AdfsRelyingPartyTrust
+  href: ./Set-AdfsRelyingPartyTrust.yml
+syntaxes:
+- New-AdfsClaimRuleSet -ClaimRule <String[]> [<CommonParameters>]
+- New-AdfsClaimRuleSet -ClaimRuleFile <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a claim rule set by using a text file'
+  code: |-
+    PS C:\> $RuleSet = New-AdfsClaimRuleSet -ClaimRuleFile 'C:\ruleset.txt'
+    PS C:\> Set-AdfsRelyingPartyTrust -TargetName "Fabrikam" -IssuanceTransformRules $RuleSet.ClaimRulesString
+  description: |-
+    The first command creates a claim rule set by using a text file, and then stores it in the $RuleSet variable.
+
+    The second command uses the **Set-AdfsRelyingPartyTrust** cmdlet to assign the rule set stored in $RuleSet to a relying party trust.
+    The command refers to the **ClaimsRuleString** property of the object stored in $RuleSet.
+  summary: ""
+- title: 'Example 2: Create a claim rule set by using an inline rule'
+  code: |-
+    PS C:\> $RuleSet = New-AdfsClaimRuleSet -ClaimRule 'c:[] => issue(claim = c);'
+    PS C:\> Set-AdfsRelyingPartyTrust -TargetName "Fabrikam" -IssuanceTransformRules $RuleSet.ClaimRulesString
+  description: |-
+    The first command creates a claim rule set by using an inline AD FS 2.0 claims language rule, and then stores it in the $RuleSet variable.
+
+    The second command uses **Set-AdfsRelyingPartyTrust** to assign the rule set stored in $RuleSet to a relying party trust.
+    The command refers to the **ClaimsRuleString** property of the object stored in $RuleSet.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClaimRule
+  isRequired: true
+  description: |+
+    Specifies an array of individual rules in this rule set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClaimRuleFile
+  isRequired: true
+  description: |+
+    Specifies the serialized policy text that is created by the collection of rules in the rule set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.New-AdfsClaimRuleSet
+name: New-AdfsClaimRuleSet
+description: |-
+  The **New-AdfsClaimRuleSet** cmdlet creates a set of claim rules in Active Directory Federation Services (AD FS) 2.0.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/new-adfsclaimruleset?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-AdfsClaimRuleSet

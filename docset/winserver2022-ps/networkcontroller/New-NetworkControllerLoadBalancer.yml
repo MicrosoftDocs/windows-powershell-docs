@@ -1,0 +1,211 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet adds/updates a load balancer resource.
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties can be added/modified for a load balancer resource:
+
+    - Front end IP configuration
+    - Back end address pool
+    - Health probe
+    - Load balancing rule
+    - Outbound NAT rules
+    - Inbound NAT rules
+syntaxes:
+- >-
+  New-NetworkControllerLoadBalancer -ConnectionUri <Uri> -Properties <LoadBalancerProperties>
+
+   -ResourceId <string> [-CertificateThumbPrint <string>] [-Credential <PSCredential>] [-Etag <string>] [-Force]
+
+   [-ResourceMetadata <ResourceMetadata>] [-Tags <psobject>]
+examples:
+- title: Example 1
+  code: |-
+    //Prepare the load balancer object
+    $lbresourceId = "LB2"
+
+    $lbproperties = @{}
+    $lbproperties.frontendipconfigurations = @()
+    $lbproperties.backendAddressPools = @()
+    $lbproperties.probes = @()
+    $lbproperties.loadbalancingRules = @()
+    $lbproperties.OutboundNatRules = @()
+
+    //Assign front end IP
+    $vipip = "10.127.132.5"
+    $vipln = get-networkcontrollerlogicalnetwork -ConnectionUri $uri -resourceid "f8f67956-3906-4303-94c5-09cf91e7e311"
+
+    $fe = @{}
+    $fe.resourceId = "FE1"
+    $fe.resourceRef = "/loadBalancers/$lbresourceId/frontendIPConfigurations/$($fe.resourceId)"
+    $fe.properties = @{}
+    $fe.properties.subnet = @{}
+    $fe.properties.subnet.ResourceRef = $vipln.properties.Subnets[0].ResourceRef
+    $fe.properties.privateIPAddress = $vipip
+    $fe.properties.privateIPAllocationMethod = "Static"
+    $lbproperties.frontendipconfigurations += $fe
+
+    //Allocate backend address pool
+    $backend = @{}
+    $backend.resourceId = "BE1"
+    $backend.resourceRef = "/loadBalancers/$lbresourceId/backendAddressPools/$($b)"
+    $lbproperties.backendAddressPools += $backend
+
+    //Define health probe
+    $lbprobe = @{}
+    $lbprobe.ResourceId = "Probe1"
+    $lbprobe.resourceRef = "/loadBalancers/$lbresourceId/Probes/$($lbprobe.resourceId)"
+    $lbprobe.properties = @{}
+    $lbprobe.properties.protocol = "HTTP"
+    $lbprobe.properties.port = "80"
+    $lbprobe.properties.RequestPath = "/health.htm"
+    $lbprobe.properties.IntervalInSeconds = 5
+    $lbprobe.properties.NumberOfProbes = 11
+    $lbproperties.probes += $lbprobe
+
+    //Define load balancing rule
+    $lbrule = @{}
+    $lbrule.ResourceId = "webserver1"
+    $lbrule.properties = @{}
+    $lbrule.properties.FrontEndIPConfigurations = @()
+    $lbrule.properties.FrontEndIPConfigurations += $fe
+    $lbrule.properties.backendaddresspool = $backend 
+    $lbrule.properties.protocol = "TCP"
+    $lbrule.properties.frontendPort = 80
+    $lbrule.properties.Probe = $lbprobe
+    $lbproperties.loadbalancingRules += $lbrule
+
+    //Add the load balancer to Network Controller
+    New-NetworkControllerLoadBalancer -ConnectionUri https://networkcontroller -ResourceId $lbresourceId -Properties $lbproperties
+  description: ""
+  summary: |+
+    This example creates a public VIP for load balancing a pool of two VMs on a virtual network.
+    This also adds a HTTP health probe to detect whether one of the pool members becomes non-responsive.
+
+parameters:
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: CertificateThumbPrint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+    This thumbprint must also be provided in the ClientCertificateThumbprint parameter in the Install-NetworkController or Set-NetworkController cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.This user must be present in the security group provided in the ClientSecurityGroup parameter in the Install-NetworkController cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="switch" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LoadBalancerProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Following properties can be added/modified for a load balancer resource:
+
+    - Front end IP configuration
+    - Back end address pool
+    - Health probe
+    - Load balancing rule
+    - Outbound NAT rules
+    - Inbound NAT rules
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the unique identifier of the load balancer resource
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    This parameter contains metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="psobject" data-throw-if-not-resolved="False" />
+  name: Tags
+  description: |+
+    @{Text=}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerLoadBalancer
+name: New-NetworkControllerLoadBalancer
+description: |-
+  The load balancer resource allows fine-grained configuration of how incoming traffic is distributed across VM instances in a virtual network.
+
+  It contains the following:
+
+  Front End IP configuration - This describes the exposed IP address of the load balancer.
+  For example, this address can be a reserved public or private IP address previously obtained by the customer, or an IP address dynamically allocated from a subnet of a virtual network.
+
+  BackEnd address pools - This describes the backend VMs behind the front end IP resource.
+
+  Load balancing rules - This defines how traffic that arrives at the front-end IP is to be sent to the backend IP
+
+  Health probe - Health probes are used by the load balancer to determine the health state of the backend pool members.
+
+  Inbound NAT rules - This can be used to forward external traffic to a specific VM in the virtual network
+
+  Outbound NAT rules - This can be used to forward VM network traffic from the virtual network to external destinations using network address translation (NAT).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollerloadbalancer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerLoadBalancer

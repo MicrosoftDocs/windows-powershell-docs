@@ -1,0 +1,145 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the details of events generated in one or more event logs by log file name or event query.
+module: ServerManagerTasks
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_ServerEventDetail" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+syntaxes:
+- >-
+  Get-SMServerEvent [-AsJob] [-BatchSize <UInt32>] [-CimSession <CimSession[]>] [-EndTime <UInt64[]>]
+
+   [-Level <EventLevelFlag[]>] [-Log <String[]>] [-QueryFile <String[]>] [-QueryFileId <Int32[]>]
+
+   [-StartTime <UInt64[]>] [-ThrottleLimit <Int32>]
+examples:
+- title: Example 1:Get server events
+  code: |-
+    PS C:\>Get-SMServerEvent -Level @(7)-Log @('Application') -ThrottleLimit 16
+  description: |-
+    This command gets the critical, error, and warning events in the application log, and specifies a throttle limit value of 16.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: BatchSize
+  description: |+
+    Specifies the batch size that the command uses to stream results.
+    If you do not specify a value, the command defaults to 256.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EndTime
+  description: |+
+    Specifies an array of end times.The command omits events that occur after the *EndTime*.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="EventLevelFlag" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Level
+  description: |+
+    Specifies an array of **EventLevelFlags** that determines which events to return.
+
+    The event level flag values and names are: 
+
+        --Value=1 Name=Critical
+
+        --Value=2 Name=Error 
+
+        --Value=4 Name=Warning 
+
+        --Value=8 Name=Informational 
+
+        --Value=16 Name=All
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Log
+  description: |+
+    Specifies an array of log files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: QueryFile
+  description: |+
+    Specifies an array of query file names.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: QueryFileId
+  description: |+
+    Specifies an array of query file IDs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StartTime
+  description: |+
+    Specifies an array of start times for events.
+    The command omits events that occur before the *StartTime*
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ServerManagerTasks.Get-SMServerEvent
+name: Get-SMServerEvent
+description: |-
+  The **Get-SMServerEvent** cmdlet gets the details of events in one or more event logs by log file name or event query.
+  Windows Server generates log entries for application, security, system, setup, and forwarded events.
+metadata:
+  external help file: SMTasks_Cmdlets.xml
+  Module Name: ServerManagerTasks
+  online version: https://docs.microsoft.com/powershell/module/servermanagertasks/get-smserverevent?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the use of the global pool by background tasks.
+module: AppBackgroundTask
+notes: ""
+syntaxes:
+- Set-AppBackgroundTaskResourcePolicy -Mode <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set global resource policy to Conservative mode'
+  code: |-
+    PS C:\> Set-AppBackgroundTaskResourcePolicy -Mode Conservative
+  description: |-
+    This command sets the global resource policy for background tasks to Conservative, which ensures that background tasks use the minimum CPU.
+  summary: ""
+- title: 'Example 2: Set global resource policy to Normal mode'
+  code: |-
+    PS C:\> Set-AppBackgroundTaskResourcePolicy -Mode Normal
+  description: |-
+    This command sets the global resource policy for background tasks to Normal.
+    A restart is required if the previous setting was Conservative.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Mode
+  isRequired: true
+  description: |+
+    Specifies the global pool settings for background tasks on the system.
+    Valid values are Normal and Conservative.
+    Use Normal to enable the global pool for all applications.
+    Use Conservative to disable the global pool for all applications.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Normal, Conservative
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AppBackgroundTask.Set-AppBackgroundTaskResourcePolicy
+name: Set-AppBackgroundTaskResourcePolicy
+description: |-
+  The **Set-AppBackgroundTaskResourcePolicy** cmdlet configures the use of the global pool by background tasks.
+  The global pool is a shared resource that provides CPU or network resources when an application requires additional resources to complete a task.
+  You must have administrator access to set the background task resource policy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: microsoft.windows.appbackgroundtask.commands.dll-Help.xml
+  Module Name: AppBackgroundTask
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appbackgroundtask/set-appbackgroundtaskresourcepolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AppBackgroundTaskResourcePolicy

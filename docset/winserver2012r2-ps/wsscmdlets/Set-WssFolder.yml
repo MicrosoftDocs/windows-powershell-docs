@@ -1,0 +1,182 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the settings of a server folder.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.Storage.Folder" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.Storage.Folder" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates an object that represents the modified folder.
+links:
+- text: Add-WssFolder
+  href: ./Add-WssFolder.yml
+- text: Get-WssFolder
+  href: ./Get-WssFolder.yml
+- text: Move-WssFolder
+  href: ./Move-WssFolder.yml
+- text: Remove-WssFolder
+  href: ./Remove-WssFolder.yml
+- text: Measure-WssFolder
+  href: ./Measure-WssFolder.yml
+syntaxes:
+- >-
+  Set-WssFolder [-Force] [-Folder] <Folder> [-NewName <String>] [-Description <String>] [-UserName <String>]
+
+   [-GroupName <String>] [-Permission <Permission>] [-HideFolderFromRemoteAccess <Boolean>] [-Quota <UInt64>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-WssFolder [-Force] [-Folder] <Folder> [-NewName <String>] [-Description <String>] [-UserSid <String>]
+
+   [-GroupSid <String>] [-Permission <Permission>] [-HideFolderFromRemoteAccess <Boolean>] [-Quota <UInt64>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the settings of a server folder'
+  code: |-
+    PS C:\>$Folder = Get-WssFolder -Name "ProjectsWest"PS C:\> Set-WssFolder -Folder $Folder -NewName "ProjectsSouthwest01" -UserName "SarahJones" -Permission Full
+  description: |-
+    The first command gets the folder named ProjectsWest and stores it in the **$Folder** variable.
+
+    The second command changes the name of the folder stored in the **$Folder** variable to ProjectsSouthwest01, and grants the user named SarahJones full access to ProjectsSouthwest01.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the server folder.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Folder" data-throw-if-not-resolved="False" />
+  name: Folder
+  isRequired: true
+  description: |+
+    Specifies the name of a folder.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupName
+  description: |+
+    Specifies the name of a group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupSid
+  description: |+
+    Specifies a security ID of a group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: HideFolderFromRemoteAccess
+  description: |+
+    Specifies whether to hide the folder in Remote Desktop Web Access or Web service applications.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewName
+  description: |+
+    Specifies a new name for the folder.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Permission" data-throw-if-not-resolved="False" />
+  name: Permission
+  description: |+
+    Specifies the access to the shared folder that the server grants to the user that you specify in the **UserName** parameter.
+    The acceptable values for this parameter are:
+    - None
+    - Readonly
+    - Full
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, ReadOnly, Full, Other, ReadPermissions
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: Quota
+  description: |+
+    Specifies a quota, in bytes, for the folder.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  description: |+
+    Specifies the user name of an account.
+    The server grants the user the permission to the shared folder that you specify the **Permission** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserSid
+  description: |+
+    Specifies the security identifier (SID) of the user that you specify in the **UserName** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WSSCmdlets.Set-WssFolder
+name: Set-WssFolder
+description: |-
+  The **Set-WssFolder** cmdlet changes the settings of a server folder.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssfolder?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssFolder

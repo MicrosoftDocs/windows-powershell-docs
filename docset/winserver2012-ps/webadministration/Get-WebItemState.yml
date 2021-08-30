@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the run-time state of a site or an application pool.
+module: WebAdministration
+notes: ""
+inputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-WebItemState [-Protocol <String>] [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Retrieve the State of all Web sites --------------'
+  code: |-
+    C:\PS>Get-WebItemState "IIS:\sites\*"
+  description: |-
+    Returns information about the state of all the sites on the IIS server.
+  summary: ""
+- title: '-------------- EXAMPLE 2: Retrieving the State of the Default Web Site using HTTP--------------'
+  code: |-
+    IIS:\>Get-WebItemState '.\Default Web Site' -Protocol http
+  description: |-
+    Value
+
+    -----
+
+    Started
+
+    Returns information about the HTTP binding on the Default Web Site.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    Specifies the protocol binding for which information is returned, such as HTTP or FTP.
+    TheProtocolparameter is applicable only when the cmdlet is used for sites.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    The path to the application pool or site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebItemState
+name: Get-WebItemState
+description: |-
+  Gets the run-time state of a site or an application pool.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webitemstate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

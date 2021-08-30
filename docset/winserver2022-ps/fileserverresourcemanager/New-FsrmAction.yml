@@ -1,0 +1,351 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns an FSRM action object.
+module: FileServerResourceManager
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMAction" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-FsrmQuotaThreshold
+  href: ./New-FsrmQuotaThreshold.yml
+- text: New-FsrmFileScreen
+  href: ./New-FsrmFileScreen.yml
+- text: New-FsrmStorageReport
+  href: ./New-FsrmStorageReport.yml
+- text: New-FsrmScheduledTask
+  href: ./New-FsrmScheduledTask.yml
+- text: New-FsrmFileManagementJob
+  href: ./New-FsrmFileManagementJob.yml
+- text: New-FsrmFMJNotification
+  href: ./New-FsrmFMJNotification.yml
+syntaxes:
+- >-
+  New-FsrmAction [-Type] <ActionTypeEnum> [-MailTo <String>] [-MailCC <String>] [-MailBCC <String>]
+
+   [-Subject <String>] [-Body <String>] [-EventType <ActionEventTypeEnum>] [-Command <String>]
+
+   [-WorkingDirectory <String>] [-CommandParameters <String>] [-SecurityLevel <ActionSecurityLevelEnum>]
+
+   [-KillTimeOut <Int32>] [-ShouldLogError] [-ReportTypes <ActionReportTypeEnum[]>] [-RunLimitInterval <Int32>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an action that sends an email'
+  code: |-
+    PS C:\> New-FsrmAction Email -MailCC "john.smith@contosco.com" -MailTo "sarah.jones@contosco.com" -Subject "Warning: Approaching storage limit" -Body "You are about to reach the end of your available storage."
+  description: |-
+    This command returns an object that indicates that the server sends an email when an associated event occurs.
+    The recipient of the email is the user sarah.jones@contosco.com and the CC recipient of the email is the administrator, john.smith@contosco.com.
+  summary: ""
+- title: 'Example 2: Create an action that has a run limit'
+  code: |-
+    PS C:\> New-FsrmAction Email -MailTo "john.smith@contosco.com;sarah.jones@contosco.com" -Subject "Warning: Approaching storage limit" -Body "You are about to reach the end of your available storage." -RunLimitInterval 120
+  description: |-
+    This command returns an object that indicates that the server sends an email to the administrator and the file owner when an associated event occurs.
+    The command specifies that the event can trigger no more than once every 120 minutes.
+    If the event does trigger, the action will have no effect before the time interval passes.
+  summary: ""
+- title: 'Example 3: Create an action that logs an event'
+  code: |-
+    PS C:\> New-FsrmAction Event -EventType Information -Body "The user [File Owner] is about to reach the end of his available storage." -RunLimitInterval 180
+  description: |-
+    This command returns an object that indicates the server logs an event that contains the specified message when an associated event occurs.
+    The event should trigger no more than once every 180 minutes.
+    If the event does trigger, no additional event log entries are created before the time interval passes.
+  summary: ""
+- title: 'Example 4: Create an action that runs a command and logs errors'
+  code: |-
+    PS C:\> New-FsrmAction Command -Command "c:\windows\system32\cmd.exe"-CommandParameters "echo [source file path] >> c:\log.txt" -ShouldLogError
+  description: |-
+    This command returns an object that indicates that when an associated event occurs, the server runs Cmd.exe with the specified parameters.
+    The command specifies that the server records errors codes from the command in the error log.
+  summary: ""
+- title: 'Example 5: Create an action that runs a storage report'
+  code: |-
+    PS C:\> New-FsrmAction Report -ReportType @(LargeFiles, DuplicateFiles)
+  description: |-
+    This command returns an object that indicates that the server runs LargeFiles and DuplicateFiles reports when an associated event occurs.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Body
+  description: |+
+    Specifies the content of an email.
+    If you specify this parameter, you must set Email or Event Specify for the *Type* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Command
+  description: |+
+    Specifies the full path to the program or script.
+    If you specify this parameter, you must set Command for the *Type* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CommandParameters
+  description: |+
+    Specifies the parameters for the program or script.
+    If you specify this parameter, you must set Command for the *Type* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="ActionEventTypeEnum" data-throw-if-not-resolved="False" />
+  name: EventType
+  description: |+
+    Specifies the event type of the action.
+    If you specify this parameter, you must set Event for the *Type* parameter.
+    The acceptable values for this parameter are:
+
+    - None
+    - Information
+    - Warning
+    - Error
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Information, Warning, Error
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: KillTimeOut
+  description: |+
+    Specifies the timeout period, in minutes, after which the process that the action created is ended.
+    Specify the default, -1, to indicate that the server does not end the process.
+    If you specify this parameter, you must set Command for the *Type* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MailBCC
+  description: |+
+    Specifies a semicolon-separated list of email addresses for the Bcc recipients of an email.
+    Valid email addresses are an administrator email account or the owner of the file.
+    If you specify this parameter, you must set Email for the *Type* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MailCC
+  description: |+
+    Specifies a semicolon-separated list of email addresses for the Cc recipients of an email.
+    Valid email addresses are an administrator email account or the owner of the file.
+    If you specify this parameter, you must set Email for the *Type* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MailTo
+  description: |+
+    Specifies a semicolon-separated list of email addresses for the recipients of an email.
+    Valid email addresses are an administrator email account or the owner of the file.
+    If you specify this parameter, you must set Email for the *Type* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ActionReportTypeEnum" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReportTypes
+  description: |+
+    Specifies an array of report types that the action generates.
+    If you specify this parameter, you must set Report for the *Type* parameter.
+    The acceptable values for this parameter are:
+
+    - DuplicateFiles
+    - FilesByFileGroup
+    - FilesByOwner
+    - FilesByProperty
+    - LargeFiles
+    - LeastRecentlyAccessed
+    - MostRecentlyAccessed
+    - QuotaUsage
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: LargeFiles, FilesByFileGroup, LeastRecentlyAccessed, MostRecentlyAccessed, QuotaUsage, FilesByOwner, DuplicateFiles, FileScreenAuditFiles, FilesByProperty
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RunLimitInterval
+  description: |+
+    Specifies the minimum interval, in minutes, before the server can run the action again.
+    For example, if the interval expired since the action last ran, the server runs the action again in response to an event; otherwise, the server cannot run the action again.
+    The default value, 60, specifies that there is no limit.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ActionSecurityLevelEnum" data-throw-if-not-resolved="False" />
+  name: SecurityLevel
+  description: |+
+    Specifies the computer account type under which the program or script runs.
+    The acceptable values for this parameter are:
+
+    - LocalService
+    - NetworkService
+    - LocalSystem
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, NetworkService, LocalService, LocalSystem
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShouldLogError
+  description: |+
+    Indicates that the server records errors codes from running commands in the event log.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Subject
+  description: |+
+    Specifies the subject of an email.
+    The maximum size of a subject is 1 KB.
+    If you specify this parameter, you must set Email for the *Type* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ActionTypeEnum" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the type of the action.
+    This setting determines the action that the server takes in response to a quota or file screen event.
+    The acceptable values for this parameter are:
+
+    - Email
+    - Event
+    - Command
+    - Report
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Event, Email, Command, Report
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WorkingDirectory
+  description: |+
+    Specifies the working directory in which the program or script runs.
+    You must specify a valid path to a folder.
+    FSRM does not support paths to remote computers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FileServerResourceManager.New-FsrmAction
+name: New-FsrmAction
+description: |-
+  The **New-FsrmAction** cmdlet returns a File Server Resource Manager (FSRM) action object.
+  An **FsrmAction** object does not contain the trigger for the action.
+  You can pass the action object to other cmdlets that use notifications and quota thresholds.
+
+  An **FsrmAction** object encapsulates a single action, such as sending an email.
+  FSRM does not save an action object unless it is used as part of another object.
+  For example, you can use an **FsrmAction** object to create notifications and quota thresholds.
+  The saved object provides the trigger for the action.
+
+  The **New-FsrmAction** cmdlet supports the following actions:
+
+  - Email: Send email to the user or administrator that the event triggered
+  - Event: Create an event log entry
+  - Command: Run a command that the administrator specifies
+  - Report: Run one or more storage reports
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: FsrmAction.cdxml-help.xml
+  Module Name: FileServerResourceManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/new-fsrmaction?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-FsrmAction

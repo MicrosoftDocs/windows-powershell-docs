@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves a server folder to a different drive.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Folder" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-WssFolder
+  href: ./Add-WssFolder.yml
+- text: Get-WssFolder
+  href: ./Get-WssFolder.yml
+- text: Set-WssFolder
+  href: ./Set-WssFolder.yml
+- text: Remove-WssFolder
+  href: ./Remove-WssFolder.yml
+- text: Measure-WssFolder
+  href: ./Measure-WssFolder.yml
+syntaxes:
+- Move-WssFolder [-Force] [-Folder] <Folder> [-NewDrive] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Move-WssFolder [-Force] [-Folder] <Folder> [-Cancel] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Move a folder to a different drive'
+  code: |-
+    PS C:\> $Folder = Get-WssFolder -Name "ProjectsWest"
+    PS C:\> Move-WssFolder -Folder $Folder -NewDrive "E:\"
+  description: |-
+    The first command gets the folder named ProjectsWest and stores it in the **$Folder** variable.
+
+    The second command moves the folder stored it in the **$Folder** variable from the current drive to the root directory on the drive E.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Cancel
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet attempts to cancel a move that is in progress.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Folder" data-throw-if-not-resolved="False" />
+  name: Folder
+  isRequired: true
+  description: |+
+    Specifies the name of a folder.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewDrive
+  isRequired: true
+  description: |+
+    Specifies the destination path for the folder on the new drive.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WSSCmdlets.Move-WssFolder
+name: Move-WssFolder
+description: |-
+  The **Move-WssFolder** cmdlet moves a server folder to a different drive.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/move-wssfolder?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Move-WssFolder

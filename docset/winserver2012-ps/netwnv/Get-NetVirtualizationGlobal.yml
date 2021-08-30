@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets per-host global information for a Network Virtualization module.
+module: NetWNV
+notes: ""
+links:
+- text: Set-NetVirtualizationGlobal
+  href: ./Set-NetVirtualizationGlobal.yml
+syntaxes:
+- >-
+  Get-NetVirtualizationGlobal [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-UseExternalRouter <Boolean[]>]
+examples:
+- title: 'Example 1: Get external router value'
+  code: |-
+    PS C:\>Get-NetVirtualizationGlobal
+
+    UseExternalRouter : False
+  description: |-
+    This command displays whether the Network Virtualization module on the current host uses external routers for cross-network traffic.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UseExternalRouter
+  description: |+
+    Specifies an array of Boolean values.
+    The values indicate whether the Network Virtualization module directs virtual machine (VM) cross-subnet traffic to external routers configured with Customer Routes for hv_win8_2 Network Visualization.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetWNV.Get-NetVirtualizationGlobal
+name: Get-NetVirtualizationGlobal
+description: |-
+  The **Get-NetVirtualizationGlobal** cmdlet gets per-host global configuration and states of a hv_win8_1 Network Virtualization module.
+  For more information about Network Virtualization, see Network Virtualization technical detailshttp://technet.microsoft.com/library/jj134174.aspx (http://technet.microsoft.com/library/jj134174.aspx) on TechNet.
+metadata:
+  external help file: NetWNV_Cmdlets.xml
+  Module Name: NetWNV
+  online version: https://docs.microsoft.com/powershell/module/netwnv/get-netvirtualizationglobal?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

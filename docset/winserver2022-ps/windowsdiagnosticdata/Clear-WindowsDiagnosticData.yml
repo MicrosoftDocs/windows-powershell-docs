@@ -1,0 +1,39 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sends a request to delete all uploaded diagnostic data sent to Microsoft from the current device.
+module: WindowsDiagnosticData
+notes: ""
+syntaxes:
+- Clear-WindowsDiagnosticData [-Force] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Clear-WindowsDiagnosticData
+  description: ""
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Clear-WindowsDiagnosticData -Force
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The cmdlet will run without asking for confirmation.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsDiagnosticData.Clear-WindowsDiagnosticData
+name: Clear-WindowsDiagnosticData
+description: |-
+  Sends a request to delete the uploaded diagnostic data sent to Microsoft from the current device.
+  This cmdlet is only supported on Windows Server 2016 and later.
+metadata:
+  external help file: ClearWindowsDiagnosticData.psm1-help.xml
+  Module Name: WindowsDiagnosticData
+  online version: https://docs.microsoft.com/powershell/module/windowsdiagnosticdata/clear-windowsdiagnosticdata?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-WindowsDiagnosticData

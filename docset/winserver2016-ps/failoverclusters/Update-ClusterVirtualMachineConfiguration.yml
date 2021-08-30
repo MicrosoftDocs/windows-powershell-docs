@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Refreshes the configuration of a clustered virtual machine within a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterVirtualMachineRole
+  href: ./Add-ClusterVirtualMachineRole.yml
+- text: Move-ClusterVirtualMachineRole
+  href: ./Move-ClusterVirtualMachineRole.yml
+syntaxes:
+- >-
+  Update-ClusterVirtualMachineConfiguration [[-Name] <String>] [-VMId <Guid>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Refresh a clustered virtual machine on the local cluster'
+  code: |-
+    PS C:\> Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM1"
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    Virtual Machine ... Online              Virtual Machine     Virtual Machine ...
+  description: |-
+    This example refreshes the clustered virtual machine named Virtual Machine Configuration VM1 on the local cluster.
+  summary: ""
+- title: 'Example 2: Refresh a clustered virtual machine on a cluster'
+  code: |-
+    PS C:\> Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM2" -Cluster cluster1
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    Virtual Machine ... Online              Virtual Machine     Virtual Machine
+  description: |-
+    This example refreshes the clustered virtual machine named Virtual Machine Configuration VM2 on the cluster named cluster1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the clustered virtual machine resource to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the clustered virtual machine resource to update.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VMId
+  description: |+
+    Specifies the virtual machine identifier (ID).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Update-ClusterVirtualMachineConfiguration
+name: Update-ClusterVirtualMachineConfiguration
+description: |-
+  The **Update-ClusterVirtualMachineConfiguration** cmdlet refreshes the configuration of a clustered virtual machine within a failover cluster.
+  Use this cmdlet if a hardware device, such as a network adapter, is to be added or removed or the hardware configuration settings, such as the setting for virtual memory, are being changed for a clustered virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/update-clustervirtualmachineconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-ClusterVirtualMachineConfiguration

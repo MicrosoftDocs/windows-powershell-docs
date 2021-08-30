@@ -1,0 +1,179 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about permissions that an NFS server grants to exported NFS shares.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/microsoft/windows/nfs/MSFT_NfsSharePermission" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Grant-NfsSharePermission
+  href: ./Grant-NfsSharePermission.yml
+- text: Revoke-NfsSharePermission
+  href: ./Revoke-NfsSharePermission.yml
+syntaxes:
+- >-
+  Get-NfsSharePermission [[-ClientName] <String>] [[-ClientType] <String>] [[-Permission] <String>]
+
+   [-Name] <String> [-NetworkName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-NfsSharePermission [-Path] <String> [[-ClientName] <String>] [[-ClientType] <String>]
+
+   [[-Permission] <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all permissions for a specified NFS share'
+  code: |-
+    PS C:\> Get-NfsSharePermission -Name "Export"
+    ClientName        : All Machines
+    ClientType        : Built-in Group
+    Name              : Export
+    Path              : C:\shares\Export
+    Permission        : READ, WRITE
+    AllowRootAccess   : ALLOW ACCESS
+    LanguageEncoding  : ansi
+  description: |-
+    This command gets the permissions for an NFS share named Export.
+  summary: ""
+- title: 'Example 2: Get read/write permissions for a specified NFS share'
+  code: |-
+    PS C:\> Get-NfsSharePermission -Name "Export" -Permission "readwrite"
+  description: |-
+    This command gets the read/write permissions for an NFS share named Export.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Indicates that this cmdlet runs the command as a background job on a remote computer.
+    Use this parameter to run commands that take an extensive time to finish.
+
+    When you use the *AsJob* parameter, the command returns an object that represents the job, and then displays the command prompt.
+    You can continue to work in the session while the job finishes.
+    To manage the job, use the **Job** cmdlets.
+    To get the job results, use the Receive-Job cmdlet.
+
+    The *AsJob* parameter resembles using the Invoke-Command cmdlet to run a Start-Job command remotely.
+    However, with *AsJob*, the job is created on the local computer, even though the job runs on a remote computer, and the results of the remote job are automatically returned to the local computer.
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251) and [about_Remote_Jobs](https://go.microsoft.com/fwlink/?LinkID=135184).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientName
+  description: |+
+    Specifies a client name.
+    The client name can be a host name or IP address, netgroup name, or client group name.
+    To specify the type of client, use the *ClientType* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Client
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientType
+  description: |+
+    Specifies a client type.
+    The acceptable values for this parameter are:
+
+    - host
+    - clientgroup
+    - netgroup
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: Type
+  parameterValueGroup: host, netgroup, clientgroup, builtin
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of an NFS share.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ShareName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkName
+  description: |+
+    Specifies the scoped network name of an NFS share.
+
+    On a local share, *NetworkName* is the host name.
+    On a cluster, it is the network name in the resource group to which the share is scoped.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: netname
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of an NFS share.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: SharePath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Permission
+  description: |+
+    Specifies the type of access to get for an NFS share.
+    The acceptable values for this parameter are:
+
+    - no-access
+    - readonly
+    - readwrite
+
+    A client can have either read-only or read/write access.
+    Only the All Machines group can have all three types of access.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: Access
+  parameterValueGroup: no-access, readonly, readwrite
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NFS.Get-NfsSharePermission
+name: Get-NfsSharePermission
+description: |-
+  The **Get-NfsSharePermission** cmdlet gets information about access permissions granted by a Network File System (NFS) server that has an NFS share configured.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NfsServerTasks.cmdletDefinition.cdxml-help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/get-nfssharepermission?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NfsSharePermission

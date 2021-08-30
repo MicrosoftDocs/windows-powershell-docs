@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables backup for a volume on a computer.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Disable-WssClientBackupVolume
+  href: ./Disable-WssClientBackupVolume.yml
+- text: Get-WssClientBackupVolume
+  href: ./Get-WssClientBackupVolume.yml
+- text: Get-WssClientBackupVolumeJob
+  href: ./Get-WssClientBackupVolumeJob.yml
+syntaxes:
+- >-
+  Enable-WssClientBackupVolume [-VolumeGuid] <Guid> [-ComputerName] <String> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Enable-WssClientBackupVolume [-VolumeGuid] <Guid> [-ComputerSid] <String> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable backup for a volume'
+  code: |-
+    PS C:\> Enable-WssClientBackupVolume -ComputerName "Workstation073" -VolumeGuid b6b093a2-1860-4172-a4a5-07ce2aebfa13
+  description: |-
+    This command enables backup for the specified volume on the computer named Workstation073.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of a computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerSid
+  isRequired: true
+  description: |+
+    Specifies the SID of a computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VolumeGuid
+  isRequired: true
+  description: |+
+    Specifies the GUID of a volume.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WSSCmdlets.Enable-WssClientBackupVolume
+name: Enable-WssClientBackupVolume
+description: |-
+  The **Enable-WssClientBackupVolume** cmdlet enables client backup for a volume on a computer.
+  Specify a computer by name or security identifier (SID).
+  Specify a volume by using its GUID.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/enable-wssclientbackupvolume?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-WssClientBackupVolume

@@ -1,0 +1,33 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the filename of the background image displayed on the Remote Web Access website.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a string object that represents the filename of a customized background image.
+    The cmdlet does not generate any output if Remote Web Access uses the default image.
+links:
+- text: Set-WssRemoteWebAccessBackgroundImage
+  href: ./Set-WssRemoteWebAccessBackgroundImage.yml
+syntaxes:
+- Get-WssRemoteWebAccessBackgroundImage [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve the filename of the background image'
+  code: |-
+    PS C:\> Get-WssRemoteWebAccessLink
+  description: |-
+    This command retrieves the filename of the background image.
+  summary: ""
+uid: WSSCmdlets.Get-WssRemoteWebAccessBackgroundImage
+name: Get-WssRemoteWebAccessBackgroundImage
+description: |-
+  The **Get-WssRemoteWebAccessBackgroundImage** cmdlet retrieves the filename of the background image displayed on the logon page of the Remote Web Access website.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssremotewebaccessbackgroundimage?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssRemoteWebAccessBackgroundImage

@@ -1,0 +1,117 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes AIA or OCSP URI from the AIA extension set on the certification authority.
+module: ADCSAdministration
+notes: |-
+  * You must be a member of Enterprise Admins group to successfully run this command.
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Administration.Commands.CA.AuthorityInformationAccessResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-CAAuthorityInformationAccess
+  href: ./Add-CAAuthorityInformationAccess.yml
+- text: Get-CAAuthorityInformationAccess
+  href: ./Get-CAAuthorityInformationAccess.yml
+syntaxes:
+- >-
+  Remove-CAAuthorityInformationAccess [-Uri] <String> [-AddToCertificateAia] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-CAAuthorityInformationAccess [-Uri] <String> [-AddToCertificateOcsp] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove AIA for a specified URI'
+  code: |-
+    PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.contoso.com/pki/orca1.crt" -AddToCertificateAia
+  description: |-
+    This command removes AIA for the specified URI named `http://www.contoso.com/pki/orca1.crt`.
+  summary: ""
+- title: 'Example 2: Remove OCSP for a specified URI'
+  code: |-
+    PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.cpandl.com/ocsp/" -AddToCertificateOcsp
+  description: |-
+    This command removes the OCSP for the specified URI named `http://www.cpandl.com/ocsp`.
+  summary: ""
+- title: 'Example 3: Remove all AIA and OCSP entries for a specified URI'
+  code: |-
+    PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.contoso.com/pki/orca1.crt"
+  description: |-
+    This command removes all AIA and OCSP entries that match the URL `http://www.contoso.com/pki/orca1.crt`.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AddToCertificateAia
+  description: |+
+    Indicates that the cmdlet adds the AIA URI.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AddToCertificateOcsp
+  description: |+
+    Indicates that the cmdlet adds an Online Responder's URI.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Uri
+  isRequired: true
+  description: |+
+    Specifies the URI from where the certificate for the CA can be downloaded or the online responder information can be obtained.
+    This information is added to the CA properties and registry.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADCSAdministration.Remove-CAAuthorityInformationAccess
+name: Remove-CAAuthorityInformationAccess
+description: |-
+  The **Remove-CAAuthorityInformationAccess** cmdlet removes the Authority Information Access (AIA) or Online Certificate Status Protocol (OCSP) uniform resource information (URI) from the AIA extension set on the certification authority.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsadministration/remove-caauthorityinformationaccess?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-CAAuthorityInformationAccess

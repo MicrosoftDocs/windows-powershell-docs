@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Decrypts an encrypted recovery key for a Windows shielded VM obtained from the [Save-ShieldedVMRecoveryKey](Save-ShieldedVMRecoveryKey.yml) cmdlet.
+module: ShieldedVMDataFile
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Save-ShieldedVMRecoveryKey
+  href: Save-ShieldedVMRecoveryKey.yml
+syntaxes:
+- >-
+  Unprotect-ShieldedVMRecoveryKey -ShieldingDataFilePath <String> -EncryptedBitLockerKeyPath <String>
+
+   -DecryptedBitLockerKeyPath <String> [-WhatIf] [-Confirm]
+- >-
+  Unprotect-ShieldedVMRecoveryKey -ShieldingDataFileSearchPath <String[]> [-Recurse]
+
+   -EncryptedBitLockerKeyPath <String> -DecryptedBitLockerKeyPath <String> [-WhatIf] [-Confirm]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Unprotect-ShieldedVMRecoveryKey -ShieldingDataFilePath 'C:\temp\ShieldingDataFile.pdk' -EncryptedBitLockerKeyPath 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek' -DecryptedBitLockerKeyPath 'C:\temp\DecryptedRecoveryKey.bek'
+  description: |-
+    Decrypts the provided encrypted BitLocker recovery key using the shielding data file and owner guardian private keys, and saves it to the temp directory.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Unprotect-ShieldedVMRecoveryKey -ShieldingDataSearchPath 'C:\temp\AllShieldingDataFiles\' -Recurse -EncryptedBitLockerKeyPath 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek' -DecryptedBitLockerKeyPath 'C:\temp\DecryptedRecoveryKey.bek'
+  description: |-
+    Searches the 'AllShieldingDataFiles' directory and all subdirectories for shielding data files that can be used to decrypt the provided encrypted BitLocker recovery key.
+    If a suitable shielding data file is found and the private key for its owner guardian is available on the local computer, the decrypted BitLocker encryption key will be saved to the temp directory.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DecryptedBitLockerKeyPath
+  isRequired: true
+  description: |+
+    Location to save the decrypted BitLocker encryption key (.bek)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EncryptedBitLockerKeyPath
+  isRequired: true
+  description: |+
+    Location of the encrypted BitLocker encryption key
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recurse
+  description: |+
+    Specifies the cmdlet should search subdirectories of the shielding data file search path for compatible PDK files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShieldingDataFilePath
+  isRequired: true
+  description: |+
+    Location of the shielding data file (.pdk) used to deploy the shielded VM.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ShieldingDataFileSearchPath
+  isRequired: true
+  description: |+
+    Location of one or more directories to search for a shielding data file that can be used to decrypt the provided encrypted BitLocker encryption key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ShieldedVMDataFile.Unprotect-ShieldedVMRecoveryKey
+name: Unprotect-ShieldedVMRecoveryKey
+description: |-
+  The *Unprotect-ShieldedVMRecoveryKey* cmdlet decrypts an encrypted BitLocker recovery key file obtained from a Windows shielded VM.
+  To run the cmdlet, you must have the shielding data file that was used to deploy the shielded VM and have the private key for the owner guardian installed on your computer.
+
+  The resulting recovery key can be provided to `manage-bde.exe`, `Unlock-BitLocker`, or the BitLocker Recovery pre-boot environment to access the contents of your shielded VM OS volume.
+metadata:
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  Module Name: ShieldedVMDataFile
+  online version: https://docs.microsoft.com/powershell/module/shieldedvmdatafile/unprotect-shieldedvmrecoverykey?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Unprotect-ShieldedVMRecoveryKey

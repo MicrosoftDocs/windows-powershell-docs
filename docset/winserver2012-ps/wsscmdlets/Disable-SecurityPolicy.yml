@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables predefined security group policies.
+module: WssCmdlets
+notes: ""
+links:
+- text: Enable-SecurityPolicy
+  href: ./Enable-SecurityPolicy.yml
+syntaxes:
+- Disable-SecurityPolicy [-AllPolicy]
+- Disable-SecurityPolicy -Policy <String[]>
+examples:
+- title: 'Example 1: Disable predefined security group policies'
+  code: |-
+    PS C:\> Disable-SecurityPolicy -Policy "WindowsUpdate"
+  description: |-
+    This command disables the security group policy for Windows Update.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllPolicy
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet disables all pre-defined group policies for Windows Update, Windows Firewall, and Windows Defender.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies an array of group policies to disable.
+    The acceptable values for this parameter are:
+
+    - WindowsUpdate
+    - Firewall
+    - WindowsDefender
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Disable-SecurityPolicy
+name: Disable-SecurityPolicy
+description: |-
+  The **Disable-SecurityPolicy** cmdlet disables pre-defined group policies for security features.
+  The cmdlet disables group policies for Windows Defender, Windows Update, and Windows Firewall.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/disable-securitypolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

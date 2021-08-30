@@ -1,0 +1,326 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes configuration settings of a file management job.
+module: FileServerResourceManager
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMFileManagementJob" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-FsrmFileManagementJob
+  href: ./Get-FsrmFileManagementJob.yml
+- text: New-FsrmFileManagementJob
+  href: ./New-FsrmFileManagementJob.yml
+- text: New-FsrmFmjCondition
+  href: ./New-FsrmFmjCondition.yml
+- text: New-FsrmFmjNotificationAction
+  href: ./New-FsrmFmjNotificationAction.yml
+- text: New-FsrmScheduledTask
+  href: ./New-FsrmScheduledTask.yml
+- text: Remove-FsrmFileManagementJob
+  href: ./Remove-FsrmFileManagementJob.yml
+- text: Start-FsrmFileManagementJob
+  href: ./Start-FsrmFileManagementJob.yml
+- text: Stop-FsrmFileManagementJob
+  href: ./Stop-FsrmFileManagementJob.yml
+- text: Wait-FsrmFileManagementJob
+  href: ./Wait-FsrmFileManagementJob.yml
+syntaxes:
+- >-
+  Set-FsrmFileManagementJob [-Name] <String[]> [-Description <String>] [-Namespace <String[]>] [-Disabled]
+
+   [-Condition <CimInstance[]>] [-Action <CimInstance>] [-ReportFormat <FmjReportFormatsEnum[]>]
+
+   [-ReportLog <FmjReportLogsEnum[]>] [-MailTo <String>] [-Notification <CimInstance[]>]
+
+   [-Schedule <CimInstance>] [-Continuous] [-ContinuousLog] [-ContinuousLogSize <UInt64>]
+
+   [-Parameters <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-FsrmFileManagementJob -InputObject <CimInstance[]> [-Description <String>] [-Namespace <String[]>]
+
+   [-Disabled] [-Condition <CimInstance[]>] [-Action <CimInstance>] [-ReportFormat <FmjReportFormatsEnum[]>]
+
+   [-ReportLog <FmjReportLogsEnum[]>] [-MailTo <String>] [-Notification <CimInstance[]>]
+
+   [-Schedule <CimInstance>] [-Continuous] [-ContinuousLog] [-ContinuousLogSize <UInt64>]
+
+   [-Parameters <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the condition for a file management job'
+  code: |-
+    The first command returns a condition object for file management job that verifies that a file has a PII classification property set to true. The command stores the results in the $condition variable.
+    PS C:\> $condition = New-FsrmFmjCondition -Property "PII" -Condition Equal -Value "1"
+
+    The second command gets the file management job named "Expire stale data" and stores the results in the $current variable.
+    PS C:\> $current = Get-FsrmFileManagementJob -Name "Expire stale data"
+
+    The third command adds the new condition to the existing conditions of the file management job.
+    PS C:\> $newConditions = $current.Conditions + $condition
+
+    The fourth command sets the condition of the file management job named "Expire stale data" to the condition stored in the $newConditions variable.
+    PS C:\> Set-FsrmFileManagementJob "Expire stale data" -Condition $newConditions
+  description: |-
+    This example changes the file management job named Expire stale data to include only files that have the PII property set to true in addition to the existing conditions.
+  summary: ""
+parameters:
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Action
+  description: |+
+    Specifies a **FsrmFmjAction** object.
+    You can use the **New-FsrmFmjAction** cmdlet to create a **FsrmFmjAction** object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Condition
+  description: |+
+    Specifies a **FsrmFmjCondition** object.
+    You can use the **New-FsrmFmjCondition** cmdlet to create a **FsrmFmjCondition** object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Continuous
+  description: |+
+    Indicates that the server continuously applies classification to files in the background.
+
+    If you specify this parameter, you cannot specify any notifications and the conditions that you specify cannot include any objects where the classification property is set to the following values: 
+
+    - File.DateCreated
+    - File.DateLastModified
+    - File.DateLastAccessed
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ContinuousLog
+  description: |+
+    Indicates that the server maintains a log of continuous classification activities.
+    You must specify the *Continuous* parameter to log classification activities.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: ContinuousLogSize
+  description: |+
+    Specifies the maximum size of the log that contains continuous classification activity.
+    You must specify the *Continuous* parameter to log classification activities.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the file management job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disabled
+  description: |+
+    Indicates that the file management job is disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MailTo
+  description: |+
+    Specifies a semicolon-separated list of email addresses to which the file server sends the email.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the file management job.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Namespace
+  description: |+
+    Specifies an array of namespaces that are part of the scope.
+    Each value must be either a value of the FolderType property defined on the server (in the format "\[Folder type property name=\<value\>\]") or a static path.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Notification
+  description: |+
+    Specifies a **FsrmFmjNotificationAction** object.
+    You can use the **New-FsrmFmjNotificationAction** cmdlet to create a **FsrmFmjNotificationAction** object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Parameters
+  description: |+
+    Specifies an array of strings using the format \<name\>=\<value\>.
+    The File Classification Infrastructure and other management tools use these parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FmjReportFormatsEnum" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReportFormat
+  description: |+
+    Specifies an array of report formats that the file management job produces.
+    The acceptable values for this parameter are:
+
+    - DHTML
+    - HTML
+    - XML
+    - CSV
+    - Text
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: DHtml, Html, Text, Csv, XML
+- type: <xref href="FmjReportLogsEnum" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReportLog
+  description: |+
+    Specifies an array of report types that the file management job generates.
+    The acceptable values for this parameter are:
+
+    - Information
+    - Error
+    - Audit
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Error, Information, Audit
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Schedule
+  description: |+
+    Specifies a File Server Resource Manager (FSRM) scheduled task object that describes the schedule for performing the continuous classification.
+    Use the **New-FsrmScheduledTask** cmdlet to create a scheduled task object.
+    Any duration information in the FSRM scheduled task object is ignored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FileServerResourceManager.Set-FsrmFileManagementJob
+name: Set-FsrmFileManagementJob
+description: |-
+  The **Set-FsrmFileManagementJob** cmdlet changes configuration settings of a file management job.
+  You must specify at least one other parameter in addition to the *Name* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: FSRMFileManagementJob.cdxml-help.xml
+  Module Name: FileServerResourceManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/set-fsrmfilemanagementjob?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-FsrmFileManagementJob

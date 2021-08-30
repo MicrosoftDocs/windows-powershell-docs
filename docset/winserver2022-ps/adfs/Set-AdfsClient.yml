@@ -1,0 +1,294 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies registration settings for an OAuth 2.0 client registered with AD FS.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsClient" data-throw-if-not-resolved="False" />
+  description: |-
+    AdfsClient objects are received by the *TargetClient* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *ClientId*, *Description*, *Name*, *RedirectUri*, *TargetClientId*, and *TargetName* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsClient" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the updated AdfsClient object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Add-AdfsClient
+  href: ./Add-AdfsClient.yml
+- text: Disable-AdfsClient
+  href: ./Disable-AdfsClient.yml
+- text: Enable-AdfsClient
+  href: ./Enable-AdfsClient.yml
+- text: Get-AdfsClient
+  href: ./Get-AdfsClient.yml
+- text: Remove-AdfsClient
+  href: ./Remove-AdfsClient.yml
+syntaxes:
+- >-
+  Set-AdfsClient [-Force] [-TargetName] <String> [-ClientId <String>] [-Name <String>] [-RedirectUri <String[]>]
+
+   [-Description <String>] [-ADUserPrincipalName <String>] [-JWTSigningCertificate <X509Certificate2[]>]
+
+   [-JWTSigningCertificateRevocationCheck <RevocationSetting>] [-ChangeClientSecret] [-ResetClientSecret]
+
+   [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>] [-LogoutUri <String>] [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsClient [-Force] [-TargetClientId] <String> [-ClientId <String>] [-Name <String>]
+
+   [-RedirectUri <String[]>] [-Description <String>] [-ADUserPrincipalName <String>]
+
+   [-JWTSigningCertificate <X509Certificate2[]>] [-JWTSigningCertificateRevocationCheck <RevocationSetting>]
+
+   [-ChangeClientSecret] [-ResetClientSecret] [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>]
+
+   [-LogoutUri <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsClient [-Force] [-TargetClient] <AdfsClient> [-ClientId <String>] [-Name <String>]
+
+   [-RedirectUri <String[]>] [-Description <String>] [-ADUserPrincipalName <String>]
+
+   [-JWTSigningCertificate <X509Certificate2[]>] [-JWTSigningCertificateRevocationCheck <RevocationSetting>]
+
+   [-ChangeClientSecret] [-ResetClientSecret] [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>]
+
+   [-LogoutUri <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the redirection URI'
+  code: |-
+    PS C:\> Set-AdfsClient -TargetName "Payroll Application" -RedirectUri "https://localhost"
+  description: |-
+    This command changes the redirection URI for the OAuth 2.0 client currently registered with AD FS with the name Payroll Application.
+  summary: ""
+- title: 'Example 2:  Rename an OAuth 2.0 client'
+  code: |-
+    PS C:\> Set-AdfsClient -TargetName "Payroll Application" -Name "Payroll Application v2"
+  description: |-
+    This command renames the OAuth 2.0 client currently registered with AD FS with the name Payroll Application.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ADUserPrincipalName
+  description: |+
+    Specifies an Active Directory user principal name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ChangeClientSecret
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientId
+  description: |+
+    Specifies a string.
+    The cmdlet modifies the OAuth 2.0 client registration information with the identifier that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description.
+    The cmdlet modifies the OAuth 2.0 client registration information with the description that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: JWKSFile
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: JWKSUri
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: JWTSigningCertificate
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RevocationSetting" data-throw-if-not-resolved="False" />
+  name: JWTSigningCertificateRevocationCheck
+  description: |+
+    The acceptable values for this parameter are:
+
+    - None
+    - CheckEndCert
+    - CheckEndCertCacheOnly
+    - CheckChain
+    - CheckChainCacheOnly
+    - CheckChainExcludeRoot
+    - CheckChainExcludeRootCacheOnly
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, CheckEndCert, CheckEndCertCacheOnly, CheckChain, CheckChainCacheOnly, CheckChainExcludeRoot, CheckChainExcludeRootCacheOnly
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogoutUri
+  description: |+
+    Specifies the logout URI for the OAuth 2.0 client to register with the AD FS. When AD FS initiates a logout it redirects the client's user-agent to this URI by rendering this URI in an iframe. The value of this parameter must be an absolute URI, may include a query component, and must not include a fragment component. This parameter is available with the Windows Update KB4038801 installed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies a name.
+    The cmdlet modifies the OAuth 2.0 client registration information with the name that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RedirectUri
+  description: |+
+    Specifies one or more redirection URIs.
+    The cmdlet modifies the OAuth 2.0 client registration information with the redirection URIs that you specify.
+
+    The OAuth 2.0 client uses the redirection URI when the client requests authorization to access a resource secured by AD FS.
+    You may register multiple redirection URIs for a single client identifier.
+    The redirection URI must be a valid URI.
+
+    The redirection URI specified by the client must already be registered with  AD FS and must correspond to the client identifier for that OAuth 2.0 client, in order for the client to be authorized to access the resource.
+    If the client ID and redirection URI correspond to a pre-registered OAuth 2.0 client and the resource owner authorized access by providing their credentials,  AD FS will deliver the authorization code or access token by redirecting the client's user-agent back to this redirection URI.
+
+    Ensure that the value of the RedirectUri parameter matches exactly the redirection URI that will be specified by the OAuth 2.0 client when requesting authorization, including trailing slashes (/), if required.
+    Use more secure schemes, such as https, when you specify a redirection URI.
+
+    For Windows Store applications that authenticate using the Windows Web Authentication Broker, use the 'ms-app://' scheme when registering a redirect URI.
+    For example, ms-app://s-1-15-2-1101140336-4090662585-1905587327-262951538-2732256205-1306401843-4235927180/ is a redirect URI for a Windows Store application.
+    If you are developing a Windows Store application, you can obtain the redirect URI for your application using the following code fragment:
+
+    `Uri redirectURI = Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri();`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReloadJWTSigningKeys
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ResetClientSecret
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AdfsClient" data-throw-if-not-resolved="False" />
+  name: TargetClient
+  isRequired: true
+  description: |+
+    Specifies the registered OAuth 2.0 client to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetClientId
+  isRequired: true
+  description: |+
+    Specifies the client identifier for the registered OAuth 2.0 client to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the registered OAuth 2.0 client to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsClient
+name: Set-AdfsClient
+description: |-
+  The **Set-AdfsClient** cmdlet modifies registration settings for an OAuth 2.0 client registered with Active Directory Federation Services (AD FS).
+  Use this cmdlet to modify the settings, including the client identifier, redirection URI, name, or description of the OAuth 2.0 client.
+  You can also use this cmdlet to register additional redirection URIs for the OAuth 2.0 client.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 09/19/2017
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsclient?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsClient

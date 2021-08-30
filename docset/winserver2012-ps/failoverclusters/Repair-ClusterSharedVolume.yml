@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Runs repair tools on a Cluster Shared Volume locally on a cluster node.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterSharedVolume
+  href: ./Get-ClusterSharedVolume.yml
+- text: Resume-ClusterResource
+  href: ./Resume-ClusterResource.yml
+- text: Suspend-ClusterResource
+  href: ./Suspend-ClusterResource.yml
+syntaxes:
+- Repair-ClusterSharedVolume [-VolumeName] <String> [-Parameters <String>] [-ChkDsk]
+- Repair-ClusterSharedVolume [-VolumeName] <String> [-Parameters <String>] [-Defrag]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Repair-ClusterSharedVolume -VolumeName C:\ClusterStorage\Volume1 -Defrag
+  description: |-
+    This example runs defrag.exe on Cluster Shared Volume located at C:\ClusterStorage\Volume1.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Repair-ClusterSharedVolume -VolumeName C:\ClusterStorage\Volume1 -ChkDsk -Parameters "/F"
+  description: |-
+    This example runs chkdsk.exe on Cluster Shared Volume located at C:\ClusterStorage\Volume1 and passes the /F parameter to chkdsk.exe.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ChkDsk
+  isRequired: true
+  description: |+
+    Specifies that **chkdsk.exe** is run on the volume.
+    Any parameters specified in the **Parameters** parameter will be passed through to **chkdsk.exe**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Defrag
+  isRequired: true
+  description: |+
+    Specifies that **defrag.exe** is run on the volume.
+    Any parameters specified in the **Parameters** parameter will be passed through to **defrag.exe**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Parameters
+  description: |+
+    Specifies one or more parameters to pass through to the tool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VolumeName
+  isRequired: true
+  description: |+
+    Specifies the name of the volume on which to run the tool.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Repair-ClusterSharedVolume
+name: Repair-ClusterSharedVolume
+description: |-
+  The **Repair-ClusterSharedVolume** cmdlet runs repair tools on a Cluster Shared Volume locally on a cluster node.
+
+  This cmdlet runs **chkdsk.exe** or **defrag.exe** on a Cluster Shared Volume.
+  It will turn maintenance on for the volume, move the cluster resource to the node running this cmdlet, run the tool, and then turn maintenance off for the volume.
+  This cmdlet has to run locally on one of the cluster nodes.
+  To run remotely, use Windows PowerShell® remoting.
+metadata:
+  external help file: Failoverv2_Cmdlets.xml
+  Module Name: FailoverClusters
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/repair-clustersharedvolume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

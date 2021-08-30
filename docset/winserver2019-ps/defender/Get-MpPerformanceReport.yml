@@ -1,0 +1,247 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Analyzes and reports on MDAV performance recording
+module: Defender
+links:
+- text: New-MpPerformanceRecording
+  href: New-MpPerformanceRecording.md#new-mpperformancerecording
+syntaxes:
+- >-
+  Get-MpPerformanceReport    [-Path] <String>
+
+  [-TopScans <Int32>]
+
+  [-TopFiles  <Int32>
+
+  [ -TopScansPerFile <Int32>]
+
+  [-TopProcessesPerFile  <Int32>  
+
+  	[-TopScansPerProcessPerFile <Int32>]
+
+  	]
+
+  ] 
+
+  [-TopExtensions  <Int32>
+
+  [-TopScansPerExtension <Int32>
+
+  [-TopProcessesPerExtension <Int32>
+
+  	[-TopScansPerProcessPerExtension <Int32>]
+
+  	]
+
+
+
+  [-TopFilesPerExtension  <Int32>
+
+  	[-TopScansPerFilePerExtension <Int32>]
+
+  	]
+
+  ] 
+
+  [-TopProcesses  <Int32>
+
+  	[-TopScansPerProcess <Int32>]
+
+  	[-TopExtensionsPerProcess <Int32>
+
+  		[-TopScansPerExtensionPerProcess <Int32>]
+
+  		]
+
+  [-TopFilesPerProcess  <Int32>
+
+  	[-TopScansPerFilePerProcess <Int32>]
+
+  ]
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: -TopScansPerFile
+  description: |+
+    Specifies how many top scans to output for each top file, sorted by "Duration”.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path(s) to one or more locations.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopExtensions
+  description: |+
+    Specifies how many top extensions to output, sorted by "Duration”.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopExtensionsPerProcess
+  description: |+
+    Specifies how many top extensions to output for each top process, sorted by "Duration”.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopFiles
+  description: |+
+    Requests a top-files report and specifies how many top files to output, sorted by "Duration".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopFilesPerExtension
+  description: |+
+    Specifies how many top files to output for each top extension, sorted by "Duration".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopFilesPerProcess
+  description: |+
+    Specifies how many top files to output for each top process, sorted by "Duration".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopProcesses
+  description: |+
+    Requests a top-processes report and specifies how many of the top processes to output, sorted by "Duration”.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopProcessesPerExtension
+  description: |+
+    Specifies how many top processes to output for each top extension, sorted by "Duration”.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopProcessesPerFile
+  description: |+
+    Specifies how many top processes to output for each top file, sorted by "Duration “.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopScans
+  description: |+
+    Requests a top-scans report and specifies how many top scans to output, sorted by "Duration".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerExtension
+  description: |+
+    Specifies how many top scans to output for each top extension, sorted by "Duration".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerExtensionPerProcess
+  description: |+
+    Specifies how many top scans for output for each top extension for each top process, sorted by "Duration”.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerFilePerExtension
+  description: |+
+    Specifies how many top scans for output for each top file for each top extension, sorted by "Duration".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerFilePerProcess
+  description: |+
+    Specifies how many top scans for output for each top file for each top process, sorted by "Duration”.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerProcess
+  description: |+
+    Specifies how many top scans to output for each top process in the Top Processes report, sorted by "Duration”.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerProcessPerExtension
+  description: |+
+    Specifies how many top scans for output for each top process for each top extension, sorted by "Duration”.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerProcessPerFile
+  description: |+
+    Specifies how many top scans for output for each top process for each top file, sorted by "Duration”.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Defender.Get-MpPerformanceReport
+name: Get-MpPerformanceReport
+description: |-
+  The `Get-MpPerformanceReport` cmdlet analyzes a previously collected Microsoft Defender Antivirus performance recording ([New-MpPerformanceRecording](New-MpPerformanceRecording.md#new-mpperformancerecording)) and reports the file paths, file extensions, and processes that cause the highest impact to Microsoft Defender Antivirus scans.
+
+  The performance analyzer provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided "AS IS" and is not intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
+
+  For more information on the Performance analyzer, see Performance Analyzer docs.
+
+  **Supported OS versions**
+
+  Windows Version 10 and higher.
+
+  > [!NOTE]
+  > This feature is available starting with platform version 4.18.2108.X and higher.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_MpPerformanceReport.cdxml-help.xml
+  Module Name: Defender
+  ms.date: 08/25/2021
+  online version: https://docs.microsoft.com/powershell/module/defender/get-mpperformancereport?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MpPerformanceReport

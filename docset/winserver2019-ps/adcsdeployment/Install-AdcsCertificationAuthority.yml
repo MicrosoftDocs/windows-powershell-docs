@@ -1,0 +1,367 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Performs installation and configuration of the AD CS Certification Authority role service.
+module: ADCSDeployment
+notes: |-
+  * Ensure you run Windows PowerShell as an administrator. You can use the *force* parameter to bypass the prompt for confirmation.
+  To see parameters, run the following command: `Install-AdcsCertificationAuthority -?`
+  If you have installation issues, try using the *verbose* parameter to get verbose output and review the information in the %windir%\cerocm.log file.
+inputs:
+- name: <xref href="bool, string, string, enum, string, SecureString, string, string, string, string, bool, string, long, string, string, bool, bool, bool, string, enum, long" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Deployment.Commands.CA.CertificationAuthoritySetupResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Uninstall-AdcsCertificationAuthority
+  href: ./Uninstall-AdcsCertificationAuthority.yml
+syntaxes:
+- >-
+  Install-AdcsCertificationAuthority [-AllowAdministratorInteraction] [-ValidityPeriod <ValidityPeriod>]
+
+   [-ValidityPeriodUnits <Int32>] [-CACommonName <String>] [-CADistinguishedNameSuffix <String>]
+
+   [-CAType <CAType>] [-CryptoProviderName <String>] [-DatabaseDirectory <String>] [-HashAlgorithmName <String>]
+
+   [-IgnoreUnicode] [-KeyLength <Int32>] [-LogDirectory <String>] [-OutputCertRequestFile <String>]
+
+   [-OverwriteExistingCAinDS] [-OverwriteExistingKey] [-ParentCA <String>] [-OverwriteExistingDatabase]
+
+   [-Credential <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Install-AdcsCertificationAuthority [-AllowAdministratorInteraction] [-CertFilePassword <SecureString>]
+
+   [-CertFile <String>] [-CAType <CAType>] [-CertificateID <String>] [-DatabaseDirectory <String>]
+
+   [-LogDirectory <String>] [-OverwriteExistingKey] [-OverwriteExistingDatabase] [-Credential <PSCredential>]
+
+   [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Install-AdcsCertificationAuthority [-AllowAdministratorInteraction] [-ValidityPeriod <ValidityPeriod>]
+
+   [-ValidityPeriodUnits <Int32>] [-CADistinguishedNameSuffix <String>] [-CAType <CAType>]
+
+   [-CryptoProviderName <String>] [-DatabaseDirectory <String>] [-HashAlgorithmName <String>] [-IgnoreUnicode]
+
+   [-KeyContainerName <String>] [-LogDirectory <String>] [-OutputCertRequestFile <String>]
+
+   [-OverwriteExistingCAinDS] [-ParentCA <String>] [-OverwriteExistingDatabase] [-Credential <PSCredential>]
+
+   [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Install a new Standalone Root CA with default settings'
+  code: |-
+    PS C:\> Install-AdcsCertificationAuthority -CAType StandaloneRootCa
+  description: |-
+    This command installs a new Standalone Root CA with default settings.
+  summary: ""
+- title: 'Example 2: Install a new Enterprise Root CA using a specific provider and key length'
+  code: |-
+    PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "ECDSA_P256#Microsoft Software Key Storage Provider" -KeyLength 256 -HashAlgorithmName SHA256
+  description: |-
+    This command installs a new Enterprise Root CA using the provider named ECDSA_P256 Microsoft Software Key Storage Provider, key length of 256, and the hash algorithm named SHA 256.
+  summary: ""
+- title: 'Example 3: Install a new Enterprise Root CA using a specific provider and a validity period'
+  code: |-
+    PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "RSA#Microsoft Software Key Storage Provider" -KeyLength 2048 -HashAlgorithmName SHA1 -ValidityPeriod Years -ValidityPeriodUnits 3
+  description: |-
+    This command installs a new Enterprise Root CA using a RSA algorithm using the provider named Microsoft Software Key Storage Provider, a key length of 2048, a hash algorithm named SHA 1, and validity period of three years.
+  summary: ""
+- title: 'Example 4: Install a new Enterprise Subordinate CA using a parent CA'
+  code: |-
+    PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseSubordinateCa -ParentCA SERVER75.corp.contoso.com\SERVER75-CA
+  description: |-
+    This command installs a new Enterprise subordinate CA, the parent CA is SERVER75 in the CORP domain of Contoso.com.
+  summary: ""
+- title: 'Example 5: Install a new Enterprise Subordinate CA using an existing certificate'
+  code: |-
+    PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseSubordinateCa -CertFile C:\Cert\SERVER80-CA.p12 -CertFilePassword (read-host "Set user password" -assecurestring)
+  description: |-
+    This command installs an Enterprise Subordinate CA using an existing certificate from a PFX/P12 file that is located on the local C:\Cert folder named SERVER80-CA.p12.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowAdministratorInteraction
+  description: |+
+    Indicates that the cmdlet enables prompting when the private key is accessed.
+    This is not required for any of the Microsoft default providers.
+    For enhanced security components, such as a hardware security module (HSM), review the enhanced security component vendor documentation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CACommonName
+  description: |+
+    Specifies the certification authority common name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CADistinguishedNameSuffix
+  description: |+
+    Specifies the certification authority distinguished name suffix.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CAType" data-throw-if-not-resolved="False" />
+  name: CAType
+  description: |+
+    Specifies the type of certification authority that this cmdlet installs.
+    The acceptable values for this parameter are:
+
+    - EnterpriseRootCA
+    - EnterpriseSubordinateCA
+    - StandaloneRootCA
+    - StandaloneSubordinateCA
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: EnterpriseRootCA, EnterpriseSubordinateCA, StandaloneRootCA, StandaloneSubordinateCA
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertFile
+  description: |+
+    Specifies the file name of certification authority PKCS #12 formatted certificate file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: CertFilePassword
+  description: |+
+    Specifies the password for certification authority certificate file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateID
+  description: |+
+    Specifies the thumbprint or serial number of certification authority certificate.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a **PSCredential** object for the connection to AD DS.
+    To obtain a credential object, use the **Get-Credential** cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+    To install an enterprise certification authority, the computer must be joined to an AD DS domain and a user account that is a member of the Enterprise Admin group is required.
+    To install a standalone certification authority, the computer can be in a workgroup or AD DS domain.
+    If the computer is in a workgroup, a user account that is a member of Administrators is required.
+    If the computer is in an AD DS domain, a user account that is a member of Domain Admins is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CryptoProviderName
+  description: |+
+    Specifies the name of the cryptographic service provider (CSP) or key storage provider (KSP) that is used to generate or store the private key for the CA.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseDirectory
+  description: |+
+    Specifies the folder location of the certification authority database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HashAlgorithmName
+  description: |+
+    Specifies the signature hash algorithm used by the certification authority.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IgnoreUnicode
+  description: |+
+    Indicates that the cmdlet allows Unicode characters in the certification authority name string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: KeyContainerName
+  description: |+
+    Specifies the name of an existing private key container.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: KeyLength
+  description: |+
+    Specifies the bit length for new certification authority key.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogDirectory
+  description: |+
+    Specifies the folder location of the certification authority database log.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutputCertRequestFile
+  description: |+
+    Specifies the folder location for certificate request file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverwriteExistingCAinDS
+  description: |+
+    Indicates that the cmdlet overwrites the computer object in the Active Directory Domain Service domain with the same computer name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverwriteExistingDatabase
+  description: |+
+    Indicates that the cmdlet overwrites the existing certification authority database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverwriteExistingKey
+  description: |+
+    Indicates that the cmdlet overwrites the existing key container with the same name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ParentCA
+  description: |+
+    Specifies the configuration string of the parent certification authority that will certify this CA.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ValidityPeriod" data-throw-if-not-resolved="False" />
+  name: ValidityPeriod
+  description: |+
+    Specifies the validity period of the certification authority (CA) certificate in hours, days, weeks, months or years. 
+    If this is a subordinate CA, do not use this parameter, because the validity period is determined by the parent CA.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Hours, Days, Weeks, Months, Years
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ValidityPeriodUnits
+  description: |+
+    Specifies the validity period of the CA certificate.
+    If this is a subordinate CA, do not specify this parameter because the validity period is determined by the parent CA.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADCSDeployment.Install-AdcsCertificationAuthority
+name: Install-AdcsCertificationAuthority
+description: |-
+  The **Install-AdcsCertificationAuthority** cmdlet performs installation and configuration of the Active Directory Certificate Services (AD CS) Certification Authority (CA) role service.
+  To remove the certification authority role service use the **Uninstall-AdcsCertificationAuthority** cmdlet.
+
+  You can import the cmdlet by running the following commands from Windows PowerShell:
+
+  - `Install-WindowsFeature Adcs-Cert-Authority`
+
+  To include the Certification Authority and Certificate Templates consoles in a CA installation, you must use the *IncludeManagementTools* parameter at the end of the `Install-WindowsFeature Adcs-Cert-Authority` command.
+
+  Int is equivalent to Int32 in the [.NET Framework](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/built-in-types).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+  Module Name: ADCSDeployment
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcscertificationauthority?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Install-AdcsCertificationAuthority

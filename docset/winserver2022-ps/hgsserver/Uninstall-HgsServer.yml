@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a local node from a Host Guardian Service and from the domain.
+module: HgsServer
+notes: ""
+links:
+- text: HGS Server Cmdlets
+  href: ./index.yml
+syntaxes:
+- >-
+  Uninstall-HgsServer [-LocalAdministratorPassword] <SecureString> [-HgsDomainCredential <PSCredential>] [-Force]
+
+   [-Restart] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove the node from HGS'
+  code: |-
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Uninstall-HgsServer -HgsDomainCredential $cred -LocalAdministratorPassword $secureString
+  description: |-
+    This example removes the node from an existing HGS setup.
+    If the second command removes the final node, then it also destroys the cluster.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: HgsDomainCredential
+  description: |+
+    Specifies the Active Directory domain administrator credentials for the primary HGS server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: LocalAdministratorPassword
+  isRequired: true
+  description: |+
+    Specifies the password for the local administrator account when the computer is no longer a domain controller.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Restart
+  description: |+
+    Indicates that a reboot is initiated automatically after running this command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsServer.Uninstall-HgsServer
+name: Uninstall-HgsServer
+description: |-
+  The **Uninstall-HgsServer** cmdlet removes a local node from a Host Guardian Service (HGS).
+
+  This cmdlet makes the following configuration changes in order to remove the HGS configuration from the additional HGS node: 
+
+  - Unregisters the Attestation Service web application with the IIS service. 
+  - Unregisters the Key Protection Service web application with the IIS service. 
+  - Disables Just Enough Administration on the local node. 
+  - Removes the local node from the existing failover cluster. 
+  - Removes the local node from being a domain controller.
+
+  This cmdlet makes the following configuration changes in order to remove the HGS configuration from the last HGS node: 
+
+  - Unregisters the Attestation Service web application with the IIS service. 
+  - Unregisters the Key Protection Service web application with the IIS service. 
+  - Removes the distributed network name (DNN) resource corresponding to the HGS name.
+  - Disables Just Enough Administration on the local node.
+  - Destroys the cluster on the local node. 
+  - Removes the local node from being a domain controller and removes the HGS domain.
+
+  For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: HgsServer-help.xml
+  Module Name: HgsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsserver/uninstall-hgsserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Uninstall-HgsServer

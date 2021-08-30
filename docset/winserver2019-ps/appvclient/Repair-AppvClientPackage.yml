@@ -1,0 +1,152 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the user settings of a package.
+module: AppvClient
+notes: ""
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvClientPackage
+  href: ./Add-AppvClientPackage.yml
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Mount-AppvClientPackage
+  href: ./Mount-AppvClientPackage.yml
+- text: Publish-AppvClientPackage
+  href: ./Publish-AppvClientPackage.yml
+- text: Remove-AppvClientPackage
+  href: ./Remove-AppvClientPackage.yml
+- text: Set-AppvClientPackage
+  href: ./Set-AppvClientPackage.yml
+- text: Stop-AppvClientPackage
+  href: ./Stop-AppvClientPackage.yml
+- text: Unpublish-AppvClientPackage
+  href: ./Unpublish-AppvClientPackage.yml
+syntaxes:
+- >-
+  Repair-AppvClientPackage [-Global] [-UserState] [-Extensions] [-PackageId] <Guid> [-VersionId] <Guid>
+
+   [<CommonParameters>]
+- >-
+  Repair-AppvClientPackage [-Global] [-UserState] [-Extensions] [-Package] <AppvClientPackage>
+
+   [<CommonParameters>]
+- >-
+  Repair-AppvClientPackage [-Global] [-UserState] [-Extensions] [-Name] <String> [[-Version] <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Delete user state for a version of a package'
+  code: |-
+    PS C:\> Repair-AppvClientPackage -Name "MyApp" -Version 3
+  description: |-
+    This command deletes the user state of version 3 of the package named MyApp.
+  summary: ""
+- title: 'Example 2: Delete user state for packages that have a name that matches a string'
+  code: |-
+    PS C:\> Get-AppvClientPackage -Name "MyA*" | Repair-AppvClientPackage
+  description: |-
+    This command gets all packages that have the string MyA in the name, and then delete the user state for those packages.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Extensions
+  description: |+
+    Indicates that this cmdlet repairs the extension points of a package only, and does not delete the user state of the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    Indicates that this cmdlet repairs the extension points for the provided packages for all users that log into the targeted computer.
+    Otherwise, the extension points of the packages are only repaired for the currently running user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the package given during Sequencing time.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppvClientPackage" data-throw-if-not-resolved="False" />
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies an App-V package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageId
+  isRequired: true
+  description: |+
+    Specifies a GUID that uniquely identifies the package.
+    It can be found in the package manifest or by opening the package in the Microsoft Application Virtualization (App-V) Sequencer.
+    The Package ID is shared by all versions of a package.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UserState
+  description: |+
+    Indicates that the cmdlet deletes the user state of the package only, and does not perform a repair on the extension points.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of an App-V package in a lineage.
+    If you do not specify this parameter, the cmdlet operates on all versions on the computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionId
+  isRequired: true
+  description: |+
+    Specifies the GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+    If you do not specify this parameter, the cmdlet operates on all versions of the package.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Repair-AppvClientPackage
+name: Repair-AppvClientPackage
+description: |-
+  The **Repair-AppvClientPackage** cmdlet deletes the user settings and reset the extension points of the package.
+  Resetting the settings causes permanent loss of any user-specific application settings in the package.
+  The settings are reset to their original state when the package was originally added to the system.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/repair-appvclientpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Repair-AppvClientPackage

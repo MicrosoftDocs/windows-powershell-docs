@@ -1,0 +1,25 @@
+### YamlMime:PowershellModule
+children:
+- title: StorageQoS
+  cmdlets:
+  - StorageQoS.Get-StorageQoSFlow
+  - StorageQoS.Get-StorageQosPolicy
+  - StorageQoS.Get-StorageQosPolicyStore
+  - StorageQoS.Get-StorageQosVolume
+  - StorageQoS.New-StorageQosPolicy
+  - StorageQoS.Remove-StorageQosPolicy
+  - StorageQoS.Set-StorageQosPolicy
+  - StorageQoS.Set-StorageQosPolicyStore
+uid: StorageQoS
+name: StorageQoS
+description: |-
+  This reference provides the cmdlet description and syntax for the Storage QoS cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.2.1
+  Locale: en-US
+  Module Guid: 18cd46da-e6a6-47f6-84b3-d4edd6e3eccf
+  Module Name: StorageQoS
+  ms.date: 12/20/2016
+  title: StorageQoS

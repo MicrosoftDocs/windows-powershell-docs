@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a resource pool.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Virtualization.Powershell.ResourcePool" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-VMResourcePool [-Name] <String> [-ResourcePoolType] <VMResourcePoolType[]> [[-ParentName] <String[]>]
+
+   [[-Paths] <Object[]>] [-ComputerName <String[]>] [-Confirm] [-WhatIf]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>New-VMResourcePool "New Resource Pool" VHD -Paths d:\VHDs
+  description: |-
+    Creates a new virtual hard disk resource pool with associated with a single path.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>New-VMResourcePool "New Resource Pool" VHD  -Paths "d:\VHDs","e:\Temp"
+  description: |-
+    Creates a new virtual hard disk resrouce pool associated with multiple paths.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>New-VMResourcePool "New Resource Pool" Ethernet
+  description: |-
+    Creates a new ethernet resource pool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the resource pool is to be created.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the resource pool
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ParentName
+  description: |+
+    Specifies the name of the parent resource pool for the new resource pool.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Paths
+  description: |+
+    Specifies an array of paths to be associated with a new storage resource pool.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMResourcePoolType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourcePoolType
+  isRequired: true
+  description: |+
+    Specifies the resource type of the resource pool.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.New-VMResourcePool
+name: New-VMResourcePool
+description: |-
+  The **New-VMResourcePool** cmdlet creates a resource pool.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/new-vmresourcepool?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

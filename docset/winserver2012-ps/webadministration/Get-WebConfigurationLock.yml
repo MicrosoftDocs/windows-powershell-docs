@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the lock status of the specified IIS configuration location.
+module: WebAdministration
+notes: ""
+syntaxes:
+- >-
+  Get-WebConfigurationLock [-Location <String[]>] [-Filter] <String[]> [[-PSPath] <String[]>]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Get the locking status of an IIS configuration --------------'
+  code: |-
+    IIS:\>Get-WebConfigurationLock -Filter //asp -PSPath IIS:\
+  description: |-
+    Returns the locking status of theaspIIS configuration section.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Filter
+  isRequired: true
+  description: |+
+    A filter expression.
+    It can be in XPath format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    The location of the IIS configuration setting.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    An IIS configuration path in the formatcomputer name/webroot/apphost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebConfigurationLock
+name: Get-WebConfigurationLock
+description: |-
+  Gets the locking status of the specified IIS configuration location.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webconfigurationlock?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

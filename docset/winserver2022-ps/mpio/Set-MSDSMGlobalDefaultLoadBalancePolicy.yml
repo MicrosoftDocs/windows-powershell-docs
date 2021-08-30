@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the default load balance policy for MPIO devices.
+module: MPIO
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-MSDSMGlobalDefaultLoadBalancePolicy
+  href: ./Get-MSDSMGlobalDefaultLoadBalancePolicy.yml
+syntaxes:
+- Set-MSDSMGlobalDefaultLoadBalancePolicy [-Policy] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Set round robin as default policy'
+  code: |-
+    PS C:\> Set-MSDSMGlobalLoadBalancePolicy -Policy RR
+  description: |-
+    This command sets the default load balance policy to round robin.
+  summary: ""
+- title: 'Example 2: Clear default policy'
+  code: |-
+    PS C:\> Set-MSDSMGlobalLoadBalancePolicy -Policy None
+  description: |-
+    This command clears any current configured default load balance policy.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies a default value for load balance policy.
+    The acceptable values for this parameter are:
+
+    - None.
+    Clears any currently configured default load balance policy.
+    - FOO.
+    Fail Over Only. 
+    - RR.
+    Round Robin.
+    - LQD.
+    Least Queue Depth.
+    - LB.
+    Least Blocks.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: None, FOO, RR, LQD, LB
+uid: MPIO.Set-MSDSMGlobalDefaultLoadBalancePolicy
+name: Set-MSDSMGlobalDefaultLoadBalancePolicy
+description: |-
+  The **Set-MSDSMGlobalDefaultLoadBalancePolicy** cmdlet sets the default load balance policy for Microsoft Multipath I/O (MPIO) devices.
+  Microsoft Device Specific Module (MSDSM) applies this policy only to devices that it claims after you set the policy.
+
+  Use the **Get-MSDSMGlobalDefaultLoadBalancePolicy** cmdlet to see the current default policy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Mpio-help.xml
+  Module Name: MPIO
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/mpio/set-msdsmglobaldefaultloadbalancepolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-MSDSMGlobalDefaultLoadBalancePolicy

@@ -1,0 +1,171 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Suspends activity on a failover cluster node, that is, pauses the node.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterNode
+  href: ./Add-ClusterNode.yml
+- text: Get-ClusterNode
+  href: ./Get-ClusterNode.yml
+- text: Remove-ClusterNode
+  href: ./Remove-ClusterNode.yml
+- text: Resume-ClusterNode
+  href: ./Resume-ClusterNode.yml
+- text: Start-ClusterNode
+  href: ./Start-ClusterNode.yml
+- text: Stop-ClusterNode
+  href: ./Stop-ClusterNode.yml
+syntaxes:
+- >-
+  Suspend-ClusterNode [[-Name] <StringCollection>] [-Drain] [-ForceDrain] [-Wait] [[-TargetNode] <String>]
+
+   [-InputObject <PSObject>] [-Cluster <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Pause a node of the local cluster'
+  code: |-
+    PS C:\> Suspend-ClusterNode -Name "node1"
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node1                                                                    Paused
+  description: |-
+    This example pauses the node named node1 on the local cluster.
+  summary: ""
+- title: 'Example 2: Pause a node of a cluster'
+  code: |-
+    PS C:\> Suspend-ClusterNode "node2" -Cluster "cluster2"
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node2                                                                    Paused
+  description: |-
+    This example pauses the node named node2 on the cluster named cluster2.
+  summary: ""
+- title: 'Example 3: Pause a node and move its workloads'
+  code: |-
+    PS C:\> Suspend-ClusterNode -Name "node1" -Target "node2" -Drain
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node1                                                                    Paused
+  description: |-
+    This example pauses the node named node1 and moves the workloads from it to the node named node2.
+  summary: ""
+- title: 'Example 4: Preview a pause operation'
+  code: |-
+    PS C:\> Suspend-ClusterNode node1 -Drain -WhatIf
+    What if: Performing operation "Suspend-ClusterNode" on Target "node1".
+  description: |-
+    This example provides a preview of the operation that will be performed on the node named node1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Drain
+  description: |+
+    Specifies that all of the workloads are gracefully moved to other nodes while maintaining the highest levels of availability and using the best placement logic.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceDrain
+  description: |+
+    The -ForceDrain switch, used in conjunction with the -Drain switch, allows all the workloads to be safely moved to other nodes, while maintaining the highest levels of availability and using the best placement logic.
+
+    If some or all of the workloads can't be moved safely, any workload that failed will be stopped and moved to another node as a failed role. Thereafter, the node will be forced to pause.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster node to suspend, with or without draining, or the cluster on which to run the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster node to suspend, with or without draining.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetNode
+  description: |+
+    Specifies a node to which to drain the workloads.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the *Wait* parameter is not specified, then the call is initiated and the cmdlet returns without waiting.
+    If specified with no value, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FailoverClusters.Suspend-ClusterNode
+name: Suspend-ClusterNode
+description: |-
+  The **Suspend-ClusterNode** cmdlet suspends activity on a failover cluster node, that is, pauses the node.
+  If you use the *Drain* parameter, clustered roles currently running on the node will be drained before the node is paused.
+
+  Pausing, or suspending, a node is usually done when applying software updates to the node.
+  If you need to perform extensive diagnosis or maintenance on a cluster node, it might be more workable to stop, not pause, the Cluster service on that node.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusternode?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Suspend-ClusterNode

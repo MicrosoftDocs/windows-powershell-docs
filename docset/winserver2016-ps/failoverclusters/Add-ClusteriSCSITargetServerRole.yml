@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a highly available iSCSI Target server.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterResource
+  href: ./Get-ClusterResource.yml
+syntaxes:
+- >-
+  Add-ClusteriSCSITargetServerRole -Storage <StringCollection> [-StaticAddress <StringCollection>]
+
+   [-IgnoreNetwork <StringCollection>] [[-Name] <String>] [-Wait <Int32>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a clustered target server'
+  code: |-
+    PS C:\> Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5"
+    Name                       OwnerNode                                      State 
+    ----                       ---------                                      ----- 
+    CLiSCSITarget              node1                                          Online
+  description: |-
+    This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns a default name.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5" -Name MyiSCSITarget
+    Name                       OwnerNode                                      State 
+    ----                       ---------                                      ----- 
+    MyiSCSITarget              node1                                          Online
+  description: |-
+    This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns the name MyiSCSITarget.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5" -Wait 0
+    Name                       OwnerNode                                      State 
+    ----                       ---------                                      ----- 
+    CLiSCSITarget              node1                                          Pending
+  description: |-
+    This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns a default name.
+    The cmdlet completes without waiting for all resources to come online.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: IgnoreNetwork
+  description: |+
+    Specifies one or more networks to ignore when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to create the highly available iSCSI Target server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the highly available iSCSI Target server to create.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: StaticAddress
+  description: |+
+    Specifies one or more static addresses to use when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Storage
+  isRequired: true
+  description: |+
+    Specifies the cluster disk resource to be added to the created highly available iSCSI Target server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the **Wait** parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusteriSCSITargetServerRole
+name: Add-ClusteriSCSITargetServerRole
+description: |-
+  The **Add-ClusteriSCSITargetServerRole** cmdlet creates a highly available iSCSI Target server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clusteriscsitargetserverrole?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusteriSCSITargetServerRole

@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests whether you can raise the behavior level of a farm.
+module: ADFS
+notes: ""
+links:
+- text: Invoke-AdfsFarmBehaviorLevelRaise
+  href: ./Invoke-AdfsFarmBehaviorLevelRaise.yml
+- text: Restore-AdfsFarmBehaviorLevel
+  href: ./Restore-AdfsFarmBehaviorLevel.yml
+- text: Test-AdfsFarmBehaviorLevelRestore
+  href: ./Test-AdfsFarmBehaviorLevelRestore.yml
+syntaxes:
+- >-
+  Test-AdfsFarmBehaviorLevelRaise [-Member <String[]>] [-Credential <PSCredential>]
+
+   [-ServiceAccountCredential <PSCredential>] [-Force] [<CommonParameters>]
+- >-
+  Test-AdfsFarmBehaviorLevelRaise [-Member <String[]>] [-Credential <PSCredential>]
+
+   [-GroupServiceAccountIdentifier <String>] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Test raising the farm behavior level'
+  code: |-
+    PS C:\> Test-AdfsFarmBehaviorLevelRaise
+  description: |-
+    This command tests whether you can raise the farm behavior level.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies credentials necessary to run this cmdlet for an AD FS farm that uses SQL Server as the policy database.
+    The credentials provided must be an administrator on each AD FS server.
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupServiceAccountIdentifier
+  description: |+
+    Specifies the ID of a group Managed Service Account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Member
+  description: |+
+    Specifies an array of members.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ServiceAccountCredential
+  description: |+
+    Specifies credentials for a service account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Test-AdfsFarmBehaviorLevelRaise
+name: Test-AdfsFarmBehaviorLevelRaise
+description: |-
+  The **Test-AdfsFarmBehaviorLevelRaise** cmdlet tests whether the **Invoke-AdfsFarmBehaviorLevelRaise** cmdlet can raise the behavior level of an Active Directory Federation Services (AD FS) farm to enable the new features that are available in later versions of the Windows operating system.
+
+  To test raising the behavior level of a farm that uses SQL Server as the policy database, specify the *Credential* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/test-adfsfarmbehaviorlevelraise?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-AdfsFarmBehaviorLevelRaise

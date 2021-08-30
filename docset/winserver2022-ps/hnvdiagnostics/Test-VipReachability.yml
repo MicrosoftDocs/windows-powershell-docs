@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests whether DIPs are reachable.
+module: HNVDiagnostics
+notes: ""
+syntaxes:
+- >-
+  Test-VipReachability [[-OperationId] <String>] [-SourceIP] <String> [[-CompartmentId] <String>]
+
+   [-TargetVIP] <String> [-Muxes] <Hashtable[]> [-Dips] <Hashtable[]> [[-SequenceNumber] <Int32>]
+
+   [[-PayloadSize] <Int32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Test VIP reachability'
+  code: |-
+    PS C:\> for ($mux in $VipHostMapping.MuxList) {
+        $secpasswd = ConvertTo-SecureString <plaintext password> -AsPlainText -Force
+        $creds = New-Object System.Management.Automation.PSCredential (<username>, $secpasswd)
+        $mux.Credentials = $creds
+    }
+    PS C:\> for ($dip in $VipHostMapping.DIPHosts) {
+        $secpasswd = ConvertTo-SecureString <plaintext password> -AsPlainText -Force
+        $creds = New-Object System.Management.Automation.PSCredential (<username>, $secpasswd)
+        $dip.HostInfo.Credentials = $creds
+    }
+    PS C:\> Test-VIPReachability -OperationId 1 -SourceIP "10.123.176.108" -TargetVIP "10.123.177.110" -Muxes $VipHostMapping.MuxList -Dips $VipHostMapping.DIPHosts
+  description: |-
+    The first command populates the credentials for the MUX nodes to test.
+
+    The second command populates the credentials for the DIPs to test.
+
+    The last command tests the VIP reachability for the specified MUXes and DIPs.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CompartmentId
+  description: |+
+    Specifies the ID of the network compartment to use to inject ICMP echo requests.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Dips
+  isRequired: true
+  description: |+
+    Specifies an array of DIPs to test.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Muxes
+  isRequired: true
+  description: |+
+    Specifies an array of MUXes to load-balance the DIPs.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OperationId
+  description: |+
+    Specifies an ID for the operation.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PayloadSize
+  description: |+
+    Specifies the size of the payload to carry in ICMP messages.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SequenceNumber
+  description: |+
+    Specifies the ICMP sequence number.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceIP
+  isRequired: true
+  description: |+
+    Specifies the IP address of the source node.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetVIP
+  isRequired: true
+  description: |+
+    Specifies the IP address of the target VIP.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HNVDiagnostics.Test-VipReachability
+name: Test-VipReachability
+description: |-
+  The **Test-VipReachability** cmdlet tests whether a list of datacenter IP addresses (DIPs) can be reached through the specified multiplexers (MUXes).
+
+  The test covers layer-3 connectivity to the MUX nodes, and from the MUX nodes to the DIP hosts.
+
+  The test first sends Internet Control Message Protocol (ICMP) echo requests to the virtual IP (VIP) address.
+  The MUX intercepts the echo requests and sends responses that appear to come from the targeted VIP.
+
+  The test then sends ICMP echo requests from the MUX host to the DIP host on the provider network.
+  The results of the test are reported in the output object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: VipReachability-help.xml
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/test-vipreachability?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-VipReachability

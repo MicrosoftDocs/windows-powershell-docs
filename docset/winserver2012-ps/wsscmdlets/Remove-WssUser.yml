@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes a user.
+module: WssCmdlets
+notes: ""
+links:
+- text: Add-WssUser
+  href: ./Add-WssUser.yml
+- text: Get-WssUser
+  href: ./Get-WssUser.yml
+- text: Import-WssUser
+  href: ./Import-WssUser.yml
+- text: Sync-WssUser
+  href: ./Sync-WssUser.yml
+syntaxes:
+- Remove-WssUser -Name <String>
+examples:
+- title: 'Example 1: Delete a user'
+  code: |-
+    PS C:\> Remove-WssUser -Name "SarahJones"
+  description: |-
+    This command deletes a user from WSS by using the logon name.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the logon name of a user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Remove-WssUser
+name: Remove-WssUser
+description: |-
+  The **Remove-WssUser** cmdlet deletes a user from a sbs_sbs8_2 server.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/remove-wssuser?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

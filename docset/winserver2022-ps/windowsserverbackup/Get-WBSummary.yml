@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the history of backup operations on the computer.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    None
+outputs:
+- name: <xref href="WBSummary" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the **WBSummary** object that contains information about the backup history for this computer.
+links:
+- text: Get-WBJob
+  href: ./Get-WBJob.yml
+- text: Start-WBBackup
+  href: ./Start-WBBackup.yml
+syntaxes:
+- Get-WBSummary [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a backup summary'
+  code: |-
+    PS C:\> Get-WBSummary
+  description: |-
+    This command gets information about the history of backups on the local computer.
+  summary: ""
+uid: WindowsServerBackup.Get-WBSummary
+name: Get-WBSummary
+description: |-
+  The **Get-WBSummary** cmdlet gets the history of backup operations on the computer.
+  This information includes the next scheduled backup, details of the last backup, and details of the last successful backup.
+  You can use this cmdlet to monitor the backups and the backup schedule on the computer.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbsummary?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBSummary

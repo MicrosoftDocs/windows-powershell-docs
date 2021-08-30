@@ -1,0 +1,353 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a routing policy configuration.
+module: RemoteAccess
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#BgpRoutingPolicyConfig" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-BgpRoutingPolicy
+  href: ./Get-BgpRoutingPolicy.yml
+- text: Add-BgpRoutingPolicy
+  href: ./Add-BgpRoutingPolicy.yml
+- text: Remove-BgpRoutingPolicy
+  href: ./Remove-BgpRoutingPolicy.yml
+syntaxes:
+- >-
+  Set-BgpRoutingPolicy [-Name] <String> [-PassThru] [-PolicyType <PolicyType>] [-RoutingDomain <String>] [-Force]
+
+   [-AddCommunity <String[]>] [-RemoveCommunity <String[]>] [-RemovePolicyClause <String[]>]
+
+   [-MatchASNRange <UInt32[]>] [-IgnorePrefix <String[]>] [-MatchCommunity <String[]>] [-MatchPrefix <String[]>]
+
+   [-MatchNextHop <IPAddress[]>] [-NewLocalPref <UInt32>] [-NewMED <UInt32>] [-NewNextHop <IPAddress>]
+
+   [-ClearMED] [-RemoveAllCommunities] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a BGP routing policy'
+  code: |-
+    PS C:\> Set-BgpRoutingPolicy -Name "RTPolicy01" -PolicyType ModifyAttribute -NewMED 100 -PassThru
+
+
+
+    Confirm
+    BGP routing policy RTPolicy01 could currently be active. Do you want to apply these changes and restart corresponding
+    peerings?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+
+
+    PolicyName   : RTPolicy01
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchASNRange : {64522, 64555}
+    SetClauses   : NewMED       : 100
+    AddCommunity : {645:2}
+  description: |-
+    This command modifies the routing policy named RTPolicy01.
+    The command sets the ModifyAttribute policy type of the routing policy, and specifies the value 100 for the MED attribute of the BGP routes that match the criteria that you specify for the routing policy.
+  summary: ""
+- title: 'Example 2: Modify the community attribute of a BGP routing policy'
+  code: |-
+    PS C:\> Set-BgpRoutingPolicy -Name "RTPolicy06" -MatchCommunity 100:500 -Force -PassThru
+
+
+
+
+
+    PolicyName   : RTPolicy06
+    PolicyType   : Deny
+    MatchClauses : MatchASNRange  : {64545, 64555}
+    MatchCommunity : {100:500}
+    SetClauses   :
+  description: |-
+    This command modifies the MatchCommunity attribute for the BGP routing policy named RTPolicy06.
+    Because the cmdlet uses the **Force** parameter, the cmdlet modifies the routing policy without prompting the user for confirmation.
+  summary: ""
+- title: 'Example 3: Modify a BGP routing policy of a routing domain'
+  code: |-
+    PS C:\> Set-BgpRoutingPolicy -Name "RTPolicy04" -RoutingDomain "Rd_001" -NewLocalPref 300 -PassThru
+
+
+
+    Confirm
+    BGP routing policy RTPolicy04 could currently be active. Do you want to apply these changes and restart corresponding
+    peerings for routing domain Rd_001?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+
+
+    PolicyName   : RTPolicy04
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchPrefix  : {10.1.4.0/24}
+    IgnorePrefix : {10.1.4.16/28}
+    SetClauses   : NewLocalPref : 300
+  description: |-
+    This command removes the routing policy named RTPolicy04 from the BGP router for the routing domain named Rd_001.
+    The command prompts the user for confirmation before it removes the routing policy.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddCommunity
+  description: |+
+    Specifies an array of **Community** attribute values.
+    The cmdlet adds the **Community** attribute values to the BGP routes that match the criteria that you specify for this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearMED
+  description: |+
+    Indicates that the cmdlet removes the Multi-Exit Discriminator (MED) value from the route advertisements of the BGP routes that match the criteria that you specify for this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IgnorePrefix
+  description: |+
+    Specifies an array of network prefixes.
+    The cmdlet does not process routes that have the network prefix that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MatchASNRange
+  description: |+
+    Specifies a range of autonomous system numbers (ASNs).
+    The cmdlet matches these ASNs with the ASNs in the **As-Path** attribute in the BGP route advertisements.
+    The cmdlet processes the routes that match these criteria.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MatchCommunity
+  description: |+
+    Specifies an array of **Community** attribute values.
+    The cmdlet matches these **Community** attribute values in the BGP route advertisements.
+    The cmdlet processes the routes that match these criteria.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MatchNextHop
+  description: |+
+    Specifies an array of **Next-Hop** attribute values.
+    The cmdlet matches these IP addresses in the BGP route advertisements, and it processes the routes that match these criteria.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MatchPrefix
+  description: |+
+    Specifies an array of network prefixes.
+    The cmdlet matches these network addresses in the BGP route advertisements and processes the routes that match this criteria.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a routing policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: PolicyId, PolicyName
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NewLocalPref
+  description: |+
+    Specifies a new value of the **Local-Pref** attribute of the BGP routes that match the criteria that you specify for this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NewMED
+  description: |+
+    Specifies anew value of the **MED** attribute of the BGP routes that match the criteria that you specify for this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: NewNextHop
+  description: |+
+    Specifies a new IP address value of the **Next-Hop** attribute of the BGP routes that match the criteria that you specify for this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PolicyType" data-throw-if-not-resolved="False" />
+  name: PolicyType
+  description: |+
+    Specifies the type of BGP routing policy or the filtering action that the cmdlet applies to the BGP routes that match the criteria that you specify for this cmdlet.
+    The acceptable values for this parameter are:
+
+    - ModifyAttribute
+    - Allow.
+    The routing policy allows all routes that match the criteria for the BGP best path selection process.
+    - Deny.
+    The routing policy filters and drops all routes that match the criteria from the BGP best path selection process.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Deny, Allow, ModifyAttribute
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemoveAllCommunities
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoveCommunity
+  description: |+
+    Specifies an array of **Community** attribute values.
+    The cmdlet removes the **Community** attribute values from the BGP routes that match the criteria that you specify for this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemovePolicyClause
+  description: |+
+    Specified an array of policy clauses.
+    The cmdlet removes these policy clauses from the routing policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingDomain
+  description: |+
+    Specifies a name, as a string, for a routing domain.
+    The name of a routing domain is a unique user-defined alphanumeric string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RoutingDomainName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Set-BgpRoutingPolicy
+name: Set-BgpRoutingPolicy
+description: |-
+  The **Set-BgpRoutingPolicy** cmdlet modifies the configuration of a BGP routing policy.
+  The cmdlet selects and configures the routes for the routing policy that match the criteria that you specify for this cmdlet.
+  You can set the criteria by specifying the following parameters: 
+
+  - MatchASNRange
+  - MatchCommunity
+  - MatchNextHop
+  - MatchPrefix
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_BgpRoutingPolicy_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-bgproutingpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-BgpRoutingPolicy

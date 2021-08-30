@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Assigns a workspace name for a Remote Desktop deployment.
+module: RemoteDesktop
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDWorkspace
+  href: ./Get-RDWorkspace.yml
+syntaxes:
+- Set-RDWorkspace [-Name] <String> [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Assign a workspace name'
+  code: |-
+    PS C:\> Set-RDWorkspace -Name "Contoso Resources"
+  description: |-
+    This command assigns the workspace name Contoso Resources for the Remote Desktop deployment that has the current computer as an RD Connection Broker server.
+    To specify a different RD Connection Broker server, use the **ConnectionBroker** parameter.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a workspace name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteDesktop.Set-RDWorkspace
+name: Set-RDWorkspace
+description: |-
+  The **Set-RDWorkspace** cmdlet assigns a workspace name for a Remote Desktop deployment.
+  Users see this name in their RemoteApp and Desktop Connection environment and their Remote Desktop Web Access (RD Web Access) environment.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdworkspace?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDWorkspace

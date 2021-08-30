@@ -1,0 +1,148 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a GPO.
+module: GroupPolicy
+notes: |-
+  * When you remove a GPO, by default, all links to that GPO in the domain of the GPO are deleted. To remove a link to a GPO, you must have permission to link Group Policy Objects for the organizational unit or domain. If you do not have rights to delete a link, the GPO is deleted, but the link remains. Links from other domains and sites are not removed. The link to a deleted GPO appears in the GPMC as Not Found. To remove Not Found links, you must either have permission on the site, domain, or organizational unit containing the link, or ask someone with sufficient rights to delete it.
+inputs:
+- name: <xref href="Microsoft.GroupPolicy.Gpo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet pipes the GPO to be removed.
+    Collections that contain GPOs from different domains are not supported.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Get-GPO
+  href: ./Get-GPO.yml
+- text: New-GPO
+  href: ./New-GPO.yml
+syntaxes:
+- >-
+  Remove-GPO -Guid <Guid> [-Domain <String>] [-Server <String>] [-KeepLinks] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-GPO [-Name] <String> [-Domain <String>] [-Server <String>] [-KeepLinks] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a GPO by GUID'
+  code: |-
+    PS C:\> Remove-GPO -Guid 50cc3e45-0b14-46dd-8b4d-afa012bc331c -Domain "contoso.com" -KeepLinks
+  description: |-
+    This command removes the GPO that has the GUID 50cc3e45-0b14-46dd-8b4d-afa012bc331c from the contoso.com domain.
+    Because the *KeepLinks* parameter is specified, links between the GPO and all sites, and links between the GPO and all containers in the domain are preserved.
+  summary: ""
+- title: 'Example 2: Remove a GPO by name'
+  code: |-
+    PS C:\> Remove-GPO -Name "TestGPO"
+  description: |-
+    This command removes the GPO named TestGPO from the domain of the user that is running the session.
+    Because the *KeepLinks* parameter is not specified, links between the GPO and all sites, and links between the GPO and all containers in the domain are removed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies the domain in which you want to remove a GPO.
+    You must specify the fully qualified domain name (FQDN) of the domain.
+
+    If you do not specify the *Domain* parameter, the domain of the computer that you are logged on to is used.
+
+    If you specify a domain that differs from the domain of your user object, a trust must exist between the domain from which you want to remove the GPO and the domain of your user object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DomainName
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Guid
+  isRequired: true
+  description: |+
+    Specifies the GPO to remove by its globally unique identifier (GUID).
+    The GUID uniquely identifies the GPO.
+
+    You can also refer to the *Guid* parameter by its built-in alias, id.
+    For more information, see about_Aliases.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ID, GPOID
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: KeepLinks
+  description: |+
+    Indicates that the cmdlet preserves the links to the GPO in the specified domain, including OUs, and all sites when the GPO is removed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the GPO that this cmdlet removes by its display name.
+
+    The display name is not guaranteed to be unique in the domain.
+    If another GPO with the same display name exists in the domain an error occurs.
+    You can use the *Guid* parameter to uniquely identify a GPO.
+
+    You can also refer to the *Name* parameter by its built-in alias, displayname.
+    For more information, see **about_Aliases**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DisplayName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
+    You can specify either the fully qualified domain name (FQDN) or the host name.
+
+    If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+
+    You can also refer to the *Server* parameter by its built-in alias, dc.
+    For more information, see **about_Aliases**.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: GroupPolicy.Remove-GPO
+name: Remove-GPO
+description: |-
+  The **Remove-GPO** cmdlet removes the Group Policy Object (GPO) container and data from the directory service and the system volume folder (SysVol).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.GroupPolicy.Commands.dll-Help.xml
+  Module Name: GroupPolicy
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/grouppolicy/remove-gpo?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-GPO

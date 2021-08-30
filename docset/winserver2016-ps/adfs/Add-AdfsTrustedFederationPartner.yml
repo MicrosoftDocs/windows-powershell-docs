@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds configuration settings for trusted federation partners in AD FS.
+module: ADFS
+notes: ""
+links:
+- text: Get-AdfsTrustedFederationPartner
+  href: ./Get-AdfsTrustedFederationPartner.yml
+- text: Remove-AdfsTrustedFederationPartner
+  href: ./Remove-AdfsTrustedFederationPartner.yml
+- text: Set-AdfsTrustedFederationPartner
+  href: ./Set-AdfsTrustedFederationPartner.yml
+syntaxes:
+- >-
+  Add-AdfsTrustedFederationPartner [-Name] <String> [-FederationPartnerHostName] <Uri> [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: FederationPartnerHostName
+  isRequired: true
+  description: |+
+    Specifies the URI of the federation partner.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the federation partner.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Add-AdfsTrustedFederationPartner
+name: Add-AdfsTrustedFederationPartner
+description: |-
+  The **Add-AdfsTrustedFederationPartner** cmdlet adds a federation partner that is trusted by this instance of Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/add-adfstrustedfederationpartner?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AdfsTrustedFederationPartner

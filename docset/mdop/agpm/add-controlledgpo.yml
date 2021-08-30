@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds GPOs to an AGPM archive.
+module: AGPM
+notes: ""
+inputs:
+- name: <xref href="Microsoft.GroupPolicy.Gpo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts GPO objects.
+outputs:
+- name: <xref href="Microsoft.Agpm.ControlledGpo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns controlled GPO objects, if you specify the *PassThru* parameter.
+links:
+- text: Get-ControlledGpo
+  href: get-controlledgpo.yml
+- text: Lock-ControlledGpo
+  href: lock-controlledgpo.yml
+- text: Publish-ControlledGpo
+  href: publish-controlledgpo.yml
+- text: Remove-ControlledGpo
+  href: remove-controlledgpo.yml
+- text: Unlock-ControlledGpo
+  href: unlock-controlledgpo.yml
+syntaxes:
+- Add-ControlledGpo [-PassThru] [-Comment <String>] [[-Gpos] <Gpo[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a GPO by using the pipeline operator'
+  code: |-
+    PS C:\>Get-Gpo -Name "TSQA Group policies" | Add-ControlledGpo -PassThru
+    Name            : TSQA Group policies
+    ID              : {5507363B-6AEB-4EFF-89FD-1567CD1E14E5}
+    CheckoutID      : 
+    BackupID        : {185339E4-54C1-441F-A53B-4510E93DA424}
+    State           : CHECKED_IN
+    ComputerVersion : 2
+    UserVersion     : 2
+    Deployed        : 
+    Changed         : 11/25/2014 9:37:18 AM
+    ChangedBy       : CONTOSO\Admin07
+    WmiFilterName   : 
+    Comment         :
+  description: |-
+    This command uses the **Get-Gpo** cmdlet to get the uncontrolled GPO named TSQA Group policies.
+    For more information, type `Get-Help Get-Gpo`.
+    The command passes that GPO to the current cmdlet.
+    This cmdlet adds that GPO to the AGPM archive.
+  summary: ""
+- title: 'Example 2: Add a GPO by using a variable'
+  code: |-
+    PS C:\>$GpoObject = Get-Gpo -Name "TSQA Group policies"
+    PS C:\> Add-ControlledGpo -Gpos $GpoObject -PassThru
+    Name            : TSQA Group policies
+    ID              : {5507363B-6AEB-4EFF-89FD-1567CD1E14E5}
+    CheckoutID      : 
+    BackupID        : {70D90CA2-E396-4549-A2C9-18EED518F6F1}
+    State           : CHECKED_IN
+    ComputerVersion : 2
+    UserVersion     : 2
+    Deployed        : 
+    Changed         : 11/25/2014 9:54:12 AM
+    ChangedBy       : CONTOSO\Admin07
+    WmiFilterName   : 
+    Comment         :
+  description: |-
+    The first command uses **Get-Gpo** to get the uncontrolled GPO named TSQA Group policies, and then stores that object in the $GpoObject variable.
+
+    The second command adds the object stored in $GpoObject to the AGPM archive.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Comment
+  description: |+
+    Specifies a comment for the change that this cmdlet makes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Gpo" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Gpos
+  description: |+
+    Specifies an array of GPOs to add to the AGPM archive.
+    To obtain GPOs, use the **Get-Gpo** cmdlet.
+    For more information, type `Get-Help Get-Gpo`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Indicates that this cmdlet returns the controlled GPOs on which the cmdlet operates.
+    If you do not specify this parameter, this cmdlet returns no results.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AGPM.Add-ControlledGpo
+name: Add-ControlledGpo
+description: |-
+  The **Add-ControlledGpo** cmdlet adds uncontrolled Group Policy Objects (GPOs) to an Advanced Group Policy Management (AGPM) archive.
+  That GPO becomes a controlled GPO.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.Agpm.Client.Powershell.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Add-ControlledGpo

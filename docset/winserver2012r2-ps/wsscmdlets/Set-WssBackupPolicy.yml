@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates or changes a scheduled backup policy.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.ServerBackup.ObjectModel.ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a server backup policy object that specifies backup options such as backup targets, backup volume, and schedule time.
+links:
+- text: Disable-WssBackupPolicy
+  href: ./Disable-WssBackupPolicy.yml
+- text: Get-WssBackupPolicy
+  href: ./Get-WssBackupPolicy.yml
+- text: Resume-WssBackupPolicy
+  href: ./Resume-WssBackupPolicy.yml
+- text: Suspend-WssBackupPolicy
+  href: ./Suspend-WssBackupPolicy.yml
+syntaxes:
+- Set-WssBackupPolicy [-BackupPolicy] <ScheduledBackupPolicy> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Specify a scheduled backup policy'
+  code: |-
+    PS C:\>$ContosoBUPolicy25 = Get-WssBackupPolicy
+    PS C:\> Add-WssBackupSchedule -BackupPolicy $ContosoBUPolicy25 -BackupTime 5:00
+    PS C:\> Set-WssBackupPolicy -BackupPolicy $ContosoBUPolicy25
+  description: |-
+    This example sets a scheduled backup policy as the current scheduled backup policy.
+
+    The first command gets the current backup policy for the computer and stores it in the **$ContosoBUPolicy25** variable.
+
+    The second command adds 5:00 A.M.
+    daily as a backup schedule for the backup policy stored in **$ContosoBUPolicy25**.
+
+    The third command sets the scheduled backup policy stored in **$ContosoBUPolicy25** (including the new schedule) as the current scheduled backup policy.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the scheduled backup policy to create or change.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WSSCmdlets.Set-WssBackupPolicy
+name: Set-WssBackupPolicy
+description: |-
+  The **Set-WssBackupPolicy** cmdlet creates or changes a scheduled backup policy.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssbackuppolicy?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssBackupPolicy

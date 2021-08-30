@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a mapping between an attribute of an LDAP folder and an AD FS claim type.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsLocalClaimsProviderTrust
+  href: ./Add-AdfsLocalClaimsProviderTrust.yml
+syntaxes:
+- New-AdfsLdapAttributeToClaimMapping [-LdapAttribute] <String> [[-ClaimType] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a mapping of an LDAP directory attribute'
+  code: |-
+    PS C:\> $DisplayName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute "displayName" -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/displayname"
+  description: |-
+    This command creates a mapping of an LDAP directory attribute to a claim type.
+    The command stores the mapping in the $DisplayName variable for use with other cmdlets.
+
+    To see this cmdlet as part of creating an LDAP local claims provider trust, see the **Add-AdfsLocalClaimsProviderTrust** cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClaimType
+  description: |+
+    Specifies the claim type to assign to the AD FS claim that contains the LDAP attribute value.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LdapAttribute
+  isRequired: true
+  description: |+
+    Specifies the attribute in the LDAP folder to which the claim type is mapped.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.New-AdfsLdapAttributeToClaimMapping
+name: New-AdfsLdapAttributeToClaimMapping
+description: |-
+  The **New-AdfsLdapAttributeToClaimMapping** cmdlet creates a mapping between an attribute of the Lightweight Directory Access Protocol (LDAP) folder and an Active Directory Federation Services (AD FS) claim type.
+  Mappings make it possible for LDAP attributes to be available for claim rule processing in AD FS.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/new-adfsldapattributetoclaimmapping?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-AdfsLdapAttributeToClaimMapping

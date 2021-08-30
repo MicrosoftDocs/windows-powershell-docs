@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Suspends replication between computers regardless of schedule.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, UInt, String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DfsReplicationGroup
+  href: ./Get-DfsReplicationGroup.yml
+- text: New-DfsReplicationGroup
+  href: ./New-DfsReplicationGroup.yml
+- text: Remove-DfsReplicationGroup
+  href: ./Remove-DfsReplicationGroup.yml
+- text: Set-DfsReplicationGroup
+  href: ./Set-DfsReplicationGroup.yml
+- text: Sync-DfsReplicationGroup
+  href: ./Sync-DfsReplicationGroup.yml
+syntaxes:
+- >-
+  Suspend-DfsReplicationGroup [-GroupName] <String[]> [-SourceComputerName] <String>
+
+   [-DestinationComputerName] <String> [-DurationInMinutes] <UInt32> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Suspend replication between servers'
+  code: |-
+    PS C:\> Suspend-DfsReplicationGroup -GroupName "RG01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -DurationInMinutes 15
+  description: |-
+    This command suspends replication from server SRV01 to SRV02 in the RG01 replication group for 15 minutes, even if the replication happens during an open replication schedule.
+  summary: ""
+- title: 'Example 2: Suspend replication between servers with verbose output'
+  code: |-
+    PS C:\> Suspend-DfsReplicationGroup -GroupName "RG01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -DurationInMinutes 5 -Verbose
+    VERBOSE: Performing operation "Suspend-DfsReplicationGroup" on Target "SRV01".
+    VERBOSE: The **Suspend-DfsReplicationGroup** cmdlet completed successfully.
+  description: |-
+    This command suspends replication from server SRV01 to SRV02 in the RG01 replication group for 5 minutes, even if the replication happens during an open replication schedule, and displays output.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of the receiving computer.
+    A destination computer is also called an inbound or downstream computer.
+    This computer overrides its schedule and stops inbound replication.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ReceivingMember, RMem
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DurationInMinutes
+  isRequired: true
+  description: |+
+    Specifies the number of minutes to suspend replication.
+
+  defaultValue: None
+  position: "3"
+  aliases: Time
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replication groups.
+    If you do not specify this parameter, the cmdlet queries for all participating replications groups.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of the sending computer.
+    A source computer is also called an outbound or upstream computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: SendingMember, SMem
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSR.Suspend-DfsReplicationGroup
+name: Suspend-DfsReplicationGroup
+description: |-
+  The **Suspend-DfsReplicationGroup** cmdlet suspends replication between computers, even if replication was scheduled by either a replication group or a connection.
+
+  This cmdlet ignores the schedule for a specified number of minutes.
+  This is typically preferable to altering the schedule temporarily to prevent replication, because this cmdlet does not require Active Directory replication and LDAP polling.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/suspend-dfsreplicationgroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Suspend-DfsReplicationGroup

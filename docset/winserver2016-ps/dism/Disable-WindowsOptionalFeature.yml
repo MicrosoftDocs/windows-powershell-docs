@@ -1,0 +1,225 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables a feature in a Windows image.
+module: DISM
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.BasicFeatureObject" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.AdvancedFeatureObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Enable-WindowsOptionalFeature
+  href: ./Enable-WindowsOptionalFeature.yml
+- text: Get-WindowsOptionalFeature
+  href: ./Get-WindowsOptionalFeature.yml
+- text: Remove-WindowsPackage
+  href: ./Remove-WindowsPackage.yml
+syntaxes:
+- >-
+  Disable-WindowsOptionalFeature -FeatureName <String[]> [-PackageName <String>] [-Remove] [-NoRestart] [-Online]
+
+   [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>]
+
+   [-LogLevel <LogLevel>] [<CommonParameters>]
+- >-
+  Disable-WindowsOptionalFeature -FeatureName <String[]> [-PackageName <String>] [-Remove] [-NoRestart]
+
+   -Path <String> [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>]
+
+   [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable an optional feature'
+  code: |-
+    PS C:\> Disable-WindowsOptionalFeature -Online -FeatureName "Hearts"
+  description: |-
+    This command disables an optional feature, Hearts, from the running Windows operating system.
+  summary: ""
+- title: 'Example 2: Disable a feature in an image'
+  code: |-
+    PS C:\> Disable-WindowsOptionalFeature -Path "c:\offline" -FeatureName "Calc" -PackageName "Microsoft.Windows.Calc.Demo~6595b6144ccf1df~x86~en~1.0.0.0" -Remove
+  description: |-
+    This command disables the optional feature, Calc, in the specified package in the Windows image that is mounted to c:\offline.
+    It also removes all of the files except the manifest file, which reduces the size of the Windows image.
+    The feature can be restored with the **Enable-WindowsOptionalFeature** cmdlet or by using Features on Demand at any time after the image is deployed.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FeatureName
+  isRequired: true
+  description: |+
+    Specifies the name of the feature to be disabled.
+    Feature names are case sensitive if you are servicing a Windows image other than Windows® 8 or a later version.
+    You can use Get-WindowsOptionalFeature to find the name of the feature in the image.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: |+
+    Specifies the maximum output level shown in the logs.
+    The default log level is 3.
+    The accepted values are as follows:
+    - 1 = Errors only
+    - 2 = Errors and warnings
+    - 3 = Errors, warnings, and information
+    - 4 = All of the information listed previously, plus debug output
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LL
+  parameterValueGroup: Errors, Warnings, WarningsInfo
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the full path and file name to log to.
+    If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+    In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+    The log file will automatically be archived.
+    The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+    Each time the log file is archived the .bak file will be overwritten. 
+    When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LP
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRestart
+  description: |+
+    Suppresses reboot.
+    If a reboot is not required, this command does nothing.
+    This option will keep the application from prompting for a restart or keep it from restarting automatically.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Online
+  isRequired: true
+  description: |+
+    Specifies that the action is to be taken on the operating system that is currently running on the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageName
+  description: |+
+    Specifies the name of a package in the Windows image.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the full path to the root directory of the offline Windows image that you will service.
+    If the directory named Windows is not a subdirectory of the root directory, *WindowsDirectory* must be specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Remove
+  description: |+
+    Removes the files for an optional feature without removing the feature's manifest from the image.
+    You can use *Remove* to reduce the disk space that is used by a Windows image.
+    After the image has been installed, you can restore the feature at any time from a remote source such as Windows Update or a network share.
+
+    Remove can only be used when servicing an image contain Windows 8 or Windows Server 2012 or a later version.
+
+    > [!NOTE]
+    > Starting with Windows 10, the payload is not removed from Windows 10 devices in order to support Push-Button Reset. However, the payload is removed from editions of Windows Server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScratchDirectory
+  description: |+
+    Specifies a temporary directory that will be used when extracting files for use during servicing.
+    The directory must exist locally.
+    If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+    Items in the scratch directory are deleted after each operation. 
+    You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+    The directory used for extracting files for temporary usage during servicing should be a local directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SystemDrive
+  description: |+
+    Specifies the path to the location of the BootMgr files.
+    This is necessary only when the BootMgr files are located on a partition other than the one that you are running the command from.
+    Use -SystemDrive to service an installed Windows image from a Windows PE environment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WindowsDirectory
+  description: |+
+    Specifies the path to the Windows directory relative to the image path.
+    This cannot be the full path to the Windows directory; it should be a relative path.
+    If not specified, the default is the Windows directory in the root of the offline image directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DISM.Disable-WindowsOptionalFeature
+name: Disable-WindowsOptionalFeature
+description: |-
+  The **Disable-WindowsOptionalFeature** cmdlet disables or removes an optional feature in a Windows image.
+
+  Use the *Online* parameter to specify the running operating system on your local computer, or use the *Path* parameter to specify the location of a mounted Windows image.
+
+  The *PackageName* parameter specifies the package that the feature is a component of.
+  This parameter is optional when the package is the Windows Foundation package.
+
+  The *FeatureName* parameter specifies the feature to remove.
+  You can specify more than one feature in the same package.
+  Separate feature names with a comma.
+
+  The *Remove* parameter removes the files for an optional feature without removing the feature's manifest from the image.
+  You can use *Remove* to reduce the disk space that is used by a Windows image.
+  After the image has been installed, you can restore the feature at any time from a remote source such as Windows Update or a network share.
+  For more information about Features on Demand, see [Configure a Windows Repair Source](https://go.microsoft.com/fwlink/?LinkId=243077) in the TechNet Library.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+  Module Name: System.Object[]
+  ms.date: 12/21/2016
+  online version: https://docs.microsoft.com/powershell/module/dism/disable-windowsoptionalfeature?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-WindowsOptionalFeature

@@ -1,0 +1,208 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds one or more client computer security groups (SGs) to the DirectAccess (DA) deployment, adds one or more DA client Group Policy Objects (GPOs) in one or more domains, adds one or more SGs of down-level clients to the DA deployment in a multi-site deployment, or adds one or more down-level DA client GPOs in one or more domains in a multi-site deployment.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DAClient" data-throw-if-not-resolved="False" />
+  description: "The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.\r\nThe path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.\r\n                         \r\nThe output object contains the following properties: \r\n                         \r\n -- The list of client SGs present in the DA deployment.\r\n                         \r\n -- The list of client GPOs present in the DA deployment. \r\n                         \r\n -- The status of force tunnel. \r\n                         \r\n -- The Name Resolution Policy Table (NRPT) object (for force tunnel properties). \r\n                         \r\n -- The status of the policy to deploy DA only on laptops and notebooks and not on all computers in the domain. \r\n                         \r\n -- The status of whether appropriate policies should be deployed on down-level clients (Windows® 7) to enable them to connect to the Windows Server 2012 DA server. \r\n                         \r\nIf multi-site is enabled, then the following additional properties are present:\r\n                         \r\n -- The name of the entry point (identity of a site) to which down-level clients are added. \r\n                         \r\n -- The name of the down-level client GPO. \r\n                         \r\n -- The list of SGs of down-level clients."
+links:
+- text: Get-DAClient
+  href: ./Get-DAClient.yml
+- text: Remove-DAClient
+  href: ./Remove-DAClient.yml
+- text: Set-DAClient
+  href: ./Set-DAClient.yml
+syntaxes:
+- >-
+  Add-DAClient [-ComputerName <String>] [-PassThru] [-SecurityGroupNameList <String[]>] [-GpoName <String[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-DAClient [-DownlevelGpoName <String[]>] [-DownlevelSecurityGroupNameList <String[]>]
+
+   [-EntrypointName <String>] [-ComputerName <String>] [-PassThru] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Add-DAClient -SecurityGroupNameList 'corp.contoso.com\DirectAccessLaptopClients','corp.contoso.com\DirectAccessMobileClients' -PassThru
+    SecurityGroupNameList          : {corp.contoso.com\DirectAccessLaptopClients, corp.contoso.com\DirectAccessMobileClients} 
+    GPOName                        : {corp.contoso.com\DirectAccess Client Settings} 
+    OnlyRemoteComputers            : Disabled 
+    Downlevel                      : Disabled 
+    ForceTunnelingStatus           : Disabled 
+    ForceTunnelingNrptSuffix       : 
+    EntrypointName                 : 
+    DownlevelSecurityGroupNameList : 
+    DownlevelGpoName               :
+  description: "This example will add the SGs corp.contoso.com\\DirectAccessLaptopClients and corp.contoso.com\\DirectAccessMobileClients to DA configuration.\r\ncorp .contoso.com/DirectAccess Client Settings is the DA Client GPO configured at the time of DA installation. \r\n                         \r\nTwo new SGs DirectAccessLaptopClients and DirectAccessMobileClients are created and DA Connectivity is provisioned for these SGs.\r\nThis cmdlet will add the SGs to DA configuration.\r\nThis essentially means that the existing Client GPO configuration corp.contoso.com/DirectAccess Client Settings will be filtered on the two SGs. \r\n                         \r\nThis cmdlet will only provision Windows® 8 clients.\r\nDown-level clients have to be provisioned separately."
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Add-DAClient -GPOName 'child.corp.contoso.com' -PassThru
+    SecurityGroupNameList          : {corp.contoso.com\DirectAccessLaptopClients, corp.contoso.com\DirectAccessMobileClients} 
+    GPOName                        : {corp.contoso.com\DirectAccess Client Settings, child.corp.contoso.com\DirectAccess Client Settings} 
+    OnlyRemoteComputers            : Disabled 
+    Downlevel                      : Disabled 
+    ForceTunnelingStatus           : Disabled 
+    ForceTunnelingNrptSuffix       : 
+    EntrypointName                 : 
+    DownlevelSecurityGroupNameList : 
+    DownlevelGpoName               :
+  description: |-
+    This example will provision DA for the domain child.corp.contoso.com which is the child of corp.contoso.com.
+    This will create a GPO named child.corp.contoso.com/DirectAccess Client Settings, using default naming convention).
+    This cmdlet makes sure that all the SGs present in DA Client configuration are added to this GPO.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Add-DAClient -DownlevelSecurityGroupNameList 'child.corp.contoso.com\DownlevelClients' -DownlevelGPOName 'child.corp.contoso.com\DownLevelClientsGPO' -EntrypointName '2-Edge-Site' -PassThru
+    SecurityGroupNameList          : {corp.contoso.com\DirectAccessLaptopClients, corp.contoso.com\DirectAccessMobileClients} 
+    GPOName                        : {corp.contoso.com\DirectAccess Client Settings, child.corp.contoso.com\DirectAccess Client Settings } 
+    OnlyRemoteComputers            : Disabled 
+    Downlevel                      : Disabled 
+    ForceTunnelingStatus           : Disabled 
+    ForceTunnelingNrptSuffix       : 
+    EntrypointName                 : 
+    DownlevelSecurityGroupNameList : child.corp.contoso.com\DownlevelClients 
+    DownlevelGpoName               : child.corp.contoso.com\DownLevelClientsGPO
+  description: |-
+    This example provisions DA for firstref_client_7 clients present in the domain child.corp.contoso.com enabling them to connect to site 2-Edge-Site. 
+    2-Edge-Site is the site configured for the child domain.
+    A new GPO (**DownlevelClientsGPO**) can be added to the DirectAccessConfiguration.
+    This GPO is filtered on DownlevelClients SG which contains Windows® 7 clients in the child domain.
+    Note: The Windows® 7 clients can only connect access the site specified in the **EntrypointName** parameter.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the Remote Access server computer specific tasks should be run.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DownlevelGpoName
+  description: "Specifies the name to be used when creating the down-level client GPO in the specified domain or represents the domain in which a down-level client GPO with the default name should be created.\r\nGPO is specified in the format `DOMAIN\\GPO_NAME`.\r\nDomain is specified in the format `DOMAIN`.\r\nThis parameter can be used to create the multiple GPOs in multiple domains in one run, so the list of names of the GPOs can be provided.\r\nThese GPOs correspond to the down-level SGs added using the **DownlevelSecurityGroupNameList** parameter. \r\n                         \r\nIf this parameter contains only the domain name, then the following default GPO name is used. \r\n                         \r\n -- \\<domain\\> client policy for \\<DirectAccess connection friendly name\\>-\\<entry point name\\>. \r\n                         \r\nA list of GPOs can be specified. \r\n                         \r\nThis parameter is applicable only in case of multi-site deployment.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DownlevelGpoNameList
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DownlevelSecurityGroupNameList
+  description: "Specifies the names of one or more down-level client SGs that are not already part of the DA deployment.\r\nSpecified in `DOMAIN\\SG_NAME` format. \r\n                         \r\nThese down-level clients can then connect only to the site specified in the **EntrypointName** parameter. \r\n                         \r\nThis parameter is only applicable in case of a multi-site deployment.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EntrypointName
+  description: |+
+    Specifies the identity of a site in a multi-site deployment to which down-level clients are added, such as these clients can only connect to the specified site.
+    If this parameter is not specified, then the site to which the computer on which the cmdlet is run is used (the user may or may not be specifying a computer name).
+    If both this parameter and the **ComputerName** parameter are specified and the computer name does not belong to the site represented by the name of the entry point, then the entry point takes precedence and the authentication type is configured for it.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GpoName
+  description: "Specifies the name to be used when creating the client GPO in the specified domain or represents the domain in which a client GPO with the default name should be created.\r\nGPO is specified in the format `DOMAIN\\GPO_NAME`.\r\nDomain is specified in the format `DOMAIN`.\r\nIf this parameter contains only the domain name, then the following default GPO name is used. \r\n                         \r\n -- \\<domain\\> client policy for \\<DirectAccess connection friendly name\\>. \r\n                         \r\nA list of GPOs can be specified.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SecurityGroupNameList
+  description: |+
+    Specifies the list of client SGs that are to be added to the DA deployment.
+    Each SG is specified in `DOMAIN\SG_NAME` format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Add-DAClient
+name: Add-DAClient
+description: "The **Add-DAClient** cmdlet adds one or more client computer security groups (SGs) to the DirectAccess (DA) deployment, adds one or more DA client Group Policy Objects (GPOs) in one or more domains, adds one or more SGs of down-level clients to the DA deployment in a multi-site deployment, or adds one or more down-level DA client GPOs in one or more domains in a multi-site deployment.\r\n\r\nThe client SG and GPO parameters are treated as independent entities.\r\nThe basic paradigm is that client GPOs can be created independent of the SGs and the represented domains.\r\nEvery SG that is added to the DA deployment is added in all current client GPOs.\r\nTherefore all GPOs always contain all SGs even if all the corresponding domains are not represented in all the SGs.\r\n\r\nThere will never be a scenario where an SG is present only in some of the GPOs.\r\nIf this happens, then it means that the state of the configuration is bad.\r\n\r\nExtending this paradigm, adding clients to an SG is a pure SG level operation which can be accomplished using AD cmdlets, such as the Add-ADGroupMember cmdlet.\r\n\r\nAlthough AD cmdlets are already available for the addition of SGs and GPOs, the additional capabilities of this cmdlet are justified as follows. \r\n                       \r\n -- When an SG is added it is added in all Client GPOs.\r\nIf user does not have permissions to edit a GPO, then the SG is not added to any of the Client GPOs in any of the domains.\r\nWhen using the AD cmdlet, the user would have to carefully ensure that it is run for each of the domains and it is difficult to handle the case where the user does not have permissions on some domains. \r\n                       \r\n -- When a GPO is added all SGs are added in the GPO and DA client specific policies are created.\r\nThis cmdlet takes care of the conditions where the GPO is created if not already present.\r\nIf the GPO is already present, then it is merely edited\r\n\r\nThe following are additional behavior notes for the cmdlet. \r\n                       \r\n -- At least one client GPO is always present.\r\nThe Install-RemoteAccess cmdlet always creates a GPO even if there are no SGs added.\r\nThere is never a case where there are no client GPOs.\r\nHowever, if this situation occurs, then adding an SG without specifying a domain or GPO is not allowed.\r\nA GPO can still be added alone, but only when there is no client GPO already present in that domain. \r\n                       \r\n -- If DA is configured to be deployed only on laptops and notebooks, then when a domain or GPO is added, a WMI filter to enforce this policy is created in that domain and applied to all the SGs.\r\nIf the user does not have the permissions to create a filter in a domain, then a GPO is not created in that domain and a non-terminating error is issued. \r\n                       \r\n -- When adding a new GPO, if it is already present in the domain, then it is merely configured with the list of SG and DA client specific policies.\r\nEssentially, it is brought into the DA deployment.\r\nIf it is not present, then it is created first. \r\n                       \r\n -- Attempting to re-add a domain or specify the same GPO name for the domain again will result in no changes being made. \r\n                       \r\n -- Attempting to add a new GPO in a domain that already consists of a client GPO will result in no action being taken and the display of a non-terminating error. \r\n                       \r\n -- Attempting to add SGs in even a single GPO without the correct permissions will result in the cmdlet terminating the processing of the entire list of SGs that were specified.\r\nHowever, the cmdlet still processes the list of GPOs that have been specified. \r\n                       \r\n -- Attempting to create or configure one of the specified GPOs without the correct permissions will result in the cmdlet proceeding with the processing of the remaining GPOs. \r\n                       \r\n -- In a multi-site deployment. \r\n                       \r\n ---- Clients that are added can connect to all the sites. \r\n                       \r\n ---- A separate set of parameters is available for adding down-level clients.\r\nAdditional information can be found under parameter description. \r\n                       \r\n -- If multi-site has not been deployed, attempting to add down-level GPOs or SGs using the **DownlevelGpoName** and **DownlevelSecurityGroupNameList** parameters will display an error."
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DAClient_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/add-daclient?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DAClient

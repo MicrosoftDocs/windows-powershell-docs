@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Acquires confirmation IDs (CIDs) from the Microsoft licensing servers during proxy activation.
+module: VAMT
+notes: ""
+links:
+- text: Get-VamtProduct
+  href: ./Get-VamtProduct.yml
+- text: Install-VamtConfirmationId
+  href: ./Install-VamtConfirmationId.yml
+syntaxes:
+- >-
+  Get-VamtConfirmationId -FileName <String> [-ProxyUserName <String>] [-ProxyPassword <String>]
+
+   [<CommonParameters>]
+- >-
+  Get-VamtConfirmationId -Products <Product[]> [-ProxyUserName <String>] [-ProxyPassword <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get CIDs from a file'
+  code: |-
+    PS C:\> Get-VamtConfirmationId -FileName "c:\users\me\desktop\vamtdata.cilx"
+  description: |-
+    This command gets the CIDs for the products in the specified file.
+  summary: ""
+- title: 'Example 2: Get CIDs for products'
+  code: |-
+    PS C:\> $ProductInfo = Get-VamtProduct
+    PS C:\> $UpdatedProductInfo = Get-VamtConfirmationId -Products $ProductInfo
+  description: |-
+    This example gets a product object that has all products and gets the confirmation IDs for these products.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileName
+  isRequired: true
+  description: |+
+    Specifies the name of the file that contains the products that need CIDs.
+    Use this parameter during proxy activation to acquire CIDs for all products in the specified .cilx file.
+    You cannot use the *FileName* parameter together with the *Products* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Product" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Products
+  isRequired: true
+  description: |+
+    Specifies the products in dep_nextref_vamt that need CIDs.
+    By default, if you do not specify a product, CIDs are retrieved for all products in dep_nextref_vamt.
+    You cannot use the *Products* parameter together with the *FileName* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProxyPassword
+  description: |+
+    Specifies a password for a proxy server or gateway, if it is required for your environment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProxyUserName
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: VAMT.Get-VamtConfirmationId
+name: Get-VamtConfirmationId
+description: |-
+  The **Get-VamtConfirmationID** cmdlet acquires the confirmation IDs (CIDs) from the Microsoft licensing servers during proxy activation.
+  All products either in the Windows PowerShell object or in the .cilx file are updated with the results.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/vamt/get-vamtconfirmationid?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VamtConfirmationId

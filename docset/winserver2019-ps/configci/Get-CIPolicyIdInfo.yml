@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays Code Integrity policy information.
+module: ConfigCI
+notes: ""
+outputs:
+- name: <xref href="CIPolicyIdInfo" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CIPolicyIdInfo
+  href: ./Set-CIPolicyIdInfo.yml
+syntaxes:
+- Get-CIPolicyIdInfo [-FilePath] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Display Code Integrity policy information'
+  code: |-
+    PS C:\> Get-CIPolicyIdInfo -FilePath ".\Policy03.xml"
+
+    Provider  : ConfigCIPolicy
+    Key       : PolicyInfo
+    ValueName : Name
+    ValueType : String
+    Value     : CIPolicy03
+
+    Provider  : ConfigCIPolicy
+    Key       : PolicyInfo
+    ValueName : PolicyId
+    ValueType : String
+    Value     : CIP077
+  description: |-
+    This command displays the Code Integrity policy information for the policy in the stored in the Policy03.xml file.
+    This policy has values for both name and ID.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the path of a Code Integrity policy .xml file.
+
+  defaultValue: None
+  position: "0"
+  aliases: f
+  parameterValueGroup: ""
+uid: ConfigCI.Get-CIPolicyIdInfo
+name: Get-CIPolicyIdInfo
+description: |-
+  The **Get-CIPolicyIdInfo** cmdlet displays Code Integrity policy information.
+  Specify the .xml file of the policy to modify.
+
+  This cmdlet returns human readable content.
+  It is not intended for use with other cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/configci/get-cipolicyidinfo?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-CIPolicyIdInfo

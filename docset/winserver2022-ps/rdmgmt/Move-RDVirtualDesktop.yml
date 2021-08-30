@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves a virtual desktop to a new Remote Desktop Virtualization Host (RD Virtualization Host) server.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-RDVirtualDesktopToCollection
+  href: ./Add-RDVirtualDesktopToCollection.yml
+- text: Get-RDVirtualDesktop
+  href: ./Get-RDVirtualDesktop.yml
+- text: Get-RDVirtualDesktopCollection
+  href: ./Get-RDVirtualDesktopCollection.yml
+syntaxes:
+- >-
+  Move-RDVirtualDesktop [-SourceHost] <String> [-DestinationHost] <String> [-Name] <String>
+
+   [[-ConnectionBroker] <String>] [[-Credential] <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Move a virtual desktop to a new RD Virtualization Host server'
+  code: |-
+    PS C:\>Enable-WSManCredSSP -Role "Client" -DelegateComputer * -Force
+    PS C:\> Enable-WSManCredSSP -Role "Server" -DelegateComputer * -Force
+    PS C:\> $Creds = Get-Credential
+    PS C:\> Move-RDVirtualDesktop -SourceHost "rdvh-1.contoso.com" -DestinationHost "rdvh-2.contoso.com" -Name "RDS-WKS-A2" -Credential $Creds
+  description: |-
+    This example moves a virtual desktop from one RD Virtualization server to another.
+    The commands run on the RD Connection Broker and move virtual desktops from the source host to the destination host.
+
+    The first command enables Credential Security Support Provider (CredSSP) authentication on the destination host.
+    The **Enable-WSManCredSSP** cmdlet delegates the client credentials to the delegate server.
+
+    The second command enables CredSSP authentication on the source host.
+    The **Enable-WSManCredSSP** cmdlet delegates the server credentials to the delegate server.
+
+    The third command gets a credential object based on the user name and password that the user enters.
+    The command stores the results in the **$Creds** variable.
+
+    The fourth command moves the virtual desktop named RDS-WKS-A2 from the source host named rdvh-1.contoso.com to the destination host named rdvh-2.contoso.com.
+    The command uses the credential object stored in the **$Creds** variable.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a **PSCredential** object that contains the user credentials for the virtual desktop.
+    Remote Desktop Services does not require user credentials if you run the cmdlet from the source host.
+    If you do not specify user credentials for the virtual desktop and you run the cmdlet on a remote host, the server prompts you for credentials.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationHost
+  isRequired: true
+  description: |+
+    Specifies the fully qualified domain name (FQDN) of the new RD Virtualization Host server for the virtual desktop.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a virtual desktop.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceHost
+  isRequired: true
+  description: |+
+    Specifies the fully qualified domain name (FQDN) of the current RD Virtualization Host server for the virtual desktop.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Move-RDVirtualDesktop
+name: Move-RDVirtualDesktop
+description: |-
+  The **Move-RDVirtualDesktop** cmdlet moves a virtual desktop to a new Remote Desktop Virtualization Host (RD Virtualization Host) server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/move-rdvirtualdesktop?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Move-RDVirtualDesktop

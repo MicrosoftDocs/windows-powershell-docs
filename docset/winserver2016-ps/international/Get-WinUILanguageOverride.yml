@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the Windows UI language override setting for the current user account.
+module: International
+notes: ""
+outputs:
+- name: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the Windows UI language override for the current user account.
+    For more information about the **CultureInfo** object, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306).
+links:
+- text: Get-WinUserLanguageList
+  href: ./Get-WinUserLanguageList.yml
+- text: Set-WinUILanguageOverride
+  href: ./Set-WinUILanguageOverride.yml
+- text: Set-WinUserLanguageList
+  href: ./Set-WinUserLanguageList.yml
+syntaxes:
+- Get-WinUILanguageOverride [<CommonParameters>]
+examples:
+- title: 'Example 1: Display the language override setting'
+  code: |-
+    PS C:\> Get-WinUILanguageOverride
+    LCID             Name             DisplayName                                                                        
+    ----             ----             -----------                                                                        
+    1033             en-US            English (United States)
+  description: |-
+    This command gets and displays the UI language override setting for the current user account.
+    If the Windows UI language override is not set for the current user account, this command returns a null value.
+  summary: ""
+uid: International.Get-WinUILanguageOverride
+name: Get-WinUILanguageOverride
+description: |-
+  The **Get-WinUILanguageOverride** cmdlet displays the user-preferred language override that will be used for the Windows user interface (UI) after a reboot or log off. If the override setting is not used, **Get-WinUILanguageOverride** does not return a value. If a change is pending, the **Get-WinUILanguageOverride** returns the pending value.
+
+  For more information, see the **Get-WinUserLanguageList** and **Set-WinUserLanguageList** cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/international/get-winuilanguageoverride?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WinUILanguageOverride

@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays the ETW providers that are present on the computer or associated with an event and packet capture session.
+module: NetEventPacketCapture
+notes: ""
+links:
+- text: Add-NetEventProvider
+  href: ./Add-NetEventProvider.yml
+- text: Remove-NetEventProvider
+  href: ./Remove-NetEventProvider.yml
+- text: Set-NetEventProvider
+  href: ./Set-NetEventProvider.yml
+- text: Get-NetEventNetworkAdapter
+  href: ./Get-NetEventNetworkAdapter.yml
+- text: Get-NetEventVmNetworkAdapter
+  href: ./Get-NetEventVmNetworkAdapter.yml
+- text: Get-NetEventVmSwitch
+  href: ./Get-NetEventVmSwitch.yml
+- text: Get-NetEventSession
+  href: ./Get-NetEventSession.yml
+syntaxes:
+- >-
+  Get-NetEventProvider [[-Name] <String[]>] [-ShowInstalled] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-NetEventProvider [-AssociatedEventSession <CimInstance>] [-ShowInstalled] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-NetEventProvider [-AssociatedCaptureTarget <CimInstance>] [-ShowInstalled] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Display ETW providers'
+  code: |-
+    PS C:\>Get-NetEventProvider
+  description: |-
+    This command displays the ETW providers on the computer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedCaptureTarget
+  description: |+
+    Specifies the associated capture target as a CIM object.
+    The capture target is one of the three following objects: 
+
+    - **MSFT_NetEventNetworkAdapter**
+    - **MSFT_NetEventVmNetworkAdapter**
+    - **MSFT_NetEventVmSwitch**
+
+    To obtain a capture target, use the Get-NetEventNetworkAdapter cmdlet, the Get-NetEventVmNetworkAdapter cmdlet, or the Get-NetEventVmSwitch cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedEventSession
+  description: |+
+    Specifies the associated network event session, as a CIM object.
+    To obtain the network event session, use the Get-NetEventSession cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of names that identify ETW providers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShowInstalled
+  description: |+
+    Indicates that the cmdlet displays all ETW providers that are installed on the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetEventPacketCapture.Get-NetEventProvider
+name: Get-NetEventProvider
+description: |-
+  The **Get-NetEventProvider** cmdlet displays the Event Tracing for Windows (ETW) providers that are present on the computer, or associated with an event and packet capture session.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetEventProvider.cdxml-help.xml
+  Module Name: NetEventPacketCapture
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/neteventpacketcapture/get-neteventprovider?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetEventProvider

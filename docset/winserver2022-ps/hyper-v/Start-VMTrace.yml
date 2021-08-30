@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts tracing to a file.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Stop-VMTrace
+  href: ./Stop-VMTrace.yml
+syntaxes:
+- Start-VMTrace [-Level] <TraceLevel> [-TraceVerboseObjects] [-Path <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start error tracing'
+  code: |-
+    PS C:\> Start-VMTrace -Level Error
+  description: |-
+    This command starts tracing at the level of Error.
+  summary: ""
+parameters:
+- type: <xref href="TraceLevel" data-throw-if-not-resolved="False" />
+  name: Level
+  isRequired: true
+  description: |+
+    Specifies the level of tracing.
+    The acceptable values for this parameter are:
+
+    - Off 
+    - Error 
+    - Warning 
+    - Info 
+    - Verbose
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: Error, Warning, Info, Verbose
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path of the file where this cmdlet stores the trace information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TraceVerboseObjects
+  description: |+
+    Specifies that tracing uses verbose objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Start-VMTrace
+name: Start-VMTrace
+description: |-
+  The **Start-VMTrace** cmdlet starts tracing to a file.
+  You can use this information for advanced debugging.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/start-vmtrace?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-VMTrace

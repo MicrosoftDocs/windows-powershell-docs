@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Flushes the buffers in a log session to disk.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="SbecEtwTrace.TraceSessionInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts **SbecEtwTrace.TraceSessionInfo** objects as the sessions to flush the buffers on.
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SbecLogSession
+  href: ./Get-SbecLogSession.yml
+- text: Set-SbecLogSession
+  href: ./Set-SbecLogSession.yml
+- text: Start-SbecLogSession
+  href: ./Start-SbecLogSession.yml
+- text: Start-SbecSimpleLogSession
+  href: ./Start-SbecSimpleLogSession.yml
+- text: Start-SbecNtKernelLogSession
+  href: ./Start-SbecNtKernelLogSession.yml
+- text: Stop-SbecLogSession
+  href: ./Stop-SbecLogSession.yml
+syntaxes:
+- Save-SbecLogSession -Session <TraceSessionInfo[]> [<CommonParameters>]
+- Save-SbecLogSession -Name <String[]> [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of session names.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TraceSessionInfo" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Session
+  isRequired: true
+  description: |+
+    Specifies an array of **SbecEtwTrace.TraceSessionInfo** objects.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Save-SbecLogSession
+name: Save-SbecLogSession
+description: |-
+  The **Save-SbecLogSession** cmdlet flushes the buffers in a log session to disk.
+  The session may be identified either by name or as an object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/save-sbeclogsession?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Save-SbecLogSession

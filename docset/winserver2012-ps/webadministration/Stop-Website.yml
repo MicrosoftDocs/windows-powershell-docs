@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops an IIS Web site.
+module: WebAdministration
+notes: ""
+links:
+- text: Start-WebAppPool
+  href: ./Start-WebAppPool.yml
+- text: Start-WebItem
+  href: ./Start-WebItem.yml
+- text: Start-Website
+  href: ./Start-Website.yml
+- text: Stop-WebAppPool
+  href: ./Stop-WebAppPool.yml
+- text: Stop-WebItem
+  href: ./Stop-WebItem.yml
+syntaxes:
+- Stop-Website [[-Name] <String>] [-Passthru] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Stopping a Web Site --------------'
+  code: |-
+    IIS:\>Stop-WebSite -Name "Default Web Site"
+  description: |-
+    Stops the site named Default Web Site.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of the Web site to stop.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Passes an object that represents the Web site to the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Stop-Website
+name: Stop-Website
+description: |-
+  Stops the specified Web site.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/stop-website?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

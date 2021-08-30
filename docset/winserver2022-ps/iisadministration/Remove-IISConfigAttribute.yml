@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a configuration attribute from an IIS configuration section or configuration element attribute.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElement, String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-IISConfigAttributeValue
+  href: ./Get-IISConfigAttributeValue.yml
+- text: Set-IISConfigAttributeValue
+  href: ./Set-IISConfigAttributeValue.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Remove-IISConfigAttribute [-ConfigElement] <ConfigurationElement> [-AttributeName] <String>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a configuration attribute from an IIS web site.'
+  code: |-
+    PS C:\> Get-IISSite "Default Web Site" | Get-IISConfigElement -ChildElementName "limits" | Remove-IISConfigAttribute -AttributeName "MaxUrlSegments"
+  description: |-
+    This command removes the configuration attribute value for the attribute MaxUrlSegments from the Default Web Site, defaulting to its parent or system wide defaults.
+  summary: ""
+- title: 'Example 2: Remove configuration attribute values from different parts of the configuration store:'
+  code: |-
+    PS C:\> Get-IISConfigSection "system.webServer/asp" | Remove-IISConfigAttribute -AttributeName "ScriptErrorMessage"
+  description: |-
+    This command removes the global attribute value for ScriptErrorMessage, defaulting to the schema default.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AttributeName
+  isRequired: true
+  description: |+
+    Specifies the name of the attribute that is to be deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ConfigurationElement" data-throw-if-not-resolved="False" />
+  name: ConfigElement
+  isRequired: true
+  description: |+
+    Specifies the IIS ConfigurationSection or ConfigurationElement from which the matching attribute is to be deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Remove-IISConfigAttribute
+name: Remove-IISConfigAttribute
+description: |-
+  The **Remove-IISConfigAttribute** cmdlet removes a configuration attribute from an Internet Information Services (IIS) configuration section or a configuration element.
+  The value removed is the value for the given ConfigurationElement and not necessarily the effective value for a given site / virtual directory / folder etc.
+  To obtain the effective attribute values, always retrieve the configuration element by specifying the commit path as the deepest level possible.
+  Even the configuration attribute is not defined at that level, the parent attributes are scanned and the effective configuration element is returned.
+  You can then work on this ConfigurationElement to get/set/remove configuration attribute values.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/remove-iisconfigattribute?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-IISConfigAttribute

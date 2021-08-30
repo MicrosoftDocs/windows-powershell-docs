@@ -1,0 +1,154 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new App-V package.
+module: AppvSequencer
+notes: ""
+links:
+- text: Expand-AppvSequencerPackage
+  href: ./Expand-AppvSequencerPackage.yml
+- text: New-AppvPackageAccelerator
+  href: ./New-AppvPackageAccelerator.yml
+- text: Update-AppvSequencerPackage
+  href: ./Update-AppvSequencerPackage.yml
+syntaxes:
+- >-
+  New-AppvSequencerPackage [-FullLoad] [-Installer] <String> [[-PrimaryVirtualApplicationDirectory] <String>]
+
+   [-Name] <String> [-Path] <String> [-TemplateFilePath <String>] [<CommonParameters>]
+- >-
+  New-AppvSequencerPackage [-AcceleratorFilePath] <String> [-InstallMediaPath] <String> [-Name] <String>
+
+   [-Path] <String> [<CommonParameters>]
+- >-
+  New-AppvSequencerPackage [-AcceleratorFilePath] <String> [-InstalledFilesPath] <String> [-Name] <String>
+
+   [-Path] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a package'
+  code: |-
+    PS C:\> New-AppvSequencerPackage -Name "MyPackage" -OutputPath "C:\MyPackage" -PrimaryVirtualApplicationDirectory "C:\Program Files\MyApp" -Installer "C:\installers\MyApp\setup.exe"
+  description: |-
+    This command creates a package for the application MyApp.
+  summary: ""
+- title: 'Example 2: Create a package that must be fully downloaded'
+  code: |-
+    PS C:\> New-AppvSequencerPackage -Name MyPackage2 -OutputPath C:\MyPackages -PrimaryVirtualApplicationDirectory "C:\Program Files\MyApp -Installer C:\installers\MyApp\setup.exe -FullLoad
+  description: |-
+    This command creates a package that must be fully downloaded for the application MyApp.
+  summary: ""
+- title: 'Example 3: Create a package using a pre-generated accelerator'
+  code: |-
+    PS C:\> New-AppvSequencerPackage -Name "MyPackage" -OutputPath "C:\MyPackages" -AcceleratorFilePath "C:\MyAccelerators\MyAccelerator.cab" -PrimaryVirtualApplicationDirectory "C:\MyApp\" -InstalledMediaPath "C:\Installers\PreReq\" -Installer "C:\Installers\MyApp\setup.exe"
+  description: |-
+    This command creates a new package MyApp using a pre-generated package accelerator.
+  summary: ""
+- title: 'Example 4: Create a package using a template file'
+  code: |-
+    PS C:\> New-AppvSequencerPackage -Name "MyPackage" -TemplateFilePath "C:\template.appvt" -OutputPath "C:\Packages\MyPackage" -PrimaryVirtualApplicationDirectory "C:\Program Files\MyApp" -Installer "C:\Installers\MyApp\setup.exe"
+  description: |-
+    This command creates a new MyApp package using a template file.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AcceleratorFilePath
+  isRequired: true
+  description: |+
+    Specifies the path to the accelerator file for this package.
+    If the accelerator is not signed or is not accepted by the Sequencer, an error is returned.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FullLoad
+  description: |+
+    Indicates that the package is required to be fully downloaded before being launched.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InstalledFilesPath
+  isRequired: true
+  description: |+
+    Specifies the location of the already installed files used to create a new App-V package with the aid of an App-V Accelerator.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Installer
+  isRequired: true
+  description: |+
+    Specifies a collection of MSIs, setup executables, or other executables needed to be run to create the App-V package.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InstallMediaPath
+  isRequired: true
+  description: |+
+    Specifies the location of the installation media that the Sequencer points to and generates an accelerator.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the App-V package.
+    This is also the name of all files outputted by the sequencing process.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the folder where the package is saved.
+
+  defaultValue: None
+  position: "1"
+  aliases: OutputPath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrimaryVirtualApplicationDirectory
+  description: |+
+    Specifies the location where the application is being installed.
+    This must be a path on the local computer.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TemplateFilePath
+  description: |+
+    Specifies the path to the App-V package template file to be used for this package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvSequencer.New-AppvSequencerPackage
+name: New-AppvSequencerPackage
+description: |-
+  The **New-AppvSequencerPackage** cmdlet creates a new Microsoft Application Virtualization (App-V) package, either using an installer, an App-V accelerator, or an accelerator with an installed application.
+  The cmdlet accepts a template file, as well as the option to force the package to be fully streamed to the computer before running the package.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
+  Module Name: AppvSequencer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvsequencer/new-appvsequencerpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-AppvSequencerPackage

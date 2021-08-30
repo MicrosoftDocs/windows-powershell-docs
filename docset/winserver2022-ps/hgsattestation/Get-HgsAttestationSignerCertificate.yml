@@ -1,0 +1,32 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the public certificates for a key pair that attestation uses to sign attestation certificates.
+module: HgsAttestation
+notes: ""
+outputs:
+- name: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an X.509 certificate.
+syntaxes:
+- Get-HgsAttestationSignerCertificate [<CommonParameters>]
+examples:
+- title: 'Example 1: Get signer certificates'
+  code: |-
+    PS C:\> Get-HgsAttestationSignerCertificate
+  description: |-
+    This command gets Attestation Service signer certificates.
+  summary: ""
+uid: HgsAttestation.Get-HgsAttestationSignerCertificate
+name: Get-HgsAttestationSignerCertificate
+description: |-
+  The **Get-HgsAttestationSignerCertificate** cmdlet gets the signer certificate for Host Guardian Service (HGS) attestation.
+  The Attestation Service signs attestation certificates by using a key pair.
+  This cmdlet gets the public certificate that corresponds to that key pair.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/get-hgsattestationsignercertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-HgsAttestationSignerCertificate

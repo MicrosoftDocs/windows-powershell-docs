@@ -1,0 +1,284 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new virtual machine.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-VM [[-Name] <String>] [[-MemoryStartupBytes] <Int64>] [-BootDevice <BootDevice>] [-NoVHD]
+
+   [-SwitchName <String>] [-Path <String>] [-Version <Version>] [-Prerelease] [-Experimental]
+
+   [[-Generation] <Int16>] [-Force] [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-VM [[-Name] <String>] [[-MemoryStartupBytes] <Int64>] [-BootDevice <BootDevice>] [-SwitchName <String>]
+
+   -NewVHDPath <String> -NewVHDSizeBytes <UInt64> [-Path <String>] [-Version <Version>] [-Prerelease]
+
+   [-Experimental] [[-Generation] <Int16>] [-Force] [-AsJob] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-VM [[-Name] <String>] [[-MemoryStartupBytes] <Int64>] [-BootDevice <BootDevice>] [-SwitchName <String>]
+
+   -VHDPath <String> [-Path <String>] [-Version <Version>] [-Prerelease] [-Experimental] [[-Generation] <Int16>]
+
+   [-Force] [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    New-VM -Name "new 1" -MemoryStartupBytes 512MB
+  description: |-
+    This example creates a new virtual machine named new 1 that has 512 MB of memory.
+  summary: ""
+- title: Example 2
+  code: |-
+    New-VM -Name "new 2" -MemoryStartupBytes 1GB -NewVHDPath d:\vhd\base.vhdx -NewVHDSizeBytes 40GB
+  description: |-
+    This example creates a virtual machine named new 2 that has 1 GB of memory and that is connected to a new 40 GB virtual hard disk that uses the VHDX format.
+  summary: ""
+- title: Example 3
+  code: |-
+    New-VM -Name "new 3" -MemoryStartupBytes 1GB -VHDPath d:\vhd\BaseImage.vhdx
+  description: |-
+    This example creates a virtual machine named new 3 that has 1 GB of memory and connects it to an existing virtual hard disk that uses the VHDX format.
+  summary: ""
+- title: Example 4
+  code: |-
+    New-VM -Name "new 4" -MemoryStartupBytes 2GB -Credential (Get-Credential) -ComputerName HostServer01
+  description: |-
+    This example asks for credentials, then creates a virtual machine named new 4, which has 2 GB of memory, on the server named HostServer01.
+  summary: ""
+- title: Example 5
+  code: |-
+    New-VM -Name "new 5" -Generation 1 -BootDevice CD -NoVHD
+  description: |-
+    This example creates a virtual machine named new 5. The machine doesn't have any VHD disk and is set to boot from CD.
+  summary: ""
+- title: Example 6
+  code: |-
+    $oldVM = Get-VM "old 1"
+    $memory = (Get-VMMemory -VMName $oldVM.name).Startup
+    $switch = (Get-VMNetworkAdapter -VMName $oldVM.name).SwitchName
+    New-VM -Name "new 6" -Generation $oldVM.Generation -MemoryStartupBytes $memory -SwitchName $switch
+  description: |-
+    This example creates a virtual machine named new 6. The machine has the same generation and amount of assigned memory as the existing machine named old 1 and connects to the same network switch.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="BootDevice" data-throw-if-not-resolved="False" />
+  name: BootDevice
+  description: |+
+    Specifies the device to use as the boot device for the new virtual machine.
+    Allowed values are **CD**, **Floppy**, **LegacyNetworkAdapter**, **IDE**, NetworkAdapter, and VHD.
+
+    When LegacyNetworkAdapter is specified, this configures the new virtual machine with a network adapter that can be used to perform a PXE boot and install an operating system from a network installation server.
+
+    Note: Generation 2 virtual machines do not support Floppy, LegacyNetworkAdapter or IDE.
+    Using these values with a Generation 2 virtual machine will cause an error.
+
+    VHD and NetworkAdapter are new to Generation 2 virtual machines.
+    If you specify them on a Generation 1 virtual machine, then they are interpreted to be IDE and LegacyNetworkAdapter, respectively.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Floppy, CD, IDE, LegacyNetworkAdapter, NetworkAdapter, VHD
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the virtual machine is to be created.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Experimental
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int16" data-throw-if-not-resolved="False" />
+  name: Generation
+  description: |+
+    Specifies the generation, as an integer, for the virtual machine.
+    The values that are valid in this version of Windows are 1 and 2.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: 1, 2
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: MemoryStartupBytes
+  description: |+
+    Specifies the amount of memory, in bytes, to assign to the virtual machine.
+    The default value is 512 MB.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the new virtual machine.
+    The default name is New virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: VMName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewVHDPath
+  isRequired: true
+  description: |+
+    Creates a new virtual hard disk with the specified path and connects it to the new virtual machine.
+    Absolute paths are allowed.
+    If only a file name is specified, the virtual hard disk is created in the default path configured for the host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: NewVHDSizeBytes
+  isRequired: true
+  description: |+
+    Specifies the size of the dynamic virtual hard disk that is created and attached to the new virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoVHD
+  description: |+
+    Creates a virtual machine without attaching any virtual hard disks.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the directory to store the files for the new virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Prerelease
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SwitchName
+  description: |+
+    Specifies the friendly name of the virtual switch if you want to connect the new virtual machine to an existing virtual switch to provide connectivity to a network.
+    Hyper-V automatically creates a virtual machine with one virtual network adapter, but connecting it to a virtual switch is optional.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Version" data-throw-if-not-resolved="False" />
+  name: Version
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VHDPath
+  isRequired: true
+  description: |+
+    Specifies the path to a virtual hard disk file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.New-VM
+name: New-VM
+description: |-
+  The **New-VM** cmdlet creates a new virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/new-vm?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-VM

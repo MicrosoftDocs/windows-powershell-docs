@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Add an online service account, and assign it to a user account.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    WssUserName
+    Type: System.String
+    Description: local network account name of user
+links:
+- text: Disable-WssMsoUser
+  href: ./Disable-WssMsoUser.yml
+- text: Enable-WssMsoUser
+  href: ./Enable-WssMsoUser.yml
+- text: Get-WssMsoUser
+  href: ./Get-WssMsoUser.yml
+- text: Remove-WssMsoUser
+  href: ./Remove-WssMsoUser.yml
+syntaxes:
+- Add-WssMsoUser [-WssUserName] <String> [-MsoUserName] <String> [[-License] <MSOLicense[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add an online account'
+  code: |-
+    PS C:\> Add-WSSMSOUser -WssUserName "DavidChew" -MsoUserName "DavidChew@TSQA.Contoso.com"
+  description: |-
+    This command adds an online service account DavidChew@TSQA.Contoso.com and assigns it to the local network user account named DavidChew.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="MSOLicense" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: License
+  description: |+
+    Specifies an array of user licenses.
+    Specifies an array of licenses as **MSOLicense** objects.
+    The cmdlet assigns the licenses that you specify to the user account.
+    To obtain **MSOLicense** objects, use the Get-WssMsoSubscription cmdlet to get subscription information.
+    Subscription information contains the **MSOLicenseSuite** array that refers to **MSOLicense** objects.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MsoUserName
+  isRequired: true
+  description: |+
+    Specifies a user principal name (UPN).
+    The cmdlet adds an online service account that has the UPN that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WssUserName
+  isRequired: true
+  description: |+
+    Specifies the name of a user account.
+    The cmdlet assigns an online service account to the user account that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Add-WssMsoUser
+name: Add-WssMsoUser
+description: |-
+  The **Add-WssMsoUser** cmdlet adds and enables an online service account to aad_1, and assigns that account to a local network user account.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/add-wssmsouser?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-WssMsoUser

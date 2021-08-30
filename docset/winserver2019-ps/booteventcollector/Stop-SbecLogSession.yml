@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops a log session.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="SbecEtwTrace.TraceSessionInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    The **SbecEtwTrace.TraceSessionInfo** class is defined in $PsHome\Modules\BootEventCollector\SbecTraceHelpers.psm1.
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SbecLogSession
+  href: ./Get-SbecLogSession.yml
+- text: Save-SbecLogSession
+  href: ./Save-SbecLogSession.yml
+- text: Set-SbecLogSession
+  href: ./Set-SbecLogSession.yml
+- text: Start-SbecLogSession
+  href: ./Start-SbecLogSession.yml
+- text: Start-SbecNtKernelLogSession
+  href: ./Start-SbecNtKernelLogSession.yml
+- text: Start-SbecSimpleLogSession
+  href: ./Start-SbecSimpleLogSession.yml
+syntaxes:
+- Stop-SbecLogSession -Session <TraceSessionInfo[]> [<CommonParameters>]
+- Stop-SbecLogSession -Name <String[]> [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the log session to stop.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TraceSessionInfo" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Session
+  isRequired: true
+  description: |+
+    Specifies the session objects to stop.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Stop-SbecLogSession
+name: Stop-SbecLogSession
+description: |-
+  The **Stop-SbecLogSession** cmdlet stops a log session.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/stop-sbeclogsession?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-SbecLogSession

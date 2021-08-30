@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets settings for root targets of a DFS namespace.
+module: DFSN
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_DfsNamespaceRootTarget" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-DfsnRootTarget
+  href: ./New-DfsnRootTarget.yml
+- text: Remove-DfsnRootTarget
+  href: ./Remove-DfsnRootTarget.yml
+- text: Set-DfsnRootTarget
+  href: ./Set-DfsnRootTarget.yml
+syntaxes:
+- >-
+  Get-DfsnRootTarget [-Path] <String> [[-TargetPath] <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get root targets for a DFS namespace'
+  code: |-
+    PS C:\> Get-DfsnRootTarget -Path "\\Contoso\AccountingSoftware"
+  description: |-
+    This command gets the DFS namespace root targets for the namespace that has the path \\\\Contoso\AccountingSoftware.
+  summary: ""
+- title: 'Example 2: Get a specified root target'
+  code: |-
+    PS C:\> Get-DfsnRootTarget -Path "\\Contoso\AccountingSoftware" -TargetPath "\\Contoso-FS\Software"
+  description: |-
+    This command gets a single root target, specified by using the path \\\\Contoso\AccountingSoftware and the target path \\\\Contoso-FS\Software.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a path for the root folder of a DFS namespace.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DfsPath, NamespaceRoot
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetPath
+  description: |+
+    Specifies a path for the root folder target of a DFS namespace.
+    This cmdlet gets settings for the root target that has the path specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Target, DfsTarget, RootTargetPath
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DFSN.Get-DfsnRootTarget
+name: Get-DfsnRootTarget
+description: |-
+  The **Get-DfsnRootTarget** cmdlet gets settings for root targets of a Distributed File System (DFS) namespace.
+  You can specify a DFS namespace path to see all the root targets for that namespace.
+  You can specify a namespace path and a target path to see settings for a single root target.
+
+  For more information about DFS namespaces, see [Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736) on TechNet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsNamespaceRootTarget.cdxml-help.xml
+  Module Name: DFSN
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsn/get-dfsnroottarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DfsnRootTarget

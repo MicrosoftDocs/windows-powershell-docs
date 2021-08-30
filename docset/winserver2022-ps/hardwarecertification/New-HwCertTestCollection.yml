@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a test collection file from a project definition file.
+module: HardwareCertification
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Windows.Kits.Hardware.Certification.TestCollectionRecord" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-HwCertTestCollectionToXml
+  href: ./Export-HwCertTestCollectionToXml.yml
+- text: New-HwCertProjectDefinitionFile
+  href: ./New-HwCertProjectDefinitionFile.yml
+syntaxes:
+- New-HwCertTestCollection [-ProjectDefinitionFile] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a test collection'
+  code: |-
+    PS C:\> New-HwCertTestCollection -ProjectDefinitionFile "C:\Temp\ProjectDefinitionWindows8Client.xml"
+  description: |-
+    This command creates a test collection based on the project definition file named ProjectDefinitionWindows8Client.xml.
+  summary: ""
+- title: 'Example 2: Create a test collection and export it to a file'
+  code: |-
+    PS C:\> New-HwCertTestCollection -ProjectDefinitionFile "C:\Temp\ProjectDefinitionWindows8Client.xml" | Export-HwCertTestCollectionToXml -Output "C:\Temp\TestCollectionWindows8Client.xml"
+  description: |-
+    This command creates a test collection and then exports it to an .xml file.
+    This command creates a test collection based on the project definition file named ProjectDefinitionWindows8Client.xml, and then passes the test collection to the **Export-HwCertTestCollectionToXml** cmdlet by using the pipeline operator.
+    That cmdlet exports it to a file called TestCollectionWindows8Client.xml.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProjectDefinitionFile
+  isRequired: true
+  description: |+
+    Specifies the project definition file as a full path.
+    To create a project definition file, use the **New-HwCertProjectDefinitionFile** cmdlet.
+
+  defaultValue: None
+  position: "0"
+  aliases: Input, PDF, Project
+  parameterValueGroup: ""
+uid: HardwareCertification.New-HwCertTestCollection
+name: New-HwCertTestCollection
+description: |-
+  The **New-HwCertTestCollection** cmdlet creates a test collection file from a Windows Hardware Certification Kit (HCK) project definition file.
+  The collection file represents the testing scope of a unique combination of test and target and version of the Windows operating system.
+  For more information, see [Windows Hardware Certification Kit downloads](https://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
+
+  You can use this test collection file in several ways at different stages of the testing workflow, including the following: 
+
+  - Generate an initial test collection to understand the full scope of testing. 
+  - Filter the test collection based on test metadata and properties, and then generate smaller collections for different labs to run. 
+  - Use a test collection with results to control the scope of testing.
+  For instance, the tests could skip all passing tests. 
+  - Use a test collection as a validation file when you merge test results from the smaller collections.
+
+  The cmdlet creates temporary projects and target families to enumerate all the possible tests.
+  You can reuse the generated project for additional testing outside of the automation workflow by using tools from the HCK.
+
+  Use the **New-HwCertProjectDefinitionFile** cmdlet to create a project definition file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: microsoft.windows.kits.hardware.certification.management.dll-Help.xml
+  Module Name: HardwareCertification
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hardwarecertification/new-hwcerttestcollection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-HwCertTestCollection

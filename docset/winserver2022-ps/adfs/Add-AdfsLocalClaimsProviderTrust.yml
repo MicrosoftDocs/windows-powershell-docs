@@ -1,0 +1,254 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a local claims provider trust.
+module: ADFS
+notes: ""
+links:
+- text: Disable-AdfsLocalClaimsProviderTrust
+  href: ./Disable-AdfsLocalClaimsProviderTrust.yml
+- text: Enable-AdfsLocalClaimsProviderTrust
+  href: ./Enable-AdfsLocalClaimsProviderTrust.yml
+- text: Get-AdfsLocalClaimsProviderTrust
+  href: ./Get-AdfsLocalClaimsProviderTrust.yml
+- text: New-AdfsLdapAttributeToClaimMapping
+  href: ./New-AdfsLdapAttributeToClaimMapping.yml
+- text: Remove-AdfsLocalClaimsProviderTrust
+  href: ./Remove-AdfsLocalClaimsProviderTrust.yml
+- text: Set-AdfsLocalClaimsProviderTrust
+  href: ./Set-AdfsLocalClaimsProviderTrust.yml
+syntaxes:
+- >-
+  Add-AdfsLocalClaimsProviderTrust -Name <String> -Identifier <String> [-AcceptanceTransformRules <String>]
+
+   [-AcceptanceTransformRulesFile <String>] [-Enabled <Boolean>] [-Notes <String>]
+
+   [-OrganizationalAccountSuffix <String[]>] [-Force] [-Type <String>] [-PassThru] [-WhatIf] [-Confirm]
+
+   -LdapServerConnection <LdapServerConnection[]> -UserObjectClass <String> -UserContainer <String>
+
+   -AnchorClaimLdapAttribute <String> -AnchorClaimType <String>
+
+   [-LdapAuthenticationMethod <LdapAuthenticationMethod>]
+
+   [-LdapAttributeToClaimMapping <LdapAttributeToClaimMapping[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an LDAP local claims provider trust'
+  code: |-
+    PS C:\> $Credential = Get-Credential
+    PS C:\ > $LdapConn = New-AdfsLdapServerConnection -HostName "DomainContoller03.contoso.com" -Port 389 -SslMode None -AuthenticationMethod Basic -Credential $Credential
+    PS C:\ > $DisplayName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute "displayName" -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/displayname"
+    PS C:\> Add-AdfsLocalClaimsProviderTrust -Name "testldap" -Identifier "urn:testldap" -Type ldap -LdapServerConnection $LdapConn -UserObjectClass user -UserContainer "CN=Users,DC=<sub_domain_name>,DC=<domain_name>,DC=com" -LdapAuthenticationMethod Basic -AnchorClaimLdapAttribute userPrincipalName -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -AcceptanceTransformRules "c:[] => issue(claim=c);" -Enabled $True -OrganizationalAccountSuffix "TSQA.contoso.com" - LdapAttributeToClaimMapping $DisplayName
+  description: |-
+    The first command prompts you for a user name and password by using the **Get-Credential** cmdlet.
+    The command stores the results in the $Credential variable.
+
+    The second command creates an LDAP connection by using the **New-AdfsLdapServerConnection** cmdlet.
+    DomainContoller03.contoso.com is the fully qualified domain name of a domain controller in the other forest.
+    The command stores the result in the $LdapConn variable.
+
+    The third command creates a mapping of an LDAP directory attribute to a claim type by using the **New-AdfsLdapAttributeToClaimMapping** cmdlet.
+
+    The final command creates an LDAP claims provider trust to authenticate users in another, untrusted Active Directory forest.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AcceptanceTransformRules
+  description: |+
+    Specifies the set of claim rules to configure on the local claims provider trust.
+    These rules determine the information that is accepted from the partner represented by the local claims provider trust.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AcceptanceTransformRulesFile
+  description: |+
+    Specifies the full path of a file that contains the set of claim rules to configure on the local claims provider trust.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AnchorClaimLdapAttribute
+  isRequired: true
+  description: |+
+    Specifies the LDAP attribute to which the user name that the user enters isl be matched to find the correct user account in the LDAP directory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AnchorClaimType
+  isRequired: true
+  description: |+
+    Specifies the claim type of the anchor claim in AD FS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    Indicates whether the trust is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identifier
+  isRequired: true
+  description: |+
+    Specifies the ID, as a URI, of the claims provider trust.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LdapAttributeToClaimMapping" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LdapAttributeToClaimMapping
+  description: |+
+    Specifies a mapping of LDAP directory attributes to claim types.
+    Each mapping causes an AD FS claim with the corresponding claim type and LDAP attribute value to be available for AD FS processing rules.
+    To obtain a mapping, use the **New-AdfsLdapAttributeToClaimMapping** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LdapAuthenticationMethod" data-throw-if-not-resolved="False" />
+  name: LdapAuthenticationMethod
+  description: |+
+    Specifies the authentication method the local claims provider trust uses.
+    In Windows Server 2016, the only supported method is Basic (username/password).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Basic, Kerberos, Negotiate
+- type: <xref href="LdapServerConnection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LdapServerConnection
+  isRequired: true
+  description: |+
+    Specifies an array of LDAP server connections that the claims provider trust uses.
+    To obtain an **LdapServerConnection** object, use the **New-AdfsLdapServerConnection** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the local claims provider trust.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Specifies notes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OrganizationalAccountSuffix
+  description: |+
+    Specifies an array of organizational account suffixes that administrator can configure for the claims provider trust for a Home Realm Discovery (HRD) scenario.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the type of the claims provider trust.
+    The acceptable values for this parameter are: ActiveDirectory and LDAP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserContainer
+  isRequired: true
+  description: |+
+    Specifies a user container.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserObjectClass
+  isRequired: true
+  description: |+
+    Specifies a user object class.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Add-AdfsLocalClaimsProviderTrust
+name: Add-AdfsLocalClaimsProviderTrust
+description: |-
+  The **Add-AdfsLocalClaimsProviderTrust** cmdlet creates a local claims provider trust.
+  This trust is based on a Lightweight Directory Access Protocol (LDAP) v3 compliant directory other than the Active Directory domain of which the Active Directory Federation Services (AD FS) server is a member.
+  This includes other, untrusted, Active Directory forests or domains, Active Directory Lightweight Directory Services directories, and non-Active Directory LDAP directories.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/add-adfslocalclaimsprovidertrust?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AdfsLocalClaimsProviderTrust

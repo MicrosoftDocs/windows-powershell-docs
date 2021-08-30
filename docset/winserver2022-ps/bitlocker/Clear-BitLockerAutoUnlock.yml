@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes BitLocker automatic unlocking keys.
+module: BitLocker
+notes: ""
+inputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-BitLockerAutoUnlock
+  href: ./Disable-BitLockerAutoUnlock.yml
+- text: Enable-BitLockerAutoUnlock
+  href: ./Enable-BitLockerAutoUnlock.yml
+- text: Get-BitLockerVolume
+  href: ./Get-BitLockerVolume.yml
+syntaxes:
+- Clear-BitLockerAutoUnlock [<CommonParameters>]
+examples:
+- title: 'Example 1: Clear automatic unlocking keys'
+  code: |-
+    PS C:\>Clear-BitLockerAutoUnlock
+  description: |-
+    This command clears all automatic unlocking keys stored on the current computer.
+  summary: ""
+uid: BitLocker.Clear-BitLockerAutoUnlock
+name: Clear-BitLockerAutoUnlock
+description: |-
+  The **Clear-BitLockerAutoUnlock** cmdlet removes all automatic unlocking keys used by BitLocker Drive Encryption.
+  BitLocker stores these keys for the fixed data drives of a system on a volume that hosts a BitLocker-enabled operating system volume so that it can automatically unlock the fixed and removable data volumes in a system.
+  This makes it easier for users to access data volumes.
+
+  You can configure BitLocker to automatically unlock volumes that do not host an operating system.
+  After a user unlocks the operating system volume, BitLocker uses encrypted information stored in the registry and volume metadata to unlock any data volumes that use automatic unlocking.
+
+  You must remove automatic unlocking keys before you can disable BitLocker by using the **Disable-BitLocker** cmdlet.
+  You can use the **Disable-BitLockerAutoUnlock** cmdlet to remove keys for specific volumes that use automatic unlocking instead of all volumes.
+
+  For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BitLocker-help.xml
+  Module Name: BitLocker
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/bitlocker/clear-bitlockerautounlock?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-BitLockerAutoUnlock

@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the virtual machines from one or more Hyper-V hosts.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Virtualization.Powershell.VirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-VM [[-Name] <String[]>] [-ComputerName <String[]>]
+- Get-VM [-ClusterObject] <PSObject>
+- Get-VM [[-Id] <Guid>] [-ComputerName <String[]>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VM
+  description: |-
+    This example gets all virtual machines on the local virtual machine host.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VM -ComputerName Server1 | Where-Object {$_.State -eq 'Running'}
+  description: |-
+    This example gets all virtual machines on Hyper-V host Server1 that are running.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>Get-ClusterGroup | ? {$_.GroupType -eq 'VirtualMachine' } | Get-VM
+  description: |-
+    This example gets all virtual machines in the cluster to which the local Hyper-V host is joined.
+  summary: ""
+parameters:
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: ClusterObject
+  isRequired: true
+  description: |+
+    Specifies the cluster resource or cluster group of the virtual machine to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which virtual machines are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    Specifies the identifier of the virtual machine to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the virtual machine to be retrieved.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VM
+name: Get-VM
+description: |-
+  The **Get-VM** cmdlet gets the virtual machines from one or more Hyper-V hosts.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vm?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

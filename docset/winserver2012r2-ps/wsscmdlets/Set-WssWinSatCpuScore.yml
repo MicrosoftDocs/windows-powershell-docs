@@ -1,0 +1,40 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the Windows Experience Index processor subscore.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Get-WssWinSatCpuScore
+  href: ./Get-WssWinSatCpuScore.yml
+syntaxes:
+- Set-WssWinSatCpuScore [-WinSatCpuScore] <Double> [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the WinSAT score'
+  code: |-
+    PS C:\> Set-WssWinSatCpuScore -WinSatCpuScore 1
+  description: |-
+    This command modifies the WinSAT score.
+  summary: ""
+parameters:
+- type: <xref href="Double" data-throw-if-not-resolved="False" />
+  name: WinSatCpuScore
+  isRequired: true
+  description: |+
+    Specifies a WinSAT CPU score.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Set-WssWinSatCpuScore
+name: Set-WssWinSatCpuScore
+description: |-
+  The **Set-WssWinSatCpuScore** cmdlet modifies the Windows Experience Index (WinSAT) processor subscore.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wsswinsatcpuscore?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssWinSatCpuScore

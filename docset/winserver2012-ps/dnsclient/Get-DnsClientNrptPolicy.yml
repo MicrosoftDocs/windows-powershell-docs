@@ -1,0 +1,229 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the Name Resolution Policy Table (NRPT) configured on the computer.
+module: DnsClient
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DNS/DnsClientPolicyConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The DnsClientPolicyConfiguration object contains all of the properties of the DNS client NRPT policy.
+    If the **Effective** parameter is specified, then only the contents of effective policy are retrieved.
+links:
+- text: Add-DnsClientNrptRule
+  href: ./Add-DnsClientNrptRule.yml
+- text: Get-DnsClientNrptGlobal
+  href: ./Get-DnsClientNrptGlobal.yml
+- text: Get-DnsClientNrptPolicy
+  href: ./Get-DnsClientNrptPolicy.yml
+- text: Get-DnsClientNrptRule
+  href: ./Get-DnsClientNrptRule.yml
+- text: Remove-DnsClientNrptRule
+  href: ./Remove-DnsClientNrptRule.yml
+- text: Set-DnsClientNrptGlobal
+  href: ./Set-DnsClientNrptGlobal.yml
+- text: Set-DnsClientNrptRule
+  href: ./Set-DnsClientNrptRule.yml
+syntaxes:
+- >-
+  Get-DnsClientNrptPolicy [-Effective] [[-Namespace] <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-DnsClientNrptPolicy
+    Namespace                        : nls.corp.contoso.com 
+    QueryPolicy                      : 
+    SecureNameQueryFallback          : 
+    DirectAccessIPsecCARestriction   : 
+    DirectAccessProxyName            : 
+    DirectAccessDnsServers           : 
+    DirectAccessEnabled              : 
+    DirectAccessProxyType            : UseDefault 
+    DirectAccessQueryIPsecEncryption : 
+    DirectAccessQueryIPsecRequired   : False 
+    NameServers                      : 
+    DnsSecIPsecCARestriction         : 
+    DnsSecQueryIPsecEncryption       : 
+    DnsSecQueryIPsecRequired         : False 
+    DnsSecValidationRequired         : False 
+    NameEncoding                     : Utf8WithoutMapping 
+
+    Namespace                        : .corp.contoso.com 
+    QueryPolicy                      : 
+    SecureNameQueryFallback          : 
+    DirectAccessIPsecCARestriction   : 
+    DirectAccessProxyName            : 
+    DirectAccessDnsServers           : {2001:db8:1::2, 2001:db8:2::20, 
+                                       2001:db8:6::6} 
+    DirectAccessEnabled              : 
+    DirectAccessProxyType            : NoProxy 
+    DirectAccessQueryIPsecEncryption : 
+    DirectAccessQueryIPsecRequired   : False 
+    NameServers                      : 
+    DnsSecIPsecCARestriction         : 
+    DnsSecQueryIPsecEncryption       : 
+    DnsSecQueryIPsecRequired         : False 
+    DnsSecValidationRequired         : False 
+    NameEncoding                     : Utf8WithoutMapping
+  description: |-
+    This example retrieves the NRPT policy on a computer.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Get-DnsClientNrptPolicy -Effective
+    Namespace                        : nls.corp.contoso.com 
+    QueryPolicy                      : QueryIPv6Only 
+    SecureNameQueryFallback          : FallbackPrivate 
+    DirectAccessIPsecCARestriction   : 
+    DirectAccessProxyName            : 
+    DirectAccessDnsServers           : 
+    DirectAccessEnabled              : True 
+    DirectAccessProxyType            : UseDefault 
+    DirectAccessQueryIPsecEncryption : 
+    DirectAccessQueryIPsecRequired   : False 
+    NameServers                      : 
+    DnsSecIPsecCARestriction         : 
+    DnsSecQueryIPsecEncryption       : 
+    DnsSecQueryIPsecRequired         : 
+    DnsSecValidationRequired         : 
+    NameEncoding                     : 
+
+    Namespace                        : .corp.contoso.com 
+    QueryPolicy                      : QueryIPv6Only 
+    SecureNameQueryFallback          : FallbackPrivate 
+    DirectAccessIPsecCARestriction   : 
+    DirectAccessProxyName            : 
+    DirectAccessDnsServers           : {2001:db8:1::2, 2001:db8:2::20, 
+                                       2001:db8:6::6} 
+    DirectAccessEnabled              : True 
+    DirectAccessProxyType            : NoProxy 
+    DirectAccessQueryIPsecEncryption : 
+    DirectAccessQueryIPsecRequired   : False 
+    NameServers                      : 
+    DnsSecIPsecCARestriction         : 
+    DnsSecQueryIPsecEncryption       : 
+    DnsSecQueryIPsecRequired         : 
+    DnsSecValidationRequired         : 
+    NameEncoding                     :
+  description: |-
+    This example retrieves the effective NRPT policy on a computer.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>Get-DnsClientNrptPolicy -Effective -Namespace nls.corp.contoso.com
+    Namespace                        : nls.corp.contoso.com 
+    QueryPolicy                      : QueryIPv6Only 
+    SecureNameQueryFallback          : FallbackPrivate 
+    DirectAccessIPsecCARestriction   : 
+    DirectAccessProxyName            : 
+    DirectAccessDnsServers           : 
+    DirectAccessEnabled              : True 
+    DirectAccessProxyType            : UseDefault 
+    DirectAccessQueryIPsecEncryption : 
+    DirectAccessQueryIPsecRequired   : False 
+    NameServers                      : 
+    DnsSecIPsecCARestriction         : 
+    DnsSecQueryIPsecEncryption       : 
+    DnsSecQueryIPsecRequired         : 
+    DnsSecValidationRequired         : 
+    NameEncoding                     :
+  description: |-
+    This example retrieves an effective NRPT policy for the namespace nls.corp.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Effective
+  description: |+
+    Specifies that the effective NRPT policy is returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Namespace
+  description: |+
+    Specifies the DNS namespace for which the policy is retrieved
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsClient.Get-DnsClientNrptPolicy
+name: Get-DnsClientNrptPolicy
+description: |-
+  The **Get-DnsClientNrptPolicy** cmdlet retrieves the following Name Resolution Policy Table (NRPT) details for each namespace. 
+
+   -- DNS client name resolution fallback policy. 
+
+   -- DNS client secure name query fallback setting. 
+
+   -- Direct Access (DA) IPsec Certification Authority (CA) restriction setting. 
+
+   -- DA proxy name setting. 
+
+   -- DA DNS servers setting. 
+
+   -- DA enabled setting. 
+
+   -- DA proxy type setting. 
+
+   -- DA Query IPsec encryption setting. 
+
+   -- DA Query IPsec required setting. 
+
+   -- DNS client name servers setting. 
+
+   -- DNS security IPsec CA restriction setting. 
+
+   -- DNS security query IPsec encryption setting. 
+
+   -- DNS security query IPsec required setting. 
+
+   -- DNS security validation required setting. 
+
+   -- DNS client name encoding setting.
+metadata:
+  external help file: PS_DnsClientNrptPolicy_v1.0.0.cdxml-help.xml
+  Module Name: DnsClient
+  online version: https://docs.microsoft.com/powershell/module/dnsclient/get-dnsclientnrptpolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an authorized dump encryption key to HGS.
+module: HgsAttestation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Add-HgsAttestationDumpPolicy [-PublicKeyHash] <String> -Name <String> [-PolicyVersion <PolicyVersion>] [-Stage]
+
+   [-WhatIf] [-Confirm]
+- >-
+  Add-HgsAttestationDumpPolicy [-Path] <String> [-Name <String>] [-PolicyVersion <PolicyVersion>] [-Stage]
+
+   [-WhatIf] [-Confirm]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-HgsAttestationDumpPolicy -PublicKeyHash 'e91c254ad58860a02c788dfb5c1a65d6a8846ab1dc649631c7db16fef4af2dec' -Name 'Contoso Dump Encryption'
+  description: |-
+    Adds the dump encryption key with the specified SHA256 public key hash to HGS.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Add-HgsAttestationDumpPolicy -Path 'C:\temp\TpmBaselineWithDumpEncryption.tcglog' -Name 'Contoso Dump Encryption'
+  description: |-
+    Adds the dump encryption key to HGS using a TCG log (TPM baseline) obtained after a host was configured to use dump encryption.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Friendly name for the dump policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of a TPM baseline file (TCG log) that contains the public key hash of a dump encryption certificate.
+    The TPM baseline specified should be obtained after configuring a Hyper-V host to use dump encryption.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: FilePath, PSPath
+  parameterValueGroup: ""
+- type: <xref href="PolicyVersion" data-throw-if-not-resolved="False" />
+  name: PolicyVersion
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, PolicyVersion1503, PolicyVersion1704
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PublicKeyHash
+  isRequired: true
+  description: |+
+    SHA256 hash of the public key of the certificate used for dump encryption.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Stage
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsAttestation.Add-HgsAttestationDumpPolicy
+name: Add-HgsAttestationDumpPolicy
+description: |-
+  The **Add-HgsAttestationDumpPolicy** cmdlet authorizes the specified key to be used to encrypt memory dumps on a Hyper-V host.
+  Only hosts that encrypt dumps using an authorized key and hosts that do not allow any memory dumps will be able to successfully attest.
+metadata:
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/add-hgsattestationdumppolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-HgsAttestationDumpPolicy

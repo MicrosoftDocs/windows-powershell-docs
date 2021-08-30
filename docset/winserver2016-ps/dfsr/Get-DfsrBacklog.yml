@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the list of pending file updates between two DFS Replication partners.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder, String computerName" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrIdRecord" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-DfsrBacklog [[-GroupName] <String[]>] [[-FolderName] <String[]>] [-SourceComputerName] <String>
+
+   [-DestinationComputerName] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve unreplicated changes'
+  code: |-
+    PS C:\> Get-DfsrBacklog -DestinationComputerName "SRV01" -SourceComputerName "SRV02" -GroupName "RG01" -FolderName "RF1A"
+
+    Identifier                  : {DCE7FC28-5584-4D5D-BC84-2BD9D53CC2FC}-v538
+    Flags                       : 5
+    Attributes                  : 32
+    GlobalVersionSequenceNumber : {DCE7FC28-5584-4D5D-BC84-2BD9D53CC2FC}-v538
+    UpdateSequenceNumber        : 71576496
+    ParentId                    : {997D8F76-1207-49D7-85C9-DED015105A2F}-v1
+    FileId                      : 562949953495210
+    Volume                      : \\.\C:
+    Fence                       : 3
+    Clock                       : 130078672846368199
+    CreateTime                  : 3/15/2013 5:28:04 PM
+    UpdateTime                  : 3/15/2013 5:28:04 PM
+    FileHash                    : 173b51c11257a2eb 8c05884560fcfd1d
+    FileName                    : diskraid.exe
+    FullPathName                : c:\rf1a\diskraid.exe
+    Index                       : 1
+    ReplicatedFolderId          : 997d8f76-1207-49d7-85c9-ded015105a2f
+
+    Identifier                  : {DCE7FC28-5584-4D5D-BC84-2BD9D53CC2FC}-v539
+    Flags                       : 5
+    Attributes                  : 32
+    GlobalVersionSequenceNumber : {DCE7FC28-5584-4D5D-BC84-2BD9D53CC2FC}-v539
+    UpdateSequenceNumber        : 71577024
+    ParentId                    : {997D8F76-1207-49D7-85C9-DED015105A2F}-v1
+    FileId                      : 562949953495211
+    Volume                      : \\.\C:
+    Fence                       : 3
+    Clock                       : 130078672846524997
+    CreateTime                  : 3/15/2013 5:28:04 PM
+    UpdateTime                  : 3/15/2013 5:28:04 PM
+    FileHash                    : 6bcd377edf35e621 a7927703c08545d8
+    FileName                    : diskshadow.exe
+    FullPathName                : c:\rf1a\diskshadow.exe
+    Index                       : 2
+    ReplicatedFolderId          : 997d8f76-1207-49d7-85c9-ded015105a2f
+  description: |-
+    This command retrieves the first 100 unreplicated changes between the local computer and the upstream computer SRV02 for the replication group RG01 and the replicated folder RF1A.
+    The command displays all file metadata.
+  summary: ""
+- title: 'Example 2: Retrieve unreplicated changes between upstream and downstream computers'
+  code: |-
+    PS C:\> Get-DfsrBacklog -DestinationComputerName "SRV01" -SourceComputerName "SRV02" -GroupName "RG01" -FolderName "RF1" | Format-Table FullPathName, UpdateTime
+
+    FullPathName                      UpdateTime
+    ------------                      ----------
+    c:\rf1a\imageres.dll       3/15/2013 5:28:45 PM
+    c:\rf1a\mshtml.dll         3/15/2013 5:28:50 PM
+  description: |-
+    This command retrieves the first 100 unreplicated changes between the downstream computer SRV01 and the upstream computer SRV02 for the replication group RG01 and the replicated folder RF1.
+    The command also formats the output into a table that contains only the file paths and modification dates on the upstream server.
+  summary: ""
+- title: 'Example 3: Retrieve unreplicated changes count to display'
+  code: |-
+    PS C:\> Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose
+
+    The replicated folder has a backlog of files. Replicated folder: "RF01". Count: 2400
+  description: |-
+    This command retrieves the total count of unreplicated changes between the downstream computer SRV02 and the upstream computer SRV01 for the replication group RG01 and the replicated folder RF01.
+    The command displays this output in the verbose stream.
+  summary: ""
+- title: 'Example 4: Retrieve unreplicated changes count to a string object'
+  code: |-
+    PS C:\> (Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose 4>&1).Message.Split(':')[2]
+
+    2400
+  description: |-
+    This command retrieves the total count of unreplicated changes between the downstream computer SRV02 and the upstream computer SRV01 for the replication group RG01 and the replicated folder RF01.
+    The command converts the verbose stream data into a text string containing only the count, for later manipulation.
+  summary: ""
+- title: 'Example 5: Retrieve unreplicated changes count to a file'
+  code: |-
+    PS C:\> Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose 4> verbose.txt > null
+    PS C:\> Get-Content .\verbose.txt
+
+    The replicated folder has a backlog of files. Replicated folder: "RF01". Count: 2400
+  description: |-
+    This command retrieves the total count of unreplicated changes between the downstream computer SRV02 and the upstream computer SRV01 for the replication group RG01 and the replicated folder RF01.
+    The command converts the verbose stream data into a text string containing only the count, for later manipulation.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of the receiving computer.
+    A destination computer is also called an inbound or downstream computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ReceivingMember, RMem
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FolderName
+  description: |+
+    Specifies an array of names of replicated folders.
+    If you do not specify this parameter, the cmdlet queries for all participating replicated folders.
+    You can specify multiple folders, separated by commas, as well as wildcard characters (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: RF, RfName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  description: |+
+    Specifies an array of names of replication groups.
+    If you do not specify this parameter, the cmdlet queries for all participating replications groups.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of the sending computer.
+    A source computer is also called an outbound or upstream computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: SendingMember, SMem
+  parameterValueGroup: ""
+uid: DFSR.Get-DfsrBacklog
+name: Get-DfsrBacklog
+description: |-
+  The **Get-DfrsBacklog** cmdlet retrieves pending updates between two computers that participate in Distributed File System (DFS) Replication.
+
+  Updates can be new, modified, or deleted files and folders.
+  The maximum number of files that this command displays is 100.
+  The **Verbose** parameter displays a count of all backlogged updates.
+  Any files or folders listed in the DFS Replication backlog have not yet replicated from the source computer to the destination computer.
+  This is not necessarily an indication of problems.
+  A backlog indicates latency, and a backlog may be expected in your environment, depending on configuration, rate of change, network, and other factors.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/get-dfsrbacklog?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DfsrBacklog

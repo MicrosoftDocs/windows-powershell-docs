@@ -1,0 +1,249 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a scheduled task trigger object.
+module: ScheduledTasks
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_TaskTrigger" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-ScheduledTaskAction
+  href: ./New-ScheduledTaskAction.yml
+- text: New-ScheduledTask
+  href: ./New-ScheduledTask.yml
+- text: Get-ScheduledTaskInfo
+  href: ./Get-ScheduledTaskInfo.yml
+- text: Enable-ScheduledTask
+  href: ./Enable-ScheduledTask.yml
+- text: Register-ScheduledTask
+  href: ./Register-ScheduledTask.yml
+- text: Register-ScheduledTask
+  href: ./Register-ScheduledTask.yml
+- text: Start-ScheduledTask
+  href: ./Start-ScheduledTask.yml
+syntaxes:
+- >-
+  New-ScheduledTaskTrigger [-RandomDelay <TimeSpan>] -At <DateTime> [-Once] [-RepetitionInterval <TimeSpan>]
+
+   [-RepetitionDuration <TimeSpan>] [<CommonParameters>]
+- >-
+  New-ScheduledTaskTrigger [-DaysInterval <Int32>] [-RandomDelay <TimeSpan>] -At <DateTime> [-Daily]
+
+   [<CommonParameters>]
+- >-
+  New-ScheduledTaskTrigger [-WeeksInterval <Int32>] [-RandomDelay <TimeSpan>] -At <DateTime>
+
+   -DaysOfWeek <DayOfWeek[]> [-Weekly] [<CommonParameters>]
+- New-ScheduledTaskTrigger [-RandomDelay <TimeSpan>] [-AtStartup] [<CommonParameters>]
+- New-ScheduledTaskTrigger [-RandomDelay <TimeSpan>] [-User <String>] [-AtLogOn] [<CommonParameters>]
+examples:
+- title: 'Example 1: Register a scheduled task that starts a task once'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+    PS C:\>$Stt = New-ScheduledTaskTrigger -Once -At 3am
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
+  description: |-
+    This example registers a scheduled task that starts once.
+
+    The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable.
+    The second command creates a scheduled task trigger that starts the task once at 3:00 A.M and assigns the **ScheduledTaskTrigger** object to the $Stt variable.
+    The third command registers the scheduled task Task01 to run the task action named Cmd once at 3:00 A.M.
+  summary: ""
+- title: 'Example 2: Register a scheduled task that starts every day'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+    PS C:\>$Stt = New-ScheduledTaskTrigger -Daily -At 3am
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
+  description: |-
+    This example registers a scheduled task that starts every day.
+
+    The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable.
+    The second command creates a scheduled task trigger that starts every day at 3:00 A.M and assigns the **ScheduledTaskTrigger** object to the $Stt variable.
+    The third command registers the scheduled task Task01 to run the task action named Cmd every day at 3:00 A.M.
+  summary: ""
+- title: 'Example 3: Register a scheduled task that starts every 3 days'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+    PS C:\>$Stt = New-ScheduledTaskTrigger -Daily -DaysInterval 3 -At 3am
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
+  description: |-
+    This example registers a scheduled task that starts every 3 days.
+
+    The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable.
+    The second command creates a scheduled task trigger that starts every 3 days at 3:00 A.M and assigns the **ScheduledTaskTrigger** object to the $Stt variable.
+    The third command registers the scheduled task Task01 to run the task action named cmd every 3 days at 3:00 A.M.
+  summary: ""
+- title: 'Example 4: Register a scheduled task that starts every-other week'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+    PS C:\>$Stt = New-ScheduledTaskTrigger -Weekly -WeeksInterval 2 -DaysOfWeek Sunday -At 3am
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
+  description: |-
+    This example registers a scheduled task that starts every other week.
+
+    The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable.
+    The second command creates a scheduled task trigger that starts every other Sunday at 3:00 A.M and assigns the **ScheduledTaskTrigger** object to the $Stt variable.
+    The third command registers the scheduled task Task01 to run the task action named Cmd every other Sunday at 3:00 A.M.
+  summary: ""
+- title: 'Example 5: Register a scheduled task that starts when a user logs on'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+    PS C:\>$Stt = New-ScheduledTaskTrigger -AtLogon
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
+  description: |-
+    This example registers a scheduled task that starts when a user logs on.
+
+    The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable.
+    The second command creates a scheduled task trigger that starts when a user logs on, and assigns the **ScheduledTaskTrigger** object to the $Stt variable.
+    The third command registers the scheduled task Task01 to run the task action named Cmd when a user logs on.
+  summary: ""
+parameters:
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: At
+  isRequired: true
+  description: |+
+    Specifies a date and time to trigger the task.
+    This parameter is valid for calendar-based triggers (Once, Daily, Weekly).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AtLogOn
+  isRequired: true
+  description: |+
+    Indicates that a trigger starts a task when a user logs on.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AtStartup
+  isRequired: true
+  description: |+
+    Indicates that a trigger starts a task when the system is started.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Daily
+  isRequired: true
+  description: |+
+    Indicates that a trigger starts a task on a recurring daily schedule.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DaysInterval
+  description: |+
+    Specifies the interval between the days in the schedule.
+    An interval of 1 produces a daily schedule.
+    An interval of 2 produces an every-other day schedule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DayOfWeek" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DaysOfWeek
+  isRequired: true
+  description: |+
+    Specifies an array of the days of the week on which Task Scheduler runs the task.
+
+  defaultValue: '{ DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday, DayOfWeek.Sunday }'
+  position: Named
+  aliases: ""
+  parameterValueGroup: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Once
+  isRequired: true
+  description: |+
+    Indicates that a trigger starts a task once at a time specified in the **At** parameter.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: RandomDelay
+  description: |+
+    Specifies a random amount of time to delay the start time of the trigger.
+    The delay time is a random time between the time the task triggers and the time that you specify in this setting.
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: RepetitionDuration
+  description: |+
+    Specifies how long the repetition pattern repeats after the task starts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: RepetitionInterval
+  description: |+
+    Specifies an amount of time between each restart of the task.
+    The task will run, wait for the time interval specified, and then run again.
+    This cycle continues for the time that you specify for the **RepetitionDuration** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  description: |+
+    Specifies the identifier of the user for a trigger that starts a task when a user logs on.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Weekly
+  isRequired: true
+  description: |+
+    Indicates that the trigger starts a task on a recurring weekly schedule.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: WeeksInterval
+  description: |+
+    Specifies the interval between the weeks in the schedule.
+    An interval of 1 produces a weekly schedule.
+    An interval of 2 produces an every-other week schedule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ScheduledTasks.New-ScheduledTaskTrigger
+name: New-ScheduledTaskTrigger
+description: |-
+  The **New-ScheduledTaskTrigger** cmdlet creates and returns a new scheduled task trigger object.
+
+  You can use a time-based trigger or an event-based trigger to start a task.
+  Time-based triggers include starting a task at a specific time or starting a task multiple times on a daily or weekly schedule.
+  Event-based triggers include starting a task when the system starts up or when a user logs on to the computer.
+  Each task can contain one or more triggers, which means there are many ways that you can start a task.
+  If a task has multiple triggers, Task Scheduler starts the task when any of the triggers occur.
+metadata:
+  external help file: PSScheduledJobPrxy-help.xml
+  Module Name: ScheduledTasks
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/scheduledtasks/new-scheduledtasktrigger?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-ScheduledTaskTrigger

@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables scheduled updates while disk protection is enabled and in discard mode.
+module: MultiPoint
+notes: ""
+links:
+- text: Enable-WmsScheduledUpdate
+  href: ./Enable-WmsScheduledUpdate.yml
+- text: Get-WmsScheduledUpdate
+  href: ./Get-WmsScheduledUpdate.yml
+- text: Set-WmsScheduledUpdate
+  href: ./Set-WmsScheduledUpdate.yml
+syntaxes:
+- Disable-WmsScheduledUpdate [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable scheduled updates on the local computer'
+  code: |-
+    PS C:\> Disable-WmsScheduledUpdate
+  description: |-
+    This command disables scheduled updates on the local computer.
+  summary: ""
+- title: 'Example 2: Disable schedule updates for a specified computer'
+  code: |-
+    PS C:\> Disable-WmsScheduledUpdate -Server "sample.microsoft.com"
+  description: |-
+    This command disables scheduled updates on the computer sample.microsoft.com
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+uid: MultiPoint.Disable-WmsScheduledUpdate
+name: Disable-WmsScheduledUpdate
+description: |-
+  The **Disable-WmsScheduledUpdate** cmdlet disables scheduled updates while disk protection is enabled and in discard mode.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/disable-wmsscheduledupdate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-WmsScheduledUpdate

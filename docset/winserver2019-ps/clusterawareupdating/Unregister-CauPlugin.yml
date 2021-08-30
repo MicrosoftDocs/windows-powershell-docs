@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a software updating plug-in from the list of plug-ins that are used by CAU.
+module: ClusterAwareUpdating
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauPlugin" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CauPlugin
+  href: ./Get-CauPlugin.yml
+- text: Register-CauPlugin
+  href: ./Register-CauPlugin.yml
+syntaxes:
+- Unregister-CauPlugin [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Unregister a plug-in that is used by CAU'
+  code: |-
+    PS C:\> Unregister-CauPlugin -Name "Plugin01"
+  description: |-
+    This command removes the plug-in named Plugin01 from the list of plug-ins that are used by CAU.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the plug-in that this cmdlet unregisters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ClusterAwareUpdating.Unregister-CauPlugin
+name: Unregister-CauPlugin
+description: |-
+  The **Unregister-CauPlugin** cmdlet removes a software updating plug-in from the list of plug-ins that are used by Cluster-Aware Updating (CAU).
+  The plug-in can be removed, but afterwards, it cannot be used for updating runs.
+  The **Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin** plug-ins, which are installed with CAU, cannot be unregistered.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  Module Name: ClusterAwareUpdating
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/unregister-cauplugin?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Unregister-CauPlugin

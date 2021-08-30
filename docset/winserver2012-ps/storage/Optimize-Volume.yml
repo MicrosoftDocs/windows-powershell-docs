@@ -1,0 +1,288 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Optimizes a volume, performing such tasks as defragmentation and trim.
+module: Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Volume" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a Volume object to the **InputObject** parameter.
+links:
+- text: Format-Volume
+  href: ./Format-Volume.yml
+- text: Get-Volume
+  href: ./Get-Volume.yml
+- text: Repair-Volume
+  href: ./Repair-Volume.yml
+- text: Set-Volume
+  href: ./Set-Volume.yml
+syntaxes:
+- >-
+  Optimize-Volume [-DriveLetter] <Char[]> [-Analyze] [-AsJob] [-CimSession <CimSession[]>] [-Defrag] [-ReTrim]
+
+   [-SlabConsolidate] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+- >-
+  Optimize-Volume [-Analyze] [-AsJob] [-CimSession <CimSession[]>] [-Defrag] [-ReTrim] [-SlabConsolidate]
+
+   [-ThrottleLimit <Int32>] -ObjectId <String[]> [-Confirm] [-WhatIf]
+- >-
+  Optimize-Volume [-Analyze] [-AsJob] [-CimSession <CimSession[]>] [-Defrag] [-ReTrim] [-SlabConsolidate]
+
+   [-ThrottleLimit <Int32>] -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
+- >-
+  Optimize-Volume [-Analyze] [-AsJob] [-CimSession <CimSession[]>] [-Defrag] [-ReTrim] [-SlabConsolidate]
+
+   [-ThrottleLimit <Int32>] -Path <String[]> [-Confirm] [-WhatIf]
+- >-
+  Optimize-Volume [-Analyze] [-AsJob] [-CimSession <CimSession[]>] [-Defrag] [-ReTrim] [-SlabConsolidate]
+
+   [-ThrottleLimit <Int32>] -FileSystemLabel <String[]> [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Perform TRIM optimization'
+  code: |-
+    PS C:\>Optimize-Volume -DriveLetter H -ReTrim -Verbose
+  description: |-
+    This example optimizes drive H by re-sending Trim requests.
+    This is useful on SSD media, and thinly provisioned storage.
+  summary: ""
+- title: 'Example 2: Analyze a volume'
+  code: |-
+    PS C:\>Optimize-Volume -DriveLetter H -Analyze -Verbose
+  description: |-
+    This example reports only the current optimization state of drive H.
+  summary: ""
+- title: 'Example 3: Defragment a volume'
+  code: |-
+    PS C:\>Optimize-Volume -DriveLetter H -Defrag -Verbose
+  description: |-
+    This example defragments drive H.
+  summary: ""
+- title: 'Example 4: Perform slab consolidation'
+  code: |-
+    PS C:\>Optimize-Volume -DriveLetter H -SlabConsolidate -Verbose
+  description: |-
+    This example performs slab consolidation on the storage space backing volume H.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Analyze
+  description: |+
+    Analyzes the volume specified for defrag or optimize statistics.
+    Performs analysis only and reports the current optimization state of the volume.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Defrag
+  description: |+
+    Runs the defragment function on the specified volume, consolidating fragmented files to improve read and write performance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Char" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DriveLetter
+  isRequired: true
+  description: |+
+    Specifies the drive letter of the volume to optimize.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FileSystemLabel
+  isRequired: true
+  description: |+
+    Specifies the file system label of the volume to optimize.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an object from the pipeline as input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ObjectId
+  isRequired: true
+  description: |+
+    Specifies the ID of the volume to optimize.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the volume to optimize.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReTrim
+  description: |+
+    Generates TRIM and Unmap hints for all previously used sectors of the volume, notifying the underlying storage that the sectors are no longer needed and can be purged.
+    This can recover unused capacity on thinly provisioned drives and on solid state drives (SSDs).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SlabConsolidate
+  description: |+
+    Optimizes the volume per the supplied slab size and alignment to reduce the number of slabs on which the volumes is mounted.
+    Performs slab consolidation on the storage to optimize slab allocations.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Optimize-Volume
+name: Optimize-Volume
+description: |-
+  The **Optimize-Volume** cmdlet optimizes a volume, performing such tasks as defragmentation and trim.
+
+
+
+   If no parameter is specified, then the default operation will be performed per the drive type as follows.
+
+
+
+  Defragment (drive type) : HDD
+
+
+  Slab : YES
+
+
+  Consolidation : NO
+
+
+  TRIM : NO
+
+
+
+  Defragment (drive type) : SSD
+
+
+  Slab : NO
+
+
+  Consolidation : NO
+
+
+  TRIM : YES
+
+
+
+  Defragment (drive type): VHD
+
+
+  Slab : YES
+
+
+  Consolidation : NO
+
+
+  TRIM : NO
+
+
+
+  Defragment (drive type): diff VHD
+
+
+  Slab : NO
+
+
+  Consolidation : NO
+
+
+  TRIM : YES
+
+
+
+  Defragment (drive type): Thinly Provisioned (Storage Spaces, thinly provisioned SAN Virtual Disk, Dynamic VHD)
+
+
+  Slab : NO
+
+
+  Consolidation : YES
+
+
+  TRIM : YES
+metadata:
+  external help file: Storage2_Cmdlets.xml
+  Module Name: Storage
+  online version: https://docs.microsoft.com/powershell/module/storage/optimize-volume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,175 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the InitiatorID objects for the specified iSCSI initiators.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_MaskingSet" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a MaskingSet object to the *MaskingSet* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a StorageSubsystem object to the *StorageSubsystem* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a VirtualDisk object to the *VirtualDisk* parameter.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_InitiatorId" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents an initiator ID.
+links:
+- text: Get-InitiatorPort
+  href: ./Get-InitiatorPort.yml
+- text: Remove-InitiatorId
+  href: ./Remove-InitiatorId.yml
+syntaxes:
+- >-
+  Get-InitiatorId [[-InitiatorAddress] <String[]>] [-HostType <HostType[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-InitiatorId [-UniqueId <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-InitiatorId [-MaskingSet <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-InitiatorId [-VirtualDisk <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-InitiatorId [-StorageSubSystem <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all InitiatorIDs'
+  code: |-
+    PS C:\>Get-InitiatorID
+  description: |-
+    This example gets and displays all iSCSI initiator IDs on the computer.
+  summary: ""
+- title: 'Example 2: Get the storage providers for each InitiatorID'
+  code: |-
+    PS C:\>Get-InitiatorId | Get-StorageSubSystem | Get-StorageProvider
+  description: |-
+    This example gets and displays the storage providers for each InitiatorID by piping the output from the **Get-InitiatorId** cmdlet to the **Get-StorageSubSystem** cmdlet, and then piping that cmdlet's output to the **Get-StorageProvider** cmdlet.
+  summary: ""
+- title: Example 3:Get the InitiatorID objects for a masking set
+  code: |-
+    PS C:\>Get-InitiatorId -MaskingSet (Get-MaskingSet -FriendlyName *EQLV1)
+  description: |-
+    This example uses the **Get-MaskingSet** cmdlet to get the masking set with a friendly name that ends with EQLV1, and then gets all associated InitiatorID objects.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="HostType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HostType
+  description: |+
+    Specifies the host operating system or other host environmental factors that may influence the behavior that the storage system should have when showing a virtual disk to an initiator.
+    If the HostType property is blank for the object you want to get, omit this parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, Other, Standard, Solaris, HPUX, OpenVMS, Tru64, Netware, Sequent, AIX, DGUX, Dynix, Irix, CiscoISCSIStorageRouter, Linux, MicrosoftWindows, OS400, TRESPASS, HIUX, VMwareESXi, MicrosoftWindowsServer2008, MicrosoftWindowsServer2003
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InitiatorAddress
+  description: |+
+    Specifies the address of the InitiatorID object you want to get.
+    These are the port addresses of the hosts to which the virtual disks will be made available.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: MaskingSet
+  description: |+
+    Gets the InitiatorID objects associated with the specified MaskingSet object.
+    Enter a MaskingSet CIM object, which is exposed by the Get-MaskingSet cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageSubSystem
+  description: |+
+    Gets the InitiatorID objects associated with the specified StorageSubsystem object.
+    Enter a StorageSubsystem CIM object, which is exposed by the Get-StorageSubSystem cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UniqueId
+  description: |+
+    Specifies the UniqueID(s) of the InitiatorID(s) you want to get.
+    Separate multiple UniqueIDs with commas, and enclose brackets in quotation marks.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: VirtualDisk
+  description: |+
+    Gets the InitiatorID objects associated with the specified VirtualDisk object.
+    Enter a VirtualDisk CIM object, which is exposed by the Get-VirtualDisk cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-InitiatorId
+name: Get-InitiatorId
+description: |-
+  The **Get-InitiatorId** cmdlet gets the InitiatorID objects for the specified iSCSI initiators.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: InitiatorId.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-initiatorid?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-InitiatorId

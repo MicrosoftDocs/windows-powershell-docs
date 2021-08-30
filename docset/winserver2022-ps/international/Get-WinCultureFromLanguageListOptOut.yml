@@ -1,0 +1,36 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the Culture from the language list opt-out setting for the current user account.
+module: International
+notes: ""
+outputs:
+- name: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a Boolean value that reports the status of this setting.
+links:
+- text: Set-WinCultureFromLanguageListOptOut
+  href: ./Set-WinCultureFromLanguageListOptOut.yml
+syntaxes:
+- Get-WinCultureFromLanguageListOptOut [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the Culture override setting'
+  code: |-
+    PS C:\> Get-WinCultureFromLanguageListOptOut
+  description: |-
+    This command gets the Culture override setting for the current user account.
+  summary: ""
+uid: International.Get-WinCultureFromLanguageListOptOut
+name: Get-WinCultureFromLanguageListOptOut
+description: |-
+  The **Get-WinCultureFromLanguageListOptOut** cmdlet gets the Culture, or User Locale, override setting for the current user account.
+  When set to $True, the Culture setting is not updated by changes to the Windows display language.
+  When set to $False, the Culture setting can be reassigned to match the display language changes any time that the display language changes.
+  The default setting is $False.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/international/get-winculturefromlanguagelistoptout?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WinCultureFromLanguageListOptOut

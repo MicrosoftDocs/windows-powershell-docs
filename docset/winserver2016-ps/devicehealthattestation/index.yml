@@ -1,0 +1,32 @@
+### YamlMime:PowershellModule
+children:
+- title: DeviceHealthAttestation
+  cmdlets:
+  - DeviceHealthAttestation.Backup-DHASConfiguration
+  - DeviceHealthAttestation.Get-DHASActiveEncryptionCertificate
+  - DeviceHealthAttestation.Get-DHASActiveSigningCertificate
+  - DeviceHealthAttestation.Get-DHASCertificateChainPolicy
+  - DeviceHealthAttestation.Get-DHASInactiveEncryptionCertificate
+  - DeviceHealthAttestation.Get-DHASInactiveSigningCertificate
+  - DeviceHealthAttestation.Install-DeviceHealthAttestation
+  - DeviceHealthAttestation.Remove-DHASInactiveEncryptionCertificate
+  - DeviceHealthAttestation.Remove-DHASInactiveSigningCertificate
+  - DeviceHealthAttestation.Restore-DHASConfiguration
+  - DeviceHealthAttestation.Set-DHASActiveEncryptionCertificate
+  - DeviceHealthAttestation.Set-DHASActiveSigningCertificate
+  - DeviceHealthAttestation.Set-DHASCertificateChainPolicy
+  - DeviceHealthAttestation.Set-DHASSupportedAuthenticationSchema
+  - DeviceHealthAttestation.Uninstall-DeviceHealthAttestation
+uid: DeviceHealthAttestation
+name: DeviceHealthAttestation
+description: |-
+  This table describes the Device Health Attestation service cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.1.1
+  Locale: en-US
+  Module Guid: 246c5657-1a3f-4dda-8c64-26a0e583bbbc
+  Module Name: DeviceHealthAttestation
+  ms.date: 12/20/2016
+  title: DeviceHealthAttestation

@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables one or more extensions on one or more virtual switches.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.NetworkExtension" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Disable-VMSwitchExtension [-ComputerName <String[]>] [-Name] <String[]> [<CommonParameters>]
+- >-
+  Disable-VMSwitchExtension [-ComputerName <String[]>] [-Name] <String[]> [-VMSwitchName] <String[]>
+
+   [<CommonParameters>]
+- Disable-VMSwitchExtension [-Name] <String[]> [-VMSwitch] <VMSwitch[]> [<CommonParameters>]
+- Disable-VMSwitchExtension [-VMSwitchExtension] <VMSwitchExtension[]> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Disable-VMSwitchExtension -VMSwitchName "Internal Switch" -Name "Microsoft Windows Filtering Platform"
+  description: |-
+    Disables WFP ("Microsoft Windows Filtering Platform") on virtual switch Internal Switch.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the extension is to be disabled.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  pipelineInput: true
+  position: Named
+  aliases: PSComputerName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the extension to be disabled.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitch" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMSwitch
+  isRequired: true
+  description: |+
+    Specifies the virtual switch on which the extension is to be disabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitchExtension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMSwitchExtension
+  isRequired: true
+  description: |+
+    Specifies the extension to be disabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMSwitchName
+  isRequired: true
+  description: |+
+    Specifies the name of the switch on which the extension is to be disabled.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Disable-VMSwitchExtension
+name: Disable-VMSwitchExtension
+description: |-
+  The **Disable-VMSwitchExtension** cmdlet disables one or more extensions on one or more virtual switches.
+  You can run Get-VMSystemSwitchExtension to enumerate the virtual switch extensions installed on the system.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/disable-vmswitchextension?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-VMSwitchExtension

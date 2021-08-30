@@ -1,0 +1,29 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Performs an evaluation of all health checks.
+module: WssCmdlets
+notes: ""
+outputs:
+- name: <xref href="bool" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Test-WssHealth
+examples:
+- title: 'Example 1: Perform a health check evaluation'
+  code: |-
+    PS C:\> Test-WssHealth
+  description: |-
+    This command performs evaluation of all health checks.
+    The command returns a value of $True or $False, depending on whether it finds outstanding alerts.
+  summary: ""
+uid: WssCmdlets.Test-WssHealth
+name: Test-WssHealth
+description: |-
+  The **Test-WssHealth** cmdlet performs an evaluation of all health checks.
+  If the cmdlet finds no outstanding health alerts, it returns a value of $True.
+  If it finds outstanding health alerts, it returns a value of $False.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/test-wsshealth?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

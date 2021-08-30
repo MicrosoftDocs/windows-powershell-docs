@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the current network adapter members of a switch team.
+module: NetSwitchTeam
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-NetSwitchTeamMember
+  href: ./Add-NetSwitchTeamMember.yml
+- text: Remove-NetSwitchTeamMember
+  href: ./Remove-NetSwitchTeamMember.yml
+syntaxes:
+- >-
+  Get-NetSwitchTeamMember [[-Name] <String[]>] [[-Team] <String[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>get-NetSwitchTeamMember -Team "MyTeam1" -Name "Ethernet 2"
+  description: |-
+    This example fetches the member description for the member named Ethernet 2 of switch team named MyTeam1.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the switch team member or an object that represents a part of a switch team.
+    The adapter names are the IfAlias names, such as Ethernet 3.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Team
+  description: |+
+    Specifies the name of the switch team.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetSwitchTeam.Get-NetSwitchTeamMember
+name: Get-NetSwitchTeamMember
+description: |-
+  The **Get-NetSwitchTeamMember** cmdlet gets the current network adapter members of a switch team.
+  A switch team is a teaming solution where the failover and load balancing algorithms are implemented as part of the forward extension in a Hyper-V extensible switch.
+metadata:
+  external help file: MSFT_NetSwitchTeamMember.cdxml-help.xml
+  Module Name: NetSwitchTeam
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/netswitchteam/get-netswitchteammember?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetSwitchTeamMember

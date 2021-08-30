@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Specifies the resources that a particular resource depends on within a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterResourceDependency
+  href: ./Add-ClusterResourceDependency.yml
+- text: Get-ClusterResourceDependency
+  href: ./Get-ClusterResourceDependency.yml
+- text: Get-ClusterResourceDependencyReport
+  href: ./Get-ClusterResourceDependencyReport.yml
+- text: Remove-ClusterResourceDependency
+  href: ./Remove-ClusterResourceDependency.yml
+syntaxes:
+- >-
+  Set-ClusterResourceDependency [[-Resource] <String>] [[-Dependency] <String>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency "[IP Address 151.56.48.0]"
+  description: |-
+    This example makes the resource called cluster1FS12 dependent on \[IP Address 151.56.48.0\].
+  summary: ""
+- title: Example 2
+  code: |-
+    C:\PS>Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency "[IP Address 151.56.48.0] or [New IP Address]"
+  description: |-
+    This example makes the resource called cluster1FS12 dependent on either \[IP Address 151.56.48.0\] or \[New IP Address\].
+  summary: ""
+- title: Example 3
+  code: |-
+    C:\PS>Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency ""
+  description: |-
+    This example clears the dependency list for the resource named cluster1FS12, so that it no longer depends on any other resources.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Dependency
+  description: |+
+    Specifies the dependency expression to set for this resource.
+    The format for this is string is as follows. 
+    `"[Resource Name 1] [and|or [Resource Name 2] [...] ]"Resource Name 1Resource Name 2`
+
+     Resource names should be enclosed in square brackets as `[Cluster Disk 2]Cluster Disk 2`.
+    To reset the resource dependency, use an empty string `""` in this parameter.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster resource for which to set the dependency expression.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Resource
+  description: |+
+    Specifies the name of the cluster resource for which to set the dependency expression.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Set-ClusterResourceDependency
+name: Set-ClusterResourceDependency
+description: |-
+  The **Set-ClusterResourceDependency** cmdlet specifies the resources that a particular resource depends on within a failover cluster.
+  Existing dependencies will be overwritten by the dependencies that you specify.
+
+  The term or can be used in the expression describing the dependency.
+  For example, an or  dependency can be set up where a Network Name resource is dependent on either of two IP address resources, instead of being dependent on both.
+  This use of or dependencies is common in multi-site cluster deployments.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterresourcedependency?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-ClusterResourceDependency

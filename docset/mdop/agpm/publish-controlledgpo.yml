@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Publishes controlled GPOs.
+module: AGPM
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Agpm.ControlledGpo" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Agpm.ControlledGpo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns controlled GPO objects, if you specify the *PassThru* parameter.
+links:
+- text: Add-ControlledGpo
+  href: ./Add-ControlledGpo.yml
+- text: Get-ControlledGpo
+  href: ./Get-ControlledGpo.yml
+- text: Lock-ControlledGpo
+  href: ./Lock-ControlledGpo.yml
+- text: Remove-ControlledGpo
+  href: ./Remove-ControlledGpo.yml
+- text: Unlock-ControlledGpo
+  href: ./Unlock-ControlledGpo.yml
+syntaxes:
+- >-
+  Publish-ControlledGpo [[-ControlledGpos] <ControlledGpo[]>] [-Comment <String>] [-Domain <String>] [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Publish checked in GPOs'
+  code: |-
+    PS C:\>Get-ControlledGpo -Domain "TSQA.Contoso.com" | Where {$_.VaultState -eq "CHECKED_IN" } | Publish-ControlledGpo -PassThru
+    Name            : TSQA Group policies
+    ID              : {5507363B-6AEB-4EFF-89FD-1567CD1E14E5}
+    CheckoutID      : 
+    BackupID        : {70D90CA2-E396-4549-A2C9-18EED518F6F1}
+    State           : CHECKED_IN
+    ComputerVersion : 2
+    UserVersion     : 2
+    Deployed        : 11/25/2014 9:54:11 AM
+    Changed         : 11/25/2014 9:54:12 AM
+    ChangedBy       : CONTOSO\Admin07
+    WmiFilterName   : 
+    Comment         :
+  description: |-
+    This command uses the **Get-ControlledGpo** cmdlet to get all controlled GPOs in the specified domain.
+    The command passes those GPOs to the **Where-Object** cmdlet.
+    That cmdlet passes any GPOs that have a state of CHECKED_IN to the current cmdlet.
+    This cmdlet publishes all of those GPOs.
+    If any of the GPOs changed, the changes become live at this time.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Comment
+  description: |+
+    Specifies a comment for the change that this cmdlet makes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="ControlledGpo" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ControlledGpos
+  description: |+
+    Specifies an array of GPOs to publish.
+    To obtain controlled GPOs, use the **Get-ControlledGpo** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies the fully qualified domain name (FQDN) of a domain.
+    This cmdlet operates on GPOs in the domain that this parameter specifies.
+    If the AGPM service runs as part of a different domain, and if this cmdlet specifies that domain, a trust relationship must exist between that domain and the domain of the current user or computer.
+
+    If you do not specify a domain, this cmdlet uses the domain of the current user.
+
+    If you use this cmdlet as part of a computer startup or shutdown script, and if the command does not specify this parameter, the cmdlet uses the domain of the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Indicates that this cmdlet returns the controlled GPOs on which the cmdlet operates.
+    If you do not specify this parameter, this cmdlet returns no results.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AGPM.Publish-ControlledGpo
+name: Publish-ControlledGpo
+description: |-
+  The **Publish-ControlledGpo** cmdlet publishes controlled Group Policy Objects (GPOs) that are checked in to the Advanced Group Policy Management (AGPM) archive into production.
+  This is the equivalent of deploying a controlled GPO to production.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.Agpm.Client.Powershell.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Publish-ControlledGpo

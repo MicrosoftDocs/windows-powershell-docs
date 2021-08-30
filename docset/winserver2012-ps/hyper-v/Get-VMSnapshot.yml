@@ -1,0 +1,142 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the snapshots associated with a virtual machine or snapshot.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Virtualization.Powershell.Snapshot" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-VMSnapshot [[-Name] <String>] [-SnapshotType <SnapshotType>] -ChildOf <VMSnapshot>
+- Get-VMSnapshot [-Id] <Guid> [-ComputerName <String[]>]
+- >-
+  Get-VMSnapshot [-VMName] <String[]> [[-Name] <String>] [-ComputerName <String[]>]
+
+   [-SnapshotType <SnapshotType>]
+- Get-VMSnapshot [[-Name] <String>] [-SnapshotType <SnapshotType>] -ParentOf <VirtualMachineBase>
+- Get-VMSnapshot [-VM] <VirtualMachine[]> [[-Name] <String>] [-SnapshotType <SnapshotType>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMSnapshot -VMName TestVM
+  description: |-
+    Gets all snapshots of virtual machine TestVM.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VM -Name TestVM | Get-VMSnapshot -SnapshotType Standard
+  description: |-
+    Gets all standard snapshots of virtual machine TestVM.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>$snapshot = Get-VMSnapshot -Name 'Before applying updates' -VMName TestVM
+
+
+    PS C:\>Get-VMSnapshot -ParentOf $snapshot
+  description: |-
+    Gets the immediate parent of snapshot Before applying updates of virtual machine TestVM.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\>$snapshot = Get-VMSnapshot -Name 'Before applying updates' -VMName TestVM
+
+
+    PS C:\>Get-VMSnapshot -ChildOf $snapshot
+  description: |-
+    Gets the immediate child snapshots of snapshot Before applying updates of virtual machine TestVM.
+  summary: ""
+parameters:
+- type: <xref href="VMSnapshot" data-throw-if-not-resolved="False" />
+  name: ChildOf
+  isRequired: true
+  description: |+
+    Specifies the snapshot whose child snapshots are to be retrieved.
+    This retrieves immediate children only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which snapshots are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the unique identifier of the virtual machine whose snapshots are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the snapshot to be retrieved.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachineBase" data-throw-if-not-resolved="False" />
+  name: ParentOf
+  isRequired: true
+  description: |+
+    Specifies the snapshot whose immediate parent snapshot is to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SnapshotType" data-throw-if-not-resolved="False" />
+  name: SnapshotType
+  description: |+
+    Specifies the type of the snapshots to be retrieved.
+    Allowed values are **Standard**, **Recovery**, **Planned**, **Missing**, **Replica**, **AppConsistentReplica**, and **SyncedReplica**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine whose snapshots are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine whose snapshots are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMSnapshot
+name: Get-VMSnapshot
+description: |-
+  The **Get-VMSnapshot** cmdlet gets the snapshots associated with a virtual machine or snapshot.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmsnapshot?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

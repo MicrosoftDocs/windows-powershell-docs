@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets controlled GPOs for a domain.
+module: AGPM
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Agpm.ControlledGpo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns controlled GPO objects.
+links:
+- text: Add-ControlledGpo
+  href: ./Add-ControlledGpo.yml
+- text: Lock-ControlledGpo
+  href: ./Lock-ControlledGpo.yml
+- text: Publish-ControlledGpo
+  href: ./Publish-ControlledGpo.yml
+- text: Remove-ControlledGpo
+  href: ./Remove-ControlledGpo.yml
+- text: Unlock-ControlledGpo
+  href: ./Unlock-ControlledGpo.yml
+syntaxes:
+- Get-ControlledGpo [-Domain <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all GPOs and then filter results'
+  code: |-
+    PS C:\>Get-ControlledGpo -Domain "TQSA.Contoso.com" | Where {$_.name -eq "TSQA Group policies"}
+    Name            : TSQA Group policies
+    ID              : {5507363B-6AEB-4EFF-89FD-1567CD1E14E5}
+    CheckoutID      : 
+    BackupID        : {70D90CA2-E396-4549-A2C9-18EED518F6F1}
+    State           : CHECKED_IN
+    ComputerVersion : 2
+    UserVersion     : 2
+    Deployed        : 11/25/2014 9:54:11 AM
+    Changed         : 11/25/2014 9:54:12 AM
+    ChangedBy       : CONTOSO\Admin07
+    WmiFilterName   : 
+    Comment         :
+  description: |-
+    This command gets all controlled GPOs from the domain TQSA.Contoso.com, and then passes them to the **Where-Object** cmdlet.
+    That cmdlet returns the GPO from those results named TSQA Group policies.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies the fully qualified domain name (FQDN) of a domain.
+    This cmdlet gets GPOs in the domain that this parameter specifies.
+    If the AGPM service runs as part of a different domain, and if this cmdlet specifies that domain, a trust relationship must exist between that domain and the domain of the current user or computer.
+
+    If you do not specify a domain, this cmdlet uses the domain of the current user.
+
+    If you use this cmdlet as part of a computer startup or shutdown script, and if the command does not specify this parameter, the cmdlet uses the domain of the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: AGPM.Get-ControlledGpo
+name: Get-ControlledGpo
+description: |-
+  The **Get-ControlledGpo** cmdlet gets the controlled Group Policy Objects (GPOs) from an Advanced Group Policy Management (AGPM) archive for a domain.
+  You can use this cmdlet to view state information for controlled GPOs.
+  Use the **Get-Gpo** cmdlet to view uncontrolled GPOs.
+  For more information, type `Get-Help Get-Gpo`.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.Agpm.Client.Powershell.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Get-ControlledGpo

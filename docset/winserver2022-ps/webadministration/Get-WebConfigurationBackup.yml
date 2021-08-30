@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of available IIS configuration backups.
+module: WebAdministration
+notes: ""
+links:
+- text: Remove-WebConfigurationBackup
+  href: ./Remove-WebConfigurationBackup.yml
+syntaxes:
+- Get-WebConfigurationBackup [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get available IIS configuration backups'
+  code: |-
+    IIS:\> Get-WebConfigurationBackup
+    Name          Creation Date
+    ----          -------------
+    MyIISBackup   2/25/2009 12:00:00 AM
+  description: |-
+    This command returns a list of available IIS configuration backups.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of an IIS configuration backup.
+    If a backup exists that has the specified name, this cmdlet returns information about that backup.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebConfigurationBackup
+name: Get-WebConfigurationBackup
+description: |-
+  The **Get-WebConfigurationBackup** cmdlet gets a list of available Internet Information Services (IIS) configuration backups.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webconfigurationbackup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebConfigurationBackup

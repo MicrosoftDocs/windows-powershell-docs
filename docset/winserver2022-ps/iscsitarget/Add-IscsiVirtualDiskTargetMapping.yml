@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Assigns a virtual disk to an iSCSI target.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-IscsiVirtualDiskTargetMapping
+  href: ./Remove-IscsiVirtualDiskTargetMapping.yml
+syntaxes:
+- >-
+  Add-IscsiVirtualDiskTargetMapping [-TargetName] <String> [-Path] <String> [-Lun <Int32>]
+
+   [-ComputerName <String>] [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Associate a VHD with a target'
+  code: |-
+    PS C:\> Add-IscsiVirtualDiskTargetMapping -TargetName "TargetOne" -DevicePath "E:\Temp\vhd1.vhdx"
+  description: |-
+    This example associates the VHD with the path E:\Temp\vhd1.vhdx to the target named TargetOne.
+  summary: ""
+- title: 'Example 2: Associate a VHD with a target and set the LUN'
+  code: |-
+    PS C:\> Add-IscsiVirtualDiskTargetMapping -TargetName "TargetOne" -DevicePath "E:\Temp\vhd1.vhdx" -Lun 0
+  description: |-
+    This example associates the VHD with the path E:\Temp\vhd1.vhdx to the target named TargetOne, and sets the LUN to 0.
+    It is important that the LUN number for a given target is unique.
+  summary: ""
+- title: 'Example 3: Associate a ramdisk with a target'
+  code: |-
+    PS C:\> Add-IscsiVirtualDiskTargetMapping -TargetName "TestTarget" -Path "ramdisk:test.vhdx"
+  description: |-
+    This example assigns the ramdisk called test to the target object named TestTarget.
+    If the initiator connects to the TestTarget, it can access the RAMdisk.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Lun
+  description: |+
+    Specifies the logical unit number (LUN) associated with the virtual disk.
+    By default, the lowest available LUN number is assigned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the virtual hard disk (VHD) file that is associated with the iSCSI virtual disk.
+    Filter the iSCSI Virtual Disk object by using this parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: DevicePath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the iSCSI target.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Add-IscsiVirtualDiskTargetMapping
+name: Add-IscsiVirtualDiskTargetMapping
+description: |-
+  The **Add-IscsiVirtualDiskTargetMapping** cmdlet assigns a virtual disk to an iSCSI target.
+  Once a virtual disk has been assigned to a target, and after the iSCSI initiator connects to that target, the iSCSI initiator can access the virtual disk.
+  All of the virtual disks assigned to the same iSCSI target can be accessed by the connected iSCSI initiator.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/add-iscsivirtualdisktargetmapping?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-IscsiVirtualDiskTargetMapping

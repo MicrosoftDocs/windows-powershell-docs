@@ -1,0 +1,148 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts an NT Kernel Logger log session with forwarding of events to the Collector.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="SbecEtwTrace.TraceSessionInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    The **SbecEtwTrace.TraceSessionInfo** class is defined in $PsHome\Modules\BootEventCollector\SbecTraceHelpers.psm1.
+links:
+- text: Get-SbecLogSession
+  href: ./Get-SbecLogSession.yml
+- text: Start-SbecLogSession
+  href: ./Start-SbecLogSession.yml
+- text: Start-SbecSimpleLogSession
+  href: ./Start-SbecSimpleLogSession.yml
+- text: Stop-SbecLogSession
+  href: ./Stop-SbecLogSession.yml
+- text: Set-SbecLogSession
+  href: ./Set-SbecLogSession.yml
+- text: Save-SbecLogSession
+  href: ./Save-SbecLogSession.yml
+syntaxes:
+- >-
+  Start-SbecNtKernelLogSession [[-ClockType] <ClientContext>] [[-BufferSize] <UInt32>]
+
+   [[-MinimumBufferCount] <UInt32>] [[-MaximumBufferCount] <UInt32>] [[-FlushSeconds] <UInt32>]
+
+   [[-KernelEnableFlags] <EventTraceFlag>] [-PassThru] [<CommonParameters>]
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: BufferSize
+  description: |+
+    Specifies the buffer size for the session, in kilobytes.
+    This is the size of one buffer, with the count of these buffers set by the *MinimumBufferCount* and *MaximumBufferCount* parameters.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClientContext" data-throw-if-not-resolved="False" />
+  name: ClockType
+  description: |+
+    Specifies the type of clock used for the events collected by this session: The acceptable values for this parameter are:
+
+    - Default. 
+    - QueryPerformanceCounter.
+    The high-resolution (period of 100 nanoseconds) clock that is typically used for performance measurement. 
+    - SystemTime.
+    The lower-resolution system time similar to FILETIME (period of 10 milliseconds).
+    This value is most typical for the data collection through SBEC. 
+    - CpuCycleCounter.
+    The highest-resolution, with the frequency of the CPU, but may be unreliable depending on the CPU model and the thermal and power modes.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: Default, QueryPerformanceCounter, SystemTime, CpuCycleCounter
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: FlushSeconds
+  description: |+
+    Specifies the timeout in seconds for the session buffers to get automatically flushed.
+    You can disable the flushing of buffers on timeout by setting this parameter to 0, then the buffers will be written only when full or on an explicit flush.
+
+  defaultValue: None
+  position: "4"
+  aliases: FlushTimer
+  parameterValueGroup: ""
+- type: <xref href="EventTraceFlag" data-throw-if-not-resolved="False" />
+  name: KernelEnableFlags
+  description: |+
+    Specifies flags for the NT Kernel Logger that enable the kernel events.
+    For the setup and boot monitoring, the only reasonable flag is Process.
+    This enumeration type is defined in $PsHome\Modules\BootEventCollector\SbecTraceHelpers.psm1.
+    The acceptable values for this parameter are:
+
+    - Process
+    - Thread
+    - ImageLoad
+    - ProcessCounters
+    - ContextSwitch
+    - Dpc
+    - Interrupt
+    - SystemCall
+    - DiskIO
+    - DiskFileIO
+    - DiskIOInit
+    - Dispatcher
+    - MemoryPageFaults
+    - MemoryHardFaults
+    - VirtualAlloc
+    - NetworkTCPIP
+    - Registry
+    - Alpc
+    - SplitIO
+    - Driver
+    - FileIO
+    - FileIOInit
+    - Profile
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: None, Process, Thread, ImageLoad, ProcessCounters, ContextSwitch, Dpc, Interrupt, SystemCall, DiskIO, DiskFileIO, DiskIOInit, Dispatcher, MemoryPageFaults, MemoryHardFaults, VirtualAlloc, NetworkTCPIP, Registry, Alpc, SplitIO, Driver, FileIO, FileIOInit, Profile
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaximumBufferCount
+  description: |+
+    Specifies the maximum number of buffers to allocate for this session.
+
+  defaultValue: None
+  position: "3"
+  aliases: MaximumBuffers, maxbuf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MinimumBufferCount
+  description: |+
+    Specifies the minimum number of buffers to allocate for this session.
+
+  defaultValue: None
+  position: "2"
+  aliases: MinimumBuffers, minbuf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Start-SbecNtKernelLogSession
+name: Start-SbecNtKernelLogSession
+description: |-
+  The **Start-SbecNtKernelLogSession** cmdlet starts a real-time NT Kernel Logger trace session with forwarding of the events to the Collector.
+  The name of the session is fixed as NT Kernel Logger and the GUID is fixed as {9e814aad-3204-11d2-9a82-006008a86939}.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/start-sbecntkernellogsession?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-SbecNtKernelLogSession

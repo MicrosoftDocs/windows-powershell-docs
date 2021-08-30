@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets outgoing message queues.
+module: MSMQ
+notes: ""
+links:
+- text: Clear-MsmqOutgoingQueue
+  href: ./Clear-MSMQOutgoingQueue.yml
+- text: Resume-MsmqOutgoingQueue
+  href: ./Resume-MsmqOutgoingQueue.yml
+- text: Suspend-MsmqOutgoingQueue
+  href: ./Suspend-MsmqOutgoingQueue.yml
+syntaxes:
+- Get-MsmqOutgoingQueue [[-Name] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get outgoing message queues'
+  code: |-
+    PS C:\> Get-MsmqOutgoingQueue -Name "Order*"
+  description: |-
+    This command gets all outgoing message queues that are local to the current computer that start with the string Order.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of names of queues.
+    The names specify outgoing queues.
+    This parameter supports wildcard characters.
+    The default value is *.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MSMQ.Get-MSMQOutgoingQueue
+name: Get-MSMQOutgoingQueue
+description: |-
+  The **Get-MsmqOutgoingQueue** cmdlet gets **MsmqOutgoingQueue** objects.
+  Each object represents a transactional or non-transactional outgoing queue.
+  This cmdlet gets outgoing queues that are local to the computer on which you run the cmdlet.
+  If you do not specify parameters, this cmdlet gets all outgoing queues of the host computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/get-msmqoutgoingqueue?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MSMQOutgoingQueue

@@ -1,0 +1,186 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a BGP peer.
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: "This cmdlet outputs the following information: \r\n\r\n- Resource reference URI.\r\n- Created time of the resource.\r\n- Instance ID of the resource.\r\n- Resource metadata.\r\n- Resource ID.\r\n- Properties of the resource:\r\n\r\n \"{\r\n \r\n    \"\"PeerIP\"\" : \"\"\"\",\r\n\r\n    \"\"PeerASNumber\"\": \"\"\"\",\r\n\r\n    \"\"PeerExtASNumber\"\": \"\"\"\",\r\n\r\n    \"\"PolicyMapIn\"\": @{\"\"ResourceRef\"\": \"\"\\<string\\>\"\" },\r\n\r\n    \"\"PolicyMapOut\"\": @{\"\"ResourceRef\"\": \"\"\\<string\\>\"\" }\r\n\r\n}\""
+links:
+- text: Get-NetworkControllerVirtualGatewayBgpPeer
+  href: ./Get-NetworkControllerVirtualGatewayBgpPeer.yml
+- text: Remove-NetworkControllerVirtualGatewayBgpPeer
+  href: ./Remove-NetworkControllerVirtualGatewayBgpPeer.yml
+syntaxes:
+- >-
+  New-NetworkControllerVirtualGatewayBgpPeer [-VirtualGatewayId] <String> [-BgpRouterName] <String>
+
+   [-ResourceId] <String> [-Properties] <VGwBgpPeerProperties> [[-ResourceMetadata] <ResourceMetadata>]
+
+   [[-Etag] <String>] [-Force] -ConnectionUri <Uri> [-CertificateThumbprint <String>]
+
+   [-Credential <PSCredential>] [-PassInnerException] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a new virtual gateway BGP peer configuration to the Network Controller'
+  code: |-
+    PS C:\> $uri = "https://networkcontroller"
+
+    # Create a new object for tenant BGP peer
+    PS C:\> $bgpPeerProperties = New-Object Microsoft.Windows.NetworkController.VGwBgpPeerProperties 
+
+    # Update the BGP peer properties
+    PS C:\> $bgpPeerProperties.PeerIpAddress = "14.1.10.1" 
+    PS C:\> $bgpPeerProperties.AsNumber = 64521 
+    PS C:\> $bgpPeerProperties.ExtAsNumber = "0.64521" 
+
+    # Add the new BGP peer for tenant
+    PS C:\> New-NetworkControllerVirtualGatewayBgpPeer -ConnectionUri $uri -VirtualGatewayId Contoso -BgpRouterName "Contoso_Vnet_BgpRouter2" -ResourceId "Contoso_IPSec_Peer" -Properties $bgpPeerProperties -Force
+  description: |-
+    This set of cmdlets adds a new BGP peer to the BGP router Contoso_Vnet_BgpRouter1 for the tenant Contoso.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BgpRouterName
+  isRequired: true
+  description: |+
+    Specifies the name of a BGP router.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+    This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.
+    This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) of the resource.
+    An ETag is an HTTP response header returned by an HTTP-compliant web server.
+    An ETag is used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VGwBgpPeerProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Specifies the BGP peer properties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the resource ID of the BGP peer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualGatewayId
+  isRequired: true
+  description: |+
+    Specifies the ID of a virtual gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerVirtualGatewayBgpPeer
+name: New-NetworkControllerVirtualGatewayBgpPeer
+description: |-
+  The **New-NetworkControllerVirtualGatewayBgpPeer** cmdlet adds the configuration for a new Border Gateway Protocol (BGP) peer for the specified tenant to the Network Controller.
+  If the BGP peer configuration already exists in the Network Controller for the tenant, this cmdlet overwrites and replaces the older configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollervirtualgatewaybgppeer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerVirtualGatewayBgpPeer

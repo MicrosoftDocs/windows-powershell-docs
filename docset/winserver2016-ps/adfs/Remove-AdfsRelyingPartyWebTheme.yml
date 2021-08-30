@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a web theme to a relying party.
+module: ADFS
+notes: ""
+links:
+- text: Get-AdfsRelyingPartyWebTheme
+  href: ./Get-AdfsRelyingPartyWebTheme.yml
+- text: Set-AdfsRelyingPartyWebTheme
+  href: ./Set-AdfsRelyingPartyWebTheme.yml
+syntaxes:
+- Remove-AdfsRelyingPartyWebTheme [-TargetRelyingPartyName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-AdfsRelyingPartyWebTheme [-TargetRelyingPartyWebTheme] <AdfsRelyingPartyWebTheme> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a web theme'
+  code: |-
+    PS C:\> Remove-AdfsRelyingPartyWebTheme -TargetRelyingPartyName "urn:app1"
+  description: |-
+    This command removes the relying party web theme for the relying party named urn:app1.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetRelyingPartyName
+  isRequired: true
+  description: |+
+    Specifies the name of the target relying party for which to remove the web theme.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="AdfsRelyingPartyWebTheme" data-throw-if-not-resolved="False" />
+  name: TargetRelyingPartyWebTheme
+  isRequired: true
+  description: |+
+    Specifies the target relying party for which to remove the web theme.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: TargetWebTheme
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Remove-AdfsRelyingPartyWebTheme
+name: Remove-AdfsRelyingPartyWebTheme
+description: |-
+  The **Remove-AdfsRelyingPartyWebTheme** cmdlet removes a web theme for a relying party.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsrelyingpartywebtheme?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AdfsRelyingPartyWebTheme

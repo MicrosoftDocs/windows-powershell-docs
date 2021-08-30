@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the local, the effective, or a domain AppLocker policy.
+module: AppLocker
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.AppLockerPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    **AppLockerPolicy**
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AppLockerFileInformation
+  href: ./Get-AppLockerFileInformation.yml
+- text: New-AppLockerPolicy
+  href: ./New-AppLockerPolicy.yml
+- text: Set-AppLockerPolicy
+  href: ./Set-AppLockerPolicy.yml
+- text: Test-AppLockerPolicy
+  href: ./Test-AppLockerPolicy.yml
+syntaxes:
+- Get-AppLockerPolicy [-Local] [-Xml] [<CommonParameters>]
+- Get-AppLockerPolicy [-Domain] -Ldap <String> [-Xml] [<CommonParameters>]
+- Get-AppLockerPolicy [-Effective] [-Xml] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get an AppLocker policy'
+  code: |-
+    PS C:\> Get-AppLockerPolicy -Local
+                                    Version RuleCollections                         RuleCollectionTypes 
+                                    ------- ---------------                         ------------------- 
+                                          1 {}                                      {}
+  description: |-
+    This example gets the local AppLocker policy as an **AppLockerPolicy** object.
+  summary: ""
+- title: 'Example 2: Get the AppLocker policy for a GPO'
+  code: |-
+    PS C:\> Get-AppLockerPolicy -Domain -LDAP "LDAP:// DC13.Contoso.com/CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=Contoso,DC=com"
+  description: |-
+    This example gets the AppLocker policy of the unique GPO specified by the LDAP path as an **AppLockerPolicy** object.
+  summary: ""
+- title: 'Example 3: Get the effective policy'
+  code: |-
+    PS C:\> Get-AppLockerPolicy -Effective -Xml | Set-Content ('c:\temp\curr.xml')
+  description: |-
+    This example gets the effective policy on the computer, and then sends it in XML-format to the specified file on an existing path.
+  summary: ""
+- title: 'Example 4: Get and test an AppLocker policy'
+  code: |-
+    PS C:\> Get-AppLockerPolicy -Local | Test-AppLockerPolicy -Path C:\Windows\System32\*.exe -User Everyone
+  description: |-
+    This example gets the local AppLocker policy on the computer, and then tests the policy using the **Test-AppLockerPolicy** cmdlet to test whether the .exe files in C:\Windows\System32 will be allowed to run by the Everyone group.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Domain
+  isRequired: true
+  description: |+
+    Gets the AppLocker policy from the GPO specified by the path given in the *Ldap* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Effective
+  isRequired: true
+  description: |+
+    Gets the effective AppLocker policy on the local computer.
+    The effective policy is the merge of the local AppLocker policy and any applied AppLocker domain policies on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Ldap
+  isRequired: true
+  description: |+
+    Specifies the LDAP path of the GPO and must specify a unique GPO.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Local
+  isRequired: true
+  description: |+
+    Gets the AppLocker policy from the local GPO.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Xml
+  description: |+
+    Specifies that the AppLocker policy be output as an XML-formatted string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppLocker.Get-AppLockerPolicy
+name: Get-AppLockerPolicy
+description: |-
+  The **Get-AppLockerPolicy** cmdlet retrieves the AppLocker policy from the local Group Policy Object (GPO), a specified GPO, or the GP-deployed effective policy on the computer.
+
+  By default, the output is an **AppLockerPolicy** object.
+  If the *Xml* parameter is used, then the output will be the AppLocker policy as an XML-formatted string.
+
+  Note that the Get-AppLockerPolicy cmdlet only functions with policies deployed via GP. It does not have any knowledge of the AppLocker CSP, so it will return incorrect data if the policy in place has been applied via the CSP.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dll-Help.xml
+  Module Name: AppLocker
+  ms.date: 09/28/2020
+  online version: https://docs.microsoft.com/powershell/module/applocker/get-applockerpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AppLockerPolicy

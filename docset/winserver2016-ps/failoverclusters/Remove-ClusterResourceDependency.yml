@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a dependency between two resources in a clustered role within a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterResourceDependency
+  href: ./Add-ClusterResourceDependency.yml
+- text: Get-ClusterResourceDependency
+  href: ./Get-ClusterResourceDependency.yml
+- text: Set-ClusterResourceDependency
+  href: ./Set-ClusterResourceDependency.yml
+syntaxes:
+- >-
+  Remove-ClusterResourceDependency [[-Resource] <String>] [[-Provider] <String>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-ClusterResourceDependency -Resource cluster1FS -Provider "IP Address 2001:4898:9:2:: (3)"
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    cluster1FS          Online              cluster1FS          Network Name
+  description: |-
+    This example removes the dependency between cluster resource cluster1FS and the resource named IP Address 2001:4898:9:2:: (3).
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterResource -Name cluster1FS | Remove-ClusterResourceDependency -Provider "IP Address 2001:4898:9:2:: (3)"
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    cluster1FS          Online              cluster1FS          Network Name
+  description: |-
+    This example removes the dependency between the cluster resource named cluster1FS and the resource named IP Address 2001:4898:9:2:: (3).
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster resource from which to remove the dependency.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Provider
+  description: |+
+    Specifies the cluster resource on which to remove a dependency.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Resource
+  description: |+
+    Specifies the name of the cluster resource from which to remove the dependency.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FailoverClusters.Remove-ClusterResourceDependency
+name: Remove-ClusterResourceDependency
+description: |-
+  The **Remove-ClusterResourceDependency** cmdlet removes a dependency between two resources in a clustered role within a failover cluster.
+
+  A dependent resource is brought online after the resources on which it depends.
+  Likewise, a dependent resource is taken offline before the resources on which it depends.
+  If no dependency is configured between clustered resources, then the order in which they are brought online or taken offline might vary.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clusterresourcedependency?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-ClusterResourceDependency

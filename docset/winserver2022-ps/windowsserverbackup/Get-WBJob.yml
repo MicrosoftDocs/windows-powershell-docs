@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the current backup operation.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="Previous" data-throw-if-not-resolved="False" />
+  description: |-
+    If you use the *Previous* parameter, this cmdlet queries a **WBJob** object for previously run backups and recoveries.
+    If you do not use this parameter, the cmdlet returns a **WBJob** object that contains the currently running backup or recovery operation.
+outputs:
+- name: <xref href="WBJob" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns a **WBJob** object that contains the currently or previously running backup or recovery operation.
+links:
+- text: Start-WBBackup
+  href: ./Start-WBBackup.yml
+- text: Stop-WBJob
+  href: ./Stop-WBJob.yml
+syntaxes:
+- Get-WBJob [[-Previous] <UInt32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get backup status'
+  code: |-
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Start-WBBackup -Policy $Policy -Async
+    PS C:\> $Job = Get-WBJob
+  description: |-
+    This example gets the status of the currently running backup or recovery operation.
+
+    The first command gets a backup policy object that contains the backup policy for the current computer and stores this policy in the variable named $Policy.
+
+    The second command starts the backup job by using the policy in the variable named $Policy.
+    Because the command uses the *Async* parameter, the backup job does not display status messages as it runs.
+
+    The third command gets status information about the backup job and assigns it to the variable named $Job.
+    Because the previous command specified the *Async* parameter, you can use this cmdlet to obtain this information.
+  summary: ""
+- title: 'Example 2: Get the status of past backup or recovery jobs'
+  code: |-
+    PS C:\> $Jobs = Get-WBJob -Previous 10
+  description: |-
+    This command gets the status of the last 10 backup or recovery jobs from the backup events in the event manager.
+    It then stores the status in the variable named $Jobs.
+  summary: ""
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Previous
+  description: |+
+    Specifies the number of previous backup operations for which the server queries the event manager.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Get-WBJob
+name: Get-WBJob
+description: |-
+  The **Get-WBJob** cmdlet gets the current backup operation (if one is running) or the previous backup or recovery operation.
+  A **WBJob** object contains the backup or recovery operation.
+
+  To start a backup, use the [Start-WBBackup](./Start-WBBackup.yml) cmdlet.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbjob?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBJob

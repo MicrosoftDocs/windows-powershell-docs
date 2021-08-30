@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables a running connection group on the computer running the App-V client.
+module: AppvClient
+notes: |-
+  * The cmdlet checks that you have permissions to perform the specific action. If not, the cmdlet returns the following error: The action could not be performed due to current App-V permissions. Please modify the permissions and try the operation again.
+  * If the enable operation fails, the cmdlet returns the following error: The enable operation could not be completed. An error code is returned.
+  * If any package in the specified group is running, the connection group will not be enabled until all packages in the new group are shutdown. The cmdlet will still return success as long as the file is valid.
+  * If the cmdlet cannot find the connection group, the cmdlet returns an error stating The specified connection group could not be found on the target system.
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvClientConnectionGroup
+  href: ./Add-AppvClientConnectionGroup.yml
+- text: Disable-AppvClientConnectionGroup
+  href: ./Disable-AppvClientConnectionGroup.yml
+- text: Get-AppvClientConnectionGroup
+  href: ./Get-AppvClientConnectionGroup.yml
+- text: Mount-AppvClientConnectionGroup
+  href: ./Mount-AppvClientConnectionGroup.yml
+- text: Remove-AppvClientConnectionGroup
+  href: ./Remove-AppvClientConnectionGroup.yml
+- text: Repair-AppvClientConnectionGroup
+  href: ./Repair-AppvClientConnectionGroup.yml
+- text: Stop-AppvClientConnectionGroup
+  href: ./Stop-AppvClientConnectionGroup.yml
+syntaxes:
+- >-
+  Enable-AppvClientConnectionGroup [-Global] [-UserSID <String>] [-GroupId] <Guid> [-VersionId] <Guid>
+
+   [<CommonParameters>]
+- Enable-AppvClientConnectionGroup [-Global] [-UserSID <String>] [-Name] <String> [<CommonParameters>]
+- >-
+  Enable-AppvClientConnectionGroup [-Global] [-UserSID <String>] [-ConnectionGroup] <AppvClientConnectionGroup>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable a connection group by using its name'
+  code: |-
+    PS C:\> Enable-AppvClientConnectionGroup -Name "MyGroup" -Global
+  description: |-
+    This command enables the connection group named MyGroup to all users on the computer.
+  summary: ""
+- title: 'Example 2: Enable a connection group by using its ID'
+  code: |-
+    PS C:\> Enable-AppvClientConnectionGroup -GroupID 35ec9e5f-ab21-463f-8fe6-b90d4b66d182
+  description: |-
+    This command enables the connection group that has the group ID 35ec9e5f-ab21-463f-8fe6-b90d4b66d182.
+  summary: ""
+- title: 'Example 3: Enable all connection groups by names that match a string'
+  code: |-
+    PS C:\> Get-AppvClientConnectionGroup -Name "MyGr*" | Enable-AppvClientConnectionGroup
+  description: |-
+    This command finds all connection groups that have the string MyGr in the name, and then enables them.
+  summary: ""
+parameters:
+- type: <xref href="AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+  name: ConnectionGroup
+  isRequired: true
+  description: |+
+    Specifies an App-V Connection Group object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    Indicates that this cmdlet enables the connection group is disabled for all users that log into the target computer.
+    Otherwise, it enables the connection group only for the currently running user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    Specifies the ID associated with a connection group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the App-V connection group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserSID
+  description: |+
+    Specifies the SID of the intended user, in the form of S-1-2-34-56789012-3456789012-345678901-2345.
+    This parameter requires elevated rights to run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionId
+  isRequired: true
+  description: |+
+    Specifies a GUID that differentiates a connection group version from other versions.
+    If you do not specify this parameter, the cmdlet operates on all versions of the connection group.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Enable-AppvClientConnectionGroup
+name: Enable-AppvClientConnectionGroup
+description: |-
+  The **Enable-AppvClientConnectionGroup** cmdlet enables a connection group to the computer that runs the Microsoft Application Virtualization (App-V) client.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/enable-appvclientconnectiongroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-AppvClientConnectionGroup

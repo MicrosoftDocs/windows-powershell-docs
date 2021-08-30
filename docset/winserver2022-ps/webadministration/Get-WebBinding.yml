@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the bindings on an IIS site.
+module: WebAdministration
+notes: ""
+outputs:
+- name: <xref href="Microsoft.IIs.PowerShell.Framework.ConfigurationElement#bindings#binding" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-WebBinding
+  href: ./New-WebBinding.yml
+- text: Remove-WebBinding
+  href: ./Remove-WebBinding.yml
+- text: Set-WebBinding
+  href: ./Set-WebBinding.yml
+syntaxes:
+- >-
+  Get-WebBinding [[-Name] <String>] [-Protocol <String>] [-Port <String>] [-IPAddress <String>]
+
+   [-HostHeader <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the site bindings of the default website'
+  code: |-
+    IIS:\> Get-WebBinding -Name "Default Web Site"
+  description: |-
+    This command gets the bindings configured on the default website.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostHeader
+  description: |+
+    Specifies the host name for which the binding is configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  description: |+
+    Specifies the IP address for which the binding is configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the site for which this cmdlet returns binding information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the port for which the binding is configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    Specifies the protocol for which the binding is configured.
+    The protocol is usually HTTP, HTTPS, or FTP.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebBinding
+name: Get-WebBinding
+description: |-
+  The **Get-WebBinding** cmdlet gets information about the bindings configured on an Internet Information Services (IIS) site, such as protocol and port number.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webbinding?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebBinding

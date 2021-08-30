@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Initiates an update of the DFS Replication service.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DfsrMember
+  href: ./Get-DfsrMember.yml
+syntaxes:
+- Update-DfsrConfigurationFromAD [[-ComputerName] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update the DFS Replication service'
+  code: |-
+    PS C:\> Update-DfsrConfigurationFromAD -ComputerName "SRV01","SRV02" -Verbose
+
+
+    VERBOSE: Performing operation "Update-DfsrConfigurationFromAD" on Target "SRV01".
+    VERBOSE: Successfully updated the DFSR Active Directory Domain Service configuration on the computer named SRV01.
+    VERBOSE: Performing operation "Update-DfsrConfigurationFromAD" on Target "SRV02".
+    VERBOSE: Successfully updated the DFSR Active Directory Domain Service configuration on the computer named SRV02.
+  description: |-
+    This command forces the remote DFS Replication servers SRV01 and SRV02 to poll AD DS immediately and apply any changes to the DFS Replication service.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies an array of names of member computers.
+    You can use a comma separated list and the wildcard character (*).
+    The cmdlet forces the DFS Replication service on the computers to poll Active Directory immediately.
+
+    If you do not specify this parameter, the cmdlet uses the local computer.
+    To return a response, use the *Verbose* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: MemberList, MemList
+  parameterValueGroup: ""
+uid: DFSR.Update-DfsrConfigurationFromAD
+name: Update-DfsrConfigurationFromAD
+description: |-
+  The **Update-DfsrConfigurationFromAD** cmdlet initiates an update of the Distributed File System (DFS) Replication service.
+  The cmdlet forces the DFS Replication service to immediately perform a full Lightweight Directory Access Protocol (LDAP) poll of the Active Directory Domain Services (AD DS) for configuration changes, and applies any changes to the service.
+
+  By default, the DFS Replication service queries domain controllers every five minutes by using a lightweight check for membership configuration changes in AD DS.
+  This periodic check speeds up the service response to certain types of configuration changes.
+  If the DFS Replication service detects a new membership, a full poll follows.
+  By default, the DFS Replication service performs a full poll every hour.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/update-dfsrconfigurationfromad?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-DfsrConfigurationFromAD

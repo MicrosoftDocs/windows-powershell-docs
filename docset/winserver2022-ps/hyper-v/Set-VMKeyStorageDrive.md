@@ -60,8 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
-
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
 ```yaml
 Type: CimSession[]
 Parameter Sets: VMName
@@ -138,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Passthru
-{{ Fill Passthru Description }}
+Specifies that an object is to be passed through to the pipeline representing the storage drive to be configured.
 
 ```yaml
 Type: SwitchParameter

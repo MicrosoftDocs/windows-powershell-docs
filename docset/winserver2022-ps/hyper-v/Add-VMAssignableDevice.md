@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Passthru
-{{ Fill Passthru Description }}
+Specifies that an object is to be passed through to the pipeline representing the feature to be added.
 
 ```yaml
 Type: SwitchParameter

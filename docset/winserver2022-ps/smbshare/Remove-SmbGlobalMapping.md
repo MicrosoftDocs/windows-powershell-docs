@@ -33,6 +33,10 @@ The Remove-SmbGlobalMapping cmdlet removes the Server Message Block (SMB)global 
 ### Example 1
 ```powershell
 PS C:\> Remove-SmbGlobalMapping -LocalPath g:
+Confirm 
+Are you sure you want to perform this action? 
+Performing operation 'Close-Connection' on Target 'G:,\\uglymonkey\shared'. 
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y 
 ```
 
 This command removes an SMB global mapping for the “g:” drive to an SMB share.
@@ -55,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]

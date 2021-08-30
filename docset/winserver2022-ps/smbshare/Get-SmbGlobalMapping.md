@@ -25,6 +25,9 @@ The Get-SmbGlobalMapping cmdlet retrieves a Server Message Block (SMB) global ma
 ### Example 1
 ```powershell
 PS C:\> Get-SmbGlobalMapping
+Status Local Path Remote Path 
+------ ---------- ----------- 
+OK     G:         \\fs1.contoso.com\public
 ```
 
 This command retrieves the SMB client directory global mappings created for the SMB server. 

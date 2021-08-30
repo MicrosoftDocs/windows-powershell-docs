@@ -34,6 +34,19 @@ The Remove-SmbServerCertificateMapping cmdlet removes a certificate’s mapping 
 ### Example 1
 ```powershell
 PS C:\> Get-SmbServerCertificateMapping
+Name                        Subject       Thumbprint                               DisplayName StoreName Type Flags 
+----                        -------       ----------                               ----------- --------- ---- ----- 
+2022-ae-02.corp.contoso.com CN=2022-ae-02 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F 2022-ae-02  my        QUIC None 
+fs2.contoso.com             CN=2022-ae-02 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F 2022-ae-02  my        QUIC None 
+
+PS C:\> Remove-SmbServerCertificateMapping -name fs2.contoso.com -Thumbprint 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F 
+
+Confirm 
+Are you sure you want to perform this action? 
+Performing operation 'Delete' on Target 'SMB Server Certificate Mapping.'. 
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y 
+
+PS C:\ >
 ```
 
 This command removes a certificate mapping for SMB server edge endpoint “fs2.contoso.com” with a specific certificate thumbprint.
@@ -136,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -151,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the input object that is used in a pipeline command.
+Specifies a fully-qualified DNS name or NetBIOS name that must match the certificate’s subject name or an entry in the certificate’s subject alternative names.
 
 ```yaml
 Type: String[]

@@ -19,13 +19,17 @@ Get-SmbServerCertificateMapping [[-Name] <String[]>] [[-Subject] <String[]>] [-T
 ```
 
 ## DESCRIPTION
-The Get-SmbServerCertificateMapping cmdlet retrieves the certificates associated with the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. This cmdlet is not used for Windows or other Windows Server editions. For more information, review SMB over QUIC.
+The Get-SmbServerCertificateMapping cmdlet retrieves the certificates associated with the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. This cmdlet is not used for Windows or other Windows Server editions. For more information, review [SMB over QUIC](https://aka.ms/smboverquic).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 PS C:\> Get-SmbServerCertificateMapping
+Name                        Subject       Thumbprint                               DisplayName StoreName Type Flags 
+----                        -------       ----------                               ----------- --------- ---- ----- 
+2022-ae-02.corp.contoso.com CN=2022-ae-02 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F 2022-ae-02  My        QUIC None 
+fs2.contoso.com             CN=2022-ae-02 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F 2022-ae-02  My        QUIC None
 ```
 
 This command retrieves the certificate mapped to two SMB over QUIC server names that clients can connect to, “fs2.contoso.com” and “2022-ae-02.corp.contoso.com”.
@@ -48,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]

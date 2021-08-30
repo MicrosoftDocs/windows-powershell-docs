@@ -19,13 +19,16 @@ New-SmbServerCertificateMapping [-Name] <String> [-Thumbprint] <String> [-StoreN
 ```
 
 ## DESCRIPTION
-The New-SmbServerCertificateMapping cmdlet associates a certificate to the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. This cmdlet is not used for Windows or other Windows Server editions. For more information, review SMB over QUIC.
+The New-SmbServerCertificateMapping cmdlet associates a certificate to the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. This cmdlet is not used for Windows or other Windows Server editions. For more information, review [SMB over QUIC](https://aka.ms/smboverquic).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 PS C:\> New-SmbServerCertificateMapping -Name fs2.contoso.com -Thumbprint 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F -StoreName my -Subject CN=2022-ae-02
+Name            Subject       Thumbprint                               DisplayName StoreName Type Flags 
+----            -------       ----------                               ----------- --------- ---- ----- 
+fs2.contoso.com CN=2022-ae-02 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F 2022-ae-02  my        QUIC None
 ```
 
 This command maps a certificate located in the local machine’s personal store for SMB server edge endpoint “fs2.contoso.com” using the certificate’s thumbprint.
@@ -33,7 +36,6 @@ This command maps a certificate located in the local machine’s personal store 
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
@@ -49,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]

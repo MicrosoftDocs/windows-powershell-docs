@@ -27,6 +27,9 @@ The New-SmbGlobalMapping cmdlet creates a Server Message Block (SMB) global mapp
 ### Example 1
 ```powershell
 PS C:\> $creds = Get-Credential New-SmbGlobalMapping -RemotePath \\fs1.contoso.com\public -Credential $creds -LocalPath G:
+Status Local Path Remote Path 
+------ ---------- ----------- 
+OK     G:         \\fs1.contoso.com\public 
 ```
 
 This command will gather the credentials for the global mapping. It then maps the remote share path “\\fs1.contoso.com\public” to the “G:” drive letter. Any users, applications, or containers can now access data on the G: drive.
@@ -49,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]

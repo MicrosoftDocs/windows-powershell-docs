@@ -104,8 +104,8 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Type[]
 Parameter Sets: (All)
-Aliases: 
-Accepted values: Optimization, GarbageCollection, Scrubbing, Unoptimization
+Aliases:
+Accepted values: Optimization, GarbageCollection, Scrubbing, Unoptimization, DataPort
 
 Required: False
 Position: 0

@@ -117,11 +117,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
 
-### Uint32
-This cmdlet generates an integer that indicates success or failure of the operation.
-A value of zero indicates success.
+### System.Object
 
 ## NOTES
 

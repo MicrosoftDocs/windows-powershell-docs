@@ -16,29 +16,32 @@ Changes data deduplication settings on one or more volumes.
 ## SYNTAX
 
 ### ByVolumeId (Default)
-```powershell
+```
 Set-DedupVolume [-VolumeId <String[]>] [-OptimizeInUseFiles] [-OptimizePartialFiles] [-NoCompress <Boolean>]
- [-Verify <Boolean>] [-MinimumFileAgeDays <UInt32>] [-MinimumFileSize <UInt32>]
+ [-NearInlineMode <Boolean>] [-Verify <Boolean>] [-MinimumFileAgeDays <UInt32>] [-MinimumFileSize <UInt32>]
  [-ChunkRedundancyThreshold <UInt32>] [-ExcludeFolder <String[]>] [-ExcludeFileType <String[]>]
  [-ExcludeFileTypeDefault <String[]>] [-NoCompressionFileType <String[]>] [-InputOutputScale <UInt32>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+ [-IdleTimeoutDefault <UInt32>] [-AutoStart] [-ChunkIndexCacheVolume <String>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
 ```
 
 ### ByVolume
-```powershell
+```
 Set-DedupVolume [-Volume] <String[]> [-OptimizeInUseFiles] [-OptimizePartialFiles] [-NoCompress <Boolean>]
- [-Verify <Boolean>] [-MinimumFileAgeDays <UInt32>] [-MinimumFileSize <UInt32>]
+ [-NearInlineMode <Boolean>] [-Verify <Boolean>] [-MinimumFileAgeDays <UInt32>] [-MinimumFileSize <UInt32>]
  [-ChunkRedundancyThreshold <UInt32>] [-ExcludeFolder <String[]>] [-ExcludeFileType <String[]>]
  [-ExcludeFileTypeDefault <String[]>] [-NoCompressionFileType <String[]>] [-InputOutputScale <UInt32>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+ [-IdleTimeoutDefault <UInt32>] [-AutoStart] [-ChunkIndexCacheVolume <String>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
-```powershell
+```
 Set-DedupVolume -InputObject <CimInstance[]> [-OptimizeInUseFiles] [-OptimizePartialFiles]
- [-NoCompress <Boolean>] [-Verify <Boolean>] [-MinimumFileAgeDays <UInt32>] [-MinimumFileSize <UInt32>]
- [-ChunkRedundancyThreshold <UInt32>] [-ExcludeFolder <String[]>] [-ExcludeFileType <String[]>]
- [-ExcludeFileTypeDefault <String[]>] [-NoCompressionFileType <String[]>] [-InputOutputScale <UInt32>]
+ [-NoCompress <Boolean>] [-NearInlineMode <Boolean>] [-Verify <Boolean>] [-MinimumFileAgeDays <UInt32>]
+ [-MinimumFileSize <UInt32>] [-ChunkRedundancyThreshold <UInt32>] [-ExcludeFolder <String[]>]
+ [-ExcludeFileType <String[]>] [-ExcludeFileTypeDefault <String[]>] [-NoCompressionFileType <String[]>]
+ [-InputOutputScale <UInt32>] [-IdleTimeoutDefault <UInt32>] [-AutoStart] [-ChunkIndexCacheVolume <String>]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
 ```
 
@@ -91,6 +94,36 @@ For more information about Windows PowerShell background jobs, see [about_Jobs](
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoStart
+{{ Fill AutoStart Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChunkIndexCacheVolume
+{{ Fill ChunkIndexCacheVolume Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
@@ -191,6 +224,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IdleTimeoutDefault
+{{ Fill IdleTimeoutDefault Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InputObject
 Specifies the input to this cmdlet. 
 You can use this parameter, or you can pipe the input to this cmdlet.
@@ -247,6 +295,21 @@ The deduplication engine does not optimize files that do not meet the minimum th
 
 ```yaml
 Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NearInlineMode
+{{ Fill NearInlineMode Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -419,9 +482,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
-### Microsoft.Management.Infrastructure.CimInstance
+### Microsoft.Management.Infrastructure.CimInstance[]
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+### System.Management.Automation.SwitchParameter
 
 ## OUTPUTS
 

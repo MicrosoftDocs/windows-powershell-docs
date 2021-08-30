@@ -18,8 +18,8 @@ Starts a data deduplication job.
 ```
 Start-DedupJob [-Type] <Type> [[-Volume] <String[]>] [-StopWhenSystemBusy] [-Memory <UInt32>] [-Cores <UInt32>]
  [-Priority <Priority>] [-InputOutputThrottle <UInt32>] [-InputOutputThrottleLevel <InputOutputThrottleLevel>]
- [-Preempt] [-Wait] [-Full] [-ReadOnly] [-Timestamp <DateTime>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-Preempt] [-Wait] [-Full] [-ReadOnly] [-Timestamp <DateTime>] [-FastStart <UInt32>] [-IdleTimeout <UInt32>]
+ [-SkipReconciliation] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,6 +95,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -FastStart
+{{ Fill FastStart Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Full
 Indicates that garbage collection jobs free up all deleted or unreferenced data on the volume, if you specify the value GarbageCollection for the **Type** parameter.
 If you do not specify this parameter, garbage collection jobs free up space after a system threshold of delete data is exceeded.
@@ -113,6 +128,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IdleTimeout
+{{ Fill IdleTimeout Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -228,6 +258,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SkipReconciliation
+{{ Fill SkipReconciliation Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -StopWhenSystemBusy
 Indicates that the server stops the job when the system is busy and retries later.
 We recommend that you specify this parameter when you set a low priority for the job.
@@ -289,8 +334,8 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Type
 Parameter Sets: (All)
-Aliases: 
-Accepted values: Optimization, GarbageCollection, Scrubbing, Unoptimization
+Aliases:
+Accepted values: Optimization, GarbageCollection, Scrubbing, Unoptimization, DataPort
 
 Required: True
 Position: 0
@@ -348,9 +393,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.PowerShell.Cmdletization.GeneratedTypes.DedupJob.Type
 
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.DedupJob.InputOutputThrottleLevel
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance
+### Microsoft.Management.Infrastructure.CimInstance[]
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 

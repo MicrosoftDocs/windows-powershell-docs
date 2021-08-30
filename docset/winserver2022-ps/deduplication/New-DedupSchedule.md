@@ -19,7 +19,8 @@ Creates a data deduplication schedule.
 New-DedupSchedule [-Name] <String> [-Type] <Type> [-DurationHours <UInt32>] [-Disable] [-StopWhenSystemBusy]
  [-Memory <UInt32>] [-Cores <UInt32>] [-Priority <Priority>] [-InputOutputThrottle <UInt32>]
  [-InputOutputThrottleLevel <InputOutputThrottleLevel>] [-Start <DateTime>] [-Days <DayOfWeek[]>] [-Full]
- [-ReadOnly] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-ReadOnly] [-FastStart <UInt32>] [-IdleTimeout <UInt32>] [-AtStartup] [-SkipReconciliation]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -96,6 +97,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AtStartup
+{{ Fill AtStartup Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -190,6 +206,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -FastStart
+{{ Fill FastStart Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Full
 Indicates that garbage collection jobs free up all deleted or unreferenced data on the volume, if you specify the value GarbageCollection for the **Type** parameter.
 If you do not specify this parameter, garbage collection jobs free up space after a system threshold of delete data is exceeded.
@@ -201,6 +232,21 @@ We recommend that you run scrubbing regularly without specifying this parameter,
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IdleTimeout
+{{ Fill IdleTimeout Description }}
+
+```yaml
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 
@@ -317,6 +363,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SkipReconciliation
+{{ Fill SkipReconciliation Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Start
 Specifies a time to start this job.
 The default value is 1:45am.
@@ -380,8 +441,8 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Type
 Parameter Sets: (All)
-Aliases: 
-Accepted values: Optimization, GarbageCollection, Scrubbing, Unoptimization
+Aliases:
+Accepted values: Optimization, GarbageCollection, Scrubbing, Unoptimization, DataPort
 
 Required: True
 Position: 1

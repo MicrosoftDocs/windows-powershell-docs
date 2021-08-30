@@ -164,8 +164,8 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Type[]
 Parameter Sets: ByVolume
-Aliases: 
-Accepted values: Optimization, GarbageCollection, Scrubbing, Unoptimization
+Aliases:
+Accepted values: Optimization, GarbageCollection, Scrubbing, Unoptimization, DataPort
 
 Required: False
 Position: 1
@@ -205,6 +205,8 @@ The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class 
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
 ### Microsoft.PowerShell.Cmdletization.GeneratedTypes.DedupJob.Type[]
+
+### Microsoft.Management.Infrastructure.CimInstance[]
 
 ## OUTPUTS
 

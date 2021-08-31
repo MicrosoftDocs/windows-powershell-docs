@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_ScheduledTask_v1.0.cdxml-help.xml
 Module Name: ScheduledTasks
-ms.date: 12/20/2016
+ms.date: 07/29/2021
 online version: https://docs.microsoft.com/powershell/module/scheduledtasks/get-scheduledtask?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ScheduledTask
@@ -21,13 +21,18 @@ Get-ScheduledTask [[-TaskName] <String[]>] [[-TaskPath] <String[]>] [-CimSession
 ```
 
 ## DESCRIPTION
-The **Get-ScheduledTask** cmdlet gets the task definition object of a scheduled task that is registered on a computer.
+The **Get-ScheduledTask** cmdlet gets the task definition object of a scheduled task that is
+registered on a computer.
 
 ## EXAMPLES
 
 ### Example 1: Get a scheduled task definition object
+
+```powershell
+Get-ScheduledTask -TaskName "SystemScan"
 ```
-PS C:\> Get-ScheduledTask -TaskName "SystemScan"
+
+```Output
 TaskPath                          TaskName                        State
 --------                          --------                        --------
 \                                 SystemScan                      Ready
@@ -36,8 +41,12 @@ TaskPath                          TaskName                        State
 This command gets the definition object of the SystemScan scheduled task in the root folder.
 
 ### Example 2: Get an array of scheduled task definition objects
+
+```powershell
+Get-ScheduledTask -TaskPath "\UpdateTasks\*"
 ```
-PS C:\> Get-ScheduledTask -TaskPath "\UpdateTasks\*"
+
+```Output
 TaskPath                          TaskName                        State
 --------                          --------                        --------
 \UpdateTasks                      UpdateApps                      Ready
@@ -51,7 +60,9 @@ This command gets an array of task definitions objects from the UpdateTasks fold
 ### Example 3: Get an array of scheduled task definition objects in multiple paths
 ```powershell
 Get-ScheduledTask -TaskPath "\Microsoft\Windows\Work Folders\","\Microsoft\Windows\Workplace Join\"
+```
 
+```Output
 TaskPath                                       TaskName                          State
 --------                                       --------                          -----
 \Microsoft\Windows\Work Folders\               Work Folders Logon Synchroniza... Ready
@@ -109,7 +120,7 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: True
+Accept wildcard characters: False
 ```
 
 ### -TaskPath
@@ -126,7 +137,7 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: True
+Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit

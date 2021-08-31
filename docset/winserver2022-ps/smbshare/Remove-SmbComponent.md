@@ -24,9 +24,12 @@ Remove-SmbComponent [-Name] <String[]> [-CimSession <CimSession[]>] [-ThrottleLi
 The Remove-SmbComponent cmdlet removes SMB1 components. SMB1 is a deprecated and unsafe protocol that’s no longer installed by default in most versions of Windows and Windows Server. For more information, review SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions.
 
 ## EXAMPLES
-This command removals all SMB1 components, including SMB1 server, SMB1 client, and the SMB1 automatic removal service.
 
-### Example 1
+
+### Example 1 - Remove all SMB1 components, including SMB1 server, SMB1 client, and the SMB1 automatic removal service
+
+This command removes all SMB1 components, including SMB1 server, SMB1 client, and the SMB1 automatic removal service.
+
 ```powershell
 Remove-SmbComponent -Name SMB1Protocol
 ```

@@ -31,7 +31,7 @@ This command retrieves the properties and validity of the `2022-ae-02.corp.conto
 ```powershell
 Get-SmbServerCertProps `-Name` 2022-ae-02.corp.contoso.com
 ```
-```output
+```
 --------------------------------------------------------------------------------------------------------------- 
 Checking Mapping '2022-ae-02.corp.contoso.com'.....
 SMBServerCertificateMappingName : 2022-ae-02.corp.contoso.com 

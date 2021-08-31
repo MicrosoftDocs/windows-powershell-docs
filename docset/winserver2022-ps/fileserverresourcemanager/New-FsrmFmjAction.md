@@ -353,9 +353,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.FmjActionTypeEnum
+
+### System.String
+
+### System.Management.Automation.SwitchParameter
+
+### System.String[]
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.FmjActionSecurityLevelEnum
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMFMJAction
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

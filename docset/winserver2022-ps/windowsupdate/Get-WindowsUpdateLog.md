@@ -196,7 +196,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-The **SymbolServer** parameter is deprecated for Windows 1709 (OS Build 16299) and higher.
+The **SymbolServer** parameter is deprecated for Windows 1709 (OS Build 16299) and later.
 
 ## RELATED LINKS
 

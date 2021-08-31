@@ -70,9 +70,5 @@ To check the functional level of the Active Directory forest, use the **Get-ADFo
 
 ## RELATED LINKS
 
-[Install-WindowsFeature](../Microsoft.Windows.ServerManager.Migration/Install-WindowsFeature.md)
-
-[Disable-SmbDelegation](./Disable-SmbDelegation.md)
-
-[Enable-SmbDelegation](./Enable-SmbDelegation.md)
+[SmbShare](./SmbShare.md)
 

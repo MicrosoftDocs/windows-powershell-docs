@@ -1,8 +1,11 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerCertificateMapping.cdxml-help.xml
 Module Name: SmbShare
-online version:
+ms.date: 08/21/2021
+online version: https://docs.microsoft.com/powershell/module/smbshare/Set-SmbServerCertificateMapping?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Set-SmbServerCertificateMapping
 ---
 
 # Set-SmbServerCertificateMapping
@@ -27,16 +30,16 @@ Set-SmbServerCertificateMapping -InputObject <CimInstance[]> [-Flags <Flags>] [-
 ```
 
 ## DESCRIPTION
-The Set-SmbServerCertificateMapping cmdlet modifies a certificate’s association to the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. This cmdlet is not used for Windows or other Windows Server editions. For more information, review [SMB over QUIC](https://aka.ms/smboverquic).
+The **Set-SmbServerCertificateMapping** cmdlet modifies a certificate’s association to the SMB server for SMB over QUIC on Windows Server 2022 Datacenter: Azure Edition. This cmdlet is not used for Windows or other Windows Server editions. For more information, review [SMB over QUIC](https://aka.ms/smboverquic).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> Set-SmbServerCertificateMapping -Name 2022-ae-02.corp.contoso.com -Thumbprint 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F -StoreName my -Flags AllowNamedPipe
-```
+### Example 1 - Enable Named Pipes for the SMB over QUIC endpoint
+This command enables Named Pipes for the SMB over QUIC endpoint, overriding the default behavior where Named Pipes are disabled for increased security.
 
-This command specifies that Named Pipes be enabled for the SMB over QUIC endpoint, overriding the default behavior where Named Pipes are disabled for increased security.
+```powershell
+Set-SmbServerCertificateMapping -Name 2022-ae-02.corp.contoso.com -Thumbprint 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F -StoreName my -Flags AllowNamedPipe
+```
 
 ## PARAMETERS
 
@@ -73,9 +76,9 @@ Accept wildcard characters: False
 ### -Flags
 Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter are: 
 
-- **None** Remove all flags
-- **NamedPipes** Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides value of RestrictNamedPipeAccessOverQuic) 
-- **DefaultCert** Not used
+- `None` Remove all flags
+- `AllowNamedPipe` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides value of RestrictNamedPipeAccessOverQuic) 
+- `DefaultCert` Not used
 
 ```yaml
 Type: Flags

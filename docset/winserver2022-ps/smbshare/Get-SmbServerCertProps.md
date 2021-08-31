@@ -1,8 +1,11 @@
 ---
-external help file: SmbScriptModule.psm1-help.xml
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file: SmbServerCertProps.cdxml-help.xml
 Module Name: SmbShare
-online version:
+ms.date: 08/31/2021
+online version: https://docs.microsoft.com/powershell/module/smbshare/get-smbservercertprops?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Get-SmbServerCertProps
 ---
 
 # Get-SmbServerCertProps
@@ -13,17 +16,22 @@ Retrieves an SMB over QUIC-mapped certificate’s properties and tests certifica
 ## SYNTAX
 
 ```
-Get-SmbServerCertProps [-Name] <String> [-Force] [<CommonParameters>]
+Get-SmbServerCertProps `-Name` <String> `-Force` <CommonParameters>
 ```
 
 ## DESCRIPTION
-The Get- SmbServerCertProps cmdlet retrieves the properties of a certificate associated with the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. It also tests the validity of the certificate. This cmdlet is not used for Windows or other Windows Server editions. For more information, review [SMB over QUIC](https://aka.ms/smboverquic).
+The **Get-SmbServerCertProps** cmdlet retrieves the properties of a certificate associated with the SMB server for SMB over QUIC on Windows Server 2022 Datacenter: Azure Edition. It also tests the validity of the certificate. This cmdlet is not used for Windows or other Windows Server editions. For more information, review [SMB over QUIC](https://aka.ms/smboverquic).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Retrieve the properties of a certificate associated with the SMB server
+
+This command retrieves the properties and validity of the `2022-ae-02.corp.contoso.com` SMB over QUIC endpoint certificate mapping.
+
 ```powershell
-PS C:\> Get-SmbServerCertProps -Name 2022-ae-02.corp.contoso.com
+Get-SmbServerCertProps `-Name` 2022-ae-02.corp.contoso.com
+```
+```output
 --------------------------------------------------------------------------------------------------------------- 
 Checking Mapping '2022-ae-02.corp.contoso.com'.....
 SMBServerCertificateMappingName : 2022-ae-02.corp.contoso.com 
@@ -47,8 +55,6 @@ RenewalChain:
 
 Testing certificates in the RenewalChain.....
 ```
-
-This command retrieves the properties and validity of the “2022-ae-02.corp.contoso.com” SMB over QUIC endpoint certificate mapping.
 
 ## PARAMETERS
 
@@ -92,6 +98,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

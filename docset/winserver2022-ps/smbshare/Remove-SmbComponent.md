@@ -1,8 +1,11 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbComponent.cdxml-help.xml
 Module Name: SmbShare
-online version:
+ms.date: 08/31/2021
+online version: https://docs.microsoft.com/powershell/module/smbshare/remove-smbcomponent?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Remove-SmbComponent
 ---
 
 # Remove-SmbComponent
@@ -21,13 +24,12 @@ Remove-SmbComponent [-Name] <String[]> [-CimSession <CimSession[]>] [-ThrottleLi
 The Remove-SmbComponent cmdlet removes SMB1 components. SMB1 is a deprecated and unsafe protocol that’s no longer installed by default in most versions of Windows and Windows Server. For more information, review SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions.
 
 ## EXAMPLES
+This command removals all SMB1 components, including SMB1 server, SMB1 client, and the SMB1 automatic removal service.
 
 ### Example 1
 ```powershell
-PS C:\> Remove-SmbComponent -Name SMB1Protocol
+Remove-SmbComponent -Name SMB1Protocol
 ```
-
-This command removals all SMB1 components, including SMB1 server, SMB1 client, and the SMB1 automatic removal service.
 
 ## PARAMETERS
 
@@ -64,10 +66,10 @@ Accept wildcard characters: False
 ### -Name
 Specifies the SMB1 component to remove. The acceptable values for this parameter are: 
 
-- **SMB1Protocol** Remove all SMB1 components 
-- **SMB1Protocol-Client** Remove the SMB1 client components 
-- **SMB1Protocol-Server** Remove the SMB1 server components
-- **SMB1Protocol-Deprecation** Remove the SMB1 automatic removal service component (only applies to Windows, not Windows Server) 
+- `SMB1Protocol` Remove all SMB1 components 
+- `SMB1Protocol-Client` Remove the SMB1 client components 
+- `SMB1Protocol-Server` Remove the SMB1 server components
+- `SMB1Protocol-Deprecation` Remove the SMB1 automatic removal service component (only applies to Windows, not Windows Server) 
 
 ```yaml
 Type: String[]

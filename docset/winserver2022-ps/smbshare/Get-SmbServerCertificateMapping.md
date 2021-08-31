@@ -1,8 +1,11 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerCertificateMapping.cdxml-help.xml
 Module Name: SmbShare
-online version:
+ms.date: 08/31/2021
+online version: https://docs.microsoft.com/powershell/module/smbshare/get-smbservercertificatemapping?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Get-SmbCertificateMapping
 ---
 
 # Get-SmbServerCertificateMapping
@@ -19,20 +22,23 @@ Get-SmbServerCertificateMapping [[-Name] <String[]>] [[-Subject] <String[]>] [-T
 ```
 
 ## DESCRIPTION
-The Get-SmbServerCertificateMapping cmdlet retrieves the certificates associated with the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. This cmdlet is not used for Windows or other Windows Server editions. For more information, review [SMB over QUIC](https://aka.ms/smboverquic).
+The **Get-SmbServerCertificateMapping** cmdlet retrieves the certificates associated with the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. This cmdlet is not used for Windows or other Windows Server editions. For more information, review [SMB over QUIC](https://aka.ms/smboverquic).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Retrieve the certificate mapped to two SMB over QUIC server names
+
+This command retrieves the certificate mapped to two SMB over QUIC server names that clients can connect to, `fs2.contoso.com` and `2022-ae-02.corp.contoso.com`.
+
 ```powershell
-PS C:\> Get-SmbServerCertificateMapping
+Get-SmbServerCertificateMapping
+```
+```output
 Name                        Subject       Thumbprint                               DisplayName StoreName Type Flags 
 ----                        -------       ----------                               ----------- --------- ---- ----- 
 2022-ae-02.corp.contoso.com CN=2022-ae-02 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F 2022-ae-02  My        QUIC None 
 fs2.contoso.com             CN=2022-ae-02 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F 2022-ae-02  My        QUIC None
 ```
-
-This command retrieves the certificate mapped to two SMB over QUIC server names that clients can connect to, “fs2.contoso.com” and “2022-ae-02.corp.contoso.com”.
 
 ## PARAMETERS
 
@@ -52,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [`New-CimSession`](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [`Get-CimSession`](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -82,12 +88,12 @@ Accept wildcard characters: False
 ```
 
 ### -Flags
-Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter are: 
+Specifies if `NamedPipes` are enabled for SMB over QUIC. The acceptable values for this parameter are: 
 
 
-- **None** Remove all flags 
-- **NamedPipes** Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides value of RestrictNamedPipeAccessOverQuic) 
-- **DefaultCert** Not used
+- `None` Remove all flags 
+- `AllowNamedPipe` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides value of RestrictNamedPipeAccessOverQuic) 
+- `DefaultCert` Not used
 
 ```yaml
 Type: Flags[]
@@ -195,7 +201,7 @@ Accept wildcard characters: False
 ### -Type
 Specifies the type of certificate mapping. The acceptable value for this parameter is:  
 
-**QUIC** Certificate mapping is for SMB over QUIC.
+`QUIC` Certificate mapping is for SMB over QUIC.
 
 ```yaml
 Type: Type[]

@@ -1,8 +1,11 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerCertificateMapping.cdxml-help.xml
 Module Name: SmbShare
-online version:
+online version: https://docs.microsoft.com/powershell/module/smbshare/new-smbservercertificatemapping?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+ms.date: 08/31/2021
+title: SmbServerCertificateMapping
 ---
 
 # New-SmbServerCertificateMapping
@@ -19,19 +22,22 @@ New-SmbServerCertificateMapping [-Name] <String> [-Thumbprint] <String> [-StoreN
 ```
 
 ## DESCRIPTION
-The New-SmbServerCertificateMapping cmdlet associates a certificate to the SMB server for SMB over QUIC on ‘Windows Server 2022 Datacenter: Azure Edition’. This cmdlet is not used for Windows or other Windows Server editions. For more information, review [SMB over QUIC](https://aka.ms/smboverquic).
+The **New-SmbServerCertificateMapping** cmdlet associates a certificate to the SMB server for SMB over QUIC on Windows Server 2022 Datacenter: Azure Edition. This cmdlet is not used for Windows or other Windows Server editions. For more information, review [SMB over QUIC](https://aka.ms/smboverquic).
 
 ## EXAMPLES
 
-### Example 1
+This command maps a certificate located in the local machine’s personal store for SMB server edge endpoint “fs2.contoso.com” using the certificate’s thumbprint.
+
+### Example 1 - Map a certificate located in the local machine's personal store
+
 ```powershell
-PS C:\> New-SmbServerCertificateMapping -Name fs2.contoso.com -Thumbprint 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F -StoreName my -Subject CN=2022-ae-02
+New-SmbServerCertificateMapping -Name fs2.contoso.com -Thumbprint 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F -StoreName my -Subject CN=2022-ae-02
+```
+```output
 Name            Subject       Thumbprint                               DisplayName StoreName Type Flags 
 ----            -------       ----------                               ----------- --------- ---- ----- 
 fs2.contoso.com CN=2022-ae-02 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F 2022-ae-02  my        QUIC None
 ```
-
-This command maps a certificate located in the local machine’s personal store for SMB server edge endpoint “fs2.contoso.com” using the certificate’s thumbprint.
 
 ## PARAMETERS
 
@@ -83,9 +89,9 @@ Accept wildcard characters: False
 ### -Flags
 Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter are: 
 
-- **None** Remove all flags 
-- **NamedPipes** Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides value of RestrictNamedPipeAccessOverQuic) 
-- **DefaultCert** Not used 
+- `None` Remove all flags 
+- `AllowNamedPipe` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides value of RestrictNamedPipeAccessOverQuic) 
+- `DefaultCert` Not used 
 
 ```yaml
 Type: Flags
@@ -193,7 +199,7 @@ Accept wildcard characters: False
 ### -Type
 Specifies the type of certificate mapping. The acceptable value for this parameter is:  
 
-- **QUIC** Certificate mapping is for SMB over QUIC. 
+`QUIC` Certificate mapping is for SMB over QUIC. 
 
 ```yaml
 Type: Type

@@ -26,9 +26,9 @@ The **New-SmbServerCertificateMapping** cmdlet associates a certificate to the S
 
 ## EXAMPLES
 
-This command maps a certificate located in the local machine’s personal store for SMB server edge endpoint “fs2.contoso.com” using the certificate’s thumbprint.
-
 ### Example 1 - Map a certificate located in the local machine's personal store
+
+This command maps a certificate located in the local machine’s personal store for SMB server edge endpoint “fs2.contoso.com” using the certificate’s thumbprint.
 
 ```powershell
 New-SmbServerCertificateMapping -Name fs2.contoso.com -Thumbprint 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F -StoreName my -Subject CN=2022-ae-02

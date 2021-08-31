@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreName
-{{ Fill StoreName Description }}
+Specifies the path to the certificate store for the certificate. The recommended value is “My” for the localmachine personal store.
 
 ```yaml
 Type: String

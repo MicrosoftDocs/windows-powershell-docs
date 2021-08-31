@@ -1,8 +1,11 @@
 ---
+description: Rename-ClusterSharedVolume
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-online version: https://go.microsoft.com/fwlink/?LinkId=216242
+ms.date: 08/31/2021
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/rename-clustersharedvolume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Rename-ClusterSharedVolume
 ---
 
 # Rename-ClusterSharedVolume
@@ -24,7 +27,7 @@ Rename-ClusterSharedVolume [-Name] <String> [[-VolumeName] <String>] -NewVolumeN
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

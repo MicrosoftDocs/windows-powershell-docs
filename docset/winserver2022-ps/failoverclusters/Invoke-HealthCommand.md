@@ -1,8 +1,11 @@
 ---
+description: Invoke-HealthCommand
 external help file: Microsoft.FailoverClusters.Health.PowerShell-help.xml
 Module Name: FailoverClusters
-online version:
+ms.date: 08/31/2021
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/invoke-healthcommand?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Invoke-HealthCommand
 ---
 
 # Invoke-HealthCommand
@@ -24,7 +27,7 @@ Invoke-HealthCommand [-Name] <String> [[-Flags] <UInt32>] [[-Parameters] <String
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

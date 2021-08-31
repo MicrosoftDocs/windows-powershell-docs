@@ -1,8 +1,13 @@
 ---
+description: Start-ClusterPerformanceHistory
 external help file: Microsoft.FailoverClusters.Health.PowerShell-help.xml
 Module Name: FailoverClusters
 online version:
 schema: 2.0.0
+ms.date: 08/31/2021
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/start-clusterperformancehistory?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
+title: Start-ClusterPerformanceHistory
 ---
 
 # Start-ClusterPerformanceHistory
@@ -23,7 +28,7 @@ Start-ClusterPerformanceHistory [[-CimSession] <CimSession>] [<CommonParameters>
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

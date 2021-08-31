@@ -1,8 +1,11 @@
 ---
+description: Export-HealthAgentConfig
 external help file: Microsoft.FailoverClusters.Health.PowerShell-help.xml
 Module Name: FailoverClusters
-online version:
+ms.date: 08/31/2021
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/export-healthagentconfig?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Export-HealthAgentConfig
 ---
 
 # Export-HealthAgentConfig
@@ -24,7 +27,7 @@ Export-HealthAgentConfig [-Type] <String> [-FilePath] <String> [[-CimSession] <C
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

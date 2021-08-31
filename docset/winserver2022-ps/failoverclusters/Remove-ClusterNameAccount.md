@@ -1,8 +1,11 @@
 ---
+description: Remove-ClusterNameAccount
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-online version:
+ms.date: 08/31/2021
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clusternameaccount?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Remove-ClusterNameAccount
 ---
 
 # Remove-ClusterNameAccount
@@ -24,7 +27,7 @@ Remove-ClusterNameAccount [-DeleteComputerObjects] [-InputObject <PSObject>] [-C
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

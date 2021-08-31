@@ -1,8 +1,11 @@
 ---
+description: Add-ClusterSharedVolumeToAffinityRule
 external help file: ClusterAffinityRule.cdxml-help.xml
 Module Name: FailoverClusters
-online version:
+ms.date: 08/31/2021
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustersharedvolumetoaffinityrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Add-ClusterSharedVolumeToAffinityRule
 ---
 
 # Add-ClusterSharedVolumeToAffinityRule
@@ -31,7 +34,7 @@ Add-ClusterSharedVolumeToAffinityRule -InputObject <CimInstance[]> [-ClusterShar
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
@@ -39,7 +42,16 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
+
+The cmdlet immediately returns an object that represents the job and then displays the command
+prompt. You can continue to work in the session while the job completes. To manage the job, use the
+`*-Job` cmdlets. To get the job results, use the
+[Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+For more information about Windows PowerShell background jobs, see
+[about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter

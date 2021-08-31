@@ -1,8 +1,11 @@
 ---
+description: Resume-ClusterPhysicalDiskResource
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-online version: https://go.microsoft.com/fwlink/?LinkId=216245
+ms.date: 08/31/2021
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/resume-clusterphysicaldiskresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Resume-ClusterPhysicalDiskResource
 ---
 
 # Resume-ClusterPhysicalDiskResource
@@ -24,7 +27,7 @@ Resume-ClusterPhysicalDiskResource [[-Name] <String>] [-RecoveryPassword <String
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

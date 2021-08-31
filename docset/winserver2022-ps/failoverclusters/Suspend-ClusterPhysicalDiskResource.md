@@ -1,8 +1,11 @@
 ---
+description: Suspend-ClusterPhysicalDiskResource
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-online version: https://go.microsoft.com/fwlink/?LinkId=216260
+ms.date: 08/31/2021
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusterphysicaldiskresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Suspend-ClusterPhysicalDiskResource
 ---
 
 # Suspend-ClusterPhysicalDiskResource
@@ -24,7 +27,7 @@ Suspend-ClusterPhysicalDiskResource [[-Name] <String>] [-CleanupClusterProtector
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

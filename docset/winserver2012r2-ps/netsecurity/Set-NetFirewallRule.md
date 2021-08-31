@@ -557,7 +557,7 @@ Specifies that network packets with matching IP addresses match this rule.
                          
 This parameter value is the first end point of an IPsec rule and specifies the computers that are subject to the requirements of this rule. 
                          
-This parameter value is an IPv4 or IPv6 address, hostname, subnet, range, or the following keyword: Any. 
+This parameter value is an IPv4 or IPv6 address, subnet, range, or the following keyword: Any. 
                          
 The acceptable formats for this parameter are: 
                          
@@ -980,7 +980,7 @@ Specifies that network packets with matching IP addresses match this rule.
                          
 This parameter value is the second end point of an IPsec rule and specifies the computers that are subject to the requirements of this rule. 
                          
-This parameter value is an IPv4 or IPv6 address, hostname, subnet, range, or the following keyword: Any. 
+This parameter value is an IPv4 or IPv6 address, subnet, range, or the following keyword: Any. 
                          
 The acceptable formats for this parameter are: 
                          

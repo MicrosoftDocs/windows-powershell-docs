@@ -79,7 +79,8 @@ Remove-StorageFaultDomain -StorageTierUniqueId <String> [-StorageFaultDomains <C
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession
@@ -139,7 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -StorageTier
-{{ Fill StorageTier Description }}
+Specifies a storage tier as a **CIMInstance** object.
+The cmdlet gets the virtual disks included in the storage tier that you specify.
+To obtain a virtual disk object, use the Get-StorageTier cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -184,7 +189,11 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
 Type: Int32
@@ -199,7 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDisk
-{{ Fill VirtualDisk Description }}
+Specifies a virtual disk as a **CimInstance** object.
+To obtain a virtual disk object, use the **Get-VirtualDisk** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -214,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDiskFriendlyName
-{{ Fill VirtualDiskFriendlyName Description }}
+Specifies the friendly name of the virtual disk.
 
 ```yaml
 Type: String
@@ -229,7 +239,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDiskName
-{{ Fill VirtualDiskName Description }}
+Specifies the name of the virtual disk. This parameter is not equivalent to the
+*VirtualDiskFriendlyName* parameter that can be set by a user.
 
 ```yaml
 Type: String
@@ -244,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDiskUniqueId
-{{ Fill VirtualDiskUniqueId Description }}
+Specifies the ID of the virtual disk.
 
 ```yaml
 Type: String

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageScripts-help.xml
 Module Name: Storage
-ms.date: 12/20/2016
+ms.date: 08/31/2021
 online version: https://docs.microsoft.com/powershell/module/storage/get-storagefaultdomain?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-StorageFaultDomain
@@ -29,7 +29,7 @@ Get-StorageFaultDomain [-Type <StorageFaultDomainType>] [-PhysicalLocation <Stri
 
 ### ByStorageSubsystem
 ```
-Get-StorageFaultDomain [-FriendlyName <String>] [-SerialNumber <String>] [-Type <StorageFaultDomainType>] [-PhysicalLocation <String>] 
+Get-StorageFaultDomain [-FriendlyName <String>] [-SerialNumber <String>] [-Type <StorageFaultDomainType>] [-PhysicalLocation <String>]
  -StorageSubsystem <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDisk
-Get a list of storage fault domains associated with the specified virutal disk. 
+Get a list of storage fault domains associated with the specified virtual disk.
 
 ```yaml
 Type: CimInstance

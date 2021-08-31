@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageSubSystemFriendlyName
-
+Specifies the friendly name of the storage subsystem.
 
 ```yaml
 Type: String
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageSubSystemName
-
+Specifies the name of the storage subsystem.
 
 ```yaml
 Type: String
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageSubSystemUniqueId
-
+Specifies the UniqueID of the storage subsystem to use.
 
 ```yaml
 Type: String

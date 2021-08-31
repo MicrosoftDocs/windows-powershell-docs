@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceNumber
-{{ Fill DeviceNumber Description }}
+Specifies the device number.
 
 ```yaml
 Type: String
@@ -108,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhysicalDisk
-{{ Fill PhysicalDisk Description }}
+Specifies a physical disk as a **CimInstance** object.
+To obtain a physical disk object, use the **Get-PhysicalDisk** cmdlet.
 
 ```yaml
 Type: CimInstance

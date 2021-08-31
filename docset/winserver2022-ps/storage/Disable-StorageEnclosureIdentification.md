@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 ### -UniqueId
 Specifies an array of IDs.
-This cmdlet turns off the identification LEDsfor the enclosures that the IDs specify or for slots that belong to the specified enclosures.
+This cmdlet turns off the identification LEDs for the enclosures that the IDs specify or for slots that belong to the specified enclosures.
 
 ```yaml
 Type: String[]

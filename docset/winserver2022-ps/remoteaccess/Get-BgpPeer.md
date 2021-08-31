@@ -198,10 +198,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance#BgpPeerConfig
 
-### Microsoft.Management.Infrastructure.CimInstance[]
-
-### Microsoft.Management.Infrastructure.CimInstance#BgpPeerConfig
-
 ## NOTES
 
 ## RELATED LINKS

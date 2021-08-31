@@ -16,12 +16,16 @@ Creates a BITS transfer job.
 ## SYNTAX
 
 ```
-Start-BitsTransfer [-Asynchronous] [-Authentication <String>] [-Credential <PSCredential>]
- [-Description <String>] [[-Destination] <String[]>] [-DisplayName <String>] [-Priority <String>]
- [-TransferPolicy <CostStates>] [-UseStoredCredential <AuthenticationTargetValue>]
+Start-BitsTransfer [-Asynchronous] [-Dynamic] [-CustomHeadersWriteOnly] [-Authentication <String>]
+ [-Credential <PSCredential>] [-Description <String>] [-HttpMethod <String>] [[-Destination] <String[]>]
+ [-DisplayName <String>] [-Priority <String>] [-TransferPolicy <CostStates>] [-ACLFlags <ACLFlagValue>]
+ [-SecurityFlags <SecurityFlagValue>] [-UseStoredCredential <AuthenticationTargetValue>]
  [-ProxyAuthentication <String>] [-ProxyBypass <String[]>] [-ProxyCredential <PSCredential>]
  [-ProxyList <Uri[]>] [-ProxyUsage <String>] [-RetryInterval <Int32>] [-RetryTimeout <Int32>]
- [-Source] <String[]> [-Suspended] [-TransferType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MaxDownloadTime <Int32>] [-Source] <String[]> [-Suspended] [-TransferType <String>]
+ [-CustomHeaders <String[]>] [-NotifyFlags <NotifyFlagValue>] [-NotifyCmdLine <String[]>]
+ [-CertStoreLocation <CertStoreLocationValue>] [-CertStoreName <String>] [-CertHash <Byte[]>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -190,6 +194,21 @@ Finally, it uses the *ProxyCredential* parameter to specify the credentials of a
 
 ## PARAMETERS
 
+### -ACLFlags
+{{ Fill ACLFlags Description }}
+
+```yaml
+Type: ACLFlagValue
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Asynchronous
 Indicates that the cmdlet creates and processes BITS transfer job in the background.
 The command prompt reappears immediately after the BITS transfer job is created.
@@ -234,6 +253,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CertHash
+{{ Fill CertHash Description }}
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertStoreLocation
+{{ Fill CertStoreLocation Description }}
+
+```yaml
+Type: CertStoreLocationValue
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertStoreName
+{{ Fill CertStoreName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -259,6 +323,36 @@ When you type a user name, you are prompted for a password.
 
 ```yaml
 Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomHeaders
+{{ Fill CustomHeaders Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomHeadersWriteOnly
+{{ Fill CustomHeadersWriteOnly Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -309,6 +403,81 @@ The display name provides a user-friendly way to differentiate BITS transfer job
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Dynamic
+{{ Fill Dynamic Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpMethod
+{{ Fill HttpMethod Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxDownloadTime
+{{ Fill MaxDownloadTime Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyCmdLine
+{{ Fill NotifyCmdLine Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyFlags
+{{ Fill NotifyFlags Description }}
+
+```yaml
+Type: NotifyFlagValue
 Parameter Sets: (All)
 Aliases: 
 
@@ -478,6 +647,21 @@ The default is 1,209,600 seconds (14 days).
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SecurityFlags
+{{ Fill SecurityFlags Description }}
+
+```yaml
+Type: SecurityFlagValue
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -17,10 +17,14 @@ Modifies the properties of an existing BITS transfer job.
 
 ```
 Set-BitsTransfer [-BitsJob] <BitsJob[]> [-DisplayName <String>] [-Priority <String>] [-Description <String>]
- [-ProxyAuthentication <String>] [-RetryInterval <Int32>] [-RetryTimeout <Int32>]
- [-TransferPolicy <CostStates>] [-UseStoredCredential <AuthenticationTargetValue>] [-Credential <PSCredential>]
+ [-Dynamic] [-CustomHeadersWriteOnly] [-HttpMethod <String>] [-ProxyAuthentication <String>]
+ [-RetryInterval <Int32>] [-RetryTimeout <Int32>] [-MaxDownloadTime <Int32>] [-TransferPolicy <CostStates>]
+ [-ACLFlags <ACLFlagValue>] [-SecurityFlags <SecurityFlagValue>]
+ [-UseStoredCredential <AuthenticationTargetValue>] [-Credential <PSCredential>]
  [-ProxyCredential <PSCredential>] [-Authentication <String>] [-SetOwnerToCurrentUser] [-ProxyUsage <String>]
- [-ProxyList <Uri[]>] [-ProxyBypass <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ProxyList <Uri[]>] [-ProxyBypass <String[]>] [-CustomHeaders <String[]>] [-NotifyFlags <NotifyFlagValue>]
+ [-NotifyCmdLine <String[]>] [-CertStoreLocation <CertStoreLocationValue>] [-CertStoreName <String>]
+ [-CertHash <Byte[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,6 +97,21 @@ In this example, no proxy server is used to add a file to the BITS transfer queu
 
 ## PARAMETERS
 
+### -ACLFlags
+{{ Fill ACLFlags Description }}
+
+```yaml
+Type: ACLFlagValue
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Authentication
 Specifies the authentication mechanism to be used at the server.
 The acceptable values for this parameter are:
@@ -136,6 +155,51 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -CertHash
+{{ Fill CertHash Description }}
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertStoreLocation
+{{ Fill CertStoreLocation Description }}
+
+```yaml
+Type: CertStoreLocationValue
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertStoreName
+{{ Fill CertStoreName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -170,6 +234,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CustomHeaders
+{{ Fill CustomHeaders Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomHeadersWriteOnly
+{{ Fill CustomHeadersWriteOnly Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 Specifies a description for the BITS transfer job.
 The description is limited to 1,024 characters.
@@ -194,6 +288,81 @@ The display name provides a user-friendly way to differentiate BITS transfer job
 Type: String
 Parameter Sets: (All)
 Aliases: dn
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Dynamic
+{{ Fill Dynamic Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpMethod
+{{ Fill HttpMethod Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: hm
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxDownloadTime
+{{ Fill MaxDownloadTime Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyCmdLine
+{{ Fill NotifyCmdLine Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyFlags
+{{ Fill NotifyFlags Description }}
+
+```yaml
+Type: NotifyFlagValue
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -361,6 +530,21 @@ The default value is 1,209,600 seconds (14 days).
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SecurityFlags
+{{ Fill SecurityFlags Description }}
+
+```yaml
+Type: SecurityFlagValue
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

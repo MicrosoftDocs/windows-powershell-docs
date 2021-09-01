@@ -11,7 +11,7 @@ title: Get-SmbCertificateMapping
 # Get-SmbServerCertificateMapping
 
 ## SYNOPSIS
-Retrieves a certificate association with the SMB server for SMB over QUIC.
+Retrieves a certificate associated with the SMB server for SMB over QUIC.
 
 ## SYNTAX
 

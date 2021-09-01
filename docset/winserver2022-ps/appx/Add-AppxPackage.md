@@ -81,7 +81,7 @@ To update an already installed package, the new package must have the same packa
 
 ### Example 1: Add an app package
 ```powershell
-Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msix" -DependencyPath "C:\Users\user1\Desktop\winjs.msix"
+PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msix" -DependencyPath "C:\Users\user1\Desktop\winjs.msix"
 ```
 
 This command adds an app package that the package contains.

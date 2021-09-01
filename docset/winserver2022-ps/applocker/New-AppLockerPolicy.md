@@ -15,12 +15,22 @@ Creates a new AppLocker policy from a list of file information and other rule cr
 
 ## SYNTAX
 
+### FileInformation
 ```
 New-AppLockerPolicy
  [-FileInformation] <System.Collections.Generic.List`1[Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.FileInformation]>
+ [-AllowWindows]
  [-RuleType <System.Collections.Generic.List`1[Microsoft.Security.ApplicationId.PolicyManagement.RuleType]>]
  [-RuleNamePrefix <String>] [-User <String>] [-Optimize] [-IgnoreMissingFileInformation] [-Xml]
- [-ServiceEnforcement <String>] [<CommonParameters>]
+ [-ServiceEnforcement <ServiceEnforcementMode>] [<CommonParameters>]
+```
+
+### AllowWindows
+```
+New-AppLockerPolicy [-AllowWindows]
+ [-RuleType <System.Collections.Generic.List`1[Microsoft.Security.ApplicationId.PolicyManagement.RuleType]>]
+ [-RuleNamePrefix <String>] [-User <String>] [-Optimize] [-IgnoreMissingFileInformation] [-Xml]
+ [-ServiceEnforcement <ServiceEnforcementMode>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,14 +84,41 @@ The existing AppLocker policy in the specified GPO will be overwritten.
 
 ## PARAMETERS
 
+### -AllowWindows
+{{ Fill AllowWindows Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: FileInformation
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AllowWindows
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FileInformation
 Specifies a file that can contain publisher, path, and hash information.
 Some information may be missing, such as publisher information for an unsigned file.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.FileInformation]
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: FileInformation
+Aliases:
 
 Required: True
 Position: 0
@@ -165,7 +202,7 @@ The acceptable values for this parameter are:
 - ServicesOnly
 
 ```yaml
-Type: String
+Type: ServiceEnforcementMode
 Parameter Sets: (All)
 Aliases: 
 

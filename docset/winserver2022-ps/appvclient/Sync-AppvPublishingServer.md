@@ -33,6 +33,11 @@ Sync-AppvPublishingServer [[-Name] <String>] [[-URL] <String>] [-Global] [-Force
  [-HidePublishingRefreshUI] [<CommonParameters>]
 ```
 
+### ByXML
+```
+Sync-AppvPublishingServer [-PublishFromXML] [-Global] [-NetworkCostAware] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 The **Sync-AppvPublishingServer** cmdlet initiates the Microsoft Application Virtualization (App-V) publishing refresh operation in the context of the current user.
 The publishing refresh connects to all added servers on the client and expose new App-V packages and their respective extension points to the user.
@@ -55,8 +60,8 @@ The Force switch specifies whether to suppress warning and confirmation messages
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: ByServerId, ByObject, ByNameUrl
+Aliases:
 
 Required: False
 Position: 2
@@ -85,8 +90,8 @@ Indicates that the cmdlet suppresses the Publishing Refresh Progress bar.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: ByServerId, ByObject, ByNameUrl
+Aliases:
 
 Required: False
 Position: 4
@@ -120,6 +125,21 @@ Aliases:
 
 Required: False
 Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublishFromXML
+{{ Fill PublishFromXML Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ByXML
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

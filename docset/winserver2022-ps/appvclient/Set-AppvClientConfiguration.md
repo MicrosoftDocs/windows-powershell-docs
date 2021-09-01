@@ -17,16 +17,17 @@ Applies configuration settings to the App-V Client.
 
 ```
 Set-AppvClientConfiguration [-AllowHighCostLaunch <Boolean>] [-AutoLoad <UInt32>]
- [-CertFilterForClientSsl <String>] [-EnablePackageScripts <Boolean>] [-EnablePublishingRefreshUI <Boolean>]
- [-IntegrationRootGlobal <String>] [-IntegrationRootUser <String>] [-LocationProvider <String>]
- [-MigrationMode <Boolean>] [-PackageInstallationRoot <String>] [-PackageSourceRoot <String>]
- [-RequirePublishAsAdmin <Boolean>] [-ReestablishmentInterval <UInt32>] [-ReestablishmentRetries <UInt32>]
- [-ReportingDataBlockSize <UInt32>] [-ReportingDataCacheLimit <UInt32>] [-ReportingEnabled <Boolean>]
- [-ReportingInterval <UInt32>] [-ReportingRandomDelay <UInt32>] [-ReportingServerURL <String>]
- [-ReportingStartTime <UInt32>] [-RoamingFileExclusions <String>] [-RoamingRegistryExclusions <String>]
- [-SharedContentStoreMode <Boolean>] [-VerifyCertificateRevocationList <Boolean>]
- [-ExperienceImprovementOptIn <Boolean>] [-ProcessesUsingVirtualComponents <String[]>]
- [-EnableDynamicVirtualization <Boolean>] [-IgnoreLocationProvider <Boolean>] [-SupportBranchCache <Boolean>]
+ [-AutoCleanupEnabled <Boolean>] [-CertFilterForClientSsl <String>] [-EnablePackageScripts <Boolean>]
+ [-EnablePublishingRefreshUI <Boolean>] [-IntegrationRootGlobal <String>] [-IntegrationRootUser <String>]
+ [-LocationProvider <String>] [-MigrationMode <Boolean>] [-PackageInstallationRoot <String>]
+ [-PackageSourceRoot <String>] [-RequirePublishAsAdmin <Boolean>] [-ReestablishmentInterval <UInt32>]
+ [-ReestablishmentRetries <UInt32>] [-ReportingDataBlockSize <UInt32>] [-ReportingDataCacheLimit <UInt32>]
+ [-ReportingEnabled <Boolean>] [-ReportingInterval <UInt32>] [-ReportingRandomDelay <UInt32>]
+ [-ReportingServerURL <String>] [-ReportingStartTime <UInt32>] [-RoamingFileExclusions <String>]
+ [-RoamingRegistryExclusions <String>] [-SharedContentStoreMode <Boolean>]
+ [-VerifyCertificateRevocationList <Boolean>] [-ExperienceImprovementOptIn <Boolean>]
+ [-ProcessesUsingVirtualComponents <String[]>] [-EnableDynamicVirtualization <Boolean>]
+ [-IgnoreLocationProvider <Boolean>] [-SupportBranchCache <Boolean>] [-SyncOnBatteriesEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -47,6 +48,21 @@ This schematic example sets a particular client configuration parameter.
 
 ### -AllowHighCostLaunch
 Specifies whether virtualized applications are started on Windows 8 computers that are connected over a metered network connection, for instance, 4G.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoCleanupEnabled
+{{ Fill AutoCleanupEnabled Description }}
 
 ```yaml
 Type: Boolean
@@ -498,6 +514,21 @@ Specifies whether branch caching is turned on.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncOnBatteriesEnabled
+{{ Fill SyncOnBatteriesEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

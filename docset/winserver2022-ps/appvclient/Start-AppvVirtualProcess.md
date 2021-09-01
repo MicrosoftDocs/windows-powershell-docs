@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: AppVClientCmdlets-help.xml
+external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
 Module Name: AppvClient
 ms.date: 12/20/2016
 online version: https://docs.microsoft.com/powershell/module/appvclient/start-appvvirtualprocess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp

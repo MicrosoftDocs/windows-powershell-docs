@@ -17,17 +17,17 @@ Removes the package from a computer.
 
 ### ByGuid (Default)
 ```
-Remove-AppvClientPackage [-PackageId] <Guid> [-VersionId] <Guid> [<CommonParameters>]
+Remove-AppvClientPackage [-Safe] [-PackageId] <Guid> [-VersionId] <Guid> [<CommonParameters>]
 ```
 
 ### ByPackage
 ```
-Remove-AppvClientPackage [-Package] <AppvClientPackage> [<CommonParameters>]
+Remove-AppvClientPackage [-Safe] [-Package] <AppvClientPackage> [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Remove-AppvClientPackage [-Name] <String> [[-Version] <String>] [<CommonParameters>]
+Remove-AppvClientPackage [-Safe] [-Name] <String> [[-Version] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -97,6 +97,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Safe
+{{ Fill Safe Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

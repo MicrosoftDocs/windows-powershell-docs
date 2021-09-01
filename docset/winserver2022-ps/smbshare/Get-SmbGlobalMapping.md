@@ -11,7 +11,7 @@ title: Get-SmbGlobalMapping
 # Get-SmbGlobalMapping
 
 ## SYNOPSIS
-Retrieves the properties of an SMB global mapping.
+Retrieves the properties of a Server Message Block (SMB) global mapping.
 
 ## SYNTAX
 

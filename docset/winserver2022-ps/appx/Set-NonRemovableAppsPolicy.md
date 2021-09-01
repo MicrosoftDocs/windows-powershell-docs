@@ -1,6 +1,6 @@
 ---
 audiencems.localizationpriority: ITPro
-description: Use this topic to help prevent the uninstall of specific Windows apps with Windows PowerShell.
+description: Sets an app packages as non-removable so it can't be uninstalled.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
 ms.date: 08/24/2021

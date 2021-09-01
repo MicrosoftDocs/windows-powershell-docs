@@ -1,9 +1,9 @@
 ---
 audiencems.localizationpriority: ITPro
-description: Use this topic to help prevent the uninstall of specific Windows apps with Windows PowerShell.
+description: Returns the  a list of the app packages that are installed and configured as non-removable apps.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 08/24/2021
+ms.date: 09/01/2021
 online version: https://docs.microsoft.com/powershell/module/appx/get-nonremovableappspolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NonRemovableAppsPolicy

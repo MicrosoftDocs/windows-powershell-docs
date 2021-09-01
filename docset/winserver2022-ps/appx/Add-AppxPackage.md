@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Adds a signed app package to a user account.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 08/24/2021
+ms.date: 09/01/2021
 online version: https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-AppxPackage
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -AppInstallerFile
 Runs an appinstaller file and allows the user to install all of the defined packages with a single click.
-For more information, see [Create an App Installer file manually](https://github.com/microsoftdocs/msix-docs/blob/master/msix-src/app-installer/how-to-create-appinstaller-file.md).
+For more information, see [Create an App Installer file manually](/windows/msix/app-installer/how-to-create-appinstaller-file).
 
 ```yaml
 Type: SwitchParameter

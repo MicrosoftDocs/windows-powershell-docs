@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Restores the Windows app to its initial configuration.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 08/24/2021
+ms.date: 09/01/2021
 online version: https://docs.microsoft.com/powershell/module/appx/reset-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Reset-AppxPackage

@@ -21,7 +21,7 @@ Get-SmbGlobalMapping [[-LocalPath] <String[]>] [[-RemotePath] <String[]>] [-CimS
 ```
 
 ## DESCRIPTION
-The **Get-SmbGlobalMapping** cmdlet retrieves a Server Message Block (SMB) global mapping on the SMB client to an SMB share. Global mappings allow all users to use the same mapping. It primary use is for Windows Containers.
+The **Get-SmbGlobalMapping** cmdlet retrieves an SMB global mapping on the SMB client to an SMB share. Global mappings allow all users to use the same mapping. Its primary use is for Windows Containers.
 
 ## EXAMPLES
 

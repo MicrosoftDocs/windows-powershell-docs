@@ -116,9 +116,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Web.Administration.ConfigurationElement,System.String
+### Microsoft.Web.Administration.ConfigurationElement
+
+### System.String
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

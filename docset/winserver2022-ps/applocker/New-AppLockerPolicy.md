@@ -59,15 +59,18 @@ The rules are prefixed with `System32:` and the rules apply to the Everyone grou
 
 ### Example 2: Create an AppLocker policy
 ```
-C:\PS>Get-ChildItem C:\Windows\System32\*.exe | Get-AppLockerFileInformation | New-AppLockerPolicy -RuleType Path -User Everyone -Optimize -XML
+C:\PS>Get-ChildItem C:\Windows\System32\*.exe | Get-AppLockerFileInformation | New-AppLockerPolicy -AllowWindows -RuleType Path -User Everyone -Optimize -XML
 <AppLockerPolicy Version="1"><RuleCollection Type="Exe" EnforcementMode="NotConfigured"><FilePathRule Id="31B2F340-016D 
 -11D2-945F-00C04FB984F9" Name="%SYSTEM32%\*" Description="" 10 UserOrGroupSid="S-1-5-21-3165297888-301567370-576410423- 
 13" Action="cAllow"><Conditions><FilePathCondition Path="%SYSTEM32%\*" /></Conditions></FilePathRule></RuleCollection> 
 </AppLockerPolicy>
 ```
 
-This example creates an XML-formatted AppLocker policy for all of the executable files in C:\Windows\System32.
-The policy contains only path rules, the rules are applied to the Everyone group, and the *Optimize* parameter indicates that similar rules are grouped together where possible.
+This example creates an XML-formatted AppLocker policy for all of the executable files in `C:\Windows\System32`.
+The policy contains only path rules.
+The rules are applied to the Everyone group.
+The *Optimize* parameter indicates that similar rules are grouped together where possible.
+The AppLocker policy trusts all local Windows components.
 
 ### Example 3: Create an AppLocker policy from audited events
 ```
@@ -85,7 +88,7 @@ The existing AppLocker policy in the specified GPO will be overwritten.
 ## PARAMETERS
 
 ### -AllowWindows
-{{ Fill AllowWindows Description }}
+Indicates that the AppLocker policy allows all local Windows components.
 
 ```yaml
 Type: SwitchParameter

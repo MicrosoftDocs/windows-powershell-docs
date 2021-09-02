@@ -61,6 +61,6 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 - [Get-MpPerformanceReport](Get-MpPerformanceReport.md#get-mpperformancereport)     
-- Performance Analyzer docs
+- [Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 

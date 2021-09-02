@@ -91,13 +91,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackupTarget, WBPolicy
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
+
+### Microsoft.Windows.ServerBackup.Commands.WBBackupTarget
+
 This cmdlet removes a **WBBackupTarget** object from a **WBPolicy** object that contains the backup policy.
 
 ## OUTPUTS
 
-### WBBackupTarget[]
-This cmdlet returns a list of **WBBackupTarget** objects left in the policy.
+### System.Object
 
 ## NOTES
 

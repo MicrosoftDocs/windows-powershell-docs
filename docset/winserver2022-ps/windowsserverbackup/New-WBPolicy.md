@@ -46,12 +46,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-None
 
 ## OUTPUTS
 
-### WBPolicy
-This cmdlet returns and generates an empty **WBPolicy** object in edit mode.
+### System.Object
 
 ## NOTES
 

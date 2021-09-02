@@ -312,7 +312,7 @@ Accept wildcard characters: False
 ```
 
 ### -LeasingMode
-Specifies SMB leasing and oplock behaviors
+Specifies SMB leasing and oplock behaviors.
 
 ```yaml
 Type: LeasingMode[]

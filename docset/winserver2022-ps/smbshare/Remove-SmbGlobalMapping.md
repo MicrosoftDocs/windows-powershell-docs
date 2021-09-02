@@ -11,7 +11,7 @@ title: Remove-SmbGlobalMapping
 # Remove-SmbGlobalMapping
 
 ## SYNOPSIS
-Removes an SMB global mapping to an SMB share.
+Removes a Server Message Block (SMB) global mapping to an SMB share.
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ Remove-SmbGlobalMapping -InputObject <CimInstance[]> [-Force] [-CimSession <CimS
 ```
 
 ## DESCRIPTION
-The Remove-SmbGlobalMapping cmdlet removes the Server Message Block (SMB)global mapping to an SMB share.
+The Remove-SmbGlobalMapping cmdlet removes the SMB global mapping to an SMB share.
 
 ## EXAMPLES
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [`New-CimSession`](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [`Get-CimSession`](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [`New-CimSession`](/powershell/module/cimcmdlets/new-cimsession) or [`Get-CimSession`](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalPath
-Specifies the local driver letter to which the remote path is mapped.
+Specifies the local drive letter to which the remote path is mapped.
 
 ```yaml
 Type: String[]
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

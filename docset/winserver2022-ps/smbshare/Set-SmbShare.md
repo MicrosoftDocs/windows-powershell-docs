@@ -272,9 +272,9 @@ Accept wildcard characters: False
 
 Specifies SMB leasing and oplock behaviors for application compatibility. The acceptable values for this parameter are: 
 
-- **Full** Use default lease and oplock behaviors from SMB3 
-- **Shared** Grant read-caching lease but not write or handle-caching 
-- **None** = No oplocks or leases, behave like SMB1 (not recommended)
+- **Full** Use default lease and oplock behaviors from SMB3.
+- **Shared** Grant read-caching lease but not write or handle-caching.
+- **None** = No oplocks or leases, behave like SMB1 (not recommended).
 
 > [!IMPORTANT]
 > We do not recommend disabling oplocks, but may be required in some scenarios. For more information, see [SMB1 Product Clearinghouse](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/SMB1-Product-Clearinghouse/ba-p/426008).

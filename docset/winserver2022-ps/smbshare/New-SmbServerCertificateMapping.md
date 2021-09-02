@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -89,9 +89,9 @@ Accept wildcard characters: False
 ### -Flags
 Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter are: 
 
-- `None` Remove all flags 
-- `AllowNamedPipe` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides value of RestrictNamedPipeAccessOverQuic) 
-- `DefaultCert` Not used 
+- `None` Remove all flags.
+- `AllowNamedPipe` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides the value of RestrictNamedPipeAccessOverQuic).
+- `DefaultCert` Not used. 
 
 ```yaml
 Type: Flags
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreName
-Specifies the path to the certificate store for the certificate. The recommended value is “My” for the localmachine personal store.
+Specifies the path to the certificate store for the certificate. The recommended value is “My” for the local machine personal store.
 
 ```yaml
 Type: String
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32

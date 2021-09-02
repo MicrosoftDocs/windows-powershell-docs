@@ -21,7 +21,7 @@ Remove-SmbComponent [-Name] <String[]> [-CimSession <CimSession[]>] [-ThrottleLi
 ```
 
 ## DESCRIPTION
-The Remove-SmbComponent cmdlet removes SMB1 components. SMB1 is a deprecated and unsafe protocol that’s no longer installed by default in most versions of Windows and Windows Server. For more information, review SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions.
+The Remove-SmbComponent cmdlet removes SMB1 components. SMB1 is a deprecated and unsafe protocol that’s no longer installed by default in most versions of Windows and Windows Server. For more information, review [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709, and later versions](windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows).
 
 ## EXAMPLES
 
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -69,10 +69,10 @@ Accept wildcard characters: False
 ### -Name
 Specifies the SMB1 component to remove. The acceptable values for this parameter are: 
 
-- `SMB1Protocol` Remove all SMB1 components 
-- `SMB1Protocol-Client` Remove the SMB1 client components 
-- `SMB1Protocol-Server` Remove the SMB1 server components
-- `SMB1Protocol-Deprecation` Remove the SMB1 automatic removal service component (only applies to Windows, not Windows Server) 
+- `SMB1Protocol` Remove all SMB1 components.
+- `SMB1Protocol-Client` Remove the SMB1 client components. 
+- `SMB1Protocol-Server` Remove the SMB1 server components.
+- `SMB1Protocol-Deprecation` Remove the SMB1 automatic removal service component (only applies to Windows, not Windows Server).
 
 ```yaml
 Type: String[]
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

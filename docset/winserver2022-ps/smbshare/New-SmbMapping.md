@@ -257,9 +257,9 @@ Accept wildcard characters: False
 ### -TransportType
 Specifies the network transport used by SMB. The acceptable values for this parameter are: 
 
-- **TCP** Use TCP network transport 
-- **QUIC** Use QUIC network transport 
-- **None** Use default transport behavior (first try TCP then try QUIC)
+- **TCP** Use TCP network transport.
+- **QUIC** Use QUIC network transport.
+- **None** Use default transport behavior (first try TCP then try QUIC).
 
 ```yaml
 Type: TransportType

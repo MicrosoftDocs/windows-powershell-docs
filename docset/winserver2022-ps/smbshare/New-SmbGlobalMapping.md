@@ -11,7 +11,7 @@ title: New-SmbGlobalMapping
 # New-SmbGlobalMapping
 
 ## SYNOPSIS
-Specifies SMB leasing and oplock behaviors
+Specifies Server Message Block (SMB) leasing and oplock behaviors.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ New-SmbGlobalMapping [[-LocalPath] <String>] [-RemotePath] <String> -Credential 
 ```
 
 ## DESCRIPTION
-The New-SmbGlobalMapping cmdlet creates a Server Message Block (SMB) global mapping on the SMB client to an SMB share. Global mappings allow all users to use the same mapping. Its primary use is for Windows Containers.
+The New-SmbGlobalMapping cmdlet creates an SMB global mapping on the SMB client to an SMB share. Global mappings allow all users to use the same mapping. Its primary use is for Windows Containers.
 
 ## EXAMPLES
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -DenyAccess
-Specifies which accounts are denied access to the SMB mapping. Multiple accounts can be specified by supplying a comma-separated list. For example: -NoAccess "NT AUTHORITY\SYSTEM", "contoso\ned"
+Specifies which accounts are denied access to the SMB mapping. Multiple accounts can be specified by supplying a comma-separated list. For example: -NoAccess "NT AUTHORITY\SYSTEM", "contoso\ned".
 
 ```yaml
 Type: String[]
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -FullAccess
-Specifies which accounts are granted full permission to access the SMB mapping. Use a comma-separated list to specify multiple accounts. For example: -FullAccess "NT AUTHORITY\SYSTEM", "contoso\ned"
+Specifies which accounts are granted full permission to access the SMB mapping. Use a comma-separated list to specify multiple accounts. For example: -FullAccess "NT AUTHORITY\SYSTEM", "contoso\ned".
 
 ```yaml
 Type: String[]
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

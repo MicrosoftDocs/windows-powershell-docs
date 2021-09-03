@@ -1,6 +1,6 @@
 ### YamlMime:PowershellCmdlet
 summary: |-
-  Analyzes and reports on MDAV performance recording
+  Analyzes and reports on Microsoft Defender Antivirus (MDAV) performance recording.
 module: Defender
 links:
 - text: New-MpPerformanceRecording
@@ -180,7 +180,7 @@ parameters:
 - type: <xref href="Int32" data-throw-if-not-resolved="False" />
   name: TopScansPerExtensionPerProcess
   description: |+
-    Specifies how many top scans for output for each top extension for each top process, sorted by "Duration”.
+    Specifies how many top scans to output for each top extension for each top process, sorted by "Duration”.
 
   defaultValue: None
   position: Named
@@ -189,7 +189,7 @@ parameters:
 - type: <xref href="Int32" data-throw-if-not-resolved="False" />
   name: TopScansPerFilePerExtension
   description: |+
-    Specifies how many top scans for output for each top file for each top extension, sorted by "Duration".
+    Specifies how many top scans to output for each top file for each top extension, sorted by "Duration".
 
   defaultValue: None
   position: Named
@@ -238,14 +238,14 @@ description: |-
 
   The performance analyzer provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided "AS IS" and is not intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
 
-  For more information on the Performance analyzer, see Performance Analyzer docs.
+  For more information on the performance analyzer, see Performance Analyzer docs.
 
   **Supported OS versions**
 
-  Windows Version 10 and higher.
+  Windows Version 10 and later.
 
   > [!NOTE]
-  > This feature is available starting with platform version 4.18.2108.X and higher.
+  > This feature is available starting with platform version 4.18.2108.X and later.
 metadata:
   description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
   external help file: MSFT_MpPerformanceReport.cdxml-help.xml

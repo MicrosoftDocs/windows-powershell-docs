@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressData
-{{ Fill CompressData Description }}
+Indicates that the shares being enumerated should request compression from clients.
 
 ```yaml
 Type: Boolean

@@ -16,7 +16,6 @@ Analyzes and reports on Microsoft Defender Antivirus (MDAV) performance recordin
 ## SYNTAX
 
 ### DefaultSet (Default)
-
 ```
 Get-MpPerformanceReport    [-Path] <String>
 [-TopScans <Int32>]

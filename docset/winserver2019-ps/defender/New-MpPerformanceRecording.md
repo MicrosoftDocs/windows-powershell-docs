@@ -12,6 +12,7 @@ Collects a performance recording of Microsoft Defender Antivirus (MDAV) scans.
 
 ## SYNTAX
 
+### DefaultSet (Default)
 ```
 New-MpPerformanceRecording [-RecordTo <String >]`
 ```

@@ -15,6 +15,8 @@ Analyzes and reports on Microsoft Defender Antivirus (MDAV) performance recordin
 
 ## SYNTAX
 
+### DefaultSet (Default)
+
 ```
 Get-MpPerformanceReport    [-Path] <String>
 [-TopScans <Int32>]
@@ -45,7 +47,6 @@ Get-MpPerformanceReport    [-Path] <String>
 ```
 
 ## DESCRIPTION
-
 The `Get-MpPerformanceReport` cmdlet analyzes a previously collected Microsoft Defender Antivirus performance recording ([New-MpPerformanceRecording](New-MpPerformanceRecording.md#new-mpperformancerecording)) and reports the file paths, file extensions, and processes that cause the highest impact to Microsoft Defender Antivirus scans.
 
 The performance analyzer provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided "AS IS" and is not intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.

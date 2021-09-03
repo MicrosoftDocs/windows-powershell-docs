@@ -1,0 +1,40 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the HTTP Accept Language from the Language List opt-out setting for the current user account.
+module: International
+notes: ""
+outputs:
+- name: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a Boolean value that reports the status of the **HTTP Accept Language from Language List opt-out** setting for the current user account.
+links:
+- text: Set-WinAcceptLanguageFromLanguageListOptOut
+  href: ./Set-WinAcceptLanguageFromLanguageListOptOut.yml
+- text: Get-WinUserLanguageList
+  href: ./Get-WinUserLanguageList.yml
+syntaxes:
+- Get-WinAcceptLanguageFromLanguageListOptOut [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the status of the setting'
+  code: |-
+    PS C:\> Get-WinAcceptLanguageFromLanguageListOptOut
+    TRUE
+  description: |-
+    This command returns the status of the **HTTP Accept Language from Language List opt-out** setting for the current user account.
+  summary: ""
+uid: International.Get-WinAcceptLanguageFromLanguageListOptOut
+name: Get-WinAcceptLanguageFromLanguageListOptOut
+description: |-
+  The **Get-WinAcceptLanguageFromLanguageListOptOut** cmdlet gets the **HTTP Accept Language from Language List opt-out** setting for the current user account.
+  By default, the **HTTP Accept Language List** is automatically generated from the language list of the current user account.
+
+  When set to $True, this setting deletes the current content of the **HTTP Accept Language** registry key and prevents changes to the language list from reestablishing the key.
+  When set to $False, this setting reestablishes the **HTTP Accept Language List** that is based on the language list for the current user account.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/international/get-winacceptlanguagefromlanguagelistoptout?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WinAcceptLanguageFromLanguageListOptOut

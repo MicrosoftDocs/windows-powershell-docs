@@ -1,0 +1,158 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures high availability for a service that was not originally designed to run in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterGenericApplicationRole
+  href: ./Add-ClusterGenericApplicationRole.yml
+- text: Add-ClusterGenericScriptRole
+  href: ./Add-ClusterGenericScriptRole.yml
+- text: Get-ClusterGroup
+  href: ./Get-ClusterGroup.yml
+- text: Move-ClusterGroup
+  href: ./Move-ClusterGroup.yml
+- text: Remove-ClusterGroup
+  href: ./Remove-ClusterGroup.yml
+- text: Start-ClusterGroup
+  href: ./Start-ClusterGroup.yml
+- text: Stop-ClusterGroup
+  href: ./Stop-ClusterGroup.yml
+syntaxes:
+- >-
+  Add-ClusterGenericServiceRole -ServiceName <String> [-CheckpointKey <StringCollection>]
+
+   [-Storage <StringCollection>] [-StaticAddress <StringCollection>] [-IgnoreNetwork <StringCollection>]
+
+   [[-Name] <String>] [-Wait <Int32>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure a service that uses default values'
+  code: |-
+    PS C:\> Add-ClusterGenericServiceRole -ServiceName "Service1"
+    Name                       OwnerNode                           State 
+    ----                       ---------                           ----- 
+    cluster1GenSvc             node1                              Online
+  description: |-
+    This example configures Service1 as a generic clustered service, using defaults for the name and IP address, and does not assign a disk.
+  summary: ""
+- title: 'Example 2: Configure a service that uses default values and a specified disk'
+  code: |-
+    PS C:\> Add-ClusterGenericServiceRole -ServiceName "Service1" -Storage "Cluster Disk 6"
+    Name                       OwnerNode                           State 
+    ----                       ---------                           ----- 
+    cluster1GenSvc             node1                              Online
+  description: |-
+    This example configures Service1 as a generic clustered service using Cluster Disk 6, and assigns defaults for the name and IP address.
+  summary: ""
+parameters:
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: CheckpointKey
+  description: |+
+    Specifies a comma-separated list of registry checkpoint keys to add for this highly available generic application.
+    All registry paths are relative to HKEY_LOCAL_MACHINE.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: IgnoreNetwork
+  description: |+
+    Specifies one or more networks to ignore when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the *StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to create the highly available service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the highly available service to create.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceName
+  isRequired: true
+  description: |+
+    Specifies the service name to use for the highly available service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: StaticAddress
+  description: |+
+    Specifies one or more static addresses to use when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the *StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Storage
+  description: |+
+    Specifies the cluster disk resource to be added to the created highly available service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterGenericServiceRole
+name: Add-ClusterGenericServiceRole
+description: |-
+  The **Add-ClusterGenericServiceRole** cmdlet configures high availability for a service that was not originally designed to run in a failover cluster.
+  The cluster software will start the service, then periodically query the Service Controller, which is a feature of the operating system, to determine whether the service appears to be running.
+  If so, then it is presumed to be online, and will not be restarted or failed over.
+
+  Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergenericservicerole?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusterGenericServiceRole

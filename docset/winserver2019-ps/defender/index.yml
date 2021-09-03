@@ -9,7 +9,6 @@ children:
   - Defender.Get-MpThreat
   - Defender.Get-MpThreatCatalog
   - Defender.Get-MpThreatDetection
-  - Defender.New-MpPerformanceRecording
   - Defender.Remove-MpPreference
   - Defender.Remove-MpThreat
   - Defender.Set-MpPreference

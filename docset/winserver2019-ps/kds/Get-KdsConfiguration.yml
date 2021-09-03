@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the current configuration of the Microsoft Group KdsSvc from Active Directory.
+module: KDS
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input objects.
+outputs:
+- name: <xref href="Microsoft.KeyDistributionService.KdsServerConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **KdsServerConfiguration** object contains information such as the key derivation function (KDF) algorithm and secret agreement algorithm used in key generation.
+links:
+- text: Add-KdsRootKey
+  href: ./Add-KdsRootKey.yml
+- text: Clear-KdsCache
+  href: ./Clear-KdsCache.yml
+- text: Get-KdsRootKey
+  href: ./Get-KdsRootKey.yml
+- text: Set-KdsConfiguration
+  href: ./Set-KdsConfiguration.yml
+- text: Test-KdsRootKey
+  href: ./Test-KdsRootKey.yml
+syntaxes:
+- Get-KdsConfiguration [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve the current KDS configuration'
+  code: |-
+    PS C:\> Get-KdsConfiguration
+  description: |-
+    This command retrieves the current configuration of the Microsoft Group KdsSvc from Active Directory.
+  summary: ""
+uid: KDS.Get-KdsConfiguration
+name: Get-KdsConfiguration
+description: |-
+  The **Get-KdsConfiguration** cmdlet retrieves the current configuration of the Microsoft Group Key Distribution Service (KdsSvc) from Active Directory.
+  The KDS configuration defines how keys are generated from the root keys.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
+  Module Name: KDS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/kds/get-kdsconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-KdsConfiguration

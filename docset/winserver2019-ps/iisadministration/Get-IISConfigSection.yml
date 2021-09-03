@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a configuration section object to work further with the IIS Configuration Store.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="string, string" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Web.Administration.ConfigurationSection, Microsoft.Web.Administration.ConfigurationSection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Get-IISServerManager
+  href: ./Get-IISServerManager.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Get-IISConfigSection [[-SectionPath] <String>] [[-CommitPath] <String>] [[-Location] <String>]
+
+   [[-Clr] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a configuration section object for a section path'
+  code: |-
+    PS C:\> $ConfigSection = Get-IISConfigSection -SectionPath "system.applicationHost/sites"
+  description: |-
+    This command gets the configuration section object for the system.applicationHost/sites section.
+  summary: ""
+- title: 'Example 2: Get process state information for an IIS website'
+  code: |-
+    PS C:\> $ConfigSection = Get-IISConfigSection -SectionPath "system.applicationHost/sites"
+    Get-IISConfigCollection $configSection | Get-IISConfigCollectionElement -ConfigAttribute @{"Name"="Default Web Site"} | Get-IISConfigAttributeValue -AttributeName "State"
+  description: |-
+    This command gets runtime state information for the Default Web Site.
+  summary: ""
+- title: 'Example 3: Add a new default document at the global configuration level'
+  code: |-
+    PS C:\> Get-IISConfigSection -SectionPath "system.webServer/defaultDocument" | Get-IISConfigCollection -CollectionName "files" | New-IISConfigCollectionElement  -ConfigAttribute @{"Value" = "MyDefDoc.htm"}
+  description: |-
+    This command adds filename MyDefDoc.htm to the \<files\> collection of the \<defaultDocument\> section of the applicationHost.config file.
+  summary: ""
+- title: 'Example 4: Create an application pool'
+  code: |-
+    PS C:\> Start-IISCommitDelay
+    PS C:\> $ConfigSectionCollection = Get-IISConfigSection -SectionPath "system.applicationHost/applicationPools" | Get-IISConfigCollection
+    PS C:\> New-IISConfigCollectionElement -ConfigCollection $configSectionCollection -ConfigAttribute @{"name"="MyNewSiteAppPool"; "autoStart"=$true; "managedPipelineMode"="Integrated" }
+    PS C:\> Stop-IISCommitDelay
+  description: |-
+    This command creates an application pool and stores the result in variable $ConfigSectionCollection.
+  summary: ""
+- title: 'Example 5: Create a collection element and specify the CLR version'
+  code: |-
+    PS C:\> $collection = Get-IISConfigSection -SectionPath "appSettings" -Clr 2.0
+  description: |-
+    This command creates a new collection element using the *SectionPath* "appSettings"; that element is stored in a variable named $collection.
+    In addition, the *Clr* parameter is used to set the Common Language Runtime to version 2.0.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Clr
+  description: |+
+    Specifies the version of the root level .NET Framework Common Language Runtime (CLR) that IIS points to.
+    If this parameter is omitted then the default CLR version is used.
+    Note, however, that if the *CommitPath* parameter is included in the command the *Clr* parameter will be ignored and the runtime version of the corresponding application pool will be used instead.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CommitPath
+  description: |+
+    Specifies the path where the configuration will be retrieved from.
+    If CommitPath is omitted, applicationHost.config or root .NET configuration (root web.config) will be used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    Specifies the name of the IIS configuration location for which a configuration object is returned.
+    This corresponds to the \<location\> tag in configuration files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SectionPath
+  description: |+
+    Specifies the name of the IIS configuration section for which a configuration object is returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Get-IISConfigSection
+name: Get-IISConfigSection
+description: |-
+  The **Get-IISConfigSection** cmdlet gets a configuration section (Microsoft.Web.Administration.ConfigurationSection) object to work further with the Internet Information Services (IIS) Configuration Store.
+  It is generally the first cmdlet to use if configuration is to be read or updated.
+  The output of this cmdlet can be passed to other cmdlets in the pipeline where ConfigurationElement objects are expected, since ConfigurationSection inherits from ConfigurationElement.
+
+  If the *SectionPath* parameter is not used, the cmdlet lists all the available sections.
+  The sections that can be used are either defined in the applicationHost.config (IIS Configuration) or root web.config (.NET Framework).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/get-iisconfigsection?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-IISConfigSection

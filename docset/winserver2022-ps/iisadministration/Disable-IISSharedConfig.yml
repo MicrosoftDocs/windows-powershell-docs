@@ -3,6 +3,12 @@ summary: |-
   Disables IIS shared configuration.
 module: IISAdministration
 notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
 links:
 - text: Enable-IISSharedConfig
   href: ./Enable-IISSharedConfig.yml

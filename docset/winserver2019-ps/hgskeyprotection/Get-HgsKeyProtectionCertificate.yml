@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets key certificates in the Key Protection Service.
+module: HgsKeyProtection
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="Microsoft.Windows.KpsServer.Common.Store.Data.KeyCertificate" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a key certificate.
+    The object contains the following fields: 
+
+    - **Thumbprint**.
+    The thumbprint of the certificate. 
+    - **CertificateType**.
+    The type of the certificate.
+    Valid values are: Encryption and Signing. 
+    - **Enabled**.
+    Whether the certificate is enabled. 
+    - **Primary**.
+    Whether this certificate is the primary certificate. 
+    - **Certificate**.
+    The full **X509Certificate2** object associated with this key certificate.
+links:
+- text: Add-HgsKeyProtectionCertificate
+  href: ./Add-HgsKeyProtectionCertificate.yml
+- text: Remove-HgsKeyProtectionCertificate
+  href: ./Remove-HgsKeyProtectionCertificate.yml
+- text: Set-HgsKeyProtectionCertificate
+  href: ./Set-HgsKeyProtectionCertificate.yml
+syntaxes:
+- >-
+  Get-HgsKeyProtectionCertificate [-CertificateType <KeyCertificateType>] [-IsEnabled <Boolean>]
+
+   [-IsPrimary <Boolean>] [<CommonParameters>]
+- Get-HgsKeyProtectionCertificate -CertificateType <KeyCertificateType> -Thumbprint <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all key certificates'
+  code: |-
+    PS C:\> Get-HgsKeyProtectionCertificate
+  description: |-
+    This command gets all key certificates from the Key Protection Service.
+  summary: ""
+- title: 'Example 2: Get a specific key certificate'
+  code: |-
+    PS C:\> Get-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "a17dd68f4ecc499bbe65ee18718123da"
+  description: |-
+    This command gets a key certificate that has the specified type and thumbprint.
+  summary: ""
+- title: 'Example 3: Get enabled non-primary key certificates'
+  code: |-
+    PS C:\> Get-HgsKeyProtectionCertificate -IsEnabled $True -IsPrimary $False
+  description: |-
+    This command gets all key certificates that are enabled but not primary.
+  summary: ""
+parameters:
+- type: <xref href="KeyCertificateType" data-throw-if-not-resolved="False" />
+  name: CertificateType
+  isRequired: true
+  description: |+
+    Specifies of the type of the certificate that this cmdlet gets.
+    The acceptable values for this parameter are:The acceptable values for this parameter are:
+
+    - Signing
+    - Encryption
+
+    If you do not specify this parameter, the cmdlet gets both signing and encryption certificates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Signing, Encryption, Signing, Encryption
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsEnabled
+  description: |+
+    Specifies whether to get enabled or disabled key certificates.
+    Specify a value of $True to get only enabled certificates.
+    Specify a value of $False to get only disabled certificates.
+    If you do not specify this parameter, the cmdlet gets both enabled and disabled certificates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsPrimary
+  description: |+
+    Specifies whether to get the primary key certificate.
+    Specify a value of $True to get only the primary certificate.
+    Specify a value of $False to get only certificates that are not primary.
+    If you do not specify this parameter, the cmdlet gets both primary and not primary certificates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  isRequired: true
+  description: |+
+    Specifies the thumbprint of the certificate to get.
+    If you specify this parameter, you must also specify the **CertificateType** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HgsKeyProtection.Get-HgsKeyProtectionCertificate
+name: Get-HgsKeyProtectionCertificate
+description: |-
+  The **Get-HgsKeyProtectionCertificate** cmdlet gets key certificates in the Key Protection Service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/get-hgskeyprotectioncertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-HgsKeyProtectionCertificate

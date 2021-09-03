@@ -1,0 +1,171 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the Host Guardian Service server configuration.
+module: HgsServer
+notes: ""
+links:
+- text: HGS Server Cmdlets
+  href: ./index.yml
+syntaxes:
+- >-
+  Set-HgsServer [-Http] [-Https] [-HttpPort <UInt16>] [-HttpsPort <UInt16>]
+
+   [-HttpsCertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-HgsServer [-Http] [-Https] [-HttpPort <UInt16>] [-HttpsPort <UInt16>] [-HttpsCertificatePath <String>]
+
+   [-HttpsCertificatePassword <SecureString>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Set-HgsServer [-Http] [-HttpPort <UInt16>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-HgsServer [-Https] [-HttpPort <UInt16>] [-HttpsPort <UInt16>] [-HttpsCertificateThumbprint <String>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-HgsServer [-Https] [-HttpsPort <UInt16>] [-HttpsCertificatePath <String>]
+
+   [-HttpsCertificatePassword <SecureString>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Set-HgsServer [-TrustActiveDirectory] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Set-HgsServer [-TrustTpm] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Set-HgsServer [-UpdateMemoryLimit] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure the HGS server to be accessible over HTTP'
+  code: |-
+    PS C:\> Set-HgsServer -Http -HttpPort 81
+  description: |-
+    This command configures the HGS server to be exposed over HTTP on port 81.
+  summary: ""
+- title: 'Example 2: Configure the HGS server to be accessible over HTTP and HTTPS'
+  code: |-
+    PS C:\> Set-HgsServer -Http -Https -HttpsCertificatePath $PathToPfx -HttpsCertificatePassword $PfxSecureString
+  description: |-
+    This command configures the HGS server to be exposed over both HTTP and HTTPS on the default ports.
+    HTTPS communication is secured with the certificate specified by $PathToPfx.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Http
+  isRequired: true
+  description: |+
+    Indicates that the HGS Server is accessible over HTTP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: HttpPort
+  description: |+
+    Specifies the HTTP port.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Https
+  isRequired: true
+  description: |+
+    Indicates that the HGS Server is accessible over HTTPS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: HttpsCertificatePassword
+  description: |+
+    Specifies the password to the certificate file specified in **HttpsCertificatePath**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HttpsCertificatePath
+  description: |+
+    Specifies the path to the HTTPS certificate file (.pfx).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HttpsCertificateThumbprint
+  description: |+
+    Indicates the thumbprint of the HTTPS certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: HttpsPort
+  description: |+
+    Specifies the HTTPS port of the HGS server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TrustActiveDirectory
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet sets the Attestation service operation mode to Active Directory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TrustTpm
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet sets the Attestation service operation mode to trusted platform module (TPM).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UpdateMemoryLimit
+  isRequired: true
+  description: |+
+    Indicates that the application pool memory limit for the attestation service should be updated to reflect the current amount of physical memory in the system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsServer.Set-HgsServer
+name: Set-HgsServer
+description: |-
+  The **Set-HgsServer** cmdlet sets the Host Guardian Service (HGS) server configuration.
+  The configuration properties changed include the communication protocol, the network ports, and the HTTPS certificate for the Attestation and Key Protection services.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: HgsServer-help.xml
+  Module Name: HgsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-HgsServer

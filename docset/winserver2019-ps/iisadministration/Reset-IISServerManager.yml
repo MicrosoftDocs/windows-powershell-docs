@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the IISAdministration view of the IIS ServerManager.
+module: IISAdministration
+notes: ""
+links:
+- text: Get-IISServerManager
+  href: ./Get-IISServerManager.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- Reset-IISServerManager [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Reset the IISServerManager view of the configuration'
+  code: |-
+    PS C:\> $Sites = (Get-IISServerManager).Sites
+    PS C:\> $Sites["default web site"].Attributes["serverAutoStart"]
+
+
+    IsInheritedFromDefaultValue : True
+    IsProtected                 : False
+    Name                        : serverAutoStart
+    Schema                      : Microsoft.Web.Administration.ConfigurationAttributeSchema
+    Value                       : True
+
+
+    PS C:\> $Sites["default web site"].Attributes["serverAutoStart"].value = $false
+    PS C:\> $Sites["default web site"].Attributes["serverAutoStart"]
+
+
+    IsInheritedFromDefaultValue : False
+    IsProtected                 : False
+    Name                        : serverAutoStart
+    Schema                      : Microsoft.Web.Administration.ConfigurationAttributeSchema
+    Value                       : False
+
+
+    PS C:\> Reset-IISServerManager
+
+    Confirm
+    Are you sure you want to perform this action?
+    Performing the operation "Reset-IISServerManager" on target "ServerManager".
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y
+    PS C:\> $Sites = (Get-IISServerManager).Sites
+    PS C:\> $Sites["default web site"].Attributes["serverAutoStart"]
+
+
+    IsInheritedFromDefaultValue : True
+    IsProtected                 : False
+    Name                        : serverAutoStart
+    Schema                      : Microsoft.Web.Administration.ConfigurationAttributeSchema
+    Value                       : True
+  description: |-
+    This command resets the IISServerManager view of the .config file after changes are made, and then demonstrates that the changed value is restored.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: IISAdministration.Reset-IISServerManager
+name: Reset-IISServerManager
+description: |-
+  The **Reset-IISServerManager** cmdlet resets the IISAdministration view of the IIS ServerManager object and the view of .config file applicationHost.config to the current contents of the .config file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/reset-iisservermanager?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Reset-IISServerManager

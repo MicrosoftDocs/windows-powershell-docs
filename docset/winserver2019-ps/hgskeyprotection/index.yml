@@ -1,0 +1,27 @@
+### YamlMime:PowershellModule
+children:
+- title: HgsKeyProtection
+  cmdlets:
+  - HgsKeyProtection.Add-HgsKeyProtectionAttestationSignerCertificate
+  - HgsKeyProtection.Add-HgsKeyProtectionCertificate
+  - HgsKeyProtection.Export-HgsKeyProtectionState
+  - HgsKeyProtection.Get-HgsKeyProtectionAttestationSignerCertificate
+  - HgsKeyProtection.Get-HgsKeyProtectionCertificate
+  - HgsKeyProtection.Get-HgsKeyProtectionConfiguration
+  - HgsKeyProtection.Import-HgsKeyProtectionState
+  - HgsKeyProtection.Remove-HgsKeyProtectionAttestationSignerCertificate
+  - HgsKeyProtection.Remove-HgsKeyProtectionCertificate
+  - HgsKeyProtection.Set-HgsKeyProtectionAttestationSignerCertificatePolicy
+  - HgsKeyProtection.Set-HgsKeyProtectionCertificate
+  - HgsKeyProtection.Set-HgsKeyProtectionConfiguration
+uid: HgsKeyProtection
+name: HgsKeyProtection
+description: |-
+  This reference provides cmdlet descriptions and syntax for the Key Protection Service cmdlets. This table lists the cmdlets in alphabetical order.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 651ce3cf-ba16-4933-b656-7cd7bd64c3a8
+  Module Name: HgsKeyProtection
+  title: HgsKeyProtection

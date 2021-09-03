@@ -1,0 +1,212 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes configuration settings for FSRM quota templates.
+module: FileServerResourceManager
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMQuotaTemplate" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-FsrmQuotaTemplate
+  href: ./Get-FsrmQuotaTemplate.yml
+- text: New-FsrmQuotaTemplate
+  href: ./New-FsrmQuotaTemplate.yml
+- text: New-FsrmQuotaThreshold
+  href: ./New-FsrmQuotaThreshold.yml
+- text: Remove-FsrmQuotaTemplate
+  href: ./Remove-FsrmQuotaTemplate.yml
+syntaxes:
+- >-
+  Set-FsrmQuotaTemplate [-Name] <String[]> [-Description <String>] [-Size <UInt64>] [-SoftLimit] [-UpdateDerived]
+
+   [-UpdateDerivedMatching] [-Threshold <CimInstance[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-FsrmQuotaTemplate -InputObject <CimInstance[]> [-Description <String>] [-Size <UInt64>] [-SoftLimit]
+
+   [-UpdateDerived] [-UpdateDerivedMatching] [-Threshold <CimInstance[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the size limit of a quota template'
+  code: |-
+    PS C:\> Set-FsrmQuotaTemplate -Name "1GB limit" -Description "limit usage to 1.5 GB." -Size 1.5GB
+  description: |-
+    This command changes the quota template named "1GB limit" to have a 1.5GB limit, and adds a description to the quota template.
+  summary: ""
+- title: 'Example 2: Change the size limit of all quotas that are derived from a quota template'
+  code: |-
+    PS C:\> Set-FsrmQuotaTemplate "1GB limit" -Description "limit usage to 1.5 GB." -Size 1.5GB -UpdateDerived
+  description: |-
+    This command changes the quota template named "1GB limit" to have a 1.5GB limit.
+    The *UpdateDerived* parameter indicates that this command updates all quotas on the server that are derived from the quota template to have a 1.5GB limit.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the quota.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names of quota templates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: Size
+  description: |+
+    Specifies the size limit that the quota enforces.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SoftLimit
+  description: |+
+    Indicates that the quota reports on the disk usage with respect to the size limit and run thresholds, but does not enforce the size limit.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Threshold
+  description: |+
+    Specifies an array of threshold objects.
+
+    The threshold object defines a percentage of used space from the available space that can be reached during a file operation, and a set of actions that the server takes when a quota reaches the threshold.
+    To perform the action when the quota is exceeded, set the threshold to 100 (percent).
+    You can use the **New-FsrmQuotaThreshold** cmdlet to create a threshold object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UpdateDerived
+  description: |+
+    Indicates that the server modifies all quotas that are derived from the quota template.
+    If you specify this parameter, you cannot specify the *UpdateDerivedMatching* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UpdateDerivedMatching
+  description: |+
+    Indicates that the server updates only the quotas that are derived from the quota template that you have not modified since you created the quotas.
+    Specify this parameter if you have quotas that have been modified since they were automatically generated, and you do not want to change them.
+
+    If you specify this parameter, you cannot specify the *UpdateDerived* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FileServerResourceManager.Set-FsrmQuotaTemplate
+name: Set-FsrmQuotaTemplate
+description: |-
+  The **Set-FsrmQuotaTemplate** cmdlet changes configuration settings for one or more File Server Resource Manager (FSRM) quota templates.
+
+  When you make changes to a quota template, you have the option of extending those changes to existing quotas that are derived from the quota template.
+  You can specify the *UpdateDerivedMatching* parameter to modify only those quotas that still match the original quota template, or you can specify the *UpdateDerived* parameter to modify all quotas that are derived from the quota template, regardless of any modifications that you made to the quotas since you created them.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: FsrmQuotaTemplate.cdxml-help.xml
+  Module Name: FileServerResourceManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/set-fsrmquotatemplate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-FsrmQuotaTemplate

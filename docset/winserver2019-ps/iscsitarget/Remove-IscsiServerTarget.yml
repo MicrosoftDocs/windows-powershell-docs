@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes the specified iSCSI target.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiServerTarget" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: ForEach-Object
+  href: https://go.microsoft.com/fwlink/p/?Linkd=113300
+- text: Get-IscsiServerTarget
+  href: ./Get-IscsiServerTarget.yml
+- text: New-IscsiServerTarget
+  href: ./New-IscsiServerTarget.yml
+- text: Set-IscsiServerTarget
+  href: ./Set-IscsiServerTarget.yml
+syntaxes:
+- >-
+  Remove-IscsiServerTarget [-TargetName] <String> [-ComputerName <String>] [-Credential <PSCredential>]
+
+   [<CommonParameters>]
+- >-
+  Remove-IscsiServerTarget -InputObject <IscsiServerTarget> [-ComputerName <String>] [-Credential <PSCredential>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a target'
+  code: |-
+    PS C:\> Remove-IscsiServerTarget -Targetname "TargetOne"
+  description: |-
+    This example deletes the target named TargetOne on the local server.
+  summary: ""
+- title: 'Example 2: Remove all targets on a server'
+  code: |-
+    PS C:\> $all = Get-IscsiServerTarget
+    PS C:\> ForEach-Object -InputObject ($each in $all) -Process {Remove-IscsiServerTarget -InputObject $each}
+  description: |-
+    The example deletes all of the targets on the local server.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IscsiServerTarget" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an iSCSI Target object from the input pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the iSCSI target.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Remove-IscsiServerTarget
+name: Remove-IscsiServerTarget
+description: |-
+  The **Remove-IscsiServerTarget** cmdlet deletes an iSCSI Target object.
+  An iSCSI initiator cannot access the virtual disk after the target is deleted.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/remove-iscsiservertarget?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-IscsiServerTarget

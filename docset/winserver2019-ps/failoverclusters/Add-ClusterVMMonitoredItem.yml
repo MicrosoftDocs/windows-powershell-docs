@@ -1,0 +1,182 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures monitoring for a service or an Event Tracing for Windows (ETW) event so that it is monitored on a virtual machine.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterVMMonitoredItem" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterVMMonitoredItem
+  href: ./Get-ClusterVMMonitoredItem.yml
+- text: Remove-ClusterVMMonitoredItem
+  href: ./Remove-ClusterVMMonitoredItem.yml
+- text: Reset-ClusterVMMonitoredState
+  href: ./Reset-ClusterVMMonitoredState.yml
+syntaxes:
+- >-
+  Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>] [-EventSource <String>]
+
+   [-EventId <Int32>] [-OverrideServiceRecoveryActions] [[-VirtualMachine] <String>] [-Wait <Int32>]
+
+   [-Cluster <String>] [<CommonParameters>]
+- >-
+  Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>] [-EventSource <String>]
+
+   [-EventId <Int32>] [-OverrideServiceRecoveryActions] [-VMId <Guid>] [-Wait <Int32>] [-Cluster <String>]
+
+   [<CommonParameters>]
+- >-
+  Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>] [-EventSource <String>]
+
+   [-EventId <Int32>] [-OverrideServiceRecoveryActions] [-Wait <Int32>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -EventLog "Microsoft-Windows-FailoverClustering-Manager/Admin" -EventSource "Microsoft-Windows-FailoverClustering-Manager" -EventId 4708
+    Name 
+    ---- 
+    Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708
+  description: |-
+    This example adds monitoring for the ETW event ID 4708.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -Service spooler
+    Name 
+    ---- 
+    Spooler
+  description: |-
+    This example configures monitoring for the print spooler service.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: EventId
+  description: |+
+    Specifies the event identifier (ID) of the event to be monitored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EventLog
+  description: |+
+    Specifies the event log of the event to be monitored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EventSource
+  description: |+
+    Specifies the event source of the event to be monitored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to run the cmdlet, the clustered virtual machine on which to configure monitoring, and the cluster virtual machine monitored item object to monitor.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverrideServiceRecoveryActions
+  description: |+
+    Specifies that the cluster service will fix, by overriding, the service recovery actions in the event that it is not properly configured for monitoring.
+    To be configured for monitoring the following conditions need to be met: 
+
+    - None of the service recovery actions are set to Restart the computer. 
+
+    AND 
+
+    - At least one of the service recovery actions are set to Take no action.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Service
+  description: |+
+    Specifies the name of a service to be monitored.
+    This must be the short name, not the long name, of the service.
+    For example, specify clussvc instead of Failover Cluster service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualMachine
+  description: |+
+    Specifies the name of the clustered virtual machine on which to perform monitoring.
+    When this parameter is specified, the cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
+
+  defaultValue: None
+  position: "0"
+  aliases: VM
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VMId
+  description: |+
+    Specifies the virtual machine identifier (ID).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterVMMonitoredItem
+name: Add-ClusterVMMonitoredItem
+description: |-
+  The **Add-ClusterVMMonitoredItem** cmdlet configures monitoring for a service or an Event Tracing for Windows (ETW) event so that it is monitored on a virtual machine.
+  If the service fails or the event occurs, then the system responds by taking an action based on the failover configuration for the virtual machine resource.
+  For example, the configuration might specify that the virtual machine be restarted.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustervmmonitoreditem?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusterVMMonitoredItem

@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Finds one or more free IP subnets in a specified IP block.
+module: IpamServer
+notes: ""
+links:
+- text: Find-IpamFreeAddress
+  href: ./Find-IpamFreeAddress.yml
+- text: Find-IpamFreeRange
+  href: ./Find-IpamFreeRange.yml
+syntaxes:
+- >-
+  Find-IpamFreeSubnet [-InputObject] <CimInstance> [-SubnetPrefix] <UInt32> [[-NumberOfSubnets] <UInt32>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Find free subnets with a specified subnet prefix'
+  code: |-
+    PS C:\> $IPAMBlock= Get-IpamBlock -NetworkId 10.1.0.0/16 -StartIPAddress 10.1.0.0 -EndIPAddress 10.1.255.255
+    PS C:\> Find-IpamFreeSubnet -InputObject $IPAMBlock -SubnetPrefix 24
+  description: |-
+    This first command gets all IP addresses from network ID 10.1.0.0/16 with a specific range of IP addresses and stores the result in the variable named $IPAMBlock.
+    The second command then finds all the free subnets that have a subnet prefix of 24 that is contained in the variable named $IPAMBlock.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NumberOfSubnets
+  description: |+
+    Specifies the number of free subnets to be returned.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SubnetPrefix
+  isRequired: true
+  description: |+
+    Specifies the prefix for the subnet to be returned.
+    The prefix is an integer value indicating the number of bits set in a subnet mask.
+
+    The subnet prefix tells you the number of IP addresses available on that subnet.
+    For instance, a subnet with a prefix value of 24 has 256 IP addresses.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IpamServer.Find-IpamFreeSubnet
+name: Find-IpamFreeSubnet
+description: |-
+  The **Find-IpamFreeSubnet** cmdlet finds available free subnets in the IP Address Management (IPAM) database in a specified IP block.
+  The IP block within which free IP subnet is to be searched is passed in InputObject parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamSubnet.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/find-ipamfreesubnet?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Find-IpamFreeSubnet

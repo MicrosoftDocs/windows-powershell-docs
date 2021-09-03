@@ -1,0 +1,165 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes IPv6 reservations from the specified scope.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Reservation" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Reservation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Add-DhcpServerv6Reservation
+  href: ./Add-DhcpServerv6Reservation.yml
+- text: Get-DhcpServerv6Reservation
+  href: ./Get-DhcpServerv6Reservation.yml
+- text: Get-DhcpServerv6Scope
+  href: ./Get-DhcpServerv6Scope.yml
+- text: Set-DhcpServerv6Reservation
+  href: ./Set-DhcpServerv6Reservation.yml
+syntaxes:
+- >-
+  Remove-DhcpServerv6Reservation [-ComputerName <String>] -IPAddress <IPAddress[]> [-PassThru]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-DhcpServerv6Reservation [-ComputerName <String>] [-PassThru] [-Prefix] <IPAddress>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Delete a reservation'
+  code: |-
+    PS C:\> Remove-DhcpServerv6Reservation -ComputerName "dhcpserver.contoso.com" -IPAddress 2001:4898:7020:1020::1,2001:4898:7020:1020::2
+  description: |-
+    This example deletes the reservation for the specified IPv6 addresses.
+  summary: ""
+- title: 'Example 2: Delete all reservations for a scope'
+  code: |-
+    PS C:\> Remove-DhcpServerv6Reservation -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020::
+  description: |-
+    This example deletes all of the reservations from the specified IPv6 scope.
+  summary: ""
+- title: 'Example 3: Delete all reservations for all scopes'
+  code: |-
+    PS C:\> Get-DhcpServerv6Scope -ComputerName "dhcpserver.contoso.com" | Remove-DhcpServerv6Reservation -ComputerName "dhcpserver.contoso.com"
+  description: |-
+    This example deletes all of the reserved IP addresses from all of the DHCPv6 scopes on the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+    The **Get-DhcpServerv6Scope** cmdlet returns all of the scope objects and pipes the objects into this cmdlet, which deletes the reservations from each of the scopes passed through the pipeline.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the Dynamic Host Configuration Protocol (DHCP) server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn, ReservationServer
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPAddress
+  isRequired: true
+  description: |+
+    Specifies one or more IPv6 addresses of the reservations that are deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ReservedIP
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: Prefix
+  isRequired: true
+  description: |+
+    Specifies the IPv6 subnet prefix of the scope from which one or more reservations are deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ReservationScopeID
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Remove-DhcpServerv6Reservation
+name: Remove-DhcpServerv6Reservation
+description: |-
+  The **Remove-DhcpServerv6Reservation** cmdlet deletes one or more IPv6 reservations from the specified scope.
+  If you specify the *Prefix* parameter, all of the reservations from the scope are removed.
+  If you specify the *IPAddress* parameter, one or more specified reservations are removed.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerV6Reservation_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/remove-dhcpserverv6reservation?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-DhcpServerv6Reservation

@@ -4,10 +4,14 @@ summary: |-
 module: IISAdministration
 notes: ""
 inputs:
-- name: <xref href="Microsoft.Web.Administration.ConfigurationElementCollection, System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElementCollection" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
   description: ""
 outputs:
-- name: <xref href="Microsoft.Web.Administration.Configuration" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
   description: ""
 links:
 - text: Get-IISConfigCollectionElement

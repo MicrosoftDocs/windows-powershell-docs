@@ -3,6 +3,14 @@ summary: |-
   Exports the IIS configuration and machine keys.
 module: IISAdministration
 notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
 syntaxes:
 - >-
   Export-IISConfiguration [-PhysicalPath] <String> [[-UserName] <String>] [[-Password] <SecureString>]

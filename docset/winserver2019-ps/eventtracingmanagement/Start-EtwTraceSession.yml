@@ -1,0 +1,240 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts an ETW session with the specified name and settings.
+module: EventTracingManagement
+notes: ""
+links:
+- text: Get-EtwTraceSession
+  href: ./Get-EtwTraceSession.yml
+- text: New-EtwTraceSession
+  href: ./New-EtwTraceSession.yml
+- text: Save-EtwTraceSession
+  href: ./Save-EtwTraceSession.yml
+- text: Send-EtwTraceSession
+  href: ./Send-EtwTraceSession.yml
+- text: Stop-EtwTraceSession
+  href: ./Stop-EtwTraceSession.yml
+- text: Update-EtwTraceSession
+  href: ./Update-EtwTraceSession.yml
+syntaxes:
+- >-
+  Start-EtwTraceSession [-Name] <String> [-LogFileMode <UInt32>] [-LocalFilePath <String>]
+
+   [-MaximumFileSize <UInt32>] [-BufferSize <UInt32>] [-MinimumBuffers <UInt32>] [-MaximumBuffers <UInt32>]
+
+   [-FlushTimer <UInt32>] [-ClockType <String>] [-FileMode <String>] [-Compress] [-RealTime] [-NonPaged]
+
+   [-CimSession <CimSession>] [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: BufferSize
+  description: |+
+    Specifies the Event Tracing for Windows (ETW) session buffer size, in kilobytes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClockType
+  description: |+
+    Specifies the type of timestamp that will be used for each event logged to this ETW session.
+
+    This is an advanced session configuration option, and it is not recommended that this parameter be set.
+
+    For more information, see the description of the **ClientContext** field in the topic [WNODE_HEADER structure](https://msdn.microsoft.com/en-us/library/windows/desktop/aa364160.aspx) for a description of the different clock types available.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Performance, System, Cycle
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Compress
+  description: |+
+    Controls whether ETW should compress the saved buffers as they are filled.
+    Enabling this parameter sets the **EVENT_TRACE_COMPRESSED_MODE** bit in the *LogFileMode* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileMode
+  description: |+
+    Specifies how events received by the session should be saved.
+    *FileMode* provides named values for common logging mode constants, and setting it will affect the value of *LogFileMode* that is passed to ETW when the session is created.
+
+    If you specify this parameter do not specify any file or buffering mode bits in the *LogFileMode* parameter.
+
+    For more information about available modes, see [Logging Mode Constants](https://msdn.microsoft.com/en-us/library/windows/desktop/aa364080.aspx) in MSDN.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: File, Buffering, Sequential, Circular
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: FlushTimer
+  description: |+
+    When set, all active buffers in the session will be flushed at this interval, in seconds.
+
+    This is an advanced session configuration option, and it is not recommended that this parameter be set.
+
+    If it is not set, the ETW will select an appropriate default based on the *LogFileMode*.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalFilePath
+  description: |+
+    Specifies the full path to the file the ETW session should write to.
+    For non-buffering mode sessions only.
+
+    When creating a new-file file mode session, the file path must contain a %d in the file name.
+
+    Do not use this parameter if the session is configured as a buffering mode session.
+    Use **Save-EtwTraceSession** to save a buffering mode session to disk instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LogFileMode
+  description: |+
+    Specifies the ETW session logging mode.
+    The value is a bitmask of the ETW logging mode constants.
+
+    For more information, see [Logging Mode Constants](https://msdn.microsoft.com/en-us/library/windows/desktop/aa364080.aspx) in MSDN.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaximumBuffers
+  description: |+
+    Specifies the maximum number of buffers the ETW session should use.
+
+    The ETW session will use a maximum of (*BufferSize* * *MaximumBuffers*) kilobytes of memory.
+    Depending on the specified *LogFileMode*, this may be pageable or non-paged memory.
+
+    If the session is losing events because the buffers cannot be flushed quick enough to keep up with the incoming event rate, try increasing this value.
+
+    Configuring a session to use too many buffers may affect system performance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaximumFileSize
+  description: |+
+    Specifies the maximum file size for the output .etl file to grow to, in megabytes.
+
+    The parameter must be set for a circular, new-file, or sequential file mode ETW session.
+
+    For circular sessions, once the file reaches this size the oldest buffers will be overwritten by the new buffers.
+
+    For new-file sessions, once the file reaches this size a new file will be created and all new events will be written to that file.
+
+    For sequential file sessions, once the file reaches this size the session will stop.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MinimumBuffers
+  description: |+
+    Specifies the minimum number of buffers the ETW session should use.
+
+    The ETW session will use a minimum of (*BufferSize* * *MinimumBuffers*) kilobytes of memory.
+    Depending on the specified *LogFileMode*, this may be pageable or non-paged memory.
+
+    If the session is losing events because the buffers cannot be flushed quick enough to keep up with the incoming event rate, try increasing this value.
+
+    Configuring a session to use too many buffers may affect system performance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the ETW trace session.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NonPaged
+  description: |+
+    Controls whether ETW should use memory from the non-paged pool for the session buffers.
+    Enabling this parameter clears the **EVENT_TRACE_USE_PAGED_MEMORY** bit in the *LogFileMode* parameter.
+
+    Using memory from the non-paged pool for the session buffers is only required if any of the events that will be sent to the session are logged from the kernel or a driver at high a dispatch level.
+    This parameter should not be set otherwise.
+
+    Allocating too much memory from the non-paged pool can seriously degrade system performance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RealTime
+  description: |+
+    Controls whether ETW should allow real-time consumers to connect to the session.
+    Enabling this parameter sets the **EVENT_TRACE_REAL_TIME_MODE** bit in the *LogFileMode* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: EventTracingManagement.Start-EtwTraceSession
+name: Start-EtwTraceSession
+description: |-
+  The **Start-EtwTraceSession** cmdlet starts an ETW session with the specified name and settings.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: EventTracingManagement-help.xml
+  Module Name: EventTracingManagement
+  ms.date: 01/05/2017
+  online version: https://docs.microsoft.com/powershell/module/eventtracingmanagement/start-etwtracesession?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-EtwTraceSession

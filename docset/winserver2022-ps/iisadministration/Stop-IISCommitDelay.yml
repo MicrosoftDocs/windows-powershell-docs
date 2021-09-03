@@ -3,6 +3,12 @@ summary: |-
   Instructs the IIS configuration system to resume the commitment of changes.
 module: IISAdministration
 notes: ""
+inputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
 links:
 - text: Start-IISCommitDelay
   href: ./Start-IISCommitDelay.yml

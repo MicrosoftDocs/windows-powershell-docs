@@ -4,13 +4,11 @@ summary: |-
 module: IISAdministration
 notes: ""
 inputs:
-- name: <xref href=" " data-throw-if-not-resolved="False" />
-  description: |-
-    ****Get-IISCentralCertProvider does not accept pipelined input.
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
 outputs:
-- name: <xref href=" " data-throw-if-not-resolved="False" />
-  description: |-
-    **Get-IISCentralCertProvider** returns instances of the **System.String** object.
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
 links:
 - text: Clear-IISCentralCertProvider
   href: ./Clear-IISCentralCertProvider.yml

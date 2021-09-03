@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets message queues.
+module: MSMQ
+notes: ""
+links:
+- text: Clear-MsmqQueue
+  href: ./Clear-MSMQQueue.yml
+- text: New-MsmqQueue
+  href: ./New-MsmqQueue.yml
+- text: Receive-MsmqQueue
+  href: ./Receive-MsmqQueue.yml
+- text: Remove-MsmqQueue
+  href: ./Remove-MsmqQueue.yml
+- text: Send-MsmqQueue
+  href: ./Send-MsmqQueue.yml
+- text: Set-MsmqQueue
+  href: ./Set-MsmqQueue.yml
+syntaxes:
+- Get-MsmqQueue [[-Name] <String[]>] [-QueueType <QueueType>] [<CommonParameters>]
+- Get-MsmqQueue [[-Name] <String[]>] [-QueueType <QueueType>] [-Journal] [<CommonParameters>]
+- Get-MsmqQueue [[-Name] <String[]>] [-QueueType <QueueType>] [-SubQueue <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get public, private, and system queues'
+  code: |-
+    PS C:\> Get-MsmqQueue
+  description: |-
+    This command gets public, private, and system queues for the host computer.
+  summary: ""
+- title: 'Example 2: Get private queues'
+  code: |-
+    PS C:\> Get-MsmqQueue -Name "Order*" -QueueType Private
+  description: |-
+    This command gets private queues that have names that start with the string Order for the host computer.
+  summary: ""
+- title: 'Example 3: Get private Journal queues'
+  code: |-
+    PS C:\> Get-MsmqQueue -Name "Order*" -Journal -QueueType Private
+  description: |-
+    This command gets private Journal queues that have names that start with the string Order for the host computer.
+  summary: ""
+- title: 'Example 4: Get system Journal queues'
+  code: |-
+    PS C:\> Get-MsmqQueue -QueueType SystemJournal
+  description: |-
+    This command gets system Journal queues for the host computer.
+  summary: ""
+- title: 'Example 5: Get all local queues and their message count'
+  code: |-
+    PS C:\> Get-MsmqQueue | Select QueueName, MessageCount
+  description: |-
+    This command lists the message count for all queues on the host computer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Journal
+  description: |+
+    Indicates that this cmdlet retrieves the Journal queue or queues that match the *Name* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of names of queues.
+    This parameter accepts wildcard characters.
+    The default value is *.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="QueueType" data-throw-if-not-resolved="False" />
+  name: QueueType
+  description: |+
+    Specifies a queue type.
+    The acceptable values for this parameter are:
+
+    - PrivateAndPublic.
+    The cmdlet gets public and private queues that match the *Name* parameter. 
+    - Private.
+    The cmdlet gets private queues that match the *Name* parameter. 
+    - Public.
+    The cmdlet gets public queues that match the *Name* parameter. 
+    - SystemDeadLetter.
+    The cmdlet gets non-transactional dead-letter queues that match the *Name* parameter. 
+    - SystemJournal.
+    The cmdlet gets system journal queues that match the *Name* parameter. 
+    - SystemTransactionalDeadLetter.
+    The cmdlet gets transactional dead-letter queues that match the *Name* parameter. 
+
+    The default value is PrivateAndPublic.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: PrivateAndPublic, Private, Public, SystemJournal, SystemDeadLetter, SystemTransactionalDeadLetter
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SubQueue
+  description: |+
+    Specifies a subqueue object to get for the main queue.
+    If the subqueue does not exist, the cmdlet creates it implicitly.
+    The question mark (?) and asterisk (*) are not interpreted as wildcard characters, but as part of the subqueue name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MSMQ.Get-MsmqQueue
+name: Get-MsmqQueue
+description: |-
+  The **Get-MsmqQueue** cmdlet gets an array of **MsmqQueue** objects.
+  Each **MsmqQueue** object represents an existing private, public, or system queue.
+  This cmdlet gets queues that are local to the computer where you run the cmdlet.
+  If you do not specify parameters, this cmdlet gets all public, private, and system queues of the host computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/get-msmqqueue?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MsmqQueue

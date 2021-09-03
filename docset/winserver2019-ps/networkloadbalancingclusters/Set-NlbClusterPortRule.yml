@@ -1,0 +1,216 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Edits the port rules for a NLB cluster.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.PortRule" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.PortRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-NlbClusterPortRule
+  href: ./Add-NlbClusterPortRule.yml
+- text: Disable-NlbClusterPortRule
+  href: ./Disable-NlbClusterPortRule.yml
+- text: Enable-NlbClusterPortRule
+  href: ./Enable-NlbClusterPortRule.yml
+- text: Get-NlbClusterPortRule
+  href: ./Get-NlbClusterPortRule.yml
+- text: Remove-NlbClusterPortRule
+  href: ./Remove-NlbClusterPortRule.yml
+syntaxes:
+- >-
+  Set-NlbClusterPortRule [-HostName <String>] [-InterfaceName <String>] [-IP <IPAddress>] [[-Port] <UInt32>]
+
+   [-NewIP <IPAddress>] [-NewProtocol <PortRuleProtocol>] [-NewStartPort <Int32>] [-NewEndPort <Int32>]
+
+   [-NewMode <PortRuleFilteringMode>] [-NewAffinity <PortRuleAffinity>] [-NewTimeout <UInt32>]
+
+   [<CommonParameters>]
+- >-
+  Set-NlbClusterPortRule -InputObject <PortRule[]> [-NewIP <IPAddress>] [-NewProtocol <PortRuleProtocol>]
+
+   [-NewStartPort <Int32>] [-NewEndPort <Int32>] [-NewMode <PortRuleFilteringMode>]
+
+   [-NewAffinity <PortRuleAffinity>] [-NewTimeout <UInt32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the start port of a port rule'
+  code: |-
+    PS C:\>Get-NlbClusterPortRule -Port 80 | Set-NlbClusterPortRule -NewStartPort 5
+    IPAddress State     Start     End       Protocol  Mode      Affinity  Timeout 
+    --------- -----     -----     ---       --------  ----      --------  ------- 
+    All       Enabled   5         65535     Both      Multiple  Single    0
+  description: |-
+    This command changes the start port of the port rule of port number 80 to 5.
+  summary: ""
+- title: 'Example 2: Change the protocol of a port rule'
+  code: |-
+    PS C:\>Get-NlbClusterPortRule -Port 80 | Set-NlbClusterPortRule -NewProtocol Tcp
+    IPAddress State     Start     End       Protocol  Mode      Affinity  Timeout 
+    --------- -----     -----     ---       --------  ----      --------  ------- 
+    All       Enabled   5         65535     Tcp       Multiple  Single    0
+  description: |-
+    This command changes the protocol of the port rule of port number 80 to TCP.
+  summary: ""
+- title: 'Example 3: Change the port rule mode'
+  code: |-
+    PS C:\>Get-NlbClusterPortRule 80 | Set-NlbClusterPortRule -NewMode Single
+    IPAddress State     Start     End       Protocol  Mode      Affinity  Timeout 
+    --------- -----     -----     ---       --------  ----      --------  ------- 
+    All       Enabled   5         65535     Tcp       Single              0
+  description: |-
+    This command changes the port rule mode to Single.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: Named
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="PortRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of cluster port rules that this cmdlet sets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IP
+  description: |+
+    Specifies the IP address for the cluster port rule to set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PortRuleAffinity" data-throw-if-not-resolved="False" />
+  name: NewAffinity
+  description: |+
+    Specifies the new affinity for the cluster port rule.
+    The acceptable values for this parameter are:
+
+    - Network
+    - None
+    - Single
+
+  defaultValue: None
+  position: Named
+  aliases: NA
+  parameterValueGroup: None, Single, Network
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NewEndPort
+  description: |+
+    Specifies the new end port for the cluster port rule.
+    The acceptable values for this parameter are: 0 through 65535.
+
+  defaultValue: None
+  position: Named
+  aliases: NEP
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: NewIP
+  description: |+
+    Specifies the new IP address for the cluster port rule.
+
+  defaultValue: None
+  position: Named
+  aliases: NIP
+  parameterValueGroup: ""
+- type: <xref href="PortRuleFilteringMode" data-throw-if-not-resolved="False" />
+  name: NewMode
+  description: |+
+    Specifies a new mode for the cluster port rule.
+    The acceptable values for this parameter are:
+
+    - Disabled
+    - Multiple
+    - Single
+
+  defaultValue: None
+  position: Named
+  aliases: NM
+  parameterValueGroup: Single, Multiple, Disabled
+- type: <xref href="PortRuleProtocol" data-throw-if-not-resolved="False" />
+  name: NewProtocol
+  description: |+
+    Specifies the new protocol for the cluster port rule.
+    The acceptable values for this parameter are:
+
+    - Both
+    - Tcp
+    - Udp
+
+  defaultValue: None
+  position: Named
+  aliases: NPRTCL
+  parameterValueGroup: Tcp, Udp, Both
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NewStartPort
+  description: |+
+    Specifies the new start port for the cluster port rule.
+    The acceptable values for this parameter are: 0 through 65535.
+
+  defaultValue: None
+  position: Named
+  aliases: NSP
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NewTimeout
+  description: |+
+    Specifies the new timeout in minutes for the cluster port rule.
+    The acceptable values for this parameter are: 0 through 240.
+
+  defaultValue: None
+  position: Named
+  aliases: Timeout, T
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies a port number within the port rule to set.
+    The acceptable values for this parameter are: 0 through 65535.
+
+  defaultValue: None
+  position: "0"
+  aliases: P
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Set-NlbClusterPortRule
+name: Set-NlbClusterPortRule
+description: |-
+  The **Set-NlbClusterPortRule** cmdlet edits the port rules for a Network Load Balancing (NLB) cluster.
+  The port rule configuration you can edit includes the cluster IP address, port range, protocols, filtering mode, affinity, load weight, handling priority, and timeout.
+
+  This operation changes the configuration on all cluster nodes.
+  As a result, the NLB cluster will have to restart the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster should not be initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/set-nlbclusterportrule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NlbClusterPortRule

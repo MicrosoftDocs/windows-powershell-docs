@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about interfaces, including information about the NLB driver, on a host.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.NetworkInterface" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-NlbCluster
+  href: ./New-NlbCluster.yml
+syntaxes:
+- Get-NlbClusterNodeNetworkInterface [[-HostName] <String>] [[-InterfaceName] <String>] [<CommonParameters>]
+- Get-NlbClusterNodeNetworkInterface -InputObject <Node[]> [[-InterfaceName] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information about all network interfaces on the local node'
+  code: |-
+    PS C:\>Get-NlbClusterNodeNetworkInterface
+    InterfaceName       : vlan-3 
+    NlbBound            : True 
+    Cluster             : cluster1 
+    DhcpEnabled         : False 
+    InterfaceIP         : 3.53.4.1 
+    InterfaceSubnetMask : 255.0.0.0 
+    ClusterPrimaryIP    : 3.53.100.100 
+    ClusterSubnetMask   : 255.0.0.0 
+
+    InterfaceName       : vlan-2 
+    NlbBound            : False 
+    Cluster             : 
+    DhcpEnabled         : False 
+    InterfaceIP         : 2.53.4.1 
+    InterfaceSubnetMask : 255.0.0.0 
+    ClusterPrimaryIP    : 
+    ClusterSubnetMask   :
+  description: |-
+    This command gets information about all network interfaces on the local node.
+    The information returned includes whether NLB is bound to that interface and whether that interface is DHCP-enabled.
+  summary: ""
+- title: 'Example 2: Get information about all network interfaces on the specified node'
+  code: |-
+    PS C:\>Get-NlbClusterNodeNetworkInterface -HostName "Node01"
+    InterfaceName       : vlan-4 
+    NlbBound            : True 
+    Cluster             : cluster1 
+    DhcpEnabled         : False 
+    InterfaceIP         : 4.53.4.1 
+    InterfaceSubnetMask : 255.0.0.0 
+    ClusterPrimaryIP    : 4.53.100.100 
+    ClusterSubnetMask   : 255.0.0.0
+  description: |-
+    This command gets information about all network interfaces on the node named Node01.
+    The information returned includes whether NLB is bound to that interface and whether that interface is DHCP-enabled.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: "0"
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="Node" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of cluster nodes for which this cmdlet gets network interface information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: "1"
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Get-NlbClusterNodeNetworkInterface
+name: Get-NlbClusterNodeNetworkInterface
+description: |-
+  The **Get-NlbClusterNodeNetworkInterface** cmdlet gets information about interfaces, including information about the Network Load Balancing (NLB) driver, on a host.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/get-nlbclusternodenetworkinterface?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NlbClusterNodeNetworkInterface

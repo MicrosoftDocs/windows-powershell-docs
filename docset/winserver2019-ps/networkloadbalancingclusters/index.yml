@@ -1,0 +1,52 @@
+### YamlMime:PowershellModule
+children:
+- title: NetworkLoadBalancingClusters
+  cmdlets:
+  - NetworkLoadBalancingClusters.Add-NlbClusterNode
+  - NetworkLoadBalancingClusters.Add-NlbClusterNodeDip
+  - NetworkLoadBalancingClusters.Add-NlbClusterPortRule
+  - NetworkLoadBalancingClusters.Add-NlbClusterVip
+  - NetworkLoadBalancingClusters.Disable-NlbClusterPortRule
+  - NetworkLoadBalancingClusters.Enable-NlbClusterPortRule
+  - NetworkLoadBalancingClusters.Get-NlbCluster
+  - NetworkLoadBalancingClusters.Get-NlbClusterDriverInfo
+  - NetworkLoadBalancingClusters.Get-NlbClusterNode
+  - NetworkLoadBalancingClusters.Get-NlbClusterNodeDip
+  - NetworkLoadBalancingClusters.Get-NlbClusterNodeNetworkInterface
+  - NetworkLoadBalancingClusters.Get-NlbClusterPortRule
+  - NetworkLoadBalancingClusters.Get-NlbClusterVip
+  - NetworkLoadBalancingClusters.New-NlbCluster
+  - NetworkLoadBalancingClusters.New-NlbClusterIpv6Address
+  - NetworkLoadBalancingClusters.Remove-NlbCluster
+  - NetworkLoadBalancingClusters.Remove-NlbClusterNode
+  - NetworkLoadBalancingClusters.Remove-NlbClusterNodeDip
+  - NetworkLoadBalancingClusters.Remove-NlbClusterPortRule
+  - NetworkLoadBalancingClusters.Remove-NlbClusterVip
+  - NetworkLoadBalancingClusters.Resume-NlbCluster
+  - NetworkLoadBalancingClusters.Resume-NlbClusterNode
+  - NetworkLoadBalancingClusters.Set-NlbCluster
+  - NetworkLoadBalancingClusters.Set-NlbClusterNode
+  - NetworkLoadBalancingClusters.Set-NlbClusterNodeDip
+  - NetworkLoadBalancingClusters.Set-NlbClusterPortRule
+  - NetworkLoadBalancingClusters.Set-NlbClusterPortRuleNodeHandlingPriority
+  - NetworkLoadBalancingClusters.Set-NlbClusterPortRuleNodeWeight
+  - NetworkLoadBalancingClusters.Set-NlbClusterVip
+  - NetworkLoadBalancingClusters.Start-NlbCluster
+  - NetworkLoadBalancingClusters.Start-NlbClusterNode
+  - NetworkLoadBalancingClusters.Stop-NlbCluster
+  - NetworkLoadBalancingClusters.Stop-NlbClusterNode
+  - NetworkLoadBalancingClusters.Suspend-NlbCluster
+  - NetworkLoadBalancingClusters.Suspend-NlbClusterNode
+uid: NetworkLoadBalancingClusters
+name: NetworkLoadBalancingClusters
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Network Load Balancing (NLB) cluster-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 4.0.3.2
+  Locale: en-US
+  Module Guid: 52832d3a-17d8-48ff-a5bc-f5078492ecbe
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  title: NetworkLoadBalancingClusters

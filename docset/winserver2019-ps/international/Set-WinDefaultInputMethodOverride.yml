@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the default input method override for the current user account.
+module: International
+notes: ""
+inputs:
+- name: <xref href="InputTIP" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a locale ID and a keyboard language ID (KLID). See [Default Input Profiles (Input Locales) in Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs)
+links:
+- text: Get-WinDefaultInputMethodOverride
+  href: ./Get-WinDefaultInputMethodOverride.yml
+syntaxes:
+- Set-WinDefaultInputMethodOverride [[-InputTip] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the default input method override'
+  code: |-
+    PS C:\> Set-WinDefaultInputMethodOverride -InputTip "0409:00000409"
+  description: |-
+    This command sets the default input method override to English (United States) - US.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InputTip
+  description: |+
+    Specifies an input tip.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: International.Set-WinDefaultInputMethodOverride
+name: Set-WinDefaultInputMethodOverride
+description: |-
+  The **Set-WinDefaultInputMethodOverride** cmdlet sets the default input method override setting, which specifies a default input method for the current user account.
+  If no override setting is used, the input method is dynamically determined from the language list of the current user account.
+  For more information, see the **Get-WinUserLanguageList** and **Set-WinUserLanguageList** cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/international/set-windefaultinputmethodoverride?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WinDefaultInputMethodOverride

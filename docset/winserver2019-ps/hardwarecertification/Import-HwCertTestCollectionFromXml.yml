@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports a test collection from an .xml file.
+module: HardwareCertification
+notes: ""
+links:
+- text: Export-HwCertTestCollectionToXml
+  href: ./Export-HwCertTestCollectionToXml.yml
+syntaxes:
+- Import-HwCertTestCollectionFromXml [-LiteralPath] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Filter a test collection'
+  code: |-
+    PS C:\> Import-HwCertTestCollectionFromXml -Input "C:\Temp\All.xml" | Where-Object { $_.ContentLevelSet.Contains("Basic") }
+  description: |-
+    This command imports a test collection, and then finds the results that belong to a specified content level.
+    The command imports a test collection named All.xml, as a **TestCollectionRecord** object, and then passes that object to the **Where-Object** cmdlet by using the pipeline operator.
+    The **Where-Object** cmdlet filters the imported object for results that belong to the Basic content level.
+    For more information, type `Get-Help Where-Object`.
+  summary: ""
+- title: 'Example 2: Filter a test collection and export the results to a new test collection'
+  code: |-
+    PS C:\> Import-HwCertTestCollectionFromXml -Input "C:\Temp\All.xml" | Where-Object { $_.ContentLevelSet.Contains("Basic") } | Export-HwCertTestCollectionToXml -Output "C:\Temp\Basic.xml"
+  description: |-
+    This command imports a test collection, finds the results that belong to a specified content level, and exports a new test collection .xml file that contains only those results.
+    The command imports a test collection named All.xml, as a **TestCollectionRecord** object, and then passes that object to the **Where-Object** cmdlet by using the pipeline operator.
+    The **Where-Object** cmdlet filters the imported object for results that belong to the Basic content level.
+    For more information, type `Get-Help Where-Object`.
+    The command then passes those items to the **Export-HwCertTestCollectionToXml** cmdlet, which exports the test collection to the file named Basic.xml.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LiteralPath
+  isRequired: true
+  description: |+
+    Specifies a full path.
+    This is the file path to the test collection .xml file.
+
+  defaultValue: None
+  position: "0"
+  aliases: XML, Input, Path
+  parameterValueGroup: ""
+uid: HardwareCertification.Import-HwCertTestCollectionFromXml
+name: Import-HwCertTestCollectionFromXml
+description: |-
+  The **Import-HwCertTestCollectionFromXml** cmdlet imports a test collection from an .xml file.
+  For more information, see [Windows Hardware Certification Kit downloads](https://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
+
+  After you import a test collection, you can filter it by using **TestCollectionRecord** properties, and then use the **Export-HwCertTestCollectionToXml** cmdlet to export the filtered test collection.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: microsoft.windows.kits.hardware.certification.management.dll-Help.xml
+  Module Name: HardwareCertification
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hardwarecertification/import-hwcerttestcollectionfromxml?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-HwCertTestCollectionFromXml

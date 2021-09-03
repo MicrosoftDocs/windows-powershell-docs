@@ -1,0 +1,150 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays the SR-IOV virtual function settings for a network adapter.
+module: NetAdapter
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapterSriovVfSettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Disable-NetAdapterSriov
+  href: ./Disable-NetAdapterSriov.yml
+- text: Enable-NetAdapterSriov
+  href: ./Enable-NetAdapterSriov.yml
+- text: Get-NetAdapterSriov
+  href: ./Get-NetAdapterSriov.yml
+- text: Set-NetAdapterSriov
+  href: ./Set-NetAdapterSriov.yml
+syntaxes:
+- >-
+  Get-NetAdapterSriovVf [[-Name] <String[]>] [-SwitchID <UInt32[]>] [-FunctionID <UInt16[]>] [-IncludeHidden]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-NetAdapterSriovVf -InterfaceDescription <String[]> [-SwitchID <UInt32[]>] [-FunctionID <UInt16[]>]
+
+   [-IncludeHidden] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a list of virtual functions, virtual machines, and MAC addresses for the specified network adapter'
+  code: |-
+    PS C:\> Get-NetAdapterSriovVf -Name "Ethernet 1"
+  description: |-
+    This command gets a list of the virtual functions with the virtual machine names and MAC addresses for the network adapter named Ethernet 1.
+  summary: ""
+- title: 'Example 2: Get a list of virtual functions, virtual machines, and MAC addresses for a network adapter bound to a virtual switch'
+  code: |-
+    PS C:\> Get-NetAdapterSriovVf -SwitchId 2
+  description: |-
+    This command gets a list of the virtual functions with the virtual machine names and MAC addresses for the network adapter bound to virtual switch 2.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FunctionID
+  description: |+
+    Specifies the virtual function ID number on the indicated network adapter to return more detailed information on the virtual function.
+
+  defaultValue: None
+  position: Named
+  aliases: VfID, Id
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeHidden
+  description: |+
+    Indicates that the cmdlet includes both visible and hidden network adapters in the operation.
+    By default only visible network adapters are included.
+    If a wildcard character is used in identifying a network adapter and this parameter has been specified, then the wildcard string is matched against both hidden and visible network adapters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceDescription
+  isRequired: true
+  description: |+
+    Specifies an array of network adapter interface descriptions.
+    For a physical network adapter this is typically the name of the vendor of the network adapter followed by a part number and description, such as `Contoso 12345 Gigabit Network Device`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ifDesc, InstanceID
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of network adapter names.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ifAlias, InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SwitchID
+  description: |+
+    Specifies the virtual switch ID that identifies the network adapter for one or more virtual functions as an array.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetAdapter.Get-NetAdapterSriovVf
+name: Get-NetAdapterSriovVf
+description: |-
+  The **Get-NetAdapterSriovVf** cmdlet displays the Single-Root I/O Virtualization (SR-IOV) virtual function settings for a network adapter.
+  By default a table of virtual function settings will be displayed that includes the virtual function identifier (ID), virtual function name, network adapter ID, and the current MAC address.
+  Specifying a single virtual function displays that virtual function in more detail.
+  Additional displayed fields include the permanent MAC address, requester ID, and virtual port (VPort) information.
+
+  The network adapter to use is specified by either the name of the network adapter, interface description of the network adapter, or the switch ID of the virtual switch bound to the SR-IOV network adapter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetAdapterSriovVf.cmdletDefinition.cdxml-help.xml
+  Module Name: NetAdapter
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadaptersriovvf?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetAdapterSriovVf

@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about which nodes can own a resource in a failover cluster or information about the order of preference among owner nodes for a clustered role.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResourceType" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterOwnerNodeList" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-ClusterOwnerNode
+  href: ./Set-ClusterOwnerNode.yml
+syntaxes:
+- >-
+  Get-ClusterOwnerNode [-Resource <String>] [-Group <String>] [-ResourceType <String>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterResource -Cluster "Cluster Disk 1" | Get-ClusterOwnerNode
+    ClusterObject                           OwnerNodes 
+    -------------                           ---------- 
+    Cluster Disk 1                          {node1, node2}
+  description: |-
+    This example lists the possible owners for the cluster named Cluster Disk 1 in the local cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterGroup -Group cluster1FS12 | Get-ClusterOwnerNode
+    ClusterObject                           OwnerNodes 
+    -------------                           ---------- 
+    cluster1FS12                            {}
+  description: |-
+    This example lists the preferred owners for the clustered file server, or resource group, called cluster1FS12 on the local cluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  description: |+
+    Specifies the name of the cluster group for which owner nodes are enumerated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster group or cluster resource on which to enumerate owner nodes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Resource
+  description: |+
+    Specifies the name of the cluster resource for which owner nodes are enumerated.
+
+  defaultValue: None
+  position: Named
+  aliases: Res
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceType
+  description: |+
+    Specifies the name of the cluster resource type for which owner nodes are enumerated.
+
+  defaultValue: None
+  position: Named
+  aliases: ResType
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterOwnerNode
+name: Get-ClusterOwnerNode
+description: |-
+  The **Get-ClusterOwnerNode** cmdlet gets information about which nodes can own a resource in a failover cluster or information about the order of preference among owner nodes for a clustered role.
+
+  Settings that control the possible or preferred owners affect the way the cluster responds to the failure of a resource or a clustered role.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterownernode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterOwnerNode

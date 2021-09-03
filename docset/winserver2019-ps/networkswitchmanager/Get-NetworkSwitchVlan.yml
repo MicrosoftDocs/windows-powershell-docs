@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets VLANs for a network switch.
+module: NetworkSwitchManager
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns an array of **CimInstance** objects for network switch VLANs.
+links:
+- text: Disable-NetworkSwitchVlan
+  href: ./Disable-NetworkSwitchVlan.yml
+- text: Enable-NetworkSwitchVlan
+  href: ./Enable-NetworkSwitchVlan.yml
+- text: New-NetworkSwitchVlan
+  href: ./New-NetworkSwitchVlan.yml
+- text: Remove-NetworkSwitchVlan
+  href: ./Remove-NetworkSwitchVlan.yml
+- text: Set-NetworkSwitchVlanProperty
+  href: ./Set-NetworkSwitchVlanProperty.yml
+syntaxes:
+- Get-NetworkSwitchVlan -CimSession <CimSession> [-Name <String>] [<CommonParameters>]
+- Get-NetworkSwitchVlan -CimSession <CimSession> -VlanId <Int32> [<CommonParameters>]
+- Get-NetworkSwitchVlan -CimSession <CimSession> -InstanceId <String> [<CommonParameters>]
+- Get-NetworkSwitchVlan -CimSession <CimSession> -Caption <String> [<CommonParameters>]
+- Get-NetworkSwitchVlan -CimSession <CimSession> -Description <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all VLANs for a network switch'
+  code: |-
+    PS C:\>$Session = New-CimSession -ComputerName "NetworkSwitch08"
+    PS C:\> Get-NetworkSwitchVlan -CimSession $Session
+    Caption             Description         Name                InstanceID                       VlanID PSComputerName    
+    -------             -----------         -----------         ----------                       ------ --------------    
+                        Vlan_description    default             Contoso:NetworkVL...                   1 10.19.246.18     
+                        Vlan_description    VLAN0002            Contoso:NetworkVL...                   2 10.19.246.18
+  description: |-
+    The first command creates a **CimSession** for a network switch, and then stores it in the **$Session** variable.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+    The second command gets all VLAN for the switch NetworkSwitch08 by using the **$Session** object.
+  summary: ""
+- title: 'Example 2: Get a VLAN by using a name'
+  code: |-
+    PS C:\>Get-NetworkSwitchVlan -CimSession $Session -Name "VLAN22"
+    Caption             Description         Name                InstanceID                       VlanID PSComputerName    
+    -------             -----------         -----------         ----------                       ------ --------------    
+                        Vlan_description    VLAN22              Contoso:NetworkVL...                   1 10.19.236.49
+  description: |-
+    This command gets the VLAN named VLAN22.
+    The command includes a **CimSession**, similar to the first example.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Caption
+  isRequired: true
+  description: |+
+    Specifies the caption of a VLAN to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  isRequired: true
+  description: |+
+    Specifies the **CimSession** that this cmdlet uses to connect to the network switch.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  isRequired: true
+  description: |+
+    Specifies the description of a VLAN to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InstanceId
+  isRequired: true
+  description: |+
+    Specifies the instance ID of a VLAN to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a VLAN to get.
+    This **ElementName** is a friendly name.
+    It is not necessarily unique.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: VlanId
+  isRequired: true
+  description: |+
+    Specifies the VLAN ID of the VLAN to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkSwitchManager.Get-NetworkSwitchVlan
+name: Get-NetworkSwitchVlan
+description: |-
+  The **Get-NetworkSwitchVlan** cmdlet gets available virtual local area networks (VLANs) for a network switch.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: NetworkSwitchVlan-help.xml
+  Module Name: NetworkSwitchManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkswitchmanager/get-networkswitchvlan?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkSwitchVlan

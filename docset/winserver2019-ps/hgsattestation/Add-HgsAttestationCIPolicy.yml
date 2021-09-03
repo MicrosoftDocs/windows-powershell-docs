@@ -1,0 +1,114 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Authorizes a trusted code integrity policy to be used by hosts attesting against HGS.
+module: HgsAttestation
+notes: ""
+inputs:
+- name: <xref href="Byte[], System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts a code integrity policy as a **Byte** array or filename.
+outputs:
+- name: <xref href="AttestationPolicyInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns attestation policy information.
+syntaxes:
+- >-
+  Add-HgsAttestationCIPolicy [-InputObject] <Byte[]> -Name <String> [-PolicyVersion <PolicyVersion>] [-Stage]
+
+   [-WhatIf] [-Confirm]
+- >-
+  Add-HgsAttestationCIPolicy [-Path] <String> [-Name <String>] [-PolicyVersion <PolicyVersion>] [-Stage]
+
+   [-WhatIf] [-Confirm]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-HgsAttestationCIPolicy -Path C:\temp\WS2016-Enforced.p7b -Name "Windows Server 2016 Enforced CI Policy"
+  description: |-
+    Adds the binary code integrity policy file to HGS and names the policy "Windows Server 2016 Enforced CI Policy"
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Byte array containing the contents of a binary code integrity policy file.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Friendly name for the code integrity policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of a file that contains the code integrity policy, in binary form.
+    The file typically has a .p7b or .bin extension.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: FilePath, PSPath
+  parameterValueGroup: ""
+- type: <xref href="PolicyVersion" data-throw-if-not-resolved="False" />
+  name: PolicyVersion
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, PolicyVersion1503, PolicyVersion1704
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Stage
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsAttestation.Add-HgsAttestationCIPolicy
+name: Add-HgsAttestationCIPolicy
+description: |-
+  The **Add-HgsAttestationCIPolicy** cmdlet adds an attestation policy based on a trusted code integrity policy to HGS.
+  When HGS is configured to use TPM attestation, hosts will need to use one of the code integrity policies registered with HGS to successfully pass attestation.
+  Use the **New-CIPolicy** and **ConvertFrom-CIPolicy** cmdlets to create a binary code integrity policy that can be passed to this cmdlet.
+
+  HGS will not know which software is allowed or disallowed by your policy, nor will it know which policy rules (e.g. enforced CI, reboot actions) are configured in the policy.
+  You should choose a descriptive name for your policy to ensure you know what your policy covers for future reference when reviewing authorized policies.
+metadata:
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/add-hgsattestationcipolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-HgsAttestationCIPolicy

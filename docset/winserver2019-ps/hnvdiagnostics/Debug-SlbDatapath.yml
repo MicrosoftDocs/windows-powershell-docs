@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Collects logs from an SLB MUX and DIP host.
+module: HNVDiagnostics
+notes: ""
+syntaxes:
+- >-
+  Debug-SlbDatapath [[-OperationId] <String>] [-SourceIP] <String> [-TargetVIP] <String> [-PortNumber] <UInt16>
+
+   [-Muxes] <Hashtable[]> [-Dips] <Hashtable[]> [[-TraceFolderPath] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get MUX and DIP host logs'
+  code: |-
+    PS C:\> for ($mux in $VipHostMapping.MuxList) {
+        $secpasswd = ConvertTo-SecureString <plaintext password> -AsPlainText -Force
+        $creds = New-Object System.Management.Automation.PSCredential (<username>, $secpasswd)
+        $mux.Credentials = $creds
+    }
+    PS C:\> for ($dip in $VipHostMapping.DIPHosts) {
+        $secpasswd = ConvertTo-SecureString <plaintext password> -AsPlainText -Force
+        $creds = New-Object System.Management.Automation.PSCredential (<username>, $secpasswd)
+        $dip.HostInfo.Credentials = $creds
+    }
+    PS C:\> $out = Debug-SlbDatapath -OperationId "1" -SourceIP "10.123.176.108" -TargetVIP "10.123.177.110" -PortNumber 445 -Muxes $VipHostMapping.MuxList -Dips $VipHostMapping.DIPHosts
+  description: |-
+    The first command creates a **PSCredential** object containing MUX credentials, and then stores it in the $mux.Credentials variable.
+
+    The second command creates a **PSCredential** object containing DIP host credentials, and then stores it in the $dip.HostInfo.Credentials variable.
+
+    The third command runs test traffic targeting the specified VIP endpoint from the specified source IP address.
+    You can use the command `$out | Format-Custom` to display the paths of the MUX and DIP logs that were collected.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Dips
+  isRequired: true
+  description: |+
+    Specifies the DIPs that implement the virtual IP address (VIP) endpoint under test.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Muxes
+  isRequired: true
+  description: |+
+    Specifies the MUXes that load balance the DIPs.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OperationId
+  description: |+
+    Specifies an operation ID.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: PortNumber
+  isRequired: true
+  description: |+
+    Specifies the port number of the VIP endpoint this operation tests.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceIP
+  isRequired: true
+  description: |+
+    Specifies the IP of the source node.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetVIP
+  isRequired: true
+  description: |+
+    Specifies the IP of the VIP this operation tests.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TraceFolderPath
+  description: |+
+    Specifies the path of the trace log folder.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HNVDiagnostics.Debug-SlbDatapath
+name: Debug-SlbDatapath
+description: |-
+  The **Debug-SlbDatapath** cmdlet collects logs from the Software Load Balancing (SLB) Multiplexer (MUX) and dynamic IP address (DIP) host traversed by packets in the specified flow.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: SlbDatapathTracing-help.xml
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/debug-slbdatapath?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Debug-SlbDatapath

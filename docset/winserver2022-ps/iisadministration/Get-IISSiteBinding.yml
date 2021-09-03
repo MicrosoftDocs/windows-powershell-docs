@@ -7,7 +7,7 @@ inputs:
 - name: <xref href="System.String" data-throw-if-not-resolved="False" />
   description: ""
 outputs:
-- name: <xref href="Microsoft.Web.Administration.BindingCollection" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
   description: ""
 links:
 - text: New-IISSiteBinding
@@ -17,7 +17,10 @@ links:
 - text: IIS Administration Cmdlets for Windows PowerShell
   href: ./index.yml
 syntaxes:
-- Get-IISSiteBinding [-Name] <String> [[-BindingInformation] <String>] [[-Protocol] <String>]
+- >-
+  Get-IISSiteBinding [-Name] <String> [[-BindingInformation] <String>] [[-Protocol] <String>]
+
+   [<CommonParameters>]
 examples:
 - title: 'Example 1: Get Information about an IIS website binding'
   code: |-

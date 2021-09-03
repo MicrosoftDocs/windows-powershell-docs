@@ -1,0 +1,36 @@
+### YamlMime:PowershellModule
+children:
+- title: NetworkSwitchManager
+  cmdlets:
+  - NetworkSwitchManager.Disable-NetworkSwitchEthernetPort
+  - NetworkSwitchManager.Disable-NetworkSwitchFeature
+  - NetworkSwitchManager.Disable-NetworkSwitchVlan
+  - NetworkSwitchManager.Enable-NetworkSwitchEthernetPort
+  - NetworkSwitchManager.Enable-NetworkSwitchFeature
+  - NetworkSwitchManager.Enable-NetworkSwitchVlan
+  - NetworkSwitchManager.Get-NetworkSwitchEthernetPort
+  - NetworkSwitchManager.Get-NetworkSwitchFeature
+  - NetworkSwitchManager.Get-NetworkSwitchGlobalData
+  - NetworkSwitchManager.Get-NetworkSwitchVlan
+  - NetworkSwitchManager.New-NetworkSwitchVlan
+  - NetworkSwitchManager.Remove-NetworkSwitchEthernetPortIPAddress
+  - NetworkSwitchManager.Remove-NetworkSwitchVlan
+  - NetworkSwitchManager.Restore-NetworkSwitchConfiguration
+  - NetworkSwitchManager.Save-NetworkSwitchConfiguration
+  - NetworkSwitchManager.Set-NetworkSwitchEthernetPortIPAddress
+  - NetworkSwitchManager.Set-NetworkSwitchPortMode
+  - NetworkSwitchManager.Set-NetworkSwitchPortProperty
+  - NetworkSwitchManager.Set-NetworkSwitchVlanProperty
+uid: NetworkSwitchManager
+name: NetworkSwitchManager
+description: |-
+  This reference provides cmdlet descriptions and syntax for the Network Switch Manager cmdlets. This table lists the cmdlets in alphabetical order.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 53b60d16-69ad-4453-bf41-83efa5ac35b8
+  Module Name: NetworkSwitchManager
+  ms.date: 12/20/2016
+  title: NetworkSwitchManager

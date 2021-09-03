@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets property values for the IIS central certificate store.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Clear-IISCentralCertProvider
+  href: ./Clear-IISCentralCertProvider.yml
+- text: Disable-IISCentralCertProvider
+  href: ./Disable-IISCentralCertProvider.yml
+- text: Enable-IISCentralCertProvider
+  href: ./Enable-IISCentralCertProvider.yml
+- text: Get-IISCentralCertProvider
+  href: ./Get-IISCentralCertProvider.yml
+- text: Set-IISCentralCertProviderCredential
+  href: ./Set-IISCentralCertProviderCredential.yml
+syntaxes:
+- >-
+  Set-IISCentralCertProvider [-CertStoreLocation <String>] [-UserName <String>] [-Password <SecureString>]
+
+   [-PrivateKeyPassword <SecureString>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the location of the central certificate store'
+  code: |-
+    PS C:\> Set-IISCentralCertProvider -CertStoreLocation "\\NewCertStoreServer\CertStore"
+  description: |-
+    This command modifies the location of the IIS central certificate store.
+    In this example, the store has been moved to the file share \\\\NewCertStoreServer\CertStore.
+    Note that **Set-IISCentralCertProvider** does not move the certificate files to the new location.
+    Instead, the cmdlet merely configures the certificate store to use this new location.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertStoreLocation
+  description: |+
+    Specifies the physical path to the central certificate store; this can be either a local path (e.g., D:\CertStore) or a UNC path.
+    For example:
+
+    `-CertStoreLocation "\\\\CertStoreServer\CertStore"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Specifies the password for the user account used to access the certificate store.
+    For example:
+
+    `-Password "P@ssw0rd"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: PrivateKeyPassword
+  description: |+
+    Specifies the private key password for your IIS certificates.
+    For example:
+
+    `-PrivateKeyPassword "pa$$W0rd"`
+
+    This parameter should only be used if all your IIS certificates share the same password.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  description: |+
+    Specifies the user account used to access the certificate store; this can be either an Active Directory SAM Account Name or a user principal name.
+    For example:
+
+    `-UserName "IISCertificateAdmin"`
+
+    It is recommended that you create a user account reserved solely for certificate administration, and that you give this account only the privileges required to manage the certificate store (most notably, the account needs read access to the store location).
+    The central store user account can be either a local account or a domain account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Set-IISCentralCertProvider
+name: Set-IISCentralCertProvider
+description: |-
+  The **Set-IISCentralCertProvider** cmdlet modifies property values for the IIS central certificate store.
+  The central certificate store allows you to store all your IIS certificates in a centralized location (such as a file store); IIS servers then retrieve certificate information from this centralized location.
+  That means that you only have to install certificates in one location; there is no need to install the same certificate on each and every IIS server.
+
+  **Set-IISCentralCertProvider** is typically used in one of two scenarios: 1) if you need to change the physical location of the certificate store (for example, if you have moved the store to a new file share); or, 2) if you have run the **Clear-IISCentralCertProvider** cmdlet and have erased all the certificate store property values.
+  These values must be reconfigured before you can take advantage of the central store capabilities.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/set-iiscentralcertprovider?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-IISCentralCertProvider

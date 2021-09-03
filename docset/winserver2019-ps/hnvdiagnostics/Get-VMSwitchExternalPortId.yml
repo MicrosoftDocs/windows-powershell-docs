@@ -1,0 +1,38 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the VFP/VSwitch port ID for the external port for a virtual switch.
+module: HNVDiagnostics
+notes: ""
+syntaxes:
+- Get-VMSwitchExternalPortId [-SwitchName] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the port ID of a virtual switch'
+  code: |-
+    PS C:\> Get-VMSwitchExternalPortId -SwitchName "ExternalPrivate"
+  description: |-
+    This command gets the VFP/VSwitch port ID for the switch named ExternalPrivate.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SwitchName
+  isRequired: true
+  description: |+
+    Specifies the name of a virtual switch.
+    This cmdlet get the port ID for the switch that you specify.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HNVDiagnostics.Get-VMSwitchExternalPortId
+name: Get-VMSwitchExternalPortId
+description: |-
+  The **Get-VMSwitchExternalPortId** cmdlet gets the VFP/VSwitch port ID for the external port of a virtual switch.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Get-VMSwitchExternalPortId-help.xml
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/get-vmswitchexternalportid?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMSwitchExternalPortId

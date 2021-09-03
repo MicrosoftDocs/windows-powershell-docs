@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Edits the virtual IP address of a NLB cluster.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ClusterVip" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ClusterVip" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-NlbClusterVip
+  href: ./Add-NlbClusterVip.yml
+- text: Get-NlbClusterVip
+  href: ./Get-NlbClusterVip.yml
+- text: Remove-NlbClusterVip
+  href: ./Remove-NlbClusterVip.yml
+syntaxes:
+- >-
+  Set-NlbClusterVip [-HostName <String>] -InterfaceName <String> [-IP] <IPAddress> -NewIP <IPAddress>
+
+   [<CommonParameters>]
+- Set-NlbClusterVip -InputObject <ClusterVip[]> -NewIP <IPAddress> [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the cluster virtual IP address'
+  code: |-
+    PS C:\>Get-NlbClusterVip -IP fe80::ad1c:c26a:b9d2:5679 | Set-NlbClusterVip -NewIP fe80::ae34:85b1:d7e9:d51f
+    IPAddress                               SubnetMask 
+    ---------                               ---------- 
+    fe80::ae34:85b1:d7e9:d51f                ::
+  description: |-
+    This command changes the cluster virtual IP from fe80::ad1c:c26a:b9d2:5679 to fe80::ae34:85b1:d7e9:d51f.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: Named
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="ClusterVip" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of cluster virtual IP address that this cmdlet sets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  isRequired: true
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IP
+  isRequired: true
+  description: |+
+    Specifies the IP address of the cluster for which this cmdlet sets the virtual IP address.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: NewIP
+  isRequired: true
+  description: |+
+    Specifies the new virtual IP address for the cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Set-NlbClusterVip
+name: Set-NlbClusterVip
+description: |-
+  The **Set-NlbClusterVIP** cmdlet edits the virtual IP address of a Network Load Balancing (NLB) cluster.
+  This cmdlet can be used to edit the IP address and subnet mask for the virtual IP address.
+
+  This operation changes the configuration on all cluster nodes.
+  As a result, the NLB cluster restarts the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster should not be initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/set-nlbclustervip?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NlbClusterVip

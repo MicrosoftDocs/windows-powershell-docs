@@ -6,8 +6,10 @@ notes: ""
 inputs:
 - name: <xref href="System.String" data-throw-if-not-resolved="False" />
   description: ""
+- name: <xref href="Microsoft.Web.Administration.SslFlags" data-throw-if-not-resolved="False" />
+  description: ""
 outputs:
-- name: <xref href="Microsoft.Web.Administration.BindingCollection" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
   description: ""
 links:
 - text: Get-IISSiteBinding
@@ -24,7 +26,7 @@ syntaxes:
 
    [[-CertificateThumbPrint] <String>] [[-SslFlag] <SslFlags>] [[-CertStoreLocation] <String>] [-Force]
 
-   [-Passthru]
+   [-Passthru] [<CommonParameters>]
 examples:
 - title: 'Example 1: Create a new HTTP binding'
   code: |-
@@ -146,7 +148,7 @@ parameters:
   pipelineInput: true
   position: "4"
   aliases: ""
-  parameterValueGroup: None, Sni, CentralCertStore
+  parameterValueGroup: None, Sni, CentralCertStore, DisableHTTP2, DisableOCSPStp, DisableQUIC, DisableTLS13, DisableLegacyTLS
 uid: IISAdministration.New-IISSiteBinding
 name: New-IISSiteBinding
 description: |-

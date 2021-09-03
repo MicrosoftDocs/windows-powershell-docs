@@ -1,0 +1,24 @@
+### YamlMime:PowershellModule
+children:
+- title: HgsServer
+  cmdlets:
+  - HgsServer.Clear-HgsServer
+  - HgsServer.Export-HgsServerState
+  - HgsServer.Get-HgsServer
+  - HgsServer.Import-HgsServerState
+  - HgsServer.Initialize-HgsServer
+  - HgsServer.Install-HgsServer
+  - HgsServer.Set-HgsServer
+  - HgsServer.Test-HgsServer
+  - HgsServer.Uninstall-HgsServer
+uid: HgsServer
+name: HgsServer
+description: |-
+  This reference provides cmdlet descriptions and syntax for the Host Guardian Service server cmdlets. This table lists the cmdlets in alphabetical order.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.3
+  Locale: en-US
+  Module Guid: fda18d7c-b57d-47d7-801c-14832537a1ba
+  Module Name: HgsServer
+  title: HgsServer

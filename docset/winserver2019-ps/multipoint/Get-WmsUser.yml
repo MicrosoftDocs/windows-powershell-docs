@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets local user account information.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **WmsUser** collection as **PSObject** collection.
+links:
+- text: Set-WmsUser
+  href: ./Set-WmsUser.yml
+syntaxes:
+- Get-WmsUser -Name <String> [-Server <String>] [<CommonParameters>]
+- Get-WmsUser [-All] [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all local user account information'
+  code: |-
+    PS C:\> Get-WmsUser -All
+    Name         : Administrator
+    Password     : 
+    FullName     : 
+    Description  : Built-in account for administering the computer/domain
+    UserType     : Administrator
+    ComputerName : Test1
+    Name         : Guest
+    Password     : 
+    FullName     : 
+    Description  : Built-in account for guest access to the computer/domain
+    UserType     : Standard
+    ComputerName : Test1
+  description: |-
+    This command gets all local user account information.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  isRequired: true
+  description: |+
+    Indicates that this operation applies to all sessions on the target host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the user to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+uid: MultiPoint.Get-WmsUser
+name: Get-WmsUser
+description: |-
+  The **Get-WmsUser** cmdlet gets local user account information for a specified user or all users.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/get-wmsuser?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WmsUser

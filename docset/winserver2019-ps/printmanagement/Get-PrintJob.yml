@@ -1,0 +1,140 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a list of print jobs in the specified printer.
+module: PrintManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts one printer object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrintJob" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns one or more print job objects.
+links:
+- text: Remove-PrintJob
+  href: ./Remove-PrintJob.yml
+- text: Restart-PrintJob
+  href: ./Restart-PrintJob.yml
+- text: Suspend-PrintJob
+  href: ./Suspend-PrintJob.yml
+- text: Resume-PrintJob
+  href: ./Resume-PrintJob.yml
+syntaxes:
+- >-
+  Get-PrintJob [-ComputerName <String>] [-ID <UInt32>] [-PrinterName] <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-PrintJob [-ID <UInt32>] [-PrinterObject] <CimInstance> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a list of print jobs'
+  code: |-
+    PS C:\> Get-PrintJob -PrinterName "PrinterName"
+  description: |-
+    This command retrieves a list of print jobs on the printer named PrinterName.
+  summary: ""
+- title: 'Example 2: Get a list of print jobs using a printer object'
+  code: |-
+    PS C:\> $Printer = Get-Printer -Name "PrinterName:"
+    PS C:\> Get-PrintJob -PrinterObject $Printer
+  description: |-
+    The first command gets a printer named PrinterName: by using the Get-Printer cmdlet.
+    The command stores the result in the $Printer variable.
+
+    The second command gets print jobs on the printer in $Printer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the computer from which to retrieve the print job information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: CN, computer
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ID
+  description: |+
+    Specifies the ID of the print job to retrieve.
+    You can use wildcard characters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrinterName
+  isRequired: true
+  description: |+
+    Specifies the name of the printer from which to retrieve the print job information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: PN
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: PrinterObject
+  isRequired: true
+  description: |+
+    Specifies the printer object from which to retrieve the print job information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Printer
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PrintManagement.Get-PrintJob
+name: Get-PrintJob
+description: |-
+  The **Get-PrintJob** cmdlet retrieves the current print jobs in the specified printer.
+  Specify the *PrinterName* parameter to list the print jobs from the specified printer.
+
+  You cannot use wildcard characters with **Get-PrintJob**.
+  You can use **Get-PrintJob** in a Windows PowerShell remoting session.
+
+  You do not need administrator credentials to run **Get-PrintJob**.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_PrintJob_v1.0.cdxml-help.xml
+  Module Name: PrintManagement
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printjob?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-PrintJob

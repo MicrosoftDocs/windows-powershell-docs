@@ -1,0 +1,175 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an app package (.appx) from a Windows image.
+module: DISM
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.AppxPackageObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-AppxPackage
+  href: https://go.microsoft.com/fwlink/?LinkId=215772
+- text: Add-AppxProvisionedPackage
+  href: ./Add-AppxProvisionedPackage.yml
+- text: Get-AppxProvisionedPackage
+  href: ./Get-AppxProvisionedPackage.yml
+- text: Set-AppXProvisionedDataFile
+  href: ./Set-AppXProvisionedDataFile.yml
+syntaxes:
+- >-
+  Remove-AppxProvisionedPackage -PackageName <String> -Path <String> [-WindowsDirectory <String>]
+
+   [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [-AllUsers]
+
+   [<CommonParameters>]
+- >-
+  Remove-AppxProvisionedPackage -PackageName <String> [-Online] [-WindowsDirectory <String>]
+
+   [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [-AllUsers]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove an app package from an image'
+  code: |-
+    PS C:\> Remove-AppxProvisionedPackage -Path c:\offline -PackageName MyAppxPkg
+  description: |-
+    This command removes the app package (.appx), MyAppxPkg, from the Windows image that is mounted to c:\offline.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllUsers
+  description: |+
+    Execute the command to all users.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: |+
+    Specifies the maximum output level shown in the logs.
+    The default log level is 3.
+    The accepted values are as follows:
+    - 1 = Errors only
+    - 2 = Errors and warnings
+    - 3 = Errors, warnings, and information
+    - 4 = All of the information listed previously, plus debug output
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LL
+  parameterValueGroup: Errors, Warnings, WarningsInfo
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the full path and file name to log to.
+    If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+    In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+    The log file will automatically be archived.
+    The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+    Each time the log file is archived the .bak file will be overwritten. 
+    When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LP
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Online
+  isRequired: true
+  description: |+
+    Specifies that the action is to be taken on the operating system that is currently running on the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageName
+  isRequired: true
+  description: |+
+    Specifies the name of the app package (.appx) to remove from the Windows image.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the full path to the root directory of the offline Windows image that you will service.
+    If the directory named Windows is not a subdirectory of the root directory, *WindowsDirectory* must be specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScratchDirectory
+  description: |+
+    Specifies a temporary directory that will be used when extracting files for use during servicing.
+    The directory must exist locally.
+    If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+    Items in the scratch directory are deleted after each operation. 
+    You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+    The directory used for extracting files for temporary usage during servicing should be a local directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SystemDrive
+  description: |+
+    Specifies the path to the location of the BootMgr files.
+    This is necessary only when the BootMgr files are located on a partition other than the one that you are running the command from.
+    Use -SystemDrive to service an installed Windows image from a Windows PE environment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WindowsDirectory
+  description: |+
+    Specifies the path to the Windows directory relative to the image path.
+    This cannot be the full path to the Windows directory; it should be a relative path.
+    If not specified, the default is the Windows directory in the root of the offline image directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DISM.Remove-AppxProvisionedPackage
+name: Remove-AppxProvisionedPackage
+description: |-
+  The **Remove-AppxProvisionedPackage** cmdlet removes app packages (.appx) from a Windows image.
+  App packages will not be installed when new user accounts are created.
+  Packages will not be removed from existing user accounts.
+  To remove app packages (.appx) that are not provisioned or to remove a package for a particular user only, use Remove-AppxPackage instead.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+  Module Name: System.Object[]
+  ms.date: 12/21/2016
+  online version: https://docs.microsoft.com/powershell/module/dism/remove-appxprovisionedpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AppxProvisionedPackage

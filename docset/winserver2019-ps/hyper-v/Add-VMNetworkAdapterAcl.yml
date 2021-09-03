@@ -1,0 +1,280 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an ACL to apply to the traffic through a virtual machine network adapter.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.VMNetworkAdapterAclSetting" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+syntaxes:
+- >-
+  Add-VMNetworkAdapterAcl -Action <VMNetworkAdapterAclAction> -Direction <VMNetworkAdapterAclDirection>
+
+   [-LocalIPAddress <String[]>] [-LocalMacAddress <String[]>] [-RemoteIPAddress <String[]>]
+
+   [-RemoteMacAddress <String[]>] [-Passthru] [-VMNetworkAdapterName <String>] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-VMName] <String[]> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-VMNetworkAdapterAcl -Action <VMNetworkAdapterAclAction> -Direction <VMNetworkAdapterAclDirection>
+
+   [-LocalIPAddress <String[]>] [-LocalMacAddress <String[]>] [-RemoteIPAddress <String[]>]
+
+   [-RemoteMacAddress <String[]>] [-Passthru] [-VMNetworkAdapter] <VMNetworkAdapterBase[]> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-VMNetworkAdapterAcl -Action <VMNetworkAdapterAclAction> -Direction <VMNetworkAdapterAclDirection>
+
+   [-LocalIPAddress <String[]>] [-LocalMacAddress <String[]>] [-RemoteIPAddress <String[]>]
+
+   [-RemoteMacAddress <String[]>] [-Passthru] [-ManagementOS] [-VMNetworkAdapterName <String>]
+
+   [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-VMNetworkAdapterAcl -Action <VMNetworkAdapterAclAction> -Direction <VMNetworkAdapterAclDirection>
+
+   [-LocalIPAddress <String[]>] [-LocalMacAddress <String[]>] [-RemoteIPAddress <String[]>]
+
+   [-RemoteMacAddress <String[]>] [-Passthru] [-VMNetworkAdapterName <String>] [-VM] <VirtualMachine[]> [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress 10.0.0.0/8 -Direction Both -Action Allow
+  description: |-
+    This example adds an ACL to allow virtual machine Redmond to send to and receive from traffic on IP subnet 10.0.0.8/8.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Add-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress ANY -Direction Both -Action Deny
+  description: |-
+    This example adds an ACL to deny virtual machine Redmond to send either IPv4 or IPv6 traffic to anywhere and receive such traffic from anywhere.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-VM Redmond | Add-VMNetworkAdapterAcl -RemoteMacAddress 03-0f-01-0e-aa-b2 -Direction Both -Action Deny
+  description: |-
+    This example gets virtual machine Redmond and adds an ACL to deny it to send any traffic to a device with MAC address 03-0f-01-0e-aa-b2 or to receive any traffic from that device.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-VMNetworkAdapter -VMName Redmond | Add-VMNetworkAdapterAcl -RemoteIPAddress 192.168.0.0/16 -Direction Outbound -Action Meter
+  description: |-
+    This example gets virtual network adapters from virtual machine Redmond and adds an ACL to meter outgoing traffic sent to IP subnet 192.168.0.0/16.
+  summary: ""
+parameters:
+- type: <xref href="VMNetworkAdapterAclAction" data-throw-if-not-resolved="False" />
+  name: Action
+  isRequired: true
+  description: |+
+    Specifies the action for the ACL.
+    Allowed values are **Allow**, **Deny**, and **Meter**.
+    A metering ACL must be IP-based, i.e.
+    either -RemoteIPAddress or -LocalIPAddress must be specified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Allow, Deny, Meter
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the ACL is to be created.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterAclDirection" data-throw-if-not-resolved="False" />
+  name: Direction
+  isRequired: true
+  description: |+
+    Specifies the direction of the network traffic to which the ACL is to apply.
+    Allowed values are **Inbound**, **Outbound**, or **Both**.
+    . If **Both** is specified, the new ACL entry is added to both the inbound direction and the outbound direction.
+    In the output of Get-VMNetworkAdapterAcl, the ACL entry appears in both the inbound ACL list and the outbound ACL list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Inbound, Outbound, Both
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LocalIPAddress
+  description: |+
+    Specifies the local IP address to which the ACL is to apply.
+    For an inbound packet, this is the destination IP address in the packet header; for an outbound packet, this is the source IP address in the packet header.
+    It can be either IPv4 or IPv6 address.
+    It can be either a host address or a subnet address, e.g.
+    1.2.3.4, 2001::2008, 192.168.1.0/24, or f001:f002:f003:f004::1/64.
+    The IP address can also be a wildcard, 0.0.0.0/0 for all IPv4 addresses, ::/0 for all IPv6 addresses, or ANY for all IPv4 and IPv6 addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LocalMacAddress
+  description: |+
+    Specifies the local MAC address to which the ACL is to apply.
+    For an inbound packet, this is the destination MAC address in the packet header; for an outbound packet, this is the source MAC address in the packet header.
+    It can be a host MAC address, e.g.
+    00-ab-00-11-22-33, or a wildcard, ANY, for all MAC addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagementOS
+  isRequired: true
+  description: |+
+    Specifies that the ACL is to be applied in the management (i.e.
+    the parent, or host) operating system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that an object is to be passed through to the pipeline representing the ACL to be added.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoteIPAddress
+  description: |+
+    Specifies the remote IP address to which this ACL is to apply.
+    For an inbound packet, this is the source IP address in the packet header; for an outbound packet, this is the destination IP address in the packet header.
+    It can be either IPv4 or IPv6 address.
+    It can be either a host address or a subnet address, e.g.
+    1.2.3.4, 2001::2008, 192.168.1.0/24, or f001:f002:f003:f004::1/64.the IP address can also be a wildcard, 0.0.0.0/0 for all IPv4 addresses, ::/0 for all IPv6 addresses, or ANY for all IPv4 and IPv6 addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoteMacAddress
+  description: |+
+    Specifies the remote MAC address to which this ACL is to apply.
+    For an inbound packet, this is the source MAC address in the packet header; for an outbound packet, this is the destination MAC address in the packet header.
+    It can be a host MAC address, e.g.
+    00-ab-00-11-22-33, or a wildcard, ANY, for all MAC addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine on which the ACL is to apply.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine on which the ACL is to apply.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterBase" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMNetworkAdapter
+  isRequired: true
+  description: |+
+    Specifies the virtual machine network adapter to which the ACL is to apply.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapterName
+  description: |+
+    Specifies the name of the virtual machine network adapter to which the ACL is to apply.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Add-VMNetworkAdapterAcl
+name: Add-VMNetworkAdapterAcl
+description: |-
+  The **Add-VMNetworkAdapterAcl** cmdlet creates an ACL to apply to the traffic through a virtual machine network adapter.
+  When a virtual network adapter is created there is no ACL on it.
+  Given a list of IP-based ACL entries to be applied to traffic in the same direction, the longest match rule decides which one of the entries is most appropriate to apply to a specific packet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/add-vmnetworkadapteracl?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-VMNetworkAdapterAcl

@@ -1,0 +1,156 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts the Cluster service on a node in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterNode
+  href: ./Add-ClusterNode.yml
+- text: Get-ClusterNode
+  href: ./Get-ClusterNode.yml
+- text: Remove-ClusterNode
+  href: ./Remove-ClusterNode.yml
+- text: Resume-ClusterNode
+  href: ./Resume-ClusterNode.yml
+- text: Stop-ClusterNode
+  href: ./Stop-ClusterNode.yml
+- text: Suspend-ClusterNode
+  href: ./Suspend-ClusterNode.yml
+syntaxes:
+- >-
+  Start-ClusterNode [[-Name] <StringCollection>] [-ForceQuorum] [-ClearQuarantine] [-IgnorePersistentState]
+
+   [-PreventQuorum] [-Wait <Int32>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Start-ClusterNode -Name node3
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node3                                                                   Joining
+  description: |-
+    This example starts the Cluster service on the node named node3 on the local cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Start-ClusterNode -Name node1 -Cluster cluster2
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node1                                                                   Joining
+  description: |-
+    This example starts the Cluster service on the node named node1 on the cluster named cluster2.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Start-ClusterNode -FixQuorum
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node1                                                                   Joining
+  description: |-
+    This example forces the local node and the local cluster to start, even if quorum has not been achieved.
+    If quorum has not been achieved, then the copy of the cluster configuration that is on the local node will be treated as the authoritative copy and will be replicated to all other nodes.
+    This cmdlet should be considered a last resort, because some cluster configuration changes could be lost, such as recovery options for cluster service.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearQuarantine
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: cq
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceQuorum
+  description: |+
+    Indicates that the cmdlet forces the start of a cluster node regardless if quorum is not formed.
+
+  defaultValue: None
+  position: Named
+  aliases: fq, FixQuorum
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IgnorePersistentState
+  description: |+
+    Starts the cluster node without bringing resources online on the node.
+
+  defaultValue: None
+  position: Named
+  aliases: ips
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster node to start.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster node to start.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PreventQuorum
+  description: |+
+    Starts the node, but prevents it from achieving quorum and forming the cluster, to prevent a split situation with two competing instances of the cluster running.
+
+  defaultValue: None
+  position: Named
+  aliases: pq
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the **Wait** parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Start-ClusterNode
+name: Start-ClusterNode
+description: |-
+  The **Start-ClusterNode** cmdlet starts the Cluster service on a node in a failover cluster.
+  If this is the first node started, then it will wait for other nodes to join.
+  The cluster will begin to run when a quorum has formed.
+
+  This cmdlet with the **FixQuorum** parameter can be used to force quorum, that is, force the start of a cluster node even if quorum has not been achieved.
+  When quorum is forced on a given node, the copy of the cluster configuration that is on that node will be treated as the authoritative copy and will be replicated to all other nodes.
+  Therefore, forcing quorum should be considered a last resort, because some cluster configuration changes could be lost.
+  The ability to force quorum can be especially useful in a multi-site cluster if the primary site, with the majority of nodes, becomes unavailable, and the secondary site, with a minority of nodes, need to be brought into service.
+  Similarly, the ability to force quorum makes it possible to start a cluster that uses the Node and File Share Majority quorum option when none of the available cluster nodes contains a current copy of the cluster configuration.
+
+  Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/start-clusternode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-ClusterNode

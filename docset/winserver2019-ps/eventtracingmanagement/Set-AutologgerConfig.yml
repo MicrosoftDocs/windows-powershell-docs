@@ -1,0 +1,276 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an existing AutoLogger session configuration.
+module: EventTracingManagement
+notes: ""
+links:
+- text: Configuring and Starting an AutoLogger Session
+  href: https://msdn.microsoft.com/library/windows/desktop/aa363687.aspx
+- text: Logging Mode Constants
+  href: https://msdn.microsoft.com/library/windows/desktop/aa364080.aspx
+- text: WNODE_HEADER structure
+  href: https://msdn.microsoft.com/library/windows/desktop/aa364160.aspx
+- text: Get-AutologgerConfig
+  href: ./Get-AutologgerConfig.yml
+- text: New-AutologgerConfig
+  href: ./New-AutologgerConfig.yml
+- text: Remove-AutologgerConfig
+  href: ./Remove-AutologgerConfig.yml
+syntaxes:
+- >-
+  Set-AutologgerConfig [-Name] <String[]> [-BufferSize <UInt32>] [-ClockType <ClockType>]
+
+   [-DisableRealtimePersistence <UInt32>] [-LocalFilePath <String>] [-FileMax <UInt32>] [-FlushTimer <UInt32>]
+
+   [-Guid <String>] [-LogFileMode <UInt32>] [-MaximumFileSize <UInt32>] [-MaximumBuffers <UInt32>]
+
+   [-MinimumBuffers <UInt32>] [-Start <UInt32>] [-InitStatus <UInt32>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AutologgerConfig -InputObject <CimInstance[]> [-BufferSize <UInt32>] [-ClockType <ClockType>]
+
+   [-DisableRealtimePersistence <UInt32>] [-LocalFilePath <String>] [-FileMax <UInt32>] [-FlushTimer <UInt32>]
+
+   [-Guid <String>] [-LogFileMode <UInt32>] [-MaximumFileSize <UInt32>] [-MaximumBuffers <UInt32>]
+
+   [-MinimumBuffers <UInt32>] [-Start <UInt32>] [-InitStatus <UInt32>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a configuration'
+  code: |-
+    PS C:\> Set-AutologgerConfig -Name "WFP-IPsec Trace" -MaximumBuffers 8 -ClockType Cycle
+  description: |-
+    This command modifies the AutoLogger configuration named WFP-IPsec Trace.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: BufferSize
+  description: |+
+    Specifies the Event Tracing for Windows (ETW) trace session buffer size in KB.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="ClockType" data-throw-if-not-resolved="False" />
+  name: ClockType
+  description: |+
+    Specifies the type of timestamp that will be used for each event logged to this ETW session.
+
+    This is an advanced session configuration option, and it is not recommended that this parameter be set.
+
+    For more information, see the description of the **ClientContext** field in [WNODE_HEADER structure](https://msdn.microsoft.com/en-us/library/windows/desktop/aa364160.aspx) for a description of clock types.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Performance, System, Cycle
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DisableRealtimePersistence
+  description: |+
+    Specifies whether to not persist real-time events that were not delivered before the time the computer was shutdown.
+    Persisted events are delivered to the consumer the next time the consumer connects to the session.
+    To disable real time persistence, specify a value of one.
+    To persist events, specify a value of zero.
+    The default is zero.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: FileMax
+  description: |+
+    Specifies the maximum number of log files an AutoLogger session can create.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: FlushTimer
+  description: |+
+    Specifies the timeout value for ETW trace session to flush capture buffer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Guid
+  description: |+
+    Specifies an AutoLogger session configuration ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: InitStatus
+  description: |+
+    Specifies the initial status of the AutoLogger configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalFilePath
+  description: |+
+    Specifies the full path for an ETW log file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LogFileMode
+  description: |+
+    Specify one or more log modes, such as **EVENT_TRACE_REAL_TIME_MODE** 0x100.
+    Each mode is a bit field.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaximumBuffers
+  description: |+
+    Specifies the maximum number of buffers for an ETW trace session.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaximumFileSize
+  description: |+
+    Specifies the maximum size, in MB, of a log file before a new one is created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MinimumBuffers
+  description: |+
+    Specifies the minimum number of buffers for an ETW trace session.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the AutoLogger session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Indicates that this cmdlet returns an object that represents the item on which it operates.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Start
+  description: |+
+    Specifies whether to activate the AutoLogger session at the next computer restart.
+    By default, the AutoLogger session is configured to start at boot time.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: EventTracingManagement.Set-AutologgerConfig
+name: Set-AutologgerConfig
+description: |-
+  The **Set-AutologgerConfig** cmdlet modifies an existing AutoLogger session configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_AutologgerConfig_v1.0.cdxml-help.xml
+  Module Name: EventTracingManagement
+  ms.date: 01/05/2017
+  online version: https://docs.microsoft.com/powershell/module/eventtracingmanagement/set-autologgerconfig?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AutologgerConfig

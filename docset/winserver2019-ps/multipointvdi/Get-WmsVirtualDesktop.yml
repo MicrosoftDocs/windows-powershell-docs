@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a virtual desktop.
+module: MultipointVdi
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Import-WmsVirtualDesktop
+  href: ./Import-WmsVirtualDesktop.yml
+- text: New-WmsVirtualDesktop
+  href: ./New-WmsVirtualDesktop.yml
+- text: Open-WmsVirtualDesktop
+  href: ./Open-WmsVirtualDesktop.yml
+syntaxes:
+- Get-WmsVirtualDesktop [-VirtualMachineName <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a virtual desktop by name'
+  code: |-
+    PS C:\> Get-WmsVirtualDesktop -VirtualMachineName "MyDesktop"
+  description: |-
+    This command gets the virtual desktop named MyDesktop.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualMachineName
+  description: |+
+    Specifies the name of the virtual desktop to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MultipointVdi.Get-WmsVirtualDesktop
+name: Get-WmsVirtualDesktop
+description: |-
+  The **Get-WmsVirtualDesktop** cmdlet gets the specified virtual desktop or all virtual desktops if you don't specify the *VirtualMachineName* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPointVdi.dll-Help.xml
+  Module Name: MultipointVdi
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipointvdi/get-wmsvirtualdesktop?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WmsVirtualDesktop

@@ -4,7 +4,12 @@ summary: |-
 module: IISAdministration
 notes: ""
 inputs:
-- name: <xref href="Microsoft.Web.Administration.ConfigurationElement,System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElement" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
   description: ""
 links:
 - text: Clear-IISConfigCollection

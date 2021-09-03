@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets MultiPoint servers or personal computers running MultiPoint Connector in the same network.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Returns a string collection as **PSObject** collection.
+links:
+- text: Add-WmsSystem
+  href: ./Add-WmsSystem.yml
+- text: Get-WmsSystem
+  href: ./Get-WmsSystem.yml
+- text: Remove-WmsSystem
+  href: ./Remove-WmsSystem.yml
+- text: Restart-WmsSystem
+  href: ./Restart-WmsSystem.yml
+- text: Set-WmsSystem
+  href: ./Set-WmsSystem.yml
+- text: Stop-WmsSystem
+  href: ./Stop-WmsSystem.yml
+syntaxes:
+- Search-WmsSystem [-ManagedSystemsType] <ManagedSystemTypes> [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Search for MultiPoint servers on a subnet'
+  code: |-
+    PS C:\> Search-WmsSystem -ManagedSystemsType MultiPointServers
+    Test2
+    Test3
+  description: |-
+    The cmdlet gets peer Windows MultiPoint servers in the same subnet.
+    The query takes 10 seconds to complete and uses the Microsoft Web Services on Devices API (WSDAPI) to discover peer MultiPoint servers in the network.
+  summary: ""
+parameters:
+- type: <xref href="ManagedSystemTypes" data-throw-if-not-resolved="False" />
+  name: ManagedSystemsType
+  isRequired: true
+  description: |+
+    Specifies the managed system type.
+    The acceptable values for this parameter are: PersonalComputers, MultiPointServers.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: MultiPointServers, PersonalComputers
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+uid: MultiPoint.Search-WmsSystem
+name: Search-WmsSystem
+description: |-
+  The **Search-WmsSystem** cmdlet gets other MultiPoint servers or personal computers running MultiPoint Connector in the same network.
+  The operation takes 10 seconds to complete.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/search-wmssystem?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Search-WmsSystem

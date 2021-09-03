@@ -3,6 +3,12 @@ summary: |-
   Instructs the IIS configuration system to delay the commitment of changes.
 module: IISAdministration
 notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
 links:
 - text: Stop-IISCommitDelay
   href: ./Stop-IISCommitDelay.yml

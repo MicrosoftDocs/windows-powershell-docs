@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops a running compute system in the Hyper-V Host Compute Service.
+module: HostComputeService
+notes: ""
+links:
+- text: Get-ComputeProcess
+  href: ./Get-ComputeProcess.yml
+syntaxes:
+- Stop-ComputeProcess [-Id] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Stop-ComputeProcess -ComputeProcess <ComputeProcess[]> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="ComputeProcess" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputeProcess
+  isRequired: true
+  description: |+
+    Specifies an array of compute systems that this cmdlet stops.
+    To obtain a **ComputeProcess** object, use the **Get-ComputeProcess** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the ID of a compute system that this cmdlet stops.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HostComputeService.Stop-ComputeProcess
+name: Stop-ComputeProcess
+description: |-
+  The **Stop-ComputeProcess** cmdlet stops a running compute system in the Hyper-V Host Compute Service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HostCompute.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: HostComputeService
+  ms.date: 12/21/2016
+  online version: https://docs.microsoft.com/powershell/module/hostcomputeservice/stop-computeprocess?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-ComputeProcess

@@ -3,6 +3,12 @@ summary: |-
   Removes a binding from an IIS website. This cmdlet has been introduced in version 1.1.0.0 of IISAdministration module.
 module: IISAdministration
 notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
 links:
 - text: Get-IISSiteBinding
   href: ./Get-IISSiteBinding.yml
@@ -14,7 +20,7 @@ syntaxes:
 - >-
   Remove-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] <String>]
 
-   [-RemoveConfigOnly] [-WhatIf] [-Confirm]
+   [-RemoveConfigOnly] [-WhatIf] [-Confirm] [<CommonParameters>]
 examples:
 - title: Example 1
   code: |-

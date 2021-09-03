@@ -3,6 +3,12 @@ summary: |-
   Resets the IISAdministration view of the IIS ServerManager.
 module: IISAdministration
 notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
 links:
 - text: Get-IISServerManager
   href: ./Get-IISServerManager.yml

@@ -4,10 +4,10 @@ summary: |-
 module: IISAdministration
 notes: ""
 inputs:
-- name: <xref href="String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
   description: ""
 outputs:
-- name: <xref href="Microsoft.Web.Administration.Site" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
   description: ""
 links:
 - text: Get-IISSite

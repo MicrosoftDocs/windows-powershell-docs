@@ -1,0 +1,205 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Backs up one GPO or all the GPOs in a domain.
+module: GroupPolicy
+notes: |-
+  * You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+
+    If you do not explicitly specify the domain, the cmdlet uses a default domain.
+  The default domain is the domain that is used to access network resources by the security context under which the current session is running.
+  This domain is typically the domain of the user that is running the session.
+  For instance, the domain of the user who started the session by opening Windows PowerShell from the Program Files menu, or the domain of a user that is specified in a runas command.
+  However, computer startup and shutdown scripts run under the context of the LocalSystem account.
+  The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
+  Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
+inputs:
+- name: <xref href="Microsoft.GroupPolicy.Gpo" data-throw-if-not-resolved="False" />
+  description: |-
+    A GPO to be backed up.
+    Collections that contain GPOs from different domains are not supported.
+outputs:
+- name: <xref href="Microsoft.GroupPolicy.GpoBackup" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents the file that holds the settings of the backed-up GPO.
+links:
+- text: Import-GPO
+  href: ./Import-GPO.yml
+- text: Restore-GPO
+  href: ./Restore-GPO.yml
+syntaxes:
+- >-
+  Backup-GPO -Guid <Guid> -Path <String> [-Comment <String>] [-Domain <String>] [-Server <String>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Backup-GPO [-Name] <String> -Path <String> [-Comment <String>] [-Domain <String>] [-Server <String>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Backup-GPO -Path <String> [-Comment <String>] [-Domain <String>] [-Server <String>] [-All] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Backup a GPO to a specific directory'
+  code: |-
+    PS C:\> Backup-Gpo -Name TestGPO -Path C:\GpoBackups -Comment "Weekly Backup" 
+    DisplayName     : TestGPO 
+
+    GpoId           : 35c12ab3-956c-45d5-973b-46b17d225f47 
+
+    Id              : 2b509d4e-40f5-4337-82f7-458584555d0c 
+
+    BackupDirectory : C:\GpoBackups 
+
+    CreationTime    : 2/25/2009 8:48:19 PM 
+
+    DomainName      : contoso.com 
+
+    Comment         : Weekly Backup
+  description: |-
+    This command backs up the "TestGPO" GPO to the C:\GpoBackups directory.
+    The specified comment is included in the GPO backup.
+  summary: ""
+- title: 'Example 2: Backup a GPO with the specified GUID to a directory'
+  code: |-
+    PS C:\> Backup-Gpo -GUID fa4a9473-6e2a-4b87-ab78-175e68d97bde -Domain "contoso.com" -Server "DC1" -Path "\\Server1\GpoBackups"
+  description: |-
+    This command backs up the GPO with the specified GUID in the contoso.com domain to the \\\\Server1\GpoBackups directory.
+    The domain controller at DC1.contoso.com is contacted to complete the operation.
+
+    If the domain of the user running the session (or, for startup and shutdown scripts, the computer) is different from the contoso.com domain, a trust must exist between the two domains or the command fails.
+  summary: ""
+- title: 'Example 3: Backup all GPOs in the domain of the user that is running the session'
+  code: |-
+    PS C:\> Backup-Gpo -All -Path "\\Server1\GpoBackups"
+  description: |-
+    This command backs up all the GPOs in the domain of the user that is running the session (or, for startup and shutdown scripts, the computer) to the \\\\Server1\GpoBackups directory.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Specifies that all the GPOs in the domain are backed up.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Comment
+  description: |+
+    Specifies a comment for the backed-up GPO.
+    The comment string must be enclosed in double-quotation or single-quotation marks and can contain 2,047 characters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies the domain for this cmdlet.
+    You must specify the fully qualified domain name (FQDN) of the domain (for example: sales.contoso.com).
+
+    For the **Backup-GPO** cmdlet, the GPO to back up must exist in this domain.
+
+    If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+    (If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.) For more information, see the Notes section in the full Help.
+
+    If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user (or the computer).
+
+    You can also refer to Domain by its built-in alias, domainname.
+    For more information, see about_Aliases.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DomainName
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Guid
+  isRequired: true
+  description: |+
+    Specifies the GPO to backup by its globally unique identifier (GUID).
+    The GUID uniquely identifies the GPO.
+
+    You can also refer to the *Guid* parameter by its built-in alias, id.
+    For more information, see **about_Aliases**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the GPO to backup by its display name.
+
+    The display name is not guaranteed to be unique in the domain.
+    If another GPO with the same display name exists in the domain an error occurs.
+    You can use the *Guid* parameter to uniquely identify a GPO.
+
+    You can also refer to the Name parameter by its built-in alias, displayname.
+    For more information, see **about_Aliases**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DisplayName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path to the backup directory; for instance, "C:\Backups" or "\\\\MyServer\Backups".
+
+  defaultValue: None
+  position: Named
+  aliases: backupLocation
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
+    You can specify either the fully qualified domain name (FQDN) or the host name.
+
+    If you do not specify the name by using the *Server* parameter, the PDC emulator is contacted.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: GroupPolicy.Backup-GPO
+name: Backup-GPO
+description: |-
+  The **Backup-GPO** cmdlet backs up a specified Group Policy Object (GPO) or all the GPOs in a domain to a backup directory.
+  The backup directory and GPO must already exist.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.GroupPolicy.Commands.dll-Help.xml
+  Module Name: GroupPolicy
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/grouppolicy/backup-gpo?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Backup-GPO

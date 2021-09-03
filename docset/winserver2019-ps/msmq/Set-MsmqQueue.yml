@@ -1,0 +1,154 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties of queues.
+module: MSMQ
+notes: ""
+links:
+- text: Clear-MsmqQueue
+  href: ./Clear-MSMQQueue.yml
+- text: Get-MsmqQueue
+  href: ./Get-MsmqQueue.yml
+- text: New-MsmqQueue
+  href: ./New-MsmqQueue.yml
+- text: Receive-MsmqQueue
+  href: ./Receive-MsmqQueue.yml
+- text: Remove-MsmqQueue
+  href: ./Remove-MsmqQueue.yml
+- text: Send-MsmqQueue
+  href: ./Send-MsmqQueue.yml
+syntaxes:
+- >-
+  Set-MsmqQueue -InputObject <MessageQueue[]> [-Label <String>] [-Authenticate <Boolean>] [-Journaling <Boolean>]
+
+   [-QueueQuota <Int64>] [-JournalQuota <Int64>] [-PrivacyLevel <EncryptionRequired>]
+
+   [-MulticastAddress <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify properties of queues'
+  code: |-
+    PS C:\> Get-MsmqQueue -Name "Order*" -QueueType Private | Set-MsmqQueue -Journaling:$true -QueueQuota 500000
+  description: |-
+    This command gets private queues that have names that start with Order by using the **Get-MsmqQueue** cmdlet.
+    The command passes the results to the current cmdlet by using the pipeline operator.
+    The current cmdlet modifies journaling and the size of the queue quota.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Authenticate
+  description: |+
+    Indicates whether the queue accepts only authenticated messages.
+    There is no default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="MessageQueue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of **MsmqQueue** objects.
+    This cmdlet modifies properties of the queues that this parameter specifies.
+    This parameter accepts pipeline input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Journaling
+  description: |+
+    Indicates whether to copy received messages to the journal queue.
+    There is no default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: JournalQuota
+  description: |+
+    Specifies the maximum size of the journal queue.
+    Specify a value in kilobytes.
+    There is no default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Label
+  description: |+
+    Specifies a label.
+    The label that this parameter specifies describes the queue.
+    There is no default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MulticastAddress
+  description: |+
+    Specifies the multicast address associated with the queue.
+    There is no default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="EncryptionRequired" data-throw-if-not-resolved="False" />
+  name: PrivacyLevel
+  description: |+
+    Specifies the privacy level associated with the queue.
+    There is no default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Optional, Body
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: QueueQuota
+  description: |+
+    Specifies the maximum size, in kilobytes, of the queue.
+    There is no default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MSMQ.Set-MsmqQueue
+name: Set-MsmqQueue
+description: |-
+  The **Set-MsmqQueue** cmdlet sets properties of queues.
+  This cmdlet returns an **MsmqQueue** object that represents the modified queue.
+  Specify private or public queues to modify.
+  If you specify a journal queue, system journal queue, system dead-letter queue, or system transactional dead-letter queue, the cmdlet returns an error.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/set-msmqqueue?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-MsmqQueue

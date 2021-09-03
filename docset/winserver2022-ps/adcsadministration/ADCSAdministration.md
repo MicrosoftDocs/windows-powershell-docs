@@ -27,7 +27,7 @@ Adds a certificate template to the CA.
 Backs up the CA database and private key information.
 
 ### [Confirm-CAAttestationIdentityKeyInfo](Confirm-CAAttestationIdentityKeyInfo.md)
-{{ Fill in the Synopsis }}
+Checks whether the local certification authority trusts secure hardware for identity attestation.
 
 ### [Confirm-CAEndorsementKeyInfo](Confirm-CAEndorsementKeyInfo.md)
 Checks whether the local CA trusts secure hardware for key attestation.

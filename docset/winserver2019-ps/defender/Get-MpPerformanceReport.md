@@ -11,7 +11,7 @@ title: Get-MpPerformanceReport
 # Get-MpPerformanceReport
 
 ## SYNOPSIS
-Analyzes and reports on MDAV performance recording
+Analyzes and reports on Microsoft Defender Antivirus (MDAV) performance recording.
 
 ## SYNTAX
 
@@ -50,16 +50,27 @@ The `Get-MpPerformanceReport` cmdlet analyzes a previously collected Microsoft D
 
 The performance analyzer provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided "AS IS" and is not intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
 
-For more information on the Performance analyzer, see Performance Analyzer docs.
+For more information on the performance analyzer, see Performance Analyzer docs.
 
 **Supported OS versions**
 
-Windows Version 10 and higher.
+Windows Version 10 and later.
 
 > [!NOTE]
-> This feature is available starting with platform version 4.18.2108.X and higher.
+> This feature is available starting with platform version 4.18.2108.X and later.
 
 ## PARAMETERS
+
+### -MinDuration
+Specifies the minimum duration of any scan or total scan durations of files, extensions, and processes included in the report; accepts values like  **0.1234567sec**, **0.1234ms**, **0.1us**, or a valid TimeSpan.
+
+```yaml
+Type: String
+Position: Named
+Default value: None
+Accept pipeline input: False 
+Accept wildcard characters: False
+```
 
 ### -Path
 Specifies the path(s) to one or more locations.
@@ -183,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopScansPerFilePerExtension 
-Specifies how many top scans for output for each top file for each top extension, sorted by "Duration".
+Specifies how many top scans to output for each top file for each top extension, sorted by "Duration".
 
 ```yaml
 Type: Int32
@@ -227,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopScansPerExtensionPerProcess 
-Specifies how many top scans for output for each top extension for each top process, sorted by "Duration”.
+Specifies how many top scans to output for each top extension for each top process, sorted by "Duration”.
 
 ```yaml
 Type: Int32

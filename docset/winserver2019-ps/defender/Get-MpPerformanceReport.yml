@@ -69,6 +69,15 @@ parameters:
   aliases: ""
   parameterValueGroup: ""
 - type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MinDuration
+  description: |+
+    Specifies the minimum duration of any scan or total scan durations of files, extensions, and processes included in the report; accepts values like  **0.1234567sec**, **0.1234ms**, **0.1us**, or a valid TimeSpan.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
   name: Path
   description: |+
     Specifies the path(s) to one or more locations.

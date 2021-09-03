@@ -99,7 +99,7 @@ This command configures preferences to check for definition updates 120 minutes 
 ## PARAMETERS
 
 ### -AllowDatagramProcessingOnWinServer
-{{ Fill AllowDatagramProcessingOnWinServer Description }}
+Specifies whether to disable inspection of UDP connections on Windows Server.
 
 ```yaml
 Type: Boolean
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNetworkProtectionDownLevel
-{{ Fill AllowNetworkProtectionDownLevel Description }}
+Specifies whether to allow network protection to be set to Enabled or Audit Mode on Windows versions before 1709.
 
 ```yaml
 Type: Boolean
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNetworkProtectionOnWinServer
-{{ Fill AllowNetworkProtectionOnWinServer Description }}
+Specifies whether to allow network protection to be set to Enabled or Audit Mode for Windows Server.
 
 ```yaml
 Type: Boolean
@@ -183,7 +183,8 @@ Accept wildcard characters: False
 ```
 
 ### -AttackSurfaceReductionRules_Actions
-{{ Fill AttackSurfaceReductionRules_Actions Description }}
+Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
+If you add multiple rules as a comma separated list, specify their states separately as a comma separated list.
 
 ```yaml
 Type: ASRRuleActionType[]
@@ -198,7 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -AttackSurfaceReductionRules_Ids
-{{ Fill AttackSurfaceReductionRules_Ids Description }}
+Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
+If you add multiple rules as a comma separated list, specify their states separately as a comma separated list.
 
 ```yaml
 Type: String[]
@@ -248,7 +250,8 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlockLevel
-{{ Fill CloudBlockLevel Description }}
+Specifies a cloud block level. 
+This value determines how aggressive Microsoft Defender Antivirus is in blocking and scanning suspicious files.
 
 ```yaml
 Type: CloudBlockLevelType
@@ -263,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudExtendedTimeout
-{{ Fill CloudExtendedTimeout Description }}
+Specifies the amount of extended time to block a suspicious file and scan it in the cloud. Standard time is 10 seconds. Extend by up to 50 seconds.
 
 ```yaml
 Type: UInt32
@@ -278,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControlledFolderAccessAllowedApplications
-{{ Fill ControlledFolderAccessAllowedApplications Description }}
+Specifies applications that can make changes in controlled folders.
 
 ```yaml
 Type: String[]
@@ -293,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControlledFolderAccessProtectedFolders
-{{ Fill ControlledFolderAccessProtectedFolders Description }}
+Specifies additional folders to protect.
 
 ```yaml
 Type: String[]
@@ -420,7 +423,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDatagramProcessing
-{{ Fill DisableDatagramProcessing Description }}
+Specifies whether to disable inspection of UDP connections.
 
 ```yaml
 Type: Boolean
@@ -435,7 +438,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDnsOverTcpParsing
-{{ Fill DisableDnsOverTcpParsing Description }}
+Specifies whether to disable inspection of DNS traffic that occurs over a TCP channel.
 
 ```yaml
 Type: Boolean
@@ -450,7 +453,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDnsParsing
-{{ Fill DisableDnsParsing Description }}
+Specifies whether to disable inspection of DNS traffic that occurs over a UDP channel.
 
 ```yaml
 Type: Boolean
@@ -482,7 +485,17 @@ Accept wildcard characters: False
 ```
 
 ### -DisableGradualRelease
-{{ Fill DisableGradualRelease Description }}
+Specifies whether to disable gradual rollout of monthly and daily Windows Defender updates. 
+If you enable this option, devices are offered all updates after the gradual release cycle finishes.
+Consider this option for datacenter computers that only receive limited updates. 
+
+This setting applies to both monthly as well as daily updates.
+It overrides any previously configured channel selections for platform and engine updates. 
+
+If you disable or do not configure this policy, the device remains in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates.
+The device stays up to date automatically during the gradual release cycle, which is suitable for most devices. 
+
+This policy is available starting with platform version 4.18.2106.5 and later.
 
 ```yaml
 Type: Boolean
@@ -497,7 +510,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableHttpParsing
-{{ Fill DisableHttpParsing Description }}
+Specifies whether disable inspection of HTTP traffic.
+If **EnableNetworkProtection** has the value `Enabled`, HTTP connections to malicious websites can be blocked.
 
 ```yaml
 Type: Boolean
@@ -512,7 +526,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableInboundConnectionFiltering
-{{ Fill DisableInboundConnectionFiltering Description }}
+Specifies whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
 Type: Boolean
@@ -577,7 +591,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRdpParsing
-{{ Fill DisableRdpParsing Description }}
+Specifies whether to disable inspection of RDP traffic.
+By default, Network Protection inspects RDP traffic.
 
 ```yaml
 Type: Boolean
@@ -687,7 +702,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableSshParsing
-{{ Fill DisableSshParsing Description }}
+Specifies whether to disable inspection of SSH traffic.
+By default, Network Protection inspects SSH traffic.
 
 ```yaml
 Type: Boolean
@@ -702,7 +718,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableTlsParsing
-{{ Fill DisableTlsParsing Description }}
+Specifies whether to disable inspection of TLS traffic, also known as HTTPS.
+By default, Network Protection inspects TLS traffic.
 
 ```yaml
 Type: Boolean
@@ -717,7 +734,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableControlledFolderAccess
-{{ Fill EnableControlledFolderAccess Description }}
+Specifies the state for the controlled folder access feature. Valid values are Disabled, Enabled, and Audit Mode.
 
 ```yaml
 Type: ControlledFolderAccessType
@@ -732,7 +749,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDnsSinkhole
-{{ Fill EnableDnsSinkhole Description }}
+Specifies whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks. 
 
 ```yaml
 Type: Boolean

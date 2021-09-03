@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Add-MpPreference cmdlet modifies settings for Windows Defender.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
 ms.date: 12/20/2016
@@ -31,12 +31,19 @@ Use this cmdlet to add exclusions for file name extensions, paths, and processes
 ## EXAMPLES
 
 ### Example 1: Add a folder to the exclusion list
-```
-PS C:\> Add-MpPreference -ExclusionPath "C:\Temp"
+```powershell
+Add-MpPreference -ExclusionPath "C:\Temp"
 ```
 
 This command adds the folder C:\Temp to the exclusion list.
 The command disables Windows Defender scheduled and real-time scanning for files in this folder.
+
+### Example 2: All an application to access folders
+```powershell
+Add-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe"
+```
+
+This command allows the specified application to make changes in controlled folders.
 
 ## PARAMETERS
 
@@ -80,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -AttackSurfaceReductionRules_Actions
-{{ Fill AttackSurfaceReductionRules_Actions Description }}
+Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
+If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
 
 ```yaml
 Type: ASRRuleActionType[]
@@ -95,7 +103,10 @@ Accept wildcard characters: False
 ```
 
 ### -AttackSurfaceReductionRules_Ids
-{{ Fill AttackSurfaceReductionRules_Ids Description }}
+Specifies the IDs of attack surface reduction rules.
+Use the **AttackSurfaceReductionRules_Actions** parameter to specify the state for each rule. 
+If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
+
 
 ```yaml
 Type: String[]
@@ -127,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControlledFolderAccessAllowedApplications
-{{ Fill ControlledFolderAccessAllowedApplications Description }}
+Specifies applications that can make changes in controlled folders.
 
 ```yaml
 Type: String[]
@@ -142,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControlledFolderAccessProtectedFolders
-{{ Fill ControlledFolderAccessProtectedFolders Description }}
+Specifies more folders to protect.
 
 ```yaml
 Type: String[]

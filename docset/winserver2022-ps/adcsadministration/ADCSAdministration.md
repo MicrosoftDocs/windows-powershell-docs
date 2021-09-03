@@ -26,7 +26,10 @@ Adds a certificate template to the CA.
 ### [Backup-CARoleService](./Backup-CARoleService.md)
 Backs up the CA database and private key information.
 
-### [Confirm-CAEndorsementKeyInfo](./Confirm-CAEndorsementKeyInfo.md)
+### [Confirm-CAAttestationIdentityKeyInfo](Confirm-CAAttestationIdentityKeyInfo.md)
+{{ Fill in the Synopsis }}
+
+### [Confirm-CAEndorsementKeyInfo](Confirm-CAEndorsementKeyInfo.md)
 Checks whether the local CA trusts secure hardware for key attestation.
 
 ### [Get-CAAuthorityInformationAccess](./Get-CAAuthorityInformationAccess.md)

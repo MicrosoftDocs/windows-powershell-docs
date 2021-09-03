@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a Boolean value that indicates whether system state recovery was added to the backup policy.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet queries the **WBPolicy** object for the backup policy.
+outputs:
+- name: <xref href="boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a Boolean value to indicate whether the system state is included in the **WBPolicy** object.
+links:
+- text: Add-WBSystemState
+  href: ./Add-WBSystemState.yml
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: New-WBPolicy
+  href: ./New-WBPolicy.yml
+- text: Remove-WBSystemState
+  href: ./Remove-WBSystemState.yml
+syntaxes:
+- Get-WBSystemState [-Policy] <WBPolicy> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the system state setting from the backup'
+  code: |-
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Get-WBSystemState -Policy $Policy
+  description: |-
+    This example displays a Boolean value that indicates whether the system state setting was added to the **WBPolicy** object that is stored in the variable named $Policy.
+    The system state setting enables you to use the backups to perform system state recoveries.
+
+    The first command stores the result of the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet to the variable named $Policy.
+
+    The second command displays the result of the **Get-WBSystemState** cmdlet using the variable named $Policy.
+  summary: ""
+parameters:
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies a **WBPolicy** object that contains the backup policy to display.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Get-WBSystemState
+name: Get-WBSystemState
+description: |-
+  The **Get-WBSystemState** cmdlet gets a Boolean value that indicates whether the ability to perform system state recoveries along with the backups was added to the **WBPolicy** object.
+  If the system state is not in the list of items to be backed up, use the [Add-WBSystemState](./Add-WBSystemState.yml) cmdlet to add it to the list.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbsystemstate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBSystemState

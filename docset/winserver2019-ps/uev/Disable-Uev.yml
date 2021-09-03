@@ -1,0 +1,33 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables the UE-V service.
+module: UEV
+notes: ""
+links:
+- text: Enable-Uev
+  href: ./Enable-Uev.yml
+- text: Get-UevStatus
+  href: ./Get-UevStatus.yml
+syntaxes:
+- Disable-Uev [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable the UE-V service'
+  code: |-
+    PS C:\>Disable-Uev
+  description: |-
+    This command disables the UE-V service.
+  summary: ""
+uid: UEV.Disable-Uev
+name: Disable-Uev
+description: |-
+  The **Disable-Uev** cmdlet disables the Microsoft User Experience Virtualization (UE-V) service on Windows 10 Anniversary edition computers.
+  This cmdlet disables synchronization of all UE-V settings.
+  The cmdlet returns a success message.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/disable-uev?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-Uev

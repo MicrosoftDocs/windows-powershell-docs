@@ -1,0 +1,37 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the file system path of the web.config file.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Get-WebConfigFile [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Open the Web.config file for the default website'
+  code: |-
+    IIS:\> Notepad (Get-WebConfigFile -PSPath "IIS:\Sites\Default Web Site")
+  description: |-
+    This command uses Notepad to open the Web.config file for the default website.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies the IIS module namespace path to the site that contains the Web.config file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebConfigFile
+name: Get-WebConfigFile
+description: |-
+  The **Get-WebConfigFile** cmdlet gets the physical path of the Internet Information Services (IIS) configuration file at the specified IIS module namespace path.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webconfigfile?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebConfigFile

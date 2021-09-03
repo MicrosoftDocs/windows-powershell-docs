@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes web applications published in Web Application Proxy.
+module: WebApplicationProxy
+notes: ""
+links:
+- text: Web Application Proxy Overview
+  href: https://technet.microsoft.com/library/dn280944.aspx
+- text: Publishing Internal Applications using Web Application
+  href: https://technet.microsoft.com/library/dn383650.aspx
+- text: Add-WebApplicationProxyApplication
+  href: ./Add-WebApplicationProxyApplication.yml
+- text: Get-WebApplicationProxyApplication
+  href: ./Get-WebApplicationProxyApplication.yml
+- text: Set-WebApplicationProxyApplication
+  href: ./Set-WebApplicationProxyApplication.yml
+syntaxes:
+- >-
+  Remove-WebApplicationProxyApplication [-ID] <Guid[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+- >-
+  Remove-WebApplicationProxyApplication [-Name] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove all published applications'
+  code: |-
+    PS C:\> Remove-WebApplicationProxyApplication
+  description: |-
+    This command removes all of the published web applications.
+  summary: ""
+- title: 'Example 2: Remove an application by using an ID'
+  code: |-
+    PS C:\> Remove-WebApplicationProxyApplication -ID 616b2e81-bada-4abc-996a-b0c806eb6f45
+  description: |-
+    This command removes the application that has the specified ID.
+  summary: ""
+- title: 'Example 3: Remove an application by using a name'
+  code: |-
+    PS C:\> Remove-WebApplicationProxyApplication -Name "ContosoApp"
+  description: |-
+    This command removes the application named ContosoApp.
+  summary: ""
+- title: 'Example 4: Remove applications that have names that contain a specified string'
+  code: |-
+    PS C:\> Remove-WebApplicationProxyApplication -Name "*Contoso*"
+  description: |-
+    This command removes applications that have names that contain the string Contoso.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ID
+  isRequired: true
+  description: |+
+    Specifies an array of GUIDs of web applications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ApplicationID
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a friendly name for the published web application.
+    You can use wildcard characters.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebApplicationProxy.Remove-WebApplicationProxyApplication
+name: Remove-WebApplicationProxyApplication
+description: |-
+  The **Remove-WebApplicationProxyApplication** cmdlet removes web applications published in Web Application Proxy.
+  Specify web applications by name or by ID.
+  If you specify a string that contains wildcard characters, * and ?, as the name, the cmdlet removes all the web applications that match that string.
+
+  When you remove a web application, Web Application Proxy drops any current connections for that application.
+  The cmdlet does not uninstall the application from its backend server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: WebApplicationProxy-help.xml
+  Module Name: WebApplicationProxy
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/webapplicationproxy/remove-webapplicationproxyapplication?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WebApplicationProxyApplication

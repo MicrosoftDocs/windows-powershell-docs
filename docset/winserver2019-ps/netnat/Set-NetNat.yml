@@ -1,0 +1,240 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies settings for NAT objects.
+module: NetNat
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetNat" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NetNat
+  href: ./Get-NetNat.yml
+- text: New-NetNat
+  href: ./New-NetNat.yml
+- text: Remove-NetNat
+  href: ./Remove-NetNat.yml
+syntaxes:
+- >-
+  Set-NetNat [-Name] <String[]> [-IcmpQueryTimeout <UInt32>] [-TcpEstablishedConnectionTimeout <UInt32>]
+
+   [-TcpTransientConnectionTimeout <UInt32>] [-TcpFilteringBehavior <FilteringBehaviorType>]
+
+   [-UdpFilteringBehavior <FilteringBehaviorType>] [-UdpIdleSessionTimeout <UInt32>]
+
+   [-UdpInboundRefresh <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-NetNat -InputObject <CimInstance[]> [-IcmpQueryTimeout <UInt32>]
+
+   [-TcpEstablishedConnectionTimeout <UInt32>] [-TcpTransientConnectionTimeout <UInt32>]
+
+   [-TcpFilteringBehavior <FilteringBehaviorType>] [-UdpFilteringBehavior <FilteringBehaviorType>]
+
+   [-UdpIdleSessionTimeout <UInt32>] [-UdpInboundRefresh <Boolean>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify settings for a NAT object'
+  code: |-
+    PS C:\> Set-NetNat -Name "TSQATenant" -TcpFilteringBehavior AddressDependentFiltering -UdpInboundRefresh $True
+  description: |-
+    This command modifies a NAT object named TSQATenant.
+    The command specifies a value of $True for the *UdpInboundRefresh* parameter, and, therefore, NAT refreshes UDP sessions for both inbound and outbound packets.
+    The command changes TCP filtering behavior to address dependent filtering.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IcmpQueryTimeout
+  description: |+
+    Specifies the length of the time-out period, in seconds, for an ICMP query session.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names of NAT objects.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: TcpEstablishedConnectionTimeout
+  description: |+
+    Specifies the length of the time-out period, in seconds, for established TCP connections.
+    Use the *TcpTransientConnectionTimeout* parameter to modify the time-out period for transient TCP connections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FilteringBehaviorType" data-throw-if-not-resolved="False" />
+  name: TcpFilteringBehavior
+  description: |+
+    Specifies filtering behavior for TCP connections.
+    The acceptable values for this parameter are:
+
+    - EndpointIndependentFiltering
+    - AddressDependentFiltering
+
+    The default value is EndpointIndependentFiltering.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: EndpointIndependentFiltering, AddressDependentFiltering
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: TcpTransientConnectionTimeout
+  description: |+
+    Specifies the length of the time-out period, in seconds, for transient TCP connections.
+    Use the *TcpEstablishedConnectionTimeout* parameter to modify the time-out period for established TCP connections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FilteringBehaviorType" data-throw-if-not-resolved="False" />
+  name: UdpFilteringBehavior
+  description: |+
+    Specifies filtering behavior for UDP sessions.
+    The acceptable values for this parameter are:
+
+    - EndpointIndependentFiltering
+    - AddressDependentFiltering
+
+    The default value is EndpointIndependentFiltering.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: EndpointIndependentFiltering, AddressDependentFiltering
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: UdpIdleSessionTimeout
+  description: |+
+    Specifies the length of the time-out period, in seconds, for a UDP session.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UdpInboundRefresh
+  description: |+
+    Indicates whether a packet from the external network refreshes an existing UDP session.
+    If you specify a value of $True for this parameter, either an inbound packet or an outbound packet refreshes an existing UDP session.
+    If you specify a value of $False, only an outbound packet refreshes a UDP session.
+    The default value is $False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: False, True
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetNat.Set-NetNat
+name: Set-NetNat
+description: |-
+  The **Set-NetNat** cmdlet modifies settings for Network Address Translation (NAT) objects.
+  NAT modifies IP address and port information in packet headers.
+  Use this cmdlet to modify the following: 
+
+  - Time-out values for ICMP and UDP sessions and TCP connections. 
+  - Behavior of TCP and UDP filtering. 
+  - Whether packets from external networks refresh UDP sessions.
+
+  Specify NAT objects to modify by using the *Name* parameter or by using the **Get-NetNat** cmdlet.
+  Use the **New-NetNat** cmdlet to create NAT objects.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetNat.cdxml-help.xml
+  Module Name: NetNat
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/netnat/set-netnat?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetNat

@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays the summary statistics of real-time, currently active DirectAccess (DA) and VPN connections and the summary statistics of DA and VPN historical connections for a specified time duration.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#RemoteAccessConnectionSummary" data-throw-if-not-resolved="False" />
+  description: "The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.\r\nThe path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.\r\n                         \r\nThe RemoteAccessConnectionSummary object consists of the following properties: \r\n                         \r\nFor active connections: \r\n                         \r\n -- The total number of connections. \r\n                         \r\n -- The total number of DirectAccess connections. \r\n                         \r\n -- The total VPN number of connections. \r\n                         \r\n -- The total number of unique users. \r\n                         \r\n -- The maximum number of concurrent connections. \r\n                         \r\n -- The total number of cumulative connections (the total number of connections since the remote access server was started). \r\n                         \r\n -- The total number of bytes in. \r\n                         \r\n -- The total number of bytes out. \r\n                         \r\n -- The total number of bytes in and out."
+links:
+- text: Get-RemoteAccessConnectionStatistics
+  href: ./Get-RemoteAccessConnectionStatistics.yml
+syntaxes:
+- >-
+  Get-RemoteAccessConnectionStatisticsSummary [-ComputerName <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-RemoteAccessConnectionStatisticsSummary [[-StartDateTime] <DateTime>] [[-EndDateTime] <DateTime>]
+
+   [-ComputerName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: "PS C:\\>Get- RemoteAccessConnectionStatisticsSummary -ComputerName edge1.corp.contoso.com\r\nTotalConnections           : 0 \r\nTotalDAConnections         : 0 \r\n                       \r\nTotalVpnConnections        : 0 \r\n                       \r\nTotalUniqueUsers           : 0 \r\n                       \r\nMaxConcurrentConnections   : 10 \r\n                       \r\nTotalCumulativeConnections : 703 \r\n                       \r\nTotalBytesIn               : 1167785920 \r\n                       \r\nTotalBytesOut              : 3350338848 \r\n                       \r\nTotalBytesInOut            : 4518124768"
+  description: |-
+    This example gets the summary statistics for real-time, active connections.
+    There are no active users and hence the TotalConnections , TotalDAConnections, TotalVpnConnections and TotalUniqueUsers are `0`.
+  summary: ""
+- title: EXAMPLE 2
+  code: "PS C:\\>$startdate = Get-Date -Date \"12/25/2011\"\r\n\r\n\r\n\r\nPS C:\\>$enddate = Get-Date -Date \"01/10/2012\"\r\n\r\n\r\nWhen the start date or end date are specified, this cmdlet retrieves the counters from accounting store.\r\nPS C:\\>Get-RemoteAccessConnectionStatisticsSummary -StartDateTime $startdate -EndDateTime $enddate\r\nTotalSessions         : 2314 \r\n                         \r\nTotalDASessions       : 2314 \r\n                         \r\nTotalVpnSessions      : 0 \r\n                         \r\nMaxConcurrentSessions : 28 \r\n                         \r\nTotalUniqueDAClients  : 27 \r\n                         \r\nAverageSessionsPerDay : 144 \r\n                         \r\nTotalUniqueUsers      : 57"
+  description: |-
+    This example gets the summary statistics for past connections.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the remote access server computer specific tasks should be run.
+    When this parameter is specified the statistics summary on that Remote Access server is retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EndDateTime
+  description: |+
+    Specifies the time duration for which the statistics summary of historical connections is to be retrieved and indicates the end date.
+    If a date is not specified, then the time stamp of the last record in the accounting database is used by default.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartDateTime
+  description: |+
+    Specifies the time duration for which the statistics summary of historical connections is to be retrieved and indicates the start date.
+    If a date is not specified, then the time stamp of the first record in the accounting database is used by default.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteAccess.Get-RemoteAccessConnectionStatisticsSummary
+name: Get-RemoteAccessConnectionStatisticsSummary
+description: "The **Get-RemoteAccessConnectionStatisticsSummary** cmdlet displays the summary statistics of real-time, currently active DirectAccess (DA) and VPN connections and the summary statistics of DA and VPN historical connections for a specified duration time.\r\n\r\nThe statistics summary for active and historical connections starting or ending on a Remote Access server are stored in the inbox accounting store on that server.\r\nThis cmdlet retrieves statistics summary for a specific server.\r\nThis cmdlet is not impacted by multi-site deployment. \r\n                       \r\n -- If neither a start date nor an end date is specified, then the statistics summary of active connections is retrieved. \r\n                       \r\n -- In order to retrieve statistics summary of historical data, a time duration needs to be specified such as a start date, an end date, or both.\r\nIf only one of them is specified, then the time stamp on the first or last record in the accounting database is used to fill the missing information and create a duration."
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_RemoteAccessConnectionStatisticsSummary_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/get-remoteaccessconnectionstatisticssummary?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RemoteAccessConnectionStatisticsSummary

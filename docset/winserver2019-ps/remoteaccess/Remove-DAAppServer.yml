@@ -1,0 +1,186 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the specified list of application server security groups (SGs) from the DirectAccess (DA) deployment, removes the specified application servers from the specified DA application server SG,and removes the application server Group Policy Objects (GPOs) in the specified domains.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DAAppServer" data-throw-if-not-resolved="False" />
+  description: "The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.\r\nThe path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.\r\n                         \r\nThe DAAppServer object consists of the following properties: \r\n                         \r\n -- The list of application server security groups each security group is specified in the Domain\\GroupName format. \r\n                         \r\n -- The list of application server GPOs: each GPO is specified in the Domain\\GPOName format. \r\n                         \r\n -- The properties of the connection to the application server. \r\n                         \r\n -- Status of IPsec traffic protection: Enabled or Disabled."
+links:
+- text: Add-DAAppServer
+  href: ./Add-DAAppServer.yml
+- text: Get-DAAppServer
+  href: ./Get-DAAppServer.yml
+syntaxes:
+- >-
+  Remove-DAAppServer [-ComputerName <String>] [-PassThru] [-DomainName <String[]>]
+
+   [-SecurityGroupNameList <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Remove-DAAppServer [-SecurityGroupName] <String> [-Name] <String[]> [-ComputerName <String>] [-PassThru]
+
+   [-DomainName <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Remove-DAAppServer -SecurityGroupNameList daAppServerGrp
+    SecurityGroupNameList: 
+    GpoName  : 
+    ConnectionType : E2EAuthOnlyToAppServer 
+    TrafficProtection : Enabled
+  description: |-
+    This example deletes the daAppServerGrp SG from all GPOs.
+    In current setup, daAppServerGrp was the only SG present, therefore the application server GPO (such as corp.contoso.com\DirectAccess Application Server Settings) is also removed automatically.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Remove-DAAppServer -SecurityGroupName daAppServerGrp -Name "da-test-0807"
+  description: |-
+    This example deletes the computer named da-test-0807 from SG daAppServerGrp.
+    The SG continues to be a part of DA Configuration.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Remove-DAAppServer -DomainName "corp.contoso.com"
+    SecurityGroupNameList: 
+    GpoName  : 
+    ConnectionType : E2EAuthOnlyToAppServer 
+    TrafficProtection : Enabled
+  description: |-
+    This example removes the application server GPO in the DA configuration from the corp.contoso.com domain.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the Remote Access server computer specific tasks should be run.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DomainName
+  description: |+
+    Specifies the list of domains from which application server GPOs need to be removed.
+    A domain is specified in the `DOMAIN` format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the list of application servers that have to be deleted from the DA deployment.
+    The servers are specified by using the host names and are deleted from the SG specified by the **SecurityGroupName** parameter.
+    The servers cannot be specified by their IPv4 or IPv6 addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecurityGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a SG that is already part of the DA deployment from which the specified list of app servers should be deleted.
+    Specified in `DOMAIN\SG_NAME` format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SecurityGroupNameList
+  description: |+
+    Specifies the list of application server SGs that are to be deleted from the DA deployment.
+    Each SG is specified in `DOMAIN\SG_NAME` format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Remove-DAAppServer
+name: Remove-DAAppServer
+description: "The **Remove-DAAppServer** cmdlet removes the specified list of application server security groups (SGs) from the DirectAccess (DA) deployment, removes the specified application servers from the specified DA application server SG,and removes the application server Group Policy Objects (GPOs) in the specified domains.\r\nThis cmdlet is not applicable when DA is deployed only for the management of remote clients.\r\n\r\nThe basic paradigm is that all application server GPOs always contain all SGs even if all the corresponding domains are not represented in all the SGs.\r\nThere will never be a scenario where an SG is present only in some of the GPOs.\r\nIf this happens, then it means that the configuration is in a bad state.\r\n\r\nThe application server SG and GPO parameters are treated as independent entities.\r\nA user can remove application server GPOs independent of the SGs and the domains where these SGs exist.\r\nEvery SG that is removed from the DA deployment is removed from all application server GPOs currently present. \r\n                       \r\nThe following additional capabilities of this cmdlet justify its need though AD cmdlets are already available for the deletion of SGs and GPOs. \r\n                       \r\n -- When an SG is removed it is removed in all GPOs.\r\nAdditionally, if user does not have permissions to edit a GPO the SG is not removed from any of the GPOs.\r\nWhen using the AD cmdlet user would have to carefully ensure that it is run for each of the domains and it is difficult to handle the case where he does not have permissions on some domains. \r\n                       \r\n -- With the above described paradigm there is still a need to parse an SG to remove independent application servers in the SG because every application server has a unique IP address that is used in the client policy that needs to be removed.\r\nThis functionality is handled by this cmdlet. \r\n                       \r\n -- When a GPO is removed all SGs are removed from the GPO and the application server specific policies are also removed.\r\nThe cmdlet takes care of the conditions where the GPO is removed only if it was originally created at the time of adding.\r\nIf the GPO is already present at the time of adding, then it is merely edited.\r\n\r\nApp Server configuration is a global configuration and is applicable to all DA servers in the enterprise deployment even when there is multi-site enterprise deployment.\r\n\r\nFollowing are additional behavioral notes for this cmdlet. \r\n                       \r\n -- If a nested SG has to be removed, then the cmdlet recursively parses the SG so that all servers are retrieved and policies can be removed accordingly. \r\n                       \r\n -- Removing a domain deletes the application server GPO only if it was created at the time of addition.\r\nIf it was already present, then only the DA related policies and settings are wiped out and the GPO is left intact. \r\n                       \r\n -- Deletion of all app server GPOs and SGs is a permitted operation. \r\n                       \r\n -- When removing SGs if the user does not have the permissions to configure even one app server GPO among the many that might be present, then this cmdlet terminates the processing of the entire list of SGs specified.\r\nHowever, this cmdlet still processes any GPOs that the user might have specified to remove. \r\n                       \r\n -- When removing GPOs if the user does not have the permissions to remove or configure one of the specified GPOs, then the cmdlet still proceeds with the processing of the remaining GPOs in the list."
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DAAppServer_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/remove-daappserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-DAAppServer

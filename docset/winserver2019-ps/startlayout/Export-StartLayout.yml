@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports the layout of the Start screen.
+module: StartLayout
+notes: ""
+inputs:
+- name: <xref href="Enum" data-throw-if-not-resolved="False" />
+  description: |-
+    You can specify the following file format: 
+
+    - XML.
+    Export as an .xml file.
+links:
+- text: Import-StartLayout
+  href: ./Import-StartLayout.yml
+syntaxes:
+- Export-StartLayout [-Path] <String> [-UseDesktopApplicationID] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Export-StartLayout -LiteralPath <String> [-UseDesktopApplicationID] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Export-StartLayout -Path <String>
+examples:
+- title: 'Example 1: Export the layout'
+  code: |-
+    PS C:\> Export-StartLayout -Path "C:\Layouts\Marketing.xml"
+  description: |-
+    This command exports the layout of the tiles on Start to a file named Marketing.xml in the C:\Layouts folder.
+  summary: ""
+- title: 'Example 2: Export the layout of the Windows 11 Start menu'
+  code: |-
+    PS C:\> Export-StartLayout -Path "C:\Layouts\Marketing.json"
+  description: |-
+    This command exports the layout of the tiles on the Windows 11 Start menu to a file named Marketing.json in the C:\Layouts folder. Note that JSON is the only supported format for the output file and only the `-Path` parameter is supported.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LiteralPath
+  isRequired: true
+  description: |+
+    Specifies a literal path to a layout file.
+    Include the file .xml file name extension.
+    This parameter does not accept the wildcard character (*).
+    If the path includes an escape character (\\), enclose the string in single quotes (').
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies an absolute path to a layout file.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseDesktopApplicationID
+  description: |+
+    Specifies that the layout file should export the DesktopApplicationID value instead of DesktopApplicationLinkPath which is the default.
+    DesktopApplicationID is the application's ID and DesktopApplicationLinkPath is a path to a shortcut link (.lnk file) to a Windows desktop application.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: StartLayout.Export-StartLayout
+name: Export-StartLayout
+description: |-
+  The **Export-StartLayout** cmdlet exports the layout of the tiles on Start of the current user.
+  You can export layout and use Import-StartLayout as well as other management policies for the Start layout.
+  Specify the .xml file name extension in the name of the file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.StartLayout.Commands.dll-Help.xml
+  Module Name: StartLayout
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/startlayout/export-startlayout?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-StartLayout

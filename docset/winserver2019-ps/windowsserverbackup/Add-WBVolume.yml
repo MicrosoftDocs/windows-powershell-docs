@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds the list of source volumes to the backup policy.
+module: WindowsServerBackup
+notes: |-
+  * The **WBPolicy** object must be in edit mode. To put the **WBPolicy** object in edit mode for a policy that you set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the *Editable* parameter. The New-WBPolicy cmdlet creates a new **WBPolicy** object that is already in edit mode.
+inputs:
+- name: <xref href="WBVolume [], WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    Ths cmdlet accepts **WBVolume** objects, which contain a new list of source volumes for the backup, and **WBPolicy** objects as input.
+outputs:
+- name: <xref href="WBVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns a list of **WBVolume** objects in the **WBPolicy** object, including the **WBVolume** objects that the cmdlet just added.
+links:
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: Get-WBVolume
+  href: ./Get-WBVolume.yml
+- text: New-WBPolicy
+  href: ./New-WBPolicy.yml
+- text: Remove-WBVolume
+  href: ./Remove-WBVolume.yml
+syntaxes:
+- Add-WBVolume [-Policy] <WBPolicy> [-Volume] <WBVolume[]> [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a list of volumes to a backup policy'
+  code: |-
+    PS C:\> $Volumes = Get-WBVolume
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Add-WBVolume -Policy $Policy -Volume $Volumes
+  description: |-
+    This example adds a list of volumes for backup to the **WBPolicy** object.
+
+    The first command stores the output of the [Get-WBVolume](./Get-WBVolume.yml) cmdlet in the variable named $Volumes.
+
+    The second command calls the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet and assigns the result to the $Policy variable.
+
+    The third command adds the volumes in the $Volumes variable to the backup policy.
+  summary: ""
+parameters:
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies a **WBPolicy** object that contains the backup policy to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Volume
+  isRequired: true
+  description: |+
+    Specifies an array of volumes to add to the **WBPolicy** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Add-WBVolume
+name: Add-WBVolume
+description: |-
+  The **Add-WBVolume** cmdlet adds a list of source volumes to a **WBPolicy** object.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/add-wbvolume?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-WBVolume

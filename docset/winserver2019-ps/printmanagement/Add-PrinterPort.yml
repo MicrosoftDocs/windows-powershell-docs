@@ -1,0 +1,227 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Installs a printer port on the specified computer.
+module: PrintManagement
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input objects.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterPort" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that contains the new printer port.
+links:
+- text: Get-PrinterPort
+  href: ./Get-PrinterPort.yml
+- text: Remove-PrinterPort
+  href: ./Remove-PrinterPort.yml
+syntaxes:
+- >-
+  Add-PrinterPort [-Name] <String> [-ComputerName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-PrinterPort [-Name] <String> [-ComputerName <String>] [-SNMP <UInt32>] [-SNMPCommunity <String>]
+
+   [-LprHostAddress] <String> [-LprQueueName] <String> [-LprByteCounting] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-PrinterPort [-Name] <String> [-ComputerName <String>] [-PrinterHostAddress] <String> [-PortNumber <UInt32>]
+
+   [-SNMP <UInt32>] [-SNMPCommunity <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-PrinterPort [-ComputerName <String>] [-HostName] <String> [-PrinterName] <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a local printer port'
+  code: |-
+    PS C:\> Add-PrinterPort -Name "LocalPort:"
+  description: |-
+    This command creates a local printer port named LocalPort on the local computer.
+  summary: ""
+- title: 'Example 2: Create a TCP printer port'
+  code: |-
+    PS C:\> Add-PrinterPort -Name "TCPPort:" -PrinterHostAddress "192.168.100.100"
+  description: |-
+    This command creates a TCP printer port named TCPPort: with an IP address of 192.168.100.100 on the computer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the computer to which to add the printer port.
+    If you do not specify a value, the printer port is added to the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: CN
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  isRequired: true
+  description: |+
+    Specifies the host name of the computer on which to add LPR printer port.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LprByteCounting
+  description: |+
+    Indicates that this cmdlet enables LPR byte counting for a TCP/IP printer port in LPR mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LprHostAddress
+  isRequired: true
+  description: |+
+    Specifies the LPR host address when installing a TCP/IP printer port in LPR mode.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LprQueueName
+  isRequired: true
+  description: |+
+    Specifies the LPR queue name when installing a TCP/IP printer port in LPR mode.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the printer port to install on the specified computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PortNumber
+  description: |+
+    Specifies the TCP/IP port number for the printer port added to the specified computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrinterHostAddress
+  isRequired: true
+  description: |+
+    Specifies the host address of the TCP/IP printer port added to the specified computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrinterName
+  isRequired: true
+  description: |+
+    Specifies the name of the printer installed on the LPR printer port.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SNMP
+  description: |+
+    Enables SNMP and specifies the index for TCP/IP printer port management.
+
+  defaultValue: None
+  position: Named
+  aliases: SNMPIndex
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SNMPCommunity
+  description: |+
+    Specifies the SNMP community name for TCP/IP printer port management.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: PrintManagement.Add-PrinterPort
+name: Add-PrinterPort
+description: |-
+  The **Add-PrinterPort** cmdlet creates a printer port on the specified computer.
+  You can create a local printer port, a printer port using TCP, and LPR printer ports by using **Add-PrinterPort**.
+
+  You cannot use wildcard characters with **Add-PrinterPort**.
+  You can use **Add-PrinterPort** in a Windows PowerShell remoting session.
+
+  You do not need administrator credentials to run **Add-PrinterPort**.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_PrinterPortTasks_v1.0.cdxml-help.xml
+  Module Name: PrintManagement
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/printmanagement/add-printerport?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-PrinterPort

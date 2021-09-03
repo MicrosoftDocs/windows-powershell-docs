@@ -1,0 +1,178 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a scheduled task instance.
+module: ScheduledTasks
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_ScheduledTask" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-ScheduledTask
+  href: ./Disable-ScheduledTask.yml
+- text: Enable-ScheduledTask
+  href: ./Enable-ScheduledTask.yml
+- text: Export-ScheduledTask
+  href: ./Export-ScheduledTask.yml
+- text: Get-ScheduledTask
+  href: ./Get-ScheduledTask.yml
+- text: New-ScheduledTaskAction
+  href: ./New-ScheduledTaskAction.yml
+- text: New-ScheduledTaskSettingsSet
+  href: ./New-ScheduledTaskSettingsSet.yml
+- text: New-ScheduledTaskPrincipal
+  href: ./New-ScheduledTaskPrincipal.yml
+- text: New-ScheduledTaskTrigger
+  href: ./New-ScheduledTaskTrigger.yml
+- text: Register-ScheduledTask
+  href: ./Register-ScheduledTask.yml
+- text: Set-ScheduledTask
+  href: ./Set-ScheduledTask.yml
+- text: Start-ScheduledTask
+  href: ./Start-ScheduledTask.yml
+- text: Stop-ScheduledTask
+  href: ./Stop-ScheduledTask.yml
+- text: Unregister-ScheduledTask
+  href: ./Unregister-ScheduledTask.yml
+syntaxes:
+- >-
+  New-ScheduledTask [[-Action] <CimInstance[]>] [[-Description] <String>] [[-Principal] <CimInstance>]
+
+   [[-Settings] <CimInstance>] [[-Trigger] <CimInstance[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Define a scheduled task and register it at a later time'
+  code: |-
+    PS C:\> $action = New-ScheduledTaskAction -Execute "Taskmgr.exe"
+    PS C:\> $trigger = New-ScheduledTaskTrigger -AtLogon
+    PS C:\> $principal = "Contoso\Administrator"
+    PS C:\> $settings = New-ScheduledTaskSettingsSet
+    PS C:\> $task = New-ScheduledTask -Action $action -Principal $principal -Trigger $trigger -Settings $settings
+    PS C:\> Register-ScheduledTask T1 -InputObject $task
+  description: |-
+    In this example, the set of commands uses several cmdlets and variables to define and then register a scheduled task.
+
+    The first command uses the **New-ScheduledTaskAction** cmdlet to assign the executable file tskmgr.exe to the variable $A.
+
+    The second command uses the **New-ScheduledTaskTrigger** cmdlet to assign the value AtLogon to the variable $T.
+
+    The third command assigns the principal of the scheduled task `Contoso\Administrator` to the variable $P.
+
+    The fourth command uses the **New-ScheduledTaskSettingsSet** cmdlet to assign a task settings object to the variable $S.
+
+    The fifth command creates a new task and assigns the task definition to the variable $D.
+
+    The sixth command (hypothetically) runs at a later time.
+    It registers the new scheduled task and defines it by using the $D variable.
+  summary: ""
+- title: 'Example 2: Define a scheduled task with multiple actions'
+  code: |-
+    PS C:\> $actions = (New-ScheduledTaskAction -Execute 'foo.ps1'), (New-ScheduledTaskAction -Execute 'bar.ps1')
+    PS C:\> $trigger = New-ScheduledTaskTrigger -Daily -At '9:15 AM'
+    PS C:\> $principal = New-ScheduledTaskPrincipal -UserId 'DOMAIN\user' -RunLevel Highest
+    PS C:\> $settings = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable -WakeToRun
+    PS C:\> $task = New-ScheduledTask -Action $actions -Principal $principal -Trigger $trigger -Settings $settings
+
+    PS C:\> Register-ScheduledTask 'baz' -InputObject $task
+  description: |-
+    This example creates and registers a scheduled task that runs two PowerShell scripts daily at 09:15 AM.
+  summary: ""
+parameters:
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Action
+  description: |+
+    Specifies an array of work items for a task to run.
+    When you specify multiple actions, they run sequentially.
+    A task can have up to 32 actions.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Briefly describes the task.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Principal
+  description: |+
+    Specifies the security context in which a task runs.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Settings
+  description: |+
+    Specifies a configuration object that the Task Scheduler service uses to determine how to run a task.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Trigger
+  description: |+
+    Specifies an array of one or more trigger objects that cause a scheduled task to start.
+
+    A trigger is a set of criteria that starts a scheduled task when the criteria are met.
+    You can use a time-based trigger or an event-based trigger to start a task, and one or more triggers can start a task.
+    A task can have up to 48 triggers.
+    For more information about triggers, see [Triggers](https://technet.microsoft.com/library/cc748841.aspx).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ScheduledTasks.New-ScheduledTask
+name: New-ScheduledTask
+description: |-
+  The **New-ScheduledTask** cmdlet creates an object that contains the definition of a scheduled task.
+  **New-ScheduledTask** does not automatically register the object with the Task Scheduler service.
+
+  You can register a task to run any of the following application or file types: Win32 applications, Win16 applications, OS/2 applications, MS-DOS applications, batch files (*.bat), command files (*.cmd), or any properly registered file type.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
+  Module Name: ScheduledTasks
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/scheduledtasks/new-scheduledtask?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-ScheduledTask

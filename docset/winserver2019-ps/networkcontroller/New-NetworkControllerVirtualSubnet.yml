@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet creates a new virtual subnet in a virtual network, or updates a virtual subnet in a virtual network
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    A virtual subnet can take the following inputs
+    a.
+    Access control list for the subnet
+    b.
+    Address prefix of the subnet
+    c.
+    IP configuration
+    d.
+    Route table for all user defined routes
+    e.
+    Service insertion rules
+syntaxes:
+- >-
+  New-NetworkControllerVirtualSubnet -ConnectionUri <Uri> -Properties <VirtualSubnetProperties>
+
+   -ResourceId <string> -VirtualNetworkId <string> [-CertificateThumbPrint <string>] [-Credential <PSCredential>]
+
+   [-Etag <string>] [-Force] [-ResourceMetadata <ResourceMetadata>]
+examples:
+- title: Example 1
+  code: |-
+    $vsubnet = new-object Microsoft.Windows.NetworkController.VirtualSubnetProperties
+    $vsubnet.Properties.AccessControlList = $acllist  
+    $vsubnet.Properties.AddressPrefix = "24.30.1.0/24" 
+    New-NetworkControllerVirtualSubnet -ConnectionUri https://networkcontroller -ResourceId vSubnet1 -VirtualNetworkId Contoso
+  description: |-
+    Description
+
+
+
+    The above cmdlet creates a virtual subnet with an address prefix of 24.30.1.0/24 in a virtual network called Contoso.
+  summary: ""
+parameters:
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: CertificateThumbPrint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+    This thumbprint must also be provided in the ClientCertificateThumbprint parameter in the Install-NetworkController or Set-NetworkController cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.This user must be present in the security group provided in the ClientSecurityGroup parameter in the Install-NetworkController cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="switch" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualSubnetProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    A virtual subnet can take the following properties as inputs
+    a.
+    Access control list for the subnet
+    b.
+    Address prefix of the subnet
+    c.
+    IP configuration
+    d.
+    Route table for all user defined routes
+    e.
+    Service insertion rules
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the ID of the virtual subnet
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    This parameter contains metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: VirtualNetworkId
+  isRequired: true
+  description: |+
+    Specifies the virtual network where the virtual subnet belongs
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerVirtualSubnet
+name: New-NetworkControllerVirtualSubnet
+description: |-
+  This cmdlet creates a new virtual subnet in a virtual network, or updates a virtual subnet in a virtual network
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollervirtualsubnet?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerVirtualSubnet

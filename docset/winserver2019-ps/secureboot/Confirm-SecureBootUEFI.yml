@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Confirms that Secure Boot is enabled by checking the Secure Boot status on the local computer.
+module: SecureBoot
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a Boolean.
+    If the computer supports Secure Boot and Secure Boot is enabled, this cmdlet returns $True.
+
+    If the computer supports Secure Boot and Secure Boot is disabled, this cmdlet returns $False.
+
+    If the computer does not support Secure Boot or is a BIOS (non-UEFI) computer, this cmdlet displays the following: 
+
+    `Cmdlet not supported on this platform`.
+links:
+- text: Format-SecureBootUEFI
+  href: ./Format-SecureBootUEFI.yml
+- text: Get-SecureBootPolicy
+  href: ./Get-SecureBootPolicy.yml
+- text: Get-SecureBootUEFI
+  href: ./Get-SecureBootUEFI.yml
+- text: Set-SecureBootUEFI
+  href: ./Set-SecureBootUEFI.yml
+syntaxes:
+- Confirm-SecureBootUEFI [<CommonParameters>]
+examples:
+- title: 'Example 1: Confirm Secure Boot'
+  code: |-
+    PS C:\> Confirm-SecureBootUEFI
+    True
+  description: |-
+    This command checks whether Secure Boot is enabled on the computer.
+  summary: ""
+uid: SecureBoot.Confirm-SecureBootUEFI
+name: Confirm-SecureBootUEFI
+description: |-
+  The **Confirm-SecureBootUEFI** cmdlet confirms that Secure Boot is enabled by checking the Secure Boot status on a UEFI computer.
+
+  If the computer supports Secure Boot and Secure Boot is enabled, this cmdlet returns $True.
+
+  If the computer supports Secure Boot and Secure Boot is disabled, this cmdlet returns $False.
+
+  If the computer does not support Secure Boot or is a BIOS (non-UEFI) computer, this cmdlet displays the following: 
+
+  `Cmdlet not supported on this platform.`
+
+  If Windows PowerShell® is not run in administrator mode, this cmdlet displays the following: 
+
+  `Unable to set proper privileges.
+  Access was denied.`
+
+  This cmdlet requires that Windows PowerShell be run in administrator mode.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
+  Module Name: SecureBoot
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/secureboot/confirm-securebootuefi?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Confirm-SecureBootUEFI

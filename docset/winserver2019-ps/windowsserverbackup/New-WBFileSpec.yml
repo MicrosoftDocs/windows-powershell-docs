@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a backup file specification.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="Spec string, NonRecursive, Excluded flags" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet uses *Spec*, *NonRecursive*, and *Excluded* parameters to create a list of items to include or exclude.
+    The *Spec* parameter accepts string objects.
+outputs:
+- name: <xref href="WBFileSpec" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **WBFileSpec** object, which describes a file specification.
+    You can add a **WBFileSpec** object to a **WBPolicy** object as a source for backup.
+links:
+- text: Add-WBFileSpec
+  href: ./Add-WBFileSpec.yml
+- text: Get-WBFileSpec
+  href: ./Get-WBFileSpec.yml
+- text: Remove-WBFileSpec
+  href: ./Remove-WBFileSpec.yml
+syntaxes:
+- New-WBFileSpec [-FileSpec] <String[]> [-NonRecursive] [-Exclude] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a file to a backup file specification'
+  code: |-
+    PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample\1.jpg"
+  description: |-
+    This command creates a file specification and adds the file named C:\Sample\1.jpg to it.
+  summary: ""
+- title: 'Example 2: Add a volume recursively to a backup file specification'
+  code: |-
+    PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample"
+  description: |-
+    This command creates a file specification and adds the contents of the C:\Sample folder to it.
+    Because the cmdlet does not include the *NonRecursive* parameter, the backup includes the contents of this folder and its subfolders.
+  summary: ""
+- title: 'Example 3: Add a volume nonrecursively to a backup file specification'
+  code: |-
+    PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample" -NonRecursive
+  description: |-
+    This command creates a file specification and adds the contents of the C:\Sample folder to it.
+    Because the cmdlet includes the *NonRecursive* parameter, the backup includes the contents of this folder but not the contents of its subfolders.
+  summary: ""
+- title: 'Example 4: Exclude files from a backup file specification'
+  code: |-
+    PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample\*.mp3" -Exclude
+  description: |-
+    This command creates an exclusion file specification for MP3 files in the C:\Sample folder.
+    The backup excludes MP3 files in C:\Sample and its subfolders and stores it in the variable named $Filespec.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Exclude
+  description: |+
+    Indicates that the backup excludes the items in the *FileSpec* parameter from the backup.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FileSpec
+  isRequired: true
+  description: |+
+    Specifies a list of names of items to include in or exclude from the backup.
+    This parameter can include file paths and volumes (such as "C:\") or file specifications (such as "C:\dir1\*.*").
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NonRecursive
+  description: |+
+    Indicates that the backup includes only the items in the **WBFileSpec** object and not subordinate items.
+    If you do not include this option, the backup includes items recursively.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.New-WBFileSpec
+name: New-WBFileSpec
+description: |-
+  The **New-WBFileSpec** cmdlet creates a **WBFileSpec** object that contains a backup file specification.
+  A **WBFileSpec** object defines the items that a backup includes or excludes.
+  You can add a backup file specification to a **WBPolicy** object as a source for backup.
+
+  You can use this cmdlet to include multiple files, folders, or volumes.
+  Specify volume paths by using volume drive letters, volume mount points, or GUID-based volume names.
+  If you use a GUID-based volume name, ensure that it ends with a backslash (\\).
+  You can use wildcard characters (*) in file names to specify a path to a file or to specify a file type to include or exclude.
+
+  If you specify a path to exclude from the backup, that path must be part of an inclusion file specification in the policy.
+  Otherwise, the backup ignores the exclusion path.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/new-wbfilespec?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WBFileSpec

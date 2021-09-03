@@ -1,0 +1,204 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet creates a new access control list for allowing/denying traffic to/from a particular subnet or network interface
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Each access control list contains multiple ACL rules. Each rule contains the following:
+    1. Name
+    2. Protocol
+    3. Source port range
+    4. Destination port range
+    5. Action (Allow/Deny)
+    6. Source Address prefix
+    7. Destination address prefix
+    8. Priority
+    9. Type of rule (inbound/outbound)
+    10. Whether logging is enabled or disabled
+links:
+- text: Get-NetworkControllerAccessControlList
+  href: ./Get-NetworkControllerAccessControlList.yml
+syntaxes:
+- >-
+  New-NetworkControllerAccessControlList [-ResourceId] <String> [[-Tags] <PSObject>]
+
+   [-Properties] <AccessControlListProperties> [[-Etag] <String>] [[-ResourceMetadata] <ResourceMetadata>]
+
+   [-Force] -ConnectionUri <Uri> [-CertificateThumbprint <String>] [-Credential <PSCredential>]
+
+   [-PassInnerException] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties 
+    $ruleproperties.Protocol = "All" 
+    $ruleproperties.SourcePortRange = "0-65535" 
+    $ruleproperties.DestinationPortRange = "0-65535" 
+    $ruleproperties.Action = "Allow" 
+    $ruleproperties.SourceAddressPrefix = "*" 
+    $ruleproperties.DestinationAddressPrefix = "*" 
+    $ruleproperties.Priority = "100" 
+    $ruleproperties.Type = "Inbound" 
+    $ruleproperties.Logging = "Enabled" 
+    $aclrule1 = new-object Microsoft.Windows.NetworkController.AclRule 
+    $aclrule1.Properties = $ruleproperties 
+    $aclrule1.ResourceId = "AllowAll_Inbound" 
+    $ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties 
+    $ruleproperties.Protocol = "All" 
+    $ruleproperties.SourcePortRange = "0-65535" 
+    $ruleproperties.DestinationPortRange = "0-65535" 
+    $ruleproperties.Action = "Allow" 
+    $ruleproperties.SourceAddressPrefix = "*" 
+    $ruleproperties.DestinationAddressPrefix = "*" 
+    $ruleproperties.Priority = "110"
+    $ruleproperties.Type = "Outbound"  
+    $ruleproperties.Logging = "Enabled"  
+    $aclrule2 = new-object Microsoft.Windows.NetworkController.AclRule  
+    $aclrule2.Properties = $ruleproperties  
+    $aclrule2.ResourceId = "AllowAll_Outbound"  
+    $acllistproperties = new-object Microsoft.Windows.NetworkController.AccessControlListProperties  
+    $acllistproperties.AclRules = @($aclrule1, $aclrule2)  
+    New-NetworkControllerAccessControlList -ResourceId "AllowAll" -Properties $acllistproperties -ConnectionUri <NC REST FQDN>
+  description: ""
+  summary: |+
+    This example creates an access control list with two rules. The first rule allows all inbound network traffic. The second rule allows all outbound network traffic.
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the certificate thumbprint of a digital public key X.509 certificate of a user account that has permission to perform this action.
+    In order for Network Controller to authorize the account, specify this thumbprint by using the *ClientCertificateThumbprint* parameter of the **Install-NetworkController** or **Set-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller that all Representational State Transfer (REST) clients use to connect to that controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.
+    This user must be a member of in the security group specified by the *ClientSecurityGroup* parameter of the **Install-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) of the resource.
+    An ETag is an HTTP response header returned by an HTTP-compliant web server.
+    An ETag is used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AccessControlListProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Specifies the properties of an access control list. Each ACL consists of rules, with each rule having the following properties:
+    1. Name
+    2. Protocol
+    3. Source port range
+    4. Destination port range
+    5. Action (Allow/Deny)
+    6. Source Address prefix
+    7. Destination address prefix
+    8. Priority
+    9. Type of rule (inbound/outbound)
+    10. Whether logging is enabled or disabled
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the unique identifier of the Access Control list.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Tags
+  description: ""
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerAccessControlList
+name: New-NetworkControllerAccessControlList
+description: |-
+  The **New-NetworkControllerAccessControlList** cmdlet creates a new access control list for allowing/denying traffic to/from a particular subnet or network interface. Each access control list can contain multiple rules.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrolleraccesscontrollist?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerAccessControlList

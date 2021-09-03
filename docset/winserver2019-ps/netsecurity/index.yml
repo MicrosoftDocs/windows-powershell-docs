@@ -1,0 +1,102 @@
+### YamlMime:PowershellModule
+children:
+- title: NetSecurity
+  cmdlets:
+  - NetSecurity.Copy-NetFirewallRule
+  - NetSecurity.Copy-NetIPsecMainModeCryptoSet
+  - NetSecurity.Copy-NetIPsecMainModeRule
+  - NetSecurity.Copy-NetIPsecPhase1AuthSet
+  - NetSecurity.Copy-NetIPsecPhase2AuthSet
+  - NetSecurity.Copy-NetIPsecQuickModeCryptoSet
+  - NetSecurity.Copy-NetIPsecRule
+  - NetSecurity.Disable-NetFirewallRule
+  - NetSecurity.Disable-NetIPsecMainModeRule
+  - NetSecurity.Disable-NetIPsecRule
+  - NetSecurity.Enable-NetFirewallRule
+  - NetSecurity.Enable-NetIPsecMainModeRule
+  - NetSecurity.Enable-NetIPsecRule
+  - NetSecurity.Find-NetIPsecRule
+  - NetSecurity.Get-DAPolicyChange
+  - NetSecurity.Get-NetFirewallAddressFilter
+  - NetSecurity.Get-NetFirewallApplicationFilter
+  - NetSecurity.Get-NetFirewallInterfaceFilter
+  - NetSecurity.Get-NetFirewallInterfaceTypeFilter
+  - NetSecurity.Get-NetFirewallPortFilter
+  - NetSecurity.Get-NetFirewallProfile
+  - NetSecurity.Get-NetFirewallRule
+  - NetSecurity.Get-NetFirewallSecurityFilter
+  - NetSecurity.Get-NetFirewallServiceFilter
+  - NetSecurity.Get-NetFirewallSetting
+  - NetSecurity.Get-NetIPsecDospSetting
+  - NetSecurity.Get-NetIPsecMainModeCryptoSet
+  - NetSecurity.Get-NetIPsecMainModeRule
+  - NetSecurity.Get-NetIPsecMainModeSA
+  - NetSecurity.Get-NetIPsecPhase1AuthSet
+  - NetSecurity.Get-NetIPsecPhase2AuthSet
+  - NetSecurity.Get-NetIPsecQuickModeCryptoSet
+  - NetSecurity.Get-NetIPsecQuickModeSA
+  - NetSecurity.Get-NetIPsecRule
+  - NetSecurity.New-NetFirewallRule
+  - NetSecurity.New-NetIPsecAuthProposal
+  - NetSecurity.New-NetIPsecDospSetting
+  - NetSecurity.New-NetIPsecMainModeCryptoProposal
+  - NetSecurity.New-NetIPsecMainModeCryptoSet
+  - NetSecurity.New-NetIPsecMainModeRule
+  - NetSecurity.New-NetIPsecPhase1AuthSet
+  - NetSecurity.New-NetIPsecPhase2AuthSet
+  - NetSecurity.New-NetIPsecQuickModeCryptoProposal
+  - NetSecurity.New-NetIPsecQuickModeCryptoSet
+  - NetSecurity.New-NetIPsecRule
+  - NetSecurity.Open-NetGPO
+  - NetSecurity.Remove-NetFirewallRule
+  - NetSecurity.Remove-NetIPsecDospSetting
+  - NetSecurity.Remove-NetIPsecMainModeCryptoSet
+  - NetSecurity.Remove-NetIPsecMainModeRule
+  - NetSecurity.Remove-NetIPsecMainModeSA
+  - NetSecurity.Remove-NetIPsecPhase1AuthSet
+  - NetSecurity.Remove-NetIPsecPhase2AuthSet
+  - NetSecurity.Remove-NetIPsecQuickModeCryptoSet
+  - NetSecurity.Remove-NetIPsecQuickModeSA
+  - NetSecurity.Remove-NetIPsecRule
+  - NetSecurity.Rename-NetFirewallRule
+  - NetSecurity.Rename-NetIPsecMainModeCryptoSet
+  - NetSecurity.Rename-NetIPsecMainModeRule
+  - NetSecurity.Rename-NetIPsecPhase1AuthSet
+  - NetSecurity.Rename-NetIPsecPhase2AuthSet
+  - NetSecurity.Rename-NetIPsecQuickModeCryptoSet
+  - NetSecurity.Rename-NetIPsecRule
+  - NetSecurity.Save-NetGPO
+  - NetSecurity.Set-NetFirewallAddressFilter
+  - NetSecurity.Set-NetFirewallApplicationFilter
+  - NetSecurity.Set-NetFirewallInterfaceFilter
+  - NetSecurity.Set-NetFirewallInterfaceTypeFilter
+  - NetSecurity.Set-NetFirewallPortFilter
+  - NetSecurity.Set-NetFirewallProfile
+  - NetSecurity.Set-NetFirewallRule
+  - NetSecurity.Set-NetFirewallSecurityFilter
+  - NetSecurity.Set-NetFirewallServiceFilter
+  - NetSecurity.Set-NetFirewallSetting
+  - NetSecurity.Set-NetIPsecDospSetting
+  - NetSecurity.Set-NetIPsecMainModeCryptoSet
+  - NetSecurity.Set-NetIPsecMainModeRule
+  - NetSecurity.Set-NetIPsecPhase1AuthSet
+  - NetSecurity.Set-NetIPsecPhase2AuthSet
+  - NetSecurity.Set-NetIPsecQuickModeCryptoSet
+  - NetSecurity.Set-NetIPsecRule
+  - NetSecurity.Show-NetFirewallRule
+  - NetSecurity.Show-NetIPsecRule
+  - NetSecurity.Sync-NetIPsecRule
+  - NetSecurity.Update-NetIPsecRule
+uid: NetSecurity
+name: NetSecurity
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Network Security cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 4.0.3.1
+  Locale: en-US
+  Module Guid: 4b26ff51-7aee-4731-9cf7-508b82532cbf
+  Module Name: NetSecurity
+  ms.date: 12/27/2016
+  title: NetSecurity

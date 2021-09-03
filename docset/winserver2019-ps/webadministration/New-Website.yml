@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an IIS website.
+module: WebAdministration
+notes: ""
+links:
+- text: Get-Website
+  href: ./Get-Website.yml
+- text: Remove-Website
+  href: ./Remove-Website.yml
+- text: Start-Website
+  href: ./Start-Website.yml
+- text: Stop-Website
+  href: ./Stop-Website.yml
+syntaxes:
+- >-
+  New-Website [-Name] <String> [-Id <UInt32>] [-Port <UInt32>] [-IPAddress <String>] [-SslFlags <Int32>]
+
+   [-HostHeader <String>] [-PhysicalPath <String>] [-ApplicationPool <String>] [-Ssl] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a website'
+  code: |-
+    IIS:\> New-WebSite -Name "TestSite" -Port 80 -HostHeader "TestSite" -PhysicalPath "$Env:systemdrive\inetpub\testsite"
+  description: |-
+    This command creates a website named TestSite.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  description: |+
+    Specifies the application pool in which the new site runs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostHeader
+  description: |+
+    Specifies the host header of the new site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    Specifies the ID of the new site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  description: |+
+    Specifies the IP address of the new site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the new site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhysicalPath
+  description: |+
+    Specifies the physical path of the new site.
+    The specified folder must already exist.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the port of the new site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Ssl
+  description: |+
+    Indicates that this cmdlet enables HTTPS binding on the site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SslFlags
+  description: "Indicates what type of certificate and certificate storage the new website supports.\r\nThe acceptable values for this parameter are:\r\n\r\n- 0: Regular certificate in Windows certificate storage. \r\n- 1: SNI certificate.\r\n \r\n- 2: Central certificate store. \r\n- 3: SNI certificate in central certificate store.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-Website
+name: New-Website
+description: |-
+  The **New-Website** cmdlet creates an Internet Information Services (IIS) website with the settings specified in parameter values.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-website?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-Website

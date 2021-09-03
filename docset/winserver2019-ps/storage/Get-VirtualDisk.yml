@@ -1,0 +1,482 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a list of VirtualDisk objects, across all storage pools, across all providers, or optionally a filtered subset based on provided criteria.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Disk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_Disk object to the **Disk** parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_InitiatorId" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_InitiatorId object to the **InitiatorId** parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_InitiatorPort" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_InitiatorPort object to the **InitiatorPort** parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_MaskingSet" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_MaskingSet object to the **MaskingSet** parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_PhysicalDisk object to the **PhysicalDisk** parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StorageSubsystem object to the **StorageSubsystem** parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageTier" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StorageTier object to the **StorageTier** parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_TargetPort" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_TargetPort object to the **TargetPort** parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_TargetVirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_TargetVirtualDisk object to the **TargetVirtualDisk** parameter.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet outputs an object that represents the specified virtual disk. For more information about output object type, please see [MSFT_VirtualDisk class](https://docs.microsoft.com/previous-versions/windows/desktop/stormgmt/msft-virtualdisk)
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/?LinkID=113423
+- text: Connect-VirtualDisk
+  href: ./Connect-VirtualDisk.yml
+- text: Disconnect-VirtualDisk
+  href: ./Disconnect-VirtualDisk.yml
+- text: Get-Partition
+  href: ./Get-Partition.yml
+- text: Get-StoragePool
+  href: ./Get-StoragePool.yml
+- text: Hide-VirtualDisk
+  href: ./Hide-VirtualDisk.yml
+- text: New-VirtualDisk
+  href: ./New-VirtualDisk.yml
+- text: Remove-VirtualDisk
+  href: ./Remove-VirtualDisk.yml
+- text: Repair-VirtualDisk
+  href: ./Repair-VirtualDisk.yml
+- text: Resize-VirtualDisk
+  href: ./Resize-VirtualDisk.yml
+- text: Set-VirtualDisk
+  href: ./Set-VirtualDisk.yml
+- text: Show-VirtualDisk
+  href: ./Show-VirtualDisk.yml
+syntaxes:
+- >-
+  Get-VirtualDisk [[-FriendlyName] <String[]>] [-Usage <Usage[]>] [-OtherUsageDescription <String[]>]
+
+   [-IsSnapshot <Boolean[]>] [-HealthStatus <HealthStatus[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-UniqueId <String[]>] [-Usage <Usage[]>] [-OtherUsageDescription <String[]>]
+
+   [-IsSnapshot <Boolean[]>] [-HealthStatus <HealthStatus[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Name <String[]>] [-Usage <Usage[]>] [-OtherUsageDescription <String[]>]
+
+   [-IsSnapshot <Boolean[]>] [-HealthStatus <HealthStatus[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-StorageJob <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-TargetVirtualDisk <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-SourceVirtualDisk <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-TargetPort <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-InitiatorId <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-MaskingSet <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-InitiatorPort <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-Disk <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-StorageTier <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-PhysicalDisk <CimInstance>] [-PhysicalRangeMin <UInt64>]
+
+   [-PhysicalRangeMax <UInt64>] [-NoRedundancy] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-StoragePool <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-StorageNode <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+
+   [-HealthStatus <HealthStatus[]>] [-StorageSubSystem <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Get-VirtualDisk
+  description: |-
+    This example returns all VirtualDisk objects across all visible StoragePool objects, across all visible StorageProvider objects.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> $stpool = (Get-StoragePool -FriendlyName "SpacesPool")
+    PS C:\> Get-VirtualDisk -StoragePool $stpool
+  description: |-
+    This example lists only the virtual disks from the StoragePool object named SpacesPool.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\> Get-VirtualDisk | Where-Object -FilterScript {$_.HealthStatus -Ne "Healthy"}
+  description: |-
+    This example lists all virtual disks, across all pools, and all providers, which are not currently in a healthy state.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\> Get-VirtualDisk -FriendlyName "VDisk01" | Get-Disk | Get-Partition | Get-Volume
+  description: |-
+    This example gets the partition and volume associated with a virtual disk.
+    The command gets the virtual disk named VDisk01 and passes the virtual disk to the Get-Disk cmdlet by using the pipeline operator.
+    The Get-Disk cmdlet gets the disk associated with the virtual disk and passes the disk to the Get-Partition by using the pipeline operator.
+    The Get-Partition cmdlet gets the partition associated with the disk, and passes the partition to the Get-Volume cmdlet by using the pipeline operator.
+    The Get-Volume cmdlet gets the volume associated with the partition.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Disk
+  description: |+
+    Accepts a Disk object as input.
+    The Disk CIM object is exposed by the [Get-Disk](https://technet.microsoft.com/library/3929eb27-1365-42ca-8acf-68b364c3599f) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FriendlyName
+  description: |+
+    Specifies a friendly name for a disk.
+    The friendly name may be defined by a user and is not guaranteed to be unique.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HealthStatus" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HealthStatus
+  description: |+
+    Specifies the status of an object and indicates if the object is **Healthy** or **Warning Unhealthy**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Healthy, Warning, Unhealthy, Unknown
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InitiatorId
+  description: |+
+    Accepts an InitiatorId object as input.
+    The Initiator ID CIM object is exposed by the [Get-InitiatorId](https://technet.microsoft.com/library/56c96b69-33c0-402b-8813-d64a4434011d) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InitiatorPort
+  description: |+
+    Accepts an InitiatorPort object as input.
+    The Initiator Port CIM object is exposed by the [Get-InitiatorPort](https://technet.microsoft.com/library/580a19cf-26d1-45bb-ad34-a6265e2efacf) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IsSnapshot
+  description: |+
+    Specifies that the virtual disk is a snapshot of another virtual disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: MaskingSet
+  description: |+
+    Accepts a MaskingSet object as input.
+    The Masking Set CIM object is exposed by the [Get-MaskingSet](https://technet.microsoft.com/library/a7ef71fd-f7f6-4231-8799-0e96dd9eac84) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of an object or setting.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRedundancy
+  description: |+
+    Indicates that this cmdlet gets virtual disks that have one remaining copy of data stored on the physical disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OtherUsageDescription
+  description: |+
+    Specifies the usage of this object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: PhysicalDisk
+  description: |+
+    Accepts a PhysicalDisk object as input.
+    The Physical Disk CIM object is exposed by the [Get-PhysicalDisk](https://technet.microsoft.com/library/a204dcde-bfac-43ac-9b79-d81384f255be) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: PhysicalRangeMax
+  description: |+
+    This parameter is reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: PhysicalRangeMin
+  description: |+
+    This parameter is reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: SourceVirtualDisk
+  description: |+
+    Specifies a virtual disk as a **CIMInstance** object.
+    The cmdlet gets the snapshot or clone virtual disks that were created from the virtual disk that you specify.
+    To obtain a virtual disk object, use the Get-VirtualDisk cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageJob
+  description: |+
+    Specifies an outstanding storage job as a **CIMInstance** object.
+    The cmdlet gets the virtual disks associated with the storage jobs that you specify.
+    To obtain a virtual disk object, use the Get-StorageJob cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageNode
+  description: |+
+    Specifies a storage node as a **CIMInstance** object.
+    The cmdlet gets the virtual disks that belong to the storage node that you specify.
+    The virtual disks that belong to the storage node have read/write permissions on the node.
+    To obtain a virtual disk object, use the Get-StorageNode cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StoragePool
+  description: |+
+    Accepts a StoragePool object as input.
+    The Storage Pool CIM object is exposed by the [Get-StoragePool](https://technet.microsoft.com/library/288acad9-7678-45c2-b7b4-3a0522fea499) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageSubSystem
+  description: |+
+    Accepts a StorageSubsystem object as input.
+    The Storage Subsystem CIM object is exposed by the [Get-StorageSubsystem](https://technet.microsoft.com/library/ea364a0b-06d6-4653-b41c-be69b8038b54) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageTier
+  description: |+
+    Specifies a storage tier as a **CIMInstance** object.
+    The cmdlet gets the virtual disks included in the storage tier that you specify.
+    To obtain a virtual disk object, use the Get-StorageTier cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: TargetPort
+  description: |+
+    Accepts a TargetPort object as input.
+    The Target Port CIM object is exposed by the [Get-TargetPort](https://technet.microsoft.com/library/4c139739-cda3-4379-b87b-60b1b4db8cd2) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: TargetVirtualDisk
+  description: |+
+    Specifies a virtual disk as a **CIMInstance** object.
+    The cmdlet gets the virtual disk from which the snapshot or clone virtual disk that you specify were created.
+    To obtain a virtual disk object, use the Get-VirtualDisk cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UniqueId
+  description: |+
+    Specifies an ID used to uniquely identify a Disk object in the system.
+    The ID persists through restarts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="Usage" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Usage
+  description: |+
+    Indicates the intended usage of the virtual disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, Other, Unrestricted, ReservedForComputerSystem, ReservedForReplicationServices, ReservedForMigrationServices, LocalReplicaSource, RemoteReplicaSource, LocalReplicaTarget, RemoteReplicaTarget, LocalReplicaSourceOrTarget, RemoteReplicaSourceOrTarget, DeltaReplicaTarget, ElementComponent, ReservedAsPoolContributer, CompositeVolumeMember, CompositeVirtualDiskMember, ReservedForSparing
+uid: Storage.Get-VirtualDisk
+name: Get-VirtualDisk
+description: |-
+  The **Get-VirtualDisk** cmdlet returns a list of VirtualDisk objects, across all storage pools, across all providers, or optionally a filtered subset based on provided criteria.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: VirtualDisk.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-virtualdisk?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VirtualDisk

@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an enrollment policy server and the URL of the enrollment policy server from the current user or local computer configuration.
+module: pki
+notes: ""
+inputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.EnrollmentPolicyServer" data-throw-if-not-resolved="False" />
+  description: |-
+    Contains information about the certificate enrollment policy.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-CertificateEnrollmentPolicyServer
+  href: ./Add-CertificateEnrollmentPolicyServer.yml
+- text: Get-CertificateEnrollmentPolicyServer
+  href: ./Get-CertificateEnrollmentPolicyServer.yml
+syntaxes:
+- >-
+  Remove-CertificateEnrollmentPolicyServer [-Url] <Uri> -context <Context> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Remove-CertificateEnrollmentPolicyServer -Url https://www.contoso.com/policy/service.svc -Context User
+  description: |-
+    This example removes the enrollment policy server configuration from the local user configuration with the given URL.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$userPolicy = Get-CertificateEnrollmentPolicyServer -Scope All -Context User -Url https://www.contoso.com/policy/service.svc
+
+    PS C:\>Remove-CertificateEnrollmentPolicyServer -Url $userPolicy.url -Context User
+  description: |-
+    This example removes the enrollment policy server that is configured from the current user configuration.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Context" data-throw-if-not-resolved="False" />
+  name: context
+  isRequired: true
+  description: |+
+    Specifies that information about the location of an enrollment policy server should be removed from either the User or computer (machine) context.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Machine, User
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Specifies the URL of the enrollment policy server to remove from the local configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: pki.Remove-CertificateEnrollmentPolicyServer
+name: Remove-CertificateEnrollmentPolicyServer
+description: |-
+  The **Remove-CertificateEnrollmentPolicyServer** cmdlet removes an enrollment policy server from the current user or local computer configuration.
+  This cmdlet also removes any policy cache file and credentials from the vault.
+
+  Only one enrollment policy server configuration is removed from the user configured location at a time. 
+
+  If a scope of All is specified and the same URL exists in the local computer (machine) and User contexts, then this cmdlet will fail. 
+
+  An error is generated if the specified URL does not exist in the given scope. 
+
+  Any policy cache file and credentials are also removed from the vault.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  Module Name: pki
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/pki/remove-certificateenrollmentpolicyserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-CertificateEnrollmentPolicyServer

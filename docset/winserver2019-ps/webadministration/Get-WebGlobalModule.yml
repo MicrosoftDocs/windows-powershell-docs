@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the global modules configured in IIS, or information about a specific module.
+module: WebAdministration
+notes: ""
+links:
+- text: Disable-WebGlobalModule
+  href: ./Disable-WebGlobalModule.yml
+- text: Enable-WebGlobalModule
+  href: ./Enable-WebGlobalModule.yml
+- text: New-WebGlobalModule
+  href: ./New-WebGlobalModule.yml
+- text: Remove-WebGlobalModule
+  href: ./Remove-WebGlobalModule.yml
+- text: Set-WebGlobalModule
+  href: ./Set-WebGlobalModule.yml
+syntaxes:
+- Get-WebGlobalModule [[-Name] <String>] [-Image <String>] [-Precondition <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Getting configuration information about a module'
+  code: |-
+    IIS:\> Get-WebGlobalModule -Name "UriCacheModule"
+  description: |-
+    This command returns information about the configuration of the module named UriCacheModule.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Image
+  description: |+
+    Specifies the name of the image file associated with the module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a module about which this cmdlet gets information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Precondition
+  description: |+
+    Specifies a precondition for the module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebGlobalModule
+name: Get-WebGlobalModule
+description: |-
+  The **Get-WebGlobalModule** cmdlet gets the global modules configured in Internet Information Services (IIS), or information about a specific module.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webglobalmodule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebGlobalModule

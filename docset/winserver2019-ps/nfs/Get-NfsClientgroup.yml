@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets client groups configured on an NFS server.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_NfsClientgroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-NfsClientgroup
+  href: ./New-NfsClientgroup.yml
+- text: Remove-NfsClientgroup
+  href: ./Remove-NfsClientgroup.yml
+- text: Rename-NfsClientgroup
+  href: ./Rename-NfsClientgroup.yml
+- text: Set-NfsClientgroup
+  href: ./Set-NfsClientgroup.yml
+syntaxes:
+- >-
+  Get-NfsClientgroup [[-ClientGroupName] <String[]>] [-ExcludeName <String[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-NfsClientgroup -LiteralName <String[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get client groups by using a name'
+  code: |-
+    PS C:\> Get-NfsClientgroup -ClientGroupName "ClientGroup*"
+
+    ClientGroupMembers : {contoso-fs2}
+    ClientGroupName    : clientgroupA
+
+    ClientGroupMembers : {contoso-fs1}
+    ClientGroupName    : clientgroupB
+  description: |-
+    This command gets the client groups on local computer that start with the name ClientGroup.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Indicates that this cmdlet runs the command as a background job on a remote computer.
+    Use this parameter to run commands that take an extensive time to finish.
+
+    When you use the *AsJob* parameter, the command returns an object that represents the job, and then displays the command prompt.
+    You can continue to work in the session while the job finishes.
+    To manage the job, use the **Job** cmdlets.
+    To get the job results, use the Receive-Job cmdlet.
+
+    The *AsJob* parameter resembles using the Invoke-Command cmdlet to run a Start-Job command remotely.
+    However, with *AsJob*, the job is created on the local computer, even though the job runs on a remote computer, and the results of the remote job are automatically returned to the local computer.
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251) and [about_Remote_Jobs](https://go.microsoft.com/fwlink/?LinkID=135184).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClientGroupName
+  description: |+
+    Specifies an array of client group names.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExcludeName
+  description: |+
+    Specifies an array of client group names to exclude from the client groups that the cmdlet gets from the NFS server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LiteralName
+  isRequired: true
+  description: |+
+    Specifies an array of client groups to get from the NFS server.
+
+    The cmdlet uses the value of *LiteralName* exactly as typed.
+    The cmdlet does not interpret any characters as wildcards.
+    If the name includes escape characters, enclose it in single quotation marks (').
+    Single quotation marks instruct Windows PowerShell not to interpret any characters as escape sequences.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NFS.Get-NfsClientgroup
+name: Get-NfsClientgroup
+description: |-
+  The **Get-NfsClientGroup** cmdlet gets a list of client groups configured on a Network File System (NFS) server and the list of members of the client groups.
+  By default, the cmdlet enumerates all the client groups configured on a server.
+  You can use the optional **ClientGroupName** parameter to get a specific client group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NfsClientGroup.cmdletDefinition.cdxml-help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/get-nfsclientgroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NfsClientgroup

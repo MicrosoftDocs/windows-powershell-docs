@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Declines the update for deployment.
+module: UpdateServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.UpdateServices.Commands.WsusUpdate" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Approve-WsusUpdate
+  href: ./Approve-WsusUpdate.yml
+- text: Get-WsusUpdate
+  href: ./Get-WsusUpdate.yml
+syntaxes:
+- Deny-WsusUpdate -Update <WsusUpdate> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Deny updates'
+  code: |-
+    PS C:\> Get-WsusUpdate -Classification All -Approval Unapproved -Status FailedOrNeeded | Deny-WsusUpdate
+  description: |-
+    This command declines all unapproved updates with a status of failed or needed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="WsusUpdate" data-throw-if-not-resolved="False" />
+  name: Update
+  isRequired: true
+  description: |+
+    Specifies the object that contains the server of the update to be approved or denied as well as the update to be approved or denied. This value is obtained by running the **Get-WsusUpdate** cmdlet and passing the resulting **WsusUpdate** object into this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UpdateServices.Deny-WsusUpdate
+name: Deny-WsusUpdate
+description: |-
+  The **Deny-WsusUpdate** cmdlet declines the specified cmdlet for deployment. To use this cmdlet, run the [Get-WsusUpdate](./Get-WsusUpdate.yml) cmdlet and pass the resulting **WsusUpdate** object into this cmdlet. This operation requires Windows Server Update Services (WSUS) Administrator privileges.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/updateservices/deny-wsusupdate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Deny-WsusUpdate

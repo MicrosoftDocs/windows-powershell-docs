@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sends a system message to a specified user session.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disconnect-RDUser
+  href: ./Disconnect-RDUser.yml
+- text: Get-RDUserSession
+  href: ./Get-RDUserSession.yml
+- text: Invoke-RDUserLogoff
+  href: ./Invoke-RDUserLogoff.yml
+syntaxes:
+- >-
+  Send-RDUserMessage [-HostServer] <String> [-UnifiedSessionID] <Int32> [-MessageTitle] <String>
+
+   [-MessageBody] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Send a system message to users of a Remote Desktop application'
+  code: |-
+    PS C:\> Send-RDUserMessage -HostServer "rdsh.contoso.com" -UnifiedSessionID 1 -MessageTitle "Message from Administrator" -MessageBody "Please save your work. You will be logged off in 10 minutes"
+  description: |-
+    This command sends a system message to users of the session with an ID of 1 on the host server named rdsh.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostServer
+  isRequired: true
+  description: |+
+    Specifies the name of the server that hosts the session.
+    For session collections the host server has the name of the Remote Desktop Session Host (RD  Session Host) server.
+    For virtual desktop collections the host server has the name of the Remote Desktop Virtualization Host (RD Virtualization Host) server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MessageBody
+  isRequired: true
+  description: |+
+    Specifies the text for the message body.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MessageTitle
+  isRequired: true
+  description: |+
+    Specifies the text for the message title.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: UnifiedSessionID
+  isRequired: true
+  description: |+
+    Specifies a unique session ID on the host.
+    Use Get-RDUserSession to retrieve the unique ID for a specific session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Send-RDUserMessage
+name: Send-RDUserMessage
+description: |-
+  The **Send-RDUserMessage** cmdlet sends a system message to a specified user session.
+  Because the user session ID is unique only within the context of a session host, a different session host server can share the same user session ID.
+  The host server and session ID that you specify by using this cmdlet uniquely identify a session within a deployment.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/send-rdusermessage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Send-RDUserMessage

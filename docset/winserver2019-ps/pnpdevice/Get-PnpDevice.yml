@@ -1,0 +1,202 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about PnP devices.
+module: PnpDevice
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Cimv2/Win32_PnPEntity" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Disable-PnpDevice
+  href: ./Disable-PnpDevice.yml
+- text: Enable-PnpDevice
+  href: ./Enable-PnpDevice.yml
+syntaxes:
+- >-
+  Get-PnpDevice [[-InstanceId] <String[]>] [-Class <String[]>] [-PresentOnly] [-Status <String[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-PnpDevice [-FriendlyName <String[]>] [-Class <String[]>] [-PresentOnly] [-Status <String[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-PnpDevice [-Class <String[]>] [-PresentOnly] [-Status <String[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-PnpDevice [-Class <String[]>] [-PresentOnly] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-PnpDevice [-Status <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all PnP devices'
+  code: |-
+    PS C:\>Get-PnpDevice
+    Status     Class           FriendlyName                                                                     InstanceId     
+    ------     -----           ------------                                                                     ----------     
+    OK         System          High precision event timer                                                       ACPI\PNP0103... 
+    OK         AudioEndpoint   Remote Audio                                                                     SWD\MMDEVAPI... 
+    OK         System          System board                                                                     ACPI\PNP0C01\1 
+    OK         System          System board                                                                     ACPI\PNP0C01\A 
+    OK         System          Motherboard resources                                                            ACPI\PNP0C02\4 
+    Unknown    MEDIA           Microsoft Streaming Service Proxy                                                SW\{96E080C7... 
+    OK         System          UMBus Enumerator                                                                 UMB\UMB\1&amp;84... 
+    OK         Printer         \\prn-corp3\stug-2633-clr                                                        SWD\PRINTENU... 
+    OK         PrintQueue      stug-2633-clr on prn-tsqa.contoso.com (redirected 1)             SWD\PRINTENU...
+  description: |-
+    This command gets all devices known to PnP, whether they are present or not.
+  summary: ""
+- title: 'Example 2: Get PnP devices by name'
+  code: |-
+    PS C:\>Get-PnpDevice -FriendlyName 'Generic USB Hub'
+    Status     Class           FriendlyName                                                                     InstanceId     
+    ------     -----           ------------                                                                     ----------     
+    OK         USB             Generic USB Hub                                                                  USB\VID_0557... 
+    OK         USB             Generic USB Hub                                                                  USB\VID_0409... 
+    OK         USB             Generic USB Hub                                                                  USB\VID_8087... 
+    OK         USB             Generic USB Hub                                                                  USB\VID_8087... 
+    OK         USB             Generic USB Hub                                                                  USB\VID_0424... 
+    OK         USB             Generic USB Hub                                                                  USB\VID_0424...
+  description: |-
+    This command gets all the devices named Generic USB Hub.
+  summary: ""
+- title: 'Example 3: Get PnP devices by ID'
+  code: |-
+    PS C:\>Get-PnpDevice -InstanceId 'USB\VID_8087&amp;PID_0024\5&amp;3541780&amp;0&amp;1'
+    Status     Class           FriendlyName                                                                     InstanceId     
+    ------     -----           ------------                                                                     ----------     
+    OK         USB             Generic USB Hub                                                                  USB\VID_8087...
+  description: |-
+    This command gets the device that has the specified instance ID.
+  summary: ""
+- title: 'Example 4: Get present PnP devices in specified states'
+  code: |-
+    PS C:\>Get-PnpDevice -PresentOnly -Status ERROR,DEGRADED,UNKNOWN
+    Status     Class           FriendlyName                                                                     InstanceId     
+    ------     -----           ------------                                                                     ----------     
+    Error                      PCI Serial Port                                                                  PCI\VEN_8086... 
+    Error      Mouse           Microsoft PS/2 Mouse                                                             ACPI\PNP0F03... 
+    Error                      PCI Simple Communications Controller                                             PCI\VEN_8086... 
+    Error                      SAS Controller                                                                   PCI\VEN_8086... 
+    Error      Keyboard        Standard PS/2 Keyboard                                                           ACPI\PNP0303...
+  description: |-
+    This command gets all present devices that report a status of error, degraded, or unknown.
+  summary: ""
+- title: 'Example 5: Get PnP devices of a class'
+  code: |-
+    PS C:\>Get-PnpDevice -Class 'Mouse'
+    Status     Class           FriendlyName                                                                     InstanceId     
+    ------     -----           ------------                                                                     ----------     
+    OK         Mouse           HID-compliant mouse                                                              HID\VID_0557... 
+    Error      Mouse           Microsoft PS/2 Mouse                                                             ACPI\PNP0F03... 
+    OK         Mouse           Remote Desktop Mouse Device                                                      TERMINPUT_BU... 
+    OK         Mouse           HID-compliant mouse                                                              HID\VID_045E...
+  description: |-
+    This command gets all the devices that belong to the specified PnP class.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Class
+  description: |+
+    Specifies an array of PnP classes for devices.
+    Some example values for this parameter are Monitor, DiskDrive, and Processor.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FriendlyName
+  description: |+
+    Specifies an array of friendly names for devices.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InstanceId
+  description: |+
+    Specifies an array of unique instance ID of devices.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DeviceId
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PresentOnly
+  description: |+
+    Indicates that this cmdlet gets only those devices that are present when you issue the command.
+    Present devices are physically in the system or attached to it.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Status
+  description: |+
+    Specifies an array of current status values of devices.
+    The acceptable values for this parameter are:
+
+    - OK
+    - ERROR
+    - UNKNOWN
+    - DEGRADED
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: OK, ERROR, DEGRADED, UNKNOWN
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PnpDevice.Get-PnpDevice
+name: Get-PnpDevice
+description: |-
+  The **Get-PnpDevice** cmdlet returns basic information about Plug and Play (PnP) devices.
+  The values returned are common to all devices.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PnpDevice.cdxml-help.xml
+  Module Name: PnpDevice
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/pnpdevice/get-pnpdevice?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-PnpDevice

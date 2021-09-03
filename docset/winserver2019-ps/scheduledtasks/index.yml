@@ -1,0 +1,36 @@
+### YamlMime:PowershellModule
+children:
+- title: ScheduledTasks
+  cmdlets:
+  - ScheduledTasks.Disable-ScheduledTask
+  - ScheduledTasks.Enable-ScheduledTask
+  - ScheduledTasks.Export-ScheduledTask
+  - ScheduledTasks.Get-ClusteredScheduledTask
+  - ScheduledTasks.Get-ScheduledTask
+  - ScheduledTasks.Get-ScheduledTaskInfo
+  - ScheduledTasks.New-ScheduledTask
+  - ScheduledTasks.New-ScheduledTaskAction
+  - ScheduledTasks.New-ScheduledTaskPrincipal
+  - ScheduledTasks.New-ScheduledTaskSettingsSet
+  - ScheduledTasks.New-ScheduledTaskTrigger
+  - ScheduledTasks.Register-ClusteredScheduledTask
+  - ScheduledTasks.Register-ScheduledTask
+  - ScheduledTasks.Set-ClusteredScheduledTask
+  - ScheduledTasks.Set-ScheduledTask
+  - ScheduledTasks.Start-ScheduledTask
+  - ScheduledTasks.Stop-ScheduledTask
+  - ScheduledTasks.Unregister-ClusteredScheduledTask
+  - ScheduledTasks.Unregister-ScheduledTask
+uid: ScheduledTasks
+name: ScheduledTasks
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Scheduled Tasks cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.2.1
+  Locale: en-US
+  Module Guid: 5378ee8e-e349-49bb-83b9-f3d9c396c0a6
+  Module Name: ScheduledTasks
+  ms.date: 12/20/2016
+  title: ScheduledTasks

@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the managed modules that are configured for a particular application.
+module: WebAdministration
+notes: ""
+links:
+- text: New-WebManagedModule
+  href: ./New-WebManagedModule.yml
+- text: Remove-WebManagedModule
+  href: ./Remove-WebManagedModule.yml
+- text: Set-WebManagedModule
+  href: ./Set-WebManagedModule.yml
+syntaxes:
+- Get-WebManagedModule [[-Name] <String>] [-Location <String[]>] [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get modules for the default website'
+  code: |-
+    IIS:\> Get-WebManagedModule -PSPath "IIS:\sites\Default Web Site"
+  description: |-
+    This command gets configuration information for modules configured for the default website.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    Specifies the configuration location from which the cmdlet retrieves configuration information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the managed module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies an IIS configuration path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebManagedModule
+name: Get-WebManagedModule
+description: |-
+  The **Get-WebManagedModule** cmdlet gets the managed modules that are configured for a particular application.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webmanagedmodule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebManagedModule

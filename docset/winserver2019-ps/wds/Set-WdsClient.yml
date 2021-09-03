@@ -1,0 +1,352 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a pre-staged client device.
+module: WDS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_WdsClient" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Approve-WdsClient
+  href: ./Approve-WdsClient.yml
+- text: Deny-WdsClient
+  href: ./Deny-WdsClient.yml
+- text: Get-WdsClient
+  href: ./Get-WdsClient.yml
+- text: New-WdsClient
+  href: ./New-WdsClient.yml
+- text: Remove-WdsClient
+  href: ./Remove-WdsClient.yml
+syntaxes:
+- >-
+  Set-WdsClient [-Group <String>] [-ReferralServer <String>] [-PxePromptPolicy <PxePromptPolicy>]
+
+   [-WdsClientUnattend <String>] [-JoinDomain <Boolean>] [-ResetAccount] [-DeviceID <String>]
+
+   [-BootImagePath <String>] -DeviceName <String> [-SearchForest] -User <String> -JoinRights <JoinRights>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Set-WdsClient [-Group <String>] [-ReferralServer <String>] [-PxePromptPolicy <PxePromptPolicy>]
+
+   [-WdsClientUnattend <String>] [-JoinDomain <Boolean>] [-ResetAccount] [-DeviceID <String>]
+
+   [-BootImagePath <String>] -DeviceName <String> [-DomainName <String>] [-Domain] -User <String>
+
+   -JoinRights <JoinRights> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Set-WdsClient [-Group <String>] [-ReferralServer <String>] [-PxePromptPolicy <PxePromptPolicy>]
+
+   [-WdsClientUnattend <String>] [-JoinDomain <Boolean>] [-ResetAccount] [-DeviceID <String>]
+
+   [-BootImagePath <String>] -DeviceName <String> -User <String> -JoinRights <JoinRights>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Set-WdsClient [-Group <String>] [-ReferralServer <String>] [-PxePromptPolicy <PxePromptPolicy>]
+
+   [-WdsClientUnattend <String>] [-JoinDomain <Boolean>] [-ResetAccount] [-DeviceID <String>]
+
+   [-BootImagePath <String>] -DeviceName <String> [-SearchForest] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Set-WdsClient [-Group <String>] [-ReferralServer <String>] [-PxePromptPolicy <PxePromptPolicy>]
+
+   [-WdsClientUnattend <String>] [-JoinDomain <Boolean>] [-ResetAccount] [-DeviceID <String>]
+
+   [-BootImagePath <String>] -DeviceName <String> [-DomainName <String>] [-Domain] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Set-WdsClient [-Group <String>] [-ReferralServer <String>] [-PxePromptPolicy <PxePromptPolicy>]
+
+   [-WdsClientUnattend <String>] [-JoinDomain <Boolean>] [-ResetAccount] [-DeviceID <String>]
+
+   [-BootImagePath <String>] -DeviceName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a pre-staged client in the current AD DS domain'
+  code: |-
+    PS C:\> Set-WdsClient -DeviceName "TSQA087" -BootImagePath "boot\x86\images\Contosox86boot.wim" -DeviceID "5a7a1def-2e1f-4a7b-a792-ae5275b6ef92" -PxePromptPolicy OptOut -ReferralServer "WindowsDS07" -ResetAccount -WdsClientUnattend "WindowsDSClientUnattend\Unattend.xml"
+  description: |-
+    This command modifies a pre-staged client named TSQA087.
+    The command specifies a boot image file, a device ID, and a referral server.
+    The command changes the prompt policy to opt-out.
+    The command specifies the *ResetAccount* parameter, so the command resets permissions so that anyone granted appropriate permissions can join the domain.
+    The command also specifies an answer file that is named Unattend.xml.
+  summary: ""
+- title: 'Example 2: Modify a pre-staged client in the current AD DS domain'
+  code: |-
+    PS C:\>Set-WdsClient -DeviceName "TSQA103" -Domain -DomainName "TSQA.Contoso.com" -Group "2013Purchases" -JoinDomain $True -PxePromptPolicy NoPrompt
+  description: |-
+    This command modifies a pre-staged client named TSQA103.
+    The command specifies the *Domain* parameter to indicate that the client belongs a specified domain that is named TSQA.Contoso.com.
+    The command adds the client to the group named 2013Purchases.
+    The command changes the prompt policy to no prompt.
+    The command includes the *JoinDomain* parameter, so the computer joins adomain.
+  summary: ""
+- title: 'Example 3: Modify a pre-staged client in the current AD DS forest'
+  code: |-
+    PS C:\>Set-WdsClient -DeviceName "TSQA108" -SearchForest -BootImagePath "boot\x86\images\Contosox86boot.wim"
+  description: |-
+    This command modifies specifies a boot image file for the pre-staged client named TSQA108.
+    The *SearchForest* parameter indicates the cmdlet can find that computer in any domain in the current AD DS forest.
+  summary: ""
+- title: 'Example 4: Modify join rights and user'
+  code: |-
+    PS C:\>Set-WdsClient -DeviceName "TSQA117" -JoinRights JoinOnly -User "TSQADOMAIN\PattiFuller" -BootImagePath "boot\x86\images\Contosox86boot.wim" -ReferralServer "WindowsDS07"
+  description: |-
+    This command modifies a pre-staged client named TSQA117.
+    The command specifies a user named TSQADOMAIN\PattiFuller, and assigns JoinOnly rights for that user.
+    The command also specifies boot image and a referral server.
+  summary: ""
+- title: 'Example 5: Modify join rights, user, and prompt policy'
+  code: |-
+    PS C:\>Set-WdsClient -DeviceName "TSQA121" -Domain -JoinRights Full -User "TSQADOMAIN\PattiFuller" -PxePromptPolicy OptIn
+  description: |-
+    This command modifies a pre-staged client named TSQA121.
+    The command specifies a user named TSQADOMAIN\PattiFuller Unlike the previous example, the command assigns the user full join rights.
+    The command specifies opt-in as the prompt policy.
+  summary: ""
+- title: 'Example 6: Modify join rights, user, and prompt policy for a client in the current AD DS forest'
+  code: |-
+    PS C:\>Set-WdsClient -DeviceName "TSQA128" -JoinRights JoinOnly -SearchForest -User "TSQADOMAIN\PattiFuller" -DeviceID "5a7a1def-2e1f-4a7b-a792-ae5275b6ef92" -JoinDomain $True -ResetAccount -WdsClientUnattend "WindowsDSClientUnattend\Unattend.xml"
+  description: |-
+    This command modifies a pre-staged client named TSQA128.
+    The *SearchForest* parameter indicates the cmdlet can find that computer could be in any domain in the current AD DS forest.
+
+    The command specifies a value of $True for the *JoinDomain* parameter, so the cmdlet joins the computer to a domain.
+    The command specifies a user named TSQADOMAIN\PattiFuller, and assigns JoinOnly rights for that user.
+    The command also specifies the *ResetAccount* parameter, so the command resets permissions so that anyone granted appropriate permissions can join the domain.
+
+    This command also assigns an ID to the client by using the *DeviceID* parameter.
+    The command also specifies an answer file that is named Unattend.xml.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BootImagePath
+  description: |+
+    Specifies a path of the boot image.
+    This is the path of the boot image file for the computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DeviceID
+  description: |+
+    Specifies the ID of the computer.
+    This identifier is the GUID of a network adapter, a MAC address, or a DHCP unique identifier associated with the computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DeviceName
+  isRequired: true
+  description: |+
+    Specifies the name of the computer associated with the pre-staged client.
+    This is a **sAMAccountName** value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Domain
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet refers to pre-staged clients in the domain specified by the *DomainName* parameter, instead of the domain of the server that runs Windows Deployment Services or the whole forest.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies a domain name.
+    Specify a value for this parameter only if you specify the *Domain* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  description: |+
+    Specifies the group name of the client associated with the pre-staged client.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: JoinDomain
+  description: |+
+    Indicates whether to join the computer to a domain as the account specified by the *User* parameter.
+
+  defaultValue: "TRUE"
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="JoinRights" data-throw-if-not-resolved="False" />
+  name: JoinRights
+  isRequired: true
+  description: |+
+    Specifies the rights to assign to the account.
+    The acceptable values for this parameter are:
+
+    - Full.
+    Assigns full access rights, which includes the right to join the computer to the domain at any time.
+    - JoinOnly.
+    Requires the administrator to reset the computer account before the user can join the computer to the domain.
+
+  defaultValue: "TRUE"
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: JoinOnly, Full, JoinOnly, Full
+- type: <xref href="PxePromptPolicy" data-throw-if-not-resolved="False" />
+  name: PxePromptPolicy
+  description: |+
+    Specifies the prompt policy for this computer to boot in PXE.
+    The acceptable values for this parameter are:
+
+    - Adopt
+    - NoPrompt
+    - OptIn
+    - OptOut
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: OptIn, NoPrompt, OptOut, Abort
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReferralServer
+  description: |+
+    Specifies the name of a server.
+    If you specify a referral server, the computer connects to this Windows Deployment Services server to download the network boot program and boot image by using Trivial File Transfer Protocol (TFTP).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ResetAccount
+  description: |+
+    Indicates that the cmdlet resets the permissions on the computer so that anyone granted appropriate permissions can join the domain using the account specified by the *User* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SearchForest
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet refers to pre-staged devices in the current AD DS forest.
+    If you do not specify this parameter and do not specify the *Domain* parameter, the cmdlet looks for pre-staged devices in the local domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    Specifies a user, in the format DOMAIN\User or User@Domain.
+    If you specify a value of $True for the *JoinDomain* parameter, the cmdlet assigns the user the right to join the computer to the domain specified by the *Domain* parameter.
+    To join the client computer to the specified domain without granting any user rights, specify a value of $True for the *JoinDomain* parameter, but do not specify a user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WdsClientUnattend
+  description: |+
+    Specifies an answer file as a relative path from the RemoteInstall share.
+    This file contains information for the Windows Deployment Services client user interface screens, such as entering credentials, selecting an install image, and configuring the disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WDS.Set-WdsClient
+name: Set-WdsClient
+description: |-
+  The **Set-WdsClient** cmdlet modifies a pre-staged client device.
+  Specify the client to modify by using its name.
+  You can specify a client within AD DS domain of the server that runs Windows Deployment Services, in a specified domain, or anywhere in the current AD DS forest.
+
+  You can modify the following:
+
+  - The device ID, which is a GUID, media access control (MAC) address, or Dynamic Host Configuration Protocol (DHCP) identifier associated with the computer.
+  - A server that runs Windows Deployment Services.
+  The client contacts this server for the network boot program and boot image. 
+  - Whether the client prompts the user to boot in the Pre-Boot Execution Environment (PXE).
+  - A boot image for the client.
+  - A Windows Deployment Services answer file for the client. 
+  - Whether the client joins a domain, the user account that joins the computer to the domain, and the join rights to granted to that user. 
+
+  You can also reset the computer account, which allows for anyone granted appropriate permissions to join the computer to the domain again.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_WdsClient_v1.0.cdxml-help.xml
+  Module Name: WDS
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/wds/set-wdsclient?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WdsClient

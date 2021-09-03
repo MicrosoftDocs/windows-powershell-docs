@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the IP-HTTPS configuration from a computer or a GPO.
+module: NetworkTransition
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input objects.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetIpHTTPsConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    This cmdlet returns one or more IP-HTTPS configuration objects.
+links:
+- text: New-NetIPHttpsConfiguration
+  href: ./New-NetIPHttpsConfiguration.yml
+- text: Remove-NetIPHttpsConfiguration
+  href: ./Remove-NetIPHttpsConfiguration.yml
+- text: Rename-NetIPHttpsConfiguration
+  href: ./Rename-NetIPHttpsConfiguration.yml
+- text: Reset-NetIPHttpsConfiguration
+  href: ./Reset-NetIPHttpsConfiguration.yml
+- text: Set-NetIPHttpsConfiguration
+  href: ./Set-NetIPHttpsConfiguration.yml
+syntaxes:
+- >-
+  Get-NetIPHttpsConfiguration [-Profile <String[]>] [-ProfileActivated <Boolean[]>] [-PolicyStore <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-NetIPHttpsConfiguration [-Profile <String[]>] [-ProfileActivated <Boolean[]>] [-GPOSession <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the IP-HTTPS configuration'
+  code: |-
+    PS C:\>Get-NetIPHttpsConfiguration
+  description: |-
+    This command gets the IP-HTTPS configuration from a computer or a GPO.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GPOSession
+  description: |+
+    Specifies the Group Policy session from which to get the configuration information.
+
+    You can use this parameter with the **NetGPO** cmdlets to aggregate multiple operations performed on a GPO.
+
+    You cannot use this parameter with the *PolicyStore* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  description: |+
+    Specifies the policy store from which to get the configuration.
+    The default store is ActiveStore.
+    The acceptable values for this parameter are:
+
+    - ActiveStore 
+    - PersistentStore 
+    - GPO
+
+    To get the configuration of a GPO, specify the GPO name using the following format: Domain\GPOName
+
+    You cannot use this parameter with the *GPOSession* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Profile
+  description: |+
+    Filters the objects retrieved by the profile name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPHttpsProfile
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ProfileActivated
+  description: |+
+    Filters the objects retrieved by profile status.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkTransition.Get-NetIPHttpsConfiguration
+name: Get-NetIPHttpsConfiguration
+description: |-
+  The **Get-NetIPHttpsConfiguration** cmdlet gets the IP-HTTPS configuration from a computer or a Group Policy Object (GPO).
+
+  You can also use **Get-NetIPHttpsConfiguration** to retrieve the IP-HTTPS configuration, and then use the configuration information as input into other cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetIpHTTPsConfiguration.cdxml-help.xml
+  Module Name: NetworkTransition
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networktransition/get-netiphttpsconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetIPHttpsConfiguration

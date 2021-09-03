@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a TPM owner authorization value from a supplied string.
+module: TrustedPlatformModule
+notes: ""
+inputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts a user-supplied pass phrase string.
+outputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an owner authorization value.
+links:
+- text: Import-TpmOwnerAuth
+  href: ./Import-TpmOwnerAuth.yml
+- text: Set-TpmOwnerAuth
+  href: ./Set-TpmOwnerAuth.yml
+syntaxes:
+- ConvertTo-TpmOwnerAuth [-PassPhrase] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Convert to owner authorization value'
+  code: |-
+    PS C:\> ConvertTo-TpmOwnerAuth -PassPhrase "Saturn1977&&"
+    puJvGK4O6Qvl0loP8r1bIxipDVo=
+  description: |-
+    This command converts the string Saturn1977&& to an owner authorization value.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PassPhrase
+  isRequired: true
+  description: |+
+    Specifies a pass phrase string.
+    This cmdlet converts the pass phrase to an owner authorization value.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: TrustedPlatformModule.ConvertTo-TpmOwnerAuth
+name: ConvertTo-TpmOwnerAuth
+description: |-
+  The **ConvertTo-TpmOwnerAuth** cmdlet creates a Trusted Platform Module (TPM) owner authorization value based on a pass phrase string.
+  A computer requires an owner authorization value to manage a TPM.
+
+  For more information on TPM, see the [Trusted Platform Module Technology Overview](https://technet.microsoft.com/en-us/library/jj131725.aspx) in the Technet library.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Tpm.Commands.dll-Help.xml
+  Module Name: TrustedPlatformModule
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/trustedplatformmodule/convertto-tpmownerauth?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: ConvertTo-TpmOwnerAuth

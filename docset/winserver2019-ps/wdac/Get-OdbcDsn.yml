@@ -1,0 +1,157 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets ODBC DSNs.
+module: Wdac
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_OdbcDsn" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Add-OdbcDsn
+  href: ./Add-OdbcDsn.yml
+- text: Remove-OdbcDsn
+  href: ./Remove-OdbcDsn.yml
+- text: Set-OdbcDsn
+  href: ./Set-OdbcDsn.yml
+syntaxes:
+- >-
+  Get-OdbcDsn [[-Name] <String>] [-DriverName <String>] [-Platform <String>] [-DsnType <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all DSNs'
+  code: |-
+    PS C:\> Get-OdbcDsn
+  description: |-
+    This command gets all ODBC User DSNs and System DSNs that use 32-bit or 64-bit ODBC drivers.
+  summary: ""
+- title: 'Example 2: Get ODBC System DSNs by name'
+  code: |-
+    PS C:\> Get-OdbcDsn -Name "MyPayroll" -DsnType "System" -Platform "32-bit"
+  description: |-
+    This command gets the ODBC System DSNs named MyPayroll stored in the 32-bit registry location.
+  summary: ""
+- title: 'Example 3: Get ODBC DSNs with names that contain a string'
+  code: |-
+    PS C:\> Get-OdbcDsn -Name "*Payroll*"
+  description: |-
+    This command gets all ODBC User DSNs and System DSNs with names that contain the string Payroll.
+    The DSNs are stored in the native hive of the registry location.
+  summary: ""
+- title: 'Example 4: Get all ODBC User DSNs for specified driver'
+  code: |-
+    PS C:\> $DsnArray = Get-OdbcDsn -DriverName "SQL Server*"
+  description: |-
+    This command gets all ODBC User DSNs that use a driver that has the specified name, and then stores those DSN in the $DsnArray variable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DriverName
+  description: |+
+    Specifies the name of a driver.
+    This cmdlet gets ODBC DSNs that use the specified ODBC driver.
+    You can use wildcard characters.
+    If you do not specify this parameter, this cmdlet gets all ODBC DSNs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DsnType
+  description: |+
+    Specifies the type of an ODBC DSN.
+    This cmdlet gets DSNs of the type that this parameter specifies.
+    The acceptable values for this parameter are:
+
+    - User
+    - System
+    - All
+
+    The default value is All.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: User, System, All
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of an ODBC DSN.
+    You can use wildcard characters to specify more than one ODBC DSN.
+    If you do not specify this parameter, this cmdlet returns all ODBC DSNs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DsnName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Platform
+  description: |+
+    Specifies the platform architecture.
+    This cmdlet gets the ODBC DSN that belong to the architecture that this parameter specifies.
+    The acceptable values for this parameter are:
+
+    - 32-bit
+    - 64-bit
+    - All
+
+    The default value is All.
+    If you run this cmdlet in a remote CIM session, this parameter refers to the platform architecture on the remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: 32-bit, 64-bit, All
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Wdac.Get-OdbcDsn
+name: Get-OdbcDsn
+description: |-
+  The **Get-OdbcDsn** cmdlet gets Open Database Connectivity (ODBC) data source names (DSNs) from the computer.
+  You can specify values for the *Name*, *DsnType*, *Platform*, and *DriverName* parameters.
+  If you do not specify *Name* or *DriverName*, the cmdlet gets all DSN names and all driver names respectively.
+  If you do not specify any parameter, the cmdlet gets all ODBC DSNs from the computer.
+
+  For more information about ODBC, data source names, and drivers, see [Microsoft Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx), [Data Sources](https://msdn.microsoft.com/en-us/library/ms711688.aspx), and [Drivers](https://msdn.microsoft.com/en-us/library/ms715383.aspx) on the Microsoft Developer Network.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_OdbcDsnTask_v1.0.cdxml-help.xml
+  Module Name: Wdac
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/wdac/get-odbcdsn?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-OdbcDsn

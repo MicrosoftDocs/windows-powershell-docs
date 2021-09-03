@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the UE-V configuration settings.
+module: UEV
+notes: |-
+  * A setting value can be from four sources (in order of precedence): group policy settings for the current user, group policy settings for the local computer, the current user, and the local computer. If no setting value is found in any of the sources, UE-V uses the default setting.
+outputs:
+- name: <xref href="System.Collections.Generic.Dictionary, System.Collections.Generic.KeyValuePair" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a **KeyValuePair** object that represents the setting name and value, if you specify a setting name.
+    Otherwise, this cmdlet generates a list of all of the settings.
+links:
+- text: Set-UevConfiguration
+  href: ./Set-UevConfiguration.yml
+- text: Set-UevConfiguration
+  href: ./Set-UevConfiguration.yml
+- text: Clear-UevConfiguration
+  href: ./Clear-UevConfiguration.yml
+- text: Import-UevConfiguration
+  href: ./Import-UevConfiguration.yml
+- text: Export-UevConfiguration
+  href: ./Export-UevConfiguration.yml
+syntaxes:
+- Get-UevConfiguration [<CommonParameters>]
+- Get-UevConfiguration [-Computer] [<CommonParameters>]
+- Get-UevConfiguration [-CurrentComputerUser] [<CommonParameters>]
+- Get-UevConfiguration [-Details] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the uev_tla configuration'
+  code: |-
+    PS C:\> Get-UevConfiguration
+
+
+    Key                                     Value
+    ---                                     -----
+    MaxPackageSizeInBytes                   700000
+    SettingsImportNotifyDelayInSeconds      10
+    SettingsImportNotifyEnabled             False
+    SettingsStoragePath                     \\ServerName\Path\To\CentralStore
+    SettingsTemplateCatalogPath
+    SyncEnabled                             True
+    SyncMethod                              OfflineFiles
+    SyncFromRepositoryTimeoutInMilliseconds 2000
+  description: |-
+    This command gets the active UE-V configuration on the computer where you run the cmdlet.
+  summary: ""
+- title: 'Example 2: Get the computer-wide configuration'
+  code: |-
+    PS C:\> Get-UevConfiguration -Computer
+
+
+    Key                                     Value
+    ---                                     -----
+    MaxPackageSizeInBytes                   700000
+    SettingsImportNotifyDelayInSeconds
+    SettingsImportNotifyEnabled
+    SettingsStoragePath                     \\ServerName\Path\To\CentralStore
+    SettingsTemplateCatalogPath
+    SyncEnabled
+    SyncMethod                              OfflineFiles
+    SyncFromRepositoryTimeoutInMilliseconds 2000
+  description: |-
+    This command gets the UE-V configuration settings for all users on the computer.
+    The command gets the HKey Local Machine (HKLM) configuration settings that are in the registry.
+  summary: ""
+- title: 'Example 3: Get the user-specific configuration'
+  code: |-
+    PS C:\> Get-UevConfiguration -CurrentComputerUser
+
+
+    Key                                     Value
+    ---                                     -----
+    MaxPackageSizeInBytes
+    SettingsImportNotifyDelayInSeconds
+    SettingsImportNotifyEnabled
+    SettingsStoragePath
+    SyncEnabled
+    SyncMethod
+    SyncFromRepositoryTimeoutInMilliseconds
+  description: |-
+    This command gets the user-specific UE-V configuration, including the HKey Current User (HKCU) configuration settings that are in the registry.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Computer
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets the UE-V configuration settings for all users on the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CurrentComputerUser
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets the UE-V configuration settings for the current user only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Details
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets the UE-V configuration settings, including all of the details.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: UEV.Get-UevConfiguration
+name: Get-UevConfiguration
+description: |-
+  The **Get-UevConfiguration** cmdlet gets the Microsoft User Experience Virtualization (UE-V) configuration settings.
+  If you specify the *Computer* parameter, the cmdlet gets the settings for all users on the computer.
+  If you specify the *CurrentComputerUser* parameter, the cmdlet gets the settings for just the current user.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/get-uevconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-UevConfiguration

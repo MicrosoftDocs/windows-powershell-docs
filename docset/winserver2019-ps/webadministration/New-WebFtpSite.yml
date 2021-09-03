@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an FTP 7 Site.
+module: WebAdministration
+notes: ""
+syntaxes:
+- >-
+  New-WebFtpSite [-Name] <String> [-Id <UInt32>] [-Port <UInt32>] [-IPAddress <String>] [-HostHeader <String>]
+
+   [-PhysicalPath <String>] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an FTP site binding'
+  code: |-
+    IIS:\> New-WebFtpSite -Name "testFtpSite" -Port 21 -PhysicalPath "c:\test" -HostHeader "mySite" -IPAddress "127.0.0.1"
+  description: |-
+    This command creates an FTP site named testFtpSite.
+    This command works with FTP7 only.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the new FTP site to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostHeader
+  description: |+
+    Specifies the host header of the new FTP site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    Specifies the ID of the new FTP site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  description: |+
+    Specifies the IP Address of the new FTP site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the new FTP site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhysicalPath
+  description: |+
+    Specifies the physical path to the new FTP site.
+    The specified folder must already exist.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the port number of the new FTP site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-WebFtpSite
+name: New-WebFtpSite
+description: |-
+  The **New-WebFtpSite** cmdlet creates an FTP site.
+  This cmdlet requires FTP 7 or later.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-webftpsite?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WebFtpSite

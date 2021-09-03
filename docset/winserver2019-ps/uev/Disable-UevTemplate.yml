@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables a settings location template.
+module: UEV
+notes: ""
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+  description: |-
+    The settings location template ID.
+links:
+- text: Enable-UevTemplate
+  href: ./Enable-UevTemplate.yml
+- text: Get-UevTemplate
+  href: ./Get-UevTemplate.yml
+- text: Register-UevTemplate
+  href: ./Register-UevTemplate.yml
+- text: Test-UevTemplate
+  href: ./Test-UevTemplate.yml
+- text: Unregister-UevTemplate
+  href: ./Unregister-UevTemplate.yml
+- text: Update-UevTemplate
+  href: ./Update-UevTemplate.yml
+syntaxes:
+- Disable-UevTemplate [-ID] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable a specific template'
+  code: |-
+    PS C:\> Disable-UevTemplate -ID "MicrosoftCalculator6"
+  description: |-
+    This command disables a settings location template that has the specified ID for the current user.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ID
+  isRequired: true
+  description: |+
+    Specifies the ID of a settings location template.
+    The cmdlet disables the template that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: TemplateID
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UEV.Disable-UevTemplate
+name: Disable-UevTemplate
+description: |-
+  The **Disable-UevTemplate** cmdlet disables a settings location template for the current user of the computer.
+  Use this cmdlet to disable a settings location template for an individual user.
+  To disable a settings location template for all users on the computer, use the **Unregister-UevTemplate** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/disable-uevtemplate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-UevTemplate

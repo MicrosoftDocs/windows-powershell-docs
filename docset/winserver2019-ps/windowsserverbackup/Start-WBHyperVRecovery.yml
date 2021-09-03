@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts recovery of a Hyper-V Server 2016 virtual machine.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBBackupSet, WBVirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: HyperV Overview
+  href: https://technet.microsoft.com/en-us/library/hh831531.aspx
+- text: Get-WBBackupSet
+  href: ./Get-WBBackupSet.yml
+syntaxes:
+- >-
+  Start-WBHyperVRecovery [-BackupSet] <WBBackupSet> [-VMInBackup] <WBVirtualMachine[]> [[-TargetPath] <String>]
+
+   [-NoRollForward] [-Async] [-Force] [-UseAlternateLocation] [-RecreatePath] [<CommonParameters>]
+examples:
+- title: 'Example 1: Recover a virtual machine to its original location'
+  code: |-
+    PS C:\> $Backup = Get-WBBackupSet
+    PS C:\> Start-WBHyperVRecovery -BackupSet $Backup -VMInBackup $Backup.Application[0].Component[0]
+  description: |-
+    This example recovers a virtual machine to its original location.
+
+    The first command gets the backup set object from the system catalog and stores it in the variable named $Backup.
+
+    The second command uses the backup set stored in $Backup to recover a virtual machine that has the ID 285CEA9B-E337-44E1-9BF9-BF431BC3EB35 to its original location.
+  summary: ""
+- title: 'Example 2: Recover a virtual machine to an alternate location'
+  code: |-
+    PS C:\> $Backup = Get-WBBackupSet
+    PS C:\> Start-WBHyperVRecovery -BackupSet $Backup -VMInBackup $Backup.Application[0].Component[1] -TargetPath "F:\Dir1" -UseAlternateLocation -RecreatePath
+  description: |-
+    This example recovers a virtual machine to an alternate location.
+
+    The first command gets the backup set object from the system catalog and stores it in the variable named $Backup.
+
+    The second command recovers the virtual machine that has the ID F7D8AAF4-D086-47CC-8264-61F80527BFF4 to an alternate location.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Async
+  description: |+
+    Indicates that Windows PowerShell returns immediately after it starts the recovery and does not display status messages.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBBackupSet" data-throw-if-not-resolved="False" />
+  name: BackupSet
+  isRequired: true
+  description: |+
+    Specifies a backup set object that contains a Hyper-V application backup.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRollForward
+  description: |+
+    Indicates that this cmdlet recovers a virtual machine from a previous point in time if you select the latest version of the application from the backups.
+    For versions of the application other than the latest version, the operation uses point-in-time recovery by default.
+
+  defaultValue: "False"
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RecreatePath
+  description: |+
+    Indicates that the recovery operation recreates the original folder structure when it restores a virtual machine.
+    This option applies only if you recover a virtual machine to an alternate location.
+    If you do not specify this option, the recovery puts all files for a component under a single folder.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetPath
+  description: |+
+    Specifies an alternate location in the backup set where the recovery process searches for files.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseAlternateLocation
+  description: |+
+    Indicates that you can use the recovery process to recover Hyper-V components, update configuration, and register the virtual machine with the Hyper-V management service.
+    This option applies only if you recover a virtual machine to an alternate location.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBVirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMInBackup
+  isRequired: true
+  description: |+
+    Specifies a list of virtual machine objects that contain the virtual machines to recover.
+    This list must contain virtual machines from the Hyper-V application object in the backup set's application array.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Start-WBHyperVRecovery
+name: Start-WBHyperVRecovery
+description: |-
+  The **Start-WBHyperVRecovery** cmdlet starts a recovery operation for a Hyper-V virtual machine.
+  Use the application array from a **WBBackupSet** object to specify the virtual machines that you want to recover.
+
+  For an overview of Hyper-V, see [Hyper-V Overview](https://technet.microsoft.com/en-us/library/hh831531.aspx) on TechNet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/start-wbhypervrecovery?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-WBHyperVRecovery

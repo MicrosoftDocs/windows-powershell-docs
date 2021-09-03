@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the names and AppIDs of installed apps.
+module: StartLayout
+notes: ""
+outputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: |-
+    A **PSObject** that contains the name and AppID for each app found in the Start screen for the user, as in this output example:
+
+    Output Example: 
+
+    Name AppID
+    ---- -----
+
+    A.
+    Datum Pro Center Datum.ProCenter
+    Proseware Studio Proseware.Studio.5
+    A.
+    Datum 2010 prog..tion_0000000000000000_ebec13db489e8ef9
+    Fabrikam Initializer Fabrikam.Initializer.1
+    A.
+    Datum Connector Contoso.Datum.Connector
+    Proseware Design Pro Proseware.Design.3
+links:
+- text: Export-StartLayout
+  href: ./Export-StartLayout.yml
+- text: Import-StartLayout
+  href: ./Import-StartLayout.yml
+- text: Start Layout Cmdlets
+  href: ./index.yml
+syntaxes:
+- Get-StartApps [[-Name] <Object>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all apps'
+  code: |-
+    PS C:\> Get-StartApps
+    Name AppID
+    ---- -----
+
+    A. Datum Pro Center Datum.ProCenter
+    Proseware Studio Proseware.Studio.5
+    A. Datum 2010 prog..tion_0000000000000000_ebec13db489e8ef9
+    Fabrikam Initializer Fabrikam.Initializer.1
+    A. Datum Connector Contoso.Datum.Connector
+    Proseware Design Pro Proseware.Design.3
+  description: |-
+    This command gets all the names and IDs of installed apps for the current user.
+  summary: ""
+parameters:
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of an app.
+    You can use the wildcard character.
+    If you do not specify this parameter, the cmdlet gets all the apps.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: StartLayout.Get-StartApps
+name: Get-StartApps
+description: |-
+  The **Get-StartApps** cmdlet gets the names and AppIDs of installed apps of the current user.
+  An AppID is an AppUserModelID.
+  You can specify a particular app by using its name, or you can specify a name that includes the wildcard character (*).
+  If you do not specify a name, the cmdlet displays all installed apps.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.StartLayout.Commands.dll-help.xml
+  Module Name: StartLayout
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-StartApps

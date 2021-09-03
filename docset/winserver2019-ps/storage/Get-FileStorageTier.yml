@@ -1,0 +1,145 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the files assigned to a Storage tier on a volume, and their status.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+outputs:
+- name: <xref href="MSFT_FileStorageTier" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a file storage tier object that contains the desired storage tier, file path, status, desired storage tier file size, and state.
+    State includes values of Ok, Pending, and Processing.
+links:
+- text: Clear-FileStorageTier
+  href: ./Clear-FileStorageTier.yml
+- text: Set-FileStorageTier
+  href: ./Set-FileStorageTier.yml
+syntaxes:
+- >-
+  Get-FileStorageTier -VolumeDriveLetter <Char> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-FileStorageTier -VolumePath <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-FileStorageTier -Volume <CimInstance> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-FileStorageTier -FilePath <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get status for a file'
+  code: |-
+    PS C:\>Get-FileStorageTier -FilePath "D:\DataFile06.txt"
+  description: |-
+    This command gets the pinned file that you specify, and its status.
+  summary: ""
+- title: 'Example 2: Get pinned files for a volume'
+  code: |-
+    PS C:\>Get-FileStorageTier -VolumePath "\\?\Volume{6d6e000d-6038-11e2-be6d-806e6f6e6963}\"
+  description: |-
+    This command gets the pinned files for the specified volume, and their status values.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the full path of a file.
+    The cmdlet gets the pinned file that you specify and its status.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Volume
+  isRequired: true
+  description: |+
+    Specifies a volume as a **CimInstance** object.
+    The cmdlet gets the pinned files for the volume that you specify, and their status values.
+    To obtain a volume, use the Get-Volume cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Char" data-throw-if-not-resolved="False" />
+  name: VolumeDriveLetter
+  isRequired: true
+  description: |+
+    Specifies the drive letter of a volume.
+    The cmdlet gets the pinned files for the volume that you specify, and their status values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VolumePath
+  isRequired: true
+  description: |+
+    Specifies the path of a volume.
+    The cmdlet gets the pinned files for the volume that you specify, and their status values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-FileStorageTier
+name: Get-FileStorageTier
+description: |-
+  The **Get-FileStorageTier** cmdlet gets all the files assigned to a Storage tier on a tiered volume stored on a tiered Storage space, and the status of each file.
+  A file that you assign to a Storage tier is called a pinned file.
+  The possible status values are the following:
+
+  - Not on tier
+  - Completely on tier
+  - Partially on tier
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: FileStorageTier.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-filestoragetier?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-FileStorageTier

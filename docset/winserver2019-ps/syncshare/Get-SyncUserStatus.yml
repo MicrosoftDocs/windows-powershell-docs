@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the user status from the Sync Share server.
+module: SyncShare
+notes: ""
+outputs:
+- name: <xref href="SyncUserStatus" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Sync Share Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Get-SyncUserStatus [-User] <String> [-SyncShare] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the synchronization user status'
+  code: |-
+    PS C:\> Get-SyncUserStatus -User "User01" -SyncShare "Share01"
+  description: |-
+    This command retrieves the synchronization user status for User01.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SyncShare
+  isRequired: true
+  description: |+
+    Specifies the name of a Sync Share that hosts the user data.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    Specifies the user alias and domain name for which this cmdlet gets the data, in Domain\User Name format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: SyncShare.Get-SyncUserStatus
+name: Get-SyncUserStatus
+description: |-
+  The **Get-SyncUserStatus** cmdlet gets the user status from the Sync Share server, such as the status of a user's PCs and device synchronization.
+  Use this cmdlet to troubleshoot user connection issues.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: SyncUserStatus.cdxml-help.xml
+  Module Name: SyncShare
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/syncshare/get-syncuserstatus?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-SyncUserStatus

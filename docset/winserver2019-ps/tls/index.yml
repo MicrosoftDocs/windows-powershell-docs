@@ -1,0 +1,25 @@
+### YamlMime:PowershellModule
+children:
+- title: TLS
+  cmdlets:
+  - TLS.Disable-TlsCipherSuite
+  - TLS.Disable-TlsEccCurve
+  - TLS.Disable-TlsSessionTicketKey
+  - TLS.Enable-TlsCipherSuite
+  - TLS.Enable-TlsEccCurve
+  - TLS.Enable-TlsSessionTicketKey
+  - TLS.Export-TlsSessionTicketKey
+  - TLS.Get-TlsCipherSuite
+  - TLS.Get-TlsEccCurve
+  - TLS.New-TlsSessionTicketKey
+uid: TLS
+name: TLS
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Transport Layer Security (TLS) cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 1e28c697-2370-42f2-ace1-5ac8777f8053
+  Module Name: TLS
+  title: TLS

@@ -1,0 +1,222 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets a prediction schedule for the specified capabilities.
+module: SystemInsights
+inputs:
+- name: <xref href="Microsoft.SystemInsights.Management.PowerShell.Capability" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a capability object to the *Name* parameter.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-InsightsCapability
+  href: get-insightscapability.yml
+- text: Get-InsightsCapabilitySchedule
+  href: get-insightscapabilityschedule.yml
+- text: Enable-InsightsCapabilitySchedule
+  href: enable-insightscapabilityschedule.yml
+- text: Disable-InsightsCapabilitySchedule
+  href: disable-insightscapabilityschedule.yml
+syntaxes:
+- >-
+  Set-InsightsCapabilitySchedule [-Name] <String> [-Daily] [[-DaysInterval] <UInt16>] [[-At] <DateTime>]
+
+   [[-ComputerName] <String>] [-Credential <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-InsightsCapabilitySchedule [-Name] <String> [-Daily] [[-DaysOfWeek] <DayOfWeek[]>] [[-At] <DateTime>]
+
+   [[-ComputerName] <String>] [-Credential <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-InsightsCapabilitySchedule [-Name] <String> [[-DaysOfWeek] <DayOfWeek[]>] [-Minute]
+
+   [[-MinutesInterval] <UInt16>] [[-ComputerName] <String>] [-Credential <PSCredential>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-InsightsCapabilitySchedule [-Name] <String> [[-DaysOfWeek] <DayOfWeek[]>] [-Hourly]
+
+   [[-HoursInterval] <UInt16>] [[-ComputerName] <String>] [-Credential <PSCredential>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-InsightsCapabilitySchedule [-Name] <String> [-DefaultSchedule] [[-ComputerName] <String>]
+
+   [-Credential <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-InsightsCapabilitySchedule -Name "CPU capacity forecasting" -Daily -DaysOfWeek Monday, Tuesday, Wednesday, Thursday, Friday -At 03:00
+  description: |-
+    This example sets a daily schedule for the **CPU capacity forecasting** capability, which runs every weekday at 3am.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-InsightsCapabilitySchedule -Name "CPU capacity forecasting" -Daily -DaysInterval 2
+  description: |-
+    This example sets a daily schedule for the **CPU capacity forecasting** capability, which runs every 2 days.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Set-InsightsCapabilitySchedule -Name "CPU capacity forecasting" -Hourly -HoursInterval 4 -DaysOfWeek Tuesday, Friday
+  description: |-
+    This example sets a hourly schedule for the **CPU capacity forecasting** capability, which runs every 4 hours on Tuesday and Friday.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Set-InsightsCapabilitySchedule -Name "CPU Capacity Forecasting" -DefaultSchedule
+  description: |-
+    This example restores the default schedule for the **CPU capacity forecasting** capability.
+  summary: ""
+parameters:
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: At
+  description: |+
+    Specifies the time of day to get a prediction. This parameter can only be specified for daily predictions.
+
+  defaultValue: None
+  position: "4"
+  aliases: A
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a fully qualified domain name (FQDN). If not specified, uses the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: CN
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credential for accessing the computer specified by the -ComputerName parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Daily
+  isRequired: true
+  description: |+
+    Uses days as the scheduled time interval.
+
+  defaultValue: None
+  position: "2"
+  aliases: D
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: DaysInterval
+  description: |+
+    Specifies the interval between days in the schedule. An interval of 1 produces a daily schedule. An interval of 2 runs the capability every other day.
+
+  defaultValue: None
+  position: "3"
+  aliases: DI
+  parameterValueGroup: ""
+- type: <xref href="DayOfWeek" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DaysOfWeek
+  description: |+
+    Specifies the days of the week to run the capability.
+
+  defaultValue: None
+  position: "3"
+  aliases: DOW
+  parameterValueGroup: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DefaultSchedule
+  isRequired: true
+  description: |+
+    Restores the default schedule of the capability.
+
+  defaultValue: None
+  position: "2"
+  aliases: DS
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Hourly
+  isRequired: true
+  description: |+
+    Uses hours as the scheduled time interval.
+
+  defaultValue: None
+  position: "2"
+  aliases: H
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: HoursInterval
+  description: |+
+    Specifies the interval between hours in the schedule. An interval of 1 produces an hourly schedule. An interval of 2 produces a prediction every 2 hours.
+
+  defaultValue: None
+  position: "3"
+  aliases: HI
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Minute
+  isRequired: true
+  description: |+
+    Uses minutes as the scheduled time interval.
+
+  defaultValue: None
+  position: "2"
+  aliases: M
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: MinutesInterval
+  description: |+
+    Specifies the interval between minutes in the schedule. An interval of 5 produces a prediction every 5 minutes. An interval of 10 produces a prediction every 10 minutes. The default value is 30, and it is not recommended to specify low values of this parameter, as it may negatively impact performance.
+
+  defaultValue: None
+  position: "3"
+  aliases: MI
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a capability using a capability name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: N
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SystemInsights.Set-InsightsCapabilitySchedule
+name: Set-InsightsCapabilitySchedule
+description: |-
+  The **Set-InsightsCapabilitySchedule** cmdlet sets a prediction schedule for the specified capabilities.
+
+  >[!IMPORTANT]
+  >Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: http://go.microsoft.com
+  external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
+  Locale: en-US
+  Module Name: SystemInsights
+  ms.date: 06/18/2018
+  online version: https://docs.microsoft.com/powershell/module/systeminsights/set-insightscapabilityschedule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-InsightsCapabilitySchedule

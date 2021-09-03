@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Registers a settings location template with UE-V.
+module: UEV
+notes: ""
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    An array of paths to the settings location templates.
+links:
+- text: Disable-UevTemplate
+  href: ./Disable-UevTemplate.yml
+- text: Enable-UevTemplate
+  href: ./Enable-UevTemplate.yml
+- text: Get-UevTemplate
+  href: ./Get-UevTemplate.yml
+- text: Test-UevTemplate
+  href: ./Test-UevTemplate.yml
+- text: Unregister-UevTemplate
+  href: ./Unregister-UevTemplate.yml
+- text: Update-UevTemplate
+  href: ./Update-UevTemplate.yml
+syntaxes:
+- Register-UevTemplate [-Path] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Register-UevTemplate -LiteralPath <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Register a template'
+  code: |-
+    PS C:\> Register-UevTemplate -Path "MicrosoftCalculator.xml"
+  description: |-
+    This command registers a template in the current directory.
+  summary: ""
+- title: 'Example 2: Register multiple templates'
+  code: |-
+    PS C:\> Register-UevTemplate -Path "Microsoft*.xml"
+  description: |-
+    This command uses a wildcard to specify multiple templates in the current directory.
+  summary: ""
+- title: 'Example 3: Register all templates in a directory'
+  code: |-
+    PS C:\> Register-UevTemplate -Path "*.xml"
+  description: |-
+    This command uses a wildcard to register all settings location templates that are in the current directory but that are not currently registered.
+  summary: ""
+- title: 'Example 4: Register a template by using a literal path'
+  code: |-
+    PS C:\> Register-UevTemplate -LiteralPath "C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftCalculator.xml"
+  description: |-
+    This command registers a settings location template by using the literal path of the template file.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LiteralPath
+  isRequired: true
+  description: |+
+    Specifies an array of literal file paths.
+    The cmdlet registers the settings location templates that have the literal paths that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: PSPath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies an array of file paths.
+    The cmdlet registers the settings location templates that have the paths that you specify.
+    Use wildcards to specify multiple files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UEV.Register-UevTemplate
+name: Register-UevTemplate
+description: |-
+  The **Register-UevTemplate** cmdlet registers a settings location template with Microsoft User Experience Virtualization (UE-V).
+  A template defines settings to synchronize between computers.
+  After you register a template, UE-V synchronizes the settings.
+  If you try to register a template that is already registered, the cmdlet returns an error.
+
+  You must have administrative credentials to run this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/register-uevtemplate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Register-UevTemplate

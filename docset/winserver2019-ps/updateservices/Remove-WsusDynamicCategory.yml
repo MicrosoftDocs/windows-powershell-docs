@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a dynamic category from a WSUS server.
+module: UpdateServices
+notes: ""
+inputs:
+- name: <xref href="IDynamicCategory" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-WsusDynamicCategory
+  href: ./Add-WsusDynamicCategory.yml
+- text: Get-WsusDynamicCategory
+  href: ./Get-WsusDynamicCategory.yml
+- text: Set-WsusDynamicCategory
+  href: ./Set-WsusDynamicCategory.yml
+syntaxes:
+- >-
+  Remove-WsusDynamicCategory [-UpdateServer <IUpdateServer>] -InputObject <IDynamicCategory> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-WsusDynamicCategory [-UpdateServer <IUpdateServer>] -Name <String>
+
+   -DynamicCategoryType <DynamicCategoryType> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a dynamic category'
+  code: |-
+    PS C:\> Remove-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07"
+  description: |-
+    This command removes a dynamic category named PCI/Device07 of the Device type from the local update server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="DynamicCategoryType" data-throw-if-not-resolved="False" />
+  name: DynamicCategoryType
+  isRequired: true
+  description: |+
+    Specifies the type of the dynamic category to remove. The acceptable values for this parameter are:
+
+    - ComputerModel
+    - Device
+    - Application
+
+  defaultValue: None
+  position: Named
+  aliases: Type
+  parameterValueGroup: ComputerModel, Device, Application, Any
+- type: <xref href="IDynamicCategory" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies a dynamic category object. This cmdlet removes the dynamic category that this parameter specifies. To obtain a dynamic category, use the [Get-WsusDynamicCategory](./Get-WsusDynamicCategory.yml) cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the dynamic category to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IUpdateServer" data-throw-if-not-resolved="False" />
+  name: UpdateServer
+  description: |+
+    Specifies a WSUS server. This cmdlet removes a dynamic category from the server that this parameter specifies. To obtain a server, use the [Get-WsusServer](./Get-WsusServer.yml) cmdlet. If you do not specify a value for this parameter, the cmdlet removes dynamic categories from the local server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UpdateServices.Remove-WsusDynamicCategory
+name: Remove-WsusDynamicCategory
+description: |-
+  The **Remove-WsusDynamicCategory** cmdlet removes a dynamic category from a Windows Server Update Services (WSUS) server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/updateservices/remove-wsusdynamiccategory?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WsusDynamicCategory

@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deactivates a capability, which stops data collection for that capability and prevents the capability from being invoked.
+module: SystemInsights
+inputs:
+- name: <xref href="Microsoft.SystemInsights.Management.PowerShell.Capability" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a capability object to the *Name* parameter.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-InsightsCapability
+  href: get-insightscapability.yml
+- text: Enable-InsightsCapability
+  href: enable-insightscapability.yml
+syntaxes:
+- >-
+  Disable-InsightsCapability [-Name] <String> [[-ComputerName] <String>] [-Credential <PSCredential>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Disable-InsightsCapability -Name "CPU capacity forecasting"
+  description: |-
+    This example disables the **CPU capacity forecasting** capability.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a fully qualified domain name (FQDN). If not specified, uses the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: CN
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credential for accessing the computer specified by the -ComputerName parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a capability using a capability name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: N
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SystemInsights.Disable-InsightsCapability
+name: Disable-InsightsCapability
+description: |-
+  The **Disable-InsightsCapability** cmdlet deactivates a capability, which stops data collection for that capability and prevents the capability from being invoked.
+
+  >[!IMPORTANT]
+  >Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: http://go.microsoft.com
+  external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
+  Locale: en-US
+  Module Name: SystemInsights
+  ms.date: 06/18/2018
+  online version: https://docs.microsoft.com/powershell/module/systeminsights/disable-insightscapability?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-InsightsCapability

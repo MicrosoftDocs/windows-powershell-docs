@@ -1,0 +1,40 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the state of an IIS website.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Get-WebsiteState [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the state of a website'
+  code: |-
+    IIS:\> Get-WebsiteState -Name "Default Web Site"
+    Value
+    -----
+    Started
+  description: |-
+    This command returns the state of the default website.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the website about which this cmdlet gets information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebsiteState
+name: Get-WebsiteState
+description: |-
+  The **Get-WebsiteState** cmdlet gets the state of an Internet Information Services (IIS) website.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-websitestate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebsiteState

@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the backup catalog from the local computer.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  description: |-
+    You can specify the *Force* parameter to suppress the confirmation message for the cmdlet.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a string that indicates that the cmdlet has removed the catalog.
+links:
+- text: Restore-WBCatalog
+  href: ./Restore-WBCatalog.yml
+syntaxes:
+- Remove-WBCatalog [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a backup catalog'
+  code: |-
+    PS C:\> Remove-WBCatalog
+    Warning
+    Are you sure that you want to delete the backup catalog? If you delete the
+    catalog, you will need to create a new set of backups. 
+     [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+    The backup catalog has been successfully deleted.
+  description: |-
+    This command removes the backup catalog.
+    Because the command does not include the *Force* parameter, the command asks for confirmation before it removes the catalog.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Remove-WBCatalog
+name: Remove-WBCatalog
+description: |-
+  The **Remove-WBCatalog** cmdlet removes the backup catalog from the local computer.
+  Use this cmdlet when the backup catalog is corrupted and you cannot restore it by using the [Restore-WBCatalog](./Restore-WBCatalog.yml) cmdlet.
+
+  If you remove the backup catalog for a computer, you cannot access the backups of that computer by using Windows Server Backup.
+  In this case, if you can access another backup location, use **Restore-WBCatalog** to restore the backup catalog from that location, and then create a new backup from that backup catalog.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/remove-wbcatalog?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WBCatalog

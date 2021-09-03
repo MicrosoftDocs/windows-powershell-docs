@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Applies backed up settings from another computer to this computer.
+module: UEV
+notes: ""
+links:
+- text: Set-UevTemplateProfile
+  href: ./Set-UevTemplateProfile.yml
+syntaxes:
+- Restore-UevBackup [-ComputerName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Restore backed up settings from another computer'
+  code: |-
+    PS C:\>Restore-UevBackup -ComputerName "PattiFullerDevice03@Contoso.Com"
+  description: |-
+    This command restores all backup packages from another computer.
+    The command sets a restore flag for all applications associated with the Backup profile on this computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies the fully qualified name of the computer from which to restore packages.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UEV.Restore-UevBackup
+name: Restore-UevBackup
+description: |-
+  The **Restore-UevBackup** cmdlet allows all of the backed up settings from another computer to apply to this computer.
+  This cmdlet sets a restore flag for each user application that has a profile of Backup.
+  The next time that such an application runs, the backed up settings apply to the application.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/restore-uevbackup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Restore-UevBackup

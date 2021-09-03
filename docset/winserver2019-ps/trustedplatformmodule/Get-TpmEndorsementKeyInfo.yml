@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about the endorsement key and certificates of the TPM.
+module: TrustedPlatformModule
+notes: ""
+inputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    This accepts the name of the algorithm, as a string, used to hash the public key.
+    Sha256 is the only supported algorithm.
+outputs:
+- name: <xref href="EndorsementKeyObject" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates an **EndorsementKeyObject** object that contains the following members:
+
+    - **IsPresent**. A Boolean that represents whether the endorsement public key is known to the operating system.
+    - **PublicKey**. An **AsnEncodedData** object that contains the asn.1 encoded public portion of the endorsement key. 
+    - **PublicKeyHash**. The hash, as a String, of the public key if the cmdlet used a hash algorithm. 
+    - **ManufacturerCertificates**. A **X509Certificate2Collection** object that contains the manufacturer endorsement key certificates. This object can contain the manufacturer and platform certificates. 
+    - **AdditionalCertificates**. A **X509Certificate2Collection** object that contains a collection of additional endorsement key certificates that are registered to the operating system, such as any enterprise certificates.
+links:
+- text: Trusted Platform Module Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- Get-TpmEndorsementKeyInfo [[-HashAlgorithm] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get endorsement key information'
+  code: |-
+    PS C:\> Get-TpmEndorsementKeyInfo -Hash "Sha256"
+    IsPresent                : True
+    PublicKey                : System.Security.Cryptography.AsnEncodedData
+    PublicKeyHash            : 70769c52b6e24ef683693c2a0208da68d77e94192e1f4080ae7c9b97c6caa681
+    ManufacturerCertificates : {[Subject]
+    OID.2.23.133.2.3=1.2,
+    OID.2.23.133.2.2=C4T8SOX3.5,
+    OID.2.23.133.2.1=id:782F345A
+
+    [Issuer]
+    CN=Contoso TPM CA1, OU=Contoso
+    Certification Authority, O=Contoso, C=KR
+
+    [Serial Number]
+    77A120A
+
+    [Not Before]
+    6/4/2012 6:35:58 PM
+
+    [Not After]
+    6/4/2022 6:35:57 PM
+
+    [Thumbprint]
+    77378D1480AB48FEA2D4E610B2C7EEF648FEA2
+    }
+    AdditionalCertificates   : {}
+  description: |-
+    This command gets information about the endorsement key of the TPM.
+    The command uses the Sha256 algorithm to hash the public key.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HashAlgorithm
+  description: |+
+    Specifies the hash algorithm used for the public key.
+    The acceptable values for this parameter are: Sha256.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: sha256
+uid: TrustedPlatformModule.Get-TpmEndorsementKeyInfo
+name: Get-TpmEndorsementKeyInfo
+description: |-
+  The **Get-TpmEndorsementKeyInfo** cmdlet gets information about the endorsement public key and certificates of the Trusted Platform Module (TPM).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Tpm.Commands.dll-Help.xml
+  Module Name: TrustedPlatformModule
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/trustedplatformmodule/get-tpmendorsementkeyinfo?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-TpmEndorsementKeyInfo

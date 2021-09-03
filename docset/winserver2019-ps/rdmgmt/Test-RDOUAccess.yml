@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies that the Remote Desktop Connection Broker  server can access an Active Directory Domain Services  organizational unit.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Grant-RDOUAccess
+  href: ./Grant-RDOUAccess.yml
+syntaxes:
+- Test-RDOUAccess [[-Domain] <String>] [-OU] <String> [[-ConnectionBroker] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Verify access to an OU'
+  code: |-
+    PS C:\> Test-RDOUAccess -ConnectionBroker "Rdcb.Contoso.com" -OU "Computers"
+  description: |-
+    This command tests access to an OU named Computers by the RD Connection Broker server named Rdcb.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies an RD Connection Broker server for a remote desktop deployment.
+    If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies the Active Directory (AD) domain for which to verify access.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OU
+  isRequired: true
+  description: |+
+    Specifies one or more OUs for which to verify access.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Test-RDOUAccess
+name: Test-RDOUAccess
+description: |-
+  The **Test-RDOUAccess** cmdlet verifies that the RD Connection Broker server has access to the organizational units (OUs) in a given domain of Active Directory Domain Services (AD DS).
+
+  The RD Connection Broker must have Read access to an OU to query user account information.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/test-rdouaccess?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-RDOUAccess

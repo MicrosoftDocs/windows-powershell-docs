@@ -21,8 +21,8 @@ Enable-TlsCipherSuite [[-Position] <UInt32>] [-Name] <String> [-WhatIf] [-Confir
 
 ## DESCRIPTION
 The **Enable-TlsCipherSuite** cmdlet enables a cipher suite.
-This cmdlet adds the cipher suite to the list of Transport Layer Security (TLS) protocol cipher suites for the computer.
-If you do not specify a position in the list, this cmdlet adds it at the lowest position.
+This cmdlet adds the cipher suite to the list of Transport Layer Security (TLS) protocol cipher suites for the computer. 
+If you do not specify a position in the list, this cmdlet adds it at the lowest position. No restart is required in order for changes to take effect.
 
 If a cipher suite is not enabled for TLS based secure channel (Schannel) registry settings, then the cipher suite is not used.
 

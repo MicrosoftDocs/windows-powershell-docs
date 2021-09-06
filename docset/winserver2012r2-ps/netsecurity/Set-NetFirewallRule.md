@@ -554,27 +554,17 @@ Accept wildcard characters: False
 
 ### -LocalAddress
 Specifies that network packets with matching IP addresses match this rule. 
-                         
 This parameter value is the first end point of an IPsec rule and specifies the computers that are subject to the requirements of this rule. 
-                         
 This parameter value is an IPv4 or IPv6 address, subnet, range, or the following keyword: Any. 
-                         
 The acceptable formats for this parameter are: 
-                         
- -- Single IPv4 Address: 1.2.3.4 
-                         
- -- Single IPv6 Address: fe80::1 
-                         
- -- IPv4 Subnet (by network bit count): 1.2.3.4/24 
-                         
- -- IPv6 Subnet (by network bit count): fe80::1/48 
-                         
- -- IPv4 Subnet (by network mask): 1.2.3.4/255.255.255.0 
-                         
- -- IPv4 Range: 1.2.3.4 through 1.2.3.7 
-                         
- -- IPv6 Range: fe80::1 through fe80::9 
-Note: Querying for rules with this parameter can only be performed using filter objects.
+- Single IPv4 Address: 1.2.3.4 
+- Single IPv6 Address: fe80::1 
+- IPv4 Subnet (by network bit count): 1.2.3.4/24 
+- IPv6 Subnet (by network bit count): fe80::1/48 
+- IPv4 Subnet (by network mask): 1.2.3.4/255.255.255.0 
+- IPv4 Range: 1.2.3.4 through 1.2.3.7 
+- IPv6 Range: fe80::1 through fe80::9 
+Querying for rules with this parameter can only be performed using filter objects.
 See the Get-NetFirewallAddressFilter cmdlet for more information.
 
 ```yaml
@@ -977,27 +967,17 @@ Accept wildcard characters: False
 
 ### -RemoteAddress
 Specifies that network packets with matching IP addresses match this rule. 
-                         
 This parameter value is the second end point of an IPsec rule and specifies the computers that are subject to the requirements of this rule. 
-                         
 This parameter value is an IPv4 or IPv6 address, subnet, range, or the following keyword: Any. 
-                         
 The acceptable formats for this parameter are: 
-                         
- -- Single IPv4 Address: 1.2.3.4 
-                         
- -- Single IPv6 Address: fe80::1 
-                         
- -- IPv4 Subnet (by network bit count): 1.2.3.4/24 
-                         
- -- IPv6 Subnet (by network bit count): fe80::1/48 
-                         
- -- IPv4 Subnet (by network mask): 1.2.3.4/255.255.255.0 
-                         
- -- IPv4 Range: 1.2.3.4 through 1.2.3.7 
-                         
- -- IPv6 Range: fe80::1 through fe80::9 
-Note: Querying for rules with this parameter can only be performed using filter objects.
+- Single IPv4 Address: 1.2.3.4 
+- Single IPv6 Address: fe80::1 
+- IPv4 Subnet (by network bit count): 1.2.3.4/24 
+- IPv6 Subnet (by network bit count): fe80::1/48 
+- IPv4 Subnet (by network mask): 1.2.3.4/255.255.255.0 
+- IPv4 Range: 1.2.3.4 through 1.2.3.7 
+- IPv6 Range: fe80::1 through fe80::9 
+Querying for rules with this parameter can only be performed using filter objects.
 See the Get-NetFirewallAddressFilter cmdlet for more information.
 
 ```yaml

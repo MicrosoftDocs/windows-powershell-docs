@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -UseDesktopApplicationID
 Specifies that the layout file should export the DesktopApplicationID value instead of DesktopApplicationLinkPath which is the default.
-DesktopApplicationID is the application's ID and DesktopApplicationLinkPath is a path to a shortcut link (.lnk file) to a Windows desktop application. Available to computers running Windows 10 1809 or later.
+DesktopApplicationID is the application's ID and DesktopApplicationLinkPath is a path to a shortcut link (.lnk file) to a Windows desktop application. Available on computers running Windows 10 1809 or later.
 
 ```yaml
 Type: SwitchParameter

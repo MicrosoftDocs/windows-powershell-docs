@@ -51,7 +51,7 @@ PS C:\> Export-StartLayout -Path "C:\Layouts\Marketing.json"
 
 This command exports the layout of the tiles on the Windows 11 Start menu to a file named Marketing.json in the C:\Layouts folder. Note that JSON is the only supported format for the output file and only the `-Path` parameter is supported.
 
-### Example 3: Export the layout with applications' IDs
+### Example 3: Export the layout with the applications' IDs
 ```
 PS C:\> Export-StartLayout -UseDesktopApplicationID  -Path "C:\Layouts\Marketing.json"
 ```

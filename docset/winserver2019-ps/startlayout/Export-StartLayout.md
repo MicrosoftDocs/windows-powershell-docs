@@ -56,7 +56,7 @@ This command exports the layout of the tiles on the Windows 11 Start menu to a f
 PS C:\> Export-StartLayout -UseDesktopApplicationID  -Path "C:\Layouts\Marketing.json"
 ```
 
-This command exports the layout of the tiles on Start menu of a computer running Windows 10 1809 or later to a file named Marketing.json in the C:\Layouts folder. It exports applications' IDs instead of paths to a shortcut links.
+This command exports the layout of the tiles on the Start menu of a computer running Windows 10, version 1809 or later, to a file named Marketing.json in the C:\Layouts folder. It exports the applications' IDs instead of paths to a shortcut link.
 
 ## PARAMETERS
 

@@ -106,6 +106,13 @@ D                           NTFS       Fixed     Healthy      OK                
 
 Be careful, if using this cmdlet on a Windows Cluster, it would format all drives returned by the **Get-Volume** cmdlet.
 
+### Example 4: Full format using NTFS and allocation size 8192
+```powershell
+PS C:\Users\Administrator> Format-Volume -DriveLetter D -FileSystem NTFS -AllocationUnitSize 8192
+```
+
+This example performs a full format of the D volume using the NTFS file system and allocation size 8192.
+
 ## PARAMETERS
 
 ### -AllocationUnitSize

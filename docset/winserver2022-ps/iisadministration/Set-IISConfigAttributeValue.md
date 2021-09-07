@@ -90,9 +90,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Web.Administration.ConfigurationElement, System.String, System.Object
+### Microsoft.Web.Administration.ConfigurationElement
+
+### System.String
+
+### System.Object
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

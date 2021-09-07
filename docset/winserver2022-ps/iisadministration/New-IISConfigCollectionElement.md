@@ -115,11 +115,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Web.Administration.ConfigurationElementCollection, System.Collections.Hashtable
+### Microsoft.Web.Administration.ConfigurationElementCollection
+
+### System.Collections.Hashtable
+
+### System.UInt32
 
 ## OUTPUTS
 
-### Microsoft.Web.Administration.Configuration
+### System.Object
 
 ## NOTES
 

@@ -1,7 +1,8 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-ms.date: 08/27/2021
+ms.date: 09/07/2021
 online version: https://docs.microsoft.com/powershell/module/hyper-v/add-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-VMGpuPartitionAdapter

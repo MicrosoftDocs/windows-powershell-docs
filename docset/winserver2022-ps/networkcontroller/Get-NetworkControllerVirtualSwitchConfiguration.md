@@ -96,9 +96,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### 
+### System.Object
+
+### System.Object#https://localhost/
 
 Following properties can be retrieved for the virtual switch configuration:
 1. Number of interfaces that have Quality of Service (QoS) enabled

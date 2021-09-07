@@ -128,9 +128,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
 
-### 
+### System.Object
+
+### System.Object#https://localhost/
 
 Following properties of a virtual subnet are retrieved:
 1. Address prefix

@@ -119,9 +119,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-###  
+###  System.Object
+
+### System.Object#https://localhost/
+
 This cmdlet returns an object that contains the following configuration settings: 
 
 - Connections that specify the information that is required to connect to the server for the purposes of managing it.

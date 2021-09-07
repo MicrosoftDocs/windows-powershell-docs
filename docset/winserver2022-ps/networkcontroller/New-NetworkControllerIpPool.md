@@ -16,9 +16,10 @@ This cmdlet adds a new IP address pool to an existing subnet in an existing netw
 ## SYNTAX
 
 ```
-New-NetworkControllerIpPool -ConnectionUri <Uri> -NetworkId <string> -Properties <IpPoolProperties>
- -ResourceId <string> -SubnetId <string> [-CertificateThumbPrint <string>] [-Credential <PSCredential>]
- [-Etag <string>] [-Force] [-ResourceMetadata <ResourceMetadata>]
+New-NetworkControllerIpPool [-NetworkId] <String> [-SubnetId] <String> [-ResourceId] <String>
+ [-Properties] <IpPoolProperties> [[-ResourceMetadata] <ResourceMetadata>] [[-Etag] <String>] [-Force]
+ -ConnectionUri <Uri> [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -107,7 +108,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: switch
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Required: False
@@ -121,10 +122,26 @@ Accept wildcard characters: False
 Network resource ID for which IP pool is being created
 
 ```yaml
-Type: string
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
 Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PassInnerException
+{{ Fill PassInnerException Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -142,7 +159,7 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -156,7 +173,7 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -184,6 +201,36 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -193,7 +240,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### 
+### System.String
+
+### Microsoft.Windows.NetworkController.IpPoolProperties
 
 The following properties are provided for each IP pool
 
@@ -202,6 +251,8 @@ The following properties are provided for each IP pool
 - IP addresses reserved for load balancer VIPs
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

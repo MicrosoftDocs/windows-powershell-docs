@@ -263,7 +263,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### Microsoft.Windows.NetworkController.LogicalSubnetProperties
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

@@ -111,9 +111,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### 
+### System.Object
+
+### System.Object#https://localhost/ 
 
 Following properties of a MAC pool can be retrieved:
 1. Start MAC address

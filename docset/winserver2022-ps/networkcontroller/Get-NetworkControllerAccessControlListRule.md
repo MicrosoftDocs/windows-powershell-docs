@@ -132,9 +132,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
 
-### 
+### System.Object
+
+### System.Object#https://localhost/
 
 Each rule has the following output:
 1. Name

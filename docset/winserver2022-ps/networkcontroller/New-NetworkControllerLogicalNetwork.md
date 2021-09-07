@@ -240,13 +240,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### LogicalNetworkProperties
+### System.String
+
+### Microsoft.Windows.NetworkController.LogicalNetworkProperties
+
 This cmdlet accepts a **LogicalNetworkProperties** object that can contain the following properties: 
 
 - The subnets for the logical network
 - Whether network virtualization is enabled for the logical network.
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

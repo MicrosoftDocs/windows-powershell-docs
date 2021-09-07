@@ -17,9 +17,10 @@ This cmdlet creates a new ACL rule to allow/deny traffic to/from a particular vi
 ## SYNTAX
 
 ```
-New-NetworkControllerAccessControlListRule -ConnectionUri <Uri> -Properties <AclRuleProperties>
- -ResourceId <string> [-AccessControlListId <string>] [-CertificateThumbPrint <string>]
- [-Credential <PSCredential>] [-Etag <string>] [-Force] [-ResourceMetadata <ResourceMetadata>]
+New-NetworkControllerAccessControlListRule [-AccessControlListId] <String> [-ResourceId] <String>
+ [-Properties] <AclRuleProperties> [[-ResourceMetadata] <ResourceMetadata>] [[-Etag] <String>] [-Force]
+ -ConnectionUri <Uri> [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,10 +59,10 @@ Specifies the ID of the ACL.
 Type: string
 Parameter Sets: (All)
 Aliases: 
-Required: False
-Position: Named
+Required: True
+Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -121,7 +122,7 @@ Type: string
 Parameter Sets: (All)
 Aliases: 
 Required: False
-Position: Named
+Position: 7
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -131,9 +132,25 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: switch
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: 8
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassInnerException
+{{ Fill PassInnerException Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -158,9 +175,9 @@ Type: AclRuleProperties
 Parameter Sets: (All)
 Aliases: 
 Required: True
-Position: Named
+Position: 4
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -172,9 +189,9 @@ Type: string
 Parameter Sets: (All)
 Aliases: 
 Required: True
-Position: Named
+Position: 2
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -185,6 +202,36 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +244,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### 
+### System.String
+
+### Microsoft.Windows.NetworkController.AclRuleProperties
+ 
 Following properties can be provided for each ACL rule:
 - Name
 - Protocol
@@ -211,6 +261,8 @@ Following properties can be provided for each ACL rule:
 - Whether logging is enabled or disabled
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

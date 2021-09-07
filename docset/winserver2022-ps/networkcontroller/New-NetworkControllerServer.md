@@ -262,7 +262,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### ServerProperties
+### System.String
+
+### Microsoft.Windows.NetworkController.ServerProperties
+
 You can pipe an object to this cmdlet that contains the following properties: 
 
 - Connections that specifies the information that is required to connect to the server for the purposes of managing it.
@@ -275,6 +278,8 @@ Each connection has a management address and a credential reference to connect t
 - Server vendor name.
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

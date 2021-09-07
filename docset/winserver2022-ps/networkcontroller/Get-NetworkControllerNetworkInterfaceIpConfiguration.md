@@ -127,9 +127,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
 
-### 
+### System.Object
+
+### System.Object#https://localhost/
 
 Following properties can be retrieved from an IP interface IP Configuration resource:
 1. Private IP address

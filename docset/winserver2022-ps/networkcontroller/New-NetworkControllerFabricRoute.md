@@ -255,7 +255,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### Microsoft.Windows.NetworkController.FabricRouteProperties
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

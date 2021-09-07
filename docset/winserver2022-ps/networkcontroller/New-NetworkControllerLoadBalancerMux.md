@@ -17,9 +17,10 @@ This cmdlet adds/updates the configuration of a load balancer VM managed by the 
 ## SYNTAX
 
 ```
-New-NetworkControllerLoadBalancerMux -ConnectionUri <Uri> -ResourceId <string>
- [-CertificateThumbPrint <string>] [-Credential <PSCredential>] [-Etag <string>] [-Force]
- [-Properties <LoadBalancerMuxProperties>] [-ResourceMetadata <ResourceMetadata>] [-Tags <psobject>]
+New-NetworkControllerLoadBalancerMux [-ResourceId] <String> [[-Tags] <PSObject>]
+ [-Properties] <LoadBalancerMuxProperties> [[-Etag] <String>] [[-ResourceMetadata] <ResourceMetadata>] [-Force]
+ -ConnectionUri <Uri> [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -124,9 +125,24 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: switch
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassInnerException
+{{ Fill PassInnerException Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -149,10 +165,10 @@ Type: LoadBalancerMuxProperties
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -167,7 +183,7 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -201,9 +217,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
-### 
+### System.String
+
+### Microsoft.Windows.NetworkController.LoadBalancerMuxProperties
+
 Following properties can be added/updated for a load balancer MUX:
 1.
 Router configuration - This includes local ASN of the MUX router and peer router configuration (Name, local IP address, peer IP address, Peer ASN)
@@ -214,6 +266,9 @@ An array of connections that specifies the information needed to connect to the 
 
 ## OUTPUTS
 
+### System.Object
+
 ## NOTES
+
 ## RELATED LINKS
 

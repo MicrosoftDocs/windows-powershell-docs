@@ -17,7 +17,8 @@ Creates a network controller node object.
 
 ```
 New-NetworkControllerNodeObject -Name <String> -Server <String> -FaultDomain <String> -RestInterface <String>
- [-NodeCertificate <X509Certificate2>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NodeCertificate <X509Certificate2>] [-NodeCertificateFindBy <X509FindType>]
+ [-CertificateSubjectName <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,6 +46,21 @@ This command creates a network controller node object named Node1.
 The fully qualified domain name of the computer is NCNode1.contoso.com and the interface on the computer listening to REST requests is named Ethernet.
 
 ## PARAMETERS
+
+### -CertificateSubjectName
+{{ Fill CertificateSubjectName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -114,6 +130,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NodeCertificateFindBy
+{{ Fill NodeCertificateFindBy Description }}
+
+```yaml
+Type: X509FindType
+Parameter Sets: (All)
+Aliases:
+Accepted values: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RestInterface
 Specifies the name of the interface on the node that will receive requests from the representational state transfer (REST) clients.
 
@@ -166,9 +198,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-###  
+### System.Object
+
 This cmdlet returns an object that contains the following fields: 
 - Name of the node
 - Hostname, FQDN, or IP address of the node

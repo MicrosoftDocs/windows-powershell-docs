@@ -239,9 +239,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### Microsoft.Windows.NetworkController.VGwBgpRouterProperties
+
 ## OUTPUTS
 
-###  
+### System.Object
+
 This cmdlet outputs the following information: 
 
 - Resource reference URI.

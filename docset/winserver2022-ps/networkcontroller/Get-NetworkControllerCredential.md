@@ -138,9 +138,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-###  
+### System.Object
+
+### System.Object#https://localhost/
+ 
 The output contains the following fields:
 - Resource reference uri
 - Created time of the resource

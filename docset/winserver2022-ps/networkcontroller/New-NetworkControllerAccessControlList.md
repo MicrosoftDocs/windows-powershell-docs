@@ -265,7 +265,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### 
+### System.String
+
+### Microsoft.Windows.NetworkController.AccessControlListProperties
 
 Each access control list contains multiple ACL rules. Each rule contains the following:
 1. Name
@@ -280,6 +282,8 @@ Each access control list contains multiple ACL rules. Each rule contains the fol
 10. Whether logging is enabled or disabled
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

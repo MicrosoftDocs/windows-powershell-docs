@@ -32,10 +32,16 @@ Gets network controller application settings.
 ### [Get-NetworkControllerAccessControlList](./Get-NetworkControllerAccessControlList.md)
 Gets the access control list for a network controller.
 
-### [Get-NetworkControllerAccessControlListRule](./Get-NetworkControllerAccessControlListRule.md)
-Gets the ACL rule for a network controller.
+### [Get-NetworkControllerAccessControlListRule](Get-NetworkControllerAccessControlListRule.md)
+Gets a rule from an access control list for a network controller.
 
-### [Get-NetworkControllerCluster](./Get-NetworkControllerCluster.md)
+### [Get-NetworkControllerAuditingSettingsConfiguration](Get-NetworkControllerAuditingSettingsConfiguration.md)
+{{ Fill in the Synopsis }}
+
+### [Get-NetworkControllerBackup](Get-NetworkControllerBackup.md)
+{{ Fill in the Synopsis }}
+
+### [Get-NetworkControllerCluster](Get-NetworkControllerCluster.md)
 Gets the network controller cluster settings.
 
 ### [Get-NetworkControllerConnectivityCheck](./Get-NetworkControllerConnectivityCheck.md)
@@ -50,7 +56,10 @@ Retrieves a specified device credential or all device credentials from Network C
 ### [Get-NetworkControllerDiagnostic](./Get-NetworkControllerDiagnostic.md)
 Gets network controller diagnostic settings.
 
-### [Get-NetworkControllerFabricRoute](./Get-NetworkControllerFabricRoute.md)
+### [Get-NetworkControllerDiscovery](Get-NetworkControllerDiscovery.md)
+{{ Fill in the Synopsis }}
+
+### [Get-NetworkControllerFabricRoute](Get-NetworkControllerFabricRoute.md)
 Gets a network route or all the routes in a subnet in the Network Controller.
 
 ### [Get-NetworkControllerGateway](./Get-NetworkControllerGateway.md)
@@ -59,38 +68,44 @@ Gets the configuration of one or more gateway virtual machines.
 ### [Get-NetworkControllerGatewayPool](./Get-NetworkControllerGatewayPool.md)
 Gets the configuration of one or more gateway pools.
 
-### [Get-NetworkControllerInternalResourceInstances](./Get-NetworkControllerInternalResourceInstances.md)
+### [Get-NetworkControllerIDnsServerConfiguration](Get-NetworkControllerIDnsServerConfiguration.md)
+{{ Fill in the Synopsis }}
 
+### [Get-NetworkControllerInternalResourceInstances](Get-NetworkControllerInternalResourceInstances.md)
+This cmdlet provides mapping between the user generated resource ID and the internal instance ID in the Network Controller
 
-### [Get-NetworkControllerIpPool](./Get-NetworkControllerIpPool.md)
+### [Get-NetworkControllerIpPool](Get-NetworkControllerIpPool.md)
+This cmdlet retrieves the settings of an IP pool from the Network Controller.
 
+### [Get-NetworkControllerIpReservation](Get-NetworkControllerIpReservation.md)
+{{ Fill in the Synopsis }}
 
-### [Get-NetworkControllerLoadBalancer](./Get-NetworkControllerLoadBalancer.md)
+### [Get-NetworkControllerLoadBalancer](Get-NetworkControllerLoadBalancer.md)
+This cmdlet retrieves the configuration of a load balancer resource from the Network Controller
 
+### [Get-NetworkControllerLoadBalancerBackendAddressPool](Get-NetworkControllerLoadBalancerBackendAddressPool.md)
+This cmdlet retrieves the back end address pool configuration associated with a load balancer.
 
-### [Get-NetworkControllerLoadBalancerBackendAddressPool](./Get-NetworkControllerLoadBalancerBackendAddressPool.md)
+### [Get-NetworkControllerLoadBalancerConfiguration](Get-NetworkControllerLoadBalancerConfiguration.md)
+Retrieves the configuration of the load balancer from the Network Controller
 
+### [Get-NetworkControllerLoadBalancerFrontendIpConfiguration](Get-NetworkControllerLoadBalancerFrontendIpConfiguration.md)
+This cmdlet retrieves the front end IP configuration of a load balancer resource from the Network Controller
 
-### [Get-NetworkControllerLoadBalancerConfiguration](./Get-NetworkControllerLoadBalancerConfiguration.md)
+### [Get-NetworkControllerLoadBalancerInboundNatRule](Get-NetworkControllerLoadBalancerInboundNatRule.md)
+This cmdlet retrieves an inbound NAT rule associated with a load balancer resource.
 
+### [Get-NetworkControllerLoadBalancerMux](Get-NetworkControllerLoadBalancerMux.md)
+This cmdlet retrieves the configuration of a load balancer VM managed by the Network Controller
 
-### [Get-NetworkControllerLoadBalancerFrontendIpConfiguration](./Get-NetworkControllerLoadBalancerFrontendIpConfiguration.md)
+### [Get-NetworkControllerLoadBalancerOutboundNatRule](Get-NetworkControllerLoadBalancerOutboundNatRule.md)
+Retrieves the outbound NAT rules associated with a load balancer resource
 
+### [Get-NetworkControllerLoadBalancerProbe](Get-NetworkControllerLoadBalancerProbe.md)
+This cmdlet retrieves the health probes associated with a load balancer resource
 
-### [Get-NetworkControllerLoadBalancerInboundNatRule](./Get-NetworkControllerLoadBalancerInboundNatRule.md)
-
-
-### [Get-NetworkControllerLoadBalancerMux](./Get-NetworkControllerLoadBalancerMux.md)
-
-
-### [Get-NetworkControllerLoadBalancerOutboundNatRule](./Get-NetworkControllerLoadBalancerOutboundNatRule.md)
-
-
-### [Get-NetworkControllerLoadBalancerProbe](./Get-NetworkControllerLoadBalancerProbe.md)
-
-
-### [Get-NetworkControllerLoadBalancingRule](./Get-NetworkControllerLoadBalancingRule.md)
-
+### [Get-NetworkControllerLoadBalancingRule](Get-NetworkControllerLoadBalancingRule.md)
+This cmdlet retrieves a load balancing rule associated with a load balancer.
 
 ### [Get-NetworkControllerLogicalNetwork](./Get-NetworkControllerLogicalNetwork.md)
 Gets settings for a logical network in the Network Controller.
@@ -98,41 +113,47 @@ Gets settings for a logical network in the Network Controller.
 ### [Get-NetworkControllerLogicalSubnet](./Get-NetworkControllerLogicalSubnet.md)
 Gets settings of a logical subnet in the Network Controller.
 
-### [Get-NetworkControllerMacPool](./Get-NetworkControllerMacPool.md)
+### [Get-NetworkControllerMacPool](Get-NetworkControllerMacPool.md)
+This cmdlet retrieves the properties of a MAC pool from the Network Controller
 
+### [Get-NetworkControllerNetworkInterface](Get-NetworkControllerNetworkInterface.md)
+Retrieves the settings of a network interface from the Network Controller
 
-### [Get-NetworkControllerNetworkInterface](./Get-NetworkControllerNetworkInterface.md)
-
-
-### [Get-NetworkControllerNetworkInterfaceIpConfiguration](./Get-NetworkControllerNetworkInterfaceIpConfiguration.md)
-
+### [Get-NetworkControllerNetworkInterfaceIpConfiguration](Get-NetworkControllerNetworkInterfaceIpConfiguration.md)
+This cmdlet retrieves the IP configuration of a network interface from the Network Controller
 
 ### [Get-NetworkControllerNode](./Get-NetworkControllerNode.md)
 Gets the network controller node settings.
 
-### [Get-NetworkControllerPublicIpAddress](./Get-NetworkControllerPublicIpAddress.md)
+### [Get-NetworkControllerPublicIpAddress](Get-NetworkControllerPublicIpAddress.md)
+This cmdlet retrieves a public IP address resource from the Network Controller
 
+### [Get-NetworkControllerRestore](Get-NetworkControllerRestore.md)
+{{ Fill in the Synopsis }}
 
-### [Get-NetworkControllerRoute](./Get-NetworkControllerRoute.md)
+### [Get-NetworkControllerRoute](Get-NetworkControllerRoute.md)
+This cmdlet retrieves a route from a particular route table in the Network Controller
 
+### [Get-NetworkControllerRouteTable](Get-NetworkControllerRouteTable.md)
+This cmdlet retrieves the settings of a route table from the Network Controller
 
-### [Get-NetworkControllerRouteTable](./Get-NetworkControllerRouteTable.md)
-
-
-### [Get-NetworkControllerServer](./Get-NetworkControllerServer.md)
+### [Get-NetworkControllerServer](Get-NetworkControllerServer.md)
 Gets configuration of a physical host from the Network Controller.
 
 ### [Get-NetworkControllerServerInterface](./Get-NetworkControllerServerInterface.md)
 Gets settings of physical network interfaces from the Network Controller.
 
-### [Get-NetworkControllerServiceInsertion](./Get-NetworkControllerServiceInsertion.md)
+### [Get-NetworkControllerServiceInsertion](Get-NetworkControllerServiceInsertion.md)
+This cmdlet retrieves the properties of a service insertion resource from the Network Controller.
 
+### [Get-NetworkControllerState](Get-NetworkControllerState.md)
+This cmdlet retrieves the provisioning state of NetworkControllerState resource. 
 
-### [Get-NetworkControllerState](./Get-NetworkControllerState.md)
+### [Get-NetworkControllerStatistics](Get-NetworkControllerStatistics.md)
+This cmdlet displays health and usage statistics of resources in Network Controller
 
-
-### [Get-NetworkControllerStatistics](./Get-NetworkControllerStatistics.md)
-
+### [Get-NetworkControllerSubnetEgressReset](Get-NetworkControllerSubnetEgressReset.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-NetworkControllerVirtualGateway](./Get-NetworkControllerVirtualGateway.md)
 Gets the configuration of one or more virtual gateways.
@@ -149,20 +170,26 @@ Gets a virtual gateway network connection.
 ### [Get-NetworkControllerVirtualGatewayPolicyMap](./Get-NetworkControllerVirtualGatewayPolicyMap.md)
 Gets a BGP routing policy map.
 
-### [Get-NetworkControllerVirtualNetwork](./Get-NetworkControllerVirtualNetwork.md)
-
+### [Get-NetworkControllerVirtualNetwork](Get-NetworkControllerVirtualNetwork.md)
+This cmdlet retrieves the settings of a virtual network from the Network Controller
 
 ### [Get-NetworkControllerVirtualNetworkConfiguration](./Get-NetworkControllerVirtualNetworkConfiguration.md)
 
+### [Get-NetworkControllerVirtualNetworkPeering](Get-NetworkControllerVirtualNetworkPeering.md)
+{{ Fill in the Synopsis }}
 
-### [Get-NetworkControllerVirtualServer](./Get-NetworkControllerVirtualServer.md)
+### [Get-NetworkControllerVirtualServer](Get-NetworkControllerVirtualServer.md)
 
 
-### [Get-NetworkControllerVirtualSubnet](./Get-NetworkControllerVirtualSubnet.md)
+### [Get-NetworkControllerVirtualSubnet](Get-NetworkControllerVirtualSubnet.md)
+This cmdlet retrieves a virtual subnet belonging to a virtual network
+
 
 
 ### [Get-NetworkControllerVirtualSwitchConfiguration](./Get-NetworkControllerVirtualSwitchConfiguration.md)
 
+### [Get-NetworkControllerVirtualSwitchConfiguration](Get-NetworkControllerVirtualSwitchConfiguration.md)
+This cmdlet retrieves the global settings of the virtual switch from the Network Controller
 
 ### [Install-NetworkController](./Install-NetworkController.md)
 Creates a network controller application on top of the network controller cluster.
@@ -173,16 +200,22 @@ Creates a Network Controller cluster.
 ### [Invoke-NetworkControllerConnectivityCheck](./Invoke-NetworkControllerConnectivityCheck.md)
 
 
-### [Invoke-NetworkControllerState](./Invoke-NetworkControllerState.md)
+### [Invoke-NetworkControllerState](Invoke-NetworkControllerState.md)
+This cmdlet dumps the current configuration and state of Network Controller services on the local Network Controller nodes
 
+### [Invoke-NetworkControllerSubnetEgressReset](Invoke-NetworkControllerSubnetEgressReset.md)
+{{ Fill in the Synopsis }}
 
-### [New-NetworkControllerAccessControlList](./New-NetworkControllerAccessControlList.md)
-Creates an ACL for a Network Controller.
+### [New-NetworkControllerAccessControlList](New-NetworkControllerAccessControlList.md)
+This cmdlet creates a new access control list for allowing/denying traffic to/from a particular subnet or network interface
 
-### [New-NetworkControllerAccessControlListRule](./New-NetworkControllerAccessControlListRule.md)
-Creates a rule for an ACL.
+### [New-NetworkControllerAccessControlListRule](New-NetworkControllerAccessControlListRule.md)
+This cmdlet creates a new ACL rule to allow/deny traffic to/from a particular virtual subnet or network interface
 
-### [New-NetworkControllerCredential](./New-NetworkControllerCredential.md)
+### [New-NetworkControllerBackup](New-NetworkControllerBackup.md)
+{{ Fill in the Synopsis }}
+
+### [New-NetworkControllerCredential](New-NetworkControllerCredential.md)
 Adds or modifies a device credential in Network Controller.
 
 ### [New-NetworkControllerFabricRoute](./New-NetworkControllerFabricRoute.md)
@@ -194,35 +227,41 @@ Creates a gateway virtual machine.
 ### [New-NetworkControllerGatewayPool](./New-NetworkControllerGatewayPool.md)
 Creates a gateway pool.
 
-### [New-NetworkControllerIpPool](./New-NetworkControllerIpPool.md)
+### [New-NetworkControllerIDnsServerConfiguration](New-NetworkControllerIDnsServerConfiguration.md)
+{{ Fill in the Synopsis }}
 
+### [New-NetworkControllerIpPool](New-NetworkControllerIpPool.md)
+This cmdlet adds a new IP address pool to an existing subnet in an existing network
 
-### [New-NetworkControllerLoadBalancer](./New-NetworkControllerLoadBalancer.md)
+### [New-NetworkControllerIpReservation](New-NetworkControllerIpReservation.md)
+{{ Fill in the Synopsis }}
 
+### [New-NetworkControllerLoadBalancer](New-NetworkControllerLoadBalancer.md)
+This cmdlet adds/updates a load balancer resource.
 
-### [New-NetworkControllerLoadBalancerBackendAddressPool](./New-NetworkControllerLoadBalancerBackendAddressPool.md)
+### [New-NetworkControllerLoadBalancerBackendAddressPool](New-NetworkControllerLoadBalancerBackendAddressPool.md)
+This cmdlet adds/updates the configuration of a backend address pool resource associated with a load balancer.
 
+### [New-NetworkControllerLoadBalancerConfiguration](New-NetworkControllerLoadBalancerConfiguration.md)
+This cmdlet adds/updates the configuration of load balancer in Network Controller
 
-### [New-NetworkControllerLoadBalancerConfiguration](./New-NetworkControllerLoadBalancerConfiguration.md)
+### [New-NetworkControllerLoadBalancerFrontendIpConfiguration](New-NetworkControllerLoadBalancerFrontendIpConfiguration.md)
+This cmdlet adds/updates the front end IP configuration of a load balancer resource.
 
+### [New-NetworkControllerLoadBalancerInboundNatRule](New-NetworkControllerLoadBalancerInboundNatRule.md)
+This cmdlet adds/updates an inbound NAT rule associated with a load balancer resource.
 
-### [New-NetworkControllerLoadBalancerFrontendIpConfiguration](./New-NetworkControllerLoadBalancerFrontendIpConfiguration.md)
+### [New-NetworkControllerLoadBalancerMux](New-NetworkControllerLoadBalancerMux.md)
+This cmdlet adds/updates the configuration of a load balancer VM managed by the Network Controller.
 
+### [New-NetworkControllerLoadBalancerOutboundNatRule](New-NetworkControllerLoadBalancerOutboundNatRule.md)
+Creates/modifies outbound NAT rules associated with a load balancer resource.
 
-### [New-NetworkControllerLoadBalancerInboundNatRule](./New-NetworkControllerLoadBalancerInboundNatRule.md)
+### [New-NetworkControllerLoadBalancerProbe](New-NetworkControllerLoadBalancerProbe.md)
+This cmdlet adds/updates the health probes associated with a load balancer.
 
-
-### [New-NetworkControllerLoadBalancerMux](./New-NetworkControllerLoadBalancerMux.md)
-
-
-### [New-NetworkControllerLoadBalancerOutboundNatRule](./New-NetworkControllerLoadBalancerOutboundNatRule.md)
-
-
-### [New-NetworkControllerLoadBalancerProbe](./New-NetworkControllerLoadBalancerProbe.md)
-
-
-### [New-NetworkControllerLoadBalancingRule](./New-NetworkControllerLoadBalancingRule.md)
-
+### [New-NetworkControllerLoadBalancingRule](New-NetworkControllerLoadBalancingRule.md)
+This cmdlet adds/updates a load balancing rule associated with a load balancer.
 
 ### [New-NetworkControllerLogicalNetwork](./New-NetworkControllerLogicalNetwork.md)
 Adds or updates a logical network in Network Controller.
@@ -230,26 +269,29 @@ Adds or updates a logical network in Network Controller.
 ### [New-NetworkControllerLogicalSubnet](./New-NetworkControllerLogicalSubnet.md)
 Adds or updates a logical subnet in the Network Controller.
 
-### [New-NetworkControllerMacPool](./New-NetworkControllerMacPool.md)
+### [New-NetworkControllerMacPool](New-NetworkControllerMacPool.md)
+This cmdlet creates a new MAC pool in the Network Controller
 
+### [New-NetworkControllerNetworkInterface](New-NetworkControllerNetworkInterface.md)
+This cmdlet adds a new network interface resource to the Network Controller
 
-### [New-NetworkControllerNetworkInterface](./New-NetworkControllerNetworkInterface.md)
-
-
-### [New-NetworkControllerNetworkInterfaceIpConfiguration](./New-NetworkControllerNetworkInterfaceIpConfiguration.md)
-
+### [New-NetworkControllerNetworkInterfaceIpConfiguration](New-NetworkControllerNetworkInterfaceIpConfiguration.md)
+This cmdlet adds/updates an IP configuration to a network interface in the Network Controller
 
 ### [New-NetworkControllerNodeObject](./New-NetworkControllerNodeObject.md)
 Creates a network controller node object.
 
-### [New-NetworkControllerPublicIpAddress](./New-NetworkControllerPublicIpAddress.md)
+### [New-NetworkControllerPublicIpAddress](New-NetworkControllerPublicIpAddress.md)
+This cmdlet adds/updates a public IP address resource in the Network Controller.
 
+### [New-NetworkControllerRestore](New-NetworkControllerRestore.md)
+{{ Fill in the Synopsis }}
 
-### [New-NetworkControllerRoute](./New-NetworkControllerRoute.md)
+### [New-NetworkControllerRoute](New-NetworkControllerRoute.md)
+This cmdlet adds a new route to the Network Controller
 
-
-### [New-NetworkControllerRouteTable](./New-NetworkControllerRouteTable.md)
-
+### [New-NetworkControllerRouteTable](New-NetworkControllerRouteTable.md)
+This cmdlet creates a new route table in the Network Controller
 
 ### [New-NetworkControllerServer](./New-NetworkControllerServer.md)
 Creates or Updates a server resource in the Network Controller
@@ -257,8 +299,8 @@ Creates or Updates a server resource in the Network Controller
 ### [New-NetworkControllerServerInterface](./New-NetworkControllerServerInterface.md)
 Creates or updates a physical network interface resource in the Network Controller.
 
-### [New-NetworkControllerServiceInsertion](./New-NetworkControllerServiceInsertion.md)
-
+### [New-NetworkControllerServiceInsertion](New-NetworkControllerServiceInsertion.md)
+This cmdlet adds a new service insertion resource to the Network Controller
 
 ### [New-NetworkControllerVirtualGateway](./New-NetworkControllerVirtualGateway.md)
 Creates a virtual gateway.
@@ -275,20 +317,27 @@ Creates a virtual gateway network connection.
 ### [New-NetworkControllerVirtualGatewayPolicyMap](./New-NetworkControllerVirtualGatewayPolicyMap.md)
 Creates a BGP routing policy map.
 
-### [New-NetworkControllerVirtualNetwork](./New-NetworkControllerVirtualNetwork.md)
+### [New-NetworkControllerVirtualNetwork](New-NetworkControllerVirtualNetwork.md)
+Creates a new virtual network or updates an existing virtual network
 
+### [New-NetworkControllerVirtualNetworkPeering](New-NetworkControllerVirtualNetworkPeering.md)
+{{ Fill in the Synopsis }}
 
-### [New-NetworkControllerVirtualServer](./New-NetworkControllerVirtualServer.md)
+### [New-NetworkControllerVirtualServer](New-NetworkControllerVirtualServer.md)
+Adds a new virtual server to the Network Controller.
+If already present, updates the properties of the virtual server
 
+### [New-NetworkControllerVirtualSubnet](New-NetworkControllerVirtualSubnet.md)
+This cmdlet creates a new virtual subnet in a virtual network, or updates a virtual subnet in a virtual network
 
-### [New-NetworkControllerVirtualSubnet](./New-NetworkControllerVirtualSubnet.md)
+### [Remove-NetworkControllerAccessControlList](Remove-NetworkControllerAccessControlList.md)
+This cmdlet removes an access control list from the Network Controller
 
+### [Remove-NetworkControllerAccessControlListRule](Remove-NetworkControllerAccessControlListRule.md)
+Removes a rule from an access control list
 
-### [Remove-NetworkControllerAccessControlList](./Remove-NetworkControllerAccessControlList.md)
-
-
-### [Remove-NetworkControllerAccessControlListRule](./Remove-NetworkControllerAccessControlListRule.md)
-
+### [Remove-NetworkControllerBackup](Remove-NetworkControllerBackup.md)
+{{ Fill in the Synopsis }}
 
 ### [Remove-NetworkControllerCredential](./Remove-NetworkControllerCredential.md)
 Deletes a specified device credential from the Network Controller.
@@ -302,35 +351,38 @@ Removes the gateway virtual machine configuration from a tenant.
 ### [Remove-NetworkControllerGatewayPool](./Remove-NetworkControllerGatewayPool.md)
 Removes a gateway pool.
 
-### [Remove-NetworkControllerIpPool](./Remove-NetworkControllerIpPool.md)
+### [Remove-NetworkControllerIpPool](Remove-NetworkControllerIpPool.md)
+This cmdlet removes an IP pool from a network
 
+### [Remove-NetworkControllerIpReservation](Remove-NetworkControllerIpReservation.md)
+{{ Fill in the Synopsis }}
 
-### [Remove-NetworkControllerLoadBalancer](./Remove-NetworkControllerLoadBalancer.md)
+### [Remove-NetworkControllerLoadBalancer](Remove-NetworkControllerLoadBalancer.md)
+This cmdlet removes a load balancer resource from the Network Controller
 
+### [Remove-NetworkControllerLoadBalancerBackendAddressPool](Remove-NetworkControllerLoadBalancerBackendAddressPool.md)
+This cmdlet removes a backend address pool from a load balancer resource
 
-### [Remove-NetworkControllerLoadBalancerBackendAddressPool](./Remove-NetworkControllerLoadBalancerBackendAddressPool.md)
+### [Remove-NetworkControllerLoadBalancerConfiguration](Remove-NetworkControllerLoadBalancerConfiguration.md)
+This cmdlet removes load balancer configuration from the Network Controller
 
+### [Remove-NetworkControllerLoadBalancerFrontendIpConfiguration](Remove-NetworkControllerLoadBalancerFrontendIpConfiguration.md)
+This cmdlet removes a front end IP configuration resource from the Network Controller
 
-### [Remove-NetworkControllerLoadBalancerConfiguration](./Remove-NetworkControllerLoadBalancerConfiguration.md)
+### [Remove-NetworkControllerLoadBalancerInboundNatRule](Remove-NetworkControllerLoadBalancerInboundNatRule.md)
+This cmdlet removes an inbound NAT rule associated with a load balancer resource.
 
+### [Remove-NetworkControllerLoadBalancerMux](Remove-NetworkControllerLoadBalancerMux.md)
+This cmdlet removes a load balancer MUX from the Network Controller
 
-### [Remove-NetworkControllerLoadBalancerFrontendIpConfiguration](./Remove-NetworkControllerLoadBalancerFrontendIpConfiguration.md)
+### [Remove-NetworkControllerLoadBalancerOutboundNatRule](Remove-NetworkControllerLoadBalancerOutboundNatRule.md)
+This cmdlet removes an outbound NAT rule associated with a load balancer resource
 
+### [Remove-NetworkControllerLoadBalancerProbe](Remove-NetworkControllerLoadBalancerProbe.md)
+This cmdlet removes a health probe rule associated with a load balancer resource
 
-### [Remove-NetworkControllerLoadBalancerInboundNatRule](./Remove-NetworkControllerLoadBalancerInboundNatRule.md)
-
-
-### [Remove-NetworkControllerLoadBalancerMux](./Remove-NetworkControllerLoadBalancerMux.md)
-
-
-### [Remove-NetworkControllerLoadBalancerOutboundNatRule](./Remove-NetworkControllerLoadBalancerOutboundNatRule.md)
-
-
-### [Remove-NetworkControllerLoadBalancerProbe](./Remove-NetworkControllerLoadBalancerProbe.md)
-
-
-### [Remove-NetworkControllerLoadBalancingRule](./Remove-NetworkControllerLoadBalancingRule.md)
-
+### [Remove-NetworkControllerLoadBalancingRule](Remove-NetworkControllerLoadBalancingRule.md)
+This cmdlet removes a load balancing rule from a load balancer resource
 
 ### [Remove-NetworkControllerLogicalNetwork](./Remove-NetworkControllerLogicalNetwork.md)
 Removes a logical network from the Network Controller.
@@ -338,26 +390,29 @@ Removes a logical network from the Network Controller.
 ### [Remove-NetworkControllerLogicalSubnet](./Remove-NetworkControllerLogicalSubnet.md)
 Removes a logical subnet from the Network Controller.
 
-### [Remove-NetworkControllerMacPool](./Remove-NetworkControllerMacPool.md)
+### [Remove-NetworkControllerMacPool](Remove-NetworkControllerMacPool.md)
+This cmdlet removes a MAC pool from the Network Controller
 
+### [Remove-NetworkControllerNetworkInterface](Remove-NetworkControllerNetworkInterface.md)
+This cmdlet removes a network interface resource from the Network Controller
 
-### [Remove-NetworkControllerNetworkInterface](./Remove-NetworkControllerNetworkInterface.md)
-
-
-### [Remove-NetworkControllerNetworkInterfaceIpConfiguration](./Remove-NetworkControllerNetworkInterfaceIpConfiguration.md)
-
+### [Remove-NetworkControllerNetworkInterfaceIpConfiguration](Remove-NetworkControllerNetworkInterfaceIpConfiguration.md)
+This cmdlet removes an IP configuration resource pertaining to a network interface.
 
 ### [Remove-NetworkControllerNode](./Remove-NetworkControllerNode.md)
 Removes a node from the network controller deployment.
 
-### [Remove-NetworkControllerPublicIpAddress](./Remove-NetworkControllerPublicIpAddress.md)
+### [Remove-NetworkControllerPublicIpAddress](Remove-NetworkControllerPublicIpAddress.md)
+This cmdlet removes a public IP address resource from the Network Controller
 
+### [Remove-NetworkControllerRestore](Remove-NetworkControllerRestore.md)
+{{ Fill in the Synopsis }}
 
-### [Remove-NetworkControllerRoute](./Remove-NetworkControllerRoute.md)
+### [Remove-NetworkControllerRoute](Remove-NetworkControllerRoute.md)
+This cmdlet removes a route from a particular route table
 
-
-### [Remove-NetworkControllerRouteTable](./Remove-NetworkControllerRouteTable.md)
-
+### [Remove-NetworkControllerRouteTable](Remove-NetworkControllerRouteTable.md)
+This cmdlet removes a route table from the Network Controller
 
 ### [Remove-NetworkControllerServer](./Remove-NetworkControllerServer.md)
 Removes a server resource from the Network Controller.
@@ -365,8 +420,8 @@ Removes a server resource from the Network Controller.
 ### [Remove-NetworkControllerServerInterface](./Remove-NetworkControllerServerInterface.md)
 Removes a network interface resource from the Network Controller.
 
-### [Remove-NetworkControllerServiceInsertion](./Remove-NetworkControllerServiceInsertion.md)
-
+### [Remove-NetworkControllerServiceInsertion](Remove-NetworkControllerServiceInsertion.md)
+This cmdlet removes a service insertion resource from the Network Controller.
 
 ### [Remove-NetworkControllerVirtualGateway](./Remove-NetworkControllerVirtualGateway.md)
 Removes a virtual gateway.
@@ -383,14 +438,17 @@ Removes a virtual gateway network connection.
 ### [Remove-NetworkControllerVirtualGatewayPolicyMap](./Remove-NetworkControllerVirtualGatewayPolicyMap.md)
 Removes a BGP routing policy map.
 
-### [Remove-NetworkControllerVirtualNetwork](./Remove-NetworkControllerVirtualNetwork.md)
+### [Remove-NetworkControllerVirtualNetwork](Remove-NetworkControllerVirtualNetwork.md)
+This cmdlet removes a virtual network from the Network Controller
 
+### [Remove-NetworkControllerVirtualNetworkPeering](Remove-NetworkControllerVirtualNetworkPeering.md)
+{{ Fill in the Synopsis }}
 
-### [Remove-NetworkControllerVirtualServer](./Remove-NetworkControllerVirtualServer.md)
+### [Remove-NetworkControllerVirtualServer](Remove-NetworkControllerVirtualServer.md)
+This cmdlet removes a virtual server resource from the Network Controller.
 
-
-### [Remove-NetworkControllerVirtualSubnet](./Remove-NetworkControllerVirtualSubnet.md)
-
+### [Remove-NetworkControllerVirtualSubnet](Remove-NetworkControllerVirtualSubnet.md)
+This cmdlet removes a virtual subnet from a virtual network
 
 ### [Repair-NetworkControllerCluster](./Repair-NetworkControllerCluster.md)
 Repairs the network controller to bring it out of quorum loss.
@@ -398,7 +456,10 @@ Repairs the network controller to bring it out of quorum loss.
 ### [Set-NetworkController](./Set-NetworkController.md)
 Sets network controller application settings.
 
-### [Set-NetworkControllerCluster](./Set-NetworkControllerCluster.md)
+### [Set-NetworkControllerAuditingSettingsConfiguration](Set-NetworkControllerAuditingSettingsConfiguration.md)
+{{ Fill in the Synopsis }}
+
+### [Set-NetworkControllerCluster](Set-NetworkControllerCluster.md)
 Sets a network controller cluster.
 
 ### [Set-NetworkControllerDiagnostic](./Set-NetworkControllerDiagnostic.md)
@@ -407,11 +468,11 @@ Changes diagnostic settings for the Network Controller.
 ### [Set-NetworkControllerNode](./Set-NetworkControllerNode.md)
 Sets a node in a network controller cluster.
 
-### [Set-NetworkControllerVirtualNetworkConfiguration](./Set-NetworkControllerVirtualNetworkConfiguration.md)
+### [Set-NetworkControllerVirtualNetworkConfiguration](Set-NetworkControllerVirtualNetworkConfiguration.md)
+This cmdlet sets the global configuration for virtual networking in the Network Controller.
 
-
-### [Set-NetworkControllerVirtualSwitchConfiguration](./Set-NetworkControllerVirtualSwitchConfiguration.md)
-
+### [Set-NetworkControllerVirtualSwitchConfiguration](Set-NetworkControllerVirtualSwitchConfiguration.md)
+This cmdlet sets the global settings of the virtual switch from the Network Controller.
 
 ### [Uninstall-NetworkController](./Uninstall-NetworkController.md)
 Removes the network controller application deployed on a network controller cluster.

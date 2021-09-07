@@ -112,9 +112,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### 
+### System.Object
+
+### System.Object#https://localhost/
 
 Following properties for service insertion can be retrieved:
 For each service insertion rule, the following can be specified: 

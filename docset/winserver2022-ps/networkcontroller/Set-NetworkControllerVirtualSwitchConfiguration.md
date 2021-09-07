@@ -17,9 +17,10 @@ This cmdlet sets the global settings of the virtual switch from the Network Cont
 ## SYNTAX
 
 ```
-Set-NetworkControllerVirtualSwitchConfiguration -ConnectionUri <Uri>
- -Properties <VirtualSwitchManagerProperties> [-CertificateThumbPrint <string>] [-Credential <PSCredential>]
- [-Etag <string>] [-Force] [-ResourceId <string>] [-ResourceMetadata <ResourceMetadata>] [-Tags <psobject>]
+Set-NetworkControllerVirtualSwitchConfiguration [[-Tags] <PSObject>]
+ [-Properties] <VirtualSwitchManagerProperties> [[-Etag] <String>] [[-ResourceMetadata] <ResourceMetadata>]
+ [[-ResourceId] <String>] [-Force] -ConnectionUri <Uri> [-CertificateThumbprint <String>]
+ [-Credential <PSCredential>] [-PassInnerException] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -126,6 +127,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PassInnerException
+{{ Fill PassInnerException Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Properties
 Following properties can be set for the virtual switch configuration:
 1.
@@ -149,7 +165,7 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -199,9 +215,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
-### 
+### Microsoft.Windows.NetworkController.VirtualSwitchManagerProperties
+
 Following properties can be set for the virtual switch configuration:
 1.
 Reservation mode for QoS: absolute or Weight
@@ -218,6 +268,9 @@ Whether software reservations are enabled for QoS
 
 ## OUTPUTS
 
+### System.Object
+
 ## NOTES
+
 ## RELATED LINKS
 

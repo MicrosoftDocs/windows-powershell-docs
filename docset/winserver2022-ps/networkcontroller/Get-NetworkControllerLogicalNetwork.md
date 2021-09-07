@@ -126,7 +126,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### System.Object
+
+### System.Object#https://localhost/
 
 ## NOTES
 

@@ -16,9 +16,10 @@ This cmdlet adds/updates the configuration of load balancer in Network Controlle
 ## SYNTAX
 
 ```
-New-NetworkControllerLoadBalancerConfiguration -ConnectionUri <Uri> -Properties <LoadBalancerManagerProperties>
- -ResourceId <string> [-CertificateThumbPrint <string>] [-Credential <PSCredential>] [-Etag <string>] [-Force]
- [-ResourceMetadata <ResourceMetadata>] [-Tags <psobject>]
+New-NetworkControllerLoadBalancerConfiguration [[-Tags] <PSObject>]
+ [-Properties] <LoadBalancerManagerProperties> [[-Etag] <String>] [[-ResourceMetadata] <ResourceMetadata>]
+ [[-ResourceId] <String>] [-Force] -ConnectionUri <Uri> [-CertificateThumbprint <String>]
+ [-Credential <PSCredential>] [-PassInnerException] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -117,9 +118,24 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: switch
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassInnerException
+{{ Fill PassInnerException Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +162,7 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -158,7 +174,7 @@ Type: string
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -189,15 +205,49 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
-### 
+### Microsoft.Windows.NetworkController.LoadBalancerManagerProperties
+
 Following properties can be added/changed for a load balancer configuration:
 1.
 Load balancer manager virtual IP address (Load balancer manager is a service inside Network Controller)
@@ -208,6 +258,8 @@ These should be existing IP pools as part of existing logical networks
 IP address ranges to be excluded from outbound NAT
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 ## RELATED LINKS

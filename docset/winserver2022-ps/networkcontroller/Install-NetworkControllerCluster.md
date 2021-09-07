@@ -19,8 +19,9 @@ Creates a Network Controller cluster.
 Install-NetworkControllerCluster -Node <NetworkControllerNode[]> -ClusterAuthentication <ClusterAuthentication>
  [-ManagementSecurityGroup <String>] [-DiagnosticLogLocation <String>] [-LogLocationCredential <PSCredential>]
  [-CredentialEncryptionCertificate <X509Certificate2>] [-GmsaAccountName <String>]
- [-LogTimeLimitInDays <UInt32>] [-LogSizeLimitInMBs <UInt32>] [-EnableUpdates <Boolean>] [-Force] [-UseSsl]
- [-Credential <PSCredential>] [-CertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-LogTimeLimitInDays <UInt32>] [-LogSizeLimitInMBs <UInt32>] [-EnableAutomaticUpdates <Boolean>] [-Force]
+ [-UseSsl] [-Credential <PSCredential>] [-CertificateThumbprint <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -225,8 +226,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableUpdates
-
+### -EnableAutomaticUpdates
+{{ Fill EnableAutomaticUpdates Description }}
 
 ```yaml
 Type: Boolean
@@ -391,9 +392,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-###  
+### System.Object
+
 This cmdlet returns an object that contains the following fields: 
 - Cluster version
 - Name of the Network Controller nodes

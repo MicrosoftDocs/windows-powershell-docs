@@ -118,9 +118,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### 
+### System.Object
+
+### System.Object#https://localhost/
+
 Each access control list contains multiple ACL rules. Each rule contains the following:
 1. Name
 2. Protocol

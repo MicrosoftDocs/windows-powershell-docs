@@ -139,9 +139,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
 
-###  
+### System.Object
+
+### System.Object#https://localhost/
+
 This cmdlet returns an object that contains the following settings: 
 
 - Address prefix of the subnet.

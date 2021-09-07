@@ -135,9 +135,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
 
-###  
+### System.Object
+
+### System.Object#https://localhost/
+  
 This cmdlet returns an object that contains the following properties: 
 
 - Administrative status of the interface.

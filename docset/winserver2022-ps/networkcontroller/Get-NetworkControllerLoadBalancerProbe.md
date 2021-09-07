@@ -127,9 +127,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
 
-### 
+### System.Object
+
+### System.Object#https://localhost/
+
 Following properties can be retrieved for a load balancer probe:
 1. Protocol
 2. Port

@@ -117,9 +117,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### 
+### System.Object
+
+### System.Object#https://localhost/
+
 Following properties can be retrieved for a load balancer resource:
 1. Front end IP configuration
 2. Back end address pools

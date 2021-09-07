@@ -17,9 +17,9 @@ Sets a network controller cluster.
 
 ```
 Set-NetworkControllerCluster [-ManagementSecurityGroup <String>]
- [-CredentialEncryptionCertificate <X509Certificate2>] [-EnableUpdates <Boolean>] [-PassThru]
- [-ComputerName <String>] [-UseSsl] [-Credential <PSCredential>] [-CertificateThumbprint <String>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-CredentialEncryptionCertificate <X509Certificate2>] [-EnableAutomaticUpdates <Boolean>] [-PassThru] [-Force]
+ [-UseSubjectNameForNodeCert <Boolean>] [-ComputerName <String>] [-UseSsl] [-Credential <PSCredential>]
+ [-CertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -136,11 +136,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableUpdates
-
+### -EnableAutomaticUpdates
+{{ Fill EnableAutomaticUpdates Description }}
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{ Fill Force Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -200,6 +215,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseSubjectNameForNodeCert
+{{ Fill UseSubjectNameForNodeCert Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -221,9 +266,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-###  
+### System.Object
+
 This cmdlet returns an object that contains the following fields: 
 - Cluster version
 - Name of the network controller nodes

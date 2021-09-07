@@ -142,9 +142,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
 
-### 
+### System.Object
+
+### System.Object#https://localhost/
+
 Following properties are displayed by the cmdlet
 1. Start IP address of the pool
 2. End IP address of the pool

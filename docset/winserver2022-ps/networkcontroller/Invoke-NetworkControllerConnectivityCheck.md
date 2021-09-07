@@ -194,7 +194,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Windows.NetworkController.ConnectivityCheckProperties
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

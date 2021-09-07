@@ -148,9 +148,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-###  
+### System.Object
+
+### System.Object#https://localhost/
+ 
 This cmdlet returns one or more objects that contain the following fields: 
 
 

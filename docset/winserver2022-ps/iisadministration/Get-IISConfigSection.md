@@ -141,11 +141,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### string, string[]
+### System.String
 
 ## OUTPUTS
 
-### Microsoft.Web.Administration.ConfigurationSection, Microsoft.Web.Administration.ConfigurationSection[]
+### System.Object
 
 ## NOTES
 

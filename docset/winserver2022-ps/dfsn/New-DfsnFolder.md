@@ -342,9 +342,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.Boolean
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespaceFolder.State
+
+### System.UInt32
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespaceFolderTarget.State
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespaceFolderTarget.ReferralPriorityClass
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_DfsNamespaceFolder
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

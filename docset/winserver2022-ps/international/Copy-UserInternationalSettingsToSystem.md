@@ -7,8 +7,8 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: aandrejs
-ms.date: 10/23/2020
-ms.prod: w10
+ms.date: 09/08/2021
+ms.prod: w11
 ms.technology:
 ms.topic: reference
 online version: 

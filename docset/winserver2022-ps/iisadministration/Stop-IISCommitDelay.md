@@ -60,7 +60,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Boolean
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

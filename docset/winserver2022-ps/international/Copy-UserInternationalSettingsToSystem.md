@@ -37,29 +37,29 @@ Copy-UserInternationalSettingsToSystem [-WelcomeScreen <Boolean>] [-NewUser <Boo
 The **Copy-UserInternationalSettingsToSystem** cmdlet gets the **international settings** from the current user.
 You can decide whether to copy these settings into the **Welcome screen and system accounts**, the **New user accounts**, or both.
 
-This cmdlet needs two parameters: **-WelcomeScreen** and **-NewUser**.
+This cmdlet takes two parameters: **-WelcomeScreen** and **-NewUser**.
 
-When any of the parameters is set to $True, this gets the current values from the current user and copies them to the system settings for the selected options based on the parameters that were set to $True.
+When any of the parameters is set to $True, this cmdlet gets the current values from the current user and copies them to the system settings for the selected options based on the parameters that were set to $True.
 
 **Important:** Please note that this PowerShell Cmdlet is only available for Windows 11 and higher.
 
 
 ## EXAMPLES
 
-### Example 1: Copy settings into both the Welcome screen and new user accounts
+### Example 1: Copy settings into both the Welcome screen and system accounts, and new user accounts
 ```
 PS C:\> Copy-UserInternationalSettingsToSystem -WelcomeScreen $True -NewUser $True
 ```
 
-This example copies the Windows Display language, Input language, Regional Format/locale and Location/GeoID into both the Welcome screen and the new user accounts.
+This example copies the Windows Display language, Input language, Regional Format/locale and Location/GeoID into both the Welcome screen and system accounts, and new user accounts.
 
 
-### Example 2: Copy the settings into only the Welcome screen
+### Example 2: Copy the settings into only the Welcome screen and system accounts
 ```
 PS C:\> Copy-UserInternationalSettingsToSystem -WelcomeScreen $True -NewUser $False
 ```
 
-This example copies the Windows Display language, Input language, Format/locale and Regional Location/GeoID to the Welcome screen only.
+This example copies the Windows Display language, Input language, Format/locale and Regional Location/GeoID to the Welcome screen and system accounts only.
 
 
 ## PARAMETERS

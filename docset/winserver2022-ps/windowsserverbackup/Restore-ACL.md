@@ -1,8 +1,11 @@
 ---
+description:
 external help file: wsbcmdlet.dll-help.xml
 Module Name: WindowsServerBackup
-online version:
+ms.date: 09/10/2021
+online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/restore-acl?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Restore-ACL
 ---
 
 # Restore-ACL
@@ -21,12 +24,12 @@ Restore-ACL [-Path] <String> -XmlPath <String> -LogPath <String> [-WhatIf] [-Con
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Restore the ACL for a file
 ```powershell
-PS C:\> {{ Add example code here }}
+Restore-ACL -Path  "C:\file01.txt" -XmlPath "C:\AclBackups\file01.backup" -LogPath "C:\AclBackupLogs\file01.log"
 ```
 
-{{ Add example description here }}
+This command restores the ACL for the specified file.
 
 ## PARAMETERS
 
@@ -107,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -119,3 +122,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Backup-ACL](Backup-ACL.md)
+
+[Get-ACL](/powershell/module/microsoft.powershell.security/get-acl)

@@ -1,14 +1,17 @@
 ---
+description: The Backup-Acl cmdlet backs up the security descriptor of a specified item, such as a file or a registry key.
 external help file: wsbcmdlet.dll-help.xml
 Module Name: WindowsServerBackup
-online version:
+ms.date: 09/10/2021
+online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/backup-acl?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Backup-ACL
 ---
 
 # Backup-ACL
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Backs up the security descriptor of an item.
 
 ## SYNTAX
 
@@ -18,21 +21,24 @@ Backup-ACL [-Path] <String> [-DestinationPath] <String> [-LogPath] <String> [[-S
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Backup-Acl** cmdlet backs up the security descriptor of a specified item, such as a file or a registry key.
+
+To back up an ACL, specify the **Path** parameter to identify the item. Use the **DestinationPath** parameter to specify the location for the backup.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Back up the ACL for a file
 ```powershell
-PS C:\> {{ Add example code here }}
+Backup-ACL -Path "C:\file01.txt" -DestinationPath "C:\AclBackups\file01.backup" -LogPath "C:\AclBackupLogs\file01.log"
 ```
 
-{{ Add example description here }}
+This command backs up the ACL for the specified file.
+The command also specifies the location for the backup and the log.
 
 ## PARAMETERS
 
 ### -DestinationPath
-Path where permission backup needs to be stored
+Specifies a path to store the permission backup.
 
 ```yaml
 Type: String
@@ -47,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogPath
-Path where logs need to be stored
+Specifies a path to store the log.
 
 ```yaml
 Type: String
@@ -62,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Path for which permission needs to be backed up
+Specifies the path of the object for which the cmdlet backs up permissions.
 
 ```yaml
 Type: String
@@ -77,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleTrigger
-Specifies trigger to create a scheduled task to backup permissions of the said folder
+Specifies a ScheduleTrigger object.
+A trigger creates pipeline runs periodically, on schedule.
 
 ```yaml
 Type: Object
@@ -123,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -137,3 +144,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACL](/powershell/module/microsoft.powershell.security/get-acl)
+
+[Restore-ACL](Restore-ACL.md)

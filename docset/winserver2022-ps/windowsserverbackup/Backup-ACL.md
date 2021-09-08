@@ -38,7 +38,7 @@ The command also specifies the location for the backup and the log.
 ## PARAMETERS
 
 ### -DestinationPath
-Specifies a path to store the permission backup.
+Specifies a full path to store the permission backup.
 
 ```yaml
 Type: String
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogPath
-Specifies a path to store the log.
+Specifies a full path for the log file.
 
 ```yaml
 Type: String
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the path of the object for which the cmdlet backs up permissions.
+Specifies the full path of the object for which the cmdlet backs up permissions.
 
 ```yaml
 Type: String
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleTrigger
-Specifies a ScheduleTrigger object.
+Specifies a **ScheduleTrigger** object.
 A trigger creates pipeline runs periodically, on schedule.
 
 ```yaml

@@ -33,7 +33,7 @@ Adds a list of virtual machines to the backup policy.
 Adds the list of source volumes to the backup policy.
 
 ### [Backup-ACL](Backup-ACL.md)
-{{ Fill in the Synopsis }}
+Backs up the security descriptor of an item.
 
 ### [Get-WBBackupSet](Get-WBBackupSet.md)
 Gets backups for a server from a location that you specify.
@@ -117,7 +117,7 @@ Removes the list of virtual machines from the backup policy.
 Removes the volume from the backup policy.
 
 ### [Restore-ACL](Restore-ACL.md)
-{{ Fill in the Synopsis }}
+Restores the security descriptor of a specified item.
 
 ### [Restore-WBCatalog](Restore-WBCatalog.md)
 Restores a backup catalog for the local computer from a storage location.

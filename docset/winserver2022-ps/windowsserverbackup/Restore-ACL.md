@@ -1,5 +1,5 @@
 ---
-description:
+description: The Restore-ACL cmdlet restores the security descriptor of a specified item, such as a file or a registry key.
 external help file: wsbcmdlet.dll-help.xml
 Module Name: WindowsServerBackup
 ms.date: 09/10/2021
@@ -11,7 +11,7 @@ title: Restore-ACL
 # Restore-ACL
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Restores the security descriptor of a specified item.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Restore-ACL [-Path] <String> -XmlPath <String> -LogPath <String> [-WhatIf] [-Con
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Restore-ACL** cmdlet restores the security descriptor of a specified item, such as a file or a registry key.
 
 ## EXAMPLES
 
@@ -29,12 +29,12 @@ Restore-ACL [-Path] <String> -XmlPath <String> -LogPath <String> [-WhatIf] [-Con
 Restore-ACL -Path  "C:\file01.txt" -XmlPath "C:\AclBackups\file01.backup" -LogPath "C:\AclBackupLogs\file01.log"
 ```
 
-This command restores the ACL for the specified file.
+This command restores the ACL specified by the **XmlPath** parameter for the specified file.
 
 ## PARAMETERS
 
 ### -LogPath
-Path where logs need to be stored
+Specifies the full path of the log file.
 
 ```yaml
 Type: String
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Path for which permission needs to be restored
+Specifies the full path of the object for which the cmdlet restores permissions.
 
 ```yaml
 Type: String
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -XmlPath
-The XML file that contains ACL information.
+Specifies the full path of the the XML file that contains ACL back up.
 
 ```yaml
 Type: String
@@ -119,6 +119,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

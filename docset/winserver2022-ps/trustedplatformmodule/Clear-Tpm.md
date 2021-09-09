@@ -38,7 +38,7 @@ For more information on TPM, see the [Trusted Platform Module Technology Overvie
 
 ### Example 1: Reset TPM
 ```powershell
-PS C:\> Clear-Tpm
+Clear-Tpm
 ```
 
 ```output
@@ -57,7 +57,7 @@ The command uses the owner authorization value stored in the registry instead of
 
 ### Example 2: Reset TPM with a supplied authorization value
 ```powershell
-PS C:\> Clear-Tpm -OwnerAuthorization "vjnuW6rToM41os3xxEpjLdIW2gA="
+Clear-Tpm -OwnerAuthorization "vjnuW6rToM41os3xxEpjLdIW2gA="
 ```
 
 ```output
@@ -75,7 +75,7 @@ This command resets the TPM by using the specified owner authorization value.
 
 ### Example 3: Reset TPM using authorization value from file
 ```powershell
-PS C:\> Clear-Tpm -File "MyOwnerAuthFile.tpm"
+Clear-Tpm -File "MyOwnerAuthFile.tpm"
 ```
 
 ```output
@@ -93,7 +93,7 @@ This command resets the TPM by using the owner authorization value included in t
 
 ### Example 4: Reset TPM with Physical Presence Interface
 ```powershell
-PS C:\> Clear-Tpm -UsePPI
+Clear-Tpm -UsePPI
 ```
 
 ```output

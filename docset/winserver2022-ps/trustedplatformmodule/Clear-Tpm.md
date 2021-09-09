@@ -41,6 +41,8 @@ For more information on TPM, see the [Trusted Platform Module Technology Overvie
 Clear-Tpm
 ```
 
+The cmdlet displays the following output:
+
 ```output
 TpmReady           : False
 TpmPresent         : True
@@ -60,6 +62,8 @@ The command uses the owner authorization value stored in the registry instead of
 Clear-Tpm -OwnerAuthorization "vjnuW6rToM41os3xxEpjLdIW2gA="
 ```
 
+The cmdlet displays the following output:
+
 ```output
 TpmReady           : False
 TpmPresent         : True
@@ -78,6 +82,8 @@ This command resets the TPM by using the specified owner authorization value.
 Clear-Tpm -File "MyOwnerAuthFile.tpm"
 ```
 
+The cmdlet displays the following output:
+
 ```output
 TpmReady           : False
 TpmPresent         : True
@@ -95,6 +101,8 @@ This command resets the TPM by using the owner authorization value included in t
 ```powershell
 Clear-Tpm -UsePPI
 ```
+
+The cmdlet displays the following output:
 
 ```output
 TpmReady           : False

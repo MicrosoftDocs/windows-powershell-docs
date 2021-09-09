@@ -23,7 +23,9 @@ Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>
  [-ConfigurationName <String>] [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
  [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
  [-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
- [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks]
+ [-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [[-ClusterName] <String>]
+ [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateNow
@@ -46,7 +48,15 @@ Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>
  [-ConfigurationName <String>] [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
  [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
  [-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
- [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks]
+ [-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [[-ClusterName] <String>]
+ [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DefaultParamSet
+```
+Set-CauClusterRole [-AttemptSoftReboot] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -114,6 +124,21 @@ The earliest date that an updating run can be triggered is 1/1/2012.
 Because the command specifies the *Force* parameter, the cmdlet runs without displaying confirmation prompts
 
 ## PARAMETERS
+
+### -AttemptSoftReboot
+{{ Fill AttemptSoftReboot Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: DefaultParamSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CauPluginArguments
 Specifies a set of name=value pairs, as arguments, for each updating plug-in to use.
@@ -332,6 +357,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForcePauseAndDrain
+{{ Fill ForcePauseAndDrain Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForcePauseDrainAndReboot
+{{ Fill ForcePauseDrainAndReboot Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForcePauseNoDrain
+{{ Fill ForcePauseNoDrain Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IntervalWeeks
 Specifies the interval between weeks when the task will be triggered.
 An interval of 1 produces a weekly schedule.
@@ -388,6 +458,21 @@ Specifies an array of cluster node names in the order that they should be update
 
 ```yaml
 Type: String[]
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OsRollingUpgrade
+{{ Fill OsRollingUpgrade Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: MonthlyDayOfWeek, Weekly
 Aliases: 
 
@@ -494,6 +579,36 @@ If a single plug-in is specified, a warning appears.
 Type: SwitchParameter
 Parameter Sets: MonthlyDayOfWeek, Weekly
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAwareUpdatingOrder
+{{ Fill SiteAwareUpdatingOrder Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipUpdateChecks
+{{ Fill SkipUpdateChecks Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named

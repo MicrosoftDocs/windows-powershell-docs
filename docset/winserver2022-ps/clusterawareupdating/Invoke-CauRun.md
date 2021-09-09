@@ -21,15 +21,18 @@ Invoke-CauRun [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder
  [-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
  [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>]
  [-SeparateReboots] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
- [-SuspendClusterNodeTimeoutMinutes <Int32>] [-Force] [[-ClusterName] <String>] [[-CauPluginName] <String[]>]
- [[-Credential] <PSCredential>] [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially]
- [-StopOnPluginFailure] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SuspendClusterNodeTimeoutMinutes <Int32>] [-Force] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+ [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>] [[-ClusterName] <String>]
+ [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>] [-CauPluginArguments <Hashtable[]>]
+ [-RunPluginsSerially] [-StopOnPluginFailure] [-OsRollingUpgrade] [-AttemptSoftReboot] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RecoverParamSet
 ```
-Invoke-CauRun [-ForceRecovery] [-Force] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Invoke-CauRun [-ForceRecovery] [-Force] [-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot]
+ [-SkipUpdateChecks] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,6 +82,21 @@ This command recovers from a previous updating run that failed and left the clus
 Because the command specifies the *Force* parameter, the recovery is performed without confirmation prompts.
 
 ## PARAMETERS
+
+### -AttemptSoftReboot
+{{ Fill AttemptSoftReboot Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: DefaultParamSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CauPluginArguments
 Specifies a set of name=value pairs for each updating plug-in to use.
@@ -268,6 +286,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForcePauseAndDrain
+{{ Fill ForcePauseAndDrain Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForcePauseDrainAndReboot
+{{ Fill ForcePauseDrainAndReboot Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForcePauseNoDrain
+{{ Fill ForcePauseNoDrain Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ForceRecovery
 Indicates that the cmdlet recovers from a previous failed run that left the cluster in a Locked state.
 
@@ -325,6 +388,21 @@ Specifies an array of cluster nodes names in the order that they are updated.
 
 ```yaml
 Type: String[]
+Parameter Sets: DefaultParamSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OsRollingUpgrade
+{{ Fill OsRollingUpgrade Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: DefaultParamSet
 Aliases: 
 
@@ -432,6 +510,36 @@ If a single plug-in is specified, a warning appears.
 Type: SwitchParameter
 Parameter Sets: DefaultParamSet
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAwareUpdatingOrder
+{{ Fill SiteAwareUpdatingOrder Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: DefaultParamSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipUpdateChecks
+{{ Fill SkipUpdateChecks Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

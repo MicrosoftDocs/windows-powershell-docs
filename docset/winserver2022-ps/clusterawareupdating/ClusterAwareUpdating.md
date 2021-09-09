@@ -30,7 +30,10 @@ Exports one or more Updating Run reports into an HTML or CSV-formatted document.
 ### [Get-CauClusterRole](./Get-CauClusterRole.md)
 Gets configuration properties of the CAU clustered role on the specified cluster.
 
-### [Get-CauPlugin](./Get-CauPlugin.md)
+### [Get-CauDeviceInfoForFeatureUpdates](Get-CauDeviceInfoForFeatureUpdates.md)
+{{ Fill in the Synopsis }}
+
+### [Get-CauPlugin](Get-CauPlugin.md)
 Gets information about one or more software updating plug-ins that are registered on the local computer.
 
 ### [Get-CauReport](./Get-CauReport.md)

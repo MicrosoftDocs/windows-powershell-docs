@@ -17,7 +17,7 @@ Saves CAU debug tracing information to a local zip file.
 
 ```
 Save-CauDebugTrace [[-ClusterName] <String>] [[-FilePath] <String>] [-Credential <PSCredential>]
- [-RunId <Guid>] [-Force] [<CommonParameters>]
+ [-RunId <Guid>] [-Force] [-FeatureUpdateLogs <FeatureUpdateLogs>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,6 +61,21 @@ Specifies the administrative credentials for the target cluster.
 
 ```yaml
 Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FeatureUpdateLogs
+{{ Fill FeatureUpdateLogs Description }}
+
+```yaml
+Type: FeatureUpdateLogs
 Parameter Sets: (All)
 Aliases: 
 

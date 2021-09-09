@@ -108,10 +108,10 @@ SelfTest           : {191, 191, 245, 191...}
 ```
 
 This command resets the TPM by using the Physical Presence Interface (PPI).
-PPI does not use a value for owner authorization.
+The PPI does not use a value for owner authorization.
 
 Restart the system for the clear action to take effect.
-That restart might require user input to approve the clear request.
+The restart might require user input to approve the clear request.
 
 ## PARAMETERS
 

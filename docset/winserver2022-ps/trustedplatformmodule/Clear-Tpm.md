@@ -37,8 +37,11 @@ For more information on TPM, see the [Trusted Platform Module Technology Overvie
 ## EXAMPLES
 
 ### Example 1: Reset TPM
-```
+```powershell
 PS C:\> Clear-Tpm
+```
+
+```output
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full
@@ -53,8 +56,11 @@ This command resets the TPM.
 The command uses the owner authorization value stored in the registry instead of specifying a value or using a value in a file.
 
 ### Example 2: Reset TPM with a supplied authorization value
-```
+```powershell
 PS C:\> Clear-Tpm -OwnerAuthorization "vjnuW6rToM41os3xxEpjLdIW2gA="
+```
+
+```output
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full
@@ -68,8 +74,11 @@ SelfTest           : {191, 191, 245, 191...}
 This command resets the TPM by using the specified owner authorization value.
 
 ### Example 3: Reset TPM using authorization value from file
-```
+```powershell
 PS C:\> Clear-Tpm -File "MyOwnerAuthFile.tpm"
+```
+
+```output
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full
@@ -83,8 +92,11 @@ SelfTest           : {191, 191, 245, 191...}
 This command resets the TPM by using the owner authorization value included in the specified file.
 
 ### Example 4: Reset TPM with Physical Presence Interface
-```
+```powershell
 PS C:\> Clear-Tpm -UsePPI
+```
+
+```output
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full

@@ -764,7 +764,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileHashComputation
-{{ Fill EnableFileHashComputation Description }}
+Specifies whether to enable file hash computation. When this feature is enabled, Windows Defender computes hashes for files it scans.
 
 ```yaml
 Type: Boolean
@@ -779,7 +779,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFullScanOnBatteryPower
-{{ Fill EnableFullScanOnBatteryPower Description }}
+Specifies whether Windows Defender performs a full scan while on battery power.
 
 ```yaml
 Type: Boolean
@@ -794,7 +794,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLowCpuPriority
-{{ Fill EnableLowCpuPriority Description }}
+Specifies whether Windows Defender uses low CPU priority for scheduled scans.
 
 ```yaml
 Type: Boolean
@@ -809,7 +809,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNetworkProtection
-{{ Fill EnableNetworkProtection Description }}
+Specifies how the Network Protection Service handles web-based malicious threats, including phishing and malware.
+Possible values are Disabled, Enabled, and AuditMode.
+
 
 ```yaml
 Type: ASRRuleActionType
@@ -824,7 +826,15 @@ Accept wildcard characters: False
 ```
 
 ### -EngineUpdatesChannel
-{{ Fill EngineUpdatesChannel Description }}
+Specifies when devices receive Microsoft Defender engine updates during the monthly gradual rollout.
+
+Valid values are:
+
+- Beta. Devices are the first to receive new updates. Devices in the Windows Insider Program are subscribed to this channel by default. For use in manual test environments only and a limited number of devices.
+- Preview. Devices offered updates earliest during the monthly gradual release cycle. Suggested for pre-production or validation environments.
+- Staged. Devices offered updates after the monthly gradual release cycle. Suggested for a small, representative part of your production population.
+- Broad. Devices offered updates only after the gradual release cycle completes.
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle.
 
 ```yaml
 Type: UpdatesChannelType
@@ -1008,7 +1018,7 @@ Accept wildcard characters: False
 ```
 
 ### -MeteredConnectionUpdates
-{{ Fill MeteredConnectionUpdates Description }}
+Specifies whether to update managed devices to update through metered connections. Data charges may apply.
 
 ```yaml
 Type: Boolean
@@ -1044,7 +1054,15 @@ Accept wildcard characters: False
 ```
 
 ### -PlatformUpdatesChannel
-{{ Fill PlatformUpdatesChannel Description }}
+Specifies when devices receive Microsoft Defender platform updates during the monthly gradual rollout.
+
+Valid values are:
+
+- Beta. Devices are the first to receive new updates. Devices in the Windows Insider Program are subscribed to this channel by default. For use in manual test environments only and a limited number of devices.
+- Preview. Devices offered updates earliest during the monthly gradual release cycle. Suggested for pre-production or validation environments.
+- Staged. Devices offered updates after the monthly gradual release cycle. Suggested for a small, representative part of your production population.
+- Broad. Devices offered updates only after the gradual release cycle completes.
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle.
 
 ```yaml
 Type: UpdatesChannelType
@@ -1104,7 +1122,8 @@ Accept wildcard characters: False
 ```
 
 ### -PUAProtection
-{{ Fill PUAProtection Description }}
+Specifies the level of detection for potentially unwanted applications.
+When potentially unwanted software is downloaded or attempts to install itself on your computer, you are warned.
 
 ```yaml
 Type: PUAProtectionType
@@ -1641,7 +1660,13 @@ Accept wildcard characters: False
 ```
 
 ### -SignaturesUpdatesChannel
-{{ Fill SignaturesUpdatesChannel Description }}
+Specifies when devices receive  daily Microsoft Defender definition updates during the monthly gradual rollout.
+
+Valid values are:
+
+- Staged. Devices offered updates after the monthly gradual release cycle. Suggested for a small, representative part of your production population.
+- Broad. Devices offered updates only after the gradual release cycle completes.
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle.
 
 ```yaml
 Type: UpdatesChannelType

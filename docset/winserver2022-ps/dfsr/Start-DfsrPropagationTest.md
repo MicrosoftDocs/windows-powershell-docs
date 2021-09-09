@@ -105,7 +105,7 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -GroupName
@@ -122,7 +122,7 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ReferenceComputerName
@@ -139,7 +139,7 @@ Required: True
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -WhatIf

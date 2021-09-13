@@ -86,7 +86,7 @@ This example performs a full format of the D volume using the FAT32 file system.
 
 ### Example 3: Full format using NTFS and allocation size 8192
 ```powershell
-PS C:\Users\Administrator> Format-Volume -DriveLetter D -FileSystem NTFS -AllocationUnitSize 8192
+PS C:\> Format-Volume -DriveLetter D -FileSystem NTFS -AllocationUnitSize 8192
 ```
 
 This example performs a full format of the D volume using the NTFS file system and allocation size 8192.

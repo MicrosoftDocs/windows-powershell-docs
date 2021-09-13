@@ -31,7 +31,7 @@ Exports one or more Updating Run reports into an HTML or CSV-formatted document.
 Gets configuration properties of the CAU clustered role on the specified cluster.
 
 ### [Get-CauDeviceInfoForFeatureUpdates](Get-CauDeviceInfoForFeatureUpdates.md)
-{{ Fill in the Synopsis }}
+Gets device information for feature updates to use with CAU.
 
 ### [Get-CauPlugin](Get-CauPlugin.md)
 Gets information about one or more software updating plug-ins that are registered on the local computer.

@@ -84,7 +84,10 @@ Because the command specifies the *Force* parameter, the recovery is performed w
 ## PARAMETERS
 
 ### -AttemptSoftReboot
-{{ Fill AttemptSoftReboot Description }}
+Indicates that command attempts a Kernel Soft Reboot (KSR) for the failover cluster.
+
+KSR bypasses  BIOS/FIRMWARE initialization.
+You can only use KSR for updates that do not require a firmware/BIOS initialization.
 
 ```yaml
 Type: SwitchParameter
@@ -287,7 +290,10 @@ Accept wildcard characters: False
 ```
 
 ### -ForcePauseAndDrain
-{{ Fill ForcePauseAndDrain Description }}
+Indicates that the command forces cluster nodes to pause and drain roles.
+
+A forced drain moves the roles off of the draining node even if the group cannot move.
+A group might not be able to move because no other node can host the group or the group is locked.
 
 ```yaml
 Type: SwitchParameter
@@ -302,7 +308,10 @@ Accept wildcard characters: False
 ```
 
 ### -ForcePauseDrainAndReboot
-{{ Fill ForcePauseDrainAndReboot Description }}
+Indicates that the command forces cluster nodes to pause, drain roles, and restart.
+
+A forced drain moves the roles off of the draining node even if the group cannot move.
+A group might not be able to move because no other node can host the group or the group is locked.
 
 ```yaml
 Type: SwitchParameter
@@ -317,7 +326,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForcePauseNoDrain
-{{ Fill ForcePauseNoDrain Description }}
+Indicates that the command forces cluster nodes to pause.
+The nodes are not drained.
 
 ```yaml
 Type: SwitchParameter
@@ -399,7 +409,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsRollingUpgrade
-{{ Fill OsRollingUpgrade Description }}
+Indicates that the CAU cluster role upgrades the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads.
 
 ```yaml
 Type: SwitchParameter
@@ -519,7 +529,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAwareUpdatingOrder
-{{ Fill SiteAwareUpdatingOrder Description }}
+Specifies the order in which the command updates cluster nodes.
+
+By default, CAU selects the order of nodes to update based on the level of activity.
 
 ```yaml
 Type: String[]
@@ -534,7 +546,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipUpdateChecks
-{{ Fill SkipUpdateChecks Description }}
+Indicates that the command skips update checks.
 
 ```yaml
 Type: SwitchParameter

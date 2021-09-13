@@ -1,14 +1,17 @@
 ---
+description: The Get-CauDeviceInfoForFeatureUpdates cmdlet gets device information for feature updates to use with Cluster-Aware Updating (CAU).
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-online version:
+ms.date: 09/17/2021
+online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-caudeviceinfoforfeatureupdates?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Get-CauDeviceInfoForFeatureUpdates
 ---
 
 # Get-CauDeviceInfoForFeatureUpdates
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets device information for feature updates to use with CAU.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ Get-CauDeviceInfoForFeatureUpdates [[-ClusterName] <String>] [-Credential <PSCre
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-CauDeviceInfoForFeatureUpdates** cmdlet gets device information for feature updates to use with Cluster-Aware Updating (CAU).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get device information
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CauDeviceInfoForFeatureUpdates -ClusterName "CONTOSO-FC1" -PathToDirectory "C:\temp\contoso-device-info"
 ```
 
-{{ Add example description here }}
+This example gets device information for CAU for the specified cluster.
 
 ## PARAMETERS
 
 ### -ClusterName
-{{ Fill ClusterName Description }}
+Specifies the name of the cluster fow which to get device information.
 
 ```yaml
 Type: String
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies the administrative credentials for the target cluster.
 
 ```yaml
 Type: PSCredential
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -PathToDirectory
-{{ Fill PathToDirectory Description }}
+Specifies a directory.
 
 ```yaml
 Type: String
@@ -92,3 +95,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CauClusterRole](Get-CauClusterRole.md)
+
+[Get-CauPlugin](Get-CauPlugin.md)
+
+[Get-CauReport](Get-CauReport.md)
+
+[Get-CauRun](Get-CauRun.md)

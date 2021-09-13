@@ -55,7 +55,10 @@ This example also shows how to pass the administrative credentials for cluster C
 ## PARAMETERS
 
 ### -AttemptSoftReboot
-{{ Fill AttemptSoftReboot Description }}
+Indicates that command assumes a Kernel Soft Reboot (KSR) for the failover cluster.
+
+KSR bypasses  BIOS/FIRMWARE initialization.
+You can only use KSR for updates that do not require a firmware/BIOS initialization.
 
 ```yaml
 Type: SwitchParameter
@@ -172,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsRollingUpgrade
-{{ Fill OsRollingUpgrade Description }}
+Indicates that the CAU cluster role scans for upgrades to the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. 
 
 ```yaml
 Type: SwitchParameter

@@ -591,8 +591,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRdpParsing
-Specifies whether to disable inspection of RDP traffic.
-By default, Network Protection inspects RDP traffic.
+Specifies whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
 Type: Boolean
@@ -764,7 +763,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileHashComputation
-Specifies whether to enable file hash computation. When this feature is enabled, Windows Defender computes hashes for files it scans.
+Specifies whether to enable file hash computation.
+When this feature is enabled, Windows Defender computes hashes for files it scans.
 
 ```yaml
 Type: Boolean
@@ -811,7 +811,6 @@ Accept wildcard characters: False
 ### -EnableNetworkProtection
 Specifies how the Network Protection Service handles web-based malicious threats, including phishing and malware.
 Possible values are Disabled, Enabled, and AuditMode.
-
 
 ```yaml
 Type: ASRRuleActionType
@@ -929,7 +928,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUseProxyOnly
-{{ Fill ForceUseProxyOnly Description }}
+Specifies whether to force the device to use only the proxy.
 
 ```yaml
 Type: Boolean
@@ -1018,7 +1017,8 @@ Accept wildcard characters: False
 ```
 
 ### -MeteredConnectionUpdates
-Specifies whether to update managed devices to update through metered connections. Data charges may apply.
+Specifies whether to update managed devices to update through metered connections.
+Data charges may apply.
 
 ```yaml
 Type: Boolean
@@ -1077,7 +1077,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyBypass
-{{ Fill ProxyBypass Description }}
+Specifies proxy bypasses.
 
 ```yaml
 Type: String[]
@@ -1092,7 +1092,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPacUrl
-{{ Fill ProxyPacUrl Description }}
+Specifies the Privilege Attribute Certificate (PAC) proxy.
 
 ```yaml
 Type: String
@@ -1107,7 +1107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyServer
-{{ Fill ProxyServer Description }}
+Specifies the proxy server.
 
 ```yaml
 Type: String
@@ -1434,7 +1434,7 @@ Accept wildcard characters: False
 ```
 
 ### -SchedulerRandomizationTime
-{{ Fill SchedulerRandomizationTime Description }}
+Specifies the randomization time for the scheduler.
 
 ```yaml
 Type: UInt32
@@ -1470,7 +1470,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharedSignaturesPath
-{{ Fill SharedSignaturesPath Description }}
+Specifies the shared signatures path.
 
 ```yaml
 Type: String
@@ -1501,7 +1501,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureBlobFileSharesSources
-{{ Fill SignatureBlobFileSharesSources Description }}
+Specifies the file shares sources for signatures.
 
 ```yaml
 Type: String
@@ -1516,7 +1516,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureBlobUpdateInterval
-{{ Fill SignatureBlobUpdateInterval Description }}
+Specifies the signature update interval.
 
 ```yaml
 Type: UInt32

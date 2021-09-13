@@ -72,7 +72,7 @@ This command will exclude only that specific file app.exe in that specific folde
 ## PARAMETERS
 
 ### -AllowDatagramProcessingOnWinServer
-{{ Fill AllowDatagramProcessingOnWinServer Description }}
+Specifies whether to disable inspection of UDP connections on Windows Server.
 
 ```yaml
 Type: SwitchParameter
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNetworkProtectionDownLevel
-{{ Fill AllowNetworkProtectionDownLevel Description }}
+Specifies whether to allow network protection to be set to Enabled or Audit Mode on Windows versions before 1709.
 
 ```yaml
 Type: SwitchParameter
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNetworkProtectionOnWinServer
-{{ Fill AllowNetworkProtectionOnWinServer Description }}
+Specifies whether to allow network protection to be set to Enabled or Audit Mode for Windows Server.
 
 ```yaml
 Type: SwitchParameter
@@ -157,7 +157,8 @@ Accept wildcard characters: False
 ```
 
 ### -AttackSurfaceReductionRules_Actions
-{{ Fill AttackSurfaceReductionRules_Actions Description }}
+Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
+If you add multiple rules as a comma separated list, specify their states separately as a comma separated list.
 
 ```yaml
 Type: ASRRuleActionType[]
@@ -172,7 +173,8 @@ Accept wildcard characters: False
 ```
 
 ### -AttackSurfaceReductionRules_Ids
-{{ Fill AttackSurfaceReductionRules_Ids Description }}
+Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
+If you add multiple rules as a comma separated list, specify their states separately as a comma separated list.
 
 ```yaml
 Type: String[]
@@ -219,7 +221,8 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlockLevel
-{{ Fill CloudBlockLevel Description }}
+Specifies a cloud block level. 
+This value determines how aggressive Microsoft Defender Antivirus is in blocking and scanning suspicious files.
 
 ```yaml
 Type: SwitchParameter
@@ -234,7 +237,8 @@ Accept wildcard characters: False
 ```
 
 ### -CloudExtendedTimeout
-{{ Fill CloudExtendedTimeout Description }}
+Specifies the amount of extended time to block a suspicious file and scan it in the cloud.
+Standard time is 10 seconds. Extend by up to 50 seconds.
 
 ```yaml
 Type: SwitchParameter
@@ -249,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControlledFolderAccessAllowedApplications
-{{ Fill ControlledFolderAccessAllowedApplications Description }}
+Specifies applications that can make changes in controlled folders.
 
 ```yaml
 Type: String[]
@@ -264,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControlledFolderAccessProtectedFolders
-{{ Fill ControlledFolderAccessProtectedFolders Description }}
+Specifies additional folders to protect.
 
 ```yaml
 Type: String[]
@@ -384,7 +388,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDatagramProcessing
-{{ Fill DisableDatagramProcessing Description }}
+Specifies whether to disable inspection of UDP connections.
 
 ```yaml
 Type: SwitchParameter
@@ -399,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDnsOverTcpParsing
-{{ Fill DisableDnsOverTcpParsing Description }}
+Specifies whether to disable inspection of DNS traffic that occurs over a TCP channel.
 
 ```yaml
 Type: SwitchParameter
@@ -414,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDnsParsing
-{{ Fill DisableDnsParsing Description }}
+Specifies whether to disable inspection of DNS traffic that occurs over a UDP channel.
 
 ```yaml
 Type: SwitchParameter
@@ -444,7 +448,17 @@ Accept wildcard characters: False
 ```
 
 ### -DisableGradualRelease
-{{ Fill DisableGradualRelease Description }}
+Specifies whether to disable gradual rollout of monthly and daily Windows Defender updates. 
+If you enable this option, devices are offered all updates after the gradual release cycle finishes.
+Consider this option for datacenter computers that only receive limited updates. 
+
+This setting applies to both monthly as well as daily updates.
+It overrides any previously configured channel selections for platform and engine updates. 
+
+If you disable or do not configure this policy, the device remains in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates.
+The device stays up to date automatically during the gradual release cycle, which is suitable for most devices. 
+
+This policy is available starting with platform version 4.18.2106.5 and later.
 
 ```yaml
 Type: SwitchParameter
@@ -459,7 +473,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableHttpParsing
-{{ Fill DisableHttpParsing Description }}
+Specifies whether disable inspection of HTTP traffic.
+If **EnableNetworkProtection** has the value `Enabled`, HTTP connections to malicious websites can be blocked.
 
 ```yaml
 Type: SwitchParameter
@@ -474,7 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableInboundConnectionFiltering
-{{ Fill DisableInboundConnectionFiltering Description }}
+Specifies whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
 Type: SwitchParameter
@@ -534,7 +549,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRdpParsing
-{{ Fill DisableRdpParsing Description }}
+Specifies whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
 Type: SwitchParameter
@@ -640,7 +655,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableSshParsing
-{{ Fill DisableSshParsing Description }}
+Specifies whether to disable inspection of SSH traffic.
+By default, Network Protection inspects SSH traffic.
 
 ```yaml
 Type: SwitchParameter
@@ -655,7 +671,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableTlsParsing
-{{ Fill DisableTlsParsing Description }}
+Specifies whether to disable inspection of TLS traffic, also known as HTTPS.
+By default, Network Protection inspects TLS traffic.
 
 ```yaml
 Type: SwitchParameter
@@ -670,7 +687,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableControlledFolderAccess
-{{ Fill EnableControlledFolderAccess Description }}
+Specifies the state for the controlled folder access feature. Valid values are Disabled, Enabled, and Audit Mode.
 
 ```yaml
 Type: SwitchParameter
@@ -685,7 +702,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDnsSinkhole
-{{ Fill EnableDnsSinkhole Description }}
+Specifies whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks. 
 
 ```yaml
 Type: SwitchParameter
@@ -700,7 +717,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileHashComputation
-{{ Fill EnableFileHashComputation Description }}
+Specifies whether to enable file hash computation.
+When this feature is enabled, Windows Defender computes hashes for files it scans.
 
 ```yaml
 Type: SwitchParameter
@@ -715,7 +733,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFullScanOnBatteryPower
-{{ Fill EnableFullScanOnBatteryPower Description }}
+Specifies whether Windows Defender performs a full scan while on battery power.
 
 ```yaml
 Type: SwitchParameter
@@ -730,7 +748,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLowCpuPriority
-{{ Fill EnableLowCpuPriority Description }}
+Specifies whether Windows Defender uses low CPU priority for scheduled scans.
 
 ```yaml
 Type: SwitchParameter
@@ -745,7 +763,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNetworkProtection
-{{ Fill EnableNetworkProtection Description }}
+Specifies how the Network Protection Service handles web-based malicious threats, including phishing and malware.
+Possible values are Disabled, Enabled, and AuditMode.
 
 ```yaml
 Type: SwitchParameter
@@ -760,7 +779,15 @@ Accept wildcard characters: False
 ```
 
 ### -EngineUpdatesChannel
-{{ Fill EngineUpdatesChannel Description }}
+Specifies when devices receive Microsoft Defender engine updates during the monthly gradual rollout.
+
+Valid values are:
+
+- Beta. Devices are the first to receive new updates. Devices in the Windows Insider Program are subscribed to this channel by default. For use in manual test environments only and a limited number of devices.
+- Preview. Devices offered updates earliest during the monthly gradual release cycle. Suggested for pre-production or validation environments.
+- Staged. Devices offered updates after the monthly gradual release cycle. Suggested for a small, representative part of your production population.
+- Broad. Devices offered updates only after the gradual release cycle completes.
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle.
 
 ```yaml
 Type: SwitchParameter
@@ -853,7 +880,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUseProxyOnly
-{{ Fill ForceUseProxyOnly Description }}
+Specifies whether to force the device to use only the proxy.
 
 ```yaml
 Type: SwitchParameter
@@ -913,7 +940,8 @@ Accept wildcard characters: False
 ```
 
 ### -MeteredConnectionUpdates
-{{ Fill MeteredConnectionUpdates Description }}
+Specifies whether to update managed devices to update through metered connections.
+Data charges may apply.
 
 ```yaml
 Type: SwitchParameter
@@ -943,7 +971,15 @@ Accept wildcard characters: False
 ```
 
 ### -PlatformUpdatesChannel
-{{ Fill PlatformUpdatesChannel Description }}
+Specifies when devices receive Microsoft Defender platform updates during the monthly gradual rollout.
+
+Valid values are:
+
+- Beta. Devices are the first to receive new updates. Devices in the Windows Insider Program are subscribed to this channel by default. For use in manual test environments only and a limited number of devices.
+- Preview. Devices offered updates earliest during the monthly gradual release cycle. Suggested for pre-production or validation environments.
+- Staged. Devices offered updates after the monthly gradual release cycle. Suggested for a small, representative part of your production population.
+- Broad. Devices offered updates only after the gradual release cycle completes.
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle.
 
 ```yaml
 Type: SwitchParameter
@@ -958,7 +994,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyBypass
-{{ Fill ProxyBypass Description }}
+Specifies proxy bypasses.
 
 ```yaml
 Type: SwitchParameter
@@ -973,7 +1009,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPacUrl
-{{ Fill ProxyPacUrl Description }}
+Specifies the Privilege Attribute Certificate (PAC) proxy.
 
 ```yaml
 Type: SwitchParameter
@@ -988,7 +1024,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyServer
-{{ Fill ProxyServer Description }}
+Specifies the proxy server.
 
 ```yaml
 Type: SwitchParameter
@@ -1003,7 +1039,8 @@ Accept wildcard characters: False
 ```
 
 ### -PUAProtection
-{{ Fill PUAProtection Description }}
+Specifies the level of detection for potentially unwanted applications.
+When potentially unwanted software is downloaded or attempts to install itself on your computer, you are warned.
 
 ```yaml
 Type: SwitchParameter
@@ -1243,7 +1280,7 @@ Accept wildcard characters: False
 ```
 
 ### -SchedulerRandomizationTime
-{{ Fill SchedulerRandomizationTime Description }}
+Specifies the randomization time for the scheduler.
 
 ```yaml
 Type: SwitchParameter
@@ -1273,7 +1310,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharedSignaturesPath
-{{ Fill SharedSignaturesPath Description }}
+Specifies the shared signatures path.
 
 ```yaml
 Type: SwitchParameter
@@ -1303,7 +1340,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureBlobFileSharesSources
-{{ Fill SignatureBlobFileSharesSources Description }}
+Specifies the file shares sources for signatures.
 
 ```yaml
 Type: SwitchParameter
@@ -1318,7 +1355,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureBlobUpdateInterval
-{{ Fill SignatureBlobUpdateInterval Description }}
+Specifies the signature update interval.
 
 ```yaml
 Type: SwitchParameter
@@ -1423,7 +1460,13 @@ Accept wildcard characters: False
 ```
 
 ### -SignaturesUpdatesChannel
-{{ Fill SignaturesUpdatesChannel Description }}
+Specifies when devices receive  daily Microsoft Defender definition updates during the monthly gradual rollout.
+
+Valid values are:
+
+- Staged. Devices offered updates after the monthly gradual release cycle. Suggested for a small, representative part of your production population.
+- Broad. Devices offered updates only after the gradual release cycle completes.
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle.
 
 ```yaml
 Type: SwitchParameter

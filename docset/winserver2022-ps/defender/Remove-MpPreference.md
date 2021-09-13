@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Remove-MpPreference cmdlet removes exclusions for file name extensions, paths, and processes, or default actions for high, moderate, and low threats.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
 ms.date: 12/20/2016
@@ -72,7 +72,7 @@ This command will exclude only that specific file app.exe in that specific folde
 ## PARAMETERS
 
 ### -AllowDatagramProcessingOnWinServer
-Specifies whether to disable inspection of UDP connections on Windows Server.
+Removes whether to disable inspection of UDP connections on Windows Server.
 
 ```yaml
 Type: SwitchParameter
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNetworkProtectionDownLevel
-Specifies whether to allow network protection to be set to Enabled or Audit Mode on Windows versions before 1709.
+Removes whether to allow network protection to be set to Enabled or Audit Mode on Windows versions before 1709.
 
 ```yaml
 Type: SwitchParameter
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNetworkProtectionOnWinServer
-Specifies whether to allow network protection to be set to Enabled or Audit Mode for Windows Server.
+Removes whether to allow network protection to be set to Enabled or Audit Mode for Windows Server.
 
 ```yaml
 Type: SwitchParameter
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControlledFolderAccessProtectedFolders
-Specifies additional folders to protect.
+Specifies more folders to protect.
 
 ```yaml
 Type: String[]
@@ -388,7 +388,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDatagramProcessing
-Specifies whether to disable inspection of UDP connections.
+Removes whether to disable inspection of UDP connections.
 
 ```yaml
 Type: SwitchParameter
@@ -403,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDnsOverTcpParsing
-Specifies whether to disable inspection of DNS traffic that occurs over a TCP channel.
+Removes whether to disable inspection of DNS traffic that occurs over a TCP channel.
 
 ```yaml
 Type: SwitchParameter
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDnsParsing
-Specifies whether to disable inspection of DNS traffic that occurs over a UDP channel.
+Removes whether to disable inspection of DNS traffic that occurs over a UDP channel.
 
 ```yaml
 Type: SwitchParameter
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableGradualRelease
-Specifies whether to disable gradual rollout of monthly and daily Windows Defender updates. 
+Removes whether to disable gradual rollout of monthly and daily Windows Defender updates. 
 If you enable this option, devices are offered all updates after the gradual release cycle finishes.
 Consider this option for datacenter computers that only receive limited updates. 
 
@@ -473,7 +473,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableHttpParsing
-Specifies whether disable inspection of HTTP traffic.
+Removes whether disable inspection of HTTP traffic.
 If **EnableNetworkProtection** has the value `Enabled`, HTTP connections to malicious websites can be blocked.
 
 ```yaml
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableInboundConnectionFiltering
-Specifies whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
+Removes whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
 Type: SwitchParameter
@@ -549,7 +549,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRdpParsing
-Specifies whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
+Removes whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
 Type: SwitchParameter
@@ -655,7 +655,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableSshParsing
-Specifies whether to disable inspection of SSH traffic.
+Removes whether to disable inspection of SSH traffic.
 By default, Network Protection inspects SSH traffic.
 
 ```yaml
@@ -671,7 +671,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableTlsParsing
-Specifies whether to disable inspection of TLS traffic, also known as HTTPS.
+Removes whether to disable inspection of TLS traffic, also known as HTTPS.
 By default, Network Protection inspects TLS traffic.
 
 ```yaml
@@ -702,7 +702,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDnsSinkhole
-Specifies whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks. 
+Removes whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks. 
 
 ```yaml
 Type: SwitchParameter
@@ -717,7 +717,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileHashComputation
-Specifies whether to enable file hash computation.
+Removes whether to enable file hash computation.
 When this feature is enabled, Windows Defender computes hashes for files it scans.
 
 ```yaml
@@ -733,7 +733,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFullScanOnBatteryPower
-Specifies whether Windows Defender performs a full scan while on battery power.
+Removes whether Windows Defender performs a full scan while on battery power.
 
 ```yaml
 Type: SwitchParameter
@@ -748,7 +748,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLowCpuPriority
-Specifies whether Windows Defender uses low CPU priority for scheduled scans.
+Removes whether Windows Defender uses low CPU priority for scheduled scans.
 
 ```yaml
 Type: SwitchParameter
@@ -880,7 +880,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUseProxyOnly
-Specifies whether to force the device to use only the proxy.
+Removes whether to force the device to use only the proxy.
 
 ```yaml
 Type: SwitchParameter
@@ -940,7 +940,7 @@ Accept wildcard characters: False
 ```
 
 ### -MeteredConnectionUpdates
-Specifies whether to update managed devices to update through metered connections.
+Removes whether to update managed devices to update through metered connections.
 Data charges may apply.
 
 ```yaml
@@ -1355,7 +1355,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureBlobUpdateInterval
-Specifies the signature update interval.
+Removes the signature update interval.
 
 ```yaml
 Type: SwitchParameter

@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControlledFolderAccessProtectedFolders
-Specifies additional folders to protect.
+Specifies more folders to protect.
 
 ```yaml
 Type: String[]

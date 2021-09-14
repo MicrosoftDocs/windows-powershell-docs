@@ -153,9 +153,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
+### System.String
+
+### System.Nullable`1[[Microsoft.PowerShell.Cmdletization.GeneratedTypes.Bgp.RouteType, Microsoft.PowerShell.Cmdletization.GeneratedTypes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#BgpRouteInfo[]
+### Microsoft.Management.Infrastructure.CimInstance[]
+
+### Microsoft.Management.Infrastructure.CimInstance#BgpRouteInfo
 
 ## NOTES
 

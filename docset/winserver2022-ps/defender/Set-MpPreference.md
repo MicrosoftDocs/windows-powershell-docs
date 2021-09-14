@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
 ms.date: 12/20/2016
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ### -AttackSurfaceReductionOnlyExclusions
 Exclude files and paths from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
 
-For more information about excluding files and folders from [ASR rules](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
+For more information about excluding files and folders from [ASR rules](/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
 
 ```yaml
 Type: String[]
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 
 ### -AttackSurfaceReductionRules_Actions
 Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
-If you add multiple rules as a comma separated list, specify their states separately as a comma separated list.
+If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
 
 ```yaml
 Type: ASRRuleActionType[]
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 
 ### -AttackSurfaceReductionRules_Ids
 Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
-If you add multiple rules as a comma separated list, specify their states separately as a comma separated list.
+If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
 
 ```yaml
 Type: String[]
@@ -489,10 +489,10 @@ Specifies whether to disable gradual rollout of monthly and daily Windows Defend
 If you enable this option, devices are offered all updates after the gradual release cycle finishes.
 Consider this option for datacenter computers that only receive limited updates. 
 
-This setting applies to both monthly as well as daily updates.
-It overrides any previously configured channel selections for platform and engine updates. 
+This setting applies to both monthly and daily updates.
+It overrides configured channel selections for platform and engine updates. 
 
-If you disable or do not configure this policy, the device remains in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates.
+If you disable or do not configure this policy, the device remains in Current Channel (Default) unless specified otherwise in specific channels.
 The device stays up to date automatically during the gradual release cycle, which is suitable for most devices. 
 
 This policy is available starting with platform version 4.18.2106.5 and later.
@@ -526,7 +526,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableInboundConnectionFiltering
-Specifies whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
+Specifies whether to inspect only outbound connections.
+By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
 Type: Boolean
@@ -591,7 +592,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRdpParsing
-Specifies whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
+Specifies whether to inspect only outbound connections.
+By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
 Type: Boolean
@@ -779,7 +781,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFullScanOnBatteryPower
-Specifies whether Windows Defender performs a full scan while on battery power.
+Specifies whether Windows Defender does a full scan while on battery power.
 
 ```yaml
 Type: Boolean

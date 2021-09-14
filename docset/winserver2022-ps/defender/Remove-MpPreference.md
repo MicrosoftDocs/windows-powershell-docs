@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ### -AttackSurfaceReductionOnlyExclusions
 Exclude files and paths from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
 
-For more information about excluding files and folders from [ASR rules](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
+For more information about excluding files and folders from [ASR rules](/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
 
 ```yaml
 Type: String[]
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 ### -AttackSurfaceReductionRules_Actions
 Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
-If you add multiple rules as a comma separated list, specify their states separately as a comma separated list.
+If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
 
 ```yaml
 Type: ASRRuleActionType[]
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 
 ### -AttackSurfaceReductionRules_Ids
 Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
-If you add multiple rules as a comma separated list, specify their states separately as a comma separated list.
+If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
 
 ```yaml
 Type: String[]
@@ -452,7 +452,7 @@ Removes whether to disable gradual rollout of monthly and daily Windows Defender
 If you enable this option, devices are offered all updates after the gradual release cycle finishes.
 Consider this option for datacenter computers that only receive limited updates. 
 
-This setting applies to both monthly as well as daily updates.
+This setting applies to both monthly and daily updates.
 It overrides any previously configured channel selections for platform and engine updates. 
 
 If you disable or do not configure this policy, the device remains in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates.
@@ -489,7 +489,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableInboundConnectionFiltering
-Removes whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
+Removes whether to inspect only outbound connections.
+By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
 Type: SwitchParameter
@@ -609,7 +610,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningMappedNetworkDrivesForFullScan
-Remove whether to scan mapped network drives. If you specify a value of $False or do not specify a value, Windows Defender scans mapped network drives.
+Remove whether to scan mapped network drives.
+If you specify a value of `$False` or do not specify a value, Windows Defender scans mapped network drives.
 
 ```yaml
 Type: SwitchParameter
@@ -733,7 +735,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFullScanOnBatteryPower
-Removes whether Windows Defender performs a full scan while on battery power.
+Removes whether Windows Defender does a full scan while on battery power.
 
 ```yaml
 Type: SwitchParameter

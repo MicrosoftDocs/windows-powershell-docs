@@ -23,6 +23,7 @@ New-NetFirewallDynamicKeywordAddress [-Id <String>] [-Keyword <String>] [-Addres
 
 ## DESCRIPTION
 The **New-NetFirewallDynamicKeywordAddress** cmdlet creates a dynamic keyword address.
+
 A firewall rule can use dynamic keyword addresses instead of explicitly defining IP addresses for its remote address condition.
 
 ## EXAMPLES
@@ -199,6 +200,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-NetFirewallDynamicKeywordAddress](Get-NetFirewallDynamicKeywordAddress.md)
+
+[Remove-NetFirewallDynamicKeywordAddress](Remove-NetFirewallDynamicKeywordAddress.md)
+
+[Update-NetFirewallDynamicKeywordAddress](Update-NetFirewallDynamicKeywordAddress.md)

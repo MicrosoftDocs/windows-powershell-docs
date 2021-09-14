@@ -1,5 +1,5 @@
 ---
-description:
+description: The Update-NetFirewallDynamicKeywordAddress cmdlet updates a dynamic keyword address.
 external help file: NetFirewallDynamicKeywordAddress.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
 ms.date: 9/20/2021
@@ -11,7 +11,7 @@ title: Update-NetFirewallDynamicKeywordAddress
 # Update-NetFirewallDynamicKeywordAddress
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Updates a dynamic keyword address.
 
 ## SYNTAX
 
@@ -21,21 +21,32 @@ Update-NetFirewallDynamicKeywordAddress [-Id <String>] [-Addresses <String>] [-A
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Update-NetFirewallDynamicKeywordAddress** cmdlet updates a dynamic keyword address.
+Specify a dynamic keyword address by ID.
+
+A firewall rule can use dynamic keyword addresses instead of explicitly defining IP addresses for its remote address condition.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update a dynamic keyword address
 ```powershell
-PS C:\> {{ Add example code here }}
+Update-NetFirewallDynamicKeywordAddress Id 258741ed-94a3-406b-9b0c-81fb145a4592 -Address 10.0.0.15
 ```
 
-{{ Add example description here }}
+This example updates a dynamic keyword address to the specified value.
+
+### Example 2: Append an address to a dynamic keyword address
+```powershell
+Update-NetFirewallDynamicKeywordAddress Id 258741ed-94a3-406b-9b0c-81fb145a4592 -Address 192.0.0.1 -Append $True
+```
+
+This example adds the specified address to a dynamic keyword address.
+
 
 ## PARAMETERS
 
 ### -Addresses
-{{ Fill Addresses Description }}
+Specifies the addresses for the dynamic keyword address.
 
 ```yaml
 Type: String
@@ -50,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -Append
-{{ Fill Append Description }}
+Specifies whether to append the specified address to the dynamic keyword address.
 
 ```yaml
 Type: Boolean
@@ -97,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+Specifies GUID of the dynamic keyword address to update.
 
 ```yaml
 Type: String
@@ -141,3 +152,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-NetFirewallDynamicKeywordAddress](Get-NetFirewallDynamicKeywordAddress.md)
+
+[New-NetFirewallDynamicKeywordAddress](New-NetFirewallDynamicKeywordAddress.md)
+
+[Remove-NetFirewallDynamicKeywordAddress](Remove-NetFirewallDynamicKeywordAddress.md)

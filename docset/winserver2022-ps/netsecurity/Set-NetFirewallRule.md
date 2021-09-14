@@ -907,7 +907,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDynamicKeywordAddresses
-{{ Fill RemoteDynamicKeywordAddresses Description }}
+Specifies dynamic keyword addresses that match this rule.
 
 ```yaml
 Type: String[]
@@ -1080,6 +1080,8 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Get-NetFirewallServiceFilter](./Get-NetFirewallServiceFilter.md)
 
+[New-NetFirewallDynamicKeywordAddress](New-NetFirewallDynamicKeywordAddress.md)
+
 [New-NetFirewallRule](./New-NetFirewallRule.md)
 
 [Open-NetGPO](./Open-NetGPO.md)
@@ -1091,8 +1093,6 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Save-NetGPO](./Save-NetGPO.md)
 
 [Set-NetIPsecRule](./Set-NetIPsecRule.md)
-
-[Set-NetFirewallRule](./Set-NetFirewallRule.md)
 
 [Set-NetFirewallSetting](./Set-NetFirewallSetting.md)
 

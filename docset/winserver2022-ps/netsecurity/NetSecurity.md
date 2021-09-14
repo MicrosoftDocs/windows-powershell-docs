@@ -66,7 +66,7 @@ Retrieves address filter objects from the target computer.
 Retrieves application filter objects from the target computer.
 
 ### [Get-NetFirewallDynamicKeywordAddress](Get-NetFirewallDynamicKeywordAddress.md)
-{{ Fill in the Synopsis }}
+Gets dynamic keyword addresses.
 
 ### [Get-NetFirewallInterfaceFilter](Get-NetFirewallInterfaceFilter.md)
 Retrieves interface filter objects from the target computer.
@@ -120,7 +120,7 @@ Returns active quick mode security associations (SAs) from the target computer.
 Gets an IPsec rule from the target computer.
 
 ### [New-NetFirewallDynamicKeywordAddress](New-NetFirewallDynamicKeywordAddress.md)
-{{ Fill in the Synopsis }}
+Creates a dynamic keyword address.
 
 ### [New-NetFirewallRule](New-NetFirewallRule.md)
 Creates a new inbound or outbound firewall rule and adds the rule to the target computer.
@@ -159,7 +159,7 @@ Creates an IPsec rule that defines security requirements for network connections
 Creates a cached copy of the Group Policy Object (GPO) to modify locally.
 
 ### [Remove-NetFirewallDynamicKeywordAddress](Remove-NetFirewallDynamicKeywordAddress.md)
-{{ Fill in the Synopsis }}
+Removes dynamic keyword addresses.
 
 ### [Remove-NetFirewallRule](Remove-NetFirewallRule.md)
 Deletes one or more firewall rules that match the specified criteria.
@@ -276,7 +276,7 @@ Displays all of the existing IPsec rules and associated objects in a fully expan
 Gets the list of IP addresses to be added and deleted to an IPsec rule based on the differences detected between the existing rule IP addresses and the specified IP addresses.
 
 ### [Update-NetFirewallDynamicKeywordAddress](Update-NetFirewallDynamicKeywordAddress.md)
-{{ Fill in the Synopsis }}
+Updates a dynamic keyword address.
 
 ### [Update-NetIPsecRule](Update-NetIPsecRule.md)
 Updates an IPsec rule by adding or removing a set of IP addresses.

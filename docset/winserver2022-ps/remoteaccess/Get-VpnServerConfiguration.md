@@ -131,7 +131,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnServerIPsecConfiguration.TunnelType
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#VpnServerIPsecConfiguration
 

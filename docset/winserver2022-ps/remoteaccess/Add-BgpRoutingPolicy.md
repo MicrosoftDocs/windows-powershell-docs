@@ -421,7 +421,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.String[]
+
+### System.Nullable`1[[System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.Bgp.PolicyType
+
+### System.Net.IPAddress
+
+### System.Net.IPAddress[]
+
+### System.UInt32[]
+
+### System.Management.Automation.SwitchParameter
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#BgpRoutingPolicyConfig
 

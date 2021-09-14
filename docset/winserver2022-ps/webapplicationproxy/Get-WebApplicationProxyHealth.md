@@ -52,10 +52,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### Microsoft.IdentityServer.ApplicationProxy.Management.PowerShell.Health.WebAppProxyHealthStatus
-The return value is 1 if healthy, and any other value for non-healthy.
+### System.Object
 
 ## NOTES
 

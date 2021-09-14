@@ -212,11 +212,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
+
+### System.Net.IPAddress
 
 ## OUTPUTS
 
+### Microsoft.Management.Infrastructure.CimInstance
+
 ### Microsoft.Management.Infrastructure.CimInstance#DAEntryPoint
+
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 

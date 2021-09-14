@@ -92,22 +92,10 @@ Indicates that the AppLocker policy allows all local Windows components.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: FileInformation
+Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AllowWindows
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -262,7 +250,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.AppLockerPolicy
-**AppLockerPolicy**
 
 ### System.String
 

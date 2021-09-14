@@ -23,7 +23,7 @@ New-SmbGlobalMapping [[-LocalPath] <String>] [-RemotePath] <String> -Credential 
 ```
 
 ## DESCRIPTION
-The New-SmbGlobalMapping cmdlet creates an SMB global mapping on the SMB client to an SMB share. Global mappings allow all users to use the same mapping. Its primary use is for Windows Containers.
+The **New-SmbGlobalMapping** cmdlet creates an SMB global mapping on the SMB client to an SMB share. Global mappings allow all users to use the same mapping. Its primary use is for Windows Containers.
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ Status Local Path Remote Path
 OK     G:         \\fs1.contoso.com\public 
 ```
 
-This command will gather the credentials for the global mapping. It then maps the remote share path “\\fs1.contoso.com\public” to the “G:” drive letter. Any users, applications, or containers can now access data on the G: drive.
+This command will gather the credentials for the global mapping. It then maps the remote share path "\\fs1.contoso.com\public" to the "G:" drive letter. Any users, applications, or containers can now access data on the G: drive.
 
 ## PARAMETERS
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies a credential gathered with Get-Credential
+Specifies a credential gathered with Get-Credential.
 
 ```yaml
 Type: PSCredential
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Persistent
-Indicates that this connection is recreated after reboot
+Indicates that this connection is recreated after reboot.
 
 ```yaml
 Type: Boolean

@@ -5,7 +5,7 @@ Module Name: SmbShare
 ms.date: 08/31/2021
 online version: https://docs.microsoft.com/powershell/module/smbshare/get-smbservercertificatemapping?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Get-SmbCertificateMapping
+title: Get-SmbServerCertificateMapping
 ---
 
 # Get-SmbServerCertificateMapping
@@ -31,7 +31,7 @@ The **Get-SmbServerCertificateMapping** cmdlet retrieves the certificates associ
 This command retrieves the certificate mapped to two SMB over QUIC server names that clients can connect to, `fs2.contoso.com` and `2022-ae-02.corp.contoso.com`.
 
 ```powershell
-Get-SmbServerCertificateMapping
+PS C:\> Get-SmbServerCertificateMapping
 ```
 ```output
 Name                        Subject       Thumbprint                               DisplayName StoreName Type Flags 
@@ -91,9 +91,9 @@ Accept wildcard characters: False
 Specifies if `NamedPipes` are enabled for SMB over QUIC. The acceptable values for this parameter are: 
 
 
-- `None` Remove all flags 
-- `AllowNamedPipe` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides value of RestrictNamedPipeAccessOverQuic) 
-- `DefaultCert` Not used
+- `None:` Remove all flags 
+- `AllowNamedPipe:` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides value of RestrictNamedPipeAccessOverQuic) 
+- `DefaultCert:` Not used
 
 ```yaml
 Type: Flags[]
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ### -Type
 Specifies the type of certificate mapping. The acceptable value for this parameter is:  
 
-`QUIC` Certificate mapping is for SMB over QUIC.
+`QUIC:` Certificate mapping is for SMB over QUIC.
 
 ```yaml
 Type: Type[]

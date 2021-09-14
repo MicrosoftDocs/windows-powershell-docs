@@ -31,7 +31,7 @@ The Remove-SmbComponent cmdlet removes SMB1 components. SMB1 is a deprecated and
 This command removes all SMB1 components, including SMB1 server, SMB1 client, and the SMB1 automatic removal service.
 
 ```powershell
-Remove-SmbComponent -Name SMB1Protocol
+PS C:\> Remove-SmbComponent -Name SMB1Protocol
 ```
 
 ## PARAMETERS

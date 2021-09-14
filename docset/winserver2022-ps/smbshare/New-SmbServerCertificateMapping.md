@@ -5,7 +5,7 @@ Module Name: SmbShare
 online version: https://docs.microsoft.com/powershell/module/smbshare/new-smbservercertificatemapping?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ms.date: 08/31/2021
-title: SmbServerCertificateMapping
+title: New-SmbServerCertificateMapping
 ---
 
 # New-SmbServerCertificateMapping
@@ -89,9 +89,9 @@ Accept wildcard characters: False
 ### -Flags
 Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter are: 
 
-- `None` Remove all flags.
-- `AllowNamedPipe` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides the value of RestrictNamedPipeAccessOverQuic).
-- `DefaultCert` Not used. 
+- `None:` Remove all flags.
+- `AllowNamedPipe:` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides the value of RestrictNamedPipeAccessOverQuic).
+- `DefaultCert:` Not used. 
 
 ```yaml
 Type: Flags

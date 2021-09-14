@@ -297,9 +297,9 @@ Accept wildcard characters: False
 
 Specifies SMB leasing and oplock behaviors for application compatibility. The acceptable values for this parameter are: 
 
-- **Full** Use default lease and oplock behaviors from SMB3.
-- **Shared** Grant read-caching lease but not write or handle-caching.
-- **None** = No oplocks or leases, behave like SMB1 (not recommended).
+- `Full:` Use default lease and oplock behaviors from SMB3.
+- `Shared:` Grant read-caching lease but not write or handle-caching.
+- `None:` = No oplocks or leases, behave like SMB1 (not recommended).
 
 ```yaml
 Type: LeasingMode

@@ -29,7 +29,7 @@ The **Get-SmbServerCertProps** cmdlet retrieves the properties of a certificate 
 This command retrieves the properties and validity of the `2022-ae-02.corp.contoso.com` SMB over QUIC endpoint certificate mapping.
 
 ```powershell
-Get-SmbServerCertProps `-Name` 2022-ae-02.corp.contoso.com
+PS C:\> Get-SmbServerCertProps `-Name` 2022-ae-02.corp.contoso.com
 ```
 ```Output
 Checking Mapping '2022-ae-02.corp.contoso.com'.....

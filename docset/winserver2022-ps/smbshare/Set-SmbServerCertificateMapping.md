@@ -38,7 +38,7 @@ The **Set-SmbServerCertificateMapping** cmdlet modifies a certificate’s associ
 This command enables Named Pipes for the SMB over QUIC endpoint, overriding the default behavior where Named Pipes are disabled for increased security.
 
 ```powershell
-Set-SmbServerCertificateMapping -Name 2022-ae-02.corp.contoso.com -Thumbprint 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F -StoreName my -Flags AllowNamedPipe
+PS C:\> Set-SmbServerCertificateMapping -Name 2022-ae-02.corp.contoso.com -Thumbprint 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F -StoreName my -Flags AllowNamedPipe
 ```
 
 ## PARAMETERS
@@ -76,9 +76,9 @@ Accept wildcard characters: False
 ### -Flags
 Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter are: 
 
-- `None` Remove all flags.
-- `AllowNamedPipe` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides the value of RestrictNamedPipeAccessOverQuic).
-- `DefaultCert` Not used.
+- `None:` Remove all flags.
+- `AllowNamedPipe:` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides the value of RestrictNamedPipeAccessOverQuic).
+- `DefaultCert:` Not used.
 
 ```yaml
 Type: Flags

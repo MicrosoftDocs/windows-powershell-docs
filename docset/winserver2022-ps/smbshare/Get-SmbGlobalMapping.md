@@ -30,7 +30,7 @@ The **Get-SmbGlobalMapping** cmdlet retrieves an SMB global mapping on the SMB c
 This command retrieves the SMB client directory global mappings created for the SMB server. 
 
 ```powershell
-Get-SmbGlobalMapping
+PS C:\> Get-SmbGlobalMapping
 ```
 
 ```output

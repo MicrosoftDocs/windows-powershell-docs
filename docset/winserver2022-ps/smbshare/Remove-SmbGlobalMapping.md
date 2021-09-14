@@ -38,7 +38,7 @@ The Remove-SmbGlobalMapping cmdlet removes the SMB global mapping to an SMB shar
 This command removes an SMB global mapping for the “g:” drive to an SMB share.
 
 ```powershell
-Remove-SmbGlobalMapping -LocalPath g:
+PS C:\> Remove-SmbGlobalMapping -LocalPath g:
 ```
 ```output
 Confirm 

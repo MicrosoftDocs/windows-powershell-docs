@@ -39,7 +39,7 @@ The Remove-SmbServerCertificateMapping cmdlet removes a certificate’s mapping 
 This command removes a certificate mapping for SMB server edge endpoint “fs2.contoso.com” with a specific certificate thumbprint.
 
 ```powershell
-Get-SmbServerCertificateMapping
+PS C:\> Get-SmbServerCertificateMapping
 ```
 
 ```output
@@ -112,9 +112,9 @@ Accept wildcard characters: False
 ### -Flags
 Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter are: 
 
-- `None` Remove all flags.
-- `AllowNamedPipe` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides the value of RestrictNamedPipeAccessOverQuic).
-- `DefaultCert` Not used.
+- `None:` Remove all flags.
+- `AllowNamedPipe:` Enable use of named pipes in SMB over QUIC connections for this mapping (off by default, overrides the value of RestrictNamedPipeAccessOverQuic).
+- `DefaultCert:` Not used.
 
 ```yaml
 Type: Flags[]
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-`QUIC` Certificate mapping is for SMB over QUIC
+`QUIC` Certificate mapping is for SMB over QUIC.
 
 ```yaml
 Type: Type[]

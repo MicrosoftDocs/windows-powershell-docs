@@ -275,11 +275,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### bool, bool, enum, string, bool, string, SecureString, string, PSCredential
+### System.String
+
+### System.Security.SecureString
+
+### System.Management.Automation.SwitchParameter
+
+### Microsoft.CertificateServices.Deployment.Common.AuthenticationType
+
+### System.Management.Automation.PSCredential
 
 ## OUTPUTS
 
-### Microsoft.CertificateServices.Deployment.Commands.CES.EnrollmentServiceResult
+### Microsoft.CertificateServices.Deployment.Common.CES.EnrollmentServiceResult
 
 ## NOTES
 * Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.

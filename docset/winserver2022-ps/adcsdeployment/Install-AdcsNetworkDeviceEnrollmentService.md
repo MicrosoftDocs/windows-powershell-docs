@@ -380,11 +380,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### bool, int, string, string, string, string, string, string, string, string, string, SecurePassword, int, string
+### System.Management.Automation.SwitchParameter
+
+### System.String
+
+### System.Security.SecureString
+
+### System.Int32
+
+### System.Management.Automation.PSCredential
 
 ## OUTPUTS
 
-### Microsoft.CertificateServices.Deployment.Commands.NDES.NetworkDeviceEnrollmentServiceResult
+### Microsoft.CertificateServices.Deployment.Common.NDES.NetworkDeviceEnrollmentServiceResult
 
 ## NOTES
 * Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.

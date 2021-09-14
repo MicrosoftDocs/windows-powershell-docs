@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: WindowsUpdateLog-help.xml
+external help file: WindowsUpdateLog.psm1-help.xml
 Module Name: WindowsUpdate
 ms.date: 12/20/2016
 online version: https://docs.microsoft.com/powershell/module/windowsupdate/get-windowsupdatelog?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -16,8 +16,8 @@ Merges Windows Update .etl files into a single log file.
 ## SYNTAX
 
 ```
-Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>] [[-SymbolServer] <String>]
- [-ProcessingType <String>] [-ForceFlush] [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>] [-ProcessingType <String>] [-ForceFlush]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -167,24 +167,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SymbolServer
-Specifies the URL of Microsoft Symbol Server.
-By default, this value is the Microsoft public symbol server.
-
-This switch is deprecated for Windows 1709 (OS Build 16299) and higher.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -206,9 +188,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
 
+### System.Object
+
 ## NOTES
+
+The **SymbolServer** parameter is deprecated for Windows 1709 (OS Build 16299) and later.
 
 ## RELATED LINKS
 

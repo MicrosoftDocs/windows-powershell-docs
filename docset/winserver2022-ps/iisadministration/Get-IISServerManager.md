@@ -66,9 +66,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### Microsoft.Web.Administration.ServerManager
+### System.Object
 
 ## NOTES
 

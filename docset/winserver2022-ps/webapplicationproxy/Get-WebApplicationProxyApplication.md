@@ -158,9 +158,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Guid
+
+### System.String
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#PublishedWebApp[]
+### Microsoft.Management.Infrastructure.CimInstance#PublishedWebApp
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
 If the cmdlet finds more than one application, it displays a list of the applications.
 If the cmdlet gets a single application, it displays the properties of the application.
 

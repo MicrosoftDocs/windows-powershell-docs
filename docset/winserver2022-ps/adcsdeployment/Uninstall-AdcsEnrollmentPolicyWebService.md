@@ -146,11 +146,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### bool, enum, bool
+### System.Management.Automation.SwitchParameter
+
+### Microsoft.CertificateServices.Deployment.Common.AuthenticationType
 
 ## OUTPUTS
 
-### Microsoft.CertificateServices.Deployment.Commands.CEP.EnrollmentPolicyServiceResult
+### Microsoft.CertificateServices.Deployment.Common.CEP.EnrollmentPolicyServiceResult
 
 ## NOTES
 * Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.

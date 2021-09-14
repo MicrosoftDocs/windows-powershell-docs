@@ -87,7 +87,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 * This cmdlet relies on Active Directory Windows PowerShell cmdlets to perform its actions. Before you use this cmdlet, you must install the Active Directory cmdlets. To install the Active Directory cmdlets, run the following command: 
@@ -99,9 +103,5 @@ To check the functional level of the Active Directory forest, use the Get-ADFore
 
 ## RELATED LINKS
 
-[Install-WindowsFeature](../Microsoft.Windows.ServerManager.Migration/Install-WindowsFeature.md)
-
-[Enable-SmbDelegation](./Enable-SmbDelegation.md)
-
-[Get-SmbDelegation](./Get-SmbDelegation.md)
+[SmbShare](./SmbShare.md)
 

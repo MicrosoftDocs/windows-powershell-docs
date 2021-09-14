@@ -280,9 +280,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.Bgp.PolicyType
+
+### System.String
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#BgpRoutingPolicyConfig[]
+### Microsoft.Management.Infrastructure.CimInstance[]
+
+### Microsoft.Management.Infrastructure.CimInstance#BgpRoutingPolicyConfig
 
 ## NOTES
 

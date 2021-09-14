@@ -334,9 +334,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.Boolean
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespace.State
+
+### System.UInt32
+
+### System.String[]
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_DfsNamespace
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

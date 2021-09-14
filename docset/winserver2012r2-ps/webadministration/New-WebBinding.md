@@ -34,9 +34,10 @@ This command creates a binding on the default website.
 ### Example 2: Add a new SSL site binding
 ```powershell
 PS C:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 443 -HostHeader "TestSite" -Protocol "https"
+PS C:\> (Get-WebBinding -Name "Default Web Site" -Port 443 -Protocol "https").AddSslCertificate("a909502dd82ae41433e6f83886b00d4277a32a7b", "my")
 ```
 
-This command creates an SSL binding on the default website.
+This command creates an SSL binding on the default website and adds a certificate with thumbprint `a909502dd82ae41433e6f83886b00d4277a32a7b` from the computer certificate store.
 
 ## PARAMETERS
 

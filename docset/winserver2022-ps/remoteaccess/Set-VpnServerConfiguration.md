@@ -182,7 +182,7 @@ Specifies the encryption method plumbed in IKE policy.
 Type: EncryptionMethod
 Parameter Sets: CustomPolicy
 Aliases: Encryption
-Accepted values: DES, DES3, AES128, AES192, AES256
+Accepted values: DES, DES3, AES128, AES192, AES256, GCMAES128, GCMAES256
 
 Required: False
 Position: Named
@@ -444,7 +444,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnServerIPsecConfiguration.TunnelType
+
+### System.UInt32
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnServerIPsecConfiguration.EncryptionMethod
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnServerIPsecConfiguration.IntegrityCheckMethod
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnServerIPsecConfiguration.CipherTransformConstants
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnServerIPsecConfiguration.PfsGroup
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnServerIPsecConfiguration.AuthenticationTransformConstants
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnServerIPsecConfiguration.DHGroup
+
+### System.String
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#VpnServerIPsecConfiguration
 

@@ -1,14 +1,17 @@
 ---
+description: The Remove-NetFirewallDynamicKeywordAddress cmdlet removes dynamic keyword addresses.
 external help file: NetFirewallDynamicKeywordAddress.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-online version:
+ms.date: 9/20/2021
+online version: https://docs.microsoft.com/powershell/module/netsecurity/remove-netfirewalldynamickeywordaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Remove-NetFirewallDynamicKeywordAddress
 ---
 
 # Remove-NetFirewallDynamicKeywordAddress
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes dynamic keyword addresses.
 
 ## SYNTAX
 
@@ -32,21 +35,28 @@ Remove-NetFirewallDynamicKeywordAddress -InputObject <CimInstance[]> [-CimSessio
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Remove-NetFirewallDynamicKeywordAddress** cmdlet removes dynamic keyword addresses.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a dynamic keyword address
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-NetFirewallDynamicKeywordAddress Id 258741ed-94a3-406b-9b0c-81fb145a4592 -PolicyStore ContosoPolicyStore
 ```
 
-{{ Add example description here }}
+This example removes the specified dynamic keyword address from the specified policy store.
+
+### Example 2: Remove all AutoResolve dynamic keyword addresses
+```powershell
+Remove-NetFirewallDynamicKeywordAddress -PolicyStore ContosoPolicyStore -AllAutoResolve
+```
+
+This example removes all the AutoRestore dynamic keyword addresses from the specified policy store.
 
 ## PARAMETERS
 
 ### -All
-{{ Fill All Description }}
+Indicates that the cmdlet removes all dynamic keyword addresses.
 
 ```yaml
 Type: SwitchParameter
@@ -61,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllAutoResolve
-{{ Fill AllAutoResolve Description }}
+Indicates that the cmdlet gets all AutoResolve dynamic keyword addresses.
 
 ```yaml
 Type: SwitchParameter
@@ -76,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllNonAutoResolve
-{{ Fill AllNonAutoResolve Description }}
+Indicates that the cmdlet gets all non-AutoResolve dynamic keyword addresses.
 
 ```yaml
 Type: SwitchParameter
@@ -91,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -106,7 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -121,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+Specifies GUIDs of the dynamic keyword addresses to remove.
 
 ```yaml
 Type: String[]
@@ -136,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -151,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -166,7 +179,8 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyStore
-{{ Fill PolicyStore Description }}
+Specifies a policy store.
+The cmdlet removes dynamic key addresses from this policy store.
 
 ```yaml
 Type: String
@@ -181,7 +195,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32

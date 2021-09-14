@@ -1,14 +1,17 @@
 ---
+description: The Get-NetFirewallDynamicKeywordAddress cmdlet gets dynamic keyword addresses.
 external help file: NetFirewallDynamicKeywordAddress.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-online version:
+ms.date: 9/20/2021
+online version: https://docs.microsoft.com/powershell/module/netsecurity/get-netfirewalldynamickeywordaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Get-NetFirewallDynamicKeywordAddress
 ---
 
 # Get-NetFirewallDynamicKeywordAddress
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets dynamic keyword addresses.
 
 ## SYNTAX
 
@@ -25,21 +28,29 @@ Get-NetFirewallDynamicKeywordAddress [-Id] <String[]> [-PolicyStore <String>] [-
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NetFirewallDynamicKeywordAddress** cmdlet gets dynamic keyword addresses.
+You can specify an ID or get all AutoResolve or all non-AutoResolve dynamic keyword addresses.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a dynamic keyword address
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-NetFirewallDynamicKeywordAddress Id 258741ed-94a3-406b-9b0c-81fb145a4592 -PolicyStore ContosoPolicyStore
 ```
 
-{{ Add example description here }}
+This example gets the specified dynamic keyword address from the specified policy store.
+
+### Example 2: Get all AutoResolve dynamic keyword addresses
+```powershell
+Get-NetFirewallDynamicKeywordAddress -PolicyStore ContosoPolicyStore -AllAutoResolve
+```
+
+This example gets all the AutoResolve dynamic keyword addresses from the specified policy store.
 
 ## PARAMETERS
 
 ### -All
-{{ Fill All Description }}
+Indicates that the cmdlet gets all dynamic keyword addresses.
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllAutoResolve
-{{ Fill AllAutoResolve Description }}
+Indicates that the cmdlet gets all AutoResolve dynamic keyword addresses.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllNonAutoResolve
-{{ Fill AllNonAutoResolve Description }}
+Indicates that the cmdlet gets all non-AutoResolve dynamic keyword addresses.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -114,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+Specifies GUIDs of the dynamic keyword addresses to get.
 
 ```yaml
 Type: String[]
@@ -129,7 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyStore
-{{ Fill PolicyStore Description }}
+Specifies a policy store.
+The cmdlet gets dynamic key addresses from this policy store.
 
 ```yaml
 Type: String
@@ -144,7 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32

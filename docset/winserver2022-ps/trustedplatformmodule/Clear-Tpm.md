@@ -17,7 +17,7 @@ Resets a TPM to its default state.
 
 ### Owner Auth (Default)
 ```
-Clear-Tpm [[-OwnerAuthorization] <String>] [<CommonParameters>]
+Clear-Tpm [-UsePPI] [[-OwnerAuthorization] <String>] [<CommonParameters>]
 ```
 
 ### File
@@ -37,8 +37,10 @@ For more information on TPM, see the [Trusted Platform Module Technology Overvie
 ## EXAMPLES
 
 ### Example 1: Reset TPM
+```powershell
+Clear-Tpm
 ```
-PS C:\> Clear-Tpm
+```output
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full
@@ -53,8 +55,10 @@ This command resets the TPM.
 The command uses the owner authorization value stored in the registry instead of specifying a value or using a value in a file.
 
 ### Example 2: Reset TPM with a supplied authorization value
+```powershell
+Clear-Tpm -OwnerAuthorization "vjnuW6rToM41os3xxEpjLdIW2gA="
 ```
-PS C:\> Clear-Tpm -OwnerAuthorization "vjnuW6rToM41os3xxEpjLdIW2gA="
+```output
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full
@@ -68,8 +72,10 @@ SelfTest           : {191, 191, 245, 191...}
 This command resets the TPM by using the specified owner authorization value.
 
 ### Example 3: Reset TPM using authorization value from file
+```powershell
+Clear-Tpm -File "MyOwnerAuthFile.tpm"
 ```
-PS C:\> Clear-Tpm -File "MyOwnerAuthFile.tpm"
+```output
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full
@@ -81,6 +87,27 @@ SelfTest           : {191, 191, 245, 191...}
 ```
 
 This command resets the TPM by using the owner authorization value included in the specified file.
+
+### Example 4: Reset TPM with Physical Presence Interface
+```powershell
+Clear-Tpm -UsePPI
+```
+```output
+TpmReady           : False
+TpmPresent         : True
+ManagedAuthLevel   : Full
+OwnerAuth          :
+OwnerClearDisabled : True
+AutoProvisioning   : Disabled
+LockedOut          : False
+SelfTest           : {191, 191, 245, 191...}
+```
+
+This command resets the TPM by using the Physical Presence Interface (PPI).
+The PPI does not use a value for owner authorization.
+
+Restart the system for the clear action to take effect.
+The restart might require user input to approve the clear request.
 
 ## PARAMETERS
 
@@ -110,6 +137,23 @@ Aliases: o
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -UsePPI
+Use the PPI for the TPM reset.
+Restart the system for the changes to take effect.
+The restart might require user input to approve the clear request.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Owner Auth
+Aliases: ppi
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False

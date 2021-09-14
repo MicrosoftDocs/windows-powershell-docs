@@ -206,9 +206,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.DateTime
+
+### System.Int32
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.FsrmScheduledTaskDaysEnum[]
+
+### System.Int32[]
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMScheduledTask
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

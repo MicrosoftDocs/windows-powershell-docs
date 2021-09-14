@@ -51,6 +51,13 @@ PS C:\> Export-StartLayout -Path "C:\Layouts\Marketing.json"
 
 This command exports the layout of the tiles on the Windows 11 Start menu to a file named Marketing.json in the C:\Layouts folder. Note that JSON is the only supported format for the output file and only the `-Path` parameter is supported.
 
+### Example 3: Export the layout with the applications' IDs
+```
+PS C:\> Export-StartLayout -UseDesktopApplicationID  -Path "C:\Layouts\Marketing.json"
+```
+
+This command exports the layout of the tiles on the Start menu of a computer running Windows 10, version 1809 or later, to a file named Marketing.json in the C:\Layouts folder. It exports the applications' IDs instead of paths to a shortcut link.
+
 ## PARAMETERS
 
 ### -Confirm
@@ -103,7 +110,7 @@ Accept wildcard characters: False
 
 ### -UseDesktopApplicationID
 Specifies that the layout file should export the DesktopApplicationID value instead of DesktopApplicationLinkPath which is the default.
-DesktopApplicationID is the application's ID and DesktopApplicationLinkPath is a path to a shortcut link (.lnk file) to a Windows desktop application.
+DesktopApplicationID is the application's ID and DesktopApplicationLinkPath is a path to a shortcut link (.lnk file) to a Windows desktop application. It is available on computers running Windows 10, version 1809 or later.
 
 ```yaml
 Type: SwitchParameter

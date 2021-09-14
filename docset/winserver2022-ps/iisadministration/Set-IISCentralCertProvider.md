@@ -124,11 +124,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
+
+### System.Security.SecureString
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 

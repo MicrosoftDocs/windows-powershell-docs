@@ -444,9 +444,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespace.Type
+
+### System.Boolean
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespace.State
+
+### System.UInt32
+
+### System.String[]
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespaceRootTarget.State
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespaceRootTarget.ReferralPriorityClass
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_DfsNamespace
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

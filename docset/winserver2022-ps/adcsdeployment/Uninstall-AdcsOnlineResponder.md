@@ -87,7 +87,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.CertificateServices.Deployment.Commands.OCSP.OnlineResponderResult
+### Microsoft.CertificateServices.Deployment.Common.OCSP.OnlineResponderResult
 
 ## NOTES
 * Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.

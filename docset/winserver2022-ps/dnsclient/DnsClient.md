@@ -14,7 +14,10 @@ title: DnsClient
 This reference provides cmdlet descriptions and syntax for all Domain Name System (DNS) Client-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## DnsClient Cmdlets
-### [Add-DnsClientNrptRule](./Add-DnsClientNrptRule.md)
+### [Add-DnsClientDohServerAddress](Add-DnsClientDohServerAddress.md)
+Adds a DoH server configuration to the supported DoH servers.
+
+### [Add-DnsClientNrptRule](Add-DnsClientNrptRule.md)
 Adds a rule to the NRPT.
 
 ### [Clear-DnsClientCache](./Clear-DnsClientCache.md)
@@ -26,7 +29,10 @@ Gets details of the network interfaces configured on a specified computer.
 ### [Get-DnsClientCache](./Get-DnsClientCache.md)
 Retrieves the contents of the DNS client cache.
 
-### [Get-DnsClientGlobalSetting](./Get-DnsClientGlobalSetting.md)
+### [Get-DnsClientDohServerAddress](Get-DnsClientDohServerAddress.md)
+Gets the DoH server configuration.
+
+### [Get-DnsClientGlobalSetting](Get-DnsClientGlobalSetting.md)
 Retrieves global DNS client settings like the suffix search list.
 
 ### [Get-DnsClientNrptGlobal](./Get-DnsClientNrptGlobal.md)
@@ -44,7 +50,10 @@ Gets DNS server IP addresses from the TCP/IP properties on an interface.
 ### [Register-DnsClient](./Register-DnsClient.md)
 Registers all of the IP addresses on the computer onto the configured DNS server.
 
-### [Remove-DnsClientNrptRule](./Remove-DnsClientNrptRule.md)
+### [Remove-DnsClientDohServerAddress](Remove-DnsClientDohServerAddress.md)
+Removes a DoH server configuration from the supported DoH servers.
+
+### [Remove-DnsClientNrptRule](Remove-DnsClientNrptRule.md)
 Removes the specified DNS client NRPT rule.
 
 ### [Resolve-DnsName](./Resolve-DnsName.md)
@@ -53,7 +62,10 @@ Performs a DNS name query resolution for the specified name.
 ### [Set-DnsClient](./Set-DnsClient.md)
 Sets the interface-specific DNS client configurations on the computer.
 
-### [Set-DnsClientGlobalSetting](./Set-DnsClientGlobalSetting.md)
+### [Set-DnsClientDohServerAddress](Set-DnsClientDohServerAddress.md)
+Modifies an existing DoH server configuration.
+
+### [Set-DnsClientGlobalSetting](Set-DnsClientGlobalSetting.md)
 Sets the DNS client global, non-interface specific, settings.
 
 ### [Set-DnsClientNrptGlobal](./Set-DnsClientNrptGlobal.md)

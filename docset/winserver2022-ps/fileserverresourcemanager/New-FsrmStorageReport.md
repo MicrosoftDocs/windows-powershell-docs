@@ -579,10 +579,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.String[]
+
+### System.Management.Automation.SwitchParameter
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.StorageReportReportTypeEnum[]
+
+### System.UInt32
+
+### System.UInt64
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.StorageReportReportFormatsEnum[]
+
+### Microsoft.Management.Infrastructure.CimInstance
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMStorageReport
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

@@ -287,7 +287,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Msmq.PowerShell.Commands.MessageQueue[]
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Disables access for specified standard users to event, service, performance counter, and role and feature inventory data that is collected by Server Manager for a server.
 external help file: ServerManager-help.xml
 Module Name: ServerManager
-ms.date: 09/08/2021
+ms.date: 09/15/2021
 online version: https://docs.microsoft.com/powershell/module/servermanager/disable-servermanagerstandarduserremoting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-ServerManagerStandardUserRemoting
@@ -11,7 +11,8 @@ title: Disable-ServerManagerStandardUserRemoting
 # Disable-ServerManagerStandardUserRemoting
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Disables access for specified standard users to event, service, performance counter, and role and feature inventory data that is collected by Server Manager for a server.
+This cmdlet performs the opposite action, for specified users, of the Enable-ServerManagerStandardUserRemoting cmdlet.
 
 ## SYNTAX
 
@@ -20,26 +21,51 @@ Disable-ServerManagerStandardUserRemoting [-User] <String[]> [-Force] [-WhatIf] 
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Disables access for one or more standard, non-Administrator users to event, service, performance counter, and role and feature inventory data for a server that you are managing by using Server Manager.
+The cmdlet restores the default, administrator-only access to this data, and must be run locally on the server that is being managed by using Server Manager.
+The cmdlet works by performing the following actions:
+
+- Deletes access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
+
+- Removes specified standard users from user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the local server.
+
+- Removes access rights in the Service Control Manager for specified standard users who have access to the status of services on the local server.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+Disable-ServerManagerStandardUserRemoting -User JennyL
 ```
 
-{{ Add example description here }}
+In the following example, the administrator disables access to event, performance counter, service status, and role and feature inventory data for a server that is being managed by using either a local or remote Server Manager console, and for which there is a standard user named JennyL.
+
+### Example 2
+```powershell
+Disable-ServerManagerStandardUserRemoting -User JennyL -WhatIf
+```
+
+In the following example, the administrator views the outcome of running a command to deny a standard user named JennyL access to event, performance counter, service status, and role and feature inventory data for a server that is being managed by using the Server Manager console running on either the local or a remote computer.
+The `WhatIf` parameter is added, meaning that the command actions are not carried out.
+
+### Example 3
+```powershell
+Disable-ServerManagerStandardUserRemoting -User JennyL -Confirm
+```
+
+In the following example, the administrator denies a standard user named JennyL access to event, performance counter, service status, and role and feature inventory data for a server that is being managed by using the Server Manager console running on either the local or a remote computer.
+The `Confirm` parameter is added, meaning that the command prompts for confirmation before performing the action.
 
 ## PARAMETERS
 
 ### -Force
-{{ Fill Force Description }}
+
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -49,12 +75,12 @@ Accept wildcard characters: False
 ```
 
 ### -User
-{{ Fill User Description }}
+Specifies the user account name of a standard user who runs Server Manager, and no longer requires access to event, performance counter, service, and role and feature inventory data for a server that is being managed by using either a local or remote Server Manager console.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -104,6 +130,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-WindowsFeature](./Get-WindowsFeature.md)
+
+[Install-WindowsFeature](./Install-WindowsFeature.md)
+
+[Uninstall-WindowsFeature](./Uninstall-WindowsFeature.md)
+
+[Enable-ServerManagerStandardUserRemoting](./Enable-ServerManagerStandardUserRemoting.md)
+

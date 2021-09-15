@@ -1,9 +1,12 @@
 ---
+description: 
 Module Name: PersistentMemory
 Module Guid: e5905ed9-12bc-4765-b20d-40a37d69c3dd
-Download Help Link: {{ Update Download Link }}
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: {{ Please enter version of help manually (X.X.X.X) format }}
 Locale: en-US
+ms.date: 09/24/2021
+title: PersistentMemory
 ---
 
 # PersistentMemory Module

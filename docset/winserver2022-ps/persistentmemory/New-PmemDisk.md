@@ -1,8 +1,11 @@
 ---
+description: 
 external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
 Module Name: PersistentMemory
-online version:
+online version: https://docs.microsoft.com/powershell/module/persistentmemory/new-pmemdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+ms.date: 09/24/2021
+title: New-PmemDisk
 ---
 
 # New-PmemDisk

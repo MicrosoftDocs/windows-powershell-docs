@@ -179,8 +179,8 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyStore
-Specifies a policy store.
-The cmdlet removes dynamic key addresses from this policy store.
+Specifies the policy store from which to remove dynamic key addresses. 
+A policy store is a container for firewall and IPsec policy. 
 
 ```yaml
 Type: String

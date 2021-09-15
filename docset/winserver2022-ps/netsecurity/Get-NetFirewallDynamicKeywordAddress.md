@@ -142,8 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyStore
-Specifies a policy store.
-The cmdlet gets dynamic key addresses from this policy store.
+Specifies the policy store from which to get dynamic key addresses. 
+A policy store is a container for firewall and IPsec policy.
 
 ```yaml
 Type: String

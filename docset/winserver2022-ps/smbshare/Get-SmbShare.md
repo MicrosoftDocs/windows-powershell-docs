@@ -19,9 +19,10 @@ Retrieves the SMB shares on the computer.
 Get-SmbShare [[-Name] <String[]>] [[-ScopeName] <String[]>] [-Scoped <Boolean[]>] [-Special <Boolean[]>]
  [-ContinuouslyAvailable <Boolean[]>] [-ShareState <ShareState[]>]
  [-FolderEnumerationMode <FolderEnumerationMode[]>] [-CachingMode <CachingMode[]>]
- [-ConcurrentUserLimit <UInt32[]>] [-AvailabilityType <AvailabilityType[]>] [-CaTimeout <UInt32[]>]
- [-EncryptData <Boolean[]>] [-IncludeHidden] [-SmbInstance <SmbInstance>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-LeasingMode <LeasingMode[]>] [-ConcurrentUserLimit <UInt32[]>] [-AvailabilityType <AvailabilityType[]>]
+ [-CaTimeout <UInt32[]>] [-EncryptData <Boolean[]>] [-CompressData <Boolean[]>] [-IncludeHidden]
+ [-SmbInstance <SmbInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -219,6 +220,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CompressData
+Indicates that the shares being enumerated should request compression from clients.
+
+```yaml
+Type: Boolean[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ConcurrentUserLimit
 Specifies the concurrent user limit of the shares being enumerated.
 
@@ -292,6 +308,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LeasingMode
+Specifies SMB leasing and oplock behaviors.
+
+```yaml
+Type: LeasingMode[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

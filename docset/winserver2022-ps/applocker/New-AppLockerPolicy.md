@@ -15,12 +15,22 @@ Creates a new AppLocker policy from a list of file information and other rule cr
 
 ## SYNTAX
 
+### FileInformation
 ```
 New-AppLockerPolicy
  [-FileInformation] <System.Collections.Generic.List`1[Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.FileInformation]>
+ [-AllowWindows]
  [-RuleType <System.Collections.Generic.List`1[Microsoft.Security.ApplicationId.PolicyManagement.RuleType]>]
  [-RuleNamePrefix <String>] [-User <String>] [-Optimize] [-IgnoreMissingFileInformation] [-Xml]
- [-ServiceEnforcement <String>] [<CommonParameters>]
+ [-ServiceEnforcement <ServiceEnforcementMode>] [<CommonParameters>]
+```
+
+### AllowWindows
+```
+New-AppLockerPolicy [-AllowWindows]
+ [-RuleType <System.Collections.Generic.List`1[Microsoft.Security.ApplicationId.PolicyManagement.RuleType]>]
+ [-RuleNamePrefix <String>] [-User <String>] [-Optimize] [-IgnoreMissingFileInformation] [-Xml]
+ [-ServiceEnforcement <ServiceEnforcementMode>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,15 +59,18 @@ The rules are prefixed with `System32:` and the rules apply to the Everyone grou
 
 ### Example 2: Create an AppLocker policy
 ```
-C:\PS>Get-ChildItem C:\Windows\System32\*.exe | Get-AppLockerFileInformation | New-AppLockerPolicy -RuleType Path -User Everyone -Optimize -XML
+C:\PS>Get-ChildItem C:\Windows\System32\*.exe | Get-AppLockerFileInformation | New-AppLockerPolicy -AllowWindows -RuleType Path -User Everyone -Optimize -XML
 <AppLockerPolicy Version="1"><RuleCollection Type="Exe" EnforcementMode="NotConfigured"><FilePathRule Id="31B2F340-016D 
 -11D2-945F-00C04FB984F9" Name="%SYSTEM32%\*" Description="" 10 UserOrGroupSid="S-1-5-21-3165297888-301567370-576410423- 
 13" Action="cAllow"><Conditions><FilePathCondition Path="%SYSTEM32%\*" /></Conditions></FilePathRule></RuleCollection> 
 </AppLockerPolicy>
 ```
 
-This example creates an XML-formatted AppLocker policy for all of the executable files in C:\Windows\System32.
-The policy contains only path rules, the rules are applied to the Everyone group, and the *Optimize* parameter indicates that similar rules are grouped together where possible.
+This example creates an XML-formatted AppLocker policy for all of the executable files in `C:\Windows\System32`.
+The policy contains only path rules.
+The rules are applied to the Everyone group.
+The *Optimize* parameter indicates that similar rules are grouped together where possible.
+The AppLocker policy trusts all local Windows components.
 
 ### Example 3: Create an AppLocker policy from audited events
 ```
@@ -74,14 +87,29 @@ The existing AppLocker policy in the specified GPO will be overwritten.
 
 ## PARAMETERS
 
+### -AllowWindows
+Indicates that the AppLocker policy allows all local Windows components.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FileInformation
 Specifies a file that can contain publisher, path, and hash information.
 Some information may be missing, such as publisher information for an unsigned file.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.FileInformation]
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: FileInformation
+Aliases:
 
 Required: True
 Position: 0
@@ -165,7 +193,7 @@ The acceptable values for this parameter are:
 - ServicesOnly
 
 ```yaml
-Type: String
+Type: ServiceEnforcementMode
 Parameter Sets: (All)
 Aliases: 
 
@@ -222,7 +250,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.AppLockerPolicy
-**AppLockerPolicy**
 
 ### System.String
 

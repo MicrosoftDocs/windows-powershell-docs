@@ -997,7 +997,41 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
+### System.Boolean
+
+### System.String
+
+### System.Nullable`1[[Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.Action, Microsoft.PowerShell.Cmdletization.GeneratedTypes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+### System.Management.Automation.SwitchParameter
+
+### System.Nullable`1[[Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.EnableQoS, Microsoft.PowerShell.Cmdletization.GeneratedTypes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+### System.Nullable`1[[System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+
+### System.UInt32
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.EncryptionMethod
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.IntegrityCheckMethod
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.CipherTransformConstants
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.DHGroup
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.AuthenticationTransformConstants
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.PfsGroup
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
+### System.Nullable`1[[System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#VpnS2SInterface
 

@@ -1,8 +1,11 @@
 ---
+description: 
 external help file: VMDirectStorage-help.xml
 Module Name: VMDirectStorage
-online version:
+ms.date: 09/21/2021
+online version: https://docs.microsoft.com/powershell/module/vmdirectstorage/get-vmdirectvirtualdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Get-VMDirectVirtualDisk
 ---
 
 # Get-VMDirectVirtualDisk

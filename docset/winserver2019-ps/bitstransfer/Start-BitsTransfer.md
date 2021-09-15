@@ -497,7 +497,7 @@ Parameter Sets: (All)
 Aliases: 
 Accepted values: RedirectPolicyAllowSilent, EnableCRLCheck, IgnoreCertCNInvalid, IgnoreCertDateInvalid, IgnoreUnknownCA, IgnoreCertWrongUsage, RedirectPolicyAllowReport, RedirectPolicyDisallow, RedirectPolicyAllowHttpsToHttp
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

@@ -16,17 +16,18 @@ Sets the SMB client configuration.
 ## SYNTAX
 
 ```
-Set-SmbClientConfiguration [-ConnectionCountPerRssNetworkInterface <UInt32>]
+Set-SmbClientConfiguration [-SkipCertificateCheck <Boolean>] [-ConnectionCountPerRssNetworkInterface <UInt32>]
  [-DirectoryCacheEntriesMax <UInt32>] [-DirectoryCacheEntrySizeMax <UInt32>] [-DirectoryCacheLifetime <UInt32>]
  [-DormantFileLimit <UInt32>] [-EnableBandwidthThrottling <Boolean>]
  [-EnableByteRangeLockingOnReadOnlyFiles <Boolean>] [-EnableInsecureGuestLogons <Boolean>]
  [-EnableLargeMtu <Boolean>] [-EnableLoadBalanceScaleOut <Boolean>] [-EnableMultiChannel <Boolean>]
  [-EnableSecuritySignature <Boolean>] [-ExtendedSessionTimeout <UInt32>] [-FileInfoCacheEntriesMax <UInt32>]
  [-FileInfoCacheLifetime <UInt32>] [-FileNotFoundCacheEntriesMax <UInt32>]
- [-FileNotFoundCacheLifetime <UInt32>] [-KeepConn <UInt32>] [-MaxCmds <UInt32>]
- [-MaximumConnectionCountPerServer <UInt32>] [-OplocksDisabled <Boolean>] [-RequireSecuritySignature <Boolean>]
- [-SessionTimeout <UInt32>] [-UseOpportunisticLocking <Boolean>] [-WindowSizeThreshold <UInt32>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FileNotFoundCacheLifetime <UInt32>] [-ForceSMBEncryptionOverQuic <Boolean>] [-KeepConn <UInt32>]
+ [-MaxCmds <UInt32>] [-MaximumConnectionCountPerServer <UInt32>] [-OplocksDisabled <Boolean>]
+ [-RequireSecuritySignature <Boolean>] [-SessionTimeout <UInt32>] [-UseOpportunisticLocking <Boolean>]
+ [-WindowSizeThreshold <UInt32>] [-DisableCompression <Boolean>] [-Force] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,21 +87,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ConnectionCountPerRssNetworkInterface
 Specifies the SMB connection count per each RSS network interface.
 
@@ -151,6 +137,21 @@ Specifies the directory cache lifetime.
 
 ```yaml
 Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableCompression
+Specifies that the SMB client ignores all requests for compression from applications or SMB servers.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -371,6 +372,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForceSMBEncryptionOverQuic
+Specifies that the SMB client uses SMB encryption inside of the SMB over QUIC TLS 1.3 encrypted tunnel even if the SMB server does not require it.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -KeepConn
 Specifies the time, in seconds, before the SMB client session is automatically disconnected.
 
@@ -461,9 +477,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SkipCertificateCheck
+Specifies that the SMB client not trust the SMB over QUIC SMB server certificate issuer. Required when using a self-signed certificate.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -489,6 +520,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

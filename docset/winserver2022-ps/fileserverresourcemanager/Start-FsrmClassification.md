@@ -160,9 +160,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Management.Automation.SwitchParameter
+
+### System.Int32
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMClassification
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

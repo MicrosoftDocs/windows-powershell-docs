@@ -19,10 +19,11 @@ Sets the Server Message Block (SMB) server configuration.
 Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean>]
  [-AsynchronousCredits <UInt32>] [-AuditSmb1Access <Boolean>] [-AutoDisconnectTimeout <UInt32>]
  [-AutoShareServer <Boolean>] [-AutoShareWorkstation <Boolean>] [-CachedOpenLimit <UInt32>]
- [-DurableHandleV2TimeoutInSeconds <UInt32>] [-EnableAuthenticateUserSharing <Boolean>]
- [-EnableDownlevelTimewarp <Boolean>] [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>]
- [-EnableMultiChannel <Boolean>] [-EnableOplocks <Boolean>] [-EnableSecuritySignature <Boolean>]
- [-EnableSMB1Protocol <Boolean>] [-EnableSMB2Protocol <Boolean>] [-EnableStrictNameChecking <Boolean>]
+ [-DisableSmbEncryptionOnSecureConnection <Boolean>] [-DurableHandleV2TimeoutInSeconds <UInt32>]
+ [-EnableAuthenticateUserSharing <Boolean>] [-EnableDownlevelTimewarp <Boolean>]
+ [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>] [-EnableMultiChannel <Boolean>]
+ [-EnableOplocks <Boolean>] [-EnableSecuritySignature <Boolean>] [-EnableSMB1Protocol <Boolean>]
+ [-EnableSMB2Protocol <Boolean>] [-EnableSMBQUIC <Boolean>] [-EnableStrictNameChecking <Boolean>]
  [-EncryptData <Boolean>] [-IrpStackSize <UInt32>] [-KeepAliveTime <UInt32>] [-MaxChannelPerSession <UInt32>]
  [-MaxMpxCount <UInt32>] [-MaxSessionPerConnection <UInt32>] [-MaxThreadsPerQueue <UInt32>]
  [-MaxWorkItems <UInt32>] [-NullSessionPipes <String>] [-NullSessionShares <String>]
@@ -30,8 +31,9 @@ Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean
  [-RequireSecuritySignature <Boolean>] [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>]
  [-Smb2CreditsMin <UInt32>] [-SmbServerNameHardeningLevel <UInt32>] [-TreatHostAsStableStorage <Boolean>]
  [-ValidateAliasNotCircular <Boolean>] [-ValidateShareScope <Boolean>]
- [-ValidateShareScopeNotAliased <Boolean>] [-ValidateTargetName <Boolean>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ValidateShareScopeNotAliased <Boolean>] [-ValidateTargetName <Boolean>]
+ [-RestrictNamedpipeAccessViaQuic <Boolean>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -241,17 +243,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -DisableSmbEncryptionOnSecureConnection
+Specifies that SMB encryption will also be used if configured on the SMB server. By default, QUIC encryption only is used in order to avoid double encryption affecting performance unnecessarily. If a client requires SMB encryption using Set-SmbClientConfiguration -ForceSMBEncryptionOverQuic $true then the DisableSmbEncryptionOnSecureConnection value is ignored and SMB encryption occurs.
 
 ```yaml
-Type: SwitchParameter
+Type: Boolean
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -361,6 +363,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableSecuritySignature
+Indicates whether the security signature is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableSMB1Protocol
 Indicates whether the SMB1 protocol is enabled.
 
@@ -391,8 +408,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableSecuritySignature
-Indicates whether the security signature is enabled.
+### -EnableSMBQUIC
+Specifies that the SMB over QUIC protocol is enabled.
 
 ```yaml
 Type: Boolean
@@ -646,6 +663,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RestrictNamedpipeAccessViaQuic
+Specifies that named pipes are allowed when using SMB over QUIC. A value of $TRUE prevents use of named pipes and is the default.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ServerHidden
 Indicates whether the server announces itself.
 
@@ -708,7 +740,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -794,6 +827,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

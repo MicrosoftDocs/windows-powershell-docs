@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Remove-PmemDedicatedMemory cmdlet gets dedicated persistent memory.
 external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
 Module Name: PersistentMemory
 online version: https://docs.microsoft.com/powershell/module/persistentmemory/remove-pmemdedicatedmemory?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -11,7 +11,7 @@ title: Remove-PmemDedicatedMemory
 # Remove-PmemDedicatedMemory
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets dedicated persistent memory.
 
 ## SYNTAX
 
@@ -20,21 +20,22 @@ Remove-PmemDedicatedMemory -DeviceNumber <UInt32> [-Force] [-WhatIf] [-Confirm] 
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Remove-PmemDedicatedMemory** cmdlet gets dedicated persistent memory.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove dedicated persistent memory
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-PmemDedicatedMemory -DeviceNumber 1
 ```
 
-{{ Add example description here }}
+This example removes the specified dedicated persistent memory.
 
 ## PARAMETERS
 
 ### -DeviceNumber
-{{ Fill DeviceNumber Description }}
+Specifies the device number for the physical device.
+The cmdlet removes dedicated memory for that device.
 
 ```yaml
 Type: UInt32
@@ -49,7 +50,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Indicates that the command removes the  dedicated persistent memory without verification.
+Removing memory results in data loss.
 
 ```yaml
 Type: SwitchParameter
@@ -107,3 +109,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-PmemDedicatedMemory](Get-PmemDedicatedMemory.md)
+
+[New-PmemDedicatedMemory](New-PmemDedicatedMemory.md)

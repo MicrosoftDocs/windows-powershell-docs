@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Get-PmemDisk cmdlet gets persistent memory disks.
 external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
 Module Name: PersistentMemory
 online version: https://docs.microsoft.com/powershell/module/persistentmemory/get-pmemdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -11,7 +11,7 @@ title: Get-PmemDisk
 # Get-PmemDisk
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets persistent memory disks.
 
 ## SYNTAX
 
@@ -41,21 +41,56 @@ Get-PmemDisk [-InputObject <CimInstance>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-PmemDisk** cmdlet gets persistent memory disks.
+You can get disks by number or physical device.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get persistent memory disks
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-PmemDisk
 ```
 
-{{ Add example description here }}
+```output
+DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds UnsafeShutdownCount
+---------- ----   ------------ ------------- ------------ ----------------- -------------------
+2          252 GB Healthy      None          True         {20, 120}         0
+3          252 GB Healthy      None          True         {1020, 1120}      0
+```
+
+This example gets all persistent memory disks.
+
+### Example 2: Get persistent memory disk by number
+```powershell
+Get-PmemDisk -DiskNumber 2
+```
+
+```output
+DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds UnsafeShutdownCount
+---------- ----   ------------ ------------- ------------ ----------------- -------------------
+2          252 GB Healthy      None          True         {20, 120}         0
+```
+
+This example gets the specified persistent memory disk.
+
+### Example 3: Get physical disk information
+```powershell
+Get-PmemDisk | Get-PhysicalDisk | select SerialNumber, HealthStatus, OperationalStatus, OperationalDetails
+```
+
+```output
+SerialNumber               HealthStatus OperationalStatus  OperationalDetails
+------------               ------------ ------------------ ------------------
+802c-01-1602-117cb5fc      Healthy      OK
+802c-01-1602-117cb64f      Warning      Predictive Failure {Threshold Exceeded,NVDIMM_N Error}
+```
+
+This example gets persistent memory disks. It then gets the physical disks that host them and uses the **select** command to display serial number, health status, and operational information.
 
 ## PARAMETERS
 
 ### -DiskNumber
-{{ Fill DiskNumber Description }}
+Specifies the disk number of persistent memory disk to get.
 
 ```yaml
 Type: UInt32[]
@@ -70,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance
@@ -85,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhysicalDevice
-{{ Fill PhysicalDevice Description }}
+Specifies a physical disk.
+The cmdlet gets persistent memory disks on the physical disk.
 
 ```yaml
 Type: PmemPhysicalDevice
@@ -100,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhysicalDeviceId
-{{ Fill PhysicalDeviceId Description }}
+Specifies the ID of a physical disk.
+The cmdlet gets persistent memory disks on the physical disk.
 
 ```yaml
 Type: String[]
@@ -126,6 +163,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-PhysicalDisk](../storage/Get-PhysicalDisk.md)
+
+[New-PmemDisk](New-PmemDisk.md)
+
+[Remove-PmemDisk](Remove-PmemDisk.md)

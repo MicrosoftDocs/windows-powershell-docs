@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Get-PmemDedicatedMemory cmdlet gets dedicated persistent memory.
 external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
 Module Name: PersistentMemory
 online version: https://docs.microsoft.com/powershell/module/persistentmemory/get-pmemdedicatedmemory?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -11,7 +11,7 @@ title: Get-PmemDedicatedMemory
 # Get-PmemDedicatedMemory
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets dedicated persistent memory.
 
 ## SYNTAX
 
@@ -26,21 +26,29 @@ Get-PmemDedicatedMemory [[-DeviceNumber] <UInt32[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-PmemDedicatedMemory** cmdlet gets dedicated persistent memory. You can display all dedicated persistent memory or memory for a specific device.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all dedicated persistent memory
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-PmemDedicatedMemory
 ```
 
-{{ Add example description here }}
+This example gets all dedicated memory.
+
+### Example 2: Get dedicated persistent memory on a device
+```powershell
+Get-PmemDedicatedMemory -DeviceNumber 1
+```
+
+This example gets all dedicated memory for the specified device.
 
 ## PARAMETERS
 
 ### -DeviceNumber
-{{ Fill DeviceNumber Description }}
+Specifies the device number for the physical device.
+The cmdlet gets dedicated memory for that device.
 
 ```yaml
 Type: UInt32[]
@@ -64,6 +72,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-PmemDedicatedMemory](New-PmemDedicatedMemory.md)
+
+[Remove-PmemDedicatedMemory](Remove-PmemDedicatedMemory.md)

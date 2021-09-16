@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Remove-PmemDisk cmdlet removes persistent memory disks.
 external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
 Module Name: PersistentMemory
 online version: https://docs.microsoft.com/powershell/module/persistentmemory/remove-pmemfisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -11,7 +11,7 @@ title: Remove-PmemDisk
 # Remove-PmemDisk
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes persistent memory disks. 
 
 ## SYNTAX
 
@@ -26,21 +26,47 @@ Remove-PmemDisk [-Simulated] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Remove-PmemDisk** cmdlet removes persistent memory disks.
+
+You can use this cmdlet for troubleshooting. 
+If you remove a persistent memory disk, you lose all data on that disk.
+
+You can specify a disk by number or remove disks from simulated persistent memory.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a persistent memory disk
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-PmemDisk -DiskNumber 2 
 ```
 
-{{ Add example description here }}
+```output
+This will remove the persistent memory disk(s) from the system and will result in data loss.
+Remove the persistent memory disk(s)?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
+Removing the persistent memory disk. This may take a few moments.
+```
+
+This example removes a persistent memory disk.
+
+### Example 1: Remove a disk in simulated persistent memory
+```powershell
+Remove-PmemDisk -Simulated
+```
+
+```output
+This will remove the persistent memory disk(s) from the system and will result in data loss.
+Remove the persistent memory disk(s)?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
+Removing the persistent memory disk. This may take a few moments.
+```
+
+This example removes the disks in simulated persistent memory.
 
 ## PARAMETERS
 
 ### -DiskNumber
-{{ Fill DiskNumber Description }}
+Specifies the disk number of persistent memory disk to remove.
 
 ```yaml
 Type: UInt32
@@ -55,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Indicates that the command removes the disk without verification.
+Removing a disk results in data loss.
 
 ```yaml
 Type: SwitchParameter
@@ -70,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Simulated
-{{ Fill Simulated Description }}
+Indicates that the cmdlet removes simulated disks.
 
 ```yaml
 Type: SwitchParameter
@@ -125,6 +152,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-PmemDisk](Get-PmemDisk.md)
+
+[New-PmemDisk](New-PmemDisk.md)

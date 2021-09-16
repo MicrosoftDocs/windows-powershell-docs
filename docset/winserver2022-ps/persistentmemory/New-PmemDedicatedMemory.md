@@ -1,5 +1,5 @@
 ---
-description: 
+description: The New-PmemDedicatedMemory cmdlet creates dedicated persistent memory in the specified region.
 external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
 Module Name: PersistentMemory
 online version: https://docs.microsoft.com/powershell/module/persistentmemory/new-pmemdedicatedmemory?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -11,7 +11,7 @@ title: New-PmemDedicatedMemory
 # New-PmemDedicatedMemory
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Creates dedicated persistent memory in the specified region.
 
 ## SYNTAX
 
@@ -21,21 +21,23 @@ New-PmemDedicatedMemory -RegionId <UInt32[]> [-FriendlyName <String[]>] [-SizeIn
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **New-PmemDedicatedMemory** cmdlet creates dedicated persistent memory in the specified region. You can see unused regions by using the **Get-PmemUnusedRegion** cmdlet.
+
+Small amounts of dedicated storage can be used for memory-mapping data. 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create dedicated persistent memory
 ```powershell
-PS C:\> {{ Add example code here }}
+New-PmemDedicatedMemory -RegionId 1 -SizeInBytes 270582939648
 ```
 
-{{ Add example description here }}
+This command creates dedicated persistent memory from the region with the ID `1`.
 
 ## PARAMETERS
 
 ### -FriendlyName
-{{ Fill FriendlyName Description }}
+Specifies a friendly name for the dedicated persistent memory.
 
 ```yaml
 Type: String[]
@@ -50,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegionId
-{{ Fill RegionId Description }}
+Specifies the ID of the region for the dedicated persistent memory.
 
 ```yaml
 Type: UInt32[]
@@ -65,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -SizeInBytes
-{{ Fill SizeInBytes Description }}
+Specifies the size of the dedicated persistent memory.
 
 ```yaml
 Type: UInt64[]
@@ -92,3 +94,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-PmemUnusedRegion](Get-PmemUnusedRegion.md)
+
+[Get-PmemDedicatedMemory](Get-PmemDedicatedMemory.md)
+
+[Remove-PmemDedicatedMemory](Remove-PmemDedicatedMemory.md)

@@ -2,7 +2,7 @@
 description: The Export-StartLayoutEdgeAssets cmdlet exports secondary tiles for Microsoft Edge that display a custom image.
 external help file: Microsoft.Windows.StartLayout.Commands.dll-Help.xml
 Module Name: StartLayout
-ms.date: 09/03/2021
+ms.date: 09/20/2021
 online version: https://docs.microsoft.com/powershell/module/startlayout/export-startlayoutedgeassets?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -27,16 +27,19 @@ Export-StartLayoutEdgeAssets -LiteralPath <String> [-WhatIf] [-Confirm] [<Common
 ## DESCRIPTION
 The **Export-StartLayoutEdgeAssets** cmdlet exports secondary tiles for Microsoft Edge that display a custom image.
 Use [Export-StartLayout](./Export-StartLayout.md) and [Import-StartLayout](./Import-StartLayout.md) along with the current cmdlet to import the assets.
+For more information, see [Add image for secondary Microsoft Edge tiles](/windows/configuration/start-secondary-tiles).
+
+The provisioning policies that use the exported assets are no longer used with the Windows 11 Start menu.
 
 ## EXAMPLES
 
-### Example 1: Export assets.
+### Example 1: Export assets
 ```powershell
 Export-StartLayoutEdgeAssets -Path "C:\Layouts\assets.xml"
 ```
 
-This example exports the assets to the file `assets.xml` in the C:\Layouts folder.
-This cmdlet does not append `.xml` to a file name.
+This example exports the assets to the file `assets.xml` in the `C:\Layouts` folder.
+This cmdlet doesn't append `.xml` to a file name.
 
 ## PARAMETERS
 

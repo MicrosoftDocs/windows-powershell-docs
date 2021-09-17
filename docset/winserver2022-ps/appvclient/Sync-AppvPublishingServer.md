@@ -51,6 +51,14 @@ PS C:\> Sync-AppvPublishingServer -Name "MyServer"
 
 This command starts publishing refresh for the current user for the server named MyServer.
 
+### Example 2: Start publishing refresh from XML
+```
+PS C:\> Sync-AppvPublishingServer -PublishFromXML -Global
+```
+
+This command starts publishing refresh for the current user using the XML source.
+The command publishes to all users on the computer.
+
 ## PARAMETERS
 
 ### -Force
@@ -131,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublishFromXML
-{{ Fill PublishFromXML Description }}
+Indicates that the cmdlet publishes from XML.
 
 ```yaml
 Type: SwitchParameter

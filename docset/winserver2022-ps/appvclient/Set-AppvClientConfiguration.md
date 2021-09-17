@@ -62,7 +62,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoCleanupEnabled
-{{ Fill AutoCleanupEnabled Description }}
+Specifies whether to remove unpublished packages after restarting your device.
+Without this option, to free extra storage space in previous versions of App-V, you must manually remove unpublished packages from client devices. 
 
 ```yaml
 Type: Boolean
@@ -523,7 +524,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncOnBatteriesEnabled
-{{ Fill SyncOnBatteriesEnabled Description }}
+Specifies whether to sync while on battery power.
 
 ```yaml
 Type: Boolean

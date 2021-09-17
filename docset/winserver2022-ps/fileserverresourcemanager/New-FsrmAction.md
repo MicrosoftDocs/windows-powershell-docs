@@ -453,9 +453,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.ActionTypeEnum
+
+### System.String
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.ActionEventTypeEnum
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.ActionSecurityLevelEnum
+
+### System.Int32
+
+### System.Management.Automation.SwitchParameter
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.ActionReportTypeEnum[]
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMAction
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

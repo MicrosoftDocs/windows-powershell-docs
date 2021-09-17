@@ -26,7 +26,7 @@ Each persistent memory module contains a label storage area that stores configur
 The cmdlet can clear corrupted label storage information on the devices.
 
 This cmdlet causes data loss in persistent memory.
-Use it only as a last resort to fix persistent memory-related issues.
+Use it only as a last resort to fix persistent memory issues.
 
 ## EXAMPLES
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -128,3 +128,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-PmemPhysicalDevice](Get-PmemPhysicalDevice.md)
+
+[New-PmemDisk](New-PmemDisk.md)

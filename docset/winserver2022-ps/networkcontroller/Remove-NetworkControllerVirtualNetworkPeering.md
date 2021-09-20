@@ -1,8 +1,11 @@
 ---
+description: 
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
-online version:
+ms.date: 09/27/2021
+online version: https://docs.microsoft.com/powershell/module/networkcontroller/remove-networkcontrollervirtualnetworkpeering?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Remove-NetworkControllerVirtualNetworkPeering
 ---
 
 # Remove-NetworkControllerVirtualNetworkPeering
@@ -184,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -196,3 +199,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-NetworkControllerVirtualNetworkPeering](Get-NetworkControllerVirtualNetworkPeering.md)
+
+[New-NetworkControllerVirtualNetworkPeering](New-NetworkControllerVirtualNetworkPeering.md)

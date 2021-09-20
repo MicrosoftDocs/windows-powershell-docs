@@ -1,8 +1,11 @@
 ---
+description: 
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
-online version:
+ms.date: 09/27/2021
+online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollerauditingsettingsconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Get-NetworkControllerAuditingSettingsConfiguration
 ---
 
 # Get-NetworkControllerAuditingSettingsConfiguration
@@ -22,9 +25,9 @@ Get-NetworkControllerAuditingSettingsConfiguration [-ConnectionUri <Uri>] [-Cert
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the configuration for auditing settings
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-NetworkControllerAuditingSettingsConfiguration -ConnectionUri https://networkcontroller
 ```
 
 {{ Add example description here }}
@@ -92,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -107,3 +110,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-NetworkControllerAuditingSettingsConfiguration](Set-NetworkControllerAuditingSettingsConfiguration.md)

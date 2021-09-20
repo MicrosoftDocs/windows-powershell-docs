@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureUpdateLogs
-{{ Fill FeatureUpdateLogs Description }}
+Specifies feature update logs.
 
 ```yaml
 Type: FeatureUpdateLogs

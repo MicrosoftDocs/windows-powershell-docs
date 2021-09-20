@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Safe
-{{ Fill Safe Description }}
+Indicates that the cmdlet uses the safe option.
 
 ```yaml
 Type: SwitchParameter

@@ -40,7 +40,7 @@ Disable-NetAdapterPacketDirect -InputObject <CimInstance[]> [-NoRestart] [-PassT
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
@@ -48,7 +48,13 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job.
+Use this parameter to run commands that take a long time to complete. 
+ The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+ For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -78,7 +86,11 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeHidden
-{{ Fill IncludeHidden Description }}
+Indicates that this cmdlet includes both visible and hidden network adapters. By
+default only visible network adapters are included. If a wildcard character is
+used in identifying a network adapter and this parameter has been specified,
+then the wildcard string is matched against both hidden and visible network
+adapters.
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: CimInstance[]
@@ -108,7 +121,10 @@ Accept wildcard characters: False
 ```
 
 ### -InterfaceDescription
-{{ Fill InterfaceDescription Description }}
+Specifies an array of network adapter interface descriptions. For a physical
+network adapter this is typically the name of the vendor of the network adapter
+followed by a part number and description, such as
+`Contoso 12345 Gigabit Network Device`.
 
 ```yaml
 Type: String[]
@@ -123,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies an array of network adapter names.
 
 ```yaml
 Type: String[]
@@ -138,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoRestart
-{{ Fill NoRestart Description }}
+Indicates that the cmdlet does not restart the network adapter after completing the operation.
+Many advanced properties require restarting the network adapter before the new settings take effect.
 
 ```yaml
 Type: SwitchParameter
@@ -153,7 +170,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -168,7 +186,11 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to
+run the cmdlet. If this parameter is omitted or a value of `0` is entered, then
+Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on
+the number of CIM cmdlets that are running on the computer. The throttle limit
+applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32

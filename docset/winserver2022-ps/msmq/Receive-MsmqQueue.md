@@ -150,7 +150,11 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## INPUTS
 
+### Microsoft.Msmq.PowerShell.Commands.MessageQueue
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

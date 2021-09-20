@@ -106,11 +106,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### Microsoft.UpdateServices.Commands.WsusProduct
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 

@@ -138,9 +138,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#RelyingPartyMetadata[]
+### Microsoft.Management.Infrastructure.CimInstance[]
+
+### Microsoft.Management.Infrastructure.CimInstance#RelyingPartyMetadata
 
 ## NOTES
 

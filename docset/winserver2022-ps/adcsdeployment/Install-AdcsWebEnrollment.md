@@ -134,11 +134,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### PSCredential
+### System.String
+
+### System.Management.Automation.PSCredential
 
 ## OUTPUTS
 
-### Microsoft.CertificateServices.Deployment.Commands.WebEnrollment.WebEnrollmentResult
+### Microsoft.CertificateServices.Deployment.Common.WEP.WebEnrollmentResult
 
 ## NOTES
 * Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.

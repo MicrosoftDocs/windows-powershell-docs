@@ -28,7 +28,7 @@ Get-NetworkControllerIpReservation [-NetworkId] <String[]> [-SubnetId] <String[]
 
 ### Example 1: Get the IP reservation
 ```powershell
-Get-NetworkControllerIpReservation -ConnectionUri  https://networkcontroller
+Get-NetworkControllerIpReservation -SubnetId ContosoSubnet -ConnectionUri  https://networkcontroller
 ```
 
 {{ Add example description here }}

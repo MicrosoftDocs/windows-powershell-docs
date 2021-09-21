@@ -23,13 +23,17 @@ New-NetworkControllerBackup [-ResourceId] <String> [[-Tags] <PSObject>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **New-NetworkControllerBackup** cmdlet backs up the Network Controller database.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+$Credential = Get-Credential
+$BackupTime = (get-date).ToString("s").Replace(":", "_")
+$BackupProperties = New-Object Microsoft.Windows.NetworkController.NetworkControllerBackupProperties
+$BackupProperties.BackupPath = "C:\backups\NetworkController\$BackupTime"
+New-NetworkControllerBackup -ConnectionURI https://networkcontroller -Credential $Credential -Properties $BackupProperties -ResourceId $BackupTime -Force
 ```
 
 {{ Add example description here }}

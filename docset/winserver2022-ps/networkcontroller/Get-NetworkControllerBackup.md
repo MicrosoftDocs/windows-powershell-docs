@@ -27,7 +27,8 @@ Get-NetworkControllerBackup [[-ResourceId] <String[]>] -ConnectionUri <Uri> [-Ce
 
 ### Example 1: Get network controller backup
 ```powershell
-Get-NetworkControllerBackup -ConnectionUri https://networkcontroller
+$Credential = Get-Credential
+Get-NetworkControllerBackup -ResourceId BackupUser -ConnectionUri https://networkcontroller -Credential $Credential
 ```
 
 {{ Add example description here }}

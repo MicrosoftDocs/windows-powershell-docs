@@ -54,7 +54,7 @@ For more information about the how to determine the properties for **FineGrained
 
 ## EXAMPLES
 
-### Example 1: Get a fine-grained policy for a specified user
+### Example 1: Get a fine-grained policy using a name
 ```
 PS C:\> Get-ADFineGrainedPasswordPolicy -Identity AdminsPSO
 Name                        : AdminsPSO

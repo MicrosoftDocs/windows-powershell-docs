@@ -512,7 +512,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowPolicy
-Enables an administrator to associate a given printer with a specific Workflow application. This parameter does not allow the administrator to override device-app association that was made using device meta data service. 
+Enables an administrator to associate a given printer with a specific Workflow application. This parameter does not allow the administrator to override the device-app association that was made using the device metadata service. 
 
 
 ```yaml

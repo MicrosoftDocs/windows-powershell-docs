@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterDriver_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/add-printerdriver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-PrinterDriver
@@ -33,14 +33,14 @@ You need administrator credentials to run **Add-PrinterDriver**.
 
 ### Example 1: Add a printer driver
 ```
-PS C:\> Add-PrinterDriver -Name "Driver Name"
+Add-PrinterDriver -Name "Driver Name"
 ```
 
 This command installs the printer driver specified by the *Name* parameter on the local computer.
 
 ### Example 2: Add a printer driver on remote computer
 ```
-PS C:\> Add-PrinterDriver -Name "Driver Name" -ComputerName "printServer"
+Add-PrinterDriver -Name "Driver Name" -ComputerName "printServer"
 ```
 
 This command installs the printer driver specified by *Name* on the remote computer specified by the *ComputerName* parameter.

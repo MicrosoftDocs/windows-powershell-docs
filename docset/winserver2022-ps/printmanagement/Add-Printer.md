@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_Printer_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/add-printer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Printer
@@ -56,7 +56,7 @@ You may need administrative credentials to run **Add-Printer**.
 
 ### Example 1: Add a printer to a local computer
 ```powershell
-PS C:\> Add-Printer -Name "mxdw 2" -DriverName "Microsoft XPS Document Writer v4" -PortName "portprompt:"
+Add-Printer -Name "mxdw 2" -DriverName "Microsoft XPS Document Writer v4" -PortName "portprompt:"
 ```
 
 This command adds a printer with name mxdw2 to the local computer.
@@ -66,7 +66,7 @@ The` portprompt:` port prompts for a file name to save the XPS document when pri
 
 ### Example 2: Add a new network printer connection
 ```powershell
-PS C:\> Add-Printer -ConnectionName \\printServer\printerName
+Add-Printer -ConnectionName \\printServer\printerName
 ```
 
 This command adds a printer by specifying the name of a print server and a shared printer on that server.
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -IppURL
-{{ Fill IppURL Description }}
+Specifies a URL or hostname or IP address for the directed discovery of an IPP (Internet Printing Protocol) printer to add to the specified computer.
 
 ```yaml
 Type: String
@@ -512,7 +512,8 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowPolicy
-{{ Fill WorkflowPolicy Description }}
+Enables an administrator to associate a given printer with a specific Workflow application. This parameter does not allow the administrator to override device-app association that was made using device meta data service. 
+
 
 ```yaml
 Type: WorkflowPolicyEnum

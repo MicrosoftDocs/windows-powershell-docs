@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrintJob_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printjob?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PrintJob
@@ -40,15 +40,15 @@ You do not need administrator credentials to run **Get-PrintJob**.
 
 ### Example 1: Get a list of print jobs
 ```
-PS C:\> Get-PrintJob -PrinterName "PrinterName"
+Get-PrintJob -PrinterName "PrinterName"
 ```
 
 This command retrieves a list of print jobs on the printer named PrinterName.
 
 ### Example 2: Get a list of print jobs using a printer object
 ```
-PS C:\> $Printer = Get-Printer -Name "PrinterName:"
-PS C:\> Get-PrintJob -PrinterObject $Printer
+$Printer = Get-Printer -Name "PrinterName:"
+Get-PrintJob -PrinterObject $Printer
 ```
 
 The first command gets a printer named PrinterName: by using the Get-Printer cmdlet.

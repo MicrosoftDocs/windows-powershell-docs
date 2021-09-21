@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_Printer_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/set-printer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Printer
@@ -53,16 +53,16 @@ You need administrator credentials to run **Set-Printer**.
 
 ### Example 1: Set printer to keep printed jobs
 ```
-PS C:\> Set-Printer -Name "Microsoft XPS Document Writer" -KeepPrintedJobs $True
+Set-Printer -Name "Microsoft XPS Document Writer" -KeepPrintedJobs $True
 ```
 
 This command configures the Microsoft XPS Document Writer printer to keep printed jobs.
 
 ### Example 2: Set printer to keep printed jobs by using a printer object
 ```
-PS C:\>$Printer = Get-Printer -Name "Microsoft XPS Document Writer"
-PS C:\> $Printer.KeepPrintedJobs = $True
-PS C:\> Set-Printer -InputObject $Printer
+$Printer = Get-Printer -Name "Microsoft XPS Document Writer"
+$Printer.KeepPrintedJobs = $True
+Set-Printer -InputObject $Printer
 ```
 
 The first command gets the printer named Microsoft XPS Document Writer by using the Get-Printer cmdlet.
@@ -479,7 +479,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowPolicy
-{{ Fill WorkflowPolicy Description }}
+Enables an administrator to associate a given printer with a specific Workflow application. This parameter does not allow the administrator to override device-app association that was made using device meta data service. 
 
 ```yaml
 Type: WorkflowPolicyEnum

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterConfiguration_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/set-printconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PrintConfiguration
@@ -56,16 +56,16 @@ You need administrator credentials to use **Set-PrintConfiguration**.
 
 ### Example 1: Set the default paper size
 ```
-PS C:\> Set-PrintConfiguration -PrinterName "Microsoft XPS Document Writer" -PaperSize A4
+Set-PrintConfiguration -PrinterName "Microsoft XPS Document Writer" -PaperSize A4
 ```
 
 This command sets the default paper size of the printer named Microsoft XPS Document Writer printer to A4.
 
 ### Example 2: Set the default paper size using print configuration object
 ```
-PS C:\>$PrintConfiguration = Get-PrintConfiguration -PrinterName "Microsoft XPS Document Writer"
-PS C:\> $PrintConfiguration.paperSize = A4
-PS C:\> Set-PrintConfiguration -InputObject $PrintConfiguration
+$PrintConfiguration = Get-PrintConfiguration -PrinterName "Microsoft XPS Document Writer"
+$PrintConfiguration.paperSize = A4
+Set-PrintConfiguration -InputObject $PrintConfiguration
 ```
 
 The first command gets a printer configuration by using **Get-PrintConfiguration**.
@@ -77,7 +77,7 @@ The final command sets the value of the printer configuration to the modified va
 
 ### Example 3: Set the default paper size of all printers
 ```
-PS C:\>$Printers = Get-Printer * Foreach ($Printer in $Printers){     Set-PrintConfiguration -PrinterName $Printer.name -PaperSize A4}
+$Printers = Get-Printer * Foreach ($Printer in $Printers){     Set-PrintConfiguration -PrinterName $Printer.name -PaperSize A4}
 ```
 
 This command gets all the printers into a variable $Printers and then loops through all the printers and displays the properties.

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_Printer_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/remove-printer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Printer
@@ -40,15 +40,15 @@ You do not need administrator credentials to run **Remove-Printer**.
 
 ### Example 1: Remove a specific printer
 ```
-PS C:\> Remove-Printer -Name "Microsoft XPS Document Writer"
+Remove-Printer -Name "Microsoft XPS Document Writer"
 ```
 
 This command removes the printer named Microsoft XPS Document Writer from the local computer.
 
 ### Example 2: Remove a specific printer using a printer object
 ```
-PS C:\>$Printer = Get-Printer -Name "Microsoft XPS Document Writer"
-PS C:\> Remove-Printer -InputObject $Printer
+$Printer = Get-Printer -Name "Microsoft XPS Document Writer"
+Remove-Printer -InputObject $Printer
 ```
 
 The first command gets the printer named Microsoft XPS Document Writer by using the Get-Printer cmdlet.

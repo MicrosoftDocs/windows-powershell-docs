@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterNfcTagTasks_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/write-printernfctag?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Write-PrinterNfcTag
@@ -39,14 +39,14 @@ Specify the printer connection data for this cmdlet by specifying the paths of s
 
 ### Example 1: Write printer connection data to an NFC tag
 ```
-PS C:\>Write-PrinterNfcTag -SharePath "\\ServerName\PrinterName01","\\AlternateServerName\PrinterName02" -WsdAddress "PrinterHost01"
+Write-PrinterNfcTag -SharePath "\\ServerName\PrinterName01","\\AlternateServerName\PrinterName02" -WsdAddress "PrinterHost01"
 ```
 
 This command writes printer connection data to an NFC tag for the specified shared printers and the WSD printer that has the host name PrinterHost01.
 
 ### Example 2: Copy an NFC tag
 ```
-PS C:\>Read-PrinterNfcTag | Write-PrinterNfcTag
+Read-PrinterNfcTag | Write-PrinterNfcTag
 ```
 
 This command uses the Read-PrinterNfcTag cmdlet to read the printer connection data from the next NFC tag that someone taps against the NFC reader.

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrintJob_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/restart-printjob?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restart-PrintJob
@@ -47,15 +47,15 @@ You do not need administrator credentials to use **Restart-PrintJob**.
 
 ### Example 1: Restart a selected print job
 ```
-PS C:\> Restart-PrintJob -PrinterName "PrinterName" -ID 1
+Restart-PrintJob -PrinterName "PrinterName" -ID 1
 ```
 
 This command restarts the print job that has an ID of 1 on the printer named PrinterName.
 
 ### Example 2: Restart a print job by using printer object and the print job ID
 ```
-PS C:\>$Printer = Get-Printer -PrinterName "PrinterName"
-PS C:\> Restart-PrintJob -PrinterObject $Printer -ID 1
+$Printer = Get-Printer -PrinterName "PrinterName"
+Restart-PrintJob -PrinterObject $Printer -ID 1
 ```
 
 The first command gets a printer named PrinterName by using the Get-Printer cmdlet.
@@ -65,8 +65,8 @@ The second command restarts the print job that has the ID 1 on the printer in $P
 
 ### Example 3: Restart print job using job object
 ```
-PS C:\>$PrintJob = Get-PrintJob -PrinterName "PrinterName" -ID 1
-PS C:\> Restart-PrintJob -InputObject $PrintJob
+$PrintJob = Get-PrintJob -PrinterName "PrinterName" -ID 1
+Restart-PrintJob -InputObject $PrintJob
 ```
 
 The first command gets a printer job that has the ID on a printer named PrinterName by using the Get-PrintJob cmdlet.

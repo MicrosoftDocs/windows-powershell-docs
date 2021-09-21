@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_Printer_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Printer
@@ -33,36 +33,36 @@ You do not need administrator credentials to run **Get-Printer**.
 
 ### Example 1: Get a list of printers
 ```
-PS C:\> Get-Printer
+Get-Printer
 ```
 
 This command retrieves a list of printers and printer connections on the local computer.
 
 ### Example 2: Get the information for a specific printer
 ```
-PS C:\>Get-Printer -Name "Microsoft XPS Document Writer"
+Get-Printer -Name "Microsoft XPS Document Writer"
 ```
 
 This command retrieves information for one specific printer named Microsoft XPS Document Writer.
 
 ### Example 3: Get the detailed information for a specific printer
 ```
-PS C:\>Get-Printer -Name "Microsoft XPS Document Writer" | Format-List
+Get-Printer -Name "Microsoft XPS Document Writer" | Format-List
 ```
 
 This command retrieves detailed information for one specific printer named Microsoft XPS Document Writer.
 
 ### Example 4: Get a list of printers on a remote computer
 ```
-PS C:\>Get-Printer -ComputerName PrintServer
+Get-Printer -ComputerName PrintServer
 ```
 
 This command retrieves a list of printers from the computer named PrintServer.
 
 ### Example 5: Get a list of printer objects and then rename the printers
 ```
-PS C:\>$Printer = Get-Printer -Name "Microsoft XPS Document Writer"
-PS C:\> Rename-Printer -InputObject $printer "MXDW"
+$Printer = Get-Printer -Name "Microsoft XPS Document Writer"
+Rename-Printer -InputObject $printer "MXDW"
 ```
 
 The first command gets the printer named Microsoft XPS Document Writer, and then stores it in the $Printer variable.

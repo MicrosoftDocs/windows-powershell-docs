@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrintJob_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/suspend-printjob?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-PrintJob
@@ -48,15 +48,15 @@ You do not need administrator credentials to run **Suspend-PrintJob**.
 
 ### Example 1: Suspend a specific print job
 ```
-PS C:\> Suspend-PrintJob -PrinterName "PrinterName" -ID 1
+Suspend-PrintJob -PrinterName "PrinterName" -ID 1
 ```
 
 This command suspends the print job that has an ID of 1 on the printer named PrinterName.
 
 ### Example 2: Suspend a print job using a printer object and print job ID
 ```
-PS C:\>$Printer = Get-Printer -Name "PrinterName" 
-PS C:\> Suspend-PrintJob -PrinterObject $Printer -ID 1
+$Printer = Get-Printer -Name "PrinterName" 
+Suspend-PrintJob -PrinterObject $Printer -ID 1
 ```
 
 The first command gets a printer named PrinterName by using the Get-Printer cmdlet.
@@ -66,8 +66,8 @@ The second command suspends the print job that an ID of 1 on the printer stored 
 
 ### Example 3: Suspend a print job using a print job object
 ```
-PS C:\>$PrintJob = Get-PrintJob -PrinterName "PrinterName" -ID 1 
-PS C:\> Suspend-PrintJob -InputObject $printJob
+$PrintJob = Get-PrintJob -PrinterName "PrinterName" -ID 1 
+Suspend-PrintJob -InputObject $printJob
 ```
 
 The first command gets a print job that has the ID 1 on the printer named PrinterName by using the Get-PrintJob.

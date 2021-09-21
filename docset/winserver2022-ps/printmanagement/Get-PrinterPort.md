@@ -124,10 +124,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-This cmdlet accepts no input objects.
+### System.String[]
 
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterPort
 This cmdlet returns one or more printer port objects.

@@ -149,10 +149,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-This cmdlet accepts no input objects.
+### System.String[]
+
+### System.String
 
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterProperty
 This cmdlet returns a printer property object.

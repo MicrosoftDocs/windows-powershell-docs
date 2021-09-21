@@ -87,7 +87,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: True
+Accept wildcard characters: False
 ```
 
 ### -ComputerName
@@ -147,7 +147,7 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: True
+Accept wildcard characters: False
 ```
 
 ### -PassThru
@@ -204,13 +204,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer
-This cmdlet accepts one printer object.
+### System.String[]
+
+### Microsoft.Management.Infrastructure.CimInstance[]
 
 ## OUTPUTS
 
-###  
-By default, this cmdlet produces no output.
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer
 
 ## NOTES
 

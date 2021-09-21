@@ -312,14 +312,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer
-This cmdlet accepts one printer object.
+### System.String
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output objects.
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

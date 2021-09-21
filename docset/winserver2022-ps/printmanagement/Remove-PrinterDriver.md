@@ -224,13 +224,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterDriver
-This cmdlet accepts one printer driver object.
+### System.String[]
+
+### Microsoft.Management.Infrastructure.CimInstance[]
 
 ## OUTPUTS
 
-###  
-By default, this cmdlet produces no output.
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterDriver
 
 ## NOTES
 

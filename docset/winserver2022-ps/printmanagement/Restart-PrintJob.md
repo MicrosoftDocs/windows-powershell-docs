@@ -237,13 +237,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrintJob
-This cmdlet accepts one print job object.
+### Microsoft.Management.Infrastructure.CimInstance
+
+### System.String
 
 ## OUTPUTS
 
-### None
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

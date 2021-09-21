@@ -22,8 +22,8 @@ Set-Printer [-Name] <String[]> [-ComputerName <String>] [-Comment <String>] [-Da
  [-PermissionSDDL <String>] [-PortName <String>] [-PrintProcessor <String>] [-Priority <UInt32>]
  [-Published <Boolean>] [-RenderingMode <RenderingModeEnum>] [-SeparatorPageFile <String>] [-Shared <Boolean>]
  [-ShareName <String>] [-StartTime <UInt32>] [-DisableBranchOfficeLogging <Boolean>]
- [-BranchOfficeOfflineLogSizeMB <UInt32>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-BranchOfficeOfflineLogSizeMB <UInt32>] [-WorkflowPolicy <WorkflowPolicyEnum>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
@@ -33,8 +33,8 @@ Set-Printer -InputObject <CimInstance[]> [-Comment <String>] [-Datatype <String>
  [-PortName <String>] [-PrintProcessor <String>] [-Priority <UInt32>] [-Published <Boolean>]
  [-RenderingMode <RenderingModeEnum>] [-SeparatorPageFile <String>] [-Shared <Boolean>] [-ShareName <String>]
  [-StartTime <UInt32>] [-DisableBranchOfficeLogging <Boolean>] [-BranchOfficeOfflineLogSizeMB <UInt32>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-WorkflowPolicy <WorkflowPolicyEnum>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -478,6 +478,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WorkflowPolicy
+{{ Fill WorkflowPolicy Description }}
+
+```yaml
+Type: WorkflowPolicyEnum
+Parameter Sets: (All)
+Aliases:
+Accepted values: Uninitialized, Disabled, Enabled
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -499,10 +530,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer
-This cmdlet accepts one printer object.
+### System.String[]
+
+### Microsoft.Management.Infrastructure.CimInstance[]
 
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer
 This cmdlet returns a printer object.

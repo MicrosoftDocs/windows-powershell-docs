@@ -1,5 +1,5 @@
 ---
-description: Checks whether the local certification authority trusts secure hardware for identity attestation.
+description: Checks whether the local CA trusts secure hardware for identity key attestation.
 external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
 Module Name: ADCSAdministration
 online version: https://docs.microsoft.com/powershell/module/adcsadministration/confirm-caattestationidentitykeyinfo?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -10,7 +10,7 @@ title: Confirm-CAAttestationIdentityKeyInfo
 # Confirm-CAAttestationIdentityKeyInfo
 
 ## SYNOPSIS
-Checks whether the local certification authority trusts secure hardware for identity attestation.
+Checks whether the local CA trusts secure hardware for identity key attestation.
 
 ## SYNTAX
 
@@ -25,11 +25,11 @@ Confirm-CAAttestationIdentityKeyInfo [-Certificate] <X509Certificate2> [<CommonP
 ```
 
 ## DESCRIPTION
-The **Confirm-CAAttestationIdentityKeyInfo** cmdlet checks whether the local certification authority (CA) trusts secure hardware, such as a Trusted Platform Module (TPM), for identity attestation. The Attestation Identity Key replaces the Endorsement Key as an identity for the TPM. An Attestation Identity Key is permanently embedded in the security hardware. The public portion of the key helps to recognize genuine security hardware.
+The **Confirm-CAAttestationIdentityKeyInfo** cmdlet checks whether the local certification authority (CA) trusts secure hardware, such as a Trusted Platform Module (TPM), for identity key attestation. The Attestation Identity Key (AIK) replaces the Endorsement Key as an identity for the TPM. An Attestation Identity Key is permanently embedded in the security hardware. The public portion of the key helps to recognize genuine security hardware.
 
-This cmdlet verifies whether the public certificate connects through a certificate chain to an anchor that the CA trusts. Specify an X509 certificate by using the **Certificate** parameter.
+This cmdlet verifies whether the AIK public certificate connects through a certificate chain to an anchor that the CA trusts. Specify an X509 certificate by using the **Certificate** parameter.
 
-This cmdlet checks whether the attestation identity public key exists as a file in a folder configured at the local CA for key attestation. Specify the public key by using the **PublicKeyHash** parameter.
+This cmdlet checks whether the AIK public key exists as a file in a folder configured at the local CA for key attestation. Specify the public key by using the **PublicKeyHash** parameter.
 
 ## EXAMPLES
 
@@ -40,8 +40,8 @@ Confirm-CAAttestationIdentityKeyInfo -Certificate Contoso87.cer
 True
 ```
 
-This command checks whether the certificate Contoso87.cer connects, by using a certificate chain, to a trusted anchor.
-This example returns a value of $True.
+This command checks whether the certificate `Contoso87.cer` connects, by using a certificate chain, to a trusted anchor.
+This example returns a value of `$True`.
 
 ### Example 2: Check a key
 ```
@@ -51,7 +51,7 @@ False
 ```
 
 The command checks for the public certificate specified as an SHA-256 hash code.
-This example returns a value of $False.
+This example returns a value of `$False`.
 The CA does not have this public key.
 
 ## PARAMETERS
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicKeyHash
-Specifies an Attestation Identity Key public key of the secure hardware, as the result of the SHA-256 hash algorithm.
+Specifies an Attestation Identity Key (AIK) public key of the secure hardware, as the result of the SHA-256 hash algorithm.
 This value is a 64 character hexadecimal string.
 
 ```yaml

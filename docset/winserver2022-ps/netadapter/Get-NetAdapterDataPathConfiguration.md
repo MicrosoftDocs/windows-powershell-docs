@@ -29,16 +29,16 @@ Get-NetAdapterDataPathConfiguration -InterfaceDescription <String[]> [-Profile <
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NetAdapterDataPathConfiguration** cmdlet gets the name of the network adapter, profile, and the profile source.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Get datapath information for network adapter
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Get-NetAdapterDataPathConfiguration -Name "Ethernet"
 ```
 
-{{ Add example description here }}
+Gets the datapath profile and profile source information for the network adapter named **Ethernet**.
 
 ## PARAMETERS
 
@@ -133,7 +133,12 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-{{ Fill Profile Description }}
+Name of one of the four built-in profiles for the operating system.
+
+The profile describes the datapath behavior of NDIS Poll Mode. NDIS Poll Mode is an operating system
+controlled polling execution model that drives the network interface datapath.
+
+Allowed values for this parameter are: **Legacy mode**, **Balanced**, **Passive**, and **Dispatch**.
 
 ```yaml
 Type: String[]

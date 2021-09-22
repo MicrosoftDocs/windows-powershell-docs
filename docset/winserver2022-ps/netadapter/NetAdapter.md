@@ -198,7 +198,7 @@ Sets the binding state of a transport or filter on a network adapter.
 Sets the various checksum offload settings.
 
 ### [Set-NetAdapterDataPathConfiguration](Set-NetAdapterDataPathConfiguration.md)
-{{ Fill in the Synopsis }}
+Sets the name of the network adapter, profile, and the profile source.
 
 ### [Set-NetAdapterEncapsulatedPacketTaskOffload](Set-NetAdapterEncapsulatedPacketTaskOffload.md)
 Sets the encapsulated packet task offload property of the network adapter.

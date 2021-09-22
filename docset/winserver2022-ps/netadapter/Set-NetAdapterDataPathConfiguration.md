@@ -1,8 +1,8 @@
 ﻿---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Sets the name of the network adapter, profile, and the profile source.
 external help file: MSFT_NetAdapterDataPathConfiguration.cdxml-help.xml
 Module Name: NetAdapter
-ms.date: 09/20/2021
+ms.date: 09/22/2021
 online version: https://docs.microsoft.com/powershell/module/netadapter/set-netadapterdatapathconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NetAdapterDataPathConfiguration
@@ -11,7 +11,7 @@ title: Set-NetAdapterDataPathConfiguration
 # Set-NetAdapterDataPathConfiguration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Sets the name of the network adapter, profile, and the profile source.
 
 ## SYNTAX
 
@@ -37,16 +37,19 @@ Set-NetAdapterDataPathConfiguration -InputObject <CimInstance[]> [-Profile <Stri
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Set-NetAdapterDataPathConfiguration** cmdlet sets the name of the network adapter, profile,
+and the profile source. The profile describes the datapath behavior of NDIS Poll Mode. NDIS Poll
+Mode is an operating system controlled polling execution model that drives the network interface
+datapath. Currently, Windows supports four built-in profiles.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Set the profile of a network adapter
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Set-NetAdapterDataPathConfiguration -Name "Ethernet" -Profile Legacy
 ```
 
-{{ Add example description here }}
+Sets the profile to **Legacy** for the network adapter named **Ethernet**.
 
 ## PARAMETERS
 
@@ -57,7 +60,7 @@ Use this parameter to run commands that take a long time to complete.
 You can continue to work in the session while the job completes.
 To manage the job, use the `*-Job` cmdlets.
 To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
- For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+ For more information about Windows PowerShell&reg; background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -173,7 +176,13 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-{{ Fill Profile Description }}
+
+Name of one of the four built-in profiles for the operating system.
+
+The profile describes the datapath behavior of NDIS Poll Mode. NDIS Poll Mode is an operating system
+controlled polling execution model that drives the network interface datapath.
+
+Allowed values for this parameter are: **Legacy mode**, **Balanced**, **Passive**, and **Dispatch**.
 
 ```yaml
 Type: String
@@ -190,7 +199,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to
 run the cmdlet. If this parameter is omitted or a value of `0` is entered, then
-Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on
+Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on
 the number of CIM cmdlets that are running on the computer. The throttle limit
 applies only to the current cmdlet, not to the session or to the computer.
 

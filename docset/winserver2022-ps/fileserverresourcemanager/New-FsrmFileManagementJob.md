@@ -455,9 +455,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.String[]
+
+### System.Management.Automation.SwitchParameter
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.FmjReportFormatsEnum[]
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.FmjReportLogsEnum[]
+
+### System.UInt64
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMFileManagementJob
+### System.Object
 
 ## NOTES
 

@@ -263,7 +263,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.UInt64
+
+### System.Management.Automation.SwitchParameter
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

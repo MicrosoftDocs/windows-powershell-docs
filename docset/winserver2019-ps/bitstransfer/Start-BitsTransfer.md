@@ -21,7 +21,7 @@ Start-BitsTransfer [-Asynchronous] [-Authentication <String>] [-Credential <PSCr
  [-TransferPolicy <CostStates>] [-UseStoredCredential <AuthenticationTargetValue>]
  [-ProxyAuthentication <String>] [-ProxyBypass <String[]>] [-ProxyCredential <PSCredential>]
  [-ProxyList <Uri[]>] [-ProxyUsage <String>] [-RetryInterval <Int32>] [-RetryTimeout <Int32>]
- [-Source] <String[]> [-Suspended] [-TransferType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SecurityFlags <String>] [-Source] <String[]> [-Suspended] [-TransferType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -483,6 +483,24 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SecurityFlags
+Specifies security flags for HTTP to determine if BITS should check the certificate revocation list, ignore certain certificate errors, and define the policy to use when a server redirects the HTTP request.
+
+Note: This parameter is only available in Windows 10.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: RedirectPolicyAllowSilent, EnableCRLCheck, IgnoreCertCNInvalid, IgnoreCertDateInvalid, IgnoreUnknownCA, IgnoreCertWrongUsage, RedirectPolicyAllowReport, RedirectPolicyDisallow, RedirectPolicyAllowHttpsToHttp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

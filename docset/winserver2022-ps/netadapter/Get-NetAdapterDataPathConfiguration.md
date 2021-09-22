@@ -1,8 +1,8 @@
 ﻿---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Gets the name of the network adapter, profile, and the profile source.
 external help file: MSFT_NetAdapterDataPathConfiguration.cdxml-help.xml
 Module Name: NetAdapter
-ms.date: 09/20/2021
+ms.date: 09/21/2021
 online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadapterdatapathconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetAdapterDataPathConfiguration
@@ -11,7 +11,7 @@ title: Get-NetAdapterDataPathConfiguration
 # Get-NetAdapterDataPathConfiguration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets the name of the network adapter, profile, and the profile source.
 
 ## SYNTAX
 
@@ -49,7 +49,7 @@ Use this parameter to run commands that take a long time to complete.
 You can continue to work in the session while the job completes.
 To manage the job, use the `*-Job` cmdlets.
 To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
- For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+ For more information about Windows PowerShell&reg; background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to
 run the cmdlet. If this parameter is omitted or a value of `0` is entered, then
-Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on
+Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on
 the number of CIM cmdlets that are running on the computer. The throttle limit
 applies only to the current cmdlet, not to the session or to the computer.
 

@@ -117,7 +117,7 @@ Gets a list of bindings for a network adapter.
 Gets the various checksum offload settings from network adapters that support these checksum offloads.
 
 ### [Get-NetAdapterDataPathConfiguration](Get-NetAdapterDataPathConfiguration.md)
-{{ Fill in the Synopsis }}
+Gets the name of the network adapter, profile, and the profile source.
 
 ### [Get-NetAdapterEncapsulatedPacketTaskOffload](Get-NetAdapterEncapsulatedPacketTaskOffload.md)
 Gets the network adapters that support encapsulated task offload.

@@ -3,7 +3,7 @@ audiencems.localizationpriority: ITPro
 description: Returns the  a list of the app packages that are installed and configured as non-removable apps.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 09/01/2021
+ms.date: 09/22/2021
 online version: https://docs.microsoft.com/powershell/module/appx/get-nonremovableappspolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NonRemovableAppsPolicy
@@ -156,10 +156,10 @@ Accept wildcard characters: False
 ### -LogLevel
 Specifies the maximum output level shown in the logs. The default log level is 3. The accepted values are as follows:
 
-    - 1 = Error
-    - 2 = Errors and warnings
-    - 3 = Errors, warnings, and information
-    - 4 = All of the information listed previously, plus debug output
+- 1 = Error
+- 2 = Errors and warnings
+- 3 = Errors, warnings, and information
+- 4 = All of the information listed previously, plus debug output
 
 ```yaml
 Type: LogLevel

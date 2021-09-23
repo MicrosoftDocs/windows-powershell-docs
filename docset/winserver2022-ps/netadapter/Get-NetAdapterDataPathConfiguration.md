@@ -2,7 +2,7 @@
 description: Gets the name of the network adapter, profile, and the profile source.
 external help file: MSFT_NetAdapterDataPathConfiguration.cdxml-help.xml
 Module Name: NetAdapter
-ms.date: 09/21/2021
+ms.date: 09/23/2021
 online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadapterdatapathconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetAdapterDataPathConfiguration
@@ -29,11 +29,14 @@ Get-NetAdapterDataPathConfiguration -InterfaceDescription <String[]> [-Profile <
 ```
 
 ## DESCRIPTION
-The **Get-NetAdapterDataPathConfiguration** cmdlet gets the name of the network adapter, profile, and the profile source.
+The **Get-NetAdapterDataPathConfiguration** cmdlet gets the name of the network adapter, profile,
+and the profile source. The profile describes the datapath behavior of NDIS Poll Mode. NDIS Poll
+Mode is an operating system controlled polling execution model that drives the network interface
+datapath.
 
 ## EXAMPLES
 
-### Example 1 - Get datapath information for network adapter
+### Example 1: Get datapath information for network adapter
 ```powershell
 PS> Get-NetAdapterDataPathConfiguration -Name "Ethernet"
 ```
@@ -153,7 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileSource
-{{ Fill ProfileSource Description }}
+
+Indicates the source of the profile configuration source. Values include **BuiltIn** and
+**Custom**.
 
 ```yaml
 Type: UInt32[]
@@ -195,7 +200,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapterDataPathConfigurationSettingData
+
 ## NOTES
 
 ## RELATED LINKS

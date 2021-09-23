@@ -5,7 +5,7 @@ Help Version: 5.0.0.1
 Locale: en-US
 Module Guid: 1042b422-63a8-4016-a6d6-293e19e8f8a6
 Module Name: NetAdapter
-ms.date: 12/20/2016
+ms.date: 09/23/2021
 title: NetAdapter
 ---
 
@@ -31,9 +31,6 @@ Disables IPsec offload on the network adapter, so that the network adapter will 
 
 ### [Disable-NetAdapterLso](./Disable-NetAdapterLso.md)
 Disables all LSO properties, such as LSOv4 and LSOv6, of the network adapter.
-
-### [Disable-NetAdapterPacketDirect](Disable-NetAdapterPacketDirect.md)
-{{ Fill in the Synopsis }}
 
 ### [Disable-NetAdapterPowerManagement](Disable-NetAdapterPowerManagement.md)
 Disables specific power management features on a network adapter.
@@ -76,9 +73,6 @@ Enables IPsec offload on the network adapter.
 
 ### [Enable-NetAdapterLso](./Enable-NetAdapterLso.md)
 Enables LSO properties, such as LSOv4 and LSOv6, of the network adapter.
-
-### [Enable-NetAdapterPacketDirect](Enable-NetAdapterPacketDirect.md)
-{{ Fill in the Synopsis }}
 
 ### [Enable-NetAdapterPowerManagement](Enable-NetAdapterPowerManagement.md)
 Enables specific power management features on the network adapter.
@@ -130,9 +124,6 @@ Gets the IPsec offload properties of the network adapter.
 
 ### [Get-NetAdapterLso](./Get-NetAdapterLso.md)
 Gets the LSO properties of the network adapter.
-
-### [Get-NetAdapterPacketDirect](Get-NetAdapterPacketDirect.md)
-{{ Fill in the Synopsis }}
 
 ### [Get-NetAdapterPowerManagement](Get-NetAdapterPowerManagement.md)
 Gets the power management features of a network adapter.
@@ -208,9 +199,6 @@ Sets the IPsec offload properties of a network adapter.
 
 ### [Set-NetAdapterLso](./Set-NetAdapterLso.md)
 Sets the LSO properties of a network adapter.
-
-### [Set-NetAdapterPacketDirect](Set-NetAdapterPacketDirect.md)
-{{ Fill in the Synopsis }}
 
 ### [Set-NetAdapterPowerManagement](Set-NetAdapterPowerManagement.md)
 Sets the power management properties on the network adapter.

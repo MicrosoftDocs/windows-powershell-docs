@@ -40,7 +40,8 @@ Set-NetAdapterDataPathConfiguration -InputObject <CimInstance[]> [-Profile <Stri
 The **Set-NetAdapterDataPathConfiguration** cmdlet sets the name of the network adapter, profile,
 and the profile source. The profile describes the datapath behavior of NDIS Poll Mode. NDIS Poll
 Mode is an operating system controlled polling execution model that drives the network interface
-datapath. Currently, Windows supports four built-in profiles.
+datapath. Currently, Windows supports four built-in profiles for server and two built-in profiles
+for client. The built-in profiles can only be set using PowerShell.
 
 ## EXAMPLES
 
@@ -182,7 +183,9 @@ Name of one of the four built-in profiles for the operating system.
 The profile describes the datapath behavior of NDIS Poll Mode. NDIS Poll Mode is an operating system
 controlled polling execution model that drives the network interface datapath.
 
-Allowed values for this parameter are: **Legacy mode**, **Balanced**, **Passive**, and **Dispatch**.
+Allowed values for this parameter are: 
+- Windows Server - **Dispatch** (default), **Balanced**, **Legacy mode**, and **Passive**.
+- Windows client - **Balanced** (default)
 
 ```yaml
 Type: String
@@ -256,7 +259,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapterDataPathConfigurationSettingData
+
 ## NOTES
 
 ## RELATED LINKS

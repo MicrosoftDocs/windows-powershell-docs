@@ -151,7 +151,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
+### Microsoft.Management.Infrastructure.CimInstance#VpnSstpProxyRule
 
 ## NOTES
 

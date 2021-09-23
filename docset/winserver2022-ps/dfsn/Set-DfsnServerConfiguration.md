@@ -259,9 +259,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.UInt32
+
+### System.Boolean
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_DfsNamespaceServerConfig
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

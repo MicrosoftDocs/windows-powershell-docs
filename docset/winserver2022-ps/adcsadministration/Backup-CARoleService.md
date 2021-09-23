@@ -175,7 +175,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.Management.Automation.SwitchParameter
+
+### System.Security.SecureString
+
 ## OUTPUTS
+
+### System.Void
 
 ## NOTES
 

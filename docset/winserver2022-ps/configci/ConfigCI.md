@@ -42,8 +42,8 @@ Combines the rules in several Code Integrity policy files.
 ### [New-CIPolicy](./New-CIPolicy.md)
 Creates a Code Integrity policy as an .xml file.
 
-### [New-CIPolicyRule](./New-CIPolicyRule.md)
-Generates Code Integrity policy rules for drivers.
+### [New-CIPolicyRule](New-CIPolicyRule.md)
+Generates Code Integrity policy rules for user mode code and drivers.
 
 ### [Remove-CIPolicyRule](./Remove-CIPolicyRule.md)
 This cmdlet is not supported.
@@ -51,7 +51,10 @@ This cmdlet is not supported.
 ### [Set-CIPolicyIdInfo](./Set-CIPolicyIdInfo.md)
 Modifies the name and ID of a Code Integrity policy.
 
-### [Set-CIPolicyVersion](./Set-CIPolicyVersion.md)
+### [Set-CIPolicySetting](Set-CIPolicySetting.md)
+{{ Fill in the Synopsis }}
+
+### [Set-CIPolicyVersion](Set-CIPolicyVersion.md)
 Updates the version number of the policy.
 
 ### [Set-HVCIOptions](./Set-HVCIOptions.md)

@@ -15,8 +15,15 @@ Creates a signer rule and adds it to a policy.
 
 ## SYNTAX
 
+### Certificate
 ```
-Add-SignerRule -FilePath <String> -CertificatePath <String> [-Kernel] [-User] [-Update] [-Deny]
+Add-SignerRule -FilePath <String> -CertificatePath <String> [-Kernel] [-User] [-Update] [-Supplemental] [-Deny]
+ [<CommonParameters>]
+```
+
+### CertStore
+```
+Add-SignerRule -FilePath <String> -CertStorePath <String> [-Kernel] [-User] [-Update] [-Supplemental] [-Deny]
  [<CommonParameters>]
 ```
 
@@ -46,8 +53,23 @@ Specifies the path of a certificate (.cer) file that this cmdlet uses for the ru
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Certificate
 Aliases: c
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertStorePath
+{{ Fill CertStorePath Description }}
+
+```yaml
+Type: String
+Parameter Sets: CertStore
+Aliases:
 
 Required: True
 Position: Named
@@ -94,6 +116,21 @@ You can add a rule as more than one scenario.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Supplemental
+{{ Fill Supplemental Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

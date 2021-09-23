@@ -18,24 +18,27 @@ Generates Code Integrity policy rules for user mode code and drivers.
 ### DriverFileList
 ```
 New-CIPolicyRule [-DriverFiles <DriverFile[]>] -Level <RuleLevel> [-Fallback <RuleLevel[]>] [-Deny]
- [-ScriptFileNames] [<CommonParameters>]
+ [-ScriptFileNames] [-AllowFileNameFallbacks] [-SpecificFileNameLevel <FileNameLevel>] [-UserWriteablePaths]
+ [<CommonParameters>]
 ```
 
 ### DriverFilePath
 ```
-New-CIPolicyRule -DriverFilePath <String> -Level <RuleLevel> [-Fallback <RuleLevel[]>] [-Deny]
- [-ScriptFileNames] [<CommonParameters>]
+New-CIPolicyRule -DriverFilePath <String[]> [-AppID <String>] -Level <RuleLevel> [-Fallback <RuleLevel[]>]
+ [-Deny] [-ScriptFileNames] [-AllowFileNameFallbacks] [-SpecificFileNameLevel <FileNameLevel>]
+ [-UserWriteablePaths] [<CommonParameters>]
 ```
 
-### FilePathRule
+### PackageFamilyName
 ```
-New-CIPolicyRule -FilePathRule <String> [-Deny]
- [-ScriptFileNames] [<CommonParameters>]
+New-CIPolicyRule [-Fallback <RuleLevel[]>] [-Deny] [-ScriptFileNames] [-AllowFileNameFallbacks]
+ [-SpecificFileNameLevel <FileNameLevel>] [-UserWriteablePaths] [-Package <AppxPackage>] [<CommonParameters>]
 ```
 
-### PackagedAppRule
+### ManualFilePath
 ```
-New-CIPolicyRule -Package <String> [-Deny] [<CommonParameters>]
+New-CIPolicyRule [-Fallback <RuleLevel[]>] [-Deny] [-ScriptFileNames] [-AllowFileNameFallbacks]
+ [-SpecificFileNameLevel <FileNameLevel>] [-UserWriteablePaths] [-FilePathRule <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -243,6 +246,36 @@ This set of commands finds a packaged application matching the specified name an
 
 ## PARAMETERS
 
+### -AllowFileNameFallbacks
+{{ Fill AllowFileNameFallbacks Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppID
+{{ Fill AppID Description }}
+
+```yaml
+Type: String
+Parameter Sets: DriverFilePath
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Deny
 Indicates that this cmdlet creates deny rules instead of the default allow rules.
 
@@ -262,7 +295,7 @@ Accept wildcard characters: False
 Specifies the path of a driver on which this cmdlet bases a rule.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: DriverFilePath
 Aliases: 
 
@@ -314,15 +347,14 @@ This cmdlet will not check whether the filepath string is a valid filepath.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-Accepted values: 
+Parameter Sets: ManualFilePath
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True
-Accept wildcard characters: True
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Level
@@ -330,7 +362,7 @@ Specifies the primary level of detail for generated rules. Refer to [WDAC File R
 
 ```yaml
 Type: RuleLevel
-Parameter Sets: (All)
+Parameter Sets: DriverFileList, DriverFilePath
 Aliases: l
 Accepted values: None, Hash, FileName, FilePath, SignedVersion, PFN, Publisher, FilePublisher, LeafCertificate, PcaCertificate, RootCertificate, WHQL, WHQLPublisher, WHQLFilePublisher
 
@@ -346,13 +378,13 @@ Specifies the packaged app (MSIX/Appx) to base the rule.
 
 ```yaml
 Type: AppxPackage
-Parameter Sets: (All)
-Aliases: None
+Parameter Sets: PackageFamilyName
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -375,10 +407,25 @@ Specifies the attribute of the file off which to base a file name rule. The -Lev
 Refer to [File Name Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values. 
 
 ```yaml
-Type: SwitchParameter
+Type: FileNameLevel
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, OriginalFileName, InternalName, FileDescription, ProductName, PackageFamilyName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserWriteablePaths
+{{ Fill UserWriteablePaths Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

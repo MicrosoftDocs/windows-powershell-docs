@@ -18,14 +18,18 @@ Creates a Code Integrity policy as an .xml file.
 ### Drivers
 ```
 New-CIPolicy [-FilePath] <String> [-DriverFiles <DriverFile[]>] -Level <RuleLevel> [-Fallback <RuleLevel[]>]
- [-Audit] [-ScanPath <String>] [-ScriptFileNames] [-UserPEs] [-NoScript] [-Deny] [-NoShadowCopy]
- [-OmitPaths <String[]>] [-PathToCatroot <String>] [-MultiplePolicyFormat] [<CommonParameters>]
+ [-Audit] [-ScanPath <String>] [-ScriptFileNames] [-AllowFileNameFallbacks]
+ [-SpecificFileNameLevel <FileNameLevel>] [-UserWriteablePaths] [-UserPEs] [-NoScript] [-Deny] [-NoShadowCopy]
+ [-MultiplePolicyFormat] [-OmitPaths <String[]>] [-PathToCatroot <String>] [-AppIdTaggingPolicy]
+ [-AppIdTaggingKey <String[]>] [-AppIdTaggingValue <String[]>] [<CommonParameters>]
 ```
 
 ### Rules
 ```
-New-CIPolicy [-FilePath] <String> -Rules <Rule[]> [-Audit] [-ScanPath <String>] [-ScriptFileNames] [-UserPEs]
- [-NoScript] [-Deny] [-NoShadowCopy] [-OmitPaths <String[]>] [-PathToCatroot <String>] [-MultiplePolicyFormat] [<CommonParameters>]
+New-CIPolicy [-FilePath] <String> -Rules <Rule[]> [-Audit] [-ScanPath <String>] [-ScriptFileNames]
+ [-AllowFileNameFallbacks] [-SpecificFileNameLevel <FileNameLevel>] [-UserWriteablePaths] [-UserPEs]
+ [-NoScript] [-Deny] [-NoShadowCopy] [-MultiplePolicyFormat] [-OmitPaths <String[]>] [-PathToCatroot <String>]
+ [-AppIdTaggingPolicy] [-AppIdTaggingKey <String[]>] [-AppIdTaggingValue <String[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -309,6 +313,66 @@ File rule exceptions cannot use the PCA Certificate, Publisher, Signed Version, 
 
 ## PARAMETERS
 
+### -AllowFileNameFallbacks
+{{ Fill AllowFileNameFallbacks Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppIdTaggingKey
+{{ Fill AppIdTaggingKey Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppIdTaggingPolicy
+{{ Fill AppIdTaggingPolicy Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppIdTaggingValue
+{{ Fill AppIdTaggingValue Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Audit
 Indicates that this cmdlet searches the Code Integrity Audit log for drivers.
 It does not perform a full system scan.
@@ -401,6 +465,22 @@ Aliases: l
 Accepted values: None, Hash, FileName, FilePath, SignedVersion, PFN, Publisher, FilePublisher, LeafCertificate, PcaCertificate, RootCertificate, WHQL, WHQLPublisher, WHQLFilePublisher
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiplePolicyFormat
+Indicates that this cmdlet should create a policy in multiple policy format as opposed to a single policy format. 
+Refer to [Create WDAC policies in Multiple Policy Format](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies#creating-wdac-policies-in-multiple-policy-format) for the difference between the policy formats. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -525,6 +605,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SpecificFileNameLevel
+{{ Fill SpecificFileNameLevel Description }}
+
+```yaml
+Type: FileNameLevel
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UserPEs
 Indicates that this cmdlet includes user-mode files in the scan.
 Specify this parameter only if you do not provide driver files or rules.
@@ -541,14 +636,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MultiplePolicyFormat
-Indicates that this cmdlet should create a policy in multiple policy format as opposed to a single policy format. 
-Refer to [Create WDAC policies in Multiple Policy Format](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies#creating-wdac-policies-in-multiple-policy-format) for the difference between the policy formats. 
+### -UserWriteablePaths
+{{ Fill UserWriteablePaths Description }}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: None
+Aliases:
 
 Required: False
 Position: Named

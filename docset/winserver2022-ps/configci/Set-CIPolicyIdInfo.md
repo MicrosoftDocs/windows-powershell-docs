@@ -16,7 +16,8 @@ Modifies the name and ID of a Code Integrity policy.
 ## SYNTAX
 
 ```
-Set-CIPolicyIdInfo [-FilePath] <String> [-PolicyName <String>] [-PolicyId <String>] [-BasePolicyToSupplementPath <string>] [-SupplementsBasePolicyID <Guid>] [-ResetPolicyID] [<CommonParameters>]
+Set-CIPolicyIdInfo [-FilePath] <String> [-PolicyName <String>] [-SupplementsBasePolicyID <Guid>]
+ [-BasePolicyToSupplementPath <String>] [-ResetPolicyID] [-PolicyId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,6 +49,21 @@ PS C:\> Set-CIPolicyIdInfo -FilePath ".\Supplemental_Policy.xml" -BasePolicyToSu
 This command will extract the PolicyID field from the Base_Policy.xml file and modify the BasePolicyID field in the Supplemental_Policy.xml file.
 
 ## PARAMETERS
+
+### -BasePolicyToSupplementPath
+Specifies the path to a base policy to get the value for the **BasePolicyID** property for a supplemental policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -FilePath
 Specifies the path of a Code Integrity policy .xml file.
@@ -95,13 +111,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BasePolicyToSupplementPath
-Specifies the path to a base policy to get the value for the **BasePolicyID** property for a supplemental policy.
+### -ResetPolicyID
+Resets both the PolicyID and BasePolicyID values. This parameter will convert a single-policy format policy to multi-policy format. 
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: None
+Aliases:
 
 Required: False
 Position: Named
@@ -124,22 +140,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -ResetPolicyID
-Resets both the PolicyID and BasePolicyID values. This parameter will convert a single-policy format policy to multi-policy format. 
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: None
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).

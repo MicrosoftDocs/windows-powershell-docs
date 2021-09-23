@@ -45,7 +45,7 @@ for client. The built-in profiles can only be set using PowerShell.
 
 ## EXAMPLES
 
-### Example 1 - Set the profile of a network adapter
+### Example 1: Set the profile of a network adapter
 ```powershell
 PS> Set-NetAdapterDataPathConfiguration -Name "Ethernet" -Profile Legacy
 ```

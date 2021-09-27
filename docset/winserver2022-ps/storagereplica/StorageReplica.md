@@ -17,7 +17,10 @@ This reference provides the cmdlet description and syntax for the Storage Replic
 ### [Clear-SRMetadata](./Clear-SRMetadata.md)
 Removes unreferenced Storage Replica metadata.
 
-### [Export-SRConfiguration](./Export-SRConfiguration.md)
+### [Dismount-SRDestination](Dismount-SRDestination.md)
+
+
+### [Export-SRConfiguration](Export-SRConfiguration.md)
 Exports replication configuration to a Windows PowerShell script.
 
 ### [Get-SRAccess](./Get-SRAccess.md)
@@ -41,7 +44,10 @@ Grants security access between failover clusters to enable replication.
 ### [Grant-SRDelegation](./Grant-SRDelegation.md)
 Creates a security delegation on a Storage Replica server.
 
-### [New-SRGroup](./New-SRGroup.md)
+### [Mount-SRDestination](Mount-SRDestination.md)
+
+
+### [New-SRGroup](New-SRGroup.md)
 Creates a replication group.
 
 ### [New-SRPartnership](./New-SRPartnership.md)

@@ -17,8 +17,9 @@ Removes a replication partnership.
 
 ```
 Remove-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String>
- [-DestinationComputerName] <String> [-DestinationRGName] <String> [-IgnoreRemovalFailure] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DestinationComputerName] <String> [-DestinationRGName] <String> [-ApplyChanges] [-IgnoreRemovalFailure]
+ [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,6 +55,21 @@ The command passes the partnerships to the current cmdlet by using the pipeline 
 The current cmdlet removes all partnerships for all paired servers.
 
 ## PARAMETERS
+
+### -ApplyChanges
+{{ Fill ApplyChanges Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ADA
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.

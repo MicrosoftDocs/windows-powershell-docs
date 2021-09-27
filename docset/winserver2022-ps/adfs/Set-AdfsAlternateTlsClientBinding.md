@@ -16,8 +16,8 @@ Configures an existing AD FS deployment to use the same port for both device cer
 ## SYNTAX
 
 ```
-Set-AdfsAlternateTlsClientBinding [-Thumbprint <String>] [-Member <String[]>] [-Force <Boolean>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-AdfsAlternateTlsClientBinding [-Thumbprint <String>] [-Member <String[]>] [-Force <Boolean>]
+ [-RemoteCredential <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,6 +63,21 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteCredential
+{{ Fill RemoteCredential Description }}
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

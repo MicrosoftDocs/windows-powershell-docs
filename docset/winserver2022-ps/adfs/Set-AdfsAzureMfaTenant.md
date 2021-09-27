@@ -16,7 +16,8 @@ Enables an AD FS farm to use MFA.
 ## SYNTAX
 
 ```
-Set-AdfsAzureMfaTenant -TenantId <String> -ClientId <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-AdfsAzureMfaTenant -TenantId <String> -ClientId <String> [-Environment <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,6 +52,21 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Environment
+{{ Fill Environment Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

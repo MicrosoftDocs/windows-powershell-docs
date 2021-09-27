@@ -66,6 +66,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowAdditionalAuthenticationAsPrimary
+{{ Fill AllowAdditionalAuthenticationAsPrimary Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -AllowDeviceAuthAsPrimaryForDomainJoinedDevices
 Specifying this parameter configures an external authentication provider, for second stage authentication, in the global policy.
 This is the first step in creating an AD FS policy that invokes an external authentication provider for multifactor authentication.
@@ -123,6 +139,36 @@ Type: DeviceAuthenticationMethod
 Parameter Sets: (All)
 Aliases: 
 Accepted values: All, ClientTLS, SignedToken, PKeyAuth
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnablePaginatedAuthenticationPages
+{{ Fill EnablePaginatedAuthenticationPages Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{ Fill Force Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

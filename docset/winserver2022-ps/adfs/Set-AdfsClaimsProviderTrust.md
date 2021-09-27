@@ -29,8 +29,8 @@ Set-AdfsClaimsProviderTrust [-Name <String>] [-Identifier <String>] [-SignatureA
  [-SamlAuthenticationRequestIndex <UInt16>] [-SamlAuthenticationRequestParameters <String>]
  [-SamlAuthenticationRequestProtocolBinding <String>] [-SigningCertificateRevocationCheck <String>]
  [-PromptLoginFederation <PromptLoginFederation>] [-PromptLoginFallbackAuthenticationType <String>]
- [-AnchorClaimType <String>] -TargetClaimsProviderTrust <ClaimsProviderTrust> [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AnchorClaimType <String>] [-DomainCredential <PSCredential>]
+ -TargetClaimsProviderTrust <ClaimsProviderTrust> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### TokenSigningCertificates
@@ -47,8 +47,8 @@ Set-AdfsClaimsProviderTrust [-Name <String>] [-Identifier <String>] [-SignatureA
  [-SamlAuthenticationRequestIndex <UInt16>] [-SamlAuthenticationRequestParameters <String>]
  [-SamlAuthenticationRequestProtocolBinding <String>] [-SigningCertificateRevocationCheck <String>]
  [-PromptLoginFederation <PromptLoginFederation>] [-PromptLoginFallbackAuthenticationType <String>]
- [-AnchorClaimType <String>] -TargetCertificate <X509Certificate2> [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AnchorClaimType <String>] [-DomainCredential <PSCredential>] -TargetCertificate <X509Certificate2>
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Identifier
@@ -65,7 +65,8 @@ Set-AdfsClaimsProviderTrust [-Name <String>] [-Identifier <String>] [-SignatureA
  [-SamlAuthenticationRequestIndex <UInt16>] [-SamlAuthenticationRequestParameters <String>]
  [-SamlAuthenticationRequestProtocolBinding <String>] [-SigningCertificateRevocationCheck <String>]
  [-PromptLoginFederation <PromptLoginFederation>] [-PromptLoginFallbackAuthenticationType <String>]
- [-AnchorClaimType <String>] -TargetIdentifier <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AnchorClaimType <String>] [-DomainCredential <PSCredential>] -TargetIdentifier <String> [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### IdentifierName
@@ -82,7 +83,8 @@ Set-AdfsClaimsProviderTrust [-Name <String>] [-Identifier <String>] [-SignatureA
  [-SamlAuthenticationRequestIndex <UInt16>] [-SamlAuthenticationRequestParameters <String>]
  [-SamlAuthenticationRequestProtocolBinding <String>] [-SigningCertificateRevocationCheck <String>]
  [-PromptLoginFederation <PromptLoginFederation>] [-PromptLoginFallbackAuthenticationType <String>]
- [-AnchorClaimType <String>] -TargetName <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AnchorClaimType <String>] [-DomainCredential <PSCredential>] -TargetName <String> [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -212,6 +214,21 @@ Accept wildcard characters: False
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainCredential
+{{ Fill DomainCredential Description }}
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -570,14 +587,14 @@ Accept wildcard characters: False
 Specifies the signature algorithm that the claims provider uses for signing and verification.
 The acceptable values for this parameter are:
 
-- http://www.w3.org/2000/09/xmldsig#rsa-sha1
-- http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+- https://www.w3.org/2000/09/xmldsig#rsa-sha1
+- https://www.w3.org/2001/04/xmldsig-more#rsa-sha256
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Accepted values: http://www.w3.org/2000/09/xmldsig#rsa-sha1, http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+Accepted values: https://www.w3.org/2000/09/xmldsig#rsa-sha1, https://www.w3.org/2001/04/xmldsig-more#rsa-sha256
 
 Required: False
 Position: Named

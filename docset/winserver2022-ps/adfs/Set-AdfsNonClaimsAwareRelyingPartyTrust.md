@@ -21,8 +21,9 @@ Set-AdfsNonClaimsAwareRelyingPartyTrust [-AlwaysRequireAuthentication] [-Identif
  [-IssuanceAuthorizationRules <String>] [-IssuanceAuthorizationRulesFile <String>] [-Name <String>]
  [-Notes <String>] [-PassThru] [-AdditionalAuthenticationRules <String>]
  [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
- [-AccessControlPolicyParameters <Object>] [-ClaimsProviderName <String[]>] [-TargetName] <String> [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-AccessControlPolicyParameters <Object>] [-ClaimsProviderName <String[]>]
+ [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>] [-TargetName] <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Identifier
@@ -31,8 +32,9 @@ Set-AdfsNonClaimsAwareRelyingPartyTrust [-AlwaysRequireAuthentication] [-Identif
  [-IssuanceAuthorizationRules <String>] [-IssuanceAuthorizationRulesFile <String>] [-Name <String>]
  [-Notes <String>] [-PassThru] [-AdditionalAuthenticationRules <String>]
  [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
- [-AccessControlPolicyParameters <Object>] [-ClaimsProviderName <String[]>] -TargetIdentifier <String>
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AccessControlPolicyParameters <Object>] [-ClaimsProviderName <String[]>]
+ [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>] -TargetIdentifier <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### IdentifierObject
@@ -42,6 +44,7 @@ Set-AdfsNonClaimsAwareRelyingPartyTrust [-AlwaysRequireAuthentication] [-Identif
  [-Notes <String>] [-PassThru] [-AdditionalAuthenticationRules <String>]
  [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
  [-AccessControlPolicyParameters <Object>] [-ClaimsProviderName <String[]>]
+ [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>]
  -TargetNonClaimsAwareRelyingPartyTrust <NonClaimsAwareRelyingPartyTrust> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -142,6 +145,21 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeviceAuthenticationMethod
+{{ Fill DeviceAuthenticationMethod Description }}
+
+```yaml
+Type: DeviceAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -55,10 +55,10 @@ This command disables the expense report relying party trust named ExpenseReport
 
 ### Example 2: Disable a report relying party trust by using an identifier
 ```
-PS C:\> Disable-AdfsNonClaimsAwareRelyingPartyTrust -TargetIdentifier "http://Contosoexpense/"
+PS> Disable-AdfsNonClaimsAwareRelyingPartyTrust -TargetIdentifier "https://Contosoexpense/"
 ```
 
-This command disables the expense report relying party trust that has the identifier http://Contosoexpense.
+This command disables the expense report relying party trust that has the identifier https://Contosoexpense.
 
 ## PARAMETERS
 

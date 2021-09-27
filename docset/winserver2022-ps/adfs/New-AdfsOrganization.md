@@ -26,7 +26,7 @@ The **New-AdfsOrganization** cmdlet creates an information object for an organiz
 
 ### Example 1: Create a new organization
 ```
-PS C:\> New-AdfsOrganization -DisplayName "Fabrikam" -OrganizationUrl http://fabrikam.com
+PS C:\> New-AdfsOrganization -DisplayName "Fabrikam" -OrganizationUrl https://fabrikam.com
 ```
 
 This command adds a new organization named Fabrikam in the AD FS.

@@ -54,10 +54,10 @@ This command enables the non-claims-aware relying party trust for the applicatio
 
 ### Example 2: Enable a non-claims-aware relying party trust by using an identifier
 ```
-PS C:\> Enable-AdfsNonClaimsAwareRelyingPartyTrust -TargetIdentifier "http://Contosoexpense/"
+PS C:\> Enable-AdfsNonClaimsAwareRelyingPartyTrust -TargetIdentifier "https://Contosoexpense/"
 ```
 
-This command enables the non-claims-aware relying party trust for the expense report application that has the identifier http://Contosoexpense.
+This command enables the non-claims-aware relying party trust for the expense report application that has the identifier https://Contosoexpense.
 
 ## PARAMETERS
 

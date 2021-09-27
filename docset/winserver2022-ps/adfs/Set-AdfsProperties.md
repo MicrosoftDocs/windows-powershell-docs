@@ -21,12 +21,12 @@ Set-AdfsProperties [-AuthenticationContextOrder <Uri[]>] [-AcceptableIdentifiers
  [-AutoCertificateRollover <Boolean>] [-CertificateCriticalThreshold <Int32>] [-CertificateDuration <Int32>]
  [-CertificateGenerationThreshold <Int32>] [-CertificatePromotionThreshold <Int32>]
  [-CertificateRolloverInterval <Int32>] [-CertificateThresholdMultiplier <Int32>]
- [-ClientCertRevocationCheck <String>] [-ContactPerson <ContactPerson>] [-DisplayName <String>]
- [-EnableOAuthDeviceFlow <Boolean>]
- [-EnableOAuthLogout <Boolean>] [-FederationPassiveAddress <String>] [-HostName <String>] [-HttpPort <Int32>]
- [-HttpsPort <Int32>] [-IntranetUseLocalClaimsProvider <Boolean>] [-TlsClientPort <Int32>] [-Identifier <Uri>]
- [-LogLevel <String[]>] [-MonitoringInterval <Int32>] [-NetTcpPort <Int32>]
- [-NtlmOnlySupportedClientAtProxy <Boolean>] [-OrganizationInfo <Organization>]
+ [-CertificateKeyLengthInBits <Int32>] [-ClientCertRevocationCheck <String>] [-ContactPerson <ContactPerson>]
+ [-DisplayName <String>] [-EnableOAuthLogout <Boolean>] [-EnableOAuthDeviceFlow <Boolean>]
+ [-AdditionalErrorPageInfo <ErrorShowLevel>] [-SendLogsCacheSizeInMb <Int64>] [-SendLogsEnabled <Boolean>]
+ [-HostName <String>] [-HttpPort <Int32>] [-HttpsPort <Int32>] [-IntranetUseLocalClaimsProvider <Boolean>]
+ [-TlsClientPort <Int32>] [-Identifier <Uri>] [-LogLevel <String[]>] [-MonitoringInterval <Int32>]
+ [-NetTcpPort <Int32>] [-NtlmOnlySupportedClientAtProxy <Boolean>] [-OrganizationInfo <Organization>]
  [-PreventTokenReplays <Boolean>] [-ExtendedProtectionTokenCheck <String>] [-ProxyTrustTokenLifetime <Int32>]
  [-ReplayCacheExpirationInterval <Int32>] [-SignedSamlRequestsRequired <Boolean>]
  [-SamlMessageDeliveryWindow <Int32>] [-SignSamlAuthnRequests <Boolean>] [-SsoLifetime <Int32>]
@@ -34,16 +34,20 @@ Set-AdfsProperties [-AuthenticationContextOrder <Uri[]>] [-AcceptableIdentifiers
  [-EnablePersistentSso <Boolean>] [-PersistentSsoCutoffTime <DateTime>] [-EnableKmsi <Boolean>]
  [-WIASupportedUserAgents <String[]>] [-BrowserSsoSupportedUserAgents <String[]>]
  [-BrowserSsoEnabled <Boolean>] [-LoopDetectionTimeIntervalInSeconds <Int32>]
- [-LoopDetectionMaximumTokensIssuedInInterval <Int32>] [-EnableLoopDetection <Boolean>] [-ExtranetLockoutMode <String>] 
- [-ExtranetLockoutThreshold <Int32>] [-EnableExtranetLockout <Boolean>] [-ExtranetObservationWindow <TimeSpan>]
- [-ExtranetLockoutRequirePDC <Boolean>] [-SendClientRequestIdAsQueryStringParameter <Boolean>]
- [-GlobalRelyingPartyClaimsIssuancePolicy <String>] [-EnableLocalAuthenticationTypes <Boolean>]
- [-EnableRelayStateForIdpInitiatedSignOn <Boolean>] [-DelegateServiceAdministration <String>]
- [-AllowSystemServiceAdministration <Boolean>] [-AllowLocalAdminsServiceAdministration <Boolean>]
- [-DeviceUsageWindowInDays <Int32>] [-EnableIdPInitiatedSignonPage <Boolean>] [-IgnoreTokenBinding <Boolean>]
- [-IdTokenIssuer <Uri>] [-PromptLoginFederation <PromptLoginFederation>]
- [-PromptLoginFallbackAuthenticationType <String>] [-Force] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-LoopDetectionMaximumTokensIssuedInInterval <Int32>] [-EnableLoopDetection <Boolean>]
+ [-ExtranetLockoutThreshold <Int32>] [-ExtranetLockoutThresholdFamiliarLocation <Int32>]
+ [-ExtranetLockoutMode <ExtranetLockoutModes>] [-EnableExtranetLockout <Boolean>]
+ [-ExtranetObservationWindow <TimeSpan>] [-ExtranetLockoutRequirePDC <Boolean>]
+ [-SendClientRequestIdAsQueryStringParameter <Boolean>] [-GlobalRelyingPartyClaimsIssuancePolicy <String>]
+ [-EnableLocalAuthenticationTypes <Boolean>] [-AllowedActiveDirectoryUserPrincipalNames <String[]>]
+ [-AllowedActiveDirectoryNetbiosNames <String[]>] [-EnableRelayStateForIdpInitiatedSignOn <Boolean>]
+ [-DelegateServiceAdministration <String>] [-AllowSystemServiceAdministration <Boolean>]
+ [-AllowLocalAdminsServiceAdministration <Boolean>] [-DeviceUsageWindowInDays <Int32>]
+ [-EnableIdPInitiatedSignonPage <Boolean>] [-IgnoreTokenBinding <Boolean>] [-IdTokenIssuer <Uri>]
+ [-PromptLoginFederation <PromptLoginFederation>] [-PromptLoginFallbackAuthenticationType <String>]
+ [-AddBannedIps <String[]>] [-RemoveBannedIps <String[]>]
+ [-WindowsHelloKeyVerification <WindowsHelloKeyVerificationOptions>] [-KdfV2Support <KdfV2SupportOptions>]
+ [-Force] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,11 +83,71 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AddBannedIps
+{{ Fill AddBannedIps Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdditionalErrorPageInfo
+{{ Fill AdditionalErrorPageInfo Description }}
+
+```yaml
+Type: ErrorShowLevel
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AddProxyAuthorizationRules
 This parameter is deprecated.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedActiveDirectoryNetbiosNames
+{{ Fill AllowedActiveDirectoryNetbiosNames Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedActiveDirectoryUserPrincipalNames
+{{ Fill AllowedActiveDirectoryUserPrincipalNames Description }}
+
+```yaml
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -259,6 +323,21 @@ Accept wildcard characters: False
 Specifies the period of time, in days, before the Federation Service generates a new primary certificate to replace the current primary certificate.
 When a certificate reaches this threshold, the Federation Service initiates an automatic certificate rollover process that generates a new certificate and adds it to the secondary collection.
 This rollover process occurs so that federation partners can consume this metadata in advance and trust is not broken when this newly generated certificate is promoted to be a primary certificate.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificateKeyLengthInBits
+{{ Fill CertificateKeyLengthInBits Description }}
 
 ```yaml
 Type: Int32
@@ -571,7 +650,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExtranetLockoutMode:
+### -ExtranetLockoutMode
 Specifies Extranet Smart Lockout mode.
 
 ```yaml
@@ -618,14 +697,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExtranetObservationWindow
-Specifies the timespan of the lockout observation window.
-AD FS will reset a throttled state of an account when more than one observation window has expired since the last bad password attempt, as reported by Active Directory Domain Services.
-It is also possible that the last bad password field in AD DS is cleared by AD DS based on its own observation windows.
-In this case, AD FS will allow the request to be passed onto AD DS for validation.
+### -ExtranetLockoutThresholdFamiliarLocation
+{{ Fill ExtranetLockoutThresholdFamiliarLocation Description }}
 
 ```yaml
-Type: TimeSpan
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -636,11 +712,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FederationPassiveAddress
-Do not use this parameter.
+### -ExtranetObservationWindow
+Specifies the timespan of the lockout observation window.
+AD FS will reset a throttled state of an account when more than one observation window has expired since the last bad password attempt, as reported by Active Directory Domain Services.
+It is also possible that the last bad password field in AD DS is cleared by AD DS based on its own observation windows.
+In this case, AD FS will allow the request to be passed onto AD DS for validation.
 
 ```yaml
-Type: String
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 
@@ -777,6 +856,21 @@ Use this parameter only when there is more than one claims provider trust in AD 
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KdfV2Support
+{{ Fill KdfV2Support Description }}
+
+```yaml
+Type: KdfV2SupportOptions
 Parameter Sets: (All)
 Aliases:
 
@@ -1032,6 +1126,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveBannedIps
+{{ Fill RemoveBannedIps Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReplayCacheExpirationInterval
 Specifies the cache duration, in minutes, for token replay detection.
 This value determines the lifetime for tokens in the replay cache.
@@ -1069,6 +1178,36 @@ Indicates whether the client request id, or activity id, is sent as a query stri
 This enables all servers in AD FS to use the same client request id when logging any messages in eventlogs, traces and audits.
 As a result, it is easier to troubleshoot a single request across multiple AD FS servers in the farm.
 The default value is $True.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SendLogsCacheSizeInMb
+{{ Fill SendLogsCacheSizeInMb Description }}
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SendLogsEnabled
+{{ Fill SendLogsEnabled Description }}
 
 ```yaml
 Type: Boolean
@@ -1176,6 +1315,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WindowsHelloKeyVerification
+{{ Fill WindowsHelloKeyVerification Description }}
+
+```yaml
+Type: WindowsHelloKeyVerificationOptions
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -1208,7 +1362,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

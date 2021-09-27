@@ -27,8 +27,9 @@ Set-AdfsWebApiApplication [-TargetIdentifier] <String> [-AllowedAuthenticationCl
  [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
  [-AccessControlPolicyParameters <Object>] [-Description <String>] [-TokenLifetime <Int32>]
  [-AllowedClientTypes <AllowedClientTypes>] [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>]
- [-RefreshTokenProtectionEnabled <Boolean>] [-RequestMFAFromClaimsProviders <Boolean>] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RefreshTokenProtectionEnabled <Boolean>] [-RequestMFAFromClaimsProviders <Boolean>]
+ [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Name
@@ -43,8 +44,9 @@ Set-AdfsWebApiApplication [-TargetName] <String> [-AllowedAuthenticationClassRef
  [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
  [-AccessControlPolicyParameters <Object>] [-Description <String>] [-TokenLifetime <Int32>]
  [-AllowedClientTypes <AllowedClientTypes>] [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>]
- [-RefreshTokenProtectionEnabled <Boolean>] [-RequestMFAFromClaimsProviders <Boolean>] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RefreshTokenProtectionEnabled <Boolean>] [-RequestMFAFromClaimsProviders <Boolean>]
+ [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ApplicationObject
@@ -60,7 +62,8 @@ Set-AdfsWebApiApplication [-TargetApplication] <WebApiApplication>
  [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>] [-Description <String>]
  [-TokenLifetime <Int32>] [-AllowedClientTypes <AllowedClientTypes>]
  [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>] [-RefreshTokenProtectionEnabled <Boolean>]
- [-RequestMFAFromClaimsProviders <Boolean>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RequestMFAFromClaimsProviders <Boolean>] [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -243,6 +246,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DeviceAuthenticationMethod
+{{ Fill DeviceAuthenticationMethod Description }}
+
+```yaml
+Type: DeviceAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -540,7 +558,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

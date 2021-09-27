@@ -16,8 +16,8 @@ Generates SQL scripts to create the AD FS database and to grant permissions.
 ## SYNTAX
 
 ```
-Export-AdfsDeploymentSQLScript -DestinationFolder <String> -ServiceAccountName <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Export-AdfsDeploymentSQLScript -DestinationFolder <String> -ServiceAccountName <String>
+ [-DatabaseType <DatabaseType>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,6 +33,21 @@ PS C:\> Export-AdfsDeploymentSQLScript -DestinationFolder ".\ScriptFolder" -Serv
 This command exports SQL deployment scripts for AD FS installation on behalf of the specified AD FS service account.
 
 ## PARAMETERS
+
+### -DatabaseType
+{{ Fill DatabaseType Description }}
+
+```yaml
+Type: DatabaseType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DestinationFolder
 Specifies the folder in which the cmdlet saves the generated SQL scripts.
@@ -97,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -27,46 +27,7 @@ Add-AdfsRelyingPartyTrust -Name <String> -Identifier <String[]> [-EncryptClaims 
  [-EncryptionCertificateRevocationCheck <String>] [-NotBeforeSkew <Int32>] [-ProtocolProfile <String>]
  [-ClaimsProviderName <String[]>] [-EnableJWT <Boolean>] [-SamlResponseSignature <String>]
  [-AllowedClientTypes <AllowedClientTypes>] [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>]
- [-RefreshTokenProtectionEnabled <Boolean>] [-PassThru] [-MonitoringEnabled <Boolean>]
- [-ImpersonationAuthorizationRules <String>] [-ImpersonationAuthorizationRulesFile <String>]
- [-IssuanceTransformRules <String>] [-IssuanceTransformRulesFile <String>]
- [-IssuanceAuthorizationRules <String>] [-IssuanceAuthorizationRulesFile <String>]
- [-DelegationAuthorizationRules <String>] [-DelegationAuthorizationRulesFile <String>]
- [-AdditionalAuthenticationRules <String>] [-AdditionalAuthenticationRulesFile <String>]
- [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### MetadataFile
-```
-Add-AdfsRelyingPartyTrust -Name <String> -MetadataFile <String> [-EncryptClaims <Boolean>] 
- [-Enabled <Boolean>] [-AutoUpdateEnabled <Boolean>] [-EncryptedNameIdRequired <Boolean>]
- [-SignedSamlRequestsRequired <Boolean>] [-Notes <String>] [-SignatureAlgorithm <String>]
- [-SigningCertificateRevocationCheck <String>] [-TokenLifetime <Int32>] [-AlwaysRequireAuthentication]
- [-RequestMFAFromClaimsProviders] [-AllowedAuthenticationClassReferences <String[]>]
- [-EncryptionCertificateRevocationCheck <String>] [-NotBeforeSkew <Int32>] [-ProtocolProfile <String>]
- [-ClaimsProviderName <String[]>] [-EnableJWT <Boolean>] [-SamlResponseSignature <String>]
- [-AllowedClientTypes <AllowedClientTypes>] [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>]
- [-RefreshTokenProtectionEnabled <Boolean>] [-PassThru] [-MonitoringEnabled <Boolean>]
- [-ImpersonationAuthorizationRules <String>] [-ImpersonationAuthorizationRulesFile <String>]
- [-IssuanceTransformRules <String>] [-IssuanceTransformRulesFile <String>]
- [-IssuanceAuthorizationRules <String>] [-IssuanceAuthorizationRulesFile <String>]
- [-DelegationAuthorizationRules <String>] [-DelegationAuthorizationRulesFile <String>]
- [-AdditionalAuthenticationRules <String>] [-AdditionalAuthenticationRulesFile <String>]
- [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### MetadataUrl
-```
-Add-AdfsRelyingPartyTrust -Name <String> -MetadataUrl <Uri> [-EncryptClaims <Boolean>] [-Enabled <Boolean>] 
- [-AutoUpdateEnabled <Boolean>] [-EncryptedNameIdRequired <Boolean>] [-SignedSamlRequestsRequired <Boolean>]
- [-Notes <String>] [-SignatureAlgorithm <String>] [-SigningCertificateRevocationCheck <String>]
- [-TokenLifetime <Int32>] [-AlwaysRequireAuthentication] [-RequestMFAFromClaimsProviders]
- [-AllowedAuthenticationClassReferences <String[]>] [-EncryptionCertificateRevocationCheck <String>]
- [-NotBeforeSkew <Int32>] [-ProtocolProfile <String>] [-ClaimsProviderName <String[]>] [-EnableJWT <Boolean>]
- [-SamlResponseSignature <String>] [-AllowedClientTypes <AllowedClientTypes>]
- [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>] [-RefreshTokenProtectionEnabled <Boolean>]
+ [-RefreshTokenProtectionEnabled <Boolean>] [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>]
  [-PassThru] [-MonitoringEnabled <Boolean>] [-ImpersonationAuthorizationRules <String>]
  [-ImpersonationAuthorizationRulesFile <String>] [-IssuanceTransformRules <String>]
  [-IssuanceTransformRulesFile <String>] [-IssuanceAuthorizationRules <String>]
@@ -74,6 +35,46 @@ Add-AdfsRelyingPartyTrust -Name <String> -MetadataUrl <Uri> [-EncryptClaims <Boo
  [-DelegationAuthorizationRulesFile <String>] [-AdditionalAuthenticationRules <String>]
  [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
  [-AccessControlPolicyParameters <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### MetadataFile
+```
+Add-AdfsRelyingPartyTrust -Name <String> [-EncryptClaims <Boolean>] [-Enabled <Boolean>]
+ [-MetadataFile <String>] [-AutoUpdateEnabled <Boolean>] [-EncryptedNameIdRequired <Boolean>]
+ [-SignedSamlRequestsRequired <Boolean>] [-Notes <String>] [-SignatureAlgorithm <String>]
+ [-SigningCertificateRevocationCheck <String>] [-TokenLifetime <Int32>] [-AlwaysRequireAuthentication]
+ [-RequestMFAFromClaimsProviders] [-AllowedAuthenticationClassReferences <String[]>]
+ [-EncryptionCertificateRevocationCheck <String>] [-NotBeforeSkew <Int32>] [-ProtocolProfile <String>]
+ [-ClaimsProviderName <String[]>] [-EnableJWT <Boolean>] [-SamlResponseSignature <String>]
+ [-AllowedClientTypes <AllowedClientTypes>] [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>]
+ [-RefreshTokenProtectionEnabled <Boolean>] [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>]
+ [-PassThru] [-MonitoringEnabled <Boolean>] [-ImpersonationAuthorizationRules <String>]
+ [-ImpersonationAuthorizationRulesFile <String>] [-IssuanceTransformRules <String>]
+ [-IssuanceTransformRulesFile <String>] [-IssuanceAuthorizationRules <String>]
+ [-IssuanceAuthorizationRulesFile <String>] [-DelegationAuthorizationRules <String>]
+ [-DelegationAuthorizationRulesFile <String>] [-AdditionalAuthenticationRules <String>]
+ [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
+ [-AccessControlPolicyParameters <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### MetadataUrl
+```
+Add-AdfsRelyingPartyTrust -Name <String> [-EncryptClaims <Boolean>] [-Enabled <Boolean>] [-MetadataUrl <Uri>]
+ [-AutoUpdateEnabled <Boolean>] [-EncryptedNameIdRequired <Boolean>] [-SignedSamlRequestsRequired <Boolean>]
+ [-Notes <String>] [-SignatureAlgorithm <String>] [-SigningCertificateRevocationCheck <String>]
+ [-TokenLifetime <Int32>] [-AlwaysRequireAuthentication] [-RequestMFAFromClaimsProviders]
+ [-AllowedAuthenticationClassReferences <String[]>] [-EncryptionCertificateRevocationCheck <String>]
+ [-NotBeforeSkew <Int32>] [-ProtocolProfile <String>] [-ClaimsProviderName <String[]>] [-EnableJWT <Boolean>]
+ [-SamlResponseSignature <String>] [-AllowedClientTypes <AllowedClientTypes>]
+ [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>] [-RefreshTokenProtectionEnabled <Boolean>]
+ [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>] [-PassThru] [-MonitoringEnabled <Boolean>]
+ [-ImpersonationAuthorizationRules <String>] [-ImpersonationAuthorizationRulesFile <String>]
+ [-IssuanceTransformRules <String>] [-IssuanceTransformRulesFile <String>]
+ [-IssuanceAuthorizationRules <String>] [-IssuanceAuthorizationRulesFile <String>]
+ [-DelegationAuthorizationRules <String>] [-DelegationAuthorizationRulesFile <String>]
+ [-AdditionalAuthenticationRules <String>] [-AdditionalAuthenticationRulesFile <String>]
+ [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -286,6 +287,21 @@ Specifies a file that contains the delegation authorization rules for issuing cl
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeviceAuthenticationMethod
+{{ Fill DeviceAuthenticationMethod Description }}
+
+```yaml
+Type: DeviceAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -861,7 +877,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

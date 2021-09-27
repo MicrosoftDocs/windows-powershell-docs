@@ -21,7 +21,7 @@ Add-AdfsNonClaimsAwareRelyingPartyTrust [-Name] <String> [-Identifier] <String[]
  [-IssuanceAuthorizationRulesFile <String>] [-Notes <String>] [-PassThru]
  [-AdditionalAuthenticationRules <String>] [-AdditionalAuthenticationRulesFile <String>]
  [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>] [-ClaimsProviderName <String[]>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -125,6 +125,21 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeviceAuthenticationMethod
+{{ Fill DeviceAuthenticationMethod Description }}
+
+```yaml
+Type: DeviceAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -276,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

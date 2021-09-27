@@ -16,8 +16,8 @@ Sets an SSL certificate for HTTPS bindings for AD FS.
 ## SYNTAX
 
 ```powershell
-Set-AdfsSslCertificate -Thumbprint <String> [-Force <Boolean>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-AdfsSslCertificate -Thumbprint <String> [-Member <String[]>] [-Force <Boolean>]
+ [-RemoteCredential <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,6 +43,36 @@ This command sets the specified certificate for HTTPS bindings for AD FS.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Member
+{{ Fill Member Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteCredential
+{{ Fill RemoteCredential Description }}
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

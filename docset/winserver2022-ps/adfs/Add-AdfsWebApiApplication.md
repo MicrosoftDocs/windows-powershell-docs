@@ -27,7 +27,8 @@ Add-AdfsWebApiApplication [-ApplicationGroupIdentifier] <String> -Name <String> 
  [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>] [-NotBeforeSkew <Int32>]
  [-Description <String>] [-TokenLifetime <Int32>] [-AlwaysRequireAuthentication]
  [-AllowedClientTypes <AllowedClientTypes>] [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>]
- [-RefreshTokenProtectionEnabled <Boolean>] [-RequestMFAFromClaimsProviders] [-PassThru] [-WhatIf] [-Confirm]
+ [-RefreshTokenProtectionEnabled <Boolean>] [-RequestMFAFromClaimsProviders]
+ [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -43,7 +44,8 @@ Add-AdfsWebApiApplication [-ApplicationGroup] <ApplicationGroup> -Name <String> 
  [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>] [-NotBeforeSkew <Int32>]
  [-Description <String>] [-TokenLifetime <Int32>] [-AlwaysRequireAuthentication]
  [-AllowedClientTypes <AllowedClientTypes>] [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>]
- [-RefreshTokenProtectionEnabled <Boolean>] [-RequestMFAFromClaimsProviders] [-PassThru] [-WhatIf] [-Confirm]
+ [-RefreshTokenProtectionEnabled <Boolean>] [-RequestMFAFromClaimsProviders]
+ [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -250,6 +252,21 @@ Specifies a description.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeviceAuthenticationMethod
+{{ Fill DeviceAuthenticationMethod Description }}
+
+```yaml
+Type: DeviceAuthenticationMethod
 Parameter Sets: (All)
 Aliases:
 
@@ -509,7 +526,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

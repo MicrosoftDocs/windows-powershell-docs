@@ -34,8 +34,8 @@ Set-AdfsRelyingPartyTrust [-AllowedAuthenticationClassReferences <String[]>] [-N
  [-SignatureAlgorithm <String>] [-SigningCertificateRevocationCheck <String>] [-TokenLifetime <Int32>]
  [-AlwaysRequireAuthentication <Boolean>] [-AllowedClientTypes <AllowedClientTypes>]
  [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>] [-RefreshTokenProtectionEnabled <Boolean>]
- [-RequestMFAFromClaimsProviders <Boolean>] -TargetIdentifier <String> [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-RequestMFAFromClaimsProviders <Boolean>] [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>]
+ -TargetIdentifier <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### IdentifierObject
@@ -57,8 +57,8 @@ Set-AdfsRelyingPartyTrust [-AllowedAuthenticationClassReferences <String[]>] [-N
  [-SignatureAlgorithm <String>] [-SigningCertificateRevocationCheck <String>] [-TokenLifetime <Int32>]
  [-AlwaysRequireAuthentication <Boolean>] [-AllowedClientTypes <AllowedClientTypes>]
  [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>] [-RefreshTokenProtectionEnabled <Boolean>]
- [-RequestMFAFromClaimsProviders <Boolean>] -TargetRelyingParty <RelyingPartyTrust> [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RequestMFAFromClaimsProviders <Boolean>] [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>]
+ -TargetRelyingParty <RelyingPartyTrust> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### IdentifierName
@@ -80,8 +80,8 @@ Set-AdfsRelyingPartyTrust [-AllowedAuthenticationClassReferences <String[]>] [-N
  [-SignatureAlgorithm <String>] [-SigningCertificateRevocationCheck <String>] [-TokenLifetime <Int32>]
  [-AlwaysRequireAuthentication <Boolean>] [-AllowedClientTypes <AllowedClientTypes>]
  [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>] [-RefreshTokenProtectionEnabled <Boolean>]
- [-RequestMFAFromClaimsProviders <Boolean>] -TargetName <String> [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-RequestMFAFromClaimsProviders <Boolean>] [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>]
+ -TargetName <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,14 +91,14 @@ The **Set-AdfsRelyingPartyTrust** cmdlet configures the trust relationship with 
 
 ### Example 1: Set the name and identifier for a relying party trust
 ```
-PS C:\> Set-AdfsRelyingPartyTrust -TargetName "FabrikamApp" -Identifier "http://FabrikamApp.CentralServerNew.org"
+PS C:\> Set-AdfsRelyingPartyTrust -TargetName "FabrikamApp" -Identifier "https://FabrikamApp.CentralServerNew.org"
 ```
 
 This command sets the name and identifier for the specified relying party trust.
 
 ### Example 2: Set the target identifier for a relying party trust
 ```
-PS C:\> Set-AdfsRelyingPartyTrust -TargetIdentifier "http://FabrikamApp.CentralServer.org" -Identifier "http://FabrikamApp.CentralServerNew.org"
+PS C:\> Set-AdfsRelyingPartyTrust -TargetIdentifier "https://FabrikamApp.CentralServer.org" -Identifier "https://FabrikamApp.CentralServerNew.org"
 ```
 
 This command sets the target identifier for the specified relying party trust.
@@ -316,6 +316,21 @@ Specifies a file that contains the delegation authorization rules for issuing cl
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeviceAuthenticationMethod
+{{ Fill DeviceAuthenticationMethod Description }}
+
+```yaml
+Type: DeviceAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -739,14 +754,14 @@ Accept wildcard characters: False
 Specifies the signature algorithm that the relying party uses for signing and verification.
 The acceptable values for this parameter are:
 
-- http://www.w3.org/2000/09/xmldsig#rsa-sha1
-- http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+- https://www.w3.org/2000/09/xmldsig#rsa-sha1
+- https://www.w3.org/2001/04/xmldsig-more#rsa-sha256
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Accepted values: http://www.w3.org/2000/09/xmldsig#rsa-sha1, http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+Accepted values: https://www.w3.org/2000/09/xmldsig#rsa-sha1, https://www.w3.org/2001/04/xmldsig-more#rsa-sha256
 
 Required: False
 Position: Named
@@ -905,7 +920,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

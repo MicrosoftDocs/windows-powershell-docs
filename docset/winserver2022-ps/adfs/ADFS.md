@@ -128,6 +128,9 @@ Returns a file containing the tenant ID for which the AD FS farm is configured f
 ### [Export-AdfsDeploymentSQLScript](Export-AdfsDeploymentSQLScript.md)
 Generates SQL scripts to create the AD FS database and to grant permissions.
 
+### [Export-AdfsThreatDetectionModuleConfiguration](Export-AdfsThreatDetectionModuleConfiguration.md)
+{{ Fill in the Synopsis }}
+
 ### [Export-AdfsWebContent](Export-AdfsWebContent.md)
 Exports properties of all web content objects in a specific locale to a specified file.
 
@@ -136,6 +139,9 @@ Exports a web theme to a folder.
 
 ### [Get-AdfsAccessControlPolicy](Get-AdfsAccessControlPolicy.md)
 Gets an AD FS access control policy.
+
+### [Get-AdfsAccountActivity](Get-AdfsAccountActivity.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-AdfsAdditionalAuthenticationRule](Get-AdfsAdditionalAuthenticationRule.md)
 Retrieves the global rules that trigger additional authentication providers to be invoked.
@@ -176,11 +182,17 @@ Gets an AD FS claims provider trust group.
 ### [Get-AdfsClient](Get-AdfsClient.md)
 Retrieves registration information for an OAuth 2.0 client.
 
+### [Get-AdfsDebugLogConsumersConfiguration](Get-AdfsDebugLogConsumersConfiguration.md)
+{{ Fill in the Synopsis }}
+
 ### [Get-AdfsDeviceRegistration](Get-AdfsDeviceRegistration.md)
 Gets the administrative polices of the Device Registration Service.
 
 ### [Get-AdfsDeviceRegistrationUpnSuffix](Get-AdfsDeviceRegistrationUpnSuffix.md)
 Gets the UPN suffixes that can be used with device registration.
+
+### [Get-AdfsDirectoryProperties](Get-AdfsDirectoryProperties.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-AdfsEndpoint](Get-AdfsEndpoint.md)
 Retrieves an endpoint in AD FS.
@@ -222,6 +234,9 @@ Gets web content objects for relying parties.
 ### [Get-AdfsRelyingPartyWebTheme](Get-AdfsRelyingPartyWebTheme.md)
 Gets properties of web themes applied to relying party trusts.
 
+### [Get-AdfsResponseHeaders](Get-AdfsResponseHeaders.md)
+{{ Fill in the Synopsis }}
+
 ### [Get-AdfsScopeDescription](Get-AdfsScopeDescription.md)
 Gets a description for a scope in AD FS.
 
@@ -233,6 +248,9 @@ Gets the host name, port, and certificate hash for SSL bindings configured for A
 
 ### [Get-AdfsSyncProperties](Get-AdfsSyncProperties.md)
 Gets synchronization properties the configuration database of AD FS.
+
+### [Get-AdfsThreatDetectionModule](Get-AdfsThreatDetectionModule.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-AdfsTrustedFederationPartner](Get-AdfsTrustedFederationPartner.md)
 Gets a trusted federation partner in AD FS.
@@ -254,6 +272,9 @@ Grants application permission.
 
 ### [Import-AdfsAuthenticationProviderConfigurationData](Import-AdfsAuthenticationProviderConfigurationData.md)
 Imports the custom configuration for an authentication provider.
+
+### [Import-AdfsThreatDetectionModuleConfiguration](Import-AdfsThreatDetectionModuleConfiguration.md)
+{{ Fill in the Synopsis }}
 
 ### [Import-AdfsWebContent](Import-AdfsWebContent.md)
 Imports properties from a resource file into global and relying party web content objects.
@@ -303,6 +324,9 @@ Instead, use the Set-AdfsSslCertificate cmdlet.
 
 ### [Register-AdfsAuthenticationProvider](Register-AdfsAuthenticationProvider.md)
 Registers an external authentication provider in AD FS.
+
+### [Register-AdfsThreatDetectionModule](Register-AdfsThreatDetectionModule.md)
+{{ Fill in the Synopsis }}
 
 ### [Remove-AdfsAccessControlPolicy](Remove-AdfsAccessControlPolicy.md)
 Removes an AD FS access control policy.
@@ -380,6 +404,9 @@ Removes the relying party trust object for the Web Application Proxy.
 ### [Remove-AdfsWebTheme](Remove-AdfsWebTheme.md)
 Removes a web theme.
 
+### [Reset-AdfsAccountLockout](Reset-AdfsAccountLockout.md)
+{{ Fill in the Synopsis }}
+
 ### [Restore-AdfsFarmBehaviorLevel](Restore-AdfsFarmBehaviorLevel.md)
 Restores the farm to a previous behavior level.
 
@@ -391,6 +418,9 @@ Revokes trust for all federation server proxies configured for the Federation Se
 
 ### [Set-AdfsAccessControlPolicy](Set-AdfsAccessControlPolicy.md)
 Modifies an AD FS access control policy.
+
+### [Set-AdfsAccountActivity](Set-AdfsAccountActivity.md)
+{{ Fill in the Synopsis }}
 
 ### [Set-AdfsAdditionalAuthenticationRule](Set-AdfsAdditionalAuthenticationRule.md)
 Sets the global rules that provide the trigger for additional authentication providers to be invoked.
@@ -431,11 +461,17 @@ Sets the properties of a claims provider trust.
 ### [Set-AdfsClient](Set-AdfsClient.md)
 Modifies registration settings for an OAuth 2.0 client registered with AD FS.
 
+### [Set-AdfsDebugLogConsumersConfiguration](Set-AdfsDebugLogConsumersConfiguration.md)
+{{ Fill in the Synopsis }}
+
 ### [Set-AdfsDeviceRegistration](Set-AdfsDeviceRegistration.md)
 Configures the administrative policies for the Device Registration Service.
 
 ### [Set-AdfsDeviceRegistrationUpnSuffix](Set-AdfsDeviceRegistrationUpnSuffix.md)
 Sets the list of UPN suffixes.
+
+### [Set-AdfsDirectoryProperties](Set-AdfsDirectoryProperties.md)
+{{ Fill in the Synopsis }}
 
 ### [Set-AdfsEndpoint](Set-AdfsEndpoint.md)
 Sets the endpoint on a Web Application Proxy.
@@ -473,6 +509,9 @@ Sets properties for the relying party web content objects.
 
 ### [Set-AdfsRelyingPartyWebTheme](Set-AdfsRelyingPartyWebTheme.md)
 Applies a web theme to a relying party.
+
+### [Set-AdfsResponseHeaders](Set-AdfsResponseHeaders.md)
+{{ Fill in the Synopsis }}
 
 ### [Set-AdfsScopeDescription](Set-AdfsScopeDescription.md)
 Modifies a scope description in AD FS.
@@ -515,6 +554,9 @@ Runs prerequisite checks for adding the server computer to a federation server f
 
 ### [Unregister-AdfsAuthenticationProvider](Unregister-AdfsAuthenticationProvider.md)
 Deletes an external authentication provider from AD FS.
+
+### [Unregister-AdfsThreatDetectionModule](Unregister-AdfsThreatDetectionModule.md)
+{{ Fill in the Synopsis }}
 
 ### [Update-AdfsCertificate](Update-AdfsCertificate.md)
 Updates the certificates of AD FS.

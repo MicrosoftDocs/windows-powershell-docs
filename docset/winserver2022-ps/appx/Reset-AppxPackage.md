@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Restores the Windows app to its initial configuration.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 10/20/2020
+ms.date: 09/01/2021
 online version: https://docs.microsoft.com/powershell/module/appx/reset-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Reset-AppxPackage
@@ -20,32 +20,47 @@ Restores the Windows app to its initial configuration.
 
 ```PowerShell
 Reset-AppxPackage [-Package] <string>
-                  [-WhatIf] 
-                  [-Confirm] 
+                  [-WhatIf]
+                  [-Confirm]
                   [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Reset-AppxPackage** cmdlet will reset the app to its original settings, and the app will react as a freshly installed app. 
+The **Reset-AppxPackage** cmdlet will reset the app to its original settings, and the app will react as a freshly installed app.
 
-After resetting the app, any initial prompts by the app will be prompted for user input. 
+After resetting the app, any initial prompts by the app will be prompted for user input.
 
 ## EXAMPLES
 
 ### Example 1: Reset app package
-```
-PS C:\> Reset-AppxPackage -Package publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe
+```powershell
+Reset-AppxPackage -Package publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe
 ```
 
 This cmdlet will reset the `publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe` application back to its original settings.
 
 ## PARAMETERS
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Package
 Specifies the package full name (PFuN) of the app which will be reset.
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: None
 Aliases: None
 
@@ -53,6 +68,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

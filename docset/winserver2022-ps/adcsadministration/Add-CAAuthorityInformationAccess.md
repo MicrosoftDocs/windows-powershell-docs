@@ -180,7 +180,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.CertificateServices.Administration.Commands.CA.AuthorityInformationAccess
+
 ### System.String
+
+### System.Management.Automation.SwitchParameter
 
 ## OUTPUTS
 

@@ -123,6 +123,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CATimeout
+Specifies the continuous availability time-out for the share.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ChangeAccess
 Specifies which users are granted modify permission to access the share.
 Multiple users can be specified by using a comma-separated list.
@@ -156,6 +171,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CompressData
+Indicates that SMB compression is requested for all client connections that support it.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ConcurrentUserLimit
 Specifies the maximum number of concurrently connected users that the new SMB share may accommodate.
 If this parameter is set to zero (0), then the number of users is unlimited.
@@ -169,21 +199,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -268,6 +283,26 @@ An account may not be specified more than once in the *FullAccess*, *ChangeAcces
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LeasingMode
+
+Specifies SMB leasing and oplock behaviors for application compatibility. The acceptable values for this parameter are: 
+
+- `Full:` Use default lease and oplock behaviors from SMB3.
+- `Shared:` Grant read-caching lease but not write or handle-caching.
+- `None:` = No oplocks or leases, behave like SMB1 (not recommended).
+
+```yaml
+Type: LeasingMode
 Parameter Sets: (All)
 Aliases:
 
@@ -404,6 +439,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -17,8 +17,10 @@ Creates an SMB mapping.
 
 ```
 New-SmbMapping [[-LocalPath] <String>] [[-RemotePath] <String>] [-UserName <String>] [-Password <String>]
- [-Persistent <Boolean>] [-SaveCredentials] [-HomeFolder] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Persistent <Boolean>] [-SaveCredentials] [-HomeFolder] [-RequireIntegrity <Boolean>]
+ [-RequirePrivacy <Boolean>] [-UseWriteThrough <Boolean>] [-TransportType <TransportType>]
+ [-SkipCertificateCheck] [-CompressNetworkTraffic <Boolean>] [-GlobalMapping] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,17 +72,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -CompressNetworkTraffic
+Indicates that SMB compression is requested for the mapped drive if the SMB server supports it.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GlobalMapping
+Indicates that the SMB mapping is global instead of user-specific and is equivalent to using New-SmbGlobalMapping without any explicit allow or deny settings.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -160,8 +177,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RequireIntegrity
+Indicates that SMB signing is required for the mapped drive.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequirePrivacy
+Indicates that SMB encryption is required for the mapped drive.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SaveCredentials
 Indicates that the credentials provided should be saved for when a mapping to the same SMB server also is created.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCertificateCheck
+Indicates that the client does not need to trust the server certificate’s issuer in order to connect using SMB over QUIC.
 
 ```yaml
 Type: SwitchParameter
@@ -192,6 +254,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TransportType
+Specifies the network transport used by SMB. The acceptable values for this parameter are: 
+
+- `TCP:` Use TCP network transport.
+- `QUIC:` Use QUIC network transport.
+- `None"` Use default transport behavior (first try TCP then try QUIC).
+
+```yaml
+Type: TransportType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UserName
 Specifies the user name to use to connect to the SMB share.
 
@@ -203,6 +284,36 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseWriteThrough
+Indicates that forced unit access (“write through”) is required and bypasses all OS caches, forcing IO to disk.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

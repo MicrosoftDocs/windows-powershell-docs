@@ -89,7 +89,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Msmq.PowerShell.Commands.OutgoingQueue[]
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

@@ -114,7 +114,7 @@ There is only one parameter for this cmdlet, *Name*, and it can only accept a si
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 * To perform this procedure, you must be a member of the Domain Admins group or the Enterprise Admins group in AD DS, or you must have been delegated the appropriate authority. As a security best practice, consider using Run as to perform this procedure.

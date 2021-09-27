@@ -365,7 +365,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Net.IPAddress
+
+### System.UInt32
+
+### System.Boolean
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.Bgp.IPv6RoutingState
+
+### System.String
+
+### System.Nullable`1[[Microsoft.PowerShell.Cmdletization.GeneratedTypes.Bgp.TransitRouting, Microsoft.PowerShell.Cmdletization.GeneratedTypes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+### System.Nullable`1[[Microsoft.PowerShell.Cmdletization.GeneratedTypes.Bgp.RouteReflector, Microsoft.PowerShell.Cmdletization.GeneratedTypes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+### System.Nullable`1[[System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+
+### System.Nullable`1[[Microsoft.PowerShell.Cmdletization.GeneratedTypes.Bgp.ClientToClientReflection, Microsoft.PowerShell.Cmdletization.GeneratedTypes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#BgpRouterConfig
 

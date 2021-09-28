@@ -46,6 +46,21 @@ The FQDN of the computer is named NCNode1.contoso.com and the interface on the c
 
 ## PARAMETERS
 
+### -CertificateSubjectName
+{{ Fill CertificateSubjectName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CertificateThumbprint
 Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
 Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.

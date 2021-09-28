@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassInnerException
-
+This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
 
 ```yaml
 Type: SwitchParameter

@@ -47,7 +47,7 @@ The FQDN of the computer is named NCNode1.contoso.com and the interface on the c
 ## PARAMETERS
 
 ### -CertificateSubjectName
-{{ Fill CertificateSubjectName Description }}
+Specifies the subject name of the certificate used to perform this action.
 
 ```yaml
 Type: String
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -NodeCertificateFindBy
-{{ Fill NodeCertificateFindBy Description }}
+Specifies the method by which to find the node certificate.
 
 ```yaml
 Type: X509FindType

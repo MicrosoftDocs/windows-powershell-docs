@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutomaticUpdates
-{{ Fill EnableAutomaticUpdates Description }}
+Specifies whether to enable automatic updates for the cluster.
 
 ```yaml
 Type: Boolean
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseSubjectNameForNodeCert
-{{ Fill UseSubjectNameForNodeCert Description }}
+Specifies whether to use the subject name for the node certificate.
 
 ```yaml
 Type: Boolean

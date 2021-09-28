@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +107,11 @@ Accept wildcard characters: False
 ```
 
 ### -Update
-{{ Fill Update Description }}
+Specifies the type of update. Valid values are:
+
+- Default
+- Application
+- Cluster
 
 ```yaml
 Type: UpdateType

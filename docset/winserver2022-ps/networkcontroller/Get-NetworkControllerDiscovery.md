@@ -35,7 +35,8 @@ Get-NetworkControllerDiscovery -ConnectionUri https://networkcontroller
 ## PARAMETERS
 
 ### -CertificateThumbprint
-{{ Fill CertificateThumbprint Description }}
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: String

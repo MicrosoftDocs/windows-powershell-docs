@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutomaticUpdates
-{{ Fill EnableAutomaticUpdates Description }}
+Specifies whether to enable automatic updates for the cluster.
 
 ```yaml
 Type: Boolean

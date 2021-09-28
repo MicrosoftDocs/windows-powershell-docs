@@ -69,18 +69,25 @@ To create a new volume, use this cmdlet in conjunction with the Initialize-Disk 
 ## EXAMPLES
 
 ### Example 1: Quick format
-```
+```powershell
 PS C:\>Format-Volume -DriveLetter D
 ```
 
 This example performs a format of the D volume.
 
 ### Example 2: Full format using FAT32
-```
+```powershell
 PS C:\>Format-Volume -DriveLetter D -FileSystem FAT32 -Full -Force
 ```
 
 This example performs a full format of the D volume using the FAT32 file system.
+
+### Example 3: Full format using NTFS and allocation size 8192
+```powershell
+PS C:\> Format-Volume -DriveLetter D -FileSystem NTFS -AllocationUnitSize 8192
+```
+
+This example performs a full format of the D volume using the NTFS file system and allocation size 8192.
 
 ## PARAMETERS
 

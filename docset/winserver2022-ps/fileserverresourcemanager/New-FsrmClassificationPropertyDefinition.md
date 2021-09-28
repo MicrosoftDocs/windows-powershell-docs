@@ -241,10 +241,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.PropertyDefinitionTypeEnum
+
+### System.String[]
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMClassificationPropertyDefinition
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

@@ -356,7 +356,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.FsrmAdrEventEnum[]
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance#Root/Microsoft/Windows/FSRM/MSFT_FSRMADRSettings
 
 ## NOTES
 

@@ -493,11 +493,23 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## INPUTS
 
-### bool, string, string, enum, string, SecureString, string, string, string, string, bool, string, long, string, string, bool, bool, bool, string, enum, long
+### System.Management.Automation.SwitchParameter
+
+### System.Security.SecureString
+
+### System.String
+
+### Microsoft.CertificateServices.Deployment.Common.CA.ValidityPeriod
+
+### System.Int32
+
+### Microsoft.CertificateServices.Deployment.Common.CA.CAType
+
+### System.Management.Automation.PSCredential
 
 ## OUTPUTS
 
-### Microsoft.CertificateServices.Deployment.Commands.CA.CertificationAuthoritySetupResult
+### Microsoft.CertificateServices.Deployment.Common.CA.CertificationAuthoritySetupResult
 
 ## NOTES
 * Ensure you run Windows PowerShell as an administrator. You can use the *force* parameter to bypass the prompt for confirmation.

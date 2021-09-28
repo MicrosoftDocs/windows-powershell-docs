@@ -130,9 +130,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft UpdateServices.Commands.WsusUpdate
+### Microsoft.UpdateServices.Commands.WsusUpdate
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

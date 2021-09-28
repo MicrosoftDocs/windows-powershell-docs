@@ -20,17 +20,18 @@ Modifies the properties of the SMB share.
 Set-SmbShare [-Name] <String[]> [[-ScopeName] <String[]>] [-SmbInstance <SmbInstance>] [-Description <String>]
  [-ConcurrentUserLimit <UInt32>] [-CATimeout <UInt32>] [-ContinuouslyAvailable <Boolean>]
  [-FolderEnumerationMode <FolderEnumerationMode>] [-CachingMode <CachingMode>] [-SecurityDescriptor <String>]
- [-EncryptData <Boolean>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EncryptData <Boolean>] [-CompressData <Boolean>] [-LeasingMode <LeasingMode>] [-Force]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
 ```
 Set-SmbShare -InputObject <CimInstance[]> [-Description <String>] [-ConcurrentUserLimit <UInt32>]
  [-CATimeout <UInt32>] [-ContinuouslyAvailable <Boolean>] [-FolderEnumerationMode <FolderEnumerationMode>]
- [-CachingMode <CachingMode>] [-SecurityDescriptor <String>] [-EncryptData <Boolean>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-CachingMode <CachingMode>] [-SecurityDescriptor <String>] [-EncryptData <Boolean>] [-CompressData <Boolean>]
+ [-LeasingMode <LeasingMode>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -133,6 +134,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CompressData
+Indicates that the shares being enumerated should request compression from clients.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ConcurrentUserLimit
 Specifies the maximum number of concurrently connected users that the SMB share may accommodate.
 If this parameter is set to zero (0), then the number of users is unlimited.
@@ -147,21 +163,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -268,17 +269,18 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 ### -LeasingMode
-Allow admins to stop leases and oplocks.
 
-- Full = default SMB3
-- Shared = grant read-caching lease but not write or handle-caching
-- None = no oplocks or leases, like modified SMB1/3
+Specifies SMB leasing and oplock behaviors for application compatibility. The acceptable values for this parameter are: 
+
+- `Full:` Use default lease and oplock behaviors from SMB3.
+- `Shared:` Grant read-caching lease but not write or handle-caching.
+- `None:` No oplocks or leases, behave like SMB1 (not recommended).
 
 > [!IMPORTANT]
 > We do not recommend disabling oplocks, but may be required in some scenarios. For more information, see [SMB1 Product Clearinghouse](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/SMB1-Product-Clearinghouse/ba-p/426008).
 
 ```yaml
-Type: SwitchParameter
+Type: LeasingMode
 Parameter Sets: (All)
 Aliases: 
 
@@ -380,6 +382,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

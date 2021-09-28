@@ -153,11 +153,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### IDynamicCategory
+### None
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 

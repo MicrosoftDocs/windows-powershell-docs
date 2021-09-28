@@ -120,9 +120,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_DfsNamespaceServerConfig
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

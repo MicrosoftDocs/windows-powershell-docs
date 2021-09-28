@@ -35,7 +35,7 @@ You can specify an ID or get all AutoResolve or all non-AutoResolve dynamic keyw
 
 ### Example 1: Get a dynamic keyword address
 ```powershell
-Get-NetFirewallDynamicKeywordAddress Id 258741ed-94a3-406b-9b0c-81fb145a4592 -PolicyStore ContosoPolicyStore
+Get-NetFirewallDynamicKeywordAddress -Id 01234567-89ab-cdef-0123-456789abcdef -PolicyStore ContosoPolicyStore
 ```
 
 This example gets the specified dynamic keyword address from the specified policy store.

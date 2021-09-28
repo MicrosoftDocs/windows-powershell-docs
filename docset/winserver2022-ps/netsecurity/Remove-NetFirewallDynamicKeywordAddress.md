@@ -41,7 +41,7 @@ The **Remove-NetFirewallDynamicKeywordAddress** cmdlet removes dynamic keyword a
 
 ### Example 1: Remove a dynamic keyword address
 ```powershell
-Remove-NetFirewallDynamicKeywordAddress Id 258741ed-94a3-406b-9b0c-81fb145a4592 -PolicyStore ContosoPolicyStore
+Remove-NetFirewallDynamicKeywordAddress -Id 01234567-89ab-cdef-0123-456789abcdef -PolicyStore ContosoPolicyStore
 ```
 
 This example removes the specified dynamic keyword address from the specified policy store.

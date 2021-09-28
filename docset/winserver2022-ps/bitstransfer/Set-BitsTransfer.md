@@ -98,7 +98,13 @@ In this example, no proxy server is used to add a file to the BITS transfer queu
 ## PARAMETERS
 
 ### -ACLFlags
-{{ Fill ACLFlags Description }}
+Specifies the owner and access control list (ACL) information to maintain for the transfer job.
+Specify one or more of the following values:
+
+- o: Copy owner information with file.
+- g: Copy group information with file.
+- d: Copy discretionary access control list (DACL) information with file.
+- s: Copy system access control list (SACL) information with file.
 
 ```yaml
 Type: ACLFlagValue
@@ -156,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertHash
-{{ Fill CertHash Description }}
+Specifies a SHA1 hash that identifies the certificate.
 
 ```yaml
 Type: Byte[]
@@ -171,7 +177,16 @@ Accept wildcard characters: False
 ```
 
 ### -CertStoreLocation
-{{ Fill CertStoreLocation Description }}
+Specifies the certificate store location to use for to look up the certificate. Valid values are:
+
+- CURRENT_USER
+- LOCAL_MACHINE
+- CURRENT_SERVICE
+- SERVICES
+- USERS
+- CURRENT_USER_GROUP_POLICY
+- LOCAL_MACHINE_GROUP_POLICY
+- LOCAL_MACHINE_ENTERPRISE
 
 ```yaml
 Type: CertStoreLocationValue
@@ -186,7 +201,12 @@ Accept wildcard characters: False
 ```
 
 ### -CertStoreName
-{{ Fill CertStoreName Description }}
+Specifies the name of the certificate store. Valid values are:
+
+- CA: Certification Authority certificates
+- MY: Personal certificates
+- ROOT: Root certificates
+- SPC: Software Publisher Certificate
 
 ```yaml
 Type: String
@@ -235,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomHeaders
-{{ Fill CustomHeaders Description }}
+Specifies one or more custom HTTP headers to include in the request to the server. Specify an array of strings.
 
 ```yaml
 Type: String[]
@@ -250,7 +270,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomHeadersWriteOnly
-{{ Fill CustomHeadersWriteOnly Description }}
+Indicates that the HTTP custom headers for this job are write-only.
+
+Use this parameter when your custom headers include security information.
+Other programs on the same computer can’t read the header.
+The BITS process can read the headers and send them over the HTTP connection.
+
+You cannot change this value for a job after you set headers to write-only.
 
 ```yaml
 Type: SwitchParameter
@@ -297,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -Dynamic
-{{ Fill Dynamic Description }}
+Indicates that the transfer uses the dynamic setting.
 
 ```yaml
 Type: SwitchParameter
@@ -312,7 +338,10 @@ Accept wildcard characters: False
 ```
 
 ### -HttpMethod
-{{ Fill HttpMethod Description }}
+Specifies a method for the transfer other than the default method GET.
+If you specify GET, the parameter has no effect.
+
+If you specify a method, the job takes foreground priority, which can't be changed.
 
 ```yaml
 Type: String
@@ -327,7 +356,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDownloadTime
-{{ Fill MaxDownloadTime Description }}
+Specifies the maximum time, in seconds, for transferring the files in a job.
+The default is 7,776,000 seconds or 90 days.
 
 ```yaml
 Type: Int32
@@ -342,7 +372,10 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyCmdLine
-{{ Fill NotifyCmdLine Description }}
+Specifies a program to run after the job finishes or encounters an error.
+The program runs in the current context.
+
+Specify the program name and any parameters as an array of strings.
 
 ```yaml
 Type: String[]
@@ -357,7 +390,13 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyFlags
-{{ Fill NotifyFlags Description }}
+Specifies the type of event notification you want to receive, such as job transferred events.
+Valid values are:
+
+- 1: Generates an event when all files in the job have been transferred.
+- 2: Generates an event when an error occurs.
+- 3: Generates an event when all files have completed transfer or when an error occurs.
+- 4: Disables notifications.
 
 ```yaml
 Type: NotifyFlagValue
@@ -539,7 +578,22 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityFlags
-{{ Fill SecurityFlags Description }}
+Specifies security flags for the HTTP request.
+
+The flags you can set, from the least significant bit, are the following bits:
+
+- 1: Enable CRL Check.
+- 2: Ignore incorrect common names in the server certificate.
+- 3: Ignore incorrect dates in the server certificate.
+- 4: Ignore incorrect certification authorities in the server certificate.
+- 5: Ignore incorrect usage of the server certificate.
+- 12: Allow redirection from HTTPS to HTTP.
+
+Use bits 9 through 11 to implement your redirection policy:
+
+- 0,0,0: Redirects are automatically allowed.
+- 0,0,1: Remote name is updated if a redirect occurs.
+-0,1,0: BITS fails the job if a redirect occurs.
 
 ```yaml
 Type: SecurityFlagValue

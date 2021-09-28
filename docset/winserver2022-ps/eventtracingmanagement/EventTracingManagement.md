@@ -56,7 +56,10 @@ Starts an ETW session with the specified name and settings.
 ### [Stop-EtwTraceSession](./Stop-EtwTraceSession.md)
 Stops the specified ETW session.
 
-### [Update-EtwTraceSession](./Update-EtwTraceSession.md)
+### [Update-AutologgerConfig](Update-AutologgerConfig.md)
+
+
+### [Update-EtwTraceSession](Update-EtwTraceSession.md)
 Modifies an existing ETW session.
 
 

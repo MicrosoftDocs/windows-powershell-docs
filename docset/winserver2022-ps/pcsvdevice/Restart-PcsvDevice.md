@@ -389,7 +389,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.Management.Automation.PSCredential
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.PcsvDevice.ManagementProtocol
+
+### System.UInt16
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.PcsvDevice.Authentication
+
+### System.Management.Automation.SwitchParameter
+
+### System.UInt32
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/HardwareManagement/MSFT_PCSVDevice
 The cmdlet only returns an **MSFT_PCSVDevice** object if you specify the **PassThru** parameter.

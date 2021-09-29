@@ -393,11 +393,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.Management.Automation.PSCredential
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.PcsvDevice.ManagementProtocol
+
+### System.UInt16
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.PcsvDevice.Authentication
+
+### System.Management.Automation.SwitchParameter
+
+### System.UInt32
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance[], Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/HardwareManagement/MSFT_PCSVLogRecord
-This cmdlet returns instances of **MSFT_PCSVLogRecord** objects.
-This object contains the following properties. 
+### Microsoft.Management.Infrastructure.CimInstance[]
+
+### Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/HardwareManagement/MSFT_PCSVLogRecord
 
 - **InstanceID**.
 **String**

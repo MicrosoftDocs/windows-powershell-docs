@@ -372,10 +372,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.Management.Automation.PSCredential
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.PcsvDevice.ManagementProtocol
+
+### System.UInt16
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.PcsvDevice.Authentication
+
+### System.Management.Automation.SwitchParameter
+
+### System.UInt32
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance, Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/HardwareManagement/MSFT_PCSVDevice
-This cmdlet returns a PCSV device object, if you specify the **PassThru** parameter.
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/HardwareManagement/MSFT_PCSVDevice
 
 ## NOTES
 * This cmdlet clears the System Event Log. For devices that support the IPMI Reserve SEL command, the cmdlet first tries to make a SEL reservation. If the reservation becomes invalid due to a more recent event, the cmdlet fails. If the cmdlet fails, try again.

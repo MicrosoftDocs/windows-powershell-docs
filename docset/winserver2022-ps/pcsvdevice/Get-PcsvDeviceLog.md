@@ -415,6 +415,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/HardwareManagement/MSFT_PCSVLogRecord
 
+This cmdlet returns instances of **MSFT_PCSVLogRecord** objects.
+This object contains the following properties.
+
 - **InstanceID**.
 **String**
 - **Caption**.

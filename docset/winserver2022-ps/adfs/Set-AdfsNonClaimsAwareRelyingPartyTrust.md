@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: ADFS
-ms.date: 12/20/2016
+ms.date: 09/30/2021
 online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsnonclaimsawarerelyingpartytrust?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-AdfsNonClaimsAwareRelyingPartyTrust
@@ -154,7 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceAuthenticationMethod
-{{ Fill DeviceAuthenticationMethod Description }}
+Specifying this parameter configures an external authentication provider, for second stage
+authentication, in the global policy. This is the first step in creating an AD FS policy that
+invokes an external authentication provider for multifactor authentication.
 
 ```yaml
 Type: DeviceAuthenticationMethod

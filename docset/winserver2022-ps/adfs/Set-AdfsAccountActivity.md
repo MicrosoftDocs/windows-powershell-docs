@@ -1,8 +1,11 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: adfs
-online version:
+ms.date: 09/30/2021
+online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsaccountactivity?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Set-AdfsAccountActivity
 ---
 
 # Set-AdfsAccountActivity

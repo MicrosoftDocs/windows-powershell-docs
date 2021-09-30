@@ -263,7 +263,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceAuthenticationMethod
-{{ Fill DeviceAuthenticationMethod Description }}
+Specifying this parameter configures an external authentication provider, for second stage
+authentication, in the global policy. This is the first step in creating an AD FS policy that
+invokes an external authentication provider for multifactor authentication.
 
 ```yaml
 Type: DeviceAuthenticationMethod

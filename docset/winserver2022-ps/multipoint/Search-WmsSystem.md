@@ -75,12 +75,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
 
 ## OUTPUTS
 
-###  
-Returns a string collection as **PSObject** collection.
+### System.String
 
 ## NOTES
 

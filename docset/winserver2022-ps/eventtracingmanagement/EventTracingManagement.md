@@ -44,9 +44,6 @@ Saves the events collected by the ETW session to an .etl file.
 ### [Send-EtwTraceSession](./Send-EtwTraceSession.md)
 Sends the log file of the specified ETW session to a destination.
 
-### [Set-AutologgerConfig](./Set-AutologgerConfig.md)
-Modifies an existing AutoLogger session configuration.
-
 ### [Set-EtwTraceProvider](./Set-EtwTraceProvider.md)
 Modifies a provider's enablement settings in an ETW or AutoLogger session.
 
@@ -57,7 +54,7 @@ Starts an ETW session with the specified name and settings.
 Stops the specified ETW session.
 
 ### [Update-AutologgerConfig](Update-AutologgerConfig.md)
-
+Modifies an existing AutoLogger session configuration.
 
 ### [Update-EtwTraceSession](Update-EtwTraceSession.md)
 Modifies an existing ETW session.

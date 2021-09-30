@@ -71,14 +71,12 @@ Accept wildcard characters: False
 ### -CompressionType
 Specifies the type of compression used for the initial capture operation. Acceptable values are:
 
+- **"lzms":** Provides very high but CPU intense compression, similar to `dism.exe`'s recovery type. Results in .esd format.
 - **"max" or "maximum":** Provides the high compression, but takes more time to capture the image
-- **"fast:"** Provides faster image compression, but the resulting files are larger than those compressed by using the maximum option.
+- **"fast":** Provides faster image compression, but the resulting files are larger than those compressed by using the maximum option.
 - **"none":** No compression is used at all. This is the default. 
 
-> [!NOTE]
-> This cmdlet does not support the "recovery" compression type. Use `dism.exe` instead.
-
-the *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
+The *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
 
 ```yaml
 Type: String

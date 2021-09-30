@@ -2,7 +2,7 @@
 description: 
 external help file: VMDirectStorage-help.xml
 Module Name: VMDirectStorage
-ms.date: 09/21/2021
+ms.date: 10/08/2021
 online version: https://docs.microsoft.com/powershell/module/vmdirectstorage/get-vmdirectvirtualdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-VMDirectVirtualDisk
@@ -171,3 +171,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-VMDirectVirtualDisk](Add-VMDirectVirtualDisk.md)
+
+[Remove-VMDirectVirtualDisk](Remove-VMDirectVirtualDisk.md)

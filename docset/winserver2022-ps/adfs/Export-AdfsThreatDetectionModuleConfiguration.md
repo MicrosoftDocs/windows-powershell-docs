@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: adfs
-ms.date: 09/30/2021
+ms.date: 10/01/2021
 online version: https://docs.microsoft.com/powershell/module/adfs/export-adfsthreatdetectionmoduleconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-AdfsThreatDetectionModuleConfiguration
@@ -35,7 +35,8 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -ConfigurationFilePath
-{{ Fill ConfigurationFilePath Description }}
+Specifies the fully qualified file path of a file that contains authentication provider
+configuration data.
 
 ```yaml
 Type: String
@@ -50,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the friendly name.
 
 ```yaml
 Type: String

@@ -34,7 +34,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the friendly name.
 
 ```yaml
 Type: String

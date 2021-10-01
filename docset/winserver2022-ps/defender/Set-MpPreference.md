@@ -831,11 +831,11 @@ Specifies when devices receive Microsoft Defender engine updates during the mont
 
 Valid values are:
 
-- Beta. Devices are the first to receive new updates. Devices in the Windows Insider Program are subscribed to this channel by default. For use in manual test environments only and a limited number of devices.
-- Preview. Devices offered updates earliest during the monthly gradual release cycle. Suggested for pre-production or validation environments.
-- Staged. Devices offered updates after the monthly gradual release cycle. Suggested for a small, representative part of your production population.
-- Broad. Devices offered updates only after the gradual release cycle completes.
-- NotConfigured. Devices stay up to date automatically during the gradual release cycle.
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle. This value is suitable for most devices.
+- Beta. Devices are the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. This value is for use in manual test environments only and a limited number of devices.
+- Broad. Devices are offered updates only after the gradual release cycle completes. This value is suggested for a broad set of devices in your production population, from 10 to 100 percent.
+- Preview. Devices are offered updates earliest during the monthly gradual release cycle. This value is suggested for pre-production or validation environments.
+- Staged. Devices are offered updates after the monthly gradual release cycle. This value is suggested for a small, representative part of your production population, around 10 percent.
 
 ```yaml
 Type: UpdatesChannelType
@@ -1060,11 +1060,11 @@ Specifies when devices receive Microsoft Defender platform updates during the mo
 
 Valid values are:
 
-- Beta. Devices are the first to receive new updates. Devices in the Windows Insider Program are subscribed to this channel by default. For use in manual test environments only and a limited number of devices.
-- Preview. Devices offered updates earliest during the monthly gradual release cycle. Suggested for pre-production or validation environments.
-- Staged. Devices offered updates after the monthly gradual release cycle. Suggested for a small, representative part of your production population.
-- Broad. Devices offered updates only after the gradual release cycle completes.
-- NotConfigured. Devices stay up to date automatically during the gradual release cycle.
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle. This value is suitable for most devices.
+- Beta. Devices are the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. This value is for use in manual test environments only and a limited number of devices.
+- Broad. Devices are offered updates only after the gradual release cycle completes. This value is suggested for a broad set of devices in your production population, from 10 to 100 percent.
+- Preview. Devices are offered updates earliest during the monthly gradual release cycle. This value is suggested for pre-production or validation environments.
+- Staged. Devices are offered updates after the monthly gradual release cycle. This value is suggested for a small, representative part of your production population, around 10 percent.
 
 ```yaml
 Type: UpdatesChannelType
@@ -1666,9 +1666,9 @@ Specifies when devices receive daily Microsoft Defender definition updates durin
 
 Valid values are:
 
-- Staged. Devices offered updates after the monthly gradual release cycle. Suggested for a small, representative part of your production population.
-- Broad. Devices offered updates only after the gradual release cycle completes.
-- NotConfigured. Devices stay up to date automatically during the gradual release cycle.
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle. This value is suitable for most devices.
+- Broad. Devices are offered updates only after the gradual release cycle completes. This value is suggested for a broad set of devices in your production population, from 10 to 100 percent.
+- Staged. Devices are offered updates after the monthly gradual release cycle. This value is suggested for a small, representative part of your production population, around 10 percent.
 
 This parameter name will be updated to **DefinitionUpdatesChannel** in a future release.
 

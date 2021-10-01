@@ -76,7 +76,7 @@ Specifies the type of compression used for the initial capture operation. Accept
 - **"fast":** Provides faster image compression, but the resulting files are larger than those compressed by using the maximum option.
 - **"none":** No compression is used at all. This is the default. 
 
-The *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
+The *CompressionType* parameter does not apply when you export an image to an existing .wim file; you can only use this CompressionType when you export an image to a new .wim file.
 
 ```yaml
 Type: String

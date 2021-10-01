@@ -1662,13 +1662,15 @@ Accept wildcard characters: False
 ```
 
 ### -SignaturesUpdatesChannel
-Specifies when devices receive  daily Microsoft Defender definition updates during the monthly gradual rollout.
+Specifies when devices receive daily Microsoft Defender definition updates during the monthly gradual rollout.
 
 Valid values are:
 
 - Staged. Devices offered updates after the monthly gradual release cycle. Suggested for a small, representative part of your production population.
 - Broad. Devices offered updates only after the gradual release cycle completes.
 - NotConfigured. Devices stay up to date automatically during the gradual release cycle.
+
+This parameter name will be updated to **DefinitionUpdatesChannel** in a future release.
 
 ```yaml
 Type: UpdatesChannelType

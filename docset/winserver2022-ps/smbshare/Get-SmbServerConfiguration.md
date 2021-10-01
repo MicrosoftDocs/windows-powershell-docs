@@ -107,6 +107,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ThrottleLimit
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -118,23 +135,6 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -172,4 +172,3 @@ The **MSFT_SmbServerConfiguration** object represents the configuration of the S
 ## RELATED LINKS
 
 [Set-SmbServerConfiguration](./Set-SmbServerConfiguration.md)
-

@@ -209,9 +209,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMStorageReport
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

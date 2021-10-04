@@ -64,9 +64,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
 ## OUTPUTS
 
-### DiskProtectionMode
+### Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.DiskProtectionMode
+
 The **DiskProtectionMode** object is an enumeration with one of three values that reflect the current mode of the disk protection feature.
 The possible values are NotInstalled, Discard, or Passive.
 

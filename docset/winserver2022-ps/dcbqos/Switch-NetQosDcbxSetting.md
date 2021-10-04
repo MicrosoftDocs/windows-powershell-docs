@@ -154,7 +154,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.NetQosDcbxSetting.PolicySet
+
+### System.String
+
+### System.UInt32
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

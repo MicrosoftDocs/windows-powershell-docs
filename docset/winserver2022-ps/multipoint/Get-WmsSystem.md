@@ -101,12 +101,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
 
 ## OUTPUTS
 
-###  
-This cmdlet returns a **WmsSystem** collection as a **PSObject** collection.
+### Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsSystem
 
 ## NOTES
 

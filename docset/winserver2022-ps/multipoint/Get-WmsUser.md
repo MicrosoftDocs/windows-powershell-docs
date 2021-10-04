@@ -102,12 +102,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
 
 ## OUTPUTS
 
-###  
-This cmdlet returns a **WmsUser** collection as **PSObject** collection.
+### Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsUser
 
 ## NOTES
 

@@ -209,18 +209,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosFlowControlSettingData[]
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
-The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
-The MSFT_NetQosFlowControlSettingData object contains the flow control setting per priority.
+### System.String
+
+### System.UInt32
+
+### Microsoft.Management.Infrastructure.CimInstance[]
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosFlowControlSettingData
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
-The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
-This cmdlet returns a **MSFT_NetQosFlowControlSettingData** object that contains flow control settings per priority.
-Only if the *PassThru* parameter is specified does this cmdlet return the **MSFT_NetQosFlowControlSettingData** object.
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

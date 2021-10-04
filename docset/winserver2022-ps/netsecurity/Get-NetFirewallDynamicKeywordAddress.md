@@ -29,7 +29,7 @@ Get-NetFirewallDynamicKeywordAddress [-Id] <String[]> [-PolicyStore <String>] [-
 
 ## DESCRIPTION
 The **Get-NetFirewallDynamicKeywordAddress** cmdlet gets dynamic keyword addresses.
-You can specify an ID or get all AutoResolve or all non-AutoResolve dynamic keyword addresses.
+You can specify an ID or get all `AutoResolve` or all non-`AutoResolve` dynamic keyword addresses.
 
 ## EXAMPLES
 
@@ -45,7 +45,7 @@ This example gets the specified dynamic keyword address from the specified polic
 Get-NetFirewallDynamicKeywordAddress -PolicyStore "ContosoPolicyStore" -AllAutoResolve
 ```
 
-This example gets all the AutoResolve dynamic keyword addresses from the specified policy store.
+This example gets all the `AutoResolve` dynamic keyword addresses from the specified policy store.
 
 ## PARAMETERS
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllAutoResolve
-Indicates that the cmdlet gets all AutoResolve dynamic keyword addresses.
+Indicates that the cmdlet gets all `AutoResolve` dynamic keyword addresses.
 
 ```yaml
 Type: SwitchParameter
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllNonAutoResolve
-Indicates that the cmdlet gets all non-AutoResolve dynamic keyword addresses.
+Indicates that the cmdlet gets all non-`AutoResolve` dynamic keyword addresses.
 
 ```yaml
 Type: SwitchParameter
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies GUIDs of the dynamic keyword addresses to get.
+Specifies the GUIDs of the dynamic keyword addresses to get.
 
 ```yaml
 Type: String[]

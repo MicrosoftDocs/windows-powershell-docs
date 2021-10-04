@@ -33,7 +33,7 @@ A firewall rule can use dynamic keyword addresses instead of explicitly defining
  New-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}" -Keyword "ContosoSubnet" -AutoResolve
 ```
 
-This command creates an AutoResolve dynamic keyword address.
+This command creates an `AutoResolve` dynamic keyword address.
 
 Be sure to generate your own GUID.
 
@@ -42,7 +42,7 @@ Be sure to generate your own GUID.
  New-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}" -Keyword "ContosoServerSubnet" -Addresses 10.0.0.21
 ```
 
-This command creates a non-AutoResolve dynamic keyword address. You can instead use the form `-Address` in a command, for clarity.
+This command creates a non-`AutoResolve` dynamic keyword address. You can instead use the form `-Address` in a command, for clarity.
 
 Be sure to generate your own GUID.
 
@@ -79,8 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoResolve
-Whether the dynamic key address uses AutoResolve.
-For AutoResolve, the keyword field represents a resolvable name and the IP addresses aren't defined when the dynamic key address is created.
+Whether the dynamic key address uses `AutoResolve`.
+For `AutoResolve`, the keyword field represents a resolvable name and the IP addresses aren't defined when the dynamic key address is created.
 
 ```yaml
 Type: Boolean

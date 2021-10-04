@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies GUID of the dynamic keyword address to update.
+Specifies the GUID of the dynamic keyword address to update.
 
 ```yaml
 Type: String

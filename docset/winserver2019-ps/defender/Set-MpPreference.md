@@ -41,7 +41,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
  [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>]  [-DisableGradualRelease <Boolean>] [-SignaturesUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>]
+ [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>]
 ```
 
 ## DESCRIPTION
@@ -132,6 +132,29 @@ Parameter Sets: (All)
 Aliases: Session
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefinitionUpdatesChannel
+Enable this policy to specify when devices receive daily Microsoft Defender security intelligence (definition/signature) updates during the daily gradual rollout. 
+
+Current Channel (Staged): Devices will be offered updates after the release cycle. Suggested to apply to a small, representative part of production population (~10%).
+
+Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). 
+
+If you disable or do not configure this policy, the device will stay up to date automatically during the daily release cycle. Suitable for most devices. 
+
+Supported OS versions: Windows 10 
+
+Note: This policy is available starting with platform version 4.18.2106.5 and later
+
+```yaml
+Type: UpdatesChannelType
+Aliases: suc
+Accepted values: Staged|Broad|Not Configured
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -446,6 +469,8 @@ Current Channel (Staged): Devices will be offered updates after the monthly grad
 
 Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). 
 
+Critical- Time Delay: Devices will be offered updates with a 48-hour delay. Suggested for critical environments only.   
+
 If you disable or do not configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
 
 Supported OS versions: Windows 10 
@@ -454,7 +479,7 @@ Note: This policy is available starting with platform version 4.18.2106.5 and la
 ```yaml
 Type: UpdatesChannelType
 Aliases: euc
-Accepted values:Beta|Preview|Staged|Broad|NotConfigured 
+Accepted values:Beta|Preview|Staged|Broad|Delayed|NotConfigured 
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -648,6 +673,8 @@ Current Channel (Staged): Devices will be offered updates after the monthly grad
 
 Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). 
 
+Critical- Time Delay: Devices will be offered updates with a 48-hour delay. Suggested for critical environments only.   
+
 If you disable or do not configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
 
 Supported OS versions: Windows 10 
@@ -657,7 +684,7 @@ Note: This policy is available starting with platform version 4.18.2106.5 and la
 ```yaml
 Type: UpdatesChannelType
 Aliases: puc
-Accepted values: Beta|Preview|Staged|Broad|NotConfigured 
+Accepted values: Beta|Preview|Staged|Broad|Delayed|NotConfigured 
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1143,28 +1170,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SignaturesUpdatesChannel
-Enable this policy to specify when devices receive daily Microsoft Defender definition updates during the daily gradual rollout. 
-
-Current Channel (Staged): Devices will be offered updates after the release cycle. Suggested to apply to a small, representative part of production population (~10%).
-
-Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). 
-
-If you disable or do not configure this policy, the device will stay up to date automatically during the daily release cycle. Suitable for most devices. 
-
-Supported OS versions: Windows 10 
-
-Note: This policy is available starting with platform version 4.18.2106.5 and later
-
-```yaml
-Type: UpdatesChannelType
-Aliases: suc
-Accepted values: Staged|Broad|Not Configured
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -SignatureUpdateInterval
 Specifies the interval, in hours, at which to check for definition updates.

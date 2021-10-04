@@ -84,7 +84,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
+
+### Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsSystem
 
 ## NOTES
 

@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -TypeName
-{{ Fill TypeName Description }}
+Specifies the fully qualified type of the authentication provider assembly on the federation server.
 
 ```yaml
 Type: String

@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Member
-{{ Fill Member Description }}
+Specifies an array of members.
 
 ```yaml
 Type: String[]

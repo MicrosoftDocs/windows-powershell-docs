@@ -130,12 +130,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.UInt32[]
+
+### System.String
 
 ## OUTPUTS
 
-###  
-This cmdlet returns a **WmsSession** collection as a **PSObject** collection.
+### Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsSession
 
 ## NOTES
 

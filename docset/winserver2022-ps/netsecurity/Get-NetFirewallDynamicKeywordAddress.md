@@ -35,14 +35,14 @@ You can specify an ID or get all AutoResolve or all non-AutoResolve dynamic keyw
 
 ### Example 1: Get a dynamic keyword address
 ```powershell
-Get-NetFirewallDynamicKeywordAddress -Id 01234567-89ab-cdef-0123-456789abcdef -PolicyStore ContosoPolicyStore
+Get-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}" -PolicyStore "ContosoPolicyStore"
 ```
 
 This example gets the specified dynamic keyword address from the specified policy store.
 
 ### Example 2: Get all AutoResolve dynamic keyword addresses
 ```powershell
-Get-NetFirewallDynamicKeywordAddress -PolicyStore ContosoPolicyStore -AllAutoResolve
+Get-NetFirewallDynamicKeywordAddress -PolicyStore "ContosoPolicyStore" -AllAutoResolve
 ```
 
 This example gets all the AutoResolve dynamic keyword addresses from the specified policy store.

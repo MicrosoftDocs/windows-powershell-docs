@@ -30,14 +30,14 @@ A firewall rule can use dynamic keyword addresses instead of explicitly defining
 
 ### Example 1: Update a dynamic keyword address
 ```powershell
-Update-NetFirewallDynamicKeywordAddress -Id 01234567-89ab-cdef-0123-456789abcdef -Addresses 10.0.0.15
+Update-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}" -Addresses 10.0.0.15
 ```
 
 This example updates a dynamic keyword address to the specified value. You can instead use the form `-Address` in a command, for clarity.
 
 ### Example 2: Append an address to a dynamic keyword address
 ```powershell
-Update-NetFirewallDynamicKeywordAddress -Id 01234567-89ab-cdef-0123-456789abcdef -Addresses 192.0.0.1 -Append $True
+Update-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}" -Addresses 192.0.0.1 -Append $True
 ```
 
 This example adds the specified address to a dynamic keyword address.

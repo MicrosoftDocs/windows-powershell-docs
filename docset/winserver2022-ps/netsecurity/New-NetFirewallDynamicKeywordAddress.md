@@ -30,7 +30,7 @@ A firewall rule can use dynamic keyword addresses instead of explicitly defining
 
 ### Example 1: Create dynamic keyword address with AutoResolve
 ```powershell
- New-NetFirewallDynamicKeywordAddress -Id 01234567-89ab-cdef-0123-456789abcdef -Keyword ContosoSubnet -AutoResolve
+ New-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}" -Keyword "ContosoSubnet" -AutoResolve
 ```
 
 This command creates an AutoResolve dynamic keyword address.
@@ -39,7 +39,7 @@ Be sure to generate your own GUID.
 
 ### Example 2: Create dynamic keyword address
 ```powershell
- New-NetFirewallDynamicKeywordAddress -Id 01234567-89ab-cdef-0123-456789abcdef -Keyword ContosoServerSubnet -Addresses 10.0.0.21
+ New-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}" -Keyword "ContosoServerSubnet" -Addresses 10.0.0.21
 ```
 
 This command creates a non-AutoResolve dynamic keyword address. You can instead use the form `-Address` in a command, for clarity.
@@ -113,7 +113,6 @@ Accept wildcard characters: False
 
 ### -Id
 Specifies a GUID for the dynamic keyword address.
-If you do not specify a GUID, the cmdlet creates one.
 
 ```yaml
 Type: String

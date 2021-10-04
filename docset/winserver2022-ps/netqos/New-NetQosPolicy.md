@@ -813,14 +813,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.NetQosPolicy.NetworkProfile
+
+### System.UInt32
+
+### System.SByte
+
+### System.Byte
+
+### System.UInt64
+
+### System.Boolean
+
+### System.UInt16
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.NetQosPolicy.Protocol
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosPolicySettingData
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
-The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
-The **MSFT_NetQosPolicySettingData** object contains a QoS policy.
+### System.Object
 
 ## NOTES
 

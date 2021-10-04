@@ -34,7 +34,7 @@ Converts EMET file policy.xml to result.xml, may also generate a CI file CI-resu
 ## PARAMETERS
 
 ### -EMETFilePath
-{{Fill EMETFilePath Description}}
+Specifies the full path of the Enhanced Mitigation Experience Tool (EMET) file to convert.
 
 ```yaml
 Type: String
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFilePath
-{{Fill OutputFilePath Description}}
+Specifies the full path of the converted format file.
 
 ```yaml
 Type: String

@@ -351,9 +351,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.Management.Automation.PSCredential
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.PcsvDevice.ManagementProtocol
+
+### System.UInt16
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.PcsvDevice.Authentication
+
+### System.Management.Automation.SwitchParameter
+
+### System.UInt32
+
 ## OUTPUTS
 
+### Microsoft.Management.Infrastructure.CimInstance
+
 ### Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/HardwareManagement/MSFT_PCSVDevice
+
 A MSFT_PCSVDevice instance (derived from CIM_PhysicalComputerSystemView) that is used to represent the remote device.
 
 ## NOTES

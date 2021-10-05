@@ -91,7 +91,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.UInt32[]
+
+### System.String
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

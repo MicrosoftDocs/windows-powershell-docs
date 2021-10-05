@@ -1,5 +1,5 @@
 ---
-description: 
+description: The New-NetworkControllerRestore cmdlet restores the Network Controller database.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: New-NetworkControllerRestore
 # New-NetworkControllerRestore
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Restores the Network Controller database.
 
 ## SYNTAX
 
@@ -23,16 +23,28 @@ New-NetworkControllerRestore [-ResourceId] <String> [[-Tags] <PSObject>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **New-NetworkControllerRestore** cmdlet restores the Network Controller database.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Restore a Network Controller
 ```powershell
-PS C:\> {{ Add example code here }}
+$RestoreProperties = New-Object Microsoft.Windows.NetworkController.NetworkControllerRestoreProperties
+$RestoreProperties.RestorePath = "\\fileshare\backups\NetworkController\2017-04-25T16_53_13"
+$RestoreProperties.Credential = BackupUser
+$ResourceId = (Get-Date).ToString("s").Replace(":", "_")
+New-NetworkControllerRestore -ResourceId $ResourceId -Properties $RestoreProperties -ConnectionUri https://networkcontroller 
 ```
 
-{{ Add example description here }}
+This example restores a Network Controller.
+
+The first command creates a Network Controller restore properties object.
+
+The second and third commands update properties in that object.
+
+The fourth command creates a resource ID for the restore.
+
+The final command restores the Network Controller database with the specified values.
 
 ## PARAMETERS
 
@@ -53,7 +65,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+The cmdlet restores the database for that network controller.
 
 ```yaml
 Type: Uri
@@ -68,7 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default is the current user.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -83,7 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
-{{ Fill Etag Description }}
+Specifies the entity tag (ETag) parameter of the resource.
+An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+The value of the header is an opaque string representing the state of the resource at the time the response was generated.
 
 ```yaml
 Type: String
@@ -128,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-{{ Fill Properties Description }}
+Specifies the properties of the Network Controller restore.
 
 ```yaml
 Type: NetworkControllerRestoreProperties
@@ -143,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the resource ID of the Network Controller database to restore.
 
 ```yaml
 Type: String
@@ -158,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceMetadata
-{{ Fill ResourceMetadata Description }}
+Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
 
 ```yaml
 Type: ResourceMetadata
@@ -173,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-{{ Fill Tags Description }}
+Specifies tags.
 
 ```yaml
 Type: PSObject

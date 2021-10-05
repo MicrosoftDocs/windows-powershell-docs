@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Remove-NetworkControllerRestore cmdlet removes a Network Controller database restore object.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Remove-NetworkControllerRestore
 # Remove-NetworkControllerRestore
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes a Network Controller database restore object.
 
 ## SYNTAX
 
@@ -22,16 +22,17 @@ Remove-NetworkControllerRestore [-ResourceId] <String> [[-Etag] <String>] [-Forc
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Remove-NetworkControllerRestore** cmdlet removes a Network Controller database restore object.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a Network Controller database restore
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-NetworkControllerRestore -ResourceId $ResourceId -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+This example removes the database restore object.
+The `$ResourceId` value was created with the restore action by using the [New-NetworkControllerRestore](New-NetworkControllerRestore.md) cmdlet.
 
 ## PARAMETERS
 
@@ -52,7 +53,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+The cmdlet gets the database restore for that controller.
 
 ```yaml
 Type: Uri
@@ -67,7 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default is the current user.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -82,7 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
-{{ Fill Etag Description }}
+Specifies the entity tag (ETag) parameter of the resource.
+An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+The value of the header is an opaque string representing the state of the resource at the time the response was generated.
 
 ```yaml
 Type: String
@@ -127,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the resource ID of the restore to remove.
 
 ```yaml
 Type: String

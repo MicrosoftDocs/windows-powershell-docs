@@ -1,5 +1,5 @@
 ---
-description: 
+description: The New-NetworkControllerBackup cmdlet backs up the Network Controller database.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: New-NetworkControllerBackup
 # New-NetworkControllerBackup
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Backs up the Network Controller database.
 
 ## SYNTAX
 
@@ -27,16 +27,27 @@ The **New-NetworkControllerBackup** cmdlet backs up the Network Controller datab
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a Network Controller backup
 ```powershell
 $Credential = Get-Credential
 $BackupTime = (get-date).ToString("s").Replace(":", "_")
 $BackupProperties = New-Object Microsoft.Windows.NetworkController.NetworkControllerBackupProperties
 $BackupProperties.BackupPath = "C:\backups\NetworkController\$BackupTime"
-New-NetworkControllerBackup -ConnectionURI https://networkcontroller -Credential $Credential -Properties $BackupProperties -ResourceId $BackupTime -Force
+New-NetworkControllerBackup -ResourceId $BackupTime -Properties $BackupProperties -ConnectionURI https://networkcontroller -Credential $Credential
 ```
 
-{{ Add example description here }}
+This example creates a backup of the Network Controller database.
+
+The first command gets the credential for the current environment and then saves it in `$Credential`.
+
+The second command creates a string version of the current time to use as the location of the backup.
+
+The third command creates a **NetworkControllerBackupProperties** object.
+
+The fourth command adds a path for the backup to the properties object.
+
+The fifth command creates the backup.
+The command uses the specified connection URI and the items created in the previous commands.
 
 ## PARAMETERS
 
@@ -57,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of the Network Controller to back up.
 
 ```yaml
 Type: Uri
@@ -72,7 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default is the current user.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -87,7 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
-{{ Fill Etag Description }}
+Specifies the entity tag (ETag) parameter of the resource.
+An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+The value of the header is an opaque string representing the state of the resource at the time the response was generated.
 
 ```yaml
 Type: String
@@ -132,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-{{ Fill Properties Description }}
+Specifies the properties of the Network Controller backup.
 
 ```yaml
 Type: NetworkControllerBackupProperties
@@ -147,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the resource ID of the backup to create.
 
 ```yaml
 Type: String
@@ -162,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceMetadata
-{{ Fill ResourceMetadata Description }}
+Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
 
 ```yaml
 Type: ResourceMetadata
@@ -177,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-{{ Fill Tags Description }}
+Specifies tags.
 
 ```yaml
 Type: PSObject

@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Get-NetworkControllerBackup cmdlet gets backups of the Network Controller database.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Get-NetworkControllerBackup
 # Get-NetworkControllerBackup
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets backups of the Network Controller database.
 
 ## SYNTAX
 
@@ -21,17 +21,24 @@ Get-NetworkControllerBackup [[-ResourceId] <String[]>] -ConnectionUri <Uri> [-Ce
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NetworkControllerBackup** cmdlet gets backups of the Network Controller database.
 
 ## EXAMPLES
 
-### Example 1: Get network controller backup
+### Example 1: Get all Network Controller backups
 ```powershell
-$Credential = Get-Credential
-Get-NetworkControllerBackup -ResourceId BackupUser -ConnectionUri https://networkcontroller -Credential $Credential
+Get-NetworkControllerBackup -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+This command gets the backups for the specified Network Controller.
+
+### Example 1: Get a network controller backup
+```powershell
+$Credential = Get-Credential
+Get-NetworkControllerBackup -ResourceId "BackupUser" -ConnectionUri https://networkcontroller -Credential $Credential
+```
+
+This command gets the Network Controller backup for the specified ID.
 
 ## PARAMETERS
 
@@ -52,7 +59,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+The cmdlet gets backups for that controller.
 
 ```yaml
 Type: Uri
@@ -67,7 +75,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default is the current user.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -97,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the resource ID of the backup to get.
 
 ```yaml
 Type: String[]

@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Get-NetworkControllerRestore cmdlet gets a Network Controller database restore object. 
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Get-NetworkControllerRestore
 # Get-NetworkControllerRestore
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets a Network Controller database restore object.
 
 ## SYNTAX
 
@@ -21,16 +21,17 @@ Get-NetworkControllerRestore [[-ResourceId] <String[]>] -ConnectionUri <Uri> [-C
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NetworkControllerRestore** cmdlet gets a Network Controller database restore object. Use this cmdlet to check the status of a Network Controller database restore.
 
 ## EXAMPLES
 
-### Example 1: Get the restore object
+### Example 1: Check the status of a Network Controller database restore
 ```powershell
-Get-NetworkControllerRestore -ConnectionUri  https://networkcontroller
+Get-NetworkControllerRestore -ResourceId $ResourceId -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+This example gets the database restore object.
+The `$ResourceId` value was created with the restore action by using the [New-NetworkControllerRestore](New-NetworkControllerRestore.md) cmdlet.
 
 ## PARAMETERS
 
@@ -51,7 +52,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+The cmdlet gets the database restore for that controller.
 
 ```yaml
 Type: Uri
@@ -66,7 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default is the current user.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -96,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the resource ID of the restore to get.
 
 ```yaml
 Type: String[]

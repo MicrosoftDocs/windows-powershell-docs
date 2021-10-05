@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Get-NetworkControllerIDnsServerConfiguration cmdlet gets a configuration object for an iDNS server for a Network Controller.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Get-NetworkControllerIDnsServerConfiguration
 # Get-NetworkControllerIDnsServerConfiguration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets a configuration object for an iDNS server for a Network Controller.
 
 ## SYNTAX
 
@@ -21,16 +21,16 @@ Get-NetworkControllerIDnsServerConfiguration [-ConnectionUri <Uri>] [-Certificat
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NetworkControllerIDnsServerConfiguration** cmdlet gets a configuration object for an Internal DNS (iDNS) server for a Network Controller.
 
 ## EXAMPLES
 
-### Example 1: Get the configuration for IDns server
+### Example 1: Get the configuration for an IDNS server
 ```powershell
 Get-NetworkControllerIDnsServerConfiguration -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+This example gets the iDNS server configuration for the specified Network Controller.
 
 ## PARAMETERS
 
@@ -51,7 +51,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+The cmdlet gets iDNS configuration information for that controller.
 
 ```yaml
 Type: Uri
@@ -66,7 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default is the current user.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential

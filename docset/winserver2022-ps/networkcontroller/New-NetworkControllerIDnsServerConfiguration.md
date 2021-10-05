@@ -1,5 +1,5 @@
 ---
-description: 
+description: The New-NetworkControllerIDnsServerConfiguration cmdlet creates an iDNS Server configuration for a Network Controller.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: New-NetworkControllerIDnsServerConfiguration
 # New-NetworkControllerIDnsServerConfiguration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Creates an iDNS Server configuration for a Network Controller.
 
 ## SYNTAX
 
@@ -23,16 +23,21 @@ New-NetworkControllerIDnsServerConfiguration [[-Tags] <PSObject>] [-Properties] 
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **New-NetworkControllerIDnsServerConfiguration** cmdlet creates an Internal DNS (iDNS) server configuration for a Network Controller.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+$iDNSProperties = New-Object Microsoft.Windows.NetworkController.InternalDNSServerProperties
+New-NetworkControllerIDnsServerConfiguration -Properties $iDNSProperties -ResourceId "iDNSConfiguration" -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+The first command creates an iDNS server properties object.
+For a real deployment, you need to specify values in the object.
+For more information, see [Internal DNS Service](/windows-server/networking/sdn/technologies/idns-for-sdn).
+
+The second command creates the iDNS server configuration for the specified Network Controller.
 
 ## PARAMETERS
 
@@ -53,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of the Network Controller to configure.
 
 ```yaml
 Type: Uri
@@ -68,7 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default is the current user.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -83,7 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
-{{ Fill Etag Description }}
+Specifies the entity tag (ETag) parameter of the resource.
+An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+The value of the header is an opaque string representing the state of the resource at the time the response was generated.
 
 ```yaml
 Type: String
@@ -128,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-{{ Fill Properties Description }}
+Specifies the properties of the iDNS server fore the Network Controller.
 
 ```yaml
 Type: InternalDnsServerProperties
@@ -143,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the resource ID of the iDNS server configuration to create.
 
 ```yaml
 Type: String
@@ -158,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceMetadata
-{{ Fill ResourceMetadata Description }}
+Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
 
 ```yaml
 Type: ResourceMetadata
@@ -173,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-{{ Fill Tags Description }}
+Specifies tags.
 
 ```yaml
 Type: PSObject

@@ -146,11 +146,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.Nullable`1[[Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.EAutomaticUpdateMode, MultiPoint, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+
+### System.Nullable`1[[System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+
+### System.String
+
+### System.Nullable`1[[Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.EScheduleUpdateReturnState, MultiPoint, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
 ## OUTPUTS
 
-### None
+### Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsScheduledUpdate
 
 ## NOTES
 

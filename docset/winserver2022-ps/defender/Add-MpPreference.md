@@ -38,7 +38,7 @@ Add-MpPreference -ExclusionPath "C:\Temp"
 This command adds the folder C:\Temp to the exclusion list.
 The command disables Windows Defender scheduled and real-time scanning for files in this folder.
 
-### Example 2: All an application to access folders
+### Example 2: Allow an application to access folders
 ```powershell
 Add-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe"
 ```

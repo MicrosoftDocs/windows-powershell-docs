@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Dismount-SRDestination cmdlet dismounts a test failover snapshot.
 external help file: MSFT_WvrAdminTasks.cdxml-help.xml
 Module Name: storagereplica
 ms.date: 10/06/2021
@@ -11,6 +11,7 @@ title: Dismount-SRDestination
 # Dismount-SRDestination
 
 ## SYNOPSIS
+Dismounts a test failover snapshot.
 
 ## SYNTAX
 
@@ -20,21 +21,21 @@ Dismount-SRDestination [[-ComputerName] <String>] [-Name] <String> [-Force] [-Ci
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Dismount-SRDestination** cmdlet dismounts a test failover snapshot.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Dismount a snapshot of replicated storage
 ```powershell
-PS C:\> {{ Add example code here }}
+Dismount-SRDestination -ComputerName "SR-SRV05" -Name "ReplicationGroup01"
 ```
 
-{{ Add example description here }}
+This command dismounts the snapshot for the replication group `ReplicationGroup01` on the specified computer.
 
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -49,7 +50,9 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -64,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-{{ Fill ComputerName Description }}
+Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN).
+The default value is the local computer.
 
 ```yaml
 Type: String
@@ -79,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the name of the replication group for which this cmdlet dismounts destination storage.
 
 ```yaml
 Type: String
@@ -109,7 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32

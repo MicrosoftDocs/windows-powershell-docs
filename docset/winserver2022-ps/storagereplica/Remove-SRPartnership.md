@@ -57,7 +57,7 @@ The current cmdlet removes all partnerships for all paired servers.
 ## PARAMETERS
 
 ### -ApplyChanges
-{{ Fill ApplyChanges Description }}
+Indicates that the cmdlet applies changes.
 
 ```yaml
 Type: SwitchParameter

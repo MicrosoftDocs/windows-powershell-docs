@@ -1,9 +1,9 @@
 ---
-description: 
+description: The Mount-SRDestination cmdlet mounts a snapshot of replicated storage temporarily for testing or backup purposes.
 external help file: MSFT_WvrAdminTasks.cdxml-help.xml
 Module Name: storagereplica
 ms.date: 10/06/2021
-online version: https://docs.microsoft.com/powershell/module/storagereplica/dismount-srdestination?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/storagereplica/mount-srdestination?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Mount-SRDestination
 ---
@@ -11,6 +11,7 @@ title: Mount-SRDestination
 # Mount-SRDestination
 
 ## SYNOPSIS
+Mounts a snapshot of replicated storage temporarily for testing or backup purposes.
 
 ## SYNTAX
 
@@ -20,21 +21,25 @@ Mount-SRDestination [[-ComputerName] <String>] [-Name] <String> [-TemporaryPath]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Mount-SRDestination** cmdlet mounts a snapshot of replicated storage temporarily for testing or backup purposes.
+Storage Replica dismounts the destination volume when replication begins.
+Mounting the destination storage is called *test failover*.
+
+Test failover requires an unused NTFS or ReFS formatted volume that isn't currently being replicated.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Mount a snapshot of replicated storage
 ```powershell
-PS C:\> {{ Add example code here }}
+Mount-SRDestination -ComputerName "SR-SRV05" -Name "ReplicationGroup01" -TemporaryPath T:\
 ```
 
-{{ Add example description here }}
+This command sets up test failover for the replication group on the specified computer.
 
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -49,7 +54,9 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -64,7 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-{{ Fill ComputerName Description }}
+Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN).
+The default value is the local computer.
 
 ```yaml
 Type: String
@@ -79,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the name of the replication group for which this cmdlet mounts destination storage.
 
 ```yaml
 Type: String
@@ -109,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -TemporaryPath
-{{ Fill TemporaryPath Description }}
+Specifies the path of the test failover volume.
+This volume must be an unused NTFS or ReFS formatted volume that isn't currently replicating.
 
 ```yaml
 Type: String
@@ -124,7 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32

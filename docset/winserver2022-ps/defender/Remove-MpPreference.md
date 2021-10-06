@@ -57,14 +57,14 @@ If you attempt to remove an exclusion that is not in the list, this cmdlet repor
 
 ### Example 1: Remove a folder from the exclusion list
 ```
-PS C:\> Remove-MpPreference -ExclusionPath "C:\Temp"
+Remove-MpPreference -ExclusionPath "C:\Temp"
 ```
 
 This command removes the folder C:\Temp from the exclusion list.
 
-### Example 2: 
+### Example 2: Exclude a specific file
 ```
-PS C:\> Remove-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\Windows\App.exe"
+Remove-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\Windows\App.exe"
 ```
 
 This command will exclude only that specific file app.exe in that specific folder.
@@ -72,7 +72,7 @@ This command will exclude only that specific file app.exe in that specific folde
 ## PARAMETERS
 
 ### -AllowDatagramProcessingOnWinServer
-Removes whether to disable inspection of UDP connections on Windows Server.
+Indicates that the cmdlet removes whether to disable inspection of UDP connections on Windows Server.
 
 ```yaml
 Type: SwitchParameter
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNetworkProtectionDownLevel
-Removes whether to allow network protection to be set to Enabled or Audit Mode on Windows versions before 1709.
+Indicates that the cmdlet removes whether to allow network protection to be set to Enabled or Audit Mode on Windows versions before 1709.
 
 ```yaml
 Type: SwitchParameter
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNetworkProtectionOnWinServer
-Removes whether to allow network protection to be set to Enabled or Audit Mode for Windows Server.
+Indicates that the cmdlet removes whether to allow network protection to be set to Enabled or Audit Mode for Windows Server.
 
 ```yaml
 Type: SwitchParameter
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 
 ### -AttackSurfaceReductionOnlyExclusions
-Exclude files and paths from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
+Specifies the files and paths to exclude from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
 
 For more information about excluding files and folders from [ASR rules](/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckForSignaturesBeforeRunningScan
-Remove whether to check for new virus and spyware definitions before Windows Defender runs a scan.
+Indicates that the cmdlet removes whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 
 ```yaml
 Type: SwitchParameter
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. 
+Runs the cmdlet in a remote session or on a remote computer.
 Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
 The default is the current session on the local computer.
 
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlockLevel
-Specifies a cloud block level. 
+Specifies a cloud block level.
 This value determines how aggressive Microsoft Defender Antivirus is in blocking and scanning suspicious files.
 
 ```yaml
@@ -283,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableArchiveScanning
-Removes whether to scan archive files, such as .zip and .cab files, for malicious and unwanted software.
+Indicates that the cmdlet removes whether to scan archive files, such as .zip and .cab files, for malicious and unwanted software.
 
 ```yaml
 Type: SwitchParameter
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAutoExclusions
-Remove whether to disable the Automatic Exclusions feature for the server.
+Indicates that the cmdlet removes whether to disable the Automatic Exclusions feature for the server.
 
 ```yaml
 Type: SwitchParameter
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBehaviorMonitoring
-Removes whether to enable behavior monitoring.
+Indicates that the cmdlet removes whether to enable behavior monitoring.
 
 ```yaml
 Type: SwitchParameter
@@ -328,7 +328,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBlockAtFirstSeen
-Removes whether to enable block at first seen.
+Indicates that the cmdlet removes whether to enable block at first seen.
 
 ```yaml
 Type: SwitchParameter
@@ -343,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCatchupFullScan
-Removes whether Windows Defender runs catch-up scans for scheduled full scans.
+Indicates that the cmdlet removes whether Windows Defender runs catch-up scans for scheduled full scans.
 
 ```yaml
 Type: SwitchParameter
@@ -358,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCatchupQuickScan
-Removes whether Windows Defender runs catch-up scans for scheduled quick scans.
+Indicates that the cmdlet removes whether Windows Defender runs catch-up scans for scheduled quick scans.
 
 ```yaml
 Type: SwitchParameter
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCpuThrottleOnIdleScans
-Remove whether the CPU will be throttled for scheduled scans while the device is idle.
+Indicates that the cmdlet removes whether the CPU will be throttled for scheduled scans while the device is idle.
 
 ```yaml
 Type: SwitchParameter
@@ -388,7 +388,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDatagramProcessing
-Removes whether to disable inspection of UDP connections.
+Indicates that the cmdlet removes whether to disable inspection of UDP connections.
 
 ```yaml
 Type: SwitchParameter
@@ -403,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDnsOverTcpParsing
-Removes whether to disable inspection of DNS traffic that occurs over a TCP channel.
+Indicates that the cmdlet removes whether to disable inspection of DNS traffic that occurs over a TCP channel.
 
 ```yaml
 Type: SwitchParameter
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDnsParsing
-Removes whether to disable inspection of DNS traffic that occurs over a UDP channel.
+Indicates that the cmdlet removes whether to disable inspection of DNS traffic that occurs over a UDP channel.
 
 ```yaml
 Type: SwitchParameter
@@ -433,7 +433,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEmailScanning
-Remove whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
+Indicates that the cmdlet removes whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 
 ```yaml
 Type: SwitchParameter
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableGradualRelease
-Removes whether to disable gradual rollout of monthly and daily Windows Defender updates. 
+Indicates that the cmdlet removes whether to disable gradual rollout of monthly and daily Windows Defender updates. 
 If you enable this option, devices are offered all updates after the gradual release cycle finishes.
 Consider this option for datacenter computers that only receive limited updates. 
 
@@ -473,7 +473,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableHttpParsing
-Removes whether disable inspection of HTTP traffic.
+Indicates that the cmdlet removes whether disable inspection of HTTP traffic.
 If **EnableNetworkProtection** has the value `Enabled`, HTTP connections to malicious websites can be blocked.
 
 ```yaml
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableInboundConnectionFiltering
-Removes whether to inspect only outbound connections.
+Indicates that the cmdlet removes whether to inspect only outbound connections.
 By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
@@ -505,7 +505,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableIntrusionPreventionSystem
-Remove whether to configure network protection against exploitation of known vulnerabilities.
+Indicates that the cmdlet removes whether to configure network protection against exploitation of known vulnerabilities.
 
 ```yaml
 Type: SwitchParameter
@@ -520,7 +520,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableIOAVProtection
-Remove whether Windows Defender scans all downloaded files and attachments.
+Indicates that the cmdlet removes whether Windows Defender scans all downloaded files and attachments.
 
 ```yaml
 Type: SwitchParameter
@@ -535,7 +535,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePrivacyMode
-Remove whether to disable privacy mode.
+Indicates that the cmdlet removes whether to disable privacy mode.
 
 ```yaml
 Type: SwitchParameter
@@ -550,7 +550,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRdpParsing
-Removes whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
+Indicates that the cmdlet removes whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
 Type: SwitchParameter
@@ -565,7 +565,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRealtimeMonitoring
-Remove whether to use real-time protection.
+Indicates that the cmdlet removes whether to use real-time protection.
 
 ```yaml
 Type: SwitchParameter
@@ -580,7 +580,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRemovableDriveScanning
-Remove whether to scan for malicious and unwanted software in removable drives, such as flash drives, during a full scan.
+Indicates that the cmdlet removes whether to scan for malicious and unwanted software in removable drives, such as flash drives, during a full scan.
 
 ```yaml
 Type: SwitchParameter
@@ -595,7 +595,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRestorePoint
-Remove whether to disable scanning of restore points.
+Indicates that the cmdlet removes whether to disable scanning of restore points.
 
 ```yaml
 Type: SwitchParameter
@@ -610,7 +610,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningMappedNetworkDrivesForFullScan
-Remove whether to scan mapped network drives.
+Indicates that the cmdlet removes whether to scan mapped network drives.
 If you specify a value of `$False` or do not specify a value, Windows Defender scans mapped network drives.
 
 ```yaml
@@ -626,7 +626,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Remove whether to scan for network files. 
+Indicates that the cmdlet removes whether to scan for network files.
 
 ```yaml
 Type: SwitchParameter
@@ -641,7 +641,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScriptScanning
-Removes whether to disable the scanning of scripts during malware scans.
+Indicates that the cmdlet removes whether to disable the scanning of scripts during malware scans.
 If you specify a value of $False or do not specify a value, Windows Defender does not scan scripts.
 
 ```yaml
@@ -657,7 +657,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableSshParsing
-Removes whether to disable inspection of SSH traffic.
+Indicates that the cmdlet removes whether to disable inspection of SSH traffic.
 By default, Network Protection inspects SSH traffic.
 
 ```yaml
@@ -673,7 +673,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableTlsParsing
-Removes whether to disable inspection of TLS traffic, also known as HTTPS.
+Indicates that the cmdlet removes whether to disable inspection of TLS traffic, also known as HTTPS.
 By default, Network Protection inspects TLS traffic.
 
 ```yaml
@@ -689,7 +689,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableControlledFolderAccess
-Specifies the state for the controlled folder access feature. Valid values are Disabled, Enabled, and Audit Mode.
+Indicates that the cmdlet removes the state for the controlled folder access feature. Valid values are Disabled, Enabled, and Audit Mode.
 
 ```yaml
 Type: SwitchParameter
@@ -704,7 +704,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDnsSinkhole
-Removes whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks. 
+Indicates that the cmdlet removes whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks. 
 
 ```yaml
 Type: SwitchParameter
@@ -719,7 +719,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileHashComputation
-Removes whether to enable file hash computation.
+Indicates that the cmdlet removes whether to enable file hash computation.
 When this feature is enabled, Windows Defender computes hashes for files it scans.
 
 ```yaml
@@ -735,7 +735,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFullScanOnBatteryPower
-Removes whether Windows Defender does a full scan while on battery power.
+Indicates that the cmdlet removes whether Windows Defender does a full scan while on battery power.
 
 ```yaml
 Type: SwitchParameter
@@ -750,7 +750,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLowCpuPriority
-Removes whether Windows Defender uses low CPU priority for scheduled scans.
+Indicates that the cmdlet removes whether Windows Defender uses low CPU priority for scheduled scans.
 
 ```yaml
 Type: SwitchParameter
@@ -927,7 +927,7 @@ Accept wildcard characters: False
 ```
 
 ### -MAPSReporting
-Remove membership in Microsoft Active Protection Service.
+Indicates that the cmdlet removes membership in Microsoft Active Protection Service.
 
 ```yaml
 Type: SwitchParameter
@@ -942,7 +942,7 @@ Accept wildcard characters: False
 ```
 
 ### -MeteredConnectionUpdates
-Removes whether to update managed devices to update through metered connections.
+Indicates that the cmdlet removes whether to update managed devices to update through metered connections.
 Data charges may apply.
 
 ```yaml
@@ -1057,7 +1057,7 @@ Accept wildcard characters: False
 ```
 
 ### -QuarantinePurgeItemsAfterDelay
-Remove specified number of days to keep items in the Quarantine folder.
+Indicates that the cmdlet removes specified number of days to keep items in the Quarantine folder.
 
 ```yaml
 Type: SwitchParameter
@@ -1072,7 +1072,7 @@ Accept wildcard characters: False
 ```
 
 ### -RandomizeScheduleTaskTimes
-Remove whether to select a random time for the scheduled start and scheduled update for definitions.
+Indicates that the cmdlet removes whether to select a random time for the scheduled start and scheduled update for definitions.
 
 ```yaml
 Type: SwitchParameter
@@ -1087,7 +1087,7 @@ Accept wildcard characters: False
 ```
 
 ### -RealTimeScanDirection
-Remove specified scanning configuration for incoming and outgoing files on NTFS volumes.
+Indicates that the cmdlet removes specified scanning configuration for incoming and outgoing files on NTFS volumes.
 
 ```yaml
 Type: SwitchParameter
@@ -1102,7 +1102,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemediationScheduleDay
-Remove specified day of the week on which to perform a scheduled full scan in order to complete remediation.
+Indicates that the cmdlet removes specified day of the week on which to perform a scheduled full scan in order to complete remediation.
 
 ```yaml
 Type: SwitchParameter
@@ -1117,7 +1117,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemediationScheduleTime
-Removes specified time of day, as the number of minutes after midnight, to perform a scheduled scan.
+Indicates that the cmdlet removes specified time of day, as the number of minutes after midnight, to perform a scheduled scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1132,7 +1132,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportingAdditionalActionTimeOut
-Remove specified number of minutes before a detection in the additional action state changes to the cleared state.
+Indicates that the cmdlet removes specified number of minutes before a detection in the additional action state changes to the cleared state.
 
 ```yaml
 Type: SwitchParameter
@@ -1147,7 +1147,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportingCriticalFailureTimeOut
-Removes specified the number of minutes before a detection in the critically failed state changes to either the additional action state or the cleared state.
+Indicates that the cmdlet removes specified the number of minutes before a detection in the critically failed state changes to either the additional action state or the cleared state.
 
 ```yaml
 Type: SwitchParameter
@@ -1162,7 +1162,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportingNonCriticalTimeOut
-Removes specified number of minutes before a detection in the non-critically failed state changes to the cleared state.
+Indicates that the cmdlet removes specified number of minutes before a detection in the non-critically failed state changes to the cleared state.
 
 ```yaml
 Type: SwitchParameter
@@ -1177,7 +1177,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanAvgCPULoadFactor
-Removes specified maximum percentage CPU usage for a scan.
+Indicates that the cmdlet removes specified maximum percentage CPU usage for a scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1192,7 +1192,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanOnlyIfIdleEnabled
-Removes whether to start scheduled scans only when the computer is not in use.
+Indicates that the cmdlet removes whether to start scheduled scans only when the computer is not in use.
 
 ```yaml
 Type: SwitchParameter
@@ -1207,7 +1207,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanParameters
-Removes specified scan type to use during a scheduled scan.
+Indicates that the cmdlet removes specified scan type to use during a scheduled scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1222,7 +1222,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanPurgeItemsAfterDelay
-Remove specified number of days to keep items in the scan history folder.
+Indicates that the cmdlet removes specified number of days to keep items in the scan history folder.
 
 ```yaml
 Type: SwitchParameter
@@ -1237,7 +1237,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleDay
-Remove specified the day of the week on which to perform a scheduled scan.
+Indicates that the cmdlet removes specified the day of the week on which to perform a scheduled scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1252,7 +1252,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleQuickScanTime
-Removes specified time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
+Indicates that the cmdlet removes specified time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1267,7 +1267,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleTime
-Remove specified time of day, as the number of minutes after midnight, to perform a scheduled scan.
+Indicates that the cmdlet removes specified time of day, as the number of minutes after midnight, to perform a scheduled scan.
 
 ```yaml
 Type: SwitchParameter
@@ -1327,7 +1327,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureAuGracePeriod
-Remove specified grace period, in minutes, for the definition.
+Indicates that the cmdlet removes specified grace period, in minutes, for the definition.
 
 ```yaml
 Type: SwitchParameter
@@ -1357,7 +1357,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureBlobUpdateInterval
-Removes the signature update interval.
+Indicates that the cmdlet removes the signature update interval.
 
 ```yaml
 Type: SwitchParameter
@@ -1372,7 +1372,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureDefinitionUpdateFileSharesSources
-Remove specified file-share sources for definition updates.
+Indicates that the cmdlet removes specified file-share sources for definition updates.
 
 ```yaml
 Type: SwitchParameter
@@ -1387,7 +1387,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureDisableUpdateOnStartupWithoutEngine
-Remove whether to initiate definition updates even if no antimalware engine is present.
+Indicates that the cmdlet removes whether to initiate definition updates even if no antimalware engine is present.
 
 ```yaml
 Type: SwitchParameter
@@ -1402,7 +1402,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureFallbackOrder
-Remove specified order in which to contact different definition update sources.
+Indicates that the cmdlet removes specified order in which to contact different definition update sources.
 
 ```yaml
 Type: SwitchParameter
@@ -1417,7 +1417,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureFirstAuGracePeriod
-Removes specified grace period, in minutes, for the definition.
+Indicates that the cmdlet removes specified grace period, in minutes, for the definition.
 
 ```yaml
 Type: SwitchParameter
@@ -1432,7 +1432,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureScheduleDay
-Remove specified day of the week on which to check for definition updates.
+Indicates that the cmdlet removes specified day of the week on which to check for definition updates.
 
 ```yaml
 Type: SwitchParameter
@@ -1447,7 +1447,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureScheduleTime
-Remove specified time of day, as the number of minutes after midnight, to check for definition updates.
+Indicates that the cmdlet removes specified time of day, as the number of minutes after midnight, to check for definition updates.
 
 ```yaml
 Type: SwitchParameter
@@ -1485,7 +1485,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureUpdateCatchupInterval
-Remove specified number of days after which Windows Defender requires a catch-up definition update.
+Indicates that the cmdlet removes specified number of days after which Windows Defender requires a catch-up definition update.
 
 ```yaml
 Type: SwitchParameter
@@ -1500,7 +1500,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureUpdateInterval
-Remove specified interval at which to check for definition updates.
+Indicates that the cmdlet removes specified interval at which to check for definition updates.
 
 ```yaml
 Type: SwitchParameter
@@ -1515,7 +1515,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubmitSamplesConsent
-Remove how Windows Defender checks for user consent for certain samples.
+Indicates that the cmdlet removes how Windows Defender checks for user consent for certain samples.
 
 ```yaml
 Type: SwitchParameter
@@ -1590,7 +1590,7 @@ Accept wildcard characters: False
 ```
 
 ### -UILockdown
-Removes whether to disable UI lockdown mode.
+Indicates that the cmdlet removes whether to disable UI lockdown mode.
 
 ```yaml
 Type: SwitchParameter

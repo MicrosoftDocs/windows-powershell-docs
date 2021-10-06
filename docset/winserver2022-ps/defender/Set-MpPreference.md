@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -AttackSurfaceReductionOnlyExclusions
-Exclude files and paths from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
+Specifies the files and paths to exclude from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
 
 For more information about excluding files and folders from [ASR rules](/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
 
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlockLevel
-Specifies a cloud block level. 
+Specifies a cloud block level.
 This value determines how aggressive Microsoft Defender Antivirus is in blocking and scanning suspicious files.
 
 ```yaml
@@ -540,7 +540,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -DisableIOAVProtection
 Indicates whether Windows Defender scans all downloaded files and attachments.
@@ -969,8 +968,8 @@ Accept wildcard characters: False
 Specifies which automatic remediation action to take for a low level threat.
 The acceptable values for this parameter are:
 
-- Quarantine 
-- Remove 
+- Quarantine
+- Remove
 - Ignore
 
 ```yaml
@@ -994,7 +993,7 @@ The acceptable values for this parameter are:
 
 - 0: Disabled.
 Send no information to Microsoft.
-This is the default value. 
+This is the default value.
 - 1: Basic membership.
 Send basic information to Microsoft about detected software, including where the software came from, the actions that you apply or that apply automatically, and whether the actions succeeded. 
 - 2: Advanced membership.

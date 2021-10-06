@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Mounts a Windows image in a WIM or VHD file to a directory on the local computer.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: System.Object[]
-ms.date: 12/21/2016
+ms.date: 10/06/2021
 online version: https://docs.microsoft.com/powershell/module/dism/mount-windowsimage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Mount-WindowsImage
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 
 ### -SupportEa
 
-{{ Fill in the Description }}
+Applies an image with extended attributes.
 
 ```yaml
 Type: SwitchParameter

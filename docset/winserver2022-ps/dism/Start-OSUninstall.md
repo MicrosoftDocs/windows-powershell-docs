@@ -29,6 +29,8 @@ Start-OSUninstall [-NoRestart] [-Online] [-WindowsDirectory <String>] [-SystemDr
 The **Start-OSUninstall** cmdlet enables you to uninstall and roll back to a previously installed
 version of Windows.
 
+The **Start-OSUninstall** cmdlet is supported on Windows 11 client operating system only.
+
 ## EXAMPLES
 
 ### Example 1: Uninstall OS

@@ -18,7 +18,7 @@ This reference provides the cmdlet description and syntax for the Storage Replic
 Removes unreferenced Storage Replica metadata.
 
 ### [Dismount-SRDestination](Dismount-SRDestination.md)
-
+Dismounts a test failover snapshot.
 
 ### [Export-SRConfiguration](Export-SRConfiguration.md)
 Exports replication configuration to a Windows PowerShell script.
@@ -45,7 +45,7 @@ Grants security access between failover clusters to enable replication.
 Creates a security delegation on a Storage Replica server.
 
 ### [Mount-SRDestination](Mount-SRDestination.md)
-
+Mounts a snapshot of replicated storage temporarily for testing or backup purposes.
 
 ### [New-SRGroup](New-SRGroup.md)
 Creates a replication group.

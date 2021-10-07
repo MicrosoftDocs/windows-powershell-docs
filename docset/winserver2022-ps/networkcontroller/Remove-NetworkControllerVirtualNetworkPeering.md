@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Remove-NetworkControllerVirtualNetworkPeering cmdlet removes a virtual network peering.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Remove-NetworkControllerVirtualNetworkPeering
 # Remove-NetworkControllerVirtualNetworkPeering
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes a virtual network peering.
 
 ## SYNTAX
 
@@ -22,16 +22,16 @@ Remove-NetworkControllerVirtualNetworkPeering [-VirtualNetworkId] <String> [-Res
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Remove-NetworkControllerVirtualNetworkPeering** cmdlet removes a virtual network peering.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a virtual network peering object
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-NetworkControllerVirtualNetworkPeering -VirtualNetworkId "Contoso_vnet1" -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+This example removes the virtual network peering for the specified virtual network.
 
 ## PARAMETERS
 
@@ -52,7 +52,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+The cmdlet removes a virtual network peering for that controller.
 
 ```yaml
 Type: Uri
@@ -67,7 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default is the current user.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -82,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
-{{ Fill Etag Description }}
+Specifies the entity tag (ETag) parameter of the resource.
+An ETag is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+The value of the header is an opaque string representing the state of the resource at the time the response was generated.
 
 ```yaml
 Type: String
@@ -127,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the resource ID of the virtual network peering to remove.
 
 ```yaml
 Type: String
@@ -142,7 +147,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkId
-{{ Fill VirtualNetworkId Description }}
+Specified the ID of a virtual network.
+This cmdlet removes a peering for that network.
 
 ```yaml
 Type: String

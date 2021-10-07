@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Get-NetworkControllerVirtualNetworkPeering cmdlet gets a virtual network peering.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Get-NetworkControllerVirtualNetworkPeering
 # Get-NetworkControllerVirtualNetworkPeering
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets a virtual network peering.
 
 ## SYNTAX
 
@@ -22,16 +22,17 @@ Get-NetworkControllerVirtualNetworkPeering [-VirtualNetworkId] <String[]> [[-Res
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NetworkControllerVirtualNetworkPeering** cmdlet gets a virtual network peering.
+A peering enables connectivity between two virtual networks.
 
 ## EXAMPLES
 
-### Example 1: Get the virtual network peering object
+### Example 1: Get a virtual network peering object
 ```powershell
-Get-NetworkControllerVirtualNetworkPeering -ConnectionUri  https://networkcontroller
+Get-NetworkControllerVirtualNetworkPeering -VirtualNetworkId "Contoso_vnet1" -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+This example gets the virtual network peering object for the specified virtual network.
 
 ## PARAMETERS
 
@@ -52,7 +53,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+The cmdlet gets the virtual network peering for that controller.
+
 
 ```yaml
 Type: Uri
@@ -67,7 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default is the current user.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -97,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the resource ID of the virtual network peering to get.
 
 ```yaml
 Type: String[]
@@ -112,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkId
-{{ Fill VirtualNetworkId Description }}
+Specified the ID of a virtual network.
+This cmdlet gets a peering for that network.
 
 ```yaml
 Type: String[]

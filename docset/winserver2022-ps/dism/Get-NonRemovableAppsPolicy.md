@@ -1,14 +1,17 @@
 ---
+description: Returns the a list of the app packages that are installed and configured as non-removable apps.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
-online version: http://go.microsoft.com/fwlink/?LinkId=293633
+ms.date: 10/07/2021
+online version: https://docs.microsoft.com/powershell/module/dism/get-nonremovableappspolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Get-NonRemovableAppsPolicy
 ---
 
 # Get-NonRemovableAppsPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Returns the a list of the app packages that are installed and configured as non-removable apps.
 
 ## SYNTAX
 
@@ -25,16 +28,26 @@ Get-NonRemovableAppsPolicy [-Online] [-WindowsDirectory <String>] [-SystemDrive 
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NonRemovableAppsPolicy** cmdlet gets a list of the app packages that are installed and
+configured as non-removable (can not be uninstalled).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all installed non-removable app packages
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Get-NonRemovableAppsPolicy -Online
 ```
 
-{{ Add example description here }}
+This command gets information about all installed app packages which have been previously configured
+as non-removable.
+
+### Example 2: Get all non-removable apps from an offline Windows image
+```powershell
+PS> Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
+```
+
+This command gets information about app packages loaded into an offline operating system image which
+have been previously configured as non-removable.
 
 ## PARAMETERS
 

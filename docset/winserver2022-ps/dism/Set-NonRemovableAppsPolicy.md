@@ -1,14 +1,17 @@
 ---
+description: Sets an app packages as non-removable (can not be uninstalled).
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
-online version: http://go.microsoft.com/fwlink/?LinkId=293633
+ms.date: 10/07/2021
+online version: https://docs.microsoft.com/powershell/module/dism/set-nonremovableappspolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Set-NonRemovableAppsPolicy
 ---
 
 # Set-NonRemovableAppsPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Sets an app packages as non-removable (can not be uninstalled).
 
 ## SYNTAX
 
@@ -27,16 +30,31 @@ Set-NonRemovableAppsPolicy -PackageFamilyName <String> -NonRemovable <Int32> [-O
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Set-NonRemovableAppsPolicy cmdlet sets an installed app package as either removable (capable of
+being uninstalled) or non-removable (can not be uninstalled).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Set the app package Application1 as non-removable
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
 ```
 
-{{ Add example description here }}
+This command sets the app package *Application1* as non-removable.
+
+### Example 2: Set the app package Application1 as removable
+```powershell
+PS> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 0
+```
+This command sets the app package *Application1* as removable.
+
+### Example 3: Sets the app package Application1 as non-removable on an offline Windows image
+```powershell
+PS> Set-NonRemovableAppsPolicy -Path ".\wim\image.wim" -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
+```
+
+This command sets the app package *Application1* as non-removable for offline Windows image named
+*image.win*.
 
 ## PARAMETERS
 
@@ -84,7 +102,12 @@ Accept wildcard characters: False
 ```
 
 ### -NonRemovable
-{{ Fill NonRemovable Description }}
+Configures app package as removable or non-removable.
+
+ Accepted values are as follows:
+- 0 = Sets the application as removable and can be uninstalled.
+- 1 = Sets the application as non-removable and unable to be uninstalled.
+
 
 ```yaml
 Type: Int32
@@ -115,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageFamilyName
-{{ Fill PackageFamilyName Description }}
+Specifies the Package Family Name of the app package to set as non-removable.
 
 ```yaml
 Type: String

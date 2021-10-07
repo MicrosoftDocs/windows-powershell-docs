@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: System.Object[]
-ms.date: 12/21/2016
+ms.date: 10/07/2021
 online version: https://docs.microsoft.com/powershell/module/dism/add-appxprovisionedpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-AppxProvisionedPackage
@@ -188,7 +188,9 @@ Accept wildcard characters: False
 ```
 
 ### -OptionalPackagePath
-{{ Fill OptionalPackagePath Description }}
+Specifies the path to an optional package that will also be provisioned. For more information on
+optional packages, see
+[Optional packages and related set authoring](/windows/msix/package/optional-packages).
 
 ```yaml
 Type: String[]

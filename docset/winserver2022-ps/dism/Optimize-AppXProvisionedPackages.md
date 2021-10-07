@@ -1,14 +1,18 @@
 ---
+description: Optimizes the total file size of provisioned packages on the image by replacing identical files with hardlinks.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
-online version: http://go.microsoft.com/fwlink/?LinkId=293633
+ms.date: 10/07/2021
+online version: https://docs.microsoft.com/powershell/module/dism/optimize-appxprovisionedpackages?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Optimize-AppXProvisionedPackages
 ---
 
 # Optimize-AppXProvisionedPackages
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Optimizes the total file size of provisioned packages on the image by replacing identical files with
+hardlinks.
 
 ## SYNTAX
 
@@ -25,16 +29,26 @@ Optimize-AppXProvisionedPackages [-Online] [-WindowsDirectory <String>] [-System
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Optimizes the total file size of provisioned packages on the image by replacing identical files with
+hardlinks. 
+
+When building an image, mount the disk image, add AppX packages, optimize provisioned packages, then
+dismount the disk image.
+
+Once an image with provisioned AppX packages is online,
+**Optimize-AppXProvisionedPackages** won't be able to optimize provisioned AppX packages. If you
+take an image offline and add packages, only the packages that are provisioned after the image was
+brought offline are optimized.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Optimize provisioned packages in an offline Windows image
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Optimize-AppXProvisionedPackages -Path ".\wim\image.wim"
 ```
 
-{{ Add example description here }}
+This command gets optimizes the total file size of provisioned packages in the image named
+*image.wim*.
 
 ## PARAMETERS
 

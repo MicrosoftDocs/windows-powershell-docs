@@ -1,8 +1,11 @@
 ---
+description: Windows gives a user the ability to uninstall and roll back to a previous version of Windows.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
-online version:
+ms.date: 10/07/2021
+online version: https://docs.microsoft.com/powershell/module/dism/start-osuninstall?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Start-OSUninstall
 ---
 
 # Start-OSUninstall

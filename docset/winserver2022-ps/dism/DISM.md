@@ -5,7 +5,7 @@ Help Version: 5.0.1.1
 Locale: en-US
 Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
 Module Name: DISM
-ms.date: 08/25/2021
+ms.date: 10/07/2021
 title: DISM
 ---
 
@@ -109,7 +109,7 @@ Exports a copy of the specified image to another image file.
 Gets information about app packages (.appx) in an image that will be installed for each new user.
 
 ### [Get-NonRemovableAppsPolicy](Get-NonRemovableAppsPolicy.md)
-{{ Fill in the Synopsis }}
+Returns the a list of the app packages that are installed and configured as non-removable apps.
 
 ### [Get-WIMBootEntry](Get-WIMBootEntry.md)
 Displays the Windows image file boot (WIMBoot) configuration entries for a specified disk volume.
@@ -148,7 +148,8 @@ Captures an image of customized or serviced Windows components on a Windows Imag
 Captures an image of a drive to a new WIM file.
 
 ### [Optimize-AppXProvisionedPackages](Optimize-AppXProvisionedPackages.md)
-{{ Fill in the Synopsis }}
+Optimizes the total file size of provisioned packages on the image by replacing identical files with
+hardlinks.
 
 ### [Optimize-WindowsImage](Optimize-WindowsImage.md)
 Configures a Windows image with specified optimizations.
@@ -178,7 +179,7 @@ Applies changes made to a mounted image to its WIM or VHD file.
 Adds custom data into the specified app (.appx) package that has been provisioned in a Windows image.
 
 ### [Set-NonRemovableAppsPolicy](Set-NonRemovableAppsPolicy.md)
-{{ Fill in the Synopsis }}
+Sets an app packages as non-removable (can not be uninstalled).
 
 ### [Set-WindowsEdition](Set-WindowsEdition.md)
 Changes a Windows image to a higher edition.

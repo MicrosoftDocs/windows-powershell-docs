@@ -1,9 +1,9 @@
 ---
 audiencems.localizationpriority: ITPro
-description: Use this topic to help prevent the uninstall of specific Windows apps with Windows PowerShell.
+description: Sets an app packages as non-removable so it can't be uninstalled.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 02/05/2020
+ms.date: 08/24/2021
 online version: https://docs.microsoft.com/powershell/module/appx/set-nonremovableappspolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NonRemovableAppsPolicy
@@ -16,31 +16,31 @@ Sets an app packages as non-removable (can not be uninstalled).
 
 ## SYNTAX
 
-### ByOffline
+###  Offline
 ```powershell
-Set-NonRemovableAppsPolicy 
-    -PackageFamilyName <string> 
-    -NonRemovable <int> 
-    -Path <string> 
+Set-NonRemovableAppsPolicy
+    -PackageFamilyName <string>
+    -NonRemovable <int>
+    -Path <string>
     [-WindowsDirectory <string>]
-    [-SystemDrive <string>] 
-    [-LogPath <string>] 
-    [-ScratchDirectory <string>] 
+    [-SystemDrive <string>]
+    [-LogPath <string>]
+    [-ScratchDirectory <string>]
     [-LogLevel {Errors | Warnings | WarningsInfo}]
     [<CommonParameters>]
 ```
 
-### ByOnline
+### Online
 ```powershell
-Set-NonRemovableAppsPolicy 
-    -PackageFamilyName <string> 
-    -NonRemovable <int> 
-    -Online 
-    [-WindowsDirectory <string>] 
-    [-SystemDrive <string>] 
-    [-LogPath <string>] 
-    [-ScratchDirectory <string>] 
-    [-LogLevel {Errors | Warnings | WarningsInfo}] 
+Set-NonRemovableAppsPolicy
+    -PackageFamilyName <string>
+    -NonRemovable <int>
+    -Online
+    [-WindowsDirectory <string>]
+    [-SystemDrive <string>]
+    [-LogPath <string>]
+    [-ScratchDirectory <string>]
+    [-LogLevel {Errors | Warnings | WarningsInfo}]
     [<CommonParameters>]
 ```
 
@@ -50,21 +50,21 @@ The **Set-NonRemovableAppsPolicy** cmdlet sets an installed app package as eithe
 ## EXAMPLES
 
 ### Example 1: Set the app package Application1 as non-removable
-```
-PS C:\> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
+```powershell
+Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
 ```
 
 This command sets the app package Application1 as non-removable.
 
 ### Example 2: Set the app package Application1 as removable
-```
-PS C:\> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 0
+```powershell
+Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 0
 ```
 This command sets the app package Application1 as removable.
 
 ### Example 3: Sets the app package Application1 as non-removable on an offline Windows image
-```
-PS C:\> Set-NonRemovableAppsPolicy -Path ".\wim\image.wim" -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
+```powershell
+Set-NonRemovableAppsPolicy -Path ".\wim\image.wim" -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
 ```
 
 This command sets the app package Application1 as non-removable on an offline Windows image.
@@ -77,7 +77,7 @@ Specifies the Package Family Name of the app package that will have it's non-rem
 ```yaml
 Type: String
 Parameter Sets: ByOnline, ByOffline
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -94,7 +94,7 @@ Specifies that the app package will be configured as non-removable or not. Accep
 ```yaml
 Type: Integer
 Parameter Sets: ByOnline, ByOffline
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -109,7 +109,7 @@ Indicates that the cmdlet operates on a running operating system on the local ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByOnline
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -123,8 +123,8 @@ Specifies the full path to the root directory of the offline Windows image that 
 
 ```yaml
 Type: String
-Parameter Sets: ByOffline
-Aliases: 
+Parameter Sets: Offline
+Aliases:
 
 Required: True
 Position: Named
@@ -138,8 +138,8 @@ Specifies a temporary directory that will be used when extracting files for use 
 
 ```yaml
 Type: String
-Parameter Sets: ByOnline, ByOffline
-Aliases: 
+Parameter Sets: Online, Offline
+Aliases:
 
 Required: False
 Position: Named
@@ -153,8 +153,8 @@ Specifies the path to the location of the BootMgr files. This is necessary only 
 
 ```yaml
 Type: String
-Parameter Sets: ByOnline, ByOffline
-Aliases: 
+Parameter Sets: Online, Offline
+Aliases:
 
 Required: False
 Position: Named
@@ -168,8 +168,8 @@ Specifies the path to the Windows directory relative to the image path. This can
 
 ```yaml
 Type: String
-Parameter Sets: ByOffline
-Aliases: 
+Parameter Sets: Offline
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ Specifies the full path and file name to log to. If not set, the default is `%WI
 
 ```yaml
 Type: String
-Parameter Sets: ByOnline, ByOffline
+Parameter Sets: Online, Offline
 Aliases: LP
 
 Required: False
@@ -202,7 +202,7 @@ Specifies the maximum output level shown in the logs. The default log level is 3
 
 ```yaml
 Type: Loglevel
-Parameter Sets: ByOnline, ByOffline
+Parameter Sets: Online, Offline
 Aliases: LL
 
 Required: False

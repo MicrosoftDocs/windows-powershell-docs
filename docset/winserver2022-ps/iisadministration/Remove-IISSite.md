@@ -84,9 +84,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### string, string[]
+### System.String
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

@@ -69,11 +69,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### String
+### System.String
 
 ## OUTPUTS
 
-### Microsoft.Web.Administration.Site
+### System.Object
 
 ## NOTES
 

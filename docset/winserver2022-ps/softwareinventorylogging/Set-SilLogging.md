@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: MsftSil_ManagementTasks-help.xml
+external help file: MsftSil_ManagementTasks.psm1-help.xml
 Module Name: SoftwareInventoryLogging
 ms.date: 01/24/2017
 online version: https://docs.microsoft.com/powershell/module/softwareinventorylogging/set-sillogging?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -172,9 +172,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimMethodResult#msftsil_managementtasks#SetLoggingState
+### System.Object
 
 ## NOTES
 

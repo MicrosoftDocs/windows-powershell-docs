@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Get-NetworkControllerAuditingSettingsConfiguration cmdlet gets the firewall auditing settings for a Network Controller.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Get-NetworkControllerAuditingSettingsConfiguration
 # Get-NetworkControllerAuditingSettingsConfiguration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets the firewall auditing settings for a Network Controller.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-NetworkControllerAuditingSettingsConfiguration [-ConnectionUri <Uri>] [-Cert
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NetworkControllerAuditingSettingsConfiguration** cmdlet gets the firewall auditing settings for a Network Controller. Firewall auditing records any flow processed by Software Defined Networking (SDN) firewall rules.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ Get-NetworkControllerAuditingSettingsConfiguration [-ConnectionUri <Uri>] [-Cert
 Get-NetworkControllerAuditingSettingsConfiguration -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+This example gets the auditing settings configuration for the specified Network Controller.
 
 ## PARAMETERS
 
@@ -51,7 +51,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+The cmdlet gets configuration for auditing settings for that controller.
 
 ```yaml
 Type: Uri
@@ -66,7 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default is the current user.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential

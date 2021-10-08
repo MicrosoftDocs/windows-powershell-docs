@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Set-NetworkControllerAuditingSettingsConfiguration cmdlet sets firewall auditing settings on Network Controller.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Set-NetworkControllerAuditingSettingsConfiguration
 # Set-NetworkControllerAuditingSettingsConfiguration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Sets firewall auditing settings on Network Controller.
 
 ## SYNTAX
 
@@ -23,16 +23,29 @@ Set-NetworkControllerAuditingSettingsConfiguration [[-Tags] <PSObject>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Set-NetworkControllerAuditingSettingsConfiguration** cmdlet sets firewall auditing settings on Network Controller.
+
+Firewall auditing records any flow processed by Software Defined Networking (SDN) firewall rules.
+It records all ACLs that have logging enabled.
+These logs can be used for diagnostics or archived for later analysis.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Set auditing properties on a NetWork Controller
 ```powershell
-PS C:\> {{ Add example code here }}
+$AuditProperties = New-Object Microsoft.Windows.NetworkController.AuditingSettingsProperties
+$AuditProperties.OutputDirectory = "C:\test\log1"
+Set-NetworkControllerAuditingSettingsConfiguration -Properties $AuditProperties  -ConnectionUri https://networkcontroller 
 ```
 
-{{ Add example description here }}
+This example sets a log location for a network controller.
+
+The first command creates an auditing settings properties object.
+
+The second command assigns a value for an output directory to the object.
+
+The third command sets the properties in the **AuditingSettingsProperties** object for the Network Controller.
+
 
 ## PARAMETERS
 
@@ -53,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+The cmdlet gets configuration for auditing settings for that controller.
 
 ```yaml
 Type: Uri
@@ -68,7 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default is the current user.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -83,7 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
-{{ Fill Etag Description }}
+Specifies the entity tag (ETag) parameter of the resource.
+An ETag is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+The value of the header is an opaque string representing the state of the resource at the time the response was generated.
 
 ```yaml
 Type: String
@@ -128,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-{{ Fill Properties Description }}
+Specifies the properties of the Network Controller auditing settings.
 
 ```yaml
 Type: AuditingSettingsProperties
@@ -143,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the resource ID of the auditing settings configuration to set.
 
 ```yaml
 Type: String
@@ -158,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceMetadata
-{{ Fill ResourceMetadata Description }}
+Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
 
 ```yaml
 Type: ResourceMetadata
@@ -173,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-{{ Fill Tags Description }}
+Specifies tags.
 
 ```yaml
 Type: PSObject

@@ -27,7 +27,7 @@ Queries the Network Controller Service Fabric to show the replication status and
 Queries the Network Controller for REST information.
 
 ### [Get-NetworkControllerManagedDevices](Get-NetworkControllerManagedDevices.md)
-{{ Fill in the Synopsis }}
+Gets managed devices for a Network Controller.
 
 ### [Get-NetworkControllerReplica](Get-NetworkControllerReplica.md)
 Determines which node the Network Controller service modules use as primary.

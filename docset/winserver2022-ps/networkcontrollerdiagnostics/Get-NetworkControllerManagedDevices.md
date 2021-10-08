@@ -1,14 +1,17 @@
 ---
+description: The Get-NetworkControllerManagedDevices cmdlet gets managed devices for a Network Controller.
 external help file: Debug-NetworkController.psm1-help.xml
 Module Name: NetworkControllerDiagnostics
-online version:
+ms.date: 10/22/2021
+online version: https://docs.microsoft.com/powershell/module/networkcontrollerdiagnostics/get-networkcontrollermanageddevices?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Get-NetworkControllerManagedDevices
 ---
 
 # Get-NetworkControllerManagedDevices
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets managed devices for a Network Controller.
 
 ## SYNTAX
 
@@ -18,16 +21,16 @@ Get-NetworkControllerManagedDevices [-RestURI] <String> [[-Credential] <PSCreden
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NetworkControllerManagedDevices** cmdlet gets managed devices for a Network Controller.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get managed devices
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-NetworkControllerManagedDevices -RestURI  "NC-0.contoso.cloud.com" 
 ```
 
-{{ Add example description here }}
+This command gets managed devices for the specified Network Controller REST APIs.
 
 ## PARAMETERS
 

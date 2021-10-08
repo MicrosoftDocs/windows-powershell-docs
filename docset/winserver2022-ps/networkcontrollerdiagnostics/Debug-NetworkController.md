@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeSlbState
-Exclude SLB State information.
+Indicates that this cmdlet excludes SLB State information.
 
 ```yaml
 Type: SwitchParameter

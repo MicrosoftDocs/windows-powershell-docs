@@ -1,8 +1,11 @@
 ---
+description: 
 external help file: MSFT_NetEventVFPProvider.cdxml-help.xml
 Module Name: NetEventPacketCapture
-online version:
+ms.date: 10/22/2021
+online version: https://docs.microsoft.com/powershell/module/neteventpacketcapture/add-neteventvfpprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Add-NetEventVFPProvider
 ---
 
 # Add-NetEventVFPProvider
@@ -377,6 +380,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-NetEventVFPProvider](Get-NetEventVFPProvider.md)
+
+[Remove-NetEventVFPProvider](Remove-NetEventVFPProvider.md)
+
+[Set-NetEventVFPProvider](Set-NetEventVFPProvider.md)

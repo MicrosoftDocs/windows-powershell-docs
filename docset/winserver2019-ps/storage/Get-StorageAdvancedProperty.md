@@ -24,6 +24,8 @@ The **Get-StorageAdvancedProperty** cmdlet gets the advanced properties of a sto
 For example, Get-PhysicalDisk gets the most commonly used attributes of a physical disk such as **CanPool**.
 To get the cache (**IsDeviceCacheEnabled**) and power protection (**IsPowerProtected**) settings for a physical disk, you can pass a **PhysicalDisk** object to the **Get-StorageAdvancedProperty** cmdlet.
 
+The output of cache (**IsDeviceCacheEnabled**) and power protection (**IsPowerProtected**) are collected from the user-defined settings of the physical disk. Power protection (**IsPowerProtected**) is not an indicator of the physical disk support for Power Loss Protection (PLP). Refer to the physical disk vendor’s datasheet for PLP support details.
+
 ## EXAMPLES
 
 ### Example 1: Get advanced storage properties of a physical disk

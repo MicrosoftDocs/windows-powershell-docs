@@ -1,0 +1,9 @@
+/.openpublishing.publish.config.json
+{
+  "dependent_packages": [{
+      "id": "Microsoft.DocAsCode.MAML2Yaml",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "url": "https://github.com/Microsoft/templates.docs.msft"
+    }],
+  "docsets_to_publish": [{
+      "build_entry_point": "docs",

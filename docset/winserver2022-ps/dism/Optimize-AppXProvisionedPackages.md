@@ -2,7 +2,7 @@
 description: Optimizes the total file size of provisioned packages on the image by replacing identical files with hardlinks.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
-ms.date: 10/07/2021
+ms.date: 10/13/2021
 online version: https://docs.microsoft.com/powershell/module/dism/optimize-appxprovisionedpackages?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Optimize-AppXProvisionedPackages
@@ -19,12 +19,6 @@ hardlinks.
 ### Offline
 ```
 Optimize-AppXProvisionedPackages -Path <String> [-WindowsDirectory <String>] [-SystemDrive <String>]
- [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
-```
-
-### Online
-```
-Optimize-AppXProvisionedPackages [-Online] [-WindowsDirectory <String>] [-SystemDrive <String>]
  [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
@@ -96,8 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### -Online
-Specifies that the action is to be taken on the operating system that is currently running on the
-local computer.
+Do not use. **Optimize-AppXProvisionedPackages** can't optimize provisioned AppX packages if the
+image is online. 
 
 ```yaml
 Type: SwitchParameter

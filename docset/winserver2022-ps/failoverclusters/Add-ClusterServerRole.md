@@ -36,7 +36,8 @@ Add-ClusterServerRole [-DnsName <String>] [-NetworkNameName <String>] [-Storage 
 ## PARAMETERS
 
 ### -Cluster
-{{ Fill Cluster Description }}
+Specifies the name of the cluster on which to run this cmdlet.
+If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -66,7 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreNetwork
-{{ Fill IgnoreNetwork Description }}
+Specifies one or more networks to ignore when running the cmdlet. Networks with DHCP enabled are
+always included, but other networks need a static address to be specified using the *StaticAddress*
+parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
 
 ```yaml
 Type: StringCollection
@@ -81,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the cluster on which to create the server role.
 
 ```yaml
 Type: PSObject
@@ -126,7 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -StaticAddress
-{{ Fill StaticAddress Description }}
+Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
+are always included, but other networks need a static address to be specified using the
+*StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
 
 ```yaml
 Type: StringCollection
@@ -156,7 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-{{ Fill Wait Description }}
+Specifies the time in seconds to wait for the cmdlet.
+If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

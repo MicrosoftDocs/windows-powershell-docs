@@ -78,7 +78,10 @@ Get-ClusterPerformanceHistory [[-NetAdapterSeriesName] <String[]>] [[-TimeFrame]
 ## PARAMETERS
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
 Type: CimSession
@@ -93,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -Cluster
-{{ Fill Cluster Description }}
+Specifies the name of the cluster on which to run this cmdlet.
+If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: Cluster

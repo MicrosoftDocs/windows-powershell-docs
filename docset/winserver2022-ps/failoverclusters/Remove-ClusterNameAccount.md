@@ -35,7 +35,8 @@ Remove-ClusterNameAccount [-DeleteComputerObjects] [-InputObject <PSObject>] [-C
 ## PARAMETERS
 
 ### -Cluster
-{{ Fill Cluster Description }}
+Specifies the name of the cluster on which to run this cmdlet.
+If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String

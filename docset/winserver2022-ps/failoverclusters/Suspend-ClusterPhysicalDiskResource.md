@@ -50,7 +50,8 @@ Accept wildcard characters: False
 ```
 
 ### -Cluster
-{{ Fill Cluster Description }}
+Specifies the name of the cluster on which to run this cmdlet.
+If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -65,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Runs the cmdlet without prompting for confirmation.
+By default the cmdlet will ask for confirmation from the user before proceeding.
 
 ```yaml
 Type: SwitchParameter

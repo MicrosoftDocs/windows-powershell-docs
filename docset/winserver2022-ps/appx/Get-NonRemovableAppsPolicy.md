@@ -1,9 +1,9 @@
 ---
 audiencems.localizationpriority: ITPro
-description: Use this topic to help prevent the uninstall of specific Windows apps with Windows PowerShell.
+description: Returns the  a list of the app packages that are installed and configured as non-removable apps.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 02/05/2020
+ms.date: 09/22/2021
 online version: https://docs.microsoft.com/powershell/module/appx/get-nonremovableappspolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NonRemovableAppsPolicy
@@ -16,29 +16,29 @@ Returns the  a list of the app packages that are installed and configured as non
 
 ## SYNTAX
 
-### ByOffline
+### Offline
 
 ```powershell
-Get-NonRemovableAppsPolicy 
-    -Path <string> 
-    [-WindowsDirectory <string>] 
-    [-SystemDrive <string>] 
+Get-NonRemovableAppsPolicy
+    -Path <string>
+    [-WindowsDirectory <string>]
+    [-SystemDrive <string>]
     [-LogPath <string>]
-    [-ScratchDirectory <string>] 
-    [-LogLevel {Errors | Warnings | WarningsInfo}]  
+    [-ScratchDirectory <string>]
+    [-LogLevel {Errors | Warnings | WarningsInfo}]
     [<CommonParameters>]
 ```
 
-### ByOnline
+### Online
 
 ```powershell
-Get-NonRemovableAppsPolicy 
-    -Online 
-    [-WindowsDirectory <string>] 
-    [-SystemDrive <string>] 
-    [-LogPath <string>] 
-    [-ScratchDirectory <string>] 
-    [-LogLevel {Errors | Warnings | WarningsInfo}]  
+Get-NonRemovableAppsPolicy
+    -Online
+    [-WindowsDirectory <string>]
+    [-SystemDrive <string>]
+    [-LogPath <string>]
+    [-ScratchDirectory <string>]
+    [-LogLevel {Errors | Warnings | WarningsInfo}]
     [<CommonParameters>]
 ```
 
@@ -48,15 +48,15 @@ The **Get-NonRemovableAppsPolicy** cmdlet gets a list of the app packages what a
 ## EXAMPLES
 
 ### Example 1: Get all installed non-removable app packages
-```
-PS C:\> Get-NonRemovableAppsPolicy -Online
+```powershell
+Get-NonRemovableAppsPolicy -Online
 ```
 
 This command gets information about all installed app packages which have been previously configured as non-removable.
 
 ### Example 2: Get all non-removable apps from an offline Windows image
-```
-PS C:\> Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
+```powershell
+Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
 ```
 
 This command gets all apps packages that have been loaded into the offline operating system image.
@@ -68,8 +68,8 @@ Indicates that the cmdlet operates on a running operating system on the local ho
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ByOnline
-Aliases: 
+Parameter Sets: Online
+Aliases:
 
 Required: True
 Position: Named
@@ -83,8 +83,8 @@ Specifies the full path to the root directory of the offline Windows image that 
 
 ```yaml
 Type: String
-Parameter Sets: ByOffline
-Aliases: 
+Parameter Sets: Offline
+Aliases:
 
 Required: True
 Position: Named
@@ -98,8 +98,8 @@ Specifies a temporary directory that will be used when extracting files for use 
 
 ```yaml
 Type: String
-Parameter Sets: ByOnline, ByOffline
-Aliases: 
+Parameter Sets: Online, Offline
+Aliases:
 
 Required: False
 Position: Named
@@ -113,8 +113,8 @@ Specifies the path to the location of the BootMgr files. This is necessary only 
 
 ```yaml
 Type: String
-Parameter Sets: ByOnline, ByOffline
-Aliases: 
+Parameter Sets: Online, Offline
+Aliases:
 
 Required: False
 Position: Named
@@ -128,8 +128,8 @@ Specifies the path to the Windows directory relative to the image path. This can
 
 ```yaml
 Type: String
-Parameter Sets: ByOffline
-Aliases: 
+Parameter Sets: Offline
+Aliases:
 
 Required: False
 Position: Named
@@ -155,15 +155,15 @@ Accept wildcard characters: False
 
 ### -LogLevel
 Specifies the maximum output level shown in the logs. The default log level is 3. The accepted values are as follows:
-    
-    - 1 = Error
-    - 2 = Errors and warnings
-    - 3 = Errors, warnings, and information
-    - 4 = All of the information listed previously, plus debug output
+
+- 1 = Error
+- 2 = Errors and warnings
+- 3 = Errors, warnings, and information
+- 4 = All of the information listed previously, plus debug output
 
 ```yaml
 Type: LogLevel
-Parameter Sets: ByOnline, ByOffline
+Parameter Sets: Online, Offline
 Aliases: LL
 
 Required: False

@@ -255,9 +255,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.FmjConditionTypeEnum
+
+### System.Int32
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMFMJCondition
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

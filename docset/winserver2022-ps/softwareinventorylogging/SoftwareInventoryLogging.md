@@ -17,7 +17,10 @@ This reference provides cmdlet descriptions and syntax for all Software Inventor
 ### [Get-SilComputer](./Get-SilComputer.md)
 Displays the point in time values for specific server and operating system-related data.
 
-### [Get-SilData](./Get-SilData.md)
+### [Get-SilComputerIdentity](Get-SilComputerIdentity.md)
+Gets IDs that identify a Windows installation.
+
+### [Get-SilData](Get-SilData.md)
 Displays a point in time collection of all Software Inventory Logging data.
 
 ### [Get-SilLogging](./Get-SilLogging.md)

@@ -88,7 +88,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.CertificateServices.Deployment.Commands.CA.CertificationAuthoritySetupResult
+### Microsoft.CertificateServices.Deployment.Common.CA.CertificationAuthoritySetupResult
 
 ## NOTES
 * To uninstall the CA role service, ensure you run Windows PowerShell as an administrator. You can run the command with the *Force* parameter to bypass the prompt for confirmation.

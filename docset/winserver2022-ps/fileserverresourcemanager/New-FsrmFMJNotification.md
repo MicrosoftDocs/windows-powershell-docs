@@ -170,9 +170,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.UInt32
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMFMJNotification
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

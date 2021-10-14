@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: NetworkSwitchVlan-help.xml
+external help file: NetworkSwitchVlan.psm1-help.xml
 Module Name: NetworkSwitchManager
 ms.date: 12/20/2016
 online version: https://docs.microsoft.com/powershell/module/networkswitchmanager/get-networkswitchvlan?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -175,8 +175,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### CimInstance[]
-This cmdlet returns an array of **CimInstance** objects for network switch VLANs.
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance#CIM_NetworkVLAN
 
 ## NOTES
 

@@ -125,11 +125,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.UInt32[]
+
+### Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsDesktop
+
+### System.String
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 

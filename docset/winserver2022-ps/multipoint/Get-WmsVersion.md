@@ -57,12 +57,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
 
 ## OUTPUTS
 
-###  
-Returns the **WmsVersion** collection as **PSObject** collection.
+### Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsVersion
 
 ## NOTES
 

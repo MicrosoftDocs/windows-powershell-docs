@@ -51,7 +51,7 @@ Disables RSS on a network adapter.
 Disables SR-IOV on a network adapter.
 
 ### [Disable-NetAdapterUso](Disable-NetAdapterUso.md)
-{{ Fill in the Synopsis }}
+Disables USO properties of the network adapter.
 
 ### [Disable-NetAdapterVmq](Disable-NetAdapterVmq.md)
 Disables the VMQ feature on a network adapter.
@@ -93,7 +93,7 @@ Enables RSS on a network adapter.
 Enables SR-IOV on a network adapter.
 
 ### [Enable-NetAdapterUso](Enable-NetAdapterUso.md)
-{{ Fill in the Synopsis }}
+Enables USO properties of the network adapter.
 
 ### [Enable-NetAdapterVmq](Enable-NetAdapterVmq.md)
 Enables VMQ on a network adapter.
@@ -150,7 +150,7 @@ Displays the SR-IOV virtual function settings for a network adapter.
 Gets statistics from a network adapter.
 
 ### [Get-NetAdapterUso](Get-NetAdapterUso.md)
-{{ Fill in the Synopsis }}
+Gets the USO properties of the network adapter.
 
 ### [Get-NetAdapterVmq](Get-NetAdapterVmq.md)
 Gets the VMQ properties of a network adapter.
@@ -219,7 +219,7 @@ Sets the RSS properties on a network adapter.
 Sets the SR-IOV properties of the network adapter, such as the number of virtual functions, the number of VPorts, and the number of queue pairs for default and non-default VPorts.
 
 ### [Set-NetAdapterUso](Set-NetAdapterUso.md)
-{{ Fill in the Synopsis }}
+Sets the USO properties of a network adapter.
 
 ### [Set-NetAdapterVmq](Set-NetAdapterVmq.md)
 Sets the VMQ properties of a network adapter.

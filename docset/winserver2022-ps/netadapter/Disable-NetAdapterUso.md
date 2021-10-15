@@ -1,5 +1,5 @@
 ﻿---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Disables USO properties of the network adapter.
 external help file: MSFT_NetAdapterUso.cdxml-help.xml
 Module Name: NetAdapter
 ms.date: 09/20/2021
@@ -11,7 +11,7 @@ title: Disable-NetAdapterUso
 # Disable-NetAdapterUso
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Disables USO properties of the network adapter.
 
 ## SYNTAX
 
@@ -35,16 +35,20 @@ Disable-NetAdapterUso -InputObject <CimInstance[]> [-IPv4] [-IPv6] [-NoRestart] 
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Disable-NetAdapterUso** cmdlet disables the state of the UDP Segmentation Offload (USO) on the network adapter.
+
+If neither IPv4 or IPv6 is specified, then both are disabled.
+
+For more information, see [UDP Segmentation Offload (USO)](/windows-hardware/drivers/network/udp-segmentation-offload-uso-).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Disable USO for IPv6 on a specified network adapter
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Disable-NetAdapterUso -Name "MyAdapter" -IPv6
 ```
 
-{{ Add example description here }}
+This command disables the USO for IPv6 on the network adapter named MyAdapter and restarts the network adapter.
 
 ## PARAMETERS
 
@@ -55,7 +59,7 @@ Use this parameter to run commands that take a long time to complete.
 You can continue to work in the session while the job completes.
 To manage the job, use the `*-Job` cmdlets.
 To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
- For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+ For more information about Windows PowerShell&reg; background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -219,7 +223,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to
 run the cmdlet. If this parameter is omitted or a value of `0` is entered, then
-Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on
+Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on
 the number of CIM cmdlets that are running on the computer. The throttle limit
 applies only to the current cmdlet, not to the session or to the computer.
 

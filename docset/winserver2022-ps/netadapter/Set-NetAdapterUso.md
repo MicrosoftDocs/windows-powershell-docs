@@ -1,5 +1,5 @@
 ﻿---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Sets the USO properties of a network adapter.
 external help file: MSFT_NetAdapterUso.cdxml-help.xml
 Module Name: NetAdapter
 ms.date: 09/20/2021
@@ -11,7 +11,7 @@ title: Set-NetAdapterUso
 # Set-NetAdapterUso
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Sets the USO properties of a network adapter.
 
 ## SYNTAX
 
@@ -37,16 +37,16 @@ Set-NetAdapterUso -InputObject <CimInstance[]> [-IPv4Enabled <Boolean>] [-IPv6En
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Set-NetAdapterUso** cmdlet manages the UDP Segmentation Offload (USO) that enables network interface cards (NICs) to offload the segmentation of UDP datagrams that are larger than the maximum transmission unit (MTU) of the network medium. By doing so, Windows reduces CPU utilization associated with per-packet TCP/IP processing. For more information, see [UDP Segmentation Offload (USO)](/windows-hardware/drivers/network/udp-segmentation-offload-uso-).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Enable USO for IPv4 and disable USO for IPv6 on the specified network adapter
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Set-NetAdapterUso -Name "MyAdapter" -IPv4Enabled $True -IPv6Enabled $False
 ```
 
-{{ Add example description here }}
+This command enables USO for IPv4 and disables USO for IPv6 on the network adapter named *MyAdapter*.
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ Use this parameter to run commands that take a long time to complete.
 You can continue to work in the session while the job completes.
 To manage the job, use the `*-Job` cmdlets.
 To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
- For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+ For more information about Windows PowerShell&reg; background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -IPv4Enabled
-{{ Fill IPv4Enabled Description }}
+Indicates whether USO for IPv4 traffic is enabled.
 
 ```yaml
 Type: Boolean
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -IPv6Enabled
-{{ Fill IPv6Enabled Description }}
+Indicates whether USO for IPv6 traffic is enabled.
 
 ```yaml
 Type: Boolean
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to
 run the cmdlet. If this parameter is omitted or a value of `0` is entered, then
-Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on
+Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on
 the number of CIM cmdlets that are running on the computer. The throttle limit
 applies only to the current cmdlet, not to the session or to the computer.
 

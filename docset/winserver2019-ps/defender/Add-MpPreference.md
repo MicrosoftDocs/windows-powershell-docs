@@ -100,7 +100,6 @@ Specifies the IDs of attack surface reduction rules.
 Use the **AttackSurfaceReductionRules_Actions** parameter to specify the state for each rule. 
 If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)

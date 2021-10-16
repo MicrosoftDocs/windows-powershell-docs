@@ -11,7 +11,7 @@ title: Export-Trace
 # Export-Trace
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Exports trace events.
 
 ## SYNTAX
 
@@ -21,21 +21,21 @@ Export-Trace [-ETLFile] <String> [-Overwrite] [-LogsDirectoryPath <String>] [-Wp
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Exports trace events from an ETL (event trace log) file.
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> {{ Add example code here }}
+### Example 1: Export trace events from ETL file
+```powershell
+PS C:\> Export-Trace -ETLFile C:\Windows\Logs\WindowsUpdate\WindowsUpdate.20211013.074054.819.1.etl -LogsDirectoryPath C:\ETL\Logs
 ```
 
-{{ Add example description here }}
+Export trace events from specified ETL file and save logs to C:\ETL\Logs folder.
 
 ## PARAMETERS
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+If enabled specifies that device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ETLFile
-{{Fill ETLFile Description}}
+Specifies ETL file location.
 
 ```yaml
 Type: String
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies the logs directory path.
 
 ```yaml
 Type: String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-{{Fill Overwrite Description}}
+Overwrite existing export.
 
 ```yaml
 Type: SwitchParameter
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the location of the WPR profile file.
 
 ```yaml
 Type: String

@@ -11,7 +11,7 @@ title: Uninstall-TrustedProvisioningCertificate
 # Uninstall-TrustedProvisioningCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a previously installed provisioning certificate
 
 ## SYNTAX
 
@@ -21,21 +21,21 @@ Uninstall-TrustedProvisioningCertificate [-Thumbprint] <String> [-LogsDirectoryP
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Removes a previously installed provisioning certificate
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> {{ Add example code here }}
+### Example 1: Uninstall Trusted Provisioning Certificate 
+```powershell
+PS C:\> Uninstall-TrustedProvisioningCertificate -Thumbprint ‎fedd995b45e633d4ef30fcbc8f3a48b627e9a28b
 ```
 
-{{ Add example description here }}
+Uninstall Trusted Provisioning Certificate with the specified thumprint.
 
 ## PARAMETERS
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+If enabled specifies that device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies the logs directory path.
 
 ```yaml
 Type: String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the location of the WPR profile file.
 
 ```yaml
 Type: String

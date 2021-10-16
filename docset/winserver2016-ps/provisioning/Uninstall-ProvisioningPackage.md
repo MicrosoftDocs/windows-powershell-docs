@@ -11,7 +11,7 @@ title: Uninstall-ProvisioningPackage
 # Uninstall-ProvisioningPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Uninstalls .PPKG package from the local machine
 
 ## SYNTAX
 
@@ -40,21 +40,21 @@ Uninstall-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Unintalls .PPKG package based on package id, path, metadata or all packages.
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> {{ Add example code here }}
+### Example 1: Uninstall all provisioning packages
+```powershell
+PS C:\> Uninstall-ProvisioningPackage -AllInstalledPackages
 ```
 
-{{ Add example description here }}
+Uninstalls all provisioning packages.
 
 ## PARAMETERS
 
 ### -AllInstalledPackages
-{{Fill AllInstalledPackages Description}}
+Remove all installed packages.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+If enabled specifies that device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies the logs directory path.
 
 ```yaml
 Type: String
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-{{Fill PackageId Description}}
+Specifies the Id of a package.
 
 ```yaml
 Type: String
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackagePath
-{{Fill PackagePath Description}}
+Specifies the package path.
 
 ```yaml
 Type: String
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the location of the WPR profile file.
 
 ```yaml
 Type: String

@@ -21,21 +21,21 @@ Export-Trace [-ETLFile] <String> [-Overwrite] [-LogsDirectoryPath <String>] [-Wp
 ```
 
 ## DESCRIPTION
-Exports trace events from an ETL (event trace log) file.
+Exports trace events from an event trace log (ETL) file.
 
 ## EXAMPLES
 
-### Example 1: Export trace events from ETL file
+### Example 1: Export trace events from an ETL file
 ```powershell
 PS C:\> Export-Trace -ETLFile C:\Windows\Logs\WindowsUpdate\WindowsUpdate.20211013.074054.819.1.etl -LogsDirectoryPath C:\ETL\Logs
 ```
 
-Export trace events from specified ETL file and save logs to C:\ETL\Logs folder.
+Exports trace events from a specified ETL file and saves the logs to the C:\ETL\Logs folder.
 
 ## PARAMETERS
 
 ### -ConnectedDevice
-If enabled specifies that device type is mobile.
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ETLFile
-Specifies ETL file location.
+Specifies the ETL file location.
 
 ```yaml
 Type: String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-Overwrite existing export.
+Overwrites the existing export.
 
 ```yaml
 Type: SwitchParameter

@@ -11,7 +11,7 @@ title: Uninstall-ProvisioningPackage
 # Uninstall-ProvisioningPackage
 
 ## SYNOPSIS
-Uninstalls .PPKG package from the local machine
+Uninstalls .PPKG package from the local machine.
 
 ## SYNTAX
 
@@ -40,7 +40,7 @@ Uninstall-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-
 ```
 
 ## DESCRIPTION
-Unintalls .PPKG package based on package id, path, metadata or all packages.
+Unintalls .PPKG package based on package ID, path, metadata, or all packages.
 
 ## EXAMPLES
 
@@ -54,7 +54,7 @@ Uninstalls all provisioning packages.
 ## PARAMETERS
 
 ### -AllInstalledPackages
-Remove all installed packages.
+Removes all installed packages.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectedDevice
-If enabled specifies that device type is mobile.
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Specifies the Id of a package.
+Specifies the ID of a package.
 
 ```yaml
 Type: String

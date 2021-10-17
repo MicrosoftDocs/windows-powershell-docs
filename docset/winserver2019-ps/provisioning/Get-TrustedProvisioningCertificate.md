@@ -21,7 +21,7 @@ Get-TrustedProvisioningCertificate [[-Thumbprint] <String>] [-LogsDirectoryPath 
 ```
 
 ## DESCRIPTION
-Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the Uninstall-TrustedProvisioningCertificate cmdlet.
+Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the `Uninstall-TrustedProvisioningCertificate` cmdlet.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ List all installed trusted provisioning certificates.
 ## PARAMETERS
 
 ### -ConnectedDevice
-If enabled specifies that device type is mobile.
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter

@@ -11,7 +11,7 @@ title: Install-TrustedProvisioningCertificate
 # Install-TrustedProvisioningCertificate
 
 ## SYNOPSIS
-Adds a certificate to the Trusted Certificate Store
+Adds a certificate to the Trusted Certificate Store.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Install-TrustedProvisioningCertificate [-CertificatePath] <String> [-ForceInstal
 ```
 
 ## DESCRIPTION
-Installs the specified certificate to the Trusted Certificate Store
+Installs the specified certificate to the Trusted Certificate Store.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ Installs the specified certificate to the Trusted Certificate Store
 PS C:\> Install-TrustedProvisioningCertificate -CertificatePath trustedCert.cer
 ```
 
-Installs the specified certificate as Trusted Provisioning Certificate
+Installs the specified certificate as a trusted provisioning certificate.
 
 ## PARAMETERS
 
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectedDevice
-If enabled specifies that device type is mobile.
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceInstall
-Specifies whether if certificate already exists it will be overwritten.
+Specifies whether, if a certificate already exists, it will be overwritten.
 
 ```yaml
 Type: SwitchParameter

@@ -11,7 +11,7 @@ title: Uninstall-TrustedProvisioningCertificate
 # Uninstall-TrustedProvisioningCertificate
 
 ## SYNOPSIS
-Removes a previously installed provisioning certificate
+Removes a previously installed provisioning certificate.
 
 ## SYNTAX
 
@@ -21,21 +21,21 @@ Uninstall-TrustedProvisioningCertificate [-Thumbprint] <String> [-LogsDirectoryP
 ```
 
 ## DESCRIPTION
-Removes a previously installed provisioning certificate
+Removes a previously installed provisioning certificate.
 
 ## EXAMPLES
 
-### Example 1: Uninstall Trusted Provisioning Certificate 
+### Example 1: Uninstall a trusted provisioning certificate 
 ```powershell
 PS C:\> Uninstall-TrustedProvisioningCertificate -Thumbprint ‎fedd995b45e633d4ef30fcbc8f3a48b627e9a28b
 ```
 
-Uninstall Trusted Provisioning Certificate with the specified thumprint.
+Uninstall a trusted provisioning certificate with the specified thumbprint.
 
 ## PARAMETERS
 
 ### -ConnectedDevice
-If enabled specifies that device type is mobile.
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter

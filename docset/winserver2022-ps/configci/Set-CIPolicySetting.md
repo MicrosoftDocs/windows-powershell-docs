@@ -36,7 +36,7 @@ For more information about Secure Settings, see [Understanding WDAC Policy Setti
 
 ## EXAMPLES
 
-### Example 1: Sets the Code Integrity policy
+### Example 1: Set the Code Integrity policy
 ```powershell
 Set-CIPolicySetting -FilePath C:\Policies\WDAC_policy.xml -Key "{12345678-9abc-def0-1234-56789abcdef0}" -Provider WSH -Value $True -ValueName EnterpriseDefinedClsId -ValueType Boolean
 ```

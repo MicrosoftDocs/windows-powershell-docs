@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: Get-CustomerRoute-help.xml
+external help file: Get-CustomerRoute.psm1-help.xml
 Module Name: HNVDiagnostics
 ms.date: 12/20/2016
 online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/get-customerroute?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -43,7 +43,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

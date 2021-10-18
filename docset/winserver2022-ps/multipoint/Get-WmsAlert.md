@@ -60,12 +60,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
 
 ## OUTPUTS
 
-###  
-This cmdlet returns a **WmsAlert** collection as a **PSObject** collection.
+### Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsAlert
 
 ## NOTES
 

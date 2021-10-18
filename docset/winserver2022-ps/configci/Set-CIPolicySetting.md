@@ -1,14 +1,17 @@
 ---
+description: The Set-CIPolicySetting cmdlet modifies the SecureSettings within the Code Integrity policy.
 external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
 Module Name: ConfigCI
-online version:
+ms.date: 10/20/2021
+online version: https://docs.microsoft.com/powershell/module/configci/set-cipolicysetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Set-CIPolicySetting
 ---
 
 # Set-CIPolicySetting
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Modifies the SecureSettings within the Code Integrity policy.
 
 ## SYNTAX
 
@@ -25,21 +28,23 @@ Set-CIPolicySetting [-FilePath] <String> -Provider <String> -Key <String> -Value
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Set-CIPolicySetting** cmdlet modifies the Secure Settings within a Code Integrity policy.
+Specify the .xml file of the policy to modify.
+Secure Settings are queried by Windows APIs to set security behaviors.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Sets the Code Integrity policy
 ```powershell
-PS C:\> {{ Add example code here }}
+Set-CIPolicySetting -FilePath C:\Policies\WDAC_policy.xml -Key "{12345678-9abc-def0-1234-56789abcdef0}" -Provider WSH -Value $True -ValueName EnterpriseDefinedClsId -ValueType Boolean
 ```
 
-{{ Add example description here }}
+This command sets the Code Integrity policy to allow for the specified **Provider**, **Key** and **ValueName**.
 
 ## PARAMETERS
 
 ### -Delete
-{{ Fill Delete Description }}
+Indicates that this cmdlet removes a Secure Setting from the Code Integrity policy identified by **Provider**, **Key** and **ValueName**.
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-{{ Fill FilePath Description }}
+Specifies the full path of the policy .xml file.
 
 ```yaml
 Type: String
@@ -69,7 +74,10 @@ Accept wildcard characters: False
 ```
 
 ### -Key
-{{ Fill Key Description }}
+Specifies the Secure Setting key.
+The key is the GUID of the program to run in this format:
+
+{33333333-4444-4444-1616-161616161616}
 
 ```yaml
 Type: String
@@ -84,7 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -Provider
-{{ Fill Provider Description }}
+Specifies the Secure Setting provider.
+The provider is the platform on which the code runs.
 
 ```yaml
 Type: String
@@ -99,7 +108,10 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-{{ Fill Value Description }}
+Specifies the Secure Setting value.
+Specify `$True` to allow or `$False` to deny.
+
+Specify $False, or deny, only for base policies, not supplemental policies.
 
 ```yaml
 Type: String
@@ -114,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueName
-{{ Fill ValueName Description }}
+Specifies the value name.
 
 ```yaml
 Type: String
@@ -129,7 +141,12 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
-{{ Fill ValueType Description }}
+Specifies the value type. Valid values are:
+
+- Boolean
+- DWord
+- Binary
+- String
 
 ```yaml
 Type: String
@@ -145,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -154,6 +171,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CIPolicy](New-CIPolicy.md)
+
+[New-CIPolicyRule](New-CIPolicyRule.md)

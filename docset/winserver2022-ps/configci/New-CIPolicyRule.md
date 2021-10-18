@@ -247,7 +247,11 @@ This set of commands finds a packaged application matching the specified name an
 ## PARAMETERS
 
 ### -AllowFileNameFallbacks
-{{ Fill AllowFileNameFallbacks Description }}
+Indicates that files that do not have an `OriginalFileName` fall back in the following order:
+
+- InternalName
+- FileDescription
+- ProductName
 
 ```yaml
 Type: SwitchParameter
@@ -262,7 +266,10 @@ Accept wildcard characters: False
 ```
 
 ### -AppID
-{{ Fill AppID Description }}
+Specifies an app.
+This cmdlet creates per-app rules which control whether specific plug-ins, add-ins, and modules can run from specific apps.
+
+For more information, see [Use a Windows Defender Application Control policy to control specific plug-ins, add-ins, and modules](/windows/security/threat-protection/windows-defender-application-control/use-windows-defender-application-control-policy-to-control-specific-plug-ins-add-ins-and-modules).
 
 ```yaml
 Type: String
@@ -403,8 +410,8 @@ Accept wildcard characters: False
 ```
 
 ### -SpecificFileNameLevel
-Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option. 
-Refer to [File Name Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values. 
+Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option.
+Refer to [File Name Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values.
 
 ```yaml
 Type: FileNameLevel
@@ -420,7 +427,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserWriteablePaths
-{{ Fill UserWriteablePaths Description }}
+Indicates that this cmdlet includes files identified as user writeable in the policy.
 
 ```yaml
 Type: SwitchParameter

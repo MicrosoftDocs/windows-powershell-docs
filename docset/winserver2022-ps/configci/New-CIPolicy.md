@@ -314,7 +314,11 @@ File rule exceptions cannot use the PCA Certificate, Publisher, Signed Version, 
 ## PARAMETERS
 
 ### -AllowFileNameFallbacks
-{{ Fill AllowFileNameFallbacks Description }}
+Indicates that files that do not have an `OriginalFileName` fall back in the following order:
+
+- InternalName
+- FileDescription
+- ProductName
 
 ```yaml
 Type: SwitchParameter
@@ -329,7 +333,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppIdTaggingKey
-{{ Fill AppIdTaggingKey Description }}
+This parameter is reserved for future use.
 
 ```yaml
 Type: String[]
@@ -344,7 +348,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppIdTaggingPolicy
-{{ Fill AppIdTaggingPolicy Description }}
+This parameter is reserved for future use.
 
 ```yaml
 Type: SwitchParameter
@@ -359,7 +363,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppIdTaggingValue
-{{ Fill AppIdTaggingValue Description }}
+This parameter is reserved for future use.
 
 ```yaml
 Type: String[]
@@ -606,7 +610,8 @@ Accept wildcard characters: False
 ```
 
 ### -SpecificFileNameLevel
-{{ Fill SpecificFileNameLevel Description }}
+Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option.
+Refer to [File Name Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values.
 
 ```yaml
 Type: FileNameLevel
@@ -637,7 +642,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserWriteablePaths
-{{ Fill UserWriteablePaths Description }}
+Indicates that this cmdlet includes files identified as user writeable in the policy.
 
 ```yaml
 Type: SwitchParameter

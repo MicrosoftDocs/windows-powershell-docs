@@ -52,7 +52,7 @@ This cmdlet is not supported.
 Modifies the name and ID of a Code Integrity policy.
 
 ### [Set-CIPolicySetting](Set-CIPolicySetting.md)
-{{ Fill in the Synopsis }}
+Modifies the SecureSettings within the Code Integrity policy.
 
 ### [Set-CIPolicyVersion](Set-CIPolicyVersion.md)
 Updates the version number of the policy.

@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertStorePath
-{{ Fill CertStorePath Description }}
+Specifies the path to a certificate store to export certificates into the policy.
 
 ```yaml
 Type: String
@@ -125,7 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -Supplemental
-{{ Fill Supplemental Description }}
+Indicates that this cmdlet adds the rule as a Supplemental policy signers rule.
+You can add a rule as more than one scenario.
 
 ```yaml
 Type: SwitchParameter

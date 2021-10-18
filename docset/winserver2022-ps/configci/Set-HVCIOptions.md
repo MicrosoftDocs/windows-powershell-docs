@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAllowed
-{{ Fill DisableAllowed Description }}
+Indicates that this cmdlet allows for HVCI to be disabled by the user outside of the Code Integrity policy enablement method.
 
 ```yaml
 Type: SwitchParameter

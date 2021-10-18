@@ -2,7 +2,7 @@
 description: The Remove-NetFirewallDynamicKeywordAddress cmdlet removes dynamic keyword addresses.
 external help file: NetFirewallDynamicKeywordAddress.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 9/20/2021
+ms.date: 10/20/2021
 online version: https://docs.microsoft.com/powershell/module/netsecurity/remove-netfirewalldynamickeywordaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-NetFirewallDynamicKeywordAddress
@@ -41,10 +41,11 @@ The **Remove-NetFirewallDynamicKeywordAddress** cmdlet removes dynamic keyword a
 
 ### Example 1: Remove a dynamic keyword address
 ```powershell
-Remove-NetFirewallDynamicKeywordAddress -Id 01234567-89ab-cdef-0123-456789abcdef -PolicyStore ContosoPolicyStore
+Remove-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}" -PolicyStore ContosoPolicyStore
 ```
 
 This example removes the specified dynamic keyword address from the specified policy store.
+The braces are required for the ID.
 
 ### Example 2: Remove all AutoResolve dynamic keyword addresses
 ```powershell

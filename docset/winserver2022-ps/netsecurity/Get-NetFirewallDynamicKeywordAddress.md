@@ -2,7 +2,7 @@
 description: The Get-NetFirewallDynamicKeywordAddress cmdlet gets dynamic keyword addresses.
 external help file: NetFirewallDynamicKeywordAddress.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 9/20/2021
+ms.date: 10/20/2021
 online version: https://docs.microsoft.com/powershell/module/netsecurity/get-netfirewalldynamickeywordaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetFirewallDynamicKeywordAddress
@@ -39,6 +39,7 @@ Get-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}
 ```
 
 This example gets the specified dynamic keyword address from the specified policy store.
+The braces are required for the ID.
 
 ### Example 2: Get all AutoResolve dynamic keyword addresses
 ```powershell

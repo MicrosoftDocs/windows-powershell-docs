@@ -2,7 +2,7 @@
 description: The Update-NetFirewallDynamicKeywordAddress cmdlet updates a dynamic keyword address.
 external help file: NetFirewallDynamicKeywordAddress.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 9/20/2021
+ms.date: 10/20/2021
 online version: https://docs.microsoft.com/powershell/module/netsecurity/update-netfirewalldynamickeywordaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-NetFirewallDynamicKeywordAddress
@@ -33,7 +33,9 @@ A firewall rule can use dynamic keyword addresses instead of explicitly defining
 Update-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}" -Addresses 10.0.0.15
 ```
 
-This example updates a dynamic keyword address to the specified value. You can instead use the form `-Address` in a command, for clarity.
+This example updates a dynamic keyword address to the specified value.
+You can instead use the form `-Address` in the command, for clarity.
+The braces are required for the ID.
 
 ### Example 2: Append an address to a dynamic keyword address
 ```powershell
@@ -41,6 +43,7 @@ Update-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcd
 ```
 
 This example adds the specified address to a dynamic keyword address.
+The braces are required for the ID.
 
 ## PARAMETERS
 

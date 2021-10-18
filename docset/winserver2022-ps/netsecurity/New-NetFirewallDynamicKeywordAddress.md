@@ -2,7 +2,7 @@
 description: The New-NetFirewallDynamicKeywordAddress cmdlet creates a dynamic keyword address.
 external help file: NetFirewallDynamicKeywordAddress.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 9/20/2021
+ms.date: 10/20/2021
 online version: https://docs.microsoft.com/powershell/module/netsecurity/new-netfirewalldynamickeywordaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-NetFirewallDynamicKeywordAddress
@@ -39,7 +39,7 @@ This example creates an `AutoResolve` dynamic keyword address.
 The first command creates a GUID and assigns it to `$GUID`.
 
 The second command creates the dynamic address with the specified keyword.
-The curly braces are required for the ID.
+The braces are required for the ID.
 
 ### Example 2: Create dynamic keyword address
 ```powershell
@@ -55,7 +55,7 @@ The second command creates a dynamic address with the specified keyword.
 The address does not use AutoResolve.
 
 You can use the form `-Address` instead of `Addresses` in the command, for clarity.
-The curly braces are required for the ID.
+The braces are required for the ID.
 
 ## PARAMETERS
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 
 ### -Id
 Specifies a GUID for the dynamic keyword address.
-Wrap the GUID value in curly braces.
+Wrap the GUID value in braces.
 
 ```yaml
 Type: String

@@ -30,21 +30,32 @@ A firewall rule can use dynamic keyword addresses instead of explicitly defining
 
 ### Example 1: Create dynamic keyword address with AutoResolve
 ```powershell
- New-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}" -Keyword "ContosoSubnet" -AutoResolve
+$GUID = New-Guid
+New-NetFirewallDynamicKeywordAddress -Id $('{' + $GUID + '}') -Keyword "ContosoSubnet" -AutoResolve $True
 ```
 
-This command creates an `AutoResolve` dynamic keyword address.
+This example creates an `AutoResolve` dynamic keyword address.
 
-Be sure to generate your own GUID.
+The first command creates a GUID and assigns it to `$GUID`.
+
+The second command creates the dynamic address with the specified keyword.
+The curly braces are required for the ID.
 
 ### Example 2: Create dynamic keyword address
 ```powershell
- New-NetFirewallDynamicKeywordAddress -Id "{01234567-89ab-cdef-0123-456789abcdef}" -Keyword "ContosoServerSubnet" -Addresses 10.0.0.21
+$GUID = New-Guid
+New-NetFirewallDynamicKeywordAddress -Id $('{' + $GUID + '}') -Keyword "ContosoServerSubnet" -Addresses 10.0.0.21
 ```
 
-This command creates a non-`AutoResolve` dynamic keyword address. You can instead use the form `-Address` in a command, for clarity.
+This example creates a non-`AutoResolve` dynamic keyword address.
 
-Be sure to generate your own GUID.
+The first command creates a GUID and assigns it to `$GUID`.
+
+The second command creates a dynamic address with the specified keyword.
+The address does not use AutoResolve.
+
+You can use the form `-Address` instead of `Addresses` in the command, for clarity.
+The curly braces are required for the ID.
 
 ## PARAMETERS
 
@@ -113,6 +124,7 @@ Accept wildcard characters: False
 
 ### -Id
 Specifies a GUID for the dynamic keyword address.
+Wrap the GUID value in curly braces.
 
 ```yaml
 Type: String

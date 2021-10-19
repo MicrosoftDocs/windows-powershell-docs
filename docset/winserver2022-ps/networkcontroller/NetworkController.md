@@ -36,19 +36,19 @@ Gets the access control list for a network controller.
 Gets a rule from an access control list for a network controller.
 
 ### [Get-NetworkControllerAuditingSettingsConfiguration](Get-NetworkControllerAuditingSettingsConfiguration.md)
-{{ Fill in the Synopsis }}
+Gets the firewall auditing settings for a Network Controller.
 
 ### [Get-NetworkControllerBackup](Get-NetworkControllerBackup.md)
-{{ Fill in the Synopsis }}
+Gets backups of the Network Controller database.
 
 ### [Get-NetworkControllerCluster](Get-NetworkControllerCluster.md)
 Gets the network controller cluster settings.
 
 ### [Get-NetworkControllerConnectivityCheck](./Get-NetworkControllerConnectivityCheck.md)
-{{ Fill in the Synopsis }}
+Gets the Network Controller connectivity check.
 
 ### [Get-NetworkControllerConnectivityCheckResult](./Get-NetworkControllerConnectivityCheckResult.md)
-{{ Fill in the Synopsis }}
+Gets the Network Controller connectivity check result.
 
 ### [Get-NetworkControllerCredential](./Get-NetworkControllerCredential.md)
 Retrieves a specified device credential or all device credentials from Network Controller.
@@ -57,7 +57,7 @@ Retrieves a specified device credential or all device credentials from Network C
 Gets network controller diagnostic settings.
 
 ### [Get-NetworkControllerDiscovery](Get-NetworkControllerDiscovery.md)
-{{ Fill in the Synopsis }}
+Gets network discovery objects for Network Controller.
 
 ### [Get-NetworkControllerFabricRoute](Get-NetworkControllerFabricRoute.md)
 Gets a network route or all the routes in a subnet in the Network Controller.
@@ -69,7 +69,7 @@ Gets the configuration of one or more gateway virtual machines.
 Gets the configuration of one or more gateway pools.
 
 ### [Get-NetworkControllerIDnsServerConfiguration](Get-NetworkControllerIDnsServerConfiguration.md)
-{{ Fill in the Synopsis }}
+Gets a configuration object for an iDNS server for a Network Controller.
 
 ### [Get-NetworkControllerInternalResourceInstances](Get-NetworkControllerInternalResourceInstances.md)
 Provides mapping between the user generated resource ID and the internal instance ID in the Network Controller.
@@ -78,7 +78,7 @@ Provides mapping between the user generated resource ID and the internal instanc
 Retrieves the settings of an IP pool from the Network Controller.
 
 ### [Get-NetworkControllerIpReservation](Get-NetworkControllerIpReservation.md)
-{{ Fill in the Synopsis }}
+Gets the IP reservation for a subset in Network Controller.
 
 ### [Get-NetworkControllerLoadBalancer](Get-NetworkControllerLoadBalancer.md)
 Retrieves the configuration of a load balancer resource from the Network Controller.
@@ -129,7 +129,7 @@ Gets the network controller node settings.
 Retrieves a public IP address resource from the Network Controller.
 
 ### [Get-NetworkControllerRestore](Get-NetworkControllerRestore.md)
-{{ Fill in the Synopsis }}
+Gets a Network Controller database restore object.
 
 ### [Get-NetworkControllerRoute](Get-NetworkControllerRoute.md)
 Retrieves a route from a particular route table in the Network Controller.
@@ -153,7 +153,7 @@ Retrieves the provisioning state of NetworkControllerState resource.
 Displays health and usage statistics of resources in Network Controller.
 
 ### [Get-NetworkControllerSubnetEgressReset](Get-NetworkControllerSubnetEgressReset.md)
-{{ Fill in the Synopsis }}
+Gets subnet egress reset objects for Network Controller.
 
 ### [Get-NetworkControllerVirtualGateway](./Get-NetworkControllerVirtualGateway.md)
 Gets the configuration of one or more virtual gateways.
@@ -174,19 +174,19 @@ Gets a BGP routing policy map.
 Retrieves the settings of a virtual network from the Network Controller.
 
 ### [Get-NetworkControllerVirtualNetworkConfiguration](./Get-NetworkControllerVirtualNetworkConfiguration.md)
-{{ Fill in the Synopsis }}
+Gets the configuration of a virtual network from the Network Controller.
 
 ### [Get-NetworkControllerVirtualNetworkPeering](Get-NetworkControllerVirtualNetworkPeering.md)
-{{ Fill in the Synopsis }}
+Gets a virtual network peering.
 
 ### [Get-NetworkControllerVirtualServer](Get-NetworkControllerVirtualServer.md)
-{{ Fill in the Synopsis }}
+Gets a virtual server from the Network Controller.
 
 ### [Get-NetworkControllerVirtualSubnet](Get-NetworkControllerVirtualSubnet.md)
 Retrieves a virtual subnet belonging to a virtual network.
 
 ### [Get-NetworkControllerVirtualSwitchConfiguration](./Get-NetworkControllerVirtualSwitchConfiguration.md)
-{{ Fill in the Synopsis }}
+Retrieves the global settings of the virtual switch from the Network Controller.
 
 ### [Get-NetworkControllerVirtualSwitchConfiguration](Get-NetworkControllerVirtualSwitchConfiguration.md)
 Retrieves the global settings of the virtual switch from the Network Controller.
@@ -198,13 +198,13 @@ Creates a network controller application on top of the network controller cluste
 Creates a Network Controller cluster.
 
 ### [Invoke-NetworkControllerConnectivityCheck](./Invoke-NetworkControllerConnectivityCheck.md)
-{{ Fill in the Synopsis }}
+Does a connectivity check for the Network Controller.
 
 ### [Invoke-NetworkControllerState](Invoke-NetworkControllerState.md)
 Dumps the current configuration and state of Network Controller services on the local Network Controller nodes.
 
 ### [Invoke-NetworkControllerSubnetEgressReset](Invoke-NetworkControllerSubnetEgressReset.md)
-{{ Fill in the Synopsis }}
+Resets subnet egress for Network Controller.
 
 ### [New-NetworkControllerAccessControlList](New-NetworkControllerAccessControlList.md)
 Creates a new access control list for allowing/denying traffic to/from a particular subnet or network interface.
@@ -213,7 +213,7 @@ Creates a new access control list for allowing/denying traffic to/from a particu
 Creates a new ACL rule to allow/deny traffic to/from a particular virtual subnet or network interface.
 
 ### [New-NetworkControllerBackup](New-NetworkControllerBackup.md)
-{{ Fill in the Synopsis }}
+Backs up the Network Controller database.
 
 ### [New-NetworkControllerCredential](New-NetworkControllerCredential.md)
 Adds or modifies a device credential in Network Controller.
@@ -228,13 +228,13 @@ Creates a gateway virtual machine.
 Creates a gateway pool.
 
 ### [New-NetworkControllerIDnsServerConfiguration](New-NetworkControllerIDnsServerConfiguration.md)
-{{ Fill in the Synopsis }}
+Creates an iDNS Server configuration for a Network Controller.
 
 ### [New-NetworkControllerIpPool](New-NetworkControllerIpPool.md)
 Adds a new IP address pool to an existing subnet in an existing network.
 
 ### [New-NetworkControllerIpReservation](New-NetworkControllerIpReservation.md)
-{{ Fill in the Synopsis }}
+Creates an IP reservation for a subnet in Network Controller.
 
 ### [New-NetworkControllerLoadBalancer](New-NetworkControllerLoadBalancer.md)
 Adds or updates a load balancer resource.
@@ -285,7 +285,7 @@ Creates a network controller node object.
 Adds or updates a public IP address resource in the Network Controller.
 
 ### [New-NetworkControllerRestore](New-NetworkControllerRestore.md)
-{{ Fill in the Synopsis }}
+Restores the Network Controller database.
 
 ### [New-NetworkControllerRoute](New-NetworkControllerRoute.md)
 Adds a new route to the Network Controller.
@@ -321,7 +321,7 @@ Creates a BGP routing policy map.
 Creates a new virtual network or updates an existing virtual network.
 
 ### [New-NetworkControllerVirtualNetworkPeering](New-NetworkControllerVirtualNetworkPeering.md)
-{{ Fill in the Synopsis }}
+Creates a peering between two virtual networks to enable connectivity between them.
 
 ### [New-NetworkControllerVirtualServer](New-NetworkControllerVirtualServer.md)
 Adds a new virtual server to the Network Controller.
@@ -336,7 +336,7 @@ Removes an access control list from the Network Controller.
 Removes a rule from an access control list.
 
 ### [Remove-NetworkControllerBackup](Remove-NetworkControllerBackup.md)
-{{ Fill in the Synopsis }}
+Removes a backup of the Network Controller database.
 
 ### [Remove-NetworkControllerCredential](./Remove-NetworkControllerCredential.md)
 Deletes a specified device credential from the Network Controller.
@@ -354,7 +354,7 @@ Removes a gateway pool.
 Removes an IP pool from a network.
 
 ### [Remove-NetworkControllerIpReservation](Remove-NetworkControllerIpReservation.md)
-{{ Fill in the Synopsis }}
+Removes the IP reservation for a subset in Network Controller.
 
 ### [Remove-NetworkControllerLoadBalancer](Remove-NetworkControllerLoadBalancer.md)
 Removes a load balancer resource from the Network Controller.
@@ -405,7 +405,7 @@ Removes a node from the network controller deployment.
 Removes a public IP address resource from the Network Controller.
 
 ### [Remove-NetworkControllerRestore](Remove-NetworkControllerRestore.md)
-{{ Fill in the Synopsis }}
+Removes a Network Controller database restore object.
 
 ### [Remove-NetworkControllerRoute](Remove-NetworkControllerRoute.md)
 Removes a route from a particular route table
@@ -441,7 +441,7 @@ Removes a BGP routing policy map.
 Removes a virtual network from the Network Controller.
 
 ### [Remove-NetworkControllerVirtualNetworkPeering](Remove-NetworkControllerVirtualNetworkPeering.md)
-{{ Fill in the Synopsis }}
+Removes a virtual network peering.
 
 ### [Remove-NetworkControllerVirtualServer](Remove-NetworkControllerVirtualServer.md)
 Removes a virtual server resource from the Network Controller.
@@ -456,7 +456,7 @@ Repairs the network controller to bring it out of quorum loss.
 Sets network controller application settings.
 
 ### [Set-NetworkControllerAuditingSettingsConfiguration](Set-NetworkControllerAuditingSettingsConfiguration.md)
-{{ Fill in the Synopsis }}
+Sets firewall auditing settings on Network Controller.
 
 ### [Set-NetworkControllerCluster](Set-NetworkControllerCluster.md)
 Sets a network controller cluster.

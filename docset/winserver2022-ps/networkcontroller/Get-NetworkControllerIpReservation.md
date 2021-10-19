@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Get-NetworkControllerIpReservation cmdlet gets the IP reservation for a subset in Network Controller.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Get-NetworkControllerIpReservation
 # Get-NetworkControllerIpReservation
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets the IP reservation for a subset in Network Controller.
 
 ## SYNTAX
 
@@ -22,16 +22,16 @@ Get-NetworkControllerIpReservation [-NetworkId] <String[]> [-SubnetId] <String[]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NetworkControllerIpReservation** cmdlet gets the IP reservation for a subset in Network Controller.
 
 ## EXAMPLES
 
-### Example 1: Get the IP reservation
+### Example 1: Get an IP reservation
 ```powershell
 Get-NetworkControllerIpReservation -SubnetId ContosoSubnet -ConnectionUri  https://networkcontroller
 ```
 
-{{ Add example description here }}
+This command gets the IP reservation for the specified subnet.
 
 ## PARAMETERS
 
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of the Network Controller that all Representational State Transfer (REST) clients use to connect to that controller.
 
 ```yaml
 Type: Uri
@@ -67,7 +67,11 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default value is the current user.
+
+This user must be present in the security group provided in the **ClientSecurityGroup** parameter in the `Install-NetworkController` cmdlet.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -82,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkId
-{{ Fill NetworkId Description }}
+Specifies the network of the IP reservation.
 
 ```yaml
 Type: String[]
@@ -112,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the IDs of the IP reservations to get.
 
 ```yaml
 Type: String[]
@@ -127,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetId
-{{ Fill SubnetId Description }}
+Specifies the IDs of the subnets for which this cmdlet gets IP reservations.
 
 ```yaml
 Type: String[]

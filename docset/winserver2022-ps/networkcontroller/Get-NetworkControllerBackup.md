@@ -76,7 +76,9 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies a user credential that has permission to perform this action.
-The default is the current user.
+The default value is the current user.
+
+This user must be present in the security group provided in the **ClientSecurityGroup** parameter in the `Install-NetworkController` cmdlet.
 Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml

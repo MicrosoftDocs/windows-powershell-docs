@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Remove-NetworkControllerIpReservation cmdlet removes the IP reservation for a subset in Network Controller.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Remove-NetworkControllerIpReservation
 # Remove-NetworkControllerIpReservation
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes the IP reservation for a subset in Network Controller.
 
 ## SYNTAX
 
@@ -22,16 +22,16 @@ Remove-NetworkControllerIpReservation [-NetworkId] <String> [-SubnetId] <String>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Remove-NetworkControllerIpReservation** cmdlet removes the IP reservation for a subset in Network Controller.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an IP reservation
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-NetworkControllerIpReservation -NetworkId Network01 -SubnetId Subnet21 -ResourceId IpReservation -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+This example removes an IP reservation for the specified network and subnet.
 
 ## PARAMETERS
 
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of the Network Controller that all Representational State Transfer (REST) clients use to connect to that controller.
 
 ```yaml
 Type: Uri
@@ -67,7 +67,11 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default value is the current user.
+
+This user must be present in the security group provided in the **ClientSecurityGroup** parameter in the `Install-NetworkController` cmdlet.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -82,7 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
-{{ Fill Etag Description }}
+Specifies the entity tag (ETag) parameter of the resource.
+An ETag is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+The value of the header is an opaque string representing the state of the resource at the time the response was generated.
 
 ```yaml
 Type: String
@@ -112,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkId
-{{ Fill NetworkId Description }}
+Specifies the network of the IP reservation to remove.
 
 ```yaml
 Type: String
@@ -142,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the ID of the IP reservations to remove.
 
 ```yaml
 Type: String
@@ -157,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetId
-{{ Fill SubnetId Description }}
+Specifies the ID of the subnet of the IP reservation to remove.
 
 ```yaml
 Type: String

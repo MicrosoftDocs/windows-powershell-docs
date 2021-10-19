@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Invoke-NetworkControllerSubnetEgressReset cmdlet resets subnet egress for Network Controller.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Invoke-NetworkControllerSubnetEgressReset
 # Invoke-NetworkControllerSubnetEgressReset
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Resets subnet egress for Network Controller.
 
 ## SYNTAX
 
@@ -23,16 +23,21 @@ Invoke-NetworkControllerSubnetEgressReset [[-Tags] <PSObject>] [-Properties] <Su
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Invoke-NetworkControllerSubnetEgressReset** cmdlet resets subnet egress for Network Controller.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Invoke a reset for subnet egress
 ```powershell
-PS C:\> {{ Add example code here }}
+$SubnetEgressResetProperties = New-Object Microsoft.Windows.NetworkController.SubnetEgressResetProperties
+Invoke-NetworkControllerSubnetEgressReset -Properties $SubnetEgressResetProperties -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+This example invokes a reset for subnet egress with Network Controller.
+
+The first command creates a **SubnetEgressResetProperties** object and assigns it to a variable.
+
+The second command invokes the reset with the specified properties.
 
 ## PARAMETERS
 
@@ -53,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of the Network Controller that all Representational State Transfer (REST) clients use to connect to that controller.
 
 ```yaml
 Type: Uri
@@ -68,7 +73,11 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default value is the current user.
+
+This user must be present in the security group provided in the **ClientSecurityGroup** parameter in the `Install-NetworkController` cmdlet.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -83,7 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
-{{ Fill Etag Description }}
+Specifies the entity tag (ETag) parameter of the resource.
+An ETag is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+The value of the header is an opaque string representing the state of the resource at the time the response was generated.
 
 ```yaml
 Type: String
@@ -128,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-{{ Fill Properties Description }}
+Specifies the properties of the subnet egress reset.
 
 ```yaml
 Type: SubnetEgressResetProperties
@@ -143,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{ Fill ResourceId Description }}
+Specifies the IDs of the reset to invoke.
 
 ```yaml
 Type: String
@@ -158,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceMetadata
-{{ Fill ResourceMetadata Description }}
+Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
 
 ```yaml
 Type: ResourceMetadata
@@ -173,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-{{ Fill Tags Description }}
+Specifies tags.
 
 ```yaml
 Type: PSObject

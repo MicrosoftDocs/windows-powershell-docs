@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Get-NetworkControllerDiscovery cmdlet gets network discovery objects for Network Controller.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Get-NetworkControllerDiscovery
 # Get-NetworkControllerDiscovery
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets network discovery objects for Network Controller.
 
 ## SYNTAX
 
@@ -21,16 +21,16 @@ Get-NetworkControllerDiscovery [-ConnectionUri <Uri>] [-CertificateThumbprint <S
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NetworkControllerDiscovery** cmdlet gets network discovery objects for Network Controller.
 
 ## EXAMPLES
 
-### Example 1: Get network controller discovery object
+### Example 1: Get network controller discovery objects
 ```powershell
 Get-NetworkControllerDiscovery -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+This example gets network discovery objects for the specified controller.
 
 ## PARAMETERS
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of the Network Controller that all Representational State Transfer (REST) clients use to connect to that controller.
 
 ```yaml
 Type: Uri
@@ -66,7 +66,11 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default value is the current user.
+
+This user must be present in the security group provided in the **ClientSecurityGroup** parameter in the `Install-NetworkController` cmdlet.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential
@@ -111,3 +115,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-NetworkControllerAuditingSettingsConfiguration](Get-NetworkControllerAuditingSettingsConfiguration.md)

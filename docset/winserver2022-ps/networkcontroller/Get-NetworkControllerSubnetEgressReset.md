@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Get-NetworkControllerSubnetEgressReset cmdlet gets subnet egress reset objects for Network Controller.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Get-NetworkControllerSubnetEgressReset
 # Get-NetworkControllerSubnetEgressReset
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets subnet egress reset objects for Network Controller.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-NetworkControllerSubnetEgressReset [-ConnectionUri <Uri>] [-CertificateThumb
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-NetworkControllerSubnetEgressReset** cmdlet gets subnet egress reset objects for Network Controller.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ Get-NetworkControllerSubnetEgressReset [-ConnectionUri <Uri>] [-CertificateThumb
 Get-NetworkControllerSubnetEgressReset -ConnectionUri https://networkcontroller
 ```
 
-{{ Add example description here }}
+This command gets subnet egress reset objects for the specified controller.
 
 ## PARAMETERS
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
-{{ Fill ConnectionUri Description }}
+Specifies the Uniform Resource Identifier (URI) of the Network Controller that all Representational State Transfer (REST) clients use to connect to that controller.
 
 ```yaml
 Type: Uri
@@ -66,7 +66,11 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies a user credential that has permission to perform this action.
+The default value is the current user.
+
+This user must be present in the security group provided in the **ClientSecurityGroup** parameter in the `Install-NetworkController` cmdlet.
+Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
 
 ```yaml
 Type: PSCredential

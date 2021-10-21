@@ -138,10 +138,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.UInt32
+
+### System.String
+
 ## OUTPUTS
 
-### string
-This cmdlet returns the desktop sharing invitation string that is used to initiate viewing of the published session's desktop.
+### Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsDesktop
 
 ## NOTES
 

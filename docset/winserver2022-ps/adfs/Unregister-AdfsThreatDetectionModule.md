@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Unregisters an AD FS threat detection module.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: adfs
-ms.date: 09/30/2021
+ms.date: 10/20/2021
 online version: https://docs.microsoft.com/powershell/module/adfs/unregister-adfsthreatdetectionmodule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unregister-AdfsThreatDetectionModule
@@ -11,7 +11,7 @@ title: Unregister-AdfsThreatDetectionModule
 # Unregister-AdfsThreatDetectionModule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Unregisters an AD FS threat detection module.
 
 ## SYNTAX
 
@@ -20,16 +20,19 @@ Unregister-AdfsThreatDetectionModule [-Name] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Unregister-AdfsThreatDetectionModule** cmdlet unregisters an AD FS module.
+
+For more information, see
+[Build Plug-ins with AD FS 2019 Risk Assessment Model](/windows-server/identity/ad-fs/development/ad-fs-risk-assessment-model).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Unregister an AD FS threat detection module
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Unregister-AdfsThreatDetectionModule -Name "IPBlockPlugin"
 ```
 
-{{ Add example description here }}
+Unregisters an AD FS threat detection module `IPBlockPlugin`.
 
 ## PARAMETERS
 

@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Gets the properties for an AD FS threat detection module.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: adfs
 ms.date: 10/01/2021
@@ -11,7 +11,7 @@ title: Get-AdfsThreatDetectionModule
 # Get-AdfsThreatDetectionModule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets the properties for an AD FS threat detection module.
 
 ## SYNTAX
 
@@ -20,16 +20,18 @@ Get-AdfsThreatDetectionModule [-Name <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The **Get-AdfsThreatDetectionModule** cmdlet gets the properties for an AD FS threat detection
+module.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the properties of an AD FS module
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Get-AdfsThreatDetectionModule -Name "IPBlockPlugin"
 ```
 
-{{ Add example description here }}
+Gets the properties an AD FS module named `IPBlockPlugin`.
 
 ## PARAMETERS
 

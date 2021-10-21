@@ -326,7 +326,7 @@ Instead, use the Set-AdfsSslCertificate cmdlet.
 Registers an external authentication provider in AD FS.
 
 ### [Register-AdfsThreatDetectionModule](Register-AdfsThreatDetectionModule.md)
-{{ Fill in the Synopsis }}
+Registers an AD FS threat detection module.
 
 ### [Remove-AdfsAccessControlPolicy](Remove-AdfsAccessControlPolicy.md)
 Removes an AD FS access control policy.
@@ -556,7 +556,7 @@ Runs prerequisite checks for adding the server computer to a federation server f
 Deletes an external authentication provider from AD FS.
 
 ### [Unregister-AdfsThreatDetectionModule](Unregister-AdfsThreatDetectionModule.md)
-{{ Fill in the Synopsis }}
+Unregisters an AD FS threat detection module.
 
 ### [Update-AdfsCertificate](Update-AdfsCertificate.md)
 Updates the certificates of AD FS.

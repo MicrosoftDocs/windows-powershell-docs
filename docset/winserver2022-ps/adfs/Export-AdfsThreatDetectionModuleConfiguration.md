@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Exports AD FS threat detection module configuration data.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: adfs
-ms.date: 10/01/2021
+ms.date: 10/21/2021
 online version: https://docs.microsoft.com/powershell/module/adfs/export-adfsthreatdetectionmoduleconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-AdfsThreatDetectionModuleConfiguration
@@ -11,7 +11,7 @@ title: Export-AdfsThreatDetectionModuleConfiguration
 # Export-AdfsThreatDetectionModuleConfiguration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Exports AD FS threat detection module configuration data.
 
 ## SYNTAX
 
@@ -21,22 +21,24 @@ Export-AdfsThreatDetectionModuleConfiguration -Name <String> -ConfigurationFileP
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Export-AdfsThreatDetectionModule** cmdlet exports an AD FS module's configuration data to a
+comma separated file.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Export an AD FS threat detection module configuration data.
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Export-AdfsThreatDetectionModule -Name "IPBlockPlugin" -ConfigurationFilePath "C:\extensions\authconfigdb.csv"
 ```
 
-{{ Add example description here }}
+Exports AD FS threat detection module `IPBlockPlugin` configuration data comma separated file in the
+file path `C:\extensions\authconfigdb.csv`.
 
 ## PARAMETERS
 
 ### -ConfigurationFilePath
-Specifies the fully qualified file path of a file that contains authentication provider
-configuration data.
+Specifies the fully qualified file path to export the AD FS threat detection module configuration
+data.
 
 ```yaml
 Type: String
@@ -66,7 +68,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

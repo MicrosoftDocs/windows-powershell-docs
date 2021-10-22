@@ -258,7 +258,7 @@ Captures extended attributes. The switch must be explicitly specified to capture
 attributes. DISM captures extended attribute bits if they are set in the components to be
 captured in the WIM image. If the bits are not set, DISM won't set them. Only the inbox components
 of CAB packages and drivers will have these extended attribute bits, not the AppX package components
-or Win32 application components. Extended attributes with prefix `$Kernel.` in name are skipped
+or Win32 application components. Extended attributes with the prefix `$Kernel.` in their name are skipped
 because only user mode extended attributes are captured.
 
 If you use DISM in Windows 10, version 1607

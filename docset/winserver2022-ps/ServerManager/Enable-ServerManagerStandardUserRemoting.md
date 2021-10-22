@@ -26,9 +26,9 @@ The cmdlet works by performing the following actions:
 
 - Adds access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
 
-? Adds specified standard users to required user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the managed server.
+- Adds specified standard users to required user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the managed server.
 
-? Changes access rights in the Service Control Manager to allow specified standard users remote access to the status of services on the managed server.
+- Changes access rights in the Service Control Manager to allow specified standard users remote access to the status of services on the managed server.
 
 This cmdlet does not provide standard users access to bpa (BPA) results, or allow standard users to run BPA scans.
 Aside from the preceding list of changes, this cmdlet provides no additional access that a standard user does not already have, by default, on managed servers.

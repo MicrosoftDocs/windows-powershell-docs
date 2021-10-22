@@ -71,7 +71,7 @@ Valid values for the parameter include a NetBIOS name, an IP address, or a fully
 
 To use a remote computer's IP address as the value of this parameter, your command must include the `Credential` parameter.
 The computer must either be configured for HTTPS transport, or the IP address of the remote computer must be included in the WinRM TrustedHosts list on the local computer.
-For information about adding a computer name to the WinRM TrustedHosts list, see "How to Add a Computer to the Trusted Host List" in about_Remote_Troubleshootinghttp://go.microsoft.com/fwlink/p/?LinkID=135188.
+For information about adding a computer name to the WinRM TrustedHosts list, see "How to Add a Computer to the Trusted Host List" in [about_Remote_Troubleshooting](https://go.microsoft.com/fwlink/p/?LinkID=135188).
 
 ```yaml
 Type: String

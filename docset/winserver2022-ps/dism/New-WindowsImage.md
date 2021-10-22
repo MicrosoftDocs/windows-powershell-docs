@@ -280,7 +280,7 @@ Accept wildcard characters: False
 ### -Verify
 Checks for errors and file duplication.
  During an apply operation, for example, using the **Add-WindowsImage** cmdlet, the size and the hash of the file being applied are checked against the image file to verify they are both equal.
- During a capture operation, for example, when using the **New-WindowsImage** cmdlet, after the files is captured into a Windows image, the file is written to a temporary file and compared on a bit-by-bit basis with the original file.
+ During a capture operation, for example, when using the **New-WindowsImage** cmdlet, after the file is captured into a Windows image, the file is written to a temporary file and compared on a bit-by-bit basis with the original file.
 
 ```yaml
 Type: SwitchParameter

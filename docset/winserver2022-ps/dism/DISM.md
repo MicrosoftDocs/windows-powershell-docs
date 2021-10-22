@@ -195,7 +195,7 @@ Splits an existing .wim file into multiple read-only split .wim files.
 
 ### [Start-OSUninstall](Start-OSUninstall.md)
 Windows gives a user the ability to uninstall and roll back to a previous version of Windows. You
-can use DISM to initiate an uninstall
+can use DISM to initiate an uninstall.
 
 ### [Update-WIMBootEntry](Update-WIMBootEntry.md)
 Updates the Windows image file boot (WIMBoot) configuration entry, associated with either the specified data source ID, the renamed image file path or the moved image file path.

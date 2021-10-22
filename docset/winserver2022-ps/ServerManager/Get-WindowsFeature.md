@@ -64,7 +64,7 @@ This example returns a list of features on a specified server, Server01, that ha
 ## PARAMETERS
 
 ### -ComputerName
-Gets the list of available rrsandf_plural from the specified remote computer that is running Windows Server.
+Gets the list of available features from the specified remote computer that is running Windows Server.
 The parameter accepts only one computer name.
 If this parameter is not added, or no computer name is specified, the default target is the local computer.
 Valid values for the parameter include a NetBIOS name, an IP address, or a fully qualified domain name of a remote computer.

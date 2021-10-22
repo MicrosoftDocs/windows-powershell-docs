@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ### -LimitAccess
 Prevents DISM from contacting Windows Update (WU) when searching for the source files to repair an online image.
 
-*LimitAccess* can only be used when servicing images that are running at least Windows&reg; 8, Windows Server&reg; 2012, or Windows&reg; Preinstallation Environment (Windows PE) 4.0.
+*LimitAccess* can only be used when servicing images that are running at least Windows 8, Windows Server 2012, or Windows  Preinstallation Environment (Windows PE) 4.0.
 
 ```yaml
 Type: SwitchParameter

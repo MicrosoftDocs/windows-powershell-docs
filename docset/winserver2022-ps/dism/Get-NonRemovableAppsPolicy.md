@@ -11,7 +11,7 @@ title: Get-NonRemovableAppsPolicy
 # Get-NonRemovableAppsPolicy
 
 ## SYNOPSIS
-Returns the a list of the app packages that are installed and configured as non-removable apps.
+Returns a list of the app packages that are installed and configured as non-removable apps.
 
 ## SYNTAX
 

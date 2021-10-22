@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -ConfirmTrustedFile
 Specifies that this cmdlet validates the image for Trusted Desktop on Windows 8 or Windows 8.1.
-This option can only be run on a computer running at least Windows&reg; Preinstallation Environment (Windows PE) 4.0.
+This option can only be run on a computer running at least Windows Preinstallation Environment (Windows PE) 4.0.
 
 ```yaml
 Type: SwitchParameter

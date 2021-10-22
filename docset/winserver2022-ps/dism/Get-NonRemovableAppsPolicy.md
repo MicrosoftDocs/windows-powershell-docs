@@ -38,7 +38,7 @@ configured as non-removable (can not be uninstalled).
 PS> Get-NonRemovableAppsPolicy -Online
 ```
 
-This command gets information about all installed app packages which have been previously configured
+This command gets information about all installed app packages that have been previously configured
 as non-removable.
 
 ### Example 2: Get all non-removable apps from an offline Windows image

@@ -290,7 +290,7 @@ Separate source locations with a comma.
 If you do not specify a *Source*, the default location set by Group Policy is used.
 Windows Update (WU) is also used for online images.
 
-*Source* can only be used when servicing images that are running at least Windows&reg; 8 or Windows Server&reg; 2012.
+*Source* can only be used when servicing images that are running at least Windows 8 or Windows Server 2012.
 
 ```yaml
 Type: String[]

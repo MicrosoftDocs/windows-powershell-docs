@@ -94,7 +94,7 @@ Quotation marks are optional.
 -- "UserName"
 -- "Domain\User"
 -- "User@Domain.com"
--- A Credential object returned by the Get-Credentialhttp://go.microsoft.com/fwlink/p/?LinkID=113311 cmdlet.
+-- A Credential object returned by the [Get-Credential](https://go.microsoft.com/fwlink/p/?LinkID=113311) cmdlet.
 
 If a user name is entered, then a prompt for a password is displayed.
 

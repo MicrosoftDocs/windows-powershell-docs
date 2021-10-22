@@ -179,7 +179,7 @@ Applies changes made to a mounted image to its WIM or VHD file.
 Adds custom data into the specified app (.appx) package that has been provisioned in a Windows image.
 
 ### [Set-NonRemovableAppsPolicy](Set-NonRemovableAppsPolicy.md)
-Sets an app packages as non-removable (can not be uninstalled).
+Sets an app package as non-removable (can not be uninstalled).
 
 ### [Set-WindowsEdition](Set-WindowsEdition.md)
 Changes a Windows image to a higher edition.

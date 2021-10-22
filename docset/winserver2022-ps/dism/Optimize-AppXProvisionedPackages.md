@@ -195,5 +195,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[http://go.microsoft.com/fwlink/?LinkId=293633](http://go.microsoft.com/fwlink/?LinkId=293633)
+[https://go.microsoft.com/fwlink/?LinkId=293633](https://go.microsoft.com/fwlink/?LinkId=293633)
 

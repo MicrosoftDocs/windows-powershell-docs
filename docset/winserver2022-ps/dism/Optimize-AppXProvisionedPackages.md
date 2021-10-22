@@ -24,7 +24,7 @@ Optimize-AppXProvisionedPackages -Path <String> [-WindowsDirectory <String>] [-S
 
 ## DESCRIPTION
 Optimizes the total file size of provisioned packages on the image by replacing identical files with
-hardlinks. 
+hard links. 
 
 When building an image, mount the disk image, add AppX packages, optimize provisioned packages, then
 dismount the disk image.

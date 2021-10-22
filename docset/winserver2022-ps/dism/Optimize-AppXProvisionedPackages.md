@@ -41,7 +41,7 @@ brought offline are optimized.
 PS> Optimize-AppXProvisionedPackages -Path ".\wim\image.wim"
 ```
 
-This command gets optimizes the total file size of provisioned packages in the image named
+This command optimizes the total file size of provisioned packages in the image named
 *image.wim*.
 
 ## PARAMETERS

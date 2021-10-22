@@ -1,5 +1,5 @@
 ---
-description: Returns the a list of the app packages that are installed and configured as non-removable apps.
+description: Returns a list of the app packages that are installed and configured as non-removable apps.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
 ms.date: 10/07/2021

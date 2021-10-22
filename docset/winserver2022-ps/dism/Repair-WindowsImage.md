@@ -48,7 +48,7 @@ This operation will take several minutes.
 
 The *Source* parameter specifies the location of known good versions of files that can be used for the repair, such as a path to the root directory of a mounted image.
 
-*CheckHealth*, *ScanHealth*, *RestoreHealth*, *Source*, and *LimitAccess* can only be used when servicing images that are running at least Windows&reg; 8 or Windows Server&reg; 2012.
+*CheckHealth*, *ScanHealth*, *RestoreHealth*, *Source*, and *LimitAccess* can only be used when servicing images that are running at least Windows 8 or Windows Server 2012.
 
 ## EXAMPLES
 

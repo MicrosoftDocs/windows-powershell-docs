@@ -46,7 +46,7 @@ as non-removable.
 PS> Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
 ```
 
-This command gets information about app packages loaded into an offline operating system image which
+This command gets information about app packages loaded into an offline operating system image that
 have been previously configured as non-removable.
 
 ## PARAMETERS

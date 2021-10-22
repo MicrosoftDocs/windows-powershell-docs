@@ -66,7 +66,7 @@ Install-WindowsFeature -ConfigurationFilePath d:\ConfigurationFiles\ADCSConfigFi
 ```
 
 This example installs all roles, role services and features that are specified in a configuration file named ADCSConfigFile.xml.
-The configuration file was created by clicking Export configuration settings on the Confirm installation selections page of the arfw in Server Manager.
+The configuration file was created by clicking Export configuration settings on the Confirm installation selections page of the Add Roles and Features Wizard in Server Manager.
 
 ### Example 4
 ```powershell

@@ -24,7 +24,7 @@ Provides one or more standard, non-Administrator users access to event, service,
 The cmdlet must be run locally on the server that you are managing by using Server Manager.
 The cmdlet works by performing the following actions:
 
-? Adds access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
+- Adds access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
 
 ? Adds specified standard users to required user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the managed server.
 

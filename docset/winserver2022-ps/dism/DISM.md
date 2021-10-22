@@ -149,7 +149,7 @@ Captures an image of a drive to a new WIM file.
 
 ### [Optimize-AppXProvisionedPackages](Optimize-AppXProvisionedPackages.md)
 Optimizes the total file size of provisioned packages on the image by replacing identical files with
-hardlinks.
+hard links.
 
 ### [Optimize-WindowsImage](Optimize-WindowsImage.md)
 Configures a Windows image with specified optimizations.

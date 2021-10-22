@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -NonRemovable
-Configures app package as removable or non-removable.
+Configures an app package as removable or non-removable.
 
  Accepted values are as follows:
 - 0 = Sets the application as removable and can be uninstalled.

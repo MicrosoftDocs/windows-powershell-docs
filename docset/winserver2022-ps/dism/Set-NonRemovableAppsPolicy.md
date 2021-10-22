@@ -1,5 +1,5 @@
 ---
-description: Sets an app packages as non-removable (can not be uninstalled).
+description: Sets an app package as non-removable (can not be uninstalled).
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
 ms.date: 10/07/2021

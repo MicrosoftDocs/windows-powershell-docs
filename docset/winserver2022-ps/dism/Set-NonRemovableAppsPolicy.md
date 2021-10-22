@@ -11,7 +11,7 @@ title: Set-NonRemovableAppsPolicy
 # Set-NonRemovableAppsPolicy
 
 ## SYNOPSIS
-Sets an app packages as non-removable (can not be uninstalled).
+Sets an app package as non-removable (can not be uninstalled).
 
 ## SYNTAX
 

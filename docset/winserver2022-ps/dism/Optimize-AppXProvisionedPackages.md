@@ -1,5 +1,5 @@
 ---
-description: Optimizes the total file size of provisioned packages on the image by replacing identical files with hardlinks.
+description: Optimizes the total file size of provisioned packages on the image by replacing identical files with hard links.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
 ms.date: 10/13/2021

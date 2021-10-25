@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -Remove
-Deletes feature files for the specified rrsandf_plural from the side-by-side store, located at %SystemDrive%:\Windows\WinSxS.
+Deletes feature files for the specified features from the side-by-side store, located at %SystemDrive%:\Windows\WinSxS.
 If the feature is not yet uninstalled, the command uninstalls the feature.
 
 When you delete feature files, features that depend upon the files you remove are also deleted.

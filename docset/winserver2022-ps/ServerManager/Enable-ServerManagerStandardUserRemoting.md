@@ -33,7 +33,7 @@ The cmdlet works by performing the following actions:
 This cmdlet does not provide standard users access to bpa (BPA) results, or allow standard users to run BPA scans.
 Aside from the preceding list of changes, this cmdlet provides no additional access that a standard user does not already have, by default, on managed servers.
 
-Running this cmdlet has security implications for your network environment, because it grants specified non-Administrator users access rights to information that, by default, is restricted to members of the Administrators group on the local computer.
+Running this cmdlet has security implications for your network environment because it grants specified non-Administrator users access rights to information that, by default, is restricted to members of the Administrators group on the local computer.
 The cmdlet provides access to other WMI providers in the root\cimv2 namespace, but only those providers that can be used by standard users.
 We recommend that you run this cmdlet only when you must add a specific standard user to the users who require access to remote server data by using Server Manager.
 Additionally, you should promptly run `Disable-ServerManagerStandardUserRemoting` to deny this access to users as soon as they no longer require it.

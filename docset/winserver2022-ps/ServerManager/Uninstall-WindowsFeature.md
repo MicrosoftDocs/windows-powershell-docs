@@ -63,7 +63,7 @@ This example deletes the feature files for any roles or features that currently 
 ## PARAMETERS
 
 ### -ComputerName
-Uninstalls and optionally removes one or more rrsandf_plural from a specified remote computer.
+Uninstalls and optionally removes one or more roles or features from a specified remote computer.
 This parameter accepts only one computer name.
 If this parameter is not added, or no computer name is specified, the default target is the local computer.
 

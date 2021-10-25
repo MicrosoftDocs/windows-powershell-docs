@@ -181,7 +181,7 @@ Specifies the location of the files that are required to add a Windows capabilit
 
 If you do not specify a *Source*, the default location set by Group Policy is used. If that fails, Windows Update is also used for online images, unless *LimitAccess* is specified. When all fail, the cmdlet fails silently; no exceptions are thrown.
 
-*Source* can only be used when servicing images that are running at least Windows&reg; 8 or Windows Server&reg; 2012.
+*Source* can only be used when servicing images that are running at least Windows 8 or Windows Server 2012.
 
 ```yaml
 Type: String[]

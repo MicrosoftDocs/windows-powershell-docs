@@ -129,7 +129,7 @@ Returns a file containing the tenant ID for which the AD FS farm is configured f
 Generates SQL scripts to create the AD FS database and to grant permissions.
 
 ### [Export-AdfsThreatDetectionModuleConfiguration](Export-AdfsThreatDetectionModuleConfiguration.md)
-{{ Fill in the Synopsis }}
+Exports AD FS threat detection module configuration data.
 
 ### [Export-AdfsWebContent](Export-AdfsWebContent.md)
 Exports properties of all web content objects in a specific locale to a specified file.
@@ -250,7 +250,7 @@ Gets the host name, port, and certificate hash for SSL bindings configured for A
 Gets synchronization properties the configuration database of AD FS.
 
 ### [Get-AdfsThreatDetectionModule](Get-AdfsThreatDetectionModule.md)
-{{ Fill in the Synopsis }}
+Gets the properties for an AD FS threat detection module.
 
 ### [Get-AdfsTrustedFederationPartner](Get-AdfsTrustedFederationPartner.md)
 Gets a trusted federation partner in AD FS.
@@ -274,7 +274,7 @@ Grants application permission.
 Imports the custom configuration for an authentication provider.
 
 ### [Import-AdfsThreatDetectionModuleConfiguration](Import-AdfsThreatDetectionModuleConfiguration.md)
-{{ Fill in the Synopsis }}
+Imports AD FS threat detection module configuration data.
 
 ### [Import-AdfsWebContent](Import-AdfsWebContent.md)
 Imports properties from a resource file into global and relying party web content objects.

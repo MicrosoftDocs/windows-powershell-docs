@@ -109,7 +109,7 @@ Exports a copy of the specified image to another image file.
 Gets information about app packages (.appx) in an image that will be installed for each new user.
 
 ### [Get-NonRemovableAppsPolicy](Get-NonRemovableAppsPolicy.md)
-Returns the a list of the app packages that are installed and configured as non-removable apps.
+Returns a list of the app packages that are installed and configured as non-removable apps.
 
 ### [Get-WIMBootEntry](Get-WIMBootEntry.md)
 Displays the Windows image file boot (WIMBoot) configuration entries for a specified disk volume.

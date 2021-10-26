@@ -24,7 +24,7 @@ Adds a Remote Packet Capture provider.
 Adds an ETW provider to a session.
 
 ### [Add-NetEventVFPProvider](Add-NetEventVFPProvider.md)
-{{ Fill in the Synopsis }}
+Creates a VFP provider for network events.
 
 ### [Add-NetEventVmNetworkAdapter](Add-NetEventVmNetworkAdapter.md)
 Adds a virtual network adapter as a filter on the provider.
@@ -33,7 +33,7 @@ Adds a virtual network adapter as a filter on the provider.
 Adds a Hyper-V virtual switch as a filter on a provider.
 
 ### [Add-NetEventVmSwitchProvider](Add-NetEventVmSwitchProvider.md)
-{{ Fill in the Synopsis }}
+Creates a virtual machine switch provider for network events.
 
 ### [Add-NetEventWFPCaptureProvider](Add-NetEventWFPCaptureProvider.md)
 Creates a WFP capture provider.
@@ -51,7 +51,7 @@ Displays the ETW providers that are present on the computer or associated with a
 Gets network event sessions.
 
 ### [Get-NetEventVFPProvider](Get-NetEventVFPProvider.md)
-{{ Fill in the Synopsis }}
+Gets a VFP provider for network events.
 
 ### [Get-NetEventVmNetworkAdapter](Get-NetEventVmNetworkAdapter.md)
 Gets virtual network adapters from a provider.
@@ -60,7 +60,7 @@ Gets virtual network adapters from a provider.
 Gets Hyper-V virtual switches from a provider.
 
 ### [Get-NetEventVmSwitchProvider](Get-NetEventVmSwitchProvider.md)
-{{ Fill in the Synopsis }}
+Gets a virtual machine switch provider for network events.
 
 ### [Get-NetEventWFPCaptureProvider](Get-NetEventWFPCaptureProvider.md)
 Displays settings for a local or remote WFP capture provider configuration.
@@ -81,7 +81,7 @@ Removes an ETW provider from a session.
 Removes a network event session.
 
 ### [Remove-NetEventVFPProvider](Remove-NetEventVFPProvider.md)
-{{ Fill in the Synopsis }}
+Removes a VFP provider for network events.
 
 ### [Remove-NetEventVmNetworkAdapter](Remove-NetEventVmNetworkAdapter.md)
 Removes virtual network adapters from a provider.
@@ -90,7 +90,7 @@ Removes virtual network adapters from a provider.
 Removes Hyper-V virtual switches from a provider.
 
 ### [Remove-NetEventVmSwitchProvider](Remove-NetEventVmSwitchProvider.md)
-{{ Fill in the Synopsis }}
+Removes a virtual machine switch provider for network events.
 
 ### [Remove-NetEventWFPCaptureProvider](Remove-NetEventWFPCaptureProvider.md)
 Removes a local or remote WFP capture provider.
@@ -105,10 +105,10 @@ Modifies settings for an ETW provider.
 Modifies a network event session.
 
 ### [Set-NetEventVFPProvider](Set-NetEventVFPProvider.md)
-{{ Fill in the Synopsis }}
+Modifies a VFP provider for network events.
 
 ### [Set-NetEventVmSwitchProvider](Set-NetEventVmSwitchProvider.md)
-{{ Fill in the Synopsis }}
+Modifies a virtual machine switch provider for network events.
 
 ### [Set-NetEventWFPCaptureProvider](Set-NetEventWFPCaptureProvider.md)
 Modifies the configuration of a WFP capture provider.

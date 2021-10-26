@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Add-NetEventVmSwitchProvider cmdlet creates a virtual machine switch provider for network events.
 external help file: MSFT_NetEventVmSwitchProvider.cdxml-help.xml
 Module Name: NetEventPacketCapture
 ms.date: 10/22/2021
@@ -11,7 +11,7 @@ title: Add-NetEventVmSwitchProvider
 # Add-NetEventVmSwitchProvider
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Creates a virtual machine switch provider for network events.
 
 ## SYNTAX
 
@@ -22,21 +22,27 @@ Add-NetEventVmSwitchProvider [-SessionName] <String> [[-Level] <Byte>] [[-MatchA
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Add-NetEventVmSwitchProvider** cmdlet creates a virtual machine switch provider for network events.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Add a virtual machine switch provider
 ```powershell
-PS C:\> {{ Add example code here }}
+New-NetEventSession -Name "Session01"
+Add-NetEventVMSwitch -Name "Network Adapter 2 - Virtual Switch"
+Add-NetEventVmSwitchProvider -SessionName "Session01" -SwitchName "Network Adapter 2 - Virtual Switch"
 ```
 
-{{ Add example description here }}
+The first command creates a network event session named `Session01` by using the **New-NetEventSession** cmdlet.
+
+The second command creates a virtual machine switch by using the **Add-NetEventVMSwitch** cmdlet.
+
+The third command creates a virtual machine switch provider for the specified switch.
 
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -51,7 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -66,7 +74,25 @@ Accept wildcard characters: False
 ```
 
 ### -Level
-{{ Fill Level Description }}
+Specifies the level of Event Tracing for Windows (ETW) events for the provider.
+Use the level of detail for the event to filter the events that are logged.
+The default value for this parameter is 0x4.
+The acceptable values for this parameter are:
+
+- 0x5.
+Verbose
+- 0x4.
+Informational
+- 0x3.
+Warning
+- 0x2.
+Error
+- 0x1.
+Critical
+- 0x0.
+LogAlways
+
+The provider must log the event if the value of the event is less than or equal to the value of this parameter.
 
 ```yaml
 Type: Byte
@@ -81,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -MatchAllKeywords
-{{ Fill MatchAllKeywords Description }}
+Specifies a bitmask that restricts the events that the provider logs.
 
 ```yaml
 Type: UInt64
@@ -96,7 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -MatchAnyKeyword
-{{ Fill MatchAnyKeyword Description }}
+Specifies keywords as a set of hexadecimal values.
+Keywords are flags that you can combine to generate values.
+Use a set of hexadecimal values of the keywords instead of the keyword names, and apply a filter to write ETW events for keyword matches.
 
 ```yaml
 Type: UInt64
@@ -111,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortIds
-{{ Fill PortIds Description }}
+Specifies port numbers.
 
 ```yaml
 Type: UInt32[]
@@ -126,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -SessionName
-{{ Fill SessionName Description }}
+Specifies the name of the session that is associated with the **NetEventVMSwitchProvider**.
+This parameter has the same value as the **Name** parameter for the **New-NetEventSession** cmdlet.
 
 ```yaml
 Type: String
@@ -141,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -SwitchName
-{{ Fill SwitchName Description }}
+Specifies the switch for this virtual machine switch provider.
 
 ```yaml
 Type: String
@@ -156,7 +185,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
@@ -202,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -215,7 +246,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-NetEventVMSwitch](Add-NetEventVMSwitch.md)
+
 [Get-NetEventVmSwitchProvider](Get-NetEventVmSwitchProvider.md)
+
+[New-NetEventSession](New-NetEventSession.md)
 
 [Remove-NetEventVmSwitchProvider](Remove-NetEventVmSwitchProvider.md)
 

@@ -1,5 +1,5 @@
 ---
-description: 
+description: The Remove-NetEventVFPProvider cmdlet removes a Virtual Filtering Platform (VFP) provider for network events.
 external help file: MSFT_NetEventVFPProvider.cdxml-help.xml
 Module Name: NetEventPacketCapture
 ms.date: 10/22/2021
@@ -11,7 +11,7 @@ title: Remove-NetEventVFPProvider
 # Remove-NetEventVFPProvider
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes a VFP provider for network events.
 
 ## SYNTAX
 
@@ -28,21 +28,21 @@ Remove-NetEventVFPProvider -InputObject <CimInstance[]> [-CimSession <CimSession
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Remove-NetEventVFPProvider** cmdlet removes a Virtual Filtering Platform (VFP) provider for network events.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a VFP provider
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-NetEventVFPProvider -SessionName Session01
 ```
 
-{{ Add example description here }}
+This command removes the VFP provider associated with `Session01`.
 
 ## PARAMETERS
 
 ### -AsJob
-{{ Fill AsJob Description }}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -57,7 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{ Fill CimSession Description }}
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -72,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -87,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -102,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -SessionName
-{{ Fill SessionName Description }}
+Specifies the name of the session that is associated with the **NetEventVFPProvider**.
+This parameter has the same value as the **Name** parameter for the **New-NetEventSession** cmdlet.
 
 ```yaml
 Type: String[]
@@ -117,7 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{ Fill ThrottleLimit Description }}
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
@@ -163,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

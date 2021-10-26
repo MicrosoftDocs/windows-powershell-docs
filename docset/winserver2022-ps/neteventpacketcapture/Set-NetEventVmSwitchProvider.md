@@ -56,6 +56,8 @@ The second command creates a virtual machine switch by using the **Add-NetEventV
 
 The third command creates a virtual machine switch provider for the specified switch.
 
+The fourth command modifies the provider with the specified value.
+
 ## PARAMETERS
 
 ### -AsJob
@@ -320,5 +322,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-NetEventVmSwitchProvider](Add-NetEventVmSwitchProvider.md)
 
 [Get-NetEventVmSwitchProvider](Get-NetEventVmSwitchProvider.md)
+
+[New-NetEventSession](New-NetEventSession.md)
 
 [Remove-NetEventVmSwitchProvider](Remove-NetEventVmSwitchProvider.md)

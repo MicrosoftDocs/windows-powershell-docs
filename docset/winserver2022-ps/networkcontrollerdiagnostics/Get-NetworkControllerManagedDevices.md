@@ -95,3 +95,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Debug-NetworkControllerConfigurationState](Debug-NetworkControllerConfigurationState.md)
+
+[Debug-ServiceFabricNodeStatus](Debug-ServiceFabricNodeStatus.md)
+
+[Get-NetworkControllerDeploymentInfo](Get-NetworkControllerDeploymentInfo.md)

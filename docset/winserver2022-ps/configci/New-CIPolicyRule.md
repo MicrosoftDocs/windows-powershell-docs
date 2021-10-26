@@ -269,7 +269,7 @@ Accept wildcard characters: False
 Specifies an app.
 This cmdlet creates per-app rules which control whether specific plug-ins, add-ins, and modules can run from specific apps.
 
-For more information, see [Use a Windows Defender Application Control policy to control specific plug-ins, add-ins, and modules](/windows/security/threat-protection/windows-defender-application-control/use-windows-defender-application-control-policy-to-control-specific-plug-ins-add-ins-and-modules).
+For more information, see [Use a Windows Defender Application Control policy to control specific plug-ins, add-ins, and modules](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/use-windows-defender-application-control-policy-to-control-specific-plug-ins-add-ins-and-modules).
 
 ```yaml
 Type: String

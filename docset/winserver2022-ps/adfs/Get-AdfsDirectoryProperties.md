@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Gets the associated properties for the AD FS directory.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: adfs
 ms.date: 09/30/2021
@@ -11,7 +11,7 @@ title: Get-AdfsDirectoryProperties
 # Get-AdfsDirectoryProperties
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets the associated properties for the AD FS directory.
 
 ## SYNTAX
 
@@ -20,16 +20,16 @@ Get-AdfsDirectoryProperties [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-AdfsDirectoryProperties** cmdlet gets the associated properties for the AD FS directory.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Gets the associated properties for the AD FS directory.
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AdfsDirectoryProperties
 ```
 
-{{ Add example description here }}
+Gets the associated properties for the AD FS directory.
 
 ## PARAMETERS
 

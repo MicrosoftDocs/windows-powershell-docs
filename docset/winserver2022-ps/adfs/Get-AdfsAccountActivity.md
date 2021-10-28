@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Get the current account activity for a user account.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: adfs
-ms.date: 09/30/2021
+ms.date: 10/27/2021
 online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsaccountactivity?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-AdfsAccountActivity
@@ -11,7 +11,7 @@ title: Get-AdfsAccountActivity
 # Get-AdfsAccountActivity
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Get the current account activity for a user account.
 
 ## SYNTAX
 
@@ -27,21 +27,37 @@ Get-AdfsAccountActivity -UserPrincipalName <String> [-Server <String>] [-WhatIf]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-ADFSAccountActivity** cmdlet gets the current account activity for a user account. 
+
+The cmdlet automatically connects to the node in the farm that holds the master role. This behavior
+can be overridden by passing the **-Server** parameter.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the current account activity for a user account
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Get-ADFSAccountActivity user@contoso.com
 ```
 
-{{ Add example description here }}
+Gets the current account activity for **user@contoso.com**.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+Specifies an Active Directory group object by providing one of the following values.
+The identifier in parentheses is the LDAP display name for the attribute.
+The acceptable values for this parameter are:
+
+- A distinguished name
+- A GUID (objectGUID) 
+- A security identifier (objectSid) 
+- A Security Account Manager account name (sAMAccountName)
+
+The cmdlet searches the default naming context or partition to find the object.
+If two or more objects are found, the cmdlet returns a non-terminating error.
+
+This parameter can also get this object through the pipeline or you can set this parameter to an
+object instance.
 
 ```yaml
 Type: String
@@ -56,7 +72,18 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-{{ Fill Server Description }}
+Specifies the Active Directory Domain Services instance to connect to, by providing one of the
+following values for a corresponding domain name or directory server.
+
+Domain name values:
+- Fully qualified domain name. For example, corp.contoso.com
+- NetBIOS name. For example, CORP
+
+Directory server values:
+- Fully qualified directory server name. For example, corp-DC12.corp.contoso.com
+- NetBIOS name. For example, corp-DC12
+- Fully qualified directory server name and port. For example: corp-DC12.corp.contoso.com:3268
+
 
 ```yaml
 Type: String
@@ -71,7 +98,11 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{ Fill UserPrincipalName Description }}
+Specifies a user principal name (UPN) in the format `<user>@<DNS-domain-name>`. A UPN is a friendly
+name assigned by an administrator that is shorter than the LDAP distinguished name used by the
+system and easier to remember. The UPN is independent of the user object's distinguished name, so a
+user object can be moved or renamed without affecting the user logon name. When logging on using a
+UPN, users don't have to choose a domain from a list on the logon dialog box.
 
 ```yaml
 Type: String

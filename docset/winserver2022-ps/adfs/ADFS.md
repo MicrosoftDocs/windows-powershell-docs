@@ -141,7 +141,7 @@ Exports a web theme to a folder.
 Gets an AD FS access control policy.
 
 ### [Get-AdfsAccountActivity](Get-AdfsAccountActivity.md)
-{{ Fill in the Synopsis }}
+Get the current account activity for a user account.
 
 ### [Get-AdfsAdditionalAuthenticationRule](Get-AdfsAdditionalAuthenticationRule.md)
 Retrieves the global rules that trigger additional authentication providers to be invoked.
@@ -192,7 +192,7 @@ Gets the administrative polices of the Device Registration Service.
 Gets the UPN suffixes that can be used with device registration.
 
 ### [Get-AdfsDirectoryProperties](Get-AdfsDirectoryProperties.md)
-{{ Fill in the Synopsis }}
+Gets the associated properties for the AD FS directory.
 
 ### [Get-AdfsEndpoint](Get-AdfsEndpoint.md)
 Retrieves an endpoint in AD FS.
@@ -235,7 +235,8 @@ Gets web content objects for relying parties.
 Gets properties of web themes applied to relying party trusts.
 
 ### [Get-AdfsResponseHeaders](Get-AdfsResponseHeaders.md)
-{{ Fill in the Synopsis }}
+Gets the response headers that are included in the outgoing HTTP response sent by AD FS to a web
+browser.
 
 ### [Get-AdfsScopeDescription](Get-AdfsScopeDescription.md)
 Gets a description for a scope in AD FS.
@@ -405,7 +406,7 @@ Removes the relying party trust object for the Web Application Proxy.
 Removes a web theme.
 
 ### [Reset-AdfsAccountLockout](Reset-AdfsAccountLockout.md)
-{{ Fill in the Synopsis }}
+Resets the lockout counter for a user account.
 
 ### [Restore-AdfsFarmBehaviorLevel](Restore-AdfsFarmBehaviorLevel.md)
 Restores the farm to a previous behavior level.
@@ -420,7 +421,7 @@ Revokes trust for all federation server proxies configured for the Federation Se
 Modifies an AD FS access control policy.
 
 ### [Set-AdfsAccountActivity](Set-AdfsAccountActivity.md)
-{{ Fill in the Synopsis }}
+Update the account activity for a user account.
 
 ### [Set-AdfsAdditionalAuthenticationRule](Set-AdfsAdditionalAuthenticationRule.md)
 Sets the global rules that provide the trigger for additional authentication providers to be invoked.
@@ -471,7 +472,7 @@ Configures the administrative policies for the Device Registration Service.
 Sets the list of UPN suffixes.
 
 ### [Set-AdfsDirectoryProperties](Set-AdfsDirectoryProperties.md)
-{{ Fill in the Synopsis }}
+Sets properties for the AD FS directory.
 
 ### [Set-AdfsEndpoint](Set-AdfsEndpoint.md)
 Sets the endpoint on a Web Application Proxy.
@@ -511,7 +512,8 @@ Sets properties for the relying party web content objects.
 Applies a web theme to a relying party.
 
 ### [Set-AdfsResponseHeaders](Set-AdfsResponseHeaders.md)
-{{ Fill in the Synopsis }}
+Updates the response headers that are included in the outgoing HTTP response sent by AD FS to a web
+browser.
 
 ### [Set-AdfsScopeDescription](Set-AdfsScopeDescription.md)
 Modifies a scope description in AD FS.

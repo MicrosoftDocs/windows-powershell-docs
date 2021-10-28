@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
 Module Name: ADFS
-ms.date: 12/20/2016
+ms.date: 10/26/2021
 online version: https://docs.microsoft.com/powershell/module/adfs/export-adfsdeploymentsqlscript?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-AdfsDeploymentSQLScript
@@ -35,7 +35,12 @@ This command exports SQL deployment scripts for AD FS installation on behalf of 
 ## PARAMETERS
 
 ### -DatabaseType
-{{ Fill DatabaseType Description }}
+Specifies the AD FS database type.
+
+The acceptable values for this parameter are: All, Artifact, or Configuration.
+
+If no **DatabaseType** parameter is specified, **All** is the default and the script configures both
+the Artifact and Configuration scripts.
 
 ```yaml
 Type: DatabaseType
@@ -65,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceAccountName
-Specifies the name of the Active Directory® Domain Services account under which the AD FS service runs. 
+Specifies the name of the Active Directory&reg; Domain Services account under which the AD FS service runs. 
 All nodes in the farm must use the same service account.
 
 ```yaml

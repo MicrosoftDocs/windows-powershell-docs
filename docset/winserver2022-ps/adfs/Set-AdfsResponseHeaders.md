@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Updates the response headers that are included in the outgoing HTTP response sent by AD FS to a web browser.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: adfs
-ms.date: 09/30/2021
+ms.date: 10/28/2021
 online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsresponseheaders?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-AdfsResponseHeaders
@@ -11,7 +11,8 @@ title: Set-AdfsResponseHeaders
 # Set-AdfsResponseHeaders
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Updates the response headers that are included in the outgoing HTTP response sent by AD FS to a web
+browser.
 
 ## SYNTAX
 
@@ -32,16 +33,23 @@ Set-AdfsResponseHeaders -SetHeaderName <String> -SetHeaderValue <String> [-Remov
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Set-AdfsResponseHeaders** cmdlet updates the response headers that are included in the
+outgoing HTTP response sent by AD FS to a web browser.
+
+You can set common security headers such as **HSTS**, **CSP**,
+**X-Frame-Options**, **X-XSS-Protection** and **CORS**. You can also set new custom headers, for
+example **TestHeader**.
+
+For more information, see [Customize HTTP security response headers with AD FS](/windows-server/identity/ad-fs/operations/customize-http-security-headers-ad-fs).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Set Strict-Transport-Security header
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Set-AdfsResponseHeaders -SetHeaderName "Strict-Transport-Security" -SetHeaderValue "max-age=31536000; includeSubDomains"
 ```
 
-{{ Add example description here }}
+Sets the **Strict-Transport-Security** header to a max age of one year and include subdomains.
 
 ## PARAMETERS
 
@@ -61,7 +69,11 @@ Accept wildcard characters: False
 ```
 
 ### -CORSTrustedOrigins
-{{ Fill CORSTrustedOrigins Description }}
+Specifies a list of CORS trusted origins. For example,
+`-CORSTrustedOrigins https://example1.com,https://example2.com`
+
+You can allow CORS requests from any origin by including "*" in the list of trusted origins,
+although this approach is not recommended due to security vulnerabilities.
 
 ```yaml
 Type: String[]
@@ -76,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCORS
-{{ Fill EnableCORS Description }}
+Enable or disables CORS functionality. By default, CORS functionality is not enabled. When enabled,
+you can CORS trusted origins using the **-CORSTrustedOrigins** parameter.
 
 ```yaml
 Type: Boolean
@@ -106,7 +119,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableResponseHeaders
-{{ Fill EnableResponseHeaders Description }}
+
+The response headers are sent if **ResponseHeadersEnabled** is set to **$true** (default value). The
+value can be set to False to prevent AD FS including any of the security headers in the HTTP
+response. Setting the value to **$false** is not recommended.
 
 ```yaml
 Type: Boolean
@@ -166,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveHeaders
-{{ Fill RemoveHeaders Description }}
+Removes a header by using the header name. For example, **-RemoveHeaders "MyCustomHeaderName"**.
 
 ```yaml
 Type: String[]
@@ -181,7 +197,10 @@ Accept wildcard characters: False
 ```
 
 ### -SetHeaderName
-{{ Fill SetHeaderName Description }}
+Header name to set.
+
+You can set common security headers such as **HSTS**, **CSP**, **X-Frame-Options**,
+**X-XSS-Protection** and **CORS**. You can also set new custom headers, for example **TestHeader**.
 
 ```yaml
 Type: String
@@ -196,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetHeaderValue
-{{ Fill SetHeaderValue Description }}
+String used to set the header's value.
 
 ```yaml
 Type: String

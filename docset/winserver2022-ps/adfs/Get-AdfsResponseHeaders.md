@@ -1,8 +1,9 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Gets the response headers that are included in the outgoing HTTP response sent by AD FS to a web
+browser.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: adfs
-ms.date: 09/30/2021
+ms.date: 10/28/2021
 online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsresponseheaders?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-AdfsResponseHeaders
@@ -11,7 +12,8 @@ title: Get-AdfsResponseHeaders
 # Get-AdfsResponseHeaders
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets the response headers that are included in the outgoing HTTP response sent by AD FS to a web
+browser.
 
 ## SYNTAX
 
@@ -20,16 +22,20 @@ Get-AdfsResponseHeaders [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-AdfsResponseHeaders** cmdlet gets the response headers that are included in the outgoing
+HTTP response sent by AD FS to a web browser.
+
+The response headers will be sent only if ResponseHeadersEnabled is set to True (default value). You
+can change the value using **Set-AdfsResponseHeaders**.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Gets the HTTP response headers sent by AD FS to a web browser.
 ```powershell
-PS C:\> {{ Add example code here }}
+PS> Get-AdfsResponseHeaders
 ```
 
-{{ Add example description here }}
+Lists the HTTP response headers included in every outgoing HTTP response.
 
 ## PARAMETERS
 

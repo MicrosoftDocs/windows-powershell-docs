@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Updates properties for the AD FS directory.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: adfs
 ms.date: 09/30/2021
@@ -11,7 +11,7 @@ title: Set-AdfsDirectoryProperties
 # Set-AdfsDirectoryProperties
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Updates properties for the AD FS directory.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Set-AdfsDirectoryProperties [-AddUpnSuffix <String[]>] [-RemoveUpnSuffix <String
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Set-AdfsDirectoryProperties** cmdlet sets properties for the AD FS directory.
 
 ## EXAMPLES
 

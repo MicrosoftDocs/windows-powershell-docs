@@ -28,7 +28,7 @@ The **Add-DhcpServerv6Reservation** cmdlet reserves a specified IPv6 address for
 
 ### Example 1: Reserve an IP address
 ```
-PS C:\> Add-DhcpServerv6Reservation -Prefix 2001:4898:7020:1020:: -IPAddress 2001:4898:7020:1020::1 -ClientDuid "00-01-00-01-15-F9-7F-AB-F0-DE-F1-7A-00-5E" -Iaid 234890455
+PS C:\> Add-DhcpServerv6Reservation -Prefix 2001:4898:7020:1020:: -IPAddress 2001:4898:7020:1020::1 -ClientDuid "0001000115F97FABF0DEF17A005E" -Iaid 234890455
 ```
 
 This example reserves the specified IPv6 address for the specified *ClientDuid* and *Iaid* parameter values.
@@ -51,7 +51,7 @@ Prefix,IPAddress,Name,ClientDuid,Iaid,Description
 ### Example 3: Reserve any IP address in a scope
 ```
 PS C:\> $FreeIP = Get-DhcpServerv6FreeIPAddress -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020::
-PS C:\> Add-DhcpServerv6Reservation -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020::  -IPAddress $FreeIP -ClientDuid "00-01-00-01-15-F9-7F-AB-F0-DE-F1-7A-00-5E" -Iaid 234890455 -Description "Reservation for Printer"
+PS C:\> Add-DhcpServerv6Reservation -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020::  -IPAddress $FreeIP -ClientDuid "0001000115F97FABF0DEF17A00-5E" -Iaid 234890455 -Description "Reservation for Printer"
 ```
 
 This example creates a reservation for the client identified by the specified client ID from any of the free IP address in the scope 2001:4898:7020:1020::.

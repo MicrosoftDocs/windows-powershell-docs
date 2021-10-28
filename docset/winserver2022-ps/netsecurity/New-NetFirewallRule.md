@@ -24,8 +24,8 @@ New-NetFirewallRule [-PolicyStore <String>] [-GPOSession <String>] [-Name <Strin
  [-IcmpType <String[]>] [-DynamicTarget <DynamicTransport>] [-Program <String>] [-Package <String>]
  [-Service <String>] [-InterfaceAlias <WildcardPattern[]>] [-InterfaceType <InterfaceType>]
  [-LocalUser <String>] [-RemoteUser <String>] [-RemoteMachine <String>] [-Authentication <Authentication>]
- [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-RemoteDynamicKeywordAddresses <String[]>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -826,6 +826,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoteDynamicKeywordAddresses
+Specifies dynamic keyword addresses that match this rule.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoteMachine
 Specifies that matching IPsec rules of the indicated computer accounts are created. 
 This parameter specifies that only network packets that are authenticated as incoming from or outgoing to a computer identified in the list of computer accounts (SID) match this rule.
@@ -984,7 +999,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Get-NetFirewallSecurityFilter](./Get-NetFirewallSecurityFilter.md)
 
-[New-NetFirewallRule](./New-NetFirewallRule.md)
+[New-NetFirewallDynamicKeywordAddress](New-NetFirewallDynamicKeywordAddress.md)
 
 [Open-NetGPO](./Open-NetGPO.md)
 

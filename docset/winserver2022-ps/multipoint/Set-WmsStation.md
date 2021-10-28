@@ -231,13 +231,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.UInt32[]
+
+### System.String
 
 ## OUTPUTS
 
-### None
-Throws SecurityException if the specified autologon user is an administrative user.
-This exception is not thrown if the *OverrideAdminWarning* parameter is specified for administrative users.
+### System.Object
 
 ## NOTES
 

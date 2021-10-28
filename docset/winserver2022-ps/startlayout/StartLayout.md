@@ -17,7 +17,10 @@ This reference provides cmdlet descriptions and syntax for all Start screen cmdl
 ### [Export-StartLayout](./Export-StartLayout.md)
 Exports the layout of the Start screen.
 
-### [Get-StartApps](./Get-StartApps.md)
+### [Export-StartLayoutEdgeAssets](Export-StartLayoutEdgeAssets.md)
+Exports secondary tiles for Microsoft Edge that display a custom image.
+
+### [Get-StartApps](Get-StartApps.md)
 Gets the names and AppIDs of installed apps.
 
 ### [Import-StartLayout](./Import-StartLayout.md)

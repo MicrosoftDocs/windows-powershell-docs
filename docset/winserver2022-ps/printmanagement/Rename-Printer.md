@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_Printer_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/rename-printer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-Printer
@@ -40,15 +40,15 @@ You need administrator credentials to run **Rename-Printer**.
 
 ### Example 1: Rename a printer
 ```
-PS C:\> Rename-Printer -Name "Microsoft XPS Document Writer" -NewName "MXDW"
+Rename-Printer -Name "Microsoft XPS Document Writer" -NewName "MXDW"
 ```
 
 This command renames the Microsoft XPS Document Writer printer name as MXDW.
 
 ### Example 2: Rename a printer by using a printer object
 ```
-PS C:\>$Printer = Get-Printer -Name "Microsoft XPS Document Writer"
-PS C:\> Rename-Printer -InputObject $Printer -NewName "MXDW"
+$Printer = Get-Printer -Name "Microsoft XPS Document Writer"
+Rename-Printer -InputObject $Printer -NewName "MXDW"
 ```
 
 The first command gets a printer named Microsoft XPS Document Writer by using **Get-Printer**.
@@ -188,13 +188,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer
-This cmdlet accepts one printer object.
+### System.String
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## OUTPUTS
 
-### None
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

@@ -1,14 +1,14 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Modifies an existing AutoLogger session configuration.
 external help file: MSFT_AutologgerConfig_v1.0.cdxml-help.xml
 Module Name: EventTracingManagement
-ms.date: 01/05/2017
-online version: https://docs.microsoft.com/powershell/module/eventtracingmanagement/set-autologgerconfig?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 10/01/2021
+online version: https://docs.microsoft.com/powershell/module/eventtracingmanagement/update-autologgerconfig?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Set-AutologgerConfig
+title: Update-AutologgerConfig
 ---
 
-# Set-AutologgerConfig
+# Update-AutologgerConfig
 
 ## SYNOPSIS
 Modifies an existing AutoLogger session configuration.
@@ -17,7 +17,7 @@ Modifies an existing AutoLogger session configuration.
 
 ### ByName (Default)
 ```
-Set-AutologgerConfig [-Name] <String[]> [-BufferSize <UInt32>] [-ClockType <ClockType>]
+Update-AutologgerConfig [-Name] <String[]> [-BufferSize <UInt32>] [-ClockType <ClockType>]
  [-DisableRealtimePersistence <UInt32>] [-LocalFilePath <String>] [-FileMax <UInt32>] [-FlushTimer <UInt32>]
  [-Guid <String>] [-LogFileMode <UInt32>] [-MaximumFileSize <UInt32>] [-MaximumBuffers <UInt32>]
  [-MinimumBuffers <UInt32>] [-Start <UInt32>] [-InitStatus <UInt32>] [-CimSession <CimSession[]>]
@@ -26,7 +26,7 @@ Set-AutologgerConfig [-Name] <String[]> [-BufferSize <UInt32>] [-ClockType <Cloc
 
 ### InputObject (cdxml)
 ```
-Set-AutologgerConfig -InputObject <CimInstance[]> [-BufferSize <UInt32>] [-ClockType <ClockType>]
+Update-AutologgerConfig -InputObject <CimInstance[]> [-BufferSize <UInt32>] [-ClockType <ClockType>]
  [-DisableRealtimePersistence <UInt32>] [-LocalFilePath <String>] [-FileMax <UInt32>] [-FlushTimer <UInt32>]
  [-Guid <String>] [-LogFileMode <UInt32>] [-MaximumFileSize <UInt32>] [-MaximumBuffers <UInt32>]
  [-MinimumBuffers <UInt32>] [-Start <UInt32>] [-InitStatus <UInt32>] [-CimSession <CimSession[]>]
@@ -34,13 +34,13 @@ Set-AutologgerConfig -InputObject <CimInstance[]> [-BufferSize <UInt32>] [-Clock
 ```
 
 ## DESCRIPTION
-The **Set-AutologgerConfig** cmdlet modifies an existing AutoLogger session configuration.
+The **Update-AutologgerConfig** cmdlet modifies an existing AutoLogger session configuration.
 
 ## EXAMPLES
 
 ### Example 1: Modify a configuration
 ```
-PS C:\> Set-AutologgerConfig -Name "WFP-IPsec Trace" -MaximumBuffers 8 -ClockType Cycle
+PS C:\> Update-AutologgerConfig -Name "WFP-IPsec Trace" -MaximumBuffers 8 -ClockType Cycle
 ```
 
 This command modifies the AutoLogger configuration named WFP-IPsec Trace.
@@ -60,11 +60,11 @@ For more information about Windows PowerShell background jobs, see [about_Jobs](
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -75,11 +75,11 @@ Specifies the Event Tracing for Windows (ETW) trace session buffer size in KB.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -111,27 +111,12 @@ For more information, see the description of the **ClientContext** field in [WNO
 ```yaml
 Type: ClockType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Performance, System, Cycle
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -146,11 +131,11 @@ The default is zero.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -161,11 +146,11 @@ Specifies the maximum number of log files an AutoLogger session can create.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -176,22 +161,21 @@ Specifies the timeout value for ETW trace session to flush capture buffer.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Guid
 Specifies an AutoLogger session configuration ID.
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,11 +190,11 @@ Specifies the initial status of the AutoLogger configuration.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -222,7 +206,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -237,7 +221,7 @@ Specifies the full path for an ETW log file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -253,11 +237,11 @@ Each mode is a bit field.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -268,11 +252,11 @@ Specifies the maximum number of buffers for an ETW trace session.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -283,11 +267,11 @@ Specifies the maximum size, in MB, of a log file before a new one is created.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -298,11 +282,11 @@ Specifies the minimum number of buffers for an ETW trace session.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -313,10 +297,10 @@ Specifies the name of the AutoLogger session.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -329,27 +313,26 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Start
-Specifies whether to activate the AutoLogger session at the next computer restart.
 By default, the AutoLogger session is configured to start at boot time.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -362,7 +345,22 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: 0
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -382,7 +380,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -393,6 +391,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance#ROOT\Microsoft\Windows\EventTracingManagement\MSFT_AutologgerConfig
 
 ## NOTES
 
@@ -409,4 +411,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AutologgerConfig](./New-AutologgerConfig.md)
 
 [Remove-AutologgerConfig](./Remove-AutologgerConfig.md)
-

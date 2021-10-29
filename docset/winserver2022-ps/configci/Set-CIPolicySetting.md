@@ -32,8 +32,6 @@ The **Set-CIPolicySetting** cmdlet modifies the Secure Settings within a Code In
 Specify the .xml file of the policy to modify.
 Secure Settings are queried by Windows APIs to set security behaviors.
 
-For more information about Secure Settings, see [Understanding WDAC Policy Settings](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/understanding-wdac-policy-settings).
-
 ## EXAMPLES
 
 ### Example 1: Set the Code Integrity policy

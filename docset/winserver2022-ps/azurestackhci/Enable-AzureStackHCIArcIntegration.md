@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.HCI.Billing.Management.PowerShell.dll-Help.xml
-Module Name: azurestackhci
+Module Name: AzureStackHCI
 online version:
 schema: 2.0.0
 ---

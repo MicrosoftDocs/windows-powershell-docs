@@ -1,5 +1,5 @@
 ---
-Module Name: azurestackhci
+Module Name: AzureStackHCI
 Module Guid: 9bae6304-259a-4421-b9dc-65a66a0a6e18
 Download Help Link: {{ Update Download Link }}
 Help Version: {{ Please enter version of help manually (X.X.X.X) format }}

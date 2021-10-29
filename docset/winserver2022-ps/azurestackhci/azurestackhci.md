@@ -6,11 +6,11 @@ Help Version: {{ Please enter version of help manually (X.X.X.X) format }}
 Locale: en-US
 ---
 
-# azurestackhci Module
+# AzureStackHCI Module
 ## Description
 {{ Fill in the Description }}
 
-## azurestackhci Cmdlets
+## AzureStackHCI Cmdlets
 ### [Clear-AzureStackHCIArcIntegration](Clear-AzureStackHCIArcIntegration.md)
 {{ Fill in the Description }}
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrintJob_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/remove-printjob?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-PrintJob
@@ -47,15 +47,15 @@ You do not need administrator credentials to run **Remove-PrintJob**.
 
 ### Example 1: Remove a selected print job
 ```
-PS C:\> Remove-PrintJob -PrinterName "PrinterName" -ID 1
+Remove-PrintJob -PrinterName "PrinterName" -ID 1
 ```
 
 This command removes the print job that has an ID of 1 on the printer named PrinterName.
 
 ### Example 2: Remove a print job using printer object and the print job ID
 ```
-PS C:\> $Printer = Get-Printer -PrinterName "PrinterName"
-PS C:\> Remove-PrintJob -PrinterObject $Printer -ID "1"
+$Printer = Get-Printer -PrinterName "PrinterName"
+Remove-PrintJob -PrinterObject $Printer -ID "1"
 ```
 
 The first command gets the printer named PrinterName by using the Get-Printer cmdlet.
@@ -65,8 +65,8 @@ The second command removes the print job that has an ID of 1 from the printer in
 
 ### Example 3: Remove a print job using a print job object
 ```
-PS C:\> $printJob = Get-PrintJob - PrinterName "PrinterName" -ID 1
-PS C:\> Remove-PrintJob -InputObject $printJob
+$printJob = Get-PrintJob - PrinterName "PrinterName" -ID 1
+Remove-PrintJob -InputObject $printJob
 ```
 
 The first command gets a print job that has an ID of 1 on the printer named PrinterName by using the Get-PrintJob cmdlet.
@@ -236,11 +236,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrintJob
-This cmdlet accepts one print job object.
+### Microsoft.Management.Infrastructure.CimInstance
+
+### System.String
 
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

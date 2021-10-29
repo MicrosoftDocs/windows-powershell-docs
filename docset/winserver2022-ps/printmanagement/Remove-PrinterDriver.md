@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterDriver_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/remove-printerdriver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-PrinterDriver
@@ -41,7 +41,7 @@ You need administrator credentials to run **Remove-PrinterDriver**.
 
 ### Example1: Remove the printer driver
 ```
-PS C:\> Remove-PrinterDriver -Name "Microsoft XPS Document Writer v4"
+Remove-PrinterDriver -Name "Microsoft XPS Document Writer v4"
 ```
 
 This command removes the Microsoft XPS Document Writer v4 driver.
@@ -224,13 +224,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterDriver
-This cmdlet accepts one printer driver object.
+### System.String[]
+
+### Microsoft.Management.Infrastructure.CimInstance[]
 
 ## OUTPUTS
 
-###  
-By default, this cmdlet produces no output.
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterDriver
 
 ## NOTES
 

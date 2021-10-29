@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterConfiguration_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PrintConfiguration
@@ -46,15 +46,15 @@ You do not need administrator credentials to run **Get-PrintConfiguration**.
 
 ### Example 1: Get the printer configuration
 ```
-PS C:\> Get-PrintConfiguration -PrinterName "Microsoft XPS Document Writer"
+Get-PrintConfiguration -PrinterName "Microsoft XPS Document Writer"
 ```
 
 This command returns the printer configuration for the printer named "Microsoft XPS Document Writer".
 
 ### Example 2: Get the print configuration for all printers
 ```
-PS C:\>$Printers = Get-Printer *
-PS C:\>Foreach ($Printer in $Printers){Get-PrintConfiguration -PrinterName $Printer.name}
+$Printers = Get-Printer *
+Foreach ($Printer in $Printers){Get-PrintConfiguration -PrinterName $Printer.name}
 ```
 
 This command gets all the printers into a variable $Printers and then loops through all the printers and displays the properties.
@@ -167,13 +167,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer
-This cmdlet accepts one printer object.
+### System.String
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_PrinterConfiguration
-This cmdlet returns a printer configuration object.
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

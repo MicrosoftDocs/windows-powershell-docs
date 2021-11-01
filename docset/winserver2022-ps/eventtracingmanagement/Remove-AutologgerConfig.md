@@ -196,5 +196,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AutologgerConfig](./New-AutologgerConfig.md)
 
-[Set-AutologgerConfig](./Set-AutologgerConfig.md)
+[Update-AutologgerConfig](./Update-AutologgerConfig.md)
 

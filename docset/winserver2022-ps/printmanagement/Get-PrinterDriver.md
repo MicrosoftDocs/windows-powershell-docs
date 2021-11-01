@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterDriver_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printerdriver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PrinterDriver
@@ -34,21 +34,21 @@ You do not need administrator credentials to run **Get-PrinterDriver**.
 
 ### Example 1: Get a list of printer drivers using wildcard characters
 ```
-PS C:\>Get-PrinterDriver -Name *
+Get-PrinterDriver -Name *
 ```
 
 This command returns a list of printer drivers installed on the local computer by using wildcard characters.
 
 ### Example 2: Get a list of printer drivers on a remote computer
 ```
-PS C:\>Get-PrinterDriver -Name * -ComputerName "PrintServer"
+Get-PrinterDriver -Name * -ComputerName "PrintServer"
 ```
 
 This command retrieves a list of printer drivers from the computer named PrintServer.
 
 ### Example 3: Get detailed information about each driver
 ```
-PS C:\>Get-PrinterDriver -Name "Microsoft XPS Document Writer" | Format-List
+Get-PrinterDriver -Name "Microsoft XPS Document Writer" | Format-List
 ```
 
 This command displays the detailed information for each printer driver.
@@ -56,7 +56,7 @@ This command displays the detailed information for each printer driver.
 
 ### Example 4: Get a printer driver object
 ```
-PS C:\>$PrinterDriver = Get-PrinterDriver -Name "Microsoft XPS Document Writer v4"
+$PrinterDriver = Get-PrinterDriver -Name "Microsoft XPS Document Writer v4"
 ```
 
 This command retrieves a printer driver object that you can use with other cmdlets.
@@ -163,10 +163,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-This cmdlet accepts no input objects.
+### System.String[]
 
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterDriver
 This cmdlet returns one or more printer driver objects.

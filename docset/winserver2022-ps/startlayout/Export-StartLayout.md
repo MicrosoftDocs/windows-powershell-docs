@@ -138,5 +138,7 @@ Export as an .xml file.
 
 ## RELATED LINKS
 
+[Export-StartLayoutEdgeAssets](Export-StartLayoutEdgeAssets.md)
+
 [Import-StartLayout](./Import-StartLayout.md)
 

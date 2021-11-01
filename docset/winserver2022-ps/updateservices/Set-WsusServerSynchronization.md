@@ -189,11 +189,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.UpdateServices.Commands.IUpdateServer
+### Microsoft.UpdateServices.Administration.IUpdateServer
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 

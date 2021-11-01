@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterPort_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printerport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PrinterPort
@@ -32,7 +32,7 @@ You do not need administrator credentials to run **Get-PrinterPort**.
 
 ### Example 1: Get a list of printer ports
 ```
-PS C:\> Get-PrinterPort
+Get-PrinterPort
 ```
 
 This command retrieves a list of all the printer ports installed on the local computer.
@@ -124,10 +124,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-This cmdlet accepts no input objects.
+### System.String[]
 
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterPort
 This cmdlet returns one or more printer port objects.

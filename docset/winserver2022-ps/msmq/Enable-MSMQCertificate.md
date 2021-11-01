@@ -117,7 +117,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Security.Cryptography.X509Certificates.X509Certificate2
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

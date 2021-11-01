@@ -377,9 +377,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.FmjNotificationActionTypeEnum
+
+### System.String
+
+### System.UInt32
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.FmjNotificationActionEventTypeEnum
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.FmjNotificationActionSecurityLevelEnum
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMFMJNotificationAction
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

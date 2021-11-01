@@ -54,7 +54,7 @@ PS C:\> $FreeIP = Get-DhcpServerv6FreeIPAddress -ComputerName "dhcpserver.contos
 PS C:\> Add-DhcpServerv6Reservation -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020::  -IPAddress $FreeIP -ClientDuid "0001000115F97FABF0DEF17A00-5E" -Iaid 234890455 -Description "Reservation for Printer"
 ```
 
-This example creates a reservation for the client identified by the specified client ID from any of the free IP address in the scope 2001:4898:7020:1020::.
+This example creates a reservation for the client identified by the specified client ID from any of the free IP addresses in the scope 2001:4898:7020:1020::.
 The **Get-DhcpServerv6FreeIPAddress** cmdlet fetches a free IP address in that scope, and then this cmdlet reserves the IP address for the specified client ID.
 
 ### Example 4: Convert a lease into a reservation

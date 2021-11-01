@@ -109,9 +109,21 @@ Accept wildcard characters: False
 ### -Update
 Specifies the type of update. Valid values are:
 
-- Default
-- Application
-- Cluster
+- Default. Compares inbox version with running version. Updates only if inbox version is higher.
+  Cluster and Service Fabric are updated only if cluster was deployed through **Install-NetworkController**.
+
+  This is the default update type.
+
+- Application. Update only the application.
+  Application is updated only if inbox (template) version is higher than running version.
+
+- Cluster. Update only the cluster.
+
+  If the cluster was installed through **Install-NetworkController**, cluster and Service Fabric are updated only if inbox version is higher than the installed version.
+
+  If the cluster was not installed through **Install-NetworkController**, Service Fabric is updated only if the inbox (CAB) version is higher than the installed version.
+
+  The manifest is always updated.
 
 ```yaml
 Type: UpdateType
@@ -191,7 +203,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-NetworkController](./Get-NetworkController.md)
 
-[Get-NetworkController](./Get-NetworkController.md)
+[Install-NetworkController](./Install-NetworkController.md)
 
 [Set-NetworkController](./Set-NetworkController.md)
 

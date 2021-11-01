@@ -39,7 +39,7 @@ Gets a rule from an access control list for a network controller.
 Gets the firewall auditing settings for a Network Controller.
 
 ### [Get-NetworkControllerBackup](Get-NetworkControllerBackup.md)
-Gets backups of the Network Controller database.
+Gets the status of a backup operation.
 
 ### [Get-NetworkControllerCluster](Get-NetworkControllerCluster.md)
 Gets the network controller cluster settings.
@@ -57,10 +57,10 @@ Retrieves a specified device credential or all device credentials from Network C
 Gets network controller diagnostic settings.
 
 ### [Get-NetworkControllerDiscovery](Get-NetworkControllerDiscovery.md)
-Gets network discovery objects for Network Controller.
+Gets the network controller version and the versions of URIs supported by the controller.
 
 ### [Get-NetworkControllerFabricRoute](Get-NetworkControllerFabricRoute.md)
-Gets a network route or all the routes in a subnet in the Network Controller.
+Gets the routes specified for logical subnet children of the logical network objects.
 
 ### [Get-NetworkControllerGateway](./Get-NetworkControllerGateway.md)
 Gets the configuration of one or more gateway virtual machines.
@@ -72,7 +72,7 @@ Gets the configuration of one or more gateway pools.
 Gets a configuration object for an iDNS server for a Network Controller.
 
 ### [Get-NetworkControllerInternalResourceInstances](Get-NetworkControllerInternalResourceInstances.md)
-Provides mapping between the user generated resource ID and the internal instance ID in the Network Controller.
+Returns the mapping for instances IDs to REST resource IDs.
 
 ### [Get-NetworkControllerIpPool](Get-NetworkControllerIpPool.md)
 Retrieves the settings of an IP pool from the Network Controller.
@@ -204,7 +204,7 @@ Does a connectivity check for the Network Controller.
 Dumps the current configuration and state of Network Controller services on the local Network Controller nodes.
 
 ### [Invoke-NetworkControllerSubnetEgressReset](Invoke-NetworkControllerSubnetEgressReset.md)
-Resets subnet egress for Network Controller.
+Resets egress metering counters for Network Controller.
 
 ### [New-NetworkControllerAccessControlList](New-NetworkControllerAccessControlList.md)
 Creates a new access control list for allowing/denying traffic to/from a particular subnet or network interface.

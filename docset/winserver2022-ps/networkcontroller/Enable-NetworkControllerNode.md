@@ -106,7 +106,10 @@ Accept wildcard characters: False
 ```
 
 ### -IntentRejoin
-{{ Fill IntentRejoin Description }}
+Indicates that the intent to rejoin.
+
+Use this parameter after cleaning up a node, for instance, if the node OS was replaced and the node is clean.
+The service fabric application data repopulates using information from the computer whose name is specified.
 
 ```yaml
 Type: SwitchParameter

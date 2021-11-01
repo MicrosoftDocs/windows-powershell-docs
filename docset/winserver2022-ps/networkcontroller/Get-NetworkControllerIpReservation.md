@@ -156,8 +156,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 ## NOTES
 
 ## RELATED LINKS

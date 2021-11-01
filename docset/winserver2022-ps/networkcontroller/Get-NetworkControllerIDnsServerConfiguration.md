@@ -23,6 +23,8 @@ Get-NetworkControllerIDnsServerConfiguration [-ConnectionUri <Uri>] [-Certificat
 ## DESCRIPTION
 The **Get-NetworkControllerIDnsServerConfiguration** cmdlet gets a configuration object for an Internal DNS (iDNS) server for a Network Controller.
 
+An iDNS server is a DNS Server available for tenant virtual machines.
+
 ## EXAMPLES
 
 ### Example 1: Get the configuration for an IDNS server
@@ -110,8 +112,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
-### System.Object#https://localhost/
 
 ## NOTES
 

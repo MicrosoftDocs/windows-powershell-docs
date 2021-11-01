@@ -1,5 +1,5 @@
 ---
-description: The Invoke-NetworkControllerSubnetEgressReset cmdlet resets subnet egress for Network Controller.
+description: The Invoke-NetworkControllerSubnetEgressReset cmdlet resets egress metering counters for Network Controller.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Invoke-NetworkControllerSubnetEgressReset
 # Invoke-NetworkControllerSubnetEgressReset
 
 ## SYNOPSIS
-Resets subnet egress for Network Controller.
+Resets egress metering counters for Network Controller.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Invoke-NetworkControllerSubnetEgressReset [[-Tags] <PSObject>] [-Properties] <Su
 ```
 
 ## DESCRIPTION
-The **Invoke-NetworkControllerSubnetEgressReset** cmdlet resets subnet egress for Network Controller.
+The **Invoke-NetworkControllerSubnetEgressReset** cmdlet resets egress metering counters for Network Controller.
 
 ## EXAMPLES
 
@@ -125,6 +125,9 @@ Accept wildcard characters: False
 
 ### -PassInnerException
 This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+The thumbprint must be provided only if the network controller client authentication is X509 certificates.
+**Get-NetworkController** retrieves that client authentication and authorization information.
 
 ```yaml
 Type: SwitchParameter

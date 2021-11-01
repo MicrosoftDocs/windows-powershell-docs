@@ -1,5 +1,5 @@
 ---
-description: The Get-NetworkControllerBackup cmdlet gets backups of the Network Controller database.
+description: The Get-NetworkControllerBackup cmdlet gets the status of a backup operation started with the New-NetworkControllerBackup cmdlet
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Get-NetworkControllerBackup
 # Get-NetworkControllerBackup
 
 ## SYNOPSIS
-Gets backups of the Network Controller database.
+Gets the status of a backup operation.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-NetworkControllerBackup [[-ResourceId] <String[]>] -ConnectionUri <Uri> [-Ce
 ```
 
 ## DESCRIPTION
-The **Get-NetworkControllerBackup** cmdlet gets backups of the Network Controller database.
+The **Get-NetworkControllerBackup** cmdlet gets the status of a backup operation started with the **New-NetworkControllerBackup** cmdlet
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ The **Get-NetworkControllerBackup** cmdlet gets backups of the Network Controlle
 Get-NetworkControllerBackup -ConnectionUri https://networkcontroller
 ```
 
-This command gets the backups for the specified Network Controller.
+This command gets the status of backups for the specified Network Controller.
 
 ### Example 1: Get a network controller backup
 ```powershell
@@ -133,8 +133,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
-### System.Object#https://localhost/
 
 ## NOTES
 

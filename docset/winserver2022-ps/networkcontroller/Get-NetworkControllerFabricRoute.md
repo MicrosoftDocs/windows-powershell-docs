@@ -11,7 +11,7 @@ title: Get-NetworkControllerFabricRoute
 # Get-NetworkControllerFabricRoute
 
 ## SYNOPSIS
-Gets a network route or all the routes in a subnet in the Network Controller.
+Gets gets the routes specified for logical subnet children of the logical network objects.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Get-NetworkControllerFabricRoute [-LogicalNetworkId] <String[]> [-SubnetId] <Str
 ```
 
 ## DESCRIPTION
-The **Get-NetworkControllerFabricRoute** cmdlet gets a network route or all the routes in a specified logical subnet in the Network Controller.
+The **Get-NetworkControllerFabricRoute** cmdlet gets the routes specified for logical subnet children of the logical network objects.
 If you specify a route to get, this cmdlet gets the destination and next hop of the route.
 If you do not specify a route, this cmdlet returns all the routes in the logical subnet.
 

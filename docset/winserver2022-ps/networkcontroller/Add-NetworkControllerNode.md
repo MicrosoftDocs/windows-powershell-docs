@@ -199,7 +199,7 @@ Specifies the method by which to find the node certificate.
 Type: X509FindType
 Parameter Sets: (All)
 Aliases:
-Accepted values: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier
+Accepted values: FindByThumbprint, FindBySubjectName
 
 Required: False
 Position: Named

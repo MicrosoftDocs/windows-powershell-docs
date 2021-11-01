@@ -1,5 +1,5 @@
 ---
-description: The Get-NetworkControllerDiscovery cmdlet gets network discovery objects for Network Controller.
+description: The Get-NetworkControllerDiscovery cmdlet gets the network controller version and the versions of URIs supported by the controller.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
@@ -11,7 +11,7 @@ title: Get-NetworkControllerDiscovery
 # Get-NetworkControllerDiscovery
 
 ## SYNOPSIS
-Gets network discovery objects for Network Controller.
+Gets the network controller version and the versions of URIs supported by the controller.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-NetworkControllerDiscovery [-ConnectionUri <Uri>] [-CertificateThumbprint <S
 ```
 
 ## DESCRIPTION
-The **Get-NetworkControllerDiscovery** cmdlet gets network discovery objects for Network Controller.
+The **Get-NetworkControllerDiscovery** cmdlet gets the network controller version and the versions of URIs supported by the controller.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ The **Get-NetworkControllerDiscovery** cmdlet gets network discovery objects for
 Get-NetworkControllerDiscovery -ConnectionUri https://networkcontroller
 ```
 
-This example gets network discovery objects for the specified controller.
+This example gets the network controller version and the versions of URIs supported by the specified controller.
 
 ## PARAMETERS
 
@@ -109,8 +109,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
-### System.Object#https://localhost/
 
 ## NOTES
 

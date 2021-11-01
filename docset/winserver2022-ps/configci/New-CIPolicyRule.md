@@ -269,7 +269,7 @@ Accept wildcard characters: False
 Specifies an app.
 This cmdlet creates per-app rules which control whether specific plug-ins, add-ins, and modules can run from specific apps.
 
-For more information, see [Use a Windows Defender Application Control policy to control specific plug-ins, add-ins, and modules](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/use-windows-defender-application-control-policy-to-control-specific-plug-ins-add-ins-and-modules).
+For more information, see [Use a Windows Defender Application Control policy to control specific plug-ins, add-ins, and modules](/windows/security/threat-protection/windows-defender-application-control/use-windows-defender-application-control-policy-to-control-specific-plug-ins-add-ins-and-modules).
 
 ```yaml
 Type: String
@@ -365,7 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### -Level
-Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
+Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
 
 ```yaml
 Type: RuleLevel
@@ -411,7 +411,7 @@ Accept wildcard characters: False
 
 ### -SpecificFileNameLevel
 Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option.
-Refer to [File Name Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values.
+Refer to [File Name Rules Info](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values.
 
 ```yaml
 Type: FileNameLevel

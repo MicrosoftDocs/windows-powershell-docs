@@ -477,7 +477,7 @@ Accept wildcard characters: False
 
 ### -MultiplePolicyFormat
 Indicates that this cmdlet should create a policy in multiple policy format as opposed to a single policy format. 
-Refer to [Create WDAC policies in Multiple Policy Format](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies#creating-wdac-policies-in-multiple-policy-format) for the difference between the policy formats. 
+Refer to [Create WDAC policies in Multiple Policy Format](/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies#creating-wdac-policies-in-multiple-policy-format) for the difference between the policy formats. 
 
 ```yaml
 Type: SwitchParameter
@@ -610,8 +610,8 @@ Accept wildcard characters: False
 ```
 
 ### -SpecificFileNameLevel
-Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option.
-Refer to [File Name Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values.
+Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option. Possible values are: None, OriginalFileName, InternalName, FileDescription, ProductName, PackageFamilyName, and FilePath.
+Refer to [File Name Rules Info](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values.
 
 ```yaml
 Type: FileNameLevel

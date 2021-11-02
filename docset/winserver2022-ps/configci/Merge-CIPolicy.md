@@ -16,7 +16,8 @@ Combines the rules in several Code Integrity policy files.
 ## SYNTAX
 
 ```
-Merge-CIPolicy [-OutputFilePath] <String> [-PolicyPaths] <String[]> [-Rules <Rule[]>] [<CommonParameters>]
+Merge-CIPolicy [-OutputFilePath] <String> [-PolicyPaths] <String[]> [-Rules <Rule[]>] [-AppIdTaggingPolicy]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,6 +89,21 @@ The command does not include duplicates.
 For this example, we present only the first few rules.
 
 ## PARAMETERS
+
+### -AppIdTaggingPolicy
+This parameter is reserved for future use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -OutputFilePath
 Specifies the path of the merged .xml policy file.

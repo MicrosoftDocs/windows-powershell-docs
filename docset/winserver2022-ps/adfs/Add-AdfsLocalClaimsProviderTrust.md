@@ -36,8 +36,8 @@ This includes other, untrusted, Active Directory forests or domains, Active Dire
 ```
 PS C:\> $Credential = Get-Credential
 PS C:\ > $LdapConn = New-AdfsLdapServerConnection -HostName "DomainContoller03.contoso.com" -Port 389 -SslMode None -AuthenticationMethod Basic -Credential $Credential
-PS C:\ > $DisplayName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute "displayName" -ClaimType "https://schemas.xmlsoap.org/ws/2005/05/identity/claims/displayname"
-PS C:\> Add-AdfsLocalClaimsProviderTrust -Name "testldap" -Identifier "urn:testldap" -Type ldap -LdapServerConnection $LdapConn -UserObjectClass user -UserContainer "CN=Users,DC=<sub_domain_name>,DC=<domain_name>,DC=com" -LdapAuthenticationMethod Basic -AnchorClaimLdapAttribute userPrincipalName -AnchorClaimType "https://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -AcceptanceTransformRules "c:[] => issue(claim=c);" -Enabled $True -OrganizationalAccountSuffix "TSQA.contoso.com" - LdapAttributeToClaimMapping $DisplayName
+PS C:\ > $DisplayName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute "displayName" -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/displayname"
+PS C:\> Add-AdfsLocalClaimsProviderTrust -Name "testldap" -Identifier "urn:testldap" -Type ldap -LdapServerConnection $LdapConn -UserObjectClass user -UserContainer "CN=Users,DC=<sub_domain_name>,DC=<domain_name>,DC=com" -LdapAuthenticationMethod Basic -AnchorClaimLdapAttribute userPrincipalName -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -AcceptanceTransformRules "c:[] => issue(claim=c);" -Enabled $True -OrganizationalAccountSuffix "TSQA.contoso.com" - LdapAttributeToClaimMapping $DisplayName
 ```
 
 The first command prompts you for a user name and password by using the **Get-Credential** cmdlet.

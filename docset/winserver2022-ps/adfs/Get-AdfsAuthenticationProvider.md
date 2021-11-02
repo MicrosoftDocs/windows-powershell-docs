@@ -32,7 +32,7 @@ AdminName                          : Forms Authentication
 AllowedForPrimaryExtranet          : True
 AllowedForPrimaryIntranet          : True
 AllowedForAdditionalAuthentication : False
-AuthenticationMethods              : {urn:oasis:names:tc:SAML:1.0:am:password, urn:oasis:names:tc:SAML:2.0:ac:classes:Password, urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport, https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password}
+AuthenticationMethods              : {urn:oasis:names:tc:SAML:1.0:am:password, urn:oasis:names:tc:SAML:2.0:ac:classes:Password, urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport, http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password}
 Descriptions                       : {}
 DisplayNames                       : {}
 Name                               : FormsAuthentication
@@ -44,7 +44,7 @@ AdminName                          : Windows Authentication
 AllowedForPrimaryExtranet          : False
 AllowedForPrimaryIntranet          : True
 AllowedForAdditionalAuthentication : False
-AuthenticationMethods              : {urn:ietf:rfc:1510, urn:federation:authentication:windows, urn:oasis:names:tc:SAML:2.0:ac:classes:Kerberos, https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/kerberos...} Descriptions                       : {}
+AuthenticationMethods              : {urn:ietf:rfc:1510, urn:federation:authentication:windows, urn:oasis:names:tc:SAML:2.0:ac:classes:Kerberos, http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/kerberos...} Descriptions                       : {}
 DisplayNames                       : {}
 Name                               : WindowsAuthentication
 IdentityClaims                     : {}

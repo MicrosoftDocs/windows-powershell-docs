@@ -27,7 +27,7 @@ Mappings make it possible for LDAP attributes to be available for claim rule pro
 
 ### Example 1: Create a mapping of an LDAP directory attribute
 ```
-PS> $DisplayName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute "displayName" -ClaimType "https://schemas.xmlsoap.org/ws/2005/05/identity/claims/displayname"
+PS> $DisplayName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute "displayName" -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/displayname"
 ```
 
 This command creates a mapping of an LDAP directory attribute to a claim type.

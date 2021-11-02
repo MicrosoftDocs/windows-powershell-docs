@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: System.Object[]
-ms.date: 12/21/2016
+ms.date: 10/07/2021
 online version: https://docs.microsoft.com/powershell/module/dism/add-appxprovisionedpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-AppxProvisionedPackage
@@ -18,16 +18,18 @@ Adds an app package (.appx) that will install for each new user to a Windows ima
 ### Offline
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
- [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] -Path <String> [-WindowsDirectory <String>]
- [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>] [-Regions <String>]
+ [-OptionalPackagePath <String[]>] [-LicensePath <String[]>] [-SkipLicense] [-CustomDataPath <String>]
+ [-Regions <String>] [-StubPackageOption <StubPackageOption>] -Path <String> [-WindowsDirectory <String>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
  [<CommonParameters>]
 ```
 
 ### Online
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
- [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] [-Online] [-WindowsDirectory <String>]
- [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>] [-Regions <String>]
+ [-OptionalPackagePath <String[]>] [-LicensePath <String[]>] [-SkipLicense] [-CustomDataPath <String>]
+ [-Regions <String>] [-StubPackageOption <StubPackageOption>] [-Online] [-WindowsDirectory <String>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
  [<CommonParameters>]
 ```
 
@@ -122,7 +124,7 @@ Accept wildcard characters: False
 Specifies the location of the .xml file containing your application license.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -185,6 +187,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -OptionalPackagePath
+Specifies the path to an optional package that will also be provisioned. For more information on
+optional packages, see
+[Optional packages and related set authoring](/windows/msix/package/optional-packages).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PackagePath
 Specifies the location of the app package (.appx) to add to the Windows image.
 This package will be added for every new user account.
@@ -221,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -Regions
-Specifies what regions an app package (.appx or .appxbundle) must be provisioned in. The region argument can either be “all”, indicating that the app should be provisioned for all regions, or it can be a semi-colon delimited list of regions. The regions will be in the form of [ISO 3166-1 Alpha-2 or ISO 3166-1 Alpha-3 codes](https://en.wikipedia.org/wiki/ISO_3166-1). For example, the United States can be specified as either "US" or "USA" (case-insensitive). When a list of regions is not specified, the package will be provisioned only if it is pinned to start layout.
+Specifies what regions an app package (.appx or .appxbundle) must be provisioned in. The region argument can either be "all", indicating that the app should be provisioned for all regions, or it can be a semi-colon delimited list of regions. The regions will be in the form of [ISO 3166-1 Alpha-2 or ISO 3166-1 Alpha-3 codes](https://en.wikipedia.org/wiki/ISO_3166-1). For example, the United States can be specified as either "US" or "USA" (case-insensitive). When a list of regions is not specified, the package will be provisioned only if it is pinned to start layout.
 
 Note: Option is available on client OS. 
 
@@ -285,7 +304,7 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: InstallFull, InstallStub
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

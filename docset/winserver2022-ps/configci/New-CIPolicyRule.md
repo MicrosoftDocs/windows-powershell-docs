@@ -18,24 +18,27 @@ Generates Code Integrity policy rules for user mode code and drivers.
 ### DriverFileList
 ```
 New-CIPolicyRule [-DriverFiles <DriverFile[]>] -Level <RuleLevel> [-Fallback <RuleLevel[]>] [-Deny]
- [-ScriptFileNames] [<CommonParameters>]
+ [-ScriptFileNames] [-AllowFileNameFallbacks] [-SpecificFileNameLevel <FileNameLevel>] [-UserWriteablePaths]
+ [<CommonParameters>]
 ```
 
 ### DriverFilePath
 ```
-New-CIPolicyRule -DriverFilePath <String> -Level <RuleLevel> [-Fallback <RuleLevel[]>] [-Deny]
- [-ScriptFileNames] [<CommonParameters>]
+New-CIPolicyRule -DriverFilePath <String[]> [-AppID <String>] -Level <RuleLevel> [-Fallback <RuleLevel[]>]
+ [-Deny] [-ScriptFileNames] [-AllowFileNameFallbacks] [-SpecificFileNameLevel <FileNameLevel>]
+ [-UserWriteablePaths] [<CommonParameters>]
 ```
 
-### FilePathRule
+### PackageFamilyName
 ```
-New-CIPolicyRule -FilePathRule <String> [-Deny]
- [-ScriptFileNames] [<CommonParameters>]
+New-CIPolicyRule [-Fallback <RuleLevel[]>] [-Deny] [-ScriptFileNames] [-AllowFileNameFallbacks]
+ [-SpecificFileNameLevel <FileNameLevel>] [-UserWriteablePaths] [-Package <AppxPackage>] [<CommonParameters>]
 ```
 
-### PackagedAppRule
+### ManualFilePath
 ```
-New-CIPolicyRule -Package <String> [-Deny] [<CommonParameters>]
+New-CIPolicyRule [-Fallback <RuleLevel[]>] [-Deny] [-ScriptFileNames] [-AllowFileNameFallbacks]
+ [-SpecificFileNameLevel <FileNameLevel>] [-UserWriteablePaths] [-FilePathRule <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -243,6 +246,43 @@ This set of commands finds a packaged application matching the specified name an
 
 ## PARAMETERS
 
+### -AllowFileNameFallbacks
+Indicates that files that do not have an `OriginalFileName` fall back in the following order:
+
+- InternalName
+- FileDescription
+- ProductName
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppID
+Specifies an app.
+This cmdlet creates per-app rules which control whether specific plug-ins, add-ins, and modules can run from specific apps.
+
+For more information, see [Use a Windows Defender Application Control policy to control specific plug-ins, add-ins, and modules](/windows/security/threat-protection/windows-defender-application-control/use-windows-defender-application-control-policy-to-control-specific-plug-ins-add-ins-and-modules).
+
+```yaml
+Type: String
+Parameter Sets: DriverFilePath
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Deny
 Indicates that this cmdlet creates deny rules instead of the default allow rules.
 
@@ -262,7 +302,7 @@ Accept wildcard characters: False
 Specifies the path of a driver on which this cmdlet bases a rule.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: DriverFilePath
 Aliases: 
 
@@ -314,23 +354,22 @@ This cmdlet will not check whether the filepath string is a valid filepath.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-Accepted values: 
+Parameter Sets: ManualFilePath
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True
-Accept wildcard characters: True
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Level
-Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
+Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
 
 ```yaml
 Type: RuleLevel
-Parameter Sets: (All)
+Parameter Sets: DriverFileList, DriverFilePath
 Aliases: l
 Accepted values: None, Hash, FileName, FilePath, SignedVersion, PFN, Publisher, FilePublisher, LeafCertificate, PcaCertificate, RootCertificate, WHQL, WHQLPublisher, WHQLFilePublisher
 
@@ -346,13 +385,13 @@ Specifies the packaged app (MSIX/Appx) to base the rule.
 
 ```yaml
 Type: AppxPackage
-Parameter Sets: (All)
-Aliases: None
+Parameter Sets: PackageFamilyName
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -371,14 +410,29 @@ Accept wildcard characters: False
 ```
 
 ### -SpecificFileNameLevel
-Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option. 
-Refer to [File Name Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values. 
+Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option.
+Refer to [File Name Rules Info](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values.
+
+```yaml
+Type: FileNameLevel
+Parameter Sets: (All)
+Aliases: 
+Accepted values: None, OriginalFileName, InternalName, FileDescription, ProductName, PackageFamilyName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserWriteablePaths
+Indicates that this cmdlet includes files identified as user writeable in the policy.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Accepted values: None, OriginalFileName, InternalName, FileDescription, ProductName, PackageFamilyName
+Aliases:
 
 Required: False
 Position: Named

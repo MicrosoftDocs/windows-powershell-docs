@@ -29,11 +29,23 @@ To back up an ACL, specify the **Path** parameter to identify the item. Use the 
 
 ### Example 1: Back up the ACL for a file
 ```powershell
-Backup-ACL -Path "C:\file01.txt" -DestinationPath "C:\AclBackups\file01.backup" -LogPath "C:\AclBackupLogs\file01.log"
+Backup-ACL -Path "C:\file01.txt" -DestinationPath "C:\AclBackups\file01.xml" -LogPath "C:\AclBackupLogs\"
 ```
 
 This command backs up the ACL for the specified file.
 The command also specifies the location for the backup and the log.
+
+### Example 2: Back up on a schedule
+```powershell
+$TaskTrigger = New-ScheduledTaskTrigger -Daily -At 6am
+Backup-ACL -Path "C:\file02.txt" -DestinationPath "C:\AclBackups\" -LogPath "C:\AclBackups\" -ScheduleTrigger $TaskTrigger
+```
+
+This example backs up the ACL on a regular schedule.
+
+The first command creates a scheduled task trigger by using the **New-ScheduledTaskTrigger** cmdlet and stores it in the `$TaskTrigger` variable.
+
+The second command backs up the ACL according to the schedule object, in this case, daily at 6:00 AM.
 
 ## PARAMETERS
 
@@ -146,5 +158,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-ACL](/powershell/module/microsoft.powershell.security/get-acl)
+
+[New-ScheduledTaskTrigger](../scheduledtasks/New-ScheduledTaskTrigger.md)
 
 [Restore-ACL](Restore-ACL.md)

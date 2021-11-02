@@ -26,7 +26,7 @@ The **Restore-ACL** cmdlet restores the security descriptor of a specified item,
 
 ### Example 1: Restore the ACL for a file
 ```powershell
-Restore-ACL -Path  "C:\file01.txt" -XmlPath "C:\AclBackups\file01.backup" -LogPath "C:\AclBackupLogs\file01.log"
+Restore-ACL -Path  "C:\file01.txt" -XmlPath "C:\AclBackups\Backup-C-AclBackups-file01.txt-2021-11-02-02-14-11.xml" -LogPath "C:\AclBackupLogs\"
 ```
 
 This command restores the ACL specified by the **XmlPath** parameter for the specified file.

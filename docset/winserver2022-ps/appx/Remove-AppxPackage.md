@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Removes an app package from one or more user accounts.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 Module Name: Appx
-ms.date: 12/20/2016
+ms.date: 09/01/2021
 online version: https://docs.microsoft.com/powershell/module/appx/remove-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-AppxPackage
@@ -18,22 +18,28 @@ Removes an app package from one or more user accounts.
 
 ### RemoveByPackageSet (Default)
 ```
-Remove-AppxPackage [-Package]  [-PreserveApplicationData] [-WhatIf] [-Confirm] []
+Remove-AppxPackage [-Package] <String> [-PreserveApplicationData] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveByPackageForRoamingSet
+```
+Remove-AppxPackage [-Package] <String> [-PreserveRoamableApplicationData] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### AllUsersSet
 ```
-Remove-AppxPackage [-Package]  [-AllUsers] [-WhatIf] [-Confirm] []
+Remove-AppxPackage [-Package] <String> [-AllUsers] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UserSet
 ```
-Remove-AppxPackage [-Package]  -User  [-WhatIf] [-Confirm] []
+Remove-AppxPackage [-Package] <String> -User <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Remove-AppxPackage** cmdlet removes an app package from a user account.  
+The **Remove-AppxPackage** cmdlet removes an app package from a user account.
 An app package has an .msix or .appx file name extension.
 
 ## EXAMPLES
@@ -124,6 +130,23 @@ that are registered from file layout (Loose file registered).
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RemoveByPackageSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreserveRoamableApplicationData
+
+Preserves the roamable portion of the app's data when the package is removed. This parameter is
+incompatible with PreserveApplicationData.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RemoveByPackageForRoamingSet
 Aliases:
 
 Required: False

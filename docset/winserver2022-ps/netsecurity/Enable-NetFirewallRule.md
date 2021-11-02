@@ -17,23 +17,22 @@ Enables a previously disabled firewall rule.
 
 ### GetAll (Default)
 ```
-Enable-NetFirewallRule [-All] [-PolicyStore <String>] [-GPOSession <String>] [-TracePolicyStore]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Enable-NetFirewallRule [-All] [-PolicyStore <String>] [-TracePolicyStore] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Enable-NetFirewallRule [-Name] <String[]> [-PolicyStore <String>] [-GPOSession <String>] [-TracePolicyStore]
+Enable-NetFirewallRule [-Name] <String[]> [-PolicyStore <String>] [-TracePolicyStore]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ByDisplayName
 ```
-Enable-NetFirewallRule -DisplayName <String[]> [-PolicyStore <String>] [-GPOSession <String>]
- [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Enable-NetFirewallRule -DisplayName <String[]> [-PolicyStore <String>] [-TracePolicyStore]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByQuery
@@ -42,65 +41,65 @@ Enable-NetFirewallRule [-Description <String[]>] [-DisplayGroup <String[]>] [-Gr
  [-Enabled <Enabled[]>] [-Direction <Direction[]>] [-Action <Action[]>]
  [-EdgeTraversalPolicy <EdgeTraversal[]>] [-LooseSourceMapping <Boolean[]>] [-LocalOnlyMapping <Boolean[]>]
  [-Owner <String[]>] [-PrimaryStatus <PrimaryStatus[]>] [-Status <String[]>] [-PolicyStoreSource <String[]>]
- [-PolicyStoreSourceType <PolicyStoreType[]>] [-PolicyStore <String>] [-GPOSession <String>]
- [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-PolicyStoreSourceType <PolicyStoreType[]>] [-PolicyStore <String>] [-TracePolicyStore]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallAddressFilter
 ```
 Enable-NetFirewallRule -AssociatedNetFirewallAddressFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallApplicationFilter
 ```
 Enable-NetFirewallRule -AssociatedNetFirewallApplicationFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallInterfaceFilter
 ```
 Enable-NetFirewallRule -AssociatedNetFirewallInterfaceFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallInterfaceTypeFilter
 ```
 Enable-NetFirewallRule -AssociatedNetFirewallInterfaceTypeFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallPortFilter
 ```
 Enable-NetFirewallRule -AssociatedNetFirewallPortFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallSecurityFilter
 ```
 Enable-NetFirewallRule -AssociatedNetFirewallSecurityFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallServiceFilter
 ```
 Enable-NetFirewallRule -AssociatedNetFirewallServiceFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallProfile
 ```
-Enable-NetFirewallRule -AssociatedNetFirewallProfile <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Enable-NetFirewallRule -AssociatedNetFirewallProfile <CimInstance> [-PolicyStore <String>] [-TracePolicyStore]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
@@ -508,28 +507,6 @@ Type: Enabled[]
 Parameter Sets: ByQuery
 Aliases: 
 Accepted values: True, False
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GPOSession
-Specifies the network GPO from which to retrieve the rules to be enabled. 
-This parameter is used in the same way as the *PolicyStore* parameter.
-When modifying GPOs in Windows PowerShell®, each change to a GPO requires the entire GPO to be loaded, modified, and saved back.
-On a busy Domain Controller (DC), this can be a slow and resource-heavy operation.
-A GPO Session loads a domain GPO onto the local computer and makes all changes in a batch, before saving it back.
-This reduces the load on the DC and speeds up the Windows PowerShell cmdlets.
-To load a GPO Session, use the Open-NetGPO cmdlet.
-To save a GPO Session, use the Save-NetGPO cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: GetAll, ByName, ByDisplayName, ByQuery, ByAssociatedNetFirewallAddressFilter, ByAssociatedNetFirewallApplicationFilter, ByAssociatedNetFirewallInterfaceFilter, ByAssociatedNetFirewallInterfaceTypeFilter, ByAssociatedNetFirewallPortFilter, ByAssociatedNetFirewallSecurityFilter, ByAssociatedNetFirewallServiceFilter, ByAssociatedNetFirewallProfile
-Aliases: 
 
 Required: False
 Position: Named

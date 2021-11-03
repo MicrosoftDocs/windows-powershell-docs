@@ -26,10 +26,10 @@ A hosted email service provides a hosted email account.
 
 ### Example 1: Assign a hosted email account to a local user account
 ```
-PS C:\> Set-HostedEmailAccount -LocalAccountName "PattiFuller" -EmailAccount "PattiFuller@Constoso.com"
+PS C:\> Set-HostedEmailAccount -LocalAccountName "PattiFuller" -EmailAccount "PattiFuller@Contoso.com"
 ```
 
-This command assigns the hosted email account named PattiFuller@Constoso.com to the local user account named PattiFuller.
+This command assigns the hosted email account named PattiFuller@Contoso.com to the local user account named PattiFuller.
 
 ## PARAMETERS
 

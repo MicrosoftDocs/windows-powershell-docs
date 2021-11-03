@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: Policy-help.xml
+external help file: Policy.psm1-help.xml
 Module Name: StorageQoS
 ms.date: 12/20/2016
 online version: https://docs.microsoft.com/powershell/module/storageqos/get-storageqosflow?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -267,13 +267,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Management.Infrastructure.CimInstance
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#MSFT_StorageQoSFlow
-This cmdlet outputs a Common Information Model (CIM) object of type MSFT_StorageQoSFlowhttps://msdn.microsoft.com/en-us/library/mt164591(v=vs.85).aspx (https://msdn.microsoft.com/en-us/library/mt164591(v=vs.815).aspx).
-
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
-The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+### System.Object
 
 ## NOTES
 

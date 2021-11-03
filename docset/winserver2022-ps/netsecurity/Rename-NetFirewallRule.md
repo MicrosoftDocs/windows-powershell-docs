@@ -17,23 +17,23 @@ Renames a single IPsec rule.
 
 ### GetAll (Default)
 ```
-Rename-NetFirewallRule [-All] [-PolicyStore <String>] [-GPOSession <String>] [-TracePolicyStore]
- -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Rename-NetFirewallRule [-All] [-PolicyStore <String>] [-TracePolicyStore] -NewName <String>
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Rename-NetFirewallRule [-Name] <String[]> [-PolicyStore <String>] [-GPOSession <String>] [-TracePolicyStore]
- -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Rename-NetFirewallRule [-Name] <String[]> [-PolicyStore <String>] [-TracePolicyStore] -NewName <String>
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByDisplayName
 ```
-Rename-NetFirewallRule -DisplayName <String[]> [-PolicyStore <String>] [-GPOSession <String>]
- [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Rename-NetFirewallRule -DisplayName <String[]> [-PolicyStore <String>] [-TracePolicyStore] -NewName <String>
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByQuery
@@ -42,65 +42,65 @@ Rename-NetFirewallRule [-Description <String[]>] [-DisplayGroup <String[]>] [-Gr
  [-Enabled <Enabled[]>] [-Direction <Direction[]>] [-Action <Action[]>]
  [-EdgeTraversalPolicy <EdgeTraversal[]>] [-LooseSourceMapping <Boolean[]>] [-LocalOnlyMapping <Boolean[]>]
  [-Owner <String[]>] [-PrimaryStatus <PrimaryStatus[]>] [-Status <String[]>] [-PolicyStoreSource <String[]>]
- [-PolicyStoreSourceType <PolicyStoreType[]>] [-PolicyStore <String>] [-GPOSession <String>]
- [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PolicyStoreSourceType <PolicyStoreType[]>] [-PolicyStore <String>] [-TracePolicyStore] -NewName <String>
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallAddressFilter
 ```
 Rename-NetFirewallRule -AssociatedNetFirewallAddressFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallApplicationFilter
 ```
 Rename-NetFirewallRule -AssociatedNetFirewallApplicationFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallInterfaceFilter
 ```
 Rename-NetFirewallRule -AssociatedNetFirewallInterfaceFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallInterfaceTypeFilter
 ```
 Rename-NetFirewallRule -AssociatedNetFirewallInterfaceTypeFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallPortFilter
 ```
 Rename-NetFirewallRule -AssociatedNetFirewallPortFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallSecurityFilter
 ```
 Rename-NetFirewallRule -AssociatedNetFirewallSecurityFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallServiceFilter
 ```
 Rename-NetFirewallRule -AssociatedNetFirewallServiceFilter <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAssociatedNetFirewallProfile
 ```
-Rename-NetFirewallRule -AssociatedNetFirewallProfile <CimInstance> [-PolicyStore <String>]
- [-GPOSession <String>] [-TracePolicyStore] -NewName <String> [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Rename-NetFirewallRule -AssociatedNetFirewallProfile <CimInstance> [-PolicyStore <String>] [-TracePolicyStore]
+ -NewName <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
@@ -488,28 +488,6 @@ Type: Enabled[]
 Parameter Sets: ByQuery
 Aliases: 
 Accepted values: True, False
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GPOSession
-Targets the network GPO from which to retrieve the rules to be renamed. 
-This parameter is used in the same way as the *PolicyStore* parameter.
-When modifying GPOs in Windows PowerShell®, each change to a GPO requires the entire GPO to be loaded, modified, and saved back.
-On a busy Domain Controller (DC), this can be a slow and resource-heavy operation.
-A GPO Session loads a domain GPO onto the local computer and makes all changes in a batch, before saving it back.
-This reduces the load on the DC and speeds up the Windows PowerShell cmdlets.
-To load a GPO Session, use the Open-NetGPO cmdlet.
-To save a GPO Session, use the Save-NetGPO cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: GetAll, ByName, ByDisplayName, ByQuery, ByAssociatedNetFirewallAddressFilter, ByAssociatedNetFirewallApplicationFilter, ByAssociatedNetFirewallInterfaceFilter, ByAssociatedNetFirewallInterfaceTypeFilter, ByAssociatedNetFirewallPortFilter, ByAssociatedNetFirewallSecurityFilter, ByAssociatedNetFirewallServiceFilter, ByAssociatedNetFirewallProfile
-Aliases: 
 
 Required: False
 Position: Named

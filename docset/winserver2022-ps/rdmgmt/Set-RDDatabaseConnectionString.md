@@ -113,22 +113,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RestoreDBConnectionOnAllBrokers
-Indicates that this operation restores the database connection string(s) on all RD Connection Brokers in a deployment to re-establish database connectivity.
-If you specify this parameter, you must also specify the *RestoreDatabaseConnection* parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RestoreDatabaseConnection
 Indicates that this operation restores the database connection string(s) when database access is lost for dedicated or shared configurations.
 
@@ -141,6 +125,22 @@ Aliases:
 
 Required: False
 Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestoreDBConnectionOnAllBrokers
+Indicates that this operation restores the database connection string(s) on all RD Connection Brokers in a deployment to re-establish database connectivity.
+If you specify this parameter, you must also specify the *RestoreDatabaseConnection* parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

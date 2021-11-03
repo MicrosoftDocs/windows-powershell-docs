@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterPort_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/remove-printerport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-PrinterPort
@@ -41,7 +41,7 @@ You do not need administrator credentials to run **Remove-PrinterPort**.
 
 ### Example 1: Remove a specified printer port
 ```
-PS C:\> Remove-PrinterPort -Name "LocalPort:"
+Remove-PrinterPort -Name "LocalPort:"
 ```
 
 This command removes the printer port named LocalPort: from the computer.
@@ -194,13 +194,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterPort
-This cmdlet accepts a printer port object.
+### System.String[]
+
+### Microsoft.Management.Infrastructure.CimInstance[]
 
 ## OUTPUTS
 
-###  
-By default, this cmdlet produces no output objects.
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrinterPort
 
 ## NOTES
 

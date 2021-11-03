@@ -149,11 +149,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
+
+### System.UInt32
 
 ## OUTPUTS
 
+### Microsoft.Management.Infrastructure.CimInstance
+
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosTrafficClassSettingData
+
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 This cmdlet returns a **MSFT_NetQosTrafficClassSettingData** object that contains a network traffic class.

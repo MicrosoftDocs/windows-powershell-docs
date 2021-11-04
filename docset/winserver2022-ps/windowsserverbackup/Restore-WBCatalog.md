@@ -78,14 +78,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackupTarget, SwitchParameter
+### Microsoft.Windows.ServerBackup.Commands.WBBackupTarget
+
 Specifies a backup target object from which to restore the catalog.
 Use the *Force* parameter to suppress the confirmation message.
 
 ## OUTPUTS
 
-### System.String
-This cmdlet returns a warning that gives details about the backups present in the backup target and a message that confirms that the cmdlet successfully recovered the catalog.
+### System.Object
 
 ## NOTES
 

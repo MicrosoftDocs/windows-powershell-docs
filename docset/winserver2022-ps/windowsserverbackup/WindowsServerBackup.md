@@ -32,7 +32,10 @@ Adds a list of virtual machines to the backup policy.
 ### [Add-WBVolume](./Add-WBVolume.md)
 Adds the list of source volumes to the backup policy.
 
-### [Get-WBBackupSet](./Get-WBBackupSet.md)
+### [Backup-ACL](Backup-ACL.md)
+Backs up the security descriptor of an item.
+
+### [Get-WBBackupSet](Get-WBBackupSet.md)
 Gets backups for a server from a location that you specify.
 
 ### [Get-WBBackupTarget](./Get-WBBackupTarget.md)
@@ -113,7 +116,10 @@ Removes the list of virtual machines from the backup policy.
 ### [Remove-WBVolume](./Remove-WBVolume.md)
 Removes the volume from the backup policy.
 
-### [Restore-WBCatalog](./Restore-WBCatalog.md)
+### [Restore-ACL](Restore-ACL.md)
+Restores the security descriptor of a specified item.
+
+### [Restore-WBCatalog](Restore-WBCatalog.md)
 Restores a backup catalog for the local computer from a storage location.
 
 ### [Resume-WBBackup](./Resume-WBBackup.md)

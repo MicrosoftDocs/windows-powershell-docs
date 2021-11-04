@@ -62,13 +62,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy
-This cmdlet queries a specified **WBPolicy** object.
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
 
 ## OUTPUTS
 
-### Datetime []
-This cmdlet returns a list of **Datetime** objects in the **WBPolicy** object.
+### System.Object
 
 ## NOTES
 

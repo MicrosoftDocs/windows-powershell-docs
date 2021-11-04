@@ -32,7 +32,7 @@ Get-NetworkControllerBackup -ConnectionUri https://networkcontroller
 
 This command gets the status of backups for the specified Network Controller.
 
-### Example 1: Get a network controller backup
+### Example 2: Get a network controller backup
 ```powershell
 $Credential = Get-Credential
 Get-NetworkControllerBackup -ResourceId "BackupUser" -ConnectionUri https://networkcontroller -Credential $Credential

@@ -41,7 +41,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
  [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>]
+ [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>][-CloudBlockLevel <CloudBlockLevelType>]
 ```
 
 ## DESCRIPTION
@@ -137,6 +137,25 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -CloudBlockLevel
+Configure this policy to specify the level of cloud protection to your endpoint. 
+
+Default (0): provides strong detection without increasing risk of detecting legitamate files
+Moderate (1): provides moderate detection only for high confidence detections
+High (2): applies a strong level of detection while optimizing client performance
+HighPlus (4): applies extra protection measures (might affect client peformance and increase your chance of false positives)
+ZeroTolerance (6): blocks all unknown executables
+
+```yaml
+Type: CloudBlockLevelType
+Accepted values: Default|Moderate|High|HighPlus|ZeroTolerance
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -DefinitionUpdatesChannel
 Enable this policy to specify when devices receive daily Microsoft Defender security intelligence (definition/signature) updates during the daily gradual rollout. 

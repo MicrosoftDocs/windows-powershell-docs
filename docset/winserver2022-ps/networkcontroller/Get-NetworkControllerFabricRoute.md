@@ -11,7 +11,7 @@ title: Get-NetworkControllerFabricRoute
 # Get-NetworkControllerFabricRoute
 
 ## SYNOPSIS
-Gets gets the routes specified for logical subnet children of the logical network objects.
+Gets the routes specified for logical subnet children of the logical network objects.
 
 ## SYNTAX
 

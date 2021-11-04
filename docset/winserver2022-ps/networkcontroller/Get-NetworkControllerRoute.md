@@ -137,8 +137,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 
 Following route properties can be retrieved:
 1. Address prefix of the route

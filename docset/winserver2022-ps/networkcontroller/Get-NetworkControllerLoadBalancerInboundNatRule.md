@@ -134,8 +134,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 Following properties can be retrieved for an inbound NAT rule:
 1. Front end port
 2. Back end port

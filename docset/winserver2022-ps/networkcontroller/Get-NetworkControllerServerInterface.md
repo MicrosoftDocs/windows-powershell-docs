@@ -143,8 +143,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
-### System.Object#https://localhost/
   
 This cmdlet returns an object that contains the following properties: 
 

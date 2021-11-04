@@ -121,9 +121,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
-
-### System.Object#https://localhost/ 
+### System.Object 
 
 Following settings of a network interface can be retrieved:
 1. MAC address

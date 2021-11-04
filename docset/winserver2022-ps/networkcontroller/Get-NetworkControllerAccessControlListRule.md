@@ -141,8 +141,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 Each rule has the following output:
 1. Name
 2. Protocol

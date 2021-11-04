@@ -171,8 +171,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 This cmdlet returns an object that contains the destination and the next hop for a particular network route.
 
 ## NOTES

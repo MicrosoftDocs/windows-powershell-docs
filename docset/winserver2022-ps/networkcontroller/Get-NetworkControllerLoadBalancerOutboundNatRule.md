@@ -133,8 +133,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 Following properties of an outbound NAT rule can be retrieved:
 1. Protocol
 2. Backend address pool associated with the NAT rule

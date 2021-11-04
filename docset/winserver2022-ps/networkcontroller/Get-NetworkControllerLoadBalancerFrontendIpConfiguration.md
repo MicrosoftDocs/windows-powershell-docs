@@ -132,8 +132,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 Following properties can be retrieved for front end IP configuration of load balancer resource:
 1. Private IP address (VIP)
 2. Private IP address allocation method: Static or dynamic

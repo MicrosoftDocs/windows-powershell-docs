@@ -101,8 +101,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 Following properties can be retrieved for a load balancer configuration:
 
 - Load balancer manager virtual IP address (Load balancer manager is a service inside Network Controller)

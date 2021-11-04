@@ -123,8 +123,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 Following properties can be retrieved for a virtual network:
 1. Address space of the network
 2. DHCP options

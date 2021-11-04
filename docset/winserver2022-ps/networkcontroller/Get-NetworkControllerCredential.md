@@ -143,8 +143,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
-### System.Object#https://localhost/
  
 The output contains the following fields:
 - Resource reference uri

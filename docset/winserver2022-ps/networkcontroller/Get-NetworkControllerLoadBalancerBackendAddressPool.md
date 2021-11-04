@@ -133,8 +133,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 Following properties can be retrieved for a backend address pool:
 1. Backend IP configurations of the members of the pool
 2. Outbound NAT rules associated with the backend address pool

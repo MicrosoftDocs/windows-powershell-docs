@@ -138,8 +138,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 Following properties of a load balancing rule can be retrieved:
 1. Front end IP configuration
 2. Back end address pool

@@ -151,8 +151,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 This cmdlet returns object(s) that contains the following fields: 
 
 - Resource reference URI.

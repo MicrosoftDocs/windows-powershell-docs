@@ -107,8 +107,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 Following properties can be retrieved for the virtual switch configuration:
 1. Number of interfaces that have Quality of Service (QoS) enabled
 2. Reservation mode for QoS: absolute or Weight

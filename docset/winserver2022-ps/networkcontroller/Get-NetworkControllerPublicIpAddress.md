@@ -122,8 +122,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 Following properties can be retrieved from this cmdlet:
 1. The public IP Address of the resource
 2. Allocation method of the public IP address: Static or dynamic

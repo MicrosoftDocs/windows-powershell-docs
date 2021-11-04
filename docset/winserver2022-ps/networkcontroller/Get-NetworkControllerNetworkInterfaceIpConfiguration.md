@@ -138,8 +138,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-### System.Object#https://localhost/
-
 Following properties can be retrieved from an IP interface IP Configuration resource:
 1. Private IP address
 2. Private IP address allocation method

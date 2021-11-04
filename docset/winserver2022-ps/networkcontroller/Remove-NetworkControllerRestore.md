@@ -54,7 +54,7 @@ Accept wildcard characters: False
 
 ### -ConnectionUri
 Specifies the Uniform Resource Identifier (URI) of a Network Controller.
-The cmdlet gets the database restore for that controller.
+The cmdlet removes the database restore for that controller.
 
 ```yaml
 Type: Uri

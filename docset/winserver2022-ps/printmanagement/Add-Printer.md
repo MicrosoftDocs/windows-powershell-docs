@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_Printer_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/add-printer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Printer
@@ -21,14 +21,15 @@ Add-Printer [-ConnectionName] <String> [-CimSession <CimSession[]>] [-ThrottleLi
  [-Confirm] [<CommonParameters>]
 ```
 
-### wsd
+### ap
 ```
 Add-Printer [-Comment <String>] [-Datatype <String>] [-UntilTime <UInt32>] [-KeepPrintedJobs]
  [-Location <String>] [-SeparatorPageFile <String>] [-ComputerName <String>] [-Shared] [-ShareName <String>]
  [-StartTime <UInt32>] [-Name] <String> [-PermissionSDDL <String>] [-PrintProcessor <String>]
  [-Priority <UInt32>] [-Published] [-RenderingMode <RenderingModeEnum>] [-DisableBranchOfficeLogging]
- [-BranchOfficeOfflineLogSizeMB <UInt32>] [-DeviceURL <String>] [-DeviceUUID <String>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-BranchOfficeOfflineLogSizeMB <UInt32>] [-WorkflowPolicy <WorkflowPolicyEnum>] [-DeviceURL <String>]
+ [-DeviceUUID <String>] [-IppURL <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### port
@@ -38,7 +39,8 @@ Add-Printer [-Comment <String>] [-Datatype <String>] [-DriverName] <String> [-Un
  [-ShareName <String>] [-StartTime <UInt32>] [-Name] <String> [-PermissionSDDL <String>]
  [-PrintProcessor <String>] [-Priority <UInt32>] [-Published] [-RenderingMode <RenderingModeEnum>]
  -PortName <String> [-DisableBranchOfficeLogging] [-BranchOfficeOfflineLogSizeMB <UInt32>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WorkflowPolicy <WorkflowPolicyEnum>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,7 +56,7 @@ You may need administrative credentials to run **Add-Printer**.
 
 ### Example 1: Add a printer to a local computer
 ```powershell
-PS C:\> Add-Printer -Name "mxdw 2" -DriverName "Microsoft XPS Document Writer v4" -PortName "portprompt:"
+Add-Printer -Name "mxdw 2" -DriverName "Microsoft XPS Document Writer v4" -PortName "portprompt:"
 ```
 
 This command adds a printer with name mxdw2 to the local computer.
@@ -64,7 +66,7 @@ The` portprompt:` port prompts for a file name to save the XPS document when pri
 
 ### Example 2: Add a new network printer connection
 ```powershell
-PS C:\> Add-Printer -ConnectionName \\printServer\printerName
+Add-Printer -ConnectionName \\printServer\printerName
 ```
 
 This command adds a printer by specifying the name of a print server and a shared printer on that server.
@@ -92,8 +94,8 @@ You cannot specify this parameter for unshared queues or queues that do not have
 
 ```yaml
 Type: UInt32
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -124,8 +126,8 @@ Specifies the text to add to the Comment field for the specified printer.
 
 ```yaml
 Type: String
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +141,7 @@ Specifies the name of the computer to which to add the printer.
 
 ```yaml
 Type: String
-Parameter Sets: wsd, port
+Parameter Sets: ap, port
 Aliases: CN
 
 Required: False
@@ -185,8 +187,8 @@ Specifies the data type the printer uses to record print jobs.
 
 ```yaml
 Type: String
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -200,8 +202,8 @@ Specifies a URL for the directed discovery of a Web Services on Devices (WSD) pr
 
 ```yaml
 Type: String
-Parameter Sets: wsd
-Aliases: 
+Parameter Sets: ap
+Aliases:
 
 Required: False
 Position: Named
@@ -215,8 +217,8 @@ Specifies the multicast UUID for device detection for the WSD port.
 
 ```yaml
 Type: String
-Parameter Sets: wsd
-Aliases: 
+Parameter Sets: ap
+Aliases:
 
 Required: False
 Position: Named
@@ -231,8 +233,8 @@ You cannot specify this parameter for unshared queues.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -256,13 +258,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IppURL
+Specifies a URL or hostname or IP address for the directed discovery of an IPP (Internet Printing Protocol) printer to add to the specified computer.
+
+```yaml
+Type: String
+Parameter Sets: ap
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -KeepPrintedJobs
 Specifies whether the print jobs in the queue are kept.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -276,8 +293,8 @@ Specifies the location of the printer.
 
 ```yaml
 Type: String
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -291,8 +308,8 @@ Specifies the name of the printer to add.
 
 ```yaml
 Type: String
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: True
 Position: 0
@@ -306,8 +323,8 @@ Specifies the permissions for the printer as a Security Descriptor Definition La
 
 ```yaml
 Type: String
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -336,8 +353,8 @@ Specifies the name of the print processor used by the printer.
 
 ```yaml
 Type: String
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -351,8 +368,8 @@ Specifies the relative queue priority.
 
 ```yaml
 Type: UInt32
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -366,8 +383,8 @@ Specifies whether the printer is published in the network directory service.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -388,8 +405,8 @@ Branch Office
 
 ```yaml
 Type: RenderingModeEnum
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 Accepted values: SSR, CSR, BranchOffice
 
 Required: False
@@ -404,24 +421,8 @@ Specifies the path of and name of the separator page to be used by the printer.
 
 ```yaml
 Type: String
-Parameter Sets: wsd, port
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShareName
-Specifies the name by which to share the printer on the network.
-To share a printer, specify the **Shared** parameter.
-
-```yaml
-Type: String
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -437,8 +438,24 @@ If **ShareName** is not specified, the name of the printer is used as the share 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShareName
+Specifies the name by which to share the printer on the network.
+To share a printer, specify the **Shared** parameter.
+
+```yaml
+Type: String
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -452,8 +469,8 @@ Specifies the starting time of printer availability.
 
 ```yaml
 Type: UInt32
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
@@ -484,12 +501,44 @@ Specifies the ending time of printer availability.
 
 ```yaml
 Type: UInt32
-Parameter Sets: wsd, port
-Aliases: 
+Parameter Sets: ap, port
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkflowPolicy
+Enables an administrator to associate a given printer with a specific Workflow application. This parameter does not allow the administrator to override the device-app association that was made using the device metadata service. 
+
+
+```yaml
+Type: WorkflowPolicyEnum
+Parameter Sets: ap, port
+Aliases:
+Accepted values: Uninitialized, Disabled, Enabled
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -511,19 +560,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### None
+### System.String
 
 ## OUTPUTS
 
-### None
-
+### System.Object
 ## NOTES
 
-- The WhatIf switch doesn’t work if the **ConnectionName** parameter set is used.
+- The WhatIf switch doesn't work if the **ConnectionName** parameter set is used.
+
 ## RELATED LINKS
 
 [Get-Printer](./Get-Printer.md)

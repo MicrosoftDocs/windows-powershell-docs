@@ -57,8 +57,8 @@ This example also shows how to pass the administrative credentials for cluster C
 ### -AttemptSoftReboot
 Indicates that command assumes a Kernel Soft Reboot (KSR) for the failover cluster.
 
-KSR bypasses  BIOS/FIRMWARE initialization.
-You can only use KSR for updates that do not require a firmware/BIOS initialization.
+KSR bypasses BIOS/firmware initialization.
+You can only use KSR for updates that do not require a BIOS/firmware initialization.
 
 ```yaml
 Type: SwitchParameter

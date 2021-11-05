@@ -128,8 +128,8 @@ Because the command specifies the *Force* parameter, the cmdlet runs without dis
 ### -AttemptSoftReboot
 Indicates that the CAU clustered role attempts a Kernel Soft Reboot (KSR) for the failover cluster.
 
-KSR bypasses  BIOS/FIRMWARE initialization.
-You can only use KSR for updates that do not require a firmware/BIOS initialization.
+KSR bypasses BIOS/firmware initialization.
+You can only use KSR for updates that do not require a BIOS/firmware initialization.
 
 ```yaml
 Type: SwitchParameter

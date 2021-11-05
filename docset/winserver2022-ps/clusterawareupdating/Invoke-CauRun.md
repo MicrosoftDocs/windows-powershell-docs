@@ -86,8 +86,8 @@ Because the command specifies the *Force* parameter, the recovery is performed w
 ### -AttemptSoftReboot
 Indicates that command attempts a Kernel Soft Reboot (KSR) for the failover cluster.
 
-KSR bypasses  BIOS/FIRMWARE initialization.
-You can only use KSR for updates that do not require a firmware/BIOS initialization.
+KSR bypasses BIOS/firmware initialization.
+You can only use KSR for updates that do not require a BIOS/firmware initialization.
 
 ```yaml
 Type: SwitchParameter

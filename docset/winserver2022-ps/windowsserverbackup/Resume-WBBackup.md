@@ -57,14 +57,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### ForceFormat
-If the media contain data and need formatting, call this cmdlet with the *ForceFormat* parameter.
+### None
 
 ## OUTPUTS
 
-### System.String, System.Exception
-If the removable device does not contain the requested media, the cmdlet returns with an error message that describes the missing media.
-If the device contains media, the cmdlet returns confirmation that the backup has resumed.
+### System.Object
 
 ## NOTES
 

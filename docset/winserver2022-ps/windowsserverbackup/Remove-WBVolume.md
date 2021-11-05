@@ -110,13 +110,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy,WBVolume
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
+
+### Microsoft.Windows.ServerBackup.Commands.WBVolume
+
 This cmdlet removes the **WBVolume** object from the policy contained in the **WBPolicy** object.
 
 ## OUTPUTS
 
-### WBVolume[]
-This cmdlet returns a the list of **WBVolume** objects left in **WBPolicy** after the cmdlet removes the specified **WBVolume** object.
+### System.Object
 
 ## NOTES
 * The **WBPolicy** object must be in edit mode. To put the **WBPolicy** object in edit mode for a policy that you set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the *Editable* parameter. The New-WBPolicy cmdlet creates a **WBPolicy** object that is already in edit mode.

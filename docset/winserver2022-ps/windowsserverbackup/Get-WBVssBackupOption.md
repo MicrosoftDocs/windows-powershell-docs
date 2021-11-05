@@ -61,13 +61,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy
-This cmdlet queries the **WBPolicy** object.
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
 
 ## OUTPUTS
 
-### Microsoft.Windows.ServerBackup.Commands.VssBackupOptions
-This cmdlet returns either a **VssCopyBackup** or **VssFullBackup** object, depending on the option specified in the **WBPolicy** object.
+### System.Object
 
 ## NOTES
 

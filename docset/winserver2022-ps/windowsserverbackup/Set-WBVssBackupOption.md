@@ -95,12 +95,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy
-This cmdlet queries the specified **WBPolicy** object.
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 * The **WBPolicy** object must be in edit mode. To put the **WBPolicy** object in edit mode for a policy that you set as the scheduled backup policy, use the [New-WBPolicy](./New-WBPolicy.md) cmdlet with the *Editable* parameter. The **New-WBPolicy** cmdlet creates a new **WBPolicy** object that is already in edit mode.

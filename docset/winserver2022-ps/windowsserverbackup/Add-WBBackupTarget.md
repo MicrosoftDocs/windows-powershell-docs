@@ -104,15 +104,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackupTarget, WBPolicy
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
+
+### Microsoft.Windows.ServerBackup.Commands.WBBackupTarget
+
 This cmdlet adds a **WBBackupTarget** object, which contains new backup storage locations, to a **WBPolicy** object that contains a backup policy.
 To add more than one storage location, you must call the **Add-WBBackupTarget** cmdlet separately for each location.
 
 ## OUTPUTS
 
-### WBBackupTarget[]
-This cmdlet returns a list of storage locations from the **WBPolicy** objects that contain the backup policies.
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

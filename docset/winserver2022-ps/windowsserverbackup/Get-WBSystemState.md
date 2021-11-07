@@ -62,13 +62,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy
-This cmdlet queries the **WBPolicy** object for the backup policy.
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
 
 ## OUTPUTS
 
-### boolean
-This cmdlet returns a Boolean value to indicate whether the system state is included in the **WBPolicy** object.
+### System.Object
 
 ## NOTES
 

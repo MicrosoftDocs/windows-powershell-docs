@@ -5,7 +5,7 @@ Help Version: 5.0.1.1
 Locale: en-US
 Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
 Module Name: DISM
-ms.date: 12/21/2016
+ms.date: 10/07/2021
 title: DISM
 ---
 
@@ -96,7 +96,10 @@ Expands a custom data image.
 ### [Expand-WindowsImage](./Expand-WindowsImage.md)
 Applies an image to a specified location.
 
-### [Export-WindowsDriver](./Export-WindowsDriver.md)
+### [Export-WindowsCapabilitySource](Export-WindowsCapabilitySource.md)
+Creates a custom FOD repository that includes packages that support the installation of the specified capabilities.
+
+### [Export-WindowsDriver](Export-WindowsDriver.md)
 Exports all third-party drivers from a Windows image to a destination folder.
 
 ### [Export-WindowsImage](./Export-WindowsImage.md)
@@ -105,7 +108,10 @@ Exports a copy of the specified image to another image file.
 ### [Get-AppxProvisionedPackage](./Get-AppxProvisionedPackage.md)
 Gets information about app packages (.appx) in an image that will be installed for each new user.
 
-### [Get-WIMBootEntry](./Get-WIMBootEntry.md)
+### [Get-NonRemovableAppsPolicy](Get-NonRemovableAppsPolicy.md)
+Returns a list of the app packages that are installed and configured as non-removable apps.
+
+### [Get-WIMBootEntry](Get-WIMBootEntry.md)
 Displays the Windows image file boot (WIMBoot) configuration entries for a specified disk volume.
 
 ### [Get-WindowsCapability](./Get-WindowsCapability.md)
@@ -141,7 +147,11 @@ Captures an image of customized or serviced Windows components on a Windows Imag
 ### [New-WindowsImage](./New-WindowsImage.md)
 Captures an image of a drive to a new WIM file.
 
-### [Optimize-WindowsImage](./Optimize-WindowsImage.md)
+### [Optimize-AppXProvisionedPackages](Optimize-AppXProvisionedPackages.md)
+Optimizes the total file size of provisioned packages on the image by replacing identical files with
+hard links.
+
+### [Optimize-WindowsImage](Optimize-WindowsImage.md)
 Configures a Windows image with specified optimizations.
 
 ### [Remove-AppxProvisionedPackage](./Remove-AppxProvisionedPackage.md)
@@ -168,7 +178,10 @@ Applies changes made to a mounted image to its WIM or VHD file.
 ### [Set-AppXProvisionedDataFile](./Set-AppXProvisionedDataFile.md)
 Adds custom data into the specified app (.appx) package that has been provisioned in a Windows image.
 
-### [Set-WindowsEdition](./Set-WindowsEdition.md)
+### [Set-NonRemovableAppsPolicy](Set-NonRemovableAppsPolicy.md)
+Sets an app package as non-removable (can not be uninstalled).
+
+### [Set-WindowsEdition](Set-WindowsEdition.md)
 Changes a Windows image to a higher edition.
 
 ### [Set-WindowsProductKey](./Set-WindowsProductKey.md)
@@ -180,7 +193,11 @@ Sets the reserved storage state of the image.
 ### [Split-WindowsImage](./Split-WindowsImage.md)
 Splits an existing .wim file into multiple read-only split .wim files.
 
-### [Update-WIMBootEntry](./Update-WIMBootEntry.md)
+### [Start-OSUninstall](Start-OSUninstall.md)
+Windows gives a user the ability to uninstall and roll back to a previous version of Windows. You
+can use DISM to initiate an uninstall.
+
+### [Update-WIMBootEntry](Update-WIMBootEntry.md)
 Updates the Windows image file boot (WIMBoot) configuration entry, associated with either the specified data source ID, the renamed image file path or the moved image file path.
 
 ### [Use-WindowsUnattend](./Use-WindowsUnattend.md)

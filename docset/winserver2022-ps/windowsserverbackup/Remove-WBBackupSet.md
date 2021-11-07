@@ -224,11 +224,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Windows.ServerBackup.Commands.WBBackupSet,System.Int32,System.Management.Automation.SwitchParameter, Windows.ServerBackup.Commands.WBBackupTarget, System.String, System.Management.Automation.PSCredential
+### Microsoft.Windows.ServerBackup.Commands.WBBackupSet[]
+
+### System.Management.Automation.PSCredential
 
 ## OUTPUTS
 
-### Windows.ServerBackup.Commands.WBBackupSet
+### System.Object
 
 ## NOTES
 

@@ -17,49 +17,7 @@ Modifies existing firewall rules.
 
 ### ByName
 ```
-Set-NetFirewallRule [-Name] <String[]> [-PolicyStore <String>] [-GPOSession <String>]
- [-NewDisplayName <String>] [-Description <String>] [-Enabled <Enabled>] [-Profile <Profile>]
- [-Platform <String[]>] [-Direction <Direction>] [-Action <Action>] [-EdgeTraversalPolicy <EdgeTraversal>]
- [-LooseSourceMapping <Boolean>] [-LocalOnlyMapping <Boolean>] [-Owner <String>] [-LocalAddress <String[]>]
- [-RemoteAddress <String[]>] [-Protocol <String>] [-LocalPort <String[]>] [-RemotePort <String[]>]
- [-IcmpType <String[]>] [-DynamicTarget <DynamicTransport>] [-Program <String>] [-Package <String>]
- [-Service <String>] [-InterfaceAlias <WildcardPattern[]>] [-InterfaceType <InterfaceType>]
- [-LocalUser <String>] [-RemoteUser <String>] [-RemoteMachine <String>] [-Authentication <Authentication>]
- [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByDisplayName
-```
-Set-NetFirewallRule -DisplayName <String[]> [-PolicyStore <String>] [-GPOSession <String>]
- [-NewDisplayName <String>] [-Description <String>] [-Enabled <Enabled>] [-Profile <Profile>]
- [-Platform <String[]>] [-Direction <Direction>] [-Action <Action>] [-EdgeTraversalPolicy <EdgeTraversal>]
- [-LooseSourceMapping <Boolean>] [-LocalOnlyMapping <Boolean>] [-Owner <String>] [-LocalAddress <String[]>]
- [-RemoteAddress <String[]>] [-Protocol <String>] [-LocalPort <String[]>] [-RemotePort <String[]>]
- [-IcmpType <String[]>] [-DynamicTarget <DynamicTransport>] [-Program <String>] [-Package <String>]
- [-Service <String>] [-InterfaceAlias <WildcardPattern[]>] [-InterfaceType <InterfaceType>]
- [-LocalUser <String>] [-RemoteUser <String>] [-RemoteMachine <String>] [-Authentication <Authentication>]
- [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByDisplayGroup
-```
-Set-NetFirewallRule -DisplayGroup <String[]> [-PolicyStore <String>] [-GPOSession <String>]
- [-NewDisplayName <String>] [-Description <String>] [-Enabled <Enabled>] [-Profile <Profile>]
- [-Platform <String[]>] [-Direction <Direction>] [-Action <Action>] [-EdgeTraversalPolicy <EdgeTraversal>]
- [-LooseSourceMapping <Boolean>] [-LocalOnlyMapping <Boolean>] [-Owner <String>] [-LocalAddress <String[]>]
- [-RemoteAddress <String[]>] [-Protocol <String>] [-LocalPort <String[]>] [-RemotePort <String[]>]
- [-IcmpType <String[]>] [-DynamicTarget <DynamicTransport>] [-Program <String>] [-Package <String>]
- [-Service <String>] [-InterfaceAlias <WildcardPattern[]>] [-InterfaceType <InterfaceType>]
- [-LocalUser <String>] [-RemoteUser <String>] [-RemoteMachine <String>] [-Authentication <Authentication>]
- [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByGroup
-```
-Set-NetFirewallRule -Group <String[]> [-PolicyStore <String>] [-GPOSession <String>] [-NewDisplayName <String>]
+Set-NetFirewallRule [-Name] <String[]> [-PolicyStore <String>] [-NewDisplayName <String>]
  [-Description <String>] [-Enabled <Enabled>] [-Profile <Profile>] [-Platform <String[]>]
  [-Direction <Direction>] [-Action <Action>] [-EdgeTraversalPolicy <EdgeTraversal>]
  [-LooseSourceMapping <Boolean>] [-LocalOnlyMapping <Boolean>] [-Owner <String>] [-LocalAddress <String[]>]
@@ -67,8 +25,54 @@ Set-NetFirewallRule -Group <String[]> [-PolicyStore <String>] [-GPOSession <Stri
  [-IcmpType <String[]>] [-DynamicTarget <DynamicTransport>] [-Program <String>] [-Package <String>]
  [-Service <String>] [-InterfaceAlias <WildcardPattern[]>] [-InterfaceType <InterfaceType>]
  [-LocalUser <String>] [-RemoteUser <String>] [-RemoteMachine <String>] [-Authentication <Authentication>]
- [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-RemoteDynamicKeywordAddresses <String[]>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### ByDisplayName
+```
+Set-NetFirewallRule -DisplayName <String[]> [-PolicyStore <String>] [-NewDisplayName <String>]
+ [-Description <String>] [-Enabled <Enabled>] [-Profile <Profile>] [-Platform <String[]>]
+ [-Direction <Direction>] [-Action <Action>] [-EdgeTraversalPolicy <EdgeTraversal>]
+ [-LooseSourceMapping <Boolean>] [-LocalOnlyMapping <Boolean>] [-Owner <String>] [-LocalAddress <String[]>]
+ [-RemoteAddress <String[]>] [-Protocol <String>] [-LocalPort <String[]>] [-RemotePort <String[]>]
+ [-IcmpType <String[]>] [-DynamicTarget <DynamicTransport>] [-Program <String>] [-Package <String>]
+ [-Service <String>] [-InterfaceAlias <WildcardPattern[]>] [-InterfaceType <InterfaceType>]
+ [-LocalUser <String>] [-RemoteUser <String>] [-RemoteMachine <String>] [-Authentication <Authentication>]
+ [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-RemoteDynamicKeywordAddresses <String[]>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### ByDisplayGroup
+```
+Set-NetFirewallRule -DisplayGroup <String[]> [-PolicyStore <String>] [-NewDisplayName <String>]
+ [-Description <String>] [-Enabled <Enabled>] [-Profile <Profile>] [-Platform <String[]>]
+ [-Direction <Direction>] [-Action <Action>] [-EdgeTraversalPolicy <EdgeTraversal>]
+ [-LooseSourceMapping <Boolean>] [-LocalOnlyMapping <Boolean>] [-Owner <String>] [-LocalAddress <String[]>]
+ [-RemoteAddress <String[]>] [-Protocol <String>] [-LocalPort <String[]>] [-RemotePort <String[]>]
+ [-IcmpType <String[]>] [-DynamicTarget <DynamicTransport>] [-Program <String>] [-Package <String>]
+ [-Service <String>] [-InterfaceAlias <WildcardPattern[]>] [-InterfaceType <InterfaceType>]
+ [-LocalUser <String>] [-RemoteUser <String>] [-RemoteMachine <String>] [-Authentication <Authentication>]
+ [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-RemoteDynamicKeywordAddresses <String[]>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### ByGroup
+```
+Set-NetFirewallRule -Group <String[]> [-PolicyStore <String>] [-NewDisplayName <String>]
+ [-Description <String>] [-Enabled <Enabled>] [-Profile <Profile>] [-Platform <String[]>]
+ [-Direction <Direction>] [-Action <Action>] [-EdgeTraversalPolicy <EdgeTraversal>]
+ [-LooseSourceMapping <Boolean>] [-LocalOnlyMapping <Boolean>] [-Owner <String>] [-LocalAddress <String[]>]
+ [-RemoteAddress <String[]>] [-Protocol <String>] [-LocalPort <String[]>] [-RemotePort <String[]>]
+ [-IcmpType <String[]>] [-DynamicTarget <DynamicTransport>] [-Program <String>] [-Package <String>]
+ [-Service <String>] [-InterfaceAlias <WildcardPattern[]>] [-InterfaceType <InterfaceType>]
+ [-LocalUser <String>] [-RemoteUser <String>] [-RemoteMachine <String>] [-Authentication <Authentication>]
+ [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>] [-RemoteDynamicKeywordAddresses <String[]>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
@@ -81,8 +85,8 @@ Set-NetFirewallRule -InputObject <CimInstance[]> [-NewDisplayName <String>] [-De
  [-Program <String>] [-Package <String>] [-Service <String>] [-InterfaceAlias <WildcardPattern[]>]
  [-InterfaceType <InterfaceType>] [-LocalUser <String>] [-RemoteUser <String>] [-RemoteMachine <String>]
  [-Authentication <Authentication>] [-Encryption <Encryption>] [-OverrideBlockRules <Boolean>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-RemoteDynamicKeywordAddresses <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -404,28 +408,6 @@ Type: Encryption
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NotRequired, Required, Dynamic
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GPOSession
-Specifies the network GPO from which to retrieve the rules to be modified. 
-This parameter is used in the same way as the *PolicyStore* parameter.
-When modifying GPOs in Windows PowerShell®, each change to a GPO requires the entire GPO to be loaded, modified, and saved back.
-On a busy Domain Controller (DC), this can be a slow and resource-heavy operation.
-A GPO Session loads a domain GPO onto the local computer and makes all changes in a batch, before saving it back.
-This reduces the load on the DC and speeds up the Windows PowerShell cmdlets.
-To load a GPO Session, use the Open-NetGPO cmdlet.
-To save a GPO Session, use the Save-NetGPO cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: ByName, ByDisplayName, ByDisplayGroup, ByGroup
-Aliases: 
 
 Required: False
 Position: Named
@@ -924,6 +906,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoteDynamicKeywordAddresses
+Specifies dynamic keyword addresses that match this rule.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoteMachine
 Specifies that matching IPsec rules of the indicated computer accounts are modified. 
 This parameter specifies that only network packets that are authenticated as incoming from or outgoing to a computer identified in the list of computer accounts (SID) match this rule.
@@ -1083,6 +1080,8 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Get-NetFirewallServiceFilter](./Get-NetFirewallServiceFilter.md)
 
+[New-NetFirewallDynamicKeywordAddress](New-NetFirewallDynamicKeywordAddress.md)
+
 [New-NetFirewallRule](./New-NetFirewallRule.md)
 
 [Open-NetGPO](./Open-NetGPO.md)
@@ -1094,8 +1093,6 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Save-NetGPO](./Save-NetGPO.md)
 
 [Set-NetIPsecRule](./Set-NetIPsecRule.md)
-
-[Set-NetFirewallRule](./Set-NetFirewallRule.md)
 
 [Set-NetFirewallSetting](./Set-NetFirewallSetting.md)
 

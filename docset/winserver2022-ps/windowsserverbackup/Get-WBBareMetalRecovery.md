@@ -62,14 +62,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy
-This cmdlet queries a **WBPolicy** object that contains a backup policy to determine whether the server can use backups that use that policy for bare metal recovery.
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
 
 ## OUTPUTS
 
-### Boolean
-This cmdlet returns a Boolean value to indicate whether the server can run backups that use a specified policy for bare metal recovery.
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

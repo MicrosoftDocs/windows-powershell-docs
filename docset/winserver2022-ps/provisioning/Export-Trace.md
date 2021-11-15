@@ -1,4 +1,4 @@
----
+﻿---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
@@ -17,7 +17,7 @@ title: Export-Trace
 
 ```
 Export-Trace [-ETLFile] <String> [-Overwrite] [-LogsDirectoryPath <String>] [-WprpFile <String>]
- [-ConnectedDevice]
+ [-ConnectedDevice] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -109,16 +109,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
-

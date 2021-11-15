@@ -1,4 +1,4 @@
----
+﻿---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
@@ -17,7 +17,7 @@ Install .PPKG package onto the local machine.
 
 ```
 Install-ProvisioningPackage [-PackagePath] <String> [-ForceInstall] [-QuietInstall]
- [-LogsDirectoryPath <String>] [-WprpFile <String>] [-ConnectedDevice]
+ [-LogsDirectoryPath <String>] [-WprpFile <String>] [-ConnectedDevice] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +31,7 @@ The default is an interactive install.
 
 ### Example 1
 ```
-PS C:\> Install-ProvisioningPackage -PackagePath C:\mypackage.ppkg -QuietInstall  
+PS C:\> Install-ProvisioningPackage -PackagePath C:\mypackage.ppkg -QuietInstall
 ```
 
 This will install the mypackage.ppkg file silently without customer interaction.
@@ -128,16 +128,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
-

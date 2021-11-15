@@ -109,17 +109,17 @@ Accept wildcard characters: False
 ### -Update
 Specifies the type of update. Valid values are:
 
-- Default. Compares inbox version with running version. Updates only if inbox version is higher.
-  Cluster and Service Fabric are updated only if cluster was deployed through **Install-NetworkController**.
+- Default. Compares the inbox version with the running version. Updates only if the inbox version is higher.
+  Cluster and Service Fabric are updated only if the cluster was deployed through **Install-NetworkController**.
 
   This is the default update type.
 
-- Application. Update only the application.
-  Application is updated only if inbox (template) version is higher than running version.
+- Application. Updates only the application.
+  Application is updated only if the inbox (template) version is higher than the running version.
 
-- Cluster. Update only the cluster.
+- Cluster. Updates only the cluster.
 
-  If the cluster was installed through **Install-NetworkController**, cluster and Service Fabric are updated only if inbox version is higher than the installed version.
+  If the cluster was installed through **Install-NetworkController**, the cluster and Service Fabric are updated only if the inbox version is higher than the installed version.
 
   If the cluster was not installed through **Install-NetworkController**, Service Fabric is updated only if the inbox (CAB) version is higher than the installed version.
 

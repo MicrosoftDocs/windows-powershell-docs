@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -Etag
 Specifies the entity tag (ETag) parameter of the resource.
-An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+An ETag is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
 The value of the header is an opaque string representing the state of the resource at the time the response was generated.
 
 ```yaml

@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstallerOptions
-{{ Fill InstallerOptions Description }}
+Specifies an array of Installer Command-Line Options as parameter values, such as /quiet, /passive, or /norestart.
 
 ```yaml
 Type: String[]

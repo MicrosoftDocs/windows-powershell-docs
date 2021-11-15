@@ -114,12 +114,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### SwitchParameter, WBVolume
-You can pipe global settings or the per volume performance setting.
+### None
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 

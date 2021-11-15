@@ -64,14 +64,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Editable
-This cmdlet uses the *Editable* parameter to set the **WBPolicy** object in edit mode.
+### None
 
 ## OUTPUTS
 
-### WBPolicy
-This cmdlet returns a **WBPolicy** object.
-The cmdlet returns a null value if no backup policy is set.
+### System.Object
 
 ## NOTES
 * If you use the *Editable* parameter to make changes, set the updated policy as the current policy by using the Set-WBPolicy cmdlet.

@@ -48,7 +48,7 @@ This example extracts the content of a Package specifying it's PackageId to the 
 ## PARAMETERS
 
 ### -AllowClobber
-{{Fill AllowClobber Description}}
+Indicates that the cmdlet exports contents even if there's an existing instance.
 
 ```yaml
 Type: SwitchParameter

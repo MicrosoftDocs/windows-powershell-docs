@@ -16,7 +16,7 @@ This cmdlet retrieves the provisioning state of NetworkControllerState resource.
 ## SYNTAX
 
 ```
-Get-NetworkControllerState -ConnectionUri <Uri> [-CertificateThumbprint <String>]
+Get-NetworkControllerState [-ConnectionUri <Uri>] [-CertificateThumbprint <String>]
  [-Credential <PSCredential>] [-PassInnerException] [<CommonParameters>]
 ```
 
@@ -58,7 +58,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -81,6 +81,11 @@ Accept wildcard characters: False
 ```
 
 ### -PassInnerException
+This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+The thumbprint must be provided only if the network controller client authentication is X509 certificates.
+**Get-NetworkController** retrieves that client authentication and authorization information.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -98,9 +103,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### 
+### System.Object
 
 Provisioning state of the resource
 

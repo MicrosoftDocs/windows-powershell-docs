@@ -65,14 +65,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
 This cmdlet queries the **WBPolicy** object to determine whether the **WBSystemState** object is present.
 The cmdlet does nothing if the **WBSystemState** object is not already present.
 The cmdlet removes the **WBSystemState** object if it is present.
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 

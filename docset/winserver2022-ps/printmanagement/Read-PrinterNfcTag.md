@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterNfcTagTasks_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 12/20/2016
+ms.date: 9/20/2021
 online version: https://docs.microsoft.com/powershell/module/printmanagement/read-printernfctag?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Read-PrinterNfcTag
@@ -27,8 +27,8 @@ The cmdlet returns the printer information that it reads as a table that contain
 
 ### Example 1: Read an NFC tag
 ```
-PS C:\> $Tag = Read-PrinterNfcTag
-PS C:\> Write-PrinterNfcTag $Tag
+$Tag = Read-PrinterNfcTag
+Write-PrinterNfcTag $Tag
 ```
 
 This first command reads printer connection data from the next NFC tag that someone taps against the NFC reader.
@@ -38,8 +38,8 @@ The second command uses the Write-PrinterNfcTag to write the printer connection 
 
 ### Example 2: Modify the share path of a printer connection
 ```
-PS C:\> $Tag = Read-PrinterNfcTag
-PS C:\> $Tag.SharePaths = "\\ntprint\b27-3697-b"
+$Tag = Read-PrinterNfcTag
+$Tag.SharePaths = "\\ntprint\b27-3697-b"
 ```
 
 This first command reads printer connection information from the next NFC tag that someone taps against the NFC reader.
@@ -104,7 +104,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

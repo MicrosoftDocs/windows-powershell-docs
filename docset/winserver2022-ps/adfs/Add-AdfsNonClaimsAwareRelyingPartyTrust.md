@@ -33,14 +33,14 @@ The Web Application Proxy requests such tokens for pre-authentication to web app
 
 ### Example 1: Add a non-claims-aware relying party trust for an application
 ```
-PS C:\> Add-AdfsNonClaimsAwareRelyingPartyTrust -Name "ExpenseReport" -Identifier "http://contosoexpense/" -IssuanceAuthorizationRules "=>issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");"
+PS C:\> Add-AdfsNonClaimsAwareRelyingPartyTrust -Name "ExpenseReport" -Identifier "https://contosoexpense/" -IssuanceAuthorizationRules "=>issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");"
 ```
 
 This command adds a non-claims-aware relying party trust for the application named ExpenseReport and allows all authenticated users to access this application through the Web Application Proxy.
 
 ### Example 2: Add a non-claims-aware relying party trust that restricts access to an application
 ```
-PS C:\> Add-AdfsNonClaimsAwareRelyingPartyTrust -Name "ExpenseReport" -Identifier "http://contosoexpense/" -IssuanceAuthorizationRules "c:[type=="http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser"]=>issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");"
+PS C:\> Add-AdfsNonClaimsAwareRelyingPartyTrust -Name "ExpenseReport" -Identifier "https://contosoexpense/" -IssuanceAuthorizationRules "c:[type=="http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser"]=>issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");"
 ```
 
 This command adds a non-claims-aware relying party trust for the application named ExpenseReport and restricts access to this application, through the Web Application Proxy, to only users from their workplace-joined devices.
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

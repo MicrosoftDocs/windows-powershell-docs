@@ -1,5 +1,5 @@
 ﻿---
-description: The Get-TrustedProvisioningCertificate cmdlet gets a trusted provisioning certificate from the Trusted Certificate Store.
+description: Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the Uninstall-TrustedProvisioningCertificate cmdlet.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
 ms.date: 05/09/2017

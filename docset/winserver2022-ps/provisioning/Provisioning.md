@@ -25,7 +25,7 @@ Exports an event trace log file for provisioning.
 Gets information about the installed provisioning package.
 
 ### [Get-TrustedProvisioningCertificate](Get-TrustedProvisioningCertificate.md)
-Gets the specified certificate from the Trusted Certificate Store.
+Lists all installed trusted provisioning certificates.
 
 ### [Install-ProvisioningPackage](Install-ProvisioningPackage.md)
 Install .PPKG package onto the local machine.

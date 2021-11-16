@@ -40,11 +40,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
 ## OUTPUTS
 
-### System.String, System.Exception
-If the requested media is not inserted, the cmdlet returns an error with the description of the requested media.
-Otherwise, the recovery operation resumes and the cmdlet returns a confirmation message.
+### System.Object
 
 ## NOTES
 

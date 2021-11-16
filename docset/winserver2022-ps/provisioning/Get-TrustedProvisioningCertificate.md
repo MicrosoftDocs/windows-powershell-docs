@@ -11,7 +11,7 @@ title: Get-TrustedProvisioningCertificate
 # Get-TrustedProvisioningCertificate
 
 ## SYNOPSIS
-Gets the specified certificate from the Trusted Certificate Store.
+Lists all installed trusted provisioning certificates.
 
 ## SYNTAX
 
@@ -21,16 +21,21 @@ Get-TrustedProvisioningCertificate [[-Thumbprint] <String>] [-LogsDirectoryPath 
 ```
 
 ## DESCRIPTION
-The **Get-TrustedProvisioningCertificate** cmdlet gets a trusted provisioning certificate from the Trusted Certificate Store.
+Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the `Uninstall-TrustedProvisioningCertificate` cmdlet.
 
 ## EXAMPLES
 
-### Example 1: Get a certificate
+### Example 1: List installed trusted provisioning certificates
+```powershell
+PS C:\> Get-TrustedProvisioningCertificate
 ```
-Get-TrustedProvisioningCertificate -Thumbprint fedd995b45e633d4ef30fcbc8f3a48b627e9a28b
+```output
+The operation completed successfully.
+
+No certificates found in the trusted provisioners store
 ```
 
-This example gets the trusted provisioning certificate with the specified thumbprint.
+Lists all installed trusted provisioning certificates.
 
 ## PARAMETERS
 
@@ -65,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-Specifies a certificate thumbprint.
+Specifies the thumbprint of the certificate to retrieve.
 
 ```yaml
 Type: String

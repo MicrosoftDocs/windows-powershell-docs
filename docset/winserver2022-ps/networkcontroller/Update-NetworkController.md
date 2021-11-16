@@ -17,8 +17,8 @@ Updates the Network Controller binaries.
 ## SYNTAX
 
 ```
-Update-NetworkController [-ComputerName <String>] [-UseSsl] [-Credential <PSCredential>]
- [-CertificateThumbprint <String>] [<CommonParameters>]
+Update-NetworkController [-Update <UpdateType>] [-Force] [-ComputerName <String>] [-UseSsl]
+ [-Credential <PSCredential>] [-CertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,7 +82,55 @@ Specify this parameter only if you run this cmdlet on a computer that is not par
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Forces the command to run without asking for user confirmation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Update
+Specifies the type of update. Valid values are:
+
+- Default. Compares the inbox version with the running version. Updates only if the inbox version is higher.
+  Cluster and Service Fabric are updated only if the cluster was deployed through **Install-NetworkController**.
+
+  This is the default update type.
+
+- Application. Updates only the application.
+  Application is updated only if the inbox (template) version is higher than the running version.
+
+- Cluster. Updates only the cluster.
+
+  If the cluster was installed through **Install-NetworkController**, the cluster and Service Fabric are updated only if the inbox version is higher than the installed version.
+
+  If the cluster was not installed through **Install-NetworkController**, Service Fabric is updated only if the inbox (CAB) version is higher than the installed version.
+
+  The manifest is always updated.
+
+```yaml
+Type: UpdateType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Default, Application, Cluster
+
 Required: False
 Position: Named
 Default value: None
@@ -107,13 +155,47 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 
@@ -121,7 +203,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-NetworkController](./Get-NetworkController.md)
 
-[Get-NetworkController](./Get-NetworkController.md)
+[Install-NetworkController](./Install-NetworkController.md)
 
 [Set-NetworkController](./Set-NetworkController.md)
 

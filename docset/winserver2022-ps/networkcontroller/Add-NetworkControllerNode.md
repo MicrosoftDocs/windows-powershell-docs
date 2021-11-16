@@ -17,8 +17,9 @@ Adds a network controller node to an existing network controller deployment.
 
 ```
 Add-NetworkControllerNode -Name <String> -Server <String> -FaultDomain <String> -RestInterface <String>
- [-NodeCertificate <X509Certificate2>] [-Force] [-PassThru] [-ComputerName <String>] [-UseSsl]
- [-Credential <PSCredential>] [-CertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NodeCertificate <X509Certificate2>] [-Force] [-PassThru] [-CertificateSubjectName <String>]
+ [-NodeCertificateFindBy <X509FindType>] [-ComputerName <String>] [-UseSsl] [-Credential <PSCredential>]
+ [-CertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +45,21 @@ This command adds a network controller node named Node1 to the existing network 
 The FQDN of the computer is named NCNode1.contoso.com and the interface on the computer listening to REST requests is named Ethernet.
 
 ## PARAMETERS
+
+### -CertificateSubjectName
+Specifies the subject name of the certificate used to perform this action.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CertificateThumbprint
 Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
@@ -176,6 +192,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NodeCertificateFindBy
+Specifies the method by which to find the node certificate.
+
+```yaml
+Type: X509FindType
+Parameter Sets: (All)
+Aliases:
+Accepted values: FindByThumbprint, FindBySubjectName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PassThru
 Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
@@ -261,9 +293,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-###  
+### System.Object
+
 This cmdlet returns an object that contains the following fields: 
 - Name of the node
 - Hostname, FQDN, or IP address of the node

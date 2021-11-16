@@ -1,5 +1,5 @@
 ﻿---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Export-Trace cmdlet exports an event trace log (ETL) file for provisioning.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
 ms.date: 05/09/2017
@@ -11,7 +11,7 @@ title: Export-Trace
 # Export-Trace
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Exports an event trace log file for provisioning.
 
 ## SYNTAX
 
@@ -21,21 +21,21 @@ Export-Trace [-ETLFile] <String> [-Overwrite] [-LogsDirectoryPath <String>] [-Wp
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Export-Trace** cmdlet exports an event trace log (ETL) file for provisioning.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+Export-Trace -ETLFile C:\Windows\Logs\provisioning.etl -Overwrite
 ```
 
-{{ Add example description here }}
+This example exports an ETL file to the specified location, overwriting an existing file, if it exists.
 
 ## PARAMETERS
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ETLFile
-{{Fill ETLFile Description}}
+Specifies a location for the .etl file.
 
 ```yaml
 Type: String
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies the path of the logs directory.
 
 ```yaml
 Type: String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-{{Fill Overwrite Description}}
+Indicates that the cmdlet overwrites an existing exported log if one exists.
 
 ```yaml
 Type: SwitchParameter
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the location of the WPR profile file.
 
 ```yaml
 Type: String

@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnswerFileOnly
-Only exports the Windows provisioning answer file
+Indicates that the cmdlet only exports the Windows provisioning answer file.
 
 ```yaml
 Type: SwitchParameter
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+Indicates that the provisioning package uses a connected device.
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-Specifies a path to store logs files resulting from the export operation
+Specifies a path to store logs files resulting from the export operation.
 
 ```yaml
 Type: String
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFolder
-Specifies the path to the output directory
+Specifies the path to the output directory.
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Id of the Package to be extracted
+Specifies the ID of the Package to be extracted.
 
 ```yaml
 Type: String
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackagePath
-Path to the package to be extracted
+Specifies the path to the package to be extracted.
 
 ```yaml
 Type: String
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuntimeMetadata
-{{Fill RuntimeMetadata Description}}
+Specifies a runtime provisioning package metadata object.
 
 ```yaml
 Type: RuntimeProvPackageMetadata
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the name of a WPR profile file.
 
 ```yaml
 Type: String

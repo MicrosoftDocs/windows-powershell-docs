@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-Specifies the name of a wprp file.
+Specifies the name of a WPR profile file.
 
 ```yaml
 Type: String

@@ -1,5 +1,5 @@
 ﻿---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Get-TrustedProvisioningCertificate cmdlet gets a trusted provisioning certificate from the Trusted Certificate Store.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
 ms.date: 05/09/2017
@@ -11,7 +11,7 @@ title: Get-TrustedProvisioningCertificate
 # Get-TrustedProvisioningCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the specified certificate from the Trusted Certificate Store.
 
 ## SYNTAX
 
@@ -21,21 +21,21 @@ Get-TrustedProvisioningCertificate [[-Thumbprint] <String>] [-LogsDirectoryPath 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-TrustedProvisioningCertificate** cmdlet gets a trusted provisioning certificate from the Trusted Certificate Store.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a certificate
 ```
-PS C:\> {{ Add example code here }}
+Get-TrustedProvisioningCertificate -Thumbprint fedd995b45e633d4ef30fcbc8f3a48b627e9a28b
 ```
 
-{{ Add example description here }}
+This example gets the trusted provisioning certificate with the specified thumbprint.
 
 ## PARAMETERS
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies the logs directory path.
 
 ```yaml
 Type: String
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-{{Fill Thumbprint Description}}
+Specifies a certificate thumbprint.
 
 ```yaml
 Type: String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the location of the WPR profile file.
 
 ```yaml
 Type: String

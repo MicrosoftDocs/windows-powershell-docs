@@ -27,7 +27,7 @@ Removes a previously installed provisioning certificate.
 
 ### Example 1: Uninstall a trusted provisioning certificate
 ```powershell
-PS C:\> Uninstall-TrustedProvisioningCertificate -Thumbprint ‎fedd995b45e633d4ef30fcbc8f3a48b627e9a28b
+PS C:\> Uninstall-TrustedProvisioningCertificate -Thumbprint fedd995b45e633d4ef30fcbc8f3a48b627e9a28b
 ```
 
 Uninstall a trusted provisioning certificate with the specified thumbprint.
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-Certificate thumbprint
+Specifies a certificate thumbprint.
 
 ```yaml
 Type: String

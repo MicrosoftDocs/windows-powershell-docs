@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Uninstall-ProvisioningPackage cmdlet uninstalls .ppkg files.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
 ms.date: 05/09/2017
@@ -11,7 +11,7 @@ title: Uninstall-ProvisioningPackage
 # Uninstall-ProvisioningPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Uninstalls .ppkg files.
 
 ## SYNTAX
 
@@ -40,21 +40,21 @@ Uninstall-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Uninstall-ProvisioningPackage** cmdlet uninstalls .ppkg files.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Uninstall a package
 ```
-PS C:\> {{ Add example code here }}
+Uninstall-ProvisioningPackage -PackagePath C:\mypackage.ppkg
 ```
 
-{{ Add example description here }}
+This example uninstalls a package with the specified path.
 
 ## PARAMETERS
 
 ### -AllInstalledPackages
-{{Fill AllInstalledPackages Description}}
+Indicates that the cmdlet uninstalls all installed packages.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+Indicates that the provisioning package uses a connected device.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies a path to store logs files resulting from the operation.
 
 ```yaml
 Type: String
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-{{Fill PackageId Description}}
+Specifies the ID of the Package to be uninstalled.
 
 ```yaml
 Type: String
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackagePath
-{{Fill PackagePath Description}}
+Specifies the path to the package to be uninstalled.
 
 ```yaml
 Type: String
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuntimeMetadata
-{{Fill RuntimeMetadata Description}}
+Specifies a runtime provisioning package metadata object.
 
 ```yaml
 Type: RuntimeProvPackageMetadata
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the name of a WPR profile file.
 
 ```yaml
 Type: String

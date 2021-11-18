@@ -30,10 +30,9 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-SignatureUpdateInterval <UInt32>] [-MAPSReporting <MAPSReportingType>]
  [-SubmitSamplesConsent <SubmitSamplesConsentType>] [-DisableAutoExclusions <Boolean>]
  [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>] [-DisableBehaviorMonitoring <Boolean>]
- [-DisableIntrusionPreventionSystem <Boolean>] [-DisableIOAVProtection <Boolean>]
- [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
- [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>]
- [-DisableEmailScanning <Boolean>]
+ [-DisableIOAVProtection <Boolean>] [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] 
+ [-DisableArchiveScanning <Boolean>] [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] 
+ [-DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
  [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
@@ -340,22 +339,6 @@ If you specify a value of $False or do not specify a value, scanning downloaded 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: dioavp
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisableIntrusionPreventionSystem
-Indicates whether to configure network protection against exploitation of known vulnerabilities.
-If you specify a value of $False or do not specify a value, network protection is enabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: dips
 
 Required: False
 Position: Named

@@ -101,14 +101,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBFileSpec [], WBPolicy
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
+
+### Microsoft.Windows.ServerBackup.Commands.WBFileSpec[]
+
 This cmdlet adds a list of items from a **WBFileSpec** object that contains a backup file specification to a **WBPolicy** object that contains a backup policy.
 
 ## OUTPUTS
 
-### None
-None
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

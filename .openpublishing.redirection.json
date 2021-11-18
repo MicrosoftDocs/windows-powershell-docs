@@ -5354,6 +5354,11 @@
       "source_path": "docset/winserver2022-ps/WindowsUpdate/WindowsUpdate.md",
       "redirect_url": "/powershell/module/windowsupdate/WindowsUpdate.md?view=windowsserver2022-ps",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2022-ps/EventTracingManagement/Set-AutologgerConfig.md",
+      "redirect_url": "/powershell/module/eventtracingmanagement/Update-AutologgerConfig.md?view=windowsserver2022-ps",
+      "redirect_document_id": false
     }
   ]
 }

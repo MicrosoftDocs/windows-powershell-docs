@@ -98,10 +98,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### SwitchParameter, WBVolume
-Indicates either global settings or volume settings.
+### None
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

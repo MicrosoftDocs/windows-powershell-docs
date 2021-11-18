@@ -179,15 +179,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackupSet
-Specifies the backup set that contains volume backup of all the system critical volumes, or contains backup of the system state for the system state recovery operation.
+### Microsoft.Windows.ServerBackup.Commands.WBBackupSet
 
 ## OUTPUTS
 
-### System.String
-If you do not specify the *Async* parameter, the recovery operation outputs status at periodic intervals until the recovery operation completes.
-You can also call Get-WBJob to get the status of the current recovery operation.
-After completion of recovery, run Get-WBJob with the *Previous* parameter and an argument of 1 to get the final recovery status.
+### System.Object
 
 ## NOTES
 

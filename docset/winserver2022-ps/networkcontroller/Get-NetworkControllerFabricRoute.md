@@ -11,7 +11,7 @@ title: Get-NetworkControllerFabricRoute
 # Get-NetworkControllerFabricRoute
 
 ## SYNOPSIS
-Gets a network route or all the routes in a subnet in the Network Controller.
+Gets the routes specified for logical subnet children of the logical network objects.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Get-NetworkControllerFabricRoute [-LogicalNetworkId] <String[]> [-SubnetId] <Str
 ```
 
 ## DESCRIPTION
-The **Get-NetworkControllerFabricRoute** cmdlet gets a network route or all the routes in a specified logical subnet in the Network Controller.
+The **Get-NetworkControllerFabricRoute** cmdlet gets the routes specified for logical subnet children of the logical network objects.
 If you specify a route to get, this cmdlet gets the destination and next hop of the route.
 If you do not specify a route, this cmdlet returns all the routes in the logical subnet.
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassInnerException
-
+This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
 
 ```yaml
 Type: SwitchParameter
@@ -165,9 +165,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
 
-###  
+### System.Object
+
 This cmdlet returns an object that contains the destination and the next hop for a particular network route.
 
 ## NOTES

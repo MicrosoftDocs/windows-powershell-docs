@@ -17,9 +17,10 @@ This cmdlet creates a new virtual subnet in a virtual network, or updates a virt
 ## SYNTAX
 
 ```
-New-NetworkControllerVirtualSubnet -ConnectionUri <Uri> -Properties <VirtualSubnetProperties>
- -ResourceId <string> -VirtualNetworkId <string> [-CertificateThumbPrint <string>] [-Credential <PSCredential>]
- [-Etag <string>] [-Force] [-ResourceMetadata <ResourceMetadata>]
+New-NetworkControllerVirtualSubnet [-VirtualNetworkId] <String> [-ResourceId] <String>
+ [-Properties] <VirtualSubnetProperties> [[-ResourceMetadata] <ResourceMetadata>] [[-Etag] <String>] [-Force]
+ -ConnectionUri <Uri> [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -112,9 +113,27 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: switch
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassInnerException
+This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+The thumbprint must be provided only if the network controller client authentication is X509 certificates.
+**Get-NetworkController** retrieves that client authentication and authorization information.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +163,7 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -159,7 +178,7 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -189,13 +208,49 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
-### 
+### System.String
+
+### Microsoft.Windows.NetworkController.VirtualSubnetProperties
+ 
 A virtual subnet can take the following inputs
 a.
 Access control list for the subnet
@@ -210,6 +265,9 @@ Service insertion rules
 
 ## OUTPUTS
 
+### System.Object
+
 ## NOTES
+
 ## RELATED LINKS
 

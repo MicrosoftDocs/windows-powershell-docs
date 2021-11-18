@@ -37,7 +37,7 @@ Because netgroups are a server-side setting, **New-NfsNetgroup** is not availabl
 
 ### Example 1: Create a netgroup and add a member
 ```
-PS C:\> New-NfsNetgroup -NetGroupName "Contoso-PrintServices -AddMember "Contoso-PS02" -LdapInstanceName "Contoso.com" -LdapNamingContext "CN=MappedIdentity,DC=Contoso,DC=com"
+PS C:\> New-NfsNetgroup -NetGroupName "Contoso-PrintServices" -AddMember "Contoso-PS02" -LdapInstanceName "Contoso.com" -LdapNamingContext "CN=MappedIdentity,DC=Contoso,DC=com"
 ```
 
 This command creates a netgroup that is named Contoso-PrintServices and adds one member that is named Contoso-PS02.

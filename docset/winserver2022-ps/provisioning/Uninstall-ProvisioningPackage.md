@@ -11,7 +11,11 @@ title: Uninstall-ProvisioningPackage
 # Uninstall-ProvisioningPackage
 
 ## SYNOPSIS
+<<<<<<< HEAD
 Uninstalls .ppkg files.
+=======
+Uninstalls .PPKG package from the local machine.
+>>>>>>> 86c70245c0b9266b6a527aebe11047ca78d943bc
 
 ## SYNTAX
 
@@ -40,23 +44,23 @@ Uninstall-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-
 ```
 
 ## DESCRIPTION
-The **Uninstall-ProvisioningPackage** cmdlet uninstalls .ppkg files.
+Unintalls .PPKG package based on package ID, path, metadata, or all packages.
 
 The **Uninstall-ProvisioningPackage** cmdlet is supported on Windows 11 client operating system only.
 
 ## EXAMPLES
 
-### Example 1: Uninstall a package
-```
-Uninstall-ProvisioningPackage -PackagePath C:\mypackage.ppkg
+### Example 1: Uninstall all provisioning packages
+```powershell
+PS C:\> Uninstall-ProvisioningPackage -AllInstalledPackages
 ```
 
-This example uninstalls a package with the specified path.
+Uninstalls all provisioning packages.
 
 ## PARAMETERS
 
 ### -AllInstalledPackages
-Indicates that the cmdlet uninstalls all installed packages.
+Removes all installed packages.
 
 ```yaml
 Type: SwitchParameter
@@ -71,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectedDevice
-Indicates that the provisioning package uses a connected device.
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-Specifies a path to store logs files resulting from the operation.
+Specifies the logs directory path.
 
 ```yaml
 Type: String
@@ -101,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Specifies the ID of the Package to be uninstalled.
+Specifies the ID of a package.
 
 ```yaml
 Type: String
@@ -116,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackagePath
-Specifies the path to the package to be uninstalled.
+Specifies the package path.
 
 ```yaml
 Type: String
@@ -146,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-Specifies the name of a WPR profile file.
+Specifies the location of the WPR profile file.
 
 ```yaml
 Type: String

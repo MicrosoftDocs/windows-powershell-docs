@@ -11,11 +11,7 @@ title: Uninstall-ProvisioningPackage
 # Uninstall-ProvisioningPackage
 
 ## SYNOPSIS
-<<<<<<< HEAD
-Uninstalls .ppkg files.
-=======
 Uninstalls .PPKG package from the local machine.
->>>>>>> 86c70245c0b9266b6a527aebe11047ca78d943bc
 
 ## SYNTAX
 

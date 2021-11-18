@@ -42,6 +42,8 @@ Uninstall-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-
 ## DESCRIPTION
 The **Uninstall-ProvisioningPackage** cmdlet uninstalls .ppkg files.
 
+The **Uninstall-ProvisioningPackage** cmdlet is supported on Windows 11 client operating system only.
+
 ## EXAMPLES
 
 ### Example 1: Uninstall a package

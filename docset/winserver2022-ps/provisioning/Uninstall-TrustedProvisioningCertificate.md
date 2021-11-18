@@ -23,6 +23,8 @@ Uninstall-TrustedProvisioningCertificate [-Thumbprint] <String> [-LogsDirectoryP
 ## DESCRIPTION
 Removes a previously installed provisioning certificate.
 
+The **Uninstall-TrustedProvisioningCertificate** cmdlet is supported on Windows 11 client operating system only.
+
 ## EXAMPLES
 
 ### Example 1: Uninstall a trusted provisioning certificate

@@ -23,6 +23,8 @@ Get-TrustedProvisioningCertificate [[-Thumbprint] <String>] [-LogsDirectoryPath 
 ## DESCRIPTION
 Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the `Uninstall-TrustedProvisioningCertificate` cmdlet.
 
+The **Get-TrustedProvisioningCertificate** cmdlet is supported on Windows 11 client operating system only.
+
 ## EXAMPLES
 
 ### Example 1: List installed trusted provisioning certificates

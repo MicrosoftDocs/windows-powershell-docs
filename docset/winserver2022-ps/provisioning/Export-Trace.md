@@ -23,6 +23,8 @@ Export-Trace [-ETLFile] <String> [-Overwrite] [-LogsDirectoryPath <String>] [-Wp
 ## DESCRIPTION
 The **Export-Trace** cmdlet exports an event trace log (ETL) file for provisioning.
 
+The **Export-Trace** cmdlet is supported on Windows 11 client operating system only.
+
 ## EXAMPLES
 
 ### Example 1

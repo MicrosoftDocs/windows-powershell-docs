@@ -36,6 +36,8 @@ Export-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-Out
 ## DESCRIPTION
 Extract the contents of a provisioning package to the specified folder.
 
+The **Export-ProvisioningPackage** cmdlet is supported on Windows 11 client operating system only.
+
 ## EXAMPLES
 
 ### Example 1

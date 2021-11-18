@@ -23,6 +23,8 @@ Install-TrustedProvisioningCertificate [-CertificatePath] <String> [-ForceInstal
 ## DESCRIPTION
 Installs the specified certificate to the Trusted Certificate Store.
 
+The **Install-TrustedProvisioningCertificate** cmdlet is supported on Windows 11 client operating system only.
+
 ## EXAMPLES
 
 ### Example 1: Install Trusted Provisioning Certificate

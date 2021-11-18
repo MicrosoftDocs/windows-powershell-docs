@@ -14,6 +14,8 @@ title: Provisioning
 ## Description
 This reference provides cmdlet descriptions and syntax for the provisioning cmdlets. It lists the cmdlets in alphabetical order.
 
+The provisioning is supported on Windows 11 client operating system only.
+
 ## provisioning Cmdlets
 ### [Export-ProvisioningPackage](Export-ProvisioningPackage.md)
 Extract the contents of a provisioning package.

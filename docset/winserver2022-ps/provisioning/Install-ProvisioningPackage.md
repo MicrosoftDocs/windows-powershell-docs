@@ -23,6 +23,8 @@ Install-ProvisioningPackage [-PackagePath] <String> [-ForceInstall] [-QuietInsta
 ## DESCRIPTION
 This cmdlet is used to install .ppkg files that are generated and exported by the [Windows Configuration Designer tool](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-install-icd).
 
+The **Install-ProvisioningPackage** cmdlet is supported on Windows 11 client operating system only.
+
 You can use this cmdlet to install a .ppkg file interactively or silently by specifying the -QuietInstall switch parameter.
 
 The default is an interactive install.

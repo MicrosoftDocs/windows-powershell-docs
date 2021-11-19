@@ -11,7 +11,7 @@ title: Install-TrustedProvisioningCertificate
 # Install-TrustedProvisioningCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a certificate to the Trusted Certificate Store.
 
 ## SYNTAX
 
@@ -21,16 +21,16 @@ Install-TrustedProvisioningCertificate [-CertificatePath] <String> [-ForceInstal
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Installs the specified certificate to the Trusted Certificate Store.
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> {{ Add example code here }}
+### Example 1: Install Trusted Provisioning Certificate
+```powershell
+PS C:\> Install-TrustedProvisioningCertificate -CertificatePath trustedCert.cer
 ```
 
-{{ Add example description here }}
+Installs the specified certificate as a trusted provisioning certificate.
 
 ## PARAMETERS
 
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceInstall
-{{Fill ForceInstall Description}}
+Specifies whether, if the certificate already exists, it will be overwritten.
 
 ```yaml
 Type: SwitchParameter
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies the logs directory path.
 
 ```yaml
 Type: String
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the location of the WPR profile file.
 
 ```yaml
 Type: String

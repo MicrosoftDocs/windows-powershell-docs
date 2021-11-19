@@ -79,6 +79,11 @@ Accept wildcard characters: False
 ```
 
 ### -PassInnerException
+This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+The thumbprint must be provided only if the network controller client authentication is X509 certificates.
+**Get-NetworkController** retrieves that client authentication and authorization information.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -96,9 +101,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### 
+### System.Object
 
 Following properties can be retrieved for the virtual switch configuration:
 1. Number of interfaces that have Quality of Service (QoS) enabled

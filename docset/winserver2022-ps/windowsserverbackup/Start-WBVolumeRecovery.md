@@ -155,14 +155,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackupSet, WBVolume, WBVolume
+### Microsoft.Windows.ServerBackup.Commands.WBBackupSet
+
+### Microsoft.Windows.ServerBackup.Commands.WBVolume
 
 ## OUTPUTS
 
-### System.String
-If you do not specify the *Async* parameter, the status of the recovery operation displays at periodic intervals until the recovery operation finishes.
-You can also use the **Get-WBJob** cmdlet to get the status of the current recovery operation.
-Type `Get-WBJob -Previous 1` to get the status after the recovery operation completes.
+### System.Object
 
 ## NOTES
 

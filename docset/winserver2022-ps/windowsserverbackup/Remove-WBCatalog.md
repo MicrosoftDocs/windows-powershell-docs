@@ -63,13 +63,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### SwitchParameter
-You can specify the *Force* parameter to suppress the confirmation message for the cmdlet.
+### None
 
 ## OUTPUTS
 
-### System.String
-This cmdlet returns a string that indicates that the cmdlet has removed the catalog.
+### System.Object
 
 ## NOTES
 

@@ -11,7 +11,7 @@ title: Get-TrustedProvisioningCertificate
 # Get-TrustedProvisioningCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Lists all installed trusted provisioning certificates.
 
 ## SYNTAX
 
@@ -21,21 +21,26 @@ Get-TrustedProvisioningCertificate [[-Thumbprint] <String>] [-LogsDirectoryPath 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the `Uninstall-TrustedProvisioningCertificate` cmdlet.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: List installed trusted provisioning certificates
+```powershell
+PS C:\> Get-TrustedProvisioningCertificate
 ```
-PS C:\> {{ Add example code here }}
+```output
+The operation completed successfully.
+
+No certificates found in the trusted provisioners store
 ```
 
-{{ Add example description here }}
+List all installed trusted provisioning certificates.
 
 ## PARAMETERS
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -50,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies the logs directory path.
 
 ```yaml
 Type: String
@@ -65,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-{{Fill Thumbprint Description}}
+Specifies the thumbprint of the certificate to retrieve.
 
 ```yaml
 Type: String
@@ -80,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the location of the WPR profile file.
 
 ```yaml
 Type: String

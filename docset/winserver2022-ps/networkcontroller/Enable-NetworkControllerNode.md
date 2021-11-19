@@ -16,7 +16,7 @@ Enables a network controller node.
 ## SYNTAX
 
 ```
-Enable-NetworkControllerNode -Name <String> [-PassThru] [-ComputerName <String>] [-UseSsl]
+Enable-NetworkControllerNode -Name <String> [-PassThru] [-IntentRejoin] [-ComputerName <String>] [-UseSsl]
  [-Credential <PSCredential>] [-CertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -105,6 +105,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IntentRejoin
+Indicates the intent to rejoin.
+
+Use this parameter after cleaning up a node, for instance, if the node OS was replaced and the node is clean.
+The service fabric application data repopulates using information from the computer whose name is specified.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the node to be enabled.
 
@@ -174,9 +192,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
 ## OUTPUTS
 
-###  
+### System.Object
+
 The output for this cmdlet contains the following fields: 
 - Name of the node
 - Hostname, fully qualified domain name (FQDN), or IP address of the node

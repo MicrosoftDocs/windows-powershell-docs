@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Uninstall-ProvisioningPackage cmdlet uninstalls .ppkg files.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
 ms.date: 05/09/2017
@@ -11,7 +11,7 @@ title: Uninstall-ProvisioningPackage
 # Uninstall-ProvisioningPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Uninstalls .PPKG package from the local machine.
 
 ## SYNTAX
 
@@ -40,21 +40,23 @@ Uninstall-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Unintalls .PPKG package based on package ID, path, metadata, or all packages.
+
+The **Uninstall-ProvisioningPackage** cmdlet is supported on Windows 11 client operating system only.
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> {{ Add example code here }}
+### Example 1: Uninstall all provisioning packages
+```powershell
+PS C:\> Uninstall-ProvisioningPackage -AllInstalledPackages
 ```
 
-{{ Add example description here }}
+Uninstalls all provisioning packages.
 
 ## PARAMETERS
 
 ### -AllInstalledPackages
-{{Fill AllInstalledPackages Description}}
+Removes all installed packages.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies the logs directory path.
 
 ```yaml
 Type: String
@@ -99,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-{{Fill PackageId Description}}
+Specifies the ID of a package.
 
 ```yaml
 Type: String
@@ -114,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackagePath
-{{Fill PackagePath Description}}
+Specifies the package path.
 
 ```yaml
 Type: String
@@ -129,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuntimeMetadata
-{{Fill RuntimeMetadata Description}}
+Specifies a runtime provisioning package metadata object.
 
 ```yaml
 Type: RuntimeProvPackageMetadata
@@ -144,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the location of the WPR profile file.
 
 ```yaml
 Type: String

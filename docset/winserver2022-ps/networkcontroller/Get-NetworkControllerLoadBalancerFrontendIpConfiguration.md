@@ -126,9 +126,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
 
-### 
+### System.Object
 
 Following properties can be retrieved for front end IP configuration of load balancer resource:
 1. Private IP address (VIP)
@@ -139,6 +141,7 @@ Following properties can be retrieved for front end IP configuration of load bal
 6. Subnet associated with the resource
 7. Access control list associated with the resource
 8. Service insertion rules associated with the resource
+
 ## NOTES
 
 ## RELATED LINKS

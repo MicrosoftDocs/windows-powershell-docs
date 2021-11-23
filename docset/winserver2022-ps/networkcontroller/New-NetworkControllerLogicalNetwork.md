@@ -144,7 +144,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassInnerException
+This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
 
+The thumbprint must be provided only if the network controller client authentication is X509 certificates.
+**Get-NetworkController** retrieves that client authentication and authorization information.
 
 ```yaml
 Type: SwitchParameter
@@ -240,13 +243,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### LogicalNetworkProperties
+### System.String
+
+### Microsoft.Windows.NetworkController.LogicalNetworkProperties
+
 This cmdlet accepts a **LogicalNetworkProperties** object that can contain the following properties: 
 
 - The subnets for the logical network
 - Whether network virtualization is enabled for the logical network.
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

@@ -308,7 +308,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpecificFileNameLevel
-Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option. 
+Specifies the attribute of the file off which to base a file name rule. 
 Refer to [File Name Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values. 
 
 ```yaml

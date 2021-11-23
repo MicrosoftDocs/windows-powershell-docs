@@ -22,6 +22,8 @@ Get-AssignedAccess [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AssignedAccess** cmdlet gets the current configuration for assigned access, including the user name, user SID, app friendly name, and app ID.
 
+Assigned Access cmdlets are supported on Windows 10 and Windows 11 client operating systems only.
+
 ## EXAMPLES
 
 ### Example 1: Get the configuration for assigned access

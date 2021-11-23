@@ -43,12 +43,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-None
 
 ## OUTPUTS
 
-### WBSummary
-This cmdlet returns the **WBSummary** object that contains information about the backup history for this computer.
+### System.Object
 
 ## NOTES
 

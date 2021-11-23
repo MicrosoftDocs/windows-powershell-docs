@@ -373,7 +373,7 @@ Accept wildcard characters: False
 
 ### -NotifyCmdLine
 Specifies a program to run after the job finishes or encounters an error.
-The program runs in the current context.
+The program runs in the context of the user who runs this cmdlet.
 
 Specify the program name and any parameters as an array of strings.
 
@@ -397,6 +397,8 @@ Valid values are:
 - 2: Generates an event when an error occurs.
 - 3: Generates an event when all files have completed transfer or when an error occurs.
 - 4: Disables notifications.
+
+The default value is 3.
 
 ```yaml
 Type: NotifyFlagValue

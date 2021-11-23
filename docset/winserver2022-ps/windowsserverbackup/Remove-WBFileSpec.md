@@ -112,13 +112,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBFileSpec, WBPolicy
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
+
+### Microsoft.Windows.ServerBackup.Commands.WBFileSpec
+
 This cmdlet removes a **WBFileSpec** object from a **WBPolicy** object.
 
 ## OUTPUTS
 
-### None
-None
+### System.Object
 
 ## NOTES
 

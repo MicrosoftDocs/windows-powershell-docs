@@ -21,13 +21,13 @@ Get-NetworkControllerManagedDevices [-RestURI] <String> [[-Credential] <PSCreden
 ```
 
 ## DESCRIPTION
-The **Get-NetworkControllerManagedDevices** cmdlet gets managed devices for a Network Controller.
+The **Get-NetworkControllerManagedDevices** cmdlet gets managed devices for a Network Controller. The cmdlet aggregates results for devices from **Get-NetworkControllerServer**, **Get-NetworkControllerVirtualServer**, **Get-NetworkControllerGateway**, and **Get-NetworkControllerLoadBalancerMux**, and then presents the connections information for every device.
 
 ## EXAMPLES
 
 ### Example 1: Get managed devices
 ```powershell
-Get-NetworkControllerManagedDevices -RestURI  "NC-0.contoso.cloud.com" 
+Get-NetworkControllerManagedDevices -RestURI  "https://nc.contoso.cloud.com" 
 ```
 
 This command gets managed devices for the specified Network Controller REST APIs.
@@ -101,3 +101,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Debug-ServiceFabricNodeStatus](Debug-ServiceFabricNodeStatus.md)
 
 [Get-NetworkControllerDeploymentInfo](Get-NetworkControllerDeploymentInfo.md)
+
+[Get-NetworkControllerGateway](../networkcontroller/Get-NetworkControllerGateway.md)
+
+[Get-NetworkControllerLoadBalancerMux](../networkcontroller/Get-NetworkControllerLoadBalancerMux.md)
+
+[Get-NetworkControllerServer](../networkcontroller/Get-NetworkControllerServer.md)
+
+[Get-NetworkControllerVirtualServer](../networkcontroller/Get-NetworkControllerVirtualServer.md)

@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassInnerException
-
+This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
 
 ```yaml
 Type: SwitchParameter
@@ -118,9 +118,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### 
+### System.Object
+
 Each access control list contains multiple ACL rules. Each rule contains the following:
 1. Name
 2. Protocol

@@ -1,5 +1,5 @@
----
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+﻿---
+description: Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the Uninstall-TrustedProvisioningCertificate cmdlet.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
 ms.date: 05/09/2017
@@ -11,31 +11,38 @@ title: Get-TrustedProvisioningCertificate
 # Get-TrustedProvisioningCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Lists all installed trusted provisioning certificates.
 
 ## SYNTAX
 
 ```
 Get-TrustedProvisioningCertificate [[-Thumbprint] <String>] [-LogsDirectoryPath <String>] [-WprpFile <String>]
- [-ConnectedDevice]
+ [-ConnectedDevice] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the `Uninstall-TrustedProvisioningCertificate` cmdlet.
+
+The **Get-TrustedProvisioningCertificate** cmdlet is supported on Windows 11 client operating system only.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: List installed trusted provisioning certificates
+```powershell
+PS C:\> Get-TrustedProvisioningCertificate
 ```
-PS C:\> {{ Add example code here }}
+```output
+The operation completed successfully.
+
+No certificates found in the trusted provisioners store
 ```
 
-{{ Add example description here }}
+Lists all installed trusted provisioning certificates.
 
 ## PARAMETERS
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+If enabled, specifies that the device type is mobile.
 
 ```yaml
 Type: SwitchParameter
@@ -50,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies the logs directory path.
 
 ```yaml
 Type: String
@@ -65,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-{{Fill Thumbprint Description}}
+Specifies the thumbprint of the certificate to retrieve.
 
 ```yaml
 Type: String
@@ -80,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the location of the WPR profile file.
 
 ```yaml
 Type: String
@@ -94,16 +101,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
-

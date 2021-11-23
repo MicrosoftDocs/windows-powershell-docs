@@ -395,10 +395,9 @@ Valid values are:
 
 - 1: Generates an event when all files in the job have been transferred.
 - 2: Generates an event when an error occurs.
-- 3: Generates an event when all files have completed transfer or when an error occurs.
 - 4: Disables notifications.
 
-The default value is 3.
+The default value is 1|2.
 
 ```yaml
 Type: NotifyFlagValue

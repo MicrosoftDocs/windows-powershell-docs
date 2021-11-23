@@ -27,7 +27,7 @@ The **Get-NetworkControllerManagedDevices** cmdlet gets managed devices for a Ne
 
 ### Example 1: Get managed devices
 ```powershell
-Get-NetworkControllerManagedDevices -RestURI  "https://nc.contoso.cloud.com" 
+Get-NetworkControllerManagedDevices -RestURI "https://nc.contoso.cloud.com" 
 ```
 
 This command gets managed devices for the specified Network Controller REST APIs.

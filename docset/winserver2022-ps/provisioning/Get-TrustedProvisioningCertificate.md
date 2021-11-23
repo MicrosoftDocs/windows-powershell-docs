@@ -1,5 +1,5 @@
----
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+﻿---
+description: Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the Uninstall-TrustedProvisioningCertificate cmdlet.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
 ms.date: 05/09/2017
@@ -17,11 +17,13 @@ Lists all installed trusted provisioning certificates.
 
 ```
 Get-TrustedProvisioningCertificate [[-Thumbprint] <String>] [-LogsDirectoryPath <String>] [-WprpFile <String>]
- [-ConnectedDevice]
+ [-ConnectedDevice] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the `Uninstall-TrustedProvisioningCertificate` cmdlet.
+
+The **Get-TrustedProvisioningCertificate** cmdlet is supported on Windows 11 client operating system only.
 
 ## EXAMPLES
 
@@ -99,16 +101,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
-

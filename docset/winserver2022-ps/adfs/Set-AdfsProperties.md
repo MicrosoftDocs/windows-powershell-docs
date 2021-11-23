@@ -84,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddBannedIps
-{{ Fill AddBannedIps Description }}
+
+Specifies a list of IP addresses to add to the banned IP list.
 
 ```yaml
 Type: String[]
@@ -99,7 +100,15 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalErrorPageInfo
-{{ Fill AdditionalErrorPageInfo Description }}
+
+Specifies the logging details on the error page.
+
+Accepted values for this parameter are:
+
+- *None* - Shows least amount of detail on the error page.
+- *Private* - Shows more detail and doesn't expose PII information. For example, node name is not
+  displayed.
+- *Detailed* - Shows most verbose level of detail on the error page.
 
 ```yaml
 Type: ErrorShowLevel
@@ -129,7 +138,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedActiveDirectoryNetbiosNames
-{{ Fill AllowedActiveDirectoryNetbiosNames Description }}
+
+Specifies the custom allowed NetBIOS names.
+
+AD FS auto detects NetBIOS names from the Active Directory. The specified custom NetBIOS names are
+also allowed for user authentication.
 
 ```yaml
 Type: String[]
@@ -144,7 +157,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedActiveDirectoryUserPrincipalNames
-{{ Fill AllowedActiveDirectoryUserPrincipalNames Description }}
+
+Specifies a custom list of UPN suffixes.
+
+AD FS auto detects the UPN suffix names from the Active Directory. The specified custom UPN suffixes
+are also allowed for user authentication.
 
 ```yaml
 Type: String[]
@@ -337,7 +354,8 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateKeyLengthInBits
-{{ Fill CertificateKeyLengthInBits Description }}
+
+Specifies the key length in bits for any certificates that the Federation Service generates.
 
 ```yaml
 Type: Int32
@@ -683,7 +701,7 @@ Accept wildcard characters: False
 
 ### -ExtranetLockoutThreshold
 Specifies the maximum number of bad password attempts permitted against the directory before the account is throttled when accessing applications from the extranet.
-If you use Active Directory® Domain Services account lockout policies, it is strongly recommended that you set this threshold to a value that is less than the threshold in AD DS to avoid lockout of the user inside and outside the network.
+If you use Active Directory&reg; Domain Services account lockout policies, it is strongly recommended that you set this threshold to a value that is less than the threshold in AD DS to avoid lockout of the user inside and outside the network.
 
 ```yaml
 Type: Int32
@@ -698,7 +716,12 @@ Accept wildcard characters: False
 ```
 
 ### -ExtranetLockoutThresholdFamiliarLocation
-{{ Fill ExtranetLockoutThresholdFamiliarLocation Description }}
+
+Specifies the maximum number of bad password attempts permitted against the directory when accessing
+applications from the extranet for a known device. Once the limit is reached, the account access is
+throttled. If you use Active Directory Domain Services account lockout policy settings, it is
+strongly recommended that you set this threshold to a value that is less than the threshold in AD DS
+to avoid lockout of the user inside and outside the network.
 
 ```yaml
 Type: Int32
@@ -867,7 +890,22 @@ Accept wildcard characters: False
 ```
 
 ### -KdfV2Support
-{{ Fill KdfV2Support Description }}
+
+Enables and controls the Key Derivation Function (KDF) option to address token replay attacks.
+
+The acceptable values for this parameter are:
+
+- *None* - (Default value) Used to track if the KDFv2 setting value was ever changed. This value may
+  not be set by an Administrator.
+- *Disabled* - Reverts the Key Derivation Function to its original behavior, in case there are any
+  issues encountered when enabling KDFv2.
+- *Enabled* - Enables KDFv2 support. The ADFS server advertises that it supports the new
+  capabilities. If an initial Primary Refresh Token (PRT) request is sent from a client using the
+  original KDF version, AD FS accepts the request and uses the original KDF. This allows for
+  support of unpatched clients.
+- *Enforced* - Enables KDFv2 support and disallows (rejects) initial PRT requests using the original
+  KDF. Once an Administrator is comfortable that all clients are patched, they may switch to
+  enforced mode.
 
 ```yaml
 Type: KdfV2SupportOptions
@@ -1127,7 +1165,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveBannedIps
-{{ Fill RemoveBannedIps Description }}
+
+Specifies a list of IP addresses to remove from the banned IP list.
 
 ```yaml
 Type: String[]
@@ -1192,7 +1231,9 @@ Accept wildcard characters: False
 ```
 
 ### -SendLogsCacheSizeInMb
-{{ Fill SendLogsCacheSizeInMb Description }}
+
+Specifies the size in megabytes for cached debug logs. The debug logs are used for the send logs
+feature.
 
 ```yaml
 Type: Int64
@@ -1207,7 +1248,8 @@ Accept wildcard characters: False
 ```
 
 ### -SendLogsEnabled
-{{ Fill SendLogsEnabled Description }}
+
+Enables the send logs feature on the error page.
 
 ```yaml
 Type: Boolean
@@ -1316,7 +1358,14 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsHelloKeyVerification
-{{ Fill WindowsHelloKeyVerification Description }}
+
+Specifies the action when AD FS receives a Windows Hello request with a weak key.
+
+The accepted values for this parameter are:
+
+- *AllowAll* - Allow all keys and don't log.
+- *AllowAllAndLog* - Allow all keys and log when they are used.
+- *AllowStrongKeysOnly* - Block weak keys and log.
 
 ```yaml
 Type: WindowsHelloKeyVerificationOptions

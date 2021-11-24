@@ -1,5 +1,5 @@
 ---
-description: Updates properties for the AD FS directory.
+description: Sets Active Directory properties for the AD FS.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: adfs
 ms.date: 09/30/2021
@@ -11,7 +11,7 @@ title: Set-AdfsDirectoryProperties
 # Set-AdfsDirectoryProperties
 
 ## SYNOPSIS
-Updates properties for the AD FS directory.
+Sets Active Directory properties for the AD FS.
 
 ## SYNTAX
 
@@ -25,17 +25,22 @@ The **Set-AdfsDirectoryProperties** cmdlet sets properties for the AD FS directo
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set Active Directory properties for AD FS
+```
+PS> Set-AdfsDirectoryProperties -AddUpnSuffix custom.contoso.com -AddNetbiosName customDomain
 ```
 
-{{ Add example description here }}
+Adds `custom.contoso.com` to the custom UPN suffix list and `customDomain` to the custom NetBIOS
+name.
 
 ## PARAMETERS
 
 ### -AddNetbiosName
-{{ Fill AddNetbiosName Description }}
+
+Specifies a list of custom allowed NetBIOS names.
+
+AD FS auto detects NetBIOS names from the Active Directory. The specified custom NetBIOS names are
+also allowed for user authentication.
 
 ```yaml
 Type: String[]
@@ -50,7 +55,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddUpnSuffix
-{{ Fill AddUpnSuffix Description }}
+
+Specifies a list of custom UPN suffixes to add.
+
+AD FS auto detects the UPN suffix names from the Active Directory. The specified custom UPN suffixes
+are also allowed for user authentication.
 
 ```yaml
 Type: String[]
@@ -65,7 +74,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveNetbiosName
-{{ Fill RemoveNetbiosName Description }}
+
+Specifies a list of NetBIOS names to remove from the custom NetBIOS names list.
+
+AD FS auto detects NetBIOS names from the Active Directory. The specified custom NetBIOS names are
+also allowed for user authentication.
 
 ```yaml
 Type: String[]
@@ -80,7 +93,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveUpnSuffix
-{{ Fill RemoveUpnSuffix Description }}
+
+Specifies a list of UPN suffixes to remove from the custom UPN suffix list.
+
+AD FS auto detects the UPN suffix names from the Active Directory. The specified custom UPN suffixes
+are also allowed for user authentication.
 
 ```yaml
 Type: String[]

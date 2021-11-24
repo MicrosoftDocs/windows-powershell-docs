@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -AllowedActiveDirectoryNetbiosNames
 
-Specifies the custom allowed NetBIOS names.
+Specifies a list of custom allowed NetBIOS names.
 
 AD FS auto detects NetBIOS names from the Active Directory. The specified custom NetBIOS names are
 also allowed for user authentication.
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 ### -AllowedActiveDirectoryUserPrincipalNames
 
-Specifies a custom list of UPN suffixes.
+Specifies a list of custom UPN suffixes.
 
 AD FS auto detects the UPN suffix names from the Active Directory. The specified custom UPN suffixes
 are also allowed for user authentication.

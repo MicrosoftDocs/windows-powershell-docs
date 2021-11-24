@@ -192,7 +192,7 @@ Gets the administrative polices of the Device Registration Service.
 Gets the UPN suffixes that can be used with device registration.
 
 ### [Get-AdfsDirectoryProperties](Get-AdfsDirectoryProperties.md)
-Gets the associated properties for the AD FS directory.
+Gets the associated Active Directory properties for the AD FS.
 
 ### [Get-AdfsEndpoint](Get-AdfsEndpoint.md)
 Retrieves an endpoint in AD FS.
@@ -472,7 +472,7 @@ Configures the administrative policies for the Device Registration Service.
 Sets the list of UPN suffixes.
 
 ### [Set-AdfsDirectoryProperties](Set-AdfsDirectoryProperties.md)
-Sets properties for the AD FS directory.
+Sets Active Directory properties for the AD FS.
 
 ### [Set-AdfsEndpoint](Set-AdfsEndpoint.md)
 Sets the endpoint on a Web Application Proxy.

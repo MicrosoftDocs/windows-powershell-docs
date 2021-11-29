@@ -11,7 +11,7 @@ title: Add-ClusterGroupToAffinityRule
 # Add-ClusterGroupToAffinityRule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This cmdlet is used to add either a VM role or a group name to a cluster affinity rule.
 
 ## SYNTAX
 
@@ -28,16 +28,14 @@ Add-ClusterGroupToAffinityRule -InputObject <CimInstance[]> [-Groups] <String[]>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet is used to add either a VM role or a group name to a cluster affinity rule. When using this cmdlet we can use both **-Name** and **-Groups**. The former is used to choose the desired affinity rule and the latter is for the groups to be added.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Add-ClusterGroupToAffinityRule -Groups MyGroup -Name MyRule -Cluster MyCluster
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -84,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Groups
-{{ Fill Groups Description }}
+This list of groups to be added to the affinity rule.
 
 ```yaml
 Type: String[]
@@ -99,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -114,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+The Affinity rule in question that groups will be added to.
 
 ```yaml
 Type: String[]

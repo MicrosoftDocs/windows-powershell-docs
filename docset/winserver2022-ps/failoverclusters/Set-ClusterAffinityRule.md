@@ -11,7 +11,7 @@ title: Set-ClusterAffinityRule
 # Set-ClusterAffinityRule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This cmdlet is used to Enabled or Disable an affinity rule. This can also be used to change the RuleType.
 
 ## SYNTAX
 
@@ -28,16 +28,14 @@ Set-ClusterAffinityRule -InputObject <CimInstance[]> [-RuleType <RuleType>] [-En
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet is used to Enabled or Disable an affinity rule. This can also be used to change the RuleType.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-ClusterAffinityRule -Name MyRule -Enabled -Cluster MyCluster
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -84,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-{{ Fill Enabled Description }}
+Enables or disables the affinity rule.
 
 ```yaml
 Type: UInt32
@@ -99,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -114,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+The name of the affinity rule you want to either enable or disable.
 
 ```yaml
 Type: String[]
@@ -145,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleType
-{{ Fill RuleType Description }}
+The RuleType you want to set your affinity rule to.
 
 ```yaml
 Type: RuleType

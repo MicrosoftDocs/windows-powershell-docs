@@ -11,7 +11,7 @@ title: Remove-ClusterSharedVolumeFromAffinityRule
 # Remove-ClusterSharedVolumeFromAffinityRule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Remove a cluster shared volume from an affinity rule.
 
 ## SYNTAX
 
@@ -28,17 +28,14 @@ Remove-ClusterSharedVolumeFromAffinityRule -InputObject <CimInstance[]> [-Cluste
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Remove a cluster shared volume from an affinity rule.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Remove-ClusterSharedVolumeFromAffinityRule -ClusterSharedVolumes MyVolume -Name MyRule -Cluster MyCluster
 ```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -AsJob
@@ -84,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClusterSharedVolumes
-{{ Fill ClusterSharedVolumes Description }}
+The clustered shared volumes that should be added to the given affinity rule
 
 ```yaml
 Type: String[]
@@ -99,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -114,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+The name of the affinity rule to add groups to.
 
 ```yaml
 Type: String[]

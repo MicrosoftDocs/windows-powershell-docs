@@ -11,7 +11,7 @@ title: Remove-ClusterAffinityRule
 # Remove-ClusterAffinityRule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes a specified affinity rule.
 
 ## SYNTAX
 
@@ -28,17 +28,14 @@ Remove-ClusterAffinityRule -InputObject <CimInstance[]> [-CimSession <CimSession
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Removes a specified affinity rule.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Remove-ClusterAffinityRule -Name -Cluster Cluster1
 ```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -AsJob
@@ -84,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -99,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+The name of the affinity rule to delete.
 
 ```yaml
 Type: String[]

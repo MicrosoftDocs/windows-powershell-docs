@@ -11,7 +11,7 @@ title: Get-ClusterAffinityRule
 # Get-ClusterAffinityRule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This cmdlet is used to display the given rule and what type it is.
 
 ## SYNTAX
 
@@ -21,17 +21,14 @@ Get-ClusterAffinityRule [[-Name] <String[]>] [-CimSession <CimSession[]>] [-Thro
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet is used to display the given rule and what type it is. If -Name is not specified, it will list all rules.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-ClusterAffinityRule -Name -Cluster Cluster1
 ```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -AsJob
@@ -77,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+The name of the desired affinity rule. if this is not provided, it will list all the rules.
 
 ```yaml
 Type: String[]

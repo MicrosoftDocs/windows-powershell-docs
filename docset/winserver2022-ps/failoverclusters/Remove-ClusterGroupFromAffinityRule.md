@@ -11,7 +11,7 @@ title: Remove-ClusterGroupFromAffinityRule
 # Remove-ClusterGroupFromAffinityRule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes a cluster group from an affinity rule.
 
 ## SYNTAX
 
@@ -28,17 +28,14 @@ Remove-ClusterGroupFromAffinityRule -InputObject <CimInstance[]> [-Groups] <Stri
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Removes a cluster group from an affinity rule. This does not remove the rule itself
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Remove-ClusterGroupFromAffinityRule -Name MuRyle -Groups MyGroup -Cluster MyCluster
 ```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -AsJob
@@ -84,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Groups
-{{ Fill Groups Description }}
+The groups to be removed from the affinity rule.
 
 ```yaml
 Type: String[]
@@ -99,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -114,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+The name of the affinity rule to remove groups from 
 
 ```yaml
 Type: String[]

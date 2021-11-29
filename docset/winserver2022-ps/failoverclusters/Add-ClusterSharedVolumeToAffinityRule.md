@@ -11,7 +11,7 @@ title: Add-ClusterSharedVolumeToAffinityRule
 # Add-ClusterSharedVolumeToAffinityRule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Adds a Cluster Shared Volume (CSV) to an existing Affinity Rule.
 
 ## SYNTAX
 
@@ -28,17 +28,14 @@ Add-ClusterSharedVolumeToAffinityRule -InputObject <CimInstance[]> [-ClusterShar
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet gives the ability to keep VMs with the cluster shared volume(CSV) that contains its VHD.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Add-ClusterSharedVolumeToAffinityRule -ClusterSharedVolumes MyVolume -Name MyRule -Cluster MyCluster
 ```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -AsJob
@@ -84,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClusterSharedVolumes
-{{ Fill ClusterSharedVolumes Description }}
+The cluster shared volumes to be added to the affinity rule.
 
 ```yaml
 Type: String[]
@@ -99,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -114,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+The affinity rule in question to add cluster shared volumes to.
 
 ```yaml
 Type: String[]

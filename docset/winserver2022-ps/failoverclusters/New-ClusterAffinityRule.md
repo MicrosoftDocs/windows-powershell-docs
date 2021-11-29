@@ -11,7 +11,7 @@ title: New-ClusterAffinityRule
 # New-ClusterAffinityRule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This cmdlet allows the creation of new affinity rules. 
 
 ## SYNTAX
 
@@ -21,17 +21,14 @@ New-ClusterAffinityRule [-Name] <String> [-RuleType <RuleType>] [-CimSession <Ci
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet allows the creation of new affinity rules. There are four main types when creating a new rule: SameFaultDomain | SameNode | DifferentFaultDomain | DifferentNode
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-ClusterAffinityRule -Name -RuleType SameFaultDomain -Cluster Cluster1
 ```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -AsJob
@@ -77,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+The name of the rule to be created.
 
 ```yaml
 Type: String
@@ -92,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleType
-{{ Fill RuleType Description }}
+The type of the rule to be created.
 
 ```yaml
 Type: RuleType

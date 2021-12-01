@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ### -PackageId
 
-Specifies the ID of the Package to be extracted.
+Specifies the ID of the package to be extracted.
 
 ```yaml
 Type: String

@@ -32,7 +32,7 @@ This cmdlet cannot change the Name or Type of a DNS server resource record objec
 ### Example 1: Change the timespan of a resource record
 ```
 PS C:\> $OldObj = Get-DnsServerResourceRecord -Name "Host01" -ZoneName "contoso.com" -RRType "A"
-PS C:\> $NewObj = $OldObj.Clone()
+PS C:\> $NewObj = [ciminstance]::new($OldObj)
 PS C:\> $NewObj.TimeToLive = [System.TimeSpan]::FromHours(2)
 PS C:\> Set-DnsServerResourceRecord -NewInputObject $NewObj -OldInputObject $OldObj -ZoneName "contoso.com" -PassThru
 
@@ -45,7 +45,7 @@ In this example, the time to live (TTL) value of the resource record named Host0
 
 The first command assigns a resource record named Host01 in the zone named contoso.com to the variable **$OldObj**.
 
-The second command copies the variable **$OldObj** to a new variable **$NewObj** using the .Clone() method.
+The second command copies the variable **$OldObj** to a new variable **$NewObj** using the [ciminstance]::new() constructor.
 
 The third command sets the TTL time span for **$NewObj** to 2 hours.
 

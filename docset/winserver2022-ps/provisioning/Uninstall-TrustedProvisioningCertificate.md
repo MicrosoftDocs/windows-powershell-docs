@@ -1,4 +1,4 @@
----
+﻿---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
@@ -17,17 +17,19 @@ Removes a previously installed provisioning certificate.
 
 ```
 Uninstall-TrustedProvisioningCertificate [-Thumbprint] <String> [-LogsDirectoryPath <String>]
- [-WprpFile <String>] [-ConnectedDevice]
+ [-WprpFile <String>] [-ConnectedDevice] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Removes a previously installed provisioning certificate.
 
+The **Uninstall-TrustedProvisioningCertificate** cmdlet is supported on Windows 11 client operating system only.
+
 ## EXAMPLES
 
-### Example 1: Uninstall a trusted provisioning certificate 
+### Example 1: Uninstall a trusted provisioning certificate
 ```powershell
-PS C:\> Uninstall-TrustedProvisioningCertificate -Thumbprint ‎fedd995b45e633d4ef30fcbc8f3a48b627e9a28b
+PS C:\> Uninstall-TrustedProvisioningCertificate -Thumbprint fedd995b45e633d4ef30fcbc8f3a48b627e9a28b
 ```
 
 Uninstall a trusted provisioning certificate with the specified thumbprint.
@@ -65,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-Certificate thumbprint
+Specifies a certificate thumbprint.
 
 ```yaml
 Type: String
@@ -94,16 +96,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
-

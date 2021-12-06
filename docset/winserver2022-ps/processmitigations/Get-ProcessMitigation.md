@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: ProcessMitigations.dll-Help.xml
+external help file: Microsoft.ProcessMitigations.Commands.dll-Help.xml
 Module Name: ProcessMitigations
 ms.date: 03/29/2017
 online version: https://docs.microsoft.com/powershell/module/processmitigations/get-processmitigation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -15,27 +15,27 @@ Gets the current process mitigation settings, either from the registry, from a r
 
 ## SYNTAX
 
-### FullPolicySet
+### FullPolicy (Default)
 ```
 Get-ProcessMitigation [-FullPolicy] [<CommonParameters>]
 ```
 
-### IdSet
-```
-Get-ProcessMitigation [-Id] <Int32[]> [<CommonParameters>]
-```
-
-### NameSet
+### NameMode
 ```
 Get-ProcessMitigation [-Name] <String> [-RunningProcesses] [<CommonParameters>]
 ```
 
-### SaveSet
+### IdMode
+```
+Get-ProcessMitigation [-Id] <Int32[]> [<CommonParameters>]
+```
+
+### SaveMode
 ```
 Get-ProcessMitigation [-RegistryConfigFilePath <String>] [<CommonParameters>]
 ```
 
-### SystemSet
+### SystemMode
 ```
 Get-ProcessMitigation [-System] [<CommonParameters>]
 ```
@@ -101,8 +101,8 @@ Returns every processes' current mitigation settings in the registry
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: FullPolicySet
-Aliases: 
+Parameter Sets: FullPolicy
+Aliases: f
 
 Required: False
 Position: Named
@@ -116,8 +116,8 @@ Process Id to retrieve current running process mitigation settings from
 
 ```yaml
 Type: Int32[]
-Parameter Sets: IdSet
-Aliases: 
+Parameter Sets: IdMode
+Aliases:
 
 Required: True
 Position: 0
@@ -131,8 +131,8 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: NameSet
-Aliases: 
+Parameter Sets: NameMode
+Aliases: n
 
 Required: True
 Position: 0
@@ -146,8 +146,8 @@ File to save the current registry process mitigation configuration to
 
 ```yaml
 Type: String
-Parameter Sets: SaveSet
-Aliases: 
+Parameter Sets: SaveMode
+Aliases: o
 
 Required: False
 Position: Named
@@ -156,13 +156,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RunningProcess
+### -RunningProcesses
 Pull the current process mitigation settings from a running instance instead of the registry.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: NameSet
-Aliases:
+Parameter Sets: NameMode
+Aliases: r
 
 Required: False
 Position: Named
@@ -176,8 +176,8 @@ Pulls the current system defaults for process mitigations.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: SystemSet
-Aliases:
+Parameter Sets: SystemMode
+Aliases: s
 
 Required: False
 Position: Named
@@ -191,12 +191,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
-System.Int32\[\]
+### System.Int32[]
 
 ## OUTPUTS
 
-### Microsoft.Samples.PowerShell.Commands.AppMitigations
+### System.Object
 
 ## NOTES
 

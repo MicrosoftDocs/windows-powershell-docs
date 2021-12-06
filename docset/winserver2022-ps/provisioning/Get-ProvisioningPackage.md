@@ -36,6 +36,8 @@ Get-ProvisioningPackage [-AllInstalledPackages] [-LogsDirectoryPath <String>] [-
 ## DESCRIPTION
 The **Get-ProvisioningPackage** cmdlet gets information about the installed provisioning package.
 
+The **Get-ProvisioningPackage** cmdlet is supported on Windows 11 client operating system only.
+
 ## EXAMPLES
 
 ### Example 1
@@ -124,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-Specifies the name of a wprp file.
+Specifies the name of a WPR profile file.
 
 ```yaml
 Type: String

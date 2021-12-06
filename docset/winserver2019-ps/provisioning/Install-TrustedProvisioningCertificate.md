@@ -17,11 +17,13 @@ Adds a certificate to the Trusted Certificate Store.
 
 ```
 Install-TrustedProvisioningCertificate [-CertificatePath] <String> [-ForceInstall]
- [-LogsDirectoryPath <String>] [-WprpFile <String>] [-ConnectedDevice]
+ [-LogsDirectoryPath <String>] [-WprpFile <String>] [-ConnectedDevice] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Installs the specified certificate to the Trusted Certificate Store.
+
+The **Install-TrustedProvisioningCertificate** cmdlet is supported on Windows 10 client operating system only.
 
 ## EXAMPLES
 
@@ -65,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceInstall
-Specifies whether, if a certificate already exists, it will be overwritten.
+Specifies whether, if certificate already exists, it will be overwritten.
 
 ```yaml
 Type: SwitchParameter
@@ -108,6 +110,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

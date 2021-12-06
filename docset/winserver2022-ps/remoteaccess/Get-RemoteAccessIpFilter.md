@@ -127,9 +127,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.RemoteAccessIpFilter.Direction
+
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#InterfaceIpFilter[]
+### Microsoft.Management.Infrastructure.CimInstance[]
+
+### Microsoft.Management.Infrastructure.CimInstance#InterfaceIpFilter
 
 ## NOTES
 

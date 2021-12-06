@@ -187,11 +187,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### IDynamicCategory
+### Microsoft.UpdateServices.Administration.IDynamicCategory
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 

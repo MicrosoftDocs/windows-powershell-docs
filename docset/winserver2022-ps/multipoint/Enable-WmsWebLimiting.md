@@ -128,9 +128,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### SessionId[]
+### System.UInt32[]
+
+### System.String
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

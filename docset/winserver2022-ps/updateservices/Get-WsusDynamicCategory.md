@@ -128,6 +128,8 @@ Accept wildcard characters: False
 
 ### -First
 
+Specifies the number of dynamic categories to return from the beginning of the results.
+
 ```yaml
 Type: Int64
 Parameter Sets: Filter
@@ -157,6 +159,8 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
+
+Specifies the number of dynamic categories to skip from the beginning of the results.
 
 ```yaml
 Type: Int64
@@ -208,11 +212,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### IUpdateServer
+### Microsoft.UpdateServices.Administration.IUpdateServer
 
 ## OUTPUTS
 
-### IDynamicCategory
+### System.Object
 
 ## NOTES
 

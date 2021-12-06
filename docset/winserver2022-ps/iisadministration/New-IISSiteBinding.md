@@ -17,7 +17,7 @@ Adds a new binding to an existing Website. This cmdlet has been introduced in ve
 ```
 New-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] <String>]
  [[-CertificateThumbPrint] <String>] [[-SslFlag] <SslFlags>] [[-CertStoreLocation] <String>] [-Force]
- [-Passthru]
+ [-Passthru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -185,7 +185,7 @@ Specifies the SSL Flag(s) of the new binding.
 Type: SslFlags
 Parameter Sets: (All)
 Aliases:
-Accepted values: None, Sni, CentralCertStore
+Accepted values: None, Sni, CentralCertStore, DisableHTTP2, DisableOCSPStp, DisableQUIC, DisableTLS13, DisableLegacyTLS
 
 Required: False
 Position: 4
@@ -194,13 +194,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
 
+### Microsoft.Web.Administration.SslFlags
+
 ## OUTPUTS
 
-### Microsoft.Web.Administration.BindingCollection
+### System.Object
 
 ## NOTES
 

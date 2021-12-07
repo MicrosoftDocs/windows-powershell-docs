@@ -209,7 +209,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy,WBDisk,string
+### Microsoft.Windows.ServerBackup.Commands.WBDisk
+
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
+
 This cmdlet queries the **WBPolicy** object and the **WBDisk** object, and it references a string that specifies a path to the volumes where you will store the backups.
 
 Depending on the input parameters, you can use this cmdlet to query the **WBPolicy** object for a list of volumes specified for backup, query the **WBDisk** object for a list of volumes present on a particular disk, or get a **WBVolume** object of the volume that the string specifies *VolumePath* parameter.
@@ -218,8 +221,7 @@ In addition, you can use this cmdlet with the parameters *CriticalVolumes* and *
 
 ## OUTPUTS
 
-### WBVolume []
-This cmdlet returns an array of volumes in the **WBPolicy** object.
+### System.Object
 
 ## NOTES
 * You can add the volumes that you get from this cmdlet to the **WBPolicy** object by using the **Add-WBVolume** cmdlet to specify them as volumes to be backed up, or by using the **New-WBBackupTarget** cmdlet to specify them as backup storage locations.

@@ -17,7 +17,7 @@ Modifies hypervisor Code Integrity options for a policy.
 
 ### Options
 ```
-Set-HVCIOptions [-Enabled] [-Strict] [-DebugMode] [-FilePath] <String> [<CommonParameters>]
+Set-HVCIOptions [-Enabled] [-Strict] [-DebugMode] [-DisableAllowed] [-FilePath] <String> [<CommonParameters>]
 ```
 
 ### None
@@ -56,6 +56,21 @@ It now has a value of 2.
 
 ### -DebugMode
 Indicates that this cmdlet turns on DebugMode in the policy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Options
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableAllowed
+Indicates that this cmdlet allows for HVCI to be disabled by the user outside of the Code Integrity policy enablement method.
 
 ```yaml
 Type: SwitchParameter

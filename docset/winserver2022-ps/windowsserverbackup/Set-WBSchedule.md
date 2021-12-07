@@ -82,13 +82,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy,Datetime []
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
+
+### System.DateTime[]
+
 This cmdlet references a **Datetime** object for the scheduled times and the **WBPolicy** object for the backup policy to update.
 
 ## OUTPUTS
 
-### DateTime[]
-This cmdlet returns the **Datetime** list that you use to update the policy.
+### System.Object
 
 ## NOTES
 

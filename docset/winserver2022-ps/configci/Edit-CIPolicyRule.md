@@ -185,27 +185,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RType
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: t
-Accepted values: Allow, Deny, a, d
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RemoveEkus
-
 
 ```yaml
 Type: String[]
 Parameter Sets: SignerRule
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -216,11 +201,10 @@ Accept wildcard characters: False
 
 ### -RemoveExceptions
 
-
 ```yaml
 Type: String[]
 Parameter Sets: SignerRule
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,11 +215,24 @@ Accept wildcard characters: False
 
 ### -Root
 
-
 ```yaml
 Type: String
 Parameter Sets: SignerRule
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RType
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: t
+Accepted values: Allow, Deny, a, d
 
 Required: False
 Position: Named

@@ -157,7 +157,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassInnerException
+This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
 
+The thumbprint must be provided only if the network controller client authentication is X509 certificates.
+**Get-NetworkController** retrieves that client authentication and authorization information.
 
 ```yaml
 Type: SwitchParameter
@@ -262,7 +265,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### ServerProperties
+### System.String
+
+### Microsoft.Windows.NetworkController.ServerProperties
+
 You can pipe an object to this cmdlet that contains the following properties: 
 
 - Connections that specifies the information that is required to connect to the server for the purposes of managing it.
@@ -275,6 +281,8 @@ Each connection has a management address and a credential reference to connect t
 - Server vendor name.
 
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

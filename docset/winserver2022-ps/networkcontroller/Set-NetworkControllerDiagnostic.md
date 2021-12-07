@@ -18,7 +18,7 @@ Changes diagnostic settings for the Network Controller.
 ```
 Set-NetworkControllerDiagnostic [-LogScope <LogScope>] [-DiagnosticLogLocation <String>]
  [-LogLocationCredential <PSCredential>] [-UseLocalLogLocation] [-LogTimeLimitInDays <UInt32>]
- [-LogSizeLimitInMBs <UInt32>] [-LogLevel <LogLevel>] [-PassThru] [-ComputerName <String>] [-UseSsl]
+ [-LogSizeLimitInMBs <UInt32>] [-LogLevel <LogLevel>] [-PassThru] [-Force] [-ComputerName <String>] [-UseSsl]
  [-Credential <PSCredential>] [-CertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -115,6 +115,21 @@ Cluster logs are stored locally in %systemdrive%\ProgramData\Microsoft\Service F
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Forces the command to run without asking for user confirmation.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -287,9 +302,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-###  
+### System.Object
+
 This cmdlet returns an object that contains the following fields: 
 
 - Log scope

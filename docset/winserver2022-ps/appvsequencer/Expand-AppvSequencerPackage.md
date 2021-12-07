@@ -1,4 +1,4 @@
----
+﻿---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
 Module Name: AppvSequencer

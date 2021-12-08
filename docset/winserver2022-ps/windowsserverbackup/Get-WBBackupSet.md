@@ -96,14 +96,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackupTarget
-This cmdlet uses a **WBBackupTarget** object to determine the computer from which to load the catalog and get backup information.
+### None
 
 ## OUTPUTS
 
-### WBBackupSet[]
-This cmdlet returns alist of **WBBackupSet** objects from the local system catalog or from the catalog on the computer that stores the backup sets.
-The *WBBackupTarget* parameter specifies the location of this computer.
+### System.Object
 
 ## NOTES
 

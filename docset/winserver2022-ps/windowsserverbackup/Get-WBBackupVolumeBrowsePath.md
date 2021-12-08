@@ -77,12 +77,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackup, WBVolume
+### Microsoft.Windows.ServerBackup.Commands.WBBackupSet
+
+### Microsoft.Windows.ServerBackup.Commands.WBVolume
+
 You must specify the **WBBackupSet** object that contains the backup set along with the **WBVolume** object that contains the volume inside the backup set.
 
 ## OUTPUTS
 
-### System.String
+### System.Object
+
 This cmdlet returns the mount path for the volume that you back up if the mount is successful.
 You can use the mount path with a dir command to browse the volume or specify the file recovery path as a parameter to the **Start-WBFileRecovery** cmdlet.
 This path is valid for only 10 minutes, and Windows Server® 2012 Backup deletes the mount path after that.

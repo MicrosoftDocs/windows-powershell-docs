@@ -303,9 +303,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-###  
+### System.Object
 This cmdlet returns an object that contains the following fields: 
 
 - Names of the network controller nodes

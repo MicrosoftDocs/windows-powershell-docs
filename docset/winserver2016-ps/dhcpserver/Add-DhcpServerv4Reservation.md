@@ -43,10 +43,13 @@ This example adds all of the reservations in the file that is named Reservations
 The **Import-Csv** cmdlet returns the objects that have reservation fields and pipes the objects to this cmdlet, which adds these reservations to the DHCP server services.
 The file that is named Reservations.csv should contain the reservations in the following comma-separated values (CSV) format:
 
-`ScopeId,IPAddress,Name,ClientId,Description`
-`10.10.10.0,10.10.10.10,Computer1,1a-1b-1c-1d-1e-1f,Reserved for Computer1`
-`20.20.20.0,20.20.20.11,Computer2,2a-2b-2c-2d-2e-2f,Reserved for Computer2`
-`30.30.30.0,30.30.30.12,Computer3,3a-3b-3c-3d-3e-3f,Reserved for Computer3`
+ScopeId,IPAddress,Name,ClientId,Description
+
+10.10.10.0,10.10.10.10,Computer1,1a-1b-1c-1d-1e-1f,Reserved for Computer1
+
+20.20.20.0,20.20.20.11,Computer2,2a-2b-2c-2d-2e-2f,Reserved for Computer2
+
+30.30.30.0,30.30.30.12,Computer3,3a-3b-3c-3d-3e-3f,Reserved for Computer3
 
 ### Example 3: Convert a lease to a reservation
 ```

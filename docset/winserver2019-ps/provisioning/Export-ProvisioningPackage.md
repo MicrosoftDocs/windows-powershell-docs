@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
-ms.date: 05/09/2017
+ms.date: 11/29/2021
 online version: https://docs.microsoft.com/powershell/module/provisioning/export-provisioningpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-ProvisioningPackage
@@ -36,6 +36,8 @@ Export-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-Out
 ## DESCRIPTION
 Extract the contents of a provisioning package to the specified folder.
 
+The **Export-ProvisioningPackage** cmdlet is supported on Windows 10 client operating system only.
+
 ## EXAMPLES
 
 ### Example 1
@@ -48,7 +50,8 @@ This example extracts the content of a Package specifying it's PackageId to the 
 ## PARAMETERS
 
 ### -AllowClobber
-{{Fill AllowClobber Description}}
+
+Indicates that the cmdlet exports contents even if there's an existing instance.
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -AnswerFileOnly
-Only exports the Windows provisioning answer file
+
+Indicates that the cmdlet only exports the Windows provisioning answer file.
 
 ```yaml
 Type: SwitchParameter
@@ -78,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+
+Indicates that the provisioning package uses a connected device.
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-Specifies a path to store logs files resulting from the export operation
+
+Specifies a path to store logs files resulting from the export operation.
 
 ```yaml
 Type: String
@@ -108,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFolder
-Specifies the path to the output directory
+
+Specifies the path to the output directory.
 
 ```yaml
 Type: String
@@ -123,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-Id of the Package to be extracted
+
+Specifies the ID of the package to be extracted.
 
 ```yaml
 Type: String
@@ -138,7 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackagePath
-Path to the package to be extracted
+
+Specifies the path to the package to be extracted.
 
 ```yaml
 Type: String
@@ -153,7 +162,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuntimeMetadata
-{{Fill RuntimeMetadata Description}}
+
+Specifies a runtime provisioning package metadata object.
 
 ```yaml
 Type: RuntimeProvPackageMetadata
@@ -168,7 +178,8 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+
+Specifies the name of a WPR profile file.
 
 ```yaml
 Type: String

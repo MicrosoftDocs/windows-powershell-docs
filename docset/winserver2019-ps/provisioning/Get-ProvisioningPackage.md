@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
-ms.date: 05/09/2017
+ms.date: 11/29/2021
 online version: https://docs.microsoft.com/powershell/module/provisioning/get-provisioningpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ProvisioningPackage
@@ -35,6 +35,8 @@ Get-ProvisioningPackage [-AllInstalledPackages] [-LogsDirectoryPath <String>] [-
 
 ## DESCRIPTION
 The **Get-ProvisioningPackage** cmdlet gets information about the installed provisioning package.
+
+The **Get-ProvisioningPackage** cmdlet is supported on Windows 10 client operating system only.
 
 ## EXAMPLES
 
@@ -124,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-Specifies the name of a wprp file.
+Specifies the name of a WPR profile file.
 
 ```yaml
 Type: String

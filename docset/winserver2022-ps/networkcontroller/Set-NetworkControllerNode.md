@@ -17,8 +17,8 @@ Sets a node in a network controller cluster.
 
 ```
 Set-NetworkControllerNode -Name <String> [-RestInterface <String>] [-NodeCertificate <X509Certificate2>]
- [-PassThru] [-ComputerName <String>] [-UseSsl] [-Credential <PSCredential>] [-CertificateThumbprint <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PassThru] [-Force] [-ComputerName <String>] [-UseSsl] [-Credential <PSCredential>]
+ [-CertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -98,6 +98,21 @@ Specify this parameter only if you run this cmdlet on a computer that is not par
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Forces the command to run without asking for user confirmation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -207,9 +222,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
 ## OUTPUTS
 
-###  
+### System.Object
+
 This cmdlet returns an object that contains the following fields: 
 - Name of the node
 - Hostname, fully qualified domain name (FQDN), or IP address of the node

@@ -46,8 +46,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### WBDisk[]
-This cmdlet returns an array of **WBDisk** objects for the hard disks that the cmdlet detects on the local computer.
+### System.Object
 
 ## NOTES
 

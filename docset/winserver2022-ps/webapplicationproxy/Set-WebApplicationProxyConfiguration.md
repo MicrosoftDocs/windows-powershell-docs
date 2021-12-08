@@ -281,7 +281,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Uri
+
+### System.String
+
+### System.String[]
+
+### System.UInt32
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

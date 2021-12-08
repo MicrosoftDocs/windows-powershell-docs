@@ -5,7 +5,7 @@ Help Version: 1.0.0.0
 Locale: en-US
 Module Guid: 1323f046-a4bd-47df-a8bc-8253eabc49b2
 Module Name: Provisioning
-ms.date: 05/09/2017
+ms.date: 11/29/2021
 schema: 2.0.0
 title: Provisioning
 ---
@@ -19,7 +19,8 @@ This reference cmdlet provides descriptions and syntax for all provisioning-spec
 Extracts the contents of a provisioning package.
 
 ### [Export-Trace](Export-Trace.md)
-{{Manually Enter Export-Trace Description Here}}
+
+Exports an event trace log file for provisioning.
 
 ### [Get-ProvisioningPackage](Get-ProvisioningPackage.md)
 Gets information about the installed provisioning package.

@@ -119,13 +119,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Spec string, NonRecursive, Excluded flags
-This cmdlet uses *Spec*, *NonRecursive*, and *Excluded* parameters to create a list of items to include or exclude.
-The *Spec* parameter accepts string objects.
+### None
 
 ## OUTPUTS
 
-### WBFileSpec
+### System.Object
+
 This cmdlet returns a **WBFileSpec** object, which describes a file specification.
 You can add a **WBFileSpec** object to a **WBPolicy** object as a source for backup.
 

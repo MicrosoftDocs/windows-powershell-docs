@@ -89,13 +89,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy
-This cmdlet queries the **WBPolicy** object that contains the specified backup policy.
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
 
 ## OUTPUTS
 
-### WBFileSpec []
-This cmdlet returns a list of **WBFileSpec** objects that contain backup file specifications for a **WBPolicy** object that contains a backup policy.
+### System.Object
 
 ## NOTES
 

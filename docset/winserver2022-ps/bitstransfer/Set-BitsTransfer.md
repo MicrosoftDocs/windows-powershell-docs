@@ -17,10 +17,14 @@ Modifies the properties of an existing BITS transfer job.
 
 ```
 Set-BitsTransfer [-BitsJob] <BitsJob[]> [-DisplayName <String>] [-Priority <String>] [-Description <String>]
- [-ProxyAuthentication <String>] [-RetryInterval <Int32>] [-RetryTimeout <Int32>]
- [-TransferPolicy <CostStates>] [-UseStoredCredential <AuthenticationTargetValue>] [-Credential <PSCredential>]
+ [-Dynamic] [-CustomHeadersWriteOnly] [-HttpMethod <String>] [-ProxyAuthentication <String>]
+ [-RetryInterval <Int32>] [-RetryTimeout <Int32>] [-MaxDownloadTime <Int32>] [-TransferPolicy <CostStates>]
+ [-ACLFlags <ACLFlagValue>] [-SecurityFlags <SecurityFlagValue>]
+ [-UseStoredCredential <AuthenticationTargetValue>] [-Credential <PSCredential>]
  [-ProxyCredential <PSCredential>] [-Authentication <String>] [-SetOwnerToCurrentUser] [-ProxyUsage <String>]
- [-ProxyList <Uri[]>] [-ProxyBypass <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ProxyList <Uri[]>] [-ProxyBypass <String[]>] [-CustomHeaders <String[]>] [-NotifyFlags <NotifyFlagValue>]
+ [-NotifyCmdLine <String[]>] [-CertStoreLocation <CertStoreLocationValue>] [-CertStoreName <String>]
+ [-CertHash <Byte[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,6 +97,27 @@ In this example, no proxy server is used to add a file to the BITS transfer queu
 
 ## PARAMETERS
 
+### -ACLFlags
+Specifies the owner and access control list (ACL) information to maintain for the transfer job.
+Specify one or more of the following values:
+
+- o: Copy owner information with file.
+- g: Copy group information with file.
+- d: Copy discretionary access control list (DACL) information with file.
+- s: Copy system access control list (SACL) information with file.
+
+```yaml
+Type: ACLFlagValue
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Authentication
 Specifies the authentication mechanism to be used at the server.
 The acceptable values for this parameter are:
@@ -136,6 +161,65 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -CertHash
+Specifies a SHA1 hash that identifies the certificate.
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertStoreLocation
+Specifies the certificate store location to use for to look up the certificate. Valid values are:
+
+- CURRENT_USER
+- LOCAL_MACHINE
+- CURRENT_SERVICE
+- SERVICES
+- USERS
+- CURRENT_USER_GROUP_POLICY
+- LOCAL_MACHINE_GROUP_POLICY
+- LOCAL_MACHINE_ENTERPRISE
+
+```yaml
+Type: CertStoreLocationValue
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertStoreName
+Specifies the name of the certificate store. Valid values are:
+
+- CA: Certification Authority certificates
+- MY: Personal certificates
+- ROOT: Root certificates
+- SPC: Software Publisher Certificate
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -170,6 +254,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CustomHeaders
+Specifies one or more custom HTTP headers to include in the request to the server. Specify an array of strings.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomHeadersWriteOnly
+Indicates that the HTTP custom headers for this job are write-only.
+
+Use this parameter when your custom headers include security information.
+Other programs on the same computer can’t read the header.
+The BITS process can read the headers and send them over the HTTP connection.
+
+You cannot change this value for a job after you set headers to write-only.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 Specifies a description for the BITS transfer job.
 The description is limited to 1,024 characters.
@@ -194,6 +314,95 @@ The display name provides a user-friendly way to differentiate BITS transfer job
 Type: String
 Parameter Sets: (All)
 Aliases: dn
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Dynamic
+Indicates that the transfer uses the dynamic setting.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpMethod
+Specifies a method for the transfer other than the default method GET.
+If you specify GET, the parameter has no effect.
+
+If you specify a method, the job takes foreground priority, which can't be changed.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: hm
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxDownloadTime
+Specifies the maximum time, in seconds, for transferring the files in a job.
+The default is 7,776,000 seconds or 90 days.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyCmdLine
+Specifies a program to run after the job finishes or encounters an error.
+The program runs in the context of the user who runs this cmdlet.
+
+Specify the program name and any parameters as an array of strings.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyFlags
+Specifies the type of event notification you want to receive, such as job transferred events.
+Valid values are:
+
+- 1: Generates an event when all files in the job have been transferred.
+- 2: Generates an event when an error occurs.
+- 4: Disables notifications.
+
+The default value is 1|2.
+
+```yaml
+Type: NotifyFlagValue
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -361,6 +570,36 @@ The default value is 1,209,600 seconds (14 days).
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SecurityFlags
+Specifies security flags for the HTTP request.
+
+The flags you can set, from the least significant bit, are the following bits:
+
+- 1: Enable CRL Check.
+- 2: Ignore incorrect common names in the server certificate.
+- 3: Ignore incorrect dates in the server certificate.
+- 4: Ignore incorrect certification authorities in the server certificate.
+- 5: Ignore incorrect usage of the server certificate.
+- 12: Allow redirection from HTTPS to HTTP.
+
+Use bits 9 through 11 to implement your redirection policy:
+
+- 0,0,0: Redirects are automatically allowed.
+- 0,0,1: Remote name is updated if a redirect occurs.
+-0,1,0: BITS fails the job if a redirect occurs.
+
+```yaml
+Type: SecurityFlagValue
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -59,7 +59,7 @@ The command specifies the credentials that are stored in the $FScred variable fo
 ### Example 2: Test the overwrites of an existing AD FS configuration database
 ```
 PS C:\> $FScred = Get-Credential
-PS C:\> Test-AdfsFarmJoin -OverwriteConfiguration -PrimaryComputerName "PrimaryWIDHost" -PrimaryComputerPort 80 -ServiceAccountCredential $FScred -CertificateThumbprint 8169c52b4ec6e77eb2ae17f028fe5da4e35c0bed
+PS C:\> Test-AdfsFarmJoin -PrimaryComputerName "PrimaryWIDHost" -PrimaryComputerPort 80 -ServiceAccountCredential $FScred -CertificateThumbprint 8169c52b4ec6e77eb2ae17f028fe5da4e35c0bed
 ```
 
 The first command uses the **Get-Credential** cmdlet to create a credential object for the Active Directory account under which the AD FS service runs.
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

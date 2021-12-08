@@ -24,6 +24,8 @@ The **Clear-AssignedAccess** cmdlet clears assigned access configured account se
 
 If a user is signed-in or the computer has a PS/2 keyboard, you must restart the computer to apply the changes.
 
+Assigned Access cmdlets are supported on Windows 10 and Windows 11 client operating systems only.
+
 ## EXAMPLES
 
 ### Example 1: Clear assigned access configured settings

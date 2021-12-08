@@ -84,7 +84,7 @@ PS C:\> Get-ADUser -Identity ChewDavid -Properties *
 ```Output
 Surname           : David
 Name              : Chew David
-UserPrincipalName : 
+UserPrincipalName :
 GivenName         : David
 Enabled           : False
 SamAccountName    : ChewDavid
@@ -103,6 +103,13 @@ PS C:\> Get-ADUser -Filter "Name -eq 'ChewDavid'" -SearchBase "DC=AppNC" -Proper
 
 This command gets the user with the name ChewDavid in the Active Directory Lightweight Directory Services (AD LDS) instance.
 
+### Example 5: Get all enabled user accounts
+```powershell
+C:\PS> Get-ADUser -LDAPFilter '(!userAccountControl:1.2.840.113556.1.4.803:=2)'
+```
+
+This command gets all enabled user accounts in Active Directory using an LDAP filter.
+
 ## PARAMETERS
 
 ### -AuthType
@@ -119,7 +126,7 @@ A Secure Sockets Layer (SSL) connection is required for the Basic authentication
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -145,7 +152,7 @@ If the acting credentials do not have directory-level permission to perform the 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,8 +190,13 @@ The following syntax uses Backus-Naur form to show how to use the PowerShell Exp
 
 For a list of supported types for \<value\>, type `Get-Help about_ActiveDirectory_ObjectModel`.
 
-Note: For String parameter type, PowerShell will cast the filter query to a string while processing the command. When using a string variable as a value in the filter component, make sure that it complies with the [PowerShell Quoting Rules](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_quoting_rules). For example, if the filter expression is double-quoted, the variable should be enclosed using single quotation marks:
-**Get-ADUser -Filter "Name -like '$UserName'"**. On the contrary, if curly braces are used to enclose the filter, the variable should not be quoted at all: **Get-ADUser -Filter {Name -like $UserName}**.
+Note: For String parameter type, PowerShell will cast the filter query to a string while processing the command. When using a string variable as a value in the filter component, make sure that it complies with the [PowerShell Quoting Rules](/powershell/module/microsoft.powershell.core/about/about_quoting_rules). For example, if the filter expression is double-quoted, the variable should be either
+enclosed using single quotation marks:
+**Get-ADUser -Filter "Name -like '$UserName'"**
+or two pairs of double quotes:
+**Get-ADUser -Filter "Name -like ""$UserName"""**.
+
+On the contrary, if curly braces are used to enclose the filter, the variable should not be quoted at all: **Get-ADUser -Filter {Name -like $UserName}**.
 
 Note: PowerShell wildcards other than \*, such as ?, are not supported by the *Filter* syntax.
 
@@ -193,7 +205,7 @@ Note: To query using LDAP query strings, use the *LDAPFilter* parameter.
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -208,8 +220,8 @@ The identifier in parentheses is the LDAP display name for the attribute.
 The acceptable values for this parameter are:
 
 - A distinguished name
-- A GUID (objectGUID) 
-- A security identifier (objectSid) 
+- A GUID (objectGUID)
+- A security identifier (objectSid)
 - A SAM account name (sAMAccountName)
 
 The cmdlet searches the default naming context or partition to find the object.
@@ -220,7 +232,7 @@ This parameter can also get this object through the pipeline or you can set this
 ```yaml
 Type: ADUser
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -238,7 +250,7 @@ For more information, see the *Filter* parameter description or type `Get-Help a
 ```yaml
 Type: String
 Parameter Sets: LdapFilter
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -254,27 +266,27 @@ The cmdlet searches this partition to find the object defined by the *Identity* 
 
 In many cases, a default value is used for the *Partition* parameter if no value is specified.
 The rules for determining the default value are given below.
-Note that rules listed first are evaluated first and when a default value can be determined, no further rules are evaluated.
+Note that rules listed first are evaluated first, and when a default value can be determined, no further rules are evaluated.
 
-In AD DS environments, a default value for *Partition* are set in the following cases: 
+In AD DS environments, a default value for *Partition* is set in the following cases:
 
 - If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive.
 - If none of the previous cases apply, the default value of *Partition* is set to the default partition or naming context of the target domain.
 
-In AD LDS environments, a default value for *Partition* will be set in the following cases:
+In AD LDS environments, a default value for *Partition* is set in the following cases:
 
-- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name. 
-- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive.
 - If the target AD LDS instance has a default naming context, the default value of *Partition* is set to the default naming context.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
+To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance.
 - If none of the previous cases apply, the *Partition* parameter does not take any default value.
 
 
 ```yaml
 Type: String
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -315,7 +327,7 @@ The default is 256 objects per page.
 ```yaml
 Type: Int32
 Parameter Sets: Filter, LdapFilter
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -334,7 +346,7 @@ The default is $Null.
 ```yaml
 Type: Int32
 Parameter Sets: Filter, LdapFilter
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -353,13 +365,13 @@ When you run a cmdlet outside of an Active Directory provider drive against an A
 When you run a cmdlet outside of an Active Directory provider drive against an AD LDS target, the default value is the default naming context of the target LDS instance if one has been specified by setting the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance.
 If no default naming context has been specified for the target AD LDS instance, then this parameter has no default value.
 
-When the value of the *SearchBase* parameter is set to an empty string and you are connected to a GC port, all partitions will be searched.
-If the value of the *SearchBase* parameter is set to an empty string and you are not connected to a GC port, an error will be thrown.
+When the value of the *SearchBase* parameter is set to an empty string and you are connected to a GC port, all partitions are searched.
+If the value of the *SearchBase* parameter is set to an empty string and you are not connected to a GC port, an error is thrown.
 
 ```yaml
 Type: String
 Parameter Sets: Filter, LdapFilter
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -383,7 +395,7 @@ A Subtree query searches the current path or object and all children of that pat
 ```yaml
 Type: ADSearchScope
 Parameter Sets: Filter, LdapFilter
-Aliases: 
+Aliases:
 Accepted values: Base, OneLevel, Subtree
 
 Required: False
@@ -410,14 +422,14 @@ Directory server values:
 
 The default value for the *Server* parameter is determined by one of the following methods in the order that they are listed:
 
-- By using *Server* value from objects passed through the pipeline. 
-- By using the server information associated with the Active Directory PowerShell provider drive, when running under that drive. 
+- By using *Server* value from objects passed through the pipeline.
+- By using the server information associated with the Active Directory PowerShell provider drive, when running under that drive.
 - By using the domain of the computer running PowerShell.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -464,4 +476,3 @@ To get a list of all the properties of an **ADUser** object, use the following c
 [Remove-ADUser](./Remove-ADUser.md)
 
 [Set-ADUser](./Set-ADUser.md)
-

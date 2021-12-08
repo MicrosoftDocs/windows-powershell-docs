@@ -149,7 +149,7 @@ Owner          : PowerShell / WMI
 NetworkProfile : All 
 Precedence     : 127 
 AppPathName    : ftp.exe 
-ThrottleRate   : 1 MBytes/sec
+ThrottleRate   : 1.049 MBits/sec
 ```
 
 This command creates a QoS policy named FTP that matches an application path at ftp.exe and throttles the traffic at 8,000,000 bits per second.
@@ -180,7 +180,7 @@ NetworkProfile : All
 Precedence     : 127 
 IPProtocol     : TCP 
 IPPort         : 80 
-ThrottleRate   : 10 MBytes/sec
+ThrottleRate   : 10.486 MBits/sec
 ```
 
 This command creates a QoS policy that matches TCP traffic sent to port 80 and rate-limits it at 80,000,000 bits per second.
@@ -207,7 +207,7 @@ NetworkProfile : Domain
 Precedence     : 127 
 URI            : http://training/ 
 URIRecursive   : False 
-ThrottleRate   : 500 KBytes/sec
+ThrottleRate   : 516.096 KBits/sec
 ```
 
 This command creates a QoS policy named IIS that matches return traffic from an HTTP server application with the specified URI and rate limit the return traffic at 4,000,000 bits per second.
@@ -813,14 +813,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.NetQosPolicy.NetworkProfile
+
+### System.UInt32
+
+### System.SByte
+
+### System.Byte
+
+### System.UInt64
+
+### System.Boolean
+
+### System.UInt16
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.NetQosPolicy.Protocol
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosPolicySettingData
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
-The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
-The **MSFT_NetQosPolicySettingData** object contains a QoS policy.
+### System.Object
 
 ## NOTES
 

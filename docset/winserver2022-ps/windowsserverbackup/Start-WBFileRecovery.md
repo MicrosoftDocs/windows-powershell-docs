@@ -202,16 +202,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackupSet, WBFileRecoveryOptions
-The file recovery process specifies a backup set object that contains the backup set from which you recover files.
-The recovery process uses file recovery options when you recover files to their original locations and the file that you recover is already present in the original location.
+### Microsoft.Windows.ServerBackup.Commands.WBBackupSet
+
+### System.String
 
 ## OUTPUTS
 
-### System.String
-If you do not specify the *Async* parameter, the recovery operation displays status messages at periodic intervals until the recovery is complete.
-While the recovery operation runs you can use the **Get-WBJob** cmdlet to get the status of the operation.
-After the operation is complete, you can use the `Get-WBJob -Previous 1` command to get the completed recovery status.
+### System.Object
 
 ## NOTES
 

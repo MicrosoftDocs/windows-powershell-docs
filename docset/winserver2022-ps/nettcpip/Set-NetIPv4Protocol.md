@@ -45,7 +45,7 @@ This command enables the DHCP Media Sense event log.
 PS C:\>Set-NetIPv4Protocol -NeighborCacheLimitEntries 1000
 ```
 
-This command increases the size of the cache of on-link neighbors on the subnet to 1,000.
+This command increases the size of the cache of on-link neighbors on the subnet that are no longer referenced to 1,000.
 The default value is 256.
 
 ## PARAMETERS
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### -NeighborCacheLimitEntries
-Specifies the maximum number of neighbor cache entries.
+Specifies the maximum number of entries in the neighbor cache, which consists of all dynamic neighbors no longer referenced.
 The cmdlet modifies the value for this setting.
 
 The default value is 256.

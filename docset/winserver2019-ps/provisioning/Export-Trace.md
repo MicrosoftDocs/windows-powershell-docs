@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Export-Trace cmdlet exports an event trace log (ETL) file for provisioning.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
-ms.date: 05/09/2017
+ms.date: 11/29/2021
 online version: https://docs.microsoft.com/powershell/module/provisioning/export-trace?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-Trace
@@ -11,13 +11,13 @@ title: Export-Trace
 # Export-Trace
 
 ## SYNOPSIS
-Exports trace events.
+Exports an event trace log file for provisioning.
 
 ## SYNTAX
 
 ```
 Export-Trace [-ETLFile] <String> [-Overwrite] [-LogsDirectoryPath <String>] [-WprpFile <String>]
- [-ConnectedDevice]
+ [-ConnectedDevice] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-Overwrites the existing export.
+Indicates that the cmdlet overwrites an existing exported log if one exists.
 
 ```yaml
 Type: SwitchParameter
@@ -108,6 +108,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

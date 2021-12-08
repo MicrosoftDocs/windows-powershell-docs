@@ -132,11 +132,11 @@ The acceptable values for this parameter are:
 
  -- FailedOrNeeded 
 
- -- InstalledNotApplicableOrNoStatus 
+ -- InstalledOrNotApplicableOrNoStatus 
 
  -- Failed 
 
- -- InstalledNotApplicable 
+ -- InstalledOrNotApplicable 
 
  -- NoStatus 
 

@@ -21,18 +21,16 @@ Export-Trace [-ETLFile] <String> [-Overwrite] [-LogsDirectoryPath <String>] [-Wp
 ```
 
 ## DESCRIPTION
-The **Export-Trace** cmdlet exports an event trace log (ETL) file for provisioning.
-
-The **Export-Trace** cmdlet is supported on Windows 11 client operating system only.
+Exports trace events from an event trace log ETL file.
 
 ## EXAMPLES
 
-### Example 1
-```
-Export-Trace -ETLFile C:\Windows\Logs\provisioning.etl -Overwrite
+### Example 1: Export trace events from an ETL file
+```powershell
+PS C:\> Export-Trace -ETLFile C:\Windows\Logs\WindowsUpdate\WindowsUpdate.20211013.074054.819.1.etl -LogsDirectoryPath C:\ETL\Logs
 ```
 
-This example exports an ETL file to the specified location, overwriting an existing file, if it exists.
+Exports trace events from a specified ETL file and saves the logs to the C:\ETL\Logs folder.
 
 ## PARAMETERS
 
@@ -52,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ETLFile
-Specifies a location for the .etl file.
+Specifies the ETL file location.
 
 ```yaml
 Type: String
@@ -67,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-Specifies the path of the logs directory.
+Specifies the logs directory path.
 
 ```yaml
 Type: String

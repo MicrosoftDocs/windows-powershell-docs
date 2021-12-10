@@ -255,7 +255,7 @@ Accepted values: 1, 2
 
 Required: False
 Position: 2
-Default value: None
+Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -592,11 +592,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-`BitLockerVolume[]`, `String[]`
+### BitLockerVolume[], String[]
 
 ## OUTPUTS
 
-`BitLockerVolume[]`
+### BitLockerVolume[]
 
 ## NOTES
 

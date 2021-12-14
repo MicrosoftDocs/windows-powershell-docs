@@ -218,6 +218,9 @@ Accept wildcard characters: False
 
 ### -Timeout
 
+Specifies the duration of the wait, in seconds. When the timeout elapses, Restart-VM returns to the command prompt, even if the VM isn't  restarted.
+
+The Timeout parameter is only valid with the Wait parameter. Timeout overrides the Wait parameter's indefinite waiting period.
 
 ```yaml
 Type: Int32
@@ -248,6 +251,9 @@ Accept wildcard characters: False
 
 ### -Wait
 
+Restart-VM suppresses the PowerShell prompt and blocks the pipeline until the VM has restarted. You can use this parameter in a script to restart VM and then continue to process when the restart is finished.
+
+The Wait parameter waits indefinitely for the VM to restart. You can use Timeout to adjust the timing and the For and Delay parameters to wait for particular services to become available on the restarted VM.
 
 ```yaml
 Type: SwitchParameter

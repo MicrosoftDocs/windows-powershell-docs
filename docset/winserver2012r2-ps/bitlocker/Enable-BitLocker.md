@@ -19,144 +19,147 @@ Enables BitLocker Drive Encryption for a volume.
 ### PasswordProtector
 
 ```PowerShell
-Enable-BitLocker [-MountPoint] <String[]> [-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>]
- [-HardwareEncryption] [-SkipHardwareTest] [-UsedSpaceOnly] [-PasswordProtector] [[-Password] <SecureString>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Enable-BitLocker [-MountPoint] <String[]> -PasswordProtector [-Password] <SecureString>
+[-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>] [-HardwareEncryption]
+[-SkipHardwareTest] [-UsedSpaceOnly][-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RecoveryPasswordProtector
 
 ```PowerShell
-Enable-BitLocker [-MountPoint] <String[]> [-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>]
- [-HardwareEncryption] [-SkipHardwareTest] [-UsedSpaceOnly] [-RecoveryPasswordProtector]
- [[-RecoveryPassword] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Enable-BitLocker [-MountPoint] <String[]> -RecoveryPasswordProtector [[-RecoveryPassword] <String>]
+[-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>] [-HardwareEncryption]
+[-SkipHardwareTest] [-UsedSpaceOnly] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### StartupKeyProtector
 
 ```PowerShell
-Enable-BitLocker [-MountPoint] <String[]> [-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>]
- [-HardwareEncryption] [-SkipHardwareTest] [-UsedSpaceOnly] [-StartupKeyProtector] [-StartupKeyPath] <String>
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Enable-BitLocker [-MountPoint] <String[]> -StartupKeyProtector [-StartupKeyPath] <String>
+[-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>] [-HardwareEncryption]
+[-SkipHardwareTest] [-UsedSpaceOnly] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### TpmAndStartupKeyProtector
 
 ```PowerShell
-Enable-BitLocker [-MountPoint] <String[]> [-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>]
- [-HardwareEncryption] [-SkipHardwareTest] [-UsedSpaceOnly] [-StartupKeyPath] <String>
- [-TpmAndStartupKeyProtector] [-WhatIf] [-Confirm] [<CommonParameters>]
+Enable-BitLocker [-MountPoint] <String[]> -TpmAndStartupKeyProtector [-StartupKeyPath] <String>
+[-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>] [-HardwareEncryption]
+[-SkipHardwareTest] [-UsedSpaceOnly] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### TpmAndPinAndStartupKeyProtector
 
 ```PowerShell
-Enable-BitLocker [-MountPoint] <String[]> [-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>]
- [-HardwareEncryption] [-SkipHardwareTest] [-UsedSpaceOnly] [-StartupKeyPath] <String>
- [-TpmAndPinAndStartupKeyProtector] [[-Pin] <SecureString>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Enable-BitLocker [-MountPoint] <String[]> -TpmAndPinAndStartupKeyProtector -StartupKeyPath <String>
+[-Pin] <SecureString> [-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>]
+[-HardwareEncryption] [-SkipHardwareTest] [-UsedSpaceOnly] [-WhatIf] [-Confirm]
+[<CommonParameters>]
 ```
 
 ### AdAccountOrGroupProtector
 
 ```PowerShell
-Enable-BitLocker [-MountPoint] <String[]> [-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>]
- [-HardwareEncryption] [-SkipHardwareTest] [-UsedSpaceOnly] [-AdAccountOrGroupProtector] [-Service]
- [-AdAccountOrGroup] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Enable-BitLocker [-MountPoint] <String[]> -AdAccountOrGroupProtector [-AdAccountOrGroup] <String>
+[-Service] [-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>] [-HardwareEncryption]
+[-SkipHardwareTest] [-UsedSpaceOnly] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### TpmAndPinProtector
 
 ```PowerShell
-Enable-BitLocker [-MountPoint] <String[]> [-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>]
- [-HardwareEncryption] [-SkipHardwareTest] [-UsedSpaceOnly] [[-Pin] <SecureString>] [-TpmAndPinProtector]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Enable-BitLocker [-MountPoint] <String[]> -TpmAndPinProtector [-Pin] <SecureString>
+[-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>] [-HardwareEncryption]
+[-SkipHardwareTest] [-UsedSpaceOnly] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### TpmProtector
 
 ```PowerShell
-Enable-BitLocker [-MountPoint] <String[]> [-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>]
- [-HardwareEncryption] [-SkipHardwareTest] [-UsedSpaceOnly] [-TpmProtector] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Enable-BitLocker [-MountPoint] <String[]> -TpmProtector
+[-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>] [-HardwareEncryption]
+[-SkipHardwareTest] [-UsedSpaceOnly] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RecoveryKeyProtector
 
 ```PowerShell
-Enable-BitLocker [-MountPoint] <String[]> [-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>]
- [-HardwareEncryption] [-SkipHardwareTest] [-UsedSpaceOnly] [-RecoveryKeyProtector] [-RecoveryKeyPath] <String>
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Enable-BitLocker [-MountPoint] <String[]> -RecoveryKeyProtector [-RecoveryKeyPath] <String>
+[-EncryptionMethod <BitLockerVolumeEncryptionMethodOnEnable>] [-HardwareEncryption]
+[-SkipHardwareTest] [-UsedSpaceOnly] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The **Enable-BitLocker** cmdlet enables BitLocker Drive Encryption for a volume.
 
-When you enable encryption, you must specify a volume and an encryption method for that volume.
-You can specify a volume by drive letter or by specifying a BitLocker volume object.
-For the encryption method, you can choose either Advanced Encryption Standard (AES) algorithms AES-128 or AES-256, or you can use hardware encryption if it is supported by the disk hardware.
+When you enable encryption, you must specify a volume, either by its drive letter or by its
+BitLocker volume object.
 
-You must also establish a key protector.
-BitLocker uses a key protector to encrypt the volume encryption key.
-When a user accesses a BitLocker encrypted drive, such as when starting a computer, BitLocker requests the relevant key protector.
-For example, the user can enter a PIN or provide a USB drive that contains a key.
-BitLocker decrypts the encryption key and uses it to read data from the drive.
-You can use one of the following methods or combinations of methods for a key protector:
+You must also establish a key protector. BitLocker uses a key protector to encrypt the volume
+encryption key. When a user accesses a BitLocker encrypted drive, such as when starting a computer,
+BitLocker requests the relevant key protector. For example, the user can enter a PIN or provide a
+USB drive that contains a key. BitLocker decrypts the encryption key and uses it to read data from
+the drive. You can use one of the following methods or combinations of methods for a key protector:
 
-- Trusted Platform Module (TPM).
-BitLocker uses the computer's TPM to protect the encryption key.
-If you select this key protector, users can access the encrypted drive as long as it is connected to the system board that hosts the TPM and system boot integrity is intact.
-In general, TPM-based protectors can only be associated to an operating system volume.
+- **Trusted Platform Module (TPM):** BitLocker uses the computer's TPM to protect the encryption
+  key. If you select this key protector, users can access the encrypted drive as long as it is
+  connected to the system board that hosts the TPM and system boot integrity is intact. In general,
+  TPM-based protectors can only be associated to an operating system volume.
 
-- TPM and Personal Identification Number (PIN).
-BitLocker uses a combination of the TPM and a user-supplied PIN.
-A PIN is four to twenty digits or, if you allow enhanced PINs, is four to twenty letters, symbols, spaces, or numbers.
+- **TPM and Personal Identification Number (PIN):** BitLocker uses a combination of the TPM and a
+  user-supplied PIN. A PIN is four to twenty digits or, if you allow enhanced PINs, is four to
+  twenty letters, symbols, spaces, or numbers.
 
-- TPM, PIN, and startup key.
-BitLocker uses a combination of the TPM, a user-supplied PIN, and input from of a USB memory device that contains an external key.
+- **TPM, PIN, and startup key:** BitLocker uses a combination of the TPM, a user-supplied PIN, and
+  input from of a USB memory device that contains an external key.
 
-- TPM and startup key.
-BitLocker uses a combination of the TPM and input from of a USB memory device.
+- **TPM and startup key:** BitLocker uses a combination of the TPM and a USB flash drive that
+  contains the external key.
 
-- Startup key.
-BitLocker uses input from of a USB memory device that contains the external key.
+- **Startup key:** BitLocker uses a USB flash drive that contains the external key.
 
-- Password.
-BitLocker uses a password.
+- **Password:** BitLocker uses a password.
 
-- Recovery key.
-BitLocker uses a recovery key stored as a specified file.
+- **Recovery key:** BitLocker uses a recovery key stored as a specified file.
 
-- Recovery password.
-BitLocker uses a recovery password.
+- **Recovery password:** BitLocker uses a recovery password.
 
-- Active Directory Domain Services (AD DS) account.
-BitLocker uses domain authentication.
+- **Active Directory Domain Services (AD DS) account:** BitLocker uses domain authentication.
 
-You can specify only one of these methods or combinations when you enable encryption, but you can use the **Add-BitLockerKeyProtector** cmdlet to add other protectors.
+You can specify only one of these methods or combinations when you enable encryption, but you can
+use the **Add-BitLockerKeyProtector** cmdlet to add other protectors.
 
-For a password or PIN key protector, specify a secure string.
-You can use the **ConvertTo-SecureString** cmdlet to create a secure string.
-You can use secure strings in a script and still maintain confidentiality of passwords.
+For a password or PIN key protector, specify a secure string. You can use the
+**ConvertTo-SecureString** cmdlet to create a secure string. You can use secure strings in a script
+and still maintain confidentiality of passwords.
 
-This cmdlet returns a BitLocker volume object.
-If you choose recovery password as your key protector but do not specify a 48-digit recovery password, this cmdlet creates a random 48-digit recovery password.
-The cmdlet stores the password as the **RecoveryPassword** field of the **KeyProtector** attribute of the BitLocker volume object.
+You may optionally select an encryption method. By default, BitLocker uses AES-128 but you can opt
+AES-256 for stronger security. You may request hardware encryption but Microsoft strongly advices
+against it. For further guidance, see the "[ADV180028 Security Advisory][1]".
 
-If you use startup key or recovery key as part of your key protector, provide a path to store the key.
-This cmdlet stores the name of the file that contains the key in the **KeyFileName** field of the **KeyProtector** field in the BitLocker volume object.
+This cmdlet returns a BitLocker volume object. If you choose recovery password as your key protector
+but do not specify a 48-digit recovery password, this cmdlet generates a random one for you, and
+stores it in the **RecoveryPassword** field of the **KeyProtector** attribute of the BitLocker
+volume object.
 
-If you use the **Enable-BitLocker** cmdlet on an encrypted volume or on a volume that with encryption in process, it takes no action.
-If you use the cmdlet on a drive that has encryption paused, it resumes encryption on the volume.
+If you use startup key or recovery key as part of your key protector, provide a path to store the
+key. This cmdlet stores the name of the file that contains the key in the **KeyFileName** field of
+the **KeyProtector** field in the BitLocker volume object.
 
-By default, this cmdlet encrypts the entire drive.
-If you use the *UsedSpaceOnly* parameter, it only encrypts the used space in the disk.
-This option can significant reduce encryption time.
+If you use the **Enable-BitLocker** cmdlet on an encrypted volume or on a volume that with
+encryption in process, it takes no action. If you use the cmdlet on a drive that has encryption
+paused, it resumes encryption on the volume.
 
-It is common practice to add a recovery password to an operating system volume by using the **Add-BitLockerKeyProtector** cmdlet, and then save the recovery password by using the **Backup-BitLockerKeyProtector** cmdlet, and then enable BitLocker for the drive.
-This procedure ensures that you have a recovery option.
+By default, this cmdlet encrypts the entire drive. If you use the *UsedSpaceOnly* parameter, it only
+encrypts the used space on the disk. This option can significant reduce encryption time.
 
-For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+It is common practice to add a recovery password for an operating system volume using the
+**Add-BitLockerKeyProtector** cmdlet, save the recovery password using the
+**Backup-BitLockerKeyProtector** cmdlet, and then enable BitLocker on that volume. This procedure
+ensures that you have a recovery option.
+
+For an overview of BitLocker, see "[BitLocker Drive Encryption Overview][2]" on Microsoft Docs.
 
 ## EXAMPLES
 
@@ -587,24 +590,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### BitLockerVolume[],String[]
+`BitLockerVolume[]`, `String[]`
 
 ## OUTPUTS
 
-### BitLockerVolume[]
+`BitLockerVolume[]`
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Disable-BitLocker](./Disable-BitLocker.md)
+- [Disable-BitLocker](./Disable-BitLocker.md)
+- [Get-BitLockerVolume](./Get-BitLockerVolume.md)
+- [Lock-BitLocker](./Lock-BitLocker.md)
+- [Resume-BitLocker](./Resume-BitLocker.md)
+- [Suspend-BitLocker](./Suspend-BitLocker.md)
+- [Unlock-BitLocker](./Unlock-BitLocker.md)
 
-[Get-BitLockerVolume](./Get-BitLockerVolume.md)
-
-[Lock-BitLocker](./Lock-BitLocker.md)
-
-[Resume-BitLocker](./Resume-BitLocker.md)
-
-[Suspend-BitLocker](./Suspend-BitLocker.md)
-
-[Unlock-BitLocker](./Unlock-BitLocker.md)
+[1]: https://msrc.microsoft.com/update-guide/en-us/vulnerability/ADV180028
+[2]: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732774(v=ws.11)

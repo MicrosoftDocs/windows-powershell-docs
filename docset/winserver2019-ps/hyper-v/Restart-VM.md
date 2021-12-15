@@ -251,7 +251,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Restart-VM suppresses the PowerShell prompt and blocks the pipeline until the VM has restarted. You can use this parameter in a script to restart VM and then continue to process when the restart is finished.
+**Restart-VM** suppresses the PowerShell prompt and blocks the pipeline until the virtual machine has restarted. You can use this parameter in a script to restart the virtual machine and then continue to process when the restart is finished.
 
 The `-Wait` parameter waits indefinitely for the virtual machine to restart. You can use the `-Timeout` parameter to adjust the timing and the `-For` and `-Delay` parameters to wait for particular services to become available on the restarted virtual machine.
 

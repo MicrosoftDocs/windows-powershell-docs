@@ -220,7 +220,7 @@ Accept wildcard characters: False
 
 Specifies the duration of the wait, in seconds. When the timeout elapses, **Restart-VM** returns to the command prompt, even if the virtual machine isn't restarted.
 
-The Timeout parameter is only valid with the Wait parameter. Timeout overrides the Wait parameter's indefinite waiting period.
+This parameter is only valid with the `-Wait` parameter. The `-Timeout` parameter overrides the `-Wait` parameter's indefinite waiting period.
 
 ```yaml
 Type: Int32

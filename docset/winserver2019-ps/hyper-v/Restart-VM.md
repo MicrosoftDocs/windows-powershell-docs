@@ -218,7 +218,7 @@ Accept wildcard characters: False
 
 ### -Timeout
 
-Specifies the duration of the wait, in seconds. When the timeout elapses, Restart-VM returns to the command prompt, even if the VM isn't  restarted.
+Specifies the duration of the wait, in seconds. When the timeout elapses, **Restart-VM** returns to the command prompt, even if the virtual machine isn't restarted.
 
 The Timeout parameter is only valid with the Wait parameter. Timeout overrides the Wait parameter's indefinite waiting period.
 

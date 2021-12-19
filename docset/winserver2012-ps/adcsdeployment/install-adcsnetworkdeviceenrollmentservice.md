@@ -52,7 +52,7 @@ Description
 
 -----------
 
-This command displays the default Network Device Enrollment Service settings when the service is running as the default application identity without making any changes to the configuration.
+This command displays the default NDES settings that will be configured if it is installed.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```

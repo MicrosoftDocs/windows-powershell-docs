@@ -52,7 +52,7 @@ Int is equivalent to Int32 in the [.NET Framework](https://msdn.microsoft.com/en
 PS C:\> Install-AdcsNetworkDeviceEnrollmentService -ApplicationPoolIdentity -WhatIf
 ```
 
-This command displays the default NDES settings when the service is running as the default application identity without making any changes to the configuration.
+This command displays the default NDES settings that will be configured if it is installed.
 
 ### Example 2: Display the default NDES settings using a service account name and password
 ```

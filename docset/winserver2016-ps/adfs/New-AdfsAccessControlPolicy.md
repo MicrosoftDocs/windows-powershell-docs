@@ -24,6 +24,10 @@ New-AdfsAccessControlPolicy -Name <String> [-SourceName <String>] [-Identifier <
 ## DESCRIPTION
 The **New-AdfsAccessControlPolicy** cmdlet creates an Active Directory Federation Services (AD FS) access control policy from a policy metadata file.
 
+## How to create a Federation metadata file?
+
+The federation metadata document is a XML file that is available for [download](https://adfshelp.microsoft.com/MetadataExplorer/GetFederationMetadata).Enter in your federation service name and click the 'Get federation metadata' button to retrieve your document.
+
 ## EXAMPLES
 
 ### Example 1: Create a policy template from a policy metadata file

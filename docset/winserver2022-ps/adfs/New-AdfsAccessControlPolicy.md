@@ -26,7 +26,7 @@ The **New-AdfsAccessControlPolicy** cmdlet creates an Active Directory Federatio
 
 ## How to create a Federation metadata file?
 
-The federation metadata document is a XML file that is available for [download](https://adfshelp.microsoft.com/MetadataExplorer/GetFederationMetadata).Enter in your federation service name and click the 'Get federation metadata' button to retrieve your document.
+The federation metadata document is an XML file that is available for [download](https://adfshelp.microsoft.com/MetadataExplorer/GetFederationMetadata). Enter your federation service name and select the **Get federation metadata** button to retrieve your document.
 
 ## EXAMPLES
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerQueryResolutionPolicy_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
-ms.date: 12/20/2016
+ms.date: 01/03/2022
 online version: https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-DnsServerQueryResolutionPolicy
@@ -511,7 +511,8 @@ Accept wildcard characters: False
 ```
 
 ### -ECS
-{{ Fill ECS Description }}
+
+This parameter is reserved for internal use.
 
 ```yaml
 Type: String
@@ -731,7 +732,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

@@ -15,17 +15,17 @@ Removes an app package (.appx) from a Windows image.
 
 ## SYNTAX
 
-### Offline
+### Online
 ```
-Remove-AppxProvisionedPackage -PackageName <String> -Path <String> [-WindowsDirectory <String>]
- [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [-AllUsers]
+Remove-AppxProvisionedPackage -PackageName <String> [-AllUsers] [-Online] [-WindowsDirectory <String>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
  [<CommonParameters>]
 ```
 
-### Online
+### Offline
 ```
-Remove-AppxProvisionedPackage -PackageName <String> [-Online] [-WindowsDirectory <String>]
- [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [-AllUsers]
+Remove-AppxProvisionedPackage -PackageName <String> -Path <String> [-WindowsDirectory <String>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
  [<CommonParameters>]
 ```
 
@@ -200,7 +200,7 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

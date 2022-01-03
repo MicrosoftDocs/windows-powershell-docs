@@ -76,14 +76,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Previous
-If you use the *Previous* parameter, this cmdlet queries a **WBJob** object for previously run backups and recoveries.
-If you do not use this parameter, the cmdlet returns a **WBJob** object that contains the currently running backup or recovery operation.
+### None
 
 ## OUTPUTS
 
-### WBJob[]
-This cmdlet returns a **WBJob** object that contains the currently or previously running backup or recovery operation.
+### System.Object
 
 ## NOTES
 

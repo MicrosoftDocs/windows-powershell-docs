@@ -669,7 +669,7 @@ The policy treats values the follow the EQ operator as multiple assertions which
 The policy treats values that follow the NE operator as multiple assertions which are logically differenced (AND'd).
 The criterion is satisfied if the type of query of the request matches one of the EQ values and does not match any of the NE values.
 
-Example criterion: `"EQ,TXT,SRV,NE,MX"`
+Example criterion: `"EQ,TXT,SRV;NE,MX"`
 
 ```yaml
 Type: String

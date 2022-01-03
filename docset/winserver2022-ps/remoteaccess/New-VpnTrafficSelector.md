@@ -151,7 +151,7 @@ Accept wildcard characters: False
 Specifies an enumeration to specify address family (IPv4 or IPv6) in the address range.
 Acceptable values for this enumeration are: 
 
-- IPv2
+- IPv4
 - IPv6
 
 ```yaml
@@ -172,7 +172,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
+### System.UInt32[]
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#VpnTrafficSelector
 

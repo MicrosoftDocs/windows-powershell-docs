@@ -185,11 +185,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackupSet, WBVirtualMachine
+### Microsoft.Windows.ServerBackup.Commands.WBBackupSet
+
+### Microsoft.Windows.ServerBackup.Commands.WBVirtualMachine[]
 
 ## OUTPUTS
 
-### System.String
+### System.Object
 
 ## NOTES
 

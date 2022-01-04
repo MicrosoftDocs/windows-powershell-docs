@@ -1,4 +1,4 @@
----
+﻿---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
 Module Name: AppvSequencer
@@ -17,8 +17,9 @@ Creates a new App-V package.
 
 ### ByInstallerFullLoad (Default)
 ```
-New-AppvSequencerPackage [-FullLoad] [-Installer] <String> [[-PrimaryVirtualApplicationDirectory] <String>]
- [-Name] <String> [-Path] <String> [-TemplateFilePath <String>] [<CommonParameters>]
+New-AppvSequencerPackage [-FullLoad] [-Installer] <String[]> [-InstallerOptions <String[]>]
+ [[-PrimaryVirtualApplicationDirectory] <String>] [-Name] <String> [-Path] <String>
+ [-TemplateFilePath <String>] [<CommonParameters>]
 ```
 
 ### ByPackageAcceleratorInstallMedia
@@ -76,7 +77,7 @@ If the accelerator is not signed or is not accepted by the Sequencer, an error i
 ```yaml
 Type: String
 Parameter Sets: ByPackageAcceleratorInstallMedia, ByPackageAcceleratorInstalledFiles
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -91,7 +92,52 @@ Indicates that the package is required to be fully downloaded before being launc
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByInstallerFullLoad
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstalledFilesPath
+Specifies the location of the already installed files used to create a new App-V package with the aid of an App-V Accelerator.
+
+```yaml
+Type: String
+Parameter Sets: ByPackageAcceleratorInstalledFiles
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Installer
+Specifies a collection of MSIs, setup executables, or other executables needed to be run to create the App-V package.
+
+```yaml
+Type: String[]
+Parameter Sets: ByInstallerFullLoad
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallerOptions
+Specifies an array of Installer Command-Line Options as parameter values, such as /quiet, /passive, or /norestart.
+
+```yaml
+Type: String[]
+Parameter Sets: ByInstallerFullLoad
+Aliases:
 
 Required: False
 Position: Named
@@ -106,40 +152,10 @@ Specifies the location of the installation media that the Sequencer points to an
 ```yaml
 Type: String
 Parameter Sets: ByPackageAcceleratorInstallMedia
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstalledFilesPath
-Specifies the location of the already installed files used to create a new App-V package with the aid of an App-V Accelerator.
-
-```yaml
-Type: String
-Parameter Sets: ByPackageAcceleratorInstalledFiles
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Installer
-Specifies a collection of MSIs, setup executables, or other executables needed to be run to create the App-V package.
-
-```yaml
-Type: String
-Parameter Sets: ByInstallerFullLoad
-Aliases: 
-
-Required: True
-Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -152,7 +168,7 @@ This is also the name of all files outputted by the sequencing process.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -183,7 +199,7 @@ This must be a path on the local computer.
 ```yaml
 Type: String
 Parameter Sets: ByInstallerFullLoad
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -198,7 +214,7 @@ Specifies the path to the App-V package template file to be used for this packag
 ```yaml
 Type: String
 Parameter Sets: ByInstallerFullLoad
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

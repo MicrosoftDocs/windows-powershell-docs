@@ -129,9 +129,9 @@ Specifies the installation status for which to search. An update will be include
 
 - Needed
 - FailedOrNeeded
-- InstalledNotApplicableOrNoStatus
+- InstalledOrNotApplicableOrNoStatus
 - Failed
-- InstalledNotApplicable
+- InstalledOrNotApplicable
 - NoStatus
 - Any
 

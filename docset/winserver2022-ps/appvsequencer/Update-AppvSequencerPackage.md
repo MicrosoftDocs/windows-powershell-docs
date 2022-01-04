@@ -1,4 +1,4 @@
----
+﻿---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
 Module Name: AppvSequencer
@@ -16,8 +16,9 @@ Upgrades virtual application packages.
 ## SYNTAX
 
 ```
-Update-AppvSequencerPackage [-FullLoad] [-InputPackagePath] <String> [-Installer] <String> [-Name] <String>
- [-Path] <String> [<CommonParameters>]
+Update-AppvSequencerPackage [-FullLoad] [-InputPackagePath] <String> [-Installer] <String[]>
+ [-InstallerOptions <String[]>] [-Name] <String> [-Path] <String> [-TemplateFilePath <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +50,7 @@ Indicates that the cmdlet forces the package to be fully downloaded onto the com
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -64,7 +65,7 @@ Specifies the path of the existing Microsoft Application Virtualization (App-V) 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -77,12 +78,27 @@ Accept wildcard characters: False
 Specifies the installer used to upgrade the App-V package.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallerOptions
+Specifies an array of Installer Command-Line Options as parameter values, such as /quiet, /passive, or /norestart.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -95,7 +111,7 @@ This value is obtained from the package manifest.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -114,6 +130,21 @@ Aliases: OutputPath
 
 Required: True
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TemplateFilePath
+Specifies the path to the App-V package template file to be used for this package.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

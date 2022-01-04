@@ -281,14 +281,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### NetworkPath string, Disk WBDisk, Volume WBVolume, VolumePath string
-This cmdlet uses **NetworkPath**, **Disk**, **Volume**, and **VolumePath** objects to define where the server stores backups.
-You can specify the *Credential* parameter to determine who can access the storage location.
+### Microsoft.Windows.ServerBackup.Commands.WBDisk
+
+### Microsoft.Windows.ServerBackup.Commands.WBVolume
+
+### System.Management.Automation.PSCredential
 
 ## OUTPUTS
 
-### WBBackupTarget
-The New-WBBackupTarget cmdlet creates a **WBBackupTarget** object, which you can use to configure a backup storage location in a **WBPolicy** object that contains a backup policy.
+### System.Object
 
 ## NOTES
 

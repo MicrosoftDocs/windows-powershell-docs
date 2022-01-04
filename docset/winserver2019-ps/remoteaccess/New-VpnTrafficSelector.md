@@ -151,7 +151,7 @@ Accept wildcard characters: False
 Specifies an enumeration to specify address family (IPv4 or IPv6) in the address range.
 Acceptable values for this enumeration are: 
 
-- IPv2
+- IPv4
 - IPv6
 
 ```yaml

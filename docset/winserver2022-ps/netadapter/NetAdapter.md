@@ -5,7 +5,7 @@ Help Version: 5.0.0.1
 Locale: en-US
 Module Guid: 1042b422-63a8-4016-a6d6-293e19e8f8a6
 Module Name: NetAdapter
-ms.date: 12/20/2016
+ms.date: 09/23/2021
 title: NetAdapter
 ---
 
@@ -32,7 +32,7 @@ Disables IPsec offload on the network adapter, so that the network adapter will 
 ### [Disable-NetAdapterLso](./Disable-NetAdapterLso.md)
 Disables all LSO properties, such as LSOv4 and LSOv6, of the network adapter.
 
-### [Disable-NetAdapterPowerManagement](./Disable-NetAdapterPowerManagement.md)
+### [Disable-NetAdapterPowerManagement](Disable-NetAdapterPowerManagement.md)
 Disables specific power management features on a network adapter.
 
 ### [Disable-NetAdapterQos](./Disable-NetAdapterQos.md)
@@ -50,7 +50,10 @@ Disables RSS on a network adapter.
 ### [Disable-NetAdapterSriov](./Disable-NetAdapterSriov.md)
 Disables SR-IOV on a network adapter.
 
-### [Disable-NetAdapterVmq](./Disable-NetAdapterVmq.md)
+### [Disable-NetAdapterUso](Disable-NetAdapterUso.md)
+Disables USO properties of the network adapter.
+
+### [Disable-NetAdapterVmq](Disable-NetAdapterVmq.md)
 Disables the VMQ feature on a network adapter.
 
 ### [Enable-NetAdapter](./Enable-NetAdapter.md)
@@ -71,7 +74,7 @@ Enables IPsec offload on the network adapter.
 ### [Enable-NetAdapterLso](./Enable-NetAdapterLso.md)
 Enables LSO properties, such as LSOv4 and LSOv6, of the network adapter.
 
-### [Enable-NetAdapterPowerManagement](./Enable-NetAdapterPowerManagement.md)
+### [Enable-NetAdapterPowerManagement](Enable-NetAdapterPowerManagement.md)
 Enables specific power management features on the network adapter.
 
 ### [Enable-NetAdapterQos](./Enable-NetAdapterQos.md)
@@ -89,7 +92,10 @@ Enables RSS on a network adapter.
 ### [Enable-NetAdapterSriov](./Enable-NetAdapterSriov.md)
 Enables SR-IOV on a network adapter.
 
-### [Enable-NetAdapterVmq](./Enable-NetAdapterVmq.md)
+### [Enable-NetAdapterUso](Enable-NetAdapterUso.md)
+Enables USO properties of the network adapter.
+
+### [Enable-NetAdapterVmq](Enable-NetAdapterVmq.md)
 Enables VMQ on a network adapter.
 
 ### [Get-NetAdapter](./Get-NetAdapter.md)
@@ -104,7 +110,10 @@ Gets a list of bindings for a network adapter.
 ### [Get-NetAdapterChecksumOffload](./Get-NetAdapterChecksumOffload.md)
 Gets the various checksum offload settings from network adapters that support these checksum offloads.
 
-### [Get-NetAdapterEncapsulatedPacketTaskOffload](./Get-NetAdapterEncapsulatedPacketTaskOffload.md)
+### [Get-NetAdapterDataPathConfiguration](Get-NetAdapterDataPathConfiguration.md)
+Gets the name of the network adapter, profile, and the profile source.
+
+### [Get-NetAdapterEncapsulatedPacketTaskOffload](Get-NetAdapterEncapsulatedPacketTaskOffload.md)
 Gets the network adapters that support encapsulated task offload.
 
 ### [Get-NetAdapterHardwareInfo](./Get-NetAdapterHardwareInfo.md)
@@ -116,7 +125,7 @@ Gets the IPsec offload properties of the network adapter.
 ### [Get-NetAdapterLso](./Get-NetAdapterLso.md)
 Gets the LSO properties of the network adapter.
 
-### [Get-NetAdapterPowerManagement](./Get-NetAdapterPowerManagement.md)
+### [Get-NetAdapterPowerManagement](Get-NetAdapterPowerManagement.md)
 Gets the power management features of a network adapter.
 
 ### [Get-NetAdapterQos](./Get-NetAdapterQos.md)
@@ -140,7 +149,10 @@ Displays the SR-IOV virtual function settings for a network adapter.
 ### [Get-NetAdapterStatistics](./Get-NetAdapterStatistics.md)
 Gets statistics from a network adapter.
 
-### [Get-NetAdapterVmq](./Get-NetAdapterVmq.md)
+### [Get-NetAdapterUso](Get-NetAdapterUso.md)
+Gets the USO properties of the network adapter.
+
+### [Get-NetAdapterVmq](Get-NetAdapterVmq.md)
 Gets the VMQ properties of a network adapter.
 
 ### [Get-NetAdapterVmqQueue](./Get-NetAdapterVmqQueue.md)
@@ -176,7 +188,10 @@ Sets the binding state of a transport or filter on a network adapter.
 ### [Set-NetAdapterChecksumOffload](./Set-NetAdapterChecksumOffload.md)
 Sets the various checksum offload settings.
 
-### [Set-NetAdapterEncapsulatedPacketTaskOffload](./Set-NetAdapterEncapsulatedPacketTaskOffload.md)
+### [Set-NetAdapterDataPathConfiguration](Set-NetAdapterDataPathConfiguration.md)
+Sets the name of the network adapter, profile, and the profile source.
+
+### [Set-NetAdapterEncapsulatedPacketTaskOffload](Set-NetAdapterEncapsulatedPacketTaskOffload.md)
 Sets the encapsulated packet task offload property of the network adapter.
 
 ### [Set-NetAdapterIPsecOffload](./Set-NetAdapterIPsecOffload.md)
@@ -185,7 +200,7 @@ Sets the IPsec offload properties of a network adapter.
 ### [Set-NetAdapterLso](./Set-NetAdapterLso.md)
 Sets the LSO properties of a network adapter.
 
-### [Set-NetAdapterPowerManagement](./Set-NetAdapterPowerManagement.md)
+### [Set-NetAdapterPowerManagement](Set-NetAdapterPowerManagement.md)
 Sets the power management properties on the network adapter.
 
 ### [Set-NetAdapterQos](./Set-NetAdapterQos.md)
@@ -203,7 +218,10 @@ Sets the RSS properties on a network adapter.
 ### [Set-NetAdapterSriov](./Set-NetAdapterSriov.md)
 Sets the SR-IOV properties of the network adapter, such as the number of virtual functions, the number of VPorts, and the number of queue pairs for default and non-default VPorts.
 
-### [Set-NetAdapterVmq](./Set-NetAdapterVmq.md)
+### [Set-NetAdapterUso](Set-NetAdapterUso.md)
+Sets the USO properties of a network adapter.
+
+### [Set-NetAdapterVmq](Set-NetAdapterVmq.md)
 Sets the VMQ properties of a network adapter.
 
 

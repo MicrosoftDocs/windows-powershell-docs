@@ -44,7 +44,7 @@ This example sets the network constraint for interfaces and replication groups o
 ### Example 2: Set a constraint for a stretch cluster
 
 ```powershell
-Set-SRNetworkConstraint -SourceComputerName "SR-SRV01" -SourceRGName "Group01" -SourceNWInterface "Cluster Network 1","Cluster Network 2" -DestinationComputerName "SR-SRV03" -DestinationRGName "Group02" -DestinationNWInterface "Cluster Network 1","Cluster Network 2"
+Set-SRNetworkConstraint -SourceComputerName "Cluster01" -SourceRGName "Group01" -SourceNWInterface "Cluster Network 1","Cluster Network 2" -DestinationComputerName "Cluster02" -DestinationRGName "Group02" -DestinationNWInterface "Cluster Network 1","Cluster Network 2"
 ```
 
 This command sets a network constraint for a specific set of cluster networks in a stretch cluster.

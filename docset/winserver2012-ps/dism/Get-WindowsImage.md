@@ -119,7 +119,7 @@ Accepted values: Errors, Warnings, WarningsInfo
 
 Required: False
 Position: Named
-Default value: None
+Default value: 3
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

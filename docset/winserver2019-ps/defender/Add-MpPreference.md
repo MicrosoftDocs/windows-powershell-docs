@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Add-MpPreference cmdlet modifies settings for Windows Defender.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
 ms.date: 12/20/2016

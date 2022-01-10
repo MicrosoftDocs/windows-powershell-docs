@@ -31,12 +31,19 @@ Use this cmdlet to add exclusions for file name extensions, paths, and processes
 ## EXAMPLES
 
 ### Example 1: Add a folder to the exclusion list
-```
-PS C:\> Add-MpPreference -ExclusionPath "C:\Temp"
+```powershell
+Add-MpPreference -ExclusionPath "C:\Temp"
 ```
 
 This command adds the folder C:\Temp to the exclusion list.
 The command disables Windows Defender scheduled and real-time scanning for files in this folder.
+
+### Example 2: Allow an application to access folders
+```powershell
+Add-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe"
+```
+
+This command allows the specified application to make changes in controlled folders.
 
 ## PARAMETERS
 

@@ -67,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDeviceAuthAsPrimaryForDomainJoinedDevices
-Allows to use device authentication as primary for domain joined devices.
+Allows the use of device authentication as primary authentication for domain-joined devices.
+
 
 ```yaml
 Type: Boolean

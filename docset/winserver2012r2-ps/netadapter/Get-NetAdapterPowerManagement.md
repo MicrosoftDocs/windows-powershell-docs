@@ -27,7 +27,7 @@ Get-NetAdapterPowerManagement -InterfaceDescription <String[]> [-IncludeHidden] 
 ```
 
 ## DESCRIPTION
-The **Get-NetAdapterPowerManagement** cmdlet gets the state of the power management features of a Power Management capable network adapter.
+The **Get-NetAdapterPowerManagement** cmdlet gets the state of the power management features of a Power Management capable network adapter. You need to run this cmdlet in an elevated (Run as Administrator) Windows PowerShell session.
 
 ## EXAMPLES
 

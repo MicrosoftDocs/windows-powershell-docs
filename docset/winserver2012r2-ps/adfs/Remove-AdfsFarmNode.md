@@ -11,7 +11,7 @@ title: Remove-AdfsFarmNode
 
 ## SYNOPSIS
 The Remove-AdfsFarmNode cmdlet is deprecated.
-Instead, use the Uninstall-WindowsFeature cmdlet.
+Instead, use the **Uninstall-WindowsFeature** cmdlet. 
 
 ## SYNTAX
 
@@ -27,8 +27,8 @@ Remove-AdfsFarmNode -GroupServiceAccountIdentifier <String> [-Credential <PSCred
 
 ## DESCRIPTION
 The **Remove-AdfsFarmNode** cmdlet is deprecated in this release.
-Instead, use the Uninstall-WindowsFeaturehttp://go.microsoft.com/fwlink/?LinkID=287572 cmdlet.
-For more information on the **Uninstall-WindowsFeature** cmdlet, type `Get-Help Uninstall-WindowsFeature`.
+Instead, use the [Uninstall-WindowsFeature](https://go.microsoft.com/fwlink/?LinkID=287572) cmdlet.
+For more information on the **Uninstall-WindowsFeature** cmdlet, type `Get-Help Uninstall-WindowsFeature`. However, this cmdlet removes only the server role but doesn't remove the node from the ADFS farm. For proper cleanup please use the **Set-AdfsFarmInformation** with the `-RemoveNode` parameter.
 
 ## EXAMPLES
 

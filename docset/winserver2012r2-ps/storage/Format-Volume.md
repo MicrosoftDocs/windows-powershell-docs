@@ -408,7 +408,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
-NOTE: The WhatIf switch does not work with this cmdlet.
+**NOTE**: The WhatIf switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter

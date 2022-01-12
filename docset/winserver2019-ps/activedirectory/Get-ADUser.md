@@ -39,7 +39,7 @@ Get-ADUser [-AuthType <ADAuthType>] [-Credential <PSCredential>] -LDAPFilter <St
 The **Get-ADUser** cmdlet gets a specified user object or performs a search to get multiple user objects.
 
 The *Identity* parameter specifies the Active Directory user to get.
-You can identify a user by its distinguished name (DN), GUID, security identifier (SID) or Security Account Manager (SAM) account name.
+You can identify a user by its distinguished name (DN), GUID, security identifier (SID), or Security Account Manager (SAM) account name.
 You can also set the parameter to a user object variable such as `$<localUserObject>` or pass a user object through the pipeline to the *Identity* parameter.
 
 To search for and retrieve more than one user, use the *Filter* or *LDAPFilter* parameters.

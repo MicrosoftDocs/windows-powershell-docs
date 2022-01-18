@@ -124,7 +124,7 @@ This command adds an app package but only installs the required section of a str
 Add-AppxPackage -AppInstallerFile "C:\Users\user1\Desktop\MyApp.appinstaller"
 ```
 
-This command adds an app package as outlined in the App Installer file. With any / all update settings specified within the App Installer file.
+This command adds an app package as outlined in the App Installer file with all update settings specified within the App Installer file, if any.
 
 ## PARAMETERS
 

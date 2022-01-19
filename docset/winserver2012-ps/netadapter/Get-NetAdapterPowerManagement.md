@@ -25,8 +25,7 @@ Get-NetAdapterPowerManagement [-AsJob] [-CimSession <CimSession[]>] [-IncludeHid
 ```
 
 ## DESCRIPTION
-The **Get-NetAdapterPowerManagement** cmdlet gets the state of the power management features of a Power Management capable network adapter.
-You must be an administrator in order to run this cmdlet.
+The **Get-NetAdapterPowerManagement** cmdlet gets the state of the power management features of a Power Management capable network adapter. You need to run this cmdlet in an elevated (Run as Administrator) Windows PowerShell session.
 
 ## EXAMPLES
 

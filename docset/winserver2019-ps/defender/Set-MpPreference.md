@@ -1010,7 +1010,7 @@ Accept wildcard characters: False
 ### -ServiceHealthReportInterval
 This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. 
 
-If you do not configure this setting, the default value will be applied. The default value is set at 60 minutes (1 hour). 
+If you do not configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour). 
 If you configure this setting to 0, no service health reports will be sent.
 The maximum value allowed to be set is 14400 minutes (10 days).
 

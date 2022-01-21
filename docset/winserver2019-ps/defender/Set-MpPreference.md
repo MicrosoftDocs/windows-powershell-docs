@@ -1012,7 +1012,7 @@ This policy setting configures the time interval (in minutes) for the service he
 
 If you do not configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour). 
 If you configure this setting to 0, no service health reports will be sent.
-The maximum value allowed to be set is 14400 minutes (10 days).
+The maximum value allowed to be set is 14400 minutes (ten days).
 
 ```yaml
 Type: UInt32

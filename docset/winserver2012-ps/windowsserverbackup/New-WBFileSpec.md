@@ -40,25 +40,21 @@ The WBFileSpec object that specifies the file C:\Sample\1.jpg for backup.
 
 This command creates a file specification and adds the file named "C:\Sample\1.jpg" to it.
 
-### Example 2: Add a volume recursively to a backup file specification
+### Example 2: Add a folder recursively to a backup file specification
 ```
-PS C:\> $Filespec = New-WBFileSpec -FileSpec C:\Sample
-
-The WBFileSpec object that specifies the folder C:\Sample for backup.
+PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample"
 ```
 
-This command creates a file specification and adds the contents of the "C:\Sample" folder to it.
-Because the cmdlet does not include the **NonRecursive** parameter, the backup includes the contents of this folder and its subfolders.
+This command creates a file specification and adds the contents of the C:\Sample folder to it.
+Because the cmdlet does not include the *NonRecursive* parameter, the backup includes the contents of this folder and its subfolders.
 
-### Example 3: Add a volume nonrecursively to a backup file specification
+### Example 3: Add a folder nonrecursively to a backup file specification
 ```
-PS C:\> $Filespec = New-WBFileSpec -FileSpec C:\Sample -NonRecursive
-
-The WBFileSpec object that specifies the folder C:\sample for backup non-recursively.
+PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample" -NonRecursive
 ```
 
-This command creates a file specification and adds the contents of the "C:\Sample" folder to it.
-Because the cmdlet includes the **NonRecursive** parameter, the backup includes the contents of this folder but not the contents of its subfolders.
+This command creates a file specification and adds the contents of the C:\Sample folder to it.
+Because the cmdlet includes the *NonRecursive* parameter, the backup includes the contents of this folder but not the contents of its subfolders.
 
 ### Example 4: Exclude files from a backup file specification
 ```

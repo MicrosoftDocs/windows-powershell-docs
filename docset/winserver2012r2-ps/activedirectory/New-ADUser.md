@@ -88,6 +88,13 @@ PS C:\>New-ADUser -Name "ChewDavid" -Type iNetOrgPerson -Path "DC=AppNC" -Server
 
 This command creates an **inetOrgPerson**-class user named ChewDavid on an AD LDS instance.
 
+### Example 4: Create a user and set password
+```
+PS C:\> New-ADUser -Name "ChewDavid" -Accountpassword (Read-Host -AsSecureString "AccountPassword") -Enabled $true
+```
+
+This command creates a new user named ChewDavid and sets the account password.
+
 ## PARAMETERS
 
 ### -AccountExpirationDate

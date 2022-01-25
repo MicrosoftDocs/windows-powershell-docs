@@ -41,7 +41,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
  [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>][-CloudBlockLevel <CloudBlockLevelType>]
+ [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>][-CloudBlockLevel <CloudBlockLevelType>][-ServiceHealthReportInterval <UInt32>]
 ```
 
 ## DESCRIPTION
@@ -1004,6 +1004,23 @@ Aliases: scso
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceHealthReportInterval
+This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. 
+
+If you do not configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour). 
+If you configure this setting to 0, no service health reports will be sent.
+The maximum value allowed to be set is 14400 minutes (ten days).
+
+```yaml
+Type: UInt32
+Aliases: shri
+Accepted values: 0-14400
+Position: Named
+Default value: 60
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Uninstall-ProvisioningPackage cmdlet uninstalls .ppkg files.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
 ms.date: 05/09/2017
@@ -41,6 +41,8 @@ Uninstall-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-
 
 ## DESCRIPTION
 Unintalls .PPKG package based on package ID, path, metadata, or all packages.
+
+The **Uninstall-ProvisioningPackage** cmdlet is supported on Windows 10 client operating system only.
 
 ## EXAMPLES
 
@@ -129,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuntimeMetadata
-{{Fill RuntimeMetadata Description}}
+Specifies a runtime provisioning package metadata object.
 
 ```yaml
 Type: RuntimeProvPackageMetadata

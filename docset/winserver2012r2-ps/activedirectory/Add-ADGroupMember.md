@@ -336,6 +336,7 @@ By default, this cmdlet does not generate any output.
 ## NOTES
 * This cmdlet does not work with a read-only domain controller.
 * This cmdlet does not work with an Active Directory snapshot.
+* This cmdlet will allow you to add a group as a member of itself which could lead to unstable behavior.
 
 ## RELATED LINKS
 

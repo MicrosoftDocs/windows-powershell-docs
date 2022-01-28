@@ -22,7 +22,6 @@ Add-ClusterNode [[-Name] <StringCollection>] [-NoStorage] [-InputObject <PSObjec
 
 ## DESCRIPTION
 The **Add-ClusterNode** cmdlet adds a node, or server, to a failover cluster.
-Before adding the new node, you should run validation tests on the existing nodes together with the proposed new node.
 
 Before adding the new node, you should run validation tests on the existing nodes together with the proposed new node.
 By running the validation tests, you can confirm that the server to be added is connected correctly to the networks and storage and that it contains the same software updates.

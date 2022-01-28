@@ -349,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableIntrusionPreventionSystem
-This parameter was depreciated and its use has no impact.
+This parameter was deprecated and its use has no impact.
 
 ```yaml
 Type: Boolean

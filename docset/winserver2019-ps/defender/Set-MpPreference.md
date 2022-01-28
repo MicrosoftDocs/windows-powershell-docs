@@ -349,8 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableIntrusionPreventionSystem
-Indicates whether to configure network protection against exploitation of known vulnerabilities.
-If you specify a value of $False or do not specify a value, network protection is enabled.
+This parameter was deprecated and its use has no impact.
 
 ```yaml
 Type: Boolean

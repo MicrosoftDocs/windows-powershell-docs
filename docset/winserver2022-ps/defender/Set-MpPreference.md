@@ -2,7 +2,7 @@
 description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 12/20/2016
+ms.date: 01/28/2022
 online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -35,7 +35,6 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-MAPSReporting <MAPSReportingType>] [-SubmitSamplesConsent <SubmitSamplesConsentType>]
  [-DisableAutoExclusions <Boolean>] [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>]
  [-SchedulerRandomizationTime <UInt32>] [-DisableBehaviorMonitoring <Boolean>]
- [-DisableIntrusionPreventionSystem <Boolean>] [-DisableIOAVProtection <Boolean>]
  [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
  [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
@@ -549,22 +548,6 @@ If you specify a value of $False or do not specify a value, scanning downloaded 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: dioavp
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisableIntrusionPreventionSystem
-Indicates whether to configure network protection against exploitation of known vulnerabilities.
-If you specify a value of $False or do not specify a value, network protection is enabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: dips
 
 Required: False
 Position: Named

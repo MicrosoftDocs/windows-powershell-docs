@@ -2,7 +2,7 @@
 description: Adds a signed app package to a user account.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 09/01/2021
+ms.date: 01/31/2022
 online version: https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-AppxPackage

@@ -271,12 +271,17 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationName
+<<<<<<< HEAD
 
 Specifies the Windows PowerShell session configuration that defines the session in which scripts,
 specified by the **PreUpdateScript** and **PostUpdateScript** parameters, and cmdlets are run, and can
 limit the cmdlets that are available to be run. If either a pre-update or post-update script is
 specified but a configuration name isn't specified, then the default session configuration that is
 built into Windows PowerShell® is used.
+=======
+Specifies the Windows PowerShell session configuration that defines the session in which scripts, specified by the *PreUpdateScript* and *PostUpdateScript* parameters, and cmdlets are run, and can limit the cmdlets that are available to be run.
+If either a pre-update or post-update script is specified but a configuration name is not specified, then the default session configuration that is built into Windows PowerShell&reg; is used.
+>>>>>>> f65c35cc7 (Remove special character)
 
 ```yaml
 Type: String

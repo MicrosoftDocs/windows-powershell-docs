@@ -1,5 +1,2 @@
-items:
 - name: Windows PowerShell
   href: get-started.md
-metadata:
-  universal_ref_toc: /powershell/module/winserver2012r2-ps/toc.json

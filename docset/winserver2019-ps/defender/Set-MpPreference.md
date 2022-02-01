@@ -750,7 +750,7 @@ This is the default.
 - 1: Scan incoming files only. 
 - 2: Scan outgoing files only. 
 
-Specify a value for this parameter to enhance performance on servers which have a large number of file transfers, but need scanning for either incoming or outgoing files.
+Specify a value for this parameter to enhance performance on servers that have a large number of file transfers, but need scanning for either incoming or outgoing files.
 Evaluate this configuration based on the server role.
 For non-NTFS volumes, Windows Defender performs full monitoring of file and program activity.
 
@@ -783,7 +783,7 @@ The acceptable values for this parameter are:
 - 8: Never 
 
 The default value is 8, never.
-If you specify a value of 8 or do not specify a value, Windows Defender performs a scheduled full scan to complete remediation by using a default frequency.
+If you specify a value of 8 or don’t specify a value, Windows Defender performs a scheduled full scan to complete remediation by using a default frequency.
 
 ```yaml
 Type: Day
@@ -801,7 +801,7 @@ Accept wildcard characters: False
 ### -RemediationScheduleTime
 Specifies the time of day, as the number of minutes after midnight, to perform a scheduled scan.
 The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled scan runs at the default time of two hours after midnight.
+If you don’t specify a value for this parameter, a scheduled scan runs at the default time of two hours after midnight.
 
 ```yaml
 Type: DateTime
@@ -863,10 +863,10 @@ Accept wildcard characters: False
 ### -ScanAvgCPULoadFactor
 Specifies the maximum percentage CPU usage for a scan.
 The acceptable values for this parameter are: integers from 5 through 100, and the value 0, which disables CPU throttling.
-Windows Defender does not exceed the percentage of CPU usage that you specify.
+Windows Defender doesn’t exceed the percentage of CPU usage that you specify.
 The default value is 50.
 
-Note: This is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average.
+Note: This limit is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average.
 
 Note: Manually run scans will ignore this setting and run without any CPU limits.
 

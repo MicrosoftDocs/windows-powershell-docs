@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ### -CheckForSignaturesBeforeRunningScan
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of $True, Windows Defender checks for new definitions.
-If you specify $False or don’t specify a value, the scan begins with existing definitions.
+If you specify `$False` or don’t specify a value, the scan begins with existing definitions.
 This value applies to scheduled scans, but it doesn’t affect scans that you start from the user interface or to scans that you start from the command line.
 
 ```yaml
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -DisableArchiveScanning
 Indicates whether to scan archive files, such as .zip and .cab files, for malicious and unwanted software.
-If you specify a value of $False or don’t specify a value, Windows Defender scans archive files.
+If you specify a value of `$False` or don’t specify a value, Windows Defender scans archive files.
 However, archives are always scanned during directed scans.
 
 ```yaml
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 
 ### -DisableAutoExclusions
 Indicates whether to disable the Automatic Exclusions feature for the server.
-If you specify a value of $False or don’t specify a value, Windows Defender enables the Automatic Exclusions feature for the server.
+If you specify a value of `$False` or don’t specify a value, Windows Defender enables the Automatic Exclusions feature for the server.
 
 ```yaml
 Type: Boolean
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 
 ### -DisableBehaviorMonitoring
 Indicates whether to enable behavior monitoring.
-If you specify a value of $False or don’t specify a value, Windows Defender enables behavior monitoring.
+If you specify a value of `$False` or don’t specify a value, Windows Defender enables behavior monitoring.
 
 ```yaml
 Type: Boolean
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 ### -DisableBlockAtFirstSeen
 Indicates whether to enable block at first seen.
-If you specify a value of $False or don’t specify a value, Windows Defender enables block at first seen.
+If you specify a value of `$False` or don’t specify a value, Windows Defender enables block at first seen.
 
 ```yaml
 Type: Boolean
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ### -DisableEmailScanning
 Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 Windows Defender supports several formats, including .pst, .dbx, .mbx, .mime, and .binhex.
-If you specify a value of $False or don’t specify a value, Windows Defender performs email scanning. If you specify a value of $True, Windows Defender doesn’t perform email scanning.
+If you specify a value of `$False` or don’t specify a value, Windows Defender performs email scanning. If you specify a value of $True, Windows Defender doesn’t perform email scanning.
 This configuration isn’t applicable to modern email clients.
 
 ```yaml
@@ -366,7 +366,7 @@ Accept wildcard characters: False
 ### -DisablePrivacyMode
 Indicates whether to disable privacy mode.
 Privacy mode prevents users, other than administrators, from displaying threat history.
-If you specify a value of $False or don’t specify a value, privacy mode is enabled.
+If you specify a value of `$False` or don’t specify a value, privacy mode is enabled.
 
 ```yaml
 Type: Boolean
@@ -382,7 +382,7 @@ Accept wildcard characters: False
 
 ### -DisableRealtimeMonitoring
 Indicates whether to use real-time protection.
-If you specify a value of $False or don’t specify a value, Windows Defender uses real-time protection.
+If you specify a value of `$False` or don’t specify a value, Windows Defender uses real-time protection.
 We recommend that you enable Windows Defender to use real-time protection.
 
 ```yaml
@@ -415,7 +415,7 @@ Accept wildcard characters: False
 
 ### -DisableRestorePoint
 Indicates whether to disable scanning of restore points.
-If you specify a value of $False or don’t specify a value, Windows Defender restore point is enabled.
+If you specify a value of `$False` or don’t specify a value, Windows Defender restore point is enabled.
 
 ```yaml
 Type: Boolean
@@ -430,7 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningMappedNetworkDrivesForFullScan
-Indicates whether to scan mapped network drives. If you specify a value of $False or don’t specify a value, Windows Defender scans mapped network drives. If you specify a value of $True, Windows Defender doesn’t scan mapped network drives.
+Indicates whether to scan mapped network drives. If you specify a value of `$False` or don’t specify a value, Windows Defender scans mapped network drives. If you specify a value of $True, Windows Defender doesn’t scan mapped network drives.
 
 ```yaml
 Type: Boolean
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Indicates whether to scan for network files. If you specify a value of $False or don’t specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender doesn’t scan network files. We don’t recommend scanning network files.
+Indicates whether to scan for network files. If you specify a value of `$False` or don’t specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender doesn’t scan network files. We don’t recommend scanning network files.
 
 ```yaml
 Type: Boolean
@@ -461,7 +461,7 @@ Accept wildcard characters: False
 
 ### -DisableScriptScanning
 Specifies whether to disable the scanning of scripts during malware scans.
-If you specify a value of $False or do not specify a value, Windows Defender does not scan scripts.
+If you specify a value of `$False` or don’t specify a value, Windows Defender does not scan scripts.
 
 ```yaml
 Type: Boolean
@@ -1313,7 +1313,7 @@ Accept wildcard characters: False
 ### -UILockdown
 Indicates whether to disable UI lockdown mode.
 If you specify a value of $True, Windows Defender disables UI lockdown mode.
-If you specify $False or do not specify a value, UI lockdown mode is enabled.
+If you specify `$False` or do not specify a value, UI lockdown mode is enabled.
 
 ```yaml
 Type: Boolean

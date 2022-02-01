@@ -141,11 +141,11 @@ Accept wildcard characters: False
 ### -CloudBlockLevel
 Configure this policy to specify the level of cloud protection to your endpoint. 
 
-Default (0): provides strong detection without increasing risk of detecting legitimate files
-Moderate (1): provides moderate detection only for high confidence detections
-High (2): applies a strong level of detection while optimizing client performance
-HighPlus (4): applies extra protection measures (might affect client performance and increase your chance of false positives)
-ZeroTolerance (6): blocks all unknown executables
+- Default (0): provides strong detection without increasing risk of detecting legitimate files
+- Moderate (1): provides moderate detection only for high confidence detections
+- High (2): applies a strong level of detection while optimizing client performance
+- HighPlus (4): applies extra protection measures (might affect client performance and increase your chance of false positives)
+- ZeroTolerance (6): blocks all unknown executables
 
 ```yaml
 Type: CloudBlockLevelType

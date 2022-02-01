@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Use this article to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
 ms.date: 01/24/2022
@@ -42,7 +42,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
  [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>][-CloudBlockLevel <CloudBlockLevelType>][-ServiceHealthReportInterval <UInt32>]
-```
+ ```
 
 ## DESCRIPTION
 The **Set-MpPreference** cmdlet configures preferences for Windows Defender scans and updates.
@@ -74,7 +74,7 @@ This command configures preferences to check for definition updates every day.
 
 ### Example 2: Schedule a time of day to check for definition updates
 ```
-PS C:\> Set-MpPreference -SignatureScheduleTime 120
+PS C:\> Set-MpPreference -SignatureScheduleTime 02:00:00
 ```
 
 This command configures preferences to check for definition updates 120 minutes after midnight on days when it is scheduled to check.
@@ -141,10 +141,10 @@ Accept wildcard characters: False
 ### -CloudBlockLevel
 Configure this policy to specify the level of cloud protection to your endpoint. 
 
-Default (0): provides strong detection without increasing risk of detecting legitamate files
+Default (0): provides strong detection without increasing risk of detecting legitimate files
 Moderate (1): provides moderate detection only for high confidence detections
 High (2): applies a strong level of detection while optimizing client performance
-HighPlus (4): applies extra protection measures (might affect client peformance and increase your chance of false positives)
+HighPlus (4): applies extra protection measures (might affect client performance and increase your chance of false positives)
 ZeroTolerance (6): blocks all unknown executables
 
 ```yaml
@@ -571,7 +571,7 @@ Accept wildcard characters: False
 ```
 
 ### -HighThreatDefaultAction
-Specifies which automatic remediation action to take for a high level threat.
+Specifies which automatic remediation action to take for a high-level threat.
 The acceptable values for this parameter are:
 
 - Quarantine 
@@ -592,7 +592,7 @@ Accept wildcard characters: False
 ```
 
 ### -LowThreatDefaultAction
-Specifies which automatic remediation action to take for a low level threat.
+Specifies which automatic remediation action to take for a low-level threat.
 The acceptable values for this parameter are:
 
 - Quarantine 

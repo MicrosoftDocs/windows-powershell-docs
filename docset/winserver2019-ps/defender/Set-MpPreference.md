@@ -732,7 +732,7 @@ Accept wildcard characters: False
 
 ### -RandomizeScheduleTaskTimes
 Indicates whether to select a random time for the scheduled start and scheduled update for definitions.
-If you specify a value of `$True` or do not specify a value, scheduled tasks begin within 30 minutes, before or after, the scheduled time.
+If you specify a value of `$True` or don’t specify a value, scheduled tasks begin within 30 minutes, before or after, the scheduled time.
 If you randomize the start times, it can distribute the impact of scanning.
 For example, if several virtual machines share the same host, randomized start times prevents all the hosts from starting the scheduled tasks at the same time.
 

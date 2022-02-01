@@ -2,7 +2,7 @@
 description: The Get-CauDeviceInfoForFeatureUpdates cmdlet gets device information for feature updates to use with Cluster-Aware Updating (CAU).
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 09/17/2021
+ms.date: 02/01/2022
 online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-caudeviceinfoforfeatureupdates?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CauDeviceInfoForFeatureUpdates

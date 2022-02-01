@@ -17,9 +17,9 @@ updates that are applied to each node in a specified cluster.
 ## SYNTAX
 
 ```
-Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential]
-<PSCredential>] [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure]
- [<CommonParameters>]
+Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
+ [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-OsRollingUpgrade]
+ [-AttemptSoftReboot] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,6 +77,24 @@ This example uses splatting to pass parameter values from the `$parameters` vari
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
+
+### -AttemptSoftReboot
+Indicates that command assumes a Kernel Soft Reboot (KSR) for the failover cluster.
+
+KSR bypasses BIOS/firmware initialization.
+You can only use KSR for updates that do not require a BIOS/firmware initialization.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CauPluginArguments
 
@@ -190,6 +208,21 @@ Aliases:
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OsRollingUpgrade
+Indicates that the CAU cluster role scans for upgrades to the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

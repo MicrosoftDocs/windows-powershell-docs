@@ -20,12 +20,20 @@ Performs a scan of cluster nodes for applicable updates and installs those updat
 ```
 Invoke-CauRun [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>]
  [-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
- [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
- [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-EnableFirewallRules]
- [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-Force] [[-ClusterName]
-<String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
- [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>]
+ [-SeparateReboots] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+ [-SuspendClusterNodeTimeoutMinutes <Int32>] [-Force] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+ [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>] [[-ClusterName] <String>]
+ [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>] [-CauPluginArguments <Hashtable[]>]
+ [-RunPluginsSerially] [-StopOnPluginFailure] [-OsRollingUpgrade] [-AttemptSoftReboot] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RecoverParamSet
+```
+Invoke-CauRun [-ForceRecovery] [-Force] [-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot]
+ [-SkipUpdateChecks] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RecoverParamSet
@@ -122,6 +130,24 @@ state for the cluster named CONTOSO-FC1. Because the command specifies the **For
 recovery is performed without confirmation prompts.
 
 ## PARAMETERS
+
+### -AttemptSoftReboot
+Indicates that command attempts a Kernel Soft Reboot (KSR) for the failover cluster.
+
+KSR bypasses BIOS/firmware initialization.
+You can only use KSR for updates that do not require a BIOS/firmware initialization.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: DefaultParamSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CauPluginArguments
 
@@ -336,6 +362,58 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForcePauseAndDrain
+Indicates that the command forces cluster nodes to pause and drain roles.
+
+A forced drain moves the roles off of the draining node even if the group cannot move.
+A group might not be able to move because no other node can host the group or the group is locked.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForcePauseDrainAndReboot
+Indicates that the command forces cluster nodes to pause, drain roles, and restart.
+
+A forced drain moves the roles off of the draining node even if the group cannot move.
+A group might not be able to move because no other node can host the group or the group is locked.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForcePauseNoDrain
+Indicates that the command forces cluster nodes to pause.
+The nodes are not drained.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ForceRecovery
 
 Indicates that the cmdlet recovers from a previous failed run that left the cluster in a Locked
@@ -398,6 +476,21 @@ Specifies an array of cluster nodes names in the order that they are updated.
 
 ```yaml
 Type: String[]
+Parameter Sets: DefaultParamSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OsRollingUpgrade
+Indicates that the CAU cluster role upgrades the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: DefaultParamSet
 Aliases: 
 
@@ -519,6 +612,38 @@ If a single plug-in is specified, a warning appears.
 Type: SwitchParameter
 Parameter Sets: DefaultParamSet
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAwareUpdatingOrder
+Specifies the order in which the command updates cluster nodes.
+
+By default, CAU selects the order of nodes to update based on the level of activity.
+
+```yaml
+Type: String[]
+Parameter Sets: DefaultParamSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipUpdateChecks
+Indicates that the command skips update checks.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

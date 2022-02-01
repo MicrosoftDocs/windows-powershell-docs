@@ -17,7 +17,8 @@ Performs a scan of cluster nodes for applicable updates and gets a list of the i
 
 ```
 Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
- [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [<CommonParameters>]
+ [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-OsRollingUpgrade]
+ [-AttemptSoftReboot] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,6 +53,24 @@ The list is based on the updates that would be applied by the **Microsoft.Window
 This example also shows how to pass the administrative credentials for cluster CONTOSO-FC1 to the cmdlet.
 
 ## PARAMETERS
+
+### -AttemptSoftReboot
+Indicates that command assumes a Kernel Soft Reboot (KSR) for the failover cluster.
+
+KSR bypasses BIOS/firmware initialization.
+You can only use KSR for updates that do not require a BIOS/firmware initialization.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CauPluginArguments
 Specifies a set of name=value pairs for each updating plug-in to use.
@@ -150,6 +169,21 @@ Aliases:
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OsRollingUpgrade
+Indicates that the CAU cluster role scans for upgrades to the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

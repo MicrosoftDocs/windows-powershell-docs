@@ -23,8 +23,10 @@ Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>] [
  [-NodeOrder <String[]>] [-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
  [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>]
  [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules]
- [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [[-ClusterName] <String>]
- [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain]
+ [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
+ [-OsRollingUpgrade] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Weekly
@@ -35,8 +37,16 @@ Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>] [
  [-NodeOrder <String[]>] [-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
  [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>]
  [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules]
- [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [[-ClusterName] <String>]
- [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain]
+ [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
+ [-OsRollingUpgrade] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### DefaultParamSet
+```
+Add-CauClusterRole [-AttemptSoftReboot] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -87,6 +97,24 @@ Because the command uses the *Force* parameter, the cmdlet runs without displayi
 
 ## PARAMETERS
 
+### -AttemptSoftReboot
+Indicates that the CAU clustered role attempts a Kernel Soft Reboot (KSR) for the failover cluster.
+
+KSR bypasses BIOS/firmware initialization.
+You can only use KSR for updates that do not require a BIOS/firmware initialization.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: DefaultParamSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CauPluginArguments
 Specifies an array of name=value pairs (arguments) for each updating plug-in to use.
 For instance, to specify a Domain argument for one plug-in: 
@@ -127,8 +155,8 @@ For more information about required and optional arguments for the **Microsoft.H
 
 ```yaml
 Type: Hashtable[]
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -146,8 +174,8 @@ For more information about how plug-ins work with CAU, see [How CAU Plug-ins Wor
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -178,8 +206,8 @@ If either a pre-update or post-update script is specified but a configuration na
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -234,8 +262,8 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: Weekdays
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 Accepted values: None, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
 Required: False
@@ -254,8 +282,8 @@ The Remote Shutdown Windows Firewall rule group is not enabled when it will conf
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -278,8 +306,8 @@ The default value is Immediate.
 
 ```yaml
 Type: FailbackType
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 Accepted values: NoFailback, Immediate, Policy
 
 Required: False
@@ -304,13 +332,65 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForcePauseAndDrain
+Indicates that the CAU cluster role forces cluster nodes to pause and drain roles.
+
+A forced drain moves the roles off of the draining node even if the group cannot move.
+A group might not be able to move because no other node can host the group or the group is locked.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForcePauseDrainAndReboot
+Indicates that the CAU cluster role forces cluster nodes to pause, drain roles, and restart.
+
+A forced drain moves the roles off of the draining node even if the group cannot move.
+A group might not be able to move because no other node can host the group or the group is locked.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForcePauseNoDrain
+Indicates that the CAU cluster role forces cluster nodes to pause.
+The nodes are not drained.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GroupName
 Specifies the NetBIOS name of the resource group for the CAU clustered role.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -344,8 +424,8 @@ The default for most clusters is approximately one-third of the number of nodes.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -362,8 +442,8 @@ The maximum is 64 and the default is 3.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -377,8 +457,23 @@ Specifies an array of cluster node names in the order that they should be update
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: MonthlyDayOfWeek, Weekly
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OsRollingUpgrade
+Indicates that the CAU cluster role upgrades the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -394,8 +489,8 @@ As a best practice, the script should be located on a disk in cluster storage, o
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -412,8 +507,8 @@ If a pre-update script fails, the node is not updated.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -428,8 +523,8 @@ If the restart does not complete within this time, then the Updating Run on that
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -443,8 +538,8 @@ Indicates that the cmdlet enforces that all cluster nodes are online and reachab
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -463,8 +558,8 @@ If a single plug-in is specified, a warning appears.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -482,8 +577,40 @@ If a single plug-in is specified, a warning appears.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: MonthlyDayOfWeek, Weekly
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAwareUpdatingOrder
+Specifies the order in which the CAU cluster role updates cluster nodes.
+
+By default, CAU selects the order of nodes to update based on the level of activity.
+
+```yaml
+Type: String[]
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipUpdateChecks
+Indicates that the CAU cluster role skips update checks.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -497,8 +624,8 @@ Specifies the earliest date on which the Updating Run can be triggered.
 
 ```yaml
 Type: DateTime
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -516,8 +643,8 @@ If pre-update or post-update scripts are specified, then the entire process of r
 
 ```yaml
 Type: TimeSpan
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -534,8 +661,8 @@ If a single plug-in is specified, a warning appears.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -555,8 +682,8 @@ So CAU could potentially spend the amount of time specified for this value for e
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -573,8 +700,8 @@ Generating a name automatically requires the cluster name object to have permiss
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named
@@ -589,8 +716,8 @@ By default, no warning will be logged, regardless of the time taken by the Updat
 
 ```yaml
 Type: TimeSpan
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
 
 Required: False
 Position: Named

@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a DNS application directory partition.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerDirectoryPartition" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-DnsServerDirectoryPartition
+  href: ./Add-DnsServerDirectoryPartition.yml
+- text: Register-DnsServerDirectoryPartition
+  href: ./Register-DnsServerDirectoryPartition.yml
+- text: Unregister-DnsServerDirectoryPartition
+  href: ./Unregister-DnsServerDirectoryPartition.yml
+- text: Remove-DnsServerDirectoryPartition
+  href: ./Remove-DnsServerDirectoryPartition.yml
+syntaxes:
+- >-
+  Get-DnsServerDirectoryPartition [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String>] [-Custom]
+
+   [-ThrottleLimit <Int32>]
+- >-
+  Get-DnsServerDirectoryPartition [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String>]
+
+   [-ThrottleLimit <Int32>]
+examples:
+- title: 'Example 1: Get all DNS application directory partitions'
+  code: |-
+    PS C:\> Get-DnsServerDirectoryPartition
+    server.DirectoryPartitionName        State                         Flags                         ZoneCount
+
+    -----------------------------        -----                         -----                         ---------
+
+    DomainDnsZones.mytest.cont...        0(DNS_DP_OKAY)                Enlisted Auto Domain          3
+
+    ForestDnsZones.mytest.cont...        0(DNS_DP_OKAY)                Enlisted Auto Forest          2
+  description: |-
+    This command gets all the DNS application directory partitions on the local computer.
+  summary: ""
+- title: 'Example 2: Get all custom application directory partitions'
+  code: |-
+    PS C:\>Get-DnsServerDirectoryPartition -Custom
+    DirectoryPartitionName        State                         Flags                         ZoneCount
+
+    ----------------------        -----                         -----                         ---------
+
+    DomainDnsZones.mytest.cont... 0(DNS_DP_OKAY)                Enlisted Auto Domain          3
+  description: |-
+    This command gets all the custom application directory partitions on the local computer.
+  summary: ""
+- title: 'Example 3: Get an application directory partition by using name'
+  code: |-
+    PS C:\>Get-DnsServerDirectoryPartition -Name "DomainDnsZones.dept.contoso.com"
+  description: |-
+    This command gets the DNS application directory partition named DomainDnsZones.dept.contoso.com on the local computer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a remote DNS server.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Custom
+  description: |+
+    Returns custom directory partitions.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the FQDN of a DNS application directory partition.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Get-DnsServerDirectoryPartition
+name: Get-DnsServerDirectoryPartition
+description: |-
+  The **Get-DnsServerDirectoryPartition** cmdlet gets one or more Domain Name System (DNS) application server directory partitions on a DNS server.
+metadata:
+  external help file: DnsServer_Cmdlets.xml
+  Module Name: DnsServer
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/get-dnsserverdirectorypartition?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

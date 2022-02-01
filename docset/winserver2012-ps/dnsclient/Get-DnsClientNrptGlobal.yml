@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the Name Resolution Policy Table (NRPT) global settings.
+module: DnsClient
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DNS/DnsClientNrptGlobal" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The DnsClientNrptGlobal object contains all of the properties of the DNS client NRPT global settings.
+links:
+- text: Add-DnsClientNrptRule
+  href: ./Add-DnsClientNrptRule.yml
+- text: Get-DnsClientNrptPolicy
+  href: ./Get-DnsClientNrptPolicy.yml
+- text: Get-DnsClientNrptRule
+  href: ./Get-DnsClientNrptRule.yml
+- text: Remove-DnsClientNrptRule
+  href: ./Remove-DnsClientNrptRule.yml
+- text: Set-DnsClientNrptGlobal
+  href: ./Set-DnsClientNrptGlobal.yml
+- text: Set-DnsClientNrptRule
+  href: ./Set-DnsClientNrptRule.yml
+syntaxes:
+- >-
+  Get-DnsClientNrptGlobal [-Server <String>] [-GpoName <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-DnsClientNrptGlobal
+    EnableDAForAllNetworks                  QueryPolicy                             SecureNameQueryFallback                
+    ----------------------                  -----------                             -----------------------                
+    Disable                                 Disable                                 Disable
+  description: |-
+    This example retrieves the global NRPT settings.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Get-DnsClientNrptGlobal -GpoName "corp.contoso.com\DirectAccess Client Settings"
+  description: |-
+    This example retrieves the global NRPT settings for the GPO named DirectAccess Client Settings that is linked to corp.contoso.com.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Get-DnsClientNrptGlobal -GpoName "corp.contoso.com\DirectAccess Client Settings" -Server dc1
+  description: |-
+    This example retrieves the global NRPT settings for the GPO named DirectAccess Client Settings that is linked to corp.contoso.com on the server named dc1.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\>Get-DnsClientNrptGlobal -GpoName "corp.contoso.com\DirectAccess Client Settings" -CimSession 2-dc1.corp2.corp.contoso.com
+  description: |-
+    This example retrieves the global NRPT settings for the GPO named DirectAccess Client Settings that is linked to corp.contoso.com on the remote computer named 2-dc1.corp2.corp.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GpoName
+  description: |+
+    Specifies the name of Group Policy Object (GPO).
+    If this parameter is not specified, then the default NRPT settings are retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the server hosting the GPO.
+    This parameter is only applicable with the **GpoName** parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsClient.Get-DnsClientNrptGlobal
+name: Get-DnsClientNrptGlobal
+description: |-
+  The **Get-DnsClientNrptGlobal** cmdlet retrieves the following Name Resolution Policy Table (NRPT) details: 
+
+   -- DirectAccess (DA) settings. 
+
+   -- DNS client query policy. 
+
+   -- DNS client name resolution fallback policy.
+metadata:
+  external help file: PS_DnsClientNRPTGlobal_v1.0.0.cdxml-help.xml
+  Module Name: DnsClient
+  online version: https://docs.microsoft.com/powershell/module/dnsclient/get-dnsclientnrptglobal?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

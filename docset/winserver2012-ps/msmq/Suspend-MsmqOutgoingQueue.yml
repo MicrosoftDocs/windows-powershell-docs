@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Suspends the specified outgoing queues.
+module: MSMQ
+notes: ""
+links:
+- text: Clear-MsmqOutgoingQueue
+  href: ./Clear-MsmqOutgoingQueue.yml
+- text: Get-MsmqOutgoingQueue
+  href: ./Get-MsmqOutgoingQueue.yml
+- text: Resume-MsmqOutgoingQueue
+  href: ./Resume-MsmqOutgoingQueue.yml
+syntaxes:
+- Suspend-MsmqOutgoingQueue -InputObject <OutgoingQueue[]>
+examples:
+- title: 'Example 1: Suspend an outgoing queue'
+  code: |-
+    PS C:\>Get-MsmqOutgoingQueue -Name "Order*" | Suspend-MsmqOutgoingQueue
+  description: |-
+    This command suspends all outgoing queues that have the wildcard named Order*.
+  summary: ""
+parameters:
+- type: <xref href="OutgoingQueue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of **MsmqOutgoingQueue** objects that represent the outgoing queues that are to be suspended.
+    This parameter accepts pipelined input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MSMQ.Suspend-MsmqOutgoingQueue
+name: Suspend-MsmqOutgoingQueue
+description: |-
+  The **Suspend-MsmqOutgoingQueue** cmdlet suspends all outgoing queues that are represented by the supplied **MsmqOutgoingQueue** objects, and returns the suspended queue objects.
+metadata:
+  external help file: MSMQ_Cmdlets.xml
+  Module Name: MSMQ
+  online version: https://docs.microsoft.com/powershell/module/msmq/suspend-msmqoutgoingqueue?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

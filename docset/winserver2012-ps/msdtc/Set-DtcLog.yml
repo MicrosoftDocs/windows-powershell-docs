@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the log file settings of a DTC instance.
+module: MsDTC
+notes: ""
+links:
+- text: Get-DtcLog
+  href: ./Get-DtcLog.yml
+- text: Reset-DtcLog
+  href: ./Reset-DtcLog.yml
+syntaxes:
+- >-
+  Set-DtcLog [-CimSession <CimSession[]>] [-DtcName <String>] [-MaxSizeInMB <UInt32>] [-Path <String>]
+
+   [-SizeInMB <UInt32>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Set the log file path and file size'
+  code: |-
+    PS C:\> Set-DtcLog -Path "C:\Windows\system32\MSDtc\NewLog\" -SizeInMB 32 -MaxSizeInMB 1024
+    PS C:\> Get-DtcLog
+    MaxSizeInMB      : 1024
+    Path             : C:\Windows\system32\MSDtc\NewLog
+    SizeInMB         : 32
+  description: |-
+    The first command sets the path for the DTC log file and specifies the file size.
+    The second command confirms the change.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DtcName
+  description: |+
+    Specifies a DTC instance.
+    The cmdlet modifies the log file for this instance.
+    If you do not specify this parameter, or if you specify a value of   Local, this cmdlet modifies the log file for the local DTC instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: n
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxSizeInMB
+  description: |+
+    Specifies the maximum file size of the new log file in MB.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the physical or network path to store the new log file.
+    If a log file already exists in the specified path it is overwritten.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: p
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SizeInMB
+  description: |+
+    Specifies the initial file allocation size of the new log file in megabytes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: s
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDTC.Set-DtcLog
+name: Set-DtcLog
+description: |-
+  The **Set-DtcLog** cmdlet modifies the log file settings of a Distributed Transaction Coordinator (DTC) instance.
+  Use the **DtcName** parameter to specify a DTC instance.
+  This cmdlet also recreates the transactions log with new settings and restarts the DTC instance.
+metadata:
+  external help file: MsDTC_Cmdlets.xml
+  Module Name: MsDTC
+  online version: https://docs.microsoft.com/powershell/module/msdtc/set-dtclog?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

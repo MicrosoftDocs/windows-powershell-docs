@@ -1,0 +1,31 @@
+### YamlMime:PowershellModule
+children:
+- title: pki
+  cmdlets:
+  - pki.Add-CertificateEnrollmentPolicyServer
+  - pki.Export-Certificate
+  - pki.Export-PfxCertificate
+  - pki.Get-Certificate
+  - pki.Get-CertificateAutoEnrollmentPolicy
+  - pki.Get-CertificateEnrollmentPolicyServer
+  - pki.Get-CertificateNotificationTask
+  - pki.Get-PfxData
+  - pki.Import-Certificate
+  - pki.Import-PfxCertificate
+  - pki.New-CertificateNotificationTask
+  - pki.New-SelfSignedCertificate
+  - pki.Remove-CertificateEnrollmentPolicyServer
+  - pki.Remove-CertificateNotificationTask
+  - pki.Set-CertificateAutoEnrollmentPolicy
+  - pki.Switch-Certificate
+  - pki.Test-Certificate
+uid: pki
+name: pki
+description: |-
+  This reference provides cmdlet descriptions and syntax for all public key infrastructure (PKI) client-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2012-pshelp
+  Help Version: 3.0.0.0
+  Locale: en-US
+  Module Guid: cf094c6b-63d1-4dda-bf70-15a602c4eb2b
+  Module Name: pki

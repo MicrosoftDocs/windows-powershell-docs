@@ -1,0 +1,175 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a storage space and then creates and formats a volume on the storage space.
+module: StorageSpaces
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that contains information about the storage space and the volume hosted on the storage space.
+syntaxes:
+- >-
+  New-SpacesVolume [-StoragePoolFriendlyName] <String> [-CreateClusterSharedVolume] [[-FileSystem] <String>]
+
+   [-SpaceFriendlyName] <String> [-Size] <String> [-ResiliencyType] <String> [-ProvisioningType] <String>
+
+   [[-DriveLetterToUse] <Char>] [-MaximumColumnCount] [[-InterleaveBytes] <UInt64>] [[-ClusterSize] <String>]
+
+   [-Confirm] [-WhatIf]
+examples:
+- title: Example 1 - Create a thinly provisioned mirror space
+  code: |-
+    PS C:\>New-SpacesVolume -StoragePoolFriendlyName Internal -SpaceFriendlyName Test -Size (5GB) -ResiliencyType Mirror -ProvisioningType Thin
+  description: |-
+    This example creates a storage space named Test, which is a thinly provisioned mirror space, and then creates and formats a volume on the storage space.
+  summary: ""
+- title: Example 2 - Create a thinly provisioned mirror space and assign a specific drive letter
+  code: |-
+    PS C:\>New-SpacesVolume -StoragePoolFriendlyName Internal -SpaceFriendlyName Test -Size (5GB) -ResiliencyType Mirror -ProvisioningType Thin -DriveLetterToUse T -FileSystem NTFS
+  description: |-
+    This example creates a storage space named Test, which is a thinly provisioned mirror space, and then creates and formats an NTFS volume on the storage space, and assigns drive letter T to the volume.
+  summary: ""
+- title: Example 3 - Create a fixed mirror space and create a Cluster Shared Volume
+  code: |-
+    PS C:\>New-SpacesVolume -StoragePoolFriendlyName Internal -SpaceFriendlyName Test -Size (5GB) -ResiliencyType Mirror -ProvisioningType Fixed -CSV
+  description: |-
+    This example creates a 5GB mirror space, with fixed provisioning, and creates a Cluster Shared Volume (CSV) after creation. 
+    Note: Requires a clustered storage pool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterSize
+  description: ""
+  defaultValue: None
+  position: "9"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CreateClusterSharedVolume
+  description: |+
+    Creates a CSV on the volume.
+
+  defaultValue: None
+  position: "10"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Char" data-throw-if-not-resolved="False" />
+  name: DriveLetterToUse
+  description: |+
+    Specifies the drive letter to assign to the storage space.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileSystem
+  description: |+
+    Specifies the file system to use on the volume.
+    Acceptable values are **NTFS** and **ReFS**.
+
+  defaultValue: None
+  position: "11"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: InterleaveBytes
+  description: ""
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MaximumColumnCount
+  description: ""
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProvisioningType
+  isRequired: true
+  description: |+
+    Specifies whether to create a fixed or thinly provisioned storage space.
+    Acceptable values are **Fixed** or **Thin**.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResiliencyType
+  isRequired: true
+  description: |+
+    Specifies the resiliency setting to use.
+    Acceptable values are **Mirror**, **Parity**, and **Simple**, which does not include any resiliency.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Size
+  isRequired: true
+  description: |+
+    Specifies the size of the storage space.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SpaceFriendlyName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the storage space.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StoragePoolFriendlyName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the storage pool on which to create the storage space.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: StorageSpaces.New-SpacesVolume
+name: New-SpacesVolume
+description: |-
+  The New-SpacesVolume cmdlet creates a storage space, initializes the new virtual disk (storage space), creates a partition on virtual disk, and then formats the volume.
+  It can also optionally create a Cluster Shared Volume (CSV) on the newly formatted volume when run on a failover cluster.
+metadata:
+  external help file: StorSpaces2_Cmdlets.xml
+  Module Name: StorageSpaces
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/storagespaces/new-spacesvolume?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-SpacesVolume

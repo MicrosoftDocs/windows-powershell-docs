@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the scope information for the specified IPv6 prefixes on the Dynamic Host Configuration Protocol (DHCP) server service.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Scope" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Add-DhcpServerv6Scope
+  href: ./Add-DhcpServerv6Scope.yml
+- text: Get-DhcpServerv6ScopeStatistics
+  href: ./Get-DhcpServerv6ScopeStatistics.yml
+- text: Remove-DhcpServerv6Scope
+  href: ./Remove-DhcpServerv6Scope.yml
+- text: Set-DhcpServerv6Scope
+  href: ./Set-DhcpServerv6Scope.yml
+syntaxes:
+- >-
+  Get-DhcpServerv6Scope [[-Prefix] <IPAddress[]>] [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String>]
+
+   [-ThrottleLimit <Int32>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-DhcpServerv6Scope -ComputerName dhcpserver.contoso.com
+  description: |-
+    This example gets the information for all of the DHCPv6 scopes on the DHCP server service.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Get-DhcpServerv6Scope -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020::
+  description: |-
+    This example gets the information for the specified DHCPv6 scope on the DHCP server service.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer running the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Prefix
+  description: |+
+    Specifies the IPv6 prefixes for which the scope information is being requested.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DhcpServer.Get-DhcpServerv6Scope
+name: Get-DhcpServerv6Scope
+description: |-
+  The **Get-DhcpServerv6Scope** cmdlet gets the scope information for the specified IPv6 prefixes on the Dynamic Host Configuration Protocol (DHCP) server service.
+metadata:
+  external help file: DhcpServer_Cmdlets.xml
+  Module Name: DhcpServer
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverv6scope?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a computer that can be remotely managed.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The input is an array of fully qualified host names of the computers that should have remote management enabled.
+outputs:
+- name: <xref href="WmsSystem" data-throw-if-not-resolved="False" />
+  description: |-
+    For each computer added a **WmsSystem** object is returned which contains specific information about the configuration and state of the MultiPoint system on that computer.
+links:
+- text: Get-WmsSystem
+  href: ./Get-WmsSystem.yml
+- text: Remove-WmsSystem
+  href: ./Remove-WmsSystem.yml
+- text: Restart-WmsSystem
+  href: ./Restart-WmsSystem.yml
+- text: Search-WmsSystem
+  href: ./Search-WmsSystem.yml
+- text: Set-WmsSystem
+  href: ./Set-WmsSystem.yml
+- text: Stop-WmsSystem
+  href: ./Stop-WmsSystem.yml
+syntaxes:
+- >-
+  Add-WmsSystem [-ComputerName] <String[]> [-ManagedSystemsType] <ManagedSystemTypes>
+
+   [-Credential] <PSCredential> [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies an array of host names of MultiPoint systems to add.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  isRequired: true
+  description: |+
+    Specifies the Administrator credentials for the computer to add.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ManagedSystemTypes" data-throw-if-not-resolved="False" />
+  name: ManagedSystemsType
+  isRequired: true
+  description: |+
+    Specifies the type of managed systems.
+    The acceptable values for this parameter are: MultiPointServers, PersonalComputers.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: MultiPointServers, PersonalComputers
+uid: MultiPoint.Add-WmsSystem
+name: Add-WmsSystem
+description: |-
+  The **Add-WmsSystem** cmdlet enables the local computer to remotely manage a computer with either the MultiPoint role or MultiPoint connector installed.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/add-wmssystem?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-WmsSystem

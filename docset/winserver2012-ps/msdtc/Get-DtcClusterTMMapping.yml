@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets cluster DTC Mapping data.
+module: MsDTC
+notes: ""
+outputs:
+- name: <xref href="DtcClusterTMMapping" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **DtcClusterTMMapping** object that contains the specified **MappingName** value.
+    If you do not specify a **MappingName**, this cmdlet gets all mappings.
+links:
+- text: Add-DtcClusterTMMapping
+  href: ./Add-DtcClusterTMMapping.yml
+- text: Remove-DtcClusterTMMapping
+  href: ./Remove-DtcClusterTMMapping.yml
+- text: Set-DtcClusterTMMapping
+  href: ./Set-DtcClusterTMMapping.yml
+syntaxes:
+- Get-DtcClusterTMMapping [-CimSession <CimSession[]>] [-Name <String>] [-ThrottleLimit <Int32>]
+examples:
+- title: 'Example 1: Get cluster mapping'
+  code: |-
+    PS C:\>Get-DtcClusterTMMapping -Name "TestMapping"
+  description: |-
+    This example get the cluster DTC TM mapping for the **MappingName** TestMapping.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the **MappingName**.
+    If you do not specify this parameter, the cmdlet gets all TM mappings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDTC.Get-DtcClusterTMMapping
+name: Get-DtcClusterTMMapping
+description: |-
+  The **Get-DtcClusterTMMapping** cmdlet gets cluster Distributed Transaction Coordinator (DTC) Mapping data.
+  If you do not specify the **Name** parameter, the cmdlet gets all cluster Transaction Manager (TM) mapping data.
+  This cmdlet is supported on clustered computers only.
+metadata:
+  external help file: MsDTC_Cmdlets.xml
+  Module Name: MsDTC
+  online version: https://docs.microsoft.com/powershell/module/msdtc/get-dtcclustertmmapping?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

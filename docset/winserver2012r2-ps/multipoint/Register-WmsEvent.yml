@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Registers for notifications from the MultiPoint Server Core Service.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Register-WmsEvent [-TimeoutInSecond <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example
+  code: |-
+    PS C:\> Register-WmsEvent
+    No output.
+  description: |-
+    Registers to be notified on events from Windows MultiPoint Server Core Service.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TimeoutInSecond
+  description: |+
+    The timeout value in seconds before the operation is aborted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MultiPoint.Register-WmsEvent
+name: Register-WmsEvent
+description: |-
+  The Register-WmsEvent cmdlet registers for notifications from the MultiPoint Server Core Service.
+metadata:
+  external help file: WmsCmdlets.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/06/2017
+  online version: https://docs.microsoft.com/powershell/module/multipoint/register-wmsevent?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Register-WmsEvent

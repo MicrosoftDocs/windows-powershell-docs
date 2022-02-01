@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets network controller diagnostic settings.
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that contains the following fields: 
+
+    - Log scope
+    - Diagnostic log location
+    - Log aging time limit (in days)
+    - Log aging size limit (in MB)
+    - Log level
+links:
+- text: Set-NetworkControllerDiagnostic
+  href: ./Set-NetworkControllerDiagnostic.yml
+syntaxes:
+- >-
+  Get-NetworkControllerDiagnostic [-ComputerName <String>] [-UseSsl] [-Credential <PSCredential>]
+
+   [-CertificateThumbprint <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get diagnostic settings'
+  code: |-
+    PS C:\> Get-NetworkControllerDiagnostic -ComputerName "Node01.Contoso.com"
+    LogScope               : All
+    DiagnosticLogLocation  : 
+    LogTimeLimitInDays     : 3
+    LogSizeLimitInMBs      :
+    LogLevel               : Verbose
+  description: |-
+    This command gets the diagnostic settings for a cluster that contains the node named Node01.Contoso.com.
+    The cmdlet shows that network controller collects all diagnostic logs.
+    The network controller collects the logs locally on the nodes.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    Specify the certificate thumbprint of the certificate.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the network controller node on which this cmdlet operates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default is the current user.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseSsl
+  description: |+
+    Indicates that the remote computer uses the Secure Sockets Layer (SSL) protocol to establish a connection to the Network Controller node.
+    The default value of this parameter is false.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Get-NetworkControllerDiagnostic
+name: Get-NetworkControllerDiagnostic
+description: |-
+  The **Get-NetworkControllerDiagnostic** cmdlet gets network controller diagnostic settings.
+  This cmdlet displays whether the network controller collects only cluster logs.
+  If a remote log location exists, this cmdlet displays it.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollerdiagnostic?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerDiagnostic

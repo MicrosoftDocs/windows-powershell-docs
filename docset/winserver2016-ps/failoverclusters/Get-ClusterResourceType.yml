@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about one or more resource types in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResourceType" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterResourceType
+  href: ./Add-ClusterResourceType.yml
+- text: Remove-ClusterResourceType
+  href: ./Remove-ClusterResourceType.yml
+syntaxes:
+- >-
+  Get-ClusterResourceType [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterResourceType
+    Name                                    DisplayName 
+    ----                                    ----------- 
+    DFS Replicated Folder                   DFS Replicated Folder 
+    DHCP Service                            DHCP Service 
+    Distributed File System                 Distributed File System 
+    Distributed Transaction Coordinator     Distributed Transaction Coordinator 
+    File Server                             File Server 
+    File Share Witness                      File Share Quorum Witness 
+    Generic Application                     Generic Application 
+    Generic Script                          Generic Script 
+    Generic Service                         Generic Service 
+    IP Address                              IP Address 
+    IPv6 Address                            IPv6 Address 
+    IPv6 Tunnel Address                     IPv6 Tunnel Address 
+    Microsoft iSNS                          iSNSClusRes 
+    MSMQ                                    (Resource Type Unavailable) 
+    MSMQTriggers                            (Resource Type Unavailable) 
+    Network Name                            Network Name 
+    NFS Share                               NFS Share 
+    Physical Disk                           Physical Disk 
+    Print Spooler                           Print Spooler 
+    Virtual Machine                         Virtual Machine 
+    Virtual Machine Configuration           Virtual Machine Configuration 
+    Volume Shadow Copy Service Task         Volume Shadow Copy Service Task 
+    WINS Service                            WINS Service
+  description: |-
+    This example lists all the resource types that can be used in configurations on the local cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterResourceType -Name "File Server" | Format-List -Property *
+    Cluster                : Cluster1 
+    DisplayName            : File Server 
+    Name                   : file server 
+    DllName                : clusres.dll 
+    Description            : 
+    AdminExtensions        : {} 
+    LooksAlivePollInterval : 5000 
+    IsAlivePollInterval    : 60000 
+    PendingTimeout         : 180000 
+    DeadlockTimeout        : 300000 
+    Id                     : f582c84f-0066-0069-6c65-207365727665
+  description: |-
+    This example gets information about the File Server resource type on the local cluster, and displays the information in the form of a list.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to enumerate the cluster resource types.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster resource type to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterResourceType
+name: Get-ClusterResourceType
+description: |-
+  The **Get-ClusterResourceType** cmdlet gets information about one or more resource types in a failover cluster.
+  Obtain information such as the name of the dynamic-link library (DLL) through which the Cluster service communicates with a particular resource type.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterresourcetype?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterResourceType

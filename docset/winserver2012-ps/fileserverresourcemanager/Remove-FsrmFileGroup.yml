@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes file groups from the server.
+module: FileServerResourceManager
+notes: ""
+links:
+- text: Get-FsrmFileGroup
+  href: ./Get-FsrmFileGroup.yml
+- text: Set-FsrmFileGroup
+  href: ./Set-FsrmFileGroup.yml
+- text: New-FsrmFileGroup
+  href: ./New-FsrmFileGroup.yml
+syntaxes:
+- >-
+  Remove-FsrmFileGroup [-Name] <String[]> [-AsJob] [-CimSession <CimSession[]>] [-PassThru]
+
+   [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+- >-
+  Remove-FsrmFileGroup [-AsJob] [-CimSession <CimSession[]>] [-PassThru] [-ThrottleLimit <Int32>]
+
+   -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Remove a file group'
+  code: |-
+    PS C:\>Remove-FsrmFileGroup -Name "Media Files"
+  description: |-
+    This command removes the file group named "Media Files".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names of file groups.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FileServerResourceManager.Remove-FsrmFileGroup
+name: Remove-FsrmFileGroup
+description: |-
+  The **Remove-FsrmFileGroup** cmdlet removes file groups from the server.
+  After you remove a file group, the server cannot define file screens and file screen exceptions for the collection of file name patterns that you defined in the file group.
+metadata:
+  external help file: FSRM_Cmdlets.xml
+  Module Name: FileServerResourceManager
+  online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/remove-fsrmfilegroup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

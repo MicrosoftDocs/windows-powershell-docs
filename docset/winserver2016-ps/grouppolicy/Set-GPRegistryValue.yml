@@ -1,0 +1,368 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures one or more registry-based policy settings under either Computer Configuration or User Configuration in a GPO.
+module: GroupPolicy
+notes: |-
+  * The hive of the registry key that you specify, HKEY_LOCAL_MACHINE (HKLM) or HKEY_CURRENT_USER (HKCU), determines whether the registry-based policy setting is in Computer Configuration or User Configuration.
+
+    You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+
+    If you do not explicitly specify the domain, the cmdlet uses a default domain.
+  The default domain is the domain that is used to access network resources by the security context under which the current session is running.
+  This domain is typically the domain of the user that is running the session.
+  For instance, the domain of the user who started the session by opening Windows PowerShell from the Program Files menu, or the domain of a user that is specified in a runas command.
+  However, computer startup and shutdown scripts run under the context of the LocalSystem account.
+  The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
+  Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
+inputs:
+- name: <xref href="Microsoft.GroupPolicy.Gpo or Microsoft.GroupPolicy.PolicyRegistrySetting" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a GPO (in which to configure a registry-based policy setting), or a **PolicyRegistrySetting** object that represents a registry-based policy setting (to configure in a specified GPO) to this cmdlet.
+    Collections that contain GPOs from different domains are not supported.
+outputs:
+- name: <xref href="Microsoft.GroupPolicy.Gpo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the GPO in which the registry-based policy setting has been configured.
+links:
+- text: Get-GPRegistryValue
+  href: ./Get-GPRegistryValue.yml
+- text: Remove-GPRegistryValue
+  href: ./Remove-GPRegistryValue.yml
+syntaxes:
+- >-
+  Set-GPRegistryValue -Guid <Guid> -Key <String> [-ValueName <String[]>] [-Value <PSObject>]
+
+   [-Type <RegistryValueKind>] [-Domain <String>] [-Server <String>] [-Additive] [-Disable]
+
+   [-ValuePrefix <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-GPRegistryValue [-Name] <String> -Key <String> [-ValueName <String[]>] [-Value <PSObject>]
+
+   [-Type <RegistryValueKind>] [-Domain <String>] [-Server <String>] [-Additive] [-Disable]
+
+   [-ValuePrefix <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure a registry-based policy setting for a registry value'
+  code: |-
+    PS C:\> Set-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" -ValueName "ScreenSaveTimeOut" -Type DWORD -Value 900
+    DisplayName      : TestGPO 
+    DomainName       : contoso.com 
+    Owner            : CONTOSO\Domain Admins 
+    Id               : 35c12ab3-956c-45d5-973b-46b17d225f47 
+    GpoStatus        : AllSettingsEnabled 
+    Description      : 
+    CreationTime     : 2/24/2009 4:41:03 PM 
+    ModificationTime : 2/25/2009 12:42:00 PM 
+    UserVersion      : AD Version: 3, SysVol Version: 3 
+    ComputerVersion  : AD Version: 34, SysVol Version: 34 
+    WmiFilter        :
+  description: |-
+    This command configures a registry-based policy setting for the registry value "HKCU\Software\Policies\Microsoft\Windows\Control ScreenSaverTimeOut" with a value of 900 and a data type of DWord.
+    This policy setting sets the Screen Saver timeout to 900 seconds (15 minutes) when Group Policy is applied on the client.
+  summary: ""
+- title: 'Example 1: Configure a registry-based policy settings for multiple registry values'
+  code: |-
+    PS C:\> Set-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey" -ValueName "ValueOne", "ValueTwo", "ValueThree" -Type String -Value "String 1", "String 2", "String 3"
+  description: |-
+    This command configures registry-based policy settings to set three registry values.
+    The policy settings are configured in the User Configuration section of the GPO.
+    When the GPO is applied on the client, the following registry values are set:
+
+    "HKCU\Software\Policies\Microsoft\ExampleKey ValueOne" "String 1"
+
+    "HKCU\Software\Policies\Microsoft\ExampleKey ValueTwo" "String 2"
+
+    "HKCU\Software\Policies\Microsoft\ExampleKey ValueThree" "String 3"
+  summary: ""
+- title: 'Example 3: Configure a registry-based policy setting to set a list of registry values'
+  code: |-
+    PS C:\> Set-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey" -ValuePrefix "MyValue" -Type String -Value "String 1", "String 2", "String 3"
+  description: |-
+    This command configures a registry-based policy setting to set a list of three registry values.
+    The policy settings are configured in the Computer Configuration section of the GPO.
+    Because the *Additive* parameter is not specified, when the GPO is applied on the client any list values under the key are deleted -- then, the following registry values are set:
+
+    "HKCU\Software\Policies\Microsoft\ExampleKey MyValue1" "String 1"
+
+    "HKCU\Software\Policies\Microsoft\ExampleKey MyValue2" "String 2"
+
+    "HKCU\Software\Policies\Microsoft\ExampleKey MyValue3" "String 3"
+
+    If you specify the *Additive* parameter, the list values are added to the existing list values on the client when the GPO is applied.
+    The actual value names assigned to the list values depends on the number of existing list values on the client.
+  summary: ""
+- title: 'Example 4: Disable registry-based policy settings for specific registry values'
+  code: |-
+    PS C:\> Set-GPRegistryValue -Disable -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey" -ValueName "ValueOne", "ValueTwo", "ValueThree"
+  description: |-
+    This command disables the registry-based policy settings, in the User Configuration section, for the specified registry values.
+    When the GPO is applied on the client, the registry values are deleted from the registry on the client.
+  summary: ""
+- title: 'Example 5: Disable registry-based policy settings for a specific registry key'
+  code: |-
+    PS C:\> Set-GPRegistryValue -Disable -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey"
+  description: |-
+    This command disables the registry-based policy setting, in the User Configuration section, for the specified registry key.
+    When the GPO is applied on the client, all first level values will be deleted from the registry key.
+    Subkeys and their values are not modified.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Additive
+  description: |+
+    Indicates that registry values should be appended to existing values under the key when the GPO is applied on a client.
+
+    By default, when Group Policy is processed on a client, existing values under a registry key are deleted before any new values are written to the registry.
+    By using the *Additive* parameter for a registry-based policy setting, you can specify that the new value should be added to the registry key without deleting the existing values.
+
+    You cannot specify the *Disable* parameter with this parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disable
+  description: |+
+    Indicates that the cmdlet disables the registry-based policy setting.
+
+    You can disable a policy setting for a registry key or value:
+
+    - For a registry key, specify the *Key* parameter without the *ValueName* parameter.
+    When the GPO is applied on the client, all of the values directly under the key are removed from the registry.
+    The key itself is not removed from the registry, nor are any of its subkeys, or their values, removed.
+
+    - For a registry value, specify the *Key* parameter together with the *ValueName* parameter.
+    When the GPO is applied on the client, only the specified value is removed from the registry.
+
+    To remove a policy setting from a GPO without affecting existing registry keys or values on a client when Group Policy is processed, use the **Remove-GPRegistryValue** cmdlet.
+
+    You cannot specify the *Additive*, *Type*, *Value*, or *ValuePrefix* parameters with the *Disable* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies the domain for this cmdlet.
+    You must specify the fully qualified domain name (FQDN) of the domain.
+
+    For the **Set-GPRegistryValue** cmdlet, the GPO in which to configure the registry-based policy setting must exist in this domain.
+
+    If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+    If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
+    For more information, see the Notes section in the full Help.
+
+    If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user or the computer.
+
+    You can also refer to the *Domain* parameter by its built-in alias, domainname.
+    For more information, see about_Aliases.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DomainName
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Guid
+  isRequired: true
+  description: |+
+    Specifies the GPO in which to configure the registry-based policy setting by its globally unique identifier (GUID).
+    The GUID uniquely identifies the GPO.
+
+    You can also refer to the *Guid* parameter by its built-in alias, id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Key
+  isRequired: true
+  description: |+
+    Specifies the registry key for the registry-based policy setting; for instance, HKLM\Software\Policies\Microsoft\Windows NT\DNSClient.
+
+    The key must be in one of the two following registry hives:
+
+    - HKEY_LOCAL_MACHINE (HKLM) for a registry-based policy setting in Computer Configuration.
+
+    - HKEY_CURRENT_USER (HKCU) for a registry-based policy setting in User Configuration.
+
+    You can also refer to the Key parameter by its built-in alias, FullKeyPath.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: FullKeyPath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the GPO in which to configure the registry-based policy setting by its display name.
+
+    The display name is not guaranteed to be unique in the domain.
+    If another GPO with the same display name exists in the domain, an error occurs.
+    You can use the *Guid* parameter to uniquely identify a GPO.
+
+    You can also refer to the *Name* parameter by its built-in alias, displayname.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DisplayName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
+    You can specify either the fully qualified domain name (FQDN) or the host name.
+
+    If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+
+    You can also refer to the *Server* parameter by its built-in alias, dc.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  parameterValueGroup: ""
+- type: <xref href="RegistryValueKind" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the data type for the registry-based policy setting.
+
+    The acceptable values for this parameter are:
+
+    - String
+    - ExpandString
+    - Binary
+    - DWord
+    - MultiString
+    - QWord
+
+    For more information about these data types, see [Microsoft.Win32.RegistryValueKind Enumeration](https://go.microsoft.com/fwlink/?LinkID=143266) in the MSDN library.
+
+    Only the following data types are supported for list values: String and ExpandString.
+
+    You must specify this parameter when you configure a policy setting to set a registry value.
+    You cannot specify this parameter with the *Disable* parameter.
+
+    The following values are permitted for this object type.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, String, ExpandString, Binary, DWord, MultiString, QWord, None
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Value
+  description: |+
+    Specifies the value data for the registry-based policy setting.
+    You can specify a single value or an array of values.
+    Use a comma-separated list to specify more than one value.
+    Only the String and ExpandString data types are supported for an array of values.
+
+    At a minimum, you must specify this parameter together with the *Type* and *Key* parameters to configure a policy setting to set a registry value.
+    You cannot specify this parameter with the *Disable* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ValueName
+  description: |+
+    Specifies a value name or an array of value names for the registry-based policy setting.
+    For instance, the registry key HKLM\Software\Policies\Microsoft\Windows NT\DNSClient can have a registry value with the following value name: UseDomainNameDevolution.
+    Use a comma-separated list to specify more than one value name.
+    Only the String and ExpandString data types are supported for an array of values.
+
+    You cannot specify this parameter with the *ValuePrefix* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ValuePrefix
+  description: |+
+    Specifies a value name prefix for a registry-based policy setting for a list of registry values.
+
+    Configures a policy setting that creates the following registry values when Group Policy is applied on the client:
+
+    "HKLM\SOFTWARE\Policies\ExampleKey ExValue1" 100
+
+    "HKLM\SOFTWARE\Policies\ExampleKey ExValue2" 200
+
+    "HKLM\SOFTWARE\Policies\ExampleKey ExValue3" 300
+
+    Only the String and ExpandString data types are supported with the *ValuePrefix* parameter.
+
+    You cannot specify this parameter with the *ValueName* parameter or the *Disable* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: GroupPolicy.Set-GPRegistryValue
+name: Set-GPRegistryValue
+description: |-
+  The **Set-GPRegistryValue** cmdlet configures a registry-based policy setting under either Computer Configuration or User Configuration in a Group Policy Object (GPO).
+  The policy setting configures keys or values in the registry on the client computer when the GPO is applied.
+
+  You can specify the GPO by name or by its GUID, or you can pipe a GPO object to the cmdlet.
+  You can also pipe a PolicyRegistrySetting object to the cmdlet.
+
+  You can configure registry-based policy settings for:
+
+  - One or more registry values by passing the *Key*, *ValueName*, *Value*, and *Type* parameters.
+  For multiple registry values, pass a comma-separated list for both the *ValueName* and *Value* parameters.
+  When you specify multiple registry values, only the String and ExpandString data types are supported.
+
+  - A list of one or more registry values that share the same name prefix by passing the *Key* and *Type* parameters, and a single value or a comma-separated list for the *Value* parameter.
+  You can optionally specify the value name prefix by using the *ValuePrefix* parameter.
+  Only the String and ExpandString data types are supported for lists.
+
+  You can use the *Additive* parameter to ensure that existing registry values for the key are not overwritten by the new policy setting when the GPO is applied.
+
+  You can also delete registry values on a client when the GPO is applied by disabling a policy setting with the *Disable* parameter.
+  You can disable:
+
+  - All the registry values under a specified registry key by passing the *Key* parameter.
+  No subkeys, or their values, are deleted on the client.
+
+  - A single registry value by passing the *Key* parameter and the *ValueName* parameter.
+
+  - Multiple registry values by passing the *Key* parameter and a comma-separated list for the *ValueName* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.GroupPolicy.Commands.dll-Help.xml
+  Module Name: GroupPolicy
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/grouppolicy/set-gpregistryvalue?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-GPRegistryValue

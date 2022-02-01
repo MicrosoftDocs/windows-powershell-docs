@@ -1,0 +1,238 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes policy entries for IP addresses in a virtual network.
+module: NetWNV
+notes: ""
+links:
+- text: Get-NetVirtualizationLookupRecord
+  href: ./Get-NetVirtualizationLookupRecord.yml
+- text: New-NetVirtualizationLookupRecord
+  href: ./New-NetVirtualizationLookupRecord.yml
+- text: Set-NetVirtualizationLookupRecord
+  href: ./Set-NetVirtualizationLookupRecord.yml
+syntaxes:
+- >-
+  Remove-NetVirtualizationLookupRecord [-CustomerAddress <String[]>] [-MACAddress <String[]>]
+
+   [-VirtualSubnetID <UInt32[]>] [-ProviderAddress <String[]>] [-CustomerID <String[]>] [-Context <String[]>]
+
+   [-Rule <RuleType[]>] [-VMName <String[]>] [-UseVmMACAddress <Boolean[]>] [-Type <Type[]>]
+
+   [-Unusable <Boolean[]>] [-Unsynchronized <Boolean[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-PassThru] [<CommonParameters>]
+- >-
+  Remove-NetVirtualizationLookupRecord -InputObject <CimInstance[]> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove all policy entries'
+  code: |-
+    PS C:\> Remove-NetVirtualizationLookupRecord
+  description: |-
+    This command removes all the policy entries for the current host.
+  summary: ""
+- title: 'Example 2: Remove policy entries for a specified virtual subnet'
+  code: |-
+    PS C:\>Remove-NetVirtualizationLookupRecord -VirtualSubnetID 10234
+  description: |-
+    This command removes all policy entries that belong to the virtual subnet that has the ID 10234.
+  summary: ""
+- title: 'Example 3: Remove policy entries for a specified VM name'
+  code: |-
+    PS C:\>Remove-NetVirtualizationLookupRecord -VMName "Contoso-VM2"
+  description: |-
+    This command removes all the policy entries that contain the specified VM name.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Context
+  description: |+
+    Specifies an array of comments regarding policy entries.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CustomerAddress
+  description: |+
+    Specifies an array of IP addresses within the virtual network.
+    You can use both IPv4 and IPv6 addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CustomerID
+  description: |+
+    Specifies an array of IDs for policy entries or VMs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MACAddress
+  description: |+
+    Specifies an array of media access control (MAC) addresses that corresponds to the Customer Addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ProviderAddress
+  description: |+
+    Specifies an array of IP addresses, either IPv4 or IPv6, for physical addresses that corresponds to the Customer Addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RuleType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Rule
+  description: |+
+    Specifies an array of virtualization mechanisms that policy entries use.
+    The acceptable values for this parameter are:
+
+    - TranslationMethodNat.
+    IP address rewrite.
+    - TranslationMethodEncap.
+    Network Virtualization Generic Routing Encapsulation (NVGRE).
+    - TranslationMethodNone.
+    None.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: TranslationMethodNat, TranslationMethodEncap, TranslationMethodNone
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Type" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Type
+  description: |+
+    Specifies an array of types.
+    The type determines the address mapping for a record.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Static, Dynamic, GatewayWildcard, L2Only
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Unsynchronized
+  description: |+
+    Specifies an array of Boolean values that indicate whether a record is not synchronized with the central policy controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Unusable
+  description: |+
+    Specifies an array of Boolean values that indicate whether a record is unusable for data communication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UseVmMACAddress
+  description: |+
+    Specifies an array of Boolean values that indicate whether an entry uses its defined MAC address instead of physical MAC address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VirtualSubnetID
+  description: |+
+    Specifies an array of IDs for the virtual subnet that the Customer address belongs to.
+    The acceptable values for this parameter are:integers from 4096 through 16777214.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  description: |+
+    Specifies an array of names for the VM for a policy entry.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetWNV.Remove-NetVirtualizationLookupRecord
+name: Remove-NetVirtualizationLookupRecord
+description: |-
+  The **Remove-NetVirtualizationLookupRecord** cmdlet removes lookup record policy entries for IP addresses that belong to a hv_win8_1 virtual network.
+  Network Virtualization allows more than one virtual network to exist on the same physical network.
+  Computers can exchange network traffic with a virtual machine (VM) by using a Customer Address within the virtual network.
+  Network Virtualization manages the Provider Addresses that are the physical network addresses.
+  This cmdlet removes records that map a Customer Address to a Provider Address.
+  For more information, see Network Virtualization technical detailshttp://technet.microsoft.com/library/jj134174.aspx (http://technet.microsoft.com/library/jj134174.aspx) on TechNet.
+
+  You can specify which entries to remove, or you can remove all policy entries for a hv_win8_2 host.
+  You can use the Get-NetVirtualizationLookupRecord cmdlet to get entries to remove.
+metadata:
+  external help file: MSFT_NetVirtualizationLookupRecordSettingData.cdxml-help.xml
+  Module Name: NetWNV
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/netwnv/remove-netvirtualizationlookuprecord?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-NetVirtualizationLookupRecord

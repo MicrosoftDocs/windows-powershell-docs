@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns alert information.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Returns WmsAlert collection as PSObject collection.
+syntaxes:
+- Get-WmsAlert [-SerializeString] [-TimeoutInSecond <Int32>] [<CommonParameters>]
+examples:
+- title: Example
+  code: |-
+    PS C:\> Get-WmsAlert
+    TimeStampInUtc : 12/7/2010 12:17:15 AM
+
+
+    AlertType      : HubMissingRequiredDevice
+
+
+    AlertSeverity  : Warning
+
+
+    ComputerName   : TEST
+
+
+    StationId      : 1
+  description: |-
+    This cmdlet returns alert information from the Windows MultiPoint Server Core Service.
+    In the following example, a station is missing a keyboard.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SerializeString
+  description: |+
+    Returns data in XML format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TimeoutInSecond
+  description: |+
+    The timeout value in seconds before the operation is aborted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MultiPoint.Get-WmsAlert
+name: Get-WmsAlert
+description: |-
+  The Get-WmsAlert cmdlet returns alert information from the Windows MultiPoint Server Core Service.
+metadata:
+  external help file: WmsCmdlets.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/06/2017
+  online version: https://docs.microsoft.com/powershell/module/multipoint/get-wmsalert?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WmsAlert

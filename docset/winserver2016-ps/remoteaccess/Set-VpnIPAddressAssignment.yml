@@ -1,0 +1,163 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the IPv4 address assignment method or the IPv6 prefix for IPv6 address assignment.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnIPAddressAssignment" data-throw-if-not-resolved="False" />
+  description: "The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.\r\nThe path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.\r\n                         \r\nThe object consists of the following properties: \r\n                         \r\n -- The IPv4 assignment method configured:  DHCP or static pool. \r\n                         \r\n -- If static pool assignment is configured for IPv4, then the list of configured address pools.\r\nEach pool consists of a starting IP address and an ending IP address. \r\n                         \r\n -- The IPv6 prefix configured."
+links:
+- text: Add-VpnIPAddressRange
+  href: ./Add-VpnIPAddressRange.yml
+- text: Remove-VpnIPAddressRange
+  href: ./Remove-VpnIPAddressRange.yml
+syntaxes:
+- >-
+  Set-VpnIPAddressAssignment [-IPAddressRange <String[]>] [-ComputerName <String>] [-IPAssignmentMethod <String>]
+
+   [-IPv6Prefix <String>] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-VpnIPAddressAssignment [-ComputerName <String>] -IPv6Prefix <String> [-PassThru] -EntrypointName <String>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Set-VpnIPAddressAssignment -IPAssignmentMethod "Dhcp" -PassThru
+    IPAssignmentMethod : Dhcp 
+    IPAddressRangeList : 
+    IPv6Prefix         :
+  description: |-
+    This cmdlet sets the IPv4 address assignment type to be DHCP which causes IPv4 address assignment to happen from a DHCP server.
+  summary: ""
+- title: EXAMPLE 2
+  code: "PS C:\\>Set-VpnIPAddressAssignment -IPAssignmentMethod \"StaticPool\" -IPAddressRange \"30.1.1.10\", \"30.1.1.30\" -IPv6Prefix \"2002:836b:2:1000::/64\" -PassThru\r\nWARNING: The remoteaccess service must be restarted for the changes to take effect. \r\n \r\nIPAssignmentMethod : StaticPool \r\nIPAddressRangeList : {30.1.1.10 - 30.1.1.30} \r\nIPv6Prefix         : 2002:836b:2:1000::/64"
+  description: |-
+    The cmdlet specifies the IPv4 address assignment to happen from the IP range 30.1.1.10 through 30.1.1.30.
+    IPv6 prefix 2002:836b:2:1000::/64 is used for IPv6 address assignment.
+    Changing the IPv6 prefix requires the remote access service to be restarted in order to take effect.
+    This is conveyed through the warning message.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the IPv4 or IPv6 address, or host name, of the computer on which the VPN server computer specific tasks should be run.
+    If this parameter is specified, then the address assignment properties are configured for that VPN server.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EntrypointName
+  isRequired: true
+  description: "Specifies a site in a multi-site deployment for which the IPv6 prefix needs to be configured.\r\nThis parameter is not applicable to the IPv4 address assignment properties as these properties are always configured at the individual server level and not site level. \r\n                         \r\nIf this parameter is not specified in a multi-site deployment, then this parameter value to which the cmdlet is run is used.\r\nThe server could also be represented by using the **ComputerName** parameter. \r\n                         \r\nIf this parameter and the **ComputerName** parameter are specified and the **ComputerName** does not belong to the site represented by this parameter, then this parameter takes precedence and the authentication type is configured for it.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPAddressRange
+  description: "Specifies the IP address range from which IP addresses are allocated to VPN clients.\r\nConsists of a starting IP and an ending IP.\r\nThis parameter can be configured only if the **IPAssignmentMethod** parameter is specified to be StaticPool. \r\n                         \r\nIf there are no pre-existing IPv4 address pools, then it is mandatory to specify an address range.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPAssignmentMethod
+  description: "Specifies the mechanism for IPv4 address assignment.\r\nThe acceptable values for this parameter are:\r\n                         \r\n -- Dhcp. \r\n                         \r\n -- StaticPool. \r\n                         \r\nWhen load balancing is active the IPv4 address assignment method cannot be configured to DHCP.\r\nOnly a static pool is supported.\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Dhcp, StaticPool
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPv6Prefix
+  isRequired: true
+  description: |+
+    Specifies the IPv6 prefix used for IPv6 address assignment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Set-VpnIPAddressAssignment
+name: Set-VpnIPAddressAssignment
+description: "The **Set-VpnIPAddressAssignment** cmdlet is only used to toggle from one IPv4 address assignment type to another.\r\nThis cmdlet cannot be used to add additional IPv4 address ranges if a static pool IP address assignment is being used. \r\n                       \r\n -- This cmdlet cannot be used to Enable or Disable an IPv4 or IPv6 address assignment."
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_VPNIPAddressAssignment_v1.0.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-vpnipaddressassignment?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VpnIPAddressAssignment

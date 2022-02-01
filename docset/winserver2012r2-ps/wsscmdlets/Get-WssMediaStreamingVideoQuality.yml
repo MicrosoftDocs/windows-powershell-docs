@@ -1,0 +1,36 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the video streaming quality of the videos that are streamed from the server.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.MediaStreaming.VideoQuality" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-WssMediaStreamingVideoQuality
+  href: ./Set-WssMediaStreamingVideoQuality.yml
+syntaxes:
+- Get-WssMediaStreamingVideoQuality [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the video streaming quality'
+  code: |-
+    PS C:\>Get-WssMediaStreamingVideoQuality
+  description: |-
+    This command gets the video streaming quality for the server on which you run the cmdlet.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+uid: WSSCmdlets.Get-WssMediaStreamingVideoQuality
+name: Get-WssMediaStreamingVideoQuality
+description: |-
+  The **Get-WssMediaStreamingVideoQuality** cmdlet gets the video streaming quality of the videos that are streamed from the server.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssmediastreamingvideoquality?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssMediaStreamingVideoQuality

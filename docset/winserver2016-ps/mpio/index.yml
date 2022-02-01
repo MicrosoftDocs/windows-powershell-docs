@@ -1,0 +1,30 @@
+### YamlMime:PowershellModule
+children:
+- title: MPIO
+  cmdlets:
+  - MPIO.Clear-MSDSMSupportedHW
+  - MPIO.Disable-MSDSMAutomaticClaim
+  - MPIO.Enable-MSDSMAutomaticClaim
+  - MPIO.Get-MPIOAvailableHW
+  - MPIO.Get-MPIOSetting
+  - MPIO.Get-MSDSMAutomaticClaimSettings
+  - MPIO.Get-MSDSMGlobalDefaultLoadBalancePolicy
+  - MPIO.Get-MSDSMSupportedHW
+  - MPIO.New-MSDSMSupportedHW
+  - MPIO.Remove-MSDSMSupportedHW
+  - MPIO.Set-MPIOSetting
+  - MPIO.Set-MSDSMGlobalDefaultLoadBalancePolicy
+  - MPIO.Update-MPIOClaimedHW
+uid: MPIO
+name: MPIO
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Multipath I/O (MPIO)-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 4.0.3.1
+  Locale: en-US
+  Module Guid: 2fbffabe-343d-4db8-ad9e-a8943f50d096
+  Module Name: MPIO
+  ms.date: 12/27/2016
+  title: MPIO

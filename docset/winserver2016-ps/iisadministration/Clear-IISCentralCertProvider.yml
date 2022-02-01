@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes configuration information from the IIS central certificate store.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-IISCentralCertProvider
+  href: ./Disable-IISCentralCertProvider.yml
+- text: Enable-IISCentralCertProvider
+  href: ./Enable-IISCentralCertProvider.yml
+- text: Get-IISCentralCertProvider
+  href: ./Get-IISCentralCertProvider.yml
+- text: Set-IISCentralCertProvider
+  href: ./Set-IISCentralCertProvider.yml
+- text: Set-IISCentralCertProviderCredential
+  href: ./Set-IISCentralCertProviderCredential.yml
+syntaxes:
+- Clear-IISCentralCertProvider [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Clear configuration information from the IIS certificate store'
+  code: |-
+    PS C:\> Clear-IISCentralCertProvider
+  description: |-
+    This command removes all the configuration information for the IIS central certificate store without removing the provider itself.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Clear-IISCentralCertProvider
+name: Clear-IISCentralCertProvider
+description: |-
+  The **Clear-IISCentralCertProvider** cmdlet removes all settings for the central certificate provider.
+  You must specify the *Force* parameter if the Central Certificate Store feature is enabled.
+  If you specify *Force*, the feature is disabled and all the settings are cleared.
+  If the Central Certificate Store feature is already disabled, you do not need to specify *Force*.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/clear-iiscentralcertprovider?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-IISCentralCertProvider

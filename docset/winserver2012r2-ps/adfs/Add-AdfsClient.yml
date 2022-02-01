@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Registers an OAuth 2.0 client with AD FS.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="string, string, uri[], string" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-AdfsClient
+  href: ./Disable-AdfsClient.yml
+- text: Enable-AdfsClient
+  href: ./Enable-AdfsClient.yml
+- text: Get-AdfsClient
+  href: ./Get-AdfsClient.yml
+- text: Remove-AdfsClient
+  href: ./Remove-AdfsClient.yml
+- text: Set-AdfsClient
+  href: ./Set-AdfsClient.yml
+syntaxes:
+- >-
+  Add-AdfsClient [-ClientId] <String> [-Name] <String> [[-RedirectUri] <Uri[]>] [-Description <String>]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a client'
+  code: |-
+    PS C:\> Add-AdfsClient -Name "Payroll Application" -ClientId "ab762716-544d-4aeb-a526-687b73838a33" -RedirectUri "ms-app://s-1-15-2-2205112887-4282980309-3272664163-2407253042-283898840-27493891-3661245662/" -Description "OAuth 2.0 client for our Payroll application"
+  description: |-
+    This command registers an OAuth 2.0 client with AD FS by using a client identifier, redirection URI, name and description.
+  summary: ""
+- title: 'Example 2: Add a client with multiple redirection URIs'
+  code: |-
+    PS C:\> Add-AdfsClient -Name "Payroll Application" -ClientId "ab762716-544d-4aeb-a526-687b73838a33" -RedirectUri @("ms-app://s-1-15-2-2205112887-4282980309-3272664163-2407253042-283898840-27493891-3661245662/", "https://Contosopayrollapplication/oauthclient/") -Description "OAuth 2.0 client for our Payroll application"
+  description: |-
+    This command registers an OAuth 2.0 client with a client identifier, two redirection URIs, a name and description with AD FS.
+    The command uses two different redirections URIs to denote multiple forms of the application that may use different redirection URIs,
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientId
+  isRequired: true
+  description: |+
+    Specifies a client identifier.
+    The cmdlet adds a client identifier for the OAuth 2.0 client to register with AD FS.
+    You can also use GUIDs to represent client identifiers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description.
+    The cmdlet adds a description for the OAuth 2.0 client to register with AD FS.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name.
+    The cmdlet adds a name for the OAuth 2.0 client to register with AD FS.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RedirectUri
+  description: |+
+    Specifies one or more redirection URIs.
+    The cmdlet adds the redirection URIs for the OAuth 2.0 client to register with AD FS.
+    The OAuth 2.0 client specifies the redirection URI when it requests authorization to access a resource secured byAD FS.
+    You can register more than one redirection URI for a single client identifier.
+    The redirect URI must be a valid URI.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Add-AdfsClient
+name: Add-AdfsClient
+description: |-
+  The **Add-AdfsClient** cmdlet registers an OAuth client with Active Directory Federation Services (AD FS).
+  In order to allow access from OAuth clients to resources secured by AD FS, you need to register the OAuth client with AD FS by using this cmdlet.
+
+  When you register an OAuth 2.0 client with AD FS, you must specify a client identifier  and a redirection URI, as well as a friendly name and description, for the OAuth client.
+  When an OAuth client requests access to a resource using the OAuth 2.0 protocol, the client must specify a client identifier and redirection URI to AD FS, in accordance with [RFC 6749](https://tools.ietf.org/html/rfc6749). 
+  AD FS will not allow access to a resource to clients that specify a client identifier or redirection URI that are not registered with AD FS.
+metadata:
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/adfs/add-adfsclient?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AdfsClient

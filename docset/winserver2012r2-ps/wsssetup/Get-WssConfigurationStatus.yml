@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the status of the configuration of Windows Server Essentials.
+module: WSSSetup
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.Setup.ICCommon.StatusInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet gets an object that represents the configuration status.
+links:
+- text: Remove-WssConfigurationData
+  href: ./Remove-WssConfigurationData.yml
+- text: Start-WssConfigurationService
+  href: ./Start-WssConfigurationService.yml
+- text: Test-WssConfigurationOption
+  href: ./Test-WssConfigurationOption.yml
+- text: Test-WssPrecheckResult
+  href: ./Test-WssPrecheckResult.yml
+syntaxes:
+- Get-WssConfigurationStatus [-ShowProgress] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get configuration status'
+  code: |-
+    PS C:\> Get-WssConfigurationStatus
+  description: |-
+    This command gets configuration status of Windows Server Essentials.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShowProgress
+  description: |+
+    Indicates that the cmdlet displays a progress indicator.
+    If you do not specify this parameter, the cmdlet displays current status information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSSetup.Get-WssConfigurationStatus
+name: Get-WssConfigurationStatus
+description: |-
+  The **Get-WssConfigurationStatus** cmdlet gets the status of the configuration of Windows Server Essentials.
+  Specify the **ShowProgress** parameter to view a progress indicator.
+metadata:
+  external help file: Wssg.Setup.Commands.dll-Help.xml
+  Module Name: WSSSetup
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsssetup/get-wssconfigurationstatus?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssConfigurationStatus

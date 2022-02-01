@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports Key Protection Service configuration and certificates.
+module: HgsKeyProtection
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet outputs XmlDocument that contains Key Protection Service state if Path parameter is not specified.
+links:
+- text: Import-HgsKeyProtectionState
+  href: ./Import-HgsKeyProtectionState.yml
+syntaxes:
+- >-
+  Export-HgsKeyProtectionState [-Path <String>] -Password <SecureString> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Export Key Protection Service state to a file'
+  code: |-
+    PS C:\> Export-HgsKeyProtectionState -Path "C:\example\kps.config" -Password $Password
+  description: |-
+    This command exports configuration state of Key Protection Service.
+    All certificates that were added as a pfx are included in the output which is written to the file referenced by the path parameter.
+    The private keys are protected with the password specified in the $Password secure string.
+  summary: ""
+- title: 'Example 2: Export Key Protection Service state to Xml'
+  code: |-
+    PS C:\> Export-HgsKeyProtectionState  -Password $Password
+  description: |-
+    This command exports configuration state of Key Protection Service as output that can be stored in a variable.
+    All certificates that were added as a pfx are included in the output.
+    The private keys are protected with the password specified in the $Password secure string.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Specifies the password which protects private keys contained within the exported configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path of the file to which the configuration state is written.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsKeyProtection.Export-HgsKeyProtectionState
+name: Export-HgsKeyProtectionState
+description: |-
+  The **Export-HgsKeyProtectionState** cmdlet exports configuration of Key Protection Service to a file referenced by the path parameter.
+  If the path parameter is not provided, the cmdlet outputs the configuration state as XML.
+  If the configuration contains certificates that were added to the service with pfx (containing private key), then the exported configuration also contains those private keys.
+  The password parameter is used to protect the private keys that are part of the configuration.
+  If the configuration contains certificates with private keys in Hardware Security Module (HSM), then the configuration only contains the public certificate.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/export-hgskeyprotectionstate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-HgsKeyProtectionState

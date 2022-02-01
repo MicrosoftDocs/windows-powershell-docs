@@ -1,0 +1,420 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the Active Directory groups that have a specified user, computer, group, or service account.
+module: ActiveDirectory
+notes: |-
+  * This cmdlet does not work with an Active Directory Snapshot.
+inputs:
+- name: <xref href="Microsoft.ActiveDirectory.Management.ADPrincipal" data-throw-if-not-resolved="False" />
+  description: |-
+    A principal object that represents a user, computer or group is received by the Identity parameter.
+    Derived types, such as the following are also received by this parameter.
+
+    Microsoft.ActiveDirectory.Management.ADUser
+
+    Microsoft.ActiveDirectory.Management.ADComputer
+
+    Microsoft.ActiveDirectory.Management.ADServiceAccount
+
+    Microsoft.ActiveDirectory.Management.ADGroup
+outputs:
+- name: <xref href="Microsoft.ActiveDirectory.Management.ADGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns group objects that have the specified user, computer, group or service account as a member.
+
+    The Get-ADPrincipalGroupMembership cmdlet returns a default set of ADGroup property values.
+    To retrieve additional ADGroup properties pass the ADGroups objects produced by this cmdlet through the pipline to Get-ADGroup. 
+    Specify the additional properties required from the group objects by passing the -Properties parameter to Get-ADGroup.
+links:
+- text: Add-ADGroupMember
+  href: ./Add-ADGroupMember.yml
+- text: Add-ADPrincipalGroupMembership
+  href: ./Add-ADPrincipalGroupMembership.yml
+- text: Get-ADComputer
+  href: ./Get-ADComputer.yml
+- text: Get-ADGroup
+  href: ./Get-ADGroup.yml
+- text: Get-ADGroupMember
+  href: ./Get-ADGroupMember.yml
+- text: Get-ADUser
+  href: ./Get-ADUser.yml
+- text: Remove-ADGroupMember
+  href: ./Remove-ADGroupMember.yml
+- text: Remove-ADPrincipalGroupMembership
+  href: ./Remove-ADPrincipalGroupMembership.yml
+syntaxes:
+- >-
+  Get-ADPrincipalGroupMembership [-AuthType <ADAuthType>] [-Credential <PSCredential>] [-Identity] <ADPrincipal>
+
+   [-Partition <String>] [-ResourceContextPartition <String>] [-ResourceContextServer <String>]
+
+   [-Server <String>] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>get-adprincipalgroupmembership -server localhost:60000 -identity "CN=GlenJohns,DC=AppNC" -partition "DC=AppNC"
+  description: |-
+    Description
+
+    -----------
+
+    Retrieve all the groups the user 'CN=GlenJohns,DC=AppNC' is a member of on an AD LDS instance.
+  summary: ""
+- title: '-------------------------- EXAMPLE 2 --------------------------'
+  code: |-
+    C:\PS>get-adprincipalgroupmembership -Identity Administrator
+
+    distinguishedName : CN=Domain Users,CN=Users,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : Global
+    name              : Domain Users
+    objectClass       : group
+    objectGUID        : 86c0f0d5-8b4d-4f35-a867-85a006b92902
+    SamAccountName    : Domain Users
+    SID               : S-1-5-21-41432690-3719764436-1984117282-513
+
+    distinguishedName : CN=Administrators,CN=Builtin,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : DomainLocal
+    name              : Administrators
+    objectClass       : group
+    objectGUID        : 02ce3874-dd86-41ba-bddc-013f34019978
+    SamAccountName    : Administrators
+    SID               : S-1-5-32-544
+
+    distinguishedName : CN=Schema Admins,CN=Users,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : Universal
+    name              : Schema Admins
+    objectClass       : group
+    objectGUID        : 8d62890f-385e-4cfa-9b2a-c72576097583
+    SamAccountName    : Schema Admins
+    SID               : S-1-5-21-41432690-3719764436-1984117282-518
+
+    distinguishedName : CN=Enterprise Admins,CN=Users,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : Universal
+    name              : Enterprise Admins
+    objectClass       : group
+    objectGUID        : 0215b0a5-aea1-40da-b598-720efe930ddf
+    SamAccountName    : Enterprise Admins
+    SID               : S-1-5-21-41432690-3719764436-1984117282-519
+
+    distinguishedName : CN=Domain Admins,CN=Users,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : Global
+    name              : Domain Admins
+    objectClass       : group
+    objectGUID        : 5ccc6037-c2c9-42be-8e92-c8f98afd0011
+    SamAccountName    : Domain Admins
+    SID               : S-1-5-21-41432690-3719764436-1984117282-512
+
+    distinguishedName : CN=Group Policy Creator Owners,CN=Users,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : Global
+    name              : Group Policy Creator Owners
+    objectClass       : group
+    objectGUID        : a58f7bf2-fd20-4bbd-96f0-ee10fa1613c7
+    SamAccountName    : Group Policy Creator Owners
+    SID               : S-1-5-21-41432690-3719764436-1984117282-520
+  description: |-
+    Description
+
+    -----------
+
+    Retrieve all the groups the administrator is a member of.
+  summary: ""
+- title: '-------------------------- EXAMPLE 3 --------------------------'
+  code: |-
+    C:\PS>get-adprincipalgroupmembership -Identity Administrator -ResourceContextServer ChildDomain.Fabrikam.Com -ResourceContextPartition "DC=Fabrikam,DC=com"
+
+    distinguishedName : CN=Domain Users,CN=Users,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : Global
+    name              : Domain Users
+    objectClass       : group
+    objectGUID        : 86c0f0d5-8b4d-4f35-a867-85a006b92902
+    SamAccountName    : Domain Users
+    SID               : S-1-5-21-41432690-3719764436-1984117282-513
+
+    distinguishedName : CN=Group Policy Creator Owners,CN=Users,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : Global
+    name              : Group Policy Creator Owners
+    objectClass       : group
+    objectGUID        : a58f7bf2-fd20-4bbd-96f0-ee10fa1613c7
+    SamAccountName    : Group Policy Creator Owners
+    SID               : S-1-5-21-41432690-3719764436-1984117282-520
+
+    distinguishedName : CN=Enterprise Admins,CN=Users,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : Universal
+    name              : Enterprise Admins
+    objectClass       : group
+    objectGUID        : 0215b0a5-aea1-40da-b598-720efe930ddf
+    SamAccountName    : Enterprise Admins
+    SID               : S-1-5-21-41432690-3719764436-1984117282-519
+
+    distinguishedName : CN=Schema Admins,CN=Users,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : Universal
+    name              : Schema Admins
+    objectClass       : group
+    objectGUID        : 8d62890f-385e-4cfa-9b2a-c72576097583
+    SamAccountName    : Schema Admins
+    SID               : S-1-5-21-41432690-3719764436-1984117282-518
+
+    distinguishedName : CN=Domain Admins,CN=Users,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : Global
+    name              : Domain Admins
+    objectClass       : group
+    objectGUID        : 5ccc6037-c2c9-42be-8e92-c8f98afd0011
+    SamAccountName    : Domain Admins
+    SID               : S-1-5-21-41432690-3719764436-1984117282-512
+
+    distinguishedName : CN=Administrators,CN=Builtin,DC=Fabrikam,DC=com
+    GroupCategory     : Security
+    GroupScope        : DomainLocal
+    name              : Administrators
+    objectClass       : group
+    objectGUID        : 02ce3874-dd86-41ba-bddc-013f34019978
+    SamAccountName    : Administrators
+    SID               : S-1-5-32-544
+  description: |-
+    Description
+
+    -----------
+
+    Retrieve all the groups the adminsitrator account in the local domain is a member of in the resource domain ChildDomain.Fabrikam.Com
+  summary: ""
+parameters:
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use.
+    Possible values for this parameter include:
+
+    Negotiate or 0
+
+    Basic or 1
+
+    The default authentication method is Negotiate.
+
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+    The following example shows how to set this parameter to Basic.
+
+    -AuthType Basic
+
+  defaultValue: Microsoft.ActiveDirectory.Management.AuthType.Negotiate
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user account credentials to use to perform this task.
+    The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory PowerShell provider drive.
+    If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
+
+    To specify this parameter, you can type a user name, such as "User1" or "Domain01\User01" or you can specify a PSCredential object.
+    If you specify a user name for this parameter, the cmdlet prompts for a password.
+
+    You can also create a PSCredential object by using a script or by using the Get-Credential cmdlet.
+    You can then set the Credential parameter to the PSCredential object The following example shows how to create credentials.
+
+    $AdminCredentials = Get-Credential "Domain01\User01"
+
+    The following shows how to set the Credential parameter to these credentials.
+
+    -Credential $AdminCredentials
+
+    If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADPrincipal" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies an Active Directory principal object by providing one of the following property values.
+    The identifier in parentheses is the LDAP display name for the attribute.
+
+    Distinguished Name
+
+    Example:  CN=SaraDavis,CN=Users,DC=corp,DC=contoso,DC=com
+
+    GUID (objectGUID)
+
+    Example: 599c3d2e-f72d-4d20-8a88-030d99495f20
+
+    Security Identifier (objectSid)
+
+    Example: S-1-5-21-3165297888-301567370-576410423-1103
+
+    SAM Account Name (sAMAccountName)
+
+    Example: saradavis
+
+    The cmdlet searches the default naming context or partition to find the object.
+    If two or more objects are found, the cmdlet returns a non-terminating error.
+
+    This parameter can also get this object through the pipeline or you can set this parameter to an object instance.
+
+    Derived types, such as the following are also accepted:
+
+    - Microsoft.ActiveDirectory.Management.ADGroup
+    - Microsoft.ActiveDirectory.Management.ADUser
+    - Microsoft.ActiveDirectory.Management.ADComputer
+    - Microsoft.ActiveDirectory.Management.ADServiceAccount
+
+    This example shows how to set the parameter to a distinguished name.
+
+    -Identity  "CN=saradavis,CN=Users,DC=corp,DC=contoso,DC=com"
+
+    This example shows how to set this parameter to a principal object instance named "principalInstance".
+
+    -Identity $principalInstance
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Partition
+  description: |+
+    Specifies the distinguished name of an Active Directory partition.
+    The distinguished name must be one of the naming contexts on the current directory server.
+    The cmdlet searches this partition to find the object defined by the Identity parameter.
+
+    The following two examples show how to specify a value for this parameter.
+
+    -Partition "CN=Configuration,DC=EUROPE,DC=TEST,DC=CONTOSO,DC=COM"
+
+    -Partition "CN=Schema,CN=Configuration,DC=EUROPE,DC=TEST,DC=CONTOSO,DC=COM"
+
+    In many cases, a default value will be used for the Partition parameter if no value is specified. 
+    The rules for determining the default value are given below. 
+    Note that rules listed first are evaluated first and once a default value can be determined, no further rules will be evaluated.
+
+    In AD DS environments, a default value for Partition will be set in the following cases:  - If the Identity parameter is set to a distinguished name, the default value of Partition is automatically generated from this distinguished name.
+
+    - If running cmdlets from an Active Directory provider drive, the default value of Partition is automatically generated from the current path in the drive.
+    - If none of the previous cases apply, the default value of Partition will be set to the default partition or naming context of the target domain.
+
+    In AD LDS environments, a default value for Partition will be set in the following cases:
+
+    - If the Identity parameter is set to a distinguished name, the default value of Partition is automatically generated from this distinguished name.
+    - If running cmdlets from an Active Directory provider drive, the default value of Partition is automatically generated from the current path in the drive.
+    - If the target AD LDS instance has a default naming context, the default value of Partition will be set to the default naming context.  To specify a default naming context for an AD LDS environment, set the msDS-defaultNamingContext property of the Active Directory directory service agent (DSA) object (nTDSDSA) for the AD LDS instance.
+    - If none of the previous cases apply, the Partition parameter will not take any default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceContextPartition
+  description: |+
+    Specifies the distinguished name of the partition of an AD or AD LDS instance to search.
+    Use this parameter with the ResourceContextServer parameter to specify a partition hosted by the specified server.
+    If the ResourceContextPartition parameter is not specified, the default partition of the ResourceContextServer is searched.
+
+    The following example shows how to set this parameter.
+
+    -ResourceContextPartition "cn=employees,dc=corp,dc=contoso,dc=com"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceContextServer
+  description: |+
+    Specifies that the cmdlet return a list of groups that the user is a member of and that reside in the specified domain.
+    Use this parameter to search for groups in a domain that is not the domain where the user's account resides.
+    To search a partition other than the default partition in this domain, also specify the ResourceContextPartition parameter.
+
+    The following example shows how to specify this parameter.
+
+    -ResourceContextServer "corp.contoso.com"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory Snapshot instance.
+
+    Domain name values:
+
+    Fully qualified domain name
+
+    Examples: corp.contoso.com
+
+    NetBIOS name
+
+    Example: CORP
+
+    Directory server values:
+
+    Fully qualified directory server name
+
+    Example: corp-DC12.corp.contoso.com
+
+    NetBIOS name
+
+    Example: corp-DC12
+
+    Fully qualified directory server name and port
+
+    Example: corp-DC12.corp.contoso.com:3268
+
+    The default value for the Server parameter is determined by one of the following methods in the order that they are listed:
+
+    -By using Server value from objects passed through the pipeline.
+
+    -By using the server information associated with the Active Directory PowerShell provider drive, when running under that drive.
+
+    -By using the domain of the computer running Windows PowerShell.
+
+    The following example shows how to specify a full qualified domain name as the parameter value.
+
+    -Server "corp.contoso.com"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ActiveDirectory.Get-ADPrincipalGroupMembership
+name: Get-ADPrincipalGroupMembership
+description: |-
+  The Get-ADPrincipalGroupMembership cmdlet gets the Active Directory groups that have a specified user, computer, group, or service account as a member.
+  This cmdlet requires a global catalog to perform the group search.
+  If the forest that contains the user, computer or group does not have a global catalog, the cmdlet returns a non-terminating error.
+  If you want to search for local groups in another domain, use the ResourceContextServer parameter to specify the alternate server in the other domain.
+
+  The Identity parameter specifies the user, computer, or group object that you want to determine group membership for.
+  You can identify a user, computer, or group object by its distinguished name (DN), GUID, security identifier (SID) or SAM account name.
+  You can also specify a user, group, or computer object variable, such as $\<localGroupObject\>, or pass an object through the pipeline to the Identity parameter.
+  For example, you can use the Get-ADGroup cmdlet to retrieve a group object and then pass the object through the pipeline to the Get-ADPrincipalGroupMembership cmdlet.
+  Similarly, you can use Get-ADUser or Get-ADComputer to get user and computer objects to pass through the pipeline.
+
+  For AD LDS environments, the Partition parameter must be specified except in the following two conditions:
+
+  -The cmdlet is run from an Active Directory provider drive.
+
+  -A default naming context or partition is defined for the AD LDS environment.
+  To specify a default naming context for an AD LDS environment, set the msDS-defaultNamingContext property of the Active Directory directory service agent (DSA) object (nTDSDSA) for the AD LDS instance.
+metadata:
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/get-adprincipalgroupmembership?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

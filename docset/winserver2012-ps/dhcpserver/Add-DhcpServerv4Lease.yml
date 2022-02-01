@@ -1,0 +1,299 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new IPv4 address lease in the Dynamic Host Configuration Protocol (DHCP) server service.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Lease" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Lease" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DhcpServerv4Lease
+  href: ./Get-DhcpServerv4Lease.yml
+- text: Remove-DhcpServerv4Lease
+  href: ./Remove-DhcpServerv4Lease.yml
+syntaxes:
+- >-
+  Add-DhcpServerv4Lease [-ScopeId] <IPAddress> [-IPAddress] <IPAddress> [-ClientId] <String>
+
+   [-AddressState <String>] [-AsJob] [-CimSession <CimSession[]>] [-ClientType <String>] [-ComputerName <String>]
+
+   [-Description <String>] [-DnsRegistration <String>] [-DnsRR <String>] [-HostName <String>]
+
+   [-LeaseExpiryTime <DateTime>] [-NapCapable <Boolean>] [-NapStatus <String>] [-PassThru] [-PolicyName <String>]
+
+   [-ProbationEnds <DateTime>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Add-DhcpServerv4Lease -IPAddress 10.10.10.11 -ScopeId 10.10.10.0 -ClientId F0-DE-F1-7A-00-5E -LeaseExpiryTime "2012-01-28 01:38:13Z" -HostName MyComputer.contoso.com
+  description: |-
+    This example adds an IPv4 address lease for the IPv4 address 10.10.10.11 on the DHCP server service running on the local computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AddressState
+  description: |+
+    Specifies the state of the IPv4 Address lease.
+    The acceptable values for this parameter are: Offered, Active, Declined, Expired, or Inactive.
+    The default value is Active.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientId
+  isRequired: true
+  description: |+
+    Specifies the client identifier (ID) to be set on the IPv4 address lease.
+    Windows clients use the MAC address as the client ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientType
+  description: |+
+    Specifies the type of the client.
+    The acceptable values for this parameter are: Unspecified, DHCP, BootP, Both, Reservation, or None.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer running the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description string to be set on the IPv4 address lease.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DnsRegistration
+  description: |+
+    Indicates the status of the DNS registration of the lease. 
+    The acceptable values for this parameter are:
+
+     - Complete: For an active lease, registration of the required records , as specified by the **DnsRR** parameter value of PTR or AandPTR, is complete. 
+
+     - - For an expired lease, deletion of the required records has been done. 
+
+     - Pending: For an active lease, registration of the required records, as specified by the **DnsRR** parameter value of PTR or AandPTR, is pending. 
+
+     - - For an expired lease, deletion of the required records is pending. 
+
+     - Not applicable: When the **DnsRR** parameter is set to NoRegistration such as when no dynamic DNS registration is to be performed by the DHCP server service, this parameter is set to Not applicable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DnsRR
+  description: |+
+    Indicates the type of DNS record to be registered by the DHCP server service for this lease.
+    The acceptable values for this parameter are:
+
+     - PTR: Only PTR record to be registered by the DHCP server service. 
+
+     - AandPTR: Both A and PTR records to be registered by the DHCP server service. 
+
+     - NoRegistration: No DNS registration is done by the DHCP server service.
+    If the dynamic DNS is turned off on the DHCP server service, then this parameter is set to NoRegistration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the DNS host name of the client for which the IP address lease is to be added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  isRequired: true
+  description: |+
+    Specifies the IPv4 Address for which the IPv4 address lease record is to be added on the DHCP server service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: LeaseExpiryTime
+  description: |+
+    Specifies the expiry time of the IPv4 address lease.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: NapCapable
+  description: |+
+    Indicates that the client is network access protection (NAP) capable.
+    The acceptable values for this parameter are: True or False.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NapStatus
+  description: |+
+    Specifies the NAP status of the client.
+    The acceptable values for this parameter are: NoQuarantine, RestrictedAccess, DropPacket, Probation, Exempt, DefaultQuarSetting, or NoQuarInfo.
+    The default value is NoQuarantine. 
+
+    If this parameter is specified as Probation and a probation period is not specified, then this cmdlet will return an error. 
+
+    If this parameter is not specified or is specified as something other than Probation and probation period is not specified, then the probation period to set to 0. 
+
+    If this parameter is not specified and probation period is specified, then this parameter is set to Probation. 
+
+    If this parameter is not specified or is specified as something other than Probation and the **ProbationEnds** parameter is specified, then this cmdlet will return an error.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    Specifies the name of the policy to be set on the IPv4 address lease record being added. 
+    Note: The DHCP server service does not check whether the policy specified exists on the server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: ProbationEnds
+  description: |+
+    Specifies the end-time of probation to be set on the IPv4 address lease record. 
+
+    The default value is 0.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: ScopeId
+  isRequired: true
+  description: |+
+    Specifies the subnet mask to be set on the IPv4 address lease record being added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DhcpServer.Add-DhcpServerv4Lease
+name: Add-DhcpServerv4Lease
+description: |-
+  The **Add-DhcpServerv4Lease** cmdlet adds a new IPv4 address lease on the Dynamic Host Configuration Protocol (DHCP) server service.
+  This cmdlet is only supported for DHCP server service running on Windows Server® 2012.
+  This cmdlet is for testing purposes only.
+metadata:
+  external help file: DhcpServer_Cmdlets.xml
+  Module Name: DhcpServer
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/add-dhcpserverv4lease?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

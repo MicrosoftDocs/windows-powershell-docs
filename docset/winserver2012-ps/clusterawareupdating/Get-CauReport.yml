@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the Updating Run reports for all known Updating Runs, or all Updating Runs that match the specified dates or other specified parameters.
+module: ClusterAwareUpdating
+notes: ""
+inputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauReportSummary" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauReport" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauReportSummary" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-CauReport
+  href: ./Export-CauReport.yml
+syntaxes:
+- Get-CauReport [[-ClusterName] <String>] [-Credential <PSCredential>] [-Detailed]
+- Get-CauReport [[-ClusterName] <String>] [-Credential <PSCredential>] [-Detailed] [-Last]
+- >-
+  Get-CauReport [[-ClusterName] <String>] [[-StartDate] <DateTime>] [[-EndDate] <DateTime>]
+
+   [-Credential <PSCredential>] [-Detailed]
+- Get-CauReport [[-ClusterName] <String>] [-Credential <PSCredential>] [-Report <CauReportSummary>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Get-CauReport -ClusterName Contoso-FC1 -StartDate 01/01/2012 -Detailed
+  description: |-
+    This example returns a detailed list of the Updating Runs performed on the cluster called Contoso-FC1 on 01/01/2012 or later.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> Get-CauReport -ClusterName Contoso-FC1 -StartDate 01/01/2012 -EndDate 04/01/2012 -Detailed
+  description: |-
+    This example returns a detailed list of the Updating Runs performed on the cluster called Contoso-FC1 starting with Updating Runs on 01/01/2012 and ending with Updating Runs on 04/01/2012.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\> $CauReportSummary=Get-CauReport Contoso-FC1 -Last
+    Get-CauReport Contoso-FC1 -Report $CauReportSummary
+  description: |-
+    This example uses a CAU report summary object called $CauReportSummary to return a detailed report of the last Updating Run performed on the cluster called Contoso-FC1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  description: |+
+    Specifies the name of the cluster for which to retrieve reports.
+    This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the administrative credentials for the target cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Detailed
+  description: |+
+    Specifies that the full results for one or more runs will be returned, instead of just summary information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EndDate
+  description: |+
+    Retrieves only the reports for Runs before this time.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Last
+  description: |+
+    Retrieves only the most recent Run report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CauReportSummary" data-throw-if-not-resolved="False" />
+  name: Report
+  description: |+
+    Retrieves detailed results for the Run represented by the specified report summary.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartDate
+  description: |+
+    Retrieves only the reports from Runs on or after this time.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ClusterAwareUpdating.Get-CauReport
+name: Get-CauReport
+description: |-
+  The **Get-CauReport** cmdlet retrieves the Updating Run reports for all known Updating Runs, or all Updating Runs that match the specified dates or other specified parameters.
+  This cmdlet can return a list of all Updating Run reports between the specified **StartDate** and **EndDate** parameters, or if the **Last** parameter is specified instead of dates, then the cmdlet returns the most recent Updating Run report.
+  By default, the report contains summaries only, but more detail can be obtained with the **Detailed** parameter or by using the **Report** parameter and specifying a Cluster-Aware Updating (CAU) report summary object for which to return the detailed results.
+metadata:
+  external help file: ClusterAware_Cmdlets.xml
+  Module Name: ClusterAwareUpdating
+  online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-caureport?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

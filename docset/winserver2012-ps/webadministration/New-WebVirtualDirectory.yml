@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new virtual directory in IIS.
+module: WebAdministration
+notes: ""
+syntaxes:
+- >-
+  New-WebVirtualDirectory [-Site <String>] [-Application <String>] [-Name] <String> [-PhysicalPath <String>]
+
+   [-Force] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Creating a Virtual Directory --------------'
+  code: |-
+    IIS:\>New-WebVirtualDirectory -Site "Default Web Site" -Name ContosoVDir -PhysicalPath c:\inetpub\contoso
+  description: |-
+    The example creates a new virtual directory named "ContosoVDir" on the Default Web Site.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Application
+  description: |+
+    The application under which the virtual directory is created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies that the user is not prompted for confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the virtual directory to create.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhysicalPath
+  description: |+
+    The physical path to the folder in which the new virtual directory is created.
+    The specified folder must already exist.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Site
+  description: |+
+    The site name under which the virtual directory is created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-WebVirtualDirectory
+name: New-WebVirtualDirectory
+description: |-
+  Creates a new virtual directory in IIS.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-webvirtualdirectory?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

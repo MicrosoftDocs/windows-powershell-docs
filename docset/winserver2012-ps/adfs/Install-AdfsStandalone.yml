@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets up this computer as a stand-alone federation server for evaluation purposes or for a small lab environment.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="none" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Result object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Install-AdfsStandalone -CertificateThumbprint <String> -FederationServiceName <String>
+
+   [-OverwriteConfiguration] [-SSLPort <Int32>] [<CommonParameters>]
+- >-
+  Install-AdfsStandalone -CertificateThumbprint <String> -DecryptionCertificateThumbprint <String>
+
+   -FederationServiceName <String> [-OverwriteConfiguration] -SigningCertificateThumbprint <String>
+
+   [-SSLPort <Int32>] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>$fscredential = Get-Credential
+    C:\PS>Install-AdfsStandalone -CertificateThumbprint 8169c52b4ec6e77eb2ae17f028fe5da4e35c0bed -FederationServiceName fs.corp.contoso.com -DecryptionCertificateThumbprint ‎049e0546ca9a63d7fb5a193ccaec29badc125176 -SigningCertificateThumbprint ‎059d9546ca9a63d7fb5a193ccaec29badc236358 -ServiceAccountCredential $fscredential
+  description: |-
+    Description
+
+    -----------
+
+    Installs a standalone AD FS server with federation service name and all certificates specified, including those that are needed to sign and decrypt AD FS service communications.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  isRequired: true
+  description: |+
+    Specifies the value of the certificate thumbprint of the certificate that should be used in the SSL binding of the Default Web Site in IIS. 
+    This value should match the thumbprint of a valid certificate in the Local Computer certificate store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DecryptionCertificateThumbprint
+  isRequired: true
+  description: |+
+    Specifies the value of the certificate thumbprint of the certificate that should be used for token decryption. 
+    If this parameter is used, the automatic certificate rollover feature will be disabled, and a token signing certificate must also be specified using the SigningCertificateThumbprint parameter. 
+    This value should match the thumbprint of a valid certificate in the Local Computer certificate store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FederationServiceName
+  isRequired: true
+  description: |+
+    Specifies the DNS name of the federation service. 
+    This value must match the subject name of the certificate configured on the SSL binding in IIS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverwriteConfiguration
+  description: |+
+    This parameter must be used to remove an existing AD FS configuration database and overwrite it with a new database.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SigningCertificateThumbprint
+  isRequired: true
+  description: |+
+    Specifies the value of the certificate thumbprint of the certificate that should be used for token signing. 
+    If this parameter is used, the automatic certificate rollover feature will be disabled, and a token decryption certificate must also be specified using the DecryptionCertificateThumbprint parameter. 
+    This value should match the thumbprint of a valid certificate in the Local Computer certificate store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SSLPort
+  description: |+
+    Specifies the value of the port number of the SSL binding that the AD FS web site will use.
+
+  defaultValue: "443"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Install-AdfsStandalone
+name: Install-AdfsStandalone
+description: |-
+  The Install-AdfsStandalone cmdlet sets up this computer as a stand-alone federation server for evaluation purposes or for a small lab environment.
+metadata:
+  external help file: Microsoft.FederationServices.Deployment.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/install-adfsstandalone?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

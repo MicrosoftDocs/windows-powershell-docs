@@ -1,0 +1,23 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds or renews a certificate for the current computer.
+module: WssCmdlets
+notes: ""
+syntaxes:
+- Add-WssLocalMachineCert
+examples:
+- title: 'Example 1: Add or renew a certificate'
+  code: |-
+    PS C:\> Add-WssLocalMachineCert
+  description: |-
+    This command adds or renews a certificate for the server.
+  summary: ""
+uid: WssCmdlets.Add-WssLocalMachineCert
+name: Add-WssLocalMachineCert
+description: |-
+  The **Add-WssLocalMachineCert** cmdlet adds or renews a self-issued root certificate for the current server.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/add-wsslocalmachinecert?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

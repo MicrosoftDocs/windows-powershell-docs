@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resolves the mapping of a Windows user account or group account to a UNIX identifier.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/microsoft/windows/nfs/MSFT_NfsMappedIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NfsMappedIdentity
+  href: ./Get-NfsMappedIdentity.yml
+- text: New-NfsMappedIdentity
+  href: ./New-NfsMappedIdentity.yml
+- text: Remove-NfsMappedIdentity
+  href: ./Remove-NfsMappedIdentity.yml
+- text: Set-NfsMappedIdentity
+  href: ./Set-NfsMappedIdentity.yml
+- text: Test-NfsMappedIdentity
+  href: ./Test-NfsMappedIdentity.yml
+- text: Get-NfsMappingStore
+  href: ./Get-NfsMappingStore.yml
+- text: Install-NfsMappingStore
+  href: ./Install-NfsMappingStore.yml
+- text: Set-NfsMappingStore
+  href: ./Set-NfsMappingStore.yml
+- text: Test-NfsMappingStore
+  href: ./Test-NfsMappingStore.yml
+syntaxes:
+- >-
+  Resolve-NfsMappedIdentity [[-AccountType] <WindowsAccountType>] [-Id] <UInt32> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Resolve-NfsMappedIdentity [-AccountName] <String> [[-AccountType] <WindowsAccountType>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Resolve a Windows user account to a UNIX UID'
+  code: |-
+    PS C:\> Resolve-NfsMappedIdentity -AccountName "PSPinto" -AccountType "User"
+    Windows Account : PSPinto
+    Account Type    : User
+    Identifier      : 402
+  description: |-
+    This command resolves the Windows user account PSPinto to UNIX user identifier 402.
+    The output reflects the identity mapping that the local NFS server returns.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  isRequired: true
+  description: |+
+    Specifies the account name of the user or group to resolve.
+    You can use the **AccountType** parameter to specify whether the **AccountName** parameter value represents a user or a group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WindowsAccountType" data-throw-if-not-resolved="False" />
+  name: AccountType
+  description: |+
+    Specifies the type of Windows account name or identifier to resolve.
+    Valid values are User and Group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: type
+  parameterValueGroup: User, Group
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the UNIX identifier to resolve to a Windows account name.
+    You can use the **AccountType** parameter to specify whether the **Id** parameter value is a user or a group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: uid, gid, Identifier
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NFS.Resolve-NfsMappedIdentity
+name: Resolve-NfsMappedIdentity
+description: |-
+  The **Resolve-NfsMappedIdentity** cmdlet queries a Network File System (NFS) server to resolve the mapping of a Windows user account or group account to a UNIX identifier.
+
+  When **Resolve-NfsMappedIdentity** queries the local NFS server, the local NFS server searches its cache.
+  If the NFS server finds the mapping, the information is returned.
+  If the NFS server mapping does not find the mapping in the server cache, the NFS server queries the configured mapping store.
+  If the NFS server finds the mapping in the mapping store, the mapping is returned, locally cached, and periodically refreshed.
+
+  The main purpose of **Resolve-NfsMappedIdentity** is to perform mapping diagnostics.
+  Administrators can determine whether the NFS server can successfully get the correct mappings for users and groups by using its current configuration.
+
+  For more information about NFS, see Network File Systemhttp://technet.microsoft.com/en-us/library/jj592688.
+  For more information about NFS account mapping, see NFS Account Mapping Guidehttp://technet.microsoft.com/en-us/library/hh509020(v=ws.10) and Identity Management for UNIXhttp://technet.microsoft.com/en-us/library/cc772571.
+metadata:
+  external help file: MSFT_NfsServerTasks.cmdletDefinition.cdxml-help.xml
+  Module Name: NFS
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/nfs/resolve-nfsmappedidentity?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Resolve-NfsMappedIdentity

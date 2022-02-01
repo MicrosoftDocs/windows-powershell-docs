@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a trigger that signals when an event log logs an entry.
+module: PEF
+notes: ""
+links:
+- text: Add-PefMessageSource
+  href: ./Add-PefMessageSource.yml
+- text: New-PefTraceSession
+  href: ./New-PefTraceSession.yml
+- text: New-PefWin32EventTrigger
+  href: ./New-PefWin32EventTrigger.yml
+- text: Start-PefTraceSession
+  href: ./Start-PefTraceSession.yml
+- text: Stop-PefTraceSession
+  href: ./Stop-PefTraceSession.yml
+syntaxes:
+- >-
+  New-PefEventLogTrigger [-LogName] <String> [-MachineName <String>] [-EventId <Int32>]
+
+   [-EventSourceName <String>] [-CheckTimerPeriodMs <Int32>] [-Repeat] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an event log trigger that stops a trace session'
+  code: |-
+    PS C:\>$Trigger01 = New-PefEventLogTrigger -LogName "Application" -EventSourceName "PEFTestSource" -EventID 1234
+    PS C:\> $TraceSession01 = New-PefTraceSession -Mode Circular -Force -Path "C:\Traces\EventLog" -TotalSize 50 -SaveOnStop 
+    PS C:\> Add-PefMessageSource -PEFSession $TraceSession01 -Source "Microsoft-Pef-WFP-MessageProvider"
+    PS C:\> Stop-PefTraceSession -PEFSession $TraceSession01 -Trigger $Trigger01
+    PS C:\> Start-PefTraceSession -PEFSession $TraceSession01
+  description: |-
+    This example creates an event log trigger, and then associates it to a Trace Session.
+    The Trace Session stops when the trigger finds the specific event in the Application log.
+
+    The first command creates a trigger object for an Application log event from the PEFTestSource source, and then stores it in the **$Trigger01** variable.
+
+    The second command uses the New-PefTraceSession cmdlet to create a Trace Session object, and then stores it in the **$TraceSession01** variable.
+
+    The third command uses the Add-PefMessageSource cmdlet to specify a provider for the session that is stored in the **$TraceSession01** variable.
+
+    The fourth command uses the Stop-PefTraceSession cmdlet to create a stop action for the event log trigger that is stored in the **$Trigger01** variable, and associates that action with the session that is stored in the **$TraceSession01** variable.
+
+    The final command uses the Start-PefTraceSession cmdlet to start the Trace Session that is stored in the **$TraceSession01** variable.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CheckTimerPeriodMs
+  description: |+
+    Specifies how often, in milliseconds, to check for an event.
+    The trigger checks whether the specified log contains the event.
+    The default value is 2000 ms.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: EventId
+  description: |+
+    Specifies the event ID of the event to wait for.
+    If you do not specify an ID, the trigger waits for an event with any ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EventSourceName
+  description: |+
+    Specifies the source name of the event to wait for.
+    If you do not specify a name, the trigger waits for an event with any source name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogName
+  isRequired: true
+  description: |+
+    Specifies the name of the event log to check.
+    The acceptable values for this parameter are:
+
+    - Application 
+    - Security 
+    - System
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MachineName
+  description: |+
+    Specifies the name of the computer to monitor for the event.
+    The default value is the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Repeat
+  description: |+
+    Indicates that the trigger runs on each occurrence of the event.
+    If you do not specify this parameter, the trigger runs only once.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PEF.New-PefEventLogTrigger
+name: New-PefEventLogTrigger
+description: |-
+  The **New-PefEventLogTrigger** cmdlet creates a trigger that signals when a specified entry is logged in an event log.
+  An event log trigger waits for a specific event from the System log, Application log, or Security log.
+  You can monitor a remote computer or the local computer.
+  The trigger becomes active when you associate it to a Protocol Engineering Framework (PEF) action.
+metadata:
+  external help file: Microsoft.Protocols.Tools.PowerShell.dll-Help.xml
+  Module Name: PEF
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/pef/new-pefeventlogtrigger?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-PefEventLogTrigger

@@ -1,0 +1,146 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops routing sessions for BGP peers.
+module: RemoteAccess
+notes: ""
+links:
+- text: Add-BgpPeer
+  href: ./Add-BgpPeer.yml
+- text: Get-BgpPeer
+  href: ./Get-BgpPeer.yml
+- text: Remove-BgpPeer
+  href: ./Remove-BgpPeer.yml
+- text: Set-BgpPeer
+  href: ./Set-BgpPeer.yml
+- text: Start-BgpPeer
+  href: ./Start-BgpPeer.yml
+syntaxes:
+- >-
+  Stop-BgpPeer [-Name] <String[]> [-RoutingDomain <String>] [-Force] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Stop a routing session'
+  code: |-
+    PS C:\> Stop-BgpPeer -Name "Tenant18" -Force
+  description: |-
+    This command stops the session for the peer named Tenant18.
+    This command specifies the **Force** parameter, so the command does not prompt you for confirmation.
+  summary: ""
+- title: 'Example 2: Stop all sessions'
+  code: |-
+    PS C:\> Get-BgpPeer | Stop-BgpPeer
+    Confirm
+    BGP peering session could be active for peer Tenant18. Do you want to stop the peering?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+  description: |-
+    This command gets all the peers by using the Get-BgpPeer cmdlet, and then passes them to the current cmdlet by using the pipeline operator.
+    The command stops the sessions for all the peers.
+    This command does not specify the **Force** parameter, so it prompts the user for confirmation of each session to stop.
+  summary: ""
+- title: 'Example 3: Stop a routing session in a multitenant environment'
+  code: |-
+    PS C:\> Stop-BgpPeer -Name "TenantSite22" -RoutingDomain "Rd001"
+    Confirm
+    BGP peering session could be active for peer TenantSite22 of routing domain Rd001. Do you want to stop the peering?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+  description: |-
+    This command stops the routing session for the peer named Tenant22 in the specified routing domain of a multitenant environment.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names.
+    The cmdlet starts routing sessions for the named peers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: PeerList, PeerId, PeerName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingDomain
+  description: |+
+    Specifies the name of the routing domain as a string.
+    The name is a unique, for the multitenant gateway, user-defined alphanumeric string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RoutingDomainName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Stop-BgpPeer
+name: Stop-BgpPeer
+description: |-
+  The **Stop-BgpPeer** cmdlet stops routing sessions for Border Gateway Protocol (BGP) peers.
+  Use the Start-BgpPeer cmdlet to start a routing session.
+  When you stop a session, both peer routers lose all the information learned from each other.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_BgpPeer_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/stop-bgppeer?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-BgpPeer

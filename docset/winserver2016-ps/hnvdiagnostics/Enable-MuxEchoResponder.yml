@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables an ICMP echo responder. This cmdlet has been deprecated.
+module: HNVDiagnostics
+notes: ""
+links:
+- text: Disable-MuxEchoResponder
+  href: ./Disable-MuxEchoResponder.yml
+syntaxes:
+- Enable-MuxEchoResponder [-TargetVIP] <String> [[-SequenceNumber] <Int32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable an echo responder'
+  code: |-
+    PS C:\> Enable-MuxEchoResponder -TargetVIP "10.123.176.108" -SequenceNumber 27
+  description: |-
+    This command enables the specified echo responder.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SequenceNumber
+  description: |+
+    Specifies the ICMP sequence number of the echo responder to disable.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetVIP
+  isRequired: true
+  description: |+
+    Specifies the target virtual IP address of the echo responder to enable.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HNVDiagnostics.Enable-MuxEchoResponder
+name: Enable-MuxEchoResponder
+description: |-
+  The **Enable-MuxEchoResponder** cmdlet enables an ICMP echo responder in a multiplexer (MUX).
+
+  You should run this cmdlet on a MUX virtual machine, either locally or through remote PowerShell.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MuxEchoResponder-help.xml
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/enable-muxechoresponder?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-MuxEchoResponder

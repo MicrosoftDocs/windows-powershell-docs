@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the NTP URLs for this device.
+module: HCS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HCS.Management.Powershell.Cmdlets.NtpInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    The NtpInfo object has the following properties:
+
+    - String Primary 
+    - String\[\] Secondary
+links:
+- text: Get-HcsNtpClientServerAddress
+  href: ./Get-HcsNtpClientServerAddress.yml
+syntaxes:
+- >-
+  Set-HcsNtpClientServerAddress [-Primary <String>] [-Secondary <String[]>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set primary and secondary NTP servers'
+  code: |-
+    PS C:\> Set-HcsNtpClientServerAddress -Primary "time.contoso.com" -Secondary "secondary.contoso.com"
+    Primary                                                     Secondary
+    -------                                                     ---------
+    time.contoso.com                                            {secondary.contoso.com}
+  description: |-
+    This command sets the primary and secondary NTP servers for your device.
+  summary: ""
+- title: 'Example 2: Set primary NTP server'
+  code: |-
+    PS C:\> Set-HcsNtpClientServerAddress -Primary "time.contoso.com"
+    Primary                                                     Secondary
+    -------                                                     ---------
+    time.contoso.com                                            {secondary.contoso.com}
+  description: |-
+    This command sets the primary NTP server for your device.
+  summary: ""
+- title: 'Example 3: Set secondary NTP server'
+  code: |-
+    PS C:\> Set-HcsNtpClientServerAddress -Secondary "secondary.contoso.com"
+    Primary                                                     Secondary
+    -------                                                     ---------
+    time.contoso.com                                            {secondary.contoso.com}
+  description: |-
+    This command sets the secondary NTP server for your device.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Primary
+  description: |+
+    Specifies the primary NTP server address.
+    The device uses this server unless it is not available.
+    You can change the primary address, but you cannot remove it.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Secondary
+  description: |+
+    Specifies an array of secondary NTP server addresses.
+    If the primary NTP server does not respond, the device tries the secondary addresses in order.
+
+    If you specify a value for this parameter, this cmdlet replaces the entire list of secondary servers with the array that you specify.
+    The cmdlet does not append the servers to the current array of secondary servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HCS.Set-HcsNtpClientServerAddress
+name: Set-HcsNtpClientServerAddress
+description: |-
+  The **Set-HcsNtpClientServerAddress** cmdlet sets the Network Time Protocol (NTP) URLs for this device.
+  You can set one primary URL and several optional secondary URLs.
+metadata:
+  external help file: Microsoft.HCS.Management.dll-Help.xml
+  Module Name: HCS
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/hcs/set-hcsntpclientserveraddress?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-HcsNtpClientServerAddress

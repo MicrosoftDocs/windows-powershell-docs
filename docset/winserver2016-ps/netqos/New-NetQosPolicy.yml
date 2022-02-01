@@ -1,0 +1,628 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new network QoS policy.
+module: NetQoS
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosPolicySettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+    The **MSFT_NetQosPolicySettingData** object contains a QoS policy.
+links:
+- text: Get-NetQosPolicy
+  href: ./Get-NetQosPolicy.yml
+- text: Remove-NetQosPolicy
+  href: ./Remove-NetQosPolicy.yml
+- text: Set-NetQosPolicy
+  href: ./Set-NetQosPolicy.yml
+syntaxes:
+- >-
+  New-NetQosPolicy [-PolicyStore <String>] [-Name] <String> [-NetworkProfile <NetworkProfile>]
+
+   [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-DSCPAction <SByte>]
+
+   [-MinBandwidthWeightAction <Byte>] [-ThrottleRateActionBitsPerSecond <UInt64>]
+
+   [-IPDstPrefixMatchCondition <String>] [-UserMatchCondition <String>] [-AppPathNameMatchCondition <String>]
+
+   [-IPProtocolMatchCondition <Protocol>] [-IPSrcPrefixMatchCondition <String>]
+
+   [-IPSrcPortMatchCondition <UInt16>] [-IPSrcPortStartMatchCondition <UInt16>]
+
+   [-IPSrcPortEndMatchCondition <UInt16>] [-IPDstPortMatchCondition <UInt16>]
+
+   [-IPDstPortStartMatchCondition <UInt16>] [-IPDstPortEndMatchCondition <UInt16>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetQosPolicy [-PolicyStore <String>] [-Name] <String> [-NetworkProfile <NetworkProfile>]
+
+   [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-DSCPAction <SByte>]
+
+   [-MinBandwidthWeightAction <Byte>] [-ThrottleRateActionBitsPerSecond <UInt64>] [-UserMatchCondition <String>]
+
+   [-AppPathNameMatchCondition <String>] [-IPProtocolMatchCondition <Protocol>] -IPPortMatchCondition <UInt16>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetQosPolicy [-PolicyStore <String>] [-Name] <String> [-NetworkProfile <NetworkProfile>]
+
+   [-Precedence <UInt32>] -PriorityValue8021Action <SByte> -NetDirectPortMatchCondition <UInt16>
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetQosPolicy [-PolicyStore <String>] [-Name] <String> [-NetworkProfile <NetworkProfile>]
+
+   [-Precedence <UInt32>] [-DSCPAction <SByte>] [-ThrottleRateActionBitsPerSecond <UInt64>]
+
+   -URIMatchCondition <String> [-URIRecursiveMatchCondition <Boolean>] [-IPDstPrefixMatchCondition <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetQosPolicy [-PolicyStore <String>] [-Name] <String> [-NetworkProfile <NetworkProfile>]
+
+   [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-DSCPAction <SByte>]
+
+   [-MinBandwidthWeightAction <Byte>] [-ThrottleRateActionBitsPerSecond <UInt64>] [-Cluster]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetQosPolicy [-PolicyStore <String>] [-Name] <String> [-NetworkProfile <NetworkProfile>]
+
+   [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-DSCPAction <SByte>]
+
+   [-MinBandwidthWeightAction <Byte>] [-ThrottleRateActionBitsPerSecond <UInt64>] [-SMB]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetQosPolicy [-PolicyStore <String>] [-Name] <String> [-NetworkProfile <NetworkProfile>]
+
+   [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-DSCPAction <SByte>]
+
+   [-MinBandwidthWeightAction <Byte>] [-ThrottleRateActionBitsPerSecond <UInt64>] [-NFS]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetQosPolicy [-PolicyStore <String>] [-Name] <String> [-NetworkProfile <NetworkProfile>]
+
+   [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-DSCPAction <SByte>]
+
+   [-MinBandwidthWeightAction <Byte>] [-ThrottleRateActionBitsPerSecond <UInt64>] [-LiveMigration]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetQosPolicy [-PolicyStore <String>] [-Name] <String> [-NetworkProfile <NetworkProfile>]
+
+   [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-DSCPAction <SByte>]
+
+   [-MinBandwidthWeightAction <Byte>] [-ThrottleRateActionBitsPerSecond <UInt64>] [-iSCSI]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetQosPolicy [-PolicyStore <String>] [-Name] <String> [-NetworkProfile <NetworkProfile>]
+
+   [-Precedence <UInt32>] -PriorityValue8021Action <SByte> [-FCOE] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetQosPolicy [-PolicyStore <String>] [-Name] <String> [-Default] [-NetworkProfile <NetworkProfile>]
+
+   [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-DSCPAction <SByte>]
+
+   [-MinBandwidthWeightAction <Byte>] [-ThrottleRateActionBitsPerSecond <UInt64>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a QoS policy'
+  code: |-
+    PS C:\> New-NetQosPolicy -Name "SMB Policy" -SMB -PriorityValue8021Action 3
+    Name           : SMB Policy 
+    Owner          : Group Policy (Machine) 
+    NetworkProfile : All 
+    Precedence     : 127 
+    Template       : SMB 
+    PriorityValue  : 3
+  description: |-
+    This command creates a QoS policy named SMB Policy that classifies SMB traffic and tags it with 802.1p priority value of 3.
+    The *SMB* parameter is a built-in filter that matches TCP port 445, which is reserved for SMB.
+  summary: ""
+- title: 'Example 2: Create a QoS policy that matches an application'
+  code: |-
+    PS C:\> New-NetQosPolicy -Name "FTP" -AppPathNameMatchCondition "ftp.exe" -ThrottleRateActionBitsPerSecond 1MB -PolicyStore ActiveStore
+    Name           : FTP 
+    Owner          : PowerShell / WMI 
+    NetworkProfile : All 
+    Precedence     : 127 
+    AppPathName    : ftp.exe 
+    ThrottleRate   : 1.049 MBits/sec
+  description: |-
+    This command creates a QoS policy named FTP that matches an application path at ftp.exe and throttles the traffic at 8,000,000 bits per second.
+    This policy is ActiveStore.
+    This means that it is not persistent after restart of the computer.
+  summary: ""
+- title: 'Example 3: Create a QoS policy that matches traffic to a subnet'
+  code: |-
+    PS C:\> New-NetQosPolicy -Name "Backup" -IPDstPrefixMatchCondition "10.1.1.176/28" -NetworkProfile Domain -DSCPAction 40
+    Name           : Backup 
+    Owner          : Group Policy (Machine) 
+    NetworkProfile : Domain 
+    Precedence     : 127 
+    IPProtocol     : Both 
+    IPDstPrefix    : 10.1.1.176/28 
+    DSCPValue      : 40
+  description: |-
+    This command creates a QoS policy named Backup that matches traffic sent to 10.1.1.176/28 subnet and tags it with DSCP value of 40.
+    This policy is effective only on traffic sent on a domain-joined network adapter.
+  summary: ""
+- title: 'Example 4: Create a QoS policy that matches traffic sent to a port'
+  code: |-
+    PS C:\> New-NetQosPolicy -Name "HTTP" -IPPort 80 -IPProtocol TCP -ThrottleRateActionBitsPerSecond 10MB
+    Name           : HTTP 
+    Owner          : Group Policy (Machine) 
+    NetworkProfile : All 
+    Precedence     : 127 
+    IPProtocol     : TCP 
+    IPPort         : 80 
+    ThrottleRate   : 10.486 MBits/sec
+  description: |-
+    This command creates a QoS policy that matches TCP traffic sent to port 80 and rate-limits it at 80,000,000 bits per second.
+  summary: ""
+- title: 'Example 5: Create a default QoS policy'
+  code: |-
+    PS C:\> New-NetQosPolicy -Name "Wildcard" -Default -MinBandwidthWeightAction 30
+    Name               : wildcard 
+    Owner              : Group Policy (Machine) 
+    NetworkProfile     : All 
+    Precedence         : 127 
+    Template           : Default 
+    MinBandwidthWeight : 30
+  description: |-
+    This command creates a QoS policy named Wildcard that catches all the traffic that does not match a specific QoS policy and assigns a minimum bandwidth weight of 30 to such traffic.
+  summary: ""
+- title: 'Example 6: Create a QoS policy that matches return traffic from an application'
+  code: |-
+    PS C:\> New-NetQosPolicy -Name "IIS" -URIMatchCondition "http://training" -ThrottleRateActionBitsPerSecond 500KB
+    Name           : IIS 
+    Owner          : Group Policy (Machine) 
+    NetworkProfile : Domain 
+    Precedence     : 127 
+    URI            : http://training/ 
+    URIRecursive   : False 
+    ThrottleRate   : 516.096 KBits/sec
+  description: |-
+    This command creates a QoS policy named IIS that matches return traffic from an HTTP server application with the specified URI and rate limit the return traffic at 4,000,000 bits per second.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AppPathNameMatchCondition
+  description: |+
+    Specifies the name by which an application is run, such as `application.exe` or `%ProgramFiles%\application.exeapplication`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: AppPathName, ApplicationName, app
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Cluster
+  isRequired: true
+  description: |+
+    Specifies the Microsoft cluster service, which uses the default SQL server TCP/UDP port 3343.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Default
+  isRequired: true
+  description: |+
+    Specifies a wildcard filter that can be used to capture all traffic that is not matched by any other filter.
+    One use case is that a user can create a QoS policy for a specific application using the *AppPathNameMatchCondition* parameter and create another QoS policy for all other applications using this parameter.
+    Another use case is that a user can create several QoS policies, each of which specifies a minimum bandwidth action for the filtered traffic, and create one additional policy using this parameter to assign a minimum bandwidth action for all other traffic.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SByte" data-throw-if-not-resolved="False" />
+  name: DSCPAction
+  description: |+
+    Specifies the differentiated services code point (DSCP) value.
+    The acceptable values for this parameter are: 0 through 63.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DSCPValue, DSCP
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FCOE
+  isRequired: true
+  description: |+
+    Specifies the Fibre Channel over Ethernet (FCoE), which uses a dedicated EtherType 0x8914.
+    If this parameter is specified, then the Windows Server® 2012 and later will instruct the network adapters in the computer that support FCoE to match the FCoE packets and apply the action specified in the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: IPDstPortEndMatchCondition
+  description: |+
+    Specifies the last port in a range of destination ports to be used to match the network traffic.
+    This parameter must be used in conjunction with the *IPDstPortStartMatchCondition* parameter.
+    The value of this parameter also must be larger than the value of the *IPDstPortStartMatchCondition* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPDstPortEnd
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: IPDstPortMatchCondition
+  description: |+
+    Specifies the exact destination port to be used to match the network traffic.
+    The filter of a QoS policy can be based on either a single port or a range of ports.
+    To specify a single destination port, use this parameter.
+    To specify a range of destination ports, use both the *IPDstPortStartMatchCondition* and the *IPDstPortEndMatchCondition* parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: IPDstPort, DestinationPort, dp, dstport, destport
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: IPDstPortStartMatchCondition
+  description: |+
+    Specifies the first port in a range of destination ports to be used to match the network traffic.
+    This parameter must be used in conjunction with the *IPDstPortEndMatchCondition* parameter.
+    The value of this parameter also must be smaller than the value of the *IPDstPortEndMatchCondition* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPDstPortStart
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPDstPrefixMatchCondition
+  description: |+
+    Specifies the destination IP address, optionally with a network prefix, such as `1.2.3.4`, `3ffe:ffff::1`, `192.168.1.0/24`, or `fe80::1234/48`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPDstPrefix, DestinationAddress, da, dst, dstaddr, dstip, dest, destaddr, destip
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: IPPortMatchCondition
+  isRequired: true
+  description: |+
+    Specifies the port to be used to match the network traffic, it can be either source port or destination port.
+    If either the source port or the destination port in a packet matches the value of this parameter, then the QoS policy will apply to the packet.
+    Usually this is a well-known port that a client uses to communicate with a server.
+    With this parameter specified, the same QoS policy can be configured on both the clients and the servers and apply to the traffic in both directions.
+    For example, specifying the IPPortMatchCondition parameter value of 80 matches HTTP traffic sent by both HTTP clients and HTTP servers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPPort, port
+  parameterValueGroup: ""
+- type: <xref href="Protocol" data-throw-if-not-resolved="False" />
+  name: IPProtocolMatchCondition
+  description: |+
+    Specifies the IP protocol to be used to match the network traffic.
+    The acceptable values for this parameter are: TCP, UDP, or Both.
+    If this parameter is unspecified, then Both is the default condition.
+    The QoS policy will apply to both TCP and UDP traffic.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPProtocol, Protocol
+  parameterValueGroup: None, TCP, UDP, Both
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: IPSrcPortEndMatchCondition
+  description: |+
+    Specifies the last port in a range of source ports to be used to match the network traffic.
+    This parameter must be used in conjunction with the *IPSrcPortStartMatchCondition* parameter.
+    The value of this parameter also must be larger than the value of the *IPSrcPortStartMatchCondition* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPSrcPortEnd
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: IPSrcPortMatchCondition
+  description: |+
+    Specifies the exact source port to be used to match the network traffic.
+    The filter of a QoS policy can be based on either a single port or a range of ports.
+    To specify a single source port, use this parameter.
+    To specify a range of source ports, use both the *IPSrcPortStartMatchCondition* and the *IPSrcPortEndMatchCondition* parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: IPSrcPort, SourcePort, sp, srcport
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: IPSrcPortStartMatchCondition
+  description: |+
+    Specifies the first port in a range of source ports to be used to match the network traffic.
+    This parameter must be used in conjunction with the *IPSrcPortEndMatchCondition* parameter.
+    The value of this parameter also must be smaller than the value of the *IPSrcPortEndMatchCondition* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPSrcPortStart
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPSrcPrefixMatchCondition
+  description: |+
+    Specifies the source IP address, optionally with a network prefix, such as `1.2.3.4`, `3ffe:ffff::1`, `192.168.1.0/24`, or `fe80::1234/48`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPSrcPrefix, SourceAddress, sa, src, srcaddr, srcip
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: iSCSI
+  isRequired: true
+  description: |+
+    Specifies the internet small computer system interface (iSCSI), which uses the dedicated TCP port 3260.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LiveMigration
+  isRequired: true
+  description: |+
+    Specifies the Microsoft live migration, which uses the well-known TCP port 6600.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: MinBandwidthWeightAction
+  description: |+
+    Specifies a numerical value for minimum bandwidth that a flow should get relatively.
+    The actual bandwidth a flow gets will depend on the weights assigned to other flows in the computer.
+    The acceptable values for this parameter are: 1 through 100.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: MinBandwidthWeight, minbww, weight
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the QoS policy name.
+    This name must be unique for a QoS policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: NetDirectPortMatchCondition
+  isRequired: true
+  description: |+
+    Specifies the network direct port to be used to match the network traffic.
+    Network Direct uses an independent port space from the TCP or UDP port space.
+    Windows Server 2012 and later will send a Network Direct policy to a network adapter only if the network adapter supports Network Direct.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: NetDirectPort, ndport, networkdirectport
+  parameterValueGroup: ""
+- type: <xref href="NetworkProfile" data-throw-if-not-resolved="False" />
+  name: NetworkProfile
+  description: |+
+    Specifies the profile, or connection type, of a network, such as Domain.
+    The acceptable values for this parameter are: Domain, Public, Private, or All.
+    If this parameter is not specified, then the QoS policy will be effective when a computer is connected on any type of connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Domain, Public, Private, All
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NFS
+  isRequired: true
+  description: |+
+    Specifies the network file system, which uses the dedicated TCP port 2049.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  description: |+
+    Specifies the location of the policy that is stored.
+    The acceptable values for this parameter are:
+
+    - ActiveStore 
+    - COMPUTERNAME
+    - GPO:COMPUTERNAME
+     -- GPO:DOMAIN\GPONAME
+     -- LDAP://LDAP-URL
+
+    If a policy is stored in ActiveStore, then the policy does not persist after restart.
+
+  defaultValue: None
+  position: Named
+  aliases: store
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Precedence
+  description: |+
+    Specifies the priority of a QoS policy.
+    A higher priority policy will trump a lower priority policy in case the policies are conflicting.
+    The acceptable values for this parameter are: 0 through 255.
+    255 represents the highest priority and 0 represents the lowest.
+    If not specified, then the default value is 127.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SByte" data-throw-if-not-resolved="False" />
+  name: PriorityValue8021Action
+  isRequired: true
+  description: |+
+    Specifies the IEEE 802.1p value.
+    The acceptable values for this parameter are: 0 through 7.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: PriorityValue, PriorityValue8021, pri, dot1p
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SMB
+  isRequired: true
+  description: |+
+    Specifies the server message block, which uses the dedicated TCP port 445.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: ThrottleRateActionBitsPerSecond
+  description: |+
+    Specifies a throttle rate in bits per second to set the maximum bandwidth that can be consumed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ThrottleRateAction, ThrottleRate, Throttle, maxbw
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: URIMatchCondition
+  isRequired: true
+  description: |+
+    Specifies the URI to match.
+    Only a HTTP URL is currently supported, such as `http://myhost`, `https://*/training`, `http://myhost:8080/training`, or `https://myhost:*/training`.
+    The QoS policy will only apply to the traffic sent from HTTP server applications to HTTP clients in response to the requests from the client for the specified URI.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: URI, url
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: URIRecursiveMatchCondition
+  description: |+
+    Specifies that all subdirectories and files following the URI specified in the *URIMatchCondition* parameter are to be included.
+    This parameter can be specified only if the *URIMatchCondition* parameter is specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: URIRecursive, urlrecursive, recursive
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserMatchCondition
+  description: |+
+    Specifies the user or group name in Active Directory, such as `contoso\DavidChew`.
+    This parameter is usually specified with another filtering parameter such as the *AppPathNameMatchCondition* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: User, sid
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetQoS.New-NetQosPolicy
+name: New-NetQosPolicy
+description: |-
+  The **New-NetQosPolicy** cmdlet creates a new network Quality of Service (QoS) policy.
+  A QoS policy consists of two main parts: match conditions also known as filters, and actions.
+  Match conditions such as the name by which an application is run in Windows Server® 2012 and later or a TCP port number decide to what traffic the policy is relating.
+  Parameters such as *DSCPAction* and *ThrottleRateAction* determine how the policy is to handle the matched traffic.
+  Besides match conditions and actions, there are also some general parameters such as *NetworkProfile* and *Precedence* that the users can customize for a QoS policy.
+
+  A list of well-known match conditions, or filters, in the form of parameters is provided: *FCoE*, *Cluster* (3343), *LiveMigration* (6600), *iSCSI* (3260), *NFS* (2049), and *SMB* (445).
+  Each of them matches a well-known TCP port specified in the brackets.
+  The only exception is *FCoE*, which matches EtherType 0x8906.
+  These filters must be used alone for filtering purpose.
+  In other words, they cannot be mixed with other match condition parameters.
+
+  QoS policies can be stored in multiple locations.
+  Users can choose a location by specifying the *PolicyStore* parameter.
+  If the *PolicyStore* parameter is not specified, then the new policy is added to local computer (localhost).
+  If a policy is stored in ActiveStore, then the policy will not persist after reboot.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetQosPolicy.cdxml-help.xml
+  Module Name: NetQoS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/netqos/new-netqospolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetQosPolicy

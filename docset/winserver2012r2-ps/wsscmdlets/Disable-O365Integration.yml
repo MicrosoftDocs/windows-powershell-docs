@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables the office_365_2 Integration Module.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Enable-O365Integration
+  href: ./Enable-O365Integration.yml
+syntaxes:
+- Disable-O365Integration [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable the Office 365 Integration Module'
+  code: |-
+    PS C:\> Disable-O365Integration
+    The Office 365 account is now disabled.
+  description: |-
+    This command disables integration between Windows Server Essentials and office_365_2.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+uid: WSSCmdlets.Disable-O365Integration
+name: Disable-O365Integration
+description: |-
+  The **Disable-O365Integration** cmdlet disables integration between Windows Server Essentials and office_365_1.
+  When you disable the Office 365 Integration Module, you can no longer manage office_365_2 user accounts and licenses from the dashboard.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/disable-o365integration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-O365Integration

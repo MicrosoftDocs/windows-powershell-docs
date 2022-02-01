@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a node from the network controller deployment.
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that contains the following fields: 
+    - Name of the node
+    - Hostname, fully qualified domain name (FQDN), or IP address of the node
+    - Fault domain of the node
+    - Name of interface to be used for representational state transfer (REST) operations on the node
+    - Node certificate
+links:
+- text: Add-NetworkControllerNode
+  href: ./Add-NetworkControllerNode.yml
+- text: Disable-NetworkControllerNode
+  href: ./Disable-NetworkControllerNode.yml
+- text: Enable-NetworkControllerNode
+  href: ./Enable-NetworkControllerNode.yml
+- text: Get-NetworkControllerNode
+  href: ./Get-NetworkControllerNode.yml
+- text: Set-NetworkControllerNode
+  href: ./Set-NetworkControllerNode.yml
+syntaxes:
+- >-
+  Remove-NetworkControllerNode [-Name <String>] [-Force] [-PassThru] [-ComputerName <String>] [-UseSsl]
+
+   [-Credential <PSCredential>] [-CertificateThumbprint <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a node from an existing network controller deployment by node name'
+  code: |-
+    PS C:\> Remove-NetworkControllerNode -Name "Node1"
+  description: |-
+    This command removes the node named Node1 from the existing network controller deployment.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the network controller node on which this cmdlet operates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default is the current user.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the node to be removed from the deployment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseSsl
+  description: |+
+    Indicates that the remote computer uses Secure Socket Layer (SSL) protocol to establish a connection to the Network Controller node.
+    The default value of this parameter is false.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.Remove-NetworkControllerNode
+name: Remove-NetworkControllerNode
+description: |-
+  The **Remove-NetworkControllerNode** cmdlet removes a node from the existing set of nodes in a network controller deployment.
+  You can use this cmdlet to scale down a cluster in the case that it has more capacity than is needed for operations.
+  You cannot scale down from a three node deployment.
+  If you want to move to a single node deployment from a three node deployment, you must unconfigure the cluster and configure it again with a single node.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/remove-networkcontrollernode?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-NetworkControllerNode

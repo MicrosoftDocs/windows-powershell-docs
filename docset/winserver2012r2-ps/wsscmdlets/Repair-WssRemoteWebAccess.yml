@@ -1,0 +1,42 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Repairs Remote Web Access.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Disable-WssRemoteWebAccess
+  href: ./Disable-WssRemoteWebAccess.yml
+- text: Enable-WssRemoteWebAccess
+  href: ./Enable-WssRemoteWebAccess.yml
+syntaxes:
+- Repair-WssRemoteWebAccess [-SkipRouter] [<CommonParameters>]
+examples:
+- title: 'Example 1: Repair Remote Web Access'
+  code: |-
+    PS C:\> Repair-WssRemoteWebAccess -SkipRouter
+  description: |-
+    This command repairs Remote Web Access but skips the router configuration task.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipRouter
+  description: |+
+    Indicates that the cmdlet skips the router configuration task.
+    If you want to manually configure the router, set this parameter to $True
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Repair-WssRemoteWebAccess
+name: Repair-WssRemoteWebAccess
+description: |-
+  The **Repair-WssRemoteWebAccess** cmdlet repairs Remote Web Access in a sbs_sbs8_2 installation.
+  The cmdlet initializes and starts the service.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/repair-wssremotewebaccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Repair-WssRemoteWebAccess

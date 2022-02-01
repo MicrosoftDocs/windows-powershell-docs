@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resizes storage spaces and file system volumes.
+module: StorageSpaces
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet outputs an object that represents the volume that was resized.
+syntaxes:
+- >-
+  Resize-SpacesVolume [-SpaceFriendlyName] <String> [-NewSize] <String> [[-StoragePoolFriendlyName] <String>]
+
+   [-Confirm] [-WhatIf]
+examples:
+- title: Example 1 - Resize a storage space
+  code: |-
+    PS C:\>Resize-SpacesVolume -SpaceFriendlyName "2ndSpace" -StoragePoolFriendlyName "2ndPool" -NewSize (2TB)
+  description: |-
+    This example resizes a storage space named 2ndSpace on a storage pool named 2ndPool to 2TB.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewSize
+  isRequired: true
+  description: |+
+    Specifies the new size of the storage space and volume.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SpaceFriendlyName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the storage space to resize.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StoragePoolFriendlyName
+  description: |+
+    Specifies the friendly name of the storage pool.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: StorageSpaces.Resize-SpacesVolume
+name: Resize-SpacesVolume
+description: |-
+  The Resize-SpacesVolume cmdlet extends a storage space and the file system volumes on it.
+  Shrinking the size of a storage space is not allowed, although this cmdlet does not check the input new size.
+  It only works with Microsoft System Reserved (MSR) partitions and a single primary partition.
+metadata:
+  external help file: StorSpaces2_Cmdlets.xml
+  Module Name: StorageSpaces
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/storagespaces/resize-spacesvolume?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Resize-SpacesVolume

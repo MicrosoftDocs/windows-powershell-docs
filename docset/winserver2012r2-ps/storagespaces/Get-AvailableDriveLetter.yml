@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns an array of the available drive letters.
+module: StorageSpaces
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet outputs an array of strings that stores the available drive letters.
+syntaxes:
+- Get-AvailableDriveLetter [-ReturnFirstLetterOnly]
+examples:
+- title: Example 1 - Get all available drive letters
+  code: |-
+    PS C:\>Get-AvailableDriveLetter
+  description: ""
+  summary: ""
+- title: Example 2 - Get the first available drive letter
+  code: |-
+    PS C:\>Get-AvailableDriveLetter -ReturnFirstLetterOnly
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReturnFirstLetterOnly
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: StorageSpaces.Get-AvailableDriveLetter
+name: Get-AvailableDriveLetter
+description: |-
+  Returns an array of all available drive letters, or optionally only the first available drive letter.
+metadata:
+  external help file: StorSpaces2_Cmdlets.xml
+  Module Name: StorageSpaces
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/storagespaces/get-availabledriveletter?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AvailableDriveLetter

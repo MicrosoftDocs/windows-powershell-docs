@@ -1,0 +1,321 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the configuration for a single network interface by alias.
+module: HCS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HCS.Management.Platform.Support.NetInterfaceInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    The NetInterfaceInfo object has the following properties:
+
+     -- HcsNetInterfaces InterfaceAlias (Data0, Data1, Data2, Data3, Data4, or Data5) 
+    - IPAddress Controller 0 IPv4Address
+    - IPAddress Controller 0 IPv6Address 
+    - IPAddress Controller 1 IPv4Address 
+    - IPAddress Controller 1 IPv6Address 
+    - IPAddress IPv4Address
+    - IPAddress IPv4Gateway 
+    - IPAddress IPv4Netmask 
+    - IPAddress IPv6Address 
+    - IPAddress IPv6Gateway 
+    - String IPv6Prefix 
+    - IsEnabled
+    - IsCloudEnabled 
+    - IsiSCSIEnabled
+links:
+- text: Disable-HcsNetInterface
+  href: ./Disable-HcsNetInterface.yml
+- text: Enable-HcsNetInterface
+  href: ./Enable-HcsNetInterface.yml
+- text: Get-HcsNetInterface
+  href: ./Get-HcsNetInterface.yml
+syntaxes:
+- >-
+  Set-HcsNetInterface [-InterfaceAlias] <HcsNetInterfaces> [-Controller0IPv4Address <IPAddress>]
+
+   [-Controller1IPv4Address <IPAddress>] [-IPv4Address <IPAddress>] [-IPv4Gateway <IPAddress>]
+
+   [-IPv4Netmask <IPAddress>] [-IPv6Gateway <IPAddress>] [-IPv6Prefix <String>] [-IsCloudEnabled <Boolean>]
+
+   [-IsiSCSIEnabled <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-HcsNetInterface [-InterfaceAlias] <HcsNetInterfaces> [-ClearIPv4] [-ClearIPv6] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the IPv4 configuration for a network interface'
+  code: |-
+    PS C:\> Set-HcsNetInterface Data2 -IPv4Address 10.1.1.30 -IPv4Gateway 10.1.1.1 -IPv4Netmask 192.168.255.0
+    InterfaceAlias         : Data2
+    Controller0IPv4Address :
+    Controller0IPv6Address :
+    Controller1IPv4Address :
+    Controller1IPv6Address :
+    IPv4Address            : 10.1.1.30
+    IPv4Gateway            : 10.1.1.1
+    IPv4Netmask            : 192.168.255.0
+    IPv6Address            :
+    IPv6Gateway            :
+    IPv6Prefix             :
+    IsEnabled              : True
+    IsCloudEnabled         : False
+    IsiSCSIEnabled         : False
+  description: |-
+    This command sets the IPv4 configuration for the network interface specified by the **InterfaceAlias** parameter.
+  summary: ""
+- title: 'Example 2: Set the IPv6 gateway address'
+  code: |-
+    PS C:\> Set-HcsNetInterface Data2 -IPv6Prefix 2001:4898:4010:3015::/64 -IPv6Gateway 2001:4898:4010:3015::1
+
+
+    InterfaceAlias         : Data2
+    Controller0IPv4Address :
+    Controller0IPv6Address :
+    Controller1IPv4Address :
+    Controller1IPv6Address :
+    IPv4Address            : 10.1.1.30
+    IPv4Gateway            : 10.1.1.1
+    IPv4Netmask            : 192.168.255.0
+    IPv6Address            : 2001:4898:4010:3015:ff1a:afe8:bd14:5608
+    IPv6Gateway            : 2001:4898:4010:3015::1
+    IPv6Prefix             : 2001:4898:4010:3015::/64
+    IsEnabled              : True
+    IsCloudEnabled         : False
+    IsiSCSIEnabled         : False
+  description: |-
+    This command sets the IPv6 gateway address for the network interface specified by the **InterfaceAlias** parameter.
+    The IP address is automatically generated based on the **IPv6Prefix** parameter.
+  summary: ""
+- title: 'Example 3: Clear IPv6 settings for a network interface'
+  code: |-
+    PS C:\> Set-HcsNetInterface Data2 -ClearIPv6
+
+
+    InterfaceAlias         : Data2
+    Controller0IPv4Address :
+    Controller0IPv6Address :
+    Controller1IPv4Address :
+    Controller1IPv6Address :
+    IPv4Address            : 10.1.1.30
+    IPv4Gateway            : 10.1.1.1
+    IPv4Netmask            : 192.168.255.0
+    IPv6Address            :
+    IPv6Gateway            :
+    IPv6Prefix             :
+    IsEnabled              : True
+    IsCloudEnabled         : False
+    IsiSCSIEnabled         : False
+  description: |-
+    This command removes IPv6 settings from the network interface specified by the **InterfaceAlias** parameter.
+  summary: ""
+- title: 'Example 4: Enable cloud access for a network interface'
+  code: |-
+    PS C:\> Set-HcsNetInterface Data2 -IsCloudEnabled $True
+
+
+    InterfaceAlias         : Data2
+    Controller0IPv4Address :
+    Controller0IPv6Address :
+    Controller1IPv4Address :
+    Controller1IPv6Address :
+    IPv4Address            : 10.1.1.30
+    IPv4Gateway            : 10.1.1.1
+    IPv4Netmask            : 192.168.255.0
+    IPv6Address            :
+    IPv6Gateway            :
+    IPv6Prefix             :
+    IsEnabled              : True
+    IsCloudEnabled         : True
+    IsiSCSIEnabled         : False
+  description: |-
+    This command enables cloud access for the network interface specified by the **InterfaceAlias** parameter.
+  summary: ""
+- title: 'Example 5: Enable iSCSI access for a network interface'
+  code: |-
+    PS C:\> Set-HcsNetInterface Data2 -IsiSCSIEnabled $True
+
+
+    InterfaceAlias         : Data2
+    Controller0IPv4Address :
+    Controller0IPv6Address :
+    Controller1IPv4Address :
+    Controller1IPv6Address :
+    IPv4Address            : 10.1.1.30
+    IPv4Gateway            : 10.1.1.1
+    IPv4Netmask            : 192.168.255.0
+    IPv6Address            :
+    IPv6Gateway            :
+    IPv6Prefix             :
+    IsEnabled              : True
+    IsCloudEnabled         : True
+    IsiSCSIEnabled         : True
+  description: |-
+    This command enables iSCSI access for the network interface specified by the **InterfaceAlias** parameter.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearIPv4
+  description: |+
+    Indicates that the cmdlet removes all IPv4 addresses from a network interface.
+    If the network interface is only configured for IPv4, this cmdlet also disables the interface.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearIPv6
+  description: |+
+    Indicates that the cmdlet removes all IPv6 addresses from a network interface.
+    If the network interface is only configured for IPv6, this cmdlet also disables the interface.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: Controller0IPv4Address
+  description: |+
+    Specifies an IP address to directly target controller0.
+    You can configure only the Data0 network interface with a fixed IP address for controller0.
+    The Controller0IPv4 setting is ignored on all interfaces other than Data0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: Controller1IPv4Address
+  description: |+
+    Specifies an IP address to directly target controller1.
+    You can configure only the Data0 network interface with a fixed IP address for controller1.
+    The Controller1IPv4 setting is ignored on all interfaces other than Data0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HcsNetInterfaces" data-throw-if-not-resolved="False" />
+  name: InterfaceAlias
+  isRequired: true
+  description: |+
+    Specifies an interface alias.
+    The acceptable values for this parameter are:
+
+    - Data0
+    - Data1
+    - Data2
+    - Data3
+    - Data4
+    - Data5
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Data0, Data1, Data2, Data3, Data4, Data5
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IPv4Address
+  description: |+
+    Specifies an IPv4 address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IPv4Gateway
+  description: |+
+    Specifies an IPv4 default gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IPv4Netmask
+  description: |+
+    Specifies the IPv4 prefix length in bits.
+    This field also accepts subnet format (for example, 255.255.255.0)
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IPv6Gateway
+  description: |+
+    Specifies an IPv6 default gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPv6Prefix
+  description: |+
+    Specifies an IPv6 prefix.
+    When you specify this parameter, the cmdlet automatically generates an IPv6 address based on the prefix, ensures it does not have an IP conflict on the network, and sets that IPv6 address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsCloudEnabled
+  description: |+
+    Indicates whether cloud access is enabled on an interface.
+    If you enable cloud access, you can use an interface to send data to the cloud and communicate with the azure_1 StorSimple Manager Service.
+    Data0 must always be cloud-enabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsiSCSIEnabled
+  description: |+
+    Indicates whether iSCSI access is enabled on an interface.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HCS.Set-HcsNetInterface
+name: Set-HcsNetInterface
+description: |-
+  The **Set-HcsNetInterface** cmdlet sets the configuration for a single network interface by alias.
+  Controller-specific addresses, such as Controller0IPv4Address, apply only to Data0.
+metadata:
+  external help file: Microsoft.HCS.Management.dll-Help.xml
+  Module Name: HCS
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/hcs/set-hcsnetinterface?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-HcsNetInterface

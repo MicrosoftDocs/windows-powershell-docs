@@ -1,0 +1,163 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a specified target port from a masking set.
+module: Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_MaskingSet" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_MaskingSet" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-TargetPort
+  href: ./Get-TargetPort.yml
+- text: Get-MaskingSet
+  href: ./Get-MaskingSet.yml
+syntaxes:
+- >-
+  Remove-TargetPortFromMaskingSet [-MaskingSetFriendlyName] <String[]> [-AsJob] [-CimSession <CimSession[]>]
+
+   [-PassThru] [-TargetPortAddresses <String[]>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+- >-
+  Remove-TargetPortFromMaskingSet [-AsJob] [-CimSession <CimSession[]>] [-PassThru]
+
+   [-TargetPortAddresses <String[]>] [-ThrottleLimit <Int32>] -MaskingSetUniqueId <String[]> [-Confirm] [-WhatIf]
+- >-
+  Remove-TargetPortFromMaskingSet [-AsJob] [-CimSession <CimSession[]>] [-PassThru]
+
+   [-TargetPortAddresses <String[]>] [-ThrottleLimit <Int32>] -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>$masksfname = "MyFirstMaskingSet"
+
+
+
+    PS C:\>$targetpaddress = (Get-TargetPort).PortAddress
+
+
+
+    PS C:\>Remove-TargetPortFromMaskingSet -MaskingSetFriendlyName $masksfname -TargetPortAddresses $targetpaddress
+  description: |-
+    This example removes a target port from a masking set.
+    And prevents any of the VirtualDisk or InitiatorId objects defined in the masking set from utilizing the target port.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an object from the pipeline as input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MaskingSetFriendlyName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of a masking set.
+    The friendly name may be defined by a user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MaskingSetUniqueId
+  isRequired: true
+  description: |+
+    Specifies an ID used to uniquely identify a masking set in the system.
+    The ID persists through reboots.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: "Sends items from the interactive window down the pipeline as input to other cmdlets.\r\nBy default, this cmdlet does not generate any output. \r\n\r\n\r\n                        \r\nTo send items from the interactive window down the pipeline, click to select the items and then click OK.\r\nShift-click and Ctrl-click are supported.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TargetPortAddresses
+  description: |+
+    Specifies one or more target port addresses.
+    The target port addresses to be removed from the masking set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Remove-TargetPortFromMaskingSet
+name: Remove-TargetPortFromMaskingSet
+description: |-
+  The **Remove-TargetPortFromMaskingSet** cmdlet removes a specified target port from a masking set.
+
+  ps_storage_spacesubsystem_not_remark
+metadata:
+  external help file: Storage2_Cmdlets.xml
+  Module Name: Storage
+  online version: https://docs.microsoft.com/powershell/module/storage/remove-targetportfrommaskingset?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

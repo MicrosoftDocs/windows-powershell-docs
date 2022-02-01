@@ -1,0 +1,114 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a dedicated IP address to a Network Load Balancing (NLB) cluster.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ClusterNodeDip" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NlbClusterNodeDip
+  href: ./Get-NlbClusterNodeDip.yml
+- text: Remove-NlbClusterNodeDip
+  href: ./Remove-NlbClusterNodeDip.yml
+- text: Set-NlbClusterNodeDip
+  href: ./Set-NlbClusterNodeDip.yml
+syntaxes:
+- >-
+  Add-NlbClusterNodeDip [-IP] <IPAddress> [-SubnetMask <IPAddress>] [-HostName <String>] -InterfaceName <String>
+
+   [<CommonParameters>]
+- Add-NlbClusterNodeDip -InputObject <Node[]> [-IP] <IPAddress> [-SubnetMask <IPAddress>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a dedicated IP address to a cluster node'
+  code: |-
+    PS C:\>Get-NlbClusterNode "Node02" | Add-NlbClusterNodeDip -IP fe80::b3c4:cc5:64dd:6e62
+    Node                       IPAddress                  SubnetMask 
+    ----                       ---------                  ---------- 
+    Node02                     fe80::b3c4:cc5:64dd:6e62
+  description: |-
+    This command adds the specified dedicated IP address to the cluster node named Node02.
+  summary: ""
+- title: 'Example 2: Add a dedicated IP address to a cluster node on the specified interface'
+  code: |-
+    PS C:\>Add-NlbClusterNodeDip -HostName "Node02" -InterfaceName "Vlan-03" -IP fe80::b3c4:cc5:64dd:6e62
+    Node                       IPAddress                  SubnetMask 
+    ----                       ---------                  ---------- 
+    Node02                     fe80::b3c4:cc5:64dd:6e62
+  description: |-
+    This command adds the specified dedicated IP address to the cluster node named node2 on the interface named Vlan-03.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: Named
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="Node" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of nodes of the cluster to which this cmdlet adds the dedicated IP address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  isRequired: true
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IP
+  isRequired: true
+  description: |+
+    Specifies the dedicated IP address for the new cluster node.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: SubnetMask
+  description: |+
+    Specifies the subnet mask for the dedicated IP address of the new cluster node.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Add-NlbClusterNodeDip
+name: Add-NlbClusterNodeDip
+description: |-
+  The **Add-NlbClusterNodeDip** cmdlet adds a dedicated IP address to a Network Load Balancing (NLB) cluster.
+  NLB references the dedicated IP address to handle both client-to-cluster traffic and other network traffic that must go specifically to the cluster node.
+
+  This cmdlet changes the configuration on all cluster nodes.
+  As a result, the NLB cluster will have to restart the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster should not be initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/add-nlbclusternodedip?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-NlbClusterNodeDip

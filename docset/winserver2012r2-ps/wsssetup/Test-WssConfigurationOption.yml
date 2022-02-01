@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Validates server name, domain name and domain administrator credentials.
+module: WSSSetup
+notes: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a value of $True or $False to represent whether you can configure Windows Server Essential Experience on the target server by using the parameter values that you specify.
+links:
+- text: Get-WssConfigurationStatus
+  href: ./Get-WssConfigurationStatus.yml
+- text: Remove-WssConfigurationData
+  href: ./Remove-WssConfigurationData.yml
+- text: Start-WssConfigurationService
+  href: ./Start-WssConfigurationService.yml
+- text: Test-WssPrecheckResult
+  href: ./Test-WssPrecheckResult.yml
+syntaxes:
+- Test-WssConfigurationOption [-Credential <PSCredential>] [<CommonParameters>]
+- >-
+  Test-WssConfigurationOption [-Credential <PSCredential>] [-ComputerName <String>] -NetbiosName <String>
+
+   [<CommonParameters>]
+- >-
+  Test-WssConfigurationOption [-Credential <PSCredential>] [-ComputerName <String>] -NetbiosName <String>
+
+   -NewAdminCredential <PSCredential> [<CommonParameters>]
+examples:
+- title: 'Example 1: Validate a server configuration'
+  code: |-
+    PS C:\> $PsCredential = Get-Credential
+    PS C:\> Test-WssConfigurationOption -NetbiosName "Contoso-dom" -ComputerName "Contoso-01" -Credential $PsCredential
+  description: |-
+    The first command obtains a credential and stores the result in the **$PsCredential** variable.
+
+    The second command validates the configuration for a server named Contoso-01 in the NetBIOS domain named Contoso-dom.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the computer with which to work.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a **PSCredential** object.
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    The cmdlet uses the credential supplied by this parameter to connect to the server to test.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetbiosName
+  isRequired: true
+  description: |+
+    Specifies the NetBIOS name of the domain to which the computer being tested belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: NewAdminCredential
+  isRequired: true
+  description: |+
+    Specifies a **PSCredential** object.
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    The cmdlet validates the user name and password in the credential you supply, and then creates a new user account by using these credentials.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSSetup.Test-WssConfigurationOption
+name: Test-WssConfigurationOption
+description: |-
+  The **Test-WssConfigurationOption** cmdlet validates server name, domain name and domain administrator credentials in Windows Server Essential Experience.
+metadata:
+  external help file: Wssg.Setup.Commands.dll-Help.xml
+  Module Name: WSSSetup
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsssetup/test-wssconfigurationoption?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-WssConfigurationOption

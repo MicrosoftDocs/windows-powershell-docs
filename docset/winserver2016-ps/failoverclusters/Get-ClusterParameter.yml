@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets detailed information about an object in a failover cluster, such as a cluster resource.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNetwork" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNetworkInterface" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResourceType" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterParameter" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-ClusterParameter
+  href: ./Set-ClusterParameter.yml
+syntaxes:
+- >-
+  Get-ClusterParameter [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterResource -Name cluster1FS | Get-ClusterParameter
+    Object              Name                Value               Type 
+    ------              ----                -----               ---- 
+    cluster1FS          Name                cluster1FS          String 
+    cluster1FS          DnsName             cluster1FS          String 
+    cluster1FS          RemapPipeNames      0                   UInt32 
+    cluster1FS          HostRecordTTL       1200                UInt32 
+    cluster1FS          RegisterAllProvi... 0                   UInt32 
+    cluster1FS          PublishPTRRecords   0                   UInt32 
+    cluster1FS          TimerCallbackAdd... 5                   UInt32 
+    cluster1FS          ResourceData        {1, 0, 0, 0...}     ByteArray 
+    cluster1FS          StatusNetBIOS       0                   UInt32 
+    cluster1FS          StatusDNS           0                   UInt32 
+    cluster1FS          StatusKerberos      0                   UInt32 
+    cluster1FS          CreatingDC          \\DOMAIN12-DC-05... String 
+    cluster1FS          LastDNSUpdateTime   10/15/2008 9:50:... DateTime 
+    cluster1FS          ObjectGUID          8054680893fd5943... String
+  description: |-
+    This example gets the parameters, including the detailed information, for the cluster resource named cluster1FS on the local cluster.
+    The displayed parameters will vary according to the type of resource being viewed.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterResource -Name cluster1FS | Get-ClusterParameter -Name HostRecordTTL
+    Object              Name                Value               Type 
+    ------              ----                -----               ---- 
+    cluster1FS          HostRecordTTL       1200                UInt32
+  description: |-
+    This example displays the HostRecordTTL parameter for the cluster resource named cluster1FS on the local cluster, if that parameter is applicable to cluster1FS.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster object for which to get more information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster parameter to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterParameter
+name: Get-ClusterParameter
+description: |-
+  The **Get-ClusterParameter** cmdlet gets detailed information about an object in a failover cluster, such as a cluster resource.
+  This cmdlet is used to manage private properties for a cluster object.
+  To get and set common properties for a cluster object, use the appropriate Get-Cluster* cmdlet to get the cluster object of interest and then set the property of interest on that cluster object directly.
+
+  The type of detailed information you can obtain with this cmdlet depends on the cmdlet you combine with it.
+  For example: 
+
+  - If you use this cmdlet with the **Get-ClusterResource** cmdlet for a disk resource, then you can obtain the disk signature or GUID of a disk and information about whether maintenance is turned on for that disk. 
+
+  - If you use this cmdlet with the **Get-ClusterResource** cmdlet for a Network Name resource, then you can obtain DNS-related information about the resource. 
+
+  - If you use this cmdlet with the **Get-ClusterResource** cmdlet for an IP address resource, then you can obtain DHCP-related information about the IP Address resource. 
+
+  - If you use this cmdlet with the **Get-ClusterResource** cmdlet for resources used by virtual machines, then you can obtain details about the settings for the virtual machines.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterparameter?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterParameter

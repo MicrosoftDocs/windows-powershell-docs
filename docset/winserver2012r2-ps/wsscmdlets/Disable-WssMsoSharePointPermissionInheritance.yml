@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables permission inheritance for a sp_online_2 securable object.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.O365Integration.SharePointLibrary,Microsoft.WindowsServerSolutions.O365Integration.SharePointSite" data-throw-if-not-resolved="False" />
+  description: |-
+    Library
+
+    Type: Microsoft.WindowsServerSolutions.O365Integration.SharePointLibrary
+
+    Description: SharePoint library
+
+    Site
+
+    Type: Microsoft.WindowsServerSolutions.O365Integration.SharePointSite
+
+    Description: SharePoint site
+links:
+- text: Enable-WssMsoSharePointPermissionInheritance
+  href: ./Enable-WssMsoSharePointPermissionInheritance.yml
+syntaxes:
+- Disable-WssMsoSharePointPermissionInheritance [-Library] <SharePointLibrary> [<CommonParameters>]
+- Disable-WssMsoSharePointPermissionInheritance [-Site] <SharePointSite> [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable SharePoint permission inheritance'
+  code: |-
+    PS C:\> $Library = Get-WssMsoSharePointLibrary | Select-Object -First 1
+    PS C:\> Disable-WssMsoSharePointPermissionInheritance -SharePointLibrary $Library
+  description: |-
+    The first command uses the Get-WssMsoSharePointLibrary cmdlet to get a library, and stores the result in the $Library variable.
+
+    The second command disables permission inheritance for the library named $Library.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SharePointLibrary" data-throw-if-not-resolved="False" />
+  name: Library
+  isRequired: true
+  description: |+
+    Specifies a sp_2013_2 library.
+    The cmdlet disables permission inheritance for a library that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SharePointSite" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies a sp_2013_2 site.
+    The cmdlet disables permission inheritance for a site that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Disable-WssMsoSharePointPermissionInheritance
+name: Disable-WssMsoSharePointPermissionInheritance
+description: |-
+  The **Disable-WssMsoSharePointPermissionInheritance** cmdlet disables permission inheritance for a sp_online_1 securable object.
+  Securable objects include sites, lists, libraries, folders, documents, or items.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/disable-wssmsosharepointpermissioninheritance?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-WssMsoSharePointPermissionInheritance

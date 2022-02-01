@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a screen shot of the specified session.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Returns WmsSessionStatus collection as PSObject collection.
+syntaxes:
+- >-
+  Get-WmsThumbnail [-SerializeString] -SessionId <UInt32> -BitmapSize <UInt32> [-TimeoutInSecond <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example
+  code: |-
+    PS C:\> Get-WmsThumbnail -SessionId 3 -BitmapSize 1
+    CurrentApplication   : Program Manager
+
+    IdleTimespan         : 66515
+
+    Blanked              : False
+
+    BlankedMessage       : 
+
+    IsLocked             : False
+
+    IsDisconnected       : False
+
+    IsPrivate            : False
+
+    IsBitmapUnavailable  : False
+
+    ScreenBroadcastState : Quiescent
+
+    RemoteControlState   : Quiescent
+
+    WebLimitingState     : NotLimited
+
+    ThumbnailBits        : {255, 216, 255, 224...}
+  description: |-
+    Returns a snapshot of the current desktop of the specified session.BitmapSize can be any value between 0 & 3, with 0 for the smallest size and 4 for full screen.
+    Along with screenshot information, this cmdlet also returns the current state of the specified session.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: BitmapSize
+  isRequired: true
+  description: |+
+    Returns the thumbnail image based on the specified size.
+    It can be a number between 0 and 3, with 0 being the smallest size and 3 for the largest size.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SerializeString
+  description: |+
+    Returns data in XML format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SessionId
+  isRequired: true
+  description: |+
+    Specifies a Remote Desktop Session (RDS) using SessionID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TimeoutInSecond
+  description: |+
+    The timeout value in seconds before the operation is aborted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MultiPoint.Get-WmsThumbnail
+name: Get-WmsThumbnail
+description: |-
+  The Get-WmsThumbnail cmdlet returns a screen shot of the specified session based on the requested size.
+metadata:
+  external help file: WmsCmdlets.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/06/2017
+  online version: https://docs.microsoft.com/powershell/module/multipoint/get-wmsthumbnail?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WmsThumbnail

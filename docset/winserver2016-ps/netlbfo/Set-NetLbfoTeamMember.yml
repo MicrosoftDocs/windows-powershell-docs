@@ -1,0 +1,184 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the role of a member network adapter in a NIC team.
+module: NetLbfo
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet takes no input objects.
+outputs:
+- name: <xref href="MSFT_NetLbfoTeamMember" data-throw-if-not-resolved="False" />
+  description: |-
+    By default, this cmdlet produces no output.
+
+    If the *PassThru* parameter is specified, the cmdlet returns the updated **MSFT_NetLbfoTeamMember** object.
+links:
+- text: Get-NetLbfoTeamMember
+  href: ./Get-NetLbfoTeamMember.yml
+- text: Add-NetLbfoTeamMember
+  href: ./Add-NetLbfoTeamMember.yml
+- text: Remove-NetLbfoTeamMember
+  href: ./Remove-NetLbfoTeamMember.yml
+syntaxes:
+- >-
+  Set-NetLbfoTeamMember [[-Name] <String[]>] [[-Team] <String[]>] [-AdministrativeMode <AdminModes>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-NetLbfoTeamMember [-TeamOfTheMember <CimInstance>] [-AdministrativeMode <AdminModes>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-NetLbfoTeamMember -InputObject <CimInstance[]> [-AdministrativeMode <AdminModes>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the team member role'
+  code: |-
+    PS C:\> Set-NetLbfoTeamMember -Name "NIC4" -AdministrativeMode Standby
+  description: |-
+    This command sets the administrative mode of the specified team member named NIC4 to Standby.
+  summary: ""
+parameters:
+- type: <xref href="AdminModes" data-throw-if-not-resolved="False" />
+  name: AdministrativeMode
+  description: |+
+    Specifies the initial role of the new member (network adapter).
+    The acceptable values for this parameter are:
+
+    - Active.
+    Allows the team member to participate in the NIC team. 
+    - Standby.
+    Places the member in a standby state where it does not participate in the team.
+    The team member is automatically moved to the Active state if any other member of the team fails.
+
+    By default, the initial role of the team member is Active.
+
+    At most one member in a team can be in Standby mode.
+
+  defaultValue: None
+  position: Named
+  aliases: am
+  parameterValueGroup: Active, Standby
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the team member to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ifAlias, InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Team
+  description: |+
+    Specifies the name of the NIC team which contains the network adapter to modify.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: TeamOfTheMember
+  description: |+
+    Specifies the NIC team object whose associated member objects are to be modified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetLbfo.Set-NetLbfoTeamMember
+name: Set-NetLbfoTeamMember
+description: |-
+  The **Set-NetLbfoTeamMember** cmdlet sets the role of a specified network adapter (team member) in the NIC team.
+  You can specify the team member either by specifying the name or by specifying the network adapter object retrieved using the Get-NetLbfoTeamMember cmdlet.
+
+  You need administrative privileges to use **Set-NetLbfoTeamMember**.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetLbfoTeamMember.cdxml-help.xml
+  Module Name: NetLbfo
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/netlbfo/set-netlbfoteammember?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetLbfoTeamMember

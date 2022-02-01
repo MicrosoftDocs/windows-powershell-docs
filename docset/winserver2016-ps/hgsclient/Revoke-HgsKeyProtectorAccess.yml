@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Revokes access for a guardian to a key protector.
+module: HgsClient
+notes: ""
+outputs:
+- name: <xref href="CimInstance#MSFT_HgsKeyProtector" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Grant-HgsKeyProtectorAccess
+  href: ./Grant-HgsKeyProtectorAccess.yml
+- text: New-HgsKeyProtector
+  href: ./New-HgsKeyProtector.yml
+- text: Get-HgsGuardian
+  href: ./Get-HgsGuardian.yml
+syntaxes:
+- Revoke-HgsKeyProtectorAccess -KeyProtector <CimInstance> -Guardian <CimInstance> [<CommonParameters>]
+- Revoke-HgsKeyProtectorAccess -KeyProtector <CimInstance> -GuardianFriendlyName <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Revoke access for a guardian'
+  code: |-
+    PS C:\> $Owner = Get-HgsGuardian -Name "Guardian11" 
+    PS C:\> $GuardianA = Get-HgsGuardian -Name "GuardianA" 
+    PS C:\> $GuardianB = Get-HgsGuardian -Name "GuardianB"
+    PS C:\> New-HgsKeyProtector -Owner $Owner -Guardians @($GuardianA, $GuardianB)
+    PS C:\> $Guardian04 = Get-HgsGuardian -Name "GuardianA"
+    PS C:\> Revoke-HgsKeyProtectorAccess -KeyProtector $KeyProtector -Guardian $Guardian04
+  description: |-
+    The first command gets the guardian object named Guardian11 by using the **Get-HgsGuardian** cmdlet, and then stores that object in the **$Owner** variable.
+
+    The second and third commands get two guardians named GuardianA and GuardianB.
+    These commands store the guardians in the **$GuardianA** and **$GuardianB** variables.
+
+    The fifth command gets the guardian object named GuardianA, and then stores that object in the **$Guardian04** variable.
+
+    The final command revokes access for the guardian stored in **$Guardian04** for the key protector.
+  summary: ""
+parameters:
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Guardian
+  isRequired: true
+  description: |+
+    Specifies a guardian from which to revoke access to the key.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GuardianFriendlyName
+  isRequired: true
+  description: |+
+    Specifies a friendly name for a guardian.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: KeyProtector
+  isRequired: true
+  description: |+
+    Specifies the key protector for which to revoke access.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HgsClient.Revoke-HgsKeyProtectorAccess
+name: Revoke-HgsKeyProtectorAccess
+description: |-
+  The **Revoke-HgsKeyProtectorAccess** cmdlet revokes access for a Host Guardian Service guardian to a key protector.
+  This operation requires access to private signing key of the owner.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: HgsClient-help.xml
+  Module Name: HgsClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsclient/revoke-hgskeyprotectoraccess?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Revoke-HgsKeyProtectorAccess

@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears all DNS server statistics.
+module: DnsServer
+notes: ""
+links:
+- text: Get-DnsServerStatistics
+  href: ./Get-DnsServerStatistics.yml
+syntaxes:
+- >-
+  Clear-DnsServerStatistics [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String>] [-Force]
+
+   [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Clear DNS server statistics'
+  code: |-
+    PS C:\> Clear-DnsServerStatistics
+  description: |-
+    This command clears statistics from a DNS server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    The acceptable values for this parameter are: an IP V4 address; an IP V6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name. 
+    Type the NetBIOS name,  or a fully qualified domain name of a remote computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Instructs the cmdlet to perform the operation without prompting for confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Clear-DnsServerStatistics
+name: Clear-DnsServerStatistics
+description: |-
+  The **Clear-DnsServerStatistics** cmdlet clears all Domain Name System (DNS) server statistics.
+  After you have cleared the statistics, you cannot retrieve them.
+metadata:
+  external help file: DnsServer_Cmdlets.xml
+  Module Name: DnsServer
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/clear-dnsserverstatistics?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

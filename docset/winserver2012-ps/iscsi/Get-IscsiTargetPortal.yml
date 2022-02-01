@@ -1,0 +1,201 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gives the list of target portals which have been set for discovery.
+module: iSCSI
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiConnection" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiSession" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiTarget" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiTargetPortal" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: iSCSI Target Server Overview
+  href: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848272(v=ws.11)
+- text: Get-IscsiConnection
+  href: ./Get-IscsiConnection.yml
+- text: Get-IscsiSession
+  href: ./Get-IscsiSession.yml
+- text: Get-IscsiTarget
+  href: ./Get-IscsiTarget.yml
+syntaxes:
+- >-
+  Get-IscsiTargetPortal [[-TargetPortalAddress] <String[]>] [-AsJob] [-CimSession <CimSession[]>]
+
+   [-InitiatorInstanceName <String[]>] [-InitiatorPortalAddress <String[]>] [-IsDataDigest <Boolean[]>]
+
+   [-IsHeaderDigest <Boolean[]>] [-TargetPortalPortNumber <UInt16[]>] [-ThrottleLimit <Int32>]
+- >-
+  Get-IscsiTargetPortal [-AsJob] [-CimSession <CimSession[]>] [-iSCSITarget <CimInstance>]
+
+   [-ThrottleLimit <Int32>]
+- >-
+  Get-IscsiTargetPortal [-AsJob] [-CimSession <CimSession[]>] [-iSCSISession <CimInstance>]
+
+   [-ThrottleLimit <Int32>]
+- >-
+  Get-IscsiTargetPortal [-AsJob] [-CimSession <CimSession[]>] [-iSCSIConnection <CimInstance>]
+
+   [-ThrottleLimit <Int32>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-IscsiTargetPortal -TargetPortalAddress testIscsi
+    InitiatorInstanceName      : 
+    InitiatorNodeAddress       : 
+    InitiatorPortalAddress     : 
+    InititorIPAdressListNumber : 4294967295 
+    IsDataDigest               : False 
+    IsHeaderDigest             : False 
+    TargetPortalAddress        : testIscsi 
+    TargetPortalPortNumber     : 3260
+  description: |-
+    This example adds a new iSCSI target portal with the name testiSCSI to perform discovery.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InitiatorInstanceName
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InitiatorPortalAddress
+  description: |+
+    Represents the IP address or DNS name associated with the portal.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: iSCSIConnection
+  description: |+
+    Accepts a MSFT iSCSI connection object as an input.
+    The MSFT iSCSI connection object is output from the Get-IscsiConnection cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: iSCSISession
+  description: |+
+    Accepts a MSFT iSCSI session object as an input.
+    The MSFT iSCSI session object is output from the Get-IscsiSession cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: iSCSITarget
+  description: |+
+    Accepts a MSFT iSCSI target object as an input.
+    The MSFT iSCSI target object is output from the Get-IscsiTarget cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IsDataDigest
+  description: |+
+    Enables data digest when the initiator logs into the target portal.
+    By not specifying this parameter, the digest setting is determined by the initiator kernel mode driver.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IsHeaderDigest
+  description: |+
+    Enables header digest when the initiator logs into the target portal.
+    By not specifying this parameter, the digest setting is determined by the initiator kernel mode driver.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TargetPortalAddress
+  description: |+
+    Represents the IP address or DNS name of the target portal.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TargetPortalPortNumber
+  description: |+
+    Specifies the TCP/IP port number for the target portal.
+    By default, the port number is `3260`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: iSCSI.Get-IscsiTargetPortal
+name: Get-IscsiTargetPortal
+description: |-
+  The **Get-IscsiTargetPortal** cmdlet gets information about iSCSI target portals.
+metadata:
+  external help file: Iscsi_Cmdlets.xml
+  Module Name: iSCSI
+  online version: https://docs.microsoft.com/powershell/module/iscsi/get-iscsitargetportal?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

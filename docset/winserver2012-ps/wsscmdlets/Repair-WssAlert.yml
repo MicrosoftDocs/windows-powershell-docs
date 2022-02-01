@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Repairs an alert.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssAlert
+  href: ./Get-WssAlert.yml
+- text: Enable-WssAlert
+  href: ./Enable-WssAlert.yml
+- text: Disable-WssAlert
+  href: ./Disable-WssAlert.yml
+- text: Clear-WssAlert
+  href: ./Clear-WssAlert.yml
+- text: Enable-WssAlert
+  href: ./Enable-WssAlert.yml
+syntaxes:
+- Repair-WssAlert [-FeatureName] <String> [-HealthDefinitionName] <String> [[-MachineName] <String>]
+- Repair-WssAlert [-Alert] <Alert>
+examples:
+- title: 'Example 1: Repair an alert'
+  code: |-
+    PS C:\> Repair-WssAlert -FeatureName "MicrosoftServicing" -HealthDefinitionName "MUOptIn"
+  description: |-
+    This command runs the repair task for the alert associated with the feature named MicrosoftServicing and the health definition named MUOptIn.
+  summary: ""
+parameters:
+- type: <xref href="Alert" data-throw-if-not-resolved="False" />
+  name: Alert
+  isRequired: true
+  description: |+
+    Specifies a **WssAlert** object.
+    To obtain a **WssAlert** object, use the Get-WssAlert cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FeatureName
+  isRequired: true
+  description: |+
+    Specifies the name of the feature associated with the alert.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HealthDefinitionName
+  isRequired: true
+  description: |+
+    Specifies the name of the health definition associated with the alert.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MachineName
+  description: |+
+    Specifies the name of the computer on which the server generated the alert.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Repair-WssAlert
+name: Repair-WssAlert
+description: |-
+  The **Repair-WssAlert** cmdlet runs the repair task for an alert.
+  Specify an alert object or specify the feature and health definition file associated with the alert.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/repair-wssalert?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

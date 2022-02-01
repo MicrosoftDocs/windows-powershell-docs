@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the state of the performance data collector set.
+module: ServerManagerTasks
+notes: ""
+outputs:
+- name: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+  description: |-
+    The output values and names are: 
+
+    - Value=0 Name="Stopped"
+    - Value=1 Name="Running"
+links:
+- text: Start-SMPerformanceCollector
+  href: ./Start-SMPerformanceCollector.yml
+- text: Stop-SMPerformanceCollector
+  href: ./Stop-SMPerformanceCollector.yml
+syntaxes:
+- >-
+  Get-SMPerformanceCollector [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   -CollectorName <String>
+examples:
+- title: Example 1:Get the performance data collector set state
+  code: |-
+    PS C:\>Get-SMPerformanceCollector -CollectorName "ContosoPerf"
+  description: |-
+    This command gets the state of the performance data collector set named ContosoPerf.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectorName
+  isRequired: true
+  description: |+
+    Specifies a data collector set in PLA.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ServerManagerTasks.Get-SMPerformanceCollector
+name: Get-SMPerformanceCollector
+description: |-
+  The **Get-SMPerformanceCollector** cmdlet gets the state of the data collector set in the Performance Log Analyzer (PLA).
+  A data collector set groups multiple data collection points, such as performance counters or events, into a single component.
+metadata:
+  external help file: SMTasks_Cmdlets.xml
+  Module Name: ServerManagerTasks
+  online version: https://docs.microsoft.com/powershell/module/servermanagertasks/get-smperformancecollector?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the traffic class settings.
+module: DcbQoS
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosTrafficClassSettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The MSFT_NetQosTrafficClassSettingData object contains a network traffic class.
+links:
+- text: Get-NetAdapterQos
+  href: ../netadapter/Get-NetAdapterQos.yml
+- text: New-NetQosTrafficClass
+  href: ./New-NetQosTrafficClass.yml
+- text: Set-NetQosTrafficClass
+  href: ./Set-NetQosTrafficClass.yml
+syntaxes:
+- Get-NetQosTrafficClass [[-Name] <String[]>] [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Get-NetQosTrafficClass
+    Name                      Algorithm Bandwidth(%) Priority 
+    ----                      --------- ------------ -------- 
+    [Default]                 ETS       40           0-2,4-7 
+    SMB                       ETS       60           3
+  description: |-
+    This example displays all of the traffic classes.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the traffic class.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DcbQoS.Get-NetQosTrafficClass
+name: Get-NetQosTrafficClass
+description: |-
+  The **Get-NetQosTrafficClass** cmdlet retrieves network traffic classes configured in Windows Server® 2012 and later.
+  A traffic class contains one or more types of traffic, each of which is differentiated by the IEEE 802.1p priority.
+
+  For more information on the traffic class, see the New-NetQosTrafficClass cmdlet.
+
+  This cmdlet only retrieves the traffic classes configured in Windows Server 2012 and later.
+  The traffic classes are not necessarily configured as-is on a network adapter in the computer.
+  To see the traffic class configuration on a network adapter, run the Get-NetAdapterQos cmdlet.
+metadata:
+  external help file: DcbQos_Cmdlets.xml
+  Module Name: DcbQoS
+  online version: https://docs.microsoft.com/powershell/module/dcbqos/get-netqostrafficclass?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

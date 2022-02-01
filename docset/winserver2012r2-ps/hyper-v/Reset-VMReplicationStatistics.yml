@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the replication statistics of a virtual machine.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None by default; **VMReplication** if **-PassThru** is specified.
+syntaxes:
+- >-
+  Reset-VMReplicationStatistics [-ReplicationRelationshipType <VMReplicationRelationshipType>]
+
+   [-ComputerName <String[]>] [-VMName] <String[]> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Reset-VMReplicationStatistics [-ReplicationRelationshipType <VMReplicationRelationshipType>] [-PassThru]
+
+   [-VM] <VirtualMachine[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Reset-VMReplicationStatistics [-VMReplication] <VMReplication[]> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Reset-VMReplicationStatistics VM01
+  description: |-
+    Resets replication statistics for virtual machine VM01.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-VMReplication | Reset-VMReplicationStatistics
+  description: |-
+    Resets the replication statistics of all replication-enabled virtual machines on the local Hyper-V host.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the replication statistics of a virtual machine are to be reset.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: . (local computer)
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Specifies that a **VMReplication** object is to be passed through to the pipeline representing the replication whose statistics are to be reset.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMReplicationRelationshipType" data-throw-if-not-resolved="False" />
+  name: ReplicationRelationshipType
+  description: |+
+    Specifies the replication relationship type of the virtual machine.
+    Specify whether the replication relationship is a simple primary to replica or is an extended replication chain.
+    The cmdlet resets the replication statistics for the virtual machines that have the replication type that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: Relationship
+  parameterValueGroup: Simple, Extended
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine whose replication statistics are to be reset.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine whose replication statistics are to be reset.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMReplication" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMReplication
+  isRequired: true
+  description: |+
+    Specifies the virtual machine replication whose replication statistics are to be reset.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Reset-VMReplicationStatistics
+name: Reset-VMReplicationStatistics
+description: |-
+  The **Reset-VMReplicationStatistics** cmdlet resets the replication statistics of a virtual machine.
+  Statistics accumulated up to that time are deleted, and replication monitoring begins collecting a new set of statistics.
+  If replication health was reported as "Warning", then this operation also changes the health to "Normal".
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/reset-vmreplicationstatistics?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Reset-VMReplicationStatistics

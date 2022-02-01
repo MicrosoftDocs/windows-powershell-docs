@@ -1,0 +1,349 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a virtual desktop collection.
+module: RemoteDesktop
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDVirtualDesktopCollection
+  href: ./Get-RDVirtualDesktopCollection.yml
+- text: Update-RDVirtualDesktopCollection
+  href: ./Update-RDVirtualDesktopCollection.yml
+- text: Remove-RDVirtualDesktopCollection
+  href: ./Remove-RDVirtualDesktopCollection.yml
+syntaxes:
+- >-
+  New-RDVirtualDesktopCollection [-PooledManaged] [-CollectionName] <String> [-Description <String>]
+
+   [-UserGroups <String[]>] [-ConnectionBroker <String>] -VirtualDesktopTemplateName <String>
+
+   -VirtualDesktopTemplateHostServer <String> -VirtualDesktopAllocation <Hashtable>
+
+   -StorageType <VirtualDesktopStorageType> [-CentralStoragePath <String>] [-LocalStoragePath <String>]
+
+   [-VirtualDesktopTemplateStoragePath <String>] [-Domain <String>] [-OU <String>]
+
+   [-CustomSysprepUnattendFilePath <String>] [-VirtualDesktopNamePrefix <String>]
+
+   [-DisableVirtualDesktopRollback] [-VirtualDesktopPasswordAge <Int32>] [-UserProfileDiskPath <String>]
+
+   [-MaxUserProfileDiskSizeGB <Int32>] [-Force] [<CommonParameters>]
+- >-
+  New-RDVirtualDesktopCollection [-PersonalManaged] [-CollectionName] <String> [-Description <String>]
+
+   [-UserGroups <String[]>] [-ConnectionBroker <String>] -VirtualDesktopTemplateName <String>
+
+   -VirtualDesktopTemplateHostServer <String> -VirtualDesktopAllocation <Hashtable>
+
+   -StorageType <VirtualDesktopStorageType> [-CentralStoragePath <String>] [-LocalStoragePath <String>]
+
+   [-Domain <String>] [-OU <String>] [-CustomSysprepUnattendFilePath <String>]
+
+   [-VirtualDesktopNamePrefix <String>] [-AutoAssignPersonalVirtualDesktopToUser] [-GrantAdministrativePrivilege]
+
+   [-Force] [<CommonParameters>]
+- >-
+  New-RDVirtualDesktopCollection [-PooledUnmanaged] [-CollectionName] <String> [-Description <String>]
+
+   [-UserGroups <String[]>] [-ConnectionBroker <String>] -VirtualDesktopName <String[]>
+
+   [-UserProfileDiskPath <String>] [-MaxUserProfileDiskSizeGB <Int32>] [-Force] [<CommonParameters>]
+- >-
+  New-RDVirtualDesktopCollection [-PersonalUnmanaged] [-CollectionName] <String> [-Description <String>]
+
+   [-UserGroups <String[]>] [-ConnectionBroker <String>] -VirtualDesktopName <String[]>
+
+   [-AutoAssignPersonalVirtualDesktopToUser] [-GrantAdministrativePrivilege] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a managed pooled virtual desktop collection'
+  code: |-
+    PS C:\> New-RDVirtualDesktopCollection -CollectionName "Virtual Desktop Pool" -PooledManaged -VirtualDesktopTemplateName "RDS-Template" -VirtualDesktopTemplateHostServer "rdvh-1.contoso.com" -VirtualDesktopAllocation @{"RDS-WKS-A26.contoso.com"=1;" RDS-WKS-A27.contoso.com"=2} -StorageType LocalStorage -Description "PowerShell created Virtual Desktop Pool" -UserGroups "contoso\domain users" -ConnectionBroker "rdcb.contoso.com" -VirtualDesktopNamePrefix "RDS-WKS-A" -VirtualDesktopPasswordAge 31 -UserProfileDiskPath "\\RDS-WKS-A26.contoso.com\uvhd" -MaxUserProfileDiskSizeGB 10
+  description: |-
+    This command creates a managed pooled virtual desktop collection and specifies configuration settings for the virtual desktop collection.
+    The command specifies the LocalStorage type for the collection, and specifies the virtual desktop template named RDS-Template for the collection.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AutoAssignPersonalVirtualDesktopToUser
+  description: |+
+    Indicates that the server automatically associates virtual desktops with user accounts when you create a new personal virtual desktop collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CentralStoragePath
+  description: |+
+    Specifies the path to a central storage location for virtual desktops in the collection.
+    Use the **StorageType** parameter to specify the type of storage (local or centralized) for the collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a personal virtual desktop collection.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CustomSysprepUnattendFilePath
+  description: |+
+    Provides the path to the .xml file that contains unattended installation settings for the remote desktop collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a descriptive name for the unattended installation file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableVirtualDesktopRollback
+  description: |+
+    Indicates that the server prevents rollback of a virtual desktop deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies the fully qualified domain name (FQDN) of the Active Directory domain to which you add the virtual desktops.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GrantAdministrativePrivilege
+  description: |+
+    Indicates that the server grants administrative privileges to the user account that the server assigns to a given personal virtual desktop.
+    This parameter applies only to personal virtual desktop collections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalStoragePath
+  description: |+
+    Specifies the path to a local storage location for virtual desktops.
+    Use the **StorageType** parameter to specify the type of storage for this collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxUserProfileDiskSizeGB
+  description: |+
+    Specifies the maximum size (in gigabytes) for the user profile disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OU
+  description: |+
+    Specifies the name of the Active Directory Domain Services (AD DS) organizational unit (OU) for the virtual desktop collection.
+    OU names must be unique within a forest.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PersonalManaged
+  isRequired: true
+  description: |+
+    Indicates that the server creates a new managed personal virtual desktop collection.
+    New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PersonalUnmanaged
+  isRequired: true
+  description: |+
+    Indicates that the server creates a new unmanaged personal virtual desktop collection.
+    New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PooledManaged
+  isRequired: true
+  description: |+
+    Indicates that the server creates a new managed pooled virtual desktop collection.
+    New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PooledUnmanaged
+  isRequired: true
+  description: |+
+    Indicates that the server creates a new unmanaged pooled virtual desktop collection.
+    New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualDesktopStorageType" data-throw-if-not-resolved="False" />
+  name: StorageType
+  isRequired: true
+  description: |+
+    Specifies the storage type for the collection.
+    The acceptable values for this parameter are:
+
+    - LocalStorage
+    - CentralSmbShareStorage
+    - CentralSanStorage
+
+    If you specify LocalStorage, specify a value for the **LocalStoragePath** parameter.
+    If you specify CentralSMBSharedStorage or CentralSanStorage, specify a value for the **CentralStorage** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: LocalStorage, CentralSmbShareStorage, CentralSanStorage
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserGroups
+  description: |+
+    Specifies an array of user groups that are authorized to connect to the collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserProfileDiskPath
+  description: |+
+    Specifies the path to the user profile disk for the collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopAllocation
+  isRequired: true
+  description: |+
+    Specifies a collection of values (key/value pair) that allocate virtual desktops to Remote Desktop Virtualization (RD Virtualization Host) servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VirtualDesktopName
+  isRequired: true
+  description: |+
+    Specifies the name of a virtual desktop to add to an unmanaged collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopNamePrefix
+  description: |+
+    Specifies a prefix for virtual desktop names that Remote Desktop Services automatically creates in a managed virtual desktop collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopPasswordAge
+  description: |+
+    Specifies the number of days after which the server enforces a password update.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopTemplateHostServer
+  isRequired: true
+  description: |+
+    Specifies the fully qualified domain name (FQDN) of the server where the virtual desktop template associated with the collection is stored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopTemplateName
+  isRequired: true
+  description: |+
+    Specifies a descriptive name for the virtual desktop template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopTemplateStoragePath
+  description: |+
+    Specifies the path where the parent disk for virtual machines in the collection is stored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteDesktop.New-RDVirtualDesktopCollection
+name: New-RDVirtualDesktopCollection
+description: |-
+  The **New-RDVirtualDesktopCollection** cmdlet creates a virtual desktop collection.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/new-rdvirtualdesktopcollection?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-RDVirtualDesktopCollection

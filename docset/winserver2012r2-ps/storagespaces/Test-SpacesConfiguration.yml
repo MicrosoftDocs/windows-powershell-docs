@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests for unhealthy resources associated with a Storage Spaces storage pool.
+module: StorageSpaces
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a StoragePool object to the **StoragePool** parameter.
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet outputs a Boolean object that represents whether Storage Spaces is healthy (**True**) or unhealthy (**False**).
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    If you specify the **Passthru** parameter and the storage pool is unhealthy, this cmdlet outputs an object that represents the unhealthy storage pool.
+syntaxes:
+- Test-SpacesConfiguration [-StoragePool] <CimInstance> [-Passthru]
+- Test-SpacesConfiguration [-StoragePoolFriendlyName] <String> [-Passthru]
+examples:
+- title: Example 1 - Test a storage pool
+  code: |-
+    PS C:\>Test-SpacesConfiguration -StoragePoolFriendlyName Internal
+    This Storage Pool, the Storage Spaces created from this pool, and the Physical Disks in the Storage Pool are all currently healthy. 
+    True
+  description: |-
+    This example tests a storage pool.
+  summary: ""
+- title: Example 2 - Test a storage pool with verbose output
+  code: |-
+    PS C:\>Test-SpacesConfiguration -StoragePoolFriendlyName Internal -Verbose
+  description: |-
+    This example tests a storage pool and specifies for verbose output.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that if the storage pool is unhealthy, the cmdlet should output an object that represents the unhealthy pool.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StoragePool
+  isRequired: true
+  description: |+
+    Specifies the StoragePool object to test.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StoragePoolFriendlyName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the storage pool to test.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: StorageSpaces.Test-SpacesConfiguration
+name: Test-SpacesConfiguration
+description: |-
+  The Test-SpacesConfiguration cmdlet tests for unhealthy Storage Spaces resources.
+  It performs the following operations, and returns a **True** code if Storage Spaces is healthy:
+
+  Enumerate storage pools that unhealthy
+
+  Enumerate storage spaces that are unhealthy
+
+  Enumerate physical disks that are unhealthy
+metadata:
+  external help file: StorSpaces2_Cmdlets.xml
+  Module Name: StorageSpaces
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/storagespaces/test-spacesconfiguration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-SpacesConfiguration

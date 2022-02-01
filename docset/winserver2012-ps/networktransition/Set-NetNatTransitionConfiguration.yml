@@ -1,0 +1,238 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the NAT64 configuration on a computer.
+module: NetworkTransition
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetNatTransitionConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Disable-NetNatTransitionConfiguration
+  href: ./Disable-NetNatTransitionConfiguration.yml
+- text: Enable-NetNatTransitionConfiguration
+  href: ./Enable-NetNatTransitionConfiguration.yml
+- text: Get-NetNatTransitionConfiguration
+  href: ./Get-NetNatTransitionConfiguration.yml
+- text: Get-NetNatTransitionMonitoring
+  href: ./Get-NetNatTransitionMonitoring.yml
+- text: New-NetNatTransitionConfiguration
+  href: ./New-NetNatTransitionConfiguration.yml
+- text: Remove-NetNatTransitionConfiguration
+  href: ./Remove-NetNatTransitionConfiguration.yml
+syntaxes:
+- >-
+  Set-NetNatTransitionConfiguration [-Adapter <CimInstance>] [-AsJob] [-CimSession <CimSession[]>]
+
+   [-InboundInterface <String[]>] [-InstanceName <String[]>] [-IPv4AddressPortPool <String[]>]
+
+   [-OutboundInterface <String[]>] [-PassThru] [-PolicyStore <PolicyStore[]>] [-PrefixMapping <String[]>]
+
+   [-State <State>] [-TcpMappingTimeoutSeconds <UInt32>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+- >-
+  Set-NetNatTransitionConfiguration [-AsJob] [-CimSession <CimSession[]>] [-InboundInterface <String[]>]
+
+   [-IPv4AddressPortPool <String[]>] [-OutboundInterface <String[]>] [-PassThru] [-PrefixMapping <String[]>]
+
+   [-State <State>] [-TcpMappingTimeoutSeconds <UInt32>] [-ThrottleLimit <Int32>] -InputObject <CimInstance[]>
+
+   [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>$nat64Prefix = "2009:1:2:3:4:5::/96"
+
+
+
+    PS C:\>$prefixMapping = "$nat64Prefix,0.0.0.0/0"
+
+
+
+    PS C:\>$portPool = "33.0.0.1,6000-10000"
+
+
+
+    PS C:\>Set-NetNatTransitionConfiguration -InstanceName NAT64 OutboundInterface corpnet -PrefixMapping $prefixMapping -IPv4AddressPortPool $portPool
+  description: |-
+    This example sets the NAT64 configuration for the instance named NAT64.
+  summary: ""
+parameters:
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Adapter
+  description: |+
+    Specifies the network adapter on which to apply the NAT64 configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InboundInterface
+  description: |+
+    Sets the interface on which the NAT64 is listening for the matching incoming IPv6 traffic.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the NAT64 configuration object to set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InstanceName
+  description: |+
+    Specifies the instance of the NAT64 which is being configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPv4AddressPortPool
+  description: |+
+    Specifies the list of IPv4 address and port ranges to be used by NAT64 for creating the mappings from the IPv6 source address to the IPv4 target address.
+    The format is a comma-separated list of \<IPv4 address,Lowport-Highport\>.
+    Such as `"10.0.0.2,1024-3388","10.0.0.2,4000-49023"`.
+    The port value must be between 1024 and 65535.
+    The wildcard character (*) can be specified to use the whole port range, such as `10.0.0.1,*`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OutboundInterface
+  description: |+
+    Sets the interface on which the NAT64 sends the translated IPv4 traffic.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PolicyStore" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PolicyStore
+  description: |+
+    Specifies to which policy store the NAT64 configuration is applied.
+    The acceptable values for this parameter are: Persistent and Active.
+    If this parameter is not specified, then the cmdlet operates on both active and persistent stores.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Store
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PrefixMapping
+  description: |+
+    Sets the list of IPv6 address ranges to be translated by the NAT64.
+    The format is a comma-separated list of \<IPv6 prefix,IPv4 subnet\>.
+    Such as `"69:FF9B::/96,0.0.0.0/0","66:FF9B::/96,192.2.0.0/8"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="State" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    Sets the enabled state of the NAT64 configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: TcpMappingTimeoutSeconds
+  description: |+
+    Specifies the lifetime for a TCP mapping after which it is released by the NAT64.
+    The minimum value is 1800 seconds. 
+
+    The default value is 7200 seconds.
+
+  defaultValue: None
+  position: Named
+  aliases: TcpMappingTimeout
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkTransition.Set-NetNatTransitionConfiguration
+name: Set-NetNatTransitionConfiguration
+description: |-
+  The **Set-NetNatTransitionConfiguration** sets the NAT64 configuration on a computer.
+metadata:
+  external help file: NetTransition_Cmdlets.xml
+  Module Name: NetworkTransition
+  online version: https://docs.microsoft.com/powershell/module/networktransition/set-netnattransitionconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

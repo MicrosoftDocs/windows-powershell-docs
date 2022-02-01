@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds physical disks to a storage pool.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssSpacesPool
+  href: ./Get-WssSpacesPool.yml
+- text: Get-WssDisk
+  href: ./Get-WssDisk.yml
+- text: Get-WssSpacesPool
+  href: ./Get-WssSpacesPool.yml
+syntaxes:
+- Add-WssDisksToSpacesPool [-Pool] <SpacesPool> [-Disks] <ICollection<Disk>> [-Force] [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Add a physical disk to a storage pool'
+  code: |-
+    PS C:\>$Disk = Get-WssDisk -ID "26a21bda-a627-11d7-9931-806e6f6e6963" PS C:\>$Pool = Get-WssSpacesPool -ID "13c41bda-a627-22d7-4631-806e6f6e6963" PS C:\> Add-WssDisksToSpacesPool -Disks $Disk -Pool $Pool
+  description: |-
+    The first command gets the Disk object that has the ID 26a21bda-a627-11d7-9931-806e6f6e6963, and stores it in the **$Disk** variable.
+
+    The second command gets the storage pool that has the ID 13c41bda-a627-22d7-4631-806e6f6e6963, and stores it in the **$Pool** variable.
+
+    The third command adds the physical disk stored in the **$Disk** variable to the storage pool stored in the **$Pool** variable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ICollection<Disk>" data-throw-if-not-resolved="False" />
+  name: Disks
+  isRequired: true
+  description: |+
+    Specifies the physical disks to add to the storage pool.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SpacesPool" data-throw-if-not-resolved="False" />
+  name: Pool
+  isRequired: true
+  description: |+
+    Specifies a **StoragePool** object.
+    To obtain a **StoragePool** object, use theGet-WssSpacesPool cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Add-WssDisksToSpacesPool
+name: Add-WssDisksToSpacesPool
+description: |-
+  The **Add-WssDisksToSpacesPool** cmdlet adds physical disks to a storage pool.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/add-wssdiskstospacespool?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables a claims provider trust in the Federation Service.
+module: ADFS
+notes: |-
+  * A relying party in Active Directory Federation Services (AD FS) 2.0 is an organization in which Web servers that host one or more Web-based applications reside. Tokens and Information Cards that originate from a claims provider can then be presented and ultimately accessed by the Web-based resources that are located in the relying party organization. When AD FS 2.0 is configured in the role of the relying party, it acts as a partner that trusts a claims provider to authenticate users. Therefore, the relying party accesses the claims that are packaged in security tokens that come from users in the claims provider. In other words, a relying party is the organization whose Web servers are protected by the resource-side federation server. The federation server in the relying party uses the security tokens that the claims provider produces to issue tokens to the Web servers that are located in the relying party.
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure that represents the claims provider trusts for the Federation Service.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-AdfsClaimsProviderTrust
+  href: ./Disable-AdfsClaimsProviderTrust.yml
+- text: Get-AdfsClaimsProviderTrust
+  href: ./Get-AdfsClaimsProviderTrust.yml
+- text: Remove-AdfsClaimsProviderTrust
+  href: ./Remove-AdfsClaimsProviderTrust.yml
+- text: Set-AdfsClaimsProviderTrust
+  href: ./Set-AdfsClaimsProviderTrust.yml
+- text: Update-AdfsClaimsProviderTrust
+  href: ./Update-AdfsClaimsProviderTrust.yml
+syntaxes:
+- >-
+  Enable-AdfsClaimsProviderTrust -TargetClaimsProviderTrust <ClaimsProviderTrust> [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Enable-AdfsClaimsProviderTrust -TargetCertificate <X509Certificate2> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Enable-AdfsClaimsProviderTrust -TargetIdentifier <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Enable-AdfsClaimsProviderTrust -TargetName <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable a claims provider trust'
+  code: |-
+    PS C:\> Enable-AdfsClaimsProviderTrust -TargetName "Fabrikam claims provider"
+  description: |-
+    This command enables a claims provider trust with the name Fabrikam claims provider.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: TargetCertificate
+  isRequired: true
+  description: |+
+    Specifies the token-signing certificate of the claims provider trust to enable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  name: TargetClaimsProviderTrust
+  isRequired: true
+  description: |+
+    Specifies a **ClaimsProviderTrust** object.
+    The cmdlet enables the claims provider trust that you specify.
+    To obtain a **ClaimsProviderTrust** object, use the Get-AdfsClaimsProviderTrust cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the claims provider trust to enable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the claims provider trust to enable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Enable-AdfsClaimsProviderTrust
+name: Enable-AdfsClaimsProviderTrust
+description: |-
+  The **Enable-AdfsClaimsProviderTrust** cmdlet enables a claims provider trust in the Federation Service.
+metadata:
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/adfs/enable-adfsclaimsprovidertrust?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-AdfsClaimsProviderTrust

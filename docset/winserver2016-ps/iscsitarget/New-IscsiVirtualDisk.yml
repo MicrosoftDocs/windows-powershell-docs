@@ -1,0 +1,224 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an iSCSI virtual disk with the specified file path and size.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Checkpoint-IscsiVirtualDisk
+  href: ./Checkpoint-IscsiVirtualDisk.yml
+- text: Convert-IscsiVirtualDisk
+  href: ./Convert-IscsiVirtualDisk.yml
+- text: Get-IscsiVirtualDisk
+  href: ./Get-IscsiVirtualDisk.yml
+- text: Import-IscsiVirtualDisk
+  href: ./Import-IscsiVirtualDisk.yml
+- text: Remove-IscsiVirtualDisk
+  href: ./Remove-IscsiVirtualDisk.yml
+- text: Restore-IscsiVirtualDisk
+  href: ./Restore-IscsiVirtualDisk.yml
+- text: Set-IscsiVirtualDisk
+  href: ./Set-IscsiVirtualDisk.yml
+syntaxes:
+- >-
+  New-IscsiVirtualDisk [-Description <String>] [-Path] <String> [-SizeBytes] <UInt64>
+
+   [-LogicalSectorSizeBytes <UInt32>] [-PhysicalSectorSizeBytes <UInt32>] [-BlockSizeBytes <UInt32>]
+
+   [-ComputerName <String>] [-Credential <PSCredential>] [<CommonParameters>]
+- >-
+  New-IscsiVirtualDisk [-Description <String>] -ParentPath <String> [-Path] <String> [[-SizeBytes] <UInt64>]
+
+   [-PhysicalSectorSizeBytes <UInt32>] [-BlockSizeBytes <UInt32>] [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+- >-
+  New-IscsiVirtualDisk [-Description <String>] [-Path] <String> [-SizeBytes] <UInt64> [-DoNotClearData]
+
+   [-UseFixed] [-LogicalSectorSizeBytes <UInt32>] [-PhysicalSectorSizeBytes <UInt32>] [-BlockSizeBytes <UInt32>]
+
+   [-ComputerName <String>] [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a fixed VHDX'
+  code: |-
+    PS C:\> New-IscsiVirtualDisk -UseFixed -Path "E:\temp\test.vhdx" -Size 10GB
+  description: |-
+    This example creates a fixed VHDX that is 10GB in size.
+  summary: ""
+- title: 'Example 2: Create a differencing VHDX'
+  code: |-
+    PS C:\> New-IscsiVirtualDisk -ParentPath "E:\temp\test.vhdx" -Path "E:\temp\child\diff.vhdx"
+  description: |-
+    This example creates a differencing VHDX, with the parent path E:\temp\test.vhdx and the differencing VHDX path is E:\temp\child\diff.vhdx.
+  summary: ""
+- title: 'Example 3: Create a dynamic VHDX on a remote computer'
+  code: |-
+    PS C:\> New-IscsiVirtualDisk -Path "E:\temp\test.vhdx" -Size 10GB -ComputerName "iscsisvr"
+  description: |-
+    This example creates a dynamic VHDX with the size 10GB at E:\temp\test.vhdx on the computer named iscsisvr.
+  summary: ""
+- title: 'Example 4: Create a VHDX'
+  code: |-
+    PS C:\> New-IscsiVirtualDisk -Path "ramdisk:test.vhdx" -Size 20MB
+  description: |-
+    This example creates a VHDX with the size 20MB.
+    This VHDX is not saved.
+    The VHDX is lost if the wintarget service is restarted or the system is restarted.
+  summary: ""
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: BlockSizeBytes
+  description: |+
+    Specifies the block size, in bytes, for the VHDX.
+    For fixed VHDX, if the value of the *SizeBytes* parameter is less than 32 MB, the default size if 2 MB.
+    Otherwise, the default value is 32 MB.
+    For dynamic VHDX, the default size is 2 MB.
+    For differencing VHDX, the default size is the parent *BlockSize*.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+    If you do not specify a value for this parameter, the cmdlet uses the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description for the iSCSI virtual disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DoNotClearData
+  description: |+
+    Indicates that the cmdlet does not clear the fixed VHDX.
+    Because failing to clear data can reveal pre-existing data, we do not recommend this option.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LogicalSectorSizeBytes
+  description: |+
+    Specifies the logical sector size, in bytes, for the VHDX.
+    The acceptable values for this parameter are: 512 and 4096.
+    The default value is 512.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ParentPath
+  isRequired: true
+  description: |+
+    Specifies the parent virtual disk path if the VHDX is a differencing disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the VHDX file that is associated with the iSCSI virtual disk.
+    If the VHDX file path does not exist, a new VHDX file is created.
+    If the virtual hard disk file path exists, the server returns an error.
+    Use the **Import-IscsiVirtualDisk** cmdlet to import existing virtual hard drives.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DevicePath
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PhysicalSectorSizeBytes
+  description: |+
+    Specifies the physical sector size, in bytes, for the VHDX.
+    The acceptable values for this parameter are: 512 and 4096.
+    The default value is 4096.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: SizeBytes
+  isRequired: true
+  description: |+
+    Specifies the size, in bytes, of the iSCSI virtual disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Size
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseFixed
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet creates a fixed VHDX.
+
+  defaultValue: None
+  position: Named
+  aliases: Fixed
+  parameterValueGroup: ""
+uid: IscsiTarget.New-IscsiVirtualDisk
+name: New-IscsiVirtualDisk
+description: |-
+  The **New-IscsiVirtualDisk** cmdlet creates an iSCSI Virtual Hard Disk (VHDX) object that has the specified file path and size.
+  After the iSCSI VHDX object has been created, the virtual disk can be assigned to an iSCSI target.
+  Once a virtual disk has been assigned to a target, and an initiator connects to that target, the iSCSI initiator can then access the virtual disk after the initiator connects to the target.
+
+  If the virtual hard disk file path does not exist, a new VHDX file is created.
+
+  If the VHDX file path exists, the server returns an error.
+  Use the **Import-IscsiVirtualDisk** cmdlet to import existing virtual hard disks.
+
+  If the cmdlet displays an error while it creates a virtual disk, check the following conditions: 
+
+  - An absolute file path must be specified for the *Path* and *ParentPath* parameters. 
+
+  - The virtual disk file name must have a .vhdx file name extension. 
+  - The VHDX file cannot be a network file, or be in a compressed, sparse, or transacted folder.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/new-iscsivirtualdisk?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-IscsiVirtualDisk

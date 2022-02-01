@@ -1,0 +1,37 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an array of MsmqQueueAcl objects for the specified queues.
+module: MSMQ
+notes: ""
+links:
+- text: Set-MsmqQueueACL
+  href: ./Set-MsmqQueueACL.yml
+syntaxes:
+- Get-MsmqQueueACL [-InputObject] <MessageQueue[]>
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="MessageQueue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of **MsmqQueue** objects that represent queues for which ACL information is returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MSMQ.Get-MsmqQueueACL
+name: Get-MsmqQueueACL
+description: |-
+  The **Get-MsmqQueueACL** cmdlet returns an array of **MsmqQueueAcl** objects for the specified queues.
+  This cmdlet can be applied to private, public, system journal, system dead-letter, and system transactional dead-letter queues.
+metadata:
+  external help file: MSMQ_Cmdlets.xml
+  Module Name: MSMQ
+  online version: https://docs.microsoft.com/powershell/module/msmq/get-msmqqueueacl?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

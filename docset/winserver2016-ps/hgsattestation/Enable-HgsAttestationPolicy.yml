@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables an attestation policy in HGS.
+module: HgsAttestation
+notes: ""
+outputs:
+- name: <xref href="AttestationPolicyInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an **AttestationPolicyInfo** object.
+links:
+- text: Disable-HgsAttestationPolicy
+  href: ./Disable-HgsAttestationPolicy.yml
+- text: Get-HgsAttestationPolicy
+  href: ./Get-HgsAttestationPolicy.yml
+- text: Remove-HgsAttestationPolicy
+  href: ./Remove-HgsAttestationPolicy.yml
+syntaxes:
+- >-
+  Enable-HgsAttestationPolicy [-Name] <String> [-PolicyVersion <PolicyVersion>] [-Stage] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable a policy'
+  code: |-
+    PS C:\> Enable-HgsAttestationPolicy -Name "BaselineTpmPolicy16"
+  description: |-
+    This command enables the attestation policy named BaselineTpmPolicy16.
+    This policy was disabled.
+    After you run this command, any guarded host that matches this policy can obtain new attestation certificates.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the policy that this cmdlet enables.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PolicyVersion" data-throw-if-not-resolved="False" />
+  name: PolicyVersion
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, PolicyVersion1503, PolicyVersion1704
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Stage
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsAttestation.Enable-HgsAttestationPolicy
+name: Enable-HgsAttestationPolicy
+description: |-
+  The **Enable-HgsAttestationPolicy** cmdlet enables an attestation policy in the Host Guardian Service (HGS).
+  Specify the policy to enable by name.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/enable-hgsattestationpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-HgsAttestationPolicy

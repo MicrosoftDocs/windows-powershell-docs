@@ -1,0 +1,269 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an HCK project definition file.
+module: HardwareCertification
+notes: ""
+links:
+- text: New-HwCertTestCollection
+  href: ./New-HwCertTestCollection.yml
+syntaxes:
+- >-
+  New-HwCertProjectDefinitionFile [-ControllerName <String>] [-PdefFilePath <String>]
+
+   [-TestCollectionFilePath <String>] [-EnableIsolateTargets] [-EnableMultiDeviceTest] [-OutputAutomatedPdef]
+
+   [-ProjectName <String>] [-SkipTestStatus <String>] [-CrashDumpCollection <String>] [-MachineList <String[]>]
+
+   [-MachinePool <String>] [-RunSystemTest] [-TestAllDevices] [-HwIdList <String[]>] [-DriverList <String[]>]
+
+   [-ContainerIdList <String[]>] [-ClassIdList <String[]>] [<CommonParameters>]
+- >-
+  New-HwCertProjectDefinitionFile [-ControllerName <String>] [-PdefFilePath <String>]
+
+   [-TestCollectionFilePath <String>] [-EnableIsolateTargets] [-EnableMultiDeviceTest] [-OutputAutomatedPdef]
+
+   [-ProjectName <String>] [-SkipTestStatus <String>] [-CrashDumpCollection <String>] -MachineList <String[]>
+
+   [-RunSystemTest] [-TestAllDevices] [-HwIdList <String[]>] [-DriverList <String[]>]
+
+   [-ContainerIdList <String[]>] [-ClassIdList <String[]>] [<CommonParameters>]
+- >-
+  New-HwCertProjectDefinitionFile [-ControllerName <String>] [-PdefFilePath <String>]
+
+   [-TestCollectionFilePath <String>] [-EnableIsolateTargets] [-EnableMultiDeviceTest] [-OutputAutomatedPdef]
+
+   [-ProjectName <String>] [-SkipTestStatus <String>] [-CrashDumpCollection <String>] -MachinePool <String>
+
+   [-RunSystemTest] [-TestAllDevices] [-HwIdList <String[]>] [-DriverList <String[]>]
+
+   [-ContainerIdList <String[]>] [-ClassIdList <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a project definition file for a driver'
+  code: |-
+    PS C:\> New-HwCertProjectDefinitionFile -MachinePool "Test07" -DriverList "disk.sys"
+  description: |-
+    This command creates a project definition file.
+    The command populates the project file with HCK target values for which disk.sys is a device driver, and from all machines available in the Test07 pool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClassIdList
+  description: |+
+    Specifies an array of class GUIDs as strings.
+    For more information, see [Class-GUID](https://technet.microsoft.com/en-us/library/cc957340.aspx) in the TechNet library.
+    You can use a comma-separated list.
+
+  defaultValue: None
+  position: Named
+  aliases: ClassList
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ContainerIdList
+  description: |+
+    Specifies an array of container IDs, in GUID format.
+    You can use a comma-separated list.
+
+  defaultValue: None
+  position: Named
+  aliases: ContainerList
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ControllerName
+  description: |+
+    Specifies the name of the controller or test server.
+    The project definition file stores the controller name in the **Controller** attribute of the \<ProjectDefinitionData\> element.
+    If you do not provide a controller name and do not specify the **OutputAutomatedPdef** parameter, the cmdlet uses the current computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CrashDumpCollection
+  description: |+
+    Specifies the type of Windows crash dump file to generate and collect for the project.
+    The acceptable values for this parameter are:
+
+    - Mini
+    - Kernel
+    - Full
+    - Disable
+
+    Default value is Disable.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Mini, Kernel, Full, Disable
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DriverList
+  description: |+
+    Specifies an array of names of target drivers.
+    You can use a comma-separated list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableIsolateTargets
+  description: |+
+    Indicates that the cmdlet creates an individual device family for each discovered target.
+    If you do not specify this parameter, the cmdlet groups targets into families based on device class.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableMultiDeviceTest
+  description: |+
+    Indicates that multiple-device scheduling is enabled.
+    The project definition file stores the Boolean setting for multiple-device scheduling in the \<MultiDeviceTestGroup\> element.
+
+  defaultValue: None
+  position: Named
+  aliases: EMDT
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HwIdList
+  description: |+
+    Specifies an array of hardware IDs for target devices.
+    You can use a comma-separated list.
+
+    You can specify partial hardware IDs.
+    The cmdlet matches a partial value as a substring of the hardware ID format.
+    The comparison uses ASCII characters and is not case sensitive.
+    If the ID contains an ampersand character (&), enclose the ID in double quotes ("").
+    In Windows PowerShell®, the ampersand is a reserved character.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MachineList
+  isRequired: true
+  description: |+
+    Specifies an array of test computer names.
+    You can use a comma-separated list.
+    If you specify more than one computer, all of them must be in the same pool.
+
+  defaultValue: None
+  position: Named
+  aliases: Machine
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MachinePool
+  isRequired: true
+  description: |+
+    Specifies the name of an existing machine pool, which contains test computers.
+
+  defaultValue: None
+  position: Named
+  aliases: Pool
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OutputAutomatedPdef
+  description: |+
+    Indicates that the cmdlet generates the following attributes in the project definition file: 
+
+    - **Controller** = "\[MACHINE\]"
+    - **TestCollectionReadLocation** = "\[FILTERED_TEST_COLLECTION\]"
+    - **Path** = "\[PACKAGES\]"
+
+  defaultValue: None
+  position: Named
+  aliases: automate
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PdefFilePath
+  description: |+
+    Specifies the name of the project definition file.
+    If you do not specify a name, the cmdlet creates a name in the following format: %UserProfile%\Desktop\PDEF_Files\PDEF_TimeDate\PDEF_OSPlatformName_TimeDate.xml.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProjectName
+  description: |+
+    Specifies the friendly name of the project.
+    The project definition file stores the project name in the **Name** attribute of the \<Project\> element.
+    If you do not specify a name, the cmdlet generates a name that contains a time stamp.
+
+  defaultValue: None
+  position: Named
+  aliases: PROJ
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RunSystemTest
+  description: |+
+    Indicates that the cmdlet specifies a single **TargetType** attribute, which equals System.
+    Specify this parameter for testing a whole system.
+    You cannot run a System test with any other query types.
+
+    A System test treats the target as a single device.
+    This differs from TestAllDevices, which tests every target on a system, but treats them individually.
+    Specify the **TestAllDevices** parameter to test all devices.
+
+  defaultValue: None
+  position: Named
+  aliases: System
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SkipTestStatus
+  description: |+
+    Specifies the skipping mode for scheduling tests.
+    The project definition file stores this value in the \<TestStatusToSkip\> element.
+    The acceptable values for this parameter are:
+
+    - Pass
+    - Fail
+    - NoData
+
+    The default value is Pass.
+
+  defaultValue: None
+  position: Named
+  aliases: SkipStatus
+  parameterValueGroup: Fail, NoData
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TestAllDevices
+  description: |+
+    Indicates that the controller tests all target devices that it discovers.
+    The controller discovers devices on the computers specified by the **MachineList** or the **MachinePool** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: AllDevices
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TestCollectionFilePath
+  description: |+
+    Specifies the full path for a test collection .xml file.
+    The project definition file stores the path in the **TestCollectionReadLocation** attribute of the \<Project\> element.
+    If you do not specify a path, the cmdlet uses an empty string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HardwareCertification.New-HwCertProjectDefinitionFile
+name: New-HwCertProjectDefinitionFile
+description: |-
+  The **New-HwCertProjectDefinitionFile** cmdlet creates a Windows Hardware Certification Kit (HCK) project definition file.
+  The project definition file includes the targets, such as devices and systems, for certification tests.
+  The HCK automation tool uses the settings in this file to determine which targets to test.
+  For more information, see [Windows Hardware Certification Kit downloads](https://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
+
+  You can update this generated file by adding any changes that are valid with respect to the project definition file schema.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: microsoft.windows.kits.hardware.certification.management.dll-Help.xml
+  Module Name: HardwareCertification
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hardwarecertification/new-hwcertprojectdefinitionfile?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-HwCertProjectDefinitionFile

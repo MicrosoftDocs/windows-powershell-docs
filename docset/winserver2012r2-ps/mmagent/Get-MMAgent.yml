@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the state of application launch prefetching, operation API prefetching functionality, page combining, and application prelaunching.
+module: MMAgent
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MMAgentComponents" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Debug-MMAppPrelaunch
+  href: ./Debug-MMAppPrelaunch.yml
+- text: Set-MMAgent
+  href: ./Set-MMAgent.yml
+- text: Enable-MMAgent
+  href: ./Enable-MMAgent.yml
+- text: Disable-MMAgent
+  href: ./Disable-MMAgent.yml
+syntaxes:
+- Get-MMAgent [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Return the state of prefetching functionality'
+  code: |-
+    PS C:\> Get-MMAgent
+  description: |-
+    This command returns the state of application launch prefetching, application prelaunching, operation recorder API prefetching functionality, and page combining.
+    This command also returns the maximum number of prefetch files for scenarios that the operation recorder API records.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MMAgent.Get-MMAgent
+name: Get-MMAgent
+description: |-
+  The **Get-MMAgent** cmdlet reports whether the following features are enabled: 
+  - Application launch prefetching 
+  - Operation API prefetching functionality
+  - Page combining
+  - Application prelaunching
+
+  This cmdlet also returns the maximum number of prefetch files for scenarios that the operation recorder API records.
+metadata:
+  external help file: ps_mmagent_v1.0.cdxml-help.xml
+  Module Name: MMAgent
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/mmagent/get-mmagent?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MMAgent

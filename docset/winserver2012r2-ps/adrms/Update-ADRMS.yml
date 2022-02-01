@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates an existing deployment of rms_2 Server.
+module: ADRMS
+notes: ""
+inputs:
+- name: <xref href="SwitchParameter, string, PSCredential, SecureString" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-ADRMS [-ServiceAccount] <PSCredential> [[-PrivateKeyPassword] <SecureString>] [[-NewCspName] <String>]
+
+   [-UpdateCryptographicModeOnly] [-Credential <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>$mySecureStringPassword = ConvertTo-SecureString -String <password> -AsPlainText -Force
+    $myCred = Get-Credential
+    Update-ADRMS -PrivateKeyPassword $mySecureStringPassword -ServiceAccount $myCred
+  description: |-
+    Description
+
+    -----------
+
+    Upgrades an rms_2 server and cluster that is using a cluster key password.
+    The password must be specified securely as console input.
+    The **Get-Credential** cmdlet will launch a popup dialog to enter the rms_2 Service Account credentials (username and password) that are also required to upgrade rms_2.
+  summary: ""
+- title: '-------------------------- EXAMPLE 2 --------------------------'
+  code: |-
+    C:\PS>$myCred = Get-Credential
+    Update-ADRMS -UpdateCryptographicModeOnly -ServiceAccount $myCred
+  description: |-
+    Description
+
+    -----------
+
+    Updates an rms_2 server that is using a cluster key password to cryptographic mode 2.
+    The **Get-Credential** command will launch a popup dialog to enter the rms_2 Service Account credentials (username and password) which are required for this update.
+    The cluster key password is not required; but if the server is using CSP key storage, the **-NewCspName** parameter must be included.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies user credentials to use for the update process.
+    If this parameter is specified, you will be prompted to enter credentials.
+    This parameter operates in a similar manner to the RunAs command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces completion of the command by overriding restrictions that would prevent it from succeeding (so long as a the changes made do not compromise security).
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewCspName
+  description: |+
+    Specifies the new name of the cryptographic service provider (CSP) to use for storing the private key of the rms_2 server.
+    This parameter is used in combination with the **-UpdateCryptographicMode** parameter for rms_2 servers that are using CSP key storage.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: PrivateKeyPassword
+  description: |+
+    Specifies the password for the AD RMS centrally managed key.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ServiceAccount
+  isRequired: true
+  description: |+
+    Specifies the identity of the domain account that is used for the rms_2 service account.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UpdateCryptographicModeOnly
+  description: |+
+    If set, indicates that only the cryptographic mode of the server is to be updated.
+    To update the cryptographic mode of an rms_2 server, you must be logged in with an account that has membership in the local rms_2 Enterprise Administrators Group on that server.
+    If the rms_2 server is using CSP key storage, the **-NewCspName** parameter should also be specified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADRMS.Update-ADRMS
+name: Update-ADRMS
+description: |-
+  The Update-ADRMS cmdlet updates the Active Directory Rights Management Services (AD RMS) server role on a server that has been upgraded to this version of Windows.
+  The cmdlet can also be used to update the rms_2 cryptographic mode on a server.
+metadata:
+  external help file: Microsoft.RightsManagementServices.Configuration.dll-Help.xml
+  Module Name: ADRMS
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/adrms/update-adrms?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-ADRMS

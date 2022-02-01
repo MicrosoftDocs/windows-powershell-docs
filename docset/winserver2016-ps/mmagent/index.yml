@@ -1,0 +1,22 @@
+### YamlMime:PowershellModule
+children:
+- title: MMAgent
+  cmdlets:
+  - MMAgent.Debug-MMAppPrelaunch
+  - MMAgent.Disable-MMAgent
+  - MMAgent.Enable-MMAgent
+  - MMAgent.Get-MMAgent
+  - MMAgent.Set-MMAgent
+uid: MMAgent
+name: MMAgent
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Memory Management Agent (MMAgent) - specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: e1383a06-d48b-45e0-81e4-5ead146e81a8
+  Module Name: MMAgent
+  ms.date: 12/20/2016
+  title: MMAgent

@@ -1,0 +1,34 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the default appx volume.
+module: Appx
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Appx.PackageManager.Commands.AppxVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AppxDefaultVolume
+  href: ./Set-AppxDefaultVolume.yml
+syntaxes:
+- Get-AppxDefaultVolume [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the default volume'
+  code: |-
+    PS C:\> Get-AppxDefaultVolume
+  description: |-
+    This command gets the current default deployment target.
+  summary: ""
+uid: Appx.Get-AppxDefaultVolume
+name: Get-AppxDefaultVolume
+description: |-
+  The **Get-AppxDefaultVolume** cmdlet gets the default **AppxVolume**.
+  The default **AppxVolume** is the default target for all deployment operations on the computer.
+  You cannot remove the default **AppxVolume** from the list of volumes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: Appx
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appx/get-appxdefaultvolume?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AppxDefaultVolume

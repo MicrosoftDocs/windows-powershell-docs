@@ -1,0 +1,33 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the most recent BPA scan result.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.BPA.WssBpaIssue" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns BPA issues.
+links:
+- text: Invoke-WssBpaScan
+  href: ./Invoke-WssBpaScan.yml
+syntaxes:
+- Get-WssBpaScanResult [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a BPA scan result'
+  code: |-
+    PS C:\> Get-WssBpaScanResult
+  description: |-
+    This command gets the most recent BPA scan result.
+  summary: ""
+uid: WSSCmdlets.Get-WssBpaScanResult
+name: Get-WssBpaScanResult
+description: |-
+  The **Get-WssBpaScanResult** cmdlet gets the most recent Best Practices Analyzer (BPA) scan result.
+  The BPA compares the server configuration with guidelines for the ideal way, under normal circumstances, to configure a server.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssbpascanresult?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssBpaScanResult

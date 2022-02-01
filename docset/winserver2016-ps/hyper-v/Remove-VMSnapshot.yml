@@ -1,0 +1,188 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes a virtual machine checkpoint.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+links:
+- text: Export-VMSnapshot
+  href: ./Export-VMSnapshot.yml
+- text: Get-VMSnapshot
+  href: ./Get-VMSnapshot.yml
+- text: Rename-VMSnapshot
+  href: ./Rename-VMSnapshot.yml
+- text: Restore-VMSnapshot
+  href: ./Restore-VMSnapshot.yml
+- text: Get-VM
+  href: ./Get-VM.yml
+syntaxes:
+- >-
+  Remove-VMSnapshot [-VMName] <String[]> [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [[-Name] <String[]>] [-IncludeAllChildSnapshots] [-AsJob] [-Passthru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Remove-VMSnapshot [-VM] <VirtualMachine[]> [[-Name] <String[]>] [-IncludeAllChildSnapshots] [-AsJob]
+
+   [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-VMSnapshot [-VMSnapshot] <VMSnapshot[]> [-IncludeAllChildSnapshots] [-AsJob] [-Passthru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-VM TestVM | Remove-VMSnapshot -Name Experiment*
+  description: |-
+    Deletes all checkpoints of virtual machine TestVM whose names starts with Experiment.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-VMSnapshot -VMName TestVM | Where-Object {$_.CreationTime -lt (Get-Date).AddDays(-90) } | Remove-VMSnapshot
+  description: |-
+    Deletes all checkpoints of virtual machine TestVM older than 90 days.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which this cmdlet deletes a checkpoint.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeAllChildSnapshots
+  description: |+
+    Specifies that the checkpoint's children are to be deleted along with the checkpoint.
+
+  defaultValue: None
+  position: Named
+  aliases: IncludeAllChildCheckpoints
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the checkpoint to be deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Indicates that this cmdlet returns a **Microsoft.HyperV.PowerShell.VirtualMachine** object that represents the checkpoint that it deletes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine of which the checkpoint is to be deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine of which the checkpoint is to be deleted.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSnapshot" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMSnapshot
+  isRequired: true
+  description: |+
+    Specifies the checkpoint to be deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: VMCheckpoint
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Remove-VMSnapshot
+name: Remove-VMSnapshot
+description: |-
+  The **Remove-VMSnapshot** cmdlet deletes a virtual machine checkpoint.
+
+  Note: In Windows Server 2012 R2, virtual machine snapshots were renamed to virtual machine checkpoints.
+  For clarity, this document will refer to virtual machine snapshots as checkpoints.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/remove-vmsnapshot?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-VMSnapshot

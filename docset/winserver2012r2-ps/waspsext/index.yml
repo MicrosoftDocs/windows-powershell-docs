@@ -1,0 +1,29 @@
+### YamlMime:PowershellModule
+children:
+- title: WasPSExt
+  cmdlets:
+  - WasPSExt.Get-WASAssessment
+  - WasPSExt.Get-WASComputer
+  - WasPSExt.Get-WASImage
+  - WasPSExt.Get-WASJob
+  - WasPSExt.Get-WASJobInstance
+  - WasPSExt.Get-WASJobInstanceStatus
+  - WasPSExt.Invoke-WASJob
+  - WasPSExt.Register-WASImage
+  - WasPSExt.Reset-WASComputer
+  - WasPSExt.Resume-WASComputer
+  - WasPSExt.Skip-WASJobInstance
+  - WasPSExt.Stop-WASJobInstance
+  - WasPSExt.Update-WASJob
+uid: WasPSExt
+name: WasPSExt
+description: |-
+  {{Manually Enter Description Here}}
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
+  Help Version: 4.0.2.0
+  Locale: en-US
+  Module Guid: 0fdd54fb-8b9e-40b6-9669-f77e6fa92737
+  Module Name: WasPSExt
+  ms.date: 12/05/2017
+  title: WasPSExt

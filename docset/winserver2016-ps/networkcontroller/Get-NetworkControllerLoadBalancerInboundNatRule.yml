@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet retrieves an inbound NAT rule associated with a load balancer resource.
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties can be retrieved for an inbound NAT rule:
+    1. Front end port
+    2. Back end port
+    3. Whether floating IP is enabled
+    4. Idle timeout (in minutes)
+    5. Protocol
+    6. Back end IP addresses behind the NAT
+    7. Front end IP for the NAT
+syntaxes:
+- >-
+  Get-NetworkControllerLoadBalancerInboundNatRule [-LoadBalancerId] <String[]> [[-ResourceId] <String[]>]
+
+   -ConnectionUri <Uri> [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-NetworkControllerLoadBalancerInboundNatRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId InNat1
+  description: ""
+  summary: |+
+    This example retrieves an inbound NAT rule named InNat1 from a load balancer resource named lb1
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LoadBalancerId
+  isRequired: true
+  description: |+
+    Specifies the load balancer where the inbound NAT rule belongs
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourceId
+  description: |+
+    Specifies the unique identifier for the inbound NAT rule.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Get-NetworkControllerLoadBalancerInboundNatRule
+name: Get-NetworkControllerLoadBalancerInboundNatRule
+description: |-
+  This cmdlet retrieves an inbound NAT rule associated with a load balancer resource. This can be used to forward external traffic to a specific VM in the virtual network
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollerloadbalancerinboundnatrule?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerLoadBalancerInboundNatRule

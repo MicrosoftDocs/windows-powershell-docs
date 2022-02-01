@@ -1,0 +1,32 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the title string of a Remote Web Access website.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a string object that represents the title of Remote Web Access website.
+links:
+- text: Set-WssRemoteWebAccessTitle
+  href: ./Set-WssRemoteWebAccessTitle.yml
+syntaxes:
+- Get-WssRemoteWebAccessTitle [<CommonParameters>]
+examples:
+- title: 'Example 1: Retrieve the title for a Remote Web Access website'
+  code: |-
+    PS C:\> Get-WssRemoteWebAccessTitle
+  description: |-
+    This command retrieves the title for a Remote Web Access website.
+  summary: ""
+uid: WSSCmdlets.Get-WssRemoteWebAccessTitle
+name: Get-WssRemoteWebAccessTitle
+description: |-
+  The **Get-WssRemoteWebAccessTitle** cmdlet retrieves the title string of a Remote Web Access website.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssremotewebaccesstitle?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssRemoteWebAccessTitle

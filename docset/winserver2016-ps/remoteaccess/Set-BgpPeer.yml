@@ -1,0 +1,305 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the configuration of the specified BGP peer.
+module: RemoteAccess
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#BgpPeerConfig" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-BgpPeer
+  href: ./Add-BgpPeer.yml
+- text: Get-BgpPeer
+  href: ./Get-BgpPeer.yml
+- text: Remove-BgpPeer
+  href: ./Remove-BgpPeer.yml
+- text: Set-BgpPeer
+  href: ./Set-BgpPeer.yml
+- text: Start-BgpPeer
+  href: ./Start-BgpPeer.yml
+- text: Stop-BgpPeer
+  href: ./Stop-BgpPeer.yml
+- text: Remote Access Cmdlets
+  href: ./index.yml
+syntaxes:
+- >-
+  Set-BgpPeer [-Name] <String> [-LocalIPAddress <IPAddress>] [-PeerIPAddress <IPAddress>] [-LocalASN <UInt32>]
+
+   [-PeerASN <UInt32>] [-OperationMode <OperationMode>] [-PeeringMode <PeeringMode>] [-HoldTimeSec <UInt16>]
+
+   [-IdleHoldTimeSec <UInt16>] [-MaxAllowedPrefix <UInt32>] [-RoutingDomain <String>] [-PassThru] [-Force]
+
+   [-ClearPrefixLimit] [-Weight <UInt16>] [-RouteReflectorClient <Boolean>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update the BGP peer configuration for the specified neighbor'
+  code: |-
+    PS C:\>Set-BgpPeer -Name "TenantSite1" -PeeringMode Automatic -PassThru
+    PeerName            LocalIPAddress      PeerIPAddress       PeerASN             OperationMode       ConnectivityStatus
+    --------            --------------      -------------       -------             -------------       ------------------
+    TenantSite1      192.168.1.10        10.1.1.10           64512               Server              Connecting
+  description: |-
+    This command updates and modifies the BGP peer configuration for the specified neighbor.
+  summary: ""
+- title: 'Example 2: Update and modify the BGP peer configuration and prompt the user for confirmation'
+  code: |-
+    PS C:\>Set-BgpPeer -Name "TenantSite1" -OperationMode Mixed -PeeringMode Automatic -PassThru
+    Confirm
+    BGP peering session is active for peer TenantSite1. Do you want to apply settings and restart peering? 
+     [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+
+    PeerName            LocalIPAddress      PeerIPAddress       PeerASN             OperationMode       ConnectivityStatus
+    --------            --------------      -------------       -------             -------------       ------------------
+    TenantSite1      192.168.1.10        10.1.1.10           64512               Mixed               Connecting
+  description: |-
+    This command prompts the user for confirmation and upon confirmation, updates and modifies the BGP peer configuration for the specified neighbor, which is active.
+  summary: ""
+- title: 'Example 3: Update and modify the BGP peer configuration for the specified neighbor'
+  code: |-
+    PS C:\>Set-BgpPeer -RoutingDomain "Rd_002" -Name "Tenant1" -PeerASN 64515  -PassThru
+    Confirm
+    BGP peering session is active for RedTenant1 for routing domain Rd_002. Do you want to apply settings and restart
+    peering? 
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+
+    PeerName            LocalIPAddress      PeerIPAddress       PeerASN             OperationMode       ConnectivityStatus
+    --------            --------------      -------------       -------             -------------       ------------------
+    Tenant1          14.1.1.10           192.168.1.2         64515               Mixed               Connecting
+  description: |-
+    This command prompts the user for confirmation and upon confirmation, updates and modifies the BGP peer configuration for the specified neighbor of a specified routing domain in multi-tenant environment.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearPrefixLimit
+  description: |+
+    Indicates that the cmdlet clears the maximum limit on prefixes learned from the peer.
+    The cmdlet will reset the prefix learning to an unlimited number.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: HoldTimeSec
+  description: |+
+    Specifies the configured value of the **HoldTime** parameter in seconds after which the BGP Session expires if no BGP message is received.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: IdleHoldTimeSec
+  description: |+
+    Specifies the configured value of the **IdleHoldTime** in seconds after which the BGP Session expires if no BGP message is received.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LocalASN
+  description: |+
+    Specifies the local autonomous systems (AS) number of the BGP Router instance for this peer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: LocalIPAddress
+  description: |+
+    Specifies the local BGP router's peering IP address.
+    It can be of IPv4 or IPv6 address type.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxAllowedPrefix
+  description: |+
+    Specifies the maximum number of allowed IPv4 or IPv6 network prefixes that can be learned from the given neighbor.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the peer name for which the configuration is to be modified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: PeerId, PeerName
+  parameterValueGroup: ""
+- type: <xref href="OperationMode" data-throw-if-not-resolved="False" />
+  name: OperationMode
+  description: |+
+    Specifies the BGP router's mode of operation.
+    The acceptable values for this parameter are:
+    - Peering Initiator as well as peering acceptor
+    - Only acting as a passive peering request acceptor.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Mixed, Server
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PeerASN
+  description: |+
+    Specifies the neighbor BGP router's AS number.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PeeringMode" data-throw-if-not-resolved="False" />
+  name: PeeringMode
+  description: |+
+    Specifies a value to configure peering mode for the given peer.
+    The acceptable values for this parameter are:
+
+    - Automatic
+    - Manual
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Automatic, Manual
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: PeerIPAddress
+  description: |+
+    Specifies the neighbor BGP router's peering IP address.
+    Acceptable values are an IPv4 or IPv6 address type.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RouteReflectorClient
+  description: |+
+    Specifies whether peer is a client peer or non-client peer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingDomain
+  description: |+
+    Specifies the user-defined unique alphanumeric identifier for the routing domain.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RoutingDomainName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent connections that can be established to run this command.
+    If you omit this parameter or enter a value of 0, the default value, 32, is used.
+
+    The throttle limit applies only to the current command, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: Weight
+  description: |+
+    Specifies administrative preference assigned to the routes received from this peer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Set-BgpPeer
+name: Set-BgpPeer
+description: |-
+  The **Set-BgpPeer** cmdlet updates the Border Gateway Protocol (BGP) peer configuration.
+  This cmdlet returns error information if errors occur while modifying the BGP peer configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_BgpPeer_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-bgppeer?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-BgpPeer

@@ -1,0 +1,163 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the DVD drives attached to a virtual machine or snapshot.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMDriveController" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.HyperV.PowerShell.VMSnapshot" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.DvdDrive" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-VMDvdDrive [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String[]> [-ControllerLocation <Int32>] [-ControllerNumber <Int32>] [<CommonParameters>]
+- >-
+  Get-VMDvdDrive [-VM] <VirtualMachine[]> [-ControllerLocation <Int32>] [-ControllerNumber <Int32>]
+
+   [<CommonParameters>]
+- >-
+  Get-VMDvdDrive [-ControllerLocation <Int32>] [-ControllerNumber <Int32>] [-VMSnapshot] <VMSnapshot>
+
+   [<CommonParameters>]
+- Get-VMDvdDrive [-ControllerLocation <Int32>] [-VMDriveController] <VMDriveController[]> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-VMDvdDrive -VMName Test
+  description: |-
+    Gets the virtual DVD drives from virtual machine Test.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-VM -Name Test | Get-VMDvdDrive -ControllerNumber 1
+  description: |-
+    Gets the virtual DVD drives from IDE controller 1 of virtual machine Test.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-VMIdeController -VMName TestVM -ControllerNumber 1 -ComputerName Development | Get-VMDvdDrive
+  description: |-
+    Gets the virtual DVD drives from IDE controller 1 of virtual machine TestVM located on the server Development.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-VMSnapshot -VMName TestVM -Name 'Before applying updates' | Get-VMDvdDrive
+  description: |-
+    Gets the virtual DVD drives from snapshot Before applying updates of virtual machine TestVM.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which the DVD drives are to be retrieved.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerLocation
+  description: |+
+    Specifies the number of the location on the controller from which the DVD drives are to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerNumber
+  description: |+
+    Specifies the number of the controller from which the DVD drives are to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine from which the DVD drives are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMDriveController" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMDriveController
+  isRequired: true
+  description: |+
+    Specifies the controller from which the DVD drives are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine from which the DVD drives are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSnapshot" data-throw-if-not-resolved="False" />
+  name: VMSnapshot
+  isRequired: true
+  description: |+
+    Specifies the virtual machine snapshot from which the DVD drives are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: VMCheckpoint
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMDvdDrive
+name: Get-VMDvdDrive
+description: |-
+  The **Get-VMDvdDrive** cmdlet gets the DVD drives attached to a virtual machine or snapshot.
+  This cmdlet has no ControllerType parameter, as the **Get-VMHardDiskDrive** cmdlet does, because virtual DVD drives can be attached only to the IDE controller.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmdvddrive?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMDvdDrive

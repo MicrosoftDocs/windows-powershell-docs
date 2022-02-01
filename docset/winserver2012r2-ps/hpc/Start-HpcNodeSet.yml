@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a set of Azure nodes.
+module: HPC
+notes: |-
+  * All of the nodes that you add to an HPC cluster by using a specific node template define a set of nodes that are deployed and can be managed together in Azure when you start the nodes. This set includes nodes that you add later by using the same node template. You can start the entire set of nodes, but not individual nodes.
+  * The deployment of role instances in Azure can take several minutes if you start a large number of nodes.
+  * If a problem exists with your Internet connection or with the connection information for Azure in the specified node template, the deployment of the nodes can fail.
+  * When you start a set of nodes, additional proxy role instances are configured in Azure to facilitate communication between HPC Cluster Manager and the nodes. Starting in HPC Pack 2012, the number of proxy nodes can be configured in the Azure node template. These proxy instances appear in the Azure Management Portal, incur charges in Azure, and count toward the quota for role instances in the Azure subscription.
+  * You must be a cluster administrator to run this cmdlet successfully.
+  * This cmdlet was introduced in HPC Pack 2008 R2 with Service Pack 1 (SP1). It is not supported in previous versions.
+inputs:
+- name: <xref href="HpcNodeTemplate" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-HpcNodeSet
+  href: ./Add-HpcNodeSet.md
+- text: Remove-HpcNodeSet
+  href: ./Remove-HpcNodeSet.md
+- text: Start-HpcAzureNode
+  href: ./Start-HpcAzureNode.yml
+- text: Stop-HpcNodeSet
+  href: ./Stop-HpcNodeSet.yml
+syntaxes:
+- >-
+  Start-HpcNodeSet -Template <HpcNodeTemplate> [-Async <Boolean>]
+
+   [-Scheduler <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start Azure nodes'
+  code: |-
+    PS C:\>Get-HpcNodeTemplate -Name "MyWorkerNodeTemplate" | Start-HpcNodeSet -Async $True
+  description: |-
+    This command gets an **HpcNodeTemplate** object for the node template named MyWorkerNodeTemplate, and then starts all of the nodes that are associated with that node template from the HPC cluster and returns without waiting for the nodes to start.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Async
+  description: |+
+    Specifies whether the cmdlet should return immediately without waiting for the nodes to start.
+
+    A nonzero or $True value specifies that the cmdlet should return immediately without waiting for the nodes to start.
+    A 0 or $False value specifies that the cmdlet should wait for the nodes to start before returning.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Scheduler
+  description: |+
+    Specifies the host name or IP address of the head node for the cluster that includes the set of Azure nodes that you want to start.
+    The value must be a valid computer name or IP address.
+    If you do not specify the *Scheduler* parameter, this cmdlet uses the scheduler on the head node that the CCP_SCHEDULER environment variable specifies.
+    To set this environment variable, run the following cmdlet:
+
+    `Set-Content Env:CCP_SCHEDULER \<head_node_name\>`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HpcNodeTemplate" data-throw-if-not-resolved="False" />
+  name: Template
+  isRequired: true
+  description: |+
+    Specifies an **HpcNodeTemplate** object that corresponds to the node template that is associated with the set of Azure nodes that you want to start.
+
+    The node template that you specify must be a Azure node template.
+    An error occurs if you specify a different type of node template.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HPC.Start-HpcNodeSet
+name: Start-HpcNodeSet
+description: |-
+  The **Start-HpcNode** cmdlet starts the set of Azure nodes that use the specified node template.
+  When you start a set of nodes, you deploy a set of role instances for the nodes in Azure.
+metadata:
+  external help file: CCPPSH.dll-Help.xml
+  Module Name: HPC
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hpc/start-hpcnodeset?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-HpcNodeSet

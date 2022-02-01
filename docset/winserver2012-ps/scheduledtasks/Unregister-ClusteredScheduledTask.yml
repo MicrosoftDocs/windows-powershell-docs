@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a scheduled task from a failover cluster.
+module: ScheduledTasks
+notes: ""
+links:
+- text: Get-ClusteredScheduledTask
+  href: ./Get-ClusteredScheduledTask.yml
+- text: Register-ClusteredScheduledTask
+  href: ./Register-ClusteredScheduledTask.yml
+- text: Set-ClusteredScheduledTask
+  href: ./Set-ClusteredScheduledTask.yml
+syntaxes:
+- >-
+  Unregister-ClusteredScheduledTask [[-InputObject] <CimInstance>] [-AsJob] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>]
+- >-
+  Unregister-ClusteredScheduledTask [-TaskName] <String> [[-Cluster] <String>] [-AsJob]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+examples:
+- title: 'Example 1: Unregister a task'
+  code: |-
+    PS C:\> Unregister-ClusteredScheduledTask -TaskName "Task01" -Cluster "Cluster07"
+  description: |-
+    This command removes the task named Task01 from the cluster named Cluster07.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of a failover cluster.
+    If you do not specify a cluster, the cmdlet uses the current node cluster name.
+
+  defaultValue: '"."'
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+    This is a clustered scheduled task object.
+    To obtain a clustered scheduled task object, use the **Get-ClusteredScheduledTask** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TaskName
+  isRequired: true
+  description: |+
+    Specifies a name of a scheduled task.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ScheduledTasks.Unregister-ClusteredScheduledTask
+name: Unregister-ClusteredScheduledTask
+description: |-
+  The **Unregister-ClusteredScheduledTask** cmdlet removes a clustered scheduled task from all nodes of a failover cluster.
+
+  For more information about the Windows Server® 2012 Task Scheduler, see the Task Scheduler Overviewhttp://technet.microsoft.com/en-us/library/cc721871.aspx topic in the TechNet Library at http://technet.microsoft.com/en-us/library/cc721871.aspx.
+metadata:
+  external help file: ScheduledTask_Cmdlets.xml
+  Module Name: ScheduledTasks
+  online version: https://docs.microsoft.com/powershell/module/scheduledtasks/unregister-clusteredscheduledtask?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

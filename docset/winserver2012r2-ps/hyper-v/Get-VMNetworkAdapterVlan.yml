@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the virtual LAN settings configured on a virtual network adapter.
+module: Hyper-V
+notes: ""
+syntaxes:
+- >-
+  Get-VMNetworkAdapterVlan [[-VMName] <String[]>] [-VMNetworkAdapterName <String>] [-ComputerName <String[]>]
+
+   [<CommonParameters>]
+- Get-VMNetworkAdapterVlan [-VMSnapshot] <VMSnapshot> [<CommonParameters>]
+- Get-VMNetworkAdapterVlan [-VMNetworkAdapter] <VMNetworkAdapterBase[]> [<CommonParameters>]
+- >-
+  Get-VMNetworkAdapterVlan [-ManagementOS] [-VMNetworkAdapterName <String>] [-ComputerName <String[]>]
+
+   [<CommonParameters>]
+- Get-VMNetworkAdapterVlan [-VMNetworkAdapterName <String>] [-VM] <VirtualMachine[]> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMNetworkAdapterVlan
+  description: |-
+    Gets the virtual LAN settings for each virtual network adapter in all virtual machines on the system.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the virtual LAN settings configured on a virtual network adapter are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagementOS
+  isRequired: true
+  description: |+
+    Specifies that the virtual LAN settings are to be retrieved from the management (i.e.
+    parent, or host) operating system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine in which the virtual LAN settings configured on a virtual network adapter are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  description: |+
+    Specifies the name of the virtual machine in which the virtual LAN settings configured on a virtual network adapter are to be retrieved.
+
+    Friendly name of the virtual machine
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterBase" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMNetworkAdapter
+  isRequired: true
+  description: |+
+    Specifies the virtual network adapter for which the virtual LAN settings are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapterName
+  description: |+
+    Specifies the name of the virtual network adapter for which the virtual LAN settings are to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSnapshot" data-throw-if-not-resolved="False" />
+  name: VMSnapshot
+  isRequired: true
+  description: |+
+    Specifies the snapshot in which the virtual LAN settings are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMNetworkAdapterVlan
+name: Get-VMNetworkAdapterVlan
+description: |-
+  The** Get-VMNetworkAdapterVlan** cmdlet gets the virtual LAN settings configured on a virtual network adapter.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmnetworkadaptervlan?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMNetworkAdapterVlan

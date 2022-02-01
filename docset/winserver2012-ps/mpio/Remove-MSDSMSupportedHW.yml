@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a hardware identifier (ID) with the specific vendor ID and product ID combination from the Microsoft Device Specific Module (MSDSM) supported hardware list.
+module: MPIO
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Clear-MSDSMSupportedHW
+  href: ./Clear-MSDSMSupportedHW.yml
+- text: Get-MSDSMSupportedHW
+  href: ./Get-MSDSMSupportedHW.yml
+- text: New-MSDSMSupportedHW
+  href: ./New-MSDSMSupportedHW.yml
+- text: Update-MPIOClaimedHW
+  href: ./Update-MPIOClaimedHW.yml
+syntaxes:
+- >-
+  Remove-MSDSMSupportedHW [-VendorId] <String[]> [-ProductId] <String[]> [-AsJob] [-CimSession <CimSession[]>]
+
+   [-PassThru] [-ThrottleLimit <Int32>]
+- >-
+  Remove-MSDSMSupportedHW [-AsJob] [-CimSession <CimSession[]>] [-PassThru] [-ThrottleLimit <Int32>]
+
+   -InputObject <CimInstance[]>
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Remove-MSDSMSupportedHW -VendorId "VendorX" -ProductId "ProductY"
+  description: |-
+    This example removes the combination of the vendor ID VendorX and the product ID ProductY from the MSDSM supported hardware list.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an object from the input pipeline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Passes the object through to the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ProductId
+  isRequired: true
+  description: |+
+    Represents the product ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VendorId
+  isRequired: true
+  description: |+
+    Represents the vendor ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MPIO.Remove-MSDSMSupportedHW
+name: Remove-MSDSMSupportedHW
+description: |-
+  The **Remove-MSDSMSupportedHW** cmdlet removes a hardware identifier (ID) with the specific vendor ID and product ID combination from the Microsoft Device Specific Module (MSDSM) supported hardware list.
+
+  Note: Unlike MPCLAIM.exe, when specifying the vendor ID and product ID, the fields should not be padded with spaces.
+
+  Note: The Update-MPIOClaimedHW cmdlet needs to be run to have the Multipath I/O (MPIO) claiming process take effect.
+metadata:
+  external help file: MPIO_Cmdlets.xml
+  Module Name: MPIO
+  online version: https://docs.microsoft.com/powershell/module/mpio/remove-msdsmsupportedhw?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

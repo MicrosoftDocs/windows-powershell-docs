@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables support access to this device.
+module: HCS
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Enable-HcsSupportAccess
+  href: ./Enable-HcsSupportAccess.yml
+- text: Get-HcsSupportAccess
+  href: ./Get-HcsSupportAccess.yml
+syntaxes:
+- Disable-HcsSupportAccess [-Scope <ClusterScope>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable support access'
+  code: |-
+    PS C:\> Disable-HcsSupportAccess
+  description: |-
+    This command disables support access for your device.
+  summary: ""
+parameters:
+- type: <xref href="ClusterScope" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    Specifies the scope.
+    The acceptable values for this parameter are:
+
+    - Cluster.
+    Disable support access for both nodes.
+    This is the default. 
+    - Controller.
+    Disable support access for the local node only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Cluster, Controller
+uid: HCS.Disable-HcsSupportAccess
+name: Disable-HcsSupportAccess
+description: |-
+  The **Disable-HcsSupportAccess** cmdlet disables access to this device for Microsoft Customer Service and Support.
+  This cmdlet does not close any currently active support sessions.
+metadata:
+  external help file: Microsoft.HCS.Management.dll-Help.xml
+  Module Name: HCS
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/hcs/disable-hcssupportaccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-HcsSupportAccess

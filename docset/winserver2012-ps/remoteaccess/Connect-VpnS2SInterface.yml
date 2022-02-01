@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Connects a site-to-site (S2S) interface that is currently not connected.
+module: RemoteAccess
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnS2SInterface" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Add-VpnS2SInterface
+  href: ./Add-VpnS2SInterface.yml
+- text: Clear-VpnS2SInterfaceStatistics
+  href: ./Clear-VpnS2SInterfaceStatistics.yml
+- text: Disconnect-VpnS2SInterface
+  href: ./Disconnect-VpnS2SInterface.yml
+- text: Get-VpnAuthProtocol
+  href: ./Get-VpnAuthProtocol.yml
+- text: Get-VpnS2SInterface
+  href: ./Get-VpnS2SInterface.yml
+- text: Get-VpnS2SInterfaceStatistics
+  href: ./Get-VpnS2SInterfaceStatistics.yml
+- text: Get-VpnServerIPsecConfiguration
+  href: ./Get-VpnServerIPsecConfiguration.yml
+- text: Remove-VpnS2SInterface
+  href: ./Remove-VpnS2SInterface.yml
+- text: Set-VpnAuthProtocol
+  href: ./Set-VpnAuthProtocol.yml
+- text: Set-VpnS2SInterface
+  href: ./Set-VpnS2SInterface.yml
+- text: Set-VpnServerIPsecConfiguration
+  href: ./Set-VpnServerIPsecConfiguration.yml
+syntaxes:
+- >-
+  Connect-VpnS2SInterface [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-PassThru]
+
+   [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Connect-VpnS2SInterface -Name 2-edge1  -PassThru
+    Name                 Destination          AdminStatus  ConnectionState IPv4Subnet 
+    ----                 -----------          -----------  --------------- ---------- 
+    2-edge1              {131.107.0.20}       True         Connected       {10.2.0.0/24:1}
+  description: |-
+    This example connects a S2S VPN interface named 2-edge1.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteAccess.Connect-VpnS2SInterface
+name: Connect-VpnS2SInterface
+description: |-
+  The **Connect-VpnS2SInterface** cmdlet connects an existing site-to-site (S2S) interface.
+  This cmdlet initiates the connection process for the interface.
+metadata:
+  external help file: UnifiedRA_Cmdlets.xml
+  Module Name: RemoteAccess
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/connect-vpns2sinterface?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

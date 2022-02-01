@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists devices available to the system that can be managed by the MSDSM for MPIO.
+module: MPIO
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-MSDSMSupportedHW
+  href: ./New-MSDSMSupportedHW.yml
+syntaxes:
+- >-
+  Get-MPIOAvailableHW [[-VendorId] <String[]>] [[-ProductId] <String[]>] [-BusType <BusType[]>]
+
+   [-IsMultipathed <Boolean[]>] [-IsSPC3Supported <Boolean[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get connected multipath-capable devices'
+  code: |-
+    PS C:\> Get-MPIOAvailableHW
+  description: |-
+    This example returns a list of multipath-capable devices currently connected to the system.
+  summary: ""
+- title: 'Example 2: Get connected multipath-capable devices for a bus type'
+  code: |-
+    PS C:\> Get-MPIOAvailableHW -BusType iSCSI
+  description: |-
+    This example returns a list of multipath-capable devices currently connected to the system via iSCSI.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="BusType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: BusType
+  description: |+
+    Specifies the bus type via which the device is connected to the system.
+    The acceptable values for this parameter are: iSCSI, SAS, and FibreChannel.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: FibreChannel, iSCSI, SAS
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IsMultipathed
+  description: |+
+    Specifies that the device is currently multipath enabled by Microsoft MPIO.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IsSPC3Supported
+  description: |+
+    Specifies whether the supported specification of the device is T10 SPC3 or a later version.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ProductId
+  description: |+
+    Specifies the product ID of the device.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VendorId
+  description: |+
+    Specifies the vendor ID of the device.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MPIO.Get-MPIOAvailableHW
+name: Get-MPIOAvailableHW
+description: |-
+  The **Get-MPIOAvailableHW** cmdlet lists available hardware devices in the system that can be managed by the Microsoft Device Specific Module (MSDSM) for Multipath I/O (MPIO).
+
+  To add one of the devices to MSDSM supported hardware list, use the vendor identifier (ID) and product ID of the device that are outputs from this cmdlet as inputs for the **New-MSDSMSupportedHW** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MPIOAvailableHW.cdxml-help.xml
+  Module Name: MPIO
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/mpio/get-mpioavailablehw?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MPIOAvailableHW

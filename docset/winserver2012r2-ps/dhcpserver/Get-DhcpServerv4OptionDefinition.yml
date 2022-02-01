@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the DHCPv4 option definition for the specified option identifiers (IDs).
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4OptionValue" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4OptionDefinition" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Add-DhcpServerv4OptionDefinition
+  href: ./Add-DhcpServerv4OptionDefinition.yml
+- text: Remove-DhcpServerv4OptionDefinition
+  href: ./Remove-DhcpServerv4OptionDefinition.yml
+- text: Set-DhcpServerv4OptionDefinition
+  href: ./Set-DhcpServerv4OptionDefinition.yml
+syntaxes:
+- >-
+  Get-DhcpServerv4OptionDefinition [-ComputerName <String>] [[-OptionId] <UInt32[]>] [[-VendorClass] <String>]
+
+   [-All] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Get-DhcpServerv4OptionDefinition -ComputerName dhcpserver.contoso.com
+  description: |-
+    This example gets the standard, or non-vendor specific, DHCPv4 option definitions on the DHCP server service running on the computer named dhcpserver.contoso.com.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> Get-DhcpServerv4OptionDefinition -ComputerName dhcpserver.contoso.com -All
+  description: |-
+    This example gets all of the DHCPv4 option definitions including vendor specific option definition present on the DHCP server service.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\> Get-DhcpServerv4OptionDefinition -ComputerName dhcpserver.contoso.com -OptionId 23
+  description: |-
+    This example gets the DHCPv4 option definition for the specified option.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\> Get-DhcpServerv4OptionDefinition -ComputerName dhcpserver.contoso.com -VendorClass "Microsoft Windows Options"
+  description: |-
+    This example gets all the DHCPv4 option definitions for the specified vendor class.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Gets all of the option definitions on the DHCP server service including vendor specific option definitions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer running the Dynamic Host Configuration Protocol (DHCP) server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OptionId
+  description: |+
+    Specifies the numerical identifiers of the options for which the option definitions are requested.
+    If nothing is specified, then all of the DHCPv4 option definitions are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VendorClass
+  description: |+
+    Returns the option definitions only for the specified vendor class.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: Name
+  parameterValueGroup: ""
+uid: DhcpServer.Get-DhcpServerv4OptionDefinition
+name: Get-DhcpServerv4OptionDefinition
+description: |-
+  The **Get-DhcpServerv4OptionDefinition** cmdlet gets the DHCPv4 option definitions for the specified option identifiers (IDs).
+
+  If the **OptionId** parameter is not specified, then all of the option definitions, which are not vendor specific, are returned.
+  The **VendorClass** parameter acts as a filter for option definitions for the specified vendor class only.
+
+  If the **All** parameter is specified, then all of the option definitions including the vendor class specific option definitions will be returned.
+
+  If the **All** and **OptionId** parameters are specified, then all of the option definitions including the vendor class specific option definitions with the specified option ID will be returned.
+
+  If the **All** and the **VendorClass** parameters are specified, then the **All** parameter is ignored.
+metadata:
+  external help file: PS_DhcpServerV4OptionDefinition_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverv4optiondefinition?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DhcpServerv4OptionDefinition

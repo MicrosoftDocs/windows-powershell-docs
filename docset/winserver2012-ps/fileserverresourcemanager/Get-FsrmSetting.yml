@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the current FSRM settings.
+module: FileServerResourceManager
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMSettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-FsrmSetting
+  href: ./Set-FsrmSetting.yml
+syntaxes:
+- Get-FsrmSetting [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+examples:
+- title: 'Example 1: Get FSRM settings'
+  code: |-
+    PS C:\>Get-FsrmSetting
+  description: |-
+    This command gets the current FSRM settings.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FileServerResourceManager.Get-FsrmSetting
+name: Get-FsrmSetting
+description: |-
+  The **Get-FsrmSetting** cmdlet retrieves the current FSRM settings.
+  You can use the Set-FsrmSetting cmdlet to change FSRM settings.
+metadata:
+  external help file: FSRM_Cmdlets.xml
+  Module Name: FileServerResourceManager
+  online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/get-fsrmsetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

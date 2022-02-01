@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a printer from the specified computer.
+module: PrintManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_Printer" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts one printer object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    By default, this cmdlet produces no output.
+links:
+- text: Add-Printer
+  href: ./Add-Printer.yml
+- text: Rename-Printer
+  href: ./Rename-Printer.yml
+- text: Get-Printer
+  href: ./Get-Printer.yml
+- text: Set-Printer
+  href: ./Set-Printer.yml
+syntaxes:
+- >-
+  Remove-Printer [-Name] <String> [-AsJob] [-CimSession <CimSession>] [-ComputerName <String>] [-PassThru]
+
+   [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+- >-
+  Remove-Printer [-AsJob] [-CimSession <CimSession>] [-PassThru] [-ThrottleLimit <Int32>]
+
+   -InputObject <CimInstance> [-Confirm] [-WhatIf]
+examples:
+- title: '-------------------------- EXAMPLE Example 1: Remove Delete a specific printer from the computer --------------------------'
+  code: |-
+    PS C:\> Remove-Printer -Name "Microsoft XPS Document Writer"
+  description: |-
+    This command removes the printer named "Microsoft XPS Document Writer" from the local computer.
+  summary: |+
+    Example : Remove a specific printer
+- title: 'Example 2: Remove a specific printer using a printer object'
+  code: |-
+    PS C:\>$printer = Get-Printer -Name "Microsoft XPS Document Writer"
+
+
+
+    PS C:\>Remove-Printer -InputObject $printer
+  description: |-
+    This set of commands retrieves a printer object into a variable ($Printer) using Get-Printer, and then removes the specified printer using **Remove-Printer**.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the computer from which to remove the printer.
+
+  defaultValue: Local machine name
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the object which contains the printer to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the printer to remove.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PrintManagement.Remove-Printer
+name: Remove-Printer
+description: |-
+  The **Remove-Printer** cmdlet deletes a printer from the specified computer.
+  You can specify the printer to remove by using either a printer object retrieved by Get-Printer, or by specifying a printer name.
+
+  You can use wildcard characters with **Remove-Printer**.
+  You can use **Remove-Printer** in a Windows PowerShell remoting session.
+
+  You do not need administrator privileges to use **Remove-Printer**.
+metadata:
+  external help file: PrintMgmt_Cmdlets.xml
+  Module Name: PrintManagement
+  online version: https://docs.microsoft.com/powershell/module/printmanagement/remove-printer?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

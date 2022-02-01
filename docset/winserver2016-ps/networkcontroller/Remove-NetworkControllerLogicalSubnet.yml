@@ -1,0 +1,144 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a logical subnet from the Network Controller.
+module: NetworkController
+notes: ""
+links:
+- text: Get-NetworkControllerLogicalSubnet
+  href: ./Get-NetworkControllerLogicalSubnet.yml
+- text: Install-NetworkController
+  href: ./Install-NetworkController.yml
+- text: New-NetworkControllerLogicalSubnet
+  href: ./New-NetworkControllerLogicalSubnet.yml
+- text: Set-NetworkController
+  href: ./Set-NetworkController.yml
+syntaxes:
+- >-
+  Remove-NetworkControllerLogicalSubnet [-LogicalNetworkId] <String> [-ResourceId] <String> [[-Etag] <String>]
+
+   [-Force] -ConnectionUri <Uri> [-CertificateThumbprint <String>] [-Credential <PSCredential>]
+
+   [-PassInnerException] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a logical subnet'
+  code: |-
+    PS C:\> Remove-NetworkControllerLogicalSubnet -ConnectionUri "https://networkcontroller" -LogicalNetworkId "Network13" -ResourceId "Subnet01"
+  description: |-
+    This command removes a logical subnet from Network Controller.
+    The subnet has the resource ID Subnet01.
+    This logical subnet belongs to the logical network that has the resource ID Network13.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the certificate thumbprint of a digital public key X.509 certificate of a user account that has permission to perform this action.
+    In order for Network Controller to authorize the account, specify this thumbprint by using the *ClientCertificateThumbprint* parameter of the **Install-NetworkController** or **Set-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller.
+    All Representational State Transfer (REST) clients use this URI to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.
+    This user must be present in the security group specified in the *ClientSecurityGroup* parameter in **Install-NetworkController**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag is an HTTP response header returned by an HTTP-compliant web server.
+    An ETag is used to determine change in the content of a resource.
+    The value of the header is an opaque string that represents the state of the resource when the response was generated.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogicalNetworkId
+  isRequired: true
+  description: |+
+    Specifies the resource ID of the logical network from which this cmdlet removes a logical subnet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the resource ID of the logical subnet that this cmdlet removes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.Remove-NetworkControllerLogicalSubnet
+name: Remove-NetworkControllerLogicalSubnet
+description: |-
+  The **Remove-NetworkControllerLogicalSubnet** cmdlet removes a logical subnet from the Network Controller.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/remove-networkcontrollerlogicalsubnet?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-NetworkControllerLogicalSubnet

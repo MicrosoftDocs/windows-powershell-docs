@@ -1,0 +1,157 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Converts a primary zone or stub zone to a secondary zone.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerSecondaryZone" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: ConvertTo-DnsServerSecondaryZone
+  href: ./ConvertTo-DnsServerSecondaryZone.yml
+- text: Restore-DnsServerSecondaryZone
+  href: ./Restore-DnsServerSecondaryZone.yml
+- text: Set-DnsServerSecondaryZone
+  href: ./Set-DnsServerSecondaryZone.yml
+syntaxes:
+- >-
+  ConvertTo-DnsServerSecondaryZone [-Name] <String> [-MasterServers] <IPAddress[]> [-ZoneFile] <String> [-AsJob]
+
+   [-CimSession <CimSession[]>] [-ComputerName <String>] [-Force] [-PassThru] [-ThrottleLimit <Int32>] [-Confirm]
+
+   [-WhatIf]
+examples:
+- title: 'Example 1: Convert a file-backed zone to a secondary zone'
+  code: |-
+    PS C:\> ConvertTo-DnsServerSecondaryZone -Name "0.0.10.in-addr.arpa" -MasterServers 172.23.90.124 -ZoneFile "0.0.10.in-addr.arpa.dns" -PassThru -Verbose
+  description: |-
+    This command converts the zone named 0.0.10.in-addr.arpa to a secondary zone.
+    The command specifies a master server and the zone file.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    If you do not specify this parameter, the command runs on the local system.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Converts a zone without prompting you for confirmation.
+    By default, the cmdlet prompts you for confirmation before it proceeds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MasterServers
+  isRequired: true
+  description: |+
+    Specifies an array of IP addresses of the master servers of the zone.
+    You can use both IPv4 and IPv6.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a zone to convert.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ZoneFile
+  isRequired: true
+  description: |+
+    Specifies the name of the zone file.
+    This parameter is only relevant for file-backed DNS.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.ConvertTo-DnsServerSecondaryZone
+name: ConvertTo-DnsServerSecondaryZone
+description: |-
+  The **ConvertTo-DnsServerSecondaryZone** cmdlet converts primary zone or a stub zone on a Domain Name System (DNS) server to a secondary zone.
+metadata:
+  external help file: DnsServer_Cmdlets.xml
+  Module Name: DnsServer
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/convertto-dnsserversecondaryzone?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets backup volumes from a server, from a scheduled backup policy, or from existing backups.
+module: WssCmdlets
+notes: ""
+links:
+- text: Add-WssBackupVolume
+  href: ./Add-WssBackupVolume.yml
+- text: Remove-WssBackupVolume
+  href: ./Remove-WssBackupVolume.yml
+syntaxes:
+- Get-WssBackupVolume [-AllVolumes]
+- Get-WssBackupVolume [-BackupPolicy] <ScheduledBackupPolicy>
+- Get-WssBackupVolume [-CriticalVolumes]
+- Get-WssBackupVolume [-VolumeData] <ICollection<MountVhdData>>
+examples:
+- title: 'Example 1: Get critical volumes from a backup'
+  code: |-
+    PS C:\> Get-WssBackupVolume -CriticalVolumes
+  description: |-
+    This command gets critical volumes from the server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllVolumes
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets all  backup volumes from a server.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies a scheduled backup policy.
+    The cmdlet gets all backup volumes from this scheduled backup policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CriticalVolumes
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets all critical volumes from a server.
+    Critical volumes include the operating system volume and the Active Directory (AD) volume.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ICollection<MountVhdData>" data-throw-if-not-resolved="False" />
+  name: VolumeData
+  isRequired: true
+  description: |+
+    Specifies a virtual hard disk (VHD) from which to retrieve the volumes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Get-WssBackupVolume
+name: Get-WssBackupVolume
+description: |-
+  The **Get-WssBackupVolume** cmdlet gets backup volumes from a server, from a scheduled backup policy, or from an existing backup.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssbackupvolume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

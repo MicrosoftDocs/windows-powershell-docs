@@ -1,0 +1,237 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the properties of an existing failover relationship.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Failover" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Failover" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Add-DhcpServerv4Failover
+  href: ./Add-DhcpServerv4Failover.yml
+- text: Add-DhcpServerv4FailoverScope
+  href: ./Add-DhcpServerv4FailoverScope.yml
+- text: Get-DhcpServerv4Failover
+  href: ./Get-DhcpServerv4Failover.yml
+- text: Invoke-DhcpServerv4FailoverReplication
+  href: ./Invoke-DhcpServerv4FailoverReplication.yml
+- text: Remove-DhcpServerv4Failover
+  href: ./Remove-DhcpServerv4Failover.yml
+- text: Remove-DhcpServerv4FailoverScope
+  href: ./Remove-DhcpServerv4FailoverScope.yml
+syntaxes:
+- >-
+  Set-DhcpServerv4Failover [-Name] <String> [-AsJob] [-AutoStateTransition <Boolean>]
+
+   [-CimSession <CimSession[]>] [-ComputerName <String>] [-Force] [-LoadBalancePercent <UInt32>]
+
+   [-MaxClientLeadTime <TimeSpan>] [-PartnerDown] [-PassThru] [-ReservePercent <UInt32>] [-SharedSecret <String>]
+
+   [-StateSwitchInterval <TimeSpan>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Set-DhcpServerv4Failover -ComputerName dhcpserver.contoso.com -Name SFO-SIN-Failover -LoadBalancePercent 70 -MaxClientLeadTime 2:00:00 -AutoStateTransition True -StateSwitchInterval 2:00:00
+  description: |-
+    This example modifies the parameters of the Load Balance failover relationship named SFO-SIN-Failover on the computer named dhcpserver.contoso.com as follows: 70% of the client requests will be served by the DHCP server service running on the computer named dhcpserver.contoso.com and 30% of the client requests will be served by the DHCP server service running on the computer named dhcpserver2.contoso.com.
+    The maximum client lead time for the failover relationship is set to 2 hours.
+    The automatic state transition from the COMMUNICATION INTERRUPTED state to the PARTNER DOWN state is enabled and the timer for automatic state transition is set to 2 hours.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Set-DhcpServerv4Failover -ComputerName dhcpserver.contoso.com -Name SFO-SIN-Failover -ReservePercent 10 -MaxClientLeadTime 2:00:00 -AutoStateTransition True -StateSwitchInterval 2:00:00
+  description: |-
+    This example modifies the parameters of the Hot Standby failover relationship named SFO-SIN-Failover on computer named dhcpserver.contoso.com as follows: 10% of the free IP addresses in the scopes will be reserved for the standby DHCP server service.
+    The maximum client lead time for the failover relationship is set to 2 hours.
+    The automatic state transition from the COMMUNICATION INTERRUPTED state to the PARTNER DOWN state is enabled and the timer for automatic state transition is set to 2 hours.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoStateTransition
+  description: |+
+    Specifies the enabled state for automatic state transition from the COMMUNICATION INTERRUPTED state to the PARTNER DOWN state based on expiration of the timer, using the **StateSwitchInterval** parameter, while in the COMMUNICATION INTERRUPTED state. 
+    The acceptable values for this parameter are: True or False.
+    The default value is False. 
+    Note: This parameter value is set to True, if the **StateSwitchInterval** parameter is specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer running the Dynamic Host Configuration Protocol (DHCP) server service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies, if the **SharedSecret** parameter is specified, that user confirmation is required since the **SharedSecret** parameter value may be transferred in plain text transport in the case of remote management.
+    Specifying this parameter turns off the user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LoadBalancePercent
+  description: |+
+    Specifies the percentage of DHCP client requests which should be served by the local DHCP server service or the DHCP server service running on the computer specified in the **ComputerName** parameter.
+    The remaining DHCP client requests would be served by the partner DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: MaxClientLeadTime
+  description: |+
+    Specifies the maximum client lead time for the failover relationship.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of failover relationship for which the properties are modified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PartnerDown
+  description: |+
+    Changes the state of the DHCP server service from COMMUNICATION INTERRUPTED to PARTNER DOWN.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ReservePercent
+  description: |+
+    Specifies the percentage of the free IPv4 address pool for the scope which should be reserved on the standby DHCP server service. 
+
+    In the case of a failover, the IPv4 addresses from this reserved pool on the standby DHCP server service will be leased to new DHCP clients.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SharedSecret
+  description: |+
+    Specifies the shared secret to be used for message authentication.
+    To turn off message authentication, set this parameter value to Null.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: StateSwitchInterval
+  description: |+
+    Specifies the time interval for which the DHCP server service should continue to operate in the COMMUNICATION INTERRUPTED state before transitioning to the PARTNER DOWN state.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DhcpServer.Set-DhcpServerv4Failover
+name: Set-DhcpServerv4Failover
+description: |-
+  The **Set-DhcpServerv4Failover** cmdlet modifies the properties of an existing failover relationship.
+
+  If the failover mode of relation is Load Balance mode, then the **LoadBalancePercent**, **MaxClientLeadTime**, **StateSwitchInterval**, **AutoStateTransition**, **SharedSecret**, and **PartnerDown** parameters can be specified.
+
+  If the failover mode of relation is Hot Standby mode, then the **ReservePercent**, **MaxClientLeadTime**, **StateSwitchInterval**, **AutoStateTransition**, **SharedSecret**, and **PartnerDown** parameters can be specified.
+
+  If the **SharedSecret** parameter is specified, then the message digest authentication is enabled for the failover relationship.
+
+  If the **SharedSecret** parameter value is specified as Null, then enableauth will be set to False in the data structure.
+
+  If the **SharedSecret** parameter is specified, then confirmation will be sought from the user to transport the shared secret in the clear text on the network.
+metadata:
+  external help file: DhcpServer_Cmdlets.xml
+  Module Name: DhcpServer
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv4failover?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

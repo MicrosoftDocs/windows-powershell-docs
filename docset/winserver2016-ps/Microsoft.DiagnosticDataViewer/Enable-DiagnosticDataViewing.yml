@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables diagnostic data viewing.
+module: Microsoft.DiagnosticDataViewer
+notes: |-
+  Requires Windows 10 version 17134 (1803) or higher
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Enable-DiagnosticDataViewing [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Enable-DiagnosticDataViewing
+  description: |-
+    Enable Diagnostic Data Viewing.
+  summary: ""
+uid: Microsoft.DiagnosticDataViewer.Enable-DiagnosticDataViewing
+name: Enable-DiagnosticDataViewing
+description: |-
+  This cmdlet enables diagnostic data viewing.
+  Once enabled, the device henceforth will start recording each diagnostic data event uploaded to Microsoft, where the total history is limited by the diagnostic store capacity.
+  It may take some time for events to be shown.
+metadata:
+  external help file: DDVCmdlets.dll-Help.xml
+  Module Name: Microsoft.DiagnosticDataViewer
+  online version: https://docs.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/enable-diagnosticdataviewing?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-DiagnosticDataViewing

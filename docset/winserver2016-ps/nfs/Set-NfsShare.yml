@@ -1,0 +1,266 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes configuration settings of an NFS share.
+module: NFS
+notes: ""
+links:
+- text: Get-NfsShare
+  href: ./Get-NfsShare.yml
+- text: New-NfsShare
+  href: ./New-NfsShare.yml
+- text: Remove-NfsShare
+  href: ./Remove-NfsShare.yml
+syntaxes:
+- >-
+  Set-NfsShare [[-Authentication] <String[]>] [[-EnableAnonymousAccess] <Boolean>]
+
+   [[-EnableUnmappedAccess] <Boolean>] [[-AnonymousGid] <Int32>] [[-AnonymousUid] <Int32>]
+
+   [[-LanguageEncoding] <String>] [[-AllowRootAccess] <Boolean>] [[-Permission] <String>] [-Name] <String>
+
+   [-NetworkName <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-NfsShare [-Path] <String> [[-Authentication] <String[]>] [[-EnableAnonymousAccess] <Boolean>]
+
+   [[-EnableUnmappedAccess] <Boolean>] [[-AnonymousGid] <Int32>] [[-AnonymousUid] <Int32>]
+
+   [[-LanguageEncoding] <String>] [[-AllowRootAccess] <Boolean>] [[-Permission] <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable unmapped user access on an NFS share'
+  code: |-
+    PS C:\> Set-NfsShare -Name "NFSshare01" -EnableUnmappedAccess $True
+  description: |-
+    This command enables unmapped users to access the NFS share NFSshare01.
+  summary: ""
+- title: 'Example 2: Set the authentication protocol of an NFS share'
+  code: |-
+    PS C:\> Set-NfsShare -Name "NFSshare01" -Authentication "sys,krb5" -AnonymousUid 100 -AnonymousGid 200
+  description: |-
+    This command sets the authentication protocol as AUTH_SYS and Kerberos v5 on the NFS share NFSshare01.
+    The command also sets the anonymous UID to 100 and the anonymous GID to 200.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowRootAccess
+  description: |+
+    Grants the UNIX root user access to a share.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: AnonymousGid
+  description: |+
+    Specifies the group identifier (GID) that Server for NFS uses for anonymous users who access an NFS share.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: AnonGid
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: AnonymousUid
+  description: |+
+    Specifies the user identifier (UID) that Server for NFS uses for anonymous users who access an NFS share.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: AnonUid
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Indicates that this cmdlet runs the command as a background job on a remote computer.
+    Use this parameter to run commands that take an extensive time to finish.
+
+    When you use the *AsJob* parameter, the command returns an object that represents the job, and then displays the command prompt.
+    You can continue to work in the session while the job finishes.
+    To manage the job, use the **Job** cmdlets.
+    To get the job results, use the Receive-Job cmdlet.
+
+    The *AsJob* parameter resembles using the Invoke-Command cmdlet to run a Start-Job command remotely.
+    However, with *AsJob*, the job is created on the local computer, even though the job runs on a remote computer, and the results of the remote job are automatically returned to the local computer.
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251) and [about_Remote_Jobs](https://go.microsoft.com/fwlink/?LinkID=135184).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Authentication
+  description: |+
+    Specifies an array of authentication types that an NFS client can use to access NFS shares.
+
+    The acceptable values for this parameter are:
+
+     -- Sys (AUTH_SYS authentication) 
+    - Krb5 (Kerberos v5 authentication)
+    - Krb5i (Kerberos v5 authentication with integrity checking)
+    - Krb5p (Kerberos v5 authentication with privacy)
+    - All
+    - Default
+
+    If you specify All, Server for NFS configures Sys, Krb5, Krb5i, and Krb5p on the share.
+    If you specify Default, Server for NFS configures Sys, Krb5, and Krb5i on the share.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: af, auth
+  parameterValueGroup: sys, krb5, krb5i, krb5p, all, default
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableAnonymousAccess
+  description: |+
+    Configures the NFS share to allow anonymous users to access it.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: anon, AnonymousAccess
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableUnmappedAccess
+  description: |+
+    Configures the NFS share to allow unmapped UNIX users to access the share by using a UID or GID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: unmapped, UnmappedAccess
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LanguageEncoding
+  description: |+
+    Specifies the language encoding to configure on an NFS share.
+    You can use only one language on the share.
+
+    The acceptable values for this parameter are:
+
+    - Euc-jp (Japanese)
+    - Euc-tw (Chinese)
+    - Euc-kr (Korean) 
+    - Shift-jis (Japanese) 
+    - Big5 (Chinese)
+    - Ksc5601 (Korean)
+    - Gb2312-80 (Simplified Chinese)
+    - Ansi
+
+  defaultValue: None
+  pipelineInput: true
+  position: "6"
+  aliases: lang, encoding
+  parameterValueGroup: euc-jp, euc-tw, euc-kr, shift-jis, big5, ksc5601, gb2312-80, ansi
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of an NFS share to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ShareName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkName
+  description: |+
+    Specifies the network name of the share.
+    You cannot change the network name of an existing share.
+
+    For a local share, the network name is the host name.
+    For a server cluster, the network name is the network name in the resource group to which the share is scoped.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: netname
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of an NFS share.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: SharePath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Permission
+  description: |+
+    Configures the type of global ("All Machines") permissions on the NFS share.
+    The acceptable values for this parameter are:
+
+    - Readwrite
+    - Readonly
+    - No-access
+
+  defaultValue: None
+  pipelineInput: true
+  position: "8"
+  aliases: access
+  parameterValueGroup: no-access, readonly, readwrite, no-access, readonly, readwrite
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NFS.Set-NfsShare
+name: Set-NfsShare
+description: |-
+  The **Set-NfsShare** cmdlet changes configuration settings for an existing share that Server for Network File System (NFS) exports.
+  You can use the *NetworkName* parameter to select a share in a server cluster.
+  *NetworkName* is not required when you modify configuration settings of non-clustered (standard) shares.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NfsServerTasks.cmdletDefinition.cdxml-help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/set-nfsshare?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NfsShare

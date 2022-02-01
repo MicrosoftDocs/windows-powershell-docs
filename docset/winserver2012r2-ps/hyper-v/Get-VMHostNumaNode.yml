@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the NUMA topology of a virtual machine host.
+module: Hyper-V
+notes: ""
+syntaxes:
+- Get-VMHostNumaNode [[-ComputerName] <String[]>] [-Id <Int32>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMHostNumaNode
+  description: |-
+    Gets the NUMA topology of the local Hyper-V host.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts for which the NUMA topology is to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    Identifies a NUMA node for which a **VMHostNumaNode** is to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMHostNumaNode
+name: Get-VMHostNumaNode
+description: |-
+  The **Get-MVHostNumaNode** cmdlet gets the NUMA topology of a Hyper-V host, returning a **VMHostNumaNode** object for each of the host's NUMA nodes.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmhostnumanode?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMHostNumaNode

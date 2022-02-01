@@ -1,0 +1,233 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Publishes a RemoteApp program to a Remote Desktop deployment.
+module: RemoteDesktop
+notes: ""
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.RemoteApp" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDRemoteApp
+  href: ./Get-RDRemoteApp.yml
+- text: Remove-RDRemoteApp
+  href: ./Remove-RDRemoteApp.yml
+- text: Set-RDRemoteApp
+  href: ./Set-RDRemoteApp.yml
+syntaxes:
+- >-
+  New-RDRemoteApp [-CollectionName] <String> [-Alias <String>] -DisplayName <String> -FilePath <String>
+
+   [-FileVirtualPath <String>] [-ShowInWebAccess <Boolean>] [-FolderName <String>]
+
+   [-CommandLineSetting <CommandLineSettingValue>] [-RequiredCommandLine <String>] [-UserGroups <String[]>]
+
+   [-IconPath <String>] [-IconIndex <String>] [-ConnectionBroker <String>] [<CommonParameters>]
+- >-
+  New-RDRemoteApp [-CollectionName] <String> [-Alias <String>] -DisplayName <String> -FilePath <String>
+
+   [-FileVirtualPath <String>] [-ShowInWebAccess <Boolean>] [-FolderName <String>]
+
+   [-CommandLineSetting <CommandLineSettingValue>] [-RequiredCommandLine <String>] [-UserGroups <String[]>]
+
+   [-IconPath <String>] [-IconIndex <String>] -VirtualDesktopName <String> [-ConnectionBroker <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Publish a RemoteApp program'
+  code: |-
+    PS C:\> New-RDRemoteApp -CollectionName "Session Collection" -DisplayName "Notepad" -FilePath "C:\Windows\System32\Notepad.exe"
+  description: |-
+    This command creates a new RemoteApp program in the collection named Session Collection.
+    The command specifies the display name Notepad and uses the .exe file at the specified file path.
+  summary: ""
+- title: 'Example 2: Publish a RemoteApp program with a required argument'
+  code: |-
+    PS C:\> New-RDRemoteApp -CollectionName "Virtual Desktop Collection" -DisplayName "Bing" -FilePath "C:\Program Files\Internet Explorer\iexplore.exe" -VirtualDesktopName "RDS-WKS-A27" -CommandLineSetting Require -RequiredCommandLine "https://www.bing.com"
+  description: |-
+    This command publishes a RemoteApp to the collection named Virtual Desktop Collection.
+    The command specifies the display name Bing and uses the .exe file at the specified file path.
+    The command specifies the virtual desktop name RDS-WKS-A27.
+    This command uses a required command line argument.
+    This RemoteApp opens the specified browser to go to the specified URL.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Alias
+  description: |+
+    Specifies an alias for the RemoteApp program.
+    If you do not specify an alias, the cmdlet generates one based on the **FilePath** parameter.
+    This alias must be unique within the collection specified by the **CollectionName** parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of the personal virtual desktop collection or session collection.
+    The cmdlet publishes the RemoteApp program to this collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CommandLineSettingValue" data-throw-if-not-resolved="False" />
+  name: CommandLineSetting
+  description: |+
+    Specifies whether the RemoteApp program accepts command-line arguments from the client at connection time.
+    The acceptable values for this parameter are:
+
+    - Allow.
+    Accepts command-line arguments.
+    - DoNotAllow.
+    Does not accept command-line arguments.
+    - Require.
+    Allows only command-line arguments specified in the **RequiredCommandLine** parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: DoNotAllow, Allow, Require
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Specifies a name to display to users for the RemoteApp program.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies a path for the executable file for the application.
+    Do not include any environment variables.
+    For session collections, this path must be a valid local path on all Remote Desktop Session Host (RD Session Host) servers in the collection.
+    For virtual desktop collections, this path must be a valid local path on all virtual desktops in the collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileVirtualPath
+  description: |+
+    Specifies a path for the application executable file.
+    This path resolves to the same location as the value of the **FilePath** parameter, but it can include environment variables.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FolderName
+  description: |+
+    Specifies the name of the folder that the RemoteApp program appears in on the Remote Desktop Web Access (RD Web Access) webpage and in the Start menu for subscribed RemoteApp and Desktop Connections.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IconIndex
+  description: |+
+    Specifies the index within the icon file (specified by the **IconPath** parameter) where the RemoteApp program's icon can be found.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IconPath
+  description: |+
+    Specifies the path to a file containing the icon to display for the RemoteApp program identified by the **Alias** parameter.
+    This path must not contain any environment variables.
+    For session collections, the path must be a valid local path on all RD Session Host servers in the collection.
+    For virtual desktop collections, the path must be a valid local path on all virtual desktops in the collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RequiredCommandLine
+  description: |+
+    Specifies a string that contains command-line arguments that the client can use at connection time with the RemoteApp program.
+    If you specify this parameter, the **CommandLineSetting** parameter must have a value of Require.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ShowInWebAccess
+  description: |+
+    Specifies whether to show the RemoteApp program in the RD Web Access server, and in RemoteApp and Desktop Connections that the user subscribes to.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserGroups
+  description: |+
+    Specifies an array of domain groups and users that can view the RemoteApp in RD Web Access, and in RemoteApp and Desktop Connections.
+    To allow all users to see a RemoteApp program, provide a value of $Null.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopName
+  isRequired: true
+  description: |+
+    Specifies the name of a virtual desktop.
+    The icon file specified in the **IconPath** parameter resides in this virtual desktop.
+    The virtual desktop must be a member of the collection specified by the **CollectionName** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: VMName
+  parameterValueGroup: ""
+uid: RemoteDesktop.New-RDRemoteApp
+name: New-RDRemoteApp
+description: |-
+  The **New-RDRemoteApp** cmdlet publishes a Windows Server 2012 RemoteApp program to a Remote Desktop deployment, making it available to users.
+
+  RemoteApp allows Remote Desktop Services (RDS) to run a program remotely that appears as if it runs locally on a client computer.
+  A RemoteApp program runs in its own resizable window and has its own entry on the taskbar.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/new-rdremoteapp?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-RDRemoteApp

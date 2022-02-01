@@ -1,0 +1,184 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Suspends a print job on the specified printer.
+module: PrintManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_PrintJob" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts one print job object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet produces no output.
+links:
+- text: Get-PrintJob
+  href: ./Get-PrintJob.yml
+- text: Remove-PrintJob
+  href: ./Remove-PrintJob.yml
+- text: Restart-PrintJob
+  href: ./Restart-PrintJob.yml
+- text: Resume-PrintJob
+  href: ./Resume-PrintJob.yml
+syntaxes:
+- >-
+  Suspend-PrintJob [-PrinterName] <String> [-ID] <UInt32> [-AsJob] [-CimSession <CimSession>]
+
+   [-ComputerName <String>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+- >-
+  Suspend-PrintJob [-InputObject] <CimInstance> [-AsJob] [-CimSession <CimSession>] [-ThrottleLimit <Int32>]
+
+   [-Confirm] [-WhatIf]
+- >-
+  Suspend-PrintJob [-PrinterObject] <CimInstance> [-ID] <UInt32> [-AsJob] [-CimSession <CimSession>]
+
+   [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+examples:
+- title: '-------------------------- Example 1: Suspend a specific print job'
+  code: |-
+    PS C:\> Suspend-PrintJob -PrinterName "PrinterName" -ID 1
+  description: |-
+    This command suspends the print job with an ID of 1 on the printer named PrinterName.
+  summary: ""
+- title: 'Example 2: Suspend a print job using a printer object and print job ID'
+  code: |-
+    PS C:\>$printer = Get-Printer -Name "PrinterName:"
+
+
+
+    PS C:\>Suspend-PrintJob -PrinterObject $printer -ID 1
+  description: |-
+    This set of commands retrieves a printer object into a variable ($printer) using Get-Printer, and then passes the contents of the variable to **Suspend-PrintJob** to suspend the print job with an ID of 1 on the printer contained in the printer object.
+  summary: ""
+- title: 'Example 3: Suspend a print job using a print job object'
+  code: |-
+    PS C:\>$printJob = Get-PrintJob -PrinterName "Printer1" -ID 1
+
+
+
+    PS C:\>Suspend-PrintJob -InputObject $printJob
+  description: |-
+    This set of commands retrieves a print job object with an ID of 1 into a variable ($printJob) using Get-PrintJob, and then passes the contents of the variable to **Suspend-PrintJob** to suspend the print job on the printer contained in the print job object.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the computer on which to suspend a print job.
+
+  defaultValue: Local machine name
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ID
+  isRequired: true
+  description: |+
+    Specifies the ID of the print job to suspend on the specified printer. 
+    You cannot use wildcard characters.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the object which contains the print job to suspend on the specified printer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrinterName
+  isRequired: true
+  description: |+
+    Specifies a printer name on which to suspend the print job.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: PrinterObject
+  isRequired: true
+  description: |+
+    Specifies the object which contains the printer on which to suspend the print job.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PrintManagement.Suspend-PrintJob
+name: Suspend-PrintJob
+description: |-
+  The **Suspend-PrintJob** cmdlet suspends a print job on the specified printer.
+  Use Resume-PrintJob to resume the suspended print job.
+
+  You can specify the print job to suspend by specifying the **PrinterName** and job **ID** parameters, specifying a printer object and the job **ID** parameter, or by specifying a print job object as an input.
+
+  You cannot use wildcard characters with **Suspend-PrintJob**.
+  You can use **Suspend-PrintJob** in a Windows PowerShell remoting session.
+
+  You do not need administrator privileges to use **Suspend-PrintJob**.
+metadata:
+  external help file: PrintMgmt_Cmdlets.xml
+  Module Name: PrintManagement
+  online version: https://docs.microsoft.com/powershell/module/printmanagement/suspend-printjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

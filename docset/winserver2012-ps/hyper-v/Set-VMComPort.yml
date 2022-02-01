@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the COM port of a virtual machine.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.Virtualization.Powershell.ComPort" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+syntaxes:
+- >-
+  Set-VMComPort [-VMName] <String[]> [-Number] <Int32> [-Path] <String> [-ComputerName <String[]>] [-Passthru]
+
+   [-Confirm] [-WhatIf]
+- Set-VMComPort [-VM] <VirtualMachine[]> [-Path] <String> [-Passthru] [-Number] <Int32> [-Confirm] [-WhatIf]
+- Set-VMComPort [-VMComPort] <VMComPort[]> [-Path] <String> [-Passthru] [-Confirm] [-WhatIf]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Set-VMComPort TestVM 2 \\.\pipe\TestPipe
+  description: |-
+    Configure the second COM port on virtual machine TestVM to connect to named pipe TestPipe on the local computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the COM port of a virtual machine is to be configured.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Number
+  isRequired: true
+  description: |+
+    Specifies the Id (1 or 2) of the COM port to be configured.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that a **Microsoft.Virtualization.Powershell.ComPort** object is to be passed through to the pipeline representing the COM port to be configured.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a named pipe path for the COM port to be configured.
+    Specify local pipes as "\\\\.\pipe\PipeName" and remote pipes as "\\\\RemoteServer\pipe\PipeName".
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine for which the COM port is to be configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMComPort" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMComPort
+  isRequired: true
+  description: |+
+    Specifies the COM port to be configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine for which the COM port is to be configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMComPort
+name: Set-VMComPort
+description: |-
+  The **Set-VMComPort** cmdlet configures the COM port of a virtual machine.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmcomport?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

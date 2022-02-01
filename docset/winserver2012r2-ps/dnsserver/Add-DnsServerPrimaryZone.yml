@@ -1,0 +1,276 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a primary zone to a DNS server.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerPrimaryZone" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: ConvertTo-DnsServerPrimaryZone
+  href: ./ConvertTo-DnsServerPrimaryZone.yml
+- text: Restore-DnsServerPrimaryZone
+  href: ./Restore-DnsServerPrimaryZone.yml
+- text: Set-DnsServerPrimaryZone
+  href: ./Set-DnsServerPrimaryZone.yml
+syntaxes:
+- >-
+  Add-DnsServerPrimaryZone [-ResponsiblePerson <String>] [-DynamicUpdate <String>] [-LoadExisting]
+
+   [-ComputerName <String>] [-PassThru] [-Name] <String> [-ReplicationScope] <String>
+
+   [[-DirectoryPartitionName] <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Add-DnsServerPrimaryZone [-ResponsiblePerson <String>] [-DynamicUpdate <String>] [-LoadExisting]
+
+   [-ComputerName <String>] [-PassThru] -NetworkId <String> -ZoneFile <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-DnsServerPrimaryZone [-ResponsiblePerson <String>] [-DynamicUpdate <String>] [-LoadExisting]
+
+   [-ComputerName <String>] [-PassThru] [-Name] <String> -ZoneFile <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-DnsServerPrimaryZone [-ResponsiblePerson <String>] [-DynamicUpdate <String>] [-LoadExisting]
+
+   [-ComputerName <String>] [-PassThru] [-ReplicationScope] <String> [[-DirectoryPartitionName] <String>]
+
+   -NetworkId <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a primary zone'
+  code: |-
+    PS C:\> Add-DnsServerPrimaryZone -Name "west01.contoso.com" -ReplicationScope "Forest" -PassThru
+  description: |-
+    This command creates an Active Directory-integrated forward lookup zone called west01.contoso.com with Forest-wide replication scope.
+  summary: ""
+- title: 'Example 2: Create a file-backed primary zone'
+  code: |-
+    PS C:\>Add-DnsServerPrimaryZone -Name "west02.contoso.com" -ZoneFile "west02.contoso.com.dns"
+  description: |-
+    This command creates a file-backed primary forward lookup zone called west02.contoso.com with the specified DNS file.
+  summary: ""
+- title: 'Example 3: Create a reverse lookup zone'
+  code: |-
+    PS C:\>Add-DnsServerPrimaryZone -NetworkID "10.1.0.0/24" -ReplicationScope "Forest" 
+    ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
+
+    --------                            --------        -------------   --------------  -------------------  --------
+
+    1.10.in-addr.arpa                   Primary         False           True            True                 False
+  description: |-
+    This command creates the Active Directory-integrated class C reverse lookup zone 0.1.10.in-addr.arpa with Forest-wide replication scope.
+  summary: ""
+- title: 'Example 4: Create a file-backed reverse lookup zone'
+  code: |-
+    PS C:\>Add-DnsServerPrimaryZone -NetworkID 10.3.0.0/24 -ZoneFile "0.3.10.in-addr.arpa.dns"
+  description: |-
+    This command creates the file-backed reverse lookup zone 0.3.10.in-addr.arpa.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    If you do not specify this parameter, the command runs on the local system.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DirectoryPartitionName
+  description: |+
+    Specifies a directory partition on which to store the zone.
+    Use this parameter when the **ReplicationScope** parameter has a value of Custom.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DynamicUpdate
+  description: |+
+    Specifies how a zone accepts dynamic updates.
+    The acceptable values for this parameter are:
+
+    - None
+    - Secure
+    - NonsecureAndSecure
+
+    Secure DNS updates are available only for Active Directory-integrated zones.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Secure, NonsecureAndSecure
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LoadExisting
+  description: |+
+    Loads an existing file for the zone.
+    Otherwise, the cmdlet creates default zone records automatically.
+    This switch is relevant only for file-backed zones.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the zone the cmdlet creates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ZoneName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkId
+  isRequired: true
+  description: |+
+    Specifies a network ID and prefix length for a reverse lookup zone.
+    Use the format A.B.C.D/prefix for IPv4 or 1111:2222:3333:4444::/prefix for IPv6.
+
+    For IPv4, the cmdlet creates only class A, B, C, or D reverse lookup zones.
+    If you specify a prefix that is between classes, the cmdlet uses the longer prefix that is divisible by 8.
+    For example, a value of 10.2.10.0/23 adds the 10.2.10.0/24 reverse lookup zone, and the 10.2.11.0/24 reverse lookup zone is not created.
+    If you enter an IPv4 prefix longer than /24, the cmdlet creates a /32 reverse lookup zone.
+
+    For IPv6, the cmdlet creates ip6.arpa zones for prefixes from /16 to /128 that are divisible by 4.
+    If you specify a prefix that is between values, the cmdlet uses the longer prefix that is divisible by 4.
+    For example, entering a value of AAAA::/58 adds the AAAA::/60  ip6.arpa zone.
+    If you do not enter a prefix, the cmdlet uses a default prefix value of /128.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReplicationScope
+  isRequired: true
+  description: |+
+    Specifies a partition on which to store an Active Directory-integrated zone.
+    The acceptable values for this parameter are:
+
+    - Custom.
+    Any custom directory partition that a user creates.
+    Specify a custom directory partition by using the **DirectoryPartitionName** parameter.
+    - Domain.
+    The domain directory partition. 
+    - Forest.
+    The ForestDnsZone directory partition.
+    - Legacy.
+    A legacy directory partition.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: Forest, Domain, Legacy, Custom
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResponsiblePerson
+  description: |+
+    Specifies a person responsible for the zone.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ZoneFile
+  isRequired: true
+  description: |+
+    Specifies a name of the zone file.
+    This parameter is only relevant for file-backed zones.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Add-DnsServerPrimaryZone
+name: Add-DnsServerPrimaryZone
+description: |-
+  The **Add-DnsServerPrimaryZone** cmdlet adds a specified primary zone on a Domain Name System (DNS) server.
+
+  You can add an Active Directory-integrated forward lookup zone, an Active Directory-integrated reverse lookup zone, a file-backed forward lookup zone, or a file-backed reverse lookup zone.
+metadata:
+  external help file: PS_DnsServerPrimaryZone_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverprimaryzone?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DnsServerPrimaryZone

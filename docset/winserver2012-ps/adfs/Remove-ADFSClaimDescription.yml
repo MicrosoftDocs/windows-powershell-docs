@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a claim description from the Federation Service.
+module: ADFS
+notes: |-
+  * Claim descriptions are used to configure the list of claims that are available to be offered or accepted by the Federation Service.
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure that represents a claim description object for the Federation Service.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ADFSClaimDescription
+  href: ./Add-ADFSClaimDescription.yml
+- text: Get-ADFSClaimDescription
+  href: ./Get-ADFSClaimDescription.yml
+- text: Set-ADFSClaimDescription
+  href: ./Set-ADFSClaimDescription.yml
+syntaxes:
+- Remove-ADFSClaimDescription [-TargetName] <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Remove-ADFSClaimDescription [-TargetClaimType] <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-ADFSClaimDescription [-TargetClaimDescription] <ClaimDescription> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>Remove-ADFSClaimDescription -TargetName "Role"
+  description: |-
+    Description
+
+    -----------
+
+    Removes the "Role" claim description.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Passes an object to the pipeline.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClaimDescription" data-throw-if-not-resolved="False" />
+  name: TargetClaimDescription
+  isRequired: true
+  description: |+
+    Specifies the claim description to remove. 
+    This value is typically taken from the pipeline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetClaimType
+  isRequired: true
+  description: |+
+    Specifies the claim type of the claim description to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the claim description to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Remove-ADFSClaimDescription
+name: Remove-ADFSClaimDescription
+description: |-
+  The Remove-ADFSClaimDescription cmdlet removes a claim description from the Federation Service.
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsclaimdescription?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

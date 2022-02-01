@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a link from the home page of a Remote Web Access website.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Add-WssRemoteWebAccessLink
+  href: ./Add-WssRemoteWebAccessLink.yml
+- text: Get-WssRemoteWebAccessLink
+  href: ./Get-WssRemoteWebAccessLink.yml
+syntaxes:
+- Remove-WssRemoteWebAccessLink -ID <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a link from a home page'
+  code: |-
+    PS C:\> Remove-WssRemoteWebAccessLink -ID "23456789-ACAC-0330-9975-A246890654BC"
+  description: |-
+    This command removes a link from a home page in Remote Web Access.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ID
+  isRequired: true
+  description: |+
+    Specifies the key for the link you want to remove.
+    To obtain a list of IDs, use the **Get-RemoteWebAccessLink** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Remove-WssRemoteWebAccessLink
+name: Remove-WssRemoteWebAccessLink
+description: |-
+  The **Remove-WssRemoteWebAccessLink** cmdlet removes a link from the home page of a Remote Web Access website.
+
+  To add a link to the home page of a Remote Web Access website, use the **Add-WssRemoteWebAccessLink** cmdlet.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/remove-wssremotewebaccesslink?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WssRemoteWebAccessLink

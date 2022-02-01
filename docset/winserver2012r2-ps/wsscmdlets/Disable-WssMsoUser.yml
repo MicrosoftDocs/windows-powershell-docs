@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables an online service account.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    WssUserName - local network account name of user.
+links:
+- text: Add-WssMsoUser
+  href: ./Add-WssMsoUser.yml
+- text: Enable-WssMsoUser
+  href: ./Enable-WssMsoUser.yml
+- text: Get-WssMsoUser
+  href: ./Get-WssMsoUser.yml
+- text: Remove-WssMsoUser
+  href: ./Remove-WssMsoUser.yml
+syntaxes:
+- Disable-WssMsoUser [-WssUserName] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable a Microsoft account'
+  code: |-
+    PS C:\> Disable-WssMsoUser -WssUserName "PattiFuller"
+  description: |-
+    This command disables the online service account that is assigned to the user account named PattiFuller.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WssUserName
+  isRequired: true
+  description: |+
+    Specifies the name of a user account.
+    The cmdlet disables the online service account that is assigned to the account that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Disable-WssMsoUser
+name: Disable-WssMsoUser
+description: |-
+  The **Disable-WssMsoUser** cmdlet disables the online service account that is assigned to a local user account.
+  This prevents the disabled account from using the online portal.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/disable-wssmsouser?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-WssMsoUser

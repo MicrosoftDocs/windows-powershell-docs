@@ -59,9 +59,9 @@ The following table provides remediation action values for detected threats at l
 |3 |Remove the detected threat. |
 |6 |Allow the detected threat. |
 |8 |Allow the user to determine the action to take with the detected threat. |
-|9 |Do not take any action. |
+|9 |Don’t take any action. |
 |10 |Block the detected threat. |
-|0 | (NULL)|Apply action based on the Security Intelligence Update (SIU). This is the default value. |
+|0 | (NULL)|Apply action based on the Security Intelligence Update (SIU). This value is the default value. |
 
 ## EXAMPLES
 
@@ -77,7 +77,7 @@ This command configures preferences to check for definition updates every day.
 PS C:\> Set-MpPreference -SignatureScheduleTime 02:00:00
 ```
 
-This command configures preferences to check for definition updates 120 minutes after midnight on days when it is scheduled to check.
+This command configures preferences to check for definition updates 120 minutes after midnight on days when it’s scheduled to check.
 
 ## PARAMETERS
 
@@ -106,8 +106,8 @@ Accept wildcard characters: False
 ### -CheckForSignaturesBeforeRunningScan
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of $True, Windows Defender checks for new definitions.
-If you specify $False or do not specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans, but it does not affect scans that you start from the user interface or to scans that you start from the command line.
+If you specify $False or don’t specify a value, the scan begins with existing definitions.
+This value applies to scheduled scans, but it doesn’t affect scans that you start from the user interface or to scans that you start from the command line.
 
 ```yaml
 Type: Boolean
@@ -164,7 +164,7 @@ Current Channel (Staged): Devices will be offered updates after the release cycl
 
 Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). 
 
-If you disable or do not configure this policy, the device will stay up to date automatically during the daily release cycle. Suitable for most devices. 
+If you disable or don’t configure this policy, the device will stay up to date automatically during the daily release cycle. Suitable for most devices. 
 
 Supported OS versions: Windows 10 
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -DisableArchiveScanning
 Indicates whether to scan archive files, such as .zip and .cab files, for malicious and unwanted software.
-If you specify a value of $False or do not specify a value, Windows Defender scans archive files.
+If you specify a value of $False or don’t specify a value, Windows Defender scans archive files.
 However, archives are always scanned during directed scans.
 
 ```yaml
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 
 ### -DisableAutoExclusions
 Indicates whether to disable the Automatic Exclusions feature for the server.
-If you specify a value of $False or do not specify a value, Windows Defender enables the Automatic Exclusions feature for the server.
+If you specify a value of $False or don’t specify a value, Windows Defender enables the Automatic Exclusions feature for the server.
 
 ```yaml
 Type: Boolean
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 
 ### -DisableBehaviorMonitoring
 Indicates whether to enable behavior monitoring.
-If you specify a value of $False or do not specify a value, Windows Defender enables behavior monitoring.
+If you specify a value of $False or don’t specify a value, Windows Defender enables behavior monitoring.
 
 ```yaml
 Type: Boolean
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 ### -DisableBlockAtFirstSeen
 Indicates whether to enable block at first seen.
-If you specify a value of $False or do not specify a value, Windows Defender enables block at first seen.
+If you specify a value of $False or don’t specify a value, Windows Defender enables block at first seen.
 
 ```yaml
 Type: Boolean
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ### -DisableCatchupFullScan
 Indicates whether Windows Defender runs catch-up scans for scheduled full scans.
 A computer can miss a scheduled scan, usually because the computer is turned off at the scheduled time.
-If you specify a value of $False, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone logs on to the computer. If you specify a value of $True, the computer does not run catch-up scans for scheduled full scans.
+If you specify a value of $False, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone signs in the computer. If you specify a value of $True, the computer doesn’t run catch-up scans for scheduled full scans.
 
 ```yaml
 Type: Boolean
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ### -DisableCatchupQuickScan
 Indicates whether Windows Defender runs catch-up scans for scheduled quick scans.
 A computer can miss a scheduled scan, usually because the computer is off at the scheduled time.
-If you specify a value of $False, after the computer misses two scheduled quick scans, Windows Defender runs a catch-up scan the next time someone logs onto the computer. If you specify a value of $True, the computer does not run catch-up scans for scheduled quick scans.
+If you specify a value of $False, after the computer misses two scheduled quick scans, Windows Defender runs a catch-up scan the next time someone signs in the computer. If you specify a value of $True, the computer doesn’t run catch-up scans for scheduled quick scans.
 
 ```yaml
 Type: Boolean
@@ -280,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCpuThrottleOnIdleScans
-Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This parameter is enabled by default, thus ensuring that the CPU will not be throttled for scheduled scans performed when the device is idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag does not have any impact and normal throttling will occur.
+Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This parameter is enabled by default, thus ensuring that the CPU won’t be throttled for scheduled scans performed when the device is idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag doesn’t have any impact and normal throttling will occur.
 
 ```yaml
 Type: Boolean
@@ -294,8 +294,8 @@ Accept wildcard characters: False
 ### -DisableEmailScanning
 Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 Windows Defender supports several formats, including .pst, .dbx, .mbx, .mime, and .binhex.
-If you specify a value of $False or do not specify a value, Windows Defender performs email scanning. If you specify a value of $True, Windows Defender does not perform email scanning.
-This configuration is not applicable to modern email clients.
+If you specify a value of $False or don’t specify a value, Windows Defender performs email scanning. If you specify a value of $True, Windows Defender doesn’t perform email scanning.
+This configuration isn’t applicable to modern email clients.
 
 ```yaml
 Type: Boolean
@@ -315,9 +315,9 @@ Enable this policy to disable gradual rollout of monthly and daily Defender upda
 
 Devices will be offered all Defender updates after the gradual release cycle completes. Best for datacenter machines that only receive limited updates. 
 
-Note: This setting applies to both monthly as well as daily Defender updates and will override any previously configured channel selections for platform and engine updates. 
+Note: This setting applies to both monthly and daily Defender updates and will override any previously configured channel selections for platform and engine updates. 
 
-If you disable or do not configure this policy, the device will remain in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates. Stay up to date automatically during the gradual release cycle. Suitable for most devices. 
+If you disable or don’t configure this policy, the device will remain in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates. Stay up to date automatically during the gradual release cycle. Suitable for most devices. 
 
 Supported OS versions: Windows 10 
 
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 
 ### -DisableIOAVProtection
 Indicates whether Windows Defender scans all downloaded files and attachments.
-If you specify a value of $False or do not specify a value, scanning downloaded files and attachments is enabled.
+If you specify a value of `$False` or don’t specify a value, scanning downloaded files and attachments is enabled.
 
 ```yaml
 Type: Boolean
@@ -366,7 +366,7 @@ Accept wildcard characters: False
 ### -DisablePrivacyMode
 Indicates whether to disable privacy mode.
 Privacy mode prevents users, other than administrators, from displaying threat history.
-If you specify a value of $False or do not specify a value, privacy mode is enabled.
+If you specify a value of $False or don’t specify a value, privacy mode is enabled.
 
 ```yaml
 Type: Boolean
@@ -382,7 +382,7 @@ Accept wildcard characters: False
 
 ### -DisableRealtimeMonitoring
 Indicates whether to use real-time protection.
-If you specify a value of $False or do not specify a value, Windows Defender uses real-time protection.
+If you specify a value of $False or don’t specify a value, Windows Defender uses real-time protection.
 We recommend that you enable Windows Defender to use real-time protection.
 
 ```yaml
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 
 ### -DisableRemovableDriveScanning
 Indicates whether to scan for malicious and unwanted software in removable drives, such as flash drives, during a full scan.
-If you specify a value of $False or do not specify a value, Windows Defender scans removable drives during any type of scan. If you specify a value of $True, Windows Defender does not scan removable drives during a full scan. Windows Defender can still scan removable drives during quick scans or custom scans.
+If you specify a value of `$False` or don’t specify a value, Windows Defender scans removable drives during any type of scan. If you specify a value of $True, Windows Defender doesn’t scan removable drives during a full scan. Windows Defender can still scan removable drives during quick scans or custom scans.
 
 ```yaml
 Type: Boolean
@@ -415,7 +415,7 @@ Accept wildcard characters: False
 
 ### -DisableRestorePoint
 Indicates whether to disable scanning of restore points.
-If you specify a value of $False or do not specify a value, Windows Defender restore point is enabled.
+If you specify a value of $False or don’t specify a value, Windows Defender restore point is enabled.
 
 ```yaml
 Type: Boolean
@@ -430,7 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningMappedNetworkDrivesForFullScan
-Indicates whether to scan mapped network drives. If you specify a value of $False or do not specify a value, Windows Defender scans mapped network drives. If you specify a value of $True, Windows Defender does not scan mapped network drives.
+Indicates whether to scan mapped network drives. If you specify a value of $False or don’t specify a value, Windows Defender scans mapped network drives. If you specify a value of $True, Windows Defender doesn’t scan mapped network drives.
 
 ```yaml
 Type: Boolean
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files. We do not recommend that you scan network files.
+Indicates whether to scan for network files. If you specify a value of $False or don’t specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender doesn’t scan network files. We don’t recommend scanning network files.
 
 ```yaml
 Type: Boolean

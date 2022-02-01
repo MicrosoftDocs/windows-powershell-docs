@@ -626,7 +626,7 @@ If you join this community, you can choose to automatically send basic or additi
 Additional information helps Microsoft create new definitions.
 
 In some instances, personal information might unintentionally be sent to Microsoft.
-However, Microsoft will not use this information to identify you or contact you.
+However, Microsoft won’t use this information to identify you or contact you.
 
 ```yaml
 Type: MAPSReportingType
@@ -691,7 +691,7 @@ Current Channel (Broad): Devices will be offered updates only after the gradual 
 
 Critical- Time Delay: Devices will be offered updates with a 48-hour delay. Suggested for critical environments only.   
 
-If you disable or do not configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
+If you disable or don’t configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
 
 Supported OS versions: Windows 10 
 
@@ -709,7 +709,7 @@ Accept wildcard characters: False
 
 ### -QuarantinePurgeItemsAfterDelay
 Specifies the number of days to keep items in the Quarantine folder.
-If you specify a value of zero or do not specify a value for this parameter, items stay in the Quarantine folder indefinitely.
+If you specify a value of zero or don’t specify a value for this parameter, items stay in the Quarantine folder indefinitely.
 
 ```yaml
 Type: UInt32
@@ -725,7 +725,7 @@ Accept wildcard characters: False
 
 ### -RandomizeScheduleTaskTimes
 Indicates whether to select a random time for the scheduled start and scheduled update for definitions.
-If you specify a value of $True or do not specify a value, scheduled tasks begin within 30 minutes, before or after, the scheduled time.
+If you specify a value of `$True` or do not specify a value, scheduled tasks begin within 30 minutes, before or after, the scheduled time.
 If you randomize the start times, it can distribute the impact of scanning.
 For example, if several virtual machines share the same host, randomized start times prevents all the hosts from starting the scheduled tasks at the same time.
 
@@ -884,7 +884,7 @@ Accept wildcard characters: False
 
 ### -ScanOnlyIfIdleEnabled
 Indicates whether to start scheduled scans only when the computer is not in use.
-If you specify a value of $True or do not specify a value, Windows Defender runs schedules scans when the computer is on, but not in use.
+If you specify a value of `$True` or do not specify a value, Windows Defender runs schedules scans when the computer is on, but not in use.
 
 ```yaml
 Type: Boolean
@@ -1080,7 +1080,7 @@ Accept wildcard characters: False
 
 ### -SignatureDisableUpdateOnStartupWithoutEngine
 Indicates whether to initiate definition updates even if no antimalware engine is present.
-If you specify a value of $True or do not specify a value, Windows Defender does not initiate definition updates on startup.
+If you specify a value of `$True` or do not specify a value, Windows Defender does not initiate definition updates on startup.
 If you specify a value of $False, and if no antimalware engine is present, Windows Defender initiates definition updates on startup.
 
 ```yaml

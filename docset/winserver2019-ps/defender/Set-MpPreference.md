@@ -866,7 +866,7 @@ The acceptable values for this parameter are: integers from 5 through 100, and t
 Windows Defender doesn’t exceed the percentage of CPU usage that you specify.
 The default value is 50.
 
-Note: This limit is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average.
+Note: This limit isn’t a hard limit but rather guidance for the scanning engine to not exceed this maximum on average.
 
 Note: Manually run scans will ignore this setting and run without any CPU limits.
 
@@ -883,8 +883,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScanOnlyIfIdleEnabled
-Indicates whether to start scheduled scans only when the computer is not in use.
-If you specify a value of `$True` or do not specify a value, Windows Defender runs schedules scans when the computer is on, but not in use.
+Indicates whether to start scheduled scans only when the computer isn’t in use.
+If you specify a value of `$True` or don’t specify a value, Windows Defender runs schedules scans when the computer is on, but not in use.
 
 ```yaml
 Type: Boolean
@@ -905,7 +905,7 @@ The acceptable values for this parameter are:
 - 1: Quick scan
 - 2: Full scan 
 
-If you do not specify this parameter, Windows Defender uses the default value of quick scan.
+If you don’t specify this parameter, Windows Defender uses the default value of quick scan.
 
 ```yaml
 Type: ScanType
@@ -923,8 +923,8 @@ Accept wildcard characters: False
 ### -ScanPurgeItemsAfterDelay
 Specifies the number of days to keep items in the scan history folder.
 After this time, Windows Defender removes the items.
-If you specify a value of zero, Windows Defender does not remove items.
-If you do not specify a value, Windows Defender removes items from the scan history folder after the default length of time, which is 15 days.
+If you specify a value of zero, Windows Defender doesn’t remove items.
+If you don’t specify a value, Windows Defender removes items from the scan history folder after the default length of time, which is 15 days.
 
 ```yaml
 Type: UInt32
@@ -954,7 +954,7 @@ The acceptable values for this parameter are:
 - 8: Never
 
 The default value is 8, never.
-If you specify a value of 8 or do not specify a value, Windows Defender does not perform scheduled scans.
+If you specify a value of 8 or don’t specify a value, Windows Defender doesn’t perform scheduled scans.
 
 ```yaml
 Type: Day
@@ -972,7 +972,7 @@ Accept wildcard characters: False
 ### -ScanScheduleQuickScanTime
 Specifies the time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
 The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleOffset** parameter.
+If you don’t specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleOffset** parameter.
 That parameter has a default time of two hours after midnight.
 
 ```yaml
@@ -991,7 +991,7 @@ Accept wildcard characters: False
 This setting is discontinued and replaced with -ScanScheduleOffset as of the January 2022 (version 4.18.2201.X) update to Microsoft Defender Antivirus.
 
 ### -ScanScheduleOffset
-Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or do not enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
+Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
 
 ```yaml
 Type: UInt32
@@ -1008,9 +1008,9 @@ Accept wildcard characters: False
 ### -ServiceHealthReportInterval
 This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. 
 
-If you do not configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour). 
+If you don’t configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour). 
 If you configure this setting to 0, no service health reports will be sent.
-The maximum value allowed to be set is 14400 minutes (ten days).
+The maximum value allowed to be set is 14400 minutes (10 days).
 
 ```yaml
 Type: UInt32
@@ -1064,7 +1064,7 @@ Specifies file-share sources for definition updates.
 Specify sources as a bracketed sequence of Universal Naming Convention (UNC) locations, separated by the pipeline symbol; for example, { \\\\Server01\Share01 | \\\\Server02\Share02 | \\\\Server03\Share03}.
 If you specify a value for this parameter, Windows Defender attempts to connect to the shares in the order that you specify.
 After Windows Defender updates a definition, it stops attempting to connect to shares on the list.
-If you do not specify a value for this parameter, the list is empty.
+If you don’t specify a value for this parameter, the list is empty.
 
 ```yaml
 Type: String
@@ -1080,7 +1080,7 @@ Accept wildcard characters: False
 
 ### -SignatureDisableUpdateOnStartupWithoutEngine
 Indicates whether to initiate definition updates even if no antimalware engine is present.
-If you specify a value of `$True` or do not specify a value, Windows Defender does not initiate definition updates on startup.
+If you specify a value of `$True` or don’t specify a value, Windows Defender doesn’t initiate definition updates on startup.
 If you specify a value of $False, and if no antimalware engine is present, Windows Defender initiates definition updates on startup.
 
 ```yaml
@@ -1097,7 +1097,7 @@ Accept wildcard characters: False
 
 ### -SignatureFallbackOrder
 Specifies the order in which to contact different definition update sources.
-Specify the types of update sources in the order in which you want Windows Defender to contact them, enclosed in braces and separated by the pipeline symbol; for example, { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }.
+Specify the types of update sources in the order in which you want Windows Defender to contact them, enclosed in braces and separated by the pipeline symbol; for example, `{ InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }`.
 The values that you can specify in the string are:
 
 - InternalDefinitionUpdateServer
@@ -1109,7 +1109,7 @@ MMPC refers to Microsoft Malware Protection Center.
 
 If you specify a value for this parameter, Windows Defender contacts the definition update sources in the specified order.
 After Windows Defender downloads definition updates from a source, it stops attempting to connect to other sources.
-If you do not specify a value for this parameter, Windows Defender contacts sources in the default order of { MicrosoftUpdateServer | MMPC }.
+If you don’t specify a value for this parameter, Windows Defender contacts sources in the default order of { MicrosoftUpdateServer | MMPC }.
 
 ```yaml
 Type: String
@@ -1156,7 +1156,7 @@ The acceptable values for this parameter are:
 - 8: Never 
 
 The default value is 8, never.
-If you specify a value of 8 or do not specify a value, Windows Defender checks for definition updates by using a default frequency.
+If you specify a value of 8 or don’t specify a value, Windows Defender checks for definition updates by using a default frequency.
 
 ```yaml
 Type: Day
@@ -1174,7 +1174,7 @@ Accept wildcard characters: False
 ### -SignatureScheduleTime
 Specifies the time of day, as the number of minutes after midnight, to check for definition updates.
 The time refers to the local time on the computer.
-If you do not specify a value for this parameter, Windows Defender checks for definition updates at the default time of 15 minutes before the scheduled scan time.
+If you don’t specify a value for this parameter, Windows Defender checks for definition updates at the default time of 15 minutes before the scheduled scan time.
 
 ```yaml
 Type: DateTime
@@ -1190,7 +1190,7 @@ Accept wildcard characters: False
 
 ### -SignatureUpdateCatchupInterval
 Specifies the number of days after which Windows Defender requires a catch-up definition update.
-If you do not specify a value for this parameter, Windows Defender requires a catch-up definition update after the default value of one day.
+If you don’t specify a value for this parameter, Windows Defender requires a catch-up definition update after the default value of one day.
 
 ```yaml
 Type: UInt32
@@ -1208,7 +1208,7 @@ Accept wildcard characters: False
 ### -SignatureUpdateInterval
 Specifies the interval, in hours, at which to check for definition updates.
 The acceptable values for this parameter are: integers from 1 through 24.
-If you do not specify a value for this parameter, Windows Defender checks at the default interval.
+If you don’t specify a value for this parameter, Windows Defender checks at the default interval.
 You can use this parameter instead of the **SignatureScheduleDay** parameter and **SignatureScheduleTime** parameter.
 
 ```yaml
@@ -1226,7 +1226,7 @@ Accept wildcard characters: False
 ### -SubmitSamplesConsent
 Specifies how Windows Defender checks for user consent for certain samples.
 If consent has previously been granted, Windows Defender submits the samples.
-Otherwise, if the **MAPSReporting** parameter does not have a value of Disabled, Windows Defender prompts the user for consent.
+Otherwise, if the **MAPSReporting** parameter doesn’t have a value of Disabled, Windows Defender prompts the user for consent.
 The acceptable values for this parameter are:
 
 - 0: Always prompt
@@ -1311,7 +1311,7 @@ Accept wildcard characters: False
 ### -UILockdown
 Indicates whether to disable UI lockdown mode.
 If you specify a value of $True, Windows Defender disables UI lockdown mode.
-If you specify `$False` or do not specify a value, UI lockdown mode is enabled.
+If you specify `$False` or don’t specify a value, UI lockdown mode is enabled.
 
 ```yaml
 Type: Boolean
@@ -1347,7 +1347,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

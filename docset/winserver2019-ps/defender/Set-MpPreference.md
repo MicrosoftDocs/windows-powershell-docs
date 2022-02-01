@@ -461,7 +461,7 @@ Accept wildcard characters: False
 
 ### -DisableScriptScanning
 Specifies whether to disable the scanning of scripts during malware scans.
-If you specify a value of `$False` or don’t specify a value, Windows Defender does not scan scripts.
+If you specify a value of `$False` or don’t specify a value, Windows Defender doesn’t scan scripts.
 
 ```yaml
 Type: Boolean
@@ -489,7 +489,7 @@ Current Channel (Broad): Devices will be offered updates only after the gradual 
 
 Critical- Time Delay: Devices will be offered updates with a 48-hour delay. Suggested for critical environments only.   
 
-If you disable or do not configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
+If you disable or don’t configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
 
 Supported OS versions: Windows 10 
 Note: This policy is available starting with platform version 4.18.2106.5 and later
@@ -539,7 +539,7 @@ Accept wildcard characters: False
 Specifies an array of processes, as paths to process images.
 This cmdlet excludes any files opened by the processes that you specify from scheduled and real-time scanning.
 Specifying this parameter excludes files opened by executable programs only.
-The cmdlet does not exclude the processes themselves.
+The cmdlet doesn’t exclude the processes themselves.
 To exclude a process, specify it by using the **ExclusionPath** parameter.
 
 ```yaml
@@ -617,16 +617,14 @@ Microsoft Active Protection Service is an online community that helps you choose
 The community also helps prevent the spread of new malicious software.
 The acceptable values for this parameter are:
 
-- 0: Disabled.
-Send no information to Microsoft.
-This is the default value. 
-- 1: Basic membership.
-Send basic information to Microsoft about detected software, including where the software came from, the actions that you apply or that apply automatically, and whether the actions succeeded. 
-- 2: Advanced membership.
-In addition to basic information, send more information to Microsoft about malicious software, spyware, and potentially unwanted software, including the location of the software, file names, how the software operates, and how it affects your computer.
+- 0: Disabled - Send no information to Microsoft. This value is the default value. 
+- 1: Basic membership. - Send basic information to Microsoft about detected software, including where the software came from, the actions that you apply or that apply automatically, and whether the actions succeeded. 
+- 2: Advanced membership. - In addition to basic information, send more information to Microsoft about malicious software, spyware, and potentially unwanted software, including the location of the software, file names, how the software operates, and how it affects your computer.
 
 If you join this community, you can choose to automatically send basic or additional information about detected software.
+
 Additional information helps Microsoft create new definitions.
+
 In some instances, personal information might unintentionally be sent to Microsoft.
 However, Microsoft will not use this information to identify you or contact you.
 

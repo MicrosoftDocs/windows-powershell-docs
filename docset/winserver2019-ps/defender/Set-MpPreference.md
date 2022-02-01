@@ -53,7 +53,7 @@ You can modify exclusion file name extensions, paths, or processes, and specify 
 The following table provides remediation action values for detected threats at low, medium, high, and severe alert levels.
 
 |Value |Action |
-|------|-------------------------------------------------------------------------|
+|------|-------------------|
 |1 |Clean the detected threat. |
 |2 |Quarantine the detected threat. |
 |3 |Remove the detected threat. |
@@ -66,6 +66,7 @@ The following table provides remediation action values for detected threats at l
 ## EXAMPLES
 
 ### Example 1: Schedule to check for definition updates everyday
+
 ```
 PS C:\> Set-MpPreference -SignatureScheduleDay Everyday
 ```
@@ -73,6 +74,7 @@ PS C:\> Set-MpPreference -SignatureScheduleDay Everyday
 This command configures preferences to check for definition updates every day.
 
 ### Example 2: Schedule a time of day to check for definition updates
+
 ```
 PS C:\> Set-MpPreference -SignatureScheduleTime 02:00:00
 ```
@@ -85,8 +87,11 @@ This command configures preferences to check for definition updates 120 minutes 
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 
 The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+
 You can continue to work in the session while the job completes. 
+
 To manage the job, use the `*-Job` cmdlets. 
+
 To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
@@ -105,7 +110,7 @@ Accept wildcard characters: False
 
 ### -CheckForSignaturesBeforeRunningScan
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
-If you specify a value of $True, Windows Defender checks for new definitions.
+If you specify a value of `$True`, Windows Defender checks for new definitions.
 If you specify `$False` or don’t specify a value, the scan begins with existing definitions.
 This value applies to scheduled scans, but it doesn’t affect scans that you start from the user interface or to scans that you start from the command line.
 
@@ -123,7 +128,9 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer. 
+
 Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
+
 The default is the current session on the local computer.
 
 ```yaml
@@ -248,7 +255,7 @@ Accept wildcard characters: False
 ### -DisableCatchupFullScan
 Indicates whether Windows Defender runs catch-up scans for scheduled full scans.
 A computer can miss a scheduled scan, usually because the computer is turned off at the scheduled time.
-If you specify a value of $False, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone signs in the computer. If you specify a value of $True, the computer doesn’t run catch-up scans for scheduled full scans.
+If you specify a value of `$False`, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone signs in the computer. If you specify a value of `$True`, the computer doesn’t run catch-up scans for scheduled full scans.
 
 ```yaml
 Type: Boolean
@@ -265,7 +272,7 @@ Accept wildcard characters: False
 ### -DisableCatchupQuickScan
 Indicates whether Windows Defender runs catch-up scans for scheduled quick scans.
 A computer can miss a scheduled scan, usually because the computer is off at the scheduled time.
-If you specify a value of $False, after the computer misses two scheduled quick scans, Windows Defender runs a catch-up scan the next time someone signs in the computer. If you specify a value of $True, the computer doesn’t run catch-up scans for scheduled quick scans.
+If you specify a value of `$False`, after the computer misses two scheduled quick scans, Windows Defender runs a catch-up scan the next time someone signs in the computer. If you specify a value of `$True`, the computer doesn’t run catch-up scans for scheduled quick scans.
 
 ```yaml
 Type: Boolean
@@ -294,7 +301,7 @@ Accept wildcard characters: False
 ### -DisableEmailScanning
 Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 Windows Defender supports several formats, including .pst, .dbx, .mbx, .mime, and .binhex.
-If you specify a value of `$False` or don’t specify a value, Windows Defender performs email scanning. If you specify a value of $True, Windows Defender doesn’t perform email scanning.
+If you specify a value of `$False` or don’t specify a value, Windows Defender performs email scanning. If you specify a value of `$True`, Windows Defender doesn’t perform email scanning.
 This configuration isn’t applicable to modern email clients.
 
 ```yaml
@@ -399,7 +406,7 @@ Accept wildcard characters: False
 
 ### -DisableRemovableDriveScanning
 Indicates whether to scan for malicious and unwanted software in removable drives, such as flash drives, during a full scan.
-If you specify a value of `$False` or don’t specify a value, Windows Defender scans removable drives during any type of scan. If you specify a value of $True, Windows Defender doesn’t scan removable drives during a full scan. Windows Defender can still scan removable drives during quick scans or custom scans.
+If you specify a value of `$False` or don’t specify a value, Windows Defender scans removable drives during any type of scan. If you specify a value of `$True`, Windows Defender doesn’t scan removable drives during a full scan. Windows Defender can still scan removable drives during quick scans or custom scans.
 
 ```yaml
 Type: Boolean
@@ -430,7 +437,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningMappedNetworkDrivesForFullScan
-Indicates whether to scan mapped network drives. If you specify a value of `$False` or don’t specify a value, Windows Defender scans mapped network drives. If you specify a value of $True, Windows Defender doesn’t scan mapped network drives.
+Indicates whether to scan mapped network drives. If you specify a value of `$False` or don’t specify a value, Windows Defender scans mapped network drives. If you specify a value of `$True`, Windows Defender doesn’t scan mapped network drives.
 
 ```yaml
 Type: Boolean
@@ -445,7 +452,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Indicates whether to scan for network files. If you specify a value of `$False` or don’t specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender doesn’t scan network files. We don’t recommend scanning network files.
+Indicates whether to scan for network files. If you specify a value of `$False` or don’t specify a value, Windows Defender scans network files. If you specify a value of `$True`, Windows Defender doesn’t scan network files. We don’t recommend scanning network files.
 
 ```yaml
 Type: Boolean
@@ -1061,7 +1068,7 @@ Accept wildcard characters: False
 
 ### -SignatureDefinitionUpdateFileSharesSources
 Specifies file-share sources for definition updates.
-Specify sources as a bracketed sequence of Universal Naming Convention (UNC) locations, separated by the pipeline symbol; for example, { \\\\Server01\Share01 | \\\\Server02\Share02 | \\\\Server03\Share03}.
+Specify sources as a bracketed sequence of Universal Naming Convention (UNC) locations, separated by the pipeline symbol; for example, `{ \\\\Server01\Share01 | \\\\Server02\Share02 | \\\\Server03\Share03}`.
 If you specify a value for this parameter, Windows Defender attempts to connect to the shares in the order that you specify.
 After Windows Defender updates a definition, it stops attempting to connect to shares on the list.
 If you don’t specify a value for this parameter, the list is empty.
@@ -1081,7 +1088,7 @@ Accept wildcard characters: False
 ### -SignatureDisableUpdateOnStartupWithoutEngine
 Indicates whether to initiate definition updates even if no antimalware engine is present.
 If you specify a value of `$True` or don’t specify a value, Windows Defender doesn’t initiate definition updates on startup.
-If you specify a value of $False, and if no antimalware engine is present, Windows Defender initiates definition updates on startup.
+If you specify a value of `$False`, and if no antimalware engine is present, Windows Defender initiates definition updates on startup.
 
 ```yaml
 Type: Boolean
@@ -1310,7 +1317,7 @@ Accept wildcard characters: False
 
 ### -UILockdown
 Indicates whether to disable UI lockdown mode.
-If you specify a value of $True, Windows Defender disables UI lockdown mode.
+If you specify a value of `$True`, Windows Defender disables UI lockdown mode.
 If you specify `$False` or don’t specify a value, UI lockdown mode is enabled.
 
 ```yaml

@@ -27,7 +27,7 @@ The **Disable-MMAgent** cmdlet disables any or all of the following features:
 - Page combining
 - Application prelaunching
 
-For more details on what these features do, see Enable-MMAgent.
+For more details on what these features do, see Enable-MMAgent. Note that not all features may be disabled on all editions of Windows.
 
 ## EXAMPLES
 

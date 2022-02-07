@@ -70,9 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -AttackSurfaceReductionOnlyExclusions
-Specifies the files and paths to exclude from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
+Specifies the files and paths to exclude from attack surface reduction (ASR) rules. Specifies the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, `C:\Windows` excludes all files in that directory. `C:\Windows\App.exe` excludes only that specific file in that specific folder.
 
-For more information about excluding files and folders from [ASR rules](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
+See the [ASR rules](/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules) topic for more information about excluding files and folders from ASR rules.
 
 ```yaml
 Type: String[]

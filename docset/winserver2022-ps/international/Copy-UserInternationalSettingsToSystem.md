@@ -26,6 +26,7 @@ Copies the current user's international settings (Windows Display language, Inpu
 * New user accounts
 
 **Important:** Note that this PowerShell cmdlet is only available for Windows 11 and later.
+
 This is a system setting. It can only be changed by a user who has Administrator permissions. Changes take effect after the computer is restarted.
 
 ## SYNTAX

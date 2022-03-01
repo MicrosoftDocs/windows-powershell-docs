@@ -1,5 +1,5 @@
 ---
-description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
+description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.       
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
 ms.date: 01/28/2022

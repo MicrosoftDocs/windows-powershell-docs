@@ -453,6 +453,7 @@ Accept wildcard characters: False
 
 ### -DisableDnsParsing
 Specifies whether to disable inspection of DNS traffic that occurs over a UDP channel.
+Network Protection inspects DNS traffic that occurs over a TCP channel, to provide metadata for Anti-malware Behavior Monitoring or to allow for DNS sink holing if the "-EnableDnsSinkhole" configuration is set. This can be disabled by setting this value to "$true".
 
 ```yaml
 Type: Boolean
@@ -701,8 +702,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableTlsParsing
-Specifies whether to disable inspection of TLS traffic, also known as HTTPS.
-By default, Network Protection inspects TLS traffic.
+Specifies whether to disable inspection of TLS traffic.
+Network Protection inspects TLS traffic (also known as HTTPS traffic) to see if a connection is being made to a malicious website, and to provide metadata to Behavior Monitoring. TLS connections to malicious websites can also be blocked if "-EnableNetworkProtection" is set to enabled. HTTP inspection can be disabled by setting this value to "$true". By default, Network Protection inspects TLS traffic.
 
 ```yaml
 Type: Boolean
@@ -732,7 +733,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDnsSinkhole
-Specifies whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks. 
+Specifies whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks.
+Network Protection can inspect the DNS traffic of a machine and, in conjunction with behavior monitoring, detect and sink hole DNS exfiltration attempts, and other DNS based malicious attacks. Set this configuration to "$true" to enable this feature.
 
 ```yaml
 Type: Boolean

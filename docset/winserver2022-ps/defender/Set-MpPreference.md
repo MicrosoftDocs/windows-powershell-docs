@@ -2,7 +2,7 @@
 description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 01/28/2022
+ms.date: 03/02/2022
 online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -453,6 +453,7 @@ Accept wildcard characters: False
 
 ### -DisableDnsParsing
 Specifies whether to disable inspection of DNS traffic that occurs over a UDP channel.
+Network protection inspects DNS traffic that occurs over a TCP channel to provide metadata for anti-malware behavior monitoring or to allow for DNS sink holing if the "-EnableDnsSinkhole" configuration is set. This can be disabled by setting this value to "$true".
 
 ```yaml
 Type: Boolean
@@ -701,8 +702,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableTlsParsing
-Specifies whether to disable inspection of TLS traffic, also known as HTTPS.
-By default, Network Protection inspects TLS traffic.
+Specifies whether to disable inspection of TLS traffic.
+Network protection inspects TLS traffic (also known as HTTPS traffic) to see if a connection is being made to a malicious website, and to provide metadata to behavior monitoring. TLS connections to malicious websites can also be blocked if "-EnableNetworkProtection" is set to enabled. HTTP inspection can be disabled by setting this value to "$true". By default, network protection inspects TLS traffic.
 
 ```yaml
 Type: Boolean
@@ -732,7 +733,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDnsSinkhole
-Specifies whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks. 
+Specifies whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks.
+Network protection can inspect the DNS traffic of a machine and, in conjunction with behavior monitoring, detect and sink hole DNS exfiltration attempts, and other DNS based malicious attacks. Set this configuration to "$true" to enable this feature.
 
 ```yaml
 Type: Boolean
@@ -793,7 +795,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNetworkProtection
-Specifies how the Network Protection Service handles web-based malicious threats, including phishing and malware.
+Specifies how the network protection service handles web-based malicious threats, including phishing and malware.
 Possible values are Disabled, Enabled, and AuditMode.
 
 ```yaml

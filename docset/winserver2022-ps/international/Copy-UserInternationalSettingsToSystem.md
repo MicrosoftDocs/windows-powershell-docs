@@ -11,11 +11,11 @@ ms.date: 09/08/2021
 ms.prod: w11
 ms.technology:
 ms.topic: reference
-online version: 
-schema: 2.1.0
+online version:
+schema: 2.0.0
 title: Copy-UserInternationalSettingsToSystem
 ms.reviewer:
-ms.assetid: 
+ms.assetid:
 ---
 
 # Copy-UserInternationalSettingsToSystem

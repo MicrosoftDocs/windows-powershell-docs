@@ -65,7 +65,7 @@ New-MpPerformanceRecording -RecordTo C:\LocalPathOnServer02\trace.etl -Session $
 
 The above command collects a performance recording on Server02 (as specified by argument $s of parameter Session) and saves it to the specified path: **C:\LocalPathOnServer02\trace.etl** on Server02.
 
-## PARAMETERS -New-MpPerformanceRecording
+## PARAMETERS
 
 ### -RecordTo
 

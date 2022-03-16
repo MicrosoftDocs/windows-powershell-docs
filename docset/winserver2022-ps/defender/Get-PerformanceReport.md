@@ -5,7 +5,8 @@ Module Name: Defender
 ms.date: 03/20/2022
 online version: 
 schema: 2.0.0
-title: New-MpPerformanceRecording
+title: Get-MpPerformanceReport
+
 ---
 
 # Get-MpPerformanceReport

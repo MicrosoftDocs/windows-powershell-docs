@@ -1,7 +1,7 @@
 ﻿---
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 Module Name: appx
-online version: https://docs.microsoft.com/powershell/module/appx/move-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/appx/remove-appsharedpackagecontainer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

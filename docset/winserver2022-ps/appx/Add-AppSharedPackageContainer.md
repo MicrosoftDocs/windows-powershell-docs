@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceApplicationShutdown
-Closes all packages currently running in the Shared Package Container
+Closes all packages currently running in the Shared Package Container.
 
 ```yaml
 Type: SwitchParameter

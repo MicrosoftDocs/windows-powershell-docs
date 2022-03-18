@@ -65,7 +65,7 @@ Accept wildcard characters: False
 
 ### -Merge
 Merges a new container's definition into an existing container
-definition of the same name for target user(s)
+definition of the same name for target user(s).
 
 
 ```yaml

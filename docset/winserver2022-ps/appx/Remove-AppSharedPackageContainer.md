@@ -17,7 +17,7 @@ Remove-AppSharedPackageContainer [-Name] <String> [-ForceApplicationShutdown] [-
 ```
 
 ## DESCRIPTION 
-The Remove-AppSharedPackageContainer cmdlet removes the shared package container definiton for the particular user.
+The cmdlet removes the shared package container definition for the particular user.
 
 ## EXAMPLES
 

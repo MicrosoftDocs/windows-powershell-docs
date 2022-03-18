@@ -663,7 +663,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-HpcTask](./Add-HpcTask.md)
+[Add-HpcTask](Add-HpcTask.md)
 
 [Export-HpcTask](./Export-HpcTask.md)
 

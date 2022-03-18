@@ -31,7 +31,7 @@ This command removes the shared package container definiton with the name Contos
 ## PARAMETERS
 
 ### -AllUsers
-Remove matching packages that are deployed to any user
+Remove matching packages that are deployed to any user.
 
 ```yaml
 Type: SwitchParameter

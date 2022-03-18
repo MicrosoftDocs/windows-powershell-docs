@@ -33,7 +33,7 @@ This command deploys the definition described in the ContosoTestContainer file.
 
 ### -Force
 Replaces an existing container of the same name with the newly created
-container's definition for the target user(s)
+container's definition for the target user(s).
 
 
 ```yaml

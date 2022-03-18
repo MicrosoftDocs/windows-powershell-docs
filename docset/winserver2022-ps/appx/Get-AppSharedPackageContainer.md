@@ -17,7 +17,7 @@ Get-AppSharedPackageContainer [[-Name] <String>] [[-Id] <String>] [-AllUsers] [<
 ```
 
 ## DESCRIPTION
-The Get-AppSharedPackageContainer cmdlet shows information about any shared package container.
+The cmdlet shows information about any shared package container.
 In particular, it will show what packages are inside the shared package container.
 
 ## EXAMPLES

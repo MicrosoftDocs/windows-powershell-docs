@@ -34,15 +34,14 @@ PackageFamilyNames : {Contoso.SpellCheckPlugin.1.0.0.0_7pneu3d8sswe, Notepad++.2
 Name               : ContosoTestContainer
 Id                 : ContosoTestContainer_2
 PackageFamilyNames : {Contoso.SpellCheckPlugin2.1.0.0.0_7pneu3d8sswe, Notepad++.2.0.0.1_ohjis898f1}
-
 ```
 
-This command shows the packages in any shared package container which has a prefix of Contoso
+This command shows the packages in any shared package container that has a prefix of Contoso.
 
 ## PARAMETERS
 
 ### -AllUsers
-Get matching packages that are either deployed to any user or are provisioned to the machine
+Get matching packages that are either deployed to any user or are provisioned to the machine.
 
 ```yaml
 Type: SwitchParameter

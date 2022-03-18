@@ -26,7 +26,7 @@ The cmdlet removes the shared package container definition for the particular us
 PS C:\> Remove-AppSharedPackageContainer -Name ContosoTestContainer
 ```
 
-This command removes the shared package container definiton with the name ContosoTestContainer
+This command removes the shared package container definition with the name ContosoTestContainer.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceApplicationShutdown
-Closes all packages in the Shared Package Container
+Closes all packages in the Shared Package Container.
 
 ```yaml
 Type: SwitchParameter

@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the container
+The name of the container.
 
 ```yaml
 Type: String

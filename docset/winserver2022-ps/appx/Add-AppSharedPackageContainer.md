@@ -27,7 +27,7 @@ The Add-AppSharedPackageContainer cmdlet deploys the shared package container de
 PS C:\> Add-AppSharedPackageContainer -Path C:\MyFolder\ContosoTestContainer.xml
 ```
 
-This command deploys the definition described in the ContosoTestContainer file
+This command deploys the definition described in the ContosoTestContainer file.
 
 ## PARAMETERS
 

@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Id of the container. Can be acquired by running Get-AppSharedPackageContainer
+Id of the container. Can be acquired by running `Get-AppSharedPackageContainer`.
 
 ```yaml
 Type: String

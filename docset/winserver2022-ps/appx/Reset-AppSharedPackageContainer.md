@@ -17,7 +17,7 @@ Reset-AppSharedPackageContainer [-Name] <String> [-Force] [-WhatIf] [-Confirm] [
 ```
 
 ## DESCRIPTION
-The Reset-AppSharedPackageContainer cmdlet destroys all the application data of the container,
+The cmdlet destroys all the application data of the container,
 including the virtual files and registry keys.
 
 ## EXAMPLES

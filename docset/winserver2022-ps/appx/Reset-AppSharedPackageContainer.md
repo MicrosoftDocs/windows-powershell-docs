@@ -27,7 +27,7 @@ including the virtual files and registry keys.
 PS C:\> Reset-AppSharedPackageContainer -Name ContosoTestContainer
 ```
 
-This command destroys all the application data of the shared package container ContosoTestContainer
+This command clears all the application data of the shared package container ContosoTestContainer.
 
 ## PARAMETERS
 

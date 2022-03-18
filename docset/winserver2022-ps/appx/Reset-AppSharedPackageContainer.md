@@ -32,7 +32,7 @@ This command destroys all the application data of the shared package container C
 ## PARAMETERS
 
 ### -Force
-Skips asking for confirmation
+Skips asking for confirmation.
 
 ```yaml
 Type: SwitchParameter

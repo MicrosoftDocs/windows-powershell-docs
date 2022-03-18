@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Path to the XML definition file
+Path to the XML definition file.
 
 ```yaml
 Type: String

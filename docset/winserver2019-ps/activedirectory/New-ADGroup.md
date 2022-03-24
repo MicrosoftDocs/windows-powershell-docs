@@ -28,7 +28,7 @@ Many object properties are defined by setting cmdlet parameters.
 Properties that cannot be set by cmdlet parameters can be set using the **OtherAttributes** parameter.
 
 The **Name** and **GroupScope** parameters specify the name and scope of the group and are required to create a new group.
-You can define the new group as a security or distribution group by setting the **GroupType** parameter.
+You can define the new group as a security or distribution group by setting the **GroupCategory** parameter.
 The **Path** parameter specifies the container or organizational unit (OU) for the group.
 
 The following methods explain different ways to create an object by using this cmdlet.

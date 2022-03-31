@@ -17,8 +17,8 @@ Adds an app package (.appx) that will install for each new user to a Windows ima
 
 ### Offline
 ```
-Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
- [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] -Path <String> [-WindowsDirectory <String>]
+Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>] 
+ [-OptionalPackagePath <String[]>] [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] -Path <String> [-WindowsDirectory <String>]
  [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>] [-Regions <String>]
  [<CommonParameters>]
 ```
@@ -26,7 +26,7 @@ Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-Depe
 ### Online
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
- [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] [-Online] [-WindowsDirectory <String>]
+  [-OptionalPackagePath <String[]>] [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] [-Online] [-WindowsDirectory <String>]
  [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>] [-Regions <String>]
  [<CommonParameters>]
 ```
@@ -179,6 +179,23 @@ Parameter Sets: Online
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OptionalPackagePath
+Specifies the path to an optional package that will also be provisioned. For more information on
+optional packages, see
+[Optional packages and related set authoring](/windows/msix/package/optional-packages).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

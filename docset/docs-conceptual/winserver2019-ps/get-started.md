@@ -98,7 +98,7 @@ computer. For more information, see
 | NFS | [Network File System](/powershell/module/nfs) |
 | NPS | [Network Policy Server](/powershell/module/nps) |
 | PCSVDevice | [Physical Computer System View device](/powershell/module/pcsvdevice) |
-| PKIClient | [Public Key Infrastructure](/powershell/module/pkiclient) |
+| PKIClient | [Public Key Infrastructure](/powershell/module/pki) |
 | PlatformIdentifier | [Platform Identifier](/powershell/module/platformidentifier) |
 | PnpDevice | [Plug and Play](/powershell/module/pnpdevice) |
 | PrintManagement | [Print management](/powershell/module/printmanagement) |

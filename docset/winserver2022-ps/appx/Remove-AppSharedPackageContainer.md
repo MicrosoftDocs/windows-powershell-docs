@@ -13,7 +13,7 @@ Removes the shared package container.
 ## SYNTAX
 
 ```
-Remove-AppSharedPackageContainer [-Name] <String> [-ForceApplicationShutdown] [<CommonParameters>]
+Remove-AppSharedPackageContainer [-Name] <String> [-ForceApplicationShutdown] [-AllUsers] [<CommonParameters>]
 ```
 
 ## DESCRIPTION 
@@ -29,6 +29,21 @@ PS C:\> Remove-AppSharedPackageContainer -Name ContosoTestContainer
 This command removes the shared package container definition with the name ContosoTestContainer.
 
 ## PARAMETERS
+
+### -AllUsers
+Remove matching packages that are deployed to any user.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ForceApplicationShutdown
 Closes all packages in the Shared Package Container.

@@ -31,7 +31,7 @@ This command removes the shared package container definition with the name Conto
 ## PARAMETERS
 
 ### -AllUsers
-Remove matching packages that are deployed to any user.
+Unsupported. Will result in "A parameter cannot be found that matches parameter name" error.
 
 ```yaml
 Type: SwitchParameter

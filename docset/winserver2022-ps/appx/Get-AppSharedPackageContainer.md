@@ -13,7 +13,7 @@ Gets information about the shared package container.
 ## SYNTAX
 
 ```
-Get-AppSharedPackageContainer [[-Name] <String>] [[-Id] <String>] [<CommonParameters>]
+Get-AppSharedPackageContainer [[-Name] <String>] [[-Id] <String>] [-AllUsers] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +39,21 @@ PackageFamilyNames : {Contoso.SpellCheckPlugin2.1.0.0.0_7pneu3d8sswe, Notepad++.
 This command shows the packages in any shared package container that has a prefix of Contoso.
 
 ## PARAMETERS
+
+### -AllUsers
+Get matching packages that are either deployed to any user or are provisioned to the machine.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Id
 Id of the container. Can be acquired by running `Get-AppSharedPackageContainer`.

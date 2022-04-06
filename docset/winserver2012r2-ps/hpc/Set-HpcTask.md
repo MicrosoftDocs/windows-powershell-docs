@@ -665,8 +665,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Add-HpcTask](Add-HpcTask.md)
 
-[Export-HpcTask](./Export-HpcTask.md)
+[Export-HpcTask](Export-HpcTask.md)
 
-[Get-HpcTask](./Get-HpcTask.md)
+[Get-HpcTask](Get-HpcTask.md)
 
-[Stop-HpcTask](./Stop-HpcTask.md)
+[Stop-HpcTask](Stop-HpcTask.md)

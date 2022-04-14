@@ -35,7 +35,7 @@ You must use an Administrator account to disable a device.
 
 ### Example 1: Disable a device
 ```
-PS C:\>Disable-PnpDevice -InstanceId 'USB\VID_5986&;PID_0266&;MI_00\7&;1E5D3568&;0000'
+PS C:\>Disable-PnpDevice -InstanceId 'USB\VID_5986&PID_0266&MI_00\7&1E5D3568&0000'
 ```
 
 This command disables a device that has the specified instance ID.

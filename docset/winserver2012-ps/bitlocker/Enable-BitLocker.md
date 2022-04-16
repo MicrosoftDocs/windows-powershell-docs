@@ -554,7 +554,7 @@ Accept wildcard characters: False
 
 ### -UsedSpaceOnly
 
-Indicates that BitLocker does not encrypt disk space which contains unused data.
+Indicates that BitLocker does not encrypt disk space that contains unused data.
 
 ```yaml
 Type: SwitchParameter

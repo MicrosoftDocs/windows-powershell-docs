@@ -161,7 +161,7 @@ It is common practice to add a recovery password for an operating system volume 
 **Backup-BitLockerKeyProtector** cmdlet, and then enable BitLocker on that volume. This procedure
 ensures that you have a recovery option.
 
-For an overview of BitLocker, see "[BitLocker Drive Encryption Overview][2]" on Microsoft Docs.
+For an overview of BitLocker, see the [BitLocker Drive Encryption Overview][2].
 
 ## EXAMPLES
 

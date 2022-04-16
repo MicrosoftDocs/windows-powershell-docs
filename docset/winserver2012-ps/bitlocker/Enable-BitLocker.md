@@ -152,7 +152,7 @@ encryption in process, it takes no action. If you use the cmdlet on a drive that
 paused, it resumes encryption on the volume.
 
 By default, this cmdlet encrypts the entire drive. If you use the *UsedSpaceOnly* parameter, it only
-encrypts the used space on the disk. This option can significant reduce encryption time.
+encrypts the used space on the disk. This option can significantly reduce encryption time.
 
 It is common practice to add a recovery password for an operating system volume using the
 **Add-BitLockerKeyProtector** cmdlet, save the recovery password using the

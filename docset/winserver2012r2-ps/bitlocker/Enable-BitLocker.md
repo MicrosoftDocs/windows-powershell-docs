@@ -389,8 +389,10 @@ Accept wildcard characters: False
 ### -RecoveryPassword
 
 Specifies a recovery password.
-If you do not specify this parameter, but you do include the *RecoveryPasswordProtector* parameter, the cmdlet creates a random password.
+If you do not specify this parameter but you include the *RecoveryPasswordProtector* parameter, the cmdlet creates a random password.
+
 You can enter a 48-digit password.
+
 The password specified or created acts as a protector for the volume encryption key.
 
 ```yaml

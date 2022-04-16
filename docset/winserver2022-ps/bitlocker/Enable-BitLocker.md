@@ -149,7 +149,7 @@ If you use startup key or recovery key as part of your key protector, provide a 
 key. This cmdlet stores the name of the file that contains the key in the **KeyFileName** field of
 the **KeyProtector** field in the BitLocker volume object.
 
-If you use the **Enable-BitLocker** cmdlet on an encrypted volume or on a volume that with
+If you use the **Enable-BitLocker** cmdlet on an encrypted volume or on a volume with
 encryption in process, it takes no action. If you use the cmdlet on a drive that has encryption
 paused, it resumes encryption on the volume.
 

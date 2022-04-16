@@ -137,8 +137,8 @@ and still maintain confidentiality of passwords.
 We strongly recommend specifying the encryption method. By default, BitLocker uses XTS-AES-128. You
 can opt XTS-AES-256 for stronger security. However, if you are encrypting a removable media and
 intend to use it on Windows 8.1 or Windows Server 2012 R2, you must opt either AES-128 or AES-256
-for backward compatibility. You may request hardware encryption but Microsoft strongly advices
-against it. For further guidance, see the "[ADV180028 Security Advisory][1]".
+for backward compatibility. You may request hardware encryption but we strongly advise
+against it. For further guidance, see the [ADV180028 Security Advisory][1].
 
 This cmdlet returns a BitLocker volume object. If you choose recovery password as your key protector
 but do not specify a 48-digit recovery password, this cmdlet generates a random one for you, and

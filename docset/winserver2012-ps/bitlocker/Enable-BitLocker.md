@@ -136,7 +136,7 @@ and still maintain confidentiality of passwords.
 
 You may optionally select an encryption method. By default, BitLocker uses AES-128 but you can opt
 AES-256 for stronger security. (Diffuser is not supported.) You may request hardware encryption but
-Microsoft strongly advices against it. For further guidance, see the "[ADV180028 Security Advisory][1]".
+Microsoft strongly advices against it. For further guidance, see the [ADV180028 Security Advisory][1].
 
 This cmdlet returns a BitLocker volume object. If you choose recovery password as your key protector
 but do not specify a 48-digit recovery password, this cmdlet generates a random one for you, and

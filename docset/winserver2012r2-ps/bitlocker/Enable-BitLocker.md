@@ -254,13 +254,16 @@ Accept wildcard characters: False
 
 ### -EncryptionMethod
 
-Specifies an encryption method for the encrypted drive.
+Specifies an encryption method for the encrypted drive. The accepted values are "Aes128", "Aes256",
+and "Hardware". The latter has been deprecated and doesn't appear in the next versions of Windows.
+We strongly advise not enabling hardware encryption. For further guidance, see the
+[ADV180028 Security Advisory][1].
 
 ```yaml
 Type: BitLockerVolumeEncryptionMethodOnEnable
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Aes128, Aes256
+Accepted values: Aes128, Aes256, Hardware
 
 Required: False
 Position: Named
@@ -271,7 +274,8 @@ Accept wildcard characters: False
 
 ### -HardwareEncryption
 
-Indicates that the volume uses hardware encryption.
+Indicates that the volume uses hardware encryption. We strongly advise against hardware encryption.
+For further guidance, see the [ADV180028 Security Advisory][1].
 
 ```yaml
 Type: SwitchParameter
@@ -389,7 +393,7 @@ Accept wildcard characters: False
 ### -RecoveryPassword
 
 Specifies a recovery password.
-If you do not specify this parameter but you include the *RecoveryPasswordProtector* parameter, the cmdlet creates a random password.
+If you do not specify this parameter but include the *RecoveryPasswordProtector* parameter, the cmdlet creates a random password.
 
 You can enter a 48-digit password.
 
@@ -555,7 +559,7 @@ Accept wildcard characters: False
 
 ### -UsedSpaceOnly
 
-Indicates that BitLocker does not encrypt disk space which contains unused data.
+Indicates that BitLocker does not encrypt unallocated disk space.
 
 ```yaml
 Type: SwitchParameter

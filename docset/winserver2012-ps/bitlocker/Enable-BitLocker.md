@@ -136,7 +136,7 @@ and still maintain confidentiality of passwords.
 
 You may optionally select an encryption method. By default, BitLocker uses AES-128 but you can opt
 AES-256 for stronger security. (Diffuser is not supported.) You may request hardware encryption but
-Microsoft strongly advices against it. For further guidance, see the [ADV180028 Security Advisory][1].
+we strongly advise against it. For further guidance, see the [ADV180028 Security Advisory][1].
 
 This cmdlet returns a BitLocker volume object. If you choose recovery password as your key protector
 but do not specify a 48-digit recovery password, this cmdlet generates a random one for you, and
@@ -147,7 +147,7 @@ If you use startup key or recovery key as part of your key protector, provide a 
 key. This cmdlet stores the name of the file that contains the key in the **KeyFileName** field of
 the **KeyProtector** field in the BitLocker volume object.
 
-If you use the **Enable-BitLocker** cmdlet on an encrypted volume or on a volume that with
+If you use the **Enable-BitLocker** cmdlet on an encrypted volume or on a volume with
 encryption in process, it takes no action. If you use the cmdlet on a drive that has encryption
 paused, it resumes encryption on the volume.
 
@@ -254,13 +254,16 @@ Accept wildcard characters: False
 
 ### -EncryptionMethod
 
-Specifies an encryption method for the encrypted drive.
+Specifies an encryption method for the encrypted drive. The accepted values are "Aes128", "Aes256",
+and "Hardware". The latter has been deprecated and doesn't appear in the next versions of Windows.
+We strongly advise not enabling hardware encryption. For further guidance, see the
+[ADV180028 Security Advisory][1].
 
 ```yaml
 Type: BitLockerVolumeEncryptionMethodOnEnable
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Aes128, Aes256
+Accepted values: Aes128, Aes256, Hardware
 
 Required: False
 Position: Named
@@ -271,7 +274,8 @@ Accept wildcard characters: False
 
 ### -HardwareEncryption
 
-Indicates that the volume uses hardware encryption.
+Indicates that the volume uses hardware encryption. We strongly advise against hardware encryption.
+For further guidance, see the [ADV180028 Security Advisory][1].
 
 ```yaml
 Type: SwitchParameter
@@ -392,6 +396,7 @@ Specifies a recovery password.
 If you do not specify this parameter but include the *RecoveryPasswordProtector* parameter, the cmdlet creates a random password.
 
 You can enter a 48-digit password.
+
 The password specified or created acts as a protector for the volume encryption key.
 
 ```yaml
@@ -554,7 +559,7 @@ Accept wildcard characters: False
 
 ### -UsedSpaceOnly
 
-Indicates that BitLocker does not encrypt disk space that contains unused data.
+Indicates that BitLocker does not encrypt unallocated disk space.
 
 ```yaml
 Type: SwitchParameter

@@ -256,7 +256,8 @@ Accept wildcard characters: False
 
 ### -EncryptionMethod
 
-Specifies an encryption method for the encrypted drive.
+Indicates that the volume uses hardware encryption. We strongly advise against hardware encryption.
+For further guidance, see the [ADV180028 Security Advisory][1].
 
 ```yaml
 Type: BitLockerVolumeEncryptionMethodOnEnable
@@ -555,7 +556,7 @@ Accept wildcard characters: False
 
 ### -UsedSpaceOnly
 
-Indicates that BitLocker does not encrypt disk space which contains unused data.
+Indicates that BitLocker does not encrypt unallocated disk space.
 
 ```yaml
 Type: SwitchParameter

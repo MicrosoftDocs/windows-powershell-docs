@@ -161,7 +161,7 @@ It is common practice to add a recovery password for an operating system volume 
 **Backup-BitLockerKeyProtector** cmdlet, and then enable BitLocker on that volume. This procedure
 ensures that you have a recovery option.
 
-For an overview of BitLocker, see the [BitLocker Drive Encryption Overview][2]".
+For an overview of BitLocker, see the [BitLocker Drive Encryption Overview][2].
 
 ## EXAMPLES
 
@@ -273,7 +273,8 @@ Accept wildcard characters: False
 
 ### -HardwareEncryption
 
-Indicates that the volume uses hardware encryption.
+Indicates that the volume uses hardware encryption. We strongly advise against hardware encryption.
+For further guidance, see the [ADV180028 Security Advisory][1].
 
 ```yaml
 Type: SwitchParameter
@@ -555,7 +556,7 @@ Accept wildcard characters: False
 
 ### -UsedSpaceOnly
 
-Indicates that BitLocker does not encrypt disk space which contains unused data.
+Indicates that BitLocker does not encrypt unallocated disk space.
 
 ```yaml
 Type: SwitchParameter

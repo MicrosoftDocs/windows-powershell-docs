@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Use this article to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 01/24/2022
+ms.date: 02/01/2022
 online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -42,7 +42,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
  [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>][-CloudBlockLevel <CloudBlockLevelType>][-ServiceHealthReportInterval <UInt32>]
-```
+ ```
 
 ## DESCRIPTION
 The **Set-MpPreference** cmdlet configures preferences for Windows Defender scans and updates.
@@ -53,19 +53,20 @@ You can modify exclusion file name extensions, paths, or processes, and specify 
 The following table provides remediation action values for detected threats at low, medium, high, and severe alert levels.
 
 |Value |Action |
-|------|-------------------------------------------------------------------------|
+|------|-------------------|
 |1 |Clean the detected threat. |
 |2 |Quarantine the detected threat. |
 |3 |Remove the detected threat. |
 |6 |Allow the detected threat. |
 |8 |Allow the user to determine the action to take with the detected threat. |
-|9 |Do not take any action. |
+|9 |Don’t take any action. |
 |10 |Block the detected threat. |
-|0 | (NULL)|Apply action based on the Security Intelligence Update (SIU). This is the default value. |
+|0 | (NULL)|Apply action based on the Security Intelligence Update (SIU). This value is the default value. |
 
 ## EXAMPLES
 
 ### Example 1: Schedule to check for definition updates everyday
+
 ```
 PS C:\> Set-MpPreference -SignatureScheduleDay Everyday
 ```
@@ -73,11 +74,12 @@ PS C:\> Set-MpPreference -SignatureScheduleDay Everyday
 This command configures preferences to check for definition updates every day.
 
 ### Example 2: Schedule a time of day to check for definition updates
+
 ```
-PS C:\> Set-MpPreference -SignatureScheduleTime 120
+PS C:\> Set-MpPreference -SignatureScheduleTime 02:00:00
 ```
 
-This command configures preferences to check for definition updates 120 minutes after midnight on days when it is scheduled to check.
+This command configures preferences to check for definition updates 120 minutes after midnight on days when it’s scheduled to check.
 
 ## PARAMETERS
 
@@ -85,8 +87,11 @@ This command configures preferences to check for definition updates 120 minutes 
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 
 The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+
 You can continue to work in the session while the job completes. 
+
 To manage the job, use the `*-Job` cmdlets. 
+
 To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
@@ -105,9 +110,9 @@ Accept wildcard characters: False
 
 ### -CheckForSignaturesBeforeRunningScan
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
-If you specify a value of $True, Windows Defender checks for new definitions.
-If you specify $False or do not specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans, but it does not affect scans that you start from the user interface or to scans that you start from the command line.
+If you specify a value of `$True`, Windows Defender checks for new definitions.
+If you specify `$False` or don’t specify a value, the scan begins with existing definitions.
+This value applies to scheduled scans, but it doesn’t affect scans that you start from the user interface or to scans that you start from the command line.
 
 ```yaml
 Type: Boolean
@@ -123,7 +128,9 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer. 
+
 Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
+
 The default is the current session on the local computer.
 
 ```yaml
@@ -141,11 +148,11 @@ Accept wildcard characters: False
 ### -CloudBlockLevel
 Configure this policy to specify the level of cloud protection to your endpoint. 
 
-Default (0): provides strong detection without increasing risk of detecting legitamate files
-Moderate (1): provides moderate detection only for high confidence detections
-High (2): applies a strong level of detection while optimizing client performance
-HighPlus (4): applies extra protection measures (might affect client peformance and increase your chance of false positives)
-ZeroTolerance (6): blocks all unknown executables
+- Default (0): provides strong detection without increasing risk of detecting legitimate files
+- Moderate (1): provides moderate detection only for high confidence detections
+- High (2): applies a strong level of detection while optimizing client performance
+- HighPlus (4): applies extra protection measures (might affect client performance and increase your chance of false positives)
+- ZeroTolerance (6): blocks all unknown executables
 
 ```yaml
 Type: CloudBlockLevelType
@@ -164,7 +171,7 @@ Current Channel (Staged): Devices will be offered updates after the release cycl
 
 Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). 
 
-If you disable or do not configure this policy, the device will stay up to date automatically during the daily release cycle. Suitable for most devices. 
+If you disable or don’t configure this policy, the device will stay up to date automatically during the daily release cycle. Suitable for most devices. 
 
 Supported OS versions: Windows 10 
 
@@ -182,7 +189,7 @@ Accept wildcard characters: False
 
 ### -DisableArchiveScanning
 Indicates whether to scan archive files, such as .zip and .cab files, for malicious and unwanted software.
-If you specify a value of $False or do not specify a value, Windows Defender scans archive files.
+If you specify a value of `$False` or don’t specify a value, Windows Defender scans archive files.
 However, archives are always scanned during directed scans.
 
 ```yaml
@@ -199,7 +206,7 @@ Accept wildcard characters: False
 
 ### -DisableAutoExclusions
 Indicates whether to disable the Automatic Exclusions feature for the server.
-If you specify a value of $False or do not specify a value, Windows Defender enables the Automatic Exclusions feature for the server.
+If you specify a value of `$False` or don’t specify a value, Windows Defender enables the Automatic Exclusions feature for the server.
 
 ```yaml
 Type: Boolean
@@ -215,7 +222,7 @@ Accept wildcard characters: False
 
 ### -DisableBehaviorMonitoring
 Indicates whether to enable behavior monitoring.
-If you specify a value of $False or do not specify a value, Windows Defender enables behavior monitoring.
+If you specify a value of `$False` or don’t specify a value, Windows Defender enables behavior monitoring.
 
 ```yaml
 Type: Boolean
@@ -231,7 +238,7 @@ Accept wildcard characters: False
 
 ### -DisableBlockAtFirstSeen
 Indicates whether to enable block at first seen.
-If you specify a value of $False or do not specify a value, Windows Defender enables block at first seen.
+If you specify a value of `$False` or don’t specify a value, Windows Defender enables block at first seen.
 
 ```yaml
 Type: Boolean
@@ -248,7 +255,7 @@ Accept wildcard characters: False
 ### -DisableCatchupFullScan
 Indicates whether Windows Defender runs catch-up scans for scheduled full scans.
 A computer can miss a scheduled scan, usually because the computer is turned off at the scheduled time.
-If you specify a value of $False, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone logs on to the computer. If you specify a value of $True, the computer does not run catch-up scans for scheduled full scans.
+If you specify a value of `$False`, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone signs in the computer. If you specify a value of `$True`, the computer doesn’t run catch-up scans for scheduled full scans.
 
 ```yaml
 Type: Boolean
@@ -265,7 +272,7 @@ Accept wildcard characters: False
 ### -DisableCatchupQuickScan
 Indicates whether Windows Defender runs catch-up scans for scheduled quick scans.
 A computer can miss a scheduled scan, usually because the computer is off at the scheduled time.
-If you specify a value of $False, after the computer misses two scheduled quick scans, Windows Defender runs a catch-up scan the next time someone logs onto the computer. If you specify a value of $True, the computer does not run catch-up scans for scheduled quick scans.
+If you specify a value of `$False`, after the computer misses two scheduled quick scans, Windows Defender runs a catch-up scan the next time someone signs in the computer. If you specify a value of `$True`, the computer doesn’t run catch-up scans for scheduled quick scans.
 
 ```yaml
 Type: Boolean
@@ -280,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCpuThrottleOnIdleScans
-Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This parameter is enabled by default, thus ensuring that the CPU will not be throttled for scheduled scans performed when the device is idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag does not have any impact and normal throttling will occur.
+Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This parameter is enabled by default, thus ensuring that the CPU won’t be throttled for scheduled scans performed when the device is idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag doesn’t have any impact and normal throttling will occur.
 
 ```yaml
 Type: Boolean
@@ -294,8 +301,8 @@ Accept wildcard characters: False
 ### -DisableEmailScanning
 Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 Windows Defender supports several formats, including .pst, .dbx, .mbx, .mime, and .binhex.
-If you specify a value of $False or do not specify a value, Windows Defender performs email scanning. If you specify a value of $True, Windows Defender does not perform email scanning.
-This configuration is not applicable to modern email clients.
+If you specify a value of `$False` or don’t specify a value, Windows Defender performs email scanning. If you specify a value of `$True`, Windows Defender doesn’t perform email scanning.
+This configuration isn’t applicable to modern email clients.
 
 ```yaml
 Type: Boolean
@@ -315,9 +322,9 @@ Enable this policy to disable gradual rollout of monthly and daily Defender upda
 
 Devices will be offered all Defender updates after the gradual release cycle completes. Best for datacenter machines that only receive limited updates. 
 
-Note: This setting applies to both monthly as well as daily Defender updates and will override any previously configured channel selections for platform and engine updates. 
+Note: This setting applies to both monthly and daily Defender updates and will override any previously configured channel selections for platform and engine updates. 
 
-If you disable or do not configure this policy, the device will remain in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates. Stay up to date automatically during the gradual release cycle. Suitable for most devices. 
+If you disable or don’t configure this policy, the device will remain in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates. Stay up to date automatically during the gradual release cycle. Suitable for most devices. 
 
 Supported OS versions: Windows 10 
 
@@ -334,7 +341,7 @@ Accept wildcard characters: False
 
 ### -DisableIOAVProtection
 Indicates whether Windows Defender scans all downloaded files and attachments.
-If you specify a value of $False or do not specify a value, scanning downloaded files and attachments is enabled.
+If you specify a value of `$False` or don’t specify a value, scanning downloaded files and attachments is enabled.
 
 ```yaml
 Type: Boolean
@@ -366,7 +373,7 @@ Accept wildcard characters: False
 ### -DisablePrivacyMode
 Indicates whether to disable privacy mode.
 Privacy mode prevents users, other than administrators, from displaying threat history.
-If you specify a value of $False or do not specify a value, privacy mode is enabled.
+If you specify a value of `$False` or don’t specify a value, privacy mode is enabled.
 
 ```yaml
 Type: Boolean
@@ -382,7 +389,7 @@ Accept wildcard characters: False
 
 ### -DisableRealtimeMonitoring
 Indicates whether to use real-time protection.
-If you specify a value of $False or do not specify a value, Windows Defender uses real-time protection.
+If you specify a value of `$False` or don’t specify a value, Windows Defender uses real-time protection.
 We recommend that you enable Windows Defender to use real-time protection.
 
 ```yaml
@@ -399,7 +406,7 @@ Accept wildcard characters: False
 
 ### -DisableRemovableDriveScanning
 Indicates whether to scan for malicious and unwanted software in removable drives, such as flash drives, during a full scan.
-If you specify a value of $False or do not specify a value, Windows Defender scans removable drives during any type of scan. If you specify a value of $True, Windows Defender does not scan removable drives during a full scan. Windows Defender can still scan removable drives during quick scans or custom scans.
+If you specify a value of `$False` or don’t specify a value, Windows Defender scans removable drives during any type of scan. If you specify a value of `$True`, Windows Defender doesn’t scan removable drives during a full scan. Windows Defender can still scan removable drives during quick scans or custom scans.
 
 ```yaml
 Type: Boolean
@@ -415,7 +422,7 @@ Accept wildcard characters: False
 
 ### -DisableRestorePoint
 Indicates whether to disable scanning of restore points.
-If you specify a value of $False or do not specify a value, Windows Defender restore point is enabled.
+If you specify a value of `$False` or don’t specify a value, Windows Defender restore point is enabled.
 
 ```yaml
 Type: Boolean
@@ -430,7 +437,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningMappedNetworkDrivesForFullScan
-Indicates whether to scan mapped network drives. If you specify a value of $False or do not specify a value, Windows Defender scans mapped network drives. If you specify a value of $True, Windows Defender does not scan mapped network drives.
+Indicates whether to scan mapped network drives. If you specify a value of `$False` or don’t specify a value, Windows Defender scans mapped network drives. If you specify a value of `$True`, Windows Defender doesn’t scan mapped network drives.
 
 ```yaml
 Type: Boolean
@@ -445,7 +452,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files. We do not recommend that you scan network files.
+Indicates whether to scan for network files. If you specify a value of `$False` or don’t specify a value, Windows Defender scans network files. If you specify a value of `$True`, Windows Defender doesn’t scan network files. We don’t recommend scanning network files.
 
 ```yaml
 Type: Boolean
@@ -461,7 +468,7 @@ Accept wildcard characters: False
 
 ### -DisableScriptScanning
 Specifies whether to disable the scanning of scripts during malware scans.
-If you specify a value of $False or do not specify a value, Windows Defender does not scan scripts.
+If you specify a value of `$False` or don’t specify a value, Windows Defender doesn’t scan scripts.
 
 ```yaml
 Type: Boolean
@@ -489,7 +496,7 @@ Current Channel (Broad): Devices will be offered updates only after the gradual 
 
 Critical- Time Delay: Devices will be offered updates with a 48-hour delay. Suggested for critical environments only.   
 
-If you disable or do not configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
+If you disable or don’t configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
 
 Supported OS versions: Windows 10 
 Note: This policy is available starting with platform version 4.18.2106.5 and later
@@ -539,7 +546,7 @@ Accept wildcard characters: False
 Specifies an array of processes, as paths to process images.
 This cmdlet excludes any files opened by the processes that you specify from scheduled and real-time scanning.
 Specifying this parameter excludes files opened by executable programs only.
-The cmdlet does not exclude the processes themselves.
+The cmdlet doesn’t exclude the processes themselves.
 To exclude a process, specify it by using the **ExclusionPath** parameter.
 
 ```yaml
@@ -570,7 +577,7 @@ Accept wildcard characters: False
 ```
 
 ### -HighThreatDefaultAction
-Specifies which automatic remediation action to take for a high level threat.
+Specifies which automatic remediation action to take for a high-level threat.
 The acceptable values for this parameter are:
 
 - Quarantine 
@@ -591,7 +598,7 @@ Accept wildcard characters: False
 ```
 
 ### -LowThreatDefaultAction
-Specifies which automatic remediation action to take for a low level threat.
+Specifies which automatic remediation action to take for a low-level threat.
 The acceptable values for this parameter are:
 
 - Quarantine 
@@ -617,18 +624,16 @@ Microsoft Active Protection Service is an online community that helps you choose
 The community also helps prevent the spread of new malicious software.
 The acceptable values for this parameter are:
 
-- 0: Disabled.
-Send no information to Microsoft.
-This is the default value. 
-- 1: Basic membership.
-Send basic information to Microsoft about detected software, including where the software came from, the actions that you apply or that apply automatically, and whether the actions succeeded. 
-- 2: Advanced membership.
-In addition to basic information, send more information to Microsoft about malicious software, spyware, and potentially unwanted software, including the location of the software, file names, how the software operates, and how it affects your computer.
+- 0: Disabled - Send no information to Microsoft. This value is the default value. 
+- 1: Basic membership. - Send basic information to Microsoft about detected software, including where the software came from, the actions that you apply or that apply automatically, and whether the actions succeeded. 
+- 2: Advanced membership. - In addition to basic information, send more information to Microsoft about malicious software, spyware, and potentially unwanted software, including the location of the software, file names, how the software operates, and how it affects your computer.
 
 If you join this community, you can choose to automatically send basic or additional information about detected software.
+
 Additional information helps Microsoft create new definitions.
+
 In some instances, personal information might unintentionally be sent to Microsoft.
-However, Microsoft will not use this information to identify you or contact you.
+However, Microsoft won’t use this information to identify you or contact you.
 
 ```yaml
 Type: MAPSReportingType
@@ -693,7 +698,7 @@ Current Channel (Broad): Devices will be offered updates only after the gradual 
 
 Critical- Time Delay: Devices will be offered updates with a 48-hour delay. Suggested for critical environments only.   
 
-If you disable or do not configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
+If you disable or don’t configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
 
 Supported OS versions: Windows 10 
 
@@ -711,7 +716,7 @@ Accept wildcard characters: False
 
 ### -QuarantinePurgeItemsAfterDelay
 Specifies the number of days to keep items in the Quarantine folder.
-If you specify a value of zero or do not specify a value for this parameter, items stay in the Quarantine folder indefinitely.
+If you specify a value of zero or don’t specify a value for this parameter, items stay in the Quarantine folder indefinitely.
 
 ```yaml
 Type: UInt32
@@ -727,7 +732,7 @@ Accept wildcard characters: False
 
 ### -RandomizeScheduleTaskTimes
 Indicates whether to select a random time for the scheduled start and scheduled update for definitions.
-If you specify a value of $True or do not specify a value, scheduled tasks begin within 30 minutes, before or after, the scheduled time.
+If you specify a value of `$True` or don’t specify a value, scheduled tasks begin within 30 minutes, before or after, the scheduled time.
 If you randomize the start times, it can distribute the impact of scanning.
 For example, if several virtual machines share the same host, randomized start times prevents all the hosts from starting the scheduled tasks at the same time.
 
@@ -752,7 +757,7 @@ This is the default.
 - 1: Scan incoming files only. 
 - 2: Scan outgoing files only. 
 
-Specify a value for this parameter to enhance performance on servers which have a large number of file transfers, but need scanning for either incoming or outgoing files.
+Specify a value for this parameter to enhance performance on servers that have a large number of file transfers, but need scanning for either incoming or outgoing files.
 Evaluate this configuration based on the server role.
 For non-NTFS volumes, Windows Defender performs full monitoring of file and program activity.
 
@@ -785,7 +790,7 @@ The acceptable values for this parameter are:
 - 8: Never 
 
 The default value is 8, never.
-If you specify a value of 8 or do not specify a value, Windows Defender performs a scheduled full scan to complete remediation by using a default frequency.
+If you specify a value of 8 or don’t specify a value, Windows Defender performs a scheduled full scan to complete remediation by using a default frequency.
 
 ```yaml
 Type: Day
@@ -803,7 +808,7 @@ Accept wildcard characters: False
 ### -RemediationScheduleTime
 Specifies the time of day, as the number of minutes after midnight, to perform a scheduled scan.
 The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled scan runs at the default time of two hours after midnight.
+If you don’t specify a value for this parameter, a scheduled scan runs at the default time of two hours after midnight.
 
 ```yaml
 Type: DateTime
@@ -865,10 +870,10 @@ Accept wildcard characters: False
 ### -ScanAvgCPULoadFactor
 Specifies the maximum percentage CPU usage for a scan.
 The acceptable values for this parameter are: integers from 5 through 100, and the value 0, which disables CPU throttling.
-Windows Defender does not exceed the percentage of CPU usage that you specify.
+Windows Defender doesn’t exceed the percentage of CPU usage that you specify.
 The default value is 50.
 
-Note: This is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average.
+Note: This limit isn’t a hard limit but rather guidance for the scanning engine to not exceed this maximum on average.
 
 Note: Manually run scans will ignore this setting and run without any CPU limits.
 
@@ -885,8 +890,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScanOnlyIfIdleEnabled
-Indicates whether to start scheduled scans only when the computer is not in use.
-If you specify a value of $True or do not specify a value, Windows Defender runs schedules scans when the computer is on, but not in use.
+Indicates whether to start scheduled scans only when the computer isn’t in use.
+If you specify a value of `$True` or don’t specify a value, Windows Defender runs schedules scans when the computer is on, but not in use.
 
 ```yaml
 Type: Boolean
@@ -907,7 +912,7 @@ The acceptable values for this parameter are:
 - 1: Quick scan
 - 2: Full scan 
 
-If you do not specify this parameter, Windows Defender uses the default value of quick scan.
+If you don’t specify this parameter, Windows Defender uses the default value of quick scan.
 
 ```yaml
 Type: ScanType
@@ -925,8 +930,8 @@ Accept wildcard characters: False
 ### -ScanPurgeItemsAfterDelay
 Specifies the number of days to keep items in the scan history folder.
 After this time, Windows Defender removes the items.
-If you specify a value of zero, Windows Defender does not remove items.
-If you do not specify a value, Windows Defender removes items from the scan history folder after the default length of time, which is 15 days.
+If you specify a value of zero, Windows Defender doesn’t remove items.
+If you don’t specify a value, Windows Defender removes items from the scan history folder after the default length of time, which is 15 days.
 
 ```yaml
 Type: UInt32
@@ -956,7 +961,7 @@ The acceptable values for this parameter are:
 - 8: Never
 
 The default value is 8, never.
-If you specify a value of 8 or do not specify a value, Windows Defender does not perform scheduled scans.
+If you specify a value of 8 or don’t specify a value, Windows Defender doesn’t perform scheduled scans.
 
 ```yaml
 Type: Day
@@ -974,7 +979,7 @@ Accept wildcard characters: False
 ### -ScanScheduleQuickScanTime
 Specifies the time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
 The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleOffset** parameter.
+If you don’t specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleOffset** parameter.
 That parameter has a default time of two hours after midnight.
 
 ```yaml
@@ -993,7 +998,7 @@ Accept wildcard characters: False
 This setting is discontinued and replaced with -ScanScheduleOffset as of the January 2022 (version 4.18.2201.X) update to Microsoft Defender Antivirus.
 
 ### -ScanScheduleOffset
-Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or do not enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
+Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
 
 ```yaml
 Type: UInt32
@@ -1010,9 +1015,9 @@ Accept wildcard characters: False
 ### -ServiceHealthReportInterval
 This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. 
 
-If you do not configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour). 
+If you don’t configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour). 
 If you configure this setting to 0, no service health reports will be sent.
-The maximum value allowed to be set is 14400 minutes (ten days).
+The maximum value allowed to be set is 14400 minutes (10 days).
 
 ```yaml
 Type: UInt32
@@ -1063,10 +1068,10 @@ Accept wildcard characters: False
 
 ### -SignatureDefinitionUpdateFileSharesSources
 Specifies file-share sources for definition updates.
-Specify sources as a bracketed sequence of Universal Naming Convention (UNC) locations, separated by the pipeline symbol; for example, { \\\\Server01\Share01 | \\\\Server02\Share02 | \\\\Server03\Share03}.
+Specify sources as a bracketed sequence of Universal Naming Convention (UNC) locations, separated by the pipeline symbol; for example, `{ \\\\Server01\Share01 | \\\\Server02\Share02 | \\\\Server03\Share03}`.
 If you specify a value for this parameter, Windows Defender attempts to connect to the shares in the order that you specify.
 After Windows Defender updates a definition, it stops attempting to connect to shares on the list.
-If you do not specify a value for this parameter, the list is empty.
+If you don’t specify a value for this parameter, the list is empty.
 
 ```yaml
 Type: String
@@ -1082,8 +1087,8 @@ Accept wildcard characters: False
 
 ### -SignatureDisableUpdateOnStartupWithoutEngine
 Indicates whether to initiate definition updates even if no antimalware engine is present.
-If you specify a value of $True or do not specify a value, Windows Defender does not initiate definition updates on startup.
-If you specify a value of $False, and if no antimalware engine is present, Windows Defender initiates definition updates on startup.
+If you specify a value of `$True` or don’t specify a value, Windows Defender doesn’t initiate definition updates on startup.
+If you specify a value of `$False`, and if no antimalware engine is present, Windows Defender initiates definition updates on startup.
 
 ```yaml
 Type: Boolean
@@ -1099,7 +1104,7 @@ Accept wildcard characters: False
 
 ### -SignatureFallbackOrder
 Specifies the order in which to contact different definition update sources.
-Specify the types of update sources in the order in which you want Windows Defender to contact them, enclosed in braces and separated by the pipeline symbol; for example, { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }.
+Specify the types of update sources in the order in which you want Windows Defender to contact them, enclosed in braces and separated by the pipeline symbol; for example, `{ InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }`.
 The values that you can specify in the string are:
 
 - InternalDefinitionUpdateServer
@@ -1111,7 +1116,7 @@ MMPC refers to Microsoft Malware Protection Center.
 
 If you specify a value for this parameter, Windows Defender contacts the definition update sources in the specified order.
 After Windows Defender downloads definition updates from a source, it stops attempting to connect to other sources.
-If you do not specify a value for this parameter, Windows Defender contacts sources in the default order of { MicrosoftUpdateServer | MMPC }.
+If you don’t specify a value for this parameter, Windows Defender contacts sources in the default order of { MicrosoftUpdateServer | MMPC }.
 
 ```yaml
 Type: String
@@ -1158,7 +1163,7 @@ The acceptable values for this parameter are:
 - 8: Never 
 
 The default value is 8, never.
-If you specify a value of 8 or do not specify a value, Windows Defender checks for definition updates by using a default frequency.
+If you specify a value of 8 or don’t specify a value, Windows Defender checks for definition updates by using a default frequency.
 
 ```yaml
 Type: Day
@@ -1176,7 +1181,7 @@ Accept wildcard characters: False
 ### -SignatureScheduleTime
 Specifies the time of day, as the number of minutes after midnight, to check for definition updates.
 The time refers to the local time on the computer.
-If you do not specify a value for this parameter, Windows Defender checks for definition updates at the default time of 15 minutes before the scheduled scan time.
+If you don’t specify a value for this parameter, Windows Defender checks for definition updates at the default time of 15 minutes before the scheduled scan time.
 
 ```yaml
 Type: DateTime
@@ -1192,7 +1197,7 @@ Accept wildcard characters: False
 
 ### -SignatureUpdateCatchupInterval
 Specifies the number of days after which Windows Defender requires a catch-up definition update.
-If you do not specify a value for this parameter, Windows Defender requires a catch-up definition update after the default value of one day.
+If you don’t specify a value for this parameter, Windows Defender requires a catch-up definition update after the default value of one day.
 
 ```yaml
 Type: UInt32
@@ -1210,7 +1215,7 @@ Accept wildcard characters: False
 ### -SignatureUpdateInterval
 Specifies the interval, in hours, at which to check for definition updates.
 The acceptable values for this parameter are: integers from 1 through 24.
-If you do not specify a value for this parameter, Windows Defender checks at the default interval.
+If you don’t specify a value for this parameter, Windows Defender checks at the default interval.
 You can use this parameter instead of the **SignatureScheduleDay** parameter and **SignatureScheduleTime** parameter.
 
 ```yaml
@@ -1228,7 +1233,7 @@ Accept wildcard characters: False
 ### -SubmitSamplesConsent
 Specifies how Windows Defender checks for user consent for certain samples.
 If consent has previously been granted, Windows Defender submits the samples.
-Otherwise, if the **MAPSReporting** parameter does not have a value of Disabled, Windows Defender prompts the user for consent.
+Otherwise, if the **MAPSReporting** parameter doesn’t have a value of Disabled, Windows Defender prompts the user for consent.
 The acceptable values for this parameter are:
 
 - 0: Always prompt
@@ -1312,8 +1317,8 @@ Accept wildcard characters: False
 
 ### -UILockdown
 Indicates whether to disable UI lockdown mode.
-If you specify a value of $True, Windows Defender disables UI lockdown mode.
-If you specify $False or do not specify a value, UI lockdown mode is enabled.
+If you specify a value of `$True`, Windows Defender disables UI lockdown mode.
+If you specify `$False` or don’t specify a value, UI lockdown mode is enabled.
 
 ```yaml
 Type: Boolean
@@ -1349,7 +1354,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

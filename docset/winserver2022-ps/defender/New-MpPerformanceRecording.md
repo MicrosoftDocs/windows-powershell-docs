@@ -12,7 +12,8 @@ title: New-MpPerformanceRecording
 
 ## SYNOPSIS
 
-Collects a performance recording of Microsoft Defender Antivirus scans
+Collects a performance recording of Microsoft Defender Antivirus scans.
+
 
 ## SYNTAX
 

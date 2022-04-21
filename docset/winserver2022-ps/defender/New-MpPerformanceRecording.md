@@ -36,7 +36,8 @@ The `New-MpPerformanceRecording` cmdlet collects a performance recording of Micr
 This `New-MpPerformanceRecording` cmdlet provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided _as is_ and is not intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
 
 
-For more information on the performance analyzer, see [Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) docs.
+For more information on the performance analyzer, see the [Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) article.
+
 
 > [!IMPORTANT]
 > This cmdlet requires elevated administrator privileges.

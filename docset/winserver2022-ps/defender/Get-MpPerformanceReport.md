@@ -1,6 +1,6 @@
 ---
 description: Use this topic to analyze and report on Microsoft Defender Antivirus (MDAV) performance recordings.
-external help file:
+external help file: MSFT_MpThreat.cdxml-help.xml
 Module Name: Defender
 ms.date: 03/20/2022
 online version: 

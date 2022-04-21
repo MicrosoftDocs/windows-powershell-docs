@@ -1,6 +1,6 @@
 ---
 description: Use this topic to render performance recording of Microsoft Defender Antivirus scans.
-external help file:
+external help file: MSFT_MpThreat.cdxml-help.xml
 Module Name: Defender
 ms.date: 03/20/2022
 online version: 

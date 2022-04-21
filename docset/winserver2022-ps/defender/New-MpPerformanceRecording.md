@@ -84,7 +84,8 @@ Accept wildcard characters: False
 
 ### -Session
 
-Specifies the PSSession object in which to create and save the Microsoft Defender Antivirus performance recording. When you use this parameter the RecordTo parameter refers to the local path on the remote machine. Available with Defender platform version 4.18.2201.10.
+Specifies the PSSession object in which to create and save the Microsoft Defender Antivirus performance recording. When you use this parameter the RecordTo parameter refers to the local path on the remote machine. This feature is available with Microsoft Defender Antivirus platform version 4.18.2201.10.
+
 
 ```yaml
 Type: PSSession[]

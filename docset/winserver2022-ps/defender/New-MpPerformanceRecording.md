@@ -71,7 +71,8 @@ The above command collects a performance recording on Server02 (as specified by 
 
 ### -RecordTo
 
-Specifies the location in which to save the Microsoft Defender Antimalware performance recording.
+Specifies the location in which to save the Microsoft Defender Antivirus performance recording.
+
 
 ```yaml
 Type: String

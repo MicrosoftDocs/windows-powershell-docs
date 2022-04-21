@@ -47,7 +47,8 @@ For more information on the performance analyzer, see the [Performance Analyzer]
 Windows Version 10 and later.
 
 > [!NOTE]
-> This feature is available starting with platform version 4.18.2108.X and later.
+> This feature is available starting with Microsoft Defender Antivirus platform version 4.18.2108.X and later.
+
 
 ## EXAMPLES
 

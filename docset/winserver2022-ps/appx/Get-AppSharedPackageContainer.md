@@ -41,7 +41,7 @@ This command shows the packages in any shared package container that has a prefi
 ## PARAMETERS
 
 ### -AllUsers
-Unsupported. Will result in "A parameter cannot be found that matches parameter name" error.
+Unsupported. Will result in "-AllUsers functionality is not yet implemented" error.
 
 ```yaml
 Type: SwitchParameter

@@ -31,7 +31,7 @@ This command removes the shared package container definition with the name Conto
 ## PARAMETERS
 
 ### -AllUsers
-Unsupported. Will result in "A parameter cannot be found that matches parameter name" error.
+Unsupported. Will result in "-AllUsers functionality is not yet implemented" error.
 
 ```yaml
 Type: SwitchParameter

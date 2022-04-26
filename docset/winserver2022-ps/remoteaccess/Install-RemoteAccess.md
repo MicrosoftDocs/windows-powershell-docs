@@ -776,19 +776,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: String
-Parameter Sets: MultiTenant
-Aliases: RoleType
-Accepted values: Vpn, VpnS2S, SstpProxy, RoutingOnly
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -836,11 +823,10 @@ The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class 
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 The RemoteAccessCommon object consists of the following properties: 
 - The status of DirectAccess: installed or uninstalled. 
- -- The status of VPN: installed or uninstalled. 
- -- The status of site-to-site VPN: installed or uninstalled. 
+  - The status of VPN: installed or uninstalled. 
+  - The status of site-to-site VPN: installed or uninstalled. 
 - The status of load balancing: enabled or disabled. 
 - The name of the internet-facing interface of the Remote Access server. 
-- The name of the internal-facing interface of the Remote Access server. 
 - The SSL certificate which is used for IP-HTTPS and SSTP.
 
 ## NOTES

@@ -78,13 +78,6 @@ Accept wildcard characters: False
 
 ### -PackageTypeFilter
 Specifies one or more comma-separated types of packages that the cmdlet gets from the package repository.
-Valid values are: 
-
-- Bundle
-- Framework
-- Main
-- Resource
-- None
 
 By default, this cmdlet returns only packages of types Main and Framework.
 
@@ -92,7 +85,7 @@ By default, this cmdlet returns only packages of types Main and Framework.
 Type: PackageTypes
 Parameter Sets: (All)
 Aliases:
-Accepted values: None, Main, Framework, Resource, Bundle, Xap
+Accepted values: None, Main, Framework, Resource, Bundle, Xap, Optional
 
 Required: False
 Position: Named

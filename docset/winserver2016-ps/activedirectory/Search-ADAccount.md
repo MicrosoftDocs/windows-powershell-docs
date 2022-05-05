@@ -317,7 +317,7 @@ This example defines time by using Greenwich Mean Time (GMT).
 The following example shows how to specify a value as Coordinated Universal Time (UTC).
 This example represents Monday, April 17, 2006 at 2:22:48 PM UTC. 
 
-- "2000-04-17T14:22:48.0000000"
+- "2006-04-17T14:22:48.0000000"
 
 The following example shows how to set the *AccountExpiring* parameter to a *DateTime* value of June 18, 2012 at 2:00:00 AM. 
 

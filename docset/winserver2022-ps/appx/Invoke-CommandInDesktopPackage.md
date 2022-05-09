@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Command
-An executable to invoke (e.g. "regedit.exe").
+An executable to invoke (for example, "regedit.exe").
 
 Note that if the executable requires elevation (like regedit), you **must** call `Invoke-CommandInDesktopPackage` from an already-elevated context. Calling `Invoke-CommandInDesktopPackage` from a non-elevated context will not work as expected: the new process will be created without the package context, and the PowerShell command will fail.
 

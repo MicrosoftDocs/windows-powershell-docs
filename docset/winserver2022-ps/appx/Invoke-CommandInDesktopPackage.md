@@ -27,7 +27,7 @@ The created process will have the identity of the provided `AppId` and will have
 
 The primary use-case of this command is to invoke debugging or troubleshooting tools in the context of the packaged app to easily access its virtualized resources. For example, you can run the Registry Editor to see virtualized registry keys, or Notepad to read virtualized files. See the important note that follows on using tools such as the Registry Editor that require elevation. 
 
-No guarantees are made about the behavior of the created process, other than it having the package identity and access to the package's virtualized resources. In particular, the new process will **not** be created in an AppContainer even if an `AppId` process would normally be created in an AppContainer. Features as Privacy Controls or other App Settings may or may not apply to the new process. You should not rely on any specific side-effects of using this command, as they are undefined and subject to change.
+No guarantees are made about the behavior of the created process, other than it having the package identity and access to the package's virtualized resources. In particular, the new process will **not** be created in an AppContainer even if an `AppId` process would normally be created in an AppContainer. Features such as Privacy Controls or other App Settings may or may not apply to the new process. You should not rely on any specific side-effects of using this command, as they are undefined and subject to change.
 
 ## EXAMPLES
 

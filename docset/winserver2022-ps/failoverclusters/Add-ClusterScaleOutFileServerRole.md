@@ -16,7 +16,7 @@ Creates a clustered file server for scale-out application data.
 ## SYNTAX
 
 ```
-Add-ClusterScaleOutFileServerRole [[-Name] <String>] [-Wait <Int32>] [-InputObject <PSObject>]
+Add-ClusterScaleOutFileServerRole [[-Name] <String>] [-Wait <Int32>] [-Infrastructure] [-InputObject <PSObject>]
  [-Cluster <String>] [<CommonParameters>]
 ```
 
@@ -32,8 +32,10 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> Add-ClusterScaleOutFileServerRole
+```
+```output
 Name                                    OwnerNode                               State 
 ----                                    ---------                               ----- 
 clusterSOFS                             CLUSTER-N2                              Online
@@ -42,8 +44,10 @@ clusterSOFS                             CLUSTER-N2                              
 This example creates a highly available Scale-out file server role.
 
 ### Example 2
-```
+```powershell
 PS C:\> Add-ClusterScaleOutFileServerRole -Wait 0
+```
+```output
 Name                                    OwnerNode                               State 
 ----                                    ---------                               ----- 
 clusterSOFS                             CLUSTER-N2                              Pending
@@ -51,6 +55,13 @@ clusterSOFS                             CLUSTER-N2                              
 
 This example creates a highly available scale out file server role.
 The cmdlet completes without waiting for all resources to come online.
+
+### Example 3
+```powershell
+Add-ClusterScaleOutFileServerRole -Cluster MyCluster -Infrastructure -Name InfraSOFSName
+```
+
+This example create Scale-Out File Server role - Infrastructure File Server. It will create a single namespace share automatically for the CSV drive (i.e. `\\InfraSOFSName\Volume1`, etc.).  In hyper-converged configurations, an Infrastructure SOFS allows an SMB client (Hyper-V host) to communicate with guaranteed Continuous Availability (CA) to the Infrastructure SOFS SMB server. There can be at most only one infrastructure SOFS cluster role on a Failover Cluster.
 
 ## PARAMETERS
 
@@ -60,6 +71,21 @@ If the input for this parameter is `.` or it is omitted, then the cmdlet runs on
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Infrastructure
+Specifies whether to create Infrastructure File Server Scale-Out File Server role
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 

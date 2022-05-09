@@ -44,7 +44,7 @@ PS C:\> Invoke-CommandInDesktopPackage -AppId "ContosoApp" -PackageFamilyName "C
 ## PARAMETERS
 
 ### -AppId
-`AppId` is the Application Id from the target package's manifest. 
+`AppId` is the Application ID from the target package's manifest. 
 
 ```XML
 <Application Id="MyAppName" ... />

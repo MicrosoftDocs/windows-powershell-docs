@@ -33,7 +33,7 @@ No guarantees are made about the behavior of the created process, other than it 
 
 ### Example 1: Invoke Notepad to read virtualized files
 
-The following command invokes Notepad in the context of the `ContosoApp` app from the `Constoso.MyApp` package. This allows you to access resources such as a log file or configuration file stored in the app's virtualized filesystem.
+The following command invokes Notepad in the context of the `ContosoApp` app from the `Contoso.MyApp` package. This allows you to access resources such as a log file or configuration file stored in the app's virtualized filesystem.
 
 ```
 PS C:\> Invoke-CommandInDesktopPackage -AppId "ContosoApp" -PackageFamilyName "Contoso.MyApp_abcdefgh23456" -Command "notepad.exe"

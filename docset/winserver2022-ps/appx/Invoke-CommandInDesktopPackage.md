@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Args
-Optional arguments to be passed to the new process (e.g. "/foo /bar")
+Optional arguments to be passed to the new process (for example, "/foo /bar")
 
 ```yaml
 Type: String

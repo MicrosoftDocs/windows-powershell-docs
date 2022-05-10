@@ -41,7 +41,7 @@ Name                                    OwnerNode                               
 clusterSOFS                             CLUSTER-N2                              Online
 ```
 
-This example creates a highly available Scale-out file server role.
+This example creates a highly available scale-out file server role.
 
 ### Example 2
 ```powershell
@@ -61,7 +61,7 @@ The cmdlet completes without waiting for all resources to come online.
 Add-ClusterScaleOutFileServerRole -Cluster MyCluster -Infrastructure -Name InfraSOFSName
 ```
 
-This example create Scale-Out File Server role - Infrastructure File Server. It will create a single namespace share automatically for the CSV drive (i.e. `\\InfraSOFSName\Volume1`, etc.).  In hyper-converged configurations, an Infrastructure SOFS allows an SMB client (Hyper-V host) to communicate with guaranteed Continuous Availability (CA) to the Infrastructure SOFS SMB server. There can be at most only one infrastructure SOFS cluster role on a Failover Cluster.
+This example creates an infrastructure file server scale-out file server role. It automatically creates a single namespace share for the CSV drive (such as `\\InfraSOFSName\Volume1`).  In hyper-converged configurations, an infrastructure scale-out file server allows an SMB client (Hyper-V host) to communicate with guaranteed continuous availability with the infrastructure scale-out SMB file server. There can be at most only one infrastructure scale-out file server cluster role on a failover cluster.
 
 ## PARAMETERS
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Infrastructure
-Specifies whether to create Infrastructure File Server Scale-Out File Server role
+Specifies whether to create infrastructure file server scale-out file server role.
 
 ```yaml
 Type: SwitchParameter

@@ -126,12 +126,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-HpcJob](./Export-HpcJob.md)
+[Export-HpcJob](Export-HpcJob.md)
 
-[Get-HpcJob](./Get-HpcJob.md)
+[Get-HpcJob](Get-HpcJob.md)
 
-[New-HpcJob](./New-HpcJob.md)
+[New-HpcJob](New-HpcJob.md)
 
-[Set-HpcJob](./Set-HpcJob.md)
+[Set-HpcJob](Set-HpcJob.md)
 
 [Stop-HpcJob](./Stop-HpcJob.md)

@@ -2,7 +2,7 @@
 description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 03/02/2022
+ms.date: 04/21/2022
 online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -558,9 +558,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePrivacyMode
-Indicates whether to disable privacy mode.
-Privacy mode prevents users, other than administrators, from displaying threat history.
-If you specify a value of $False or do not specify a value, privacy mode is enabled.
+**This is a legacy setting that does not have any affect on current platforms**. The intent of this parameter was to disable privacy mode, which prevented users, other than administrators, from displaying threat history. When this parameter was in use, if you specified a value of $False or did not specify a value, privacy mode was enabled.
 
 ```yaml
 Type: Boolean

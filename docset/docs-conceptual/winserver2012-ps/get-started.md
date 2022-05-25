@@ -83,7 +83,7 @@ more information.
 | ServerCore | [Server Core Cmdlets](/powershell/module/servercore) |
 | ServerManager | [Server Manager Cmdlets](/powershell/module/servermanager) |
 | ServerManagerTasks | [Server Manager Tasks Cmdlets](/powershell/module/servermanagertasks) |
-| ServerMig_Cmdlets | [Server Migration Cmdlets](/powershell/module/servermigration) |
+| ServerMig_Cmdlets | [Server Migration Cmdlets](/powershell/module/servermigrationcmdlets) |
 | SMBShare | [SMB Share Cmdlets](/powershell/module/smbshare) |
 | SMBWitness | [SMB Witness Cmdlets](/powershell/module/smbwitness) |
 | SMISConfig | [SMI-S Cmdlets](/powershell/module/smisconfig) |

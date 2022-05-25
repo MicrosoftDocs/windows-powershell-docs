@@ -79,7 +79,7 @@ computer. For more information, see
 | Multipoint | [MultiPoint Services](/powershell/module/multipoint) |
 | MultiPointVdi | [Multipoint VDI](/powershell/module/multipointvdi) |
 | NanoServerImageGenerator | [Nano Server Image Generator](/powershell/module/nanoserverimagegenerator) |
-| NetLdpAgent | [NetLdpAgent](/powershell/module/netlldpagent) |
+| NetLldpAgent | [NetLldpAgent](/powershell/module/netlldpagent) |
 | NetAdapter | [Network Adapter](/powershell/module/netadapter) |
 | NetConnection | [Network connection](/powershell/module/netconnection) |
 | NetEventPacketCapture | [Network Event Packet Capture](/powershell/module/neteventpacketcapture) |

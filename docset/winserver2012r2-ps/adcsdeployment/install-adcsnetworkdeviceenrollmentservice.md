@@ -45,46 +45,36 @@ Int is equivalent to Int32 in the .NET Frameworkhttp://msdn.microsoft.com/en-us/
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Display the default NDES settings
 ```
-C:\PS>Install-AdcsNetworkDeviceEnrollmentService -ApplicationPoolIdentity -WhatIf
-```
-
-Description
-
------------
-
-This command displays the default Network Device Enrollment Service settings when the service is running as the default application identity without making any changes to the configuration.
-
-### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>Install-AdcsNetworkDeviceEnrollmentService -ServiceAccountName <Domain>\<AccountName> -ServiceAccountPassword (read-host "Set user password" -assecurestring) -WhatIf
+PS C:\> Install-AdcsNetworkDeviceEnrollmentService -ApplicationPoolIdentity -WhatIf
 ```
 
-Description
+This command displays the default NDES settings that will be configured if it is installed.
 
------------
+### Example 2: Display the default NDES settings using a service account name and password
+```
+PS C:\> Install-AdcsNetworkDeviceEnrollmentService -ServiceAccountName "CONTOSO\svcNDES"  -ServiceAccountPassword (read-host "Set user password" -assecurestring) -WhatIf
+```
 
 This command displays the default settings when NDES is using a service account without making any changes to the configuration.
-This command assumes that the \<Domain\>\\\<AccountName\> service account is a member of the local machine's IIS_USRS group.
-Substitute the domain name for \<Domain\> and the user account name for \<AccountName\>.
+This command uses the service account named CONTOSO\svcNDES that is a member of the local computer's IIS_USRS group.
 
-### -------------------------- EXAMPLE 3 --------------------------
+### Example 3: Install NDES using the application pool identity
 ```
-C:\PS>Install-AdcsNetworkDeviceEnrollmentService -ApplicationPoolIdentity -CAConfig <CAComputerName>\<CACommonName>
+PS C:\> Install-AdcsNetworkDeviceEnrollmentService -ApplicationPoolIdentity -CAConfig "<CAComputerName>\<CACommonName>"
 ```
 
-Description
+This command installs NDES using the application pool identity to use a remote CA as specified by the CA computer `<CAComputerName>\<CACommonName>`.
+Substitute the appropriate CA computer name and common name for `<CAComputerName>` and `<CACommonName>`.
 
------------
-
-This command installs the Network Device Enrollment Service using the application pool identity to use a remote CA as specified by the CA computer \<CACompterName\>\\\<CACommonName\>.
-Substitute the appropriate CA computer name and common name for \<CAComputerName\> and \<CACommonName\>.
-
-### -------------------------- EXAMPLE 4 --------------------------
+### Example 4: Install NDES using a specific service account
 ```
-C:\PS>Install-AdcsNetworkDeviceEnrollmentService -ServiceAccountName MyDomain\AccountName -ServiceAccountPassword (read-host "Set user password" -assecurestring) -CAConfig "CAMachineName\CAName" -RAName "Contoso-NDES-RA" -RACountry "US" -RACompany "Contoso" -SigningProviderName "Microsoft Strong Cryptographic Provider" -SigningKeyLength 4096 -EncryptionProviderName "Microsoft Strong Cryptographic Provider" -EncryptionKeyLength 4096
+PS C:\> Install-AdcsNetworkDeviceEnrollmentService -ServiceAccountName "CONTOSO\svcNDES" -ServiceAccountPassword (read-host "Set user password" -assecurestring) -CAConfig "CAComputerName\CAName" -RAName "Contoso-NDES-RA" -RACountry "US" -RACompany "Contoso" -SigningProviderName "Microsoft Strong Cryptographic Provider" -SigningKeyLength 4096 -EncryptionProviderName "Microsoft Strong Cryptographic Provider" -EncryptionKeyLength 4096
 ```
+
+This command installs the NDES using a service account named CONTOSO\svcNDES that is a member of the local computer's IIS_USRS group.
+The command also specifies several non-default parameters.
 
 Description
 

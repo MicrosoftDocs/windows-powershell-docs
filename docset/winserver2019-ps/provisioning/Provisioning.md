@@ -12,40 +12,30 @@ title: Provisioning
 
 # Provisioning Module
 ## Description
-This reference provides cmdlet descriptions and syntax for the provisioning cmdlets. It lists the cmdlets in alphabetical order.
-
-The provisioning is supported on Windows 10 client operating system only.
+This reference cmdlet provides descriptions and syntax for all provisioning-specific cmdlets. It lists cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## provisioning Cmdlets
 ### [Export-ProvisioningPackage](Export-ProvisioningPackage.md)
-
-Extract the contents of a provisioning package.
+Extracts the contents of a provisioning package.
 
 ### [Export-Trace](Export-Trace.md)
 
 Exports an event trace log file for provisioning.
 
 ### [Get-ProvisioningPackage](Get-ProvisioningPackage.md)
-
 Gets information about the installed provisioning package.
 
 ### [Get-TrustedProvisioningCertificate](Get-TrustedProvisioningCertificate.md)
-
-Lists all installed trusted provisioning certificates.
+Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the Uninstall-TrustedProvisioningCertificate cmdlet.
 
 ### [Install-ProvisioningPackage](Install-ProvisioningPackage.md)
-
-Install .PPKG package onto the local machine.
+Installs .PPKG package onto the local machine.
 
 ### [Install-TrustedProvisioningCertificate](Install-TrustedProvisioningCertificate.md)
-
 Adds a certificate to the Trusted Certificate Store.
 
 ### [Uninstall-ProvisioningPackage](Uninstall-ProvisioningPackage.md)
-
-Uninstalls .ppkg files.
+Uninstalls .PPKG package from the local machine.
 
 ### [Uninstall-TrustedProvisioningCertificate](Uninstall-TrustedProvisioningCertificate.md)
-
 Removes a previously installed provisioning certificate.
-

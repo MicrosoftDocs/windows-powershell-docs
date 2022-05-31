@@ -25,5 +25,4 @@ available locally on your computer by using the Update-Help cmdlet. For more inf
 | [Advanced Group Policy Management](/powershell/module/agpm) | 4.0 SP3 |
 | [Microsoft Application Virtualization](/powershell/module/appv) | 5.1 |
 | [Microsoft Bitlocker Administration and Monitoring](/powershell/module/mbam) | 2.5 |
-| [Microsoft Enterprise Desktop Virtualization](/powershell/module/medv) | 2.0 |
 | [User Experience Virtualization](/powershell/module/uev) | 2.1 SP1 |

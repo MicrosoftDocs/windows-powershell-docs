@@ -17,42 +17,38 @@ Modifies the configuration for a Remote Packet Capture provider.
 
 ### BySessionName (Default)
 ```
-Set-NetEventPacketCaptureProvider [[-SessionName] <String[]>] [[-Level] <Byte>] [[-MatchAnyKeyword] <UInt64>]
- [[-MatchAllKeyword] <UInt64>] [[-CaptureType] <CaptureType>] [[-MultiLayer] <Boolean>]
- [[-LinkLayerAddress] <String[]>] [[-EtherType] <UInt16[]>] [[-IpAddresses] <String[]>]
- [[-IpProtocols] <Byte[]>] [[-TruncationLength] <UInt16>] [[-VmCaptureDirection] <VmCaptureDirection>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-NetEventPacketCaptureProvider [[-SessionName] <String[]>] [-Level <Byte>] [-MatchAnyKeyword <UInt64>]
+ [-MatchAllKeyword <UInt64>] [-CaptureType <CaptureType>] [-MultiLayer <Boolean>]
+ [-LinkLayerAddress <String[]>] [-EtherType <UInt16[]>] [-IpAddresses <String[]>] [-IpProtocols <Byte[]>]
+ [-TruncationLength <UInt16>] [-VmCaptureDirection <VmCaptureDirection>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### BySessionOfTheProvider
 ```
-Set-NetEventPacketCaptureProvider [-AssociatedEventSession <CimInstance>] [[-Level] <Byte>]
- [[-MatchAnyKeyword] <UInt64>] [[-MatchAllKeyword] <UInt64>] [[-CaptureType] <CaptureType>]
- [[-MultiLayer] <Boolean>] [[-LinkLayerAddress] <String[]>] [[-EtherType] <UInt16[]>]
- [[-IpAddresses] <String[]>] [[-IpProtocols] <Byte[]>] [[-TruncationLength] <UInt16>]
- [[-VmCaptureDirection] <VmCaptureDirection>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-NetEventPacketCaptureProvider [-AssociatedEventSession <CimInstance>] [-Level <Byte>]
+ [-MatchAnyKeyword <UInt64>] [-MatchAllKeyword <UInt64>] [-CaptureType <CaptureType>] [-MultiLayer <Boolean>]
+ [-LinkLayerAddress <String[]>] [-EtherType <UInt16[]>] [-IpAddresses <String[]>] [-IpProtocols <Byte[]>]
+ [-TruncationLength <UInt16>] [-VmCaptureDirection <VmCaptureDirection>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByTargetOfTheProvider
 ```
-Set-NetEventPacketCaptureProvider [-AssociatedCaptureTarget <CimInstance>] [[-Level] <Byte>]
- [[-MatchAnyKeyword] <UInt64>] [[-MatchAllKeyword] <UInt64>] [[-CaptureType] <CaptureType>]
- [[-MultiLayer] <Boolean>] [[-LinkLayerAddress] <String[]>] [[-EtherType] <UInt16[]>]
- [[-IpAddresses] <String[]>] [[-IpProtocols] <Byte[]>] [[-TruncationLength] <UInt16>]
- [[-VmCaptureDirection] <VmCaptureDirection>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-NetEventPacketCaptureProvider [-AssociatedCaptureTarget <CimInstance>] [-Level <Byte>]
+ [-MatchAnyKeyword <UInt64>] [-MatchAllKeyword <UInt64>] [-CaptureType <CaptureType>] [-MultiLayer <Boolean>]
+ [-LinkLayerAddress <String[]>] [-EtherType <UInt16[]>] [-IpAddresses <String[]>] [-IpProtocols <Byte[]>]
+ [-TruncationLength <UInt16>] [-VmCaptureDirection <VmCaptureDirection>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
 ```
-Set-NetEventPacketCaptureProvider -InputObject <CimInstance[]> [[-Level] <Byte>] [[-MatchAnyKeyword] <UInt64>]
- [[-MatchAllKeyword] <UInt64>] [[-CaptureType] <CaptureType>] [[-MultiLayer] <Boolean>]
- [[-LinkLayerAddress] <String[]>] [[-EtherType] <UInt16[]>] [[-IpAddresses] <String[]>]
- [[-IpProtocols] <Byte[]>] [[-TruncationLength] <UInt16>] [[-VmCaptureDirection] <VmCaptureDirection>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-NetEventPacketCaptureProvider -InputObject <CimInstance[]> [-Level <Byte>] [-MatchAnyKeyword <UInt64>]
+ [-MatchAllKeyword <UInt64>] [-CaptureType <CaptureType>] [-MultiLayer <Boolean>]
+ [-LinkLayerAddress <String[]>] [-EtherType <UInt16[]>] [-IpAddresses <String[]>] [-IpProtocols <Byte[]>]
+ [-TruncationLength <UInt16>] [-VmCaptureDirection <VmCaptureDirection>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

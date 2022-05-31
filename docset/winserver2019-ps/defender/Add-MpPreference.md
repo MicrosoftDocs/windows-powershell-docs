@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Add-MpPreference cmdlet modifies settings for Windows Defender.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
 ms.date: 12/20/2016
@@ -17,8 +17,11 @@ Modifies settings for Windows Defender.
 
 ```
 Add-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
- [-ThreatIDDefaultAction_Ids <Int64[]>] [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-ExclusionIpAddress <String[]>] [-ThreatIDDefaultAction_Ids <Int64[]>]
+ [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-AttackSurfaceReductionOnlyExclusions <String[]>]
+ [-ControlledFolderAccessAllowedApplications <String[]>] [-ControlledFolderAccessProtectedFolders <String[]>]
+ [-AttackSurfaceReductionRules_Ids <String[]>] [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>]
+ [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,12 +31,19 @@ Use this cmdlet to add exclusions for file name extensions, paths, and processes
 ## EXAMPLES
 
 ### Example 1: Add a folder to the exclusion list
-```
-PS C:\> Add-MpPreference -ExclusionPath "C:\Temp"
+```powershell
+Add-MpPreference -ExclusionPath "C:\Temp"
 ```
 
 This command adds the folder C:\Temp to the exclusion list.
 The command disables Windows Defender scheduled and real-time scanning for files in this folder.
+
+### Example 2: Allow an application to access folders
+```powershell
+Add-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe"
+```
+
+This command allows the specified application to make changes in controlled folders.
 
 ## PARAMETERS
 
@@ -59,6 +69,56 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AttackSurfaceReductionOnlyExclusions
+Specifies the files or folders to exclude from attack surface reduction (ASR) rules. Enter a folder path or a fully qualified resource name. For example, `C:\Windows` excludes all files in that directory. `C:\Windows\App.exe` excludes only that specific file in that specific folder.
+
+See the [ASR rules](/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules) topic for more information about excluding files and folders from ASR rules.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttackSurfaceReductionRules_Actions
+Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
+If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
+
+```yaml
+Type: ASRRuleActionType[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttackSurfaceReductionRules_Ids
+Specifies the IDs of attack surface reduction rules.
+Use the **AttackSurfaceReductionRules_Actions** parameter to specify the state for each rule. 
+If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer. 
 Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
@@ -76,9 +136,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ControlledFolderAccessAllowedApplications
+Specifies applications that can make changes in controlled folders.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ControlledFolderAccessProtectedFolders
+Specifies more folders to protect.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExclusionExtension
 Specifies an array of file name extensions, such as obj or lib, to exclude from scheduled, custom, and real-time scanning.
 This cmdlet adds these file name extensions to the exclusions.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExclusionIpAddress
+Specifies an array of IP addresses to exclude from scheduled and real-time scanning.
 
 ```yaml
 Type: String[]

@@ -2,7 +2,7 @@
 description: Adds a signed app package to a user account.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 09/01/2021
+ms.date: 01/31/2022
 online version: https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-AppxPackage
@@ -118,6 +118,13 @@ Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -RequiredContent
 ```
 
 This command adds an app package but only installs the required section of a streaming app. Calling this command again without the RequiredContentGroupOnly flag proceeds to install the rest of the application in the order defined by the AppxContentGroupMap.xml
+
+### Example 6: Install an app using the App Installer file
+```powershell
+Add-AppxPackage -AppInstallerFile "C:\Users\user1\Desktop\MyApp.appinstaller"
+```
+
+This command adds an app package as outlined in the App Installer file with all update settings specified within the App Installer file, if any.
 
 ## PARAMETERS
 

@@ -74,7 +74,7 @@ The acceptable values for this parameter are: Full, Change, or Read.
 Type: ShareAccessRight
 Parameter Sets: (All)
 Aliases:
-Accepted values: Full, Change, Read, Custom
+Accepted values: Full, Change, Read
 
 Required: False
 Position: Named

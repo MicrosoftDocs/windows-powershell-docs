@@ -818,8 +818,7 @@ The rule is active on the local computer only when the specified profile is curr
 This relationship is many-to-many and can be indirectly modified by the user, by changing the Profiles field on instances of firewall rules.
 Only one profile is applied at a time. 
 The acceptable values for this parameter are: Any, Domain, Private, Public, or NotApplicable. 
-
-The default value is Any. 
+ 
 Separate multiple entries with a comma and do not include any spaces. 
 Use the keyword Any to configure the profile as Private, Public, and Domain in the configurable service store.
 

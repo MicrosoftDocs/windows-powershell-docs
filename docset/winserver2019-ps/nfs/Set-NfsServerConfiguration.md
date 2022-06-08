@@ -45,7 +45,7 @@ This command sets the grace period for the NLM protocol to 45 seconds and sets t
 
 ### Example 2: Set NFS versions on a local NFS server
 ```
-PS C:\> Set-NfsServerConfiguration -EnableNfsv2 $False -EnableNfsv4 $True -EnableNfsv3 $True
+PS C:\> Set-NfsServerConfiguration -EnableNfsv2 $False -EnableNfsv3 $False -EnableNfsv4 $True
 ```
 
 This command disables versions 2 and 3 of the NFS protocol and enables NFS v4.1 on a local NFS server.

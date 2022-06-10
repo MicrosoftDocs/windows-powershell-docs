@@ -26,34 +26,41 @@ The **Get-SmbClientConfiguration** cmdlet retrieves the Server Message Block (SM
 ## EXAMPLES
 
 ### Example 1: Get the client configuration
+```PowerShell
+Get-SmbClientConfiguration
 ```
-PS C:\>Get-SmbClientConfiguration
+```Output
+SkipCertificateCheck                  : False
 ConnectionCountPerRssNetworkInterface : 4
 DirectoryCacheEntriesMax              : 16
-DirectoryCacheEntrySizeMax            : 65536
+DirectoryCacheEntrySizeMax            : 0
 DirectoryCacheLifetime                : 10
+DormantFileLimit                      : 1023
 EnableBandwidthThrottling             : True
 EnableByteRangeLockingOnReadOnlyFiles : True
 EnableLargeMtu                        : True
+EnableLoadBalanceScaleOut             : True
 EnableMultiChannel                    : True
-DormantFileLimit                      : 1023
-EnableSecuritySignature               : True
 ExtendedSessionTimeout                : 1000
 FileInfoCacheEntriesMax               : 64
 FileInfoCacheLifetime                 : 10
 FileNotFoundCacheEntriesMax           : 128
 FileNotFoundCacheLifetime             : 5
+ForceSMBEncryptionOverQuic            : False
 KeepConn                              : 600
 MaxCmds                               : 50
 MaximumConnectionCountPerServer       : 32
 OplocksDisabled                       : False
-RequireSecuritySignature              : False
 SessionTimeout                        : 60
 UseOpportunisticLocking               : True
 WindowSizeThreshold                   : 1
+EncryptionCiphers                     : AES_128_GCM, AES_128_CCM, AES_256_GCM, AES_256_CCM
 ```
 
 This command retrieves the SMB client configuration.
+
+> [!NOTE]
+> The EncryptionCiphers parameter is available beginning with 2022-06 Cumulative Update for Windows Server 2022 (build 20348.681), and Cumulative Update for Windows 11 (build 22000.652).
 
 ## PARAMETERS
 

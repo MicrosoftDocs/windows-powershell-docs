@@ -3,67 +3,61 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: SmbClientConfiguration.cdxml-help.xml
 Module Name: SmbShare
 ms.date: 06/10/2022
-online version: https://docs.microsoft.com/powershell/module/smbshare/set-smbclientconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: http://go.microsoft.com/fwlink/?LinkID=241959
 schema: 2.0.0
-title: Set-SmbClientConfiguration
+title: Reset-SmbClientConfiguration
 ---
 
-# Set-SmbClientConfiguration
+# Reset-SmbClientConfiguration
 
 ## SYNOPSIS
-Sets the SMB client configuration.
+Resets the Server Message Block (SMB) client configuration parameters to their default values.
 
 ## SYNTAX
 
 ```
-Set-SmbClientConfiguration [-ConnectionCountPerRssNetworkInterface <UInt32>]
- [-DirectoryCacheEntriesMax <UInt32>] [-DirectoryCacheEntrySizeMax <UInt32>] [-DirectoryCacheLifetime <UInt32>]
- [-DisableCompression <Boolean>] [-DormantFileLimit <UInt32>] [-EnableBandwidthThrottling <Boolean>]
- [-EnableByteRangeLockingOnReadOnlyFiles <Boolean>] [-EnableInsecureGuestLogons <Boolean>]
- [-EnableLargeMtu <Boolean>] [-EnableLoadBalanceScaleOut <Boolean>] [-EnableMultiChannel <Boolean>]
- [-EnableSecuritySignature <Boolean>] [-EncryptionCiphers <String>] [-ExtendedSessionTimeout <UInt32>]
- [-FileInfoCacheEntriesMax <UInt32>] [-FileInfoCacheLifetime <UInt32>] [-FileNotFoundCacheEntriesMax <UInt32>]
- [-FileNotFoundCacheLifetime <UInt32>] [-ForceSMBEncryptionOverQuic <Boolean>] [-KeepConn <UInt32>]
- [-MaxCmds <UInt32>] [-MaximumConnectionCountPerServer <UInt32>] [-OplocksDisabled <Boolean>]
- [-RequireSecuritySignature <Boolean>] [-SessionTimeout <UInt32>] [-SkipCertificateCheck <Boolean>]
- [-UseOpportunisticLocking <Boolean>] [-WindowSizeThreshold <UInt32>] [-Force] [-CimSession <CimSession[]>]
+Reset-SmbClientConfiguration [-All] [-ConnectionCountPerRssNetworkInterface] [-DirectoryCacheEntriesMax]
+ [-DirectoryCacheEntrySizeMax] [-DirectoryCacheLifetime] [-DisableCompression] [-DormantFileLimit]
+ [-EnableBandwidthThrottling] [-EnableByteRangeLockingOnReadOnlyFiles] [-EnableLargeMtu]
+ [-EnableLoadBalanceScaleOut] [-EnableMultiChannel] [-EncryptionCiphers] [-ExtendedSessionTimeout]
+ [-FileInfoCacheEntriesMax] [-FileInfoCacheLifetime] [-FileNotFoundCacheEntriesMax]
+ [-FileNotFoundCacheLifetime] [-ForceSMBEncryptionOverQuic] [-KeepConn] [-MaxCmds]
+ [-MaximumConnectionCountPerServer] [-OplocksDisabled] [-SessionTimeout] [-SkipCertificateCheck]
+ [-UseOpportunisticLocking] [-WindowSizeThreshold] [-Force] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-SmbClientConfiguration** cmdlet sets the Server Message Block (SMB) client configuration.
+The **Reset-SmbClientConfiguration** cmdlet resets SMB client configuration parameters to their default values.
 
 > [!NOTE]
-> The EncryptionCiphers parameter is available beginning with 2022-06 Cumulative Update for Windows Server 2022 (build 20348.681), and Cumulative Update for Windows 11 (build 22000.652).
+> This cmdlet is available beginning with 2022-06 Cumulative Update for Windows Server 2022 (build 20348.681), and Cumulative Update for Windows 11 (build 22000.652).
 
 ## EXAMPLES
 
-### Example 1: Set the SMB client configuration
-```
-PS C:\>Set-SmbClientConfiguration -ConnectionCountPerRssNetworkInterface 8
-Confirm 
-Are you sure you want to perform this action? 
-Performing operation 'Modify' on Target 'SMB Client Configuration'. 
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
-```
-
-This command sets the SMB client configuration.
-
-### Example 2: Set the SMB client configuration without confirmation
-```
-PS C:\>Set-SmbClientConfiguration -ConnectionCountPerRssNetworkInterface 4 -Force
-```
-
-This command sets the SMB client configuration without user confirmation.
-
-### Example 3: Specify encryption ciphers
+### Example 1: Reset the large MTU behavior
 ```powershell
-PS C:\>Set-SmbClientConfiguration -EncryptionCiphers "AES_128_GCM, AES_256_GCM"
+Reset-SmbClientConfiguration -EnableLargeMtu
 ```
 
-This command specifies the encryption ciphers used by the SMB client.
+This commands resets only the large MTU behavior to its default value.
 
 ## PARAMETERS
+
+### -All
+Resets all the SMB client configuration parameters to their default values.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
@@ -71,7 +65,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,12 +92,12 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionCountPerRssNetworkInterface
-Specifies the SMB connection count per each RSS network interface.
+Resets the SMB connection count for each RSS network interface to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,12 +107,12 @@ Accept wildcard characters: False
 ```
 
 ### -DirectoryCacheEntriesMax
-Specifies the maximum cache entries that can be in the directory cache.
+Resets the maximum cache entries that can be in the directory cache to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,12 +122,12 @@ Accept wildcard characters: False
 ```
 
 ### -DirectoryCacheEntrySizeMax
-Specifies the maximum size of directory cache entry.
+Resets the maximum size of directory cache entry value to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,10 +137,10 @@ Accept wildcard characters: False
 ```
 
 ### -DirectoryCacheLifetime
-Specifies the directory cache lifetime.
+Resets the directory cache lifetime to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -158,12 +152,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompression
-Specifies that the SMB client ignores all requests for compression from applications or SMB servers.
+Resets the SMB compression behavior to its default value.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,12 +167,12 @@ Accept wildcard characters: False
 ```
 
 ### -DormantFileLimit
-Specifies the dormant file limit.
+Resets the dormant file limit to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,12 +182,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBandwidthThrottling
-Indicates that bandwidth throttling is enabled.
+Resets the bandwidth throttling behavior to its default value.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,27 +197,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableByteRangeLockingOnReadOnlyFiles
-Indicates that byte range locking on read-only files is enabled.
+Resets the enabled byte range locking behavior on read-only file to its default value.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableInsecureGuestLogons
-Indicates whether SMB client will allow insecure guest logons to an SMB server.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,12 +212,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLargeMtu
-Indicates that large MTU is enabled.
+Resets the enable large MTU value to its default value.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,12 +227,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLoadBalanceScaleOut
-Indicates whether load balance scale out is enabled.
+Resets the enable load balance scale out value to its default value.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -263,27 +242,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMultiChannel
-Indicates that multi-channel is enabled.
+Resets the enable multi-channel value to its default value.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableSecuritySignature
-Indicates that the security signature is enabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -293,10 +257,10 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionCiphers
-Specifies the encryption ciphers used by the SMB client.
+Resets the encryption ciphers used by the SMB client to its default value.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -308,12 +272,12 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedSessionTimeout
-Specifies the extended session time-out.
+Resets the extended session time-out value to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -323,12 +287,12 @@ Accept wildcard characters: False
 ```
 
 ### -FileInfoCacheEntriesMax
-Specifies the maximum number entries that can be in the file information cache.
+Resets the maximum number entries that can be in the file information cache to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -338,12 +302,12 @@ Accept wildcard characters: False
 ```
 
 ### -FileInfoCacheLifetime
-Specifies the file information cache lifetime.
+Resets the file information cache lifetime value to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -353,12 +317,12 @@ Accept wildcard characters: False
 ```
 
 ### -FileNotFoundCacheEntriesMax
-Specifies the maximum number entries that can be in the file not found cache.
+Resets the maximum number entries that can be in the file not found cache to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -368,12 +332,12 @@ Accept wildcard characters: False
 ```
 
 ### -FileNotFoundCacheLifetime
-Specifies the file not found cache lifetime.
+Resets the file not found cache lifetime value to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -388,7 +352,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -398,10 +362,10 @@ Accept wildcard characters: False
 ```
 
 ### -ForceSMBEncryptionOverQuic
-Specifies that the SMB client uses SMB encryption inside of the SMB over QUIC TLS 1.3 encrypted tunnel even if the SMB server does not require it.
+Resets the for SMB encryption over QUIC value to its default value.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -413,12 +377,12 @@ Accept wildcard characters: False
 ```
 
 ### -KeepConn
-Specifies the time, in seconds, before the SMB client session is automatically disconnected.
+Reset the time, in seconds, before the SMB client session is automatically disconnected to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -428,12 +392,12 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCmds
-Specifies the maximum number of concurrent outstanding network requests that the SMB client supports.
+Resets the maximum number of concurrent outstanding network requests that the SMB client supports to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -443,12 +407,12 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumConnectionCountPerServer
-Specifies the maximum connection count per server.
+Resets the maximum connection count per server to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -458,27 +422,12 @@ Accept wildcard characters: False
 ```
 
 ### -OplocksDisabled
-Indicates that opportunistic locks are disabled.
+Resets the opportunistic locks disabled value to its default value.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequireSecuritySignature
-Indicates that the security signature is required.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -488,12 +437,12 @@ Accept wildcard characters: False
 ```
 
 ### -SessionTimeout
-Specifies the session time-out.
+Resets the session time-out value to its default value.
 
 ```yaml
-Type: UInt32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -503,10 +452,10 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateCheck
-Specifies that the SMB client not trust the SMB over QUIC SMB server certificate issuer. Required when using a self-signed certificate.
+Resets the skip certificate check value to its default value.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -525,7 +474,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -535,12 +484,27 @@ Accept wildcard characters: False
 ```
 
 ### -UseOpportunisticLocking
-Indicates that opportunistic locks are used.
+Resets the use opportunistic locks value to its default value.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WindowSizeThreshold
+Resets the window size threshold value to its default value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -559,7 +523,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -575,28 +539,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WindowSizeThreshold
-Specifies the window size threshold.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -604,11 +553,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 
 ## RELATED LINKS
 
 [Get-SmbClientConfiguration](./Get-SmbClientConfiguration.md)
-[Reset-SmbClientConfiguration](./Reset-SmbClientConfiguration.md)
+[Set-SmbClientConfiguration](./Set-SmbClientConfiguration.md)

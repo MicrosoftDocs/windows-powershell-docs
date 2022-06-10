@@ -119,6 +119,12 @@ Removes a certificate mapping from the SMB server for SMB over QUIC.
 ### [Remove-SmbShare](./Remove-SmbShare.md)
 Deletes the specified SMB shares.
 
+### [Reset-SmbClientConfiguration](./Reset-SmbClientConfiguration.md) 
+Resets the Server Message Block (SMB) client configuration parameters to their default values.
+
+### [Reset-SmbServerConfiguration](./Reset-SmbServerConfiguration.md)
+Resets the Server Message Block (SMB) server configuration parameters to their default values.
+
 ### [Revoke-SmbShareAccess](./Revoke-SmbShareAccess.md)
 Removes all of the allow ACEs for a trustee from the security descriptor of the SMB share.
 

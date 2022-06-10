@@ -26,52 +26,62 @@ The **Get-SmbServerConfiguration** cmdlet retrieves the Server Message Block (SM
 ## EXAMPLES
 
 ### Example 1: Get SMB server configuration
+```PowerShell
+Get-SmbServerConfiguration
 ```
-PS C:\>Get-SmbServerConfiguration
-AnnounceServer                  : False 
-AsynchronousCredits             : 64 
-AutoShareServer                 : True 
-AutoShareWorkstation            : True 
-CachedOpenLimit                 : 5 
-AnnounceComment                 : 
-EnableDownlevelTimewarp         : False 
-EnableLeasing                   : True 
-EnableMultiChannel              : True 
-EnableStrictNameChecking        : True 
-AutoDisconnectTimeout           : 0 
-DurableHandleV2TimeoutInSeconds : 30 
-EnableAuthenticateUserSharing   : False 
-EnableForcedLogoff              : True 
-EnableOplocks                   : True 
-EnableSecuritySignature         : False 
-ServerHidden                    : True 
-IrpStackSize                    : 15 
-KeepAliveTime                   : 2 
-MaxChannelPerSession            : 32 
-MaxMpxCount                     : 50 
-MaxSessionPerConnection         : 16384 
-MaxThreadsPerQueue              : 20 
-MaxWorkItems                    : 1 
-NullSessionPipes                : 
-NullSessionShares               : 
-OplockBreakWait                 : 35 
-PendingClientTimeoutInSeconds   : 120 
-RequireSecuritySignature        : False 
-EnableSMB1Protocol              : True 
-EnableSMB2Protocol              : True 
-Smb2CreditsMax                  : 2048 
-Smb2CreditsMin                  : 128 
-SmbServerNameHardeningLevel     : 0 
-TreatHostAsStableStorage        : False 
-ValidateAliasNotCircular        : True 
-ValidateShareScope              : True 
-ValidateShareScopeNotAliased    : True 
-ValidateTargetName              : True 
-EncryptData                     : False 
-RejectUnencryptedAccess         : True
+```Output
+AnnounceComment                        :
+AnnounceServer                         : False
+AsynchronousCredits                    : 512
+AuditSmb1Access                        : False
+AutoDisconnectTimeout                  : 15
+AutoShareServer                        : True
+AutoShareWorkstation                   : True
+CachedOpenLimit                        : 10
+DisableSmbEncryptionOnSecureConnection : True
+DurableHandleV2TimeoutInSeconds        : 180
+EnableAuthenticateUserSharing          : False
+EnableDownlevelTimewarp                : False
+EnableForcedLogoff                     : True
+EnableLeasing                          : True
+EnableMultiChannel                     : True
+EnableOplocks                          : True
+EnableSecuritySignature                : False
+EnableSMB1Protocol                     : False
+EnableSMB2Protocol                     : True
+EnableStrictNameChecking               : True
+EncryptData                            : False
+IrpStackSize                           : 15
+KeepAliveTime                          : 2
+MaxChannelPerSession                   : 32
+MaxMpxCount                            : 50
+MaxSessionPerConnection                : 16384
+MaxThreadsPerQueue                     : 20
+MaxWorkItems                           : 1
+NullSessionPipes                       :
+NullSessionShares                      :
+OplockBreakWait                        : 35
+PendingClientTimeoutInSeconds          : 120
+RejectUnencryptedAccess                : True
+RequireSecuritySignature               : False
+ServerHidden                           : True
+Smb2CreditsMax                         : 8192
+Smb2CreditsMin                         : 512
+SmbServerNameHardeningLevel            : 0
+TreatHostAsStableStorage               : False
+ValidateAliasNotCircular               : True
+ValidateShareScope                     : True
+ValidateShareScopeNotAliased           : True
+ValidateTargetName                     : True
+RestrictNamedpipeAccessViaQuic         : True
+EnableSMBQUIC                          : True
+EncryptionCiphers                      : AES_128_GCM, AES_128_CCM, AES_256_GCM, AES_256_CCM
 ```
 
 This command retrieves the SMB server configuration.
+
+> [!NOTE]
+> The EncryptionCiphers parameter is available beginning with 2022-06 Cumulative Update for Windows Server 2022 (build 20348.681), and Cumulative Update for Windows 11 (build 22000.652).
 
 ## PARAMETERS
 

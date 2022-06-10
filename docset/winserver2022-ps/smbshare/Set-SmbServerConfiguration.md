@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 12/20/2016
+ms.date: 06/10/2022
 online version: https://docs.microsoft.com/powershell/module/smbshare/set-smbserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SmbServerConfiguration
@@ -24,20 +24,23 @@ Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean
  [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>] [-EnableMultiChannel <Boolean>]
  [-EnableOplocks <Boolean>] [-EnableSecuritySignature <Boolean>] [-EnableSMB1Protocol <Boolean>]
  [-EnableSMB2Protocol <Boolean>] [-EnableSMBQUIC <Boolean>] [-EnableStrictNameChecking <Boolean>]
- [-EncryptData <Boolean>] [-IrpStackSize <UInt32>] [-KeepAliveTime <UInt32>] [-MaxChannelPerSession <UInt32>]
- [-MaxMpxCount <UInt32>] [-MaxSessionPerConnection <UInt32>] [-MaxThreadsPerQueue <UInt32>]
- [-MaxWorkItems <UInt32>] [-NullSessionPipes <String>] [-NullSessionShares <String>]
- [-OplockBreakWait <UInt32>] [-PendingClientTimeoutInSeconds <UInt32>] [-RejectUnencryptedAccess <Boolean>]
- [-RequireSecuritySignature <Boolean>] [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>]
+ [-EncryptData <Boolean>] [-EncryptionCiphers <String>] [-IrpStackSize <UInt32>] [-KeepAliveTime <UInt32>]
+ [-MaxChannelPerSession <UInt32>] [-MaxMpxCount <UInt32>] [-MaxSessionPerConnection <UInt32>]
+ [-MaxThreadsPerQueue <UInt32>] [-MaxWorkItems <UInt32>] [-NullSessionPipes <String>]
+ [-NullSessionShares <String>] [-OplockBreakWait <UInt32>] [-PendingClientTimeoutInSeconds <UInt32>]
+ [-RejectUnencryptedAccess <Boolean>] [-RequireSecuritySignature <Boolean>]
+ [-RestrictNamedpipeAccessViaQuic <Boolean>] [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>]
  [-Smb2CreditsMin <UInt32>] [-SmbServerNameHardeningLevel <UInt32>] [-TreatHostAsStableStorage <Boolean>]
  [-ValidateAliasNotCircular <Boolean>] [-ValidateShareScope <Boolean>]
- [-ValidateShareScopeNotAliased <Boolean>] [-ValidateTargetName <Boolean>]
- [-RestrictNamedpipeAccessViaQuic <Boolean>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ValidateShareScopeNotAliased <Boolean>] [-ValidateTargetName <Boolean>] [-Force]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Set-SmbServerConfiguration** cmdlet sets the Server Message Block (SMB) Service configuration. For more information on SMB server and protocol specifications, see [Overview of file sharing using the SMB 3 protocol in Windows Server](https://docs.microsoft.com/windows-server/storage/file-server/file-server-smb-overview) and [[MS-SMB2]: Server Message Block (SMB) Protocol Versions 2 and 3](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
+
+> [!NOTE]
+> The EncryptionCiphers parameter is available beginning with 2022-06 Cumulative Update for Windows Server 2022 (build 20348.681), and Cumulative Update for Windows 11 (build 22000.652).
 
 ## EXAMPLES
 
@@ -88,6 +91,13 @@ PS C:\>Set-SmbServerConfiguration -EnableSMB1Protocol $false
 ```
 
 This command disables SMB1 on the SMB server.
+
+### Example 7: Specify encryption ciphers
+```powershell
+PS C:\>Set-SmbServerConfiguration -EncryptionCiphers "AES_128_GCM, AES_256_GCM"
+```
+
+This command specifies the encryption ciphers used by the SMB server.
 
 ## PARAMETERS
 
@@ -443,6 +453,21 @@ Indicates whether the sessions established on this server are encrypted.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionCiphers
+Specifies the encryption ciphers used by the SMB server.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -878,3 +903,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-SmbServerConfiguration](./Get-SmbServerConfiguration.md)
+[Reset-SmbServerConfiguration](./Reset-SmbServerConfiguration.md)

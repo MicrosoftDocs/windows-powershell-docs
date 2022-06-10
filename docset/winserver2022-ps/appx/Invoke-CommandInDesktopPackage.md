@@ -21,13 +21,13 @@ Invoke-CommandInDesktopPackage [-PackageFamilyName] <String> [-AppId] <String> [
 ```
 
 ## DESCRIPTION
-**Invoke-CommandInDesktopPackage** creates a new process in the context of the supplied `PackageFamilyName` and `AppId`. 
+`Invoke-CommandInDesktopPackage` creates a new process in the context of the supplied **PackageFamilyName** and **AppId**. 
 
-The created process will have the identity of the provided `AppId` and will have access to its virtualized file system and registry (if any). The new process will have a token that is similar to, but not identical to, a real `AppId` process. 
+The created process will have the identity of the provided **AppId** and will have access to its virtualized file system and registry (if any). The new process will have a token that is similar to, but not identical to, a real **AppId** process. 
 
 The primary use-case of this command is to invoke debugging or troubleshooting tools in the context of the packaged app to easily access its virtualized resources. For example, you can run the Registry Editor to see virtualized registry keys, or Notepad to read virtualized files. See the important note that follows on using tools such as the Registry Editor that require elevation. 
 
-No guarantees are made about the behavior of the created process, other than it having the package identity and access to the package's virtualized resources. In particular, the new process will **not** be created in an AppContainer even if an `AppId` process would normally be created in an AppContainer. Features such as Privacy Controls or other App Settings may or may not apply to the new process. You should not rely on any specific side-effects of using this command, as they are undefined and subject to change.
+No guarantees are made about the behavior of the created process, other than it having the package identity and access to the package's virtualized resources. In particular, the new process will _not_ be created in an AppContainer even if an **AppId** process would normally be created in an AppContainer. Features such as Privacy Controls or other App Settings may or may not apply to the new process. You should not rely on any specific side-effects of using this command, as they are undefined and subject to change.
 
 ## EXAMPLES
 
@@ -44,7 +44,7 @@ PS C:\> Invoke-CommandInDesktopPackage -AppId "ContosoApp" -PackageFamilyName "C
 ## PARAMETERS
 
 ### -AppId
-`AppId` is the Application ID from the target package's manifest. 
+**AppId** is the Application ID from the target package's manifest. 
 
 ```XML
 <Application Id="MyAppName" ... />
@@ -79,9 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -Command
-An executable to invoke (for example, "regedit.exe").
+An executable to invoke (for example, `regedit.exe`).
 
-Note that if the executable requires elevation (like regedit), you **must** call `Invoke-CommandInDesktopPackage` from an already-elevated context. Calling `Invoke-CommandInDesktopPackage` from a non-elevated context will not work as expected: the new process will be created without the package context, and the PowerShell command will fail.
+Note that if the executable requires elevation (like `regedit`), you must call `Invoke-CommandInDesktopPackage` from an already-elevated context. Calling `Invoke-CommandInDesktopPackage` from a non-elevated context does not work as expected. The new process is created without the package context, and the PowerShell command fails.
 
 ```yaml
 Type: String
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreventBreakaway
-Causes all child processes of the invoked process to also be created in the context of the `AppId`. By default, child processes are created without any context. This switch is useful for running `cmd.exe` so that you can launch multiple other tools in the package context.
+Causes all child processes of the invoked process to also be created in the context of the **AppId**. By default, child processes are created without any context. This switch is useful for running `cmd.exe` so that you can launch multiple other tools in the package context.
 
 ```yaml
 Type: SwitchParameter

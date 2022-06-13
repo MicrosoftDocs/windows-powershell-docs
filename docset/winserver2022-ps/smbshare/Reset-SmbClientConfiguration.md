@@ -31,7 +31,7 @@ Reset-SmbClientConfiguration [-All] [-ConnectionCountPerRssNetworkInterface] [-D
 The **Reset-SmbClientConfiguration** cmdlet resets SMB client configuration parameters to their default values.
 
 > [!NOTE]
-> This cmdlet is available beginning with 2022-06 Cumulative Update for Windows Server 2022 (build 20348.681), and Cumulative Update for Windows 11 (build 22000.652).
+> This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems (KB5014665), and Cumulative Update for Windows 11, version 22H2 (KB5014668).
 
 ## EXAMPLES
 
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionCiphers
-Resets the encryption ciphers used by the SMB client to its default value.
+Resets the encryption ciphers used by the SMB client to its default value and order.
 
 ```yaml
 Type: SwitchParameter

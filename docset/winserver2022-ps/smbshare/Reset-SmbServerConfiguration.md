@@ -33,7 +33,7 @@ Reset-SmbServerConfiguration [-All] [-AnnounceComment] [-AnnounceServer] [-Async
 The **Reset-SmbServerConfiguration** cmdlet resets SMB server configuration parameters to their default values. For more information on SMB server and protocol specifications, see [Overview of file sharing using the SMB 3 protocol in Windows Server](https://docs.microsoft.com/windows-server/storage/file-server/file-server-smb-overview) and [[MS-SMB2]: Server Message Block (SMB) Protocol Versions 2 and 3](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 > [!NOTE]
-> This cmdlet is available beginning with 2022-06 Cumulative Update for Windows Server 2022 (build 20348.681), and Cumulative Update for Windows 11 (build 22000.652).
+> This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems (KB5014665), and Cumulative Update for Windows 11, version 22H2 (KB5014668).
 
 ## EXAMPLES
 
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptData
-Resets the session encryption behavior to its default value.
+Resets the session encryption behavior to its default value and order.
 
 ```yaml
 Type: SwitchParameter
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionCiphers
-Resets the encryption ciphers used by the SMB client to its default value.
+Resets the encryption ciphers used by the SMB client to its default value and order.
 
 ```yaml
 Type: SwitchParameter

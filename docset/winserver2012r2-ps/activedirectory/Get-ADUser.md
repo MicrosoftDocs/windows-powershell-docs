@@ -451,10 +451,6 @@ To get a list of the default set of properties of an **ADUser** object, use the 
 
 `Get-ADUser`\<user\>`| Get-Member`
 
-To get a list of the most commonly used properties of an ADUser object, use the following command:
-
-`Get-ADUser`\<user\>`-Properties Extended | Get-Member`
-
 To get a list of all the properties of an **ADUser** object, use the following command:
 
 `Get-ADUser`\<user\>`-Properties * | Get-Member`

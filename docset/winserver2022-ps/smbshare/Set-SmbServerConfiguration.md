@@ -97,7 +97,7 @@ This command disables SMB1 on the SMB server.
 PS C:\>Set-SmbServerConfiguration -EncryptionCiphers "AES_128_GCM, AES_256_GCM"
 ```
 
-This command specifies the encryption ciphers used by the SMB server.
+This command specifies the encryption ciphers used by the SMB client, and the preferred order.
 
 ## PARAMETERS
 

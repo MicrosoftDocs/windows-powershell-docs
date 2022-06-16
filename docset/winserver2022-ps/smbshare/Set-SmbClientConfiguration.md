@@ -61,7 +61,7 @@ This command sets the SMB client configuration without user confirmation.
 PS C:\>Set-SmbClientConfiguration -EncryptionCiphers "AES_128_GCM, AES_256_GCM"
 ```
 
-This command specifies the encryption ciphers used by the SMB client.
+This command specifies the encryption ciphers used by the SMB client, and the preferred order.
 
 ## PARAMETERS
 

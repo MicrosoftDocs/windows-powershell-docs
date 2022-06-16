@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptData
-Resets the session encryption behavior to its default value and order.
+Resets the session encryption behavior to its default value.
 
 ```yaml
 Type: SwitchParameter

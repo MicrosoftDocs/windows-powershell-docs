@@ -26,8 +26,9 @@ Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>
  [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
  [-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
  [-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks]
- [-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [[-ClusterName] <String>]
- [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [-AttemptSoftReboot]
+ [-RebootMode <RebootType>] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateNow
@@ -55,14 +56,23 @@ Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>
  [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
  [-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
  [-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks]
- [-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [[-ClusterName] <String>]
- [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [-AttemptSoftReboot]
+ [-RebootMode <RebootType>] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### DefaultParamSet
+### Once
 ```
-Set-CauClusterRole [-AttemptSoftReboot] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CauClusterRole [-UseDefault] [-RunOnce] [-CauPluginName <String[]>]
+ [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>]
+ [-NodeOrder <String[]>] [-PreUpdateScript <String>] [-PostUpdateScript <String>]
+ [-ConfigurationName <String>] [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>]
+ [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially]
+ [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+ [-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+ [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
+ [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
+ [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -385,8 +395,8 @@ settings that are configured for Windows Firewall.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -408,8 +418,8 @@ another node. The acceptable values for this parameter are:
 
 ```yaml
 Type: FailbackType
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 Accepted values: NoFailback, Immediate, Policy
 
 Required: False
@@ -443,7 +453,7 @@ A group might not be able to move because no other node can host the group or th
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
 Aliases:
 
 Required: False
@@ -461,7 +471,7 @@ A group might not be able to move because no other node can host the group or th
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
 Aliases:
 
 Required: False
@@ -477,7 +487,7 @@ The nodes are not drained.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
 Aliases:
 
 Required: False
@@ -514,8 +524,8 @@ The default for most clusters is approximately one-third of the number of nodes.
 
 ```yaml
 Type: Int32
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -531,8 +541,8 @@ post-update scripts, is retried per node. The maximum is 64and the default is 3.
 
 ```yaml
 Type: Int32
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -547,7 +557,7 @@ Specifies an array of cluster node names in the order that they should be update
 
 ```yaml
 Type: String[]
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
 Aliases:
 
 Required: False
@@ -562,8 +572,8 @@ Indicates that the CAU cluster role upgrades the operating system of the cluster
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -582,8 +592,8 @@ the cluster nodes.
 
 ```yaml
 Type: String
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -612,6 +622,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RebootMode
+{{ Fill RebootMode Description }}
+
+```yaml
+Type: RebootType
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
+Accepted values: ClusProp, FullReboot, SoftReboot
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RebootTimeoutMinutes
 
 Specifies the time in minutes that CAU will allow for the restarting of a node. If the restart doesn't
@@ -619,8 +645,8 @@ complete within this time, then the updating run on that node is marked as faile
 
 ```yaml
 Type: Int32
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -635,8 +661,23 @@ Indicates that all cluster nodes must be online and reachable before updating be
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RunOnce
+{{ Fill RunOnce Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Once
+Aliases:
 
 Required: False
 Position: Named
@@ -660,8 +701,8 @@ single plug-in is specified, a warning appears.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -682,8 +723,8 @@ If a single plug-in is specified, a warning appears.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -699,7 +740,7 @@ By default, CAU selects the order of nodes to update based on the level of activ
 
 ```yaml
 Type: String[]
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
 Aliases:
 
 Required: False
@@ -714,7 +755,7 @@ Indicates that the CAU cluster role skips update checks.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
 Aliases:
 
 Required: False
@@ -752,8 +793,8 @@ performing updates must be complete within this time limit.
 
 ```yaml
 Type: TimeSpan
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -773,8 +814,8 @@ If a single plug-in is specified, a warning appears.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -798,8 +839,8 @@ for this value for every node in the cluster in the worst case.
 
 ```yaml
 Type: Int32
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -831,8 +872,8 @@ Indicates that default values are used for all parameters that don't have specif
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, UseDefault, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, UseDefault, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -849,8 +890,8 @@ of the time taken by the updating run.
 
 ```yaml
 Type: TimeSpan
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: MonthlyDayOfWeek, Weekly, Once
+Aliases:
 
 Required: False
 Position: Named
@@ -906,7 +947,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 

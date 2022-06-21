@@ -18,8 +18,8 @@ updates that are applied to each node in a specified cluster.
 
 ```
 Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
- [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-OsRollingUpgrade]
- [-AttemptSoftReboot] [<CommonParameters>]
+ [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure]
+ [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -228,6 +228,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RebootMode
+{{ Fill RebootMode Description }}
+
+```yaml
+Type: RebootType
+Parameter Sets: (All)
+Aliases:
+Accepted values: ClusProp, FullReboot, SoftReboot
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RunPluginsSerially
 
 Indicates that CAU scans each cluster node for applicable updates and stages the updates for each
@@ -284,7 +300,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ClusterAwareUpdating.CauUpdateInfo
+### Microsoft.ClusterAwareUpdating.UpdateInfo
+
+### Microsoft.ClusterAwareUpdating.ActivityIdMap
+
+### Microsoft.ClusterAwareUpdating.UpgradeSetupInfo
 
 ## NOTES
 

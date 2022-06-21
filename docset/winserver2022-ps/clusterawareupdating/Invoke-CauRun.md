@@ -23,24 +23,17 @@ Invoke-CauRun [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder
  [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>]
  [-SeparateReboots] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
  [-SuspendClusterNodeTimeoutMinutes <Int32>] [-Force] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
- [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>] [[-ClusterName] <String>]
- [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>] [-CauPluginArguments <Hashtable[]>]
- [-RunPluginsSerially] [-StopOnPluginFailure] [-OsRollingUpgrade] [-AttemptSoftReboot] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-ForceSelfUpdate] [-SiteAwareUpdatingOrder <String[]>]
+ [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
+ [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-OsRollingUpgrade]
+ [-AttemptSoftReboot] [-RebootMode <RebootType>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RecoverParamSet
 ```
-Invoke-CauRun [-ForceRecovery] [-Force] [-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot]
- [-SkipUpdateChecks] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### RecoverParamSet
-
-```
-Invoke-CauRun [-ForceRecovery] [-Force] [[-ClusterName] <String>] [[-Credential] <PSCredential>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CauRun [-ForceRecovery] [-Force] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+ [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-ForceSelfUpdate] [[-ClusterName] <String>]
+ [[-Credential] <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -164,8 +157,9 @@ For instance:
 
 For the default **Microsoft.WindowsUpdatePlugin** plug-in, no arguments are needed.
 The following arguments are optional: 
-- **'IncludeRecommendedUpdates'='\<Value\>'**: Boolean value to indicate that recommended updates will be applied in addition to important updates on each node.
-If not specified, the default value is **'False'**.
+- **'IncludeRecommendedUpdates'='\<Value\>'**: Boolean value to indicate that recommended updates
+  will be applied in addition to important updates on each node. If not specified, the default value
+  is **'False'**.
 -- A standard Windows Update Agent query string that specifies criteria used by the Windows Update
 Agent to filter the updates that will be applied to each node. For a name, use **QueryString** and
 for a value, enclose the full query in quotation marks. If not specified, then the
@@ -434,6 +428,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForceSelfUpdate
+{{ Fill ForceSelfUpdate Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MaxFailedNodes
 
 Specifies the maximum number of nodes on which updating can fail.
@@ -534,6 +543,22 @@ pre-update script fails, the node isn't updated.
 Type: String
 Parameter Sets: DefaultParamSet
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RebootMode
+{{ Fill RebootMode Description }}
+
+```yaml
+Type: RebootType
+Parameter Sets: DefaultParamSet
+Aliases:
+Accepted values: ClusProp, FullReboot, SoftReboot
 
 Required: False
 Position: Named

@@ -154,7 +154,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
+### Microsoft.ClusterAwareUpdating.ActivityIdMap
+
+### System.IO.FileInfo
 
 ## NOTES
 

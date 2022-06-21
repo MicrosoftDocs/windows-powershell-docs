@@ -26,8 +26,8 @@ Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>] [
  [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules]
  [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain]
  [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
- [-OsRollingUpgrade] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
+ [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Weekly
@@ -41,14 +41,21 @@ Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>] [
  [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules]
  [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain]
  [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
- [-OsRollingUpgrade] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
+ [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### DefaultParamSet
+### Once
 ```
-Add-CauClusterRole [-AttemptSoftReboot] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>] [-RunOnce]
+ [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
+ [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>] [-PostUpdateScript <String>]
+ [-ConfigurationName <String>] [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
+ [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
+ [-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
+ [-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks]
+ [-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>]
+ [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -271,17 +278,12 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationName
-<<<<<<< HEAD
 
 Specifies the Windows PowerShell session configuration that defines the session in which scripts,
 specified by the **PreUpdateScript** and **PostUpdateScript** parameters, and cmdlets are run, and can
 limit the cmdlets that are available to be run. If either a pre-update or post-update script is
 specified but a configuration name isn't specified, then the default session configuration that is
-built into Windows PowerShell® is used.
-=======
-Specifies the Windows PowerShell session configuration that defines the session in which scripts, specified by the *PreUpdateScript* and *PostUpdateScript* parameters, and cmdlets are run, and can limit the cmdlets that are available to be run.
-If either a pre-update or post-update script is specified but a configuration name is not specified, then the default session configuration that is built into Windows PowerShell&reg; is used.
->>>>>>> f65c35cc7 (Remove special character)
+built into Windows PowerShell is used.
 
 ```yaml
 Type: String
@@ -618,6 +620,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RebootMode
+{{ Fill RebootMode Description }}
+
+```yaml
+Type: RebootType
+Parameter Sets: (All)
+Aliases:
+Accepted values: ClusProp, FullReboot, SoftReboot
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RebootTimeoutMinutes
 
 Specifies the time in minutes that CAU allows for the restarting of a node. If the restart doesn't
@@ -643,6 +661,21 @@ begins.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: MonthlyDayOfWeek, Weekly
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RunOnce
+{{ Fill RunOnce Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Once
 Aliases:
 
 Required: False

@@ -18,20 +18,18 @@ specified dates or other specified parameters.
 
 ### AllParamsSet (Default)
 ```
-Get-CauReport [[-ClusterName] <String>] [-Detailed] [-Credential <PSCredential>]
-[<CommonParameters>]
+Get-CauReport [[-ClusterName] <String>] [-Detailed] [-Credential <PSCredential>] [<CommonParameters>]
 ```
 
 ### RangeParamSet
 ```
-Get-CauReport [[-ClusterName] <String>] [[-StartDate] <DateTime>] [[-EndDate] <DateTime>]
-[-Detailed] [-Credential <PSCredential>] [<CommonParameters>]
+Get-CauReport [[-ClusterName] <String>] [[-StartDate] <DateTime>] [[-EndDate] <DateTime>] [-Detailed]
+ [-Credential <PSCredential>] [<CommonParameters>]
 ```
 
 ### LastParamSet
 ```
-Get-CauReport [[-ClusterName] <String>] [-Last] [-Detailed] [-Credential <PSCredential>]
-[<CommonParameters>]
+Get-CauReport [[-ClusterName] <String>] [-Last] [-Detailed] [-Credential <PSCredential>] [<CommonParameters>]
 ```
 
 ### SpecificReportParamSet
@@ -189,10 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
--WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

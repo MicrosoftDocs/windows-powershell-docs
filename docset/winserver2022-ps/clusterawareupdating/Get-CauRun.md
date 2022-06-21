@@ -22,20 +22,17 @@ Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [<CommonParame
 
 ### WaitForStart
 ```
-Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForStart]
-[<CommonParameters>]
+Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForStart] [<CommonParameters>]
 ```
 
 ### WaitForCompletion
 ```
-Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForCompletion]
-[<CommonParameters>]
+Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForCompletion] [<CommonParameters>]
 ```
 
 ### ShowClusterNodeState
 ```
-Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-ShowClusterNodeState]
-[<CommonParameters>]
+Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-ShowClusterNodeState] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -153,10 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
--WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -17,9 +17,9 @@ updates that are applied to each node in a specified cluster.
 ## SYNTAX
 
 ```
-Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential]
-<PSCredential>] [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure]
-[-OsRollingUpgrade] [-AttemptSoftReboot] [<CommonParameters>]
+Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
+ [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-OsRollingUpgrade]
+ [-AttemptSoftReboot] [-RebootMode <RebootType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -209,6 +209,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RebootMode
+{{ Fill RebootMode Description }}
+
+```yaml
+Type: RebootType
+Parameter Sets: (All)
+Aliases:
+Accepted values: ClusProp, FullReboot, SoftReboot
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RunPluginsSerially
 Indicates that CAU scans each cluster node for applicable updates and stages the updates for each
 plug-in in the plug-in order passed into the *CauPluginName* parameter then multiple plug-ins are
@@ -251,10 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
--WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -262,7 +275,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ClusterAwareUpdating.CauUpdateInfo
+### Microsoft.ClusterAwareUpdating.UpdateInfo
+
+### Microsoft.ClusterAwareUpdating.ActivityIdMap
+
+### Microsoft.ClusterAwareUpdating.UpgradeSetupInfo
 
 ## NOTES
 

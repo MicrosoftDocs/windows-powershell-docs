@@ -11,7 +11,8 @@ title: Get-CauPlugin
 # Get-CauPlugin
 
 ## SYNOPSIS
-Gets information about one or more software updating plug-ins that are registered on the local computer.
+Gets information about one or more software updating plug-ins that are registered on the local
+computer.
 
 ## SYNTAX
 
@@ -20,19 +21,21 @@ Get-CauPlugin [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-CauPlugin** cmdlet gets information about one or more software updating plug-ins that are registered on the local computer.
-A plug-in can be specified or information can be retrieved about all registered plug-ins.
+The **Get-CauPlugin** cmdlet gets information about one or more software updating plug-ins that are
+registered on the local computer. A plug-in can be specified or information can be retrieved about
+all registered plug-ins.
 
-CAU always uses a plug-in when performing updates.
-The default is the **Microsoft.WindowsUpdatePlugin** plug-in.
-This plug-in communicates with the Windows Update agent, the same software that is used when updates are downloaded from Windows Update or Microsoft Update, or from a Windows Server Update Services (WSUS) server.
-For more information about how plug-ins work in CAU, see [How CAU Plug-ins Work](https://go.microsoft.com/fwlink/p/?LinkId=235333).
+CAU always uses a plug-in when performing updates. The default is the
+**Microsoft.WindowsUpdatePlugin** plug-in. This plug-in communicates with the Windows Update agent,
+the same software that is used when updates are downloaded from Windows Update or Microsoft Update,
+or from a Windows Server Update Services (WSUS) server. For more information about how plug-ins work
+in CAU, see [How CAU Plug-ins Work](https://go.microsoft.com/fwlink/p/?LinkId=235333).
 
 ## EXAMPLES
 
 ### Example 1: Get information about software update plug-ins
 ```
-PS C:\> Get-CauPlugin | Format-List -Property "*"
+Get-CauPlugin | Format-List -Property "*"
 
 Name       : Microsoft.WindowsUpdatePlugin
 BinaryPath : C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ClusterAwareUpdating\ClusterAwareUpdating.dll
@@ -42,7 +45,8 @@ BinaryPath : C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ClusterAwareUpda
 ClassName  : MS.Internal.ClusterAwareUpdating.HotfixPlugin
 ```
 
-This command gets information about the software updating plug-ins that are registered in the local CAU tool.
+This command gets information about the software updating plug-ins that are registered in the local
+CAU tool.
 
 ## PARAMETERS
 
@@ -63,7 +67,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -20,13 +20,14 @@ Get-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [<Comm
 ```
 
 ## DESCRIPTION
-The **Get-CauClusterRole** cmdlet gets configuration properties of the Cluster-Aware Updating (CAU) clustered role on the specified cluster.
+The **Get-CauClusterRole** cmdlet gets configuration properties of the Cluster-Aware Updating (CAU)
+clustered role on the specified cluster.
 
 ## EXAMPLES
 
 ### Example 1: Get information about a CAU clustered role on the specified cluster
 ```
-PS C:\> Get-CauClusterRole -ClusterName "CONTOSO-FC1"
+Get-CauClusterRole -ClusterName "CONTOSO-FC1"
 
 Name                                                        Value 
 ----                                                        ----- 
@@ -46,8 +47,9 @@ This command gets information about the CAU clustered role on the cluster named 
 ## PARAMETERS
 
 ### -ClusterName
-Specifies the name of the cluster for which the CAU clustered role information that this cmdlet gets.
-This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+Specifies the name of the cluster for which the CAU clustered role information that this cmdlet
+gets. This parameter is only required when this cmdlet is not run on a failover cluster node, or
+this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
 Type: String
@@ -77,7 +79,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

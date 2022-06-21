@@ -21,7 +21,8 @@ Get-CauDeviceInfoForFeatureUpdates [[-ClusterName] <String>] [-Credential <PSCre
 ```
 
 ## DESCRIPTION
-The **Get-CauDeviceInfoForFeatureUpdates** cmdlet gets device information for feature updates to use with Cluster-Aware Updating (CAU).
+The **Get-CauDeviceInfoForFeatureUpdates** cmdlet gets device information for feature updates to use
+with Cluster-Aware Updating (CAU).
 
 ## EXAMPLES
 
@@ -80,7 +81,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

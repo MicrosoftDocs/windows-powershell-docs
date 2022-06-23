@@ -81,7 +81,7 @@ EncryptionCiphers                      : AES_128_GCM, AES_128_CCM, AES_256_GCM, 
 This command retrieves the SMB server configuration.
 
 > [!NOTE]
-> The EncryptionCiphers parameter is available beginning with 2022-06 Cumulative Update for Windows Server 2022 (build 20348.681), and Cumulative Update for Windows 11 (build 22000.652).
+> The EncryptionCiphers parameter is available beginning with 2022-06 Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11, version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
 
 ## PARAMETERS
 

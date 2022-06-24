@@ -64,10 +64,18 @@ This command sets the SMB Service configuration without user confirmation.
 ### Example 2: Turn on SMB signing and encryption
 
 ```powershell
-Set-SmbServerConfiguration -RequireSecuritySignature $True -EnableSecuritySignature $True -EncryptData $True -Confirm:$false
+$Parameters = @{
+    RequireSecuritySignature = $True
+    EnableSecuritySignature = $True
+    EncryptData = $True
+    Confirm = $false
+}
+Set-SmbServerConfiguration @Parameters
 ```
 
-This command turns on SMB signing and encryption without user confirmation.
+This command turns on SMB signing and encryption without user confirmation. This example uses
+splatting to pass parameter values from the '$Parameters' variable to the command. Learn more about
+[Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 3: Turn off the default server and workstations shares
 

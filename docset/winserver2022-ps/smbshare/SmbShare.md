@@ -5,13 +5,15 @@ Help Version: 5.0.1.1
 Locale: en-US
 Module Guid: 3af1699d-cc54-4e54-81cf-28d2df5cce0a
 Module Name: SmbShare
-ms.date: 12/20/2016
+ms.date: 06/23/2022
 title: SmbShare
 ---
 
 # SmbShare Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all Server Message Block (SMB) Share-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+This reference provides cmdlet descriptions and syntax for all Server Message Block (SMB)
+Share-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the
+beginning of the cmdlet.
 
 ## SmbShare Cmdlets
 ### [Block-SmbShareAccess](./Block-SmbShareAccess.md)
@@ -51,19 +53,22 @@ Retrieves the properties of an SMB global mapping.
 Retrieves the SMB client directory mappings created for a server.
 
 ### [Get-SmbMultichannelConnection](./Get-SmbMultichannelConnection.md)
-Retrieves the SMB connections made between the SMB client network interfaces and the SMB server network interfaces.
+Retrieves the SMB connections made between the SMB client network interfaces and the SMB server
+network interfaces.
 
 ### [Get-SmbMultichannelConstraint](./Get-SmbMultichannelConstraint.md)
-Retrieves the constraints that define how the SMB client uses network interfaces to connect to the servers.
+Retrieves the constraints that define how the SMB client uses network interfaces to connect to the
+servers.
 
 ### [Get-SmbOpenFile](./Get-SmbOpenFile.md)
-Retrieves basic information about the files that are open on behalf of the clients of the SMB server.
+Retrieves basic information about the files that are open on behalf of the clients of the SMB
+server.
 
 ### [Get-SmbServerCertificateMapping](./Get-SmbServerCertificateMapping.md)
 Retrieves a certificate association with the SMB server for SMB over QUIC.
 
 ### [Get-SmbServerCertProps](./Get-SmbServerCertProps.md)
-Retrieves an SMB over QUIC-mapped certificate’s properties and tests certificate validity.
+Retrieves an SMB over QUIC-mapped certificate's properties and tests certificate validity.
 
 ### [Get-SmbServerConfiguration](./Get-SmbServerConfiguration.md)
 Retrieves the SMB server configuration.
@@ -72,7 +77,8 @@ Retrieves the SMB server configuration.
 Retrieves the network interfaces used by the SMB server.
 
 ### [Get-SmbSession](./Get-SmbSession.md)
-Retrieves information about the SMB sessions that are currently established between the SMB server and the associated clients.
+Retrieves information about the SMB sessions that are currently established between the SMB server
+and the associated clients.
 
 ### [Get-SmbShare](./Get-SmbShare.md)
 Retrieves the SMB shares on the computer.
@@ -119,7 +125,7 @@ Removes a certificate mapping from the SMB server for SMB over QUIC.
 ### [Remove-SmbShare](./Remove-SmbShare.md)
 Deletes the specified SMB shares.
 
-### [Reset-SmbClientConfiguration](./Reset-SmbClientConfiguration.md) 
+### [Reset-SmbClientConfiguration](./Reset-SmbClientConfiguration.md)
 Resets the Server Message Block (SMB) client configuration parameters to their default values.
 
 ### [Reset-SmbServerConfiguration](./Reset-SmbServerConfiguration.md)
@@ -151,5 +157,3 @@ Removes all of the deny ACEs for the trustee from the security descriptor of the
 
 ### [Update-SmbMultichannelConnection](./Update-SmbMultichannelConnection.md)
 Forces the SMB client to update the multi-channel-related information.
-
-

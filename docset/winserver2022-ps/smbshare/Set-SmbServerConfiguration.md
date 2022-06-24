@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/23/2022
+ms.date: 06/24/2022
 online version: /powershell/module/smbshare/set-smbserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SmbServerConfiguration
@@ -59,55 +59,49 @@ and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and 3](/openspecs/
 Set-SmbServerConfiguration -MaxChannelPerSession 16 -Confirm:$false
 ```
 
-This command sets the SMB Service configuration.
-
-### Example 2: Set the SMB Service configuration without confirmation
-
-```powershell
-Set-SmbServerConfiguration -MaxChannelPerSession 32 -Force
-```
-
 This command sets the SMB Service configuration without user confirmation.
 
-### Example 3: Turn on SMB signing and encryption
+### Example 2: Turn on SMB signing and encryption
 
 ```powershell
-Set-SmbServerConfiguration -RequireSecuritySignature $True -EnableSecuritySignature $True -EncryptData $True -Confirm:$false
+Set-SmbServerConfiguration -RequireSecuritySignature $True -EnableSecuritySignature $True
+ -EncryptData $True -Confirm:$false
 ```
 
-This command turns on SMB signing and encryption.
+This command turns on SMB signing and encryption without user confirmation.
 
-### Example 4: Turn off the default server and workstations shares
+### Example 3: Turn off the default server and workstations shares
 
 ```powershell
 Set-SmbServerConfiguration -AutoShareServer $False -AutoShareWorkstation $False -Confirm:$false
 ```
 
-This command turns off the default server and workstations shares.
+This command turns off the default server and workstations shares without user confirmation.
 
-### Example 5: Turn off server announcements
+### Example 4: Turn off server announcements
 
 ```powershell
 Set-SmbServerConfiguration -ServerHidden $False -AnnounceServer $False -Confirm:$false
 ```
 
-This command turns off server announcements.
+This command turns off server announcements without user confirmation.
 
-### Example 6: Turn off SMB1
-
-```powershell
-Set-SmbServerConfiguration -EnableSMB1Protocol $false
-```
-
-This command disables SMB1 on the SMB server.
-
-### Example 7: Specify encryption ciphers
+### Example 5: Turn off SMB1
 
 ```powershell
-Set-SmbServerConfiguration -EncryptionCiphers "AES_128_GCM, AES_256_GCM"
+Set-SmbServerConfiguration -EnableSMB1Protocol $false -Confirm:$false
 ```
 
-This command specifies the encryption ciphers used by the SMB client, and the preferred order.
+This command disables SMB1 on the SMB server without user confirmation.
+
+### Example 6: Specify encryption ciphers
+
+```powershell
+Set-SmbServerConfiguration -EncryptionCiphers "AES_128_GCM, AES_256_GCM" -Confirm:$false
+```
+
+This command specifies the encryption ciphers used by the SMB client, and the preferred order
+without user confirmation.
 
 ## PARAMETERS
 

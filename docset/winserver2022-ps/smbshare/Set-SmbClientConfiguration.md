@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbClientConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/23/2022
+ms.date: 06/24/2022
 online version: https://docs.microsoft.com/powershell/module/smbshare/set-smbclientconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SmbClientConfiguration
@@ -51,23 +51,16 @@ The `Set-SmbClientConfiguration` cmdlet sets the Server Message Block (SMB) clie
 Set-SmbClientConfiguration -ConnectionCountPerRssNetworkInterface 8 -Confirm:$false
 ```
 
-This command sets the SMB client configuration.
-
-### Example 2: Set the SMB client configuration without confirmation
-
-```powershell
-Set-SmbClientConfiguration -ConnectionCountPerRssNetworkInterface 4 -Force
-```
-
 This command sets the SMB client configuration without user confirmation.
 
-### Example 3: Specify encryption ciphers
+### Example 2: Specify encryption ciphers
 
 ```powershell
-Set-SmbClientConfiguration -EncryptionCiphers "AES_128_GCM, AES_256_GCM"
+Set-SmbClientConfiguration -EncryptionCiphers "AES_128_GCM, AES_256_GCM" -Confirm:$false
 ```
 
-This command specifies the encryption ciphers used by the SMB client, and the preferred order.
+This command specifies the encryption ciphers used by the SMB client, and the preferred order
+without user confirmation.
 
 ## PARAMETERS
 

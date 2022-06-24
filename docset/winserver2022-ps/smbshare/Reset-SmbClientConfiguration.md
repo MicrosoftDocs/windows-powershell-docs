@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbClientConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/23/2022
+ms.date: 06/24/2022
 online version: http://go.microsoft.com/fwlink/?LinkID=241959
 schema: 2.0.0
 title: Reset-SmbClientConfiguration
@@ -44,10 +44,10 @@ default values.
 ### Example 1: Reset the large MTU behavior
 
 ```powershell
-Reset-SmbClientConfiguration -EnableLargeMtu
+Reset-SmbClientConfiguration -EnableLargeMtu -Confirm:$false
 ```
 
-This commands resets only the large MTU behavior to its default value.
+This commands resets only the large MTU behavior to its default value without user confirmation.
 
 ## PARAMETERS
 

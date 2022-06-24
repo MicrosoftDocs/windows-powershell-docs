@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/23/2022
+ms.date: 06/24/2022
 online version: http://go.microsoft.com/fwlink/?LinkID=241959
 schema: 2.0.0
 title: Reset-SmbServerConfiguration
@@ -49,10 +49,11 @@ and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and3](/openspecs/w
 ### Example 1: Reset the unencrypted access behavior
 
 ```powershell
-Reset-SmbServerConfiguration -RejectUnencryptedAccess
+Reset-SmbServerConfiguration -RejectUnencryptedAccess -Confirm:$false
 ```
 
-This commands resets only the unencrypted access behavior to its default value.
+This commands resets only the unencrypted access behavior to its default value without user
+confirmation.
 
 ## PARAMETERS
 

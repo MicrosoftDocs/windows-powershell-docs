@@ -64,8 +64,7 @@ This command sets the SMB Service configuration without user confirmation.
 ### Example 2: Turn on SMB signing and encryption
 
 ```powershell
-Set-SmbServerConfiguration -RequireSecuritySignature $True -EnableSecuritySignature $True
- -EncryptData $True -Confirm:$false
+Set-SmbServerConfiguration -RequireSecuritySignature $True -EnableSecuritySignature $True -EncryptData $True -Confirm:$false
 ```
 
 This command turns on SMB signing and encryption without user confirmation.

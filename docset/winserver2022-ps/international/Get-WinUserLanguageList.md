@@ -79,27 +79,27 @@ For information about the **Generic.List** object, see [List(Of T) Class](https:
 
 The generic list object supports the following methods: 
 
-- Add("BCP-47")
-- Insert(index, "BCP-47")
+- Add("`LanguageTag`")
+- Insert(index, "`LanguageTag`")
 - Remove(Index)
 
 The output language object contains the following properties: 
 
-- **BCP-47** (READ).
-A standard language tag that is used to identify languages.
+- **LanguageTag** (READ).
+A standard BCP-47 language tag that is used to identify languages.
 For more information, see the [Internet Engineering Task Force (IETF) BCP 47 RFC](https://go.microsoft.com/fwlink/?LinkID=242207). 
 - **Autonym** (LP database) (READ).
 The name of the language in the language itself. 
-- **English name** (LP database) (READ).
+- **EnglishName** (LP database) (READ).
 The name of the language in English. 
-- **Localized name** (LP database) (READ).
+- **LocalizedName** (LP database) (READ).
 The name of the language in the current Windows display language. 
-- **Script** (LP database) (READ).
+- **ScriptName** (LP database) (READ).
 The writing system of the language. 
-- **Input methods** (READ/WRITE).
+- **InputMethodTips** (READ/WRITE).
 A list of input method Tablet Input Panel (TIP) strings that are enabled for this language.
 The enabled Input methods are listed in the format `Language ID: Keyboard layout ID`. 
-- **Handwriting recognition input mode** (READ/WRITE).
+- **Handwriting** (READ/WRITE).
 This value is either 0 (freehand) or 1 (write each character separately).
 
 ## NOTES

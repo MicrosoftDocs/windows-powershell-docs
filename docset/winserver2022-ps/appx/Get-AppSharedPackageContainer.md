@@ -41,7 +41,7 @@ This command shows the packages in any shared package container that has a prefi
 ## PARAMETERS
 
 ### -AllUsers
-Get matching packages that are either deployed to any user or are provisioned to the machine.
+Unsupported. Will result in "-AllUsers functionality is not yet implemented" error.
 
 ```yaml
 Type: SwitchParameter

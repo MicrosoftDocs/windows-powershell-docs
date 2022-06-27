@@ -33,12 +33,13 @@ PS C:\> Set-AdfsAzureMfaTenant -TenantId <your tenant ID> -ClientId 981f26a1-7f4
 
 This command creates a certificate for Azure MFA, registers it in the tenant, and enables Azure MFA on the AD FS farm.
 
-### Example 2: Determine the Azure MFA certificate
+### Example 2: Determine which certificate Azure MFA is using
 ```
-PS C:\> New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID> -out-file amfacert.cer
+$CertInBase64 = New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID> 
+[Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($CertInBase64))
 ```
 
-This command determines which certificate Azure MFA is using, after AD FS has been configured for Azure MFA using the previous example.
+After AD FS has been configured for Azure MFA, this command determines which certificate Azure MFA is using and when it expires.
 
 ## PARAMETERS
 

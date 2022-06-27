@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: A debugging tool that creates a new process in the context of a packaged app.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 Module Name: Appx
 ms.date: 05/19/2017
@@ -11,43 +11,52 @@ title: Invoke-CommandInDesktopPackage
 # Invoke-CommandInDesktopPackage
 
 ## SYNOPSIS
-Runs a command in the context of a specified app package. 
+A debugging tool that creates a new process in the context of a packaged app.
 
 ## SYNTAX
 
 ```
-Invoke-CommandInDesktopPackage [-PackageFamilyName] <String> [[-AppId] <String>] [-Command] <String>
+Invoke-CommandInDesktopPackage [-PackageFamilyName] <String> [-AppId] <String> [-Command] <String>
  [[-Args] <String>] [-PreventBreakaway] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Invoke-CommandInDesktopPackage** will have a package token and identity. It's primarily designed to be used as a debugging utility. 
+`Invoke-CommandInDesktopPackage` creates a new process in the context of the supplied **PackageFamilyName** and **AppId**. 
+
+The created process will have the identity of the provided **AppId** and will have access to its virtualized file system and registry (if any). The new process will have a token that is similar to, but not identical to, a real **AppId** process. 
+
+The primary use-case of this command is to invoke debugging or troubleshooting tools in the context of the packaged app to easily access its virtualized resources. For example, you can run the Registry Editor to see virtualized registry keys, or Notepad to read virtualized files. See the important note that follows on using tools such as the Registry Editor that require elevation. 
+
+No guarantees are made about the behavior of the created process, other than it having the package identity and access to the package's virtualized resources. In particular, the new process will _not_ be created in an AppContainer even if an **AppId** process would normally be created in an AppContainer. Features such as Privacy Controls or other App Settings may or may not apply to the new process. You should not rely on any specific side-effects of using this command, as they are undefined and subject to change.
 
 ## EXAMPLES
 
-### Example 1: Invoke an executable from app package
+### Example 1: Invoke Notepad to read virtualized files
+
+The following command invokes Notepad in the context of the `ContosoApp` app from the `Contoso.MyApp` package. This allows you to access resources such as a log file or configuration file stored in the app's virtualized filesystem.
+
 ```
-PS C:\> Invoke-CommandInDesktopPackage -AppId "AppPackage1" -PackageFamilyName "29270sandstorm.AppPackage1_gah1vdar1nn7a" -Command "demo.exe"
+PS C:\> Invoke-CommandInDesktopPackage -AppId "ContosoApp" -PackageFamilyName "Contoso.MyApp_abcdefgh23456" -Command "notepad.exe"
 ```
 
-This command invokes the demo.exe that can be found in '29270sandstorm.AppPackage1_gah1vdar1nn7a' app package under the 'AppPackage1' Application element. 
+
 
 ## PARAMETERS
 
 ### -AppId
-AppId is the Application ID from the package manifest.
+**AppId** is the Application ID from the target package's manifest. 
 
-
-
-<Application Id="blah" ... />
+```XML
+<Application Id="MyAppName" ... />
 </Application>
+```
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
@@ -55,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Args
-Optional arguments that should be passed to the Command (e.g. "/od")
+Optional arguments to be passed to the new process (for example, "/foo /bar")
 
 ```yaml
 Type: String
@@ -70,7 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -Command
-An executable to invoke (e.g. "cmd.exe")
+An executable to invoke (for example, `regedit.exe`).
+
+Note that if the executable requires elevation (like `regedit`), you must call `Invoke-CommandInDesktopPackage` from an already-elevated context. Calling `Invoke-CommandInDesktopPackage` from a non-elevated context does not work as expected. The new process is created without the package context, and the PowerShell command fails.
 
 ```yaml
 Type: String
@@ -85,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageFamilyName
-Family Name of the package. You can retrieve this by calling [Get-AppxPackage](./Get-AppxPackage.md).
+The Package Family Name of the target package. You can retrieve this by calling [Get-AppxPackage](./Get-AppxPackage.md).
 
 ```yaml
 Type: String
@@ -100,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreventBreakaway
-Switch that causes the entire process tree to stay in the package context.
+Causes all child processes of the invoked process to also be created in the context of the **AppId**. By default, child processes are created without any context. This switch is useful for running `cmd.exe` so that you can launch multiple other tools in the package context.
 
 ```yaml
 Type: SwitchParameter

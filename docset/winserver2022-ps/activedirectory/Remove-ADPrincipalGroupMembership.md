@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -MemberOf
-Specifies the Active Directory groups to add a user, computer, or group to as a member.
+Specifies the Active Directory groups to remove a user, computer, or group to as a member.
 You can identify a group by providing one of the following values. 
 Note: The identifier in parentheses is the LDAP display name for the attribute.
 The acceptable values for this parameter are:

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 02/01/2022
+ms.date: 07/06/2022
 online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/add-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-CauClusterRole
@@ -11,7 +11,7 @@ title: Add-CauClusterRole
 # Add-CauClusterRole
 
 ## SYNOPSIS
-Adds the CAU clustered role that provides the self-updating functionality to the specified cluster.
+Adds the Cluster Aware Updating (CAU) clustered role that provides the self-updating functionality to the specified cluster.
 
 ## SYNTAX
 
@@ -69,8 +69,21 @@ Mode (HTTP-In) firewall exception is enabled on each node.
 ## EXAMPLES
 
 ### Example 1: Add a CAU clustered role on the specified cluster at a specific interval
-```
-Add-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday,Saturday -WeeksOfMonth 2,4 -MaxFailedNodes 2 -MaxRetriesPerNode 2 -PostUpdateScript \\CONTOSOFileShare\scripts\verifyupdatesinstalled.ps1 -RequireAllNodesOnline -EnableFirewallRules -Force
+```powershell
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    DaysOfWeek = 'Tuesday',
+                    'Saturday'
+    WeeksOfMonth = '2',
+                    '4'
+    MaxFailedNodes = '2'
+    MaxRetriesPerNode = '2'
+    PostUpdateScript = '\\CONTOSOFileShare\scripts\verifyupdatesinstalled.ps1'
+    RequireAllNodesOnline = $true
+    EnableFirewallRules = $true
+    Force = $true
+}
+Add-CauClusterRole @parameters
 ```
 
 This command adds the CAU clustered role, using a default name, on the cluster called CONTOSO-FC1.
@@ -82,9 +95,22 @@ that cluster must be running. If it is not already enabled, the Remote Shutdown 
 rule group will be enabled on each cluster node. Because the command uses the *Force* parameter, the
 cmdlet runs without displaying confirmation prompts.
 
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
 ### Example 2: Add a CAU clustered role on the specified cluster at a specific interval
-```
-Add-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday,Saturday -IntervalWeeks 3 -MaxFailedNodes 2 -MaxRetriesPerNode 2 -EnableFirewallRules -Force
+```powershell
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    DaysOfWeek = 'Tuesday',
+                    'Saturday'
+    IntervalWeeks = '3'
+    MaxFailedNodes = '2'
+    MaxRetriesPerNode = '2'
+    EnableFirewallRules = $true
+    Force = $true
+}
+Add-CauClusterRole @parameters
 ```
 
 This command adds the CAU clustered role, using a default name, on the cluster called CONTOSO-FC1.
@@ -96,28 +122,44 @@ enabled, the Remote Shutdown Windows Firewall rule group will be enabled on each
 Because the command uses the *Force* parameter, the cmdlet runs without displaying confirmation
 prompts.
 
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
 ### Example 3: Add a CAU clustered role on the specified cluster using plug-ins
-```
-Add-CauClusterRole -ClusterName "CONTOSO-FC1" -CauPluginName Microsoft.WindowsUpdatePlugin, Microsoft.HotfixPlugin -CauPluginArguments @{ 'IncludeRecommendedUpdates' = 'True' }, @{ 'HotfixRootFolderPath' = '\\CauHotfixSrv\shareName ' } -StopOnPluginFailure -EnableFirewallRules -Force
+```powershell
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    CauPluginName = 'Microsoft.WindowsUpdatePlugin',
+                    'Microsoft.HotfixPlugin'
+    CauPluginArguments = @{'IncludeRecommendedUpdates' = 'True'},
+                         @{'HotfixRootFolderPath' = '\\CauHotfixSrv\shareName'}
+    StopOnPluginFailure = $true
+    EnableFirewallRules = $true
+    Force = $true
+}
+Add-CauClusterRole @parameters
 ```
 
 This command adds the CAU clustered role, using a default name, on the cluster called CONTOSO-FC1.
 The CAU clustered role is configured to perform updates using the **Microsoft.WindowsUpdatePlugin**
-plug-in with the optional *IncludeRecommendedUpdates* parameter set to True, and using the
+plug-in with the optional **IncludeRecommendedUpdates** parameter set to True, and using the
 **Microsoft.HotfixPlugin plug-in** using the hotfix root folder \\\\CauHotfixSrv\shareName and the
 default hotfix configuration file. If a failure occurs during the installation of updates on a node
 by **Microsoft.WindowsUpdatePlugin**, updates are applied by **Microsoft.HotfixPlugin plug-in**. If
 it is not already enabled, the Remote Shutdown Windows Firewall rule group is enabled on each
-cluster node. Because the command uses the *Force* parameter, the cmdlet runs without displaying
+cluster node. Because the command uses the **Force** parameter, the cmdlet runs without displaying
 confirmation prompts.
+
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 
 ### -AttemptSoftReboot
 Indicates that the CAU clustered role attempts a Kernel Soft Reboot (KSR) for the failover cluster.
 
-KSR bypasses BIOS/firmware initialization.
-You can only use KSR for updates that do not require a BIOS/firmware initialization.
+KSR bypasses BIOS/firmware initialization. You can only use KSR for updates that do not require a
+BIOS/firmware initialization.
 
 ```yaml
 Type: SwitchParameter
@@ -195,7 +237,7 @@ values separated with commas. The default is the Microsoft.WindowsUpdatePlugin p
 coordinates the Windows Update Agent software resident on each cluster node, the same software that
 is used when updates are downloaded from Windows Update or Microsoft Update, or from a Windows
 Server Update Services (WSUS) server. For more information about how plug-ins work with CAU, see
-[How CAU Plug-ins Work](https://go.microsoft.com/fwlink/p/?LinkId=235333).
+[How CAU Plug-ins Work](/windows-server/failover-clustering/cluster-aware-updating-plug-ins).
 
 ```yaml
 Type: String[]
@@ -228,10 +270,10 @@ Accept wildcard characters: False
 
 ### -ConfigurationName
 Specifies the Windows PowerShell session configuration that defines the session in which scripts,
-specified by the *PreUpdateScript* and *PostUpdateScript* parameters, and cmdlets are run, and can
-limit the cmdlets that are available to be run. If either a pre-update or post-update script is
+specified by the **PreUpdateScript** and **PostUpdateScript** parameters, and cmdlets are run, and
+can limit the cmdlets that are available to be run. If either a pre-update or post-update script is
 specified but a configuration name is not specified, then the default session configuration that is
-built into Windows PowerShell&reg; is used.
+built into Windows PowerShell is used.
 
 ```yaml
 Type: String
@@ -281,13 +323,13 @@ Multiple values can be specified either separated with commas or as a hexadecima
 
 The acceptable values for this parameter are:
 
-- **Sunday:** (0x01) 
-- **Monday:** (0x02) 
-- **Tuesday:** (0x04) 
-- **Wednesday:** (0x08) 
-- **Thursday:** (0x10) 
-- **Friday:** (0x20) 
-- **Saturday:** (0x40)
+- `Sunday` or 0x01
+- `Monday` or 0x02
+- `Tuesday` or 0x04
+- `Wednesday` or 0x08
+- `Thursday` or 0x10
+- `Friday` or 0x20
+- `Saturday` or 0x40
 
 ```yaml
 Type: Weekdays
@@ -332,11 +374,11 @@ another node.
 
 The acceptable values for this parameter are:
 
-- NoFailback
-- Immediate
-- Policy
+- `NoFailback`
+- `Immediate`
+- `Policy`
 
-The default value is Immediate.
+The default value is `Immediate`.
 
 ```yaml
 Type: FailbackType
@@ -750,12 +792,12 @@ Accept wildcard characters: False
 ```
 
 ### -SuspendClusterNodeTimeoutMinutes
-Specifies the maximum amount of time CAU should wait for the **Suspend-ClusterNode** cmdlet to
+Specifies the maximum amount of time CAU should wait for the `Suspend-ClusterNode` cmdlet to
 succeed if the underlying clustered space is in degraded condition.
 
-If **Suspend-ClusterNode** fails with ERROR_CLUSTER_SPACE_DEGRADED error, CAU will keep retrying for
-*SuspendClusterNodeTimeoutMinutes* or suspend the call if the command succeeds. The retries for this
-error don not count towards the *MaxRetriesPerNode* parameter set by the user.
+If `Suspend-ClusterNode` fails with ERROR_CLUSTER_SPACE_DEGRADED error, CAU will keep retrying for
+**SuspendClusterNodeTimeoutMinutes** or suspend the call if the command succeeds. The retries for
+this error don not count towards the **MaxRetriesPerNode** parameter set by the user.
 
 The timeout value is per cluster node. So CAU could potentially spend the amount of time specified
 for this value for every node in the cluster in the worst case.
@@ -775,7 +817,7 @@ Accept wildcard characters: False
 ### -VirtualComputerObjectName
 Specifies the name of a pre-staged virtual computer object that is used by the CAU clustered role.
 For more information, see
-[Steps to create computer objects in Active Directory](https://go.microsoft.com/fwlink/p/?LinkId=237624).
+[Steps to create computer objects in Active Directory](/windows-server/failover-clustering/configure-ad-accounts).
 If not specified, then a virtual computer object is created using a generated name. Generating a
 name automatically requires the cluster name object to have permissions to create the virtual
 computer object in Active Directory.
@@ -842,7 +884,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

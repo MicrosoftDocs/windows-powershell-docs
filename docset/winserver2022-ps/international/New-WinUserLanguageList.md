@@ -22,7 +22,7 @@ New-WinUserLanguageList [-Language] <String> [<CommonParameters>]
 ## DESCRIPTION
 The **New-WinUserLanguageList** cmdlet creates a user language list object.
 The object settings include input method, spelling setting, text prediction setting, and handwriting input mode.
-For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306) and [Configurable Language and Cultural Settings](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms425914(v=office.14)).
+For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306) and [Configurable Language and Cultural Settings](/previous-versions/office/developer/sharepoint-2010/ms425914(v=office.14)).
 
 ## EXAMPLES
 

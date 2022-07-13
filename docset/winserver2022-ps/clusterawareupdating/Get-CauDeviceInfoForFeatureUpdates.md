@@ -2,7 +2,7 @@
 description: The Get-CauDeviceInfoForFeatureUpdates cmdlet gets device information for feature updates to use with Cluster-Aware Updating (CAU).
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 02/01/2022
+ms.date: 07/13/2022
 online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-caudeviceinfoforfeatureupdates?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CauDeviceInfoForFeatureUpdates
@@ -27,11 +27,18 @@ with Cluster-Aware Updating (CAU).
 ## EXAMPLES
 
 ### Example 1: Get device information
+
 ```powershell
-Get-CauDeviceInfoForFeatureUpdates -ClusterName "CONTOSO-FC1" -PathToDirectory "C:\temp\contoso-device-info"
+$Parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    PathToDirectory = 'C:\temp\contoso-device-info'
+}
+Get-CauDeviceInfoForFeatureUpdates $Parameters
 ```
 
-This example gets device information for CAU for the specified cluster.
+This example gets device information for CAU for the specified cluster. This example uses
+splatting to pass parameter values from the `$Parameters` variable to the command. Learn more about
+[Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 
@@ -81,7 +88,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

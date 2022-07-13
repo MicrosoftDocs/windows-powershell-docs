@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 02/01/2022
+ms.date: 07/13/2022
 online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/set-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-CauClusterRole
@@ -17,53 +17,58 @@ Sets configuration properties for the CAU clustered role on the specified cluste
 
 ### MonthlyDayOfWeek (Default)
 ```
-Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-WeeksOfMonth <Int32[]>]
- [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
- [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>] [-PostUpdateScript <String>]
- [-ConfigurationName <String>] [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
- [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
- [-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
- [-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks]
- [-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>]
- [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>]
+[-WeeksOfMonth <Int32[]>] [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>]
+[-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>]
+[-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
+[-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
+[-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
+[-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
+[-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks]
+[-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [-AttemptSoftReboot]
+[-RebootMode <RebootType>] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
+[-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateNow
 ```
-Set-CauClusterRole [-UpdateNow] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CauClusterRole [-UpdateNow] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
+[-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UseDefault
 ```
-Set-CauClusterRole [-UseDefault] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CauClusterRole [-UseDefault] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
+[-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Weekly
 ```
-Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-IntervalWeeks <Int32>]
- [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
- [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>] [-PostUpdateScript <String>]
- [-ConfigurationName <String>] [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
- [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
- [-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
- [-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks]
- [-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>]
- [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>]
+[-IntervalWeeks <Int32>] [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>]
+[-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>]
+[-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
+[-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
+[-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
+[-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
+[-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks]
+[-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [-AttemptSoftReboot]
+[-RebootMode <RebootType>] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
+[-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Once
 ```
-Set-CauClusterRole [-UseDefault] [-RunOnce] [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>]
- [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
- [-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>]
- [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially]
- [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
- [-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
- [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade]
- [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>] [[-Credential] <PSCredential>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CauClusterRole [-UseDefault] [-RunOnce] [-CauPluginName <String[]>]
+[-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>]
+[-NodeOrder <String[]>] [-PreUpdateScript <String>] [-PostUpdateScript <String>]
+[-ConfigurationName <String>] [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>]
+[-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially]
+[-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+[-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+[-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
+[-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
+[[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,7 +76,7 @@ The **Set-CauClusterRole** cmdlet sets configuration properties for the Cluster-
 clustered role on the specified cluster. This cmdlet can specify properties such as the updating
 schedule and updating run parameters.
 
-To run this cmdlet with the *PostUpdateScript* or *PreUpdateScript* parameters, Windows PowerShell
+To run this cmdlet with the **PostUpdateScript** or **PreUpdateScript** parameters, Windows PowerShell
 remoting must be enabled on each node. To do this, use the **Enable-PSRemoting** cmdlet. In
 addition, ensure that the **Windows Remote Management - Compatibility Mode (HTTP-In)** firewall
 exception is enabled on each node.
@@ -79,21 +84,44 @@ exception is enabled on each node.
 ## EXAMPLES
 
 ### Example 1: Configure settings for a CAU cluster role on the specified cluster on the first and second weeks of the month
-```
-Set-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday -WeeksOfMonth 1,2 -RebootTimeoutMinutes 10 -Force
+
+```powershell
+$Parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    DaysOfWeek = 'Tuesday'
+    WeeksOfMonth = '1,2'
+    RebootTimeoutMinutes = '10'
+    Force = $true
+}
+Set-CauClusterRole $Parameters
 ```
 
 This command configures settings for the CAU clustered role on the cluster named CONTOSO-FC1. The
 CAU clustered role is configured to perform updating runs on Tuesdays on the first and second weeks
 of each month. The CAU clustered role allows 10 minutes for the restarting of each node, if a
 restart is necessary. If the restart does not complete within this time, then the updating run on
-that node is marked as failed. Because the command specifies the *Force* parameter, the cmdlet runs
+that node is marked as failed. Because the command specifies the **Force** parameter, the cmdlet runs
 without displaying confirmation prompts.
 
-### Example 2: Configure settings for a CAU cluster role on the specified cluster on the second week of the month
-```
-Set-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday -IntervalWeeks 2 -RebootTimeoutMinutes 10 -PostUpdateScript "c:\verifyupdatesinstalled.ps1" -Force
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
+### Example 2: Configure settings for a CAU cluster role on the specified cluster on the second week of the month
+
+```powershell
+$Parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    DaysOfWeek = 'Tuesday'
+    WeeksOfMonth = '1,2'
+    IntervalWeeks = '2'
+    RebootTimeoutMinutes = '10'
+    PostUpdateScript = 'c:\verifyupdatesinstalled.ps1'
+    Force = $true
+}
+Set-CauClusterRole $Parameters
+```
+
+```output
 Name                                                        Value 
 ----                                                        ----- 
 ResourceGroupName                                           CAUCAUCldy8 
@@ -114,8 +142,12 @@ leaves Maintenance mode. The script is located at the root of drive G: in cluste
 named verifyupdatesinstalled.ps1. Because the command specifies the *Force* parameter, the cmdlet
 runs without displaying confirmation prompts.
 
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
 ### Example 3: Initiate an updating run on the specified cluster
-```
+
+```powershell
 Set-CauClusterRole -ClusterName "CONTOSO-FC1" -UpdateNow -Force
 ```
 
@@ -124,7 +156,8 @@ named CONTOSO-FC1. Because the command specifies the *Force* parameter, the cmdl
 displaying confirmation prompts
 
 ### Example 4: Configure settings for a CAU cluster role on the specified cluster
-```
+
+```powershell
 $WarnAfter = New-TimeSpan -hour 1 -minute 90 -seconds 10
 $StopAfter = New-TimeSpan -hour 2 -minute 90 -seconds 10
 Set-CauClusterRole -ClusterName "CONTOSO-FC1" -WarnAfter $WarnAfter -StopAfter $StopAfter -StartDate 1/1/2012 -Force
@@ -176,10 +209,11 @@ The following arguments are optional:
   Agent to filter the updates that will be applied to each node. For a name, use **QueryString** and
   for a value, enclose the full query in quotation marks. If not specified, then the
   **Microsoft.WindowsUpdatePlugin** plug-in by default uses the following argument:
-- `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"` For more
-  information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in and the
-  criteria such as IsInstalled that can be included in the query strings, see
-  [IUpdateSearcher::Search method](https://go.microsoft.com/fwlink/p/?LinkId=223304).
+  - `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
+
+For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in
+and the criteria such as IsInstalled that can be included in the query strings, see
+[IUpdateSearcher::Search method](https://go.microsoft.com/fwlink/p/?LinkId=223304).
 
 For the **Microsoft.HotfixPlugin** plug-in, the following argument is required: 
 - **HotfixRootFolderPath=\<Path\>**: The UNC path to a hotfix root folder in an SMB share with a
@@ -252,8 +286,8 @@ Accept wildcard characters: False
 
 ### -ConfigurationName
 Specifies the Windows PowerShell session configuration that defines the session in which scripts,
-specified by the *PreUpdateScript* and *PostUpdateScript* parameters, and cmdlets are run, and can
-limit the cmdlets that are available to be run. If either a pre-update or post-update script is
+specified by the **PreUpdateScript** and **PostUpdateScript** parameters, and cmdlets are run, and
+can limit the cmdlets that are available to be run. If either a pre-update or post-update script is
 specified but a configuration name is not specified, then the default session configuration that is
 built into Windows PowerShell is used.
 
@@ -334,8 +368,8 @@ Indicates that this cmdlet enables the **Remote Shutdown** Windows Firewall rule
 cluster node, if it is not already enabled, each time the CAU clustered role performs an Updating
 Run. Enabling this rule group permits inbound communication to each cluster node during each
 Updating Run that allows CAU to shut down and restart the node remotely. If Windows Firewall is in
-use on the cluster nodes and the rule group is not enabled, the updating run will fail. The **Remote
-Shutdown** Windows Firewall rule group is not enabled when it will conflict with Group Policy
+use on the cluster nodes and the rule group is not enabled, the updating run will fail. The 
+**Remote Shutdown** Windows Firewall rule group is not enabled when it will conflict with Group Policy
 settings that are configured for Windows Firewall.
 
 ```yaml
@@ -441,9 +475,8 @@ Accept wildcard characters: False
 ```
 
 ### -IntervalWeeks
-Specifies the interval between weeks when the task will be triggered.
-An interval of 1 produces a weekly schedule.
-An interval of 2 produces an every-other week schedule.
+Specifies the interval between weeks when the task will be triggered. An interval of 1 produces a
+weekly schedule. An interval of 2 produces an every-other week schedule.
 
 ```yaml
 Type: Int32
@@ -624,14 +657,14 @@ Accept wildcard characters: False
 
 ### -RunPluginsSerially
 Indicates that CAU scans each cluster node for applicable updates and stage the updates for each
-plug-in in the plug-in order passed into the*CauPluginName* parameter, when multiple plug-ins are
+plug-in in the plug-in order passed into the**CauPluginName** parameter, when multiple plug-ins are
 used during an updating run.
 
 By default, CAU scans and stages the applicable updates for all plug-ins in parallel. Regardless of
 the configuration of this parameter, CAU installs the applicable updates for each plug-in
 sequentially.
 
-The parameter is valid only when multiple plug-ins are specified in *CauPluginName* parameter.
+The parameter is valid only when multiple plug-ins are specified in **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml
@@ -652,7 +685,7 @@ node, if the installation of an update by a plug-in requires a restart that CAU 
 restart a cluster node after each plug-in installs updates on the node, if the installation of an
 update by a plug-in requires a restart
 
-The parameter is valid only when multiple plug-ins are specified in the *CauPluginName* parameter.
+The parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml
@@ -762,7 +795,7 @@ the underlying clustered space is in degraded condition.
 If **Suspend-ClusterNode** fails with ERROR_CLUSTER_SPACE_DEGRADED error, CAU will keep retrying for
 *SuspendClusterNodeTimeoutMinutes* or suspend the call if the command succeeds.
 
-These retries do not decrement the value of the *MaxRetriesPerNode* parameter set by the user.
+These retries do not decrement the value of the **MaxRetriesPerNode** parameter set by the user.
 
 The timeout value is per cluster node. So CAU could potentially spend the amount of time specified
 for this value for every node in the cluster in the worst case.
@@ -860,7 +893,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

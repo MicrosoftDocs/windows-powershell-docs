@@ -5,7 +5,7 @@ Help Version: 5.0.0.1
 Locale: en-US
 Module Guid: 4e804861-1dce-46c1-868d-c8f2ab9d220a
 Module Name: ClusterAwareUpdating
-ms.date: 02/01/2022
+ms.date: 07/13/2022
 title: ClusterAwareUpdating
 ---
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 07/13/2022
 online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/enable-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-CauClusterRole
@@ -16,8 +16,8 @@ Re-enables the self-updating functionality on the specified cluster.
 ## SYNTAX
 
 ```
-Enable-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Enable-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [-Force] [-WhatIf]
+[-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,13 +28,14 @@ cluster. The self-updating functionality of the cluster can be disabled with the
 ## EXAMPLES
 
 ### Example 1: Enable a CAU clustered role on the specified cluster
-```
+
+```powershell
 Enable-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
 ```
 
 This command enables the CAU clustered role on the CONTOSO-FC1 cluster to begin performing Updating
-Runs. The cmdlet changes the status of the CAU clustered role to Running. Because the command
-specified the *Force* parameter, the cmdlet runs without displaying confirmation prompts.
+Runs. The cmdlet changes the status of the CAU clustered role to Running. The cmdlet runs without
+displaying confirmation prompts, as the **Force** parameter was used.
 
 ## PARAMETERS
 
@@ -117,7 +118,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 02/01/2022
+ms.date: 07/13/2022
 online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/save-caudebugtrace?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-CauDebugTrace
@@ -32,7 +32,8 @@ Compatibility Mode (HTTP-In)** firewall exception is enabled on each node.
 ## EXAMPLES
 
 ### Example 1: Save debug tracing information for the specified cluster
-```
+
+```powershell
 Save-CauDebugTrace -ClusterName "CONTOSO-FC1" -FilePath "C:\temp\testrun.zip"
 ```
 
@@ -135,7 +136,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

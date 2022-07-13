@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 07/06/2022
+ms.date: 07/13/2022
 online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/add-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-CauClusterRole
@@ -16,44 +16,50 @@ Adds the Cluster Aware Updating (CAU) clustered role that provides the self-upda
 ## SYNTAX
 
 ### MonthlyDayOfWeek (Default)
+
 ```
-Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>] [-StartDate <DateTime>]
- [-DaysOfWeek <Weekdays>] [-WeeksOfMonth <Int32[]>] [-CauPluginName <String[]>]
- [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>]
- [-NodeOrder <String[]>] [-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
- [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>]
- [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules]
- [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain]
- [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
- [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
- [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>]
+[-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-WeeksOfMonth <Int32[]>]
+[-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
+[-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
+[-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
+[-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
+[-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+[-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+[-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
+[-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
+[[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Weekly
+
 ```
-Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>] [-StartDate <DateTime>]
- [-DaysOfWeek <Weekdays>] [-IntervalWeeks <Int32>] [-CauPluginName <String[]>]
- [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>]
- [-NodeOrder <String[]>] [-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
- [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>]
- [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules]
- [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain]
- [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
- [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
- [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>]
+[-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-IntervalWeeks <Int32>]
+[-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
+[-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
+[-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
+[-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
+[-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+[-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+[-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
+[-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
+[[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Once
+
 ```
 Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>] [-RunOnce]
- [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
- [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>] [-PostUpdateScript <String>]
- [-ConfigurationName <String>] [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
- [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
- [-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
- [-ForcePauseNoDrain] [-ForcePauseAndDrain] [-ForcePauseDrainAndReboot] [-SkipUpdateChecks]
- [-SiteAwareUpdatingOrder <String[]>] [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>]
- [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
+[-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
+[-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
+[-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
+[-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+[-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+[-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
+[-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
+[[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,6 +75,7 @@ Mode (HTTP-In) firewall exception is enabled on each node.
 ## EXAMPLES
 
 ### Example 1: Add a CAU clustered role on the specified cluster at a specific interval
+
 ```powershell
 $parameters = @{
     ClusterName = 'CONTOSO-FC1'
@@ -99,6 +106,7 @@ This example uses splatting to pass parameter values from the `$Parameters` vari
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 2: Add a CAU clustered role on the specified cluster at a specific interval
+
 ```powershell
 $parameters = @{
     ClusterName = 'CONTOSO-FC1'
@@ -126,6 +134,7 @@ This example uses splatting to pass parameter values from the `$Parameters` vari
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 3: Add a CAU clustered role on the specified cluster using plug-ins
+
 ```powershell
 $parameters = @{
     ClusterName = 'CONTOSO-FC1'

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 07/13/2022
 online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-caureport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CauReport
@@ -18,39 +18,42 @@ specified dates or other specified parameters.
 
 ### AllParamsSet (Default)
 ```
-Get-CauReport [[-ClusterName] <String>] [-Detailed] [-Credential <PSCredential>] [<CommonParameters>]
+Get-CauReport [[-ClusterName] <String>] [-Detailed] [-Credential <PSCredential>]
+[<CommonParameters>]
 ```
 
 ### RangeParamSet
 ```
-Get-CauReport [[-ClusterName] <String>] [[-StartDate] <DateTime>] [[-EndDate] <DateTime>] [-Detailed]
- [-Credential <PSCredential>] [<CommonParameters>]
+Get-CauReport [[-ClusterName] <String>] [[-StartDate] <DateTime>] [[-EndDate] <DateTime>]
+[-Detailed] [-Credential <PSCredential>] [<CommonParameters>]
 ```
 
 ### LastParamSet
 ```
-Get-CauReport [[-ClusterName] <String>] [-Last] [-Detailed] [-Credential <PSCredential>] [<CommonParameters>]
+Get-CauReport [[-ClusterName] <String>] [-Last] [-Detailed] [-Credential <PSCredential>]
+[<CommonParameters>]
 ```
 
 ### SpecificReportParamSet
 ```
 Get-CauReport [[-ClusterName] <String>] [-Report <CauReportSummary>] [-Credential <PSCredential>]
- [<CommonParameters>]
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Get-CauReport** cmdlet gets the Updating Run reports for all known Updating Runs, or all
 Updating Runs that match the specified dates or other specified parameters. This cmdlet can return a
 list of all Updating Run reports between the specified *StartDate* and *EndDate* parameters, or if
-the *Last* parameter is specified instead of dates, then the cmdlet returns the most recent Updating
+the **Last** parameter is specified instead of dates, then the cmdlet returns the most recent Updating
 Run report. By default, the report contains summaries only, but more detail can be obtained with the
-*Detailed* parameter or by using the *Report* parameter and specifying a Cluster-Aware Updating
+**Detailed** parameter or by using the **Report** parameter and specifying a Cluster-Aware Updating
 (CAU) report summary object.
 
 ## EXAMPLES
 
 ### Example 1: Get a detailed list of updating runs from the specified cluster
-```
+
+```powershell
 Get-CauReport -ClusterName Contoso-FC1 -StartDate 01/01/2012 -Detailed
 ```
 
@@ -58,7 +61,8 @@ This command gets a detailed list of the updating runs performed on the cluster 
 01/01/2012 or later.
 
 ### Example 2: Get a detailed list of updating runs from a date span from the specified cluster
-```
+
+```powershell
 Get-CauReport -ClusterName "Contoso-FC1" -StartDate 01/01/2012 -EndDate 04/01/2012 -Detailed
 ```
 
@@ -66,7 +70,8 @@ This command gets a detailed list of the updating runs performed on the cluster 
 starting with updating runs on 01/01/2012 and ending with updating runs on 04/01/2012.
 
 ### Example 3: Get the last updating run summary from the specified cluster
-```
+
+```powershell
 $CauReportSummary = Get-CauReport "Contoso-FC1" -Last
 Get-CauReport "Contoso-FC1" -Report $CauReportSummary
 ```
@@ -187,7 +192,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

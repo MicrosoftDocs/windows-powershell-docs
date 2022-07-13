@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 07/13/2022
 online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-caurun?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CauRun
@@ -22,17 +22,20 @@ Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [<CommonParame
 
 ### WaitForStart
 ```
-Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForStart] [<CommonParameters>]
+Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForStart]
+[<CommonParameters>]
 ```
 
 ### WaitForCompletion
 ```
-Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForCompletion] [<CommonParameters>]
+Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForCompletion]
+[<CommonParameters>]
 ```
 
 ### ShowClusterNodeState
 ```
-Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-ShowClusterNodeState] [<CommonParameters>]
+Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-ShowClusterNodeState]
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,9 +45,12 @@ Use this cmdlet to monitor current updating runs.
 ## EXAMPLES
 
 ### Example 1: Get status information about the updating run in progress from the specified cluster
-```
-Get-CauRun -ClusterName "CONTOSO-FC1"
 
+```powershell
+Get-CauRun -ClusterName "CONTOSO-FC1"
+```
+
+```output
 RunId                   : 834dd11e-584b-41f2-8d22-4c9c0471dbad 
 RunStartTime            : 10/13/2011 1:35:39 PM 
 CurrentOrchestrator     : NODE1 
@@ -150,7 +156,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

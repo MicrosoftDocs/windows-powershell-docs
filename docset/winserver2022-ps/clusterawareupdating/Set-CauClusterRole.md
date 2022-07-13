@@ -224,10 +224,11 @@ The following arguments are optional:
   Agent to filter the updates that will be applied to each node. For a name, use **QueryString** and
   for a value, enclose the full query in quotation marks. If not specified, then the
   **Microsoft.WindowsUpdatePlugin** plug-in by default uses the following argument:
-- `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"` For more
-  information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in and the
-  criteria such as IsInstalled that can be included in the query strings, see
-  [IUpdateSearcher::Search method](https://go.microsoft.com/fwlink/p/?LinkId=223304).
+  - `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
+
+For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in
+and the criteria such as IsInstalled that can be included in the query strings, see
+[IUpdateSearcher::Search method](https://go.microsoft.com/fwlink/p/?LinkId=223304).
 
 For the **Microsoft.HotfixPlugin** plug-in, the following argument is required: 
 - **HotfixRootFolderPath=\<Path\>**: The UNC path to a hotfix root folder in an SMB share with a
@@ -389,9 +390,9 @@ Indicates that this cmdlet enables the **Remote Shutdown** Windows Firewall rule
 cluster node, if it isn't already enabled, each time the CAU clustered role performs an Updating
 Run. Enabling this rule group permits inbound communication to each cluster node during each
 Updating Run that allows CAU to shut down and restart the node remotely. If Windows Firewall is in
-use on the cluster nodes and the rule group isn't enabled, the updating run will fail. The **Remote
-Shutdown** Windows Firewall rule group isn't enabled when it will conflict with Group Policy
-settings that are configured for Windows Firewall.
+use on the cluster nodes and the rule group is not enabled, the updating run will fail. The
+**Remote Shutdown** Windows Firewall rule group is not enabled when it will conflict with Group
+Policy settings that are configured for Windows Firewall.
 
 ```yaml
 Type: SwitchParameter
@@ -498,10 +499,8 @@ Accept wildcard characters: False
 ```
 
 ### -IntervalWeeks
-
-Specifies the interval between weeks when the task will be triggered.
-An interval of 1 produces a weekly schedule.
-An interval of 2 produces an every-other week schedule.
+Specifies the interval between weeks when the task will be triggered. An interval of 1 produces a
+weekly schedule. An interval of 2 produces an every-other week schedule.
 
 ```yaml
 Type: Int32
@@ -689,15 +688,15 @@ Accept wildcard characters: False
 ### -RunPluginsSerially
 
 Indicates that CAU scans each cluster node for applicable updates and stage the updates for each
-plug-in in the plug-in order passed into the*CauPluginName* parameter, when multiple plug-ins are
+plug-in in the plug-in order passed into the**CauPluginName** parameter, when multiple plug-ins are
 used during an updating run.
 
 By default, CAU scans and stages the applicable updates for all plug-ins in parallel. Regardless of
 the configuration of this parameter, CAU installs the applicable updates for each plug-in
 sequentially.
 
-The parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter. If a
-single plug-in is specified, a warning appears.
+The parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter.
+If a single plug-in is specified, a warning appears.
 
 ```yaml
 Type: SwitchParameter
@@ -935,7 +934,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

@@ -110,6 +110,7 @@ For instance:
 - `@{name1=value1;name2=value2;name3=value3},@{name4=value4;name5=value5}`
 
 For the default **Microsoft.WindowsUpdatePlugin** plug-in, no arguments are needed.
+
 The following arguments are optional: 
 - **'IncludeRecommendedUpdates'='\<Value\>'**: Boolean value to indicate that recommended updates
   will be applied in addition to important updates on each node. If not specified, the default value
@@ -118,7 +119,7 @@ The following arguments are optional:
   Agent to filter the updates that will be applied to each node. For a name, use **QueryString** and
   for a value, enclose the full query in quotation marks. If not specified, then the
   **Microsoft.WindowsUpdatePlugin** plug-in by default uses the following argument:
-- `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
+  - `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
 
 For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in
 and the criteria such as IsInstalled that can be included in the query strings, see
@@ -163,7 +164,9 @@ Specifies one or more plug-ins to use when performing scans. You can specify mul
 separated with commas. The default is the **Microsoft.WindowsUpdatePlugin** plug-in. This plug-in
 coordinates the Windows Update Agent software resident on each cluster node, the same software that
 is used when updates are downloaded from Windows Update or Microsoft Update, or from a Windows
-Server Update Services (WSUS) server. For more information about how plug-ins work with
+Server Update Services (WSUS) server.
+
+For more information about how plug-ins work with
 Cluster-Aware Updating (CAU), see
 [Cluster-Aware Updating plug-ins](https://go.microsoft.com/fwlink/p/?LinkId=235333).
 
@@ -288,7 +291,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

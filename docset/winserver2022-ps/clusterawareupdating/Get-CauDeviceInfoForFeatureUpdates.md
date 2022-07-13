@@ -26,11 +26,18 @@ The **Get-CauDeviceInfoForFeatureUpdates** cmdlet gets device information for fe
 ## EXAMPLES
 
 ### Example 1: Get device information
+
 ```powershell
-Get-CauDeviceInfoForFeatureUpdates -ClusterName "CONTOSO-FC1" -PathToDirectory "C:\temp\contoso-device-info"
+$Parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    PathToDirectory = 'C:\temp\contoso-device-info'
+}
+Get-CauDeviceInfoForFeatureUpdates $Parameters
 ```
 
-This example gets device information for CAU for the specified cluster.
+This example gets device information for CAU for the specified cluster. This example uses
+splatting to pass parameter values from the `$Parameters` variable to the command. Learn more about
+[Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 
@@ -80,7 +87,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

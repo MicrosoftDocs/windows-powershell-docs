@@ -35,8 +35,8 @@ Enable-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
 ```
 
 This command enables the CAU clustered role on the CONTOSO-FC1 cluster to begin performing Updating
-Runs. The cmdlet changes the status of the CAU clustered role to Running. Because the command
-specified the **Force** parameter, the cmdlet runs without displaying confirmation prompts.
+Runs. The cmdlet changes the status of the CAU clustered role to Running. The cmdlet runs without
+displaying confirmation prompts, as the **Force** parameter was used.
 
 ## PARAMETERS
 
@@ -124,7 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

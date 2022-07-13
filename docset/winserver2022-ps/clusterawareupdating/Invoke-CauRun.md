@@ -160,11 +160,11 @@ The following arguments are optional:
 - **'IncludeRecommendedUpdates'='\<Value\>'**: Boolean value to indicate that recommended updates
   will be applied in addition to important updates on each node. If not specified, the default value
   is **'False'**.
--- A standard Windows Update Agent query string that specifies criteria used by the Windows Update
-Agent to filter the updates that will be applied to each node. For a name, use **QueryString** and
-for a value, enclose the full query in quotation marks. If not specified, then the
-**Microsoft.WindowsUpdatePlugin** plug-in by default uses the following argument:
-- `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
+- A standard Windows Update Agent query string that specifies criteria used by the Windows Update
+  Agent to filter the updates that will be applied to each node. For a name, use **QueryString** and
+  for a value, enclose the full query in quotation marks. If not specified, then the
+  **Microsoft.WindowsUpdatePlugin** plug-in by default uses the following argument:
+  - `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
 
 For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in
 and the criteria such as IsInstalled that can be included in the query strings, see
@@ -782,7 +782,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

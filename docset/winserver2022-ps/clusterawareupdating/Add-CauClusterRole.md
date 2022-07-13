@@ -366,7 +366,7 @@ conflict with Group Policy settings that are configured for Windows Firewall.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -391,7 +391,7 @@ The default value is `Immediate`.
 
 ```yaml
 Type: FailbackType
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 Accepted values: NoFailback, Immediate, Policy
 
@@ -425,7 +425,7 @@ A group might not be able to move because no other node can host the group or th
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -443,7 +443,7 @@ A group might not be able to move because no other node can host the group or th
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -459,7 +459,7 @@ The nodes are not drained.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -474,7 +474,7 @@ Specifies the NetBIOS name of the resource group for the CAU clustered role.
 
 ```yaml
 Type: String
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -509,7 +509,7 @@ The default for most clusters is approximately one-third of the number of nodes.
 
 ```yaml
 Type: Int32
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -527,7 +527,7 @@ The maximum is 64 and the default is 3.
 
 ```yaml
 Type: Int32
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -542,8 +542,8 @@ Specifies an array of cluster node names in the order that they should be update
 
 ```yaml
 Type: String[]
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -597,7 +597,7 @@ pre-update script fails, the node is not updated.
 
 ```yaml
 Type: String
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -629,7 +629,7 @@ complete within this time, then the Updating Run on that node will be marked as 
 
 ```yaml
 Type: Int32
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -645,7 +645,7 @@ begins.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -682,7 +682,7 @@ If a single plug-in is specified, a warning appears.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -703,8 +703,8 @@ If a single plug-in is specified, a warning appears.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
-Aliases: 
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -720,7 +720,7 @@ By default, CAU selects the order of nodes to update based on the level of activ
 
 ```yaml
 Type: String[]
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -735,7 +735,7 @@ Indicates that the CAU cluster role skips update checks.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -771,7 +771,7 @@ performing updates must be complete within this time limit.
 
 ```yaml
 Type: TimeSpan
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -790,7 +790,7 @@ a warning appears.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -813,7 +813,7 @@ for this value for every node in the cluster in the worst case.
 
 ```yaml
 Type: Int32
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -833,7 +833,7 @@ computer object in Active Directory.
 
 ```yaml
 Type: String
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -850,7 +850,7 @@ regardless of the time taken by the Updating Run.
 
 ```yaml
 Type: TimeSpan
-Parameter Sets: MonthlyDayOfWeek, Weekly
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -904,7 +904,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 

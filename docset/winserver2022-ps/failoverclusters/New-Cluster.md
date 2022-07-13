@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/07/2021
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/new-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Cluster
@@ -18,7 +18,7 @@ Creates a new failover cluster.
 ```
 New-Cluster [-Name] <String> [-Node <StringCollection>] [-StaticAddress <StringCollection>]
  [-IgnoreNetwork <StringCollection>] [-NoStorage] [-S2D] [-AdministrativeAccessPoint <AdminAccessPoint>]
- [-Force] [<CommonParameters>]
+ [-Force] [-ManagementPointNetworkType <AdminAccessPointResType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,8 +36,8 @@ There are multiple types of tests, including Inventory, System Configuration, Ne
 PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4
 ```
 ```output
-Name 
----- 
+Name
+----
 cluster1
 ```
 
@@ -48,8 +48,8 @@ This example creates a four-node cluster named cluster1, using default settings 
 PS C:\> New-Cluster -Name cluster1 -Node node1,node2 -NoStorage
 ```
 ```output
-Name 
----- 
+Name
+----
 cluster1
 ```
 
@@ -62,8 +62,8 @@ Storage can be added using the **Get-ClusterAvailableDisk** cmdlet with the **Ad
 PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123
 ```
 ```output
-Name 
----- 
+Name
+----
 cluster1
 ```
 
@@ -74,8 +74,8 @@ This example creates a four-node cluster named cluster1 that uses the static IP 
 PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123,3.0.0.123
 ```
 ```output
-Name 
----- 
+Name
+----
 cluster1
 ```
 
@@ -86,8 +86,8 @@ This example creates a four-node cluster named cluster1 that uses the static IP 
 PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -IgnoreNetwork 2.0.0.0/8
 ```
 ```output
-Name 
----- 
+Name
+----
 cluster1
 ```
 
@@ -99,8 +99,8 @@ The cluster uses default settings for IP addressing, and does not use the networ
 PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123 -IgnoreNetwork 3.0.0.0/8
 ```
 ```output
-Name 
----- 
+Name
+----
 cluster1
 ```
 
@@ -143,7 +143,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,11 +159,32 @@ Networks with DHCP enabled are always included, but other networks need a static
 ```yaml
 Type: StringCollection
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementPointNetworkType
+Specifies the network configuration used to determine IP address settings.
+
+The acceptable values for this parameter are:
+
+- Automatic: Automatically detects the appropriate setting. If SQL Server is running in Azure, uses
+  `Distributed`. If SQL Server is running on-premises, uses `Singleton`. (Default setting)
+- Singleton: The traditional method of DHCP or static IP address.
+- Distributed: Uses a Distributed Network Name by using Node IP addresses.
+
+```yaml
+Type: AdminAccessPointResType
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: Automatic
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -174,7 +195,7 @@ Specifies the name of the cluster to create.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -191,7 +212,7 @@ Shared storage can later be added by piping the **ClusterDiskInfo** object from 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,7 +228,7 @@ If this parameter is not specified, then a one node cluster is created on the lo
 ```yaml
 Type: StringCollection
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +243,7 @@ Specifies whether to enable Storage Spaces Direct when creating the cluster.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -238,7 +259,7 @@ Networks with DHCP enabled are always included, but other networks need a static
 ```yaml
 Type: StringCollection
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

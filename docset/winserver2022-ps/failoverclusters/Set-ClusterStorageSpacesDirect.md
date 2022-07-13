@@ -17,7 +17,8 @@ Sets S2D cache parameters.
 
 ```
 Set-ClusterStorageSpacesDirect [-CacheState <CacheStateType>] [-CacheModeHDD <CacheModeType>]
- [-CacheModeSSD <CacheModeType>] [-Nodes <String[]>] [-SkipEligibilityChecks] [-CimSession <CimSession[]>]
+ [-CacheModeSSD <CacheModeType>] [-Nodes <String[]>] [-ScmUse <ScmUse>] [-SkipEligibilityChecks]
+ [-SedProtectionState <SedProtectionStateType>] [-UseSedExclusively <Boolean>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
@@ -149,6 +150,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ScmUse
+{{ Fill ScmUse Description }}
+
+```yaml
+Type: ScmUse
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SedProtectionState
+{{ Fill SedProtectionState Description }}
+
+```yaml
+Type: SedProtectionStateType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SkipEligibilityChecks
 Indicates that the cmdlet skips cache eligibility checks.
 If cache stores are found with data partitions on them, then you can use Enable-ClusterStorageSpacesDirect with the cache state as Disabled but not as ReadOnly or ReadWrite.
@@ -174,6 +205,21 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseSedExclusively
+{{ Fill UseSedExclusively Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

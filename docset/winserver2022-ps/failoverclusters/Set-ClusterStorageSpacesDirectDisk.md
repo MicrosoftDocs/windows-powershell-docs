@@ -15,9 +15,18 @@ Configures the system to enable S2D to claim or not claim specific physical disk
 
 ## SYNTAX
 
+### ByPhysicalDiskGuid (Default)
 ```
-Set-ClusterStorageSpacesDirectDisk [-CanBeClaimed <Boolean>] [-PhysicalDiskIds <String[]>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-ClusterStorageSpacesDirectDisk -PhysicalDiskGuid <String[]> [-CanBeClaimed <Boolean>] [-Reset]
+ [-CacheUsage <S2DDiskUsage>] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### ByPhysicalDisk
+```
+Set-ClusterStorageSpacesDirectDisk -PhysicalDisk <CimInstance[]> [-CanBeClaimed <Boolean>] [-Reset]
+ [-CacheUsage <S2DDiskUsage>] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,19 +50,35 @@ Omitting that parameter has the same effect.
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CacheUsage
+The desired cache usage of the disk. The acceptable values for this parameter are: NonHybrid, Capacity, Cache, and Auto.
+
+```yaml
+Type: S2DDiskUsage
+Parameter Sets: (All)
+Aliases:
+Accepted values: NonHybrid, Capacity, Cache, Auto
 
 Required: False
 Position: Named
@@ -69,7 +94,7 @@ If you do not specify this parameter, this cmdlet indicates that the specified p
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,14 +135,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PhysicalDiskIds
-Specifies an array of unique IDs of physical disks.
-This cmdlet set S2D to claim or not claim the specified disks.
+### -PhysicalDisk
+{{ Fill PhysicalDisk Description }}
+
+```yaml
+Type: CimInstance[]
+Parameter Sets: ByPhysicalDisk
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -PhysicalDiskGuid
+{{ Fill PhysicalDiskGuid Description }}
 
 ```yaml
 Type: String[]
+Parameter Sets: ByPhysicalDiskGuid
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reset
+Indicates whether the disk can be reset.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,13 +182,13 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

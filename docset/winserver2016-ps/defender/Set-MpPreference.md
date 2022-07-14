@@ -2,7 +2,7 @@
 description: Use this article to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 12/20/2016
+ms.date: 07/14/2022
 online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference

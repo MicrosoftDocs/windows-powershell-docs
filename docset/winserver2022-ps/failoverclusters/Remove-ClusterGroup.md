@@ -184,9 +184,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.FailoverClusters.PowerShell.ClusterGroup
 
+### System.Management.Automation.PSObject
+
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 

@@ -17,14 +17,14 @@ Updates a cluster group set.
 
 ### Query (cdxml) (Default)
 ```
-Set-ClusterGroupSet [[-Name] <String[]>] [-StartupSetting <StartupSettingType>] [-StartupCount <UInt32>]
+Set-ClusterGroupSet [[-Name] <String[]>] [-StartupDelayTrigger <StartupSettingType>] [-StartupCount <UInt32>]
  [-IsGlobal <Boolean>] [-StartupDelay <UInt32>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
  [-PassThru] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
 ```
-Set-ClusterGroupSet -InputObject <CimInstance[]> [-StartupSetting <StartupSettingType>]
+Set-ClusterGroupSet -InputObject <CimInstance[]> [-StartupDelayTrigger <StartupSettingType>]
  [-StartupCount <UInt32>] [-IsGlobal <Boolean>] [-StartupDelay <UInt32>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
 ```
@@ -38,7 +38,7 @@ To update the dependencies, use the Add-ClusterGroupSetDependency and Remove-Clu
 
 ### Example 1: Change a group set to the specified startup setting
 ```
-PS C:\> Set-ClusterGroupSet -Name "Set002" -StartupSetting Online
+PS C:\> Set-ClusterGroupSet -Name "Set002" -StartupDelayTrigger Online
 ```
 
 This command changes the group set named Set002 to the startup setting Online.
@@ -175,7 +175,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StartupSetting
+### -StartupDelayTrigger
 Specifies the startup setting when the set is deemed ready.
 When delay it is when the groups specified in the *StartupCount* parameter are in pending in addition to the *StartupDelay* parameter.
 If it is online it is when *StartupCount* groups reach online in addition to the delay.
@@ -185,7 +185,7 @@ The acceptable values for this parameter are: Delay or Online.
 ```yaml
 Type: StartupSettingType
 Parameter Sets: (All)
-Aliases: StartupDelayTrigger
+Aliases:
 Accepted values: Delay, Online
 
 Required: False
@@ -217,7 +217,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance#root/MSCLUSTER/MSCluster_GroupSet
 
 ## NOTES
 

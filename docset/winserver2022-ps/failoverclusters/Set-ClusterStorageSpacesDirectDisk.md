@@ -218,7 +218,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Management.Infrastructure.CimInstance[]
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

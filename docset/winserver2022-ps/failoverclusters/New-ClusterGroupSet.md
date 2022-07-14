@@ -16,7 +16,7 @@ Create a names set of groups in the cluster.
 ## SYNTAX
 
 ```
-New-ClusterGroupSet -Name <String> [-Group <String[]>] [-Providers <String[]>] [-CimSession <CimSession[]>]
+New-ClusterGroupSet [-Name] <String> [-Group <String[]>] [-Providers <String[]>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
@@ -105,7 +105,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -148,7 +148,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance#root/MSCluster/MSCluster_GroupSet
 
 ## NOTES
 

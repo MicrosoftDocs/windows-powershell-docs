@@ -200,6 +200,8 @@ This cmdlet accepts a **Cluster** object for which it creates a cluster name acc
 
 ## OUTPUTS
 
+### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

@@ -15,8 +15,14 @@ Gets information about one or more failover clusters in a given domain.
 
 ## SYNTAX
 
+### Name (Default)
 ```
 Get-Cluster [[-Name] <String>] [-Domain <String>] [<CommonParameters>]
+```
+
+### ClusterSet
+```
+Get-Cluster [-Domain <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -159,8 +165,8 @@ Specifies the name of the cluster to get.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: Name
+Aliases:
 
 Required: False
 Position: 0
@@ -173,6 +179,8 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## OUTPUTS
 

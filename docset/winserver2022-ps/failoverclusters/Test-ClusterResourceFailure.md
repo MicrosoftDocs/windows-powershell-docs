@@ -91,7 +91,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Management.Automation.PSObject
+
 ## OUTPUTS
+
+### Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume
+
+### Microsoft.FailoverClusters.PowerShell.ClusterResource
 
 ## NOTES
 

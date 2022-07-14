@@ -122,6 +122,7 @@ Accept wildcard characters: False
 Type: NodeType
 Parameter Sets: (All)
 Aliases:
+Accepted values: Node, StorageNode
 
 Required: False
 Position: Named

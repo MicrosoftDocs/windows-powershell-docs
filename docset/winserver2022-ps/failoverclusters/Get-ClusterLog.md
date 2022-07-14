@@ -16,9 +16,10 @@ Creates a log file for all nodes, or a specific a node, in a failover cluster.
 ## SYNTAX
 
 ```
-Get-ClusterLog [[-Node] <StringCollection>] [-Destination <String>][-PerformanceHistoryTimeFrame <String>] 
-[-TimeSpan <UInt32>] [-UseLocalTime] [-SkipClusterState] [-Health]  [-ExportClusterPerformanceHistory]
-  [-NetworkDiagnostics] [-NetworkDiagnosticsLevel <Int32>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+Get-ClusterLog [[-Node] <StringCollection>] [-Destination <String>] [-PerformanceHistoryTimeFrame <String>]
+ [-TimeSpan <UInt32>] [-UseLocalTime] [-SkipClusterState] [-Health] [-Netft] [-ExportClusterPerformanceHistory]
+ [-NetworkDiagnostics] [-NetworkDiagnosticsLevel <Int32>] [-InputObject <PSObject>] [-Cluster <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -141,6 +142,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Netft
+Generate the cluster netft logs.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

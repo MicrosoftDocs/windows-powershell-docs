@@ -191,6 +191,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume
 
+### Microsoft.FailoverClusters.PowerShell.ClusterResource
+
 ## NOTES
 
 ## RELATED LINKS

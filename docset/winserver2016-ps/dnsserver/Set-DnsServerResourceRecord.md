@@ -32,7 +32,7 @@ This cmdlet cannot change the Name or Type of a DNS server resource record objec
 ### Example 1: Change the timespan of a resource record
 ```
 PS C:\> $OldObj = Get-DnsServerResourceRecord -Name "Host01" -ZoneName "contoso.com" -RRType "A"
-PS C:\> $NewObj = $OldObj.Clone()
+PS C:\> $NewObj = [ciminstance]::new($OldObj)
 PS C:\> $NewObj.TimeToLive = [System.TimeSpan]::FromHours(2)
 PS C:\> Set-DnsServerResourceRecord -NewInputObject $NewObj -OldInputObject $OldObj -ZoneName "contoso.com" -PassThru
 

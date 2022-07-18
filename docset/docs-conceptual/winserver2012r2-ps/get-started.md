@@ -43,17 +43,17 @@ for more information.
 | DFSN | [DFSN Cmdlets](/powershell/module/dfsn) |
 | Dfsr | [Distributed File System (DFS) Replication Cmdlets](/powershell/module/dfsn) |
 | DhcpServer | [DHCP Server Cmdlets](/powershell/module/dhcpserver) |
-| DirectAccessClientComponents | [DirectAccess Client Cmdlets](/powershell/module/directaccessclient) |
+| DirectAccessClientComponents | [DirectAccess Client Cmdlets](/powershell/module/directaccessclientcomponents/) |
 | Dism | [DISM Cmdlets](/powershell/module/dism) |
 | DnsClient | [DNS Client Cmdlets](/powershell/module/dnsclient) |
 | DnsServer | [DNS Server Cmdlets](/powershell/module/dnsserver) |
 | FailoverClusters | [Failover Clusters Cmdlets](/powershell/module/failoverclusters) |
-| FileServerResourceManager | [FSRM Cmdlets](/powershell/module/fsrm) |
+| FileServerResourceManager | [FSRM Cmdlets](/powershell/module/fileserverresourcemanager) |
 | GroupPolicy | [Group Policy Cmdlets](/powershell/module/grouppolicy) |
 | HCS | [High Performance Computing Pack](/powershell/module/hpc) |
 | HPC | [StorSimple Hybrid Cloud Storage (HCS) Cmdlets](/powershell/module/hcs) |
 | Hyper-V | [Hyper-V Cmdlets](/powershell/module/hyper-v) |
-| International | [International Settings Cmdlets](/powershell/module/international_cmdlets) |
+| International | [International Settings Cmdlets](/powershell/module/international) |
 | IpamServer | [IPAM Cmdlets](/powershell/module/ipamserver) |
 | iScsi | [iSCSI Cmdlets](/powershell/module/iscsi) |
 | iScsiTarget | [iSCSI Target Cmdlets](/powershell/module/iscsitarget) |
@@ -79,7 +79,7 @@ for more information.
 | PcsvDevice | [Physical Computer System View (PSCV) Cmdlets](/powershell/module/pcsvdevice) |
 | PEF | [Message Analyzer Cmdlets](/powershell/module/pef) |
 | PKI | [PKI Client Cmdlets](/powershell/module/pki) |
-| PowerShellWebAccess | [Windows PowerShell Web Access Cmdlets](/powershell/module/powershellwebacccess) |
+| PowerShellWebAccess | [Windows PowerShell Web Access Cmdlets](/powershell/module/powershellwebaccess) |
 | PrintManagement | [Print Management Cmdlets](/powershell/module/printmanagement) |
 | RemoteAccess | [Remote Access Cmdlets](/powershell/module/remoteaccess) |
 | RemoteDesktop | [Remote Desktop Cmdlets](/powershell/module/remotedesktop) |
@@ -99,7 +99,7 @@ for more information.
 | StorageSpaces | [Storage Spaces Cmdlets](/powershell/module/storagespaces) |
 | SyncShare | [Sync Share Cmdlets](/powershell/module/syncshare) |
 | TLS | [Transport Layer Security (TLS) Authentication Cmdlets](/powershell/module/tls) |
-| TroubleshootingPack | [Troubleshooting Pack (TP) Cmdlets](/powershell/module/troubleshootingtack) |
+| TroubleshootingPack | [Troubleshooting Pack (TP) Cmdlets](/powershell/module/troubleshootingpack) |
 | TrustedPlatformModule | [Trusted Platform Module (TPM) Cmdlets](/powershell/module/trustedplatformmodule) |
 | UpdateServices | [Windows Server Update Services (WSUS) Cmdlets](/powershell/module/updateservices) |
 | UserAccessLogging | [User Access Logging (UAL) Cmdlets](/powershell/module/useraccesslogging) |

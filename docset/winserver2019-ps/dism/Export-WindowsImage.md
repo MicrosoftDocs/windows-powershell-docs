@@ -72,7 +72,7 @@ Accept wildcard characters: False
 Specifies the type of compression used for the initial capture operation. Acceptable values are:
 
 - **"lzms":** Provides very high but CPU intense compression, similar to `dism.exe`'s recovery type. Results in .esd format.
-- **"max" or "maximum":** Provides the high compression, but takes more time to capture the image
+- **"max" or "maximum":** Provides high compression but takes more time to capture the image.
 - **"fast":** Provides faster image compression, but the resulting files are larger than those compressed by using the maximum option.
 - **"none":** No compression is used at all. This is the default. 
 

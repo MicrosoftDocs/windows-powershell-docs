@@ -2,7 +2,7 @@
 description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 03/02/2022
+ms.date: 07/14/2022
 online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -23,7 +23,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-ReportingCriticalFailureTimeOut <UInt32>] [-ReportingNonCriticalTimeOut <UInt32>]
  [-ScanAvgCPULoadFactor <Byte>] [-CheckForSignaturesBeforeRunningScan <Boolean>]
  [-ScanPurgeItemsAfterDelay <UInt32>] [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>]
- [-ScanScheduleDay <Day>] [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleTime <DateTime>]
+ [-ScanScheduleDay <Day>] [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleOffset <UInt32>]
  [-SignatureFirstAuGracePeriod <UInt32>] [-SignatureAuGracePeriod <UInt32>]
  [-SignatureDefinitionUpdateFileSharesSources <String>]
  [-SignatureDisableUpdateOnStartupWithoutEngine <Boolean>] [-SignatureFallbackOrder <String>]
@@ -75,7 +75,7 @@ The following table provides remediation action values for detected threats at l
 |3 |Remove the detected threat. |
 |6 |Allow the detected threat. |
 |8 |Allow the user to determine the action to take with the detected threat. |
-|9 |Do not take any action. |
+|9 |Don't take any action. |
 |10 |Block the detected threat. |
 |0 | (NULL)|Apply action based on the Security Intelligence Update (SIU). This is the default value. |
 
@@ -93,7 +93,7 @@ This command configures preferences to check for definition updates every day.
 PS C:\> Set-MpPreference -SignatureScheduleTime 120
 ```
 
-This command configures preferences to check for definition updates 120 minutes after midnight on days when it is scheduled to check.
+This command configures preferences to check for definition updates 120 minutes after midnight on days when it's scheduled to check.
 
 ## PARAMETERS
 
@@ -216,8 +216,8 @@ Accept wildcard characters: False
 ### -CheckForSignaturesBeforeRunningScan
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of $True, Windows Defender checks for new definitions.
-If you specify $False or do not specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans and to scans that you start from the command line, but it does not affect scans that you start from the user interface.
+If you specify $False or don't specify a value, the scan begins with existing definitions.
+This value applies to scheduled scans and to scans that you start from the command line, but it doesn't affect scans that you start from the user interface.
 
 ```yaml
 Type: Boolean
@@ -408,7 +408,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCpuThrottleOnIdleScans
-Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This parameter is enabled by default, thus ensuring that the CPU will not be throttled for scheduled scans performed when the device is idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag does not have any impact and normal throttling will occur.
+Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This parameter is enabled by default, thus ensuring that the CPU won't be throttled for scheduled scans performed when the device is idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag does not have any impact and normal throttling will occur.
 
 ```yaml
 Type: Boolean
@@ -558,9 +558,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePrivacyMode
-Indicates whether to disable privacy mode.
-Privacy mode prevents users, other than administrators, from displaying threat history.
-If you specify a value of $False or do not specify a value, privacy mode is enabled.
+**This is a legacy setting that does not have any affect on current platforms**. The intent of this parameter was to disable privacy mode, which prevented users, other than administrators, from displaying threat history. When this parameter was in use, if you specified a value of $False or did not specify a value, privacy mode was enabled.
 
 ```yaml
 Type: Boolean

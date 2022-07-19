@@ -297,10 +297,10 @@ Accept wildcard characters: False
 ```
 
 ### -DateTime
-Specifies a distinct time value for Search-ADAccount parameters such as **AccountExpiring**, **AccountInactive**, and **PasswordExpiring**.
+Specifies a distinct time value for Search-ADAccount parameters such as **AccountExpiring**, **AccountInactive**, and **PasswordExpired**.
 
 Time is assumed to be local time unless otherwise specified.
-When a time value is not specified, the time is assumed to midnight local time.
+When a time value is not specified, the time is assumed to be midnight local time.
 If you do not specify a date, the date is assumed to be the current date.
 The following examples show commonly-used syntax to specify a **DateTime** object. 
 
@@ -323,7 +323,7 @@ This example defines time by using Greenwich Mean Time (GMT).
 The following example shows how to specify a value as Coordinated Universal Time (UTC).
 This example represents Monday, April 17, 2006 at 2:22:48 PM UTC. 
 
-  "2000-04-17T14:22:48.0000000"
+  "2006-04-17T14:22:48.0000000"
 
 The following example shows how to set the **AccountExpiring** parameter to a **DateTime** value of June 18, 2012 at 2:00:00 AM. 
 

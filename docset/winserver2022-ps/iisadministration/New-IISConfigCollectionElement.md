@@ -27,17 +27,16 @@ The **New-IISConfigCollectionElement** cmdlet creates a new ConfigurationElement
 
 ### Example 1: Add a new file name to list of default documents
 ```
-PS C:\> $ConfigSection = Get-IISConfigSection -SectionPath "system.webServer/defaultDocument"
-PS C:\> $DefaultDocumentCollection = Get-IISConfigCollection -ConfigElement $ConfigSection -CollectionName "files"
-PS C:\> New-IISConfigCollectionElement 
-  -ConfigCollection $DefaultDocumentCollection -ConfigAttribute @{"Value" = "MyDefDoc.htm"}
+$ConfigSection = Get-IISConfigSection -SectionPath "system.webServer/defaultDocument"
+$DefaultDocumentCollection = Get-IISConfigCollection -ConfigElement $ConfigSection -CollectionName "files"
+New-IISConfigCollectionElement -ConfigCollection $DefaultDocumentCollection -ConfigAttribute @{"Value" = "MyDefDoc.htm"}
 ```
 
 This command creates an entry in the list of default documents.
 
 ### Example 2: Add a new file name to the top of the list of default documents
 ```
-PS C:\> Get-IISConfigSection -SectionPath "system.webServer/defaultDocument" | Get-IISConfigCollection -CollectionName "files" | New-IISConfigCollectionElement  -ConfigAttribute @{Value = "MyDefDoc.htm"} -AddAt 0
+Get-IISConfigSection -SectionPath "system.webServer/defaultDocument" | Get-IISConfigCollection -CollectionName "files" | New-IISConfigCollectionElement  -ConfigAttribute @{Value = "MyDefDoc.htm"} -AddAt 0
 ```
 
 This command creates a new entry in the list of default documents, and makes this new entry the first item in the collection.

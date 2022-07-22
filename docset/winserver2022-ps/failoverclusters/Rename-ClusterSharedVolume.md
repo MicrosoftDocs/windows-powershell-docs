@@ -11,7 +11,7 @@ title: Rename-ClusterSharedVolume
 # Rename-ClusterSharedVolume
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Renames a cluster shared volume.
 
 ## SYNTAX
 
@@ -21,21 +21,21 @@ Rename-ClusterSharedVolume [-Name] <String> [[-VolumeName] <String>] -NewVolumeN
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Rename-ClusterSharedVolume** cmdlet renames a specified cluster shared volume.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Rename-ClusterSharedVolume -Name "CSV01" -NewVolumeName "CONTOSOCSV01"
 ```
 
-{{ Add example description here }}
+This command renames the cluster shared volume from CSV01 to CONTOSOCSV01.
 
 ## PARAMETERS
 
 ### -Name
-{{ Fill Name Description }}
+Specify the name of the cluster shared volume to rename.
 
 ```yaml
 Type: String
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewVolumeGuid
-{{ Fill NewVolumeGuid Description }}
+Specify the new volume GUID of the cluster shared volume.
 
 ```yaml
 Type: String
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewVolumeName
-{{ Fill NewVolumeName Description }}
+Specify the new volume name of the cluster shared volume.
 
 ```yaml
 Type: String
@@ -108,5 +108,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[https://go.microsoft.com/fwlink/?LinkId=216242](https://go.microsoft.com/fwlink/?LinkId=216242)
+[Add-ClusterSharedVolume](./Add-ClusterSharedVolume.md)
 
+[Get-ClusterSharedVolume](Get-ClusterSharedVolume.md)
+
+[Move-ClusterSharedVolume](./Move-ClusterSharedVolume.md)
+
+[Remove-ClusterSharedVolume](./Remove-ClusterSharedVolume.md)

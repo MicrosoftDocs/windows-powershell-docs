@@ -144,7 +144,11 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Specifies the user account credentials to use to perform this task.
+The default credentials are the credentials of the currently logged on user.
+
+You can also create a **PSCredential** object by using a script or by using the `Get-Credential` cmdlet.
+You can then set the **Credential** parameter to the **PSCredential** object.
 
 ```yaml
 Type: PSCredential
@@ -252,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -SASToken
-{{ Fill SASToken Description }}
+Specifies the Shared Access Security (SAS) token to be used by the failover cluster to access the Cloud Witness
 
 ```yaml
 Type: String

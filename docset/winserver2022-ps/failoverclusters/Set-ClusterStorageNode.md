@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the storage node object for which this cmdlet remove the cluster node.
 
 ```yaml
 Type: CimInstance[]
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the storage node name for which this cmdlet remove the cluster node.
 
 ```yaml
 Type: String[]
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-{{ Fill NewName Description }}
+Specify the new storage node name.
 
 ```yaml
 Type: String

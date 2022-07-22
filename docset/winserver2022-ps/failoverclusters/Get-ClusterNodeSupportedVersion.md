@@ -11,7 +11,9 @@ title: Get-ClusterNodeSupportedVersion
 # Get-ClusterNodeSupportedVersion
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets the supported cluster functional level, and upgrade version available for the
+failover cluster.
+
 
 ## SYNTAX
 
@@ -21,16 +23,41 @@ Get-ClusterNodeSupportedVersion [-CimSession <CimSession[]>] [-ThrottleLimit <In
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-ClusterNodeSupportedVersion** command gets information about the cluster functional level
+and upgrade version.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-ClusterNodeSupportedVersion
 ```
 
-{{ Add example description here }}
+```Output
+ClusterFunctionalLevel ClusterUpgradeVersion
+---------------------- ---------------------
+                    11                     4
+
+```
+
+This example displays the supported cluster functional level, and upgrade version available for the
+failover cluster.
+
+### Example 2
+```powershell
+Get-ClusterNodeSupportedVersion
+```
+
+```Output
+ClusterFunctionalLevel ClusterUpgradeVersion
+---------------------- ---------------------
+                    11                     4
+                    10                     3
+
+```
+
+This example displays the supported cluster functional level, and upgrade version available for the
+failover cluster after all nodes have been upgraded.
 
 ## PARAMETERS
 
@@ -111,3 +138,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Update-ClusterFunctionalLevel](Update-ClusterFunctionalLevel.md)

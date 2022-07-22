@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Valid values are: MAConfig, HADefinition
+Specifies the agent configuration or definition for export.
 
 ```yaml
 Type: String

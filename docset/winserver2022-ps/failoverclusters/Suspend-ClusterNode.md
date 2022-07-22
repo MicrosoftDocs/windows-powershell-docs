@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryDrainOnFailure
-{{ Fill RetryDrainOnFailure Description }}
+Specifies that the cmdlet should retry if the drain activity fails.
 
 ```yaml
 Type: SwitchParameter

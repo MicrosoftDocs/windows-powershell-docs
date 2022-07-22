@@ -11,7 +11,7 @@ title: Resume-ClusterPhysicalDiskResource
 # Resume-ClusterPhysicalDiskResource
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Resumes a physical disk resource within a failover cluster.
 
 ## SYNTAX
 
@@ -21,7 +21,8 @@ Resume-ClusterPhysicalDiskResource [[-Name] <String>] [-RecoveryPassword <String
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Resume-ClusterPhysicalDiskResource** cmdlet resumes activity on a failover cluster physical disk after it has been suspended, or paused, or both.
+When a physical disk is resumed, ...
 
 ## EXAMPLES
 
@@ -66,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the name of the physical disk resource to resume.
 
 ```yaml
 Type: String

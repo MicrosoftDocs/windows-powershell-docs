@@ -125,3 +125,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-ClusterSharedVolume](./Remove-ClusterSharedVolume.md)
 
+[Rename-ClusterSharedVolume](Rename-ClusterSharedVolume.md)

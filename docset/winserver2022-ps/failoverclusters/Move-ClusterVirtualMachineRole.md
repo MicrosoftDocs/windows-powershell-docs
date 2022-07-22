@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreAffinityRule
-{{ Fill IgnoreAffinityRule Description }}
+Allows the virtual machine role to move to another node, ignoring any configured affinity rules.
 
 ```yaml
 Type: SwitchParameter

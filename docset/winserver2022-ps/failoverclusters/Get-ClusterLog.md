@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExportClusterPerformanceHistory
-Export the ClusterPorformanceHistory data.
+Export the cluster's performance history data.
 
 ```yaml
 Type: SwitchParameter
@@ -206,7 +206,15 @@ Accept wildcard characters: False
 ```
 
 ### -PerformanceHistoryTimeFrame
-{{ Fill PerformanceHistoryTimeFrame Description }}
+Specifies the performance history time frame for which to include in the cluster log. The acceptable
+values for this parameter are:
+
+- `MostRecent`
+- `LastHour`
+- `LastDay`
+- `LastWeek`
+- `LastMonth`
+- `LastYear`
 
 ```yaml
 Type: String

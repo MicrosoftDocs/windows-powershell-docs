@@ -11,7 +11,7 @@ title: Remove-ClusterStorageNode
 # Remove-ClusterStorageNode
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes a storage node from a failover cluster.
 
 ## SYNTAX
 
@@ -28,16 +28,17 @@ Remove-ClusterStorageNode -InputObject <CimInstance[]> [-Flags <UInt32>] [-CimSe
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Remove-ClusterStorageNode** cmdlet removes a storage node from a failover cluster.
+After the node is removed, the node no longer functions as part of the cluster unless the node is added back to the cluster. Removing a node is also called evicting a node from the cluster.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Remove-ClusterStorageNode -Name node4
 ```
 
-{{ Add example description here }}
+This example removes the storage node named node4 from the local cluster.
 
 ## PARAMETERS
 
@@ -114,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the storage node object for which this cmdlet remove the cluster node.
 
 ```yaml
 Type: CimInstance[]
@@ -129,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the storage node name for which this cmdlet remove the cluster node.
 
 ```yaml
 Type: String[]
@@ -227,3 +228,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ClusterStorageNode](Get-ClusterStorageNode.md)
+[Add-ClusterStorageNode](Add-ClusterStorageNode.md)

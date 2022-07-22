@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the cluster for which this cmdlet adds a cluster name account.
+Specifies the cluster object for which this cmdlet adds a cluster name account.
 
 ```yaml
 Type: PSObject
@@ -146,7 +146,14 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementPointNetworkType
-{{ Fill ManagementPointNetworkType Description }}
+Specifies the network configuration used to determine IP address settings.
+
+The acceptable values for this parameter are:
+
+- `Automatic` Automatically detects the appropriate setting. If SQL Server is running in Azure, uses
+  `Distributed`. If SQL Server is running on-premises, uses `Singleton`. (Default setting)
+- `Singleton` The traditional method of DHCP or static IP address.
+- `Distributed` Uses a Distributed Network Name by using Node IP addresses.
 
 ```yaml
 Type: AdminAccessPointResType

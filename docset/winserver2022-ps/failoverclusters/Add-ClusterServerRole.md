@@ -28,10 +28,28 @@ Add-ClusterServerRole [-DnsName <String>] [-NetworkNameName <String>] [-Storage 
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Add-ClusterServerRole
 ```
 
-{{ Add example description here }}
+This example establishes a default name for a clustered server.
+It does not specify any storage.
+Storage and other resources can be added later.
+
+### Example 2
+```powershell
+Add-ClusterServerRole -Storage "Cluster Disk 3" -Name MainSrv1
+```
+
+This example creates a clustered service or application using Cluster Disk 3, and assigns the name
+MainSrv1.
+
+### Example 3
+```powershell
+Add-ClusterServerRole -Storage "Cluster Disk 4","Cluster Disk 5" -Name MainSrv2
+```
+
+This example creates a clustered service or application using Cluster Disk 4 and Cluster Disk 5, and
+assigns the name MainSrv2.
 
 ## PARAMETERS
 
@@ -68,8 +86,8 @@ Accept wildcard characters: False
 
 ### -IgnoreNetwork
 Specifies one or more networks to ignore when running the cmdlet. Networks with DHCP enabled are
-always included, but other networks need a static address to be specified using the *StaticAddress*
-parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+always included, but other networks need a static address to be specified using the
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -99,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the name of the highly available server to create.
 
 ```yaml
 Type: String
@@ -131,7 +149,7 @@ Accept wildcard characters: False
 ### -StaticAddress
 Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
 are always included, but other networks need a static address to be specified using the
-*StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -146,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Storage
-{{ Fill Storage Description }}
+Specifies the cluster disk resource to be added to the created highly available server.
 
 ```yaml
 Type: StringCollection
@@ -162,7 +180,7 @@ Accept wildcard characters: False
 
 ### -Wait
 Specifies the time in seconds to wait for the cmdlet.
-If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+If the **Wait** parameter is not specified, then the cmdlet waits for completion.
 If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
 
 ```yaml
@@ -178,7 +196,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

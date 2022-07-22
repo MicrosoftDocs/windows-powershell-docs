@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreAffinityRule
-{{ Fill IgnoreAffinityRule Description }}
+Allows the cluster group to start on a node, ignoring any configured affinity rules.
 
 ```yaml
 Type: SwitchParameter

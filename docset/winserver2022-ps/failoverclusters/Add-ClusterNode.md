@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-{{ Fill Type Description }}
+Sets the type of cluster node to add to the cluster.
 
 ```yaml
 Type: NodeType

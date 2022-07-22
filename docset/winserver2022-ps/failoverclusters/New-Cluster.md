@@ -173,10 +173,10 @@ Specifies the network configuration used to determine IP address settings.
 
 The acceptable values for this parameter are:
 
-- Automatic: Automatically detects the appropriate setting. If SQL Server is running in Azure, uses
+- `Automatic` Automatically detects the appropriate setting. If SQL Server is running in Azure, uses
   `Distributed`. If SQL Server is running on-premises, uses `Singleton`. (Default setting)
-- Singleton: The traditional method of DHCP or static IP address.
-- Distributed: Uses a Distributed Network Name by using Node IP addresses.
+- `Singleton` The traditional method of DHCP or static IP address.
+- `Distributed` Uses a Distributed Network Name by using Node IP addresses.
 
 ```yaml
 Type: AdminAccessPointResType

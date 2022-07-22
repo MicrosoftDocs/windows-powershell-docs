@@ -11,7 +11,7 @@ title: Suspend-ClusterPhysicalDiskResource
 # Suspend-ClusterPhysicalDiskResource
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Turns on maintenance for a physical disk resource so that you can run a disk maintenance tool without triggering failover.
 
 ## SYNTAX
 
@@ -21,7 +21,9 @@ Suspend-ClusterPhysicalDiskResource [[-Name] <String>] [-CleanupClusterProtector
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Suspend-ClusterPhysicalDiskResource** cmdlet turns on maintenance for a physical disk resource so that a disk maintenance tool can be run without triggering failover.
+
+This cmdlet only applies to physical disks. Turning on maintenance leaves dependent resources online.
 
 ## EXAMPLES
 
@@ -97,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the name of the physical disk resource to suspend.
 
 ```yaml
 Type: String

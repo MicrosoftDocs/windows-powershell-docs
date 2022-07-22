@@ -11,7 +11,7 @@ title: Remove-ClusterNameAccount
 # Remove-ClusterNameAccount
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes a cluster name account from the cluster configuration.
 
 ## SYNTAX
 
@@ -21,16 +21,29 @@ Remove-ClusterNameAccount [-DeleteComputerObjects] [-InputObject <PSObject>] [-C
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Remove-ClusterNameAccount** cmdlet removes a cluster name account from cluster configuration. A cluster name account is also referred to as a cluster name object (CNO).
+
+The cluster name resource must be offline for the command to succeed.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Remove-ClusterNameAccount
 ```
 
-{{ Add example description here }}
+This command removes the cluster name account from the cluster configuration and disables the cluster name object in Active Directory Domain Services.
+
+### Example 2
+```powershell
+$cluster = Get-Cluster -Name "CONTOSOCL01.contoso.com"
+Remove-ClusterNameAccount -DeleteComputerObjects -InputObject $cluster
+```
+
+This command gets the cluster object for the cluster CONTOSOCL01.contoso.com" and removes the
+cluster name account from the cluster configuration, deleting the cluster name object in Active
+Directory Domain Services.
+
 
 ## PARAMETERS
 
@@ -51,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteComputerObjects
-{{ Fill DeleteComputerObjects Description }}
+Specifies that the cluster name object in Active Directory Domain Services should be deleted.
 
 ```yaml
 Type: SwitchParameter
@@ -66,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the cluster object for which this cmdlet adds a cluster name account.
 
 ```yaml
 Type: PSObject
@@ -93,3 +106,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-Cluster](Get-Cluster.md)
+[New-ClusterNameAccount](New-ClusterNameAccount.md)

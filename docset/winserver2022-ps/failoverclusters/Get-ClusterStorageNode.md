@@ -11,7 +11,7 @@ title: Get-ClusterStorageNode
 # Get-ClusterStorageNode
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets information about one or more storage nodes in a failover cluster.
 
 ## SYNTAX
 
@@ -21,16 +21,33 @@ Get-ClusterStorageNode [-Id <String[]>] [[-Name] <String[]>] [-CimSession <CimSe
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Get-ClusterStorageNode** cmdlet gets information about one or more storage nodes in a failover
+cluster.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-ClusterStorageNode
 ```
 
-{{ Add example description here }}
+This example displays the name, id, and state of each node, or server, in the local cluster.
+
+### Example 2
+```powershell
+Get-ClusterStorageNode -Id 1
+```
+
+This example lists all cluster resources that are currently owned the node with an ID of 1 on the
+local cluster.
+
+### Example 3
+```powershell
+Get-ClusterStorageNode - Name node1
+```
+
+This example lists all cluster resources that are currently owned by node named node1 on the local
+cluster.
 
 ## PARAMETERS
 
@@ -92,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the name of the cluster storage node to get.
 
 ```yaml
 Type: String[]

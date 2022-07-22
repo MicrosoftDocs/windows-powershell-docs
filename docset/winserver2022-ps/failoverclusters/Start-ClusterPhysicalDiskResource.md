@@ -11,7 +11,7 @@ title: Start-ClusterPhysicalDiskResource
 # Start-ClusterPhysicalDiskResource
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Starts a physical disk resource within a failover cluster.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Start-ClusterPhysicalDiskResource [[-Name] <String>] [-RecoveryPassword <StringC
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Start-ClusterPhysicalDiskResource** cmdlet brings a physical disk online in a failover cluster.
 
 ## EXAMPLES
 
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+Specifies the name of the physical disk resource to bring online.
 
 ```yaml
 Type: PSObject

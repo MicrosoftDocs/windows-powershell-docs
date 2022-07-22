@@ -30,22 +30,15 @@ One way is to store configuration information in the registry on the local serve
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterCheckpoint
-Resource                      Name                          Type                          Key 
---------                      ----                          ----                          --- 
-Cluster Name                  Microsoft Enhanced Cryptog...                               b5a571f2-c28b-48fa-b82f-a8... 
-Cluster Name                  software\clusname
+```powershell
+Get-ClusterCheckpoint
 ```
 
 This example retrieves all cluster checkpoints.
 
 ### Example 2
-```
-PS C:\> Get-ClusterResource -ResourceName "Cluster Name" | Get-ClusterCheckpoint -CryptoCheckpoint
-Resource                      Name                          Type                          Key 
---------                      ----                          ----                          --- 
-Cluster Name                  Microsoft Enhanced Cryptog...                               b5a571f2-c28b-48fa-b82f-a8...
+```powershell
+Get-ClusterResource -ResourceName "Cluster Name" | Get-ClusterCheckpoint -CryptoCheckpoint
 ```
 
 This example retrieves the cryptographic checkpoints for the resource named Cluster Name.

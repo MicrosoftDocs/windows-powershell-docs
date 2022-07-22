@@ -36,6 +36,9 @@ Remove a cluster shared volume from an affinity rule.
 ```powershell
 Remove-ClusterSharedVolumeFromAffinityRule -ClusterSharedVolumes MyVolume -Name MyRule -Cluster MyCluster
 ```
+
+This command removes the cluster shared volume _MyVolume_ from the affinity rule _MyRule_ for the cluster _MyCluster_.
+
 ## PARAMETERS
 
 ### -AsJob

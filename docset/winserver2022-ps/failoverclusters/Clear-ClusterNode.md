@@ -29,15 +29,15 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Clear-ClusterNode -Name node4 -Force
+```powershell
+Clear-ClusterNode -Name node4 -Force
 ```
 
 This example removes cluster configuration information from the node named node4 without asking for user confirmation.
 
 ### Example 2
-```
-PS C:\> Clear-ClusterNode
+```powershell
+Clear-ClusterNode
 ```
 
 This example removes cluster configuration information from the local node after prompting for confirmation.

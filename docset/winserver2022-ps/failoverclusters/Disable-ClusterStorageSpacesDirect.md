@@ -26,8 +26,8 @@ The **Disable-ClusterStorageSpacesDirect** cmdlet disables highly available Stor
 ## EXAMPLES
 
 ### Example 1: Disable Storage Spaces Direct
-```
-PS C:\> Disable-ClusterStorageSpacesDirect
+```powershell
+Disable-ClusterStorageSpacesDirect
 ```
 
 This command disables S2D on the cluster.

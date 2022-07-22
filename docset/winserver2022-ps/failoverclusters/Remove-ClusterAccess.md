@@ -27,8 +27,8 @@ After this cmdlet is run, the user might still have access to the cluster if the
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-ClusterAccess -User contoso\johnj99
+```powershell
+Remove-ClusterAccess -User contoso\johnj99
 ```
 
 This example removes the user johnj99 in the contoso domain from the access list of the local cluster.

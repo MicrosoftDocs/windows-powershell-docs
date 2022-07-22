@@ -30,21 +30,15 @@ For other disks, Logical Unit Number (LUNs), in cluster storage, turning on main
 ## EXAMPLES
 
 ### Example 1: Turn on maintenance for a CSV
-```
-PS C:\> Suspend-ClusterResource -Name "Cluster Disk 2"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 2      Online(Maintenance) Available Storage   Physical Disk
+```powershell
+Suspend-ClusterResource -Name "Cluster Disk 2"
 ```
 
 This example turns on maintenance for CSV named Cluster Disk 2 so that you can run a disk maintenance tool without triggering failover.
 
 ### Example 2: Turn on maintenance for multiple volumes
-```
-PS C:\> Get-ClusterSharedVolume -Name "Cluster Disk 5" | Suspend-ClusterResource
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 5             Online                     node2
+```powershell
+Get-ClusterSharedVolume -Name "Cluster Disk 5" | Suspend-ClusterResource
 ```
 
 This example turns on maintenance for all volumes on the CSV named Cluster Disk 5.

@@ -39,13 +39,23 @@ Alternatively, you can run this cmdlet after you enable S2D.
 ## EXAMPLES
 
 ### Example 1: Configure disks not to be claimed
-```
-PS C:\> Set-ClusterStorageSpacesDirectDisk -CimSession "K0619-C1.contoso.com" -CanBeClaimed:$False -PhysicalDiskIds "55CD2E404B75A3FC","50014EE05950DD7C"
+```powershell
+$parameters = @{
+    CimSession = 'K0619-C1.contoso.com'
+    CanBeClaimed = $False
+    PhysicalDiskIds = '55CD2E404B75A3FC',
+                      '50014EE05950DD7C'
+}
+Set-ClusterStorageSpacesDirectDisk @parameters
 ```
 
-This command configures the system that physical disks that have the IDs 55CD2E404B75A3FC and 50014EE05950DD7C cannot be claimed by S2D.
-In this example, the *CanBeClaimed* parameter is explicitly specified as $False.
-Omitting that parameter has the same effect.
+This command configures the system that physical disks that have the IDs _55CD2E404B75A3FC_ and
+_50014EE05950DD7C_ cannot be claimed by S2D. In this example, the `CanBeClaimed` parameter is
+explicitly specified as $False. Omitting that parameter has the same effect.
+
+
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 

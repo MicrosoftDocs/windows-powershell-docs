@@ -27,41 +27,29 @@ When a node is resumed, clustered roles that were drained from the node are retu
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Resume-ClusterNode node1
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                        Up
+```powershell
+Resume-ClusterNode node1
 ```
 
 This example resumes node1 on the local cluster.
 
 ### Example 2
-```
-PS C:\> Resume-ClusterNode node2 -Cluster mycluster
-Name                                                                      State 
-----                                                                      ----- 
-node2                                                                        Up
+```powershell
+Resume-ClusterNode node2 -Cluster mycluster
 ```
 
 This example resumes node2 on the cluster called mycluster.
 
 ### Example 3
-```
-PS C:\> Get-ClusterNode | Resume-ClusterNode
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                        Up
+```powershell
+Get-ClusterNode | Resume-ClusterNode
 ```
 
 This example resumes all cluster nodes that are suspended, or paused, on the local cluster.
 
 ### Example 4
-```
-PS C:\> Get-ClusterNode | Resume-ClusterNode -Failback Immediate
-Name                                                                      State 
-----                                                                      ----- 
-node2                                                                        Up
+```powershell
+Get-ClusterNode | Resume-ClusterNode -Failback Immediate
 ```
 
 This example resumes all cluster nodes that are suspended, or paused, on the local cluster and immediately brings back the workloads drained from the nodes.

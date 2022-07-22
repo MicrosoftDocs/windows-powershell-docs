@@ -38,17 +38,17 @@ If a cluster name account already exists for a cluster, this cmdlet has no effec
 ## EXAMPLES
 
 ### Example 1: Create a cluster name account for the current cluster
-```
-PS C:\> New-ClusterNameAccount -Name "cluster_17" -Domain "production.contoso.com"
+```powershell
+New-ClusterNameAccount -Name "cluster_17" -Domain "production.contoso.com"
 ```
 
 This command creates a cluster name account for the current cluster in the specified domain.
 The current cluster is the default value for the cluster on which this cmdlet operates.
 
 ### Example 2: Create a cluster name account by using credentials
-```
-PS C:\> $Credential = Get-Credential
-PS C:\> New-ClusterNameAccount -Name "cluster27" -Domain "production.contoso.com" -Credentials $Credential
+```powershell
+$Credential = Get-Credential
+New-ClusterNameAccount -Name "cluster27" -Domain "production.contoso.com" -Credentials $Credential
 ```
 
 The first command prompts you for credentials, and then stores them in the **$Credential** variable.

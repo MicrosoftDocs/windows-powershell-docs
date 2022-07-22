@@ -27,21 +27,15 @@ Use this cmdlet if a hardware device, such as a network adapter, is to be added 
 ## EXAMPLES
 
 ### Example 1: Refresh a clustered virtual machine on the local cluster
-```
-PS C:\> Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM1"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Virtual Machine ... Online              Virtual Machine     Virtual Machine ...
+```powershell
+Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM1"
 ```
 
 This example refreshes the clustered virtual machine named Virtual Machine Configuration VM1 on the local cluster.
 
 ### Example 2: Refresh a clustered virtual machine on a cluster
-```
-PS C:\> Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM2" -Cluster cluster1
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Virtual Machine ... Online              Virtual Machine     Virtual Machine
+```powershell
+Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM2" -Cluster cluster1
 ```
 
 This example refreshes the clustered virtual machine named Virtual Machine Configuration VM2 on the cluster named cluster1.

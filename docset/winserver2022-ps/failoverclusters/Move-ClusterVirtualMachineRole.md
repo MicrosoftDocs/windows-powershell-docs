@@ -32,49 +32,32 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Move-ClusterVirtualMachineRole -Name "Virtual Machine1" -Node node2
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-Virtual Machine1           node2                              Online
+```powershell
+Move-ClusterVirtualMachineRole -Name "Virtual Machine1" -Node node2
 ```
 
 This example performs a live migration of the clustered virtual machine named Virtual Machine1 to the node named node2.
 The Windows PowerShell® prompt does not return until the action is complete.
 
 ### Example 2
-```
-PS C:\> Get-ClusterGroup -Name "Virtual Machine1" | Move-ClusterVirtualMachineRole -Node node2 -Wait 0
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-Virtual Machine1           node2                              Online
+```powershell
+Get-ClusterGroup -Name "Virtual Machine1" | Move-ClusterVirtualMachineRole -Node node2 -Wait 0
 ```
 
 This example performs a live migration of clustered virtual machine named Virtual Machine1 to the node named node2.
 The Windows PowerShell® prompt returns as soon as the action has been initiated.
 
 ### Example 3
-```
-PS C:\> Move-ClusterVirtualMachineRole -Name "Virtual Machine1" -Cancel
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-Virtual Machine1           node1                              Online
+```powershell
+Move-ClusterVirtualMachineRole -Name "Virtual Machine1" -Cancel
 ```
 
 This example cancels the live migration in progress for the clustered virtual machine named Virtual Machine1.
 
 ### Example 4
-```
-PS C:\> $groups = Get-ClusterNode -Name node1 | Get-ClusterGroup | Where-Object -FilterScript {$_ | Get-ClusterResource | Where-Object -FilterScript {$_.ResourceType -Like "Virtual Machine"}}
-
-
-
-PS C:\> ForEach-Object -InputObject $groups -Process { $_ | Move-ClusterVirtualMachineRole -Node node2 }
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-Virtual Machine1           node2                              Online 
-Virtual Machine2           node2                              Online 
-Virtual Machine3           node2                              Online
+```powershell
+$groups = Get-ClusterNode -Name node1 | Get-ClusterGroup | Where-Object -FilterScript {$_ | Get-ClusterResource | Where-Object -FilterScript {$_.ResourceType -Like "Virtual Machine"}}
+ForEach-Object -InputObject $groups -Process { $_ | Move-ClusterVirtualMachineRole -Node node2 }
 ```
 
 This example performs a live migration of all clustered virtual machines that are currently owned by the node named node1 to the node named node2.

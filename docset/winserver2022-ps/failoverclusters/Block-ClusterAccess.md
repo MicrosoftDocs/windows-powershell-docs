@@ -27,8 +27,8 @@ If you do not want to completely block access and instead want to limit a user t
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Block-ClusterAccess -User contoso\johnj99
+```powershell
+Block-ClusterAccess -User contoso\johnj99
 ```
 
 This example prevents the user named johnj99 on the contoso domain from gaining access to the local cluster.

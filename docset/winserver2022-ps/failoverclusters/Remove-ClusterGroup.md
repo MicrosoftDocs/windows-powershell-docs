@@ -30,23 +30,23 @@ If the group still has resources in it, then either remove the resources first, 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-ClusterGroup -Name MyFileServer
+```powershell
+Remove-ClusterGroup -Name MyFileServer
 ```
 
 This example prompts the user for confirmation and then removes the clustered role named MyFileServer, if the resources have first been removed from it.
 
 ### Example 2
-```
-PS C:\> Remove-ClusterGroup -Name MyFileServer -Force
+```powershell
+Remove-ClusterGroup -Name MyFileServer -Force
 ```
 
 This example removes the clustered role named MyFileServer, if the resources have first been removed from it.
 The cmdlet does not prompt for confirmation.
 
 ### Example 3
-```
-PS C:\> Remove-ClusterGroup -Name MyFileServer -Force -RemoveResources
+```powershell
+Remove-ClusterGroup -Name MyFileServer -Force -RemoveResources
 ```
 
 This example removes the clustered  role named MyFileServer, without prompting for confirmation.

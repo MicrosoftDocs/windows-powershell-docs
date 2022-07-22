@@ -29,11 +29,8 @@ This cmdlet can be used to simulate what actions the Cluster service will take w
 ## EXAMPLES
 
 ### Example 1: Simulate a failure
-```
-PS C:\> Test-ClusterResourceFailure -Name "Cluster Disk 4"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 4      Failed              cluster12FS         Physical Disk
+```powershell
+Test-ClusterResourceFailure -Name "Cluster Disk 4"
 ```
 
 This example simulates a failure in cluster resource named Cluster Disk 4.

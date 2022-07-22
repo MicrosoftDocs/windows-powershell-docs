@@ -26,11 +26,8 @@ The **Update-ClusterNetworkNameResource** cmdlet registers existing Network Name
 ## EXAMPLES
 
 ### Example 1: Register name resources with a DNS server
-```
-PS C:\> Get-ClusterResource -Name "Cluster Name" | Update-ClusterNetworkNameResource
-Name                          State                         OwnerGroup                    ResourceType 
-----                          -----                         ----------                    ------------ 
-Cluster Name                  Online                        Cluster Group                 Network Name
+```powershell
+Get-ClusterResource -Name "Cluster Name" | Update-ClusterNetworkNameResource
 ```
 
 This example registers the Network Name resources of the local cluster with a DNS server.

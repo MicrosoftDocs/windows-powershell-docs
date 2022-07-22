@@ -27,15 +27,15 @@ To provide someone with read-only access to the cluster, use the **ReadOnly** pa
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Grant-ClusterAccess -User contoso\johnj99 -Full
+```powershell
+Grant-ClusterAccess -User contoso\johnj99 -Full
 ```
 
 This example grants full access to the local cluster to johnj99 in the contoso domain.
 
 ### Example 2
-```
-PS C:\> Grant-ClusterAccess -User contoso\johnj99 -ReadOnly
+```powershell
+Grant-ClusterAccess -User contoso\johnj99 -ReadOnly
 ```
 
 This example grants read-only access to the local cluster to johnj99 in the contoso domain.

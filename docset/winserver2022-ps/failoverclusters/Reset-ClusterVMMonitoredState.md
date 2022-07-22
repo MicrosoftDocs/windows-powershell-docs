@@ -26,8 +26,8 @@ Note: This cmdlet can only be run locally on the virtual machine or through Wind
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Reset-ClusterVMMoniteredState
+```powershell
+Reset-ClusterVMMoniteredState
 ```
 
 This example resets the state of the virtual machine and clears the critical state.

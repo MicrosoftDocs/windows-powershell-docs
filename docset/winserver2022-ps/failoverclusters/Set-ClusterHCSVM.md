@@ -33,10 +33,18 @@ With this cmdlet you can set a variaty of settings on the HCS VM
 
 ### Example 1
 ```powershell
-Set-ClusterHCSVM -Name "HCS Virtual Machine hcsres" -NewName "newName" -ExtendedVmConfiguration "info" -OfflineAction 0
+$parameters = @{
+    Name = 'HCS Virtual Machine hcsres'
+    NewName = 'newName'
+    ExtendedVmConfiguration = 'info'
+    OfflineAction = '0'
+}
+Set-ClusterHCSVM @parameters
 ```
 
-Though you can change certian settings, it is not recommended that you change the name of the resource
+Though you can change certain settings, it is not recommended that you change the name of the resource.
+
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command. Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 

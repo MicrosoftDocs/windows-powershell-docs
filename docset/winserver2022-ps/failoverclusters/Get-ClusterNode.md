@@ -28,39 +28,22 @@ To see the resources currently owned by a particular node, specify that node in 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterNode
-Name           ID    State 
-----           --    ----- 
-node1           1     Up 
-node2           2     Up 
-node3           3     Up 
-node4           4     Up
+```powershell
+Get-ClusterNode
 ```
 
 This example displays the name, id, and state of each node, or server, in the local cluster.
 
 ### Example 2
-```
-PS C:\> Get-ClusterNode -Cluster cluster1
-Name           ID    State 
-----           --    ----- 
-node1           1     Up 
-node2           2     Up
+```powershell
+Get-ClusterNode -Cluster cluster1
 ```
 
 This example displays the name, id, and state of each node, or server, in the cluster named cluster1.
 
 ### Example 3
-```
-PS C:\> Get-ClusterNode -Name node1 | Get-ClusterResource
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 1      Online              Cluster Group       Physical Disk 
-Cluster IP Address  Online              Cluster Group       IP Address 
-Cluster IP Addre... Online              Cluster Group       IPv6 Address 
-Cluster Name        Online              Cluster Group       Network Name 
-File Share Witness  Offline             Cluster Group       File Share Witness
+```powershell
+Get-ClusterNode -Name node1 | Get-ClusterResource
 ```
 
 This example lists all cluster resources that are currently owned by node named node1 on the local cluster.

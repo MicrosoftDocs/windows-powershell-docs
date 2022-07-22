@@ -27,21 +27,15 @@ With this cmdlet, a clustered role can be started again after stopping it for ma
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Start-ClusterGroup FileServer1
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-FileServer1                node1                                         Online
+```powershell
+Start-ClusterGroup FileServer1
 ```
 
 This example starts the clustered file server, or resource group, called FileServer1.
 
 ### Example 2
-```
-PS C:\> Start-ClusterGroup FileServer1 -Wait 0
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-FileServer1                node1                                        Pending
+```powershell
+Start-ClusterGroup FileServer1 -Wait 0
 ```
 
 This example starts the clustered file server, or resource group, called FileServer1.

@@ -33,27 +33,12 @@ and upgrade version.
 Get-ClusterNodeSupportedVersion
 ```
 
-```Output
-ClusterFunctionalLevel ClusterUpgradeVersion
----------------------- ---------------------
-                    11                     4
-
-```
-
 This example displays the supported cluster functional level, and upgrade version available for the
 failover cluster.
 
 ### Example 2
 ```powershell
 Get-ClusterNodeSupportedVersion
-```
-
-```Output
-ClusterFunctionalLevel ClusterUpgradeVersion
----------------------- ---------------------
-                    11                     4
-                    10                     3
-
 ```
 
 This example displays the supported cluster functional level, and upgrade version available for the

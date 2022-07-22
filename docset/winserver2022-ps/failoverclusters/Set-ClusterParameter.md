@@ -46,42 +46,29 @@ The **Set-ClusterParameter** cmdlet controls specific properties of an object in
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterResource -Name cluster1FS | Set-ClusterParameter -Name HostRecordTTL -Value 300
+```powershell
+Get-ClusterResource -Name cluster1FS | Set-ClusterParameter -Name HostRecordTTL -Value 300
 ```
 
 This example configures the clustered resource called cluster1FS on the local cluster, by setting the value of HostRecordTTL to 300.
 
 ### Example 2
-```
-PS C:\> Get-ClusterResource -Name "Cluster IP Address" | Set-ClusterParameter -Multiple @{"Address"="172.24.22.168";"Network"="Cluster Network 2";"EnableDhcp"=1}
-```
-
-This example uses the **Multiple** parameter to configure the clustered resource called Cluster IP Address, by setting the **Address**, **Network**, and **EnableDhcp** parameters simultaneously.
-
-### Example 3
-```
-PS C:\> $res = Get-ClusterResource -Name "IP Address"
-
-
-
-PS C:\> $param1 = New-Object -ComObject Microsoft.FailoverClusters.PowerShell.ClusterParameter -Property $res,Address,10.55.88.46
-
-
-
-PS C:\> $param2 = New-Object -ComObject Microsoft.FailoverClusters.PowerShell.ClusterParameter -Property $res,SubnetMask,255.0.0.0
-
-
-
-PS C:\> $params = $param1,$param2
-
-
-
-PS C:\> $params | Set-ClusterParameter
+```powershell
+$parameters = @{
+    Multiple = @{'Address'='10.1.100.12';
+		        'SubnetMask'='255.255.255.0';
+                'Network'='Cluster Network 1';
+                'EnableDhcp'='0'}
+}
+Get-ClusterResource -Name "Cluster IP Address" | Set-ClusterParameter @parameters
 ```
 
-This example configures the clustered resource called IP Address to use a new static IP.
-Because the new address and subnet mask are required, both parameters must be passed to this cmdlet together.
+This example configures the clustered resource called IP Address to use a new static IP using the
+`Multiple` parameter to configure the clustered resource called Cluster IP Address, by setting the
+`Address`, `SubnetMask`, `Network`, and `EnableDhcp` parameters simultaneously.
+
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 

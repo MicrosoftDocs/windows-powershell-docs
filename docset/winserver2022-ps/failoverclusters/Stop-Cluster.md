@@ -32,15 +32,15 @@ A node can only function as part of the cluster when the Cluster service is runn
 ## EXAMPLES
 
 ### Example 1: Stop Cluster service on all nodes of the local cluster
-```
-PS C:\> Stop-Cluster
+```powershell
+Stop-Cluster
 ```
 
 This example stops the Cluster service on all nodes in the local cluster, which will stop all services and applications configured in the cluster.
 
 ### Example 2: Stop Cluster service on all nodes of a cluster
-```
-PS C:\> Stop-Cluster -Name cluster1
+```powershell
+Stop-Cluster -Name cluster1
 ```
 
 This example stops the Cluster service on all nodes in the cluster named cluster1, which will stop all services and applications configured in the cluster.

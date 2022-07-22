@@ -37,8 +37,8 @@ To update the dependencies, use the Add-ClusterGroupSetDependency and Remove-Clu
 ## EXAMPLES
 
 ### Example 1: Change a group set to the specified startup setting
-```
-PS C:\> Set-ClusterGroupSet -Name "Set002" -StartupDelayTrigger Online
+```powershell
+Set-ClusterGroupSet -Name "Set002" -StartupDelayTrigger Online
 ```
 
 This command changes the group set named Set002 to the startup setting Online.

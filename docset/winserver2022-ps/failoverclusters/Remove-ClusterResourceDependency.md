@@ -30,24 +30,24 @@ If no dependency is configured between clustered resources, then the order in wh
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-ClusterResourceDependency -Resource cluster1FS -Provider "IP Address 2001:4898:9:2:: (3)"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-cluster1FS          Online              cluster1FS          Network Name
+```powershell
+Remove-ClusterResourceDependency -Resource cluster1FS -Provider "IP Address 2001:4898:9:2:: (3)"
 ```
 
 This example removes the dependency between cluster resource cluster1FS and the resource named IP Address 2001:4898:9:2:: (3).
 
 ### Example 2
-```
-PS C:\> Get-ClusterResource -Name cluster1FS | Remove-ClusterResourceDependency -Provider "IP Address 2001:4898:9:2:: (3)"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-cluster1FS          Online              cluster1FS          Network Name
+```powershell
+$parameters = @{
+    Provider = 'IP Address 2001:4898:9:2:: (3)'
+}
+Get-ClusterResource -Name cluster1FS | Remove-ClusterResourceDependency @parameters
 ```
 
-This example removes the dependency between the cluster resource named cluster1FS and the resource named IP Address 2001:4898:9:2:: (3).
+This example removes the dependency between the cluster resource named cluster1FS and the resource
+named IP Address 2001:4898:9:2:: (3). This example uses splatting to pass parameter values from the
+`$Parameters` variable to the command. Learn more about
+[Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 

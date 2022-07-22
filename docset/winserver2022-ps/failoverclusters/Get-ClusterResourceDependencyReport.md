@@ -29,26 +29,23 @@ For convenience in storing and finding the report, you can pipe this cmdlet to t
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterResourceDependencyReport -Group cluster1FS12
-Mode                LastWriteTime     Length Name 
-----                -------------     ------ ---- 
--a---        10/15/2008   6:29 PM      59299 fb509e66-8d02-4881-8184-6be5b1bfa4c2.mht
+```powershell
+Get-ClusterResourceDependencyReport -Group cluster1FS12
 ```
 
 This example creates a dependency report file for the clustered file server, or resource group, named cluster1FS12 on the local cluster.
 
 ### Example 2
-```
-PS C:\> Get-ClusterResourceDependencyReport -Group cluster1FS12 | Copy-Item -Destination C:\users\user1
+```powershell
+Get-ClusterResourceDependencyReport -Group cluster1FS12 | Copy-Item -Destination C:\users\user1
 ```
 
 This example creates a dependency report file for the clustered file server, or resource group, named cluster1FS12 on the local cluster.
 The dependency report is copied to C:\users\user1.
 
 ### Example 3
-```
-PS C:\> Get-ClusterGroup | Get-ClusterResourceDependencyReport | Copy-Item -Destination \\fileserver\share
+```powershell
+Get-ClusterGroup | Get-ClusterResourceDependencyReport | Copy-Item -Destination \\fileserver\share
 ```
 
 This example creates a dependency report file for each clustered role, or resource group, on the local cluster, and copies all reports to \\\\fileserver\share.

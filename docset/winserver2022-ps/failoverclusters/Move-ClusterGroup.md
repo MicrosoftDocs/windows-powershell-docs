@@ -29,44 +29,30 @@ Running this cmdlet is also an appropriate step to take in preparation for routi
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Move-ClusterGroup -Name MyFileServer
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-MyFileServer               node1                                         Online
+```powershell
+Move-ClusterGroup -Name MyFileServer
 ```
 
 This example moves the clustered service called MyFileServer from the current owner node to any other node.
 
 ### Example 2
-```
-PS C:\> Move-ClusterGroup -Name MyFileServer -Node node2
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-MyFileServer               node2                                         Online
+```powershell
+Move-ClusterGroup -Name MyFileServer -Node node2
 ```
 
 This example moves the resource group called MyFileServer from the current owner node to the node named node2.
 
 ### Example 3
-```
-PS C:\> Get-ClusterNode node3 | Get-ClusterGroup | Move-ClusterGroup
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-Available Storage          node4                                         Online 
-Cluster Group              node1                                         Online 
-MyFileServer               node1                                         Online
+```powershell
+Get-ClusterNode node3 | Get-ClusterGroup | Move-ClusterGroup
 ```
 
 This example moves all resource groups that are currently owned by the node named node3 to other nodes.
 Use this cmdlet before performing maintenance on the specified node.
 
 ### Example 4
-```
-PS C:\> Move-ClusterGroup -Name MyFileServer -Node node2 -Wait 0
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-MyFileServer              node2                                        Pending
+```powershell
+Move-ClusterGroup -Name MyFileServer -Node node2 -Wait 0
 ```
 
 This example moves the resource group called MyFileServer from the current owner node to the node named `node2`.

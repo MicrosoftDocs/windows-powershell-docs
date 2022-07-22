@@ -39,12 +39,8 @@ For example, the configuration might specify that the virtual machine be restart
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
-Name 
----- 
-Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708 
-Spooler
+```powershell
+Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
 ```
 
 This example returns the services and events being monitored in the virtual machine named vm1 on the cluster named Cluster1.

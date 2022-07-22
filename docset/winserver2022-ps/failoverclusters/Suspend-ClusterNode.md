@@ -31,39 +31,29 @@ If you need to perform extensive diagnosis or maintenance on a cluster node, it 
 ## EXAMPLES
 
 ### Example 1: Pause a node of the local cluster
-```
-PS C:\> Suspend-ClusterNode -Name "node1"
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                    Paused
+```powershell
+Suspend-ClusterNode -Name "node1"
 ```
 
 This example pauses the node named node1 on the local cluster.
 
 ### Example 2: Pause a node of a cluster
-```
-PS C:\> Suspend-ClusterNode "node2" -Cluster "cluster2"
-Name                                                                      State 
-----                                                                      ----- 
-node2                                                                    Paused
+```powershell
+Suspend-ClusterNode "node2" -Cluster "cluster2"
 ```
 
 This example pauses the node named node2 on the cluster named cluster2.
 
 ### Example 3: Pause a node and move its workloads
-```
-PS C:\> Suspend-ClusterNode -Name "node1" -Target "node2" -Drain
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                    Paused
+```powershell
+Suspend-ClusterNode -Name "node1" -Target "node2" -Drain
 ```
 
 This example pauses the node named node1 and moves the workloads from it to the node named node2.
 
 ### Example 4: Preview a pause operation
-```
-PS C:\> Suspend-ClusterNode node1 -Drain -WhatIf
-What if: Performing operation "Suspend-ClusterNode" on Target "node1".
+```powershell
+Suspend-ClusterNode node1 -Drain -WhatIf
 ```
 
 This example provides a preview of the operation that will be performed on the node named node1.

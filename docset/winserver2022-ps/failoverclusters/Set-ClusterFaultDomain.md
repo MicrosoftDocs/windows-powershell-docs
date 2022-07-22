@@ -37,8 +37,8 @@ The *NewName* parameter should be specified only when renaming the fault domain.
 ## EXAMPLES
 
 ### Example 1: Update an existing fault domain
-```
-PS C:\> Set-ClusterFaultDomain -Name "NMALIWA-VM-1101" -FaultDomain "Rack1"
+```powershell
+Set-ClusterFaultDomain -Name "NMALIWA-VM-1101" -FaultDomain "Rack1"
 ```
 
 This command sets the parent of the fault domain named NMALIWA-VM-1101 to the fault domain named Rack1.

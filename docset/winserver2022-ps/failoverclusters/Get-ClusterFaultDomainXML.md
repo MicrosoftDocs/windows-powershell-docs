@@ -26,11 +26,8 @@ The **Get-ClusterFaultDomainXML** cmdlet gets the fault domain as an XML string.
 ## EXAMPLES
 
 ### Example 1: Get all fault domains in the cluster in XML form
-```
-PS C:\> Get-ClusterFaultDomainXML
-<Topology>
-        <Node Name="NMALIWA-VM-1101" Description="" Location=""/>
-</Topology>
+```powershell
+Get-ClusterFaultDomainXML
 ```
 
 This command gets all the fault domains in the cluster on the local node in XML form.

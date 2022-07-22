@@ -27,21 +27,15 @@ After placing a volume in Available Storage, you can use the volume when you con
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-ClusterSharedVolume -Name "Cluster Disk 3"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 3      Online              Available Storage   Physical Disk
+```powershell
+Remove-ClusterSharedVolume -Name "Cluster Disk 3"
 ```
 
 This example removes the CSV named Cluster Disk 3 from the Cluster Shared Volumes on the local cluster, and places it in Available Storage.
 
 ### Example 2
-```
-PS C:\> Get-ClusterSharedVolume -Name "Cluster Disk 4" | Remove-ClusterSharedVolume
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 4      Online              Available Storage   Physical Disk
+```powershell
+Get-ClusterSharedVolume -Name "Cluster Disk 4" | Remove-ClusterSharedVolume
 ```
 
 This example removes the CSV named Cluster Disk 4 from the Cluster Shared Volumes on the local cluster, and places it in Available Storage.

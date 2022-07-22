@@ -33,32 +33,23 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1: Configure a script to run on a failover cluster
-```
-PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs"
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1GenScript          node2                              Online
+```powershell
+Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs"
 ```
 
 This example configures the script named script1.vbs to run within a failover cluster, using defaults for the name and IP address, and does not assign a disk.
 
 ### Example 2: Configure a script on a failover cluster and assign a clustered script name
-```
-PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Storage "Cluster Disk 4" -Name "script1"
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-script1                    node2                              Online
+```powershell
+Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Storage "Cluster Disk 4" -Name "script1"
 ```
 
 This example configures the script named script1.vbs to run within a failover cluster and use Cluster Disk 4.
 The cmdlet assigns the clustered script the name script1.
 
 ### Example 3: Configure a script to run on a fail over cluster without waiting for resources
-```
-PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Wait 0
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1GenScript          node2                             Pending
+```powershell
+Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Wait 0
 ```
 
 This example configures the script called script1.vbs to run within a failover cluster, using defaults for the name and IP address, and does not assign a disk.

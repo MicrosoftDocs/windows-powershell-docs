@@ -50,14 +50,14 @@ The **Enable-ClusterStorageSpacesDirect** cmdlet enables highly available Storag
 
 ### Example 1: Enable Storage Spaces Direct
 ```powershell
-PS C:\> Enable-ClusterStorageSpacesDirect
+Enable-ClusterStorageSpacesDirect
 ```
 
 This command enables S2D on the cluster.
 
 ### Example 2: Enable Storage Spaces Direct specifying a Friendly Name
 ```powershell
-PS C:\> Enable-ClusterStorageSpacesDirect -PoolFriendlyName 'Sales'
+Enable-ClusterStorageSpacesDirect -PoolFriendlyName 'Sales'
 ```
 
 This command enables S2d on the cluster and sets a friendly name for the Storage Spaces Direct pool.

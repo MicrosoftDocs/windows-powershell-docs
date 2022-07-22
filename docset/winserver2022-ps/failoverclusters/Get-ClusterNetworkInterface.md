@@ -27,25 +27,15 @@ A failover cluster requires network connectivity among nodes and between clients
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterNetworkInterface
-Name                Node                Network                           State 
-----                ----                -------                           ----- 
-node1 - Local A ...  node1               Cluster Network 1                    Up 
-node2 - Local A ...  node2               Cluster Network 1                    Up 
-node1 - Local A ...  node1               Cluster Network 2                    Up 
-node2 - Local A ...  node2               Cluster Network 2                    Up
+```powershell
+Get-ClusterNetworkInterface
 ```
 
 This example displays information about the physical network adapters used by the local cluster.
 
 ### Example 2
-```
-PS C:\> Get-ClusterNode -Name node1 | Get-ClusterNetworkInterface
-Name                Node                Network                           State 
-----                ----                -------                           ----- 
-node1 - Local A ...  node1               Cluster Network 1                    Up 
-node1 - Local A ...  node1               Cluster Network 2                    Up
+```powershell
+Get-ClusterNode -Name node1 | Get-ClusterNetworkInterface
 ```
 
 This example displays information about the physical network adapters used by node1 in the local cluster.

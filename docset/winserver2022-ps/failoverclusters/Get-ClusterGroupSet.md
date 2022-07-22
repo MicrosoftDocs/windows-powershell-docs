@@ -26,23 +26,8 @@ The **Get-ClusterGroupSet** cmdlet gets all the group sets in the cluster.
 ## EXAMPLES
 
 ### Example 1: Get all the group sets in the cluster
-```
-PS C:\> Get-ClusterGroupSet
-Name                : Set1
-GroupNames          : {g1}
-ProviderNames       : {Set2}
-StartupDelayTrigger : Delay
-StartupCount        : 4294967295
-IsGlobal            : False
-StartupDelay        : 20
-
-Name                : Set2
-GroupNames          : {g2}
-ProviderNames       : {}
-StartupDelayTrigger : Delay
-StartupCount        : 4294967295
-IsGlobal            : False
-StartupDelay        : 20
+```powershell
+Get-ClusterGroupSet
 ```
 
 This command enumerates the group sets in the cluster.

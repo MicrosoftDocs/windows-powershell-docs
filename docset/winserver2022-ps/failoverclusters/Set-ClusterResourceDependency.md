@@ -31,22 +31,29 @@ This use of or dependencies is common in multi-site cluster deployments.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency "[IP Address 151.56.48.0]"
+```powershell
+Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency "[IP Address 151.56.48.0]"
 ```
 
 This example makes the resource called cluster1FS12 dependent on \[IP Address 151.56.48.0\].
 
 ### Example 2
-```
-C:\PS>Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency "[IP Address 151.56.48.0] or [New IP Address]"
+```powershell
+$parameters = @{
+    Resource = 'cluster1FS12'
+    Dependency = '[IP Address 151.56.48.0]'
+}
+Set-ClusterResourceDependency @parameters
 ```
 
 This example makes the resource called cluster1FS12 dependent on either \[IP Address 151.56.48.0\] or \[New IP Address\].
 
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
 ### Example 3
-```
-C:\PS>Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency ""
+```powershell
+Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency ""
 ```
 
 This example clears the dependency list for the resource named cluster1FS12, so that it no longer depends on any other resources.

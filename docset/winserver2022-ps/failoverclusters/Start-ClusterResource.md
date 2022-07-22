@@ -27,22 +27,16 @@ Before the resource is brought online, any resources that it depends are brought
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Start-ClusterResource -Name "IP Address 172.24.11.0"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-IP Address 172.2...  Online              cluster1FS12        IP Address
+```powershell
+Start-ClusterResource -Name "IP Address 172.24.11.0"
 ```
 
 This example brings the resource called IP Address 172.24.11.0 online on the local cluster.
 Before bringing the resource online, this cmdlet brings online any resources on which the resource depends.
 
 ### Example 2
-```
-PS C:\> Start-ClusterResource -Name "IP Address 172.24.11.0" -Wait 0
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-IP Address 172.2...  OnlinePending       cluster1FS12        IP Address
+```powershell
+Start-ClusterResource -Name "IP Address 172.24.11.0" -Wait 0
 ```
 
 This example brings the resource called IP Address 172.24.11.0 online on the local cluster.

@@ -27,11 +27,8 @@ The Cluster Shared Volume must be chosen from the disks in Available Storage (th
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Add-ClusterSharedVolume -Name "Cluster Disk 4"
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 4             Online                     node2
+```powershell
+Add-ClusterSharedVolume -Name "Cluster Disk 4"
 ```
 
 This example adds Cluster Disk 4 to the Cluster Shared Volumes on the local cluster.

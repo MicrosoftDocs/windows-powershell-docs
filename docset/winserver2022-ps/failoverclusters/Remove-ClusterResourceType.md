@@ -28,8 +28,8 @@ After a resource type is removed from a failover cluster, resources of that type
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-ClusterResourceType -Name ResType1
+```powershell
+Remove-ClusterResourceType -Name ResType1
 ```
 
 This example removes the registered resource type named ResType1 on the local cluster.

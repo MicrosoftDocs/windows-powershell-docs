@@ -30,21 +30,15 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1: Stop Cluster service on a local cluster node
-```
-PS C:\> Stop-ClusterNode -Name "node3"
-Name                                                                      State 
-----                                                                      ----- 
-node3                                                                      Down
+```powershell
+Stop-ClusterNode -Name "node3"
 ```
 
 This example stops the Cluster service on the node named node3 of the local cluster.
 
 ### Example 2: Stop Cluster service on a cluster node
-```
-PS C:\> Stop-ClusterNode -Name "node1" -Cluster "cluster2"
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                      Down
+```powershell
+Stop-ClusterNode -Name "node1" -Cluster "cluster2"
 ```
 
 This example stops the Cluster service on the node named node1 on the cluster named cluster2.

@@ -27,15 +27,15 @@ Before removing a resource, be sure to review whether any other resource is depe
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-ClusterResource -Name "Cluster Disk 4"
+```powershell
+Remove-ClusterResource -Name "Cluster Disk 4"
 ```
 
 This example prompts the user for confirmation and then deletes the cluster named Cluster Disk 4 from the local cluster.
 
 ### Example 2
-```
-PS C:\> Remove-ClusterResource -Name "Cluster Disk 5" -Force
+```powershell
+Remove-ClusterResource -Name "Cluster Disk 5" -Force
 ```
 
 This example deletes the cluster named Cluster Disk 5 from the local cluster without prompting for confirmation.

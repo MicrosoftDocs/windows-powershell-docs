@@ -36,31 +36,22 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Start-ClusterNode -Name node3
-Name                                                                      State 
-----                                                                      ----- 
-node3                                                                   Joining
+```powershell
+Start-ClusterNode -Name node3
 ```
 
 This example starts the Cluster service on the node named node3 on the local cluster.
 
 ### Example 2
-```
-PS C:\> Start-ClusterNode -Name node1 -Cluster cluster2
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                   Joining
+```powershell
+Start-ClusterNode -Name node1 -Cluster cluster2
 ```
 
 This example starts the Cluster service on the node named node1 on the cluster named cluster2.
 
 ### Example 3
-```
-PS C:\> Start-ClusterNode -FixQuorum
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                   Joining
+```powershell
+Start-ClusterNode -FixQuorum
 ```
 
 This example forces the local node and the local cluster to start, even if quorum has not been achieved.

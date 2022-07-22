@@ -32,15 +32,6 @@ You can verify using **Get-ClusterResource** which shows the list of resources o
 ```powershell
 New-ClusterHCSVM -Name "hcstest" -VhdPath c:\vhd.vhdx -SwitchName TestSwitch -MemorySizeInMb 4096 -CpuCount 2
 ```
-```Output
-Name           : HCS Virtual Machine hcsres
-SwitchName     : TestSwitch
-MemorySizeInMb : 4096
-CpuCount       : 2
-VhdPath        : c:\vhd.vhdx
-OfflineAction  : 0
-VmName         : hcsres
-```
 
 After creating the HCS VM, a list of information is returned. The **Name** of the resource has been changed. However, the group name (**VmName**) remains the same.
 

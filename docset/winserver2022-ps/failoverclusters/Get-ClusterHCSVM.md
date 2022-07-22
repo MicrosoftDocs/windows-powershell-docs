@@ -26,15 +26,6 @@ This cmdlet will allow you to get an already created HCS VM resource.
 ```powershell
 Get-ClusterHCSVM -Name "HCS Virtual Machine Your_Name"
 ```
-```Output
-Name           : HCS Virtual Machine hcsres
-SwitchName     : TestSwitch
-MemorySizeInMb : 1024
-CpuCount       : 1
-VhdPath        : c:\testVhd.vhdx
-OfflineAction  : 0
-VmName         : hcsres
-```
 
 ## PARAMETERS
 

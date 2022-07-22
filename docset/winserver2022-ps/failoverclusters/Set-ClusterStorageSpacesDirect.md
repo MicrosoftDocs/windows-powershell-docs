@@ -28,8 +28,8 @@ The **Set-ClusterStorageSpacesDirect** cmdlet sets Storage Spaces Direct (S2D) c
 ## EXAMPLES
 
 ### Example 1: Set S2D cache parameters
-```
-PS C:\> Set-ClusterStorageSpacesDirect -CimSession "K0619-C2.cfdev.nttest.contoso.com" -CacheModeHDD ReadWrite
+```powershell
+Set-ClusterStorageSpacesDirect -CimSession "K0619-C2.cfdev.nttest.contoso.com" -CacheModeHDD ReadWrite
 ```
 
 The following command sets the S2D cache parameter as ReadWrite on the cluster named K0619-C2.cfdev.nttest.contoso.com.

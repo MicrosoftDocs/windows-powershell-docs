@@ -31,23 +31,23 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-Cluster
+```powershell
+Remove-Cluster
 ```
 
 This example prompts the user for confirmation, then destroys the local failover cluster and removes cluster configuration information from the cluster nodes.
 
 ### Example 2
-```
-PS C:\> Remove-Cluster -Force
+```powershell
+Remove-Cluster -Force
 ```
 
 This example destroys the local failover cluster and removes cluster configuration information from the cluster nodes.
 The cmdlet does not prompt for confirmation.
 
 ### Example 3
-```
-PS C:\> Get-Cluster -Name Cluster1 | Remove-Cluster -Force -CleanupAD
+```powershell
+Get-Cluster -Name Cluster1 | Remove-Cluster -Force -CleanupAD
 ```
 
 This example destroys the cluster named Cluster1, removes cluster configuration information from the cluster nodes, and deletes the cluster objects in Active Directory.

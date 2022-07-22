@@ -36,15 +36,15 @@ After removal, if the service fails or the event occurs, the system will no long
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterVMMonitoredItem -VirtualMachine VM1 | Remove-ClusterVMMonitoredItem -VirtualMachine VM1
+```powershell
+Get-ClusterVMMonitoredItem -VirtualMachine VM1 | Remove-ClusterVMMonitoredItem -VirtualMachine VM1
 ```
 
 This example removes all of the items being monitored on the virtual machine named VM1.
 
 ### Example 2
-```
-PS C:\> Remove-ClusterVMMonitoredItem -VirtualMachine VM1 -Service spooler
+```powershell
+Remove-ClusterVMMonitoredItem -VirtualMachine VM1 -Service spooler
 ```
 
 This example removes monitoring on the print spooler service on the virtual machine named VM1.

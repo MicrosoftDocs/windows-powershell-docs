@@ -28,21 +28,15 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Start-Cluster
-Name 
----- 
-mycluster
+```powershell
+Start-Cluster
 ```
 
 This example starts all cluster nodes on the local cluster.
 
 ### Example 2
-```
-PS C:\> Start-Cluster -Name node2
-Name 
----- 
-mycluster
+```powershell
+Start-Cluster -Name node2
 ```
 
 This example starts all cluster nodes on the cluster of which the node named node2 is a part.

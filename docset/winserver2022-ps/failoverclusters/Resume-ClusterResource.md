@@ -29,21 +29,15 @@ We recommend that maintenance be turned off for a disk or Cluster Shared Volume 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Resume-ClusterResource "Cluster Disk 2"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 2      Online              Available Storage   Physical Disk
+```powershell
+Resume-ClusterResource "Cluster Disk 2"
 ```
 
 This example turns off maintenance for the CSV named Cluster Disk 2.
 
 ### Example 2
-```
-PS C:\> Get-ClusterSharedVolume "Cluster Disk 5" | Resume-ClusterResource
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 5             Online                     node2
+```powershell
+Get-ClusterSharedVolume "Cluster Disk 5" | Resume-ClusterResource
 ```
 
 This example turns off maintenance for all volumes on the CSV named Cluster Disk 5.

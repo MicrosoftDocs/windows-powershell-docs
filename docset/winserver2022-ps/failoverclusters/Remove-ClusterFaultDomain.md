@@ -34,8 +34,8 @@ The fault domain cannot be empty.
 ## EXAMPLES
 
 ### Example 1: Remove a cluster fault domain
-```
-PS C:\> Remove-ClusterFaultDomain -Name "Rack001"
+```powershell
+Remove-ClusterFaultDomain -Name "Rack001"
 ```
 
 This command removes the cluster fault domain named Rack001.

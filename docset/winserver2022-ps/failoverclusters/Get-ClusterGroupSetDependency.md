@@ -27,16 +27,8 @@ You can get all sets that are dependent on a specific set.
 ## EXAMPLES
 
 ### Example 1: Get all the group sets that are provided by the specified set
-```
-PS C:\> Get-ClusterGroupSetDependency -Provider "Set2"
-
-Name                : Set1
-GroupNames          : {g1}
-ProviderNames       : {Set2}
-StartupDelayTrigger : Delay
-StartupCount        : 4294967295
-IsGlobal            : False
-StartupDelay        : 20
+```powershell
+Get-ClusterGroupSetDependency -Provider "Set2"
 ```
 
 This command gets all the group sets that are provided by set named Set2.

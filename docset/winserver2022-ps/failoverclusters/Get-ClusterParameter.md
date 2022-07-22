@@ -39,35 +39,16 @@ For example:
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterResource -Name cluster1FS | Get-ClusterParameter
-Object              Name                Value               Type 
-------              ----                -----               ---- 
-cluster1FS          Name                cluster1FS          String 
-cluster1FS          DnsName             cluster1FS          String 
-cluster1FS          RemapPipeNames      0                   UInt32 
-cluster1FS          HostRecordTTL       1200                UInt32 
-cluster1FS          RegisterAllProvi... 0                   UInt32 
-cluster1FS          PublishPTRRecords   0                   UInt32 
-cluster1FS          TimerCallbackAdd... 5                   UInt32 
-cluster1FS          ResourceData        {1, 0, 0, 0...}     ByteArray 
-cluster1FS          StatusNetBIOS       0                   UInt32 
-cluster1FS          StatusDNS           0                   UInt32 
-cluster1FS          StatusKerberos      0                   UInt32 
-cluster1FS          CreatingDC          \\DOMAIN12-DC-05... String 
-cluster1FS          LastDNSUpdateTime   10/15/2008 9:50:... DateTime 
-cluster1FS          ObjectGUID          8054680893fd5943... String
+```powershell
+Get-ClusterResource -Name cluster1FS | Get-ClusterParameter
 ```
 
 This example gets the parameters, including the detailed information, for the cluster resource named cluster1FS on the local cluster.
 The displayed parameters will vary according to the type of resource being viewed.
 
 ### Example 2
-```
-PS C:\> Get-ClusterResource -Name cluster1FS | Get-ClusterParameter -Name HostRecordTTL
-Object              Name                Value               Type 
-------              ----                -----               ---- 
-cluster1FS          HostRecordTTL       1200                UInt32
+```powershell
+Get-ClusterResource -Name cluster1FS | Get-ClusterParameter -Name HostRecordTTL
 ```
 
 This example displays the HostRecordTTL parameter for the cluster resource named cluster1FS on the local cluster, if that parameter is applicable to cluster1FS.

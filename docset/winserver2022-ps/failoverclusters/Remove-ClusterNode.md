@@ -30,15 +30,15 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-ClusterNode -Name node4
+```powershell
+Remove-ClusterNode -Name node4
 ```
 
 This example removes the node named node4 from the local cluster.
 
 ### Example 2
-```
-PS C:\> Remove-ClusterNode -Name node4 -Force
+```powershell
+Remove-ClusterNode -Name node4 -Force
 ```
 
 This example removes the node named node4 from the local cluster without prompting for confirmation.

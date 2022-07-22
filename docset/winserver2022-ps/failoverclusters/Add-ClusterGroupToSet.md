@@ -34,8 +34,8 @@ A group can only belong to one set.
 ## EXAMPLES
 
 ### Example 1: Add a cluster group to a set
-```
-PS C:\> Add-ClusterGroupToSet -Name "Set001" -Group "Group001"
+```powershell
+Add-ClusterGroupToSet -Name "Set001" -Group "Group001"
 ```
 
 This command adds the cluster group named Group001 to the set named Set001.

@@ -29,21 +29,15 @@ However, a single CSV can contain virtual hard disk (VHD) files used by multiple
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Move-ClusterSharedVolume -Name "Cluster Disk 3"
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 3             Online                     node2
+```powershell
+Move-ClusterSharedVolume -Name "Cluster Disk 3"
 ```
 
 This example moves the Cluster Shared Volume called Cluster Disk 3 to another cluster node.
 
 ### Example 2
-```
-PS C:\> Move-ClusterSharedVolume -Name "Cluster Disk 3" -Node node1
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 3             Online                     node1
+```powershell
+Move-ClusterSharedVolume -Name "Cluster Disk 3" -Node node1
 ```
 
 This example moves the Cluster Shared Volume called Cluster Disk 3 to the node named node1.

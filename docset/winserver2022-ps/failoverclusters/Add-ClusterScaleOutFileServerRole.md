@@ -33,24 +33,13 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 
 ### Example 1
 ```powershell
-PS C:\> Add-ClusterScaleOutFileServerRole
+Add-ClusterScaleOutFileServerRole
 ```
-```output
-Name                                    OwnerNode                               State 
-----                                    ---------                               ----- 
-clusterSOFS                             CLUSTER-N2                              Online
-```
-
 This example creates a highly available scale-out file server role.
 
 ### Example 2
 ```powershell
 PS C:\> Add-ClusterScaleOutFileServerRole -Wait 0
-```
-```output
-Name                                    OwnerNode                               State 
-----                                    ---------                               ----- 
-clusterSOFS                             CLUSTER-N2                              Pending
 ```
 
 This example creates a highly available scale out file server role.

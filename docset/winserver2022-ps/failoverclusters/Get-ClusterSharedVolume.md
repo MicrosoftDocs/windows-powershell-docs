@@ -26,32 +26,22 @@ The **Get-ClusterSharedVolume** cmdlet gets information about Cluster Shared Vol
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterSharedVolume
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 3             Online                     node1 
-Cluster Disk 4             Online                     node2
+```powershell
+Get-ClusterSharedVolume
 ```
 
 This example lists all the Cluster Shared Volumes on the local cluster.
 
 ### Example 2
-```
-PS C:\> Get-ClusterSharedVolume -Cluster cluster1
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 1             Online                     node4
+```powershell
+Get-ClusterSharedVolume -Cluster cluster1
 ```
 
 This example lists all the Cluster Shared Volumes on the cluster named cluster1.
 
 ### Example 3
-```
-PS C:\> Get-ClusterSharedVolume -Name "Cluster Disk 4"
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 4             Online                     node2
+```powershell
+Get-ClusterSharedVolume -Name "Cluster Disk 4"
 ```
 
 This example displays the state of the Cluster Shared Volume called Cluster Disk 4.

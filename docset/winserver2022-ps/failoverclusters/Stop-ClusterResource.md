@@ -27,11 +27,8 @@ Before the resource is taken offline, any resources that depend on it are taken 
 ## EXAMPLES
 
 ### Example 1: Take a resource offline
-```
-PS C:\> Stop-ClusterResource "IP Address 10.24.11.0"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-IP Address 10.2...  Offline             cluster1FS12        IP Address
+```powershell
+Stop-ClusterResource "IP Address 10.24.11.0"
 ```
 
 This example takes the resource called IP Address 10.24.11.0 offline on the local cluster.

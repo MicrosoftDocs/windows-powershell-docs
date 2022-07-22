@@ -28,11 +28,8 @@ If maintenance on a clustered role is needed, the clustered role can be stopped 
 ## EXAMPLES
 
 ### Example 1: Stop a clustered role on the local cluster
-```
-PS C:\> Stop-ClusterGroup FileServer1
-Name                       OwnerNode                            State 
-----                       ---------                            ----- 
-FileServer1                 node1                              Offline
+```powershell
+Stop-ClusterGroup FileServer1
 ```
 
 This example stops the clustered role, or resource group, called FileServer1 on the local cluster.

@@ -33,12 +33,11 @@ The **Repair-ClusterStorageSpacesDirect** cmdlet repairs Storage Spaces Direct (
 ## EXAMPLES
 
 ### Example 1: Repair S2D on all nodes
-```
-PS C:\> Repair-ClusterStorageSpacesDirect -Verbose -Confirm:$False
-VERBOSE: Performing operation 'Repair Cluster Storage Spaces Direct' on Target 'K0619-C1'.
+```powershell
+Repair-ClusterStorageSpacesDirect -Verbose -Confirm:$False
 ```
 
-This command repairs S2D on all nodes.
+This command repairs S2D on all nodes without user confirmation.
 
 ## PARAMETERS
 

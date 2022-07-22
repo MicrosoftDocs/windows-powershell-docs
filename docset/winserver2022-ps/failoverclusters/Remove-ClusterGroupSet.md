@@ -34,8 +34,8 @@ The group set cannot be a provider for another group set.
 ## EXAMPLES
 
 ### Example 1: Remove a group set from the cluster
-```
-PS C:\> Remove-ClusterGroupSet -Name "Set001"
+```powershell
+Remove-ClusterGroupSet -Name "Set001"
 ```
 
 This command removes the group set named Set001 from the cluster.

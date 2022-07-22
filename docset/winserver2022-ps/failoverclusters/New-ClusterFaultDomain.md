@@ -28,11 +28,8 @@ Additionally, you can specify the relationship between the fault domains when th
 ## EXAMPLES
 
 ### Example 1: Create a cluster fault domain in an existing fault domain
-```
-PS C:\> New-ClusterFaultDomain -Type Rack -Name "Rack1" -FaultDomain "Site001"
-Name  Type ParentName ChildrenNames
-----  ---- ---------- -------------
-Rack1 Rack Site1
+```powershell
+New-ClusterFaultDomain -Type Rack -Name "Rack1" -FaultDomain "Site001"
 ```
 
 This command creates a cluster fault domain of type Rack named Rack1 in the existing fault domain named Site001.

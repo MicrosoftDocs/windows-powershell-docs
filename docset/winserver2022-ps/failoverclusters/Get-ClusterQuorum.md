@@ -29,21 +29,15 @@ The relevant failures in this context are failures of nodes or, in some cases, o
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterQuorum
-Cluster                    QuorumResource                            QuorumType 
--------                    --------------                            ---------- 
-cluster1                   Cluster Disk 1                   NodeAndDiskMajority
+```powershell
+Get-ClusterQuorum
 ```
 
 This example displays the quorum configuration for the local cluster.
 
 ### Example 2
-```
-PS C:\> Get-ClusterQuorum -Cluster Cluster1
-Cluster                    QuorumResource                            QuorumType 
--------                    --------------                            ---------- 
-mycluster                                                          NodeMajority
+```powershell
+Get-ClusterQuorum -Cluster Cluster1
 ```
 
 This example displays the quorum configuration for the cluster named Cluster1.

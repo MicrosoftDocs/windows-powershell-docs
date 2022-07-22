@@ -31,21 +31,15 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Add-ClusterResourceType -Name ResType3 -InputObject C:\res3.dll
-Name                                    DisplayName 
-----                                    ----------- 
-ResType3                                ResType3
+```powershell
+Add-ClusterResourceType -Name ResType3 -InputObject C:\res3.dll
 ```
 
 This example creates ResType3 on the local cluster using res3.dll located on the provided resource DLL file path C:\.
 
 ### Example 2
-```
-PS C:\> Add-ClusterResourceType -Name ResType4 -InputObject C:\res4.dll -DisplayName "Resource Type 4"
-Name                                    DisplayName 
-----                                    ----------- 
-ResType4                                Resource Type 4
+```powershell
+Add-ClusterResourceType -Name ResType4 -InputObject C:\res4.dll -DisplayName "Resource Type 4"
 ```
 
 This example creates ResType4 on the local cluster using res4.dll located on the provided resource DLL file path C:\.

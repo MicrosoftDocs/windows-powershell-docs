@@ -29,15 +29,15 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Clear-ClusterDiskReservation -Disk 5
+```powershell
+Clear-ClusterDiskReservation -Disk 5
 ```
 
 This example clears the persistent reservation on Disk 5 on the local node after asking for user confirmation.
 
 ### Example 2
-```
-C:\PS>Clear-ClusterDiskReservation -Disk 6 -Node node2 -Force
+```powershell
+Clear-ClusterDiskReservation -Disk 6 -Node node2 -Force
 ```
 
 This example clears the persistent reservation on Disk 6 on the node named node2 without asking for user confirmation.

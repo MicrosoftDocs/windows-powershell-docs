@@ -27,11 +27,8 @@ When a clustered resource is moved to a different clustered role, the clustered 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Move-ClusterResource -Name resource1 -Group group2
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-resource1           Offline             group2              IP Address
+```powershell
+Move-ClusterResource -Name resource1 -Group group2
 ```
 
 This command moves the cluster resource called resource1 to the resource group called group2 on the local cluster.

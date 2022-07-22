@@ -27,15 +27,8 @@ On this set you can control when other sets start and when this set starts based
 ## EXAMPLES
 
 ### Example 1: Create a cluster group set
-```
-PS C:\> New-ClusterGroupSet -Name "Set001" -Group "Group001"
-Name                : Set1
-GroupNames          : {g1}
-ProviderNames       : {}
-StartupDelayTrigger : Delay
-StartupCount        : 4294967295
-IsGlobal            : False
-StartupDelay        : 20
+```powershell
+New-ClusterGroupSet -Name "Set001" -Group "Group001"
 ```
 
 This command creates a cluster group set named Set001 that contains the group named Group001.

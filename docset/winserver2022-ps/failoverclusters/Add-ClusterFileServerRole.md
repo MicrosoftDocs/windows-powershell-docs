@@ -31,31 +31,22 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1: Create a clustered file server
-```
-PS C:\> Add-ClusterFileServerRole -Storage "Cluster Disk 8"
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1FS                 node1                              Online
+```powershell
+Add-ClusterFileServerRole -Storage "Cluster Disk 8"
 ```
 
 This example creates a clustered file server using Cluster Disk 8, and assigns a default name.
 
 ### Example 2: Create and name a clustered file server
-```
-PS C:\> Add-ClusterFileServerRole -Storage "Cluster Disk 6" -Name cluster1FS12
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1FS12               node1                              Online
+```powershell
+Add-ClusterFileServerRole -Storage "Cluster Disk 6" -Name cluster1FS12
 ```
 
 This example creates a clustered file server using Cluster Disk 6, and assigns the name cluster1FS12.
 
 ### Example 3: Create a clustered file server with no waiting for resources
-```
-PS C:\> Add-ClusterFileServerRole -Storage "Cluster Disk 8" -Wait 0
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1FS                 node1                             Pending
+```powershell
+Add-ClusterFileServerRole -Storage "Cluster Disk 8" -Wait 0
 ```
 
 This example creates a clustered file server using Cluster Disk 8, and assigns a default name.

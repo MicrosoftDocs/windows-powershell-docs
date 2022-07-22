@@ -54,22 +54,16 @@ Repeat these steps for each node of the cluster.
 ## EXAMPLES
 
 ### Example 1: Test a possible update
-```
-PS C:\> Update-ClusterFunctionalLevel -WhatIf
-Name
-----
-cluster_17
+```powershell
+Update-ClusterFunctionalLevel -WhatIf
 ```
 
 This command tests whether an update would finish successfully.
 Because the command includes the *WhatIf* common parameter, the command does not perform the update.
 
 ### Example 2: Update a cluster functional level
-```
-PS C:\> Update-ClusterFunctionalLevel -Cluster "cluster_17"
-Name
-----
-cluster_17
+```powershell
+Update-ClusterFunctionalLevel -Cluster "cluster_17"
 ```
 
 This command updates the cluster functional level of the cluster named cluster_17.

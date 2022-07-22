@@ -29,58 +29,29 @@ During failover, all resources in the resource group move together.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterGroup
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-Available Storage          node1                                         Online 
-Cluster Group              node2                                         Online 
-cluster1FS                 node1                                         Online 
-cluster1FS-Other           node1                                         Online
+```powershell
+Get-ClusterGroup
 ```
 
 This example lists the state and owner node of each clustered role, or resource group, in the local cluster.
 
 ### Example 2
-```
-PS C:\> Get-ClusterGroup -Name "Cluster Group" | Get-ClusterResource
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 1      Online              Cluster Group       Physical Disk 
-Cluster IP Address  Online              Cluster Group       IP Address 
-Cluster IP Addre... Online              Cluster Group       IPv6 Address 
-Cluster Name        Online              Cluster Group       Network Name
+```powershell
+Get-ClusterGroup -Name "Cluster Group" | Get-ClusterResource
 ```
 
 This example lists the resources in Cluster Group on the local cluster.
 
 ### Example 3
-```
-PS C:\> Get-ClusterNode -Name node1 | Get-ClusterGroup
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-Cluster Group              node1                                         Online
+```powershell
+Get-ClusterNode -Name node1 | Get-ClusterGroup
 ```
 
 This example lists the clustered services and applications, or resource groups, that are currently owned by node1 in the local cluster.
 
 ### Example 4
-```
-PS C:\> Get-ClusterGroup -Name FileServer1 | Format-List -Property *
-Cluster                :  Cluster1 
-IsCoreGroup            : False 
-OwnerNode              :  node1 
-State                  : Online 
-Name                   :  FileServer1 
-Description            : 
-PersistentState        : 0 
-FailoverThreshold      : 4294967295 
-FailoverPeriod         : 6 
-AutoFailbackType       : 0 
-FailbackWindowStart    : 4294967295 
-FailbackWindowEnd      : 4294967295 
-AntiAffinityClassNames : {} 
-Id                     :  189ec8ad-1831-4f57-9bb0-3ffb9cbb9227
+```powershell
+Get-ClusterGroup -Name FileServer1 | Format-List -Property *
 ```
 
 This example displays the properties of a clustered file server, or resource group, called FileServer1, in the form of a list.

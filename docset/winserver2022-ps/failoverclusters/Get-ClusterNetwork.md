@@ -27,20 +27,15 @@ A failover cluster requires network connectivity among nodes and between clients
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterNetwork
-Name                                                                      State 
-----                                                                      ----- 
-Cluster Network 1                                                            Up 
-Cluster Network 2                                                            Up 
-Cluster Network 3                                                            Up
+```powershell
+Get-ClusterNetwork
 ```
 
 This example gets information about the networks used by the local cluster.
 
 ### Example 2
-```
-PS C:\> (Get-ClusterNetwork -Name "Cluster Network 1").Name = "Cluster Network 3"
+```powershell
+(Get-ClusterNetwork -Name "Cluster Network 1").Name = "Cluster Network 3"
 ```
 
 This example renames Cluster Network 1 to Cluster Network 3.

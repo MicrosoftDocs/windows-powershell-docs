@@ -33,8 +33,8 @@ The **Remove-ClusterGroupSetDependency** cmdlet removes a dependency from a grou
 ## EXAMPLES
 
 ### Example 1: Remove a group set dependency on another group set
-```
-PS C:\> Remove-ClusterGroupSetDependency -Name "Set001" -Provider "Set002"
+```powershell
+Remove-ClusterGroupSetDependency -Name "Set001" -Provider "Set002"
 ```
 
 This command removes the group set named Set002 from being a provider for the group set named Set001.

@@ -26,8 +26,8 @@ The **Set-ClusterFaultDomainXML** cmdlet sets the cluster fault domain using XML
 ## EXAMPLES
 
 ### Example 1:
-```
-PS C:\> Set-ClusterFaultDomainXML -XML @"
+```powershell
+Set-ClusterFaultDomainXML -XML @"
 <Topology>
 
  <Site Name="site1" Description="Site 1 with 4 nodes" Location="Site 1">

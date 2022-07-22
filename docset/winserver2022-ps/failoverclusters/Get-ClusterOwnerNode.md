@@ -28,21 +28,15 @@ Settings that control the possible or preferred owners affect the way the cluste
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-ClusterResource -Cluster "Cluster Disk 1" | Get-ClusterOwnerNode
-ClusterObject                           OwnerNodes 
--------------                           ---------- 
-Cluster Disk 1                          {node1, node2}
+```powershell
+Get-ClusterResource -Cluster "Cluster Disk 1" | Get-ClusterOwnerNode
 ```
 
 This example lists the possible owners for the cluster named Cluster Disk 1 in the local cluster.
 
 ### Example 2
-```
-PS C:\> Get-ClusterGroup -Group cluster1FS12 | Get-ClusterOwnerNode
-ClusterObject                           OwnerNodes 
--------------                           ---------- 
-cluster1FS12                            {}
+```powershell
+Get-ClusterGroup -Group cluster1FS12 | Get-ClusterOwnerNode
 ```
 
 This example lists the preferred owners for the clustered file server, or resource group, called cluster1FS12 on the local cluster.

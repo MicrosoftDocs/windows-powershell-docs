@@ -27,21 +27,15 @@ The default level, `3`, includes errors, warnings, and additional information.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-ClusterLog -Level 1
-Name 
----- 
-cluster1
+```powershell
+Set-ClusterLog -Level 1
 ```
 
 This example sets the cluster log to a detail level of 1.
 
 ### Example 2
-```
-PS C:\> Set-ClusterLog -Size 1024
-Name 
----- 
-cluster1
+```powershell
+Set-ClusterLog -Size 1024
 ```
 
 This example sets the cluster log size to 1024 MB.

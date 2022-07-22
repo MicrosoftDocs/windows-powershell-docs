@@ -33,8 +33,8 @@ The **Remove-ClusterGroupFromSet** cmdlet removes a group from a set.
 ## EXAMPLES
 
 ### Example 1: Remove a group from the specified group set
-```
-PS C:\> Remove-ClusterGroupFromSet -Name "Set001" -Group "Group001"
+```powershell
+Remove-ClusterGroupFromSet -Name "Set001" -Group "Group001"
 ```
 
 This command removes the group named Group001 from group set named Set001.

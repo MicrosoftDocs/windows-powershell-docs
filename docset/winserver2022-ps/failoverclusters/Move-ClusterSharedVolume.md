@@ -21,10 +21,13 @@ Move-ClusterSharedVolume [[-Name] <String>] [[-Node] <String>] [-Wait <Int32>] [
 ```
 
 ## DESCRIPTION
-The **Move-ClusterSharedVolume** cmdlet moves a Cluster Shared Volume (CSV) to ownership by a different node in a failover cluster.
+The **Move-ClusterSharedVolume** cmdlet moves a Cluster Shared Volume (CSV) to ownership by a
+different node in a failover cluster.
 
-On a failover cluster that uses CSVs, at any given time, access to each CSV is controlled by a particular node, called the owner of that CSV.
-However, a single CSV can contain virtual hard disk (VHD) files used by multiple clustered virtual machines that are distributed across multiple cluster nodes.
+On a failover cluster that uses CSVs, at any given time, access to each CSV is controlled by a
+particular node, called the owner of that CSV. However, a single CSV can contain virtual hard disk
+(VHD) files used by multiple clustered virtual machines that are distributed across multiple cluster
+nodes.
 
 ## EXAMPLES
 
@@ -123,7 +126,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

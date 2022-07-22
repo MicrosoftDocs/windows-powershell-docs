@@ -28,8 +28,9 @@ Remove-ClusterStorageNode -InputObject <CimInstance[]> [-Flags <UInt32>] [-CimSe
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterStorageNode** cmdlet removes a storage node from a failover cluster.
-After the node is removed, the node no longer functions as part of the cluster unless the node is added back to the cluster. Removing a node is also called evicting a node from the cluster.
+The **Remove-ClusterStorageNode** cmdlet removes a storage node from a failover cluster. After the
+node is removed, the node no longer functions as part of the cluster unless the node is added back
+to the cluster. Removing a node is also called evicting a node from the cluster.
 
 ## EXAMPLES
 
@@ -211,7 +212,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -21,9 +21,11 @@ Stop-ClusterGroup [[-Name] <String>] [-IgnoreLocked] [-Wait <Int32>] [-InputObje
 ```
 
 ## DESCRIPTION
-The **Stop-ClusterGroup** cmdlet stops one or more clustered roles, also known as resource groups, on a failover cluster.
+The **Stop-ClusterGroup** cmdlet stops one or more clustered roles, also known as resource groups,
+on a failover cluster.
 
-If maintenance on a clustered role is needed, the clustered role can be stopped in an orderly fashion by using this cmdlet.
+If maintenance on a clustered role is needed, the clustered role can be stopped in an orderly
+fashion by using this cmdlet.
 
 ## EXAMPLES
 
@@ -115,7 +117,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

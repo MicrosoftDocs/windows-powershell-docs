@@ -17,21 +17,22 @@ Removes monitoring of a service or event that is currently being monitored on a 
 
 ### VirtualMachine (Default)
 ```
-Remove-ClusterVMMonitoredItem [-InputObject <PSObject>] [-Service <StringCollection>] [-EventLog <String>]
- [-EventSource <String>] [-EventId <Int32>] [[-VirtualMachine] <String>] [-Wait <Int32>] [-Cluster <String>]
- [<CommonParameters>]
+Remove-ClusterVMMonitoredItem [-InputObject <PSObject>] [-Service <StringCollection>]
+[-EventLog <String>] [-EventSource <String>] [-EventId <Int32>] [[-VirtualMachine] <String>]
+[-Wait <Int32>] [-Cluster <String>] [<CommonParameters>]
 ```
 
 ### VMId
 ```
-Remove-ClusterVMMonitoredItem [-InputObject <PSObject>] [-Service <StringCollection>] [-EventLog <String>]
- [-EventSource <String>] [-EventId <Int32>] [-VMId <Guid>] [-Wait <Int32>] [-Cluster <String>]
- [<CommonParameters>]
+Remove-ClusterVMMonitoredItem [-InputObject <PSObject>] [-Service <StringCollection>]
+[-EventLog <String>] [-EventSource <String>] [-EventId <Int32>] [-VMId <Guid>] [-Wait <Int32>]
+[-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterVMMonitoredItem** cmdlet removes monitoring of a service or event that is currently being monitored.
-After removal, if the service fails or the event occurs, the system will no longer take an action, such as restarting the virtual machine.
+The **Remove-ClusterVMMonitoredItem** cmdlet removes monitoring of a service or event that is
+currently being monitored. After removal, if the service fails or the event occurs, the system will
+no longer take an action, such as restarting the virtual machine.
 
 ## EXAMPLES
 
@@ -68,7 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-Specifies the event identifier (ID) of the Event Tracing for Windows (ETW) event to be removed from monitoring.
+Specifies the event identifier (ID) of the Event Tracing for Windows (ETW) event to be removed from
+monitoring.
 
 ```yaml
 Type: Int32
@@ -113,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the cluster on which to run the cmdlet, the clustered virtual machine from which to remove monitoring, or the clustered virtual machine monitored item to stop monitoring.
+Specifies the cluster on which to run the cmdlet, the clustered virtual machine from which to remove
+monitoring, or the clustered virtual machine monitored item to stop monitoring.
 
 ```yaml
 Type: PSObject
@@ -158,8 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachine
-Specifies the name of the clustered virtual machine from which to remove monitoring.
-When this parameter is specified, this cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
+Specifies the name of the clustered virtual machine from which to remove monitoring. When this
+parameter is specified, this cmdlet must be run on one of the host cluster nodes, or else the
+**Cluster** parameter must also be specified.
 
 ```yaml
 Type: String
@@ -191,7 +195,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -21,8 +21,9 @@ Add-ClusterSharedVolume [[-Name] <StringCollection>] [-InputObject <PSObject>] [
 ```
 
 ## DESCRIPTION
-The **Add-ClusterSharedVolume** cmdlet makes a volume available in the Cluster Shared Volumes in a failover cluster.
-The Cluster Shared Volume must be chosen from the disks in Available Storage (that is, disks that have been added to the cluster but not assigned to a specific use in the cluster).
+The **Add-ClusterSharedVolume** cmdlet makes a volume available in the Cluster Shared Volumes in a
+failover cluster. The Cluster Shared Volume must be chosen from the disks in Available Storage (that
+is, disks that have been added to the cluster but not assigned to a specific use in the cluster).
 
 ## EXAMPLES
 
@@ -82,7 +83,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

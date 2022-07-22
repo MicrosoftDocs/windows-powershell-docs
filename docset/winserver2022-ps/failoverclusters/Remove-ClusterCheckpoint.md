@@ -21,11 +21,14 @@ Remove-ClusterCheckpoint [[-ResourceName] <String>] [-Force] [-CheckpointName <S
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterCheckpoint** cmdlet removes a cryptographic key checkpoint or registry checkpoint for a resource.
+The **Remove-ClusterCheckpoint** cmdlet removes a cryptographic key checkpoint or registry
+checkpoint for a resource.
 
-Checkpoints help provide failover support for applications that store configuration information locally instead of or in addition to storing information in the cluster configuration database.
-Applications might store information locally in two ways.
-One way is to store configuration information in the registry on the local server; another way is to use cryptographic keys on the local server.
+Checkpoints help provide failover support for applications that store configuration information
+locally instead of or in addition to storing information in the cluster configuration database.
+Applications might store information locally in two ways. One way is to store configuration
+information in the registry on the local server; another way is to use cryptographic keys on the
+local server.
 
 ## EXAMPLES
 
@@ -35,7 +38,8 @@ Get-ClusterResource "Cluster Name" | Remove-ClusterCheckpoint -RegistryCheckpoin
 Remove-ClusterCheckpoint -Confirm:$false
 ```
 
-This example removes the registry checkpoint called software\clusname for the resource named Cluster Name without user confirmation.
+This example removes the registry checkpoint called software\clusname for the resource named Cluster
+Name without user confirmation.
 
 ## PARAMETERS
 
@@ -117,7 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the cluster on which to run the cmdlet or the cluster resource from which to remove the checkpoint.
+Specifies the cluster on which to run the cmdlet or the cluster resource from which to remove the
+checkpoint.
 
 ```yaml
 Type: PSObject
@@ -178,7 +183,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

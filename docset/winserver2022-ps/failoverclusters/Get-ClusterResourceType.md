@@ -21,8 +21,9 @@ Get-ClusterResourceType [[-Name] <StringCollection>] [-InputObject <PSObject>] [
 ```
 
 ## DESCRIPTION
-The **Get-ClusterResourceType** cmdlet gets information about one or more resource types in a failover cluster.
-Obtain information such as the name of the dynamic-link library (DLL) through which the Cluster service communicates with a particular resource type.
+The **Get-ClusterResourceType** cmdlet gets information about one or more resource types in a
+failover cluster. Obtain information such as the name of the dynamic-link library (DLL) through
+which the Cluster service communicates with a particular resource type.
 
 ## EXAMPLES
 
@@ -38,7 +39,8 @@ This example lists all the resource types that can be used in configurations on 
 Get-ClusterResourceType -Name "File Server" | Format-List -Property *
 ```
 
-This example gets information about the File Server resource type on the local cluster, and displays the information in the form of a list.
+This example gets information about the File Server resource type on the local cluster, and displays
+the information in the form of a list.
 
 ## PARAMETERS
 
@@ -89,7 +91,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

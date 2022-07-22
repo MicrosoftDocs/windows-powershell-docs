@@ -11,7 +11,8 @@ title: Stop-Cluster
 # Stop-Cluster
 
 ## SYNOPSIS
-Stops the Cluster service on all nodes in a failover cluster, which will stop all services and applications configured in the cluster.
+Stops the Cluster service on all nodes in a failover cluster, which will stop all services and
+applications configured in the cluster.
 
 ## SYNTAX
 
@@ -26,8 +27,9 @@ Stop-Cluster [-Force] [-Wait <Int32>] [-InputObject <PSObject>] [-WhatIf] [-Conf
 ```
 
 ## DESCRIPTION
-The **Stop-Cluster** cmdlet stops the Cluster service on all nodes in a failover cluster, which will stop all services and applications configured in the cluster.
-A node can only function as part of the cluster when the Cluster service is running on that node.
+The **Stop-Cluster** cmdlet stops the Cluster service on all nodes in a failover cluster, which will
+stop all services and applications configured in the cluster. A node can only function as part of
+the cluster when the Cluster service is running on that node.
 
 ## EXAMPLES
 
@@ -36,20 +38,22 @@ A node can only function as part of the cluster when the Cluster service is runn
 Stop-Cluster
 ```
 
-This example stops the Cluster service on all nodes in the local cluster, which will stop all services and applications configured in the cluster.
+This example stops the Cluster service on all nodes in the local cluster, which will stop all
+services and applications configured in the cluster.
 
 ### Example 2: Stop Cluster service on all nodes of a cluster
 ```powershell
 Stop-Cluster -Name cluster1
 ```
 
-This example stops the Cluster service on all nodes in the cluster named cluster1, which will stop all services and applications configured in the cluster.
+This example stops the Cluster service on all nodes in the cluster named cluster1, which will stop
+all services and applications configured in the cluster.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -142,7 +146,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

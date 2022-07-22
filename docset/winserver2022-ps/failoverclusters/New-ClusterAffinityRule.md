@@ -21,7 +21,8 @@ New-ClusterAffinityRule [-Name] <String> [-RuleType <RuleType>] [-CimSession <Ci
 ```
 
 ## DESCRIPTION
-This cmdlet allows the creation of new affinity rules. There are four main types when creating a new rule: SameFaultDomain | SameNode | DifferentFaultDomain | DifferentNode
+This cmdlet allows the creation of new affinity rules. There are four main types when creating a new
+rule: SameFaultDomain | SameNode | DifferentFaultDomain | DifferentNode
 
 ## EXAMPLES
 
@@ -124,7 +125,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -21,10 +21,11 @@ Clear-ClusterDiskReservation [[-Node] <StringCollection>] -Disk <UInt32[]> [-For
 ```
 
 ## DESCRIPTION
-The **Clear-ClusterDiskReservation** cmdlet clears the persistent reservation on a disk in a failover cluster.
-This cmdlet prompts for confirmation unless you specify the **Force** parameter.
+The **Clear-ClusterDiskReservation** cmdlet clears the persistent reservation on a disk in a
+failover cluster. This cmdlet prompts for confirmation unless you specify the **Force** parameter.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -33,14 +34,16 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 Clear-ClusterDiskReservation -Disk 5
 ```
 
-This example clears the persistent reservation on Disk 5 on the local node after asking for user confirmation.
+This example clears the persistent reservation on Disk 5 on the local node after asking for user
+confirmation.
 
 ### Example 2
 ```powershell
 Clear-ClusterDiskReservation -Disk 6 -Node node2 -Force
 ```
 
-This example clears the persistent reservation on Disk 6 on the node named node2 without asking for user confirmation.
+This example clears the persistent reservation on Disk 6 on the node named node2 without asking for
+user confirmation.
 
 ## PARAMETERS
 
@@ -123,7 +126,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -35,8 +35,8 @@ This command gets the state of Cluster Shared Volumes on the local cluster.
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If you specify a period (`.`) or do not specify this parameter, the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If you specify a period (`.`) or do
+not specify this parameter, the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -67,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the names, as a collection of strings, of the Cluster Shared Volumes for which to get state information.
+Specifies the names, as a collection of strings, of the Cluster Shared Volumes for which to get
+state information.
 
 ```yaml
 Type: StringCollection
@@ -82,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -Node
-Specifies the names, as a collection of strings, of the cluster nodes for which to get the state of Cluster Shared Volumes.
+Specifies the names, as a collection of strings, of the cluster nodes for which to get the state of
+Cluster Shared Volumes.
 
 ```yaml
 Type: StringCollection
@@ -97,7 +99,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

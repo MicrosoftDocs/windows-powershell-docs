@@ -22,12 +22,12 @@ New-Cluster [-Name] <String> [-Node <StringCollection>] [-StaticAddress <StringC
 ```
 
 ## DESCRIPTION
-The **New-Cluster** cmdlet creates a new failover cluster.
-Before creating a cluster, the hardware (servers, networks, and storage) must be connected, and the validation tests must be run.
+The **New-Cluster** cmdlet creates a new failover cluster. Before creating a cluster, the hardware
+(servers, networks, and storage) must be connected, and the validation tests must be run.
 
-Use Test-Cluster to run the validation tests.
-The tests will confirm that the hardware and settings are compatible with failover clustering.
-There are multiple types of tests, including Inventory, System Configuration, Network, Storage, and other types of tests.
+Use Test-Cluster to run the validation tests. The tests will confirm that the hardware and settings
+are compatible with failover clustering. There are multiple types of tests, including Inventory,
+System Configuration, Network, Storage, and other types of tests.
 
 ## EXAMPLES
 
@@ -43,9 +43,9 @@ This example creates a four-node cluster named cluster1, using default settings 
 New-Cluster -Name cluster1 -Node node1,node2 -NoStorage
 ```
 
-This example creates a two-node cluster named cluster1.
-The cluster will not have any clustered storage, or disk resources.
-Storage can be added using the **Get-ClusterAvailableDisk** cmdlet with the **Add-ClusterDisk** cmdlet.
+This example creates a two-node cluster named cluster1. The cluster will not have any clustered
+storage, or disk resources. Storage can be added using the **Get-ClusterAvailableDisk** cmdlet with
+the **Add-ClusterDisk** cmdlet.
 
 ### Example 3
 ```powershell
@@ -59,7 +59,8 @@ This example creates a four-node cluster named cluster1 that uses the static IP 
 New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123,3.0.0.123
 ```
 
-This example creates a four-node cluster named cluster1 that uses the static IP addresses 2.0.0.123 and 3.0.0.123.
+This example creates a four-node cluster named cluster1 that uses the static IP addresses 2.0.0.123
+and 3.0.0.123.
 
 ### Example 5
 ```powershell
@@ -92,16 +93,17 @@ Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/
 Specifies the type of administrative access point that the cmdlet creates for the cluster.
 The acceptable values for this parameter are:
 
-- ActiveDirectoryAndDns.
-The cmdlet creates an administrative access point for the cluster.
-The administrative access point is registered in DNS and enabled in Active Directory Domain Services.
-- Dns.
-The cmdlet creates an administrative access point for the cluster.
-The administrative access point is registered in DNS but is not enabled in Active Directory Domain Services.
-- None.
-The cmdlet does not create an administrative access point for the cluster.
-Some clustered roles and functionality might not be available for a cluster that does not have an administrative access point.
-Also, you cannot use Failover Cluster Manager to manage a cluster that does not have an administrative access point.
+- `ActiveDirectoryAndDns`
+  - The cmdlet creates an administrative access point for the cluster. The administrative access
+    point is registered in DNS and enabled in Active Directory Domain Services.
+- `Dns`
+  - The cmdlet creates an administrative access point for the cluster. The administrative access
+    point is registered in DNS but is not enabled in Active Directory Domain Services.
+- `None`
+  - The cmdlet does not create an administrative access point for the cluster. Some clustered roles
+    and functionality might not be available for a cluster that does not have an administrative
+    access point. Also, you cannot use Failover Cluster Manager to manage a cluster that does not
+    have an administrative access point.
 
 ```yaml
 Type: AdminAccessPoint
@@ -132,8 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreNetwork
-Specifies one or more networks to ignore when running the cmdlet.
-Networks with DHCP enabled are always included, but other networks need a static address to be specified using the **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
+Specifies one or more networks to ignore when running the cmdlet. Networks with DHCP enabled are
+always included, but other networks need a static address to be specified using the
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -184,9 +187,10 @@ Accept wildcard characters: False
 ```
 
 ### -NoStorage
-Specifies that shared storage is ignored during the cluster creation.
-The cluster created at the end of the operation will not have shared storage.
-Shared storage can later be added by piping the **ClusterDiskInfo** object from the **Get-ClusterAvailableDisk** cmdlet into the **Add-ClusterDisk** cmdlet.
+Specifies that shared storage is ignored during the cluster creation. The cluster created at the end
+of the operation will not have shared storage. Shared storage can later be added by piping the
+**ClusterDiskInfo** object from the **Get-ClusterAvailableDisk** cmdlet into the **Add-ClusterDisk**
+cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -201,8 +205,9 @@ Accept wildcard characters: False
 ```
 
 ### -Node
-Specifies a comma-separated list of cluster node names, or server names, on which to create the cluster.
-If this parameter is not specified, then a one node cluster is created on the local physical computer.
+Specifies a comma-separated list of cluster node names, or server names, on which to create the
+cluster. If this parameter is not specified, then a one node cluster is created on the local
+physical computer.
 
 ```yaml
 Type: StringCollection
@@ -232,8 +237,9 @@ Accept wildcard characters: False
 ```
 
 ### -StaticAddress
-Specifies one or more static addresses to use when running the cmdlet.
-Networks with DHCP enabled are always included, but other networks need a static address to be specified using the **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
+Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
+are always included, but other networks need a static address to be specified using the
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -248,7 +254,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`,
+`-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`,
+`-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -260,7 +269,9 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## NOTES
 
-- This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+- This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+  authentication on the server computer. 
+
 ## RELATED LINKS
 
 [Add-ClusterNode](./Add-ClusterNode.md)

@@ -37,7 +37,8 @@ Remove a cluster shared volume from an affinity rule.
 Remove-ClusterSharedVolumeFromAffinityRule -ClusterSharedVolumes MyVolume -Name MyRule -Cluster MyCluster
 ```
 
-This command removes the cluster shared volume _MyVolume_ from the affinity rule _MyRule_ for the cluster _MyCluster_.
+This command removes the cluster shared volume _MyVolume_ from the affinity rule _MyRule_ for the
+cluster _MyCluster_.
 
 ## PARAMETERS
 
@@ -164,7 +165,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

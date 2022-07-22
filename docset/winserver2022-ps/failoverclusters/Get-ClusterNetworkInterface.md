@@ -21,8 +21,9 @@ Get-ClusterNetworkInterface [[-Name] <StringCollection>] [-Node <StringCollectio
 ```
 
 ## DESCRIPTION
-The **Get-ClusterNetworkInterface** cmdlet gets information about one or more network adapters in a failover cluster.
-A failover cluster requires network connectivity among nodes and between clients and nodes.
+The **Get-ClusterNetworkInterface** cmdlet gets information about one or more network adapters in a
+failover cluster. A failover cluster requires network connectivity among nodes and between clients
+and nodes.
 
 ## EXAMPLES
 
@@ -38,8 +39,8 @@ This example displays information about the physical network adapters used by th
 Get-ClusterNode -Name node1 | Get-ClusterNetworkInterface
 ```
 
-This example displays information about the physical network adapters used by node1 in the local cluster.
-This cmdlet is equivalent to `Get-ClusterNetworkInterface -Node node1`.
+This example displays information about the physical network adapters used by node1 in the local
+cluster. This cmdlet is equivalent to `Get-ClusterNetworkInterface -Node node1`.
 
 ## PARAMETERS
 
@@ -120,7 +121,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

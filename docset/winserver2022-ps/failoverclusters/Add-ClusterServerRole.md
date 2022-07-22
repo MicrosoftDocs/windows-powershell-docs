@@ -17,8 +17,8 @@ title: Add-ClusterServerRole
 
 ```
 Add-ClusterServerRole [-DnsName <String>] [-NetworkNameName <String>] [-Storage <StringCollection>]
- [-StaticAddress <StringCollection>] [-IgnoreNetwork <StringCollection>] [[-Name] <String>] [-Wait <Int32>]
- [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+[-StaticAddress <StringCollection>] [-IgnoreNetwork <StringCollection>] [[-Name] <String>]
+[-Wait <Int32>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -30,11 +30,12 @@ Set-ClusterStorageSpacesDirectDisk -PhysicalDisk <CimInstance[]> [-CanBeClaimed 
 ```
 
 ## DESCRIPTION
-The **Set-ClusterStorageSpacesDirectDisk** cmdlet configures the system to enable Storage Spaces Direct (S2D) to claim or not claim specific physical disks.
-Disks marked to be not claimed by S2D remain untouched so that they can be used for other purposes.
+The **Set-ClusterStorageSpacesDirectDisk** cmdlet configures the system to enable Storage Spaces
+Direct (S2D) to claim or not claim specific physical disks. Disks marked to be not claimed by S2D
+remain untouched so that they can be used for other purposes.
 
-To avoid possible clean up and warnings, we recommend that you run this cmdlet before you enable S2D.
-Alternatively, you can run this cmdlet after you enable S2D.
+To avoid possible clean up and warnings, we recommend that you run this cmdlet before you enable
+S2D. Alternatively, you can run this cmdlet after you enable S2D.
 
 ## EXAMPLES
 
@@ -60,14 +61,16 @@ Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt.
-You can continue to work in the session while the job completes.
-To manage the job, use the `*-Job` cmdlets.
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+The cmdlet immediately returns an object that represents the job and then displays the command
+prompt. You can continue to work in the session while the job completes. To manage the job, use the
+`*-Job` cmdlets. To get the job results, use the
+[Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+For more information about Windows PowerShell background jobs, see
+[about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -82,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -CacheUsage
-The desired cache usage of the disk. The acceptable values for this parameter are: NonHybrid, Capacity, Cache, and Auto.
+The desired cache usage of the disk. The acceptable values for this parameter are: NonHybrid,
+Capacity, Cache, and Auto.
 
 ```yaml
 Type: S2DDiskUsage
@@ -98,8 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -CanBeClaimed
-Indicates that S2D can claim the physical disks specified by the *PhysicalDiskIds* parameter.
-If you do not specify this parameter, this cmdlet indicates that the specified physical disks can be claimed.
+Indicates that S2D can claim the physical disks specified by the *PhysicalDiskIds* parameter. If you
+do not specify this parameter, this cmdlet indicates that the specified physical disks can be
+claimed.
 
 ```yaml
 Type: Boolean
@@ -114,9 +119,10 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -191,9 +197,11 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
 Type: Int32
@@ -224,7 +232,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

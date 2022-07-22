@@ -11,22 +11,26 @@ title: Add-ClusterResourceType
 # Add-ClusterResourceType
 
 ## SYNOPSIS
-Adds a resource type to a failover cluster, and specifies information such as the dynamic-link library (DLL) to use with that resource type.
+Adds a resource type to a failover cluster, and specifies information such as the dynamic-link
+library (DLL) to use with that resource type.
 
 ## SYNTAX
 
 ```
-Add-ClusterResourceType [-Name] <String> [-Dll] <String> [[-DisplayName] <String>] [-InputObject <PSObject>]
- [-Cluster <String>] [<CommonParameters>]
+Add-ClusterResourceType [-Name] <String> [-Dll] <String> [[-DisplayName] <String>]
+[-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-ClusterResourceType** cmdlet adds a resource type to a failover cluster, and specifies information such as the dynamic-link library (DLL) to use with that resource type.
+The **Add-ClusterResourceType** cmdlet adds a resource type to a failover cluster, and specifies
+information such as the dynamic-link library (DLL) to use with that resource type.
 
 The failover cluster software provides Resource DLL files for the most common types of resources.
-Using the application programming interface (API) provided in the Microsoft Platform Software Development Kit (SDK), other vendors can add support for other resource types.
+Using the application programming interface (API) provided in the Microsoft Platform Software
+Development Kit (SDK), other vendors can add support for other resource types.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -35,21 +39,22 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 Add-ClusterResourceType -Name ResType3 -InputObject C:\res3.dll
 ```
 
-This example creates ResType3 on the local cluster using res3.dll located on the provided resource DLL file path C:\.
+This example creates ResType3 on the local cluster using res3.dll located on the provided resource
+DLL file path C:\.
 
 ### Example 2
 ```powershell
 Add-ClusterResourceType -Name ResType4 -InputObject C:\res4.dll -DisplayName "Resource Type 4"
 ```
 
-This example creates ResType4 on the local cluster using res4.dll located on the provided resource DLL file path C:\.
-The display name of the resource type is Resource Type 4.
+This example creates ResType4 on the local cluster using res4.dll located on the provided resource
+DLL file path C:\. The display name of the resource type is Resource Type 4.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -124,7 +129,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

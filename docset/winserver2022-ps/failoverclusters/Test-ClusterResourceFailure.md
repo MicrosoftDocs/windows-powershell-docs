@@ -23,8 +23,9 @@ Test-ClusterResourceFailure [[-Name] <String>] [-InputObject <PSObject>] [-Clust
 ## DESCRIPTION
 The **Test-ClusterResourceFailure** cmdlet simulates a failure of a cluster resource.
 
-Based on the failover and failback policies, when this cmdlet runs, the Cluster service moves the clustered role, or resource group, and attempts to bring the clustered resource online.
-This cmdlet can be used to simulate what actions the Cluster service will take when a resource fails.
+Based on the failover and failback policies, when this cmdlet runs, the Cluster service moves the
+clustered role, or resource group, and attempts to bring the clustered resource online. This cmdlet
+can be used to simulate what actions the Cluster service will take when a resource fails.
 
 ## EXAMPLES
 
@@ -84,7 +85,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

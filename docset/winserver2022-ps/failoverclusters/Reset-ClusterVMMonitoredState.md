@@ -11,7 +11,8 @@ title: Reset-ClusterVMMonitoredState
 # Reset-ClusterVMMonitoredState
 
 ## SYNOPSIS
-Resets the Application Critical state of a virtual machine, so that the virtual machine is no longer marked as being in a critical state in the cluster.
+Resets the Application Critical state of a virtual machine, so that the virtual machine is no longer
+marked as being in a critical state in the cluster.
 
 ## SYNTAX
 
@@ -20,8 +21,10 @@ Reset-ClusterVMMonitoredState [-Wait <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Reset-ClusterVMMonitoredState** cmdlet resets the Application Critical state of a virtual machine, so that the virtual machine is no longer marked as being in a critical state in the cluster.
-Note: This cmdlet can only be run locally on the virtual machine or through Windows PowerShell® remoting to the virtual machine.
+The **Reset-ClusterVMMonitoredState** cmdlet resets the Application Critical state of a virtual
+machine, so that the virtual machine is no longer marked as being in a critical state in the
+cluster. Note: This cmdlet can only be run locally on the virtual machine or through Windows
+PowerShell® remoting to the virtual machine.
 
 ## EXAMPLES
 
@@ -52,7 +55,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -17,17 +17,20 @@ Moves the ownership of a clustered virtual machine to a different node.
 
 ```
 Move-ClusterVirtualMachineRole [[-Name] <String>] [[-Node] <String>] [-Cancel]
- [-MigrationType <VmMigrationType>] [-IgnoreLocked] [-IgnoreAffinityRule] [-VMId <Guid>] [-Wait <Int32>] [-InputObject <PSObject>]
- [-Cluster <String>] [<CommonParameters>]
+[-MigrationType <VmMigrationType>] [-IgnoreLocked] [-IgnoreAffinityRule] [-VMId <Guid>]
+[-Wait <Int32>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Move-ClusterVirtualMachineRole** cmdlet moves the ownership of a clustered virtual machine to a different node.
+The **Move-ClusterVirtualMachineRole** cmdlet moves the ownership of a clustered virtual machine to
+a different node.
 
-This cmdlet is used to live migrate a clustered virtual machine.
-For quick migration, use Move-ClusterGroup after using Get-ClusterResource and Set-ClusterParameter to set the **OfflineAction** parameter of the virtual machine resource to save state, or a value of 1.
+This cmdlet is used to live migrate a clustered virtual machine. For quick migration, use
+Move-ClusterGroup after using Get-ClusterResource and Set-ClusterParameter to set the
+**OfflineAction** parameter of the virtual machine resource to save state, or a value of 1.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -36,23 +39,24 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 Move-ClusterVirtualMachineRole -Name "Virtual Machine1" -Node node2
 ```
 
-This example performs a live migration of the clustered virtual machine named Virtual Machine1 to the node named node2.
-The Windows PowerShell® prompt does not return until the action is complete.
+This example performs a live migration of the clustered virtual machine named Virtual Machine1 to
+the node named node2. The Windows PowerShell® prompt does not return until the action is complete.
 
 ### Example 2
 ```powershell
 Get-ClusterGroup -Name "Virtual Machine1" | Move-ClusterVirtualMachineRole -Node node2 -Wait 0
 ```
 
-This example performs a live migration of clustered virtual machine named Virtual Machine1 to the node named node2.
-The Windows PowerShell® prompt returns as soon as the action has been initiated.
+This example performs a live migration of clustered virtual machine named Virtual Machine1 to the
+node named node2. The Windows PowerShell® prompt returns as soon as the action has been initiated.
 
 ### Example 3
 ```powershell
 Move-ClusterVirtualMachineRole -Name "Virtual Machine1" -Cancel
 ```
 
-This example cancels the live migration in progress for the clustered virtual machine named Virtual Machine1.
+This example cancels the live migration in progress for the clustered virtual machine named Virtual
+Machine1.
 
 ### Example 4
 ```powershell
@@ -60,9 +64,10 @@ $groups = Get-ClusterNode -Name node1 | Get-ClusterGroup | Where-Object -FilterS
 ForEach-Object -InputObject $groups -Process { $_ | Move-ClusterVirtualMachineRole -Node node2 }
 ```
 
-This example performs a live migration of all clustered virtual machines that are currently owned by the node named node1 to the node named node2.
-The migration of each virtual machine should complete before the next migration is started.
-Use this cmdlet before performing maintenance on the specified node.
+This example performs a live migration of all clustered virtual machines that are currently owned by
+the node named node1 to the node named node2. The migration of each virtual machine should complete
+before the next migration is startqed. Use this cmdlet before performing maintenance on the
+specified node.
 
 ## PARAMETERS
 
@@ -146,16 +151,20 @@ Accept wildcard characters: False
 Specifies the type of migration to perform for the virtual machine.
 The options are as follows: 
 
- -- Live: Transparently migrates the virtual machine without a dropped network connection or perceived downtime. 
+ -- Live: Transparently migrates the virtual machine without a dropped network connection or
+ perceived downtime.
 
- -- Quick: Rapidly migrates a running virtual machine with minimal downtime. 
+ -- Quick: Rapidly migrates a running virtual machine with minimal downtime.
 
- -- Shutdown: Performs an orderly shutdown of the operating system (waiting for all processes to close) on the virtual machine, and then migrates the virtual machine. 
+ -- Shutdown: Performs an orderly shutdown of the operating system (waiting for all processes to
+ close) on the virtual machine, and then migrates the virtual machine.
 
- -- ShutdownForce: Shuts down the operating system on the virtual machine without waiting for slower processes to finish, and then migrates the virtual machine. 
+ -- ShutdownForce: Shuts down the operating system on the virtual machine without waiting for slower
+ processes to finish, and then migrates the virtual machine.
 
- -- TurnOff: Turns off the virtual machine without shutting down the operating system first, then migrates the virtual machine.
-This is the same as turning off the power, which means that data loss may occur.
+ -- TurnOff: Turns off the virtual machine without shutting down the operating system first, then
+ migrates the virtual machine. This is the same as turning off the power, which means that data loss
+ may occur.
 
 ```yaml
 Type: VmMigrationType
@@ -233,7 +242,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

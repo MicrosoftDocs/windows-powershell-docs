@@ -23,11 +23,14 @@ Get-ClusterLog [[-Node] <StringCollection>] [-Destination <String>] [-Performanc
 ```
 
 ## DESCRIPTION
-The **Get-ClusterLog** cmdlet creates a log file for all nodes, or a specific a node, in a failover cluster.
+The **Get-ClusterLog** cmdlet creates a log file for all nodes, or a specific a node, in a failover
+cluster.
 
-When creating a log file for the cluster, you can specify the timespan that you want logged information for in addition to providing a destination for the created logs.
+When creating a log file for the cluster, you can specify the timespan that you want logged
+information for in addition to providing a destination for the created logs.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -36,28 +39,30 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 Get-ClusterLog
 ```
 
-This command creates a log file for the local cluster in the cluster reports folder (C:\Windows\Cluster\Reports) on each node of the cluster.
+This command creates a log file for the local cluster in the cluster reports folder
+(C:\Windows\Cluster\Reports) on each node of the cluster.
 
 ### Example 2: Create log files for each node and save them locally
 ```powershell
 Get-ClusterLog -Destination .
 ```
 
-This command creates a log file for each node of the local cluster, and copies all logs to the local folder.
+This command creates a log file for each node of the local cluster, and copies all logs to the local
+folder.
 
 ### Example 3: Create a log file for the local cluster for previous five minutes
 ```powershell
 Get-ClusterLog -TimeSpan 5
 ```
 
-This command creates a log file for the local cluster in the cluster reports folder (C:\Windows\Cluster\Reports) on each node of the cluster.
-The log covers the last 5 minutes.
+This command creates a log file for the local cluster in the cluster reports folder
+(C:\Windows\Cluster\Reports) on each node of the cluster. The log covers the last 5 minutes.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -263,7 +268,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

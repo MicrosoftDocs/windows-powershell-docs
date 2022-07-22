@@ -20,11 +20,13 @@ Get-ClusterQuorum [[-Cluster] <String>] [-InputObject <PSObject>] [<CommonParame
 ```
 
 ## DESCRIPTION
-The **Get-ClusterQuorum** cmdlet gets information about the quorum configuration of a failover cluster.
+The **Get-ClusterQuorum** cmdlet gets information about the quorum configuration of a failover
+cluster.
 
-The quorum configuration in a failover cluster determines the number of failures that the cluster can sustain.
-If an additional failure occurs, then the cluster must stop running.
-The relevant failures in this context are failures of nodes or, in some cases, of a disk witness (which contains a copy of the cluster configuration) or file share witness.
+The quorum configuration in a failover cluster determines the number of failures that the cluster
+can sustain. If an additional failure occurs, then the cluster must stop running. The relevant
+failures in this context are failures of nodes or, in some cases, of a disk witness (which contains
+a copy of the cluster configuration) or file share witness.
 
 ## EXAMPLES
 
@@ -76,7 +78,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

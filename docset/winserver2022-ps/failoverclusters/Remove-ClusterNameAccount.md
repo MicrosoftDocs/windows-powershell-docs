@@ -21,7 +21,8 @@ Remove-ClusterNameAccount [-DeleteComputerObjects] [-InputObject <PSObject>] [-C
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterNameAccount** cmdlet removes a cluster name account from cluster configuration. A cluster name account is also referred to as a cluster name object (CNO).
+The **Remove-ClusterNameAccount** cmdlet removes a cluster name account from cluster configuration.
+A cluster name account is also referred to as a cluster name object (CNO).
 
 The cluster name resource must be offline for the command to succeed.
 
@@ -32,7 +33,8 @@ The cluster name resource must be offline for the command to succeed.
 Remove-ClusterNameAccount
 ```
 
-This command removes the cluster name account from the cluster configuration and disables the cluster name object in Active Directory Domain Services.
+This command removes the cluster name account from the cluster configuration and disables the
+cluster name object in Active Directory Domain Services.
 
 ### Example 2
 ```powershell
@@ -94,7 +96,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -22,11 +22,15 @@ Add-ClusterFileServerRole -Storage <StringCollection> [-StaticAddress <StringCol
 ```
 
 ## DESCRIPTION
-The **Add-ClusterFileServerRole** cmdlet creates a clustered file server resource group that includes one or more disks, on which shared folders can be created for users.
+The **Add-ClusterFileServerRole** cmdlet creates a clustered file server resource group that
+includes one or more disks, on which shared folders can be created for users.
 
-When adding a clustered file server, specify a name for the file server, any IP address information that is not automatically supplied by your DHCP settings, and the storage volume or volumes that the clustered file server should use.
+When adding a clustered file server, specify a name for the file server, any IP address information
+that is not automatically supplied by your DHCP settings, and the storage volume or volumes that the
+clustered file server should use.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -42,7 +46,8 @@ This example creates a clustered file server using Cluster Disk 8, and assigns a
 Add-ClusterFileServerRole -Storage "Cluster Disk 6" -Name cluster1FS12
 ```
 
-This example creates a clustered file server using Cluster Disk 6, and assigns the name cluster1FS12.
+This example creates a clustered file server using Cluster Disk 6, and assigns the name
+cluster1FS12.
 
 ### Example 3: Create a clustered file server with no waiting for resources
 ```powershell
@@ -71,8 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreNetwork
-Specifies one or more networks to ignore when running the cmdlet.
-Networks with DHCP enabled are always included, but other networks need a static address to be specified using the *StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+Specifies one or more networks to ignore when running the cmdlet. Networks with DHCP enabled are
+always included, but other networks need a static address to be specified using the *StaticAddress*
+parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
 
 ```yaml
 Type: StringCollection
@@ -117,8 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -StaticAddress
-Specifies one or more static addresses to use when running the cmdlet.
-Networks with DHCP enabled are always included, but other networks need a static address to be specified using the *StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
+are always included, but other networks need a static address to be specified using the
+*StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
 
 ```yaml
 Type: StringCollection
@@ -165,7 +172,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

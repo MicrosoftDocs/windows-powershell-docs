@@ -26,7 +26,8 @@ The affected servers will no longer function together as a cluster.
 
 This cmdlet deletes all copies of the cluster configuration database on all cluster nodes.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -35,28 +36,31 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 Remove-Cluster
 ```
 
-This example prompts the user for confirmation, then destroys the local failover cluster and removes cluster configuration information from the cluster nodes.
+This example prompts the user for confirmation, then destroys the local failover cluster and removes
+cluster configuration information from the cluster nodes.
 
 ### Example 2
 ```powershell
 Remove-Cluster -Force
 ```
 
-This example destroys the local failover cluster and removes cluster configuration information from the cluster nodes.
-The cmdlet does not prompt for confirmation.
+This example destroys the local failover cluster and removes cluster configuration information from
+the cluster nodes. The cmdlet does not prompt for confirmation.
 
 ### Example 3
 ```powershell
 Get-Cluster -Name Cluster1 | Remove-Cluster -Force -CleanupAD
 ```
 
-This example destroys the cluster named Cluster1, removes cluster configuration information from the cluster nodes, and deletes the cluster objects in Active Directory.
-The cmdlet does not prompt for confirmation.
+This example destroys the cluster named Cluster1, removes cluster configuration information from the
+cluster nodes, and deletes the cluster objects in Active Directory. The cmdlet does not prompt for
+confirmation.
 
 ## PARAMETERS
 
 ### -CleanupAD
-Specifies that when the cluster is destroyed, the objects in Active Directory that are associated with the cluster are removed.
+Specifies that when the cluster is destroyed, the objects in Active Directory that are associated
+with the cluster are removed.
 
 ```yaml
 Type: SwitchParameter
@@ -149,7 +153,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

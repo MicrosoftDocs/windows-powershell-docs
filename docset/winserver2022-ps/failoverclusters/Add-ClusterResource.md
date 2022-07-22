@@ -16,13 +16,13 @@ Adds a resource to a clustered role, or resource group, in a failover cluster.
 ## SYNTAX
 
 ```
-Add-ClusterResource [-Name] <String> [[-Group] <String>] [-ResourceType] <String> [-SeparateMonitor]
- [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
-```
+Add-ClusterResource [-Name] <String> [[-Group] <String>] [-ResourceType] <String>
+[-SeparateMonitor] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>] ```
 
 ## DESCRIPTION
-The **Add-ClusterResource** cmdlet adds a resource to a clustered role, or resource group, in a failover cluster.
-Before adding the resource, obtain the resource type and the name of the group to which to add the resource.
+The **Add-ClusterResource** cmdlet adds a resource to a clustered role, or resource group, in a
+failover cluster. Before adding the resource, obtain the resource type and the name of the group to
+which to add the resource.
 
 ## EXAMPLES
 
@@ -31,8 +31,8 @@ Before adding the resource, obtain the resource type and the name of the group t
 Add-ClusterResource -Name resource1 -ResourceType "IP Address" -Group ClusterSrv1
 ```
 
-This example creates a new IP Address resource called resource1 on the local cluster.
-The cmdlet configures the resource as part of the clustered role, or resource group, called ClusterSrv1.
+This example creates a new IP Address resource called resource1 on the local cluster. The cmdlet
+configures the resource as part of the clustered role, or resource group, called ClusterSrv1.
 
 ## PARAMETERS
 
@@ -128,7 +128,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

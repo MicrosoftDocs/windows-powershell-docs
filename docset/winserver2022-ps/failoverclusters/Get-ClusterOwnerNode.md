@@ -11,7 +11,8 @@ title: Get-ClusterOwnerNode
 # Get-ClusterOwnerNode
 
 ## SYNOPSIS
-Gets information about which nodes can own a resource in a failover cluster or information about the order of preference among owner nodes for a clustered role.
+Gets information about which nodes can own a resource in a failover cluster or information about the
+order of preference among owner nodes for a clustered role.
 
 ## SYNTAX
 
@@ -21,9 +22,12 @@ Get-ClusterOwnerNode [-Resource <String>] [-Group <String>] [-ResourceType <Stri
 ```
 
 ## DESCRIPTION
-The **Get-ClusterOwnerNode** cmdlet gets information about which nodes can own a resource in a failover cluster or information about the order of preference among owner nodes for a clustered role.
+The **Get-ClusterOwnerNode** cmdlet gets information about which nodes can own a resource in a
+failover cluster or information about the order of preference among owner nodes for a clustered
+role.
 
-Settings that control the possible or preferred owners affect the way the cluster responds to the failure of a resource or a clustered role.
+Settings that control the possible or preferred owners affect the way the cluster responds to the
+failure of a resource or a clustered role.
 
 ## EXAMPLES
 
@@ -39,7 +43,8 @@ This example lists the possible owners for the cluster named Cluster Disk 1 in t
 Get-ClusterGroup -Group cluster1FS12 | Get-ClusterOwnerNode
 ```
 
-This example lists the preferred owners for the clustered file server, or resource group, called cluster1FS12 on the local cluster.
+This example lists the preferred owners for the clustered file server, or resource group, called
+cluster1FS12 on the local cluster.
 
 ## PARAMETERS
 
@@ -120,7 +125,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

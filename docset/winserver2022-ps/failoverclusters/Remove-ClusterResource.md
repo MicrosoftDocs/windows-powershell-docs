@@ -21,8 +21,8 @@ Remove-ClusterResource [[-Name] <StringCollection>] [-Force] [-InputObject <PSOb
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterResource** cmdlet removes a clustered resource from the failover cluster.
-Before removing a resource, be sure to review whether any other resource is dependent on that resource.
+The **Remove-ClusterResource** cmdlet removes a clustered resource from the failover cluster. Before
+removing a resource, be sure to review whether any other resource is dependent on that resource.
 
 ## EXAMPLES
 
@@ -31,20 +31,22 @@ Before removing a resource, be sure to review whether any other resource is depe
 Remove-ClusterResource -Name "Cluster Disk 4"
 ```
 
-This example prompts the user for confirmation and then deletes the cluster named Cluster Disk 4 from the local cluster.
+This example prompts the user for confirmation and then deletes the cluster named Cluster Disk 4
+from the local cluster.
 
 ### Example 2
 ```powershell
 Remove-ClusterResource -Name "Cluster Disk 5" -Force
 ```
 
-This example deletes the cluster named Cluster Disk 5 from the local cluster without prompting for confirmation.
+This example deletes the cluster named Cluster Disk 5 from the local cluster without prompting for
+confirmation.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -136,7 +138,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

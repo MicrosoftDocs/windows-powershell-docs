@@ -21,8 +21,9 @@ Remove-ClusterAccess [[-User] <StringCollection>] [-InputObject <PSObject>] [-Cl
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterAccess** cmdlet removes a user from the access list on the cluster.
-After this cmdlet is run, the user might still have access to the cluster if the user account is part of another user group which is on the cluster access list.
+The **Remove-ClusterAccess** cmdlet removes a user from the access list on the cluster. After this
+cmdlet is run, the user might still have access to the cluster if the user account is part of
+another user group which is on the cluster access list.
 
 ## EXAMPLES
 
@@ -31,8 +32,9 @@ After this cmdlet is run, the user might still have access to the cluster if the
 Remove-ClusterAccess -User contoso\johnj99
 ```
 
-This example removes the user johnj99 in the contoso domain from the access list of the local cluster.
-After this cmdlet runs, the user might still have access to the cluster if the user is part of another user group granted access to the cluster.
+This example removes the user johnj99 in the contoso domain from the access list of the local
+cluster. After this cmdlet runs, the user might still have access to the cluster if the user is part
+of another user group granted access to the cluster.
 
 ## PARAMETERS
 
@@ -83,7 +85,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

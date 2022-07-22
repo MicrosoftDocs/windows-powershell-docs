@@ -21,20 +21,27 @@ Get-ClusterParameter [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cl
 ```
 
 ## DESCRIPTION
-The **Get-ClusterParameter** cmdlet gets detailed information about an object in a failover cluster, such as a cluster resource.
-This cmdlet is used to manage private properties for a cluster object.
-To get and set common properties for a cluster object, use the appropriate Get-Cluster* cmdlet to get the cluster object of interest and then set the property of interest on that cluster object directly.
+The **Get-ClusterParameter** cmdlet gets detailed information about an object in a failover cluster,
+such as a cluster resource. This cmdlet is used to manage private properties for a cluster object.
+To get and set common properties for a cluster object, use the appropriate Get-Cluster* cmdlet to
+get the cluster object of interest and then set the property of interest on that cluster object
+directly.
 
-The type of detailed information you can obtain with this cmdlet depends on the cmdlet you combine with it.
-For example: 
+The type of detailed information you can obtain with this cmdlet depends on the cmdlet you combine
+with it. For example:
 
-- If you use this cmdlet with the **Get-ClusterResource** cmdlet for a disk resource, then you can obtain the disk signature or GUID of a disk and information about whether maintenance is turned on for that disk. 
+- If you use this cmdlet with the **Get-ClusterResource** cmdlet for a disk resource, then you can
+  obtain the disk signature or GUID of a disk and information about whether maintenance is turned on
+  for that disk.
 
-- If you use this cmdlet with the **Get-ClusterResource** cmdlet for a Network Name resource, then you can obtain DNS-related information about the resource. 
+- If you use this cmdlet with the **Get-ClusterResource** cmdlet for a Network Name resource, then
+  you can obtain DNS-related information about the resource.
 
-- If you use this cmdlet with the **Get-ClusterResource** cmdlet for an IP address resource, then you can obtain DHCP-related information about the IP Address resource. 
+- If you use this cmdlet with the **Get-ClusterResource** cmdlet for an IP address resource, then
+  you can obtain DHCP-related information about the IP Address resource.
 
-- If you use this cmdlet with the **Get-ClusterResource** cmdlet for resources used by virtual machines, then you can obtain details about the settings for the virtual machines.
+- If you use this cmdlet with the **Get-ClusterResource** cmdlet for resources used by virtual
+  machines, then you can obtain details about the settings for the virtual machines.
 
 ## EXAMPLES
 
@@ -43,15 +50,17 @@ For example:
 Get-ClusterResource -Name cluster1FS | Get-ClusterParameter
 ```
 
-This example gets the parameters, including the detailed information, for the cluster resource named cluster1FS on the local cluster.
-The displayed parameters will vary according to the type of resource being viewed.
+This example gets the parameters, including the detailed information, for the cluster resource named
+cluster1FS on the local cluster. The displayed parameters will vary according to the type of
+resource being viewed.
 
 ### Example 2
 ```powershell
 Get-ClusterResource -Name cluster1FS | Get-ClusterParameter -Name HostRecordTTL
 ```
 
-This example displays the HostRecordTTL parameter for the cluster resource named cluster1FS on the local cluster, if that parameter is applicable to cluster1FS.
+This example displays the HostRecordTTL parameter for the cluster resource named cluster1FS on the
+local cluster, if that parameter is applicable to cluster1FS.
 
 ## PARAMETERS
 
@@ -102,7 +111,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -11,7 +11,8 @@ title: Suspend-ClusterPhysicalDiskResource
 # Suspend-ClusterPhysicalDiskResource
 
 ## SYNOPSIS
-Turns on maintenance for a physical disk resource so that you can run a disk maintenance tool without triggering failover.
+Turns on maintenance for a physical disk resource so that you can run a disk maintenance tool
+without triggering failover.
 
 ## SYNTAX
 
@@ -21,7 +22,8 @@ Suspend-ClusterPhysicalDiskResource [[-Name] <String>] [-CleanupClusterProtector
 ```
 
 ## DESCRIPTION
-The **Suspend-ClusterPhysicalDiskResource** cmdlet turns on maintenance for a physical disk resource so that a disk maintenance tool can be run without triggering failover.
+The **Suspend-ClusterPhysicalDiskResource** cmdlet turns on maintenance for a physical disk resource
+so that a disk maintenance tool can be run without triggering failover.
 
 This cmdlet only applies to physical disks. Turning on maintenance leaves dependent resources online.
 
@@ -52,8 +54,8 @@ Accept wildcard characters: False
 ```
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -145,7 +147,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

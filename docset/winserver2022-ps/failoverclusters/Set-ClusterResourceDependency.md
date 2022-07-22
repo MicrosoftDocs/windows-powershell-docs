@@ -21,12 +21,14 @@ Set-ClusterResourceDependency [[-Resource] <String>] [[-Dependency] <String>] [-
 ```
 
 ## DESCRIPTION
-The **Set-ClusterResourceDependency** cmdlet specifies the resources that a particular resource depends on within a failover cluster.
-Existing dependencies will be overwritten by the dependencies that you specify.
+The **Set-ClusterResourceDependency** cmdlet specifies the resources that a particular resource
+depends on within a failover cluster. Existing dependencies will be overwritten by the dependencies
+that you specify.
 
-The term or can be used in the expression describing the dependency.
-For example, an or  dependency can be set up where a Network Name resource is dependent on either of two IP address resources, instead of being dependent on both.
-This use of or dependencies is common in multi-site cluster deployments.
+The term or can be used in the expression describing the dependency. For example, an or dependency
+can be set up where a Network Name resource is dependent on either of two IP address resources,
+instead of being dependent on both. This use of or dependencies is common in multi-site cluster
+deployments.
 
 ## EXAMPLES
 
@@ -46,7 +48,8 @@ $parameters = @{
 Set-ClusterResourceDependency @parameters
 ```
 
-This example makes the resource called cluster1FS12 dependent on either \[IP Address 151.56.48.0\] or \[New IP Address\].
+This example makes the resource called cluster1FS12 dependent on either \[IP Address 151.56.48.0\]
+or \[New IP Address\].
 
 This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
@@ -56,7 +59,8 @@ Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/
 Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency ""
 ```
 
-This example clears the dependency list for the resource named cluster1FS12, so that it no longer depends on any other resources.
+This example clears the dependency list for the resource named cluster1FS12, so that it no longer
+depends on any other resources.
 
 ## PARAMETERS
 
@@ -127,7 +131,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

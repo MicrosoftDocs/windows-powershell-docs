@@ -17,18 +17,20 @@ This cmdlet is used to add either a VM role or a group name to a cluster affinit
 
 ### Query (cdxml) (Default)
 ```
-Add-ClusterGroupToAffinityRule [[-Name] <String[]>] [-Groups] <String[]> [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+Add-ClusterGroupToAffinityRule [[-Name] <String[]>] [-Groups] <String[]>
+[-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
 ```
-Add-ClusterGroupToAffinityRule -InputObject <CimInstance[]> [-Groups] <String[]> [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+Add-ClusterGroupToAffinityRule -InputObject <CimInstance[]> [-Groups] <String[]>
+[-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet is used to add either a VM role or a group name to a cluster affinity rule. When using this cmdlet we can use both **-Name** and **-Groups**. The former is used to choose the desired affinity rule and the latter is for the groups to be added.
+This cmdlet is used to add either a VM role or a group name to a cluster affinity rule. When using
+this cmdlet we can use both **-Name** and **-Groups**. The former is used to choose the desired
+affinity rule and the latter is for the groups to be added.
 
 ## EXAMPLES
 
@@ -162,7 +164,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

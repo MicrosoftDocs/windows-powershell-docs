@@ -21,10 +21,11 @@ Resume-ClusterResource [[-Name] <String>] [-VolumeName <String>] [-InputObject <
 ```
 
 ## DESCRIPTION
-The **Resume-ClusterResource** cmdlet turns off maintenance for a disk resource or Cluster Shared Volume within a failover cluster.
+The **Resume-ClusterResource** cmdlet turns off maintenance for a disk resource or Cluster Shared
+Volume within a failover cluster.
 
-This cmdlet applies to disks and Cluster Shared Volumes only.
-We recommend that maintenance be turned off for a disk or Cluster Shared Volume as soon as the maintenance tasks have been completed.
+This cmdlet applies to disks and Cluster Shared Volumes only. We recommend that maintenance be
+turned off for a disk or Cluster Shared Volume as soon as the maintenance tasks have been completed.
 
 ## EXAMPLES
 
@@ -91,9 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -VolumeName
-Specifies the name of the volume to suspend.
-This parameter is only applicable to Cluster Shared Volumes.
-If this parameter is not specified, then the operation will be performed on all volumes on the Cluster Shared Volume.
+Specifies the name of the volume to suspend. This parameter is only applicable to Cluster Shared
+Volumes. If this parameter is not specified, then the operation will be performed on all volumes on
+the Cluster Shared Volume.
 
 ```yaml
 Type: String
@@ -108,7 +109,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

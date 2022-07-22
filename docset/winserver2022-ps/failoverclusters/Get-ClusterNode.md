@@ -20,10 +20,12 @@ Get-ClusterNode [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cluster
 ```
 
 ## DESCRIPTION
-The **Get-ClusterNode** cmdlet gets information about one or more nodes, or servers, in a failover cluster.
+The **Get-ClusterNode** cmdlet gets information about one or more nodes, or servers, in a failover
+cluster.
 
-Use this cmdlet to obtain information about the node status.
-To see the resources currently owned by a particular node, specify that node in this cmdlet and then pipe the results through the **Get-ClusterResource** cmdlet.
+Use this cmdlet to obtain information about the node status. To see the resources currently owned by
+a particular node, specify that node in this cmdlet and then pipe the results through the
+**Get-ClusterResource** cmdlet.
 
 ## EXAMPLES
 
@@ -39,14 +41,16 @@ This example displays the name, id, and state of each node, or server, in the lo
 Get-ClusterNode -Cluster cluster1
 ```
 
-This example displays the name, id, and state of each node, or server, in the cluster named cluster1.
+This example displays the name, id, and state of each node, or server, in the cluster named
+cluster1.
 
 ### Example 3
 ```powershell
 Get-ClusterNode -Name node1 | Get-ClusterResource
 ```
 
-This example lists all cluster resources that are currently owned by node named node1 on the local cluster.
+This example lists all cluster resources that are currently owned by node named node1 on the local
+cluster.
 
 ## PARAMETERS
 
@@ -97,7 +101,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

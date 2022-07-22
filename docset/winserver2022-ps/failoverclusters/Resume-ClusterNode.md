@@ -21,8 +21,10 @@ Resume-ClusterNode [[-Name] <StringCollection>] [[-Failback] <ResumeClusterNodeF
 ```
 
 ## DESCRIPTION
-The **Resume-ClusterNode** cmdlet resumes activity on a failover cluster node after it has been suspended, or paused, or brings back drained workloads to the node, or both.
-When a node is resumed, clustered roles that were drained from the node are returned to it, and clustered roles or resources that are currently offline can be brought online on that node.
+The **Resume-ClusterNode** cmdlet resumes activity on a failover cluster node after it has been
+suspended, or paused, or brings back drained workloads to the node, or both. When a node is resumed,
+clustered roles that were drained from the node are returned to it, and clustered roles or resources
+that are currently offline can be brought online on that node.
 
 ## EXAMPLES
 
@@ -52,7 +54,8 @@ This example resumes all cluster nodes that are suspended, or paused, on the loc
 Get-ClusterNode | Resume-ClusterNode -Failback Immediate
 ```
 
-This example resumes all cluster nodes that are suspended, or paused, on the local cluster and immediately brings back the workloads drained from the nodes.
+This example resumes all cluster nodes that are suspended, or paused, on the local cluster and
+immediately brings back the workloads drained from the nodes.
 
 ## PARAMETERS
 
@@ -73,9 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -Failback
-Sets the policy to bring back drained workloads to the node.
-The acceptable values for this parameter are:NoFailback, Immediate, and Policy.
-Policy can be configured to not failback, failback immediately, or failback only during specific hours.
+Sets the policy to bring back drained workloads to the node. The acceptable values for this
+parameter are:NoFailback, Immediate, and Policy. Policy can be configured to not failback, failback
+immediately, or failback only during specific hours.
 
 ```yaml
 Type: ResumeClusterNodeFailbackType
@@ -106,7 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the group, node, resource, or service for which or cluster on which to run the cmdlet.
+Specifies the name of the group, node, resource, or service for which or cluster on which to run the
+cmdlet.
 
 ```yaml
 Type: StringCollection
@@ -121,7 +125,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

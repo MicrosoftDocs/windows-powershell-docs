@@ -21,10 +21,11 @@ Get-ClusterAccess [[-User] <StringCollection>] [-InputObject <PSObject>] [-Clust
 ```
 
 ## DESCRIPTION
-The **Get-ClusterAccess** cmdlet gets information about permissions that control access to a failover cluster.
+The **Get-ClusterAccess** cmdlet gets information about permissions that control access to a
+failover cluster.
 
-A cluster can allow full access or read-only access.
-Read-only access limits the user to Windows PowerShell® cmdlets that provide information about the cluster.
+A cluster can allow full access or read-only access. Read-only access limits the user to Windows
+PowerShell® cmdlets that provide information about the cluster.
 
 ## EXAMPLES
 
@@ -33,7 +34,8 @@ Read-only access limits the user to Windows PowerShell® cmdlets that provide in
 Get-ClusterAccess
 ```
 
-This example lists the level of permissions that have been assigned to users of this cluster, including users who are blocked from access.
+This example lists the level of permissions that have been assigned to users of this cluster,
+including users who are blocked from access.
 
 ## PARAMETERS
 
@@ -84,7 +86,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

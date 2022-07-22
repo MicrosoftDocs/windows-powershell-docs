@@ -11,7 +11,8 @@ title: Get-ClusterResourceDependency
 # Get-ClusterResourceDependency
 
 ## SYNOPSIS
-Gets information about the dependencies that have been configured between clustered resources in a failover cluster.
+Gets information about the dependencies that have been configured between clustered resources in a
+failover cluster.
 
 ## SYNTAX
 
@@ -21,8 +22,9 @@ Get-ClusterResourceDependency [[-Resource] <StringCollection>] [-Guid] [-InputOb
 ```
 
 ## DESCRIPTION
-The **Get-ClusterResourceDependency** cmdlet gets information about the dependencies that have been configured between clustered resources in a failover cluster.
-Resource dependencies control the order in which resources are brought online or taken offline in the cluster.
+The **Get-ClusterResourceDependency** cmdlet gets information about the dependencies that have been
+configured between clustered resources in a failover cluster. Resource dependencies control the
+order in which resources are brought online or taken offline in the cluster.
 
 ## EXAMPLES
 
@@ -38,8 +40,8 @@ This example displays the dependencies for the resource called cluster1FS12.
 Get-ClusterGroup -Name cluster1FS12 | Get-ClusterResource | Get-ClusterResourceDependency
 ```
 
-This example displays the dependencies for each resource in the clustered file server ─resource group─ called cluster1FS12.
-Some resources do not have dependencies.
+This example displays the dependencies for each resource in the clustered file server ─resource
+group─ called cluster1FS12. Some resources do not have dependencies.
 
 ## PARAMETERS
 
@@ -105,7 +107,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

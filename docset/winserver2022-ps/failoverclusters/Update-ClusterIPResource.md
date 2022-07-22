@@ -21,8 +21,8 @@ Update-ClusterIPResource [[-Name] <String>] [-Renew] [-Release] [-InputObject <P
 ```
 
 ## DESCRIPTION
-The **Update-ClusterIPResource** cmdlet renews or releases the DHCP lease for an IP address resource in a failover cluster.
-This cmdlet applies only to IP address resources that use DHCP.
+The **Update-ClusterIPResource** cmdlet renews or releases the DHCP lease for an IP address resource
+in a failover cluster. This cmdlet applies only to IP address resources that use DHCP.
 
 ## EXAMPLES
 
@@ -31,7 +31,8 @@ This cmdlet applies only to IP address resources that use DHCP.
 Update-ClusterIPResource -Name "Cluster IP Address"
 ```
 
-This example updates the DHCP lease for the resource called Cluster IP Address if this resource is DHCP assigned.
+This example updates the DHCP lease for the resource called Cluster IP Address if this resource is
+DHCP assigned.
 
 ### Example 2: Update DHCP leases for all clustered IP resources
 ```powershell
@@ -46,13 +47,14 @@ $clusterResource = Get-ClusterResource -Name "IP Address 10.24.11.0"
 $clusterResource | Stop-ClusterResource | Update-ClusterIPResource -Release
 ```
 
-This example takes the resource named IP Address 172.24.11.0 offline, and releases the DHCP lease for that resource.
+This example takes the resource named IP Address 172.24.11.0 offline, and releases the DHCP lease
+for that resource.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -127,7 +129,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

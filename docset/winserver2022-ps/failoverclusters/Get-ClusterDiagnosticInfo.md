@@ -11,7 +11,8 @@ title: Get-ClusterDiagnosticInfo
 # Get-ClusterDiagnosticInfo
 
 ## SYNOPSIS
-Gets diagnostics for a cluster a cluster that contains VMs and produces a zip file containing the data.
+Gets diagnostics for a cluster a cluster that contains VMs and produces a zip file containing the
+data.
 
 ## SYNTAX
 
@@ -27,7 +28,8 @@ Get-ClusterDiagnosticInfo -ReadFromPath <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-ClusterDiagnosticInfo** cmdlet gets diagnostics for a cluster that contains virtual machines and produces a zip file containing the data.
+The **Get-ClusterDiagnosticInfo** cmdlet gets diagnostics for a cluster that contains virtual
+machines and produces a zip file containing the data.
 
 ## EXAMPLES
 
@@ -131,7 +133,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -31,16 +31,16 @@ Before the resource is brought online, any resources that it depends are brought
 Start-ClusterResource -Name "IP Address 172.24.11.0"
 ```
 
-This example brings the resource called IP Address 172.24.11.0 online on the local cluster.
-Before bringing the resource online, this cmdlet brings online any resources on which the resource depends.
+This example brings the resource called IP Address 172.24.11.0 online on the local cluster. Before
+bringing the resource online, this cmdlet brings online any resources on which the resource depends.
 
 ### Example 2
 ```powershell
 Start-ClusterResource -Name "IP Address 172.24.11.0" -Wait 0
 ```
 
-This example brings the resource called IP Address 172.24.11.0 online on the local cluster.
-Before bringing the resource online, this cmdlet brings online any resources on which the resource depends.
+This example brings the resource called IP Address 172.24.11.0 online on the local cluster. Before
+bringing the resource online, this cmdlet brings online any resources on which the resource depends.
 The Windows PowerShell® prompt returns as soon as the action has been initiated.
 
 ## PARAMETERS
@@ -155,7 +155,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

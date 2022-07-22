@@ -24,8 +24,8 @@ Remove-ClusterGroup [-VMId <Guid>] [[-Name] <StringCollection>] [-Force] [-Remov
 The **Remove-ClusterGroup** cmdlet removes a clustered role.
 also called a resource group, from a failover cluster.
 
-Use this cmdlet to delete a group.
-If the group still has resources in it, then either remove the resources first, or specify the **RemoveResources** parameter.
+Use this cmdlet to delete a group. If the group still has resources in it, then either remove the
+resources first, or specify the **RemoveResources** parameter.
 
 ## EXAMPLES
 
@@ -34,15 +34,16 @@ If the group still has resources in it, then either remove the resources first, 
 Remove-ClusterGroup -Name MyFileServer
 ```
 
-This example prompts the user for confirmation and then removes the clustered role named MyFileServer, if the resources have first been removed from it.
+This example prompts the user for confirmation and then removes the clustered role named
+MyFileServer, if the resources have first been removed from it.
 
 ### Example 2
 ```powershell
 Remove-ClusterGroup -Name MyFileServer -Force
 ```
 
-This example removes the clustered role named MyFileServer, if the resources have first been removed from it.
-The cmdlet does not prompt for confirmation.
+This example removes the clustered role named MyFileServer, if the resources have first been removed
+from it. The cmdlet does not prompt for confirmation.
 
 ### Example 3
 ```powershell
@@ -178,7 +179,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

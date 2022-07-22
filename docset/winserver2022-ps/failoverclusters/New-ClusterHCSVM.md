@@ -20,9 +20,10 @@ New-ClusterHCSVM [-Name] <String> [-SwitchName <String>] [-ExtendedVmConfigurati
 
 ## DESCRIPTION
 
-Use this cmdlet to create a new instance of an HCS VM resource. When an HCS
-VM resource is created, it renames the resource. For example, if you create an HCS VM resource
-and name the resource **HcsRes** using the **Name** parameter, the resource name is translated to **HCS Virtual Machine HcsRes**.
+Use this cmdlet to create a new instance of an HCS VM resource. When an HCS VM resource is created,
+it renames the resource. For example, if you create an HCS VM resource and name the resource
+**HcsRes** using the **Name** parameter, the resource name is translated to **HCS Virtual Machine
+HcsRes**.
 
 You can verify using **Get-ClusterResource** which shows the list of resources on the cluster.
 
@@ -30,22 +31,35 @@ You can verify using **Get-ClusterResource** which shows the list of resources o
 
 ### Example 1
 ```powershell
-New-ClusterHCSVM -Name "hcstest" -VhdPath c:\vhd.vhdx -SwitchName TestSwitch -MemorySizeInMb 4096 -CpuCount 2
+$parameters = @{
+    Name = 'hcstest'
+    VhdPath = 'c:\vhd.vhdx'
+    SwitchName = 'TestSwitch'
+    MemorySizeInMb = '4096'
+    CpuCount = '2'
+}
+New-ClusterHCSVM @parameters
 ```
 
-After creating the HCS VM, a list of information is returned. The **Name** of the resource has been changed. However, the group name (**VmName**) remains the same.
+After creating the HCS VM, a list of information is returned. The **Name** of the resource has been
+changed. However, the group name (**VmName**) remains the same.
+
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt.
-You can continue to work in the session while the job completes.
-To manage the job, use the `*-Job` cmdlets.
-To get the job results, use the [Receive-Job](/powershell/module/microsoft.powershell.core/receive-job) cmdlet.
+The cmdlet immediately returns an object that represents the job and then displays the command
+prompt. You can continue to work in the session while the job completes. To manage the job, use the
+`*-Job` cmdlets. To get the job results, use the
+[Receive-Job](/powershell/module/microsoft.powershell.core/receive-job) cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
+For more information about Windows PowerShell background jobs, see
+[about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
 
 ```yaml
 Type: SwitchParameter
@@ -60,9 +74,10 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) or [Get-CimSession](/powershell/module/CimCmdlets/Get-CimSession) cmdlet.
-The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) or
+[Get-CimSession](/powershell/module/CimCmdlets/Get-CimSession) cmdlet. The default is the current
+session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -116,7 +131,9 @@ Accept wildcard characters: False
 
 ### -MemorySizeInMb
 
-Specify the amount of memory you want to allocate for your VM. This parameter has a **default** value of 1024mb. This parameter also has a minimum amount that may be passed in. You cannot pass a value lower than **32mb**. Values lower than 32mb result in a minimum value of 32mb.
+Specify the amount of memory you want to allocate for your VM. This parameter has a **default**
+value of 1024mb. This parameter also has a minimum amount that may be passed in. You cannot pass a
+value lower than **32mb**. Values lower than 32mb result in a minimum value of 32mb.
 
 ```yaml
 Type: UInt32
@@ -135,7 +152,8 @@ Accept wildcard characters: False
 Name of resource you are creating. This value is used to create the full name of the HCS VM
 resource.
 
-For example, if you used the value **hcsres** the full name of the HCS VM resource is **HCS Virtual Machine hcsres**.
+For example, if you used the value **hcsres** the full name of the HCS VM resource is **HCS Virtual
+Machine hcsres**.
 
 ```yaml
 Type: String
@@ -248,7 +266,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

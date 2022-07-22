@@ -21,8 +21,9 @@ Start-ClusterGroup [[-Name] <String>] [-IgnoreLocked] [-ChooseBestNode] [-Ignore
 ```
 
 ## DESCRIPTION
-The **Start-ClusterGroup** cmdlet starts one or more clustered roles, also known as resource groups, on a failover cluster.
-With this cmdlet, a clustered role can be started again after stopping it for maintenance or diagnosis.
+The **Start-ClusterGroup** cmdlet starts one or more clustered roles, also known as resource groups,
+on a failover cluster. With this cmdlet, a clustered role can be started again after stopping it for
+maintenance or diagnosis.
 
 ## EXAMPLES
 
@@ -152,7 +153,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -11,7 +11,8 @@ title: Update-ClusterNetworkNameResource
 # Update-ClusterNetworkNameResource
 
 ## SYNOPSIS
-Registers existing Network Name resources with a DNS server in a way that does not interrupt cluster availability.
+Registers existing Network Name resources with a DNS server in a way that does not interrupt cluster
+availability.
 
 ## SYNTAX
 
@@ -21,7 +22,8 @@ Update-ClusterNetworkNameResource [[-Name] <StringCollection>] [-InputObject <PS
 ```
 
 ## DESCRIPTION
-The **Update-ClusterNetworkNameResource** cmdlet registers existing Network Name resources with a DNS server in a way that does not interrupt cluster availability.
+The **Update-ClusterNetworkNameResource** cmdlet registers existing Network Name resources with a
+DNS server in a way that does not interrupt cluster availability.
 
 ## EXAMPLES
 
@@ -81,7 +83,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

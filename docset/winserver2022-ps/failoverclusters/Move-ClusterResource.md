@@ -21,8 +21,9 @@ Move-ClusterResource [[-Name] <String>] [[-Group] <String>] [-InputObject <PSObj
 ```
 
 ## DESCRIPTION
-The **Move-ClusterResource** cmdlet moves a clustered resource from one clustered role to another within a failover cluster.
-When a clustered resource is moved to a different clustered role, the clustered resource will then fail over with that clustered role.
+The **Move-ClusterResource** cmdlet moves a clustered resource from one clustered role to another
+within a failover cluster. When a clustered resource is moved to a different clustered role, the
+clustered resource will then fail over with that clustered role.
 
 ## EXAMPLES
 
@@ -31,7 +32,8 @@ When a clustered resource is moved to a different clustered role, the clustered 
 Move-ClusterResource -Name resource1 -Group group2
 ```
 
-This command moves the cluster resource called resource1 to the resource group called group2 on the local cluster.
+This command moves the cluster resource called resource1 to the resource group called group2 on the
+local cluster.
 
 ## PARAMETERS
 
@@ -97,7 +99,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

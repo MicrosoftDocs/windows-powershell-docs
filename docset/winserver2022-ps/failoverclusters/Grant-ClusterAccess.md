@@ -21,8 +21,9 @@ Grant-ClusterAccess [-User] <StringCollection> [-Full] [-ReadOnly] [-InputObject
 ```
 
 ## DESCRIPTION
-The **Grant-ClusterAccess** cmdlet grants access to a failover cluster, either full access or read-only access.
-To provide someone with read-only access to the cluster, use the **ReadOnly** parameter.
+The **Grant-ClusterAccess** cmdlet grants access to a failover cluster, either full access or
+read-only access. To provide someone with read-only access to the cluster, use the **ReadOnly**
+parameter.
 
 ## EXAMPLES
 
@@ -121,7 +122,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -16,18 +16,20 @@ Adds a node (server) to a failover cluster.
 ## SYNTAX
 
 ```
-Add-ClusterNode [[-Name] <StringCollection>] [-Type <NodeType>] [-NoStorage] [-InputObject <PSObject>] [-Cluster <String>]
- [<CommonParameters>]
+Add-ClusterNode [[-Name] <StringCollection>] [-Type <NodeType>] [-NoStorage]
+[-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-ClusterNode** cmdlet adds a node, or server, to a failover cluster.
-Before adding the new node, you should run validation tests on the existing nodes together with the proposed new node.
+The **Add-ClusterNode** cmdlet adds a node, or server, to a failover cluster. Before adding the new
+node, you should run validation tests on the existing nodes together with the proposed new node.
 
-Before adding the new node, you should run validation tests on the existing nodes together with the proposed new node.
-By running the validation tests, you can confirm that the server to be added is connected correctly to the networks and storage and that it contains the same software updates.
+Before adding the new node, you should run validation tests on the existing nodes together with the
+proposed new node. By running the validation tests, you can confirm that the server to be added is
+connected correctly to the networks and storage and that it contains the same software updates.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -94,8 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -NoStorage
-Ensures that shared storage, on the node being joined to the cluster, will not be added to the cluster during the join operation.
-Shared storage can be added by piping the ClusterDiskInfo object from the **Get-ClusterAvailableDisk** cmdlet into the **Add-ClusterDisk** cmdlet.
+Ensures that shared storage, on the node being joined to the cluster, will not be added to the
+cluster during the join operation. Shared storage can be added by piping the ClusterDiskInfo object
+from the **Get-ClusterAvailableDisk** cmdlet into the **Add-ClusterDisk** cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -126,7 +129,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

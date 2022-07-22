@@ -11,7 +11,8 @@ title: Add-ClusterGroup
 # Add-ClusterGroup
 
 ## SYNOPSIS
-Adds an empty resource group to the failover cluster configuration, in preparation for adding clustered resources to the group.
+Adds an empty resource group to the failover cluster configuration, in preparation for adding
+clustered resources to the group.
 
 ## SYNTAX
 
@@ -21,9 +22,9 @@ Add-ClusterGroup [-Name] <StringCollection> [[-GroupType] <GroupType>] [-InputOb
 ```
 
 ## DESCRIPTION
-The **Add-ClusterGroup** cmdlet adds an empty resource group to the failover cluster configuration, in preparation for adding clustered resources to the group.
-A resource group, or a clustered role, is the unit of failover.
-During failover, all resources in the resource group move together.
+The **Add-ClusterGroup** cmdlet adds an empty resource group to the failover cluster configuration,
+in preparation for adding clustered resources to the group. A resource group, or a clustered role,
+is the unit of failover. During failover, all resources in the resource group move together.
 
 ## EXAMPLES
 
@@ -99,7 +100,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

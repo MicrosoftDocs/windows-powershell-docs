@@ -42,21 +42,25 @@ $parameters = @{
 Set-ClusterHCSVM @parameters
 ```
 
-Though you can change certain settings, it is not recommended that you change the name of the resource.
+Though you can change certain settings, it is not recommended that you change the name of the
+resource.
 
-This example uses splatting to pass parameter values from the `$Parameters` variable to the command. Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt.
-You can continue to work in the session while the job completes.
-To manage the job, use the `*-Job` cmdlets.
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+The cmdlet immediately returns an object that represents the job and then displays the command
+prompt. You can continue to work in the session while the job completes. To manage the job, use the
+`*-Job` cmdlets. To get the job results, use the
+[Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+For more information about Windows PowerShell background jobs, see
+[about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -71,9 +75,10 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -88,11 +93,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedVmConfiguration
-This are where you can pass in extra settings that you'd like to pass into the VM. You can pass them in via JSON. This would be an example of you'd want to pass it in via parameter
+This are where you can pass in extra settings that you'd like to pass into the VM. You can pass them
+in via JSON.
 
-> -ExtendedVmConfiguration (Get-Content 'C:\config.txt')
-
-Ensure that you use **Get-Content**. This parameter is **not required**, and a **default** ExtendedVmConfiguration will be passed in when the resource is started
+Ensure that you use **Get-Content**. This parameter is **not required**, and a **default**
+ExtendedVmConfiguration will be passed in when the resource is started
 
 ```yaml
 Type: String
@@ -122,7 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-This fetches the HCS VM via name. Remember to use the updated name **"HCS Virtual Machine YourName"**
+This fetches the HCS VM via name. Remember to use the updated name 
+**"HCS Virtual Machine YourName"**
 
 ```yaml
 Type: String[]
@@ -152,8 +158,8 @@ Accept wildcard characters: False
 ```
 
 ### -OfflineAction
-***
-This will be the action taken when shutting the VM off. This parameter is **not required** and has a **default** value of 0. You can set a value anywhere from 0-2
+This will be the action taken when shutting the VM off. This parameter is **not required** and has a
+**default** value of 0. You can set a value anywhere from 0-2
 
 - **Save (0) [Save state]**
 - **Shutdown (1) [Graceful shutdown]**
@@ -187,9 +193,11 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
 Type: Int32
@@ -204,7 +212,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

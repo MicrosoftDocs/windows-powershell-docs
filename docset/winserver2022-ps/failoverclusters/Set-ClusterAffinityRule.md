@@ -11,7 +11,8 @@ title: Set-ClusterAffinityRule
 # Set-ClusterAffinityRule
 
 ## SYNOPSIS
-This cmdlet is used to Enabled or Disable an affinity rule. This can also be used to change the RuleType.
+This cmdlet is used to Enabled or Disable an affinity rule. This can also be used to change the
+RuleType.
 
 ## SYNTAX
 
@@ -28,7 +29,8 @@ Set-ClusterAffinityRule -InputObject <CimInstance[]> [-RuleType <RuleType>] [-En
 ```
 
 ## DESCRIPTION
-This cmdlet is used to Enabled or Disable an affinity rule. This can also be used to change the RuleType.
+This cmdlet is used to Enabled or Disable an affinity rule. This can also be used to change the
+RuleType.
 
 ## EXAMPLES
 
@@ -178,7 +180,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

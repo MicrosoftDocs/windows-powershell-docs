@@ -21,10 +21,13 @@ Get-ClusterResource [[-Name] <StringCollection>] [-VMId <Guid>] [-InputObject <P
 ```
 
 ## DESCRIPTION
-The **Get-ClusterResource** cmdlet gets information about one or more resources in a failover cluster.
+The **Get-ClusterResource** cmdlet gets information about one or more resources in a failover
+cluster.
 
-To set a common property for a clustered resource, use this cmdlet to get the object for the clustered resource, and then set the appropriate property on that object directly.
-To get and set more specific information about a clustered resource, use this cmdlet with Get-ClusterParameter and Set-ClusterParameter.
+To set a common property for a clustered resource, use this cmdlet to get the object for the
+clustered resource, and then set the appropriate property on that object directly. To get and set
+more specific information about a clustered resource, use this cmdlet with Get-ClusterParameter and
+Set-ClusterParameter.
 
 ## EXAMPLES
 
@@ -54,14 +57,16 @@ This example displays detailed parameters for Cluster Disk 2 on the local cluste
 Get-ClusterGroup -Name FileServer1 | Get-ClusterResource
 ```
 
-This example lists cluster resources in cluster group named FileServer1, a clustered file server on the local cluster.
+This example lists cluster resources in cluster group named FileServer1, a clustered file server on
+the local cluster.
 
 ### Example 5
 ```powershell
 Get-ClusterResource -Name "Cluster Disk 2" | ForEach-Object -Process {$_.RestartDelay = 600}
 ```
 
-This example sets the common property RestartDelay for the Cluster Disk 2 resource on the local cluster to 600.
+This example sets the common property RestartDelay for the Cluster Disk 2 resource on the local
+cluster to 600.
 
 ### Example 6
 ```powershell
@@ -75,14 +80,15 @@ This example shows how to display the owner of a cluster pooled disk.
 Get-ClusterResource -Name *print-VM1 | Get-VM | Stop-VM -Verbose -Confirm:$false
 ```
 
-This example enumerates the cluster resources for wildcard characters *print-VM1 and stops the corresponding virtual machines without user confirmation..
-Verbose mode is turned on for details of the operation.
+This example enumerates the cluster resources for wildcard characters *print-VM1 and stops the
+corresponding virtual machines without user confirmation.. Verbose mode is turned on for details of
+the operation.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -142,7 +148,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

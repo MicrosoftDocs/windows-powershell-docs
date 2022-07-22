@@ -21,7 +21,8 @@ Get-ClusterGroup [[-Name] <StringCollection>] [-VMId <Guid>] [-InputObject <PSOb
 ```
 
 ## DESCRIPTION
-The **Get-ClusterGroup** cmdlet gets information about one or more clustered roles (resource groups) in a failover cluster.
+The **Get-ClusterGroup** cmdlet gets information about one or more clustered roles (resource groups)
+in a failover cluster.
 
 A resource group is the unit of failover.
 During failover, all resources in the resource group move together.
@@ -33,7 +34,8 @@ During failover, all resources in the resource group move together.
 Get-ClusterGroup
 ```
 
-This example lists the state and owner node of each clustered role, or resource group, in the local cluster.
+This example lists the state and owner node of each clustered role, or resource group, in the local
+cluster.
 
 ### Example 2
 ```powershell
@@ -47,14 +49,16 @@ This example lists the resources in Cluster Group on the local cluster.
 Get-ClusterNode -Name node1 | Get-ClusterGroup
 ```
 
-This example lists the clustered services and applications, or resource groups, that are currently owned by node1 in the local cluster.
+This example lists the clustered services and applications, or resource groups, that are currently
+owned by node1 in the local cluster.
 
 ### Example 4
 ```powershell
 Get-ClusterGroup -Name FileServer1 | Format-List -Property *
 ```
 
-This example displays the properties of a clustered file server, or resource group, called FileServer1, in the form of a list.
+This example displays the properties of a clustered file server, or resource group, called
+FileServer1, in the form of a list.
 
 ## PARAMETERS
 
@@ -120,7 +124,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

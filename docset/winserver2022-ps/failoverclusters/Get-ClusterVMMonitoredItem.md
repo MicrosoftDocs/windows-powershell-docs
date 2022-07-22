@@ -32,9 +32,10 @@ Get-ClusterVMMonitoredItem [-Wait <Int32>] [-InputObject <PSObject>] [-Cluster <
 ```
 
 ## DESCRIPTION
-The **Get-ClusterVMMonitoredItem** cmdlet gets the list of services and events currently being monitored in the virtual machine.
-If one of those services fails or one of the events occurs, then the system responds by taking an action based on the failover configuration for the virtual machine resource.
-For example, the configuration might specify that the virtual machine be restarted.
+The **Get-ClusterVMMonitoredItem** cmdlet gets the list of services and events currently being
+monitored in the virtual machine. If one of those services fails or one of the events occurs, then
+the system responds by taking an action based on the failover configuration for the virtual machine
+resource. For example, the configuration might specify that the virtual machine be restarted.
 
 ## EXAMPLES
 
@@ -43,7 +44,8 @@ For example, the configuration might specify that the virtual machine be restart
 Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
 ```
 
-This example returns the services and events being monitored in the virtual machine named vm1 on the cluster named Cluster1.
+This example returns the services and events being monitored in the virtual machine named vm1 on the
+cluster named Cluster1.
 
 ## PARAMETERS
 
@@ -64,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the cluster on which to run the cmdlet or the clustered virtual machine for which to retrieve the clustered virtual machine monitored item object.
+Specifies the cluster on which to run the cmdlet or the clustered virtual machine for which to
+retrieve the clustered virtual machine monitored item object.
 
 ```yaml
 Type: PSObject
@@ -94,8 +97,9 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachine
-Specifies the name of the clustered virtual machine on which to perform monitoring.
-When this parameter is specified, the cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
+Specifies the name of the clustered virtual machine on which to perform monitoring. When this
+parameter is specified, the cmdlet must be run on one of the host cluster nodes, or else the
+**Cluster** parameter must also be specified.
 
 ```yaml
 Type: String
@@ -110,9 +114,9 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-Specifies the time in seconds to wait for the cmdlet.
-If the *Wait* parameter is not specified, then the cmdlet waits for completion.
-If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
+the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+cmdlet returns without waiting.
 
 ```yaml
 Type: Int32
@@ -127,7 +131,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -24,9 +24,11 @@ Add-ClusterCheckpoint [[-ResourceName] <String>] [-CryptoCheckpointName <String>
 ## DESCRIPTION
 The **Add-ClusterCheckpoint** cmdlet adds a cryptographic key checkpoint or registry checkpoint for a resource.
 
-Checkpoints help provide failover support for applications that store configuration information locally instead of or in addition to storing information in the cluster configuration database.
-Applications might store information locally in two ways.
-One way is to store configuration information in the registry on the local server; another way is to use cryptographic keys on the local server.
+Checkpoints help provide failover support for applications that store configuration information
+locally instead of or in addition to storing information in the cluster configuration database.
+Applications might store information locally in two ways. One way is to store configuration
+information in the registry on the local server; another way is to use cryptographic keys on the
+local server.
 
 ## EXAMPLES
 
@@ -117,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the cluster on which to run the cmdlet or the cluster resource for which the checkpoint should be added.
+Specifies the cluster on which to run the cmdlet or the cluster resource for which the checkpoint
+should be added.
 
 ```yaml
 Type: PSObject
@@ -162,7 +165,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

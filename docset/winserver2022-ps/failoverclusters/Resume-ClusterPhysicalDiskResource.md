@@ -21,8 +21,8 @@ Resume-ClusterPhysicalDiskResource [[-Name] <String>] [-RecoveryPassword <String
 ```
 
 ## DESCRIPTION
-The **Resume-ClusterPhysicalDiskResource** cmdlet resumes activity on a failover cluster physical disk after it has been suspended, or paused, or both.
-When a physical disk is resumed, ...
+The **Resume-ClusterPhysicalDiskResource** cmdlet resumes activity on a failover cluster physical
+disk after it has been suspended, or paused, or both. When a physical disk is resumed, ...
 
 ## EXAMPLES
 
@@ -112,7 +112,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

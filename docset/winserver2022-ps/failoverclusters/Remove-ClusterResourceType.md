@@ -21,9 +21,10 @@ Remove-ClusterResourceType [[-Name] <StringCollection>] [-InputObject <PSObject>
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterResourceType** cmdlet removes a resource type from a failover cluster.
-A resource type is a class of resource, such as physical disk, network name, or virtual machine, that is organized by the failover cluster.
-After a resource type is removed from a failover cluster, resources of that type will not be able to be used in the cluster.
+The **Remove-ClusterResourceType** cmdlet removes a resource type from a failover cluster. A
+resource type is a class of resource, such as physical disk, network name, or virtual machine, that
+is organized by the failover cluster. After a resource type is removed from a failover cluster,
+resources of that type will not be able to be used in the cluster.
 
 ## EXAMPLES
 
@@ -114,7 +115,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

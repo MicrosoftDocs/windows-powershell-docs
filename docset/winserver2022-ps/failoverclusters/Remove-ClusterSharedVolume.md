@@ -21,8 +21,9 @@ Remove-ClusterSharedVolume [[-Name] <StringCollection>] [-InputObject <PSObject>
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterSharedVolume** cmdlet removes a volume from the Cluster Shared Volumes in a failover cluster, and places it in Available Storage in the cluster.
-After placing a volume in Available Storage, you can use the volume when you configure a new clustered role.
+The **Remove-ClusterSharedVolume** cmdlet removes a volume from the Cluster Shared Volumes in a
+failover cluster, and places it in Available Storage in the cluster. After placing a volume in
+Available Storage, you can use the volume when you configure a new clustered role.
 
 ## EXAMPLES
 
@@ -31,20 +32,22 @@ After placing a volume in Available Storage, you can use the volume when you con
 Remove-ClusterSharedVolume -Name "Cluster Disk 3"
 ```
 
-This example removes the CSV named Cluster Disk 3 from the Cluster Shared Volumes on the local cluster, and places it in Available Storage.
+This example removes the CSV named Cluster Disk 3 from the Cluster Shared Volumes on the local
+cluster, and places it in Available Storage.
 
 ### Example 2
 ```powershell
 Get-ClusterSharedVolume -Name "Cluster Disk 4" | Remove-ClusterSharedVolume
 ```
 
-This example removes the CSV named Cluster Disk 4 from the Cluster Shared Volumes on the local cluster, and places it in Available Storage.
+This example removes the CSV named Cluster Disk 4 from the Cluster Shared Volumes on the local
+cluster, and places it in Available Storage.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -120,7 +123,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

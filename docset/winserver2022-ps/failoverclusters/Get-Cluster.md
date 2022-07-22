@@ -28,7 +28,8 @@ Get-Cluster [-Domain <String>] [<CommonParameters>]
 ## DESCRIPTION
 The **Get-Cluster** cmdlet gets information about one or more failover clusters in a given domain.
 
-This cmdlet can obtain a variety of configuration and state information about a failover cluster, including the following items: 
+This cmdlet can obtain a variety of configuration and state information about a failover cluster,
+including the following items:
 
  -- State information about whether a backup is in progress. 
 
@@ -36,7 +37,8 @@ This cmdlet can obtain a variety of configuration and state information about a 
 
  -- Cross-network settings that are especially relevant for multi-site clusters.
 
-To set a common property for the cluster, use this cmdlet to get the cluster object and then set the appropriate property on that cluster object directly.
+To set a common property for the cluster, use this cmdlet to get the cluster object and then set the
+appropriate property on that cluster object directly.
 
 ## EXAMPLES
 
@@ -80,11 +82,14 @@ This example enables the Dynamic Quorum feature for the cluster.
 Get-Cluster | Format-List -Property Quarantine*
 ```
 
-This example shows default values for QuarantineThreshold and QuarantineDuration for the local cluster.
+This example shows default values for QuarantineThreshold and QuarantineDuration for the local
+cluster.
 
- -- QuarantineThreshold: This is the number of times that a node can become isolated in an hour before the cluster will be quarantined. This is set to 3 by default.
+ -- QuarantineThreshold: This is the number of times that a node can become isolated in an hour
+ before the cluster will be quarantined. This is set to 3 by default.
 
- --QuarantineDuration: This setting, set to 7200 seconds or 2 hours by default, controls how long a host will remain quarantined.
+ --QuarantineDuration: This setting, set to 7200 seconds or 2 hours by default, controls how long a
+ host will remain quarantined.
 
 ## PARAMETERS
 
@@ -119,7 +124,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

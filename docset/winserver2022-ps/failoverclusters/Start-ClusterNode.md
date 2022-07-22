@@ -21,17 +21,23 @@ Start-ClusterNode [[-Name] <StringCollection>] [-ForceQuorum] [-ClearQuarantine]
 ```
 
 ## DESCRIPTION
-The **Start-ClusterNode** cmdlet starts the Cluster service on a node in a failover cluster.
-If this is the first node started, then it will wait for other nodes to join.
-The cluster will begin to run when a quorum has formed.
+The **Start-ClusterNode** cmdlet starts the Cluster service on a node in a failover cluster. If this
+is the first node started, then it will wait for other nodes to join. The cluster will begin to run
+when a quorum has formed.
 
-This cmdlet with the **FixQuorum** parameter can be used to force quorum, that is, force the start of a cluster node even if quorum has not been achieved.
-When quorum is forced on a given node, the copy of the cluster configuration that is on that node will be treated as the authoritative copy and will be replicated to all other nodes.
-Therefore, forcing quorum should be considered a last resort, because some cluster configuration changes could be lost.
-The ability to force quorum can be especially useful in a multi-site cluster if the primary site, with the majority of nodes, becomes unavailable, and the secondary site, with a minority of nodes, need to be brought into service.
-Similarly, the ability to force quorum makes it possible to start a cluster that uses the Node and File Share Majority quorum option when none of the available cluster nodes contains a current copy of the cluster configuration.
+This cmdlet with the **FixQuorum** parameter can be used to force quorum, that is, force the start
+of a cluster node even if quorum has not been achieved. When quorum is forced on a given node, the
+copy of the cluster configuration that is on that node will be treated as the authoritative copy and
+will be replicated to all other nodes. Therefore, forcing quorum should be considered a last resort,
+because some cluster configuration changes could be lost. The ability to force quorum can be
+especially useful in a multi-site cluster if the primary site, with the majority of nodes, becomes
+unavailable, and the secondary site, with a minority of nodes, need to be brought into service.
+Similarly, the ability to force quorum makes it possible to start a cluster that uses the Node and
+File Share Majority quorum option when none of the available cluster nodes contains a current copy
+of the cluster configuration.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -54,9 +60,11 @@ This example starts the Cluster service on the node named node1 on the cluster n
 Start-ClusterNode -FixQuorum
 ```
 
-This example forces the local node and the local cluster to start, even if quorum has not been achieved.
-If quorum has not been achieved, then the copy of the cluster configuration that is on the local node will be treated as the authoritative copy and will be replicated to all other nodes.
-This cmdlet should be considered a last resort, because some cluster configuration changes could be lost, such as recovery options for cluster service.
+This example forces the local node and the local cluster to start, even if quorum has not been
+achieved. If quorum has not been achieved, then the copy of the cluster configuration that is on the
+local node will be treated as the authoritative copy and will be replicated to all other nodes. This
+cmdlet should be considered a last resort, because some cluster configuration changes could be lost,
+such as recovery options for cluster service.
 
 ## PARAMETERS
 
@@ -152,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreventQuorum
-Starts the node, but prevents it from achieving quorum and forming the cluster, to prevent a split situation with two competing instances of the cluster running.
+Starts the node, but prevents it from achieving quorum and forming the cluster, to prevent a split
+situation with two competing instances of the cluster running.
 
 ```yaml
 Type: SwitchParameter
@@ -167,9 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-Specifies the time in seconds to wait for the cmdlet.
-If the **Wait** parameter is not specified, then the cmdlet waits for completion.
-If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+cmdlet returns without waiting.
 
 ```yaml
 Type: Int32
@@ -184,7 +193,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

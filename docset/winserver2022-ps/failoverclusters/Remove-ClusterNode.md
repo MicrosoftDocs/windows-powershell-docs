@@ -21,11 +21,12 @@ Remove-ClusterNode [[-Name] <StringCollection>] [-Force] [-Wait <Int32>] [-Ignor
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterNode** cmdlet removes a node from a failover cluster.
-After the node is removed, the node no longer functions as part of the cluster unless the node is added back to the cluster.
+The **Remove-ClusterNode** cmdlet removes a node from a failover cluster. After the node is removed,
+the node no longer functions as part of the cluster unless the node is added back to the cluster.
 Removing a node is also called evicting a node from the cluster.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -108,9 +109,10 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreStorageConnectivityLoss
-Indicates that this cmdlet does not check whether the cluster node contains non-shared storage, if Storage Spaces Direct is enabled.
-If you do not specify this parameter, the cmdlet checks whether this node has any Storage Spaces Direct storage.
-If this cmdlet finds Storage Spaces Direct storage, it prompts you for confirmation before it removes the node.
+Indicates that this cmdlet does not check whether the cluster node contains non-shared storage, if
+Storage Spaces Direct is enabled. If you do not specify this parameter, the cmdlet checks whether
+this node has any Storage Spaces Direct storage. If this cmdlet finds Storage Spaces Direct storage,
+it prompts you for confirmation before it removes the node.
 
 ```yaml
 Type: SwitchParameter
@@ -188,7 +190,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -21,10 +21,12 @@ Clear-ClusterNode [[-Name] <StringCollection>] [-Force] [-Wait <Int32>] [-Cleanu
 ```
 
 ## DESCRIPTION
-The **Clear-ClusterNode** cmdlet clears the cluster configuration from a node that was evicted from a failover cluster.
-This cmdlet helps ensure that the failover cluster configuration has been completely removed from a node that was evicted.
+The **Clear-ClusterNode** cmdlet clears the cluster configuration from a node that was evicted from
+a failover cluster. This cmdlet helps ensure that the failover cluster configuration has been
+completely removed from a node that was evicted.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -33,14 +35,16 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 Clear-ClusterNode -Name node4 -Force
 ```
 
-This example removes cluster configuration information from the node named node4 without asking for user confirmation.
+This example removes cluster configuration information from the node named node4 without asking for
+user confirmation.
 
 ### Example 2
 ```powershell
 Clear-ClusterNode
 ```
 
-This example removes cluster configuration information from the local node after prompting for confirmation.
+This example removes cluster configuration information from the local node after prompting for
+confirmation.
 
 ## PARAMETERS
 
@@ -170,7 +174,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

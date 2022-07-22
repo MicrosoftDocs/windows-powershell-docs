@@ -11,7 +11,8 @@ title: Suspend-ClusterResource
 # Suspend-ClusterResource
 
 ## SYNOPSIS
-Turns on maintenance for a disk resource or CSV so that you can run a disk maintenance tool without triggering failover.
+Turns on maintenance for a disk resource or CSV so that you can run a disk maintenance tool without
+triggering failover.
 
 ## SYNTAX
 
@@ -21,11 +22,12 @@ Suspend-ClusterResource [[-Name] <String>] [-VolumeName <String>] [-RedirectedAc
 ```
 
 ## DESCRIPTION
-The **Suspend-ClusterResource** cmdlet turns on maintenance for a disk resource or Cluster Shared Volume (CSV) so that a disk maintenance tool can be run without triggering failover.
+The **Suspend-ClusterResource** cmdlet turns on maintenance for a disk resource or Cluster Shared
+Volume (CSV) so that a disk maintenance tool can be run without triggering failover.
 
-This cmdlet only applies to disks and CSVs.
-For Cluster Shared Volumes, turning on maintenance takes dependent resources offline, which interrupts client access.
-For other disks, Logical Unit Number (LUNs), in cluster storage, turning on maintenance leaves dependent resources online.
+This cmdlet only applies to disks and CSVs. For Cluster Shared Volumes, turning on maintenance takes
+dependent resources offline, which interrupts client access. For other disks, Logical Unit Number
+(LUNs), in cluster storage, turning on maintenance leaves dependent resources online.
 
 ## EXAMPLES
 
@@ -34,7 +36,8 @@ For other disks, Logical Unit Number (LUNs), in cluster storage, turning on main
 Suspend-ClusterResource -Name "Cluster Disk 2"
 ```
 
-This example turns on maintenance for CSV named Cluster Disk 2 so that you can run a disk maintenance tool without triggering failover.
+This example turns on maintenance for CSV named Cluster Disk 2 so that you can run a disk
+maintenance tool without triggering failover.
 
 ### Example 2: Turn on maintenance for multiple volumes
 ```powershell
@@ -122,8 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectedAccess
-Causes CSV access to the storage device to be redirected over the network through another cluster node.
-This parameter is only applicable to CSVs.
+Causes CSV access to the storage device to be redirected over the network through another cluster
+node. This parameter is only applicable to CSVs.
 
 ```yaml
 Type: SwitchParameter
@@ -138,9 +141,8 @@ Accept wildcard characters: False
 ```
 
 ### -VolumeName
-Specifies the name of the volume to suspend.
-This parameter is only applicable to CSVs.
-If this parameter is not specified, then the operation will be performed on all volumes on the CSV.
+Specifies the name of the volume to suspend. This parameter is only applicable to CSVs. If this
+parameter is not specified, then the operation will be performed on all volumes on the CSV.
 
 ```yaml
 Type: String
@@ -171,7 +173,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -11,7 +11,8 @@ title: Add-ClusterVMMonitoredItem
 # Add-ClusterVMMonitoredItem
 
 ## SYNOPSIS
-Configures monitoring for a service or an Event Tracing for Windows (ETW) event so that it is monitored on a virtual machine.
+Configures monitoring for a service or an Event Tracing for Windows (ETW) event so that it is
+monitored on a virtual machine.
 
 ## SYNTAX
 
@@ -37,9 +38,11 @@ Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>] [-
 ```
 
 ## DESCRIPTION
-The **Add-ClusterVMMonitoredItem** cmdlet configures monitoring for a service or an Event Tracing for Windows (ETW) event so that it is monitored on a virtual machine.
-If the service fails or the event occurs, then the system responds by taking an action based on the failover configuration for the virtual machine resource.
-For example, the configuration might specify that the virtual machine be restarted.
+The **Add-ClusterVMMonitoredItem** cmdlet configures monitoring for a service or an Event Tracing
+for Windows (ETW) event so that it is monitored on a virtual machine. If the service fails or the
+event occurs, then the system responds by taking an action based on the failover configuration for
+the virtual machine resource. For example, the configuration might specify that the virtual machine
+be restarted.
 
 ## EXAMPLES
 
@@ -129,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the cluster on which to run the cmdlet, the clustered virtual machine on which to configure monitoring, and the cluster virtual machine monitored item object to monitor.
+Specifies the cluster on which to run the cmdlet, the clustered virtual machine on which to
+configure monitoring, and the cluster virtual machine monitored item object to monitor.
 
 ```yaml
 Type: PSObject
@@ -144,8 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideServiceRecoveryActions
-Specifies that the cluster service will fix, by overriding, the service recovery actions in the event that it is not properly configured for monitoring.
-To be configured for monitoring the following conditions need to be met: 
+Specifies that the cluster service will fix, by overriding, the service recovery actions in the
+event that it is not properly configured for monitoring. To be configured for monitoring the
+following conditions need to be met:
 
 - None of the service recovery actions are set to Restart the computer. 
 
@@ -198,8 +203,9 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachine
-Specifies the name of the clustered virtual machine on which to perform monitoring.
-When this parameter is specified, the cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
+Specifies the name of the clustered virtual machine on which to perform monitoring. When this
+parameter is specified, the cmdlet must be run on one of the host cluster nodes, or else the
+**Cluster** parameter must also be specified.
 
 ```yaml
 Type: String
@@ -231,7 +237,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

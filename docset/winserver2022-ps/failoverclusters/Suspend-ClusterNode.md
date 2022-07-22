@@ -22,11 +22,13 @@ Suspend-ClusterNode [[-Name] <StringCollection>] [-Drain] [-ForceDrain] [-RetryD
 ```
 
 ## DESCRIPTION
-The **Suspend-ClusterNode** cmdlet suspends activity on a failover cluster node, that is, pauses the node.
-If you use the *Drain* parameter, clustered roles currently running on the node will be drained before the node is paused.
+The **Suspend-ClusterNode** cmdlet suspends activity on a failover cluster node, that is, pauses the
+node. If you use the *Drain* parameter, clustered roles currently running on the node will be
+drained before the node is paused.
 
-Pausing, or suspending, a node is usually done when applying software updates to the node.
-If you need to perform extensive diagnosis or maintenance on a cluster node, it might be more workable to stop, not pause, the Cluster service on that node.
+Pausing, or suspending, a node is usually done when applying software updates to the node. If you
+need to perform extensive diagnosis or maintenance on a cluster node, it might be more workable to
+stop, not pause, the Cluster service on that node.
 
 ## EXAMPLES
 
@@ -107,7 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -Drain
-Specifies that all of the workloads are gracefully moved to other nodes while maintaining the highest levels of availability and using the best placement logic.
+Specifies that all of the workloads are gracefully moved to other nodes while maintaining the
+highest levels of availability and using the best placement logic.
 
 ```yaml
 Type: SwitchParameter
@@ -122,9 +125,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDrain
-The -ForceDrain switch, used in conjunction with the -Drain switch, allows all the workloads to be safely moved to other nodes, while maintaining the highest levels of availability and using the best placement logic.
+The -ForceDrain switch, used in conjunction with the -Drain switch, allows all the workloads to be
+safely moved to other nodes, while maintaining the highest levels of availability and using the best
+placement logic.
 
-If some or all of the workloads can't be moved safely, any workload that failed will be stopped and moved to another node as a failed role. Thereafter, the node will be forced to pause.
+If some or all of the workloads can't be moved safely, any workload that failed will be stopped and
+moved to another node as a failed role. Thereafter, the node will be forced to pause.
 
 ```yaml
 Type: SwitchParameter
@@ -139,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the cluster node to suspend, with or without draining, or the cluster on which to run the cmdlet.
+Specifies the cluster node to suspend, with or without draining, or the cluster on which to run the
+cmdlet.
 
 ```yaml
 Type: PSObject
@@ -199,10 +206,10 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-Specifies the time in seconds to wait for the cmdlet.
-If the *Wait* parameter is not specified, then the call is initiated and the cmdlet returns without waiting.
-If specified with no value, then the cmdlet waits for completion.
-If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
+the call is initiated and the cmdlet returns without waiting. If specified with no value, then the
+cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the cmdlet
+returns without waiting.
 
 ```yaml
 Type: SwitchParameter
@@ -232,7 +239,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -16,12 +16,13 @@ This cmdlet is used to display the given rule and what type it is.
 ## SYNTAX
 
 ```
-Get-ClusterAffinityRule [[-Name] <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+Get-ClusterAffinityRule [[-Name] <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+[-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet is used to display the given rule and what type it is. If -Name is not specified, it will list all rules.
+This cmdlet is used to display the given rule and what type it is. If -Name is not specified, it
+will list all rules.
 
 ## EXAMPLES
 
@@ -108,7 +109,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

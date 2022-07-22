@@ -21,8 +21,10 @@ Update-ClusterVirtualMachineConfiguration [[-Name] <String>] [-VMId <Guid>] [-In
 ```
 
 ## DESCRIPTION
-The **Update-ClusterVirtualMachineConfiguration** cmdlet refreshes the configuration of a clustered virtual machine within a failover cluster.
-Use this cmdlet if a hardware device, such as a network adapter, is to be added or removed or the hardware configuration settings, such as the setting for virtual memory, are being changed for a clustered virtual machine.
+The **Update-ClusterVirtualMachineConfiguration** cmdlet refreshes the configuration of a clustered
+virtual machine within a failover cluster. Use this cmdlet if a hardware device, such as a network
+adapter, is to be added or removed or the hardware configuration settings, such as the setting for
+virtual memory, are being changed for a clustered virtual machine.
 
 ## EXAMPLES
 
@@ -31,14 +33,16 @@ Use this cmdlet if a hardware device, such as a network adapter, is to be added 
 Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM1"
 ```
 
-This example refreshes the clustered virtual machine named Virtual Machine Configuration VM1 on the local cluster.
+This example refreshes the clustered virtual machine named Virtual Machine Configuration VM1 on the
+local cluster.
 
 ### Example 2: Refresh a clustered virtual machine on a cluster
 ```powershell
 Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM2" -Cluster cluster1
 ```
 
-This example refreshes the clustered virtual machine named Virtual Machine Configuration VM2 on the cluster named cluster1.
+This example refreshes the clustered virtual machine named Virtual Machine Configuration VM2 on the
+cluster named cluster1.
 
 ## PARAMETERS
 
@@ -104,7 +108,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

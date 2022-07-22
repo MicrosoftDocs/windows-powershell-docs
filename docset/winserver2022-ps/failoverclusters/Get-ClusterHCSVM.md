@@ -38,7 +38,8 @@ prompt. You can continue to work in the session while the job completes. To mana
 `*-Job` cmdlets. To get the job results, use the
 [Receive-Job](/powershell/module/microsoft.powershell.core/receive-job) cmdlet.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
+For more information about Windows PowerShell background jobs, see
+[about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
 
 ```yaml
 Type: SwitchParameter
@@ -112,7 +113,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

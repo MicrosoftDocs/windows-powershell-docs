@@ -54,7 +54,8 @@ New-ClusterNameAccount -Name "cluster27" -Domain "production.contoso.com" -Crede
 The first command prompts you for credentials, and then stores them in the **$Credential** variable.
 
 The second command creates a cluster name account for the current cluster in the specified domain.
-The command supplies the credentials stored in $Credential to access Active Directory Domain Services.
+The command supplies the credentials stored in $Credential to access Active Directory Domain
+Services.
 
 ## PARAMETERS
 
@@ -75,9 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credentials
-Specifies the credentials that this cmdlet uses when it connects to Active Directory Domain Services.
-To obtain credentials, use the **Get-Credential** cmdlet.
-For more information, type `Get-Help Get-Credential`.
+Specifies the credentials that this cmdlet uses when it connects to Active Directory Domain
+Services. To obtain credentials, use the **Get-Credential** cmdlet. For more information, type
+`Get-Help Get-Credential`.
 
 ```yaml
 Type: PSCredential
@@ -104,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-Specifies the Active Directory Domain Services domain in which this cmdlet creates a cluster name account.
+Specifies the Active Directory Domain Services domain in which this cmdlet creates a cluster name
+account.
 
 ```yaml
 Type: String
@@ -198,7 +200,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

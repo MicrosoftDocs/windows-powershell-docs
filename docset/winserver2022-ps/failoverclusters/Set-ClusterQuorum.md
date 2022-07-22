@@ -23,10 +23,11 @@ Set-ClusterQuorum [-DiskOnly <String>] [-NoWitness] [-DiskWitness <String>] [-Fi
 ```
 
 ## DESCRIPTION
-The **Set-ClusterQuorum** cmdlet configures quorum options for a failover cluster.
-The quorum configuration in a failover cluster determines the number of failures that the cluster can sustain.
-If an additional failure occurs, the cluster must stop running.
-The relevant failures in this context are failures of nodes or, in some cases, of a disk witness (which contains a copy of the cluster configuration) or file share witness.
+The **Set-ClusterQuorum** cmdlet configures quorum options for a failover cluster. The quorum
+configuration in a failover cluster determines the number of failures that the cluster can sustain.
+If an additional failure occurs, the cluster must stop running. The relevant failures in this
+context are failures of nodes or, in some cases, of a disk witness (which contains a copy of the
+cluster configuration) or file share witness.
 
 ## EXAMPLES
 
@@ -42,14 +43,16 @@ This example changes the quorum configuration to Node Majority on the local clus
 Set-ClusterQuorum -DiskWitness "Cluster Disk 7"
 ```
 
-This example changes the quorum configuration to Node and Disk Majority on the local cluster, using the disk resource named Cluster Disk 7 for the disk witness.
+This example changes the quorum configuration to Node and Disk Majority on the local cluster, using
+the disk resource named Cluster Disk 7 for the disk witness.
 
 ### Example 3
 ```powershell
 Set-ClusterQuorum -NodeAndFileShareMajority \\fileserver\fsw
 ```
 
-This example changes the quorum configuration to Node and File Share Majority on the local cluster, using the disk resource at \\\\fileserver\fsw for the file share witness.
+This example changes the quorum configuration to Node and File Share Majority on the local cluster,
+using the disk resource at \\\\fileserver\fsw for the file share witness.
 
 ### Example 4
 ```powershell
@@ -104,8 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -135,11 +138,11 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies the user account credentials to use to perform this task.
-The default credentials are the credentials of the currently logged on user.
+Specifies the user account credentials to use to perform this task. The default credentials are the
+credentials of the currently logged on user.
 
-You can also create a **PSCredential** object by using a script or by using the `Get-Credential` cmdlet.
-You can then set the **Credential** parameter to the **PSCredential** object.
+You can also create a **PSCredential** object by using a script or by using the `Get-Credential`
+cmdlet. You can then set the **Credential** parameter to the **PSCredential** object.
 
 ```yaml
 Type: PSCredential
@@ -247,7 +250,8 @@ Accept wildcard characters: False
 ```
 
 ### -SASToken
-Specifies the Shared Access Security (SAS) token to be used by the failover cluster to access the Cloud Witness
+Specifies the Shared Access Security (SAS) token to be used by the failover cluster to access the
+Cloud Witness
 
 ```yaml
 Type: String
@@ -262,7 +266,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

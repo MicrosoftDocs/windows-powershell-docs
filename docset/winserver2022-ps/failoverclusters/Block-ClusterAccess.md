@@ -21,8 +21,10 @@ Block-ClusterAccess [-User] <StringCollection> [-InputObject <PSObject>] [-Clust
 ```
 
 ## DESCRIPTION
-The **Block-ClusterAccess** cmdlet prevents the specified user or users from accessing a failover cluster.
-If you do not want to completely block access and instead want to limit a user to using Windows PowerShell® to view cluster settings (not change settings), then use the **Grant-ClusterAccess** cmdlet with the **Readonly** parameter.
+The **Block-ClusterAccess** cmdlet prevents the specified user or users from accessing a failover
+cluster. If you do not want to completely block access and instead want to limit a user to using
+Windows PowerShell® to view cluster settings (not change settings), then use the
+**Grant-ClusterAccess** cmdlet with the **Readonly** parameter.
 
 ## EXAMPLES
 
@@ -31,13 +33,14 @@ If you do not want to completely block access and instead want to limit a user t
 Block-ClusterAccess -User contoso\johnj99
 ```
 
-This example prevents the user named johnj99 on the contoso domain from gaining access to the local cluster.
+This example prevents the user named johnj99 on the contoso domain from gaining access to the local
+cluster.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -113,7 +116,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

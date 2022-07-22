@@ -31,28 +31,30 @@ The **Add-ClusteriSCSITargetServerRole** cmdlet creates a highly available iSCSI
 Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5"
 ```
 
-This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns a default name.
+This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns a default
+name.
 
 ### Example 2
 ```powershell
 Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5" -Name MyiSCSITarget
 ```
 
-This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns the name MyiSCSITarget.
+This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns the name
+MyiSCSITarget.
 
 ### Example 3
 ```powershell
 Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5" -Wait 0
 ```
 
-This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns a default name.
-The cmdlet completes without waiting for all resources to come online.
+This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns a default
+name. The cmdlet completes without waiting for all resources to come online.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -67,8 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreNetwork
-Specifies one or more networks to ignore when running the cmdlet.
-Networks with DHCP enabled are always included, but other networks need a static address to be specified using the **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
+Specifies one or more networks to ignore when running the cmdlet. Networks with DHCP enabled are
+always included, but other networks need a static address to be specified using the
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -113,8 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -StaticAddress
-Specifies one or more static addresses to use when running the cmdlet.
-Networks with DHCP enabled are always included, but other networks need a static address to be specified using the **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
+Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
+are always included, but other networks need a static address to be specified using the
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -144,9 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-Specifies the time in seconds to wait for the cmdlet.
-If the **Wait** parameter is not specified, then the cmdlet waits for completion.
-If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+cmdlet returns without waiting.
 
 ```yaml
 Type: Int32
@@ -161,7 +165,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

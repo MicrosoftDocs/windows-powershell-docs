@@ -21,11 +21,13 @@ Remove-ClusterResourceDependency [[-Resource] <String>] [[-Provider] <String>] [
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterResourceDependency** cmdlet removes a dependency between two resources in a clustered role within a failover cluster.
+The **Remove-ClusterResourceDependency** cmdlet removes a dependency between two resources in a
+clustered role within a failover cluster.
 
-A dependent resource is brought online after the resources on which it depends.
-Likewise, a dependent resource is taken offline before the resources on which it depends.
-If no dependency is configured between clustered resources, then the order in which they are brought online or taken offline might vary.
+A dependent resource is brought online after the resources on which it depends. Likewise, a
+dependent resource is taken offline before the resources on which it depends. If no dependency is
+configured between clustered resources, then the order in which they are brought online or taken
+offline might vary.
 
 ## EXAMPLES
 
@@ -34,7 +36,8 @@ If no dependency is configured between clustered resources, then the order in wh
 Remove-ClusterResourceDependency -Resource cluster1FS -Provider "IP Address 2001:4898:9:2:: (3)"
 ```
 
-This example removes the dependency between cluster resource cluster1FS and the resource named IP Address 2001:4898:9:2:: (3).
+This example removes the dependency between cluster resource cluster1FS and the resource named IP
+Address 2001:4898:9:2:: (3).
 
 ### Example 2
 ```powershell
@@ -144,7 +147,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

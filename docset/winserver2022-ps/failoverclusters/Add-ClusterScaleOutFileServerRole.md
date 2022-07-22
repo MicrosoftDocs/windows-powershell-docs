@@ -16,18 +16,20 @@ Creates a clustered file server for scale-out application data.
 ## SYNTAX
 
 ```
-Add-ClusterScaleOutFileServerRole [[-Name] <String>] [-Wait <Int32>] [-Infrastructure] [-InputObject <PSObject>]
- [-Cluster <String>] [<CommonParameters>]
+Add-ClusterScaleOutFileServerRole [[-Name] <String>] [-Wait <Int32>] [-Infrastructure]
+[-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-ClusterScaleOutFileServerRole** cmdlet creates a clustered file server for scale-out application data.
-A file server for scale-out application data provides storage for applications or virtual machines that leave files open for extended periods of time.
-Client connections are distributed across nodes for better throughput.
-This type of file server supports the Server Message Block (SMB) protocol.
-It does not support the Network File System (NFS) protocol, or certain role services such as File Server Resource Manager (FSRM) or Distributed File System (DFS) Replication.
+The **Add-ClusterScaleOutFileServerRole** cmdlet creates a clustered file server for scale-out
+application data. A file server for scale-out application data provides storage for applications or
+virtual machines that leave files open for extended periods of time. Client connections are
+distributed across nodes for better throughput. This type of file server supports the Server Message
+Block (SMB) protocol. It does not support the Network File System (NFS) protocol, or certain role
+services such as File Server Resource Manager (FSRM) or Distributed File System (DFS) Replication.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -50,7 +52,12 @@ The cmdlet completes without waiting for all resources to come online.
 Add-ClusterScaleOutFileServerRole -Cluster MyCluster -Infrastructure -Name InfraSOFSName
 ```
 
-This example creates an infrastructure file server scale-out file server role. It automatically creates a single namespace share for the CSV drive (such as `\\InfraSOFSName\Volume1`).  In hyper-converged configurations, an infrastructure scale-out file server allows an SMB client (Hyper-V host) to communicate with guaranteed continuous availability with the infrastructure scale-out SMB file server. There can be at most only one infrastructure scale-out file server cluster role on a failover cluster.
+This example creates an infrastructure file server scale-out file server role. It automatically
+creates a single namespace share for the CSV drive (such as `\\InfraSOFSName\Volume1`). In
+hyper-converged configurations, an infrastructure scale-out file server allows an SMB client
+(Hyper-V host) to communicate with guaranteed continuous availability with the infrastructure
+scale-out SMB file server. There can be at most only one infrastructure scale-out file server
+cluster role on a failover cluster.
 
 ## PARAMETERS
 
@@ -133,7 +140,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

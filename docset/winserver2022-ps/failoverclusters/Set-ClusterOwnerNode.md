@@ -11,7 +11,8 @@ title: Set-ClusterOwnerNode
 # Set-ClusterOwnerNode
 
 ## SYNOPSIS
-Specifies which nodes can own a resource in a failover cluster or specifies the order of preference among owner nodes for a clustered role, or resource group.
+Specifies which nodes can own a resource in a failover cluster or specifies the order of preference
+among owner nodes for a clustered role, or resource group.
 
 ## SYNTAX
 
@@ -21,8 +22,10 @@ Set-ClusterOwnerNode [-Resource <String>] [-Group <String>] -Owners <StringColle
 ```
 
 ## DESCRIPTION
-The **Set-ClusterOwnerNode** cmdlet specifies which nodes can own a resource in a failover cluster or specifies the order of preference among owner nodes for a clustered role, or resource group.
-The settings that control the possible or preferred owners affect the way the cluster responds to the failure of a resource or a clustered role.
+The **Set-ClusterOwnerNode** cmdlet specifies which nodes can own a resource in a failover cluster
+or specifies the order of preference among owner nodes for a clustered role, or resource group. The
+settings that control the possible or preferred owners affect the way the cluster responds to the
+failure of a resource or a clustered role.
 
 ## EXAMPLES
 
@@ -31,14 +34,16 @@ The settings that control the possible or preferred owners affect the way the cl
 Get-ClusterResource -Name "Cluster Disk 3" | Set-ClusterOwnerNode -Owners node1,node2
 ```
 
-This example sets the possible owners for cluster named Cluster Disk 3 on the local cluster to the nodes named node1 and node2.
+This example sets the possible owners for cluster named Cluster Disk 3 on the local cluster to the
+nodes named node1 and node2.
 
 ### Example 2
 ```powershell
 Set-ClusterOwnerNode -Group cluster12FS -Owners node3,node2
 ```
 
-This example sets the preferred owners for the clustered service named cluster12FS to the node named node3 followed by the node named node2 on the local cluster.
+This example sets the preferred owners for the clustered service named cluster12FS to the node named
+node3 followed by the node named node2 on the local cluster.
 
 ## PARAMETERS
 
@@ -89,9 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -Owners
-Specifies the list of owner nodes.
-If this is for a cluster group, then the sorted list of nodes is the preferred owners for this cluster group.
-If this is for a cluster resource, then the list is for the possible owners for this cluster resource.
+Specifies the list of owner nodes. If this is for a cluster group, then the sorted list of nodes is
+the preferred owners for this cluster group. If this is for a cluster resource, then the list is for
+the possible owners for this cluster resource.
 
 ```yaml
 Type: StringCollection
@@ -121,7 +126,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

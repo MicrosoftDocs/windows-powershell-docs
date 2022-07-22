@@ -33,15 +33,18 @@ Set-ClusterParameter [-InputObject <PSObject>] [[-Multiple] <Hashtable>] [-Creat
 ```
 
 ## DESCRIPTION
-The **Set-ClusterParameter** cmdlet controls specific properties of an object in a failover cluster, such as a resource, a group, or a network. 
+The **Set-ClusterParameter** cmdlet controls specific properties of an object in a failover cluster,
+such as a resource, a group, or a network.
 
- -- For a disk resource, you can set the disk signature or GUID of a disk, and turn maintenance on or off for that disk. 
+ -- For a disk resource, you can set the disk signature or GUID of a disk, and turn maintenance on
+ or off for that disk.
 
- -- For a Network Name resource, you can set DNS-related information about the resource. 
+ -- For a Network Name resource, you can set DNS-related information about the resource.
 
  -- For an IP address resource, you can set DHCP-related information about the IP Address resource. 
 
- -- For resources used by virtual machines, you can set details about the settings for the virtual machines.
+ -- For resources used by virtual machines, you can set details about the settings for the virtual
+ machines.
 
 ## EXAMPLES
 
@@ -50,7 +53,8 @@ The **Set-ClusterParameter** cmdlet controls specific properties of an object in
 Get-ClusterResource -Name cluster1FS | Set-ClusterParameter -Name HostRecordTTL -Value 300
 ```
 
-This example configures the clustered resource called cluster1FS on the local cluster, by setting the value of HostRecordTTL to 300.
+This example configures the clustered resource called cluster1FS on the local cluster, by setting
+the value of HostRecordTTL to 300.
 
 ### Example 2
 ```powershell
@@ -178,7 +182,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

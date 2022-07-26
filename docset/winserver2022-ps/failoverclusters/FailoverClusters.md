@@ -5,7 +5,7 @@ Help Version: 5.0.3.3
 Locale: en-US
 Module Guid: cc3e946b-9141-48c2-95d8-d9e56594416a
 Module Name: FailoverClusters
-ms.date: 06/30/2021
+ms.date: 07/26/2022
 title: FailoverClusters
 ---
 
@@ -39,7 +39,7 @@ Adds an empty resource group to the failover cluster configuration, in preparati
 Adds a dependency to a cluster set.
 
 ### [Add-ClusterGroupToAffinityRule](./Add-ClusterGroupToAffinityRule.md)
-{{ Fill in the Synopsis }}
+This cmdlet is used to add either a VM role or a group name to a cluster affinity rule.
 
 ### [Add-ClusterGroupToSet](./Add-ClusterGroupToSet.md)
 Adds a group to a set.
@@ -69,10 +69,10 @@ Creates a clustered file server for scale-out application data.
 Makes a volume available in Cluster Shared Volumes in a failover cluster.
 
 ### [Add-ClusterSharedVolumeToAffinityRule](./Add-ClusterSharedVolumeToAffinityRule.md)
-{{ Fill in the Synopsis }}
+Adds a Cluster Shared Volume (CSV) to an existing Affinity Rule.
 
 ### [Add-ClusterStorageNode](./Add-ClusterStorageNode.md)
-{{ Fill in the Synopsis }}
+Add a storage node to a failover cluster.
 
 ### [Add-ClusterVirtualMachineRole](./Add-ClusterVirtualMachineRole.md)
 Creates a clustered virtual machine, that is, a virtual machine that can be failed over if necessary to a different server in the failover cluster.
@@ -105,7 +105,7 @@ Gets information about one or more failover clusters in a given domain.
 Gets information about permissions that control access to a failover cluster.
 
 ### [Get-ClusterAffinityRule](./Get-ClusterAffinityRule.md)
-{{ Fill in the Synopsis }}
+This cmdlet is used to display the given rule and what type it is.
 
 ### [Get-ClusterAvailableDisk](./Get-ClusterAvailableDisk.md)
 Gets information about the disks that can support Failover Clustering and are visible to all nodes, but are not yet part of the set of clustered disks.
@@ -147,7 +147,8 @@ Gets information about one or more network adapters in a failover cluster.
 Gets information about one or more nodes, or servers, in a failover cluster.
 
 ### [Get-ClusterNodeSupportedVersion](./Get-ClusterNodeSupportedVersion.md)
-{{ Fill in the Synopsis }}
+Gets the supported cluster functional level, and upgrade version available for the
+failover cluster.
 
 ### [Get-ClusterOwnerNode](./Get-ClusterOwnerNode.md)
 Gets information about which nodes can own a resource in a failover cluster or information about the order of preference among owner nodes for a clustered role.
@@ -180,7 +181,7 @@ Gets information about Cluster Shared Volumes in a failover cluster.
 Gets the state of Cluster Shared Volumes in a cluster.
 
 ### [Get-ClusterStorageNode](./Get-ClusterStorageNode.md)
-{{ Fill in the Synopsis }}
+Gets information about one or more storage nodes in a failover cluster.
 
 ### [Get-ClusterStorageSpacesDirect](./Get-ClusterStorageSpacesDirect.md)
 Gets the S2D settings from a cluster.
@@ -216,10 +217,10 @@ Moves the ownership of a clustered virtual machine to a different node.
 Creates a new failover cluster.
 
 ### [New-ClusterAffinityRule](./New-ClusterAffinityRule.md)
-{{ Fill in the Synopsis }}
+Creates new affinity rules.  
 
 ### [New-ClusterAvailabilitySet](./New-ClusterAvailabilitySet.md)
-{{ Fill in the Synopsis }}
+Create a new cluster availability set. 
 
 ### [New-ClusterFaultDomain](./New-ClusterFaultDomain.md)
 Creates a fault domain in the cluster.
@@ -240,7 +241,7 @@ Destroys an existing failover cluster.
 Removes a user from the access list on the cluster.
 
 ### [Remove-ClusterGroupFromAffinityRule](./Remove-ClusterGroupFromAffinityRule.md)
-{{ Fill in the Synopsis }}
+Removes a cluster group from an affinity rule.
 
 ### [Remove-ClusterCheckpoint](./Remove-ClusterCheckpoint.md)
 Removes a cryptographic key checkpoint or registry checkpoint for a resource.
@@ -264,7 +265,7 @@ Removes a dependency from a group set.
 Removes an instance of an HCS VM resource.
 
 ### [Remove-ClusterNameAccount](./Remove-ClusterNameAccount.md)
-{{ Fill in the Synopsis }}
+Removes a cluster name account from the cluster configuration.
 
 ### [Remove-ClusterNode](./Remove-ClusterNode.md)
 Removes a node from a failover cluster.
@@ -282,16 +283,16 @@ Removes a resource type from a failover cluster.
 Removes a volume from the Cluster Shared Volumes in a failover cluster, and places it in Available Storage in the cluster.
 
 ### [Remove-ClusterSharedVolumeFromAffinityRule](./Remove-ClusterSharedVolumeFromAffinityRule.md)
-{{ Fill in the Synopsis }}
+Remove a cluster shared volume from an affinity rule.
 
 ### [Remove-ClusterStorageNode](./Remove-ClusterStorageNode.md)
-{{ Fill in the Synopsis }}
+Removes a storage node from a failover cluster.
 
 ### [Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
 Removes monitoring of a service or event that is currently being monitored on a virtual machine.
 
 ### [Rename-ClusterSharedVolume](./Rename-ClusterSharedVolume.md)
-{{ Fill in the Synopsis }}
+Renames a cluster shared volume.
 
 ### [Repair-ClusterStorageSpacesDirect](./Repair-ClusterStorageSpacesDirect.md)
 Repairs S2D disks.
@@ -303,13 +304,13 @@ Resets the Application Critical state of a virtual machine, so that the virtual 
 Resumes a node from the paused state or brings back drained workloads to the node or both.
 
 ### [Resume-ClusterPhysicalDiskResource](./Resume-ClusterPhysicalDiskResource.md)
-{{ Fill in the Synopsis }}
+Resumes a physical disk resource within a failover cluster.
 
 ### [Resume-ClusterResource](./Resume-ClusterResource.md)
 Turns off maintenance for a disk resource or Cluster Shared Volume within a failover cluster.
 
 ### [Set-ClusterAffinityRule](./Set-ClusterAffinityRule.md)
-{{ Fill in the Synopsis }}
+Enabled or Disable an affinity rule, and update the rule type.
 
 ### [Set-ClusterFaultDomain](./Set-ClusterFaultDomain.md)
 Update an existing cluster fault domain.
@@ -357,7 +358,7 @@ Starts the Cluster service on a node in a failover cluster.
 {{ Fill in the Synopsis }}
 
 ### [Start-ClusterPhysicalDiskResource](./Start-ClusterPhysicalDiskResource.md)
-{{ Fill in the Synopsis }}
+Starts a physical disk resource within a failover cluster.
 
 ### [Start-ClusterResource](./Start-ClusterResource.md)
 Brings a resource online in a failover cluster.

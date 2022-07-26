@@ -2,7 +2,7 @@
 description: Remove-ClusterNameAccount
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 08/31/2021
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clusternameaccount?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterNameAccount
@@ -21,7 +21,7 @@ Remove-ClusterNameAccount [-DeleteComputerObjects] [-InputObject <PSObject>] [-C
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterNameAccount** cmdlet removes a cluster name account from cluster configuration.
+The `Remove-ClusterNameAccount` cmdlet removes a cluster name account from cluster configuration.
 A cluster name account is also referred to as a cluster name object (CNO).
 
 The cluster name resource must be offline for the command to succeed.

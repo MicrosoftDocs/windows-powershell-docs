@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 07/07/2021
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/new-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Cluster
@@ -22,7 +22,7 @@ New-Cluster [-Name] <String> [-Node <StringCollection>] [-StaticAddress <StringC
 ```
 
 ## DESCRIPTION
-The **New-Cluster** cmdlet creates a new failover cluster. Before creating a cluster, the hardware
+The `New-Cluster` cmdlet creates a new failover cluster. Before creating a cluster, the hardware
 (servers, networks, and storage) must be connected, and the validation tests must be run.
 
 Use Test-Cluster to run the validation tests. The tests will confirm that the hardware and settings
@@ -44,8 +44,8 @@ New-Cluster -Name cluster1 -Node node1,node2 -NoStorage
 ```
 
 This example creates a two-node cluster named cluster1. The cluster will not have any clustered
-storage, or disk resources. Storage can be added using the **Get-ClusterAvailableDisk** cmdlet with
-the **Add-ClusterDisk** cmdlet.
+storage, or disk resources. Storage can be added using the `Get-ClusterAvailableDisk` cmdlet with
+the `Add-ClusterDisk` cmdlet.
 
 ### Example 3
 ```powershell
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ### -NoStorage
 Specifies that shared storage is ignored during the cluster creation. The cluster created at the end
 of the operation will not have shared storage. Shared storage can later be added by piping the
-**ClusterDiskInfo** object from the **Get-ClusterAvailableDisk** cmdlet into the **Add-ClusterDisk**
+**ClusterDiskInfo** object from the `Get-ClusterAvailableDisk` cmdlet into the `Add-ClusterDisk`
 cmdlet.
 
 ```yaml

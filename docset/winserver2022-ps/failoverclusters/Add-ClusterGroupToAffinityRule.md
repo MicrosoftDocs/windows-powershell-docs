@@ -2,7 +2,7 @@
 description: Add-ClusterGroupToAffinityRule
 external help file: ClusterAffinityRule.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 08/31/2021
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergrouptoaffinityrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGroupToAffinityRule
@@ -29,8 +29,8 @@ Add-ClusterGroupToAffinityRule -InputObject <CimInstance[]> [-Groups] <String[]>
 
 ## DESCRIPTION
 This cmdlet is used to add either a VM role or a group name to a cluster affinity rule. When using
-this cmdlet we can use both **-Name** and **-Groups**. The former is used to choose the desired
-affinity rule and the latter is for the groups to be added.
+this cmdlet we can use both **Name** and **Groups** parameters. The former is used to choose the
+desired affinity rule and the latter is for the groups to be added.
 
 ## EXAMPLES
 

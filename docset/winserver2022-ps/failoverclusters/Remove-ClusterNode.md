@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterNode
@@ -21,7 +21,7 @@ Remove-ClusterNode [[-Name] <StringCollection>] [-Force] [-Wait <Int32>] [-Ignor
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterNode** cmdlet removes a node from a failover cluster. After the node is removed,
+The `Remove-ClusterNode` cmdlet removes a node from a failover cluster. After the node is removed,
 the node no longer functions as part of the cluster unless the node is added back to the cluster.
 Removing a node is also called evicting a node from the cluster.
 

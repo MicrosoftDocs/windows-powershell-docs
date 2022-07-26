@@ -2,7 +2,7 @@
 description: Set-ClusterStorageNode
 external help file: ClusterStorageNode.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 08/31/2021
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterstoragenode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterStorageNode

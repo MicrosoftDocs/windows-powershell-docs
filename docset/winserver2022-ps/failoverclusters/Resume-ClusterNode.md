@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/resume-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Resume-ClusterNode
@@ -21,7 +21,7 @@ Resume-ClusterNode [[-Name] <StringCollection>] [[-Failback] <ResumeClusterNodeF
 ```
 
 ## DESCRIPTION
-The **Resume-ClusterNode** cmdlet resumes activity on a failover cluster node after it has been
+The `Resume-ClusterNode` cmdlet resumes activity on a failover cluster node after it has been
 suspended, or paused, or brings back drained workloads to the node, or both. When a node is resumed,
 clustered roles that were drained from the node are returned to it, and clustered roles or resources
 that are currently offline can be brought online on that node.

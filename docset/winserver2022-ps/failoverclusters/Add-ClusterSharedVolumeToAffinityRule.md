@@ -2,7 +2,7 @@
 description: Add-ClusterSharedVolumeToAffinityRule
 external help file: ClusterAffinityRule.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/14/2021
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustersharedvolumetoaffinityrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterSharedVolumeToAffinityRule

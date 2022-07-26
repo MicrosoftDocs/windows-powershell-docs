@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterparameter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterParameter
@@ -33,7 +33,7 @@ Set-ClusterParameter [-InputObject <PSObject>] [[-Multiple] <Hashtable>] [-Creat
 ```
 
 ## DESCRIPTION
-The **Set-ClusterParameter** cmdlet controls specific properties of an object in a failover cluster,
+The `Set-ClusterParameter` cmdlet controls specific properties of an object in a failover cluster,
 such as a resource, a group, or a network.
 
  -- For a disk resource, you can set the disk signature or GUID of a disk, and turn maintenance on

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/clear-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-ClusterNode
@@ -21,7 +21,7 @@ Clear-ClusterNode [[-Name] <StringCollection>] [-Force] [-Wait <Int32>] [-Cleanu
 ```
 
 ## DESCRIPTION
-The **Clear-ClusterNode** cmdlet clears the cluster configuration from a node that was evicted from
+The `Clear-ClusterNode` cmdlet clears the cluster configuration from a node that was evicted from
 a failover cluster. This cmdlet helps ensure that the failover cluster configuration has been
 completely removed from a node that was evicted.
 

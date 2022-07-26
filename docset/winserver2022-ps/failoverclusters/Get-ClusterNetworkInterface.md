@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternetworkinterface?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterNetworkInterface
@@ -21,7 +21,7 @@ Get-ClusterNetworkInterface [[-Name] <StringCollection>] [-Node <StringCollectio
 ```
 
 ## DESCRIPTION
-The **Get-ClusterNetworkInterface** cmdlet gets information about one or more network adapters in a
+The `Get-ClusterNetworkInterface` cmdlet gets information about one or more network adapters in a
 failover cluster. A failover cluster requires network connectivity among nodes and between clients
 and nodes.
 

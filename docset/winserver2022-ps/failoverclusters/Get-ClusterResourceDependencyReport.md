@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterresourcedependencyreport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterResourceDependencyReport
@@ -21,7 +21,7 @@ Get-ClusterResourceDependencyReport [-Resource <String>] [-Group <String>] [-Inp
 ```
 
 ## DESCRIPTION
-The **Get-ClusterResourceDependencyReport** cmdlet generates a report that lists the dependencies
+The `Get-ClusterResourceDependencyReport` cmdlet generates a report that lists the dependencies
 between resources in a failover cluster.
 
 The report has a filename extension of MHT. For convenience in storing and finding the report, you

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clusterscaleoutfileserverrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterScaleOutFileServerRole
@@ -21,7 +21,7 @@ Add-ClusterScaleOutFileServerRole [[-Name] <String>] [-Wait <Int32>] [-Infrastru
 ```
 
 ## DESCRIPTION
-The **Add-ClusterScaleOutFileServerRole** cmdlet creates a clustered file server for scale-out
+The `Add-ClusterScaleOutFileServerRole` cmdlet creates a clustered file server for scale-out
 application data. A file server for scale-out application data provides storage for applications or
 virtual machines that leave files open for extended periods of time. Client connections are
 distributed across nodes for better throughput. This type of file server supports the Server Message

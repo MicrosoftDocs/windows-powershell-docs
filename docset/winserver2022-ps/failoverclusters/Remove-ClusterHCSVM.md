@@ -83,13 +83,11 @@ Accept wildcard characters: False
 
 ### -Force
 This parameter is only needed in one instance. If you have a HCS VM resource that is currently
-running and try to remove it, you'll get the error **ERROR_INVALID_STATE** meaning that the state of
-the VM (in this case **online**) is preventing it from being removed. If you pass in the values
-**1** or **$true**, the VM will shut down and then remove itself.
+running and try to remove it, you'll get the error `ERROR_INVALID_STATE` meaning that the state of
+the VM (in this case online) is preventing it from being removed. If you pass in the values
+`1` or `$true`, the VM will shut down and then remove itself.
 
- The **default** value is 0
- >-Force 1
- >-Force $true
+ The default value is `0`.
 
 ```yaml
 Type: Boolean
@@ -126,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Here **Name** is used to find the actual resource. This parameter is **required**. Remember, when
+Here **Name** parameter is used to find the actual resource. This parameter is required. Remember, when
 trying to get an HCS VM resource, always call it by its updated name.
 
 ```yaml

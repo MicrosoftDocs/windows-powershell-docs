@@ -2,7 +2,7 @@
 description: Remove-ClusterStorageNode
 external help file: ClusterStorageNode.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 08/31/2021
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clusterstoragenode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterStorageNode
@@ -28,7 +28,7 @@ Remove-ClusterStorageNode -InputObject <CimInstance[]> [-Flags <UInt32>] [-CimSe
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterStorageNode** cmdlet removes a storage node from a failover cluster. After the
+The `Remove-ClusterStorageNode` cmdlet removes a storage node from a failover cluster. After the
 node is removed, the node no longer functions as part of the cluster unless the node is added back
 to the cluster. Removing a node is also called evicting a node from the cluster.
 

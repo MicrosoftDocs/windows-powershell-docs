@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/clear-clusterdiskreservation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-ClusterDiskReservation
@@ -21,7 +21,7 @@ Clear-ClusterDiskReservation [[-Node] <StringCollection>] -Disk <UInt32[]> [-For
 ```
 
 ## DESCRIPTION
-The **Clear-ClusterDiskReservation** cmdlet clears the persistent reservation on a disk in a
+The `Clear-ClusterDiskReservation` cmdlet clears the persistent reservation on a disk in a
 failover cluster. This cmdlet prompts for confirmation unless you specify the **Force** parameter.
 
 Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)

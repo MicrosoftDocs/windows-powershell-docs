@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell-help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterdiagnosticinfo?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterDiagnosticInfo
@@ -28,7 +28,7 @@ Get-ClusterDiagnosticInfo -ReadFromPath <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-ClusterDiagnosticInfo** cmdlet gets diagnostics for a cluster that contains virtual
+The `Get-ClusterDiagnosticInfo` cmdlet gets diagnostics for a cluster that contains virtual
 machines and produces a zip file containing the data.
 
 ## EXAMPLES

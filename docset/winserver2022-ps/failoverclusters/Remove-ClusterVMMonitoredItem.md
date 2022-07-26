@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clustervmmonitoreditem?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterVMMonitoredItem
@@ -30,7 +30,7 @@ Remove-ClusterVMMonitoredItem [-InputObject <PSObject>] [-Service <StringCollect
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterVMMonitoredItem** cmdlet removes monitoring of a service or event that is
+The `Remove-ClusterVMMonitoredItem` cmdlet removes monitoring of a service or event that is
 currently being monitored. After removal, if the service fails or the event occurs, the system will
 no longer take an action, such as restarting the virtual machine.
 

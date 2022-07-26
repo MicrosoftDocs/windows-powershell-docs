@@ -2,7 +2,7 @@
 description: Add-ClusterStorageNode
 external help file: ClusterStorageNode.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 08/31/2021
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clusterstoragenode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterStorageNode
@@ -11,7 +11,7 @@ title: Add-ClusterStorageNode
 # Add-ClusterStorageNode
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Add a storage node to a failover cluster.
 
 ## SYNTAX
 
@@ -21,7 +21,18 @@ Add-ClusterStorageNode -Name <String> [-Description <String>] [-Location <String
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The `Add-ClusterStorageNode` cmdlet adds a storage node to a failover cluster.
+
+Before adding the new node, you should run validation tests on the existing nodes together with the
+proposed new node.
+
+Before adding the new node, you should run validation tests on the existing nodes together with the
+proposed new node. By running the validation tests, you can confirm that the server to be added is
+connected correctly to the networks and storage and that it contains the same software updates.
+
+> [!IMPORTANT]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+authentication on the server computer.
 
 ## EXAMPLES
 
@@ -122,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specifies the name of the storage node to add.
 
 ```yaml
 Type: String

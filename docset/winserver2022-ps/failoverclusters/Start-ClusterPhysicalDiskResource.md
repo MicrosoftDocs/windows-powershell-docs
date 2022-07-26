@@ -2,7 +2,7 @@
 description: Start-ClusterPhysicalDiskResource
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 08/31/2021
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/start-clusterphysicaldiskresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ClusterPhysicalDiskResource
@@ -22,7 +22,7 @@ Start-ClusterPhysicalDiskResource [[-Name] <String>] [-RecoveryPassword <StringC
 ```
 
 ## DESCRIPTION
-The **Start-ClusterPhysicalDiskResource** cmdlet brings a physical disk online in a failover cluster.
+The `Start-ClusterPhysicalDiskResource` cmdlet brings a physical disk online in a failover cluster.
 
 ## EXAMPLES
 

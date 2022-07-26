@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergenericscriptrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGenericScriptRole
@@ -23,7 +23,7 @@ Add-ClusterGenericScriptRole -ScriptFilePath <String> [-Storage <StringCollectio
 ```
 
 ## DESCRIPTION
-The **Add-ClusterGenericScriptRole** cmdlet configures an application controlled by a script that
+The `Add-ClusterGenericScriptRole` cmdlet configures an application controlled by a script that
 runs in Windows Script Host, within a failover cluster.
 
 The script provides the cluster software with information about the current state of the

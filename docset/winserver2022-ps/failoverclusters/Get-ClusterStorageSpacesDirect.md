@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterstoragespacesdirect?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterStorageSpacesDirect
@@ -21,7 +21,7 @@ Get-ClusterStorageSpacesDirect [-Node <String>] [-CimSession <CimSession[]>] [-T
 ```
 
 ## DESCRIPTION
-The **Get-ClusterStorageSpacesDirect** cmdlet gets the Storage Spaces Direct (S2D) settings from a
+The `Get-ClusterStorageSpacesDirect` cmdlet gets the Storage Spaces Direct (S2D) settings from a
 cluster.
 
 ## EXAMPLES
@@ -39,7 +39,7 @@ Get-Cluster "K0617-C1.contoso.com" | Get-ClusterStorageSpacesDirect
 ```
 
 This command gets the S2D settings from cluster K0617-C1.contoso.com and pipes the cluster object to
-**Get-ClusterStorageSpacesDirect**.
+`Get-ClusterStorageSpacesDirect`.
 
 ## PARAMETERS
 

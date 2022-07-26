@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/stop-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Cluster
@@ -27,7 +27,7 @@ Stop-Cluster [-Force] [-Wait <Int32>] [-InputObject <PSObject>] [-WhatIf] [-Conf
 ```
 
 ## DESCRIPTION
-The **Stop-Cluster** cmdlet stops the Cluster service on all nodes in a failover cluster, which will
+The `Stop-Cluster` cmdlet stops the Cluster service on all nodes in a failover cluster, which will
 stop all services and applications configured in the cluster. A node can only function as part of
 the cluster when the Cluster service is running on that node.
 

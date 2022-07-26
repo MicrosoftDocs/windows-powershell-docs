@@ -96,7 +96,7 @@ Accept wildcard characters: False
 This are where you can pass in extra settings that you'd like to pass into the VM. You can pass them
 in via JSON.
 
-Ensure that you use **Get-Content**. This parameter is **not required**, and a **default**
+Ensure that you use `Get-Content` cmdlet. This parameter is not required, and a default
 ExtendedVmConfiguration will be passed in when the resource is started
 
 ```yaml
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -Name
 This fetches the HCS VM via name. Remember to use the updated name 
-**"HCS Virtual Machine YourName"**
+`"HCS Virtual Machine YourName"`
 
 ```yaml
 Type: String[]
@@ -158,12 +158,15 @@ Accept wildcard characters: False
 ```
 
 ### -OfflineAction
-This will be the action taken when shutting the VM off. This parameter is **not required** and has a
-**default** value of 0. You can set a value anywhere from 0-2
+Action taken when shutting the VM off. This parameter is not required and has a default
+value of 0. You can set a value anywhere from 0-2. The values have the following actions:
 
-- **Save (0) [Save state]**
-- **Shutdown (1) [Graceful shutdown]**
-- **Poweroff (2) [Ungraceful shutdown]**
+- `0` performs the _Save state_ actions
+- `1` performs a _Graceful shutdown_
+- `2` performs a _Ungraceful shutdown_
+
+To use `1` to perform a graceful shutdown, you must have GCS enabled. This can be passed in via
+the ExtendedVmConfiguration parameter.
 
 ```yaml
 Type: UInt32

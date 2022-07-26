@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterownernode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterOwnerNode
@@ -22,7 +22,7 @@ Set-ClusterOwnerNode [-Resource <String>] [-Group <String>] -Owners <StringColle
 ```
 
 ## DESCRIPTION
-The **Set-ClusterOwnerNode** cmdlet specifies which nodes can own a resource in a failover cluster
+The `Set-ClusterOwnerNode` cmdlet specifies which nodes can own a resource in a failover cluster
 or specifies the order of preference among owner nodes for a clustered role, or resource group. The
 settings that control the possible or preferred owners affect the way the cluster responds to the
 failure of a resource or a clustered role.

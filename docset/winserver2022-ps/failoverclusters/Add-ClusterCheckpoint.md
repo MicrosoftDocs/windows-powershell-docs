@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustercheckpoint?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterCheckpoint
@@ -22,7 +22,8 @@ Add-ClusterCheckpoint [[-ResourceName] <String>] [-CryptoCheckpointName <String>
 ```
 
 ## DESCRIPTION
-The **Add-ClusterCheckpoint** cmdlet adds a cryptographic key checkpoint or registry checkpoint for a resource.
+The `Add-ClusterCheckpoint` cmdlet adds a cryptographic key checkpoint or registry checkpoint for
+a resource.
 
 Checkpoints help provide failover support for applications that store configuration information
 locally instead of or in addition to storing information in the cluster configuration database.

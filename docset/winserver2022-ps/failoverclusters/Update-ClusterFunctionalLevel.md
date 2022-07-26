@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-ClusterFunctionalLevel
@@ -21,12 +21,12 @@ Update-ClusterFunctionalLevel [-Force] [-WhatIf] [-InputObject <PSObject>] [-Clu
 ```
 
 ## DESCRIPTION
-The **Update-ClusterFunctionalLevel** cmdlet updates the functional level of a mixed-version
+The `Update-ClusterFunctionalLevel` cmdlet updates the functional level of a mixed-version
 cluster. You can update the cluster after all nodes have been updated.
 
 Starting with Windows Server 2016, you can add a node that runs a more recent version of the Windows
 operating system into a cluster of nodes that run a previous version of the Windows operating
-system. To add a cluster node, use the **Add-ClusterNode** cmdlet.
+system. To add a cluster node, use the `Add-ClusterNode` cmdlet.
 
 After you add a node that runs a different version of the Windows operating system, the cluster
 becomes a mixed-version cluster. You can implement a mixed-version cluster to continue to run while
@@ -39,18 +39,18 @@ You can use this cmdlet to support a rolling operating system upgrade for a clus
 cluster that runs Hyper-V in which all the nodes run Windows Server 2012 R2, you can upgrade the
 nodes of that cluster without downtime for your virtual machines.
 
-First, drain one cluster node by specifying the *Drain* parameter of the **Suspend-ClusterNode**
+First, drain one cluster node by specifying the *Drain* parameter of the `Suspend-ClusterNode`
 cmdlet. This cmdlet causes all virtual machines to live-migrate to one of the other hosts.
 
-Next, remove the host from the cluster by using the **Remove-ClusterNode** cmdlet.
+Next, remove the host from the cluster by using the `Remove-ClusterNode` cmdlet.
 
 Next, install a new version of the operating system.
 Do not perform an upgrade or in-place installation.
 
-Next, add the Hyper-V role and the **Failover Clustering** feature by using the
-**Install-WindowsFeature** cmdlet. For more information, type `Get-Help Install-WindowsFeature`.
+Next, add the Hyper-V role and the _Failover Clustering_ feature by using the
+`Install-WindowsFeature` cmdlet. For more information, type `Get-Help Install-WindowsFeature`.
 
-Finally, add the node into the cluster by using the **Add-ClusterNode** cmdlet.
+Finally, add the node into the cluster by using the `Add-ClusterNode` cmdlet.
 
 Repeat these steps for each node of the cluster.
 
@@ -145,13 +145,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.FailoverClusters.PowerShell.Cluster
-This cmdlet accepts a **Cluster**.
+This cmdlet accepts a **Cluster** object.
 This cmdlet updates the functional level of this cluster.
 
 ## OUTPUTS
 
 ### Microsoft.FailoverClusters.PowerShell.Cluster
-This cmdlet returns a **Cluster**.
+This cmdlet returns a **Cluster** object.
 This cmdlet updates the functional level of this cluster.
 
 ## NOTES

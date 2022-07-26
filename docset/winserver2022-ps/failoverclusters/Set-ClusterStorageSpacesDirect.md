@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterstoragespacesdirect?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterStorageSpacesDirect
@@ -23,7 +23,7 @@ Set-ClusterStorageSpacesDirect [-CacheState <CacheStateType>] [-CacheModeHDD <Ca
 ```
 
 ## DESCRIPTION
-The **Set-ClusterStorageSpacesDirect** cmdlet sets Storage Spaces Direct (S2D) cache parameters.
+The `Set-ClusterStorageSpacesDirect` cmdlet sets Storage Spaces Direct (S2D) cache parameters.
 
 ## EXAMPLES
 

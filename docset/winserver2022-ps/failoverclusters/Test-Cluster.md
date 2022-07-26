@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-Cluster
@@ -23,15 +23,15 @@ Test-Cluster [[-Node] <StringCollection>] [-Disk <Object[]>] [-Pool <Object[]>]
 ```
 
 ## DESCRIPTION
-The **Test-Cluster** cmdlet runs validation tests for failover cluster hardware and settings.
+The `Test-Cluster` cmdlet runs validation tests for failover cluster hardware and settings.
 Tests can be run both before and after a cluster is set up.
 
 Test results are captured in a file with the file name that you specify. By running the validation
 tests, you can confirm that your hardware and settings are compatible with Failover Clustering.
 There are multiple types of tests, including Cluster, Inventory, Network, Storage, System, and other
 types of tests. Storage tests will not test online disks or storage pools that are in use by a
-clustered role. To test such disks, first run **Stop-ClusterGroup** to stop the clustered role, and
-then run **Test-Cluster**. After the tests are done, start the clustered roles, also known as
+clustered role. To test such disks, first run `Stop-ClusterGroup` to stop the clustered role, and
+then run `Test-Cluster`. After the tests are done, start the clustered roles, also known as
 resource groups, again.
 
 ## EXAMPLES
@@ -126,20 +126,20 @@ Accept wildcard characters: False
 
 ### -Disk
 Specifies the disk number or disks for which to run the cmdlet. If the specified disk is online and
-is assigned to a clustered role or Cluster Shared Volume, you must also specify the *Force*
+is assigned to a clustered role or Cluster Shared Volume, you must also specify the **Force**
 parameter to take the disk offline for the duration of the storage tests. Otherwise, the specified
-disk must be offline before the cmdlet is run. If the *Disk* parameter is not specified, storage
+disk must be offline before the cmdlet is run. If the **Disk** parameter is not specified, storage
 tests run on all disks that are available for use in the cluster or that are in the cluster resource
 offline or failed state. The acceptable values for this parameter are:
 
-- Int32, Int64, Uint32, Uint64. A number that represents a master boot record (MBR) signature of the
-  disk.
-- **System.String**. A string that represents a master boot record (MBR) signature of the disk,
+- **Int32**, **Int64**, **Uint32**, or **Uint64** type. A number that represents a master boot
+  record (MBR) signature of the disk.
+- **System.String** type. A string that represents a master boot record (MBR) signature of the disk,
   hexadecimal format is supported.
-- **System.String**. A string that represents the GUID of a GPT disk.
-- **ClusterResource**. A cluster resource object that represents a clustered disk.
-- **CimInstance#MSFT_Disk**. An object returned from Get-Disk, from the Windows PowerShell® storage
-  module.
+- **System.String** type. A string that represents the GUID of a GPT disk.
+- **ClusterResource** object. A cluster resource object that represents a clustered disk.
+- **CimInstance#MSFT_Disk** object. An object returned from Get-Disk, from the Windows PowerShell®
+  storage module.
 
 ```yaml
 Type: Object[]
@@ -270,10 +270,10 @@ offline before the storage tests. If the **Pool** parameter is not specified, st
 all storage pools that are available for use in the cluster or that are in the cluster resource
 offline or failed state. The acceptable values for this parameter are:
 
-- **System.String**: A string that represents the name of the clustered storage pool or pools. 
-- **ClusterResource**: A cluster resource object that represents a clustered storage pool.
-- **CimInstance#MSFT_StoragePool**: An object returned from **Get-StoragePool**, from the Windows
-  PowerShell storage module.
+- **System.String** type: A string that represents the name of the clustered storage pool or pools. 
+- **ClusterResource** object: A cluster resource object that represents a clustered storage pool.
+- **CimInstance#MSFT_StoragePool** object: An object returned from `Get-StoragePool`, from the
+  Windows PowerShell storage module.
 
 ```yaml
 Type: Object[]

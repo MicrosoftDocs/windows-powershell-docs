@@ -2,7 +2,7 @@
 description: Resume-ClusterPhysicalDiskResource
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 08/31/2021
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/resume-clusterphysicaldiskresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Resume-ClusterPhysicalDiskResource
@@ -21,7 +21,7 @@ Resume-ClusterPhysicalDiskResource [[-Name] <String>] [-RecoveryPassword <String
 ```
 
 ## DESCRIPTION
-The **Resume-ClusterPhysicalDiskResource** cmdlet resumes activity on a failover cluster physical
+The `Resume-ClusterPhysicalDiskResource` cmdlet resumes activity on a failover cluster physical
 disk after it has been suspended, or paused, or both. When a physical disk is resumed, ...
 
 ## EXAMPLES

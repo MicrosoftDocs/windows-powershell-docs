@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusteravailabledisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterAvailableDisk
@@ -22,7 +22,7 @@ Get-ClusterAvailableDisk [[-Cluster] <String>] [-Disk <CimInstance>] [-All] [-In
 ```
 
 ## DESCRIPTION
-The **Get-ClusterAvailableDisk** cmdlet gets information about the disks that can support Failover
+The `Get-ClusterAvailableDisk` cmdlet gets information about the disks that can support Failover
 Clustering and are visible to all nodes, but are not yet part of the set of clustered disks.
 
 If a disk is unexpectedly missing from the list of disks that are available for use in the cluster,

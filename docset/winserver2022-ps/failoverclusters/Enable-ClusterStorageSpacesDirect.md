@@ -2,7 +2,7 @@
 description: Use this topic to help manage Storage Spaces Direct with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/enable-clusterstoragespacesdirect?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-ClusterStorageSpacesDirect
@@ -47,7 +47,7 @@ Enable-ClusterStorageSpacesDirect [-PoolFriendlyName <String>] [-Autoconfig <Boo
 ```
 
 ## DESCRIPTION
-The **Enable-ClusterStorageSpacesDirect** cmdlet enables highly available Storage Spaces that use
+The `Enable-ClusterStorageSpacesDirect` cmdlet enables highly available Storage Spaces that use
 directly attached storage Storage Spaces Direct (S2D) on a cluster.
 
 ## EXAMPLES

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clusterdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterDisk
@@ -20,7 +20,7 @@ Add-ClusterDisk [-InputObject] <PSObject[]> [-Cluster <String>] [<CommonParamete
 ```
 
 ## DESCRIPTION
-The **Add-ClusterDisk** cmdlet makes a new disk available for use in a failover cluster. The disk
+The `Add-ClusterDisk` cmdlet makes a new disk available for use in a failover cluster. The disk
 (LUN) must be exposed to all nodes in the failover cluster, and should not be exposed to any other
 servers.
 
@@ -28,7 +28,7 @@ When adding a disk, make sure that the configuration of the storage allows the o
 recognize and mount the disk as needed. The disk must be a basic disk, not a dynamic disk, and
 should not be exposed to servers outside the cluster.
 
-The **Get-ClusterAvailableDisk** cmdlet gets information about disks that you can add to the
+The `Get-ClusterAvailableDisk` cmdlet gets information about disks that you can add to the
 cluster.
 
 ## EXAMPLES
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies the list of shared disks to add to the cluster.
-The list of disks is generated with the **Get-ClusterAvailableDisk** cmdlet.
+The list of disks is generated with the `Get-ClusterAvailableDisk` cmdlet.
 
 ```yaml
 Type: PSObject[]
@@ -102,7 +102,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.FailoverClusters.PowerShell.ClusterDiskInfo
 
 ### Microsoft.Management.Infrastructure.CimInstance
-This object is output from the Get-Disk and the **Get-VirtualDisk** cmdlets.
+This object is output from the Get-Disk and the `Get-VirtualDisk` cmdlets.
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Disk
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays

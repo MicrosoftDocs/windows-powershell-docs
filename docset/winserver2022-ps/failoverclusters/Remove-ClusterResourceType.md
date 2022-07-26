@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clusterresourcetype?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterResourceType
@@ -21,7 +21,7 @@ Remove-ClusterResourceType [[-Name] <StringCollection>] [-InputObject <PSObject>
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterResourceType** cmdlet removes a resource type from a failover cluster. A
+The `Remove-ClusterResourceType` cmdlet removes a resource type from a failover cluster. A
 resource type is a class of resource, such as physical disk, network name, or virtual machine, that
 is organized by the failover cluster. After a resource type is removed from a failover cluster,
 resources of that type will not be able to be used in the cluster.

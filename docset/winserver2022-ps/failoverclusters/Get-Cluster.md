@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Cluster
@@ -26,7 +26,7 @@ Get-Cluster [-Domain <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-Cluster** cmdlet gets information about one or more failover clusters in a given domain.
+The `Get-Cluster` cmdlet gets information about one or more failover clusters in a given domain.
 
 This cmdlet can obtain a variety of configuration and state information about a failover cluster,
 including the following items:

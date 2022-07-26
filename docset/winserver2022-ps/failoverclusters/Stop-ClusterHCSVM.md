@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -Name
 Stops the HCS VM resource via name. Remember to use the updated name 
-**"HCS Virtual Machine YourName"**
+`"HCS Virtual Machine YourName"`
 
 ```yaml
 Type: String[]

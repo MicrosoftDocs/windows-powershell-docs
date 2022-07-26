@@ -2,7 +2,7 @@
 description: Suspend-ClusterPhysicalDiskResource
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 08/31/2021
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusterphysicaldiskresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-ClusterPhysicalDiskResource
@@ -22,7 +22,7 @@ Suspend-ClusterPhysicalDiskResource [[-Name] <String>] [-CleanupClusterProtector
 ```
 
 ## DESCRIPTION
-The **Suspend-ClusterPhysicalDiskResource** cmdlet turns on maintenance for a physical disk resource
+The `Suspend-ClusterPhysicalDiskResource` cmdlet turns on maintenance for a physical disk resource
 so that a disk maintenance tool can be run without triggering failover.
 
 This cmdlet only applies to physical disks. Turning on maintenance leaves dependent resources online.

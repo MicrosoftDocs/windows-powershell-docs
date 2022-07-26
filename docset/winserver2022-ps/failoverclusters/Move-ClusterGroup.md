@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/move-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Move-ClusterGroup
@@ -21,7 +21,7 @@ Move-ClusterGroup [[-Name] <String>] [[-Node] <String>] [-IgnoreLocked][-IgnoreA
 ```
 
 ## DESCRIPTION
-The **Move-ClusterGroup** cmdlet moves a clustered role (a resource group) from one node to another
+The `Move-ClusterGroup` cmdlet moves a clustered role (a resource group) from one node to another
 in a failover cluster.
 
 Moving a resource group is a way of simulating failover. Running this cmdlet is also an appropriate

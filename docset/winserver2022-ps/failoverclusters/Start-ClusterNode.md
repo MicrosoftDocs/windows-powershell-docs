@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/start-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ClusterNode
@@ -21,7 +21,7 @@ Start-ClusterNode [[-Name] <StringCollection>] [-ForceQuorum] [-ClearQuarantine]
 ```
 
 ## DESCRIPTION
-The **Start-ClusterNode** cmdlet starts the Cluster service on a node in a failover cluster. If this
+The `Start-ClusterNode` cmdlet starts the Cluster service on a node in a failover cluster. If this
 is the first node started, then it will wait for other nodes to join. The cluster will begin to run
 when a quorum has formed.
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clusteraccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterAccess
@@ -21,7 +21,7 @@ Remove-ClusterAccess [[-User] <StringCollection>] [-InputObject <PSObject>] [-Cl
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterAccess** cmdlet removes a user from the access list on the cluster. After this
+The `Remove-ClusterAccess` cmdlet removes a user from the access list on the cluster. After this
 cmdlet is run, the user might still have access to the cluster if the user account is part of
 another user group which is on the cluster access list.
 

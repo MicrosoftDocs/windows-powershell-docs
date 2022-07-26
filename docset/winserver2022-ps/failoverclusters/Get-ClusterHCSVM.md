@@ -77,9 +77,7 @@ Used to identify the resource. When trying to get an HCS VM resource, always ref
 translated name.
 
 For example, the translated name for hcsres is **HCS Virtual Machine hcsres**. You would pass the
-value to the parameter as:
-
-> -Name "HCS Virtual Machine hcsres"
+value to the parameter as `-Name "HCS Virtual Machine hcsres"`
 
 ```yaml
 Type: String[]

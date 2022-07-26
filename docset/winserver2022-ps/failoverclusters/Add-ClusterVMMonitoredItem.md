@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustervmmonitoreditem?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterVMMonitoredItem
@@ -38,7 +38,7 @@ Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>] [-
 ```
 
 ## DESCRIPTION
-The **Add-ClusterVMMonitoredItem** cmdlet configures monitoring for a service or an Event Tracing
+The `Add-ClusterVMMonitoredItem` cmdlet configures monitoring for a service or an Event Tracing
 for Windows (ETW) event so that it is monitored on a virtual machine. If the service fails or the
 event occurs, then the system responds by taking an action based on the failover configuration for
 the virtual machine resource. For example, the configuration might specify that the virtual machine

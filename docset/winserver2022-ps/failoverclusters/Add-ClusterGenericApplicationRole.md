@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergenericapplicationrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGenericApplicationRole
@@ -23,7 +23,7 @@ Add-ClusterGenericApplicationRole -CommandLine <String> [-Parameters <String>]
 ```
 
 ## DESCRIPTION
-The **Add-ClusterGenericApplicationRole** cmdlet configures high availability for an application
+The `Add-ClusterGenericApplicationRole` cmdlet configures high availability for an application
 that was not originally designed to run in a failover cluster.
 
 If an application is run as a Generic Application, the cluster software will start the application,

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/start-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ClusterResource
@@ -21,7 +21,7 @@ Start-ClusterResource [[-Name] <String>] [-IgnoreLocked] [-ChooseBestNode] [-Ign
 ```
 
 ## DESCRIPTION
-The **Start-ClusterResource** cmdlet brings a resource online in a failover cluster.
+The `Start-ClusterResource` cmdlet brings a resource online in a failover cluster.
 Before the resource is brought online, any resources that it depends are brought online.
 
 ## EXAMPLES

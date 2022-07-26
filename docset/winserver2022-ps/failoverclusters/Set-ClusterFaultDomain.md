@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterFaultDomain.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterfaultdomain?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterFaultDomain
@@ -30,7 +30,7 @@ Set-ClusterFaultDomain -InputObject <CimInstance[]> [-NewName <String>] [-Locati
 ```
 
 ## DESCRIPTION
-The **Set-ClusterFaultDomain** cmdlet update an existing cluster fault domain.
+The `Set-ClusterFaultDomain` cmdlet update an existing cluster fault domain.
 The *Name* parameter should identify the current name.
 The *NewName* parameter should be specified only when renaming the fault domain.
 

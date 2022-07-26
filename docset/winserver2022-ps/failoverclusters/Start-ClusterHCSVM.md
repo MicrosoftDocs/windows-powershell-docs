@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -Name
 This allows you start the resource via name. Remember to use the updated name 
-**"HCS Virtual Machine YourName"**
+`"HCS Virtual Machine YourName"`
 
 ```yaml
 Type: String[]

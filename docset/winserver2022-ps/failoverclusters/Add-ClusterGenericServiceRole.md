@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergenericservicerole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGenericServiceRole
@@ -23,7 +23,7 @@ Add-ClusterGenericServiceRole -ServiceName <String> [-CheckpointKey <StringColle
 ```
 
 ## DESCRIPTION
-The **Add-ClusterGenericServiceRole** cmdlet configures high availability for a service that was not
+The `Add-ClusterGenericServiceRole` cmdlet configures high availability for a service that was not
 originally designed to run in a failover cluster. The cluster software will start the service, then
 periodically query the Service Controller, which is a feature of the operating system, to determine
 whether the service appears to be running. If so, then it is presumed to be online, and will not be

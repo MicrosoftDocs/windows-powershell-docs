@@ -25,7 +25,7 @@ it renames the resource. For example, if you create an HCS VM resource and name 
 **HcsRes** using the **Name** parameter, the resource name is translated to **HCS Virtual Machine
 HcsRes**.
 
-You can verify using **Get-ClusterResource** which shows the list of resources on the cluster.
+You can verify using `Get-ClusterResource` which shows the list of resources on the cluster.
 
 ## EXAMPLES
 
@@ -41,7 +41,7 @@ $parameters = @{
 New-ClusterHCSVM @parameters
 ```
 
-After creating the HCS VM, a list of information is returned. The **Name** of the resource has been
+After creating the HCS VM, a list of information is returned. The name of the resource has been
 changed. However, the group name (**VmName**) remains the same.
 
 This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 
 ### -CpuCount
 
-Specifies how many CPU cores are used. This parameter has a **default** value of 1.
+Specifies how many CPU cores are used. This parameter has a default value of 1.
 
 ```yaml
 Type: UInt32
@@ -114,7 +114,7 @@ Specify a VM configuration setting file. The configuration file format is JSON.
 The following example shows how to pass a configuration file via parameter:
 > -ExtendedVmConfiguration (Get-Content 'C:\config.txt')
 
-Ensure that you use **Get-Content** when passing the configuration file. A **default**
+Ensure that you use `Get-Content` when passing the configuration file. A default
 ExtendedVmConfiguration is used when the resource is started.
 
 ```yaml
@@ -131,9 +131,9 @@ Accept wildcard characters: False
 
 ### -MemorySizeInMb
 
-Specify the amount of memory you want to allocate for your VM. This parameter has a **default**
+Specify the amount of memory you want to allocate for your VM. This parameter has a default
 value of 1024mb. This parameter also has a minimum amount that may be passed in. You cannot pass a
-value lower than **32mb**. Values lower than 32mb result in a minimum value of 32mb.
+value lower than _32mb_. Values lower than 32mb result in a minimum value of 32mb.
 
 ```yaml
 Type: UInt32
@@ -168,14 +168,14 @@ Accept wildcard characters: False
 ```
 
 ### -OfflineAction
-Action taken when shutting the VM off. This parameter is **not required** and has a **default**
-value of 0. You can set a value anywhere from 0-2.
+Action taken when shutting the VM off. This parameter is not required and has a default
+value of 0. You can set a value anywhere from 0-2. The values have the following actions:
 
-- **Save (0) [Save state]**
-- **Shutdown (1) [Graceful shutdown]**
-- **Poweroff (2) [Ungraceful shutdown]**
+- `0` performs the _Save state_ actions
+- `1` performs a _Graceful shutdown_
+- `2` performs a _Ungraceful shutdown_
 
-To use **Shutdown (1) [Graceful shutdown]**, you must have GCS enabled. This can be passed in via
+To use `1` to perform a graceful shutdown, you must have GCS enabled. This can be passed in via
 the ExtendedVmConfiguration parameter.
 
 ```yaml
@@ -194,11 +194,11 @@ Accept wildcard characters: False
 
 Specifies the name of the switch used for network connectivity on the VM.
 
-> [!IMPORTANT]
-> Ensure **every host** on the cluster uses the exact same **SwitchName**.
+This parameter is not required, but is required to start the VM. If you intend on creating a
+resource and starting it, you must pass a value to the **SwitchName** parameter.
 
-This parameter is **not required**, but is **required** to start the VM. If you intend on creating a
-resource and starting it, you **must** pass in a **SwitchName**.
+> [!IMPORTANT]
+> Ensure _every host_ on the cluster uses the exact same **SwitchName** parameter value.
 
 ```yaml
 Type: String
@@ -233,8 +233,8 @@ Accept wildcard characters: False
 
 ### -VhdPath
 
-Specifies the path to your VHD. This parameter is **not required** but as with **SwitchName**, it is
-required if you plan on starting the VM.
+Specifies the path to your VHD. This parameter is not required but as with **SwitchName** parameter,
+it is required if you plan on starting the VM.
 
 ```yaml
 Type: String

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterFaultDomain.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterfaultdomainxml?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterFaultDomainXML
@@ -21,7 +21,7 @@ Set-ClusterFaultDomainXML [-XML] <String> [-Flags <UInt32>] [-CimSession <CimSes
 ```
 
 ## DESCRIPTION
-The **Set-ClusterFaultDomainXML** cmdlet sets the cluster fault domain using XML.
+The `Set-ClusterFaultDomainXML` cmdlet sets the cluster fault domain using XML.
 
 ## EXAMPLES
 

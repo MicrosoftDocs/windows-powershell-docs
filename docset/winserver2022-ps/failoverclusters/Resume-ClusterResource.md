@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/resume-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Resume-ClusterResource
@@ -21,7 +21,7 @@ Resume-ClusterResource [[-Name] <String>] [-VolumeName <String>] [-InputObject <
 ```
 
 ## DESCRIPTION
-The **Resume-ClusterResource** cmdlet turns off maintenance for a disk resource or Cluster Shared
+The `Resume-ClusterResource` cmdlet turns off maintenance for a disk resource or Cluster Shared
 Volume within a failover cluster.
 
 This cmdlet applies to disks and Cluster Shared Volumes only. We recommend that maintenance be

@@ -2,7 +2,7 @@
 description: Get-ClusterStorageNode
 external help file: ClusterStorageNode.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 08/31/2021
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterstoragenode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterStorageNode
@@ -21,7 +21,7 @@ Get-ClusterStorageNode [-Id <String[]>] [[-Name] <String[]>] [-CimSession <CimSe
 ```
 
 ## DESCRIPTION
-The **Get-ClusterStorageNode** cmdlet gets information about one or more storage nodes in a failover
+The `Get-ClusterStorageNode` cmdlet gets information about one or more storage nodes in a failover
 cluster.
 
 ## EXAMPLES

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 07/26/2022
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGroup
@@ -22,7 +22,7 @@ Add-ClusterGroup [-Name] <StringCollection> [[-GroupType] <GroupType>] [-InputOb
 ```
 
 ## DESCRIPTION
-The **Add-ClusterGroup** cmdlet adds an empty resource group to the failover cluster configuration,
+The `Add-ClusterGroup` cmdlet adds an empty resource group to the failover cluster configuration,
 in preparation for adding clustered resources to the group. A resource group, or a clustered role,
 is the unit of failover. During failover, all resources in the resource group move together.
 

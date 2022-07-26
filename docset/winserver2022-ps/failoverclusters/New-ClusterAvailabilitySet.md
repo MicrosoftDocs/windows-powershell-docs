@@ -9,9 +9,9 @@ title: New-ClusterAvailabilitySet
 ---
 
 # New-ClusterAvailabilitySet
-Creates a new cluster availability set. 
 
 ## SYNOPSIS
+Creates a new cluster availability set. 
 
 ## SYNTAX
 

@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an AD FS claims provider trust group.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsClaimsProviderTrustsGroup
+  href: ./Add-AdfsClaimsProviderTrustsGroup.yml
+- text: Remove-AdfsClaimsProviderTrustsGroup
+  href: ./Remove-AdfsClaimsProviderTrustsGroup.yml
+syntaxes:
+- Get-AdfsClaimsProviderTrustsGroup [[-Identifier] <String[]>] [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identifier
+  description: |+
+    Specifies an array of IDs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsClaimsProviderTrustsGroup
+name: Get-AdfsClaimsProviderTrustsGroup
+description: |-
+  The **Get-AdfsClaimsProviderTrustsGroup** cmdlet gets an Active Directory Federation Services (AD FS) claims provider trust group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsclaimsprovidertrustsgroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsClaimsProviderTrustsGroup

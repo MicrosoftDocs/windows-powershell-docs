@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an application group.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.ApplicationGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    ApplicationGroup objects are received by the *ApplicationGroup* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *ApplicationGroupIdentifier* and *Name* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.ApplicationGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more ApplicationGroup objects that represent the Application Groups for the Federation Service.
+links:
+- text: Disable-AdfsApplicationGroup
+  href: ./Disable-AdfsApplicationGroup.yml
+- text: Enable-AdfsApplicationGroup
+  href: ./Enable-AdfsApplicationGroup.yml
+- text: New-AdfsApplicationGroup
+  href: ./New-AdfsApplicationGroup.yml
+- text: Remove-AdfsApplicationGroup
+  href: ./Remove-AdfsApplicationGroup.yml
+- text: Set-AdfsApplicationGroup
+  href: ./Set-AdfsApplicationGroup.yml
+syntaxes:
+- Get-AdfsApplicationGroup [[-ApplicationGroupIdentifier] <String[]>] [<CommonParameters>]
+- Get-AdfsApplicationGroup [-Name] <String[]> [<CommonParameters>]
+- Get-AdfsApplicationGroup [-ApplicationGroup] <ApplicationGroup> [<CommonParameters>]
+parameters:
+- type: <xref href="ApplicationGroup" data-throw-if-not-resolved="False" />
+  name: ApplicationGroup
+  isRequired: true
+  description: |+
+    Specifies an application group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ApplicationGroupIdentifier
+  description: |+
+    Specifies the ID of an application group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names of application groups.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsApplicationGroup
+name: Get-AdfsApplicationGroup
+description: |-
+  The **Get-AdfsApplicationGroup** cmdlet gets an Active Directory Federation Services (AD FS) application group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsapplicationgroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsApplicationGroup

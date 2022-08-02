@@ -1,0 +1,177 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds the computer that runs the DHCP server service to the list of authorized DHCP server services in Active Directory.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerInDC" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerInDC" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DhcpServerInDC
+  href: ./Get-DhcpServerInDC.yml
+- text: Remove-DhcpServerInDC
+  href: ./Remove-DhcpServerInDC.yml
+syntaxes:
+- >-
+  Add-DhcpServerInDC [[-DnsName] <String>] [[-IPAddress] <IPAddress>] [-PassThru] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add an object for the DHCP server service'
+  code: |-
+    PS C:\> Add-DhcpServerInDC -DnsName "dhcpserver.contoso.com" -IPAddress 10.10.10.2
+  description: |-
+    This example adds an object in the Active Directory domain for the DHCP server service that runs on the computer that has the DNS name dhcpserver.contoso.com and the IP address 10.10.10.2, and authorizes the DHCP server service to serve DHCP clients on the network.
+  summary: ""
+- title: 'Example 2: Add an object for the DHCP server service with IP address lookup'
+  code: |-
+    PS C:\> Add-DhcpServerInDC -DnsName "dhcpserver.contoso.com"
+  description: |-
+    This example adds an object in the Active Directory domain for the DHCP server service that runs on the computer that has the DNS name dhcpserver.contoso.com, and authorizes the DHCP server service to serve DHCP clients on the network.
+    The IP address for the DHCP server service object in Active Directory is obtained by looking up dhcpserver.contoso.com in DNS.
+  summary: ""
+- title: 'Example 1: Add an object for the DHCP server service on the local computer with IP address lookup'
+  code: |-
+    PS C:\> Add-DhcpServerInDC
+  description: |-
+    This example adds an object in the Active Directory domain for the DHCP server service that runs on the local computer.
+    The IP address for the computer that runs the DHCP server service in Active Directory is obtained by looking up the host name of the local computer in DNS.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DnsName
+  description: |+
+    Specifies the DNS name of the computer that runs the DHCP server service to be added to the list of authorized DHCP server services in Active Directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  description: |+
+    Specifies the IP address of the computer that runs the DHCP server service which is added to the list of authorized DHCP server services in Active Directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Add-DhcpServerInDC
+name: Add-DhcpServerInDC
+description: |-
+  The **Add-DhcpServerInDC** cmdlet adds the computer that runs the DHCP server service to the list of authorized Dynamic Host Configuration Protocol (DHCP) server services in the Active Directory.
+  A DHCP server service that runs on a domain joined computer must be authorized in Active Directory so that it can start leasing IP addresses on the network.
+
+  If you specify neither the *DnsName* nor the *IPAddress* parameter, the local server is added in the Active Directory.
+
+  If you specify only the *DnsName* parameter, the specified Domain Name System (DNS) name is added in Active Directory.
+
+  In both these cases, any of the IP addresses of the computer that runs the DHCP server service being added into the domain controller are added as part of the server object in Active Directory.
+
+  If you specify the *DnsName* and the *IPAddress* parameter, the object is added to domain controller that has specified values.
+
+  In addition to adding the computer that runs the DHCP server service in DC, this cmdlet also triggers the DHCP server service to perform an authorization check.
+
+  The trigger for authorization check is done even if the addition of computer that runs the DHCP server service fails with an object already exists error.
+
+  The following warning is displayed if the computer that runs the DHCP server service is already authorized and the trigger for the server authorization check succeeded: 
+
+  `The DHCP server is already authorized in Active Directory.
+  The authorization check on the DHCP server has been initiated.`
+
+  The following warning is displayed if the computer that runs the DHCP server service is already authorized, but the trigger for the server authorization check failed: 
+
+  `The DHCP server is already authorized in Active Directory.
+  Failed to initiate the authorization check on the DHCP server.
+  Error code: %d`
+
+  The following warning is displayed if the addition of the computer that runs the DHCP server service in Active Directory succeeded, but the trigger for the server authorization check failed: 
+
+  `The DHCP server has been successfully authorized in Active Directory.
+  Failed to initiate the authorization check on the DHCP server.
+  Error code: %d`
+
+  If the addition of computer that runs the DHCP server service to Active Directory fails with an error other than object_already_exists_error, an error is returned and authorization check on the server is not triggered.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerInDC_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/add-dhcpserverindc?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DhcpServerInDC

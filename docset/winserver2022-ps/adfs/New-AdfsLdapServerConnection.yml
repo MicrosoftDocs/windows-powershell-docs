@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a connection object.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsLocalClaimsProviderTrust
+  href: ./Add-AdfsLocalClaimsProviderTrust.yml
+syntaxes:
+- >-
+  New-AdfsLdapServerConnection [-HostName] <String> [-Port <Int32>] [-SslMode <LdapSslMode>]
+
+   [-AuthenticationMethod <LdapAuthenticationMethod>] [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an LDAP connection'
+  code: |-
+    PS C:\> $Credential = Get-Credential
+    PS C:\ > $LdapConn = New-AdfsLdapServerConnection -HostName "DomainContoller03.contoso.com" -Port 389 -SslMode None -AuthenticationMethod Basic -Credential $Credential
+  description: |-
+    The first command prompts you for a user name and password by using the **Get-Credential** cmdlet.
+    The command stores the results in the $Credential variable.
+
+    The second command creates an LDAP connection.
+    DomainContoller03.contoso.com is the fully qualified domain name of a domain controller in the other forest.
+    The command stores the result in the $LdapConn variable.
+
+    To see this cmdlet as part of creating an LDAP local claims provider trust, see the **Add-AdfsLocalClaimsProviderTrust** cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="LdapAuthenticationMethod" data-throw-if-not-resolved="False" />
+  name: AuthenticationMethod
+  description: |+
+    Specifies the authentication method the local claims provider trust uses.
+    In Windows Server 2016, the only supported method is Basic (username/password).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Basic, Kerberos, Negotiate
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials to use for the connection to the LDAP host.
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  isRequired: true
+  description: |+
+    Specifies the fully qualified domain name of the server that hosts the LDAP folder to which Active Directory Federation Services (AD FS) connects for authentication requests.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the port that AD FS uses to connect to the LDAP host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LdapSslMode" data-throw-if-not-resolved="False" />
+  name: SslMode
+  description: |+
+    Specifies SSL setting of the connection.
+    The acceptable values for this parameter are:
+
+    - None 
+    - Ssl 
+    - Tls
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Ssl, Tls
+uid: ADFS.New-AdfsLdapServerConnection
+name: New-AdfsLdapServerConnection
+description: |-
+  The **New-AdfsLdapServerConnection** cmdlet creates a connection object that represents the Lightweight Directory Access Protocol (LDAP) folder that serves as a claims provider trust.
+  A connection object includes host name, port, and authentication credentials.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/new-adfsldapserverconnection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-AdfsLdapServerConnection

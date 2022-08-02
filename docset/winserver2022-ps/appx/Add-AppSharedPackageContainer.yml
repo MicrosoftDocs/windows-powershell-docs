@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deploys the shared package container definiton.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Add-AppSharedPackageContainer [-Path] <String> [-ForceApplicationShutdown] [-Merge] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-AppSharedPackageContainer -Path C:\MyFolder\ContosoTestContainer.xml
+  description: |-
+    This command deploys the definition described in the ContosoTestContainer file.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Replaces an existing container of the same name with the newly created
+    container's definition for the target user(s).
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceApplicationShutdown
+  description: |+
+    Closes all packages currently running in the Shared Package Container.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Merge
+  description: |+
+    Merges a new container's definition into an existing container
+    definition of the same name for target user(s).
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Path to the XML definition file.
+
+  defaultValue: None
+  position: "0"
+  aliases: PSPath
+  parameterValueGroup: ""
+uid: Appx.Add-AppSharedPackageContainer
+name: Add-AppSharedPackageContainer
+description: |-
+  The Add-AppSharedPackageContainer cmdlet deploys the shared package container definiton for the particular user.
+metadata:
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: appx
+  online version: https://docs.microsoft.com/powershell/module/appx/add-appsharedpackagecontainer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

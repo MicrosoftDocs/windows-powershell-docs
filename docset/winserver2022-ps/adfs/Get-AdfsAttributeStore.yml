@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the attribute stores of the Federation Service.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    A string object is received by the *Name* parameter.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AttributeStore" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more AttributeStore objects that represent the attribute stores of the Federation Service.
+links:
+- text: Add-AdfsAttributeStore
+  href: ./Add-AdfsAttributeStore.yml
+- text: Remove-AdfsAttributeStore
+  href: ./Remove-AdfsAttributeStore.yml
+- text: Set-AdfsAttributeStore
+  href: ./Set-AdfsAttributeStore.yml
+syntaxes:
+- Get-AdfsAttributeStore [[-Name] <String[]>] [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of names of attribute stores that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsAttributeStore
+name: Get-AdfsAttributeStore
+description: |-
+  The **Get-AdfsAttributeStore** cmdlet gets an attribute store of the Federation Service.
+  If you do not specify any parameters, the cmdlet gets all attribute stores of the Federation Service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsattributestore?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsAttributeStore

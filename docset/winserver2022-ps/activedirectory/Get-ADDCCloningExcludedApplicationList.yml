@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of installed programs and services present on this domain controller that are not in the default or user defined inclusion list.
+module: ActiveDirectory
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="ADEntity" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-ADDCCloneConfigFile
+  href: ./New-ADDCCloneConfigFile.yml
+- text: AD DS Administration Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- Get-ADDCCloningExcludedApplicationList [<CommonParameters>]
+- Get-ADDCCloningExcludedApplicationList [-Force] [-GenerateXml] [-Path <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Display the excluded application list to the console'
+  code: |-
+    PS C:\> Get-ADDCCloningExcludedApplicationList
+  description: |-
+    This command displays the excluded application list to the console.
+    If there is already a CustomDCCloneAllowList.xml file, this cmdlet displays the delta of that list compared to the operating system, which may be nothing if the lists match.
+  summary: ""
+- title: 'Example 2: Generate the excluded application list and save it as a file'
+  code: |-
+    PS C:\> Get-ADDCCloningExcludedApplicationList -GenerateXml -Path C:\Windows\NTDS -Force
+  description: |-
+    This command generates the excluded application list as a file named CustomDCCloneAllowList.xml at the specified folder path, C:\Windows\NTDS, and forces overwrite if a file by that name is found to already exist at that path location.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GenerateXml
+  isRequired: true
+  description: |+
+    Indicates whether to create the CustomDCCloneAllowList.xml file and writes it in the location specified using the *Path* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the folder path to use when creating the CustomDCCloneAllowList.xml file using the *GenerateXml* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ActiveDirectory.Get-ADDCCloningExcludedApplicationList
+name: Get-ADDCCloningExcludedApplicationList
+description: |-
+  The **Get-ADDCCloningExcludedApplicationList** cmdlet searches the local domain controller for programs and services in the installed programs database, the services control manager that are not specified in the default and user defined inclusion list.
+  The applications in the resulting list can be added to the user defined exclusion list if they are determined to support cloning.
+  If the applications are not cloneable, they should be removed from the source domain controller before the clone media is created.
+  Any application that appears in cmdlet output and is not included in the user defined inclusion list will force cloning to fail.
+
+  Once you have granted a source virtualized domain controller permissions to be cloned, the **Get-ADDCCloningExcludedApplicationList** cmdlet should be run a first time with no additional parameters on the source virtualized domain controller to identify all programs or services that are to be evaluated for cloning.
+  Next, vet the returned list with your software vendors and remove any applications from the list that cannot be safely cloned.
+  Finally, you can run the **Get-ADDCCloningExcludedApplicationList** cmdlet again using the *GenerateXml* parameter set to create the CustomDCCloneAllowList.xml file.
+
+  The **Get-ADDCCloningExcludedApplicationList** cmdlet needs to be run before the **New-ADDCCloneConfigFile** cmdlet is used because if the **New-ADDCCloneConfigFile** cmdlet detects an excluded application, it will not create a DCCloneConfig.xml file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/get-addccloningexcludedapplicationlist?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ADDCCloningExcludedApplicationList

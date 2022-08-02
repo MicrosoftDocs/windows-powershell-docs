@@ -1,0 +1,222 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the administrative policies for the Device Registration Service.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="uint, string, switch" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-AdfsDeviceRegistration
+  href: ./Disable-AdfsDeviceRegistration.yml
+- text: Enable-AdfsDeviceRegistration
+  href: ./Enable-AdfsDeviceRegistration.yml
+- text: Get-AdfsDeviceRegistration
+  href: ./Get-AdfsDeviceRegistration.yml
+syntaxes:
+- >-
+  Set-AdfsDeviceRegistration -MaximumInactiveDays <UInt32> [-AccessControlPolicyName <String>]
+
+   [-AccessControlPolicyParameters <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsDeviceRegistration -DevicesPerUser <UInt32> [-AccessControlPolicyName <String>]
+
+   [-AccessControlPolicyParameters <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsDeviceRegistration -ServiceAccountIdentifier <String> -Credential <PSCredential>
+
+   [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AdfsDeviceRegistration [-IssuanceCertificate] [-AccessControlPolicyName <String>]
+
+   [-AccessControlPolicyParameters <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsDeviceRegistration [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>]
+
+   [-AllowedAuthenticationClassReferences <String[]>] [-IssuanceAuthorizationRules <String>]
+
+   [-IssuanceAuthorizationRulesFile <String>] [-IssuanceTransformRules <String>]
+
+   [-IssuanceTransformRulesFile <String>] [-AdditionalAuthenticationRules <String>]
+
+   [-AdditionalAuthenticationRulesFile <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the number of devices that a user can register'
+  code: |-
+    PS C:\> Set-AdfsDeviceRegistration -DevicesPerUser 10
+  description: |-
+    This command sets the number of devices that a user can register to 10.
+  summary: ""
+- title: 'Example 2: Configure the maximum inactive days for a device'
+  code: |-
+    PS C:\> Set-AdfsDeviceRegistration -MaximumInactiveDays 90
+  description: |-
+    This command configures the number of days before the Device Registration Service removes an inactive device object.
+  summary: ""
+- title: 'Example 3: Set the service account for the Device Registration Service'
+  code: |-
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Set-AdfsDeviceRegistration -ServiceAccountIdentifier "CONTOSO\Svc_adfs" -Credential $Cred
+  description: |-
+    The first command uses the **Get-Credential** cmdlet to create a credential object for the Active Directory account under which the AD FS service runs.
+    The command stores the credential object in the $Cred variable.
+
+    The second command sets the service account that has the ID Svc_adfs.
+    The command specifies the credentials stored in $Cred for the Active Directory account under which the AD FS service runs.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyName
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyParameters
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRules
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRulesFile
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AllowedAuthenticationClassReferences
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DevicesPerUser
+  isRequired: true
+  description: |+
+    Specifies the maximum number of devices that a user can register.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceAuthorizationRules
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceAuthorizationRulesFile
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IssuanceCertificate
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet generates and uses a new signing certificate for the Device Registration Service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceTransformRules
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceTransformRulesFile
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaximumInactiveDays
+  isRequired: true
+  description: |+
+    Specifies the number of days before a device object is removed because of inactivity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceAccountIdentifier
+  isRequired: true
+  description: |+
+    Specifies the ID of the service account.
+    The cmdlet grants this account read and write access to the Device Registration Service configuration and containers in Active Directory® Domain Services.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsDeviceRegistration
+name: Set-AdfsDeviceRegistration
+description: |-
+  The **Set-AdfsDeviceRegistration** cmdlet configures the administrative policies for the Device Registration Service.
+  Use this cmdlet to change the default policies of the Device Registration Service in Active Directory Federation Services (AD FS), such as the maximum number of devices that a user can register.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsdeviceregistration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsDeviceRegistration

@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets appx volumes for the computer.
+module: Appx
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Appx.PackageManager.Commands.AppxVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppxVolume
+  href: ./Add-AppxVolume.yml
+- text: Dismount-AppxVolume
+  href: ./Dismount-AppxVolume.yml
+- text: Mount-AppxVolume
+  href: ./Mount-AppxVolume.yml
+- text: Remove-AppxVolume
+  href: ./Remove-AppxVolume.yml
+syntaxes:
+- Get-AppxVolume [[-Path] <String>] [<CommonParameters>]
+- Get-AppxVolume [[-Path] <String>] [-Online] [<CommonParameters>]
+- Get-AppxVolume [[-Path] <String>] [-Offline] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all the volumes'
+  code: |-
+    PS C:\> Get-AppxVolume
+  description: |-
+    The command gets all the **AppxVolume** objects on the computer.
+  summary: ""
+- title: 'Example 2: Get the volume at a path'
+  code: |-
+    PS C:\> Get-AppxVolume -Path F:\
+  description: |-
+    This command gets the **AppxVolume** at the path F:\.
+  summary: ""
+- title: 'Example 3: Get mounted volumes'
+  code: |-
+    PS C:\> Get-AppxVolume -Online
+  description: |-
+    This command gets only **AppxVolume** objects that are currently mounted on the computer.
+  summary: ""
+- title: 'Example 4: Get volumes that are note mounted'
+  code: |-
+    PS C:\> Get-AppxVolume -Offline
+  description: |-
+    This command gets the **AppxVolume** objects that not currently mounted on the computer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Offline
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet returns only volumes that are currently dismounted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Online
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet returns only volumes that are currently mounted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path of the mount point of a volume.
+    This cmdlet gets a volume at the location that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Appx.Get-AppxVolume
+name: Get-AppxVolume
+description: |-
+  The **Get-AppxVolume** cmdlet gets a list of **AppxVolume** objects known to the computer.
+  Volumes can be added by the user or a device, for instance, by using Storage Sense.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: Appx
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appx/get-appxvolume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AppxVolume

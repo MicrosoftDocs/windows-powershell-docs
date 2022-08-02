@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Available in the Windows Insider Preview Builds of Windows 10, is the `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet. The `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet provides visibility to the settings configured on a Windows 10 client device for a particular Windows App.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Package Manager API
+  href: http://go.microsoft.com/fwlink/?LinkId=245447
+- text: How to Add and Remove Apps
+  href: http://go.microsoft.com/fwlink/?LinkID=231020
+- text: Get-AppxPackage
+  href: ./Get-AppxPackage.yml
+- text: Get-AppxPackageManifest
+  href: ./Get-AppxPackageManifest.yml
+- text: Move-AppxPackage
+  href: ./Move-AppxPackage.yml
+- text: Remove-AppxPackage
+  href: ./Remove-AppxPackage.yml
+syntaxes:
+- >-
+  Get-AppxPackageAutoUpdateSettings [[-PackageFullName] <String>] [-ShowUpdateAvailability] [-AllUsers]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all App Package Auto Update settings'
+  code: |-
+    PS C:\> Get-AppxPackageAutoUpdateSettings
+  description: |-
+    This will return the Auto Update and Repair settings for all configured and installed Windows Apps on the device, and registered to the user.
+  summary: ""
+- title: 'Example 2: Get App Package Auto Update settings for all users'
+  code: |-
+    PS C:\> Get-AppxPackageAutoUpdateSettings -AllUsers
+  description: |-
+    This will return the Auto Update and Repair settings for all configured and installed Windows Apps that have been registered for all users.
+  summary: ""
+- title: 'Example 3: Get a single App Package Auto Update setting'
+  code: |-
+    PS C:\> Get-AppxPackageAutoUpdateSettings -PackageFullName publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe
+  description: |-
+    This will return the Auto Update and Repair settings for a specific Windows App that has been installed and registered to the signed-in user.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllUsers
+  description: |+
+    Specifies to display Windows App Auto Update and Repair settings for all that are installed for all users.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageFullName
+  description: |+
+    Specifies the Package Full Name of the app that is being queried.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShowUpdateAvailability
+  description: |+
+    Specifies to display available update information for a specific Windows App.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Appx.Get-AppxPackageAutoUpdateSettings
+name: Get-AppxPackageAutoUpdateSettings
+description: |-
+  The `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet will return the settings configured for a specific or all installed Windows Apps in relation to Auto Update and Repair.
+metadata:
+  description: Provides guidance on how to view the auto-update and repair settings of a Windows App.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+  Module Name: Appx
+  ms.date: 06/07/2021
+  online version: https://docs.microsoft.com/powershell/module/appx/Get-AppxPackageAutoUpdateSettings?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

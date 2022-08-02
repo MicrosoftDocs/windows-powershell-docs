@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the inactive encryption certificate.
+module: DeviceHealthAttestation
+notes: ""
+outputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the inactive encryption certificate as a **String**.
+links:
+- text: Remove-DHASInactiveEncryptionCertificate
+  href: ./Remove-DHASInactiveEncryptionCertificate.yml
+syntaxes:
+- Get-DHASInactiveEncryptionCertificate [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the inactive encryption certificate'
+  code: |-
+    PS C:\> Get-DHASInactiveEncryptionCertificate
+  description: |-
+    This command gets the inactive encryption certificate thumbprint.
+  summary: ""
+uid: DeviceHealthAttestation.Get-DHASInactiveEncryptionCertificate
+name: Get-DHASInactiveEncryptionCertificate
+description: |-
+  The **Get-DHASInactiveEncryptionCertificate** cmdlet gets the inactive encryption certificate thumbprint for the Device Health Attestation service.
+
+  You must have administrator rights to run this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.DeviceHealthAttestation.PowerShell.dll-Help.xml
+  Module Name: DeviceHealthAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/devicehealthattestation/get-dhasinactiveencryptioncertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DHASInactiveEncryptionCertificate

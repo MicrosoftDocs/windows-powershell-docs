@@ -1,0 +1,235 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet is only available in the Windows Insider Preview Builds of Windows 10. The `Set-AppxPackageAutoUpdateSettings` PowerShell cmdlet provides access to configure a specific Windows App's Auto Update and Repair settings. Including pausing update checks.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Package Manager API
+  href: http://go.microsoft.com/fwlink/?LinkId=245447
+- text: How to Add and Remove Apps
+  href: http://go.microsoft.com/fwlink/?LinkID=231020
+- text: Get-AppxPackage
+  href: Get-AppxPackage.yml
+- text: Get-AppxPackageManifest
+  href: Get-AppxPackageManifest.yml
+- text: Move-AppxPackage
+  href: Move-AppxPackage.yml
+- text: Remove-AppxPackage
+  href: Remove-AppxPackage.yml
+syntaxes:
+- >-
+  Set-AppxPackageAutoUpdateSettings [-PackageFamilyName] <String> -AppInstallerUri <String>
+
+   [-UpdateUris <String[]>] [-RepairUris <String[]>] [-OptionalPackages <String[]>]
+
+   [-DependencyPackages <String[]>] [-EnableAutomaticBackgroundTask] [-ForceUpdateFromAnyVersion]
+
+   [-DisableAutoRepairs] [-CheckOnLaunch] [-ShowPrompt] [-UpdateBlocksActivation] [-UseSystemPolicySource]
+
+   [-HoursBetweenUpdateChecks <UInt32>] [-Version <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AppxPackageAutoUpdateSettings [-PackageFamilyName] <String> [-PauseUpdates] [-UseSystemPolicySource]
+
+   -HoursToPause <UInt32> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update the Auto-Update settings for an App'
+  code: |-
+    PS C:\> Set-AppxPackageAutoUpdateSettings -AppInstallerUri https://website.com/PackageName.appinstaller -PackageFamilyName PackageName_8h66172c634n0 -CheckOnLaunch -ForceUpdateFromAnyVersion -HoursBetweenUpdateChecks 2 -ShowPrompt -UpdateUris file://ComputerName/Share/PackageName_x64.appinstaller
+  description: |-
+    This cmdlet will update the Auto Update settings of the *PackageName_8h66172c634n0* Windows App to target an AppInstaller file on a network accessible file share every two hours, displaying a prompt to the user. Allowing for the Windows App to update to any version (higher or lower) despite the version of the installed Windows App.
+  summary: ""
+- title: 'Example 2: Disable the Auto Repair setting for an App'
+  code: |-
+    PS C:\> Set-AppxPackageAutoUpdateSettings -AppInstallerUri https://website.com/PackageName.appinstaller -PackageFamilyName PackageName_8h66172c634n0 -DisableAutoRepairs
+  description: |-
+    This cmdlet will disable the automatic repair of the Windows App.
+  summary: ""
+- title: 'Example 3: Pause Updates on a specific Windows App'
+  code: |-
+    PS C:\> Set-AppxPackageAutoUpdateSettings -HoursToPause 4320 -PackageFamilyName PackageName_8h66172c634n0 -PauseUpdates
+  description: |-
+    This cmdlet will pause the Windows App from checking for App updates for 4320 hours (180 Days).
+  summary: ""
+- title: 'Example 3: Pause Updates on a specific Windows App'
+  code: |-
+    PS C:\> Set-AppxPackageAutoUpdateSettings -HoursToPause 0 -PackageFamilyName PackageName_8h66172c634n0 -PauseUpdates
+  description: |-
+    This cmdlet will re-enable automatic updating of the Windows App.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AppInstallerUri
+  isRequired: true
+  description: |+
+    Specifies the location of the AppInstaller file targetted by this Windows App.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CheckOnLaunch
+  description: |+
+    Specifies that the Windows App will check for new updates when the App is launched.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DependencyPackages
+  description: |+
+    Specifies any Dependency Packages being used by the Windows App.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableAutoRepairs
+  description: |+
+    Turns off the automatic repair of a broken Windows App.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableAutomaticBackgroundTask
+  description: |+
+    Specifies that the automation of updating and repairing will occur as a background task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceUpdateFromAnyVersion
+  description: |+
+    Specifies that the next update of the Windows App can be of a higher or lower version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: HoursBetweenUpdateChecks
+  description: |+
+    Specifies the time between update checks allowed for a specific Windows App.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: HoursToPause
+  isRequired: true
+  description: |+
+    Specifies the duration of time in hours that the Windows App will not check for updates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OptionalPackages
+  description: |+
+    Specifies the Optional Packages being used by the Windows App.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageFamilyName
+  isRequired: true
+  description: |+
+    Specifies the Package Family Name of the Windows App which is being modified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PauseUpdates
+  isRequired: true
+  description: |+
+    Specifies if the Windows App updates are to be paused.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RepairUris
+  description: |+
+    Specifies the location which will be sourced from when repairing the Windows App.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShowPrompt
+  description: |+
+    Specifies that if any action is occurring for the Windows App, a prompt will be displayed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UpdateBlocksActivation
+  description: |+
+    Specifies that if an update is available for a Windows App, the App will prevent launching until the update has been installed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UpdateUris
+  description: |+
+    Specifies the location which will be sourced from when updating the Windows App.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseSystemPolicySource
+  description: |+
+    Specifies that an override can be applied to the Developer configured settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of the Update Settings being applied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Appx.Set-AppxPackageAutoUpdateSettings
+name: Set-AppxPackageAutoUpdateSettings
+description: |-
+  The **Set-AppxPackageAutoUpdateSettings** cmdlet provides access to configure a specific Windows App's Auto Update and Repair seetings.
+metadata:
+  description: Provides guidance on how to configure the auto-update and repair settings of a Windows App.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+  Module Name: Appx
+  ms.date: 06/07/2021
+  online version: https://docs.microsoft.com/powershell/module/appx/reset-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AppxPackageAutoUpdateSettings

@@ -1,0 +1,35 @@
+### YamlMime:PowershellModule
+children:
+- title: ClusterAwareUpdating
+  cmdlets:
+  - ClusterAwareUpdating.Add-CauClusterRole
+  - ClusterAwareUpdating.Disable-CauClusterRole
+  - ClusterAwareUpdating.Enable-CauClusterRole
+  - ClusterAwareUpdating.Export-CauReport
+  - ClusterAwareUpdating.Get-CauClusterRole
+  - ClusterAwareUpdating.Get-CauPlugin
+  - ClusterAwareUpdating.Get-CauReport
+  - ClusterAwareUpdating.Get-CauRun
+  - ClusterAwareUpdating.Invoke-CauRun
+  - ClusterAwareUpdating.Invoke-CauScan
+  - ClusterAwareUpdating.Register-CauPlugin
+  - ClusterAwareUpdating.Remove-CauClusterRole
+  - ClusterAwareUpdating.Save-CauDebugTrace
+  - ClusterAwareUpdating.Set-CauClusterRole
+  - ClusterAwareUpdating.Stop-CauRun
+  - ClusterAwareUpdating.Test-CauSetup
+  - ClusterAwareUpdating.Unregister-CauPlugin
+uid: ClusterAwareUpdating
+name: ClusterAwareUpdating
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Cluster-Aware Updating-specific cmdlets. 
+  It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 4e804861-1dce-46c1-868d-c8f2ab9d220a
+  Module Name: ClusterAwareUpdating
+  ms.date: 12/20/2016
+  title: ClusterAwareUpdating

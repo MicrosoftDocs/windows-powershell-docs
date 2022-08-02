@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Writes in-memory buffers to disk.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SbecActiveConfig
+  href: ./Get-SbecActiveConfig.yml
+- text: Set-SbecActiveConfig
+  href: ./Set-SbecActiveConfig.yml
+- text: Stop-SbecInstance
+  href: ./Stop-SbecInstance.yml
+- text: Test-SbecActiveConfig
+  href: ./Test-SbecActiveConfig.yml
+- text: Test-SbecConfig
+  href: ./Test-SbecConfig.yml
+syntaxes:
+- Save-SbecInstance [[-ComputerName] <String[]>] [[-CimSession] <CimSession[]>] [<CommonParameters>]
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet on the remote computers through a remote session.
+    Enter a session object, such as the output of a **New-CimSession** or **Get-CimSession** cmdlet, or an array of these objects.
+    The default is to run the cmdlet on the local computer.
+    For more information, see About_CimSession.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies the names of the computers on which you want to perform the operation.
+    You can specify a fully qualified domain name (FQDN), a NetBIOS name, or an IP address for each computer.
+    For more information see [Invoke-CimMethod](https://go.microsoft.com/fwlink/?LinkId=808801) on MSDN.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Save-SbecInstance
+name: Save-SbecInstance
+description: |-
+  The **Save-SbecInstance** cmdlet writes the in-memory buffers of the running Setup and Boot Event Collector to disk.
+
+  When the command returns, the buffers of the forwarders in the Setup and Boot Event Collector are saved to disk, and thus all the data up to the point when the write request was received is saved to disk.
+
+  You must have the Builtin Administrator privilege to run this cmdlet.
+
+  The alias for this cmdlet is **Flush-SbecInstance**.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/save-sbecinstance?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Save-SbecInstance

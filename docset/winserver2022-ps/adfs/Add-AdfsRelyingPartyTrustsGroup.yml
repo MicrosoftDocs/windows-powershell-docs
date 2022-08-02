@@ -1,0 +1,247 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a relying party trusts group.
+module: ADFS
+notes: ""
+links:
+- text: Get-AdfsRelyingPartyTrustsGroup
+  href: ./Get-AdfsRelyingPartyTrustsGroup.yml
+- text: Remove-AdfsRelyingPartyTrustsGroup
+  href: ./Remove-AdfsRelyingPartyTrustsGroup.yml
+syntaxes:
+- >-
+  Add-AdfsRelyingPartyTrustsGroup -MetadataFile <String> [-Force] [-PassThru] [-MonitoringEnabled <Boolean>]
+
+   [-ImpersonationAuthorizationRules <String>] [-ImpersonationAuthorizationRulesFile <String>]
+
+   [-IssuanceTransformRules <String>] [-IssuanceTransformRulesFile <String>]
+
+   [-IssuanceAuthorizationRules <String>] [-IssuanceAuthorizationRulesFile <String>]
+
+   [-DelegationAuthorizationRules <String>] [-DelegationAuthorizationRulesFile <String>]
+
+   [-AdditionalAuthenticationRules <String>] [-AdditionalAuthenticationRulesFile <String>]
+
+   [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-AdfsRelyingPartyTrustsGroup -MetadataUrl <Uri> [-AutoUpdateEnabled <Boolean>] [-Force] [-PassThru]
+
+   [-MonitoringEnabled <Boolean>] [-ImpersonationAuthorizationRules <String>]
+
+   [-ImpersonationAuthorizationRulesFile <String>] [-IssuanceTransformRules <String>]
+
+   [-IssuanceTransformRulesFile <String>] [-IssuanceAuthorizationRules <String>]
+
+   [-IssuanceAuthorizationRulesFile <String>] [-DelegationAuthorizationRules <String>]
+
+   [-DelegationAuthorizationRulesFile <String>] [-AdditionalAuthenticationRules <String>]
+
+   [-AdditionalAuthenticationRulesFile <String>] [-AccessControlPolicyName <String>]
+
+   [-AccessControlPolicyParameters <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyName
+  description: |+
+    Specifies the name of an access control policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyParameters
+  description: |+
+    Specifies the parameters of an access control policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRules
+  description: |+
+    Specifies additional authentication rules for the relying party trusts group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRulesFile
+  description: |+
+    Specifies a file that contains additional authentication rules for the relying party trusts group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoUpdateEnabled
+  description: |+
+    Specifies whether automatic updates are enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DelegationAuthorizationRules
+  description: |+
+    Specifies delegation authorization rules for the relying party trusts group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DelegationAuthorizationRulesFile
+  description: |+
+    Specifies a file that contains delegation authorization rules for the relying party trusts group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImpersonationAuthorizationRules
+  description: |+
+    Specifies impersonation authorization rules for the relying party trusts group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImpersonationAuthorizationRulesFile
+  description: |+
+    Specifies a file that contains impersonation authorization rules for the relying party trusts group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceAuthorizationRules
+  description: |+
+    Specifies issuance authorization rules for the relying party trusts group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceAuthorizationRulesFile
+  description: |+
+    Specifies a file that contains issuance authorization rules for the relying party trusts group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceTransformRules
+  description: |+
+    Specifies issuance transform rules for the relying party trusts group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceTransformRulesFile
+  description: |+
+    Specifies a file that contains issuance transform rules for the relying party trusts group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MetadataFile
+  isRequired: true
+  description: |+
+    Specifies a file that contains federation metadata for the relying party trusts group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: MetadataUrl
+  isRequired: true
+  description: |+
+    Specifies the URL of federation metadata for the relying party trusts group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: MonitoringEnabled
+  description: |+
+    Indicates whether monitoring is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Add-AdfsRelyingPartyTrustsGroup
+name: Add-AdfsRelyingPartyTrustsGroup
+description: |-
+  The **Add-AdfsRelyingPartyTrustsGroup** cmdlet creates a relying party trusts group based on metadata that contains multiple entities.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/add-adfsrelyingpartytrustsgroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AdfsRelyingPartyTrustsGroup

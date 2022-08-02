@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Backs up the configuration.
+module: DeviceHealthAttestation
+notes: ""
+outputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a string with the backup file path.
+links:
+- text: Restore-DHASConfiguration
+  href: ./Restore-DHASConfiguration.yml
+syntaxes:
+- Backup-DHASConfiguration [-Path] <String> [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Back up the service configuration'
+  code: |-
+    PS C:\> Backup-DHASConfiguration -Path "c:\backup.xml"
+  description: |-
+    This commands backs up the service configuration from the web.config file to the file specified by the *Path* parameter.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the location in which to save the backup configuration file.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: DeviceHealthAttestation.Backup-DHASConfiguration
+name: Backup-DHASConfiguration
+description: |-
+  The **Backup-DHASConfiguration** cmdlet backs up the Device Health Attestation service configuration from the web.config file.
+
+  You must have administrator rights to run this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.DeviceHealthAttestation.PowerShell.dll-Help.xml
+  Module Name: DeviceHealthAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/devicehealthattestation/backup-dhasconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Backup-DHASConfiguration

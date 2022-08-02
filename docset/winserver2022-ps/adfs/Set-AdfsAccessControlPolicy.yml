@@ -1,0 +1,150 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an AD FS access control policy.
+module: ADFS
+notes: ""
+links:
+- text: Get-AdfsAccessControlPolicy
+  href: ./Get-AdfsAccessControlPolicy.yml
+- text: New-AdfsAccessControlPolicy
+  href: ./New-AdfsAccessControlPolicy.yml
+- text: Remove-AdfsAccessControlPolicy
+  href: ./Remove-AdfsAccessControlPolicy.yml
+syntaxes:
+- >-
+  Set-AdfsAccessControlPolicy [-Name <String>] [-Identifier <String>] [-Description <String>]
+
+   [-PolicyMetadata <PolicyMetadata>] [-PolicyMetadataFile <String>] [-PassThru] [-TargetName] <String> [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsAccessControlPolicy [-Name <String>] [-Identifier <String>] [-Description <String>]
+
+   [-PolicyMetadata <PolicyMetadata>] [-PolicyMetadataFile <String>] [-PassThru] [-TargetIdentifier] <String>
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsAccessControlPolicy [-Name <String>] [-Identifier <String>] [-Description <String>]
+
+   [-PolicyMetadata <PolicyMetadata>] [-PolicyMetadataFile <String>] [-PassThru]
+
+   [-TargetAccessControlPolicy] <AdfsAccessControlPolicy> [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identifier
+  description: |+
+    Specifies an ID for the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies a name for the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PolicyMetadata" data-throw-if-not-resolved="False" />
+  name: PolicyMetadata
+  description: |+
+    Specifies metadata for the policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyMetadataFile
+  description: |+
+    Specifies the metadata file for the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AdfsAccessControlPolicy" data-throw-if-not-resolved="False" />
+  name: TargetAccessControlPolicy
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the ID of the target.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the target name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsAccessControlPolicy
+name: Set-AdfsAccessControlPolicy
+description: |-
+  The **Set-AdfsAccessControlPolicy** cmdlet modifies an Active Directory Federation Services (AD FS) access control policy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsaccesscontrolpolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsAccessControlPolicy

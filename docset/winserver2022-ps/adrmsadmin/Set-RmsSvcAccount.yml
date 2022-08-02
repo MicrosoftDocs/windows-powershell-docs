@@ -1,0 +1,117 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the service account for an AD RMS cluster.
+module: ADRMSAdmin
+notes: ""
+outputs:
+- name: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Get-RmsSvcAccount
+  href: ./Get-RmsSvcAccount.yml
+syntaxes:
+- >-
+  Set-RmsSvcAccount [-Credential] <PSCredential> [-Force] [-PassThru] [-Path] <String[]> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the service account'
+  code: |-
+    PS C:\> Set-RmsSvcAccount -Path "."
+  description: |-
+    This command changes the AD RMS service account.
+    Because the *Credential* parameter is not used, the **Set-RmsSvcAccount** cmdlet prompts for the user name and password of the new service account.
+  summary: ""
+- title: 'Example 2: Modify the service account with specified credentials'
+  code: |-
+    PS C:\> Set-RmsSvcAccount -Path "." -Force -PassThru -Credential ITDOMAIN\adrmssvc
+  description: |-
+    This command changes the AD RMS service account.
+    Because the *Credential* parameter specifies the domain and user name of the account, the **Set-RmsSvcAccount** cmdlet prompts for the password of the new service account.
+  summary: ""
+- title: 'Example 3: Get credentials to use to modify a service account'
+  code: |-
+    PS C:\> $userAccount = Get-Credential ITDOMAIN\adrmssvc
+    PS C:\> Set-RmsSvcAccount -Path "." -Force -PassThru -Credential $userAccount
+  description: |-
+    This command uses the **Get-Credential** cmdlet to prompt for the password for the ITDOMAIN\adrmsvc account and then stores the account credentials securely in a variable, which is then passed to the **Set-RmsSvcAccount** cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  isRequired: true
+  description: |+
+    Specifies a user name and password as a **PSCredential** object.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overrides restrictions that prevent the command from succeeding if the restrictions do not compromise security.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a provider drive and path or relative path on the current drive.
+    Use a dot (.) to specify the current location.
+    This parameter does not accept wildcards and has no default value.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADRMSAdmin.Set-RmsSvcAccount
+name: Set-RmsSvcAccount
+description: |-
+  The **Set-RmsSvcAccount** cmdlet sets the service account of an Active Directory Rights Management Services (AD RMS) cluster.
+
+  To specify the service account, set the *Credential* parameter to the service account credentials, and then set the *Path* parameter to `<PSDrive>:\` where `<PSDrive>` is the AD RMS provider drive ID.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adrmsadmin/set-rmssvcaccount?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RmsSvcAccount

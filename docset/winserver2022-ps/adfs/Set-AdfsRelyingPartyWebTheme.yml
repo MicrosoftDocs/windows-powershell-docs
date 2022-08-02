@@ -1,0 +1,180 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Applies a web theme to a relying party.
+module: ADFS
+notes: ""
+links:
+- text: Export-AdfsWebTheme
+  href: ./Export-AdfsWebTheme.yml
+- text: Get-AdfsRelyingPartyWebTheme
+  href: ./Get-AdfsRelyingPartyWebTheme.yml
+- text: New-AdfsWebTheme
+  href: ./New-AdfsWebTheme.yml
+- text: Remove-AdfsRelyingPartyWebTheme
+  href: ./Remove-AdfsRelyingPartyWebTheme.yml
+- text: Set-AdfsWebTheme
+  href: ./Set-AdfsWebTheme.yml
+syntaxes:
+- >-
+  Set-AdfsRelyingPartyWebTheme [-StyleSheet <Hashtable[]>] [-RTLStyleSheetPath <String>]
+
+   [-OnLoadScriptPath <String>] [-Logo <Hashtable[]>] [-Illustration <Hashtable[]>]
+
+   [-SourceWebThemeName <String>] [-SourceRelyingPartyName <String>] [-TargetRelyingPartyName] <String> [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsRelyingPartyWebTheme [-StyleSheet <Hashtable[]>] [-RTLStyleSheetPath <String>]
+
+   [-OnLoadScriptPath <String>] [-Logo <Hashtable[]>] [-Illustration <Hashtable[]>]
+
+   [-SourceWebThemeName <String>] [-SourceRelyingPartyName <String>]
+
+   [-TargetRelyingPartyWebTheme] <AdfsRelyingPartyWebTheme> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a custom theme and assign it to the Office 365 relying party trust'
+  code: |-
+    PS C:\> New-AdfsWebTheme -Name "Office365Theme" -SourceName "default"
+    PS C:\> Set-AdfsWebTheme -TargetName "Office365Theme" -Illustration @{Path="C:\localpath\illustration22.jpg"}
+    PS C:\> Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName "Microsoft Office 365 Identity Platform" -SourceWebThemeName "Office365Theme"
+  description: |-
+    The first command creates an AD FS web theme by using the **New-AdfsWebTheme** cmdlet.
+    The theme is named Office365Theme.
+
+    The second command modifies Office365Theme by using the **Set-AdfsWebTheme** cmdlet.
+
+    The final command assigns the custom theme to the Office 365 relying party trust.
+  summary: ""
+- title: 'Example 2: Create an advanced per application custom theme and assign it to a relying party'
+  code: |-
+    PS C:\> New-AdfsWebTheme -Name "AppSpecificTheme" -SourceName "default" 
+    PS C:\> Export-AdfsWebTheme -Name "AppSpecificTheme" -DirectoryPath "C:\AppSpecificTheme"
+    PS C:\> Set-AdfsWebTheme -TargetName "AppSpecificTheme" -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="C:\AppSpecificTheme\script\onload.js"} 
+    PS C:\> Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName "urn:app1" -SourceWebThemeName "AppSpecificTheme"
+  description: |-
+    The first command creates a theme as a copy of the default global theme in AD FS by using **New-AdfsWebTheme**.
+
+    The second command exports the theme for customization by using the **Export-AdfsWebTheme** cmdlet.
+
+    The third command customizes the theme by specifying files by using **Set-AdfsWebTheme**.
+
+    The final command applies the customized theme to a relying party.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Illustration
+  description: |+
+    Specifies an illustration as a hash table.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Logo
+  description: |+
+    Specifies a logo as a hash table.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OnLoadScriptPath
+  description: |+
+    Specifies the path of an onload script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RTLStyleSheetPath
+  description: |+
+    Specifies the path of the RTL style sheet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceRelyingPartyName
+  description: |+
+    Specifies the name of the source relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceWebThemeName
+  description: |+
+    Specifies the name of the source web theme.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StyleSheet
+  description: |+
+    Specifies a style sheet as a hash table.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetRelyingPartyName
+  isRequired: true
+  description: |+
+    Specifies the name of the target relying party.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="AdfsRelyingPartyWebTheme" data-throw-if-not-resolved="False" />
+  name: TargetRelyingPartyWebTheme
+  isRequired: true
+  description: |+
+    Specifies the name of the target web theme.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: TargetWebTheme
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsRelyingPartyWebTheme
+name: Set-AdfsRelyingPartyWebTheme
+description: |-
+  The **Set-AdfsRelyingPartyWebTheme** cmdlet applies a web theme to a relying party.
+  A web theme includes logo, illustration, stylesheets, and custom onload.js files.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsrelyingpartywebtheme?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsRelyingPartyWebTheme

@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an appx volume to the Package Manager.
+module: Appx
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Appx.PackageManager.Commands.AppxVolume" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the **AppxVolume** object that it adds.
+links:
+- text: Dismount-AppxVolume
+  href: ./Dismount-AppxVolume.yml
+- text: Get-AppxVolume
+  href: ./Get-AppxVolume.yml
+- text: Mount-AppxVolume
+  href: ./Mount-AppxVolume.yml
+- text: Remove-AppxVolume
+  href: ./Remove-AppxVolume.yml
+syntaxes:
+- Add-AppxVolume [-Path] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a volume'
+  code: |-
+    PS C:\> Add-AppxVolume -Path "E:\WindowsApps"
+  description: |-
+    This command adds the volume E:\WindowsApps to Package Manager.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the mount point of the volume that this cmdlet adds.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: PSPath
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Appx.Add-AppxVolume
+name: Add-AppxVolume
+description: |-
+  The **Add-AppxVolume** cmdlet adds an **AppxVolume** for the Package Manager to advertise.
+  After you add a volume, appx deployment operations can use that volume as a target.
+  This cmdlet returns the volume that it adds.
+  Note, the *Path* parameter must be specified as a drive letter followed by "WindowsApps" as the directory.
+  Not using the aforementioned format could lead to inconsistent behavior in the application model subsystems or the volume itself; for more information see the examples section.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: Appx
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appx/add-appxvolume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AppxVolume

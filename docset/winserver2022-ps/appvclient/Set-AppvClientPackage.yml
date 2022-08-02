@@ -1,0 +1,145 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures an App-V Client Package.
+module: AppvClient
+notes: ""
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvClientPackage
+  href: ./Add-AppvClientPackage.yml
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Mount-AppvClientPackage
+  href: ./Mount-AppvClientPackage.yml
+- text: Publish-AppvClientPackage
+  href: ./Publish-AppvClientPackage.yml
+- text: Remove-AppvClientPackage
+  href: ./Remove-AppvClientPackage.yml
+- text: Repair-AppvClientPackage
+  href: ./Repair-AppvClientPackage.yml
+- text: Stop-AppvClientPackage
+  href: ./Stop-AppvClientPackage.yml
+- text: Unpublish-AppvClientPackage
+  href: ./Unpublish-AppvClientPackage.yml
+syntaxes:
+- >-
+  Set-AppvClientPackage [-Path <String>] [-DynamicDeploymentConfiguration <String>] [-UseNoConfiguration]
+
+   [-PackageId] <Guid> [-VersionId] <Guid> [<CommonParameters>]
+- >-
+  Set-AppvClientPackage [-Path <String>] [-DynamicDeploymentConfiguration <String>] [-UseNoConfiguration]
+
+   [-Package] <AppvClientPackage> [<CommonParameters>]
+- >-
+  Set-AppvClientPackage [-Path <String>] [-DynamicDeploymentConfiguration <String>] [-UseNoConfiguration]
+
+   [-Name] <String> [[-Version] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a deployment configuration for a package'
+  code: |-
+    PS C:\> Set-AppvClientPackage -Name "MyApp" -Version 1 -DynamicDeploymentConfiguration "C:\policies\MyApp.xml"
+  description: |-
+    This command sets a new deployment configuration for a package.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DynamicDeploymentConfiguration
+  description: |+
+    Specifies the path of a Dynamic Deployment Configuration file for the App-V package to be added.
+    The cmdlet uses the Dynamic Deployment Configuration file to override the default behavior provided in the package manifest.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the package given during Sequencing time.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppvClientPackage" data-throw-if-not-resolved="False" />
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies an App-V package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageId
+  isRequired: true
+  description: |+
+    Specifies the GUID that uniquely identifies the package.
+    It can be found in the package manifest or by opening the package in the App-V Sequencer.
+    The package ID is shared by all versions of a package.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path specifies the location of the .APPV file that contains the package to be added.
+    This value can be local directory, a network directory, or an HTTP or HTTPS URL.
+
+  defaultValue: None
+  position: Named
+  aliases: PSPath
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseNoConfiguration
+  description: |+
+    Indicates that this cmdlet applies the default computer policy to the selected package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of an App-V package in a lineage.
+    If you do not specify this parameter, the cmdlet operates on all available versions of the package on the target computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionId
+  isRequired: true
+  description: |+
+    Specifies a GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+    If you do not specify this parameter, the cmdlet operates on all versions of the package.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Set-AppvClientPackage
+name: Set-AppvClientPackage
+description: |-
+  The **Set-AppvClientPackage** cmdlet modifies the configuration files of an Microsoft Application Virtualization (App-V) package.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/set-appvclientpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AppvClientPackage
